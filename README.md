@@ -6,6 +6,8 @@
 
 ## 当前架构
 
+第一阶段扩展设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)，多来源导入原型见 [source/README.md](source/README.md)。当前生产构建仍使用下述 V2 输入，尚未迁移正式母库。
+
 网站保持纯静态部署，不依赖服务器或数据库服务：
 
 - `content/`：人工 / AI 维护的规范化源数据

@@ -1,4 +1,4 @@
-name: Build data branches
+name: Validate data branches
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'data-*'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -16,18 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply Batch 003 draft corrections
-        run: node tools/migrations/verify-batch-003.mjs
-      - name: Hold Batch 003 pending for handoff
-        run: node tools/migrations/hold-batch-003-pending.mjs
+      # One-time migration scripts remain archived; CI cannot rewrite statuses.
+      - name: Test public gate in isolated fixtures
+        run: node --test tools/tests/*.test.mjs
       - name: Build and validate data
         run: node tools/build-data.mjs
-      - name: Commit staged source and generated runtime data when changed
-        run: |
-          if ! git diff --quiet -- content/batches data; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add content/batches data
-            git commit -m "data: stage batch 003 corrections and regenerate runtime"
-            git push origin HEAD:${GITHUB_REF_NAME}
-          fi
+      - name: Ensure generated data is committed
+        run: git diff --exit-code -- data
