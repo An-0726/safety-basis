@@ -1,28 +1,137 @@
 'use strict';
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const KEY='safety-basis-v1';let data=structuredClone(window.SEED),selected=data[0].id,admin=false,editing=null,lastDeleted=null;
-function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3500)}
-function validate(arr){if(!Array.isArray(arr)||arr.length>3000)throw Error('应为不超过3000条的隐患数组');const ids=new Set();for(const r of arr){for(const k of ['id','title','category','keywords','description','measures','note','mode','status','checked'])if(typeof r[k]!=='string'||r[k].length>30000)throw Error('条目字段缺失或格式错误：'+k);if(!r.id||!r.title||ids.has(r.id))throw Error('ID重复或名称为空');ids.add(r.id);if(!Array.isArray(r.places)||!r.places.length||r.places.some(x=>typeof x!=='string'))throw Error('场所类型无效');if(!['待核验','已核验','已失效'].includes(r.status))throw Error('核验状态无效');if(!['条件适用','直接适用','上位法兜底'].includes(r.mode))throw Error('匹配类型无效');if(!Array.isArray(r.bases)||!r.bases.length||r.bases.length>30)throw Error('每条需1至30条依据');for(const b of r.bases){for(const k of ['name','article','quote','url','level','scope','role'])if(typeof b[k]!=='string'||b[k].length>30000)throw Error('法规字段无效：'+k);if(b.url&&!/^https?:\/\//i.test(b.url))throw Error('来源链接必须使用http或https');}if(r.status==='已核验'&&(!/^\d{4}-\d{2}-\d{2}$/.test(r.checked)||r.bases.some(b=>!b.quote.trim()||!b.url.trim())))throw Error('已核验条目必须包含核验日期、原文和来源链接');}return arr}
-try{const raw=localStorage.getItem(KEY);if(raw)data=validate(JSON.parse(raw));}catch(e){setTimeout(()=>toast('本地数据无法读取，已显示初始库；原始数据未覆盖'),100)}
-function save(next){try{validate(next);localStorage.setItem(KEY,JSON.stringify(next));data=next;return true}catch(e){toast('未保存：'+e.message);return false}}
-function places(){const old=$('#place').value;$('#place').innerHTML='<option value="">全部场所</option>'+[...new Set(data.flatMap(r=>r.places))].sort().map(v=>`<option>${esc(v)}</option>`).join('');$('#place').value=old;}
-function matchBasis(b){const l=$('#level').value,r=$('#region').value;return(!l||b.level===l)&&(!r||b.scope.includes(r))}
-function filtered(){const terms=$('#search').value.trim().toLowerCase().split(/\s+/).filter(Boolean),p=$('#place').value;return data.filter(r=>(admin||r.status!=='已失效')&&(!p||r.places.includes(p))&&r.bases.some(matchBasis)&&terms.every(t=>[r.title,r.keywords,r.description,r.category,...r.places,...r.bases.map(b=>b.name+' '+b.article)].join(' ').toLowerCase().includes(t)));}
-function pill(r){return `<span class="pill ${r.status==='已失效'?'red':r.mode!=='直接适用'||r.status==='待核验'?'amber':''}">${esc(r.status==='已核验'?r.mode:r.status)}</span>`}
-function render(){const rows=filtered();if(!rows.some(r=>r.id===selected))selected=rows[0]?.id;$('#count').textContent=rows.length;$('#summary').textContent=admin?'管理模式 · 编辑、备份与新增':'选择条目查看完整依据';$('#list').innerHTML=rows.length?rows.map(r=>`<button class="card ${r.id===selected?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===selected}"><div class="meta"><span>${esc(r.id)} <span style="margin-left:8px">${esc(r.category)}</span></span>${pill(r)}</div><h3>${esc(r.title)}</h3><p>${esc(r.places.join(' / '))}</p><span class="arrow">↗</span></button>`).join(''):'<div class="empty"><strong>暂未找到匹配隐患</strong><br>试试缩短关键词，或重置场所和法规筛选。<br>也可以在隐患库管理中新增。</div>';$$('.card').forEach(el=>el.onclick=()=>{selected=el.dataset.id;render()});detail();}
-function detail(){const r=data.find(x=>x.id===selected);if(!r){$('#detail').innerHTML='<div class="empty"><strong>让每条依据都适用</strong><br>选择一个隐患，查看专业描述、法规原文和整改措施。</div>';return}const bases=r.bases.filter(matchBasis);$('#detail').innerHTML=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(r.id)} / ${esc(r.category)}</span>${pill(r)}</div><h2>${esc(r.title)}</h2><div class="subtitle">${esc(r.places.join(' · '))}<br>${r.status==='已核验'?'原文已核对':'核验状态：'+esc(r.status)} · ${esc(r.checked||'未填写日期')} · 使用前复核现行有效性</div></div><div class="detailbody"><section class="block"><h3><span class="number">01</span>隐患专业描述</h3><p>${esc(r.description)}</p></section><section class="block"><h3><span class="number">02</span>法规原文依据 <small style="font-weight:400;color:#98a08f">${bases.length} 条${bases.length!==r.bases.length?' · 已按筛选显示':''}</small></h3>${bases.map(b=>`<div class="basis"><div class="basismeta"><span class="pill ${b.role.includes('兜底')?'amber':''}">${esc(b.role)}</span><span class="article">${esc(b.level)} · ${esc(b.scope)}</span></div><h4>${esc(b.name)}</h4><span class="article">${esc(b.article)}</span><blockquote>${esc(b.quote||'尚未录入原文，请核验后补充。')}</blockquote>${b.url?`<a href="${esc(b.url)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}</div>`).join('')}</section><section class="block"><h3><span class="number">03</span>整改措施</h3><p>${esc(r.measures)}</p></section><section class="block note"><h3>ⓘ 适用说明 / 上位法兜底</h3><p>${esc(r.note)}</p></section></div><div class="detailactions"><button class="primary" id="copy">复制整改条目</button><button id="copyfull">复制完整资料</button>${admin?'<button id="edit">编辑条目</button><button id="del">删除</button>':'<button id="toedit">维护此条目</button>'}</div>`;$('#copy').onclick=()=>copy(r,bases);$('#copyfull').onclick=()=>copyFull(r,bases);if(admin){$('#edit').onclick=()=>openEdit(r);$('#del').onclick=()=>ask('删除这个条目？','仅修改当前浏览器的隐患库。删除后可立即撤销。',()=>{lastDeleted=structuredClone(data);if(save(data.filter(x=>x.id!==r.id))){places();render();toast('已删除，可在管理区撤销');addUndo()}})}else $('#toedit').onclick=()=>{setAdmin(true);openEdit(r)}}
-function textOf(r,bases){return `${r.title}\n\n隐患专业描述：\n${r.description}\n\n法规依据：\n${bases.map(b=>`《${b.name}》${b.article}\n${b.quote||'原文待核验'}`).join('\n\n')}\n\n整改措施：\n${r.measures}`}
-function fullTextOf(r,bases){return `${r.title}\n\n隐患专业描述\n${r.description}\n\n法规原文依据\n${bases.map(b=>`${b.name} ${b.article}【${b.role}；${b.scope}】\n${b.quote||'原文待核验'}\n来源：${b.url}`).join('\n\n')}\n\n整改措施\n${r.measures}\n\n适用说明 / 上位法兜底\n${r.note}\n\n核验状态：${r.status}；核验日期：${r.checked||'未填写'}。使用前复核现行有效性。`}
-async function copyText(text,success){try{await navigator.clipboard.writeText(text);toast(success)}catch{const t=document.createElement('textarea');t.value=text;document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();toast(ok?success:'复制失败，请手动选择文本复制')}}
-function copy(r,b){return copyText(textOf(r,b),'已复制整改条目')}
-function copyFull(r,b){return copyText(fullTextOf(r,b),'已复制完整资料')}
-function setAdmin(v){admin=v;$('#admin').hidden=!v;$('#manage').classList.toggle('active',v);$('#home').classList.toggle('active',!v);render()}
-function addUndo(){if($('#undo'))return;const b=document.createElement('button');b.id='undo';b.textContent='撤销删除';b.onclick=()=>{if(lastDeleted&&save(lastDeleted)){lastDeleted=null;b.remove();places();render();toast('已恢复')}};$('#admin .actions').append(b)}
-function ask(title,msg,fn){$('#confirmTitle').textContent=title;$('#confirmText').textContent=msg;$('#confirm').showModal();$('#yes').onclick=()=>{$('#confirm').close();fn()};$('#no').onclick=()=>$('#confirm').close()}
-const fields=['name','article','level','scope','role','url','quote'];
-function lawfield(b={name:'',article:'',quote:'',url:'',level:'法律',scope:'全国',role:'待核验'}){const el=document.createElement('div');el.className='lawform';el.innerHTML=`<div class="formgrid"><label>法规 / 标准名称<input data-k="name" required value="${esc(b.name)}"></label><label>条、款、项 / 节选范围<input data-k="article" required value="${esc(b.article)}"></label><label>法规类别<select data-k="level">${['法律','行政法规','强制性国家标准','推荐性标准','部门规章','地方性法规','地方政府规章'].map(x=>`<option ${b.level===x?'selected':''}>${x}</option>`).join('')}</select></label><label>地区<select data-k="scope">${['全国','江苏／南京','南京'].map(x=>`<option ${b.scope===x?'selected':''}>${x}</option>`).join('')}</select></label><label>依据角色<input data-k="role" required value="${esc(b.role)}"></label><label>来源链接<input type="url" data-k="url" value="${esc(b.url)}" placeholder="https://…"></label></div><label>原文（不得用概括冒充原文）<textarea data-k="quote" rows="4">${esc(b.quote)}</textarea></label><button type="button" class="remove">移除此依据</button>`;el.querySelector('.remove').onclick=()=>{if($$('.lawform').length<2)return toast('每个条目至少保留一条依据');el.remove()};$('#lawfields').append(el)}
-function openEdit(r){editing=r?.id||null;$('#editform').reset();$('#editTitle').textContent=r?'编辑隐患':'新增隐患';$('#lawfields').innerHTML='';for(const k of ['title','category','keywords','description','measures','note','mode','status','checked']){const e=$('#editform').elements[k];if(r)e.value=r[k]}$('#editform').elements.places.value=r?r.places.join('，'):'';if(r)r.bases.forEach(lawfield);else lawfield();$('#editor').showModal()}
-$('#editform').onsubmit=e=>{e.preventDefault();const f=e.target,r={id:editing||'U'+Date.now(),bases:[]};for(const k of ['title','category','keywords','description','measures','note','mode','status','checked'])r[k]=f.elements[k].value.trim();r.places=f.elements.places.value.split(/[,，]/).map(s=>s.trim()).filter(Boolean);r.bases=$$('.lawform').map(el=>Object.fromEntries(fields.map(k=>[k,el.querySelector(`[data-k="${k}"]`).value.trim()])));const next=data.map(x=>x.id===editing?r:x);if(!editing)next.push(r);if(save(next)){$('#editor').close();$('#search').value='';$('#place').value='';$('#level').value='';$('#region').value='';selected=r.id;places();render();toast('已保存到当前浏览器，建议导出备份')}};
-$('#addlaw').onclick=()=>lawfield();$('#add').onclick=()=>openEdit();$('#close').onclick=$('#cancel').onclick=()=>$('#editor').close();$('#manage').onclick=()=>setAdmin(true);$('#home').onclick=()=>setAdmin(false);$('#search').oninput=render;['place','level','region'].forEach(x=>$('#'+x).onchange=render);$('#clear').onclick=()=>{$('#search').value='';render();$('#search').focus()};$('#reset').onclick=()=>{['search','place','level','region'].forEach(x=>$('#'+x).value='');render()};document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#search').focus()}});
-$('#export').onclick=()=>{const a=document.createElement('a'),blob=new Blob([JSON.stringify({schemaVersion:1,exportedAt:new Date().toISOString(),records:data},null,2)],{type:'application/json'});a.href=URL.createObjectURL(blob);a.download='安全隐患库_'+new Date().toISOString().slice(0,10)+'_ChatGPT.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);toast('备份已导出，包含当前全部条目')};$('#import').onclick=()=>$('#file').click();$('#file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>10*1024*1024)throw Error('文件超过10MB');const obj=JSON.parse(await file.text());if(!Array.isArray(obj)&&obj.schemaVersion!==1)throw Error('不支持的备份版本');const incoming=validate(Array.isArray(obj)?obj:obj.records),oldIds=new Set(data.map(x=>x.id)),overlap=incoming.filter(x=>oldIds.has(x.id)).length;ask('导入隐患库',`共 ${incoming.length} 条，其中 ${overlap} 条同ID记录将更新，其余新增。现有其他条目保留。请确认导入来源可信。`,()=>{const m=new Map(data.map(x=>[x.id,x]));incoming.forEach(x=>m.set(x.id,x));if(save([...m.values()])){places();render();toast('导入成功，已保存到当前浏览器')}})}catch(err){toast('导入失败：'+err.message)}e.target.value=''};
-places();render();
+import {DataStore} from './js/store.js';
+import {searchHazards,searchLaws} from './js/search.js';
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const MAX_RENDER=120;
+const state={view:'hazards',selectedHazard:'',selectedLaw:'',query:'',store:null,results:[]};
+
+function toast(text){const el=$('#toast');el.textContent=text;el.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>el.classList.remove('show'),2800)}
+function setBusy(text='加载中…'){$('#detail').innerHTML=`<div class="empty"><span class="spinner" aria-hidden="true"></span><strong>${esc(text)}</strong></div>`}
+function download(name,text,type='application/json'){const a=document.createElement('a');const blob=new Blob([text],{type});a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500)}
+async function copyText(text,msg='已复制'){try{await navigator.clipboard.writeText(text);toast(msg)}catch{const t=document.createElement('textarea');t.value=text;document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();toast(ok?msg:'复制失败')}}
+function option(v){return `<option>${esc(v)}</option>`}
+function statusClass(v){return /失效|废止/.test(v)?'red':/待核|条件|兜底|即将/.test(v)?'amber':''}
+function pill(text,extra=''){return `<span class="pill ${statusClass(text)} ${extra}">${esc(text)}</span>`}
+function currentFilters(){return state.view==='hazards'?{category:$('#category').value,place:$('#place').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value,status:$('#status').value}:{level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
+
+function loadUrlState(){const p=new URLSearchParams(location.search);state.view=['hazards','laws','data'].includes(p.get('view'))?p.get('view'):'hazards';state.query=p.get('q')||'';state.selectedHazard=p.get('id')||'';state.selectedLaw=p.get('law')||''}
+function syncUrl(){const p=new URLSearchParams();if(state.view!=='hazards')p.set('view',state.view);if(state.query)p.set('q',state.query);if(state.view==='hazards'&&state.selectedHazard)p.set('id',state.selectedHazard);if(state.view==='laws'&&state.selectedLaw)p.set('law',state.selectedLaw);history.replaceState(null,'',`${location.pathname}${p.size?'?'+p.toString():''}${location.hash}`)}
+
+function initFilters(){const t=state.store.taxonomy;
+  $('#category').innerHTML='<option value="">全部主题</option>'+t.categories.map(option).join('');
+  $('#place').innerHTML='<option value="">全部场所</option>'+t.places.map(option).join('');
+  $('#level').innerHTML='<option value="">全部法规类别</option>'+t.lawLevels.map(option).join('');
+  $('#mode').innerHTML='<option value="">全部匹配类型</option>'+t.hazardModes.map(option).join('');
+  $('#status').innerHTML='<option value="">有效条目</option>'+t.hazardStatuses.map(option).join('');
+  $('#lawLevel').innerHTML='<option value="">全部法规类别</option>'+t.lawLevels.map(option).join('');
+  $('#lawStatus').innerHTML='<option value="">有效法规</option>'+t.lawStatuses.map(option).join('');
+}
+
+function switchView(view,{keepQuery=false}={}){
+  state.view=view;if(!keepQuery)state.query='';
+  $$('.nav').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
+  $('#searchView').hidden=view==='data';$('#dataView').hidden=view!=='data';
+  $('#hazardFilters').hidden=view!=='hazards';$('#lawFilters').hidden=view!=='laws';
+  $('#search').value=state.query;
+  if(view==='hazards'){$('#search').placeholder='搜索隐患、现场现象、关键词或法规，如：配电箱门跨接、灭火器失压…';$('#sectionTitle').textContent='隐患速查';$('#sectionHint').textContent='现场问题 → 专业描述 → 直接依据 → 整改措施';}
+  if(view==='laws'){$('#search').placeholder='搜索法规、标准、条款号，如：安全生产法、GB 55036…';$('#sectionTitle').textContent='法规库';$('#sectionHint').textContent='法规标准 → 收录条款 → 反查关联隐患';}
+  if(view==='data')renderDataView();else renderResults();
+  syncUrl();
+}
+
+function renderResults(){
+  state.query=$('#search').value.trim();
+  const filters=currentFilters();
+  const rows=state.view==='hazards'?searchHazards(state.store.searchIndex,state.query,filters):searchLaws(state.store.lawIndex,state.query,filters);
+  state.results=rows;
+  $('#count').textContent=rows.length;
+  $('#summary').textContent=rows.length>MAX_RENDER?`显示相关度最高的前 ${MAX_RENDER} 条`:(state.view==='hazards'?'选择隐患查看完整依据':'选择法规查看收录条款与关联隐患');
+  $('#list').innerHTML=rows.length?rows.slice(0,MAX_RENDER).map(state.view==='hazards'?hazardCard:lawCard).join(''):'<div class="empty"><strong>没有找到匹配内容</strong><p>可缩短关键词、清除筛选，或在后续资料整理时补入数据库。</p></div>';
+  if(state.view==='hazards'){
+    if(!rows.some(x=>x.id===state.selectedHazard)) state.selectedHazard=rows[0]?.id||'';
+    $$('.card').forEach(el=>el.onclick=()=>selectHazard(el.dataset.id));
+    renderHazardDetail();
+  }else{
+    if(!rows.some(x=>x.id===state.selectedLaw)) state.selectedLaw=rows[0]?.id||'';
+    $$('.card').forEach(el=>el.onclick=()=>selectLaw(el.dataset.id));
+    renderLawDetail();
+  }
+  syncUrl();
+}
+
+function hazardCard(r){return `<button class="card ${r.id===state.selectedHazard?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedHazard}"><div class="meta"><span>${esc(r.id)} · ${esc(r.category)}</span>${pill(r.status==='已核验'?r.mode:r.status)}</div><h3>${esc(r.title)}</h3><p>${esc(r.places.join(' / '))}</p><span class="arrow">↗</span></button>`}
+function lawCard(r){return `<button class="card ${r.id===state.selectedLaw?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedLaw}"><div class="meta"><span>${esc(r.id)} · ${esc(r.level)}</span>${pill(r.status)}</div><h3>${esc(r.name)}</h3><p>${esc(r.scope)} · ${r.clauseCount} 条收录条款 · 关联 ${r.hazardCount} 条隐患</p><span class="arrow">↗</span></button>`}
+
+function selectHazard(id){state.selectedHazard=id;renderResults()}
+function selectLaw(id){state.selectedLaw=id;renderResults()}
+
+async function renderHazardDetail(){
+  const index=state.store.searchIndex.find(x=>x.id===state.selectedHazard);
+  if(!index){$('#detail').innerHTML='<div class="empty"><strong>选择一个隐患查看详情</strong></div>';return}
+  setBusy('正在读取隐患详情');
+  try{
+    const {hazard,bases}=await state.store.getHazardDetail(index);
+    $('#detail').innerHTML=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(hazard.id)} / ${esc(hazard.category)}</span>${pill(hazard.status==='已核验'?hazard.mode:hazard.status)}</div><h2>${esc(hazard.title)}</h2><div class="subtitle">${esc(hazard.places.join(' · '))}<br>核验状态：${esc(hazard.status)} · ${esc(hazard.checked||'未填写日期')} · 数据库版本 ${esc(state.store.manifest.dataVersion)}</div></div><div class="detailbody"><section class="block"><h3><span class="number">01</span>隐患专业描述</h3><p>${esc(hazard.description)}</p></section><section class="block"><h3><span class="number">02</span>法规原文依据 <small>${bases.length} 条</small></h3>${bases.map(basisHtml).join('')}</section><section class="block"><h3><span class="number">03</span>整改措施</h3><p>${esc(hazard.measures)}</p></section><section class="block note"><h3>ⓘ 适用说明 / 兜底条件</h3><p>${esc(hazard.note)}</p></section></div><div class="detailactions"><button class="primary" id="copy">复制整改条目</button><button id="copyfull">复制完整资料</button><button id="share">复制当前链接</button></div>`;
+    $('#copy').onclick=()=>copyText(hazardText(hazard,bases),'已复制整改条目');
+    $('#copyfull').onclick=()=>copyText(hazardFullText(hazard,bases),'已复制完整资料');
+    $('#share').onclick=()=>copyText(location.href,'已复制当前链接');
+    $$('.lawjump').forEach(b=>b.onclick=()=>{state.selectedLaw=b.dataset.law;switchView('laws',{keepQuery:false})});
+  }catch(err){showError(err)}
+}
+
+function basisHtml({ref,clause,law,sourceUrl}){return `<div class="basis"><div class="basismeta"><span>${pill(ref.role)}</span><span class="article">${esc(law.level)} · ${esc(law.scope)} · ${esc(law.status)}</span></div><h4>${esc(law.name)}</h4><span class="article">${esc(clause.article)} · 条款核验 ${esc(clause.checked||'待核')}</span><blockquote>${esc(clause.quote||'尚未录入原文，请核验后补充。')}</blockquote><div class="basislinks">${sourceUrl?`<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}<button class="linkbutton lawjump" data-law="${esc(law.id)}">在法规库查看</button></div></div>`}
+function hazardText(h,bases){return `${h.title}\n\n隐患专业描述：\n${h.description}\n\n法规依据：\n${bases.map(x=>`《${x.law.name}》${x.clause.article}\n${x.clause.quote}`).join('\n\n')}\n\n整改措施：\n${h.measures}`}
+function hazardFullText(h,bases){return `${hazardText(h,bases)}\n\n适用说明 / 兜底条件：\n${h.note}\n\n核验状态：${h.status}；核验日期：${h.checked||'未填写'}；数据库版本：${state.store.manifest.dataVersion}。`}
+
+async function renderLawDetail(){
+  const law=state.store.lawIndex.find(x=>x.id===state.selectedLaw);
+  if(!law){$('#detail').innerHTML='<div class="empty"><strong>选择一部法规或标准查看详情</strong></div>';return}
+  setBusy('正在读取法规条款');
+  try{
+    const detail=await state.store.getLawDetail(law);
+    const related=[...new Set(detail.clauses.flatMap(x=>x.ref.hazardIds))].map(id=>state.store.searchIndex.find(h=>h.id===id)).filter(Boolean);
+    $('#detail').innerHTML=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(law.id)} / ${esc(law.level)}</span>${pill(law.status)}</div><h2>${esc(law.name)}</h2><div class="subtitle">适用范围：${esc(law.scope)} · 核验日期：${esc(law.checked||'未填写')} · 本库收录 ${law.clauseCount} 个条款 / 关联 ${law.hazardCount} 条隐患</div></div><div class="detailbody"><section class="block lawmeta"><h3><span class="number">01</span>法规状态</h3><div class="metagrid"><div><span>效力状态</span><strong>${esc(law.status)}</strong></div><div><span>实施日期</span><strong>${esc(law.effectiveDate||'未录入')}</strong></div><div><span>地区</span><strong>${esc(law.scope)}</strong></div><div><span>数据库核验</span><strong>${esc(law.checked||'待核')}</strong></div></div>${law.sourceUrl?`<a class="sourcecta" href="${esc(law.sourceUrl)}" target="_blank" rel="noopener noreferrer">打开来源原文 ↗</a>`:''}</section><section class="block"><h3><span class="number">02</span>本库已收录条款</h3>${detail.clauses.map(({ref,clause})=>lawClauseHtml(ref,clause)).join('')}</section><section class="block"><h3><span class="number">03</span>关联隐患 <small>${related.length} 条</small></h3><div class="related">${related.map(h=>`<button class="relateditem hazardjump" data-id="${esc(h.id)}"><span>${esc(h.id)}</span>${esc(h.title)}</button>`).join('')||'<p>暂无关联隐患。</p>'}</div></section></div><div class="detailactions"><button class="primary" id="copylaw">复制法规资料</button><button id="share">复制当前链接</button></div>`;
+    $('#copylaw').onclick=()=>copyText(lawText(detail),'已复制法规资料');
+    $('#share').onclick=()=>copyText(location.href,'已复制当前链接');
+    $$('.hazardjump').forEach(b=>b.onclick=()=>{state.selectedHazard=b.dataset.id;switchView('hazards',{keepQuery:false})});
+  }catch(err){showError(err)}
+}
+function lawClauseHtml(ref,c){return `<div class="basis"><div class="basismeta"><strong class="articletitle">${esc(c.article)}</strong>${pill(c.status)}</div><blockquote>${esc(c.quote||'原文待核验')}</blockquote><div class="article">核验日期：${esc(c.checked||'未填写')} · 关联 ${ref.hazardIds.length} 条隐患</div></div>`}
+function lawText({law,clauses}){return `${law.name}\n效力状态：${law.status}\n适用范围：${law.scope}\n来源：${law.sourceUrl||'待补'}\n\n${clauses.map(x=>`${x.clause.article}\n${x.clause.quote}`).join('\n\n')}`}
+
+function renderDataView(){
+  const m=state.store.manifest,h=m.health;
+  $('#dataView').innerHTML=`<div class="datahead"><span class="eyebrow">DATABASE / V2</span><h2>数据库状态与维护</h2><p>公开站点只保存经过整理的知识数据；企业报告、现场照片和未脱敏资料继续放在你的私有资料源，不直接上传到公开仓库。</p></div><div class="stats"><div><span>隐患</span><strong>${m.counts.hazards}</strong><small>${h.verifiedHazards} 条已核验</small></div><div><span>法规 / 标准</span><strong>${m.counts.laws}</strong><small>${h.activeLaws} 部现行有效</small></div><div><span>条款</span><strong>${m.counts.clauses}</strong><small>${m.counts.links} 个关联关系</small></div><div><span>数据版本</span><strong class="version">${esc(m.dataVersion)}</strong><small>${esc(m.generatedAt)} 构建</small></div></div><div class="maintgrid"><section><h3>数据架构</h3><p><b>维护源：</b>隐患、法规、条款、关联关系分开保存，法规原文不在每条隐患中重复复制。</p><p><b>运行层：</b>首页只加载轻量搜索索引；点击结果后再按需加载对应分片，数据量增长时不会让所有正文一次进入手机内存。</p><p><b>版本控制：</b>每次更新通过 GitHub Commit 留痕，可比较、回滚；网站显示数据库版本和核验日期。</p></section><section><h3>报告入库流程</h3><ol><li>报告 / 检查表留在私有资料源。</li><li>提取候选隐患、法规和整改语料。</li><li>与现有库去重、拆分、合并并核验现行法规。</li><li>更新维护源 JSON，运行构建与完整性校验。</li><li>提交 GitHub，Pages 自动发布最新数据。</li></ol></section></div><div class="dataactions"><button class="primary" id="refreshData">重新加载最新数据库</button><button id="exportSource">导出维护源 JSON 包</button><button id="clearCache">清除离线缓存</button><a class="buttonlink" href="https://github.com/An-0726/safety-basis" target="_blank" rel="noopener noreferrer">打开 GitHub 仓库 ↗</a></div><div class="health"><span class="dot good"></span><strong>结构校验通过</strong><span>引用关系错误 ${h.invalidReferences} · 待核隐患 ${h.pendingHazards} · 待核法规 ${h.pendingLaws}</span></div>`;
+  $('#refreshData').onclick=()=>location.reload();
+  $('#exportSource').onclick=async()=>{try{toast('正在整理维护源…');const bundle=await state.store.exportSourceBundle();download(`安全隐患法规库_维护源_${m.dataVersion}_ChatGPT.json`,JSON.stringify({schemaVersion:2,dataVersion:m.dataVersion,exportedAt:new Date().toISOString(),...bundle},null,2));toast('维护源已导出')}catch(e){showError(e)}};
+  $('#clearCache').onclick=clearOfflineCache;
+}
+
+async function clearOfflineCache(){try{if('caches' in window){for(const k of await caches.keys())if(k.startsWith('safety-basis-'))await caches.delete(k)}state.store.clearMemoryCache();toast('离线缓存已清除')}catch(e){showError(e)}}
+function showError(err){console.error(err);$('#detail').innerHTML=`<div class="empty error"><strong>数据读取失败</strong><p>${esc(err?.message||err)}</p><button id="retry">重新加载</button></div>`;$('#retry')?.addEventListener('click',()=>location.reload())}
+
+function bind(){
+  $$('.nav').forEach(b=>b.onclick=()=>switchView(b.dataset.view));
+  $('#search').oninput=()=>{state.query=$('#search').value;renderResults()};
+  $('#clear').onclick=()=>{$('#search').value='';state.query='';renderResults();$('#search').focus()};
+  $('#reset').onclick=()=>{$$('#hazardFilters select,#lawFilters select').forEach(x=>x.value='');$('#search').value='';state.query='';renderResults()};
+  $$('#hazardFilters select,#lawFilters select').forEach(x=>x.onchange=renderResults);
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();if(state.view==='data')switchView('hazards');$('#search').focus()}});
+}
+
+async function boot(){
+  loadUrlState();bind();
+  try{
+    state.store=await new DataStore('.').init();
+    initFilters();
+    $('#dbVersion').textContent=`数据 ${state.store.manifest.dataVersion}`;
+    $('#dbDate').textContent=state.store.manifest.generatedAt;
+    $('#search').value=state.query;
+    switchView(state.view,{keepQuery:true});
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+  }catch(err){showError(err);$('#list').innerHTML='<div class="empty"><strong>数据库未能初始化</strong></div>'}
+}
+
+boot();
