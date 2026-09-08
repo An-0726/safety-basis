@@ -18,7 +18,10 @@ const uniq = xs => [...new Set(xs)].sort((a, b) => String(a).localeCompare(Strin
 const dateRe = /^\d{4}-\d{2}-\d{2}$/;
 const idRe = /^[A-Z][A-Z0-9_-]{1,31}$/;
 const urlRe = /^https?:\/\//i;
-const norm = value => String(value ?? '').normalize('NFKC').toLowerCase().replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g, ' ').replace(/\s+/g, ' ').trim();
+const norm = value => String(value ?? '').normalize('NFKC').toLowerCase()
+  .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g, ' ')
+  .replace(/\s+/g, ' ').trim();
+
 const recordMap = (rows, kind) => {
   const m = new Map();
   for (const row of rows) {
@@ -60,13 +63,19 @@ const readBatchFiles = async () => {
 };
 
 const [settings, baseHazards, baseLaws, baseClauses, baseLinks, batches] = await Promise.all([
-  readJson('settings.json'), readJson('hazards.json'), readJson('laws.json'), readJson('clauses.json'), readJson('links.json'), readBatchFiles()
+  readJson('settings.json'),
+  readJson('hazards.json'),
+  readJson('laws.json'),
+  readJson('clauses.json'),
+  readJson('links.json'),
+  readBatchFiles()
 ]);
 
-const hazards = [...baseHazards, ...batches.flatMap(b => b.hazards)];
-const laws = [...baseLaws, ...batches.flatMap(b => b.laws)];
-const clauses = [...baseClauses, ...batches.flatMap(b => b.clauses)];
-const links = [...baseLinks, ...batches.flatMap(b => b.links)];
+// All source records are validated, but only fully verified/current records are published.
+const allHazards = [...baseHazards, ...batches.flatMap(b => b.hazards)];
+const allLaws = [...baseLaws, ...batches.flatMap(b => b.laws)];
+const allClauses = [...baseClauses, ...batches.flatMap(b => b.clauses)];
+const allLinks = [...baseLinks, ...batches.flatMap(b => b.links)];
 
 assert(settings.schemaVersion === 2, 'settings.schemaVersion 必须为 2');
 assert(typeof settings.dataVersion === 'string' && settings.dataVersion, 'settings.dataVersion 不能为空');
@@ -74,58 +83,97 @@ assert(dateRe.test(settings.generatedAt), 'settings.generatedAt 必须为 YYYY-M
 assert(Number.isInteger(settings.hazardShardSize) && settings.hazardShardSize >= 100 && settings.hazardShardSize <= 2000, 'hazardShardSize 应为 100~2000');
 assert(Number.isInteger(settings.clauseShardSize) && settings.clauseShardSize >= 100 && settings.clauseShardSize <= 2000, 'clauseShardSize 应为 100~2000');
 
-const hazardMap = recordMap(hazards, 'hazard');
-const lawMap = recordMap(laws, 'law');
-const clauseMap = recordMap(clauses, 'clause');
+const allHazardMap = recordMap(allHazards, 'hazard');
+const allLawMap = recordMap(allLaws, 'law');
+const allClauseMap = recordMap(allClauses, 'clause');
 
 const hazardModes = ['直接适用','条件适用','上位法兜底'];
 const hazardStatuses = ['待核验','已核验','已失效'];
 const lawStatuses = ['现行有效','即将生效','已废止','待核验'];
 const clauseStatuses = ['待核验','已核验','已失效'];
 
-for (const h of hazards) {
+for (const h of allHazards) {
   const ctx = `hazard:${h.id}`;
   for (const key of ['title','category','description','measures','note','mode','status','checked']) requireString(h,key,ctx,{allowEmpty:key==='checked'});
-  requireStringArray(h,'aliases',ctx,{allowEmpty:true}); requireStringArray(h,'places',ctx); requireStringArray(h,'keywords',ctx);
+  requireStringArray(h,'aliases',ctx,{allowEmpty:true});
+  requireStringArray(h,'places',ctx);
+  requireStringArray(h,'keywords',ctx);
   assert(hazardModes.includes(h.mode), `${ctx}.mode 无效`);
   assert(hazardStatuses.includes(h.status), `${ctx}.status 无效`);
   if (h.checked) assert(dateRe.test(h.checked), `${ctx}.checked 日期无效`);
 }
-for (const l of laws) {
+for (const l of allLaws) {
   const ctx = `law:${l.id}`;
   for (const key of ['name','level','scope','status','checked','sourceUrl','effectiveDate']) requireString(l,key,ctx,{allowEmpty:['checked','sourceUrl','effectiveDate'].includes(key)});
-  requireStringArray(l,'aliases',ctx,{allowEmpty:true}); requireStringArray(l,'replaces',ctx,{allowEmpty:true}); requireStringArray(l,'replacedBy',ctx,{allowEmpty:true});
+  requireStringArray(l,'aliases',ctx,{allowEmpty:true});
+  requireStringArray(l,'replaces',ctx,{allowEmpty:true});
+  requireStringArray(l,'replacedBy',ctx,{allowEmpty:true});
   assert(lawStatuses.includes(l.status), `${ctx}.status 无效`);
   if (l.checked) assert(dateRe.test(l.checked), `${ctx}.checked 日期无效`);
   if (l.effectiveDate) assert(dateRe.test(l.effectiveDate), `${ctx}.effectiveDate 日期无效`);
   if (l.sourceUrl) assert(urlRe.test(l.sourceUrl), `${ctx}.sourceUrl 必须是 http(s)`);
-  for (const ref of [...l.replaces, ...l.replacedBy]) assert(lawMap.has(ref), `${ctx} 引用不存在法规：${ref}`);
+  for (const ref of [...l.replaces, ...l.replacedBy]) assert(allLawMap.has(ref), `${ctx} 引用不存在法规：${ref}`);
 }
-for (const c of clauses) {
+for (const c of allClauses) {
   const ctx = `clause:${c.id}`;
   for (const key of ['lawId','article','quote','checked','status','sourceUrl']) requireString(c,key,ctx,{allowEmpty:['quote','checked','sourceUrl'].includes(key)});
-  assert(lawMap.has(c.lawId), `${ctx}.lawId 不存在：${c.lawId}`);
+  assert(allLawMap.has(c.lawId), `${ctx}.lawId 不存在：${c.lawId}`);
   assert(clauseStatuses.includes(c.status), `${ctx}.status 无效`);
   if (c.checked) assert(dateRe.test(c.checked), `${ctx}.checked 日期无效`);
   if (c.sourceUrl) assert(urlRe.test(c.sourceUrl), `${ctx}.sourceUrl 必须是 http(s)`);
   if (c.status === '已核验') {
     assert(c.quote.trim(), `${ctx} 已核验但原文为空`);
-    const law = lawMap.get(c.lawId);
+    const law = allLawMap.get(c.lawId);
     assert((c.sourceUrl || law.sourceUrl || '').trim(), `${ctx} 已核验但无来源链接`);
   }
 }
 
 const linkKeys = new Set();
-for (const link of links) {
+const allLinksByHazard = new Map();
+for (const link of allLinks) {
   const ctx = `link:${link.hazardId}->${link.clauseId}`;
-  requireString(link,'hazardId',ctx); requireString(link,'clauseId',ctx); requireString(link,'role',ctx);
-  assert(hazardMap.has(link.hazardId), `${ctx} 隐患不存在`);
-  assert(clauseMap.has(link.clauseId), `${ctx} 条款不存在`);
+  requireString(link,'hazardId',ctx);
+  requireString(link,'clauseId',ctx);
+  requireString(link,'role',ctx);
+  assert(allHazardMap.has(link.hazardId), `${ctx} 隐患不存在`);
+  assert(allClauseMap.has(link.clauseId), `${ctx} 条款不存在`);
   assert(Number.isFinite(link.priority), `${ctx}.priority 必须为数字`);
   const key = `${link.hazardId}\u0000${link.clauseId}`;
-  assert(!linkKeys.has(key), `${ctx} 重复关联`); linkKeys.add(key);
+  assert(!linkKeys.has(key), `${ctx} 重复关联`);
+  linkKeys.add(key);
+  if (!allLinksByHazard.has(link.hazardId)) allLinksByHazard.set(link.hazardId, []);
+  allLinksByHazard.get(link.hazardId).push(link);
 }
-for (const h of hazards) assert(links.some(x => x.hazardId === h.id), `hazard:${h.id} 没有关联任何法规条款`);
+for (const h of allHazards) assert((allLinksByHazard.get(h.id) || []).length > 0, `hazard:${h.id} 没有关联任何法规条款`);
+
+// Public gate: pending/expired data can stay in source staging, but never enters runtime.
+const isActiveLaw = law => law?.status === '现行有效';
+const isVerifiedClause = clause => clause?.status === '已核验' && isActiveLaw(allLawMap.get(clause.lawId));
+const publishableHazardIds = new Set(allHazards.filter(h => {
+  if (h.status !== '已核验') return false;
+  const refs = allLinksByHazard.get(h.id) || [];
+  return refs.length > 0 && refs.every(ref => isVerifiedClause(allClauseMap.get(ref.clauseId)));
+}).map(h => h.id));
+
+const hazards = allHazards.filter(h => publishableHazardIds.has(h.id));
+const links = allLinks.filter(x => publishableHazardIds.has(x.hazardId) && isVerifiedClause(allClauseMap.get(x.clauseId)));
+const publishedClauseIds = new Set(links.map(x => x.clauseId));
+const clauses = allClauses.filter(c => publishedClauseIds.has(c.id));
+const publishedLawIds = new Set(clauses.map(c => c.lawId));
+const laws = allLaws.filter(l => publishedLawIds.has(l.id) || ((l.status === '现行有效' || l.status === '即将生效') && l.checked && l.sourceUrl));
+
+const lawMap = new Map(laws.map(x => [x.id, x]));
+const clauseMap = new Map(clauses.map(x => [x.id, x]));
+for (const h of hazards) {
+  const refs = links.filter(x => x.hazardId === h.id);
+  assert(refs.length > 0, `公开隐患 ${h.id} 缺少已核验依据`);
+  for (const ref of refs) {
+    const c = clauseMap.get(ref.clauseId);
+    const l = c && allLawMap.get(c.lawId);
+    assert(c?.status === '已核验', `公开隐患 ${h.id} 关联未核验条款 ${ref.clauseId}`);
+    assert(l?.status === '现行有效', `公开隐患 ${h.id} 关联非现行法规 ${c?.lawId}`);
+  }
+}
 
 const sortedHazards = [...hazards].sort((a,b)=>a.id.localeCompare(b.id,'zh-CN'));
 const sortedClauses = [...clauses].sort((a,b)=>a.id.localeCompare(b.id,'zh-CN'));
@@ -162,16 +210,13 @@ for (const h of sortedHazards) {
   const refs = (linksByHazard.get(h.id)||[]).map(x=>({clauseId:x.clauseId,clauseShard:clauseShardOf.get(x.clauseId),role:x.role,priority:x.priority}));
   runtimeHazards.set(h.id,{...h,basisRefs:refs});
   const linkedClauses = refs.map(x=>clauseMap.get(x.clauseId));
-  const linkedLaws = linkedClauses.map(c=>lawMap.get(c.lawId));
+  const linkedLaws = linkedClauses.map(c=>allLawMap.get(c.lawId));
   const lawNames = uniq(linkedLaws.map(l=>l.name));
   const articles = uniq(linkedClauses.map(c=>c.article));
   const levels = uniq(linkedLaws.map(l=>l.level));
   const scopes = uniq(linkedLaws.map(l=>l.scope));
   const searchParts=[h.id,h.title,...h.aliases,h.category,...h.places,...h.keywords,...lawNames,...articles];
-  searchIndex.push({
-    id:h.id,title:h.title,aliases:h.aliases,category:h.category,places:h.places,keywords:h.keywords,status:h.status,mode:h.mode,checked:h.checked,
-    levels,scopes,lawNames,articles,shard:hazardShardOf.get(h.id),searchText:norm(searchParts.join(' '))
-  });
+  searchIndex.push({id:h.id,title:h.title,aliases:h.aliases,category:h.category,places:h.places,keywords:h.keywords,status:h.status,mode:h.mode,checked:h.checked,levels,scopes,lawNames,articles,shard:hazardShardOf.get(h.id),searchText:norm(searchParts.join(' '))});
 }
 
 const lawIndex = [];
@@ -194,13 +239,20 @@ const taxonomy = {
   hazardStatuses,
   lawStatuses
 };
+const stagedHazardIds = allHazards.filter(x => !publishableHazardIds.has(x.id)).map(x => x.id);
+const stagedLawIds = allLaws.filter(x => x.status === '待核验').map(x => x.id);
+const publicBatchNames = batches.filter(b => b.hazards.some(h => publishableHazardIds.has(h.id)) || b.laws.some(l => lawMap.has(l.id))).map(b => b.name);
+const stagedBatchNames = batches.filter(b => b.hazards.some(h => stagedHazardIds.includes(h.id)) || b.laws.some(l => stagedLawIds.includes(l.id)) || b.clauses.some(c => c.status === '待核验')).map(b => b.name);
+
 const health = {
-  verifiedHazards: hazards.filter(x=>x.status==='已核验').length,
-  pendingHazards: hazards.filter(x=>x.status==='待核验').length,
-  expiredHazards: hazards.filter(x=>x.status==='已失效').length,
+  verifiedHazards: hazards.length,
+  pendingHazards: 0,
+  expiredHazards: 0,
   activeLaws: laws.filter(x=>x.status==='现行有效').length,
-  pendingLaws: laws.filter(x=>x.status==='待核验').length,
-  invalidReferences: 0
+  pendingLaws: 0,
+  invalidReferences: 0,
+  stagedHazards: stagedHazardIds.length,
+  stagedLaws: stagedLawIds.length
 };
 const manifest = {
   schemaVersion: settings.schemaVersion,
@@ -208,8 +260,10 @@ const manifest = {
   generatedAt: settings.generatedAt,
   publicScope: settings.publicScope,
   counts: {hazards:hazards.length,laws:laws.length,clauses:clauses.length,links:links.length},
+  sourceCounts: {hazards:allHazards.length,laws:allLaws.length,clauses:allClauses.length,links:allLinks.length},
   health,
-  batches: batches.map(b => b.name),
+  batches: publicBatchNames,
+  stagedBatches: stagedBatchNames,
   files: {searchIndex:'data/search-index.json',lawIndex:'data/law-index.json',taxonomy:'data/taxonomy.json'},
   hazardShards: hazardShards.map(({rows,...x})=>x),
   clauseShards: clauseShards.map(({rows,...x})=>x)
@@ -226,4 +280,4 @@ await writeJson(path.join(DATA,'law-index.json'),lawIndex);
 await writeJson(path.join(DATA,'taxonomy.json'),taxonomy);
 await writeJson(path.join(DATA,'manifest.json'),manifest);
 
-console.log(`Built data v${settings.dataVersion}: ${hazards.length} hazards, ${laws.length} laws, ${clauses.length} clauses, ${links.length} links from ${batches.length} batch file(s).`);
+console.log(`Built public data v${settings.dataVersion}: ${hazards.length} verified hazards, ${laws.length} laws, ${clauses.length} clauses, ${links.length} links. Staged/unpublished: ${stagedHazardIds.length} hazards, ${stagedLawIds.length} laws.`);
