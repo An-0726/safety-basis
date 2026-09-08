@@ -6,7 +6,8 @@
 
 ## 当前架构
 
-第一阶段扩展设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)，多来源导入原型见 [source/README.md](source/README.md)。当前生产构建仍使用下述 V2 输入，尚未迁移正式母库。
+第一阶段扩展设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)，多来源导入原型见 [source/README.md](source/README.md)。当前生产构建仍使用下述 V2 输入，尚未切换到新母库发布。
+正式母库迁移工具现已可用，见 [迁移与对账](docs/MASTER_MIGRATION.md)。本地母库独立保存，网站仍使用既有 V2 发布流程。
 
 网站保持纯静态部署，不依赖服务器或数据库服务：
 
