@@ -1,6 +1,6 @@
 # Excel 母库编辑往返（exchange-v1）
 
-SQLite 是唯一母库，Excel 是带版本的查看和编辑快照。网站 JSON 仍是构建产物。本工具已经实现 **导出 → 修改 → 差异提案 → 单事务提交**；本轮只支持更新已有核心记录，尚未实现新增、删除、合并、标签维护、法规终审或新母库发布器。
+SQLite 是唯一母库，Excel 是带版本的查看和编辑快照。网站 JSON 仍是构建产物。本工具已经实现 **导出 → 修改 → 差异提案 → 单事务提交**；Excel v1 只更新已有核心记录，不通过新增/删行表达入库和合并。后续 [入库/隐患合并](ADMISSION.md) 及 [核验/隔离发布](VERIFICATION_PUBLISH.md) 使用独立提案接口，标签维护等仍待实现。
 
 ## 工作簿组织
 
@@ -71,8 +71,8 @@ python tools/pipeline/exchange.py --db path/to/test.sqlite3 apply --proposal sou
 
 `master.py verify` 是“是否完整迁移旧来源”的对账工具；正常编辑之后，它仍会报告与旧来源的差异，这不等于编辑失败。编辑流程自身检查 SQLite 完整性、外键、快照、版本和业务规则，变更历史记录解释内容为什么变化。迁移原件、旧 raw payload、来源定位和 `restore` 能力继续保留。
 
-当前母库没有接入生产构建，本工具不会写 `content/` 或 `data/`。既有公开发布门禁不变。未来母库发布器必须逐层检查 hazard/law/version/clause/link 的当前 revision、依赖版本、核验证据和失效状态，不能仅凭状态列判断；这一步尚未实现，不能把本轮 Excel 往返当作完整发布能力。
+当前母库没有接入生产构建，本工具不会写 `content/` 或 `data/`。既有公开发布门禁不变。严格母库发布器现已逐层检查 hazard/law/version/clause/link 的当前 revision、依赖版本、核验证据和失效状态；输出为新隔离目录，不能仅凭 Excel 状态列发布。
 
-下一步是新增/合并提案和母库核验发布器，再接入历史数据整理。通用原始 Excel 导入继续使用 `intake.py`，与这里的“编辑已有母库实体”分工不同；2776 条仍只是其中一个来源。
+通用原始 Excel 导入继续使用 `intake.py`，与这里的“编辑已有母库实体”分工不同；2776 条仍只是其中一个来源。新增法规/条款/一般依据关联、法规身份合并与条款冲突解决需继续补齐受控提案接口。
 
 工作簿、提案、SQLite 和原件归档放在 `source/exchange/`、`source/proposals/`、`source/master/`、`source/archive/`，已由 Git 忽略。定期一起备份；仓库提交工具、模式、文档和测试即可。

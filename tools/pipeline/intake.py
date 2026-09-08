@@ -15,7 +15,7 @@ from zipfile import BadZipFile
 from xml.etree.ElementTree import ParseError
 
 ROOT = Path(__file__).resolve().parents[2]
-PARSER_VERSION = 'intake-v1'
+PARSER_VERSION = 'intake-v2'
 EXTENSIONS = {'.csv', '.json', '.xlsx'}
 
 
@@ -52,9 +52,16 @@ def mapped(headers, values, mapping):
         if len(matches) > 1:
             raise ValueError(f'ambiguous field {field}; select one source column in mapping')
         result[field] = norm(values[matches[0]]) if matches and matches[0] < len(values) else ''
-    missing = [k for k in mapping.get('required', ['title']) if not result.get(k)]
+    inspection = mapping.get('recordType') == 'inspection' or bool(result.get('compliance'))
+    missing = [k for k in mapping.get('required', ['title']) if not (inspection and k == 'title') and not result.get(k)]
     if missing:
         raise ValueError(f'missing fields: {missing}')
+    if inspection:
+        result['recordType'] = 'inspection'
+        # A report's asserted defect/old machine translation is source evidence,
+        # not a ready-to-admit reusable hazard title.
+        if 'title' in result:
+            result['reportedHazard'] = result.pop('title')
     return result
 
 

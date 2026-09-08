@@ -31,6 +31,12 @@ jobs:
         run: python tools/pipeline/exchange.py propose --workbook "${{ runner.temp }}/safety-master.xlsx" --output "${{ runner.temp }}/safety-proposal.json"
       - name: Restore legacy files without replacing the checkout
         run: python tools/pipeline/master.py restore --db source/master/safety.sqlite3 --output "${{ runner.temp }}/safety-legacy-restored"
+      - name: Rebuild the reviewed pilot snapshot without the private master
+        run: python tools/pipeline/manage.py build --release source/releases/pilot-20260909/release.json --output "${{ runner.temp }}/safety-pilot-build"
+      - name: Rebuild the same snapshot a second time
+        run: python tools/pipeline/manage.py build --release source/releases/pilot-20260909/release.json --output "${{ runner.temp }}/safety-pilot-rebuild"
+      - name: Verify deterministic pilot output
+        run: diff -r "${{ runner.temp }}/safety-pilot-build" "${{ runner.temp }}/safety-pilot-rebuild"
       - run: node --test tools/tests/*.test.mjs
       - name: Keep legacy sources and website output unchanged
         run: git diff --exit-code -- content data

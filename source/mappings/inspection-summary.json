@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "recordType": "inspection",
+  "headerRow": 1,
+  "fields": {
+    "reportedHazard": ["隐患描述", "隐患名称"],
+    "basis": ["依据条款", "依据法规", "法规依据"],
+    "quote": ["法规原文", "条款原文"],
+    "compliance": ["检查结果", "是否符合"],
+    "sourceSituation": ["现场实际情况"],
+    "sourceNotes": ["整改参考"],
+    "reportExample": ["来源示例"],
+    "reportType": ["报告类型"],
+    "frequency": ["出现次数"],
+    "companyCount": ["涉及企业数"],
+    "externalId": ["序号", "原始编号", "ZCode"]
+  },
+  "required": ["compliance"]
+}

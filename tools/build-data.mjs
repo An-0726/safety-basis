@@ -1,11 +1,23 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseArgs } from 'node:util';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
-const CONTENT = path.join(ROOT, 'content');
-const DATA = path.join(ROOT, 'data');
+const {values: options} = parseArgs({options: {'input-dir': {type:'string'}, 'output-dir': {type:'string'}}});
+if (Boolean(options['input-dir']) !== Boolean(options['output-dir'])) throw new Error('自定义输入和输出目录必须同时指定');
+const CONTENT = options['input-dir'] ? path.resolve(options['input-dir']) : path.join(ROOT, 'content');
+const DATA = options['output-dir'] ? path.resolve(options['output-dir']) : path.join(ROOT, 'data');
+if (options['output-dir']) {
+  const relative = path.relative(CONTENT, DATA);
+  const reverse = path.relative(DATA, CONTENT);
+  if (!relative || (!relative.startsWith('..' + path.sep) && !path.isAbsolute(relative))
+      || (!reverse.startsWith('..' + path.sep) && !path.isAbsolute(reverse))) throw new Error('输入输出目录不能重叠');
+  try {
+    if ((await fs.readdir(DATA)).length) throw new Error('自定义输出目录必须为空，拒绝覆盖已有发布数据');
+  } catch (err) { if (err.code !== 'ENOENT') throw err; }
+}
 
 const readJson = async name => JSON.parse(await fs.readFile(path.join(CONTENT, name), 'utf8'));
 const writeJson = async (file, value) => {
@@ -269,12 +281,16 @@ const manifest = {
   clauseShards: clauseShards.map(({rows,...x})=>x)
 };
 
-await fs.rm(path.join(DATA,'hazards'),{recursive:true,force:true});
-await fs.rm(path.join(DATA,'clauses'),{recursive:true,force:true});
+// Only these literal child directories of the resolved data target are replaced.
+for (const name of ['hazards','clauses']) {
+  const target = path.resolve(DATA,name);
+  assert(path.dirname(target) === DATA, '分片输出路径越界');
+  await fs.rm(target,{recursive:true,force:true});
+}
 await fs.mkdir(path.join(DATA,'hazards'),{recursive:true});
 await fs.mkdir(path.join(DATA,'clauses'),{recursive:true});
-for (const shard of hazardShards) await writeJson(path.join(ROOT,shard.url), {schemaVersion:2,shard:shard.id,records:shard.rows.map(h=>runtimeHazards.get(h.id))});
-for (const shard of clauseShards) await writeJson(path.join(ROOT,shard.url), {schemaVersion:2,shard:shard.id,records:shard.rows});
+for (const shard of hazardShards) await writeJson(path.join(DATA,'hazards',`${shard.id}.json`), {schemaVersion:2,shard:shard.id,records:shard.rows.map(h=>runtimeHazards.get(h.id))});
+for (const shard of clauseShards) await writeJson(path.join(DATA,'clauses',`${shard.id}.json`), {schemaVersion:2,shard:shard.id,records:shard.rows});
 await writeJson(path.join(DATA,'search-index.json'),searchIndex);
 await writeJson(path.join(DATA,'law-index.json'),lawIndex);
 await writeJson(path.join(DATA,'taxonomy.json'),taxonomy);

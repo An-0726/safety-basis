@@ -79,6 +79,11 @@ STATE_TABLES = (
     "legacy_payloads", "provenance", "migration_conflicts", "verification", "evidence",
 )
 
+ADMISSION_STATE_TABLES = (
+    "intake_runs", "intake_candidates", "candidate_admissions", "intake_parsed_rows",
+    "intake_source_locations", "intake_provenance", "merge_decisions", "intake_derivations", "verification_details",
+)
+
 READ_ONLY_SHEETS = {
     "隐患标签": ("hazard_tags", ("hazard_id", "kind", "value", "ordinal")),
     "法规别名": ("law_aliases", ("law_id", "alias", "ordinal")),
@@ -102,11 +107,25 @@ def table_rows(conn: sqlite3.Connection, table: str) -> list[dict[str, Any]]:
     conn.row_factory = sqlite3.Row
     columns = [row[1] for row in conn.execute(f"PRAGMA table_info({table})")]
     order = ",".join(f'"{column}"' for column in columns)
-    return [dict(row) for row in conn.execute(f'SELECT * FROM "{table}" ORDER BY {order}')]
+    rows = [dict(row) for row in conn.execute(f'SELECT * FROM "{table}" ORDER BY {order}')]
+    if table == "provenance" and has_table(conn, "intake_provenance"):
+        # Present one provenance view without changing the legacy migration FK.
+        rows += [{field: row[field] for field in columns} for row in table_rows(conn, "intake_provenance")]
+    return rows
+
+
+def has_table(conn: sqlite3.Connection, table: str) -> bool:
+    return conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (table,)).fetchone() is not None
 
 
 def state_hash(conn: sqlite3.Connection) -> str:
     payload = {table: table_rows(conn, table) for table in STATE_TABLES}
+    # Preserve existing exchange-v1 snapshots until business data actually changes.
+    for table in ADMISSION_STATE_TABLES:
+        if has_table(conn, table):
+            rows = table_rows(conn, table)
+            if rows:
+                payload[table] = rows
     return sha256_bytes(dumps(payload).encode("utf-8"))
 
 

@@ -6,13 +6,12 @@
 
 ## 当前架构
 
-第一阶段扩展设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)，多来源导入原型见 [source/README.md](source/README.md)。当前生产构建仍使用下述 V2 输入，尚未切换到新母库发布。
-正式母库迁移工具现已可用，见 [迁移与对账](docs/MASTER_MIGRATION.md)。本地母库独立保存，网站仍使用既有 V2 发布流程。
-多 Sheet Excel 的导出、差异提案和事务提交现已可用，见 [Excel 母库编辑往返](docs/EXCEL_EXCHANGE.md)。目前支持已有核心记录的内容修订，尚未切换到新母库发布。
+采用 SQLite 规范化母库、多 Sheet Excel 编辑交换、证据核验记录和自动网站构建，设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)。可执行入口与实施边界见 [数据流水线](source/README.md)。
+已实现 [旧数据无损迁移](docs/MASTER_MIGRATION.md)、[Excel 编辑往返](docs/EXCEL_EXCHANGE.md)、[多来源入库与隐患合并](docs/ADMISSION.md)、[核验及严格发布包生成](docs/VERIFICATION_PUBLISH.md)。当前生产构建仍使用下述 V2 输入，新发布器只生成隔离包。
 
 网站保持纯静态部署，不依赖服务器或数据库服务：
 
-- `content/`：人工 / AI 维护的规范化源数据
+- `content/`：过渡期保留的旧规范化输入和全部 batch 历史
   - `hazards.json`：隐患主表
   - `laws.json`：法规 / 标准主表
   - `clauses.json`：法规条款原文
@@ -32,18 +31,28 @@
 - 数据版本、核验日期、法规效力状态可见
 - URL 可保存当前隐患 / 法规详情，便于分享和复查
 - 支持离线缓存；在线时法规数据采用网络优先策略，避免长期停留旧版本
-- 数据状态页可查看规模和完整性统计，并导出维护源 JSON 包
+- 数据状态页可查看规模和完整性统计；旧页面 JSON 导出不能作为完整母库备份
 - GitHub Commit 留存数据版本，可比较和回滚
 
 ## 数据维护
 
-新母库通过上述 Excel 提案流程维护。`data/` 不作为人工编辑入口；以下命令是过渡期既有 V2 构建流程，仍以 `content/` 为输入：
+新增资料放入私有 `source/imports/`，由 AI 和导入工具整理、去重、核验，通过提案更新母库。已有内容通过 Excel 编辑往返维护。原始检查项的“符合/不符合”与通用隐患模板分开保存；待核数据保留在母库并被发布门禁阻断。
+
+核验后生成新网站数据包：
+
+```text
+python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/exchange/release-preview-001
+```
+
+输出包含 release、索引、分片、manifest 和校验和。用户无需编辑网站 JSON。正式切换前审阅增减差异；当前 4 条真实样板仅供验证流程，未替换站点。
+
+以下命令继续用于过渡期生产数据的重建检查：
 
 ```bash
 node tools/build-data.mjs
 ```
 
-然后提交 `content/` 与重新生成的 `data/`。GitHub Actions 会再次构建并检查 `data/` 是否与维护源一致。
+GitHub Actions 检查旧 `data/` 与遗留输入一致，同时从公开样板快照独立重建两次、比较输出。`content/README.md` 保留旧维护流程的历史说明，当前操作以本页和流水线文档为准。
 
 详细字段见 [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md)，报告入库流程见 [`docs/WORKFLOW.md`](docs/WORKFLOW.md)。
 
