@@ -78,7 +78,7 @@ def build_site(db, library, checklist, as_of, output, *, node='node', baseline=N
                        'officialLinkCount':sum(d['textMode']=='link_only' for d in catalog['documents'])}
         site_manifest['fileHashes']={p.relative_to(bundle).as_posix():exchange.sha256_bytes(p.read_bytes())
                                     for p in sorted((bundle/'data').rglob('*.json'))}
-        (bundle/'site-manifest.json').write_text(json.dumps(site_manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        (bundle/'site-manifest.json').write_bytes((json.dumps(site_manifest,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
         for asset in SITE_ASSETS:
             target=bundle/asset
             target.parent.mkdir(parents=True,exist_ok=True)
@@ -86,7 +86,7 @@ def build_site(db, library, checklist, as_of, output, *, node='node', baseline=N
             target.write_bytes((publish.ROOT/asset).read_text(encoding='utf-8').encode('utf-8'))
         checksums={p.relative_to(bundle).as_posix():exchange.sha256_bytes(p.read_bytes())
                    for p in sorted(bundle.rglob('*')) if p.is_file() and p.name!='checksums.json'}
-        (bundle/'checksums.json').write_text(json.dumps(checksums,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        (bundle/'checksums.json').write_bytes((json.dumps(checksums,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
         report['fullText']=json.loads((scratch/'fulltext.blockers.json').read_text(encoding='utf-8'))
         report['fullText']['publicCount']=ft['publicCount']
         # Private reasons remain beside the package, never under its data/.

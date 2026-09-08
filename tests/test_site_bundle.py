@@ -38,6 +38,8 @@ class SiteBundleTests(unittest.TestCase):
                 self.assertEqual(set(checksums),{p.relative_to(output).as_posix() for p in output.rglob('*') if p.is_file() and p.name!='checksums.json'})
                 for name,sha in checksums.items():
                     self.assertEqual(site_bundle.exchange.sha256_bytes((output/name).read_bytes()),sha)
+                    if name.endswith('.json'):
+                        self.assertNotIn(b'\r\n',(output/name).read_bytes(),name)
                 self.assertTrue((output/'library.html').is_file())
                 self.assertTrue(site_bundle.verify_bundle(output)['ok'])
                 self.assertFalse(any('blockers' in name or 'review.json' in name or 'sqlite' in name for name in checksums))
