@@ -21,7 +21,10 @@
         "hazardIds": [
           "H001",
           "H003",
-          "H014"
+          "H014",
+          "H025",
+          "H026",
+          "H028"
         ]
       },
       {
@@ -61,7 +64,7 @@
         ]
       }
     ],
-    "hazardCount": 11,
+    "hazardCount": 14,
     "clauseCount": 5,
     "searchText": "l001 中华人民共和国消防法 2021修正 消防法 法律 全国 第十六条第一款第 二 项 第二十八条第一句 第二十七条第二款 第十六条第一款第 三 项 第十六条第一款第 五 项"
   },
@@ -194,11 +197,19 @@
         "hazardIds": [
           "H019"
         ]
+      },
+      {
+        "id": "C030",
+        "article": "第三十五条",
+        "shard": "c0000",
+        "hazardIds": [
+          "H031"
+        ]
       }
     ],
-    "hazardCount": 14,
-    "clauseCount": 14,
-    "searchText": "l002 中华人民共和国安全生产法 2021修正 安全生产法 法律 全国 第四十一条第二款 节选 第四十二条第二款 第三十六条第四款 第二十八条第一款 第四款 第二十三条 第四十五条 第四十六条第一款 第二十一条第 一 项 第二十一条第 二 项 第二十一条第 五 项 第二十四条 第三十八条第三款 第四十一条第一款 第二十二条"
+    "hazardCount": 15,
+    "clauseCount": 15,
+    "searchText": "l002 中华人民共和国安全生产法 2021修正 安全生产法 法律 全国 第四十一条第二款 节选 第四十二条第二款 第三十六条第四款 第二十八条第一款 第四款 第二十三条 第四十五条 第四十六条第一款 第二十一条第 一 项 第二十一条第 二 项 第二十一条第 五 项 第二十四条 第三十八条第三款 第四十一条第一款 第二十二条 第三十五条"
   },
   {
     "id": "L003",
@@ -335,7 +346,8 @@
         "article": "10.0.7",
         "shard": "c0000",
         "hazardIds": [
-          "H001"
+          "H001",
+          "H028"
         ]
       },
       {
@@ -345,10 +357,141 @@
         "hazardIds": [
           "H003"
         ]
+      },
+      {
+        "id": "C027",
+        "article": "10.0.5",
+        "shard": "c0000",
+        "hazardIds": [
+          "H027"
+        ]
+      }
+    ],
+    "hazardCount": 4,
+    "clauseCount": 3,
+    "searchText": "l007 消防设施通用规范 gb 55036 2022 gb 55036 2022 gb55036 强制性国家标准 全国 10.0.7 10.0.4 10.0.5"
+  },
+  {
+    "id": "L008",
+    "name": "建筑灭火器配置设计规范 GB 50140—2005",
+    "aliases": [
+      "GB 50140-2005",
+      "GB50140",
+      "建筑灭火器配置设计规范"
+    ],
+    "level": "国家标准",
+    "scope": "全国",
+    "status": "现行有效",
+    "checked": "2026-09-08",
+    "sourceUrl": "https://ghzrzyw.beijing.gov.cn/zhengwuxinxi/zcwj/qtwj/202409/P020240914543945101730.pdf",
+    "effectiveDate": "2005-10-01",
+    "replaces": [],
+    "replacedBy": [],
+    "clauseRefs": [
+      {
+        "id": "C026",
+        "article": "6.1.1",
+        "shard": "c0000",
+        "hazardIds": [
+          "H026"
+        ]
+      }
+    ],
+    "hazardCount": 1,
+    "clauseCount": 1,
+    "searchText": "l008 建筑灭火器配置设计规范 gb 50140 2005 gb 50140 2005 gb50140 建筑灭火器配置设计规范 国家标准 全国 6.1.1"
+  },
+  {
+    "id": "L009",
+    "name": "低压配电设计规范 GB 50054—2011",
+    "aliases": [
+      "GB 50054-2011",
+      "GB50054",
+      "低压配电设计规范"
+    ],
+    "level": "国家标准",
+    "scope": "全国",
+    "status": "现行有效",
+    "checked": "2026-09-08",
+    "sourceUrl": "https://files.anshan.gov.cn/files/ueditor/ASJKQ/jsp/upload/file/20211201/1638343166465002256.pdf",
+    "effectiveDate": "2012-06-01",
+    "replaces": [],
+    "replacedBy": [],
+    "clauseRefs": [
+      {
+        "id": "C028",
+        "article": "6.1.1",
+        "shard": "c0000",
+        "hazardIds": [
+          "H029"
+        ]
+      },
+      {
+        "id": "C029",
+        "article": "7.1.2第3项",
+        "shard": "c0000",
+        "hazardIds": [
+          "H030"
+        ]
       }
     ],
     "hazardCount": 2,
     "clauseCount": 2,
-    "searchText": "l007 消防设施通用规范 gb 55036 2022 gb 55036 2022 gb55036 强制性国家标准 全国 10.0.7 10.0.4"
+    "searchText": "l009 低压配电设计规范 gb 50054 2011 gb 50054 2011 gb50054 低压配电设计规范 国家标准 全国 6.1.1 7.1.2第3项"
+  },
+  {
+    "id": "L010",
+    "name": "用电安全导则 GB/T 13869—2017",
+    "aliases": [
+      "GB/T 13869-2017",
+      "GBT13869-2017",
+      "用电安全导则2017"
+    ],
+    "level": "推荐性国家标准",
+    "scope": "全国",
+    "status": "现行有效",
+    "checked": "2026-09-08",
+    "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=1C5996A8BAD63FF484CCFE024D98849C",
+    "effectiveDate": "2018-07-01",
+    "replaces": [],
+    "replacedBy": [
+      "L011"
+    ],
+    "clauseRefs": [
+      {
+        "id": "C031",
+        "article": "5.1.1",
+        "shard": "c0000",
+        "hazardIds": [
+          "H032"
+        ]
+      }
+    ],
+    "hazardCount": 1,
+    "clauseCount": 1,
+    "searchText": "l010 用电安全导则 gb/t 13869 2017 gb/t 13869 2017 gbt13869 2017 用电安全导则2017 推荐性国家标准 全国 5.1.1"
+  },
+  {
+    "id": "L011",
+    "name": "用电安全导则 GB/T 13869—2026",
+    "aliases": [
+      "GB/T 13869-2026",
+      "GBT13869-2026",
+      "用电安全导则2026"
+    ],
+    "level": "推荐性国家标准",
+    "scope": "全国",
+    "status": "即将生效",
+    "checked": "2026-09-08",
+    "sourceUrl": "https://std.samr.gov.cn/gb/search/gbDetailedCNF?id=55B3892F95A2336AE06397BE0A0A4BF9",
+    "effectiveDate": "2027-02-01",
+    "replaces": [
+      "L010"
+    ],
+    "replacedBy": [],
+    "clauseRefs": [],
+    "hazardCount": 0,
+    "clauseCount": 0,
+    "searchText": "l011 用电安全导则 gb/t 13869 2026 gb/t 13869 2026 gbt13869 2026 用电安全导则2026 推荐性国家标准 全国"
   }
 ]
