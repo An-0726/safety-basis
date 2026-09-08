@@ -8,6 +8,7 @@
 
 第一阶段扩展设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)，多来源导入原型见 [source/README.md](source/README.md)。当前生产构建仍使用下述 V2 输入，尚未切换到新母库发布。
 正式母库迁移工具现已可用，见 [迁移与对账](docs/MASTER_MIGRATION.md)。本地母库独立保存，网站仍使用既有 V2 发布流程。
+多 Sheet Excel 的导出、差异提案和事务提交现已可用，见 [Excel 母库编辑往返](docs/EXCEL_EXCHANGE.md)。目前支持已有核心记录的内容修订，尚未切换到新母库发布。
 
 网站保持纯静态部署，不依赖服务器或数据库服务：
 
@@ -36,7 +37,7 @@
 
 ## 数据维护
 
-不要直接编辑 `data/`。修改 `content/` 后运行：
+新母库通过上述 Excel 提案流程维护。`data/` 不作为人工编辑入口；以下命令是过渡期既有 V2 构建流程，仍以 `content/` 为输入：
 
 ```bash
 node tools/build-data.mjs

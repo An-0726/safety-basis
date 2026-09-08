@@ -196,6 +196,40 @@ CREATE TABLE IF NOT EXISTS evidence (
   locator TEXT NOT NULL DEFAULT ''
 );
 
+-- Excel and future UI edits are applied as immutable, reviewed change sets.
+-- These tables are deliberately excluded from the logical master-state hash.
+CREATE TABLE IF NOT EXISTS change_sets (
+  id TEXT PRIMARY KEY,
+  proposal_hash TEXT NOT NULL UNIQUE,
+  base_state_hash TEXT NOT NULL,
+  result_state_hash TEXT NOT NULL,
+  workbook_sha256 TEXT NOT NULL,
+  actor TEXT NOT NULL,
+  status TEXT NOT NULL CHECK(status IN ('applied')),
+  created_at TEXT NOT NULL,
+  applied_at TEXT NOT NULL,
+  proposal_json TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS change_events (
+  change_set_id TEXT NOT NULL REFERENCES change_sets(id),
+  ordinal INTEGER NOT NULL CHECK(ordinal >= 0),
+  entity_type TEXT NOT NULL,
+  entity_id TEXT NOT NULL,
+  base_revision INTEGER NOT NULL CHECK(base_revision > 0),
+  result_revision INTEGER NOT NULL CHECK(result_revision > base_revision),
+  before_json TEXT NOT NULL,
+  after_json TEXT NOT NULL,
+  PRIMARY KEY(change_set_id, ordinal)
+);
+CREATE TRIGGER IF NOT EXISTS change_sets_no_update BEFORE UPDATE ON change_sets
+BEGIN SELECT RAISE(ABORT,'change sets are append-only'); END;
+CREATE TRIGGER IF NOT EXISTS change_sets_no_delete BEFORE DELETE ON change_sets
+BEGIN SELECT RAISE(ABORT,'change sets are append-only'); END;
+CREATE TRIGGER IF NOT EXISTS change_events_no_update BEFORE UPDATE ON change_events
+BEGIN SELECT RAISE(ABORT,'change events are append-only'); END;
+CREATE TRIGGER IF NOT EXISTS change_events_no_delete BEFORE DELETE ON change_events
+BEGIN SELECT RAISE(ABORT,'change events are append-only'); END;
+
 CREATE TRIGGER IF NOT EXISTS verification_target_insert
 BEFORE INSERT ON verification
 BEGIN

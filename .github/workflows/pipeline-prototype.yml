@@ -25,6 +25,10 @@ jobs:
         run: python tools/pipeline/master.py verify --db source/master/safety.sqlite3
       - name: Verify a repeated migration is safe
         run: python tools/pipeline/master.py migrate
+      - name: Export a versioned Excel snapshot from the temporary master
+        run: python tools/pipeline/exchange.py export --output "${{ runner.temp }}/safety-master.xlsx"
+      - name: Validate an unchanged workbook without applying edits
+        run: python tools/pipeline/exchange.py propose --workbook "${{ runner.temp }}/safety-master.xlsx" --output "${{ runner.temp }}/safety-proposal.json"
       - name: Restore legacy files without replacing the checkout
         run: python tools/pipeline/master.py restore --db source/master/safety.sqlite3 --output "${{ runner.temp }}/safety-legacy-restored"
       - run: node --test tools/tests/*.test.mjs
