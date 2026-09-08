@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "recordType": "inspection",
+  "sheet": "隐患库任务",
+  "headerRow": 1,
+  "fields": {
+    "reportedHazard": ["隐患描述"],
+    "basis": ["依据法规"],
+    "quote": ["法规原文"],
+    "compliance": ["检查结果"],
+    "sourceSituation": ["现场实际情况"],
+    "externalId": ["序号"]
+  },
+  "required": ["compliance", "basis"]
+}

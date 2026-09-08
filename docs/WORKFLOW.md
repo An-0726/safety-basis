@@ -2,11 +2,17 @@
 
 目标不是“把整份报告上传网站”，而是把报告中的可复用安全知识持续沉淀到数据库，同时避免重复、过期依据和私有资料泄露。
 
-当前入口见 [入库与合并](ADMISSION.md)、[Excel 编辑](EXCEL_EXCHANGE.md)、[核验与发布](VERIFICATION_PUBLISH.md)。已完成少量真实数据闭环，尚未切换生产；新增法规/条款/一般关联和身份冲突处理接口仍需补齐。
+当前入口见 [入库与合并](ADMISSION.md)、[Excel 编辑](EXCEL_EXCHANGE.md)、[法规目录及身份合并](CATALOG.md)、[核验与发布](VERIFICATION_PUBLISH.md)、[全文库](FULLTEXT_LIBRARY.md)。工具链已完成真实多文件演练，尚未切换生产；具体核验完成范围见 [交付报告](DELIVERY_20260909.md)。
 
 ## 一、资料进入私有资料源
 
 新报告、检查表、整改通知、法规台账等首先保留在私有位置；可导入表格放在 `source/imports/`。程序按文件哈希归档原件，保存来源路径、Sheet、行号及解析配置。私有目录由 Git 忽略，需独立备份。
+
+多布局来源可用注册表入口按 Sheet 和明确表头组合路由，再复用 `intake.py` 保存候选；法规台账进入独立的 `law-registers.sqlite3`，检查/隐患进入 `intake.sqlite3`。未知或同等候选布局会拒绝并留下诊断：
+
+```text
+python tools/pipeline/imports.py source/imports --registry source/mappings/registry.json
+```
 
 ## 二、抽取候选知识
 
@@ -69,7 +75,7 @@ python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/excha
 
 ## 七、提交和发布
 
-生成隔离包及独立私有增减/阻断报告，公开快照可提交供 CI 重建。当前生产仍从遗留 `content/` 构建 `data/`，新发布包不会自动覆盖网站。生产切换前需补齐现有公开记录证据，审阅完整发布差异及缓存迁移；不以 4 条样板替换整站。
+生成隔离包及独立私有增减/阻断报告，公开快照可提交供 CI 重建。当前生产仍从遗留 `content/` 构建 `data/`，新发布包不会自动覆盖网站。生产切换前需处理现有公开记录证据和完整发布增减报告。统一命令 `python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output NEW_DIR` 同时生成网站资源、JSON、索引、全文和发布清单。
 
 ## 八、后续法规更新
 

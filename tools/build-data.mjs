@@ -28,7 +28,9 @@ const fail = msg => { throw new Error(msg); };
 const assert = (cond, msg) => { if (!cond) fail(msg); };
 const uniq = xs => [...new Set(xs)].sort((a, b) => String(a).localeCompare(String(b), 'zh-CN'));
 const dateRe = /^\d{4}-\d{2}-\d{2}$/;
-const idRe = /^[A-Z][A-Z0-9_-]{1,31}$/;
+// Stable opaque IDs share the catalog's safe alphabet and maximum length.
+const idRe = /^[A-Za-z][A-Za-z0-9_-]{1,79}$/;
+const scopeLabel = value => ({CN:'全国', 'CN-32':'江苏', 'CN-3201':'南京'}[value] || value);
 const urlRe = /^https?:\/\//i;
 const norm = value => String(value ?? '').normalize('NFKC').toLowerCase()
   .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g, ' ')
@@ -86,6 +88,7 @@ const [settings, baseHazards, baseLaws, baseClauses, baseLinks, batches] = await
 // All source records are validated, but only fully verified/current records are published.
 const allHazards = [...baseHazards, ...batches.flatMap(b => b.hazards)];
 const allLaws = [...baseLaws, ...batches.flatMap(b => b.laws)];
+for (const law of allLaws) law.scope = scopeLabel(law.scope);
 const allClauses = [...baseClauses, ...batches.flatMap(b => b.clauses)];
 const allLinks = [...baseLinks, ...batches.flatMap(b => b.links)];
 

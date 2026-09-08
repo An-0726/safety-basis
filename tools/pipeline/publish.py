@@ -187,7 +187,8 @@ def build(release, output, *, node="node"):
         manifest["health"].update(stagedHazards=counts["hazards"] - manifest["counts"]["hazards"],
                                   stagedLaws=counts["law_versions"] - manifest["counts"]["laws"])
         (bundle / "data/manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        review.write_json(bundle / "release.json", release)
+        # Proof fields originate from sets; canonical serialization must not depend on PYTHONHASHSEED.
+        (bundle / "release.json").write_bytes((json.dumps(release, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode('utf-8'))
         checksums = {path.relative_to(bundle).as_posix(): exchange.sha256_bytes(path.read_bytes())
                      for path in sorted(bundle.rglob("*.json"))}
         review.write_json(bundle / "checksums.json", checksums)

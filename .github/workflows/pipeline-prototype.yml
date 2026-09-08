@@ -37,6 +37,12 @@ jobs:
         run: python tools/pipeline/manage.py build --release source/releases/pilot-20260909/release.json --output "${{ runner.temp }}/safety-pilot-rebuild"
       - name: Verify deterministic pilot output
         run: diff -r "${{ runner.temp }}/safety-pilot-build" "${{ runner.temp }}/safety-pilot-rebuild"
-      - run: node --test tools/tests/*.test.mjs
+      - run: node --test tools/tests/*.test.mjs tests/*.test.mjs
       - name: Keep legacy sources and website output unchanged
         run: git diff --exit-code -- content data
+      - name: Validate the reviewed website package and full-text hashes
+        run: python tools/pipeline/manage.py verify-site --output source/releases/reviewed-20260909
+      - name: Rebuild the reviewed core data without private sources
+        run: python tools/pipeline/manage.py build --release source/releases/reviewed-20260909/release.json --output "${{ runner.temp }}/safety-reviewed-build"
+      - name: Compare the rebuilt public core data
+        run: diff -r --exclude=fulltext "${{ runner.temp }}/safety-reviewed-build/data" source/releases/reviewed-20260909/data

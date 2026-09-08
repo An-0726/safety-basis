@@ -3,12 +3,15 @@
 架构决策与迁移验收见 [DATA_ARCHITECTURE_V3.md](../docs/DATA_ARCHITECTURE_V3.md)。
 
 已实现：原始来源导入、SQLite 无损迁移、多 Sheet Excel 编辑往返、候选入库/检查项拆分、隐患合并、证据核验记录和严格发布包生成。
+另已实现多布局自动导入、法规/版本/条款目录提案、法规身份合并、本地原件库及网站全文检索。最新范围见 [本轮交付](../docs/DELIVERY_20260909.md)。
 `content/` 仍是过渡期生产构建输入，`data/` 仍由原构建器生成；新发布器生成隔离包，尚未切换生产。
 
 - [母库迁移与备份](../docs/MASTER_MIGRATION.md)
 - [Excel 编辑往返](../docs/EXCEL_EXCHANGE.md)
 - [多来源入库、检查项拆分与合并](../docs/ADMISSION.md)
 - [核验、发布命令与真实试跑结果](../docs/VERIFICATION_PUBLISH.md)
+- [法规目录与身份合并](../docs/CATALOG.md)
+- [全文库与统一网站构建](../docs/FULLTEXT_LIBRARY.md)
 
 ```text
 source/
@@ -18,6 +21,7 @@ source/
   mappings/         可复用字段映射配置，提交 Git
   schemas/          表结构、Excel 交换契约，提交 Git
   master/           safety.sqlite3 正式母库，忽略 Git
+  library/          私有原件、全文索引和待 OCR 文件，忽略 Git
   exchange/         Excel 导出、隔离试跑与私有差异报告，忽略 Git
   proposals/        模型分批结果与提交提案，忽略 Git
   releases/         仅已核验、已审阅公开字段的自动发布快照，提交 Git

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "layouts": [
+    {
+      "id": "default",
+      "mapping": "default.json",
+      "database": "intake",
+      "headerSets": [["隐患名称"], ["title"]],
+      "forbidHeaders": ["检查结果", "是否符合", "依据条款", "法规原文", "条款原文"]
+    },
+    {
+      "id": "inspection-summary",
+      "mapping": "inspection-summary.json",
+      "database": "intake",
+      "headerSets": [["检查结果", "依据条款"], ["检查结果", "依据法规"]],
+      "forbidSheetNames": ["隐患库任务", "依据总表"]
+    },
+    {
+      "id": "zcode-task",
+      "mapping": "zcode-task.json",
+      "database": "intake",
+      "sheetNames": ["隐患库任务"],
+      "headerSets": [["隐患描述", "依据法规", "检查结果"]]
+    },
+    {
+      "id": "law-register",
+      "mapping": "law-register.json",
+      "database": "law-registers",
+      "sheetNames": ["依据总表"],
+      "headerSets": [["依据名称", "文号/标准号"]]
+    }
+  ],
+  "auxiliarySheets": [
+    {
+      "id": "law-category-statistics",
+      "sheetNames": ["分类统计"],
+      "headerSets": [["统计维度", "分类", "数量", "说明"]],
+      "skipReason": "法规台账分类统计辅助页，不导入法规候选。"
+    },
+    {
+      "id": "law-update-notes",
+      "sheetNames": ["更新与核验说明"],
+      "headerContains": ["评价依据台账"],
+      "skipReason": "法规台账更新与核验说明页，不导入法规候选。"
+    },
+    {
+      "id": "law-verification-diff",
+      "sheetNames": ["逐条核验差异"],
+      "headerSets": [
+        ["总表序号", "原依据名称", "核验后依据名称"],
+        ["序号", "处理类型", "富鼎处理"]
+      ],
+      "skipReason": "法规台账逐条核验差异页，不导入法规候选。"
+    }
+  ]
+}

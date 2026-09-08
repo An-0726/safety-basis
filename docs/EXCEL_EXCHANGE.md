@@ -1,6 +1,8 @@
 # Excel 母库编辑往返（exchange-v1）
 
-SQLite 是唯一母库，Excel 是带版本的查看和编辑快照。网站 JSON 仍是构建产物。本工具已经实现 **导出 → 修改 → 差异提案 → 单事务提交**；Excel v1 只更新已有核心记录，不通过新增/删行表达入库和合并。后续 [入库/隐患合并](ADMISSION.md) 及 [核验/隔离发布](VERIFICATION_PUBLISH.md) 使用独立提案接口，标签维护等仍待实现。
+SQLite 是唯一母库，Excel 是带版本的查看和编辑快照。网站 JSON 仍是构建产物。本工具已经实现 **导出 → 修改 → 差异提案 → 单事务提交**；Excel v1 只更新已有核心记录，不通过新增/删行表达入库和合并。[入库/隐患合并](ADMISSION.md)、[法规目录/标签/别名](CATALOG.md) 及 [核验/隔离发布](VERIFICATION_PUBLISH.md) 使用独立提案接口。
+
+新收到的多布局来源 Excel 先放入 `source/imports/`，使用 `tools/pipeline/imports.py` 和 `source/mappings/registry.json` 按 Sheet/表头路由到私有 intake 数据库；不要把来源文件当作母库编辑快照直接提交。
 
 ## 工作簿组织
 

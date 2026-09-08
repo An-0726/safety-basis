@@ -279,6 +279,8 @@ def admission_payload(master, staging, decisions):
             for draft in decision["hazards"]:
                 if set(draft) != {"ref", "title", "conditions", "measures", "action", "target", "reason"} or any(not isinstance(v, str) for v in draft.values()):
                     raise ValueError("模板字段必须是 ref/title/conditions/measures/action/target/reason 文本")
+                if any("\ufffd" in value for value in draft.values()) or any("\ufffd" in decision[field] for field in ("basis", "quote")):
+                    raise ValueError("拆分材料含编码损坏的替换字符；保留原件并重新提取，不能入库")
                 if not draft["ref"] or draft["ref"] in refs:
                     raise ValueError("模板 ref 不能为空或重复")
                 refs.add(draft["ref"])

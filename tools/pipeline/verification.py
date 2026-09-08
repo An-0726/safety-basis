@@ -184,6 +184,7 @@ def preparation_errors(graph, kind, ident):
         "link": ("role", "applicability", "jurisdiction_code"),
     }[kind]
     errors = ["缺少 " + field for field in required if not row[field].strip()]
+    errors += ["文本编码损坏 " + field for field in required if "\ufffd" in row[field]]
     if row.get("status") in ("已失效", "merged", "rejected") or row.get("review_status") == "已失效" or row.get("merged_into"):
         errors.append("记录已关闭，不能以核验操作重新启用")
     if kind in ("law_version", "clause") and not official_url(row["source_url"]):

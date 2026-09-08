@@ -18,13 +18,21 @@
 python tools/pipeline/intake.py source/imports --mapping source/mappings/default.json
 ```
 
-同一配置可导入多个同布局的 XLSX、CSV 或对象数组 JSON。不同布局分别指定配置，或放入不同子目录调用；尚无自动选择配置的注册表。表头别名、Sheet、表头行、CSV 编码、JSON 数组位置由 mapping 描述，不按文件名重写程序。
+同一配置可导入多个同布局的 XLSX、CSV 或对象数组 JSON。不同布局可分别指定配置，或由注册表按 Sheet 和明确表头组合自动选择；未知布局或同等候选会拒绝并留下诊断。表头别名、Sheet、表头行、CSV 编码、JSON 数组位置由 mapping 描述，不按文件名重写程序。
 
 检查表汇总使用独立映射：
 
 ```text
 python tools/pipeline/intake.py source/imports/inspection --mapping source/mappings/inspection-summary.json
 ```
+
+需要让同一目录中的不同 Sheet/表头自动路由时，使用注册表入口（法规台账会写入独立的 `law-registers.sqlite3`）：
+
+```text
+python tools/pipeline/imports.py source/imports --registry source/mappings/registry.json
+```
+
+注册表中的 `auxiliarySheets` 只按已登记的 Sheet 名和表头签名跳过统计、说明、差异等辅助页，并在逐源回执中记录；未登记的业务 Sheet 会拒绝整本来源并保留诊断。
 
 `inspection-summary.json` 同时保留检查结果、现场情况、来源示例等私有信息。`default.json` 识别到非空检查结果也转为检查项目。字段歧义或缺失会报错；列内容语义错位仍须整理者识别，不能只靠表头判定成功。`.xls`、报告第五章的自动提取、扫描件和复杂表格适配不在当前导入器范围。
 

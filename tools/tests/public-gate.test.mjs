@@ -84,3 +84,32 @@ test('orphan reference fails the build', async () => sandbox(async dir => {
   await write(dir,'content/links.json',links);
   assert.throws(()=>build(dir), /条款不存在/);
 }));
+
+test('catalog version IDs survive builds and reverse references', async () => sandbox(async dir => {
+  const laws = await read(dir, 'content/laws.json');
+  const clauses = await read(dir, 'content/clauses.json');
+  const old = laws[0].id;
+  const id = 'LV_NPC_2933e1a00644487bbd43d0960cb01931';
+  laws[0].id = id;
+  for (const law of laws) for (const key of ['replaces', 'replacedBy']) {
+    law[key] = law[key].map(ref => ref === old ? id : ref);
+  }
+  for (const clause of clauses) if (clause.lawId === old) clause.lawId = id;
+  const names = await fs.readdir(path.join(dir, 'content/batches'));
+  for (const name of names.filter(name => name.endsWith('.json'))) {
+    const file = `content/batches/${name}`;
+    const batch = await read(dir, file);
+    for (const clause of batch.clauses || []) if (clause.lawId === old) clause.lawId = id;
+    for (const law of batch.laws || []) for (const key of ['replaces', 'replacedBy']) {
+      law[key] = (law[key] || []).map(ref => ref === old ? id : ref);
+    }
+    await write(dir, file, batch);
+  }
+  await write(dir, 'content/laws.json', laws);
+  await write(dir, 'content/clauses.json', clauses);
+  build(dir);
+  assert.ok((await read(dir, 'data/law-index.json')).some(law => law.id === id));
+  laws[0].id = '../invalid';
+  await write(dir, 'content/laws.json', laws);
+  assert.throws(() => build(dir), /ID 无效/);
+}));
