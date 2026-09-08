@@ -38,9 +38,35 @@ const requireStringArray = (obj, key, ctx, {allowEmpty=false}={}) => {
   if (!allowEmpty) assert(obj[key].length, `${ctx}.${key} 不能为空`);
 };
 
-const [settings, hazards, laws, clauses, links] = await Promise.all([
-  readJson('settings.json'), readJson('hazards.json'), readJson('laws.json'), readJson('clauses.json'), readJson('links.json')
+const readBatchFiles = async () => {
+  const dir = path.join(CONTENT, 'batches');
+  let names = [];
+  try {
+    names = (await fs.readdir(dir)).filter(name => name.endsWith('.json')).sort();
+  } catch (err) {
+    if (err?.code !== 'ENOENT') throw err;
+  }
+  const batches = [];
+  for (const name of names) {
+    const batch = JSON.parse(await fs.readFile(path.join(dir, name), 'utf8'));
+    assert(batch && typeof batch === 'object' && !Array.isArray(batch), `batch:${name} 必须为对象`);
+    for (const key of ['hazards','laws','clauses','links']) {
+      if (batch[key] === undefined) batch[key] = [];
+      assert(Array.isArray(batch[key]), `batch:${name}.${key} 必须为数组`);
+    }
+    batches.push({name, ...batch});
+  }
+  return batches;
+};
+
+const [settings, baseHazards, baseLaws, baseClauses, baseLinks, batches] = await Promise.all([
+  readJson('settings.json'), readJson('hazards.json'), readJson('laws.json'), readJson('clauses.json'), readJson('links.json'), readBatchFiles()
 ]);
+
+const hazards = [...baseHazards, ...batches.flatMap(b => b.hazards)];
+const laws = [...baseLaws, ...batches.flatMap(b => b.laws)];
+const clauses = [...baseClauses, ...batches.flatMap(b => b.clauses)];
+const links = [...baseLinks, ...batches.flatMap(b => b.links)];
 
 assert(settings.schemaVersion === 2, 'settings.schemaVersion 必须为 2');
 assert(typeof settings.dataVersion === 'string' && settings.dataVersion, 'settings.dataVersion 不能为空');
@@ -183,6 +209,7 @@ const manifest = {
   publicScope: settings.publicScope,
   counts: {hazards:hazards.length,laws:laws.length,clauses:clauses.length,links:links.length},
   health,
+  batches: batches.map(b => b.name),
   files: {searchIndex:'data/search-index.json',lawIndex:'data/law-index.json',taxonomy:'data/taxonomy.json'},
   hazardShards: hazardShards.map(({rows,...x})=>x),
   clauseShards: clauseShards.map(({rows,...x})=>x)
@@ -199,4 +226,4 @@ await writeJson(path.join(DATA,'law-index.json'),lawIndex);
 await writeJson(path.join(DATA,'taxonomy.json'),taxonomy);
 await writeJson(path.join(DATA,'manifest.json'),manifest);
 
-console.log(`Built data v${settings.dataVersion}: ${hazards.length} hazards, ${laws.length} laws, ${clauses.length} clauses, ${links.length} links.`);
+console.log(`Built data v${settings.dataVersion}: ${hazards.length} hazards, ${laws.length} laws, ${clauses.length} clauses, ${links.length} links from ${batches.length} batch file(s).`);
