@@ -1,24 +1,25 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "2026.09.08.2",
+  "dataVersion": "2026.09.08.3",
   "generatedAt": "2026-09-08",
   "publicScope": "国家法规标准优先，江苏／南京补充",
   "counts": {
-    "hazards": 24,
-    "laws": 7,
-    "clauses": 25,
-    "links": 34
+    "hazards": 32,
+    "laws": 11,
+    "clauses": 31,
+    "links": 44
   },
   "health": {
-    "verifiedHazards": 24,
+    "verifiedHazards": 32,
     "pendingHazards": 0,
     "expiredHazards": 0,
-    "activeLaws": 7,
+    "activeLaws": 10,
     "pendingLaws": 0,
     "invalidReferences": 0
   },
   "batches": [
-    "2026-09-08-batch-001.json"
+    "2026-09-08-batch-001.json",
+    "2026-09-08-batch-002.json"
   ],
   "files": {
     "searchIndex": "data/search-index.json",
@@ -29,18 +30,18 @@
     {
       "id": "h0000",
       "url": "data/hazards/h0000.json",
-      "count": 24,
+      "count": 32,
       "firstId": "H001",
-      "lastId": "H024"
+      "lastId": "H032"
     }
   ],
   "clauseShards": [
     {
       "id": "c0000",
       "url": "data/clauses/c0000.json",
-      "count": 25,
+      "count": 31,
       "firstId": "C001",
-      "lastId": "C025"
+      "lastId": "C031"
     }
   ]
 }
