@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-09",
-  "batch": "core-laws-004",
+  "batch": "core-laws-005",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -32,17 +32,25 @@
       "lawsAdded": 3,
       "selection": "High-value current EHS authorities: hazardous-chemical warehouse storage, electrical equipment safety, and occupational disease prevention; selected from verified/current V3 entities while avoiding recently supersession-sensitive hazardous-chemical framework rules.",
       "successionsAdded": 0
+    },
+    {
+      "evidenceAdded": 9,
+      "id": "core-laws-005",
+      "lawVersionsAdded": 6,
+      "lawsAdded": 6,
+      "selection": "Current high-value Jiangsu/Nanjing fire and safety-production rules plus two 2026-effective special-equipment safety technical specifications; hazardous-chemical framework rules with post-2026 succession sensitivity remain deferred to Phase 7.",
+      "successionsAdded": 0
     }
   ],
   "counts": {
-    "evidence": 20,
-    "lawVersions": 19,
-    "laws": 19,
+    "evidence": 29,
+    "lawVersions": 25,
+    "laws": 25,
     "successions": 2
   },
   "formatVersion": "4.0-alpha",
   "migrationPhase": "Phase 6",
-  "scope": "Cumulative verified law/current lawVersion core. core-laws-004 adds three high-value current EHS authorities covering hazardous-chemical storage, electrical equipment safety, and occupational health; clauses, hazards and links remain deferred.",
+  "scope": "Cumulative verified law/current lawVersion core. core-laws-005 adds four Jiangsu/Nanjing local fire/safety rules and two current special-equipment safety technical specifications; clauses, hazards and links remain deferred.",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
