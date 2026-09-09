@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-09-09",
-  "batch": "clauses-001",
+  "asOf": "2026-09-10",
+  "batch": "clauses-002",
   "batches": [
     {"evidenceAdded":6,"id":"core-laws-001","lawVersionsAdded":6,"lawsAdded":6,"successionsAdded":2},
     {"evidenceAdded":4,"id":"core-laws-002","lawVersionsAdded":4,"lawsAdded":4,"selection":"Remaining r10 laws with positive current link usage; counts 30, 9, 1, 1.","successionsAdded":0},
@@ -10,20 +10,12 @@
     {"evidenceAdded":6,"id":"core-laws-006","lawVersionsAdded":6,"lawsAdded":6,"selection":"Current verified high-value special-equipment, occupational-health, explosion-proof electrical and dust-explosion authorities; all selected from confirmed law identities, current verified versions, latest passed V3 reviews and authoritative public evidence.","successionsAdded":0},
     {"evidenceAdded":6,"id":"core-laws-007","lawVersionsAdded":6,"lawsAdded":6,"selection":"Current verified high-value occupational-health, safety-sign, forging-machinery, confined-space and dust-collection standards; priority given to newly effective 2025/2026 mandatory standards and direct technical authorities used in common EHS inspections.","successionsAdded":0},
     {"evidenceAdded":6,"id":"core-laws-008","lawVersionsAdded":6,"lawsAdded":6,"selection":"Current verified direct technical authorities for electrostatic safety, metal-cutting machinery, welding/cutting, production-equipment safety, PPE and gas cylinders; priority to mandatory national standards and TSG rules used in routine EHS inspection.","successionsAdded":0},
-    {"clausesAdded":15,"evidenceAdded":3,"id":"clauses-001","lawVersionsAdded":0,"lawsAdded":0,"selection":"First 15 conservative V3 verified clauses in Stable ID order; status=已核验, confirmed locator, latest text review passed, authoritative public evidence, non-empty locator; parent lawVersion coverage prevalidated.","successionsAdded":0}
+    {"clausesAdded":15,"evidenceAdded":3,"id":"clauses-001","lawVersionsAdded":0,"lawsAdded":0,"selection":"First 15 conservative V3 verified clauses in Stable ID order; status=已核验, confirmed locator, latest text review passed, authoritative public evidence, non-empty locator; parent lawVersion coverage prevalidated.","successionsAdded":0},
+    {"clausesAdded":15,"evidenceAdded":3,"id":"clauses-002","lawVersionsAdded":0,"lawsAdded":0,"selection":"Next 15 conservative V3 verified clauses in Stable ID order using the same Phase 5 eligibility rule; parent lawVersion closure and locator uniqueness prevalidated.","successionsAdded":0}
   ],
-  "counts": {
-    "clauses": 15,
-    "evidence": 50,
-    "lawVersions": 43,
-    "laws": 43,
-    "successions": 2
-  },
+  "counts": {"clauses":30,"evidence":53,"lawVersions":43,"laws":43,"successions":2},
   "formatVersion": "4.0-alpha",
   "migrationPhase": "Phase 6",
-  "scope": "Cumulative verified core plus first 15 conservative verified clauses; hazards and links remain deferred until clause migration closes.",
-  "source": {
-    "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
-    "v3ReleaseCorroboration": "reviewed-20260909-r10"
-  }
+  "scope": "Cumulative verified core plus first 30 of 54 conservative verified clauses; hazards and links remain deferred until clause migration closes.",
+  "source": {"sqliteSha256":"7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8","v3ReleaseCorroboration":"reviewed-20260909-r10"}
 }
