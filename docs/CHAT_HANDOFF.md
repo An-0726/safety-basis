@@ -17,7 +17,7 @@ ACTIVE
 - Phase 3：V4 门禁设计 —— 完成
 - Phase 4：V3 → V4 数据映射 —— 完成
 - Phase 5：V4 只读迁移原型 —— 完成并验收
-- Phase 6：迁移现有有效知识 —— **进行中；core-laws-001～006 已完成**
+- Phase 6：迁移现有有效知识 —— **进行中；core-laws-001～008 已完成，已满足 verified clause 父链覆盖条件，开始 clause 迁移**
 
 不得提前进入 Phase 7～10。
 
@@ -30,9 +30,12 @@ ACTIVE
 ### GitHub
 
 - 本轮起始 HEAD：`3fe47ab2fcd8a9e9e5c4de11342beed607383dcb`
-- Phase 6 core-laws-006 data commit：`3c50604454bf68afc6ffd7afb9eb71ec33346323`
-- data tree：`3065303ce12f0c3c75af531198984f1d376454dd`
-- 本 handoff 更新提交位于该 data commit 之后；下一轮必须重新读取 `chat-v4` HEAD 获取最终 SHA。
+- core-laws-006 最终线性应用 commit：`816c486a645c38963cd05a9198470447f13111c9`
+- core-laws-007 data commit：`81a7ea6aee8febd2b566b561bfd0c01088a2a7d3`
+- core-laws-008 data commit：`089258489829f2ec1cfa932f0f3b68fe101a15e4`
+- core-laws-008 data tree：`e133d6c86e35a3de5ab2c4590a11715210e198cf`
+- 本 handoff 更新提交位于 `089258489829f2ec1cfa932f0f3b68fe101a15e4` 之后；下一轮必须重新读取 `chat-v4` HEAD 获取最终 SHA。
+- `3c50604454bf68afc6ffd7afb9eb71ec33346323` 是 core-laws-006 施工中生成但未挂到 `chat-v4` 的孤立 data commit；其内容已由 `816c486a645c38963cd05a9198470447f13111c9` 无 force、线性重新应用。不得把孤立 commit 当当前分支基线。
 - core-laws-005 data commit：`3c64a3e4577687c0dc3dcfa810c8028961d57a83`
 - core-laws-004 data commit：`c42bd8dd062514a5432df2439ed3686d23e04547`
 - core-laws-003 data commit：`252a98bacdd0c193c0bbeb513b5340111467608b`
@@ -61,32 +64,61 @@ ACTIVE
 
 ## 本轮完成
 
-完成 Phase 6 `core-laws-006`：
+### core-laws-006
 
-1. 重新读取 handoff，核对 `chat-v4` 实际 HEAD、Drive 工作目录、冻结 SQLite、fulltext、release 与生产选择，确认无版本漂移。
-2. 下载并只读校验最新冻结 `safety.sqlite3`，SHA-256 与冻结基线一致，`integrity_check=ok`。
-3. 从冻结 V3 母库中按“confirmed law + 现行有效且已核验 lawVersion + 最新 passed review + authoritative public evidence”筛选本批对象。
-4. 本批迁入 6 组当前高价值 EHS 法规/标准：
-   - `LF_META_092309FDFAE1512F22E46F5F`《特种设备使用单位落实使用安全主体责任监督管理规定》 / `LV_META_4C6D3794A60BF2FF3F322090`
-   - `LF_STD_F2B7E7DF0CA9165F17E1A2D5`《特种设备重大事故隐患判定准则》 / `LV_STD_E7182E7A85BA6017C48B96A8`（GB 45067-2024）
-   - `LF_META_742108353FBBB16FA5331B8C`《工作场所职业卫生管理规定》 / `LV_META_41623A7893D311A1A7F0A591`
-   - `LF_STD_F2EDD2DD856BA9DFAD570DB9`《工作场所有害因素职业接触限值 第1部分：化学有害因素》 / `LV_STD_1D86925638268E844AAEF9D8`（GBZ 2.1-2019）
-   - `LF_STD_8BEC81A8A08365A9B0DD7FF0`《危险场所电气防爆安全规范》 / `LV_STD_017FDC72B60369E966DC9439`（AQ 3009—2007）
-   - `LF_STD_303E8C5A7D0F2C10840FC7E9`《粉尘防爆安全规程》 / `LV_STD_A307C34C912F164D6A1D19E9`（GB 15577-2018）
-5. 新增 6 law、6 current lawVersion、12 review sidecar、6 public evidence，并更新 `knowledge/manifest.json`。
-6. 六组 Stable ID 在本批写入前均不存在于 `knowledge/` 当前树；没有重复迁入或重新编号。
-7. public evidence 仅保留公开 URL、retrievedAt、locator/page 与 snapshot SHA；V3 私有 `snapshot_ref` 未迁入。
-8. 通过单一 data tree/commit 原子落库，并 fast-forward `chat-v4`；未 force。
+迁入 6 组高价值特种设备、职业卫生、电气防爆、粉尘防爆法规/标准。施工中出现一次提交顺序分叉：先生成孤立 data commit `3c506044...`，随后 handoff 更新占用分支 HEAD。已通过新线性 commit `816c486a...` 将完整 data tree 应用到当前分支，再 fast-forward；未 force、未丢数据、未改 main。
+
+### core-laws-007
+
+迁入 6 组：
+
+- 《职业健康监护技术规范》GBZ 188—2025
+- 《工业企业设计卫生标准》GBZ 1-2010
+- 《安全色和安全标志》GB 2894-2025
+- 《锻压机械 安全技术规范》GB 17120-2025
+- 《有限空间作业安全技术规范》GB 46768-2025
+- 《粉尘爆炸危险场所用除尘系统安全技术规范》AQ 4273-2016
+
+新增 6 law、6 current lawVersion、12 review sidecar、6 public evidence。commit：`81a7ea6aee8febd2b566b561bfd0c01088a2a7d3`。
+
+### core-laws-008
+
+迁入 6 组：
+
+- 《防止静电事故通用要求》GB 12158-2024
+- 《金属切削机床 安全防护通用技术规范》GB 15760-2025
+- 《焊接与切割安全》GB 9448-2025
+- 《生产设备安全卫生设计总则》GB 5083-2023
+- 《个体防护装备配备规范 第1部分：总则》GB 39800.1-2020
+- 《气瓶安全技术规程》TSG 23—2021
+
+新增 6 law、6 current lawVersion、12 review sidecar、6 public evidence。commit：`089258489829f2ec1cfa932f0f3b68fe101a15e4`。
+
+### clause 父链覆盖核对
+
+按 Phase 5 保守规则重新从冻结 V3 母库筛选：
+
+- verified clause：54
+- 唯一父 lawVersion：6
+  - `L002`《中华人民共和国安全生产法》：31 条
+  - `L023`《危险废物贮存污染控制标准》：13 条
+  - `L001`《中华人民共和国消防法（2021修正）》：7 条
+  - `L014`《中华人民共和国特种设备安全法》：1 条
+  - `L020`《江苏省安全生产条例》：1 条
+  - `LV_META_8982B9B15AF4365DE59CDFCE`《易制毒化学品管理条例》：1 条
+- 上述 6 个父 lawVersion 均已存在于当前 `knowledge/law-versions/`，父链闭合。
+
+因此不再以“先迁完 148 个 catalogue law”作为进入 clause 的前置条件；剩余 catalogue law 可在 Phase 6 后续按价值继续补充，但 verified clause 已可安全迁移。
 
 ## 本轮修改文件
 
 新增：
 
-- `knowledge/laws/`：6 个 law 文件
-- `knowledge/law-versions/`：6 个 current version 文件
-- `knowledge/reviews/laws/`：6 个 review sidecar
-- `knowledge/reviews/law-versions/`：6 个 review sidecar
-- `knowledge/evidence/`：6 个 public evidence 文件
+- `knowledge/laws/`：core-laws-007/008 共 12 个 law 文件
+- `knowledge/law-versions/`：共 12 个 current version 文件
+- `knowledge/reviews/laws/`：共 12 个 review sidecar
+- `knowledge/reviews/law-versions/`：共 12 个 review sidecar
+- `knowledge/evidence/`：共 12 个 public evidence 文件
 
 修改：
 
@@ -97,57 +129,61 @@ ACTIVE
 
 ## 本轮校验
 
-- `chat-v4` 起始 HEAD：`3fe47ab2fcd8a9e9e5c4de11342beed607383dcb`
 - Drive 母库 size/modified 与冻结基线一致，无漂移
-- 下载后 SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`，与冻结基线一致
+- SQLite SHA-256 复算：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
 - SQLite `integrity_check=ok`
-- fulltext size：21,864,448 bytes，与冻结基线一致
-- 最新候选 release 仍为 r10；生产选择文件未发生新修改
-- 6 个目标 law：identity_status=confirmed，最新 identity review=passed
-- 6 个目标 lawVersion：现行有效、已核验、有 effectiveDate，最新 version review=passed
-- lawVersion → law：本批全部闭合，不新增断链
-- Stable ID：全部沿用 V3 原 ID；写入前树中均不存在
-- 新增 evidence：6 个唯一 ID，均为国家市场监督管理总局/国家标准公开系统、国家卫生健康委员会、中国政府网等 authoritative public 来源
-- V3 私有 `snapshot_ref` 未迁入；public evidence 不含私有 Drive 路径、archive 路径或 legacy/raw payload
-- `reviewedContentHash`：按 V4 canonical JSON 重新计算并写入 sidecar
-- data tree：`3065303ce12f0c3c75af531198984f1d376454dd`
-- data commit：`3c50604454bf68afc6ffd7afb9eb71ec33346323`
-- data commit 预期差异：30 个新增 JSON + `knowledge/manifest.json`，共 31 路径
-- branch update：fast-forward，force=false
-- manifest 目标回读：batch=`core-laws-006`，累计 laws=31、lawVersions=31、evidence=35、successions=2
+- 本轮曾出现一次旧长只读连接 `database disk image is malformed`；重新以 immutable 只读连接打开后 SHA 未变、`integrity_check=ok`、laws=160、law_versions=161，确认属于连接级读取异常，不是文件损坏
+- core-laws-007：相对前一 HEAD ahead_by=1、behind_by=0，恰好 31 个预期路径变化（30 新增 + manifest）
+- core-laws-008：相对前一 HEAD ahead_by=1、behind_by=0，恰好 31 个预期路径变化（30 新增 + manifest）
+- core-laws-007/008 所有目标 law：identity_status=confirmed、最新 identity review=passed
+- 所有目标 lawVersion：现行有效、已核验、有 effectiveDate、最新 version review=passed
+- 所有新增 evidence：authoritative-public；未迁入私有 `snapshot_ref`
+- 所有 Stable ID 沿用 V3 原 ID，无重新编号
+- verified clause 父链检查：54 条 clause 对应 6 个父 lawVersion，当前 knowledge 全部存在
 
 ## 当前项目状态
 
 `knowledge/` 当前累计：
 
-- laws：31
-- current verified lawVersions：31
-- public evidence：35
+- laws：43
+- current verified lawVersions：43
+- public evidence：47
 - successions：2
-- clauses/hazards/links：尚未开始正式 Phase 6 迁入
+- verified clauses：准备开始正式迁入（V3 保守候选 54）
+- hazards/links：尚未开始正式 Phase 6 迁入
 
-Phase 5 保守 candidate 总量仍为 law 148、current lawVersion 148、clause 54、hazard 642、link 179。当前 laws/lawVersions 为 31/148；约剩余 117 组 law/current lawVersion，Phase 6 未完成。
+Phase 5 保守 candidate 总量：law 148、current lawVersion 148、clause 54、hazard 642、link 179。
+
+核心法规阶段已形成足以支撑全部 54 条 verified clause 的父链闭环。剩余约 105 组 verified law/current lawVersion 主要作为独立法规目录扩充，不再阻塞 clause/hazard/link 主链迁移。
 
 ## 未完成事项
 
-### Phase 6 — 法规身份/版本
+### Phase 6 — verified clause
 
-剩余约 117 个 verified law/current lawVersion 尚未进入正式 `knowledge/`。继续按高价值 EHS 场景、法规/标准效力、江苏/南京地域价值和 Stable ID 做稳定排序；不为追求数量迁入存在时效或替代关系疑义的对象。
+54 条保守 verified clause 待分批迁移。必须保留原 clause Stable ID、父 lawVersion、articlePath、quote、sourceUrl、最新 text review、evidence；不得因批量迁移重新判断或扩大 verified 集合。
 
-### Phase 6 — clause / hazard / link
+### Phase 6 — verified hazard
 
-法规基础批次达到可接受覆盖后，再依次迁入 verified clause → verified hazard → 角色明确且适用性有佐证的 verified link。pending / superseded / inactive / r8 错误 / unclassified role / 效力不明 version 均不得强行升级。
+Phase 5 保守候选 642 条。待 clause 迁移闭合后开始。
+
+### Phase 6 — verified link
+
+Phase 5 保守候选 179 条。必须保持 r8 禁令，只有角色明确且适用性有佐证的 link 才可进入 verified；`ROLE_UNCLASSIFIED` 保持 pending。
+
+### Phase 6 — catalogue law/current version
+
+仍有约 105 组 verified/current lawVersion 未迁入，可在主链迁移间隙按高价值场景补充；不阻塞 verified clause。
 
 ## 下一轮第一步
 
-**继续 Phase 6 `core-laws-007`：重新核对 `chat-v4` HEAD 与 Drive 母库后，在剩余 confirmed + verified/current 对象中优先评估职业健康监护（含当前已实施的新版本）、工业企业设计卫生、消防/电气、特种设备及其他常用 EHS 强制性标准；继续避开需 Phase 7 重新判定替代边界的危化框架法规。形成一个可单轮收口的 law + current lawVersion + review + public evidence 批次。**
+**继续 Phase 6 `clauses-001`：从冻结 V3 母库的 54 条保守 verified clause 中按 Stable ID 稳定排序，先迁入首批 12～15 条；每条同时迁入 clause JSON、text review sidecar 和所需 public evidence。仅使用 `status=已核验 + identity_status=confirmed_locator + 最新 text review=passed + authoritative public evidence + locator 非空` 的既有候选，不扩大集合。迁移后检查父 lawVersion 闭合、articlePath 唯一性、quote 非空、evidence 引用存在、reviewedContentHash 正确，再 fast-forward。**
 
 ## 后续任务
 
-1. Phase 6：继续 core law/current version 批次迁移。
-2. Phase 6：verified clause。
-3. Phase 6：verified hazard。
-4. Phase 6：verified 且角色明确/适用性有佐证的 link。
+1. Phase 6：分批完成 54 条 verified clause。
+2. Phase 6：分批迁移 642 条 verified hazard。
+3. Phase 6：迁移 verified 且角色明确/适用性有佐证的 link。
+4. Phase 6：按价值补充剩余 catalogue law/current version。
 5. Phase 7：法规与标准核验框架。
 6. Phase 8：历史报告条款重新审阅。
 7. Phase 9：V4 Validator。
@@ -158,7 +194,7 @@ Phase 5 保守 candidate 总量仍为 law 148、current lawVersion 148、clause 
 ## 法规/标准待核验队列
 
 - 2026 年新《中华人民共和国危险化学品安全法》生效后，对《危险化学品安全管理条例》等既有危化框架法规的继续适用/替代边界，留待 Phase 7 使用当前官方来源专项核验；在此之前不把这类存在替代敏感性的对象作为 Phase 6 自动迁移优先项。
-- 本轮未启动大规模新联网法规核验；Phase 6 继续以 V3 已通过核验且当前效力明确的资产迁移为主。
+- Phase 6 当前以已通过 V3 严格核验、证据为 authoritative-public 的资产迁移为主，不启动无差别全库新核验。
 
 ## 风险 / 阻塞
 
