@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "safety-dictionaries-v1",
+  "entries": [
+    {"kind": "record_status", "code": "raw", "label": "原始数据", "parentCode": "", "active": true, "ordinal": 10, "description": "已归档并保留来源，尚未整理"},
+    {"kind": "record_status", "code": "organizing", "label": "待整理", "parentCode": "", "active": true, "ordinal": 20, "description": "需要清洗、拆分、补字段或去重"},
+    {"kind": "record_status", "code": "pending_review", "label": "待核验", "parentCode": "", "active": true, "ordinal": 30, "description": "可留在母库，禁止进入正式发布数据"},
+    {"kind": "record_status", "code": "reviewed", "label": "已核验", "parentCode": "", "active": true, "ordinal": 40, "description": "仍须通过对象版本、依赖和证据门禁"},
+    {"kind": "record_status", "code": "retired", "label": "已失效", "parentCode": "", "active": true, "ordinal": 50, "description": "历史保留，禁止作为现行依据发布"},
+    {"kind": "validity_status", "code": "pending_review", "label": "待核验", "parentCode": "", "active": true, "ordinal": 10, "description": "效力尚未确认"},
+    {"kind": "validity_status", "code": "effective", "label": "现行有效", "parentCode": "", "active": true, "ordinal": 20, "description": "在发布基准日已经实施且未失效"},
+    {"kind": "validity_status", "code": "upcoming", "label": "即将生效", "parentCode": "", "active": true, "ordinal": 30, "description": "已公布、尚未实施，可进入法规目录但不能提前支撑隐患"},
+    {"kind": "validity_status", "code": "repealed", "label": "已废止", "parentCode": "", "active": true, "ordinal": 40, "description": "历史保留，禁止作为现行依据发布"},
+    {"kind": "verification_result", "code": "passed", "label": "通过", "parentCode": "", "active": true, "ordinal": 10, "description": "本次核验通过"},
+    {"kind": "verification_result", "code": "failed", "label": "不通过", "parentCode": "", "active": true, "ordinal": 20, "description": "有明确错误或不适用"},
+    {"kind": "verification_result", "code": "pending", "label": "待补证", "parentCode": "", "active": true, "ordinal": 30, "description": "证据或判断不足"},
+    {"kind": "verification_result", "code": "not_applicable", "label": "不适用", "parentCode": "", "active": true, "ordinal": 40, "description": "该检查类型不适用于对象"},
+    {"kind": "link_role", "code": "direct", "label": "直接依据", "parentCode": "", "active": true, "ordinal": 10, "description": "条款直接规定该义务或禁止行为"},
+    {"kind": "link_role", "code": "technical", "label": "技术依据", "parentCode": "", "active": true, "ordinal": 20, "description": "标准条款给出具体技术要求"},
+    {"kind": "link_role", "code": "supplemental", "label": "补充依据", "parentCode": "", "active": true, "ordinal": 30, "description": "用于补充范围、程序或管理要求"}
+  ]
+}

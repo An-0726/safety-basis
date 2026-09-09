@@ -11,6 +11,7 @@ sys.path.insert(0,str(ROOT/'tools/pipeline'))
 import exchange
 import identity
 import admission
+import verification
 
 
 class IdentityTests(unittest.TestCase):
@@ -61,6 +62,50 @@ class IdentityTests(unittest.TestCase):
             conn.commit()
         with self.assertRaisesRegex(ValueError,'冲突'):
             identity.propose(self.db,'L_OLD','L_KEEP','E_ONE','reviewed',self.root/'conflict.json')
+
+    def test_identity_amendment_keeps_ids_and_invalidates_dependent_proofs(self):
+        with closing(sqlite3.connect(self.db)) as conn:
+            conn.execute("UPDATE laws SET identity_status='confirmed',status='已核验' WHERE id='L_KEEP'")
+            conn.commit()
+            before=verification.dependency_hash(verification.graph_from_db(conn),'law_version','V_KEEP')
+        path=self.root/'amend.json'
+        identity.propose_amendment(self.db,'L_KEEP',{'document_kind':'国家标准'},'E_ONE','同一系列的不同版本具有不同强制属性。',path)
+        identity.apply_amendment(self.db,path,'tester')
+        with closing(sqlite3.connect(self.db)) as conn:
+            self.assertEqual(conn.execute("SELECT identity_status,status,revision FROM laws WHERE id='L_KEEP'").fetchone(),('provisional','待核验',2))
+            self.assertEqual(conn.execute("SELECT id,law_id FROM law_versions WHERE id='V_KEEP'").fetchone(),('V_KEEP','L_KEEP'))
+            self.assertNotEqual(before,verification.dependency_hash(verification.graph_from_db(conn),'law_version','V_KEEP'))
+            self.assertEqual(conn.execute('SELECT count(*) FROM law_identity_amendments').fetchone()[0],1)
+            with self.assertRaises(sqlite3.IntegrityError):
+                conn.execute('DELETE FROM law_identity_amendments')
+        self.assertEqual(identity.apply_amendment(self.db,path,'tester')['status'],'already_applied')
+
+    def test_amendment_rejects_state_bypass_and_resealed_tampering(self):
+        path=self.root/'amend.json'
+        with self.assertRaisesRegex(ValueError,'状态或ID'):
+            identity.propose_amendment(self.db,'L_KEEP',{'status':'已核验'},'E_ONE','fake',path)
+        identity.propose_amendment(self.db,'L_KEEP',{'document_kind':'国家标准'},'E_ONE','reviewed',path)
+        data=json.loads(path.read_text(encoding='utf-8'))
+        data['after']['identity_status']='confirmed'
+        data=admission.seal({k:v for k,v in data.items() if k not in ('proposalId','proposalHash')})
+        path.write_text(json.dumps(data),encoding='utf-8')
+        with self.assertRaisesRegex(ValueError,'被修改'):
+            identity.apply_amendment(self.db,path,'tester')
+        with closing(sqlite3.connect(self.db)) as conn:
+            self.assertEqual(conn.execute("SELECT revision FROM laws WHERE id='L_KEEP'").fetchone()[0],1)
+
+    def test_amendment_rejects_stale_master_and_corrupt_evidence(self):
+        path=self.root/'amend.json'
+        identity.propose_amendment(self.db,'L_KEEP',{'document_kind':'国家标准'},'E_ONE','reviewed',path)
+        (self.root/'evidence.txt').write_text('changed',encoding='utf-8')
+        with self.assertRaisesRegex(ValueError,'证据原件'):
+            identity.apply_amendment(self.db,path,'tester')
+        (self.root/'evidence.txt').write_text('official standard identity',encoding='utf-8')
+        with closing(sqlite3.connect(self.db)) as conn:
+            conn.execute("UPDATE laws SET canonical_name='modified' WHERE id='L_OLD'")
+            conn.commit()
+        with self.assertRaisesRegex(ValueError,'母库已变化'):
+            identity.apply_amendment(self.db,path,'tester')
 
 
 if __name__=='__main__':

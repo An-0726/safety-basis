@@ -1,0 +1,50 @@
+name: Build reviewed website
+
+on:
+  push:
+    branches: [main, data-verify-batch-003]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reviewed-site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/pipeline/requirements.txt
+      - name: Prepare only the selected reviewed package
+        run: python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/reviewed-site"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-safety-site
+          path: ${{ runner.temp }}/reviewed-site
+          if-no-files-found: error
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+        with:
+          path: ${{ runner.temp }}/reviewed-site
+
+  deploy:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the verified artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

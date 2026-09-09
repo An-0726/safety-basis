@@ -158,7 +158,7 @@ class ExchangeTests(unittest.TestCase):
                     exchange.create_proposal(self.db, self.book, self.proposal)
 
     def test_deleted_duplicate_new_rows_and_sheet_structure_rejected(self):
-        for kind in ("deleted", "duplicate", "new", "missing_sheet", "new_sheet", "extra_column", "readonly_edit", "readonly_deleted"):
+        for kind in ("deleted", "duplicate", "new", "missing_sheet", "new_sheet", "extra_column", "readonly_edit", "readonly_deleted", "dictionary_edit"):
             with self.subTest(kind=kind):
                 shutil.copyfile(self.fixture / "base.xlsx", self.book)
                 wb = load_workbook(self.book)
@@ -171,6 +171,7 @@ class ExchangeTests(unittest.TestCase):
                 if kind == "extra_column": ws["Z2"] = "不能丢弃"
                 if kind == "readonly_edit": wb["法规别名"]["B2"] = "不能忽略"
                 if kind == "readonly_deleted": wb["原始来源"].delete_rows(2)
+                if kind == "dictionary_edit": wb["字典"]["C2"] = "不能私改字典"
                 wb.save(self.book)
                 wb.close()
                 with self.assertRaises(ValueError):

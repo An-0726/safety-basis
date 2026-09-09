@@ -75,9 +75,22 @@ python tools/pipeline/admission.py merge --source H_SOURCE --target H_TARGET --r
 python tools/pipeline/admission.py apply --proposal source/proposals/merge-001.json --actor reviewer-name
 ```
 
-来源隐患保留并标记 `merged`，目标保持 ID 和正文、追加来源及标签并退回待核验。迁入关联重新核验；相同条款的关系差异保存在提案与旧记录中，不静默采用来源结论。合并循环、关闭目标、过期提案和错误外键均拒绝。网页旧 ID 跳转尚未实现，生产切换前需要补齐。
+来源隐患保留并标记 `merged`，目标保持 ID 和正文、追加来源及标签并退回待核验。迁入关联重新核验；相同条款的关系差异保存在提案与旧记录中，不静默采用来源结论。合并循环、关闭目标、过期提案和错误外键均拒绝。网页对未进入当前已核验包的旧 ID 显示明确的未发布/已撤下提示；合并去向映射可在后续需要保留旧链接时扩展。
 
 母库更新、来源绑定、合并历史和回执在同一事务完成。原件按内容哈希归档，失败不覆盖旧文件；事务失败时可能留下未引用的内容归档，可保留而不视为成功入库。提交器重新检查来源 SHA、原始行映射和业务规则，重算提案校验和不能绕过检查。
+
+## 已确认法规身份的修订
+
+同一法规身份的不同版本可能具有不同的强制属性。例如 GB/T 12801—2008 与 GB 12801—2025 在官方替代关系确认后共用一个法规身份，身份文种应使用“国家标准”，各版本分别保留推荐性或强制性属性。
+
+已确认身份不能通过普通 Excel 或目录更新直接改写。`identity.py amend` 只允许修订规范名称、制定机关、地区及文种；必须引用已登记的官方原件和具体理由：
+
+```text
+python tools/pipeline/identity.py --db source/master/safety.sqlite3 amend --law LF_EXAMPLE --changes source/proposals/identity-fields.json --evidence E_EXAMPLE --reason "官方新旧版本替代关系已确认，修正共同身份文种" --output source/proposals/identity-amendment.json
+python tools/pipeline/identity.py --db source/master/safety.sqlite3 apply --proposal source/proposals/identity-amendment.json --actor reviewer-name
+```
+
+`identity-fields.json` 是字段对象，例如 `{"document_kind":"国家标准"}`。修订保留法规 ID、各版本 ID 和条款；身份退回待核验、修订号增加，依赖旧身份的核验证明失效。重新审阅身份及受影响版本后才能再次发布。状态和 ID 不可作为修订字段；原件损坏、提案过期及身份冲突会拒绝提交，操作与回执只追加保存。`apply` 自动识别身份合并和身份修订提案。
 
 ## 当前边界与真实验收
 

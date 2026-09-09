@@ -4,7 +4,7 @@
 
 已实现：原始来源导入、SQLite 无损迁移、多 Sheet Excel 编辑往返、候选入库/检查项拆分、隐患合并、证据核验记录和严格发布包生成。
 另已实现多布局自动导入、法规/版本/条款目录提案、法规身份合并、本地原件库及网站全文检索。最新范围见 [本轮交付](../docs/DELIVERY_20260909.md)。
-`content/` 仍是过渡期生产构建输入，`data/` 仍由原构建器生成；新发布器生成隔离包，尚未切换生产。
+`content/` 和根 `data/` 只作为过渡期线上基线保留。新流水线生成完整静态发布包，并由选择文件和 CI 在隔离目录验证；尚未切换生产。
 
 - [母库迁移与备份](../docs/MASTER_MIGRATION.md)
 - [Excel 编辑往返](../docs/EXCEL_EXCHANGE.md)
@@ -42,12 +42,14 @@ Excel 合并表头、标题行等用 `sheet` / `headerRow` 明确指定。歧义
 同一文件同一解析配置重复导入不增加记录；不同文件完全相同的候选归并，但各自原始行保留。
 导入成功不表示法规核验通过。`.xls` / PDF / 扫描图像暂不支持，先保留原件后由独立适配器转换。
 
-检查表使用 `source/mappings/inspection-summary.json`，符合项原始描述留白而保留依据/原文；通用隐患模板另行拆分。新增法规/条款/一般依据关联、法规身份合并及条款冲突解决接口仍待实现。
+检查表使用 `source/mappings/inspection-summary.json`，符合项原始描述留白而保留依据/原文；通用隐患模板另行拆分。新增法规/版本、条款、依据关联、隐患合并和已确认法规身份修订均使用受控提案接口。
 
 生成隔离网站数据包：
 
 ```text
-python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/exchange/release-preview-001
+python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output source/releases/NEW_RELEASE
+python tools/pipeline/manage.py verify-site --output source/releases/NEW_RELEASE
+python tools/pipeline/prepare_site.py --output NEW_HOSTING_DIR
 ```
 
-当前真实公开样板为 `source/releases/pilot-20260909/release.json`，只有 4 个隐患，不能替代整站数据。母库、原件与私有工作材料须另行备份，Git 不包含这些文件。
+`source/releases/site-selection.json` 固定 CI 检查的候选包及 releaseHash。分支 CI 只构建 artifact；正式 Pages 发布仅允许在 `main` 手动触发。当前候选范围见 [架构验收](../docs/ARCHITECTURE_ACCEPTANCE_20260909.md)。母库、原件与私有工作材料须另行备份，Git 不包含这些文件。

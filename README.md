@@ -6,8 +6,8 @@
 
 ## 当前架构
 
-采用 SQLite 规范化母库、多 Sheet Excel 编辑交换、证据核验记录和自动网站构建，设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)。可执行入口与实施边界见 [数据流水线](source/README.md)。
-已实现 [旧数据无损迁移](docs/MASTER_MIGRATION.md)、[Excel 编辑往返](docs/EXCEL_EXCHANGE.md)、[多来源入库与隐患合并](docs/ADMISSION.md)、[核验及严格发布包生成](docs/VERIFICATION_PUBLISH.md)。当前生产构建仍使用下述 V2 输入，新发布器只生成隔离包。
+采用 SQLite 规范化母库、多 Sheet Excel 编辑交换、证据核验记录和自动网站构建，设计见 [数据架构 V3](docs/DATA_ARCHITECTURE_V3.md)。第一阶段最终结构、操作步骤和保留/淘汰边界见 [架构验收](docs/ARCHITECTURE_ACCEPTANCE_20260909.md)。
+已实现 [旧数据无损迁移](docs/MASTER_MIGRATION.md)、[Excel 编辑往返](docs/EXCEL_EXCHANGE.md)、[多来源入库与隐患合并](docs/ADMISSION.md)、[核验及严格发布包生成](docs/VERIFICATION_PUBLISH.md)。生产网站尚未切换；工作分支已能从已核验发布包生成独立托管 artifact。
 
 2026-09-09 已补齐 [法规目录与版本提案](docs/CATALOG.md)、法规身份合并、多 Excel 自动路由、[本地原件与网站全文检索](docs/FULLTEXT_LIBRARY.md)。本轮收录量、实质核验范围和未决项见 [本轮交付报告](docs/DELIVERY_20260909.md)。
 
@@ -43,10 +43,11 @@
 核验后生成新网站数据包：
 
 ```text
-python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/exchange/release-preview-001
+python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output source/releases/NEW_RELEASE
+python tools/pipeline/manage.py verify-site --output source/releases/NEW_RELEASE
 ```
 
-输出包含 release、索引、分片、manifest 和校验和。用户无需编辑网站 JSON。正式切换前审阅增减差异；当前 4 条真实样板仅供验证流程，未替换站点。
+输出包含 release、索引、分片、manifest 和校验和。用户无需编辑网站 JSON。当前候选包及准确数量见 [架构验收](docs/ARCHITECTURE_ACCEPTANCE_20260909.md)；正式站点仍需审阅发布差异后手动切换。
 
 以下命令继续用于过渡期生产数据的重建检查：
 

@@ -60,7 +60,8 @@ python tools/pipeline/imports.py source/imports --registry source/mappings/regis
 ## 六、构建与校验
 
 ```text
-python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/exchange/release-preview-001
+python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output source/releases/NEW_RELEASE
+python tools/pipeline/manage.py verify-site --output source/releases/NEW_RELEASE
 ```
 
 构建脚本会检查：
@@ -75,7 +76,7 @@ python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/excha
 
 ## 七、提交和发布
 
-生成隔离包及独立私有增减/阻断报告，公开快照可提交供 CI 重建。当前生产仍从遗留 `content/` 构建 `data/`，新发布包不会自动覆盖网站。生产切换前需处理现有公开记录证据和完整发布增减报告。统一命令 `python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output NEW_DIR` 同时生成网站资源、JSON、索引、全文和发布清单。
+生成隔离包及独立私有增减/阻断报告，公开快照可提交供 CI 重建。更新 `source/releases/site-selection.json` 后，分支 CI 只构建托管 artifact；当前生产仍保留遗留基线，正式发布仅在 `main` 手动触发。生产切换前需审阅完整增减报告。统一命令 `python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output NEW_DIR` 同时生成网站资源、JSON、索引、全文和发布清单。
 
 ## 八、后续法规更新
 

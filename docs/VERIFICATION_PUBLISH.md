@@ -1,6 +1,6 @@
 # 有证据的核验与网站数据构建
 
-`review.py` 登记实际审阅结论；`manage.py publish` 从母库筛选通过全部依赖核验的记录，生成独立网站数据包。当前已跑通小批次真实闭环，**生产输入仍是旧 `content/`，本工具没有接管正式 `data/`，也不部署网站**。
+`review.py` 登记实际审阅结论；`manage.py site` 从母库筛选通过全部依赖核验的记录，生成完整独立网站包。生产网站仍使用旧基线；候选包通过选择文件和 CI 构建托管 artifact，正式发布须在 `main` 手动触发。
 
 ## 核验对象
 
@@ -63,7 +63,8 @@ python tools/pipeline/review.py apply --proposal source/proposals/review-001.jso
 ## 一条命令生成网站数据
 
 ```text
-python tools/pipeline/manage.py publish --as-of 2026-09-09 --output source/exchange/release-preview-001
+python tools/pipeline/manage.py site --as-of 2026-09-09 --output source/releases/NEW_RELEASE
+python tools/pipeline/manage.py verify-site --output source/releases/NEW_RELEASE
 ```
 
 可加 `--db <母库副本>`、`--node <Node可执行文件>`、`--baseline <旧search-index.json>`。默认基线为仓库现有搜索索引。输出目录必须尚不存在，拒绝覆盖当前 `data/` 或已有发布包。

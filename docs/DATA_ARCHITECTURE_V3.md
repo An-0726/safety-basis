@@ -1,8 +1,8 @@
-# Safety Basis 数据架构 V3：第一阶段设计与验证
+# Safety Basis 数据架构 V3
 
 设计日期：2026-09-08。工作分支：`data-verify-batch-003`。
 检查基线：`b95ace0d5953f1375613294835b626a9f55cbf4c`。
-本阶段不开展法规原文终审，不将候选升级为已核验，不切换 main 或部署。
+第一阶段先完成可扩展工具链；法规内容核验作为持续的数据工作，生产切换仍需单独审阅。
 
 截至 2026-09-09，已落地母库迁移、Excel 双向编辑、候选入库/检查项拆分/隐患合并、证据核验与严格隔离发布；新增法规/版本/条款/一般关联、法规身份合并和全文库已实现。以下保留第一阶段检查基线；最新实际数据量与未决项见 [本轮交付报告](DELIVERY_20260909.md)。正式网站尚未切换。
 
@@ -101,7 +101,7 @@ flowchart TD
 | `verification` | id、entityType、entityId、entityRevision、dependencyHash、checkType、result、reviewer、model、checkedAt、reviewDueAt、evidenceId、reason、supersedes；必须指向存在的对象和版本 |
 | `evidence` | id、officialUrl、retrievedAt、snapshotRef、sha256、page/locator；核验报告引用证据，不复制到每条隐患 |
 | `merge_decisions` | id、sourceIds、targetIds、action、baseRevision、reason、reviewer、createdAt；保留合并/拆分/排除历史 |
-| `dictionary` | kind、code、label、parentCode、active；主题、区域、状态、依据角色和适用类型 |
+| `source/schemas/dictionaries.json` | kind、code、label、parentCode、active、ordinal；统一工作簿显示字典，业务约束仍由 DDL/代码执行 |
 | `change_sets` | id、baseRevision、resultRevision、actor、diffHash、createdAt；Excel/AI 更新事务审计 |
 
 `laws` 是法规身份，`law_versions` 是各版正式文件。不同年份版本应保留，不属于冗余。
@@ -207,7 +207,8 @@ flowchart TD
 已实现命令（生成隔离包，不部署）：
 
 ```text
-python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/exchange/release-preview-001
+python tools/pipeline/manage.py site --as-of YYYY-MM-DD --output source/releases/NEW_RELEASE
+python tools/pipeline/manage.py verify-site --output source/releases/NEW_RELEASE
 ```
 
 运行顺序：母库一致性检查 → 固定只读 revision → 计算四层核验门禁 → 生成阻断报告 → 白名单导出 release → V2 适配 → 原 Node 分片/索引编译 → 全量运行引用检查 → 整包校验和 → 发布产物。
@@ -217,10 +218,10 @@ python tools/pipeline/manage.py publish --as-of YYYY-MM-DD --output source/excha
 
 发布快照包含：hazards、lawVersions、clauses、links、当前通过的公开核验证明摘要、settings。
 仅放脱敏字段；rawPayload、source 本地路径、现场信息、内部审核备注不得通过对象展开混入发布。
-CI 不访问私有母库，从提交的 release 样板快照再次做完整门禁检查并在临时目录确定性重建网站数据；生产 `data/` 仍保持旧输入。
+CI 不访问私有母库，从 `source/releases/site-selection.json` 选择的完整 release 包再次检查清单、哈希及发布当日门禁，并在临时目录生成托管 artifact；生产根 `data/` 仍保持旧输入。
 releaseHash 标识规范化内容，generatedAt/asOf 固定为快照值，不用运行时当前时间破坏可复现性。
-构建结果先写临时目录，通过内部校验后安装到新的输出目录。未来生产切换再生成 Pages artifact，当前命令不部署。
-切换时还需更新 Service Worker 缓存版本，验证旧缓存不会保留撤下条目，提供版本不匹配自动刷新；这些生产迁移工作尚未实施。
+构建结果先写临时目录，通过内部校验后安装到新的输出目录。`prepare_site.py` 只复制被选择且复核有效的完整公开包；分支和 PR 自动构建 artifact，正式 Pages 部署仅在 `main` 手动触发。
+Service Worker 已更新缓存版本；前端在旧深链接未进入所选已核验包时显示“未发布/已撤下”提示，不会静默打开另一条记录。生产域名上的实际缓存和增减差异仍须在手动发布时验收。
 
 运行格式继续：`manifest.json`、`search-index.json`、`law-index.json`、`taxonomy.json`、`hazards/*.json`、`clauses/*.json`。
 manifest 增加 releaseHash、sourceRevision、buildToolVersion、发布统计；私有待整理明细仅在本地报告。

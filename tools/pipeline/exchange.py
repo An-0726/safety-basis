@@ -1,7 +1,7 @@
 """Versioned Excel exchange for the normalized safety master.
 
 The workbook is an editable snapshot, never an independent source of truth.
-Only existing core records can be updated in exchange-v1.  Importing first creates
+Only existing core records can be updated in exchange-v2.  Importing first creates
 a reviewable proposal; a separate command applies that exact proposal atomically.
 """
 from __future__ import annotations
@@ -26,7 +26,9 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from master import ROOT, connect_readonly, dumps
 
 
-FORMAT_VERSION = "safety-master-exchange-v1"
+FORMAT_VERSION = "safety-master-exchange-v2"
+DICTIONARY_PATH = ROOT / "source/schemas/dictionaries.json"
+DICTIONARY_COLUMNS = ("kind", "code", "label", "parentCode", "active", "ordinal", "description")
 
 # Column definitions: (database column, workbook heading, editable, value kind).
 SHEETS: dict[str, dict[str, Any]] = {
@@ -95,6 +97,24 @@ READ_ONLY_SHEETS = {
 }
 
 
+def dictionary_rows() -> list[dict[str, Any]]:
+    document = json.loads(DICTIONARY_PATH.read_text(encoding="utf-8"))
+    if (not isinstance(document, dict) or document.get("schemaVersion") != "safety-dictionaries-v1"
+            or set(document) != {"schemaVersion", "entries"} or not isinstance(document["entries"], list)):
+        raise ValueError("字典配置格式无效")
+    rows, keys = [], set()
+    for entry in document["entries"]:
+        if not isinstance(entry, dict) or set(entry) != set(DICTIONARY_COLUMNS):
+            raise ValueError("字典条目字段无效")
+        key = (entry["kind"], entry["code"])
+        if key in keys or not all(isinstance(entry[field], str) for field in ("kind", "code", "label", "parentCode", "description")):
+            raise ValueError("字典条目重复或类型无效")
+        if not isinstance(entry["active"], bool) or not isinstance(entry["ordinal"], int):
+            raise ValueError("字典条目类型无效")
+        keys.add(key); rows.append(entry)
+    return sorted(rows, key=lambda row: (row["kind"], row["ordinal"], row["code"]))
+
+
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -120,7 +140,7 @@ def has_table(conn: sqlite3.Connection, table: str) -> bool:
 
 def state_hash(conn: sqlite3.Connection) -> str:
     payload = {table: table_rows(conn, table) for table in STATE_TABLES}
-    # Preserve existing exchange-v1 snapshots until business data actually changes.
+    # Keep state hashes independent of empty optional audit tables.
     for table in ADMISSION_STATE_TABLES:
         if has_table(conn, table):
             rows = table_rows(conn, table)
@@ -238,7 +258,7 @@ def export_workbook(db_path: Path, output: Path) -> dict[str, Any]:
             "只在黄色列修改，并在该行“操作”填写 update；灰色列禁止修改。",
             "先运行 propose 生成差异提案并审阅，再运行 apply 原子提交。",
             "内容变化增加 revision 并回到待核验；已失效或关闭记录保留关闭状态，旧核验记录保留。",
-            "exchange-v1 只更新已有核心记录；新增、删除、合并、标签和别名编辑留给后续版本。",
+            "exchange-v2 只更新已有核心记录；新增、删除、合并、标签和别名使用专门提案接口。",
             "工作簿中的公式一律拒绝，待核验内容仍不能进入正式网站发布数据。",
             "长条款保留完整原文；可在 Excel 展开行高或编辑栏阅读。文本列保持文本格式。",
         ]
@@ -288,6 +308,15 @@ def export_workbook(db_path: Path, output: Path) -> dict[str, Any]:
                 for column_index, field in enumerate(columns, 1):
                     write_cell(ws, row_index, column_index, row[field])
             _style_table(ws, set())
+
+        ws = wb.create_sheet("字典")
+        for index, heading in enumerate(DICTIONARY_COLUMNS, 1):
+            ws.cell(1, index, heading)
+        rows = dictionary_rows()
+        for row_index, row in enumerate(rows, 2):
+            for column_index, field in enumerate(DICTIONARY_COLUMNS, 1):
+                write_cell(ws, row_index, column_index, row[field])
+        _style_table(ws, set())
 
         wb.calculation.fullCalcOnLoad = False
         blob = BytesIO()
@@ -339,7 +368,7 @@ def check_headers(ws, headings: list[str]) -> None:
 
 
 def check_readonly_sheets(wb, conn: sqlite3.Connection) -> None:
-    if set(wb.sheetnames) != {"说明", *SHEETS, *READ_ONLY_SHEETS}:
+    if set(wb.sheetnames) != {"说明", *SHEETS, *READ_ONLY_SHEETS, "字典"}:
         raise ValueError("Sheet 集合已改变；不支持新增或删除 Sheet")
     for name, (table, columns) in READ_ONLY_SHEETS.items():
         ws = wb[name]
@@ -353,6 +382,16 @@ def check_readonly_sheets(wb, conn: sqlite3.Connection) -> None:
             actual[dumps([cell if cell is not None else "" for cell in cells])] += 1
         if actual != expected:
             raise ValueError(f"{name}: 只读 Sheet 内容已改变")
+    ws = wb["字典"]
+    check_headers(ws, list(DICTIONARY_COLUMNS))
+    expected = Counter(dumps([row[column] for column in DICTIONARY_COLUMNS]) for row in dictionary_rows())
+    actual = Counter()
+    for cells in ws.iter_rows(min_row=2, max_col=len(DICTIONARY_COLUMNS), values_only=True):
+        if all(cell in (None, "") for cell in cells):
+            continue
+        actual[dumps([cell if cell is not None else "" for cell in cells])] += 1
+    if actual != expected:
+        raise ValueError("字典: 只读 Sheet 内容已改变")
 
 
 def make_change(sheet_name: str, before: dict[str, Any], edits: dict[str, Any]) -> dict[str, Any]:
