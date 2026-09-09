@@ -1,15 +1,32 @@
 {
   "asOf": "2026-09-09",
-  "batch": "core-laws-001",
+  "batch": "core-laws-002",
+  "batches": [
+    {
+      "evidenceAdded": 6,
+      "id": "core-laws-001",
+      "lawVersionsAdded": 6,
+      "lawsAdded": 6,
+      "successionsAdded": 2
+    },
+    {
+      "evidenceAdded": 4,
+      "id": "core-laws-002",
+      "lawVersionsAdded": 4,
+      "lawsAdded": 4,
+      "selection": "Remaining r10 laws with positive current link usage; counts 30, 9, 1, 1.",
+      "successionsAdded": 0
+    }
+  ],
   "counts": {
-    "evidence": 6,
-    "lawVersions": 6,
-    "laws": 6,
+    "evidence": 10,
+    "lawVersions": 10,
+    "laws": 10,
     "successions": 2
   },
   "formatVersion": "4.0-alpha",
   "migrationPhase": "Phase 6",
-  "scope": "High-use verified laws plus current verified active law versions; active-to-active succession endpoints forced into batch. Clauses, hazards and links are intentionally deferred.",
+  "scope": "Cumulative verified law/current lawVersion core. core-laws-002 adds all remaining r10 laws with positive current link usage after core-laws-001; clauses, hazards and links remain deferred.",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
