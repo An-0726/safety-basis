@@ -1,9 +1,9 @@
 # Safety Basis V4 Chat-first 架构设计
 
-> 状态：Phase 2 正式设计稿  
+> 状态：Phase 2 正式设计稿（已完成二次架构校验）  
 > 日期：2026-09-10  
 > 工作分支：`chat-v4`  
-> 设计目标：在完整保留 V3 有价值知识资产的前提下，把日常维护入口改造成 Chat 可以直接理解、审阅、修改、验证和提交的 Git-first 知识工程体系。
+> 设计目标：完整保留 V3 有价值知识资产，同时把日常维护入口改造成 Chat 可以直接理解、审阅、修改、验证和提交的 Git-first 知识工程体系。
 
 ---
 
@@ -11,106 +11,104 @@
 
 V4 不推倒 V3 的知识模型，但改变“谁是日常维护入口”和“什么才是发布硬门禁”。
 
-V3 的核心优点继续保留：
+继续保留：
 
 - Stable ID；
 - 隐患、法规身份、法规版本、条款、隐患—条款关联分离；
-- 同一条款复用而不是在每个隐患里重复复制；
-- 国家、江苏、南京等 jurisdiction 独立建模；
+- 同一条款复用；
+- jurisdiction 独立建模；
 - 新旧法规版本并存；
-- 证据与来源可追溯；
-- release 是只读派生结果；
-- 生产选择与候选 release 分离。
+- law succession；
+- 来源/证据可追溯；
+- pending 与 verified 隔离；
+- release 只读派生；
+- 候选 release 与生产选择分离。
 
-V4 的关键改变：
+关键改变：
 
-1. **Git 中的结构化知识文件成为 Chat 的正式维护面。**
-2. **SQLite 从“日常唯一写入母库”降级为 V3 冻结资产、迁移来源、批量分析工具和可选派生索引，不再要求每次日常修改都经本地事务脚本。**
-3. **Git commit / PR diff 取代大量手工 revision、change_set 和 dependency_hash，作为日常版本审计主轴。**
-4. **发布硬门禁只拦内容正确性、法规效力、条款定位、关联适用性、字段完整性和隐私泄漏等真正影响公开质量的问题。**
-5. **证据文件哈希、归档文件是否还在、复核日期、技术依赖 hash 等保留为审计增强或软警告，不再默认等同于内容错误。**
-6. **完整法规/标准全文不是发布隐患的前置条件。** 已可靠核验的具体条款可以独立使用；全文库继续作为可选私有证据资产。
-7. **网站继续吃自动生成的 release，不直接读取维护源。**
+1. **Git 中结构化知识文件成为 Chat 的正式维护面。**
+2. **SQLite 从日常唯一写入母库降级为 V3 冻结资产、首次迁移来源、批量分析工具和可选派生索引。**
+3. **Git commit / PR diff 成为日常版本审计主轴。**
+4. **review 只绑定“被审阅实体本身的 canonical 内容 hash”，不再计算跨实体 dependencyHash。**
+5. **链式正确性通过逐节点 gate 保证：law、version、clause、link 各自必须通过；上游实体变化不会机械重算所有下游 proof，但会因为上游 review 失效而自然阻断整条链。**
+6. **证据原件哈希、归档文件是否还在、复核日期等转为审计增强或软警告，不再默认等同于内容错误。**
+7. **完整法规/标准全文不是发布隐患的统一前置条件；已可靠核验的具体条款可以独立使用。**
+8. **网站继续读取自动生成的 release，不直接读取维护源。**
 
-一句话定义 V4：
+一句话定义：
 
-> **Git-first 维护 + Stable-ID 关系知识 + 独立审阅状态 + 内容型硬门禁 + 可选证据增强 + 自动 release + 静态网站。**
+> **Git-first 维护 + Stable-ID 关系知识 + 实体级审阅绑定 + 内容型硬门禁 + 可选证据增强 + 自动 release + 静态网站。**
 
 ---
 
-## 2. 为什么 V3 不直接原样延续
+## 2. V3 为什么不原样延续
 
-V3 当前采用 SQLite 规范化母库、verification proof、entity revision、dependency hash、evidence archive hash 和严格链式 gate。该设计对本地 Code Agent 很严谨，但对跨轮 Chat 日常维护有几个结构性问题：
+V3 采用 SQLite 规范化母库、verification proof、entity revision、dependency hash、evidence archive hash 和严格链式 gate。它对本地 Code Agent 很严谨，但对跨轮 Chat 日常维护存在结构性成本：
 
-- Chat 很难把本地 SQLite 事务作为长期、稳定、可见的日常编辑界面；
-- 一次很小的实体修改可能导致 dependency hash 大面积失效；
-- evidence 原件搬动、重处理或哈希变化可能把“技术一致性失败”表现为“内容不能发布”；
-- 每个实体都要求完整 proof/evidence 绑定，使简单修改产生大量机械性维护；
+- Chat 很难把本地 SQLite 事务长期作为稳定、可见的编辑界面；
+- 一个小修改可能造成 dependency hash 级联失效；
+- evidence 原件搬动、重处理或哈希变化可能把技术一致性失败表现为内容不可发布；
+- 每个实体都要求完整 proof/evidence 绑定，简单修改产生大量机械维护；
 - 公开知识和私有全文/企业来源耦合过重；
-- 本地脚本、SQLite、Git 和 release 之间存在多套状态，需要专门 Code Agent 才容易安全操作。
+- SQLite、Git、exchange、proof、release 形成多套状态，需要专门 Code Agent 才容易操作。
 
-V4 不否定 V3 的审计价值，而是把这些能力重新分层：
+V4 将能力重新分层：
 
-- **知识真值层**：回答“内容是什么、依据是什么、适用于什么场景”；
-- **审阅状态层**：回答“这个实体/关联是否已确认”；
-- **证据增强层**：回答“核验时看过什么、在哪里、是否有快照”；
-- **发布门禁层**：只决定能否公开；
-- **审计层**：Git 历史、release hash、可选 snapshot hash 用于追溯，不反过来机械否定已核实内容。
+- **知识真值层**：内容是什么；
+- **审阅状态层**：当前内容是否已确认；
+- **证据增强层**：核验依据在哪里；
+- **发布门禁层**：是否允许进入 release；
+- **审计层**：Git 历史、release hash、可选 evidence snapshot/hash。
 
 ---
 
 ## 3. V4 权威层级
 
-### 3.1 正式维护源
-
-V4 正式维护源拟放在：
+### 3.1 日常正式维护源
 
 ```text
 knowledge/
 ```
 
-它是 Chat 日常读写的结构化知识区。
+这是 V4 Chat 日常读写的正式知识区。
 
-### 3.2 V3 SQLite 的地位
+### 3.2 V3 SQLite
 
-`source/master/safety.sqlite3` 在迁移完成前仍是 **V3 事实源**，不得删除、覆盖或改写；进入 V4 后其角色变为：
+`source/master/safety.sqlite3` 在切换前仍是 **V3 事实源**，不得删除、覆盖或边迁移边改写。
+
+V4 切换后其角色变为：
 
 - V3 冻结基线；
-- V3 → V4 首次迁移来源；
+- 首次迁移来源；
 - 对账与回溯来源；
 - 批量统计/复杂查询工具；
-- 必要时生成临时索引。
+- 可选生成临时索引。
 
-V4 正式切换后，日常新增或修改知识不再要求先写 SQLite 再导出 Git 文件。
+它不再是 V4 日常新增/修改知识的必经写入口。
 
-### 3.3 release 的地位
+### 3.3 release
 
-`releases/` 或迁移期 `source/releases/` 仍然只保存 **自动派生、不可人工作为第二母库维护** 的发布快照。
+release 永远是自动派生结果，不能成为第二母库人工维护。
 
-### 3.4 网站数据的地位
+### 3.4 网站 data
 
-`data/manifest.json`、search index、law index、hazard/clause shards 仍是构建产物，不是知识源。
+manifest、search-index、law-index、hazard/clause shards 均是构建产物，不是知识源。
 
 ---
 
-## 4. 建议目录结构
-
-V4 目标目录：
+## 4. 目标目录
 
 ```text
 knowledge/
   manifest.json
   hazards/
     H001.json
-    H002.json
   laws/
     L001.json
-    LF_xxx.json
   law-versions/
     LV_xxx.json
   clauses/
     C001.json
-    C002.json
   links/
     LK_xxx.json
   successions/
@@ -126,7 +124,7 @@ knowledge/
   provenance/
     public/
 
-private/                 # 不进入公开仓库；仅作为概念目录
+private/                 # 概念目录，不进入公开 Git
   evidence/
   source-index/
   enterprise-material/
@@ -153,38 +151,33 @@ docs/
   MIGRATION_V3_TO_V4.md
 ```
 
-迁移期不立刻删除现有 `source/`、`content/`、`data/` 或 `tools/pipeline/`。
+迁移期不删除现有 `source/`、`content/`、`data/` 或 `tools/pipeline/`。
 
 ---
 
-## 5. 为什么采用“一实体一 JSON 文件”
+## 5. 文件格式：一实体一 JSON
 
-V4 维护源优先使用 UTF-8、pretty-printed JSON，每个核心实体一个文件。
+V4 正式维护源优先使用 UTF-8 pretty-printed JSON，每个核心实体一个文件。
 
-原因：
+理由：
 
-- Chat 和 GitHub 都能直接读取和修改；
-- JSON 语义明确，不依赖本地数据库驱动；
-- 每次修改 diff 小，冲突范围有限；
-- Stable ID 可以直接作为文件名；
-- 可用 JSON Schema 或 Python 标准库严格校验；
-- 不要求引入 YAML 解析器；
-- 一个实体损坏不会让整批 JSONL 无法定位；
-- Git 历史天然记录每个实体的变化。
+- Chat/GitHub 可直接读改；
+- JSON 语义明确；
+- diff 小、冲突面小；
+- Stable ID 可直接作为文件名；
+- Python 标准库即可解析；
+- 一个实体损坏不会拖垮整个大文件；
+- Git 历史天然记录变化。
 
-不采用“一个超大 master.json”，因为 1000+ 隐患和 2600+ 条款会让 Chat 每轮修改成本、冲突风险和 diff 噪声过高。
+不使用单一 `master.json`；1000+ hazard、2600+ clause 会导致巨大 diff 和高冲突。
 
-不采用 Excel 作为 V4 唯一母库，因为多实体关系、Stable ID、历史版本、外键和多人/多 AI 并发修改仍不适合 Excel 直接承担。
-
-Excel 可以继续作为查看、批量审阅和导入/导出界面，但不是第二事实源。
+Excel 继续作为批量查看、导入/导出和人工审阅界面，但不是第二事实源。
 
 ---
 
-## 6. 核心实体模型
+## 6. 核心实体
 
 ### 6.1 hazard
-
-示例：
 
 ```json
 {
@@ -203,7 +196,7 @@ Excel 可以继续作为查看、批量审阅和导入/导出界面，但不是�
 }
 ```
 
-V4 不把“已核验”直接混进 hazard 内容文件。核验状态放 review sidecar，避免内容状态和内容本身互相污染。
+核验状态不混进 hazard 内容文件，而在 review sidecar 中维护。
 
 ### 6.2 law
 
@@ -236,14 +229,9 @@ V4 不把“已核验”直接混进 hazard 内容文件。核验状态放 revie
 }
 ```
 
-`validityStatus` 推荐标准值：
+`validityStatus` 标准值：`active`、`upcoming`、`repealed`、`unknown`。
 
-- `active`
-- `upcoming`
-- `repealed`
-- `unknown`
-
-法规版本状态与“内容是否核验”继续分开。
+版本效力与内容审阅分开。
 
 ### 6.4 clause
 
@@ -257,12 +245,12 @@ V4 不把“已核验”直接混进 hazard 内容文件。核验状态放 revie
 }
 ```
 
-硬规则：
+规则：
 
 - 必须指向明确 lawVersion；
-- 同一版本同一定位不得存在两个互相冲突的 active clause；
-- 没有可靠原文就保持 pending，不编造；
-- 不要求为了保存这一条 clause 先取得整部标准全文。
+- 同一版本同一定位不得存在互相冲突的 active clause；
+- 没有可靠原文保持 pending，不编造；
+- 不要求先取得整部标准全文才能保存/核验一个可靠条款。
 
 ### 6.5 link
 
@@ -279,27 +267,23 @@ V4 不把“已核验”直接混进 hazard 内容文件。核验状态放 revie
 }
 ```
 
-link 是 V4 最重要的语义实体之一。
+link 是最重要的语义实体之一。
 
-“条款原文正确”不等于“该条款适合这个隐患”。因此关联适用性必须独立审阅，禁止仅因关键词、法规名称或同一章节而自动升级为 verified。
+“条款原文正确”不等于“该条款适用于这个隐患”。关联适用性必须独立审阅，禁止只靠关键词、同法规或同章节自动 verified。
 
 ### 6.6 succession
 
-继续保留法规版本替代关系，支持：
+继续保留法规版本替代关系：`replaces`、`partially_replaces`、`amends`、`supersedes`、`related`。
 
-- replaces
-- partially_replaces
-- amends
-- supersedes
-- related
-
-这样法规更新时优先改版本关系和 link 状态，不在几百个 hazard 文本里机械改标准号。
+法规更新优先改版本关系和 link 状态，不在大量 hazard 文本里机械替换标准号。
 
 ---
 
-## 7. Review sidecar：用“当前审阅结论”替代复杂 proof 绑定
+## 7. Review sidecar：实体级内容绑定
 
-V4 把当前审阅结论放在独立 sidecar：
+V4 review 记录当前审阅结论，并**必须绑定被审阅实体当前 canonical 内容**。
+
+示例：
 
 ```json
 {
@@ -307,6 +291,7 @@ V4 把当前审阅结论放在独立 sidecar：
   "entityId": "C014",
   "decision": "verified",
   "reviewType": "text",
+  "reviewedContentHash": "<canonical entity sha256>",
   "checkedAt": "2026-09-10T00:00:00+09:00",
   "reviewer": "ChatGPT",
   "evidenceRefs": ["EV_xxx"],
@@ -322,15 +307,33 @@ V4 把当前审阅结论放在独立 sidecar：
 - `rejected`
 - `superseded`
 
-V4 不要求 sidecar 自带 `entityRevision + dependencyHash` 才能生效。原因是 Git commit 已经承担了内容版本历史；validator 可以检查 review 引用对象是否存在，gate 只看当前 review 是否足够支持发布。
+### 7.1 reviewedContentHash 是硬绑定
 
-如果后续确有必要，可以在 review 中增加可选 `reviewedCommit`，用 Git commit SHA 精确指向核验时版本，但它应是增强审计，不是所有数据日常更新的机械前置条件。
+validator/gate 对实体重新 canonicalize 后计算 hash：
+
+- 当前 hash = `reviewedContentHash`：review 可以使用；
+- 当前 hash ≠ `reviewedContentHash`：review 立即视为 stale，实体不能按 verified 发布。
+
+这样解决“实体改了但旧 review 仍放行”的漏洞。
+
+### 7.2 为什么不恢复 V3 dependencyHash
+
+V4 **只 hash 本实体，不 hash 跨实体依赖图**。
+
+例如：
+
+- C014 文本修改 → 只让 C014 的 review stale；
+- H015 review 和 LK001 review 不被机械改写；
+- 但发布 H015 时链式 gate 必须经过 C014，因此 H015 仍会被自然阻断；
+- C014 复核后，整条链恢复，无需重新制造所有下游 dependency hash。
+
+这保留安全性，同时消除 V3 大面积级联失效。
+
+可选字段 `reviewedCommit` 可以额外记录核验时 Git commit，但不是 reviewedContentHash 的替代品。
 
 ---
 
-## 8. Evidence：证据保留，但不再强制“全文原件 + 哈希”
-
-V4 evidence 设计分三级：
+## 8. Evidence：内容证据与技术归档分离
 
 ### A. 官方公开证据
 
@@ -346,9 +349,7 @@ V4 evidence 设计分三级：
 
 ### B. 私有合法原件
 
-适用于购买标准、内部持有 PDF 等。
-
-公开 Git 中只记录最小元数据和私有引用 ID，不放原件、不放企业路径、不放受限全文：
+适用于购买标准、内部持有 PDF 等。公开 Git 只记录最小元数据和私有引用 ID，不放原件、不放企业路径、不放受限全文：
 
 ```json
 {
@@ -362,59 +363,59 @@ V4 evidence 设计分三级：
 
 ### C. 二手/辅助来源
 
-可作为找线索、比对或解释，但不得单独支撑关键法规原文 verified。
+可用于找线索、解释和交叉比对，但不得单独支撑关键法规原文 verified。
 
-`sha256`、snapshotRef、archiveOk 等字段可以继续存在，但改为可选增强字段。
+`sha256`、snapshotRef、archiveOk 可继续作为可选证据字段。
 
 ---
 
-## 9. Fulltext 在 V4 中的角色
+## 9. Fulltext 的角色
 
-`fulltext.sqlite3` 和历史全文归档不删除。
+`fulltext.sqlite3` 和历史全文归档保留，但 V4 明确：
 
-但 V4 明确：
-
-> **全文是证据能力和检索能力，不是每条隐患进入网站的统一硬门槛。**
+> **全文是检索/证据能力，不是每条隐患进入网站的统一硬门槛。**
 
 只要：
 
 - 法规身份正确；
-- 版本正确且当前有效；
+- 版本正确且在 asOf 有效；
 - 具体条款定位正确；
-- 条款原文已可靠核对；
-- hazard—clause 适用性已确认；
+- 条款原文可靠；
+- hazard—clause 适用性确认；
 
 即可发布该依据。
 
-这解决付费标准、扫描 PDF、OCR 难题或官方网页只公开部分条款时，整个知识库被“全文未完成”拖死的问题。
+这避免付费标准、扫描 PDF、OCR 或官方仅公开部分内容时拖死整个知识生产流程。
 
 ---
 
-## 10. V4 门禁分层原则
+## 10. V4 门禁架构原则
 
-Phase 3 将单独形成 `docs/GATE_V4.md`，本文件只冻结架构原则。
+Phase 3 单独形成 `docs/GATE_V4.md`；本节冻结原则。
 
-### 10.1 硬门禁：内容与公开安全
+### 10.1 硬门禁
 
-硬门禁至少覆盖：
+至少包括：
 
 - JSON/schema 合法；
 - Stable ID 唯一；
 - 外键完整；
+- 内容文件与 review 的 `reviewedContentHash` 一致；
 - hazard 公共字段完整；
-- law identity 已确认；
-- law version 效力明确且在 asOf 日期有效；
-- clause 定位和原文已确认；
-- link 适用性已确认；
-- hazard 至少有一个可用依据 link；
-- 禁止待核验内容混入正式 release；
-- 禁止私有企业资料、内部路径、受限全文泄漏；
-- 禁止已失效 link 支撑当前 hazard；
-- 禁止 upcoming 版本在实施日前作为当前违法/隐患定性依据。
+- law identity verified；
+- law version verified 且效力明确；
+- asOf 日期处于有效期间；
+- clause text/locator verified；
+- link applicability verified；
+- hazard 至少一个可用 link；
+- 待核验内容不进入正式 release；
+- 已失效 link 不支撑当前 hazard；
+- upcoming 版本实施日前不作为当前隐患定性依据；
+- 私有企业资料、内部路径、受限全文不得泄漏。
 
-### 10.2 软门禁：审计增强
+### 10.2 软警告
 
-默认只警告：
+默认不阻断：
 
 - evidence snapshot 丢失；
 - snapshot hash 不一致；
@@ -422,35 +423,34 @@ Phase 3 将单独形成 `docs/GATE_V4.md`，本文件只冻结架构原则。
 - official URL 临时失效；
 - evidence 没有本地归档副本；
 - reviewedCommit 未记录；
-- 技术索引需要重建；
-- 可选全文缺失。
+- 可选全文缺失；
+- 技术索引需要重建。
 
-### 10.3 绝不能放软的项
+### 10.3 绝不能放软
 
-与旧“分级门禁方案”相比，V4 明确以下不能因为“技术上麻烦”而放软：
-
-- clause 是否是真实原文；
-- clause locator 是否准确；
-- law version 是否有效；
+- 条款是否是真实原文；
+- locator 是否准确；
+- 法规版本是否有效；
 - hazard—clause 是否确实适用；
-- 是否存在私有信息泄漏。
+- review 是否对应当前实体内容；
+- 是否存在隐私/受限内容泄漏。
 
 ---
 
-## 11. Git 作为 V4 审计主轴
+## 11. Git 审计主轴
 
-V4 每次知识修改都应体现为小范围 Git diff。
-
-推荐流程：
+V4 每次知识修改都应形成小范围 Git diff：
 
 ```text
 读取 CHAT_HANDOFF
   ↓
-定位目标实体文件
+定位实体及关联实体
   ↓
-读取关联 law/version/clause/link/review
+修改 knowledge 文件
   ↓
-修改少量 knowledge 文件
+旧 review 因 reviewedContentHash 不匹配自动 stale
+  ↓
+必要时重新核验并更新 review
   ↓
 validate
   ↓
@@ -465,56 +465,45 @@ gate candidate
 更新 CHAT_HANDOFF
 ```
 
-Git 历史天然提供：
-
-- 谁改了什么；
-- 哪次 commit 改的；
-- 修改前后 diff；
-- 可回滚版本；
-- PR/Review 记录。
-
-因此不再需要为每个普通文本字段变化额外制造一套与 Git 重复的变更流水账。
+Git 历史提供修改人、commit、前后 diff 和回滚能力，因此不再为普通文本变化维持一套与 Git 重复的 change_set 体系。
 
 ---
 
 ## 12. Chat 日常操作规范
 
-每一轮 Chat 开工必须：
+每轮必须：
 
-1. 读取 `docs/CHAT_HANDOFF.md`；
-2. 确认当前分支和 HEAD；
-3. 确认上轮任务是否完整结束；
-4. 只读取本轮涉及的知识实体和关联实体；
+1. 读 `docs/CHAT_HANDOFF.md`；
+2. 确认分支/HEAD；
+3. 确认上轮任务状态；
+4. 只加载本轮需要的实体和关联；
 5. 修改后运行 validator；
-6. 涉及可发布内容时运行 gate；
+6. 涉及发布内容时运行 gate；
 7. 不直接改 `main`；
 8. 不直接改生产 selection；
-9. 更新 handoff 再结束。
+9. 更新 handoff 后结束。
 
-这使跨聊天续建不依赖模型记忆。
+跨聊天续建由仓库状态驱动，不依赖模型记忆。
 
 ---
 
-## 13. 并发与冲突策略
+## 13. 并发与批量质量
 
-V4 采用一实体一文件后，并发冲突主要限制在实际同时修改同一实体的场景。
+- 每个任务使用独立工作分支或明确共享工作分支；
+- 不让多个 AI 同时无协调修改同一实体；
+- 批量任务先产出候选，不直接一次升级数千条 verified；
+- 合并前重跑 validator/gate；
+- 冲突按实体语义审阅，不做最后写入覆盖；
+- 不确定内容保持 pending；
+- 禁止共享一个 evidence/模板结论冒充逐条适用性核验。
 
-规则：
-
-- 每个任务使用独立分支或明确工作分支；
-- 不在多个 AI 中同时直接修改同一个 entity file；
-- 批量任务先输出候选结果，不直接一次提交数千条 verified；
-- 合并前 validator 必须重新运行；
-- 发生冲突时按实体语义审阅，不使用“最后写入覆盖”；
-- 任何批量核验都必须保留 pending，而不是为了提高通过率自动强配。
-
-r8 的质量事故被视为 V4 的反例：批量生成大量关联和共享证据不能替代逐条适用性判断。
+r8 质量事故是明确反例。
 
 ---
 
 ## 14. Release V4
 
-建议 V4 release 继续采用关系 graph，但缩减 proof 技术负担：
+建议结构：
 
 ```json
 {
@@ -534,17 +523,17 @@ r8 的质量事故被视为 V4 的反例：批量生成大量关联和共享证�
 }
 ```
 
-`releaseHash` 继续保留，因为它对“这次网站发布的到底是哪一包内容”非常有价值。
+`releaseHash` 继续保留，用于确定网站实际发布的是哪一包。
 
-`sourceStateHash` 可由 Git tree/commit 或 canonical knowledge tree hash 替代，不再绑定 SQLite 全库事务状态。
+V3 `sourceStateHash` 可由 Git tree/commit 或 canonical knowledge tree hash 替代，不再绑定 SQLite 全库事务状态。
 
 ---
 
 ## 15. 网站兼容策略
 
-V4 第一阶段不要求重写网站前端。
+V4 第一阶段不重写前端。
 
-迁移器/构建器可将 `safety-release-v4` 适配为现有前端需要的：
+构建器将 V4 release 适配为现有前端需要的：
 
 - schemaVersion=2 manifest；
 - search-index；
@@ -552,120 +541,88 @@ V4 第一阶段不要求重写网站前端。
 - hazard shards；
 - clause shards。
 
-优点：
-
-- 先替换维护架构，不同时重写数据层和 UI；
-- V3/V4 可以用相同网站页面做 A/B 对比；
-- 生产切换风险小；
-- 未来再单独升级前端契约。
+这样先更换维护架构，再单独决定是否升级 UI，降低生产切换风险。
 
 ---
 
 ## 16. V3 → V4 迁移原则
 
-Phase 4 才写正式字段映射；Phase 5 才做只读迁移原型。
+Phase 4 写字段映射；Phase 5 做只读原型。当前冻结：
 
-当前先冻结以下原则：
-
-1. V3 Stable ID 原样保留，除非有明确冲突；
-2. 不把 V3 pending 自动升级为 verified；
+1. V3 Stable ID 原样保留，除非明确冲突；
+2. V3 pending 不自动升级；
 3. r8 批量错误结论不得恢复；
-4. V3 verification 历史可以归档，但迁移到 V4 时只提炼“当前可依赖审阅结论”，不强行复制全部 dependency hash；
-5. evidence 保留可用 metadata，私有原件不进入公开 Git；
-6. law succession 必须保留；
-7. merged entity 保留旧 ID 和去向；
-8. r10 用作候选发布对比样本，不取代 SQLite 作为 V3 迁移事实源；
-9. 首次迁移必须是只读导出，禁止边迁移边修改 V3 SQLite；
-10. V4 首批 release 必须与 V3 r10 做逐项差异报告。
+4. V3 verification 历史归档保留，但迁入 V4 时提炼当前有效 review，不复制全部 dependencyHash；
+5. 首次生成 `reviewedContentHash` 时必须基于迁移后 canonical entity 内容计算；
+6. evidence 保留可用 metadata，私有原件不进入公开 Git；
+7. law succession 保留；
+8. merged entity 保留旧 ID 和去向；
+9. r10 是候选发布对比样本，不取代 SQLite 作为 V3 迁移事实源；
+10. 首次迁移只读导出，不反写 V3 SQLite；
+11. V4 首批 release 必须和 V3 r10 做逐项差异报告。
 
 ---
 
-## 17. V4 最小工具链
-
-目标不是继续扩张工具数量，而是把核心流程收敛到少数可理解工具：
+## 17. 最小工具链
 
 ### `validate.py`
 
-负责：
-
-- JSON 解析；
-- schema；
-- ID；
-- foreign key；
-- duplicate；
-- lifecycle；
-- law/version/clause/link 图完整性；
-- 隐私字段检查。
+负责 JSON/schema、ID、外键、duplicate、lifecycle、图完整性、reviewedContentHash 和隐私字段检查。
 
 ### `gate.py`
 
-负责：
-
-- 当前法规效力；
-- review decision；
-- clause text/locator；
-- link applicability；
-- hard/soft gate 分类。
+负责法规效力、review decision、条款文本/定位、link applicability、hard/soft 分类。
 
 ### `build_release.py`
 
-只从通过硬门禁的 knowledge graph 生成 release。
+只从通过硬门禁的 graph 生成 release。
 
 ### `build_site.py`
 
-把 release 转为网站 manifest/index/shards。
+把 release 转成网站 manifest/index/shards。
 
 ### `migrate_v3.py`
 
-只读读取 V3 SQLite，输出 V4 candidate knowledge；不反写 V3。
+只读 V3 SQLite，输出 V4 candidate knowledge，不反写 V3。
 
 ### `compare_v3_v4.py`
 
-比较：
-
-- 实体数量；
-- Stable ID；
-- 字段差异；
-- link 差异；
-- release inclusion 差异；
-- 可能的数据丢失。
+比较实体数量、Stable ID、字段、link、release inclusion 和数据丢失。
 
 ---
 
-## 18. 不再作为 V4 日常必需品的 V3 机制
+## 18. 不再作为日常必需的 V3 机制
 
-以下机制不直接删除历史，但不再作为 V4 日常主流程的必要前置：
+历史保留，但不再作为 V4 日常前置：
 
-- 每次编辑都走 SQLite exchange/propose/apply；
-- 每个实体都维护整数 revision；
-- 每个核验都必须计算 dependency hash；
-- 每次发布都要求 evidence archive 文件存在且哈希完全一致；
-- 每条发布内容都要求完整法规/标准全文已归档；
-- 用大量本地临时 Python 修复脚本作为正常业务流程；
-- Excel 作为必须经过的中间状态。
+- 每次编辑必须 SQLite exchange/propose/apply；
+- 每实体整数 revision；
+- 跨实体 dependencyHash；
+- evidence archive 文件存在且哈希完全一致才允许发布；
+- 完整法规/标准全文已归档才允许发布具体可靠条款；
+- 大量本地临时修复脚本作为正常业务流程；
+- Excel 必须作为中间状态。
 
-它们需要时仍可以作为专项工具使用。
+注意：**实体级 `reviewedContentHash` 仍是 V4 硬门禁。** 它解决审阅陈旧问题，但不会产生跨图级联。
 
 ---
 
-## 19. 必须继续保留的 V3 机制
-
-以下不能因为“Chat-first”而简化掉：
+## 19. 必须保留的 V3 机制
 
 - Stable ID；
-- law 与 lawVersion 分离；
-- clause 归属于具体版本；
-- hazard 与 clause 多对多；
-- link 适用性；
+- law / lawVersion 分离；
+- clause 属于具体版本；
+- hazard / clause 多对多；
+- link applicability；
 - law succession；
-- pending / verified 明确隔离；
-- release 不等于生产；
-- 私有/公开严格隔离；
-- 原始来源可追溯；
+- pending / verified 隔离；
+- release ≠ production；
+- 私有/公开隔离；
+- 来源可追溯；
 - 不编造法规原文；
-- 不把 upcoming 当 active；
-- 不把旧版条文冒充新版条文；
-- 不因批量匹配置信度高就自动升级为 verified。
+- upcoming ≠ active；
+- 旧版条文不得冒充新版；
+- 批量置信度不得自动升级为 verified。
 
 ---
 
@@ -682,48 +639,50 @@ Phase 4 才写正式字段映射；Phase 5 才做只读迁移原型。
 
 因此：
 
-> **Phase 2、Phase 3、Phase 4 可以继续在 `chat-v4` 做文档和独立 V4 设计；Phase 5 进入真实迁移代码前，必须先解决 Drive 未推送历史与 GitHub 的安全对账。**
+> **Phase 2/3/4 可以在 `chat-v4` 做独立设计；Phase 5 进入真实迁移代码前，必须解决 Drive 未推送历史与 GitHub 的安全对账。**
 
-不能在当前 `chat-v4` 上假装其旧源码就是最新 V3 源码，然后直接重构生产代码。
+不能假装 `chat-v4` 当前旧源码就是最新 V3 源码后直接重构生产代码。
 
 ---
 
-## 21. Phase 2 验收标准
+## 21. Phase 2 验收结论
 
-本设计稿完成以下问题的明确回答，即 Phase 2 可视为完成：
+本设计明确回答：
 
-- V4 谁是日常正式维护源：**Git-first `knowledge/`**；
-- SQLite 是否删除：**否，保留为 V3 冻结/迁移/查询资产，但不再作为 V4 日常写入口**；
-- Stable ID 是否保留：**保留**；
-- law/version/clause/link 关系是否保留：**保留**；
-- verification 是否原样保留：**不原样照搬，拆为 review + evidence + Git audit**；
-- dependency hash 是否继续硬门禁：**否**；
-- evidence archive hash 是否继续硬门禁：**默认否**；
-- clause text、locator、version validity、link applicability 是否硬门禁：**是**；
-- 完整全文是否发布前强制：**否**；
-- release hash 是否保留：**是**；
-- 网站是否立即重写：**否，先用 adapter 保持兼容**；
-- 是否立即迁移数据：**否，Phase 4 映射、Phase 5 只读原型后再决定**；
-- 是否切生产：**否，必须用户另行批准**。
+- V4 日常正式维护源：**Git-first `knowledge/`**；
+- SQLite：**保留，但不再作为 V4 日常写入口**；
+- Stable ID：**保留**；
+- law/version/clause/link：**保留**；
+- verification：**重构为 review + evidence + Git audit**；
+- review 与当前内容绑定：**使用实体级 reviewedContentHash，硬门禁**；
+- 跨实体 dependencyHash：**取消**；
+- evidence archive hash：**默认软警告**；
+- clause text / locator / version validity / link applicability：**硬门禁**；
+- 完整全文：**不是统一硬门禁**；
+- releaseHash：**保留**；
+- 网站：**先 adapter 兼容，不立即重写**；
+- 数据迁移：**Phase 4 映射、Phase 5 只读原型之后**；
+- 生产切换：**必须用户批准**。
+
+Phase 2 架构设计完成。
 
 ---
 
 ## 22. 下一步
 
-Phase 2 完成后，下一轮进入：
+进入 **Phase 3：`docs/GATE_V4.md`**。
 
-**Phase 3：`docs/GATE_V4.md`**
+Phase 3 要把上述原则落成可执行矩阵，明确：
 
-重点把本文件的门禁原则落成可执行检查矩阵，明确：
-
-- entity/type 级硬门禁；
+- 各实体硬门禁；
+- reviewedContentHash 规范与 canonicalization；
 - 软警告；
-- upcoming/repealed 版本处理；
+- upcoming/repealed；
 - 私有标准证据；
-- review sidecar 判定；
+- review sidecar；
 - link applicability；
-- release 构建失败条件；
+- release 失败条件；
 - 隐私扫描；
-- 用户手工 override 的边界。
+- 用户 override 边界。
 
 Phase 3 仍不做大规模正式数据迁移。
