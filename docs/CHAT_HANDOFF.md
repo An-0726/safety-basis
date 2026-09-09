@@ -11,7 +11,7 @@ ACTIVE
 
 在保留 Codex V3 有价值数据、Stable ID、法规版本关系、条款、隐患、link、evidence、release、网站与审计历史的基础上，逐步改造成更适合 Chat 长期维护的 V4 / Chat-first 架构。
 
-目标不是从零重建，也不是追求复杂技术流程；优先保证隐患内容、法规版本、条款原文、适用性和隐私正确，同时降低 SQLite / dependency hash / 本地 Code Agent 对日常维护的强依赖。
+优先保证隐患内容、法规版本、条款原文、适用性和隐私正确，同时降低 SQLite / dependency hash / 本地 Code Agent 对日常维护的强依赖。
 
 ## 当前 Phase
 
@@ -20,9 +20,9 @@ ACTIVE
 - Phase 3：V4 发布门禁设计 —— **完成**
 - Phase 4：V3 → V4 字段映射设计 —— **完成**
 - Phase 5：V4 只读迁移原型 —— **完成并通过原型验收**
-- 当前下一阶段：**Phase 6：迁移现有有效知识**
+- Phase 6：迁移现有有效知识 —— **进行中；core-laws-001 已完成**
 
-不得跳到 Phase 9/10 提前实现 Validator/Gate；应继续按既定 Phase 顺序推进。
+不得跳到 Phase 9/10 提前实现 Validator/Gate。
 
 ## 当前工作分支
 
@@ -32,11 +32,13 @@ ACTIVE
 
 ### 当前关键提交
 
-- Phase 4：`11b6f65f7e8004a2fcdcde2ed7f506dcf929d38e` — `docs: define V3 to V4 field migration`
-- Phase 5 迁移器：`b509db266864771cd2f707ea3da3b3f4ca11c041` — `feat: add read-only V3 to V4 migration prototype`
-- Phase 5 验收报告：`15cd827fbbee11e7c9e3501ed9573942d89af2c3` — `docs: record Phase 5 migration prototype validation`
+- Phase 4：`11b6f65f7e8004a2fcdcde2ed7f506dcf929d38e`
+- Phase 5 迁移器：`b509db266864771cd2f707ea3da3b3f4ca11c041`
+- Phase 5 验收报告：`15cd827fbbee11e7c9e3501ed9573942d89af2c3`
+- Phase 5 交接：`b2d0f4e0384f54a1c51342f4ae3a7683351e8c41`
+- Phase 6 core-laws-001：`5cf400bae85a99e7d1edfb2c271c10f161e0495b` — `feat: seed Phase 6 V4 core law knowledge batch 001`
 
-本文件更新提交位于上述提交之后；下一轮必须重新读取 `chat-v4` HEAD 获取实际最新 commit。
+本文件更新提交位于 `5cf400b...` 之后；下一轮必须重新读取 `chat-v4` HEAD 获取实际最新 commit。
 
 ## 当前真实基线
 
@@ -107,7 +109,7 @@ r8 是历史质量事故版本，不得恢复。r10 只是候选和迁移对比/
 
 **不得自行切 r10 或 V4。**
 
-## Phase 2 / 3 / 4 已冻结设计
+## Phase 2 / 3 / 4 冻结设计
 
 正式文件：
 
@@ -118,49 +120,25 @@ r8 是历史质量事故版本，不得恢复。r10 只是候选和迁移对比/
 核心原则：
 
 1. V4 日常维护源转为 Git-first `knowledge/`。
-2. Stable ID 原样保留，不能给现有 1000+ hazard 批量改号。
+2. Stable ID 原样保留。
 3. SQLite 保留为 V3 冻结/迁移/分析资产，不再作为 V4 日常唯一写入口。
 4. review 与 entity 分离，使用 `reviewedContentHash` 绑定实体内容。
 5. link review 额外保存 hazard/clause `contextHashes`。
 6. 不恢复 V3 通用 dependencyHash 全图级联。
-7. evidence Tier A/B/C；完整全文不是可靠局部条款的统一发布前置条件。
+7. evidence 使用公开分级；完整全文不是可靠局部条款的统一发布前置条件。
 8. Hard Gate 聚焦内容真实性、版本时效、link applicability、外键/重复/隐私。
-9. evidence snapshot/hash/reviewDue 等非关键历史元数据默认降级为 Warning。
+9. 非关键历史 snapshot/hash/reviewDue 默认降级为 Warning。
 10. upcoming/repealed 不得错误支撑当前 hazard。
-11. `primary`、候选角色不能自动映射 direct；不明确时迁为 `unclassified` + pending。
+11. `primary`、候选角色不能自动映射 direct；不明确时保持 `unclassified` + pending。
 12. r10 只做对比/佐证，禁止反向覆盖 V3 SQLite。
-
-## 本轮完成
-
-本轮收口 Phase 5，并把此前已经运行通过但尚未写回 GitHub 的成果正式保存。
-
-完成：
-
-1. 重新读取 `docs/CHAT_HANDOFF.md`，发现其仍停在 Phase 3/“下一阶段 Phase 4”，与 GitHub 实际状态冲突。
-2. 核对 `chat-v4`，确认 Phase 4 已在 `11b6f65...` 完成。
-3. 核对 Drive `source/master/safety.sqlite3`，确认仍是冻结基线 110,002,176 bytes，没有被新旧备份替换。
-4. 对 Phase 5 迁移器重新执行 Python 语法校验。
-5. 重新核对 SQLite / fulltext SHA-256，与冻结值完全一致。
-6. 正式提交 `tools/v4/migrate_v3.py`。
-7. 正式提交 `docs/PHASE5_MIGRATION_PROTOTYPE_REPORT.md`。
-8. 修正阶段顺序：Phase 6 为“迁移现有有效知识”；Validator/Gate 仍在 Phase 9/10。
-9. 更新本 `CHAT_HANDOFF.md`。
 
 ## Phase 5 原型结果
 
-迁移原型以 SQLite `mode=ro` 打开冻结母库，输出隔离候选树，不调用旧 V3 `tools/pipeline/`，不反写数据库。
+只读迁移原型以 SQLite `mode=ro` 打开冻结母库，不调用旧 V3 pipeline，不反写数据库。
 
-### 全量迁出
+全量迁出：160 laws、161 lawVersions、2603 clauses、1125 hazards、2298 links、1124 evidence、4 successions。
 
-- laws：160 / 160
-- lawVersions：161 / 161
-- clauses：2603 / 2603
-- hazards：1125 / 1125
-- links：2298 / 2298
-- evidence：1124 / 1124
-- successions：4 / 4
-
-### 自动 verified candidate（保守提炼）
+保守自动 verified candidate：
 
 - law：148
 - lawVersion：150
@@ -168,50 +146,47 @@ r8 是历史质量事故版本，不得恢复。r10 只是候选和迁移对比/
 - hazard：642
 - link：179
 
-### 其余 review
+当前可形成 qualifying basis 的比较子集：148 laws、148 current lawVersions、54 clauses、179 links、158 hazards。
 
-- law：11 pending，1 superseded
-- lawVersion：11 pending
-- clause：2549 pending
-- hazard：483 pending
-- link：1502 superseded，617 pending
+r10 比原型多出的 90 条 link 已解释为：84 `primary`、5 `候选直接依据`、1 `主要负责人职责`；这些不足以自动证明 V4 角色语义，因此不自动升级。
 
-### 当前可形成 qualifying basis 的保守比较子集
+Quarantine：143 条 `ROLE_UNCLASSIFIED` active link + 11 个 `VERSION_EFFECTIVITY_UNCERTAIN` lawVersion。
 
-- laws：148
-- current law_versions：148
-- clauses：54
-- links：179
-- hazards：158
+## 本轮完成
 
-该 158 **不是正式 V4 release 数量**，只是 Phase 5 原型在现有证据与保守角色映射下可形成完整链的比较子集。
+本轮开始 Phase 6，并完成第一个可独立收口子批次 `core-laws-001`。
 
-### r10 差异已解释
+完成内容：
 
-r10 比 V4 原型多 90 条 link：
+1. 重新读取 `docs/CHAT_HANDOFF.md`，确认 Phase 6 为当前阶段。
+2. 核对 `chat-v4` 起始 HEAD：`b2d0f4e0384f54a1c51342f4ae3a7683351e8c41`。
+3. 使用冻结 `safety.sqlite3` 与 r10 佐证数据，只读提取 Phase 6 核心法规子集。
+4. 保持“一实体一 JSON”，正式建立 version-controlled `knowledge/` 工作面。
+5. 优先纳入当前 r10 使用频率最高的两部法律：
+   - `LF_L002`《中华人民共和国安全生产法》
+   - `LF_L001`《中华人民共和国消防法》
+6. 为保持 succession 外键闭合，额外纳入两组现行有效标准端点：
+   - `L008` → `L007`：GB 50140-2005 与 GB 55036-2022 的部分替代关系
+   - `L025` → `L029`：GB 50016-2014（2018年版）与 GB 55037-2022 的部分替代关系
+7. 迁入对应 law/lawVersion review sidecar 与所需 public evidence projection。
+8. V3 `verification` 实际无 `method` 字段；review sidecar 已按真实 schema 处理为“不生成该字段”，未伪造元数据。
+9. 使用 Git Data tree + commit 一次性写入，未逐文件人工提交。
 
-- `primary`：84
-- `候选直接依据`：5
-- `主要负责人职责`：1
+## 本轮新增/修改文件
 
-这些历史角色不足以自动证明 direct/supporting/fallback 语义，因此保持 pending/unclassified；相应造成 84 个 r10 hazard 暂不能形成 V4 qualifying chain。
+新增 `knowledge/` 核心骨架，共 33 个 JSON：
 
-这是保守迁移差异，不是数据丢失。
+- `knowledge/manifest.json`：1
+- `knowledge/laws/*.json`：6
+- `knowledge/law-versions/*.json`：6
+- `knowledge/reviews/laws/*.json`：6
+- `knowledge/reviews/law-versions/*.json`：6
+- `knowledge/evidence/*.json`：6
+- `knowledge/successions/*.json`：2
 
-### Quarantine
+本轮另更新：
 
-154 条：
-
-- `ROLE_UNCLASSIFIED`：143
-- `VERSION_EFFECTIVITY_UNCERTAIN`：11
-
-不删除实体，不自动升级。
-
-## 本轮修改文件
-
-- 新增 `tools/v4/migrate_v3.py`
-- 新增 `docs/PHASE5_MIGRATION_PROTOTYPE_REPORT.md`
-- 更新 `docs/CHAT_HANDOFF.md`
+- `docs/CHAT_HANDOFF.md`
 
 未修改：
 
@@ -220,58 +195,118 @@ r10 比 V4 原型多 90 条 link：
 - fulltext SQLite
 - `site-selection.json`
 - production website
-- 任何正式 release
+- 任何正式 V3 release
+
+## Phase 6 core-laws-001 数据状态
+
+`knowledge/manifest.json`：
+
+- formatVersion：`4.0-alpha`
+- batch：`core-laws-001`
+- asOf：`2026-09-09`
+- laws：6
+- lawVersions：6
+- successions：2
+- evidence：6
+- source SQLite SHA：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
+
+当前迁入 law IDs：
+
+- `LF_L001`
+- `LF_L002`
+- `LF_L007`
+- `LF_L008`
+- `LF_L025`
+- `LF_L029`
+
+当前迁入 lawVersion IDs：
+
+- `L001`
+- `L002`
+- `L007`
+- `L008`
+- `L025`
+- `L029`
+
+当前 succession：
+
+- `LS_e7516d229b6de451e0fa1fb6`：`L008` → `L007`，`partially_replaces`
+- `LS_75abaaec337577b1f419a8d8`：`L025` → `L029`，`partially_replaces`
+
+尚未迁入 upcoming succession 端点；不得为了追求完整 succession 数量把 upcoming 当 active 当前依据。
 
 ## 本轮校验
 
-- `python -m py_compile tools/v4/migrate_v3.py` 对本轮同一脚本内容通过。
-- `safety.sqlite3` SHA-256：`7086d945...76bc8`，与冻结值一致。
-- `fulltext.sqlite3` SHA-256：`8cedaf8f...b30e`，与冻结值一致。
-- Phase 5 两次完全相同输入重跑：candidate tree hash 均为 `5545fcfbd43fdeac8d5cb9a7106b17639a5781237330fe40b1c7ff5b0542e07d`。
-- 整个原型输出树两次 hash：`6e3bb90df7d9e2150e0d33a8f72a80005235db797fe7826953951c63951eb39c`。
-- ID issue：0。
-- broken FK：0。
-- hazard tag 重复组合：0。
-- law alias 重复组合：0。
-- 公开 candidate 私有路径/Drive 私有 URL/`snapshot_ref`/`storage_ref`/`raw_payload`/`legacy_payload` 扫描命中：0。
-- r8 已失效 link 没有复活。
-- pending 没有因为追求数量批量升级 verified。
+本地生成阶段：
+
+- JSON 可解析：通过
+- selected laws：6
+- selected current verified lawVersions：6
+- successions：2
+- public evidence：6
+- entity/review 外键问题：0
+- succession 端点断链：0
+- duplicate entity ID：0
+- 私有字段/路径扫描：0
+- pending/upcoming 未被批量升级
+
+提交前额外纠正：
+
+- 删除不存在的 V3 `verification.method` 空字段，不向 V4 伪造元数据。
+
+GitHub 保存：
+
+- knowledge commit：`5cf400bae85a99e7d1edfb2c271c10f161e0495b`
+- knowledge tree：`18a57b584aa2ad7d53d78df0274206ab86e447f7`
+- branch update：fast-forward，未 force
+- `knowledge/manifest.json` 已回读成功
+- `knowledge/reviews/laws/LF_L002.json` 已回读成功，review/evidence/hash 字段完整且无 `method:null`
 
 ## 当前项目状态
 
-Phase 1～5 已形成可续接的文档 + 代码基线。
+Phase 1～5 已完成。
 
-V4 还没有正式 `knowledge/` 发布工作面，也没有正式 V4 release，更没有切生产。
+Phase 6 已正式建立 Git 版本控制的 `knowledge/` 维护面，但目前仅完成 `core-laws-001`；它不是完整 V4 knowledge，也不是 release。
 
-当前最重要的下一步不是修 V3 旧 gate failure，也不是提前写 Gate V4，而是按 Phase 6 把“现有有效知识”从 Phase 5 隔离 candidate 中安全纳入版本控制的 V4 工作面。
+当前不应修 V3 旧 gate failure，不应提前实现 Validator/Gate，也不应切生产。
 
 ## 未完成事项
 
-### Phase 6
+### Phase 6 — 法规身份/版本继续迁移
 
-迁移现有有效知识，优先：
+Phase 5 共有 148 verified law、148 current verified lawVersion 可作为保守 current candidate；当前仅迁入 6/148。
 
-- verified law
-- verified / current lawVersion
+后续应继续按可收口批次迁入剩余 verified law/current lawVersion 及 public evidence/review。
+
+### Phase 6 — clause / hazard / link
+
+法规基础批次完成后，再依次迁入：
+
 - verified clause
 - verified hazard
 - verified、角色明确且适用性有佐证的 link
-- 必需 evidence public projection
-- succession
+- 必需 public evidence
 - review sidecar
 
-必须继续保留：
+必须保留 pending / superseded / inactive / r8 历史错误 / unclassified link / 效力不明 version，不为完成率强行升级。
 
-- pending
-- superseded / inactive
-- r8 历史错误
-- `unclassified` active link
-- 效力不明 lawVersion
+## 下一轮第一步
 
-但这些内容可继续留在迁移输出/隔离区，不得为了“全量进 knowledge”强行升级。
+**继续 Phase 6 `core-laws-002`：从尚未迁入的 verified law + current verified lawVersion 中，按当前 r10 使用频率优先选择下一批，并补齐对应 review/evidence；不得覆盖 `core-laws-001` 已有实体。**
 
-### 后续 Phase
+下一轮完成该批次后必须：
 
+1. 将 `knowledge/manifest.json` 改为累计数量，并记录新增 batch 信息；
+2. 校验新旧 Stable ID 无重复/覆盖冲突；
+3. 检查 lawVersion → law FK；
+4. 扫描私有字段；
+5. fast-forward 提交到 `chat-v4`；
+6. 更新本 handoff；
+7. 在法规核心批次尚未基本完成前，不提前吞 clause/hazard/link。
+
+## 后续任务
+
+- Phase 6：完成法规身份/版本核心迁移，再迁 clause → hazard → link
 - Phase 7：法规与标准核验框架
 - Phase 8：历史报告条款重新审阅
 - Phase 9：实现 V4 Validator
@@ -284,36 +319,24 @@ V4 还没有正式 `knowledge/` 发布工作面，也没有正式 V4 release，�
 - Phase 16：最终验收
 - Phase 17：生产切换（必须用户明确批准）
 
-## 下一轮第一步
-
-**开始 Phase 6 的第一个可独立收口批次：先建立 version-controlled `knowledge/` 最小核心骨架，并迁入 verified law + current verified lawVersion + succession + 对应 review/evidence public projection；使用 Git tree/commit 批量写入，不逐文件人工修改。**
-
-完成该批次后必须：
-
-1. 核对迁入 ID 与 Phase 5 candidate 一致；
-2. 检查外键和重复；
-3. 扫描私有字段；
-4. 记录批次数量和 tree/commit；
-5. 更新本 handoff；
-6. 下一轮再继续 clause/hazard/link，不在同一轮强行吞完整 1.3 万文件。
-
 ## 法规/标准待核验队列
 
-当前不启动全量法规核验。Phase 6 后仍需重点处理：
+当前不启动全量法规核验。Phase 6 后重点处理：
 
-- 143 条 `ROLE_UNCLASSIFIED` active link 的逐条适用性与角色复核；
-- 11 个 `VERSION_EFFECTIVITY_UNCERTAIN` lawVersion 的版本/效力/日期补证；
-- 当前网站高频依据优先核验；
-- upcoming 版本只能进入法规知识，不得支撑当前 asOf hazard。
+- 143 条 `ROLE_UNCLASSIFIED` active link 的逐条适用性与角色复核
+- 11 个 `VERSION_EFFECTIVITY_UNCERTAIN` lawVersion 的版本/效力/日期补证
+- 当前网站高频依据优先核验
+- upcoming 版本只能进入法规知识，不得支撑当前 asOf hazard
 
 ## 风险 / 阻塞
 
-1. Drive 最新 V3 Git 历史仍比 GitHub 远端 `data-verify-batch-003` 新；因此禁止从 GitHub 旧 V3 pipeline 直接重构生产代码。
-2. Phase 5 通过独立只读迁移器绕过了这一源码分叉，当前迁移数据本身不再因此阻塞。
-3. 143 条 active link 角色不明确，是 Phase 6/后续核验的重要质量风险；不得批量猜成 direct。
+1. Drive 最新 V3 Git 历史仍比 GitHub 远端 `data-verify-batch-003` 新；禁止从 GitHub 旧 V3 pipeline 直接重构生产代码。
+2. 独立只读迁移器已绕过上述源码分叉，当前迁移数据本身不因此阻塞。
+3. 143 条 active link 角色不明确，不得批量猜成 direct。
 4. 11 个 lawVersion 效力/日期不足，保持 pending/quarantine。
-5. r10 不能作为 V4 事实源，只能作对比/佐证。
-6. 当前没有需要用户决策的不可逆问题。
+5. r10 只能作对比/佐证，不能作为 V4 事实源。
+6. 当前 `knowledge/` 仅为 Phase 6 部分迁移，不能作为正式 release 或生产数据源。
+7. 当前无需要用户决策的不可逆问题。
 
 ## 用户待决策事项
 
