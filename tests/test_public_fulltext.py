@@ -115,6 +115,18 @@ class PublicFullTextTests(unittest.TestCase):
         report = json.loads((self.root / "blocked.blockers.json").read_text(encoding="utf-8"))
         self.assertTrue(any("通过" in reason or "核验" in reason for reason in report["blockers"][0]["reasons"]))
 
+    def test_reviewed_partial_repeal_note_reaches_public_catalog(self):
+        checklist = self.checklist('')
+        payload = json.loads(checklist.read_text(encoding='utf-8'))
+        note = '本测试标准第三条已废止；其他条款仍需分别核对。'
+        payload['documents'][0]['validityNote'] = note
+        checklist.write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
+        output = self.root / 'partial-repeal'
+        public_fulltext.export_public(self.db, self.library, checklist, '2026-09-09', output)
+        catalog = json.loads((output / 'catalog.json').read_text(encoding='utf-8'))
+        self.assertEqual(catalog['documents'][0]['validityNote'], note)
+        self.assertNotIn('permissionReason', catalog['documents'][0])
+
     def test_fulltext_sha_mismatch_is_blocked(self):
         output = self.root / "sha-blocked"
         result = public_fulltext.export_public(self.db, self.library, self.checklist("0" * 64), "2026-09-09", output)

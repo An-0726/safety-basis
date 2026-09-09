@@ -98,6 +98,22 @@ class ReviewPublishTests(unittest.TestCase):
         self.assertEqual(release["graph"]["hazards"], [])
         self.assertIn("没有最新通过记录", str(report))
 
+    def test_version_number_is_searchable_without_changing_v1_rebuilds(self):
+        self.execute("UPDATE law_versions SET document_number='GB/T 99999-2020'")
+        self.verified()
+        release, _ = publish.prepare(self.db, self.as_of)
+        self.assertEqual(release['formatVersion'], 'safety-release-v2')
+        self.assertIn('GB/T 99999-2020', publish.runtime_input(release)['laws'][0]['name'])
+        legacy = copy.deepcopy(release)
+        legacy['formatVersion'] = 'safety-release-v1'
+        legacy['releaseHash'] = v.digest({k: val for k, val in legacy.items() if k != 'releaseHash'})
+        publish.validate_release(legacy)
+        self.assertEqual(publish.runtime_input(legacy)['laws'][0]['name'], '测试法规夹具（2020）')
+        output = self.root / 'legacy-rebuild'
+        publish.build(legacy, output, node=os.environ.get('SAFETY_NODE', 'node'))
+        manifest = json.loads((output / 'data/manifest.json').read_text(encoding='utf-8'))
+        self.assertEqual(manifest['buildToolVersion'], 'safety-release-v1')
+
     def test_valid_shared_clause_release_is_private_free_and_reproducible(self):
         self.verified()
         release, report = publish.prepare(self.db, self.as_of)

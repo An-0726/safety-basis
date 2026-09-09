@@ -46,3 +46,9 @@ jobs:
         run: python tools/pipeline/manage.py build --release source/releases/reviewed-20260909/release.json --output "${{ runner.temp }}/safety-reviewed-build"
       - name: Compare the rebuilt public core data
         run: diff -r --exclude=fulltext "${{ runner.temp }}/safety-reviewed-build/data" source/releases/reviewed-20260909/data
+      - name: Validate the expanded reviewed catalogue
+        run: python tools/pipeline/manage.py verify-site --output source/releases/reviewed-20260909-r2
+      - name: Rebuild the expanded catalogue from its public snapshot
+        run: python tools/pipeline/manage.py build --release source/releases/reviewed-20260909-r2/release.json --output "${{ runner.temp }}/safety-reviewed-r2-build"
+      - name: Compare the expanded catalogue core data
+        run: diff -r --exclude=fulltext "${{ runner.temp }}/safety-reviewed-r2-build/data" source/releases/reviewed-20260909-r2/data

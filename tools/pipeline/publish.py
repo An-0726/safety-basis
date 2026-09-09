@@ -10,21 +10,31 @@ from contextlib import closing
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import tempfile
+import unicodedata
 
 import exchange
 from master import ROOT, connect_readonly
 import review
 import verification as v
 
-FORMAT = "safety-release-v1"
+FORMAT = "safety-release-v2"
 SETTINGS_FIELDS = {"schemaVersion", "dataVersion", "generatedAt", "hazardShardSize", "clauseShardSize", "publicScope"}
+
+
+def public_version_title(version):
+    """Keep a reviewed version's document/standard number visible and searchable."""
+    title, number = version['official_name'], version.get('document_number', '').strip()
+    def normalized(value):
+        return re.sub(r'\s+', '', unicodedata.normalize('NFKC', value)).translate(str.maketrans('—–－', '---')).casefold()
+    return f'{title} {number}' if number and normalized(number) not in normalized(title) else title
 
 
 def validate_release(release):
     fields = {"formatVersion", "asOf", "sourceStateHash", "sourceCounts", "graph", "proofs", "evidence", "settings", "releaseHash"}
-    if not isinstance(release, dict) or set(release) != fields or release["formatVersion"] != FORMAT:
+    if not isinstance(release, dict) or set(release) != fields or release["formatVersion"] not in ("safety-release-v1", FORMAT):
         raise ValueError("发布快照格式无效或含额外字段")
     if release["releaseHash"] != v.digest({k: val for k, val in release.items() if k != "releaseHash"}):
         raise ValueError("发布快照哈希不匹配")
@@ -128,7 +138,7 @@ def runtime_input(release):
                      "category": h["category"], "mode": h["mode"], "note": "适用条件：" + h["conditions"],
                      "aliases": h["aliases"], "places": h["places"], "keywords": h["keywords"], "status": "已核验",
                      "checked": checked("hazard", h["id"])} for h in graph["hazards"]],
-        "laws": [{"id": r["id"], "name": r["official_name"], "aliases": laws[r["law_id"]]["aliases"],
+        "laws": [{"id": r["id"], "name": public_version_title(r) if release['formatVersion'] == FORMAT else r["official_name"], "aliases": laws[r["law_id"]]["aliases"],
                   "level": r["level"], "scope": r["scope"], "status": r["validity_status"], "checked": checked("law_version", r["id"]),
                   "effectiveDate": r["effective_date"], "sourceUrl": r["source_url"], "replaces": [], "replacedBy": []}
                  for r in graph["law_versions"]],
@@ -181,7 +191,7 @@ def build(release, output, *, node="node"):
         if result.returncode:
             raise ValueError("网站构建失败: " + result.stderr[-4000:])
         manifest = check_runtime(bundle, release)
-        manifest.update(releaseHash=release["releaseHash"], sourceRevision=release["sourceStateHash"], asOf=release["asOf"], buildToolVersion=FORMAT)
+        manifest.update(releaseHash=release["releaseHash"], sourceRevision=release["sourceStateHash"], asOf=release["asOf"], buildToolVersion=release['formatVersion'])
         counts = release["sourceCounts"]
         manifest["sourceCounts"] = {"hazards": counts["hazards"], "laws": counts["law_versions"], "clauses": counts["clauses"], "links": counts["links"]}
         manifest["health"].update(stagedHazards=counts["hazards"] - manifest["counts"]["hazards"],

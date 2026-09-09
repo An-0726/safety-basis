@@ -22,6 +22,7 @@ import exchange
 import fulltext
 import legal_text
 import master
+import publish
 import verification
 
 
@@ -36,6 +37,7 @@ ITEM_FIELDS = {
     "lawId", "versionId", "fullTextSha256", "evidenceId", "publicationPermission",
     "permissionReason", "permissionSource", "fullTextReviewed", "reviewer", "reviewedAt",
 }
+OPTIONAL_ITEM_FIELDS = {'validityNote'}
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -58,10 +60,12 @@ def _checklist(path: Path) -> list[dict[str, Any]]:
     result = []
     seen: set[tuple[str, str]] = set()
     for ordinal, item in enumerate(documents, 1):
-        if not isinstance(item, dict) or set(item) != ITEM_FIELDS:
+        if not isinstance(item, dict) or not ITEM_FIELDS <= set(item) or set(item) - ITEM_FIELDS - OPTIONAL_ITEM_FIELDS:
             raise ValueError(f"documents[{ordinal}] 字段必须精确匹配公开审阅清单 schema")
         if any(not isinstance(item[key], str) for key in ITEM_FIELDS - {"fullTextReviewed"}):
             raise ValueError(f"documents[{ordinal}] 文本字段类型无效")
+        if 'validityNote' in item and not isinstance(item['validityNote'], str):
+            raise ValueError(f"documents[{ordinal}].validityNote 必须为已审阅公开文本")
         if type(item["fullTextReviewed"]) is not bool or (item["fullTextSha256"] and not item["fullTextReviewed"]):
             raise ValueError(f"documents[{ordinal}] 发布全文时 fullTextReviewed 必须为 true")
         for key in ("lawId", "versionId", "evidenceId", "permissionReason", "permissionSource", "reviewer", "reviewedAt"):
@@ -260,11 +264,12 @@ def export_public(db: Path, library: Path, checklist: Path, as_of: str, output: 
             mode = "full_text" if full_text else "link_only"
             text_path = f"texts/{version_id}.json" if full_text else None
             public.append({
-                "lawId": law_id, "versionId": version_id, "title": version["official_name"],
+                "lawId": law_id, "versionId": version_id, "title": publish.public_version_title(version),
                 "version": version_key, "officialUrl": evidence["official_url"] if evidence else version["source_url"],
                 "effectiveDate": version["effective_date"], "status": version["validity_status"],
                 "textMode": mode, "fullTextSha256": item["fullTextSha256"], "textPath": text_path,
                 "fullTextReviewed": item["fullTextReviewed"], "publicationPermission": item["publicationPermission"],
+                **({'validityNote': item['validityNote']} if item.get('validityNote') else {}),
             })
             if full_text:
                 library_conn, text_row, library_db = _library_document(library, law_id, version_key)
