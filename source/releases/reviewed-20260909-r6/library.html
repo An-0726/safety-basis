@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#183e35">
+  <meta name="description" content="检索本库已收录、已核验的法规全文，并查看官方来源与关联隐患。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>法规全文 · 安全技术工作台</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="library.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./" aria-label="返回隐患速查"><span class="logo" aria-hidden="true">盾</span><span>隐患依据速查<small>安全技术工作台</small></span></a>
+  <nav aria-label="主导航"><a class="nav" href="./">隐患速查</a><a class="nav" href="./?view=laws">法规库</a><a class="nav active" href="library.html" aria-current="page">法规全文</a><a class="nav" href="./?view=data">数据状态</a></nav>
+  <span class="private" id="libraryDate">目录加载中</span>
+</header>
+<main>
+  <section class="intro"><div><div class="eyebrow">LEGAL TEXT LIBRARY</div><h1>找到法规，<span>读懂全文。</span></h1><p>按法规名称、条号或正文关键词查找。每份全文保留版本、核验日期和官方来源。</p><div class="scope"><span id="coverageSummary">正在读取收录范围</span></div></div><aside class="principle"><span class="mini">收录范围</span><strong>已收录的全文<br>逐步补齐的标准</strong><p>没有收录全文的文件提供官方入口。具体隐患是否适用，另在隐患速查中核对。</p><span class="ruleline"></span></aside></section>
+  <section class="workspace">
+    <div class="sectionhead"><div><h2>全文检索</h2><p>搜索当前公开全文；来源链接不会计入正文搜索结果。</p></div></div>
+    <form class="searchbar" id="librarySearch" role="search"><span aria-hidden="true">⌕</span><input id="textQuery" aria-label="搜索法规正文" placeholder="如：消防、承包、从业人员、安全生产责任制" autocomplete="off"><button class="primary" type="submit">搜索</button><button class="quiet" id="clearTextQuery" type="button">清空</button></form>
+    <div class="filters"><label>收录情况<select id="coverage"><option value="">全部目录</option><option value="full_text">已收全文</option><option value="link_only">官方链接</option></select></label><label>实施状态<select id="validityFilter"><option value="">全部已核验版本</option><option value="现行有效">现行有效</option><option value="即将生效">已发布 · 尚未实施</option></select></label><label>法规<select id="documentFilter"><option value="">全部法规</option></select></label></div>
+    <div class="resultbar"><span id="libraryResultCount" role="status">正在读取目录</span><span class="legend">核验状态以标注日期为准</span></div>
+    <div class="columns"><div class="list" id="libraryResults" aria-label="法规全文搜索结果"></div><article class="detail" id="libraryDetail" aria-live="polite"><div class="empty"><strong>选择法规或搜索结果阅读原文</strong></div></article></div>
+  </section>
+  <footer><span>法规全文库 · 按版本收录</span><span>正文可检索 / 来源可追溯 / 隐患可反查</span></footer>
+</main>
+<script type="module" src="js/library.js"></script>
+</body>
+</html>
