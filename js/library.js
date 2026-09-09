@@ -21,6 +21,17 @@ function officialLink(url, title = '查看官方来源 ↗') {
   return `<a class="sourcecta" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`;
 }
 
+function statusLabel(status) {
+  return status === '即将生效' ? '已发布 · 尚未实施' : status;
+}
+
+function versionNotice(doc) {
+  const current = catalog.documents.filter(other => other.lawId === doc.lawId && other.versionId !== doc.versionId && other.status === '现行有效');
+  const message = doc.status === '即将生效' ? `<p><strong>已发布 · 尚未实施</strong>：将于 ${esc(doc.effectiveDate)} 实施，可提前查阅和准备。</p>` : '';
+  const links = current.map(other => `<a class="sourcecta" href="?document=${encodeURIComponent(other.versionId)}">查看现行版：${esc(other.title)} →</a>`).join('');
+  return message || links ? `<section class="block">${message}${links}</section>` : '';
+}
+
 async function candidateIds(query) {
   const grams = queryGrams(query);
   if (!grams.length || !index.gramShards) return null;
@@ -49,7 +60,7 @@ function paintResults(results, query, total, failures = 0) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'library-hit' + (doc.versionId === selected ? ' selected' : '');
-    button.innerHTML = `<strong>${esc(doc.title)}</strong><small>${doc.textMode === 'full_text' ? '已收全文' : '官方链接'} · ${esc(doc.status)} · ${esc(doc.effectiveDate)} 施行</small>${paragraph ? `<p>${esc(snippet(paragraph.text, query))}</p>` : ''}`;
+    button.innerHTML = `<strong>${esc(doc.title)}</strong><small>${doc.textMode === 'full_text' ? '已收全文' : '官方链接'} · ${esc(statusLabel(doc.status))} · ${esc(doc.effectiveDate)} 施行</small>${paragraph ? `<p>${esc(snippet(paragraph.text, query))}</p>` : ''}`;
     button.addEventListener('click', () => showDocument(doc, paragraph?.location));
     $('#libraryResults').append(button);
   }
@@ -59,8 +70,8 @@ function paintResults(results, query, total, failures = 0) {
 async function search() {
   const turn = ++sequence;
   const query = $('#textQuery').value.trim();
-  const mode = $('#coverage').value, version = $('#documentFilter').value;
-  let docs = catalog.documents.filter(doc => (!mode || doc.textMode === mode) && (!version || doc.versionId === version));
+  const mode = $('#coverage').value, version = $('#documentFilter').value, validity = $('#validityFilter').value;
+  let docs = catalog.documents.filter(doc => (!mode || doc.textMode === mode) && (!version || doc.versionId === version) && (!validity || doc.status === validity));
   const url = new URL(location.href);
   query ? url.searchParams.set('q', query) : url.searchParams.delete('q');
   history.replaceState(null, '', url);
@@ -105,7 +116,7 @@ async function showDocument(doc, hitLocation = '') {
   try {
     const text = doc.textMode === 'full_text' ? await read(doc.textPath) : null;
     if (selected !== doc.versionId) return;
-    $('#libraryDetail').innerHTML = `<div class="detailtop"><div class="eyebrow">${doc.textMode === 'full_text' ? '已收全文' : '官方链接'}</div><h2>${esc(doc.title)}</h2><p class="library-meta">${esc(doc.status)} · ${esc(doc.effectiveDate)} 施行<br>目录核验基准：${esc(catalog.asOf)}${text ? ` · ${text.paragraphs.length} 个原文段落` : ''}</p></div><div class="detailbody"><section class="block">${officialLink(doc.officialUrl)}<a class="sourcecta" href="./?view=laws&amp;law=${encodeURIComponent(doc.versionId)}">查看收录条款与关联隐患 →</a></section><section class="block" id="textBody"></section></div>`;
+    $('#libraryDetail').innerHTML = `<div class="detailtop"><div class="eyebrow">${doc.textMode === 'full_text' ? '已收全文' : '官方链接'}</div><h2>${esc(doc.title)}</h2><p class="library-meta">${esc(statusLabel(doc.status))} · ${esc(doc.effectiveDate)} 施行<br>目录核验基准：${esc(catalog.asOf)}${text ? ` · ${text.paragraphs.length} 个原文段落` : ''}</p></div><div class="detailbody">${versionNotice(doc)}<section class="block">${officialLink(doc.officialUrl)}<a class="sourcecta" href="./?view=laws&amp;law=${encodeURIComponent(doc.versionId)}">查看收录条款与关联隐患 →</a></section><section class="block" id="textBody"></section></div>`;
     if (!text) { $('#textBody').textContent = '本库尚未公开此文件的全文，请通过官方入口查阅。'; return; }
     const body = $('#textBody');
     let cursor = hitLocation ? Math.max(0, text.paragraphs.findIndex(row => row.location === hitLocation) - 2) : 0;
@@ -149,7 +160,7 @@ async function boot() {
     const params = new URLSearchParams(location.search);
     $('#textQuery').value = params.get('q') || '';
     $('#librarySearch').addEventListener('submit', event => { event.preventDefault(); search(); });
-    $('#coverage').addEventListener('change', search); $('#documentFilter').addEventListener('change', search);
+    $('#coverage').addEventListener('change', search); $('#documentFilter').addEventListener('change', search); $('#validityFilter').addEventListener('change', search);
     $('#clearTextQuery').addEventListener('click', () => { $('#textQuery').value = ''; search(); });
     await search();
     const doc = catalog.documents.find(doc => doc.versionId === params.get('document'));

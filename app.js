@@ -13,7 +13,8 @@ function download(name,text,type='application/json'){const a=document.createElem
 async function copyText(text,msg='已复制'){try{await navigator.clipboard.writeText(text);toast(msg)}catch{const t=document.createElement('textarea');t.value=text;document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();toast(ok?msg:'复制失败')}}
 function option(v){return `<option>${esc(v)}</option>`}
 function statusClass(v){return /失效|废止/.test(v)?'red':/待核|条件|兜底|即将/.test(v)?'amber':''}
-function pill(text,extra=''){return `<span class="pill ${statusClass(text)} ${extra}">${esc(text)}</span>`}
+function lawStatusLabel(status){return status==='即将生效'?'已发布 · 尚未实施':status}
+function pill(text,extra=''){return `<span class="pill ${statusClass(text)} ${extra}">${esc(lawStatusLabel(text))}</span>`}
 function currentFilters(){return state.view==='hazards'?{category:$('#category').value,place:$('#place').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value,status:$('#status').value}:{level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
 
 function loadUrlState(){const p=new URLSearchParams(location.search);state.view=['hazards','laws','data'].includes(p.get('view'))?p.get('view'):'hazards';state.query=p.get('q')||'';state.selectedHazard=p.get('id')||'';state.selectedLaw=p.get('law')||''}
@@ -26,7 +27,7 @@ function initFilters(){const t=state.store.taxonomy;
   $('#mode').innerHTML='<option value="">全部匹配类型</option>'+t.hazardModes.map(option).join('');
   $('#status').innerHTML='<option value="">有效条目</option>'+t.hazardStatuses.map(option).join('');
   $('#lawLevel').innerHTML='<option value="">全部法规类别</option>'+t.lawLevels.map(option).join('');
-  $('#lawStatus').innerHTML='<option value="">有效法规</option>'+t.lawStatuses.map(option).join('');
+  $('#lawStatus').innerHTML='<option value="">全部已核验版本</option>'+t.lawStatuses.map(status=>`<option value="${esc(status)}">${esc(lawStatusLabel(status))}</option>`).join('');
 }
 
 function switchView(view,{keepQuery=false}={}){
@@ -93,13 +94,14 @@ async function renderLawDetail(){
     const detail=await state.store.getLawDetail(law);
     const related=[...new Set(detail.clauses.flatMap(x=>x.ref.hazardIds))].map(id=>state.store.searchIndex.find(h=>h.id===id)).filter(Boolean);
     $('#detail').innerHTML=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(law.id)} / ${esc(law.level)}</span>${pill(law.status)}</div><h2>${esc(law.name)}</h2><div class="subtitle">适用范围：${esc(law.scope)} · 核验日期：${esc(law.checked||'未填写')} · 本库收录 ${law.clauseCount} 个条款 / 关联 ${law.hazardCount} 条隐患</div></div><div class="detailbody"><section class="block lawmeta"><h3><span class="number">01</span>法规状态</h3><div class="metagrid"><div><span>效力状态</span><strong>${esc(law.status)}</strong></div><div><span>实施日期</span><strong>${esc(law.effectiveDate||'未录入')}</strong></div><div><span>地区</span><strong>${esc(law.scope)}</strong></div><div><span>数据库核验</span><strong>${esc(law.checked||'待核')}</strong></div></div>${law.sourceUrl?`<a class="sourcecta" href="${esc(law.sourceUrl)}" target="_blank" rel="noopener noreferrer">打开来源原文 ↗</a>`:''}</section><section class="block"><h3><span class="number">02</span>本库已收录条款</h3>${detail.clauses.map(({ref,clause})=>lawClauseHtml(ref,clause)).join('')}</section><section class="block"><h3><span class="number">03</span>关联隐患 <small>${related.length} 条</small></h3><div class="related">${related.map(h=>`<button class="relateditem hazardjump" data-id="${esc(h.id)}"><span>${esc(h.id)}</span>${esc(h.title)}</button>`).join('')||'<p>暂无关联隐患。</p>'}</div></section></div><div class="detailactions"><button class="primary" id="copylaw">复制法规资料</button><button id="share">复制当前链接</button></div>`;
+    if(law.status==='即将生效') $('#detail .lawmeta').insertAdjacentHTML('afterbegin',`<p><strong>已发布 · 尚未实施</strong>：将于 ${esc(law.effectiveDate)} 实施，可提前查阅和准备。<a class="sourcecta" href="library.html?document=${encodeURIComponent(law.id)}">查看版本目录与现行版入口 →</a></p>`);
     $('#copylaw').onclick=()=>copyText(lawText(detail),'已复制法规资料');
     $('#share').onclick=()=>copyText(location.href,'已复制当前链接');
     $$('.hazardjump').forEach(b=>b.onclick=()=>{state.selectedHazard=b.dataset.id;switchView('hazards',{keepQuery:false})});
   }catch(err){showError(err)}
 }
 function lawClauseHtml(ref,c){return `<div class="basis"><div class="basismeta"><strong class="articletitle">${esc(c.article)}</strong>${pill(c.status)}</div><blockquote>${esc(c.quote||'原文待核验')}</blockquote><div class="article">核验日期：${esc(c.checked||'未填写')} · 关联 ${ref.hazardIds.length} 条隐患</div></div>`}
-function lawText({law,clauses}){return `${law.name}\n效力状态：${law.status}\n适用范围：${law.scope}\n来源：${law.sourceUrl||'待补'}\n\n${clauses.map(x=>`${x.clause.article}\n${x.clause.quote}`).join('\n\n')}`}
+function lawText({law,clauses}){return `${law.name}\n效力状态：${lawStatusLabel(law.status)}\n实施日期：${law.effectiveDate||'未录入'}\n适用范围：${law.scope}\n来源：${law.sourceUrl||'待补'}\n\n${clauses.map(x=>`${x.clause.article}\n${x.clause.quote}`).join('\n\n')}`}
 
 function renderDataView(){
   const m=state.store.manifest,h=m.health;

@@ -23,7 +23,7 @@
   <section class="workspace">
     <div class="sectionhead"><div><h2>全文检索</h2><p>搜索当前公开全文；来源链接不会计入正文搜索结果。</p></div></div>
     <form class="searchbar" id="librarySearch" role="search"><span aria-hidden="true">⌕</span><input id="textQuery" aria-label="搜索法规正文" placeholder="如：消防、承包、从业人员、安全生产责任制" autocomplete="off"><button class="primary" type="submit">搜索</button><button class="quiet" id="clearTextQuery" type="button">清空</button></form>
-    <div class="filters"><label>收录情况<select id="coverage"><option value="">全部目录</option><option value="full_text">已收全文</option><option value="link_only">官方链接</option></select></label><label>法规<select id="documentFilter"><option value="">全部法规</option></select></label></div>
+    <div class="filters"><label>收录情况<select id="coverage"><option value="">全部目录</option><option value="full_text">已收全文</option><option value="link_only">官方链接</option></select></label><label>实施状态<select id="validityFilter"><option value="">全部已核验版本</option><option value="现行有效">现行有效</option><option value="即将生效">已发布 · 尚未实施</option></select></label><label>法规<select id="documentFilter"><option value="">全部法规</option></select></label></div>
     <div class="resultbar"><span id="libraryResultCount" role="status">正在读取目录</span><span class="legend">核验状态以标注日期为准</span></div>
     <div class="columns"><div class="list" id="libraryResults" aria-label="法规全文搜索结果"></div><article class="detail" id="libraryDetail" aria-live="polite"><div class="empty"><strong>选择法规或搜索结果阅读原文</strong></div></article></div>
   </section>

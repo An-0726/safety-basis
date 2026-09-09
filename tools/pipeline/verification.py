@@ -254,7 +254,7 @@ def load_evidence(conn, db=None):
     return result
 
 
-def own_errors(graph, kind, ident, proofs, evidence, as_of):
+def own_errors(graph, kind, ident, proofs, evidence, as_of, *, allow_upcoming=False):
     errors = preparation_errors(graph, kind, ident)
     row = maps(graph)[kind][ident]
     if row.get("review_status", row.get("status")) != "已核验":
@@ -264,11 +264,15 @@ def own_errors(graph, kind, ident, proofs, evidence, as_of):
     if kind == "clause" and row["identity_status"] != "confirmed_locator":
         errors.append("条款定位未确认")
     if kind == "law_version":
-        if row["validity_status"] != "现行有效":
+        upcoming = allow_upcoming and row["validity_status"] == "即将生效"
+        if row["validity_status"] != "现行有效" and not upcoming:
             errors.append("非现行有效版本")
         try:
-            if date(row["effective_date"]) > as_of or (row["end_date"] and date(row["end_date"]) <= as_of):
+            effective = date(row["effective_date"])
+            if (effective > as_of and not upcoming) or (row["end_date"] and date(row["end_date"]) <= as_of):
                 errors.append("发布日不在有效期间内")
+            if upcoming and effective <= as_of:
+                errors.append("尚未实施版本已到实施日，需复核效力状态")
         except ValueError:
             pass
     proof = proofs.get((kind, ident))
@@ -321,5 +325,10 @@ def gate(graph, proofs, evidence, as_of):
         for link_id in row["active_link_ids"]:
             messages += chain("link", link_id)
         hazards[ident] = sorted(set(messages))
-    versions = {ident: sorted(set(chain("law_version", ident))) for ident in index["law_version"]}
+    # The independent catalogue includes verified, published upcoming editions.
+    # Hazard chains above still require a currently effective legal basis.
+    versions = {ident: sorted(set(
+        [f"law_version:{ident}: {reason}" for reason in
+         own_errors(graph, "law_version", ident, proofs, evidence, as_of, allow_upcoming=True)]
+        + chain("law", row["law_id"]))) for ident, row in index["law_version"].items()}
     return {"hazards": hazards, "lawVersions": versions}

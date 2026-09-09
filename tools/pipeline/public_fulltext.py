@@ -219,7 +219,7 @@ def export_public(db: Path, library: Path, checklist: Path, as_of: str, output: 
             if not version_key:
                 reasons.append("母库 law_version 缺少版本键")
             reasons.extend(verification.own_errors(graph, "law", law_id, proofs, evidence_map, as_of_date))
-            reasons.extend(verification.own_errors(graph, "law_version", version_id, proofs, evidence_map, as_of_date))
+            reasons.extend(verification.own_errors(graph, "law_version", version_id, proofs, evidence_map, as_of_date, allow_upcoming=True))
             evidence = evidence_map.get(item["evidenceId"])
             if not evidence:
                 reasons.append("清单 evidenceId 不存在")

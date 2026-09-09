@@ -132,6 +132,27 @@ class PublicFullTextTests(unittest.TestCase):
         self.assertEqual(document["fullTextSha256"], "")
         self.assertFalse((output / "texts/LV_TEST.json").exists())
 
+    def test_reviewed_upcoming_fulltext_and_official_link_are_both_publishable(self):
+        with closing(sqlite3.connect(self.db)) as conn:
+            conn.execute("UPDATE law_versions SET validity_status='即将生效',effective_date='2027-02-01'")
+            graph = verification.graph_from_db(conn)
+            conn.execute("INSERT INTO verification VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (
+                'V_UPCOMING', 'law_version', 'LV_TEST', 1,
+                verification.dependency_hash(graph, 'law_version', 'LV_TEST'), 'version',
+                'passed', 'reviewer', 'synthetic-test', '2026-09-08T04:00:00+00:00', '',
+                'E_META', 'Verified announced future edition in synthetic fixture', 'V_LV_TEST'))
+            conn.execute("INSERT INTO verification_details VALUES(?,?,?,?)", ('V_UPCOMING', '实施日期', 1, 'A_TEST'))
+            conn.commit()
+        for sha, mode in ((self.sha, 'full_text'), ('', 'link_only')):
+            with self.subTest(mode=mode):
+                output = self.root / ('upcoming-' + mode)
+                result = public_fulltext.export_public(self.db, self.library, self.checklist(sha), '2026-09-09', output)
+                self.assertEqual(result['publicCount'], 1)
+                document = json.loads((output / 'catalog.json').read_text(encoding='utf-8'))['documents'][0]
+                self.assertEqual(document['status'], '即将生效')
+                self.assertEqual(document['effectiveDate'], '2027-02-01')
+                self.assertEqual(document['textMode'], mode)
+
     def test_unsupported_article_directory_is_blocked_from_public_output(self):
         unsupported = self.root / "standard.txt"
         unsupported.write_text("3.1 Requirement; 3.2 Another requirement.", encoding="utf-8")

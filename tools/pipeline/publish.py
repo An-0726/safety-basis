@@ -129,7 +129,7 @@ def runtime_input(release):
                      "aliases": h["aliases"], "places": h["places"], "keywords": h["keywords"], "status": "已核验",
                      "checked": checked("hazard", h["id"])} for h in graph["hazards"]],
         "laws": [{"id": r["id"], "name": r["official_name"], "aliases": laws[r["law_id"]]["aliases"],
-                  "level": r["level"], "scope": r["scope"], "status": "现行有效", "checked": checked("law_version", r["id"]),
+                  "level": r["level"], "scope": r["scope"], "status": r["validity_status"], "checked": checked("law_version", r["id"]),
                   "effectiveDate": r["effective_date"], "sourceUrl": r["source_url"], "replaces": [], "replacedBy": []}
                  for r in graph["law_versions"]],
         "clauses": [{"id": r["id"], "lawId": r["law_version_id"], "article": r["article_path"], "quote": r["quote"],

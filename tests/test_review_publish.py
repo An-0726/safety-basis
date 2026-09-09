@@ -140,6 +140,34 @@ class ReviewPublishTests(unittest.TestCase):
         self.assertTrue(publish.prepare(self.db, self.as_of)[0]["graph"]["hazards"])
         self.assertFalse(publish.prepare(self.db, tomorrow)[0]["graph"]["hazards"])
 
+    def test_reviewed_upcoming_version_is_searchable_without_becoming_a_current_hazard_basis(self):
+        self.execute("UPDATE law_versions SET validity_status='即将生效',effective_date='2099-01-01'")
+        self.verified()
+        release, report = publish.prepare(self.db, self.as_of)
+        self.assertEqual([row['id'] for row in release['graph']['law_versions']], ['L_TEST'])
+        self.assertEqual(release['graph']['hazards'], [])
+        self.assertEqual(release['graph']['clauses'], [])
+        self.assertEqual(report['blockedLawVersions'], {})
+        self.assertEqual(len(report['blockedHazards']), 2)
+        output = self.root / 'upcoming'
+        publish.build(release, output, node=os.environ.get('SAFETY_NODE', 'node'))
+        index = json.loads((output / 'data/law-index.json').read_text(encoding='utf-8'))
+        self.assertEqual(index[0]['status'], '即将生效')
+        self.assertEqual(index[0]['effectiveDate'], '2099-01-01')
+        self.assertEqual(index[0]['hazardCount'], 0)
+
+    def test_upcoming_still_requires_review_and_a_consistent_implementation_date(self):
+        self.execute("UPDATE law_versions SET validity_status='即将生效',effective_date='2099-01-01'")
+        self.assertEqual(publish.prepare(self.db, self.as_of)[0]['graph']['law_versions'], [])
+        self.verified()
+        self.assertEqual(len(publish.prepare(self.db, self.as_of)[0]['graph']['law_versions']), 1)
+        # Crossing the announced date does not silently relabel an old snapshot.
+        self.assertEqual(publish.prepare(self.db, '2099-01-01')[0]['graph']['law_versions'], [])
+        proposal = self.path()
+        review.propose(self.db, self.draft(['law_version:L_TEST'], result='pending'), proposal, 'test-reviewer')
+        review.apply(self.db, proposal, 'test-actor')
+        self.assertEqual(publish.prepare(self.db, self.as_of)[0]['graph']['law_versions'], [])
+
     def test_later_failed_review_supersedes_pass_and_history_is_immutable(self):
         self.verified()
         proposal = self.path()
