@@ -17,7 +17,7 @@ ACTIVE
 - Phase 3：V4 门禁设计 —— 完成
 - Phase 4：V3 → V4 数据映射 —— 完成
 - Phase 5：V4 只读迁移原型 —— 完成并验收
-- Phase 6：迁移现有有效知识 —— **进行中；core-laws-001～004 已完成**
+- Phase 6：迁移现有有效知识 —— **进行中；core-laws-001～005 已完成**
 
 不得提前进入 Phase 7～10。
 
@@ -29,9 +29,11 @@ ACTIVE
 
 ### GitHub
 
-- 本轮起始 HEAD：`fa6d1438076ebe85eda9d9e2b3c632cd3c9d430e`
-- Phase 6 core-laws-004 data commit：`c42bd8dd062514a5432df2439ed3686d23e04547`
-- 本 handoff 更新提交位于该 commit 之后；下一轮必须重新读取 `chat-v4` HEAD 获取最终 SHA。
+- 本轮起始 HEAD：`4bdbf1a3aacdbb85341cc0b4fcba1b3390c8a822`
+- Phase 6 core-laws-005 data commit：`3c64a3e4577687c0dc3dcfa810c8028961d57a83`
+- data tree：`c52a436dc7d1ac19cd45afa1ea1ad000fcbcb1ae`
+- 本 handoff 更新提交位于该 data commit 之后；下一轮必须重新读取 `chat-v4` HEAD 获取最终 SHA。
+- core-laws-004 data commit：`c42bd8dd062514a5432df2439ed3686d23e04547`
 - core-laws-003 data commit：`252a98bacdd0c193c0bbeb513b5340111467608b`
 - core-laws-002 data commit：`2180f07fd3abe54ac5d366b8d2f5eb600f314301`
 - core-laws-001 data commit：`5cf400bae85a99e7d1edfb2c271c10f161e0495b`
@@ -58,27 +60,30 @@ ACTIVE
 
 ## 本轮完成
 
-完成 Phase 6 `core-laws-004`：
+完成 Phase 6 `core-laws-005`：
 
-1. 重新读取 handoff，核对 `chat-v4` HEAD 与 Drive 冻结 SQLite，确认无版本漂移。
-2. 从剩余 verified/current lawVersion 中选取 3 个高价值 EHS 对象，并避开可能受 2026 年新法替代关系影响、需要重新判定的危化框架性法规。
-3. 本批迁入：
-   - `LF_L012`《危险化学品仓库储存通则》 / `L012`（GB 15603-2022）
-   - `LF_STD_6294CCA2BE20A4078E76A41B`《国家电气设备安全技术规范》 / `LV_STD_9F0C49F748552F616764E7E8`（GB 19517-2023）
-   - `LF_NPC_ff8080816f135f46016f212ea20a17f8`《中华人民共和国职业病防治法》 / `LV_NPC_ff8080816f135f46016f212ea20a17f8`
-4. 新增 3 law、3 current lawVersion、6 review sidecar、4 public evidence，并更新 `knowledge/manifest.json`。
-5. 职业病防治法的 law identity 与 lawVersion 使用不同的最新官方 evidence，均保留其真实 evidence ID，不强行合并。
+1. 重新读取 handoff，并核对 `chat-v4` 实际 HEAD、Drive 工作目录和冻结 SQLite，确认无版本漂移。
+2. 从冻结 V3 母库中按“confirmed law + 已核验 current lawVersion + 最新 passed review + 公开 evidence”筛选本批对象。
+3. 本批迁入 6 组当前高价值 EHS 法规/安全技术规范：
+   - `LF_NPC_ff808181864a5d91018653f61bbd4f61`《江苏省消防条例》 / `LV_NPC_ff808181864a5d91018653f61bbd4f61`
+   - `LF_NPC_ff80818188c8b06b018929165ced45c4`《南京市安全生产条例》 / `LV_NPC_ff80818188c8b06b018929165ced45c4`
+   - `LF_NPC_ff808181905e69170190729eeef53bcc`《江苏省生产经营单位安全风险管理条例》 / `LV_NPC_ff808181905e69170190729eeef53bcc`
+   - `LF_NPC_ff80818194a5cf29019541042f6d1cdc`《南京市消防条例》 / `LV_NPC_ff80818194a5cf29019541042f6d1cdc`
+   - `LF_STD_6E8536FD29C1696E35CF4A1D`《承压类特种设备安全附件安全技术规程》 / `LV_STD_AC9450848A37DC769475CCCC`（TSG 92—2026，2026-07-01 实施）
+   - `LF_STD_7850A7B209AB5AD548EBECB2`《特种设备使用管理规则》 / `LV_STD_E10C40D4BD9D8DB74D518B2A`（TSG 08—2026，2026-05-01 实施）
+4. 新增 6 law、6 current lawVersion、12 review sidecar、9 public evidence，并更新 `knowledge/manifest.json`。
+5. 危化领域 2026 新法可能影响的旧框架性法规继续留待 Phase 7 时效专项核验，本批未直接迁入。
 6. 使用单一 Git tree 形成 data commit，并 fast-forward `chat-v4`，未 force。
 
 ## 本轮修改文件
 
 新增：
 
-- `knowledge/laws/`：3 个 law 文件
-- `knowledge/law-versions/`：3 个 current version 文件
-- `knowledge/reviews/laws/`：3 个 review sidecar
-- `knowledge/reviews/law-versions/`：3 个 review sidecar
-- `knowledge/evidence/`：4 个 public evidence 文件
+- `knowledge/laws/`：6 个 law 文件
+- `knowledge/law-versions/`：6 个 current version 文件
+- `knowledge/reviews/laws/`：6 个 review sidecar
+- `knowledge/reviews/law-versions/`：6 个 review sidecar
+- `knowledge/evidence/`：9 个 public evidence 文件
 
 修改：
 
@@ -90,37 +95,40 @@ ACTIVE
 ## 本轮校验
 
 - Drive 母库 size/modified 与冻结基线一致，无漂移
+- 下载后重新计算 SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`，与冻结基线完全一致
 - SQLite `integrity_check=ok`
-- 3 个目标 law：identity_status=confirmed，最新 identity review=passed
-- 3 个目标 lawVersion：现行有效、已核验、有 effectiveDate，最新 version review=passed
-- lawVersion → law FK：0 断链
-- Stable ID：均沿用 V3 原 ID；没有重新编号
-- 新增 evidence：4 个唯一 ID，全部为官方公开 URL
-- `reviewedContentHash`：按 V4 canonical JSON 重新计算
-- 私有字段/路径扫描：0 命中；未写入 `snapshot_ref`、`legacy_payload`、`raw_payload`、Drive 私有路径或 `../archive`
-- data Git tree：`a167f65be42f62fc2c5d166f7383de7f942c5492`
-- data commit：`c42bd8dd062514a5432df2439ed3686d23e04547`
-- compare：相对起始 HEAD ahead_by=1、behind_by=0；恰好 17 个预期文件变化（16 新增 + manifest）
+- 6 个目标 law：identity_status=confirmed，最新 identity review=passed
+- 6 个目标 lawVersion：现行有效、已核验、有 effectiveDate，最新 version review=passed
+- 两个 2026 TSG 的 effectiveDate 均早于当前日期 2026-09-10，不属于 upcoming
+- lawVersion → law：本批全部闭合，不新增断链
+- Stable ID：全部沿用 V3 原 ID；没有重新编号
+- 新增 evidence：9 个唯一 ID，均为国家法律法规数据库、南京人大、国家市场监督管理总局等公开官方 URL
+- V3 私有 `snapshot_ref` 未迁入；public evidence 只保留公开 URL、retrievedAt、locator/page 与 snapshot SHA
+- `reviewedContentHash`：按 V4 canonical JSON 计算并写入 sidecar
+- 私有字段/路径生成检查：未写入 `snapshot_ref`、`legacy_payload`、`raw_payload`、Drive 私有路径或 `../archive`
+- data tree：`c52a436dc7d1ac19cd45afa1ea1ad000fcbcb1ae`
+- data commit：`3c64a3e4577687c0dc3dcfa810c8028961d57a83`
+- compare：相对起始 HEAD ahead_by=1、behind_by=0；恰好 34 个预期文件变化（33 新增 + manifest），无无关文件
 - branch update：fast-forward，force=false
-- manifest 回读：batch=`core-laws-004`，累计 laws=19、lawVersions=19、evidence=20、successions=2
+- manifest 回读：batch=`core-laws-005`，累计 laws=25、lawVersions=25、evidence=29、successions=2
 
 ## 当前项目状态
 
 `knowledge/` 当前累计：
 
-- laws：19
-- current verified lawVersions：19
-- public evidence：20
+- laws：25
+- current verified lawVersions：25
+- public evidence：29
 - successions：2
 - clauses/hazards/links：尚未开始正式 Phase 6 迁入
 
-Phase 5 保守 candidate 总量仍为 law 148、current lawVersion 148、clause 54、hazard 642、link 179。当前 laws/lawVersions 为 19/148；Phase 6 未完成。
+Phase 5 保守 candidate 总量仍为 law 148、current lawVersion 148、clause 54、hazard 642、link 179。当前 laws/lawVersions 为 25/148；约剩余 123 组 law/current lawVersion，Phase 6 未完成。
 
 ## 未完成事项
 
 ### Phase 6 — 法规身份/版本
 
-剩余约 129 个 verified law/current lawVersion 尚未进入正式 `knowledge/`。后续继续按强制性法规/标准、常见 EHS 场景价值、江苏/南京地域价值和 Stable ID 做稳定排序。
+剩余约 123 个 verified law/current lawVersion 尚未进入正式 `knowledge/`。继续按高价值 EHS 场景、法规/标准效力、江苏/南京地域价值和 Stable ID 做稳定排序；不为追求数量迁入存在时效疑义的对象。
 
 ### Phase 6 — clause / hazard / link
 
@@ -128,7 +136,7 @@ Phase 5 保守 candidate 总量仍为 law 148、current lawVersion 148、clause 
 
 ## 下一轮第一步
 
-**继续 Phase 6 `core-laws-005`：重新核对 `chat-v4` HEAD 与 Drive 母库后，在剩余 verified/current lawVersion 中优先选择消防、特种设备、职业卫生、江苏/南京地方规则中的高价值对象，形成一个可单轮收口的 law + current lawVersion + review + public evidence 批次；对 2026 年新法可能影响效力关系的危化框架法规先保留待 Phase 7 时效复核，不直接迁入。**
+**继续 Phase 6 `core-laws-006`：重新核对 `chat-v4` HEAD 与 Drive 母库后，在剩余 confirmed + verified/current 对象中优先选择特种设备、职业卫生、电气、防火及通用 EHS 高价值法规/标准，例如特种设备使用单位主体责任、特种设备重大事故隐患判定、工作场所职业卫生管理/职业接触限值、防爆电气等；仍避开需要 Phase 7 重新判定替代边界的危化框架法规。形成一个可单轮收口的 law + current lawVersion + review + public evidence 批次。**
 
 ## 后续任务
 
@@ -145,8 +153,8 @@ Phase 5 保守 candidate 总量仍为 law 148、current lawVersion 148、clause 
 
 ## 法规/标准待核验队列
 
-- 2026 年新《中华人民共和国危险化学品安全法》已生效后，对《危险化学品安全管理条例》等既有危化框架法规的继续适用/替代边界，留待 Phase 7 使用当前官方来源专项核验；在此之前不把这类存在替代敏感性的对象作为 Phase 6 自动迁移优先项。
-- 其余当前 Phase 6 不启动大规模新联网核验。
+- 2026 年新《中华人民共和国危险化学品安全法》生效后，对《危险化学品安全管理条例》等既有危化框架法规的继续适用/替代边界，留待 Phase 7 使用当前官方来源专项核验；在此之前不把这类存在替代敏感性的对象作为 Phase 6 自动迁移优先项。
+- 本轮未启动大规模新联网法规核验；Phase 6 继续以 V3 已通过核验且当前效力明确的资产迁移为主。
 
 ## 风险 / 阻塞
 
