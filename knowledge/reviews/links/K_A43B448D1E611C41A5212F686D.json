@@ -1,27 +1,27 @@
 {
-  "entityType": "link",
-  "entityId": "K_A43B448D1E611C41A5212F686D",
-  "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "2e8c6837a4169b6d58be58ca295d8e7b19251808063dbad59dfa2aa868b84154",
-  "contextHashes": {
-    "hazard": "b36f995404308ad4fc6d721c06083b29400a5d74ca0b1aac4a87fb8d6fe11f98",
-    "clause": "8db33a935ccc864e6e49fc01ac0b43a4b59f6ac7fade533d92f5dc45b40d8d98"
-  },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "《易制毒化学品管理条例》第36条要求第一类易制毒化学品使用单位于每年3月31日前报告上一年度使用、储存情况，与Hazard直接对应。注：本条review的evidenceRefs仍指向GB18597来源PDF，属evidence错配数据缺陷，将在数据修复中新建易制毒条例来源并更新引用。",
-  "reasonCodes": [
-    "DIRECT_MATCH"
-  ],
-  "evidenceRefs": [
-    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
-  ],
-  "migratedFromV3Verification": {
-    "id": "VR_733b5d262c876a20ce76c8215f_0",
-    "reviewedAt": "2026-09-09T12:24:34+00:00",
-    "reviewer": "doubao-work-链式核验",
-    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
-    "v3Result": "passed"
-  }
+ "entityType": "link",
+ "entityId": "K_A43B448D1E611C41A5212F686D",
+ "reviewType": "applicability",
+ "decision": "verified",
+ "reviewedContentHash": "2e8c6837a4169b6d58be58ca295d8e7b19251808063dbad59dfa2aa868b84154",
+ "contextHashes": {
+  "hazard": "b36f995404308ad4fc6d721c06083b29400a5d74ca0b1aac4a87fb8d6fe11f98",
+  "clause": "8db33a935ccc864e6e49fc01ac0b43a4b59f6ac7fade533d92f5dc45b40d8d98"
+ },
+ "checkedAt": "2026-09-10T16:00:00+08:00",
+ "reviewer": "Doubao-Agent",
+ "reason": "《易制毒化学品管理条例》第36条要求第一类易制毒化学品使用单位于每年3月31日前报告上一年度使用、储存情况，与Hazard直接对应。注：本条review的evidenceRefs仍指向GB18597来源PDF，属evidence错配数据缺陷，将在数据修复中新建易制毒条例来源并更新引用。\n修复：该 review clause 为《易制毒化学品管理条例》第三十六条（年度报告义务），原 evidence 错误指向 GB 18597 危废标准 PDF，现改指商务部转载的国务院令第445号官方全文（第三十六条）。",
+ "reasonCodes": [
+  "DIRECT_MATCH"
+ ],
+ "evidenceRefs": [
+  "E_a93b82bf6346e4fb318bc4f03e34d58f0a679c3595c8a751427c8455130fe9ac"
+ ],
+ "migratedFromV3Verification": {
+  "id": "VR_733b5d262c876a20ce76c8215f_0",
+  "reviewedAt": "2026-09-09T12:24:34+00:00",
+  "reviewer": "doubao-work-链式核验",
+  "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+  "v3Result": "passed"
+ }
 }
