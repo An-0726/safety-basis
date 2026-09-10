@@ -20,14 +20,18 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 KNOW = os.path.join(ROOT, "knowledge")
 
 
-def load_dir(sub):
+def load_dir(sub, by_entity_id=False):
     d = os.path.join(KNOW, sub)
     out = {}
     for fn in os.listdir(d):
         if not fn.endswith(".json"):
             continue
         with open(os.path.join(d, fn), encoding="utf-8") as f:
-            out[os.path.splitext(fn)[0]] = json.load(f)
+            obj = json.load(f)
+        # review 文件名可能是 review 自身 id（RV_*）而非被审实体 id，
+        # 必须按 entityId 索引，否则这些 review 会被静默跳过。
+        key = (obj.get("entityId") or os.path.splitext(fn)[0]) if by_entity_id else os.path.splitext(fn)[0]
+        out[key] = obj
     return out
 
 
@@ -35,7 +39,7 @@ def main():
     links = load_dir("links")
     hazards = load_dir("hazards")
     clauses = load_dir("clauses")
-    reviews = load_dir(os.path.join("reviews", "links"))
+    reviews = load_dir(os.path.join("reviews", "links"), by_entity_id=True)
 
     stale_link, stale_hazard, stale_clause, unbound = [], [], [], []
     for kid, rev in sorted(reviews.items()):
@@ -81,7 +85,10 @@ def main():
     print(f"stale clause ctx: {len(stale_clause)}")
     for x in stale_clause[:20]:
         print("   ", x[0], "rev=", x[1][:16], "now=", x[2][:16])
-    return 0
+    bad = len(stale_link) + len(stale_hazard) + len(stale_clause) + len(unbound)
+    if bad:
+        print(f"BINDING FAILURES: {bad}（可使用 tools/v4/rebind.py --fix 批量刷新）")
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":
