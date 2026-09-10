@@ -1,6 +1,6 @@
 # Safety Basis Chat 续接状态
 
-> 最后更新：2026-09-10。恢复项目时必须先读取本文件、`knowledge/manifest.json` 与 `chat-v4` 当前真实 HEAD；如有冲突，以 GitHub / Google Drive 真实文件为准。
+> 最后更新：2026-09-10（Pending 39 落定轮收尾）。恢复项目时必须先读取本文件、`knowledge/manifest.json` 与 `chat-v4` 当前真实 HEAD；如有冲突，以 GitHub 真实文件为准。
 
 ## PROJECT_STATUS
 
@@ -12,141 +12,111 @@ ACTIVE
 
 ## 当前 Phase
 
-主体迁移、关联复核、Validator、Gate、候选网站、候选 release、V3/V4 差异检查均已完成机制或主要工作；当前处于**最终验收与遗留项收口阶段**。
-
-当前优先问题不是继续旧 Phase 6 批量迁移，而是：
-1. 同步已经继续前移的真实知识状态；
-2. 收口 pending link / 补迁 hazard / Requirement 等遗留项；
-3. 基于最新状态重建 candidate release 并重新执行 RELEASE 级验收。
+最终验收与遗留项收口阶段。本轮完成：39 条 pending link 落定、21 个复合隐患拆分任务登记、RELEASE gate 自动化收口（六级 PASS）、manifest 同步。
 
 ## 当前工作分支
 
 `chat-v4`
 
-## 当前真实基线
+## 当前真实基线（GitHub）
 
-### GitHub
+- 本轮最终 HEAD 由提交链决定：`17f90c2`（上一轮终态）→ `d425459`（pending39 落定）→ `9f40da7`（release 重建）→ merge `9544c49d`（GPT 标准日期核验）→ `7feb20e`（merge gate 报告修正 91ed7a78）→ merge `ebbbeb97`（GPT handoff）→ gate RELEASE 收口 commit → 本次 handoff commit。
+- 施工期间检测到 3 次并发推进（GPT/Hsu Zane）：`9544c49d`（标准日期+succession）、`91ed7a78`（gate 报告修正）、`ebbbeb97`（handoff），全部已 merge 整合，无文件冲突、无 force。
+- **下一轮仍须重新读取 `chat-v4` 获取最终真实 HEAD**，禁止把这里的提交号当成永远不变的最终 HEAD。
 
-本轮开始时真实 HEAD 为 `9544c49d43e39dda68f024d1b73b92acbe49de7a`，提交说明为 `fix: verify pending standard dates and 12801 transition`；它晚于上一版 handoff 所记载的 `6d075c6`，因此上一版 handoff 已部分滞后。
+## 当前知识规模（真实文件统计，2026-09-10）
 
-本轮随后提交：
-- `91ed7a78e03eff4ae1b0ca1841ad9a7a01b44505` — 修正 `docs/V4_GATE_REPORT.md` 中错误的 RELEASE 状态。
-
-本 handoff 提交位于其后；下一轮仍须重新读取 `chat-v4` 获取最终真实 HEAD，禁止把这里记录的前置提交号当成永远不变的最终 HEAD。
-
-### 当前知识规模（最近一次完整统计）
-
-最近一次完整 handoff 统计为：
 - laws：68
 - lawVersions：68
 - clauses：76
 - requirements：75（草案，全部 pending）
-- hazards：662
+- hazards：662（642 迁移 + 20 补迁）
 - links：181
 - evidence：552
-- successions：19
+- successions：22（19 + GPT 补 3：GB 12801-2008→2025、GB 6514、GB 15607 替代关系）
 
-Link review 最近一次完整统计：
-- verified：127
-- rejected：15
-- pending：39
+Link review（181 全审）：
+- **verified：128**
+- **rejected：21**
+- **pending：32**
 - 合计：181
 
-注意：`knowledge/manifest.json` 当前仍保留早期 Phase 6 汇总值（43 laws / 43 lawVersions / 54 clauses / 642 hazards / 179 links / 548 evidence / 2 successions），**已经明显落后于后续 catalogue、GB 2894、20 条 hazard 补迁以及最终 link review 等真实成果**。因此 manifest 当前不能作为最终计数事实源，下一轮应先同步它。
+`knowledge/manifest.json` 已同步上述真实计数（不再落后）。
 
-### V3 冻结基线
+## V3 冻结基线
 
-`knowledge/manifest.json` 仍记录 V3 SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`；本轮未修改 V3 SQLite。
+V3 SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`；全程未修改 V3 SQLite（只读）。
 
-Google Drive 搜索确认 `ESH_Codex/work/safety-basis` 相关历史架构/交接/导出资料仍可访问；本轮没有对 Drive 文件执行写入。对 `safety.sqlite3` / `fulltext.sqlite3` 的精确元数据没有取得比既有冻结记录更强的新证据，因此不得改写既有冻结 hash / size 结论。
+## Candidate release
 
-### Candidate release
-
-现有候选：`source/releases/v4-candidate-20260910/`
-
-`release.json` 当前记录：
-- candidate=true
-- production=false
-- laws=68
-- law_versions=68
-- clauses=76
-- hazards=662
-- links=181
-- requirements=75
-- reviewStats=114 verified / 14 rejected / 32 pending
-- sourceStateHash=`fae429fff4aad1493d579143b8dbbf40904786ff332f24de949cb07ada47afe6`
-
-这组 reviewStats 与当前真实 link review 统计 127 / 15 / 39 不一致；候选包生成后 `chat-v4` 还继续修正了法规版本元数据。因此该 candidate 已是**历史候选快照**，不能作为当前 HEAD 的发布一致性证明。
+`source/releases/v4-candidate-20260910/`（candidate=true, production=false）
+- `release.json` 已按当前 HEAD 重建：sourceStateHash 与当前 knowledge 一致、counts 匹配、reviewStatsByLink=128/21/32。
+- Gate 六级：STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE/RELEASE 全部 PASS。
+- production 未切换（需用户批准）。
 
 ## 本轮完成
 
-1. 按 HEAD-first 原则重新核对真实分支，发现施工期间 `chat-v4` 已从旧 handoff 记载状态继续前移到 `9544c49...`。
-2. 核对现有 candidate release，确认候选构建实际已经执行，旧 `docs/V4_GATE_REPORT.md` 中 `RELEASE: NOT_RUN (candidate build pending)` 属于文档滞后。
-3. 同时确认现有 candidate 的 reviewStats 已落后于当前知识库，且候选生成后又发生法规版本数据修正，因此不能把 RELEASE 直接改成 PASS。
-4. 将 `docs/V4_GATE_REPORT.md` 的 RELEASE 状态改为 `REVIEW_REQUIRED`，明确要求基于最新 HEAD 重建 candidate 后重新跑完整发布级验收。
-5. 识别出 `knowledge/manifest.json` 自 Phase 6 后未同步后续实体规模，是当前另一项明确状态债务；已在本 handoff 标记为下一轮第一步。
+1. **39 条 pending link 落定**：1 verified（K_13863d87 灭火器筒体，V3 核验记录交叉确认）、6 rejected（4 条 FACT_NOT_HAZARD 法规义务复述、2 条 SCOPE_MISMATCH 挂错条款）、32 条保持 pending 但理由补强（GB 2894-2025 官方解读核验、TSG 81-2022 指向）。
+2. **21 个复合隐患拆分任务登记**：`docs/V4_HAZARD_SPLIT_TASKS.md`（Hazard ID / 混合义务 / 相关 Link / 拆分建议）。
+3. **RELEASE gate 自动化收口**：`gate_v4.py` 新增 RELEASE 级一致性核对（sourceStateHash/counts/reviewStats vs candidate），输出 PASS 而非 NOT_RUN。
+4. **manifest 同步**：`sync_manifest.py` 从真实文件统计更新 counts（68/68/76/662/181/552/22/75）。
+5. 合并 GPT 并发：标准日期核验（GB 6514-2023、GB 15607-2023、GB 12801-2025 实施日期确认 + 6514/12801 名称与状态纠正 + 3 条 succession）、gate 报告修正、handoff 更新。
 
 ## 本轮修改文件
 
-- `docs/V4_GATE_REPORT.md`
-- `docs/CHAT_HANDOFF.md`
+- `knowledge/reviews/links/*.json`（41 条：7 决策 + 2 补强 + 32 复合登记）
+- `knowledge/hazards/*.json`（4 条 FACT_NOT_HAZARD note 标记）
+- `knowledge/manifest.json`（同步）
+- `knowledge/law-versions/laws/successions`（GPT 9544c49d 的 9 个文件，已 merge）
+- `tools/v4/apply_pending39.py`、`extract_pending39.py`、`sync_manifest.py`、`build_release.py`（双级 reviewStats）、`gate_v4.py`（RELEASE 检查）
+- `docs/V4_HAZARD_SPLIT_TASKS.md`（新）、`docs/V4_GATE_REPORT.md`、`docs/CHAT_HANDOFF.md`
+- `source/releases/v4-candidate-20260910/`（重建）
+- `tools/workbooks/pending_39_workbook.json`（新）
 
-未修改知识实体、V3 SQLite、fulltext、现有 candidate 内容、`main`、production 或 GitHub Pages 数据源。
+未修改 V3 SQLite、`main`、production、GitHub Pages 数据源。
 
 ## 本轮校验
 
-- 当前 candidate 确认存在，`candidate=true`、`production=false`。
-- candidate `reviewStats=114/14/32` 与当前完整 review 统计 `127/15/39` 不一致，因此 RELEASE 不满足当前状态一致性要求。
-- `docs/GATE_V4.md` 明确将 Stage 6 定义为 Release 一致性与确定性校验，因此当前采用 `REVIEW_REQUIRED` 而非虚假 PASS。
-- 检测并尊重并发前移：在写入前重新读取真实 HEAD；没有 force update，没有回退覆盖并发成果。
-- Google Drive 只读查询；未修改任何 Drive 资产。
+- `validate_all.py`：check_catalogue / check_requirements / check_review_binding（unbound 0、stale 0）/ scan_evidence_exact / scan_quality / version_impact 全 PASS。
+- `gate_v4.py`：六级全 PASS（RELEASE 经一致性核对）。
+- `test_search.py`：20/20 通过。
+- `version_impact.py`：full-replaced 迁移 0、partial 7（不迁移）。
 
 ## 当前项目状态
 
-- 181 条 link 已完成一轮完整 review，但仍有 39 条 pending。
-- 20 条 V3 已核验 hazard 已补迁，但旧 handoff 记录其无 link，需要后续建立可靠依据而不能恢复历史 r8 错误关联。
-- Requirement 层机制已建，但 75 条仍为 pending 草案，checkItems 待校准。
-- 候选网站与搜索回归曾完成 20/20；V3/V4 差异验收曾完成主要检查。
-- **RELEASE 当前为 REVIEW_REQUIRED**：原因是候选包与最新知识状态发生漂移，而不是 candidate 从未生成。
+- 181 条 link 已全部有明确状态（128 verified / 21 rejected / 32 pending）。
+- 32 条 pending 全部有扎实理由，其中 21 个复合隐患已登记拆分任务（`docs/V4_HAZARD_SPLIT_TASKS.md`），拆分后再判定 link 角色。
+- 20 条 V3 补迁 hazard 仍无 link（刻意不迁移 V3 旧关联），需建立可靠新 link。
+- Requirement 层 75 条仍为 pending 草案，checkItems 待校准。
+- 候选网站与搜索回归 20/20；V3/V4 差异验收完成主要检查。
+- Gate 六级 PASS；production 切换需用户批准。
 
-## 未完成事项
+## 未完成事项（最终验收范围）
 
-1. 同步 `knowledge/manifest.json` 到当前真实知识状态，并确保统计来自实际文件而非手工猜测。
-2. 基于最新 HEAD 重建新的 candidate release，重新计算 sourceStateHash / counts / reviewStats。
-3. 对新 candidate 重跑 Validator、Gate、V3/V4 diff、search regression，收口 RELEASE 级状态。
-4. 继续处理 39 条 pending link 的补证与适用性复核。
-5. 为 20 条补迁 hazard 建立新的可靠 link 并逐条 review。
-6. 校准被实际 link 引用的 Requirement，补 checkItems；不得批量强行 verified。
-7. 继续处理 merge 候选、composite hazard 等最终验收遗留项。
-
-## 下一轮第一步
-
-**先按当前真实 HEAD 重新统计 `knowledge/` 各实体目录并同步 `knowledge/manifest.json`；同时核对 `9544c49...` 之后是否又有并发提交。只有 manifest 与真实文件一致后，才能基于最新状态重建 candidate release。**
-
-## 后续任务
-
-按顺序：manifest 同步 → 最新 candidate 重建 → Validator/Gate/diff/search regression → RELEASE 收口 → pending link 补证 → 20 条补迁 hazard 建依据 → Requirement 校准 → 其他最终验收项。
+1. 32 条 pending link 的补证与复合 hazard 拆分（21 个任务在 `docs/V4_HAZARD_SPLIT_TASKS.md`）。
+2. 20 条补迁 hazard 建立新 link 并逐条 review。
+3. Requirement 层：被 link 引用的 clause 对应 RQ 校准 verified + checkItems；不得批量强行 verified。
+4. 45 组 merge 候选语义判定（`docs/V4_MERGE_CANDIDATES.md`）。
+5. 工贸企业重大事故隐患判定标准（应急部令第 10 号 vs 2025 新令）状态核验入库。
+6. GB 50140-2005 / GB 50016-2014 与 GB 55036/55037-2022 partial replacement 复核。
+7. 危化品条例处置关系：GPT 已独立核验 partially_replaces 正确（司法部国家行政法规库仍列现行有效），建议最终验收复核留存。
 
 ## 法规/标准待核验队列
 
-上一版 handoff 所列 GB 6514-2023、GB 15607-2023、GB 12801-2025 实施日期“未获官方确认”的描述已被最新提交 `9544c49...` 部分/全部更新，**下一轮不得继续按旧描述重复施工**，应以最新实体与 review 文件为准重新判断剩余未决项。
-
-仍需最终验收关注：
-- 《危险化学品安全管理条例》与 2026 新法的具体处置关系；
-- GB 50140-2005 / GB 50016-2014 与新强制性工程建设规范的 partial replacement 处理；
-- 工贸企业重大事故隐患判定标准新旧版本状态；
-- 39 条 pending link 中涉及的专项技术标准全文/局部条款证据。
+- GB 6514-2023 / GB 15607-2023 / GB 12801-2025 实施日期：**已由 GPT 9544c49d 核验补全**，不得再按旧描述重复施工。
+- 工贸企业重大事故隐患判定标准新旧版本状态：未核验、未入库。
+- 32 条 pending 涉及的专项技术标准全文/局部条款证据（见各 review reason）。
 
 ## 风险 / 阻塞
 
-- 当前无需要用户立即决策的阻塞。
-- 最大状态风险是 manifest、candidate、handoff 可能在并发施工下继续落后；所有后续轮次必须先读真实 HEAD。
-- 旧 candidate 已不代表当前知识状态，禁止据此切 production。
+- 无需要用户立即决策的硬阻塞。
+- 并发施工活跃：每次写入前必须 `git ls-remote origin chat-v4` 重读真实 HEAD；只允许 non-force fast-forward。
+- candidate 与 handoff 可能在并发下继续落后；所有后续轮次先读真实 HEAD。
 - pending 不得为追求完成率强行改 verified。
 
 ## 用户待决策事项
 
-当前没有必须由用户立即决定的事项。正式生产切换仍必须等待用户明确批准。
+生产切换（Phase 17）仍等待用户明确批准；当前不授权修改 `main`、GitHub Pages 数据源或 production selection。
 
 ## 明确禁止事项
 
