@@ -3,14 +3,14 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T21:30:00+08:00",
-  "reason": "易发生火灾、爆炸、缺氧、极低温和其他危险化学品事故的实验室，其房间的门必须向疏散方向开启，未设置检测报警及自动灭火系统，违反中华人民共和国危险化学品安全法第四十一条危险化学品储存管理要求，以及GB 50016建筑设计防火规范中实验室安全要求。危化品实验室门必须向疏散方向开启并设置检测报警及自动灭火系统。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《危险化学品安全法》第四十一条属危化品储存通用要求，保留为 fallback；本条 direct 依据已由 JGJ 91-2019 第5.2.6条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "HAZCHEM_LAB_EGRESS_DOOR_ALARM"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "ab3adbf3404ac30a0280a8afac189e89c23cd2d59256803053e59ec2b74ce88e",
+  "reviewedContentHash": "cf8eecdc77e22bfa7c8e592fe8e4f518ad116c6c2bf7c61d5b3ecd01f9f59f13",
   "contextHashes": {
     "hazard": "c3a1123e19832800fd73be3340e8653a3c4604e574937da6f186fc653ad9630c",
     "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931",

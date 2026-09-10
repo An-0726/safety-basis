@@ -3,14 +3,14 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T22:00:00+08:00",
-  "reason": "当易发生火灾、爆炸、极低温和其他危险化学品引发事故的实验室与其他用房相邻时，必须形成独立的防护单元，未符合防护单元围护结构等规定，违反中华人民共和国危险化学品安全法第四十一条危险化学品储存管理要求，以及GB 50016建筑设计防火规范中实验室安全要求。危化品实验室与其他用房相邻时必须形成独立防护单元。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《危险化学品安全法》第四十一条属危化品储存通用要求，保留为 fallback；本条 direct 依据已由 JGJ 91-2019 第5.2.5条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "HAZCHEM_LABORATORY_INDEPENDENT_PROTECTION_UNIT"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "fd04bb09cc1816ac1e9d2a7cbc27d7638b9a2fc5f410ab42266e217381ef825b",
+  "reviewedContentHash": "f5a5a05bdd44b438e10cc19e0ab6d4bc1e06a2a6f966ab01044e08d5b9250a97",
   "contextHashes": {
     "hazard": "a2f6d418bccdcfd0df7ee47fed0ed2a6a8befc8f2293fc994f31e9841fa55eff",
     "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931",
