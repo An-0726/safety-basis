@@ -1,14 +1,15 @@
 {
- "schemaVersion": 3,
+ "schemaVersion": 2,
+ "v4SchemaVersion": 3,
  "dataVersion": "2026.09.10.v4-candidate",
  "generatedAt": "2026-09-10",
- "publicScope": "国家法规标准优先，江苏／南京补充",
+ "publicScope": "国家法规标准优先，江苏／南京补充；只投影通过链式门禁的隐患",
  "counts": {
   "hazards": 641,
-  "laws": 85,
+  "laws": 67,
   "lawVersions": 85,
-  "clauses": 177,
-  "links": 829
+  "clauses": 150,
+  "links": 801
  },
  "sourceCounts": {
   "hazards": 712,
@@ -18,20 +19,41 @@
   "links": 829
  },
  "health": {
-  "eligibleHazards": 641,
+  "verifiedHazards": 641,
   "pendingHazards": 0,
-  "rejectedHazards": 2,
-  "noLinkHazards": 62,
-  "notEligibleHazards": 7
+  "activeLaws": 67,
+  "pendingLaws": 0,
+  "invalidReferences": 0,
+  "stagedHazards": 71,
+  "stagedLaws": 0
  },
- "publishStats": {
-  "publishable": 641,
-  "notPublishable": 71,
-  "byStatus": {
-   "eligible": 641,
-   "no_link": 62,
-   "not_eligible": 7,
-   "rejected": 2
+ "files": {
+  "searchIndex": "data/search-index.json",
+  "lawIndex": "data/law-index.json",
+  "taxonomy": "data/taxonomy.json"
+ },
+ "hazardShards": [
+  {
+   "id": "h0000",
+   "url": "data/hazards/h0000.json"
+  },
+  {
+   "id": "h0001",
+   "url": "data/hazards/h0001.json"
+  },
+  {
+   "id": "h0002",
+   "url": "data/hazards/h0002.json"
+  },
+  {
+   "id": "h0003",
+   "url": "data/hazards/h0003.json"
   }
- }
+ ],
+ "clauseShards": [
+  {
+   "id": "c0000",
+   "url": "data/clauses/c0000.json"
+  }
+ ]
 }

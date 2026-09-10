@@ -107,8 +107,8 @@ class MasterMigrationTests(unittest.TestCase):
 
         # Restore the fixture, then introduce an FK break. The schema transaction
         # must roll back the temporary database as a whole.
-        shutil.rmtree(self.root / "content")
-        shutil.copytree(REPO / "content", self.root / "content")
+        # 直接覆盖还原：Windows 不允许删除仍被进程占用的目录，rmtree 会失败。
+        shutil.copytree(REPO / "content", self.root / "content", dirs_exist_ok=True)
         links = self.root / "content/links.json"
         values = json.loads(links.read_text(encoding="utf-8"))
         values[0]["clauseId"] = "C_DOES_NOT_EXIST"

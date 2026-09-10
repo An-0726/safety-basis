@@ -3,12 +3,15 @@
 
 输出：source/releases/v4-candidate-20260910/
 - data/search-index.json      公开发布投影：只含共享 Gate 判定 publishable=true 的 hazard
-- data/search-index-all.json  后台全量：所有 hazard，标注 publishable / excludedReason
-- data/hazards/*.json         hazard 详情（compact JSON）
+- data/_internal/search-index-all.json  后台全量：所有 hazard，标注 publishable / excludedReason
+- data/_internal/hazards/*.json         全量 hazard 详情（compact JSON，内部审计视图，不随公开站点发布）
 - data/law-index.json         法规目录（law canonicalName + lawVersion validityStatus）
 - data/taxonomy.json          分类/场所
 - data/manifest.json          数据版本与健康摘要
 - release.json                release 元信息（counts/state hash/gate 摘要）
+
+公开目录下的 hazards/ 与 clauses/ 分片由 tools/v4/build_site_data.py 生成，
+只包含通过链式 Gate 的隐患及其依据。
 
 本脚本不再自行实现任何门禁规则：是否 publishable 完全由共享核心
 release_gate_core.evaluate_release_gate 决定，避免与 strict_release_audit 漂移。
@@ -141,14 +144,16 @@ def main():
         for p in (h.get("places") or []):
             place_counter[p] += 1
 
-    os.makedirs(os.path.join(REL, "data", "hazards"), exist_ok=True)
+    # 全量 hazard 正文属内部审计视图，放到 _internal/，公开目录留给网站投影分片
+    # （由 tools/v4/build_site_data.py 生成，只含通过链式 Gate 的隐患）。
+    os.makedirs(os.path.join(REL, "data", "_internal", "hazards"), exist_ok=True)
     with io.open(os.path.join(REL, "data", "search-index.json"), "w", encoding="utf-8") as fh:
         json.dump(si, fh, ensure_ascii=False)
-    with io.open(os.path.join(REL, "data", "search-index-all.json"), "w", encoding="utf-8") as fh:
+    with io.open(os.path.join(REL, "data", "_internal", "search-index-all.json"), "w", encoding="utf-8") as fh:
         json.dump(si_all, fh, ensure_ascii=False)
     # hazard 文件用 compact JSON（无缩进）
     for hid, h in hdata.items():
-        with io.open(os.path.join(REL, "data", "hazards", hid + ".json"), "w", encoding="utf-8") as fh:
+        with io.open(os.path.join(REL, "data", "_internal", "hazards", hid + ".json"), "w", encoding="utf-8") as fh:
             json.dump(h, fh, ensure_ascii=False, separators=(",", ":"))
 
     # law-index：名称优先 canonicalName；版本效力必须用 validityStatus
@@ -222,7 +227,8 @@ def main():
         "notes": ("V4 candidate release. NOT switched to production. Chain-gated via shared "
                   "release_gate_core: search-index contains only publishable hazards "
                   "(>=1 eligible direct/fallback link through clause->lawVersion->law); "
-                  "all hazards retained in data/hazards + search-index-all.json with excludedReason. "
+                  "all hazards retained under data/_internal/ with excludedReason. "
+                  "Public shards are written by tools/v4/build_site_data.py. "
                   "See docs/V4_GATE_REPORT.md."),
     }
     with io.open(os.path.join(REL, "release.json"), "w", encoding="utf-8") as fh:

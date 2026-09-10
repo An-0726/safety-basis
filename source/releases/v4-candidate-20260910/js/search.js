@@ -1,71 +1,81 @@
-/* V4 candidate search: relevance-ranked, loads data/search-index.json once. */
-"use strict";
-let INDEX = [];
+'use strict';
 
-async function loadIndex() {
-  const r = await fetch("data/search-index.json");
-  INDEX = await r.json();
+export const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase()
+  .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g,' ')
+  .replace(/\s+/g,' ').trim();
+
+const termsOf = query => normalize(query).split(' ').filter(Boolean);
+const allTermsMatch = (text,terms) => terms.every(t=>text.includes(t));
+const scopeMatch = (scopes, region) => !region || scopes.some(x => region==='全国' ? x==='全国' : x.includes(region));
+
+const hazardScore=(r,q,terms)=>{
+  if(!terms.length) return 0;
+  const title=normalize(r.title), aliases=normalize(r.aliases.join(' ')), keywords=normalize(r.keywords.join(' ')), laws=normalize(r.lawNames.join(' '));
+  let score=0;
+  if(title===q) score+=160;
+  else if(title.startsWith(q)) score+=120;
+  else if(title.includes(q)) score+=95;
+  if(aliases.includes(q)) score+=70;
+  if(keywords.includes(q)) score+=55;
+  if(laws.includes(q)) score+=35;
+  for(const t of terms){
+    if(title.includes(t)) score+=28;
+    else if(aliases.includes(t)) score+=20;
+    else if(keywords.includes(t)) score+=14;
+    else if(laws.includes(t)) score+=8;
+    else score+=2;
+  }
+  if(r.status==='已核验') score+=3;
+  if(r.mode==='直接适用') score+=2;
+  return score;
+};
+
+export function searchHazards(rows, query, filters={}) {
+  const q=normalize(query), terms=termsOf(query);
+  const out=[];
+  for(const r of rows){
+    if(r.status==='已失效' && filters.status!=='已失效') continue;
+    if(filters.category && r.category!==filters.category) continue;
+    if(filters.place && !r.places.includes(filters.place)) continue;
+    if(filters.level && !r.levels.includes(filters.level)) continue;
+    if(filters.region && !scopeMatch(r.scopes,filters.region)) continue;
+    if(filters.mode && r.mode!==filters.mode) continue;
+    if(filters.status && r.status!==filters.status) continue;
+    if(terms.length && !allTermsMatch(r.searchText,terms)) continue;
+    out.push({row:r,score:hazardScore(r,q,terms)});
+  }
+  out.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
+  return out.map(x=>x.row);
 }
 
-function score(q, rec) {
-  const qs = q.trim().toLowerCase();
-  if (!qs) return 0;
-  const title = (rec.title || "").toLowerCase();
-  const aliases = (rec.aliases || []).join(" ").toLowerCase();
-  const keywords = (rec.keywords || []).join(" ").toLowerCase();
-  const law = (rec.lawNames || []).join(" ").toLowerCase();
-  const stds = (rec.stdNumbers || []).map(s => s.replace(/[\s\-—–/]/g, "").toLowerCase());
-  const qsN = qs.replace(/[\s\-—–/]/g, "");
-  let s = 0;
-  if (title === qs) s += 120;
-  if (title.includes(qs)) s += 80;
-  if (aliases.includes(qs)) s += 70;
-  if (keywords.includes(qs)) s += 60;
-  if (law.includes(qs)) s += 40;
-  if (stds.some(st => st === qsN || st.startsWith(qsN))) s += 60;
-  if (qs.length >= 2 && title.split(qs).length > 2) s += 20;
-  return s;
-}
+const lawScore=(r,q,terms)=>{
+  if(!terms.length) return 0;
+  const name=normalize(r.name), aliases=normalize(r.aliases.join(' '));
+  let score=0;
+  if(name===q) score+=160;
+  else if(name.startsWith(q)) score+=120;
+  else if(name.includes(q)) score+=95;
+  if(aliases.includes(q)) score+=60;
+  for(const t of terms){
+    if(name.includes(t)) score+=28;
+    else if(aliases.includes(t)) score+=18;
+    else score+=3;
+  }
+  if(r.status==='现行有效') score+=3;
+  return score;
+};
 
-function search(q) {
-  const qs = q.trim();
-  if (!qs) return [];
-  return INDEX
-    .map(r => ({ r, s: score(qs, r) }))
-    .filter(x => x.s > 0)
-    .sort((a, b) => b.s - a.s)
-    .map(x => x.r);
+export function searchLaws(rows, query, filters={}) {
+  const q=normalize(query), terms=termsOf(query);
+  const out=[];
+  for(const r of rows){
+    if(r.status==='已废止' && filters.status!=='已废止') continue;
+    if(filters.level && r.level!==filters.level) continue;
+    if(filters.region && !scopeMatch([r.scope],filters.region)) continue;
+    if(filters.status && r.status!==filters.status) continue;
+    if(terms.length && !allTermsMatch(r.searchText,terms)) continue;
+    out.push({row:r,score:lawScore(r,q,terms)});
+  }
+  out.sort((a,b)=>b.score-a.score || a.row.name.localeCompare(b.row.name,'zh-CN'));
+  return out.map(x=>x.row);
 }
-
-function renderResults(q) {
-  const box = document.getElementById("results");
-  const stat = document.getElementById("stat");
-  const list = search(q);
-  stat.textContent = `“${q}” 相关记录 ${list.length} 条（按相关度排序）`;
-  box.innerHTML = "";
-  list.slice(0, 60).forEach(r => {
-    const d = document.createElement("div");
-    d.className = "item";
-    d.innerHTML =
-      `<a href="library.html?id=${r.id}"><b>${r.title}</b></a>` +
-      `<span class="tag ${r.status === "已核验" ? "ok" : r.status === "待定" ? "pd" : "rj"}">${r.status}</span>` +
-      `<div class="meta">${r.category || ""}${r.places && r.places.length ? " · " + r.places.join("、") : ""}` +
-      `${r.lawNames && r.lawNames.length ? " · 依据：" + r.lawNames.join("、") : ""}</div>`;
-    box.appendChild(d);
-  });
-  if (!list.length) box.innerHTML = "<div class='empty'>未找到相关记录。可尝试更口语的表述或标准号。</div>";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  loadIndex().then(() => {
-    const q = new URLSearchParams(location.search).get("q") || "";
-    const input = document.getElementById("q");
-    input.value = q;
-    if (q) renderResults(q);
-    let t;
-    input.addEventListener("input", e => {
-      clearTimeout(t);
-      t = setTimeout(() => renderResults(e.target.value), 150);
-    });
-  });
-});
