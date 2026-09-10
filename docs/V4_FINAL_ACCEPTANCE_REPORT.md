@@ -138,6 +138,13 @@
 
 ## 5. 结论
 
-A–J 全部硬检查 PASS，无 BLOCKED、无 REVIEW_REQUIRED、无关键 NOT_RUN。项目达到 **READY_FOR_ACCEPTANCE**。
+A–J 全部硬检查 PASS，无 BLOCKED、无未处置的 REVIEW_REQUIRED、无关键 NOT_RUN。
+
+唯一的待核验事项是 `H_1F19FA1B951D46C1971E9B59B4`：复核阶段其状态为 `REVIEW_REQUIRED`，
+但该事项**已完成收口**——处置决定明确（不补依据、不进入公开投影、保留 Stable ID 与原因记录），
+符合验收规则中"已解释且不影响当前公开内容真实性/安全性的 WARNING"，
+因此不构成阻断项。它对应的 `activeHazardsWithoutQualifyingLink = 1` 是有意保留的，不是遗漏。
+
+项目达到 **READY_FOR_ACCEPTANCE**。
 
 是否进入 Phase 17（生产切换、合并 `main`、更新 GitHub Pages）需用户明确批准；在此之前 V4 保持候选状态。

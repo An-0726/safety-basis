@@ -1,110 +1,123 @@
 # Safety Basis Chat 续接状态
 
-> 最后更新：2026-09-10。恢复项目必须先读取本文件，并核对 GitHub `chat-v4` 真实 HEAD、最新 Phase 16 inventory / acceptance、`knowledge/manifest.json` 与 Google Drive `ESH_Codex/work/safety-basis`。真实文件状态优先于聊天历史。分支存在并发施工，写入前重新 fetch；禁止 reset / force push。
+> 最后更新：2026-09-10。恢复项目必须先读取本文件，并核对 GitHub `chat-v4` 真实 HEAD、`knowledge/manifest.json`、
+> `docs/V4_FINAL_ACCEPTANCE_REPORT.md` 与 `source/releases/v4-candidate-20260910/release.json`。
+> 真实文件状态优先于聊天历史。分支存在并发施工，写入前必须重新 fetch；**禁止 reset / force push**。
 
 ## PROJECT_STATUS
 
 **READY_FOR_ACCEPTANCE** — Phase 16 全部验收已完成，等待用户批准是否进入 Phase 17。
 
-当前知识树实测：**85 laws / 85 lawVersions / 177 clauses / 712 hazards / 829 links / 590 evidence / 75 requirements / 23 successions**。
-最近一次完整候选发布链验收：**640 publishable hazards / 801 eligible links / strictBlockers 0**。
+当前知识树实测（`py tools/v4/sync_manifest.py` 可幂等刷新 `knowledge/manifest.json`）：
 
-完整验收结论见 **`docs/V4_FINAL_ACCEPTANCE_REPORT.md`**（A–J 全部 PASS）。
-候选包已包含网站前端与数据投影，可在 `source/releases/v4-candidate-20260910/` 直接起静态服务验证；
-网站投影由 `tools/v4/build_site_data.py` 生成，已接入 CI 与双构建确定性检查。
+| 实体 | 数量 |
+|---|---:|
+| laws | 85 |
+| lawVersions | 85 |
+| clauses | 177 |
+| hazards | 712 |
+| links | 827 |
+| evidence | 590 |
+| requirements | 75 |
+| successions | 23 |
 
-**唯一未收口项**：`H_1F19FA1B951D46C1971E9B59B4`（门窗未朝外开启）现场信息不足——
-"门窗"混指门与窗、缺少场所类型与门的用途，且 GB 55037-2022 第7.1.6条只对列举场所的疏散出口门强制生效。
-按 `docs/reviews/H_1F19FA1B951D46C1971E9B59B4_DATA_QUALITY_REVIEW_20260910.md` 的结论**不强行补依据**；
-该隐患保留 Stable ID 与历史记录，active 但无 qualifying link，因此不在公开投影中，待原始场景确认后重新核定。
-
-**未获用户明确批准前不得进入 Phase 17、修改 `main` 或切换生产网站。**
+候选发布链：**640 publishable hazards / 799 eligible links / strictBlockers 0**，`candidate=true`、`production=false`。
 
 ## 当前总目标
 
-在保留 V3 Stable ID、法规/标准身份、版本、条款、可靠隐患、正确关联、证据、历史 release 与网站能力的前提下完成 Chat-first V4。Phase 16 全部真实验收通过后进入 `READY_FOR_ACCEPTANCE`；未经用户明确批准不得进入 Phase 17、修改 `main` 或切换生产网站。
+在保留 V3 Stable ID、法规/标准身份、版本、条款、可靠隐患、正确关联、证据、历史 release 与网站能力的前提下完成 Chat-first V4。
+Phase 16 已通过，下一步是用户批准后的 Phase 17 生产切换。未经明确批准不得修改 `main` 或切换生产网站。
 
 ## 当前 Phase
 
-Phase 16：最终验收。
+Phase 16 完成，处于 `READY_FOR_ACCEPTANCE`；Phase 17 未启动。
 
 ## 当前工作分支
 
-`chat-v4`
+`chat-v4`（`main`、GitHub Pages、production 数据源、V3 SQLite 均未改动）。
 
 ## 当前真实基线
 
-- 本轮开始核对的 GitHub `chat-v4` HEAD：`f858eba417c8968daba4810a736d7de3bc95e344`。
-- `f858eba4` 已完成一次完整候选重建和全验收：`validate_all` 6/6 PASS；643 publishable hazards；752 eligible links；六阶段 Gate 全 PASS；strictBlockers=0；search regression 20/20；双构建 diff clean；公开投影隐私扫描零命中。
-- 最新 Phase 16 inventory 对当前知识树统计：79 laws / 79 lawVersions / 129 clauses / 712 hazards / 781 links；643 eligible hazards / 743 inventory eligible links；68 superseded/merged hazards；仅 1 条 active hazard 无 qualifying direct/fallback link。
-- V3 冻结基线 `source/master/safety.sqlite3` 未修改；`main`、production、GitHub Pages 正式数据源均未修改。
-- Google Drive 已核对 `ESH_Codex/work/safety-basis` 路径，本轮未以旧 Drive 文件覆盖 GitHub。
+- V3 冻结基线：`source/master/safety.sqlite3`，SHA-256 `7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`，全程只读。
+- 候选包：`source/releases/v4-candidate-20260910`，同时包含网站前端与数据投影，
+  可直接 `py -m http.server` 起静态服务验收。
+- 网站投影由 `tools/v4/build_site_data.py` 生成，已接入 CI 与双构建确定性检查。
 
 ## 本轮完成
 
-1. 纠正旧 handoff：实际仓库已明显超过其中记录的 78/78/111/712/761 状态，完整验收也已从 644 条推进到 643 条真实可发布隐患；旧“49 条队列”等不能再作为当前断点。
-2. 定位 Phase 16 inventory 中唯一 active 且无 qualifying direct/fallback 的隐患：`H_1F19FA1B951D46C1971E9B59B4`《门窗,未朝外开启》。
-3. 对该条完成数据质量复核并新增 `docs/reviews/H_1F19FA1B951D46C1971E9B59B4_DATA_QUALITY_REVIEW_20260910.md`。
-4. 复核结论：当前记录把“门”和“窗”混为同一对象，缺少建筑/场所、人员、门用途及位置等适用条件；整改措施与“开启方向”问题也不对应。当前不能安全补 direct/fallback，也没有充分依据指定 mergedInto 目标。不得为了清零 inventory 强行配法规或猜合并对象。
-5. 本轮没有修改该 hazard 的 lifecycle；先保留 Stable ID 和历史事实，等待按现有 V4 schema / merged precedent 确认正确退出 active 的处理方式。
+1. **补录 6 部 V3 曾引用、V4 缺失的现行法规**，并在补录中纠正了 V3 的真实错误：
+   - 工业企业总平面设计规范 GB 50187-2012：23 条条款 + 32 条 direct 关联。
+     V3 的 24 条里 12 条与现行版本不符、4 条条号错挂（2.0.3→3.0.3、4.2.7→5.2.7、4.2.8→5.2.8、6.4.1→6.4.12），
+     人行道宽度沿用了已废止版本的 0.75m（现行为 1.0m）。
+   - 江苏省工业企业安全生产风险报告规定（省政府令第140号）：6 条 + 12 条 direct。
+     V3 把 5 条隐患挂在第三十四条**罚则**上，已改挂第七/十二/十六/十七/十八条等行为规范条款。
+   - 特种作业人员安全技术培训考核管理规定（应急管理部令第19号）、特种作业目录（应急〔2026〕45号）。
+   - 建设项目安全设施"三同时"监督管理办法（安监总局令第36号）、南京市电动自行车消防安全管理办法。
+2. **补齐 Phase 11 网站适配层**：此前发布包用自己的数据格式，与网站前端所需的分片 + `basisRefs` 结构不通，
+   详情页无法显示条款原文。`tools/v4/build_site_data.py` 现在从 `knowledge/` 生成公开投影，
+   浏览器实测通过（搜索、场所筛选、隐患详情的条款原文、法规库反查关联隐患、PWA 注册）。
+3. **数据质量清理**：合并完全重复隐患、清理挂在已合并隐患上的悬挂关联与中间态说明、
+   把义务复述型标题改写为现场缺陷事实、证据等级归一、来源补齐、删除重复孤儿条款。
+4. **V3 → V4 差异验收**：报告改为运行时生成；V3 已核验的 662 条隐患在 V4 的覆盖率为 **100%**，未发现误删。
+5. **门禁加固**：`rebind` 支持同一哈希多处替换、`check_review_binding` 恢复真实失败语义、
+   `gate_link` 检查目标隐患状态、`gate_clause` 检查条款效力。
 
 ## 本轮修改文件
 
-- `docs/reviews/H_1F19FA1B951D46C1971E9B59B4_DATA_QUALITY_REVIEW_20260910.md`
-- `docs/CHAT_HANDOFF.md`
+- 工具：`tools/v4/{build_site_data.py(新), build_release.py, rebind.py, scan_quality_v4.py, diff_v3_v4.py, sync_manifest.py}`
+- 门禁与 CI：`.github/workflows/v4-final-acceptance.yml`
+- 知识：`knowledge/` 下 laws / law-versions / clauses / links / evidence / hazards / reviews 的相应实体
+- 文档：`docs/V4_FINAL_ACCEPTANCE_REPORT.md(新)`、`docs/V3_V4_DIFF_REPORT.md`、`docs/CHAT_HANDOFF.md`、
+  `docs/reviews/H_1F19FA1B...{DATA_QUALITY_REVIEW,CLAUSE_VERIFICATION}_20260910.md`
+- 测试：`tests/test_master.py`（修正 Windows 下无法删除被占用目录导致的既有失败）
 
 ## 本轮校验
 
-- 重新核对 `chat-v4` HEAD 与 Phase 16 完整验收提交。
-- 核对最新 `V4_FINAL_ACCEPTANCE_INVENTORY.md`：唯一 active/no-qualifying-basis 为 `H_1F19FA1B951D46C1971E9B59B4`。
-- 核对该 hazard 源文件：title/description 均为“门窗,未朝外开启”，conditions 仍引用 GB/T 12801-2008 5.4.6，measures 为“该公司设置了安全通道,疏散指示标志等”。
-- 在当前候选全集中检索“疏散门/疏散方向/开启方向/向外开启/安全出口”等，没有获得足以证明可无损合并的 canonical hazard。
-- 本地只读 clone 因当前执行环境 DNS 无法解析 `github.com` 而失败；GitHub connector 持续可用，因此不构成项目阻塞。
+- `validate_all.py` 六项全 PASS（check_catalogue / check_requirements / check_review_binding /
+  scan_evidence_exact / scan_quality / version_impact），BLOCKING failures: none。
+- `gate_v4.py` 六阶段全 PASS；`strict_release_audit.py`：`strictVerdict=PASS`、`blockerCount=0`。
+- 搜索回归 20/20；双构建产物逐字节一致；隐私公开投影扫描 723 个文件零命中。
+- 单元测试 135 项全部通过。
 
 ## 当前项目状态
 
-- Phase 16 仍为 ACTIVE，无需用户立即决策。
-- 最新完整构建链本身已全绿，但知识树最终语义收口尚差最后的 active/no-basis 分类，以及 handoff 中尚未确认已完成的旧遗留事项复核。
-- 当前最重要原则：最后 1 条不能靠“随便补一个依据”清零；应该让错误/残缺知识退出公开候选，而不是制造错误依据。
+- 可发布隐患 640 / 712；合格关联 799 / 827（verified 799 / rejected 21 / superseded 7 / pending 0）。
+- 不可发布的 72 条 = 71 条 `superseded`（已合并或已拆分）+ 1 条 `H_1F19FA1B951D46C1971E9B59B4`。
 
 ## 未完成事项
 
-1. 核对现有 hazard lifecycle / merged precedent，决定 `H_1F19FA1B951D46C1971E9B59B4` 应采用 rejected / superseded / merged 中哪一种真实语义；若无可靠合并对象，优先作为历史待复核实体退出 active，而不是伪造 mergedInto。
-2. 处理该状态后刷新 review/hash binding，并跑相关 Validation / Gate。
-3. 重新生成 Phase 16 inventory，确认 activeHazardsWithoutQualifyingLink 是否归零。
-4. 对照当前真实仓库复核旧 handoff 列出的 H058→H043、Phase8、Requirement、重复项、sourceUrl 等事项是否已被并发提交完成；只处理仍真实存在的项，禁止重复施工。
-5. 知识树稳定后再跑一次最终完整 candidate、确定性构建、strict audit、搜索、页面/PWA、隐私投影和 V3/V4 diff 收口。
-6. 全部真实验收通过后将状态改为 `READY_FOR_ACCEPTANCE`，等待用户批准 Phase 17。
+1. **`H_1F19FA1B951D46C1971E9B59B4`（门窗未朝外开启）待原始场景确认**。
+   该条描述把门与窗混为同一检查对象，且缺场所类型、使用人数、门的用途，无法判断应适用哪条具体强制要求。
+   已按 `docs/reviews/` 中两份复核记录**不强行补依据**：保留 Stable ID 与历史记录，退出公开投影。
+   因此 `activeHazardsWithoutQualifyingLink = 1` 是**有意保留**，不是遗漏。
+   待恢复原始场景后，应重述为有明确适用边界的"疏散门开启方向不符合要求"类隐患再核验。
+2. 法规全文视图（`library.html`）在候选包内可用，但 `data/fulltext/` 尚未投影，待与版权边界一并确定。
+3. Phase 17 生产切换未启动。
 
 ## 下一轮第一步
 
-**先读取一个当前已经正确 `merged` / `superseded` / `rejected` 的 hazard 及其 review/link 处理样板，并核对 V4 validator 对 hazard lifecycle 的允许值。随后对 `H_1F19FA1B951D46C1971E9B59B4` 采用语义正确的退出 active 方案；不得猜 `mergedInto`。**
+等待用户对 `READY_FOR_ACCEPTANCE` 的复核结论。若批准，再规划 Phase 17：
+确认最终发布的具体 Release、`main` 合并方式与 GitHub Pages 切换步骤；未获批准前不做任何生产侧改动。
 
 ## 法规/标准待核验队列
 
-以当前真实 Phase 16 inventory、reviews 与最新提交为准，不再照抄旧 handoff 的历史队列。只有仍影响 active 发布链的条款才进入优先核验；已完成或已 superseded 的项目不得重复查。
+- `GB/T 12801-2008` 有效期至 **2026-09-30**，新版 `GB 12801-2025《生产过程安全基本要求》` 自 2026-10-01 实施，
+  届时应切换引用（已在条款审核记录与相关隐患说明中登记）。
+- 18 条已被替代的历史 `lawVersion` 无官方在线来源，如实留空，不编造链接。
+- 7 对"整条/分款"并存的条款属粒度设计选择，不做高风险合并。
 
 ## 风险 / 阻塞
 
-- 当前无必须用户决策的 blocker。
-- GitHub 存在并发写入可能；每次写目标文件前重新 fetch，禁止覆盖新提交。
-- 机器 Gate 全绿不等于语义天然正确；r8 历史事故继续作为长期禁令。
-- 对残缺 hazard 不能用宽泛上位法或旧标准线索凑 direct/fallback。
-- 本地 clone 的 DNS 失败只影响本轮本地执行校验，不影响 GitHub 远端读取/写入；最终全套验收仍应在可运行项目工具链的环境中执行。
+- 本分支存在并发写入者，**每次写入前必须重新 fetch**；出现冲突时人工合并，禁止 reset / force push。
+- 候选包内 `data/_internal/` 为内部审计视图（含未通过门禁的全量隐患），
+  若将来部署该包，必须排除该目录。
 
 ## 用户待决策事项
 
-当前无。只有进入 Phase 17、修改 `main` 或正式切换生产网站时需要用户明确批准。
+1. 是否批准进入 Phase 17（合并 `main`、切换生产网站、更新 GitHub Pages）。
+2. `H_1F19FA1B951D46C1971E9B59B4` 能否从原始报告恢复场景；若不能，是否长期保留为待核验实体。
+3. `data/fulltext/`（法规全文视图）的公开范围与版权边界。
 
 ## 明确禁止事项
 
-- 不修改 `main`。
-- 不切换 production / GitHub Pages 正式数据源。
-- 不覆盖 V3 SQLite 冻结基线。
-- 不用旧 release / 旧报告覆盖新成果。
-- 不因 Gate 全绿自动宣告法规语义全部正确。
-- 不批量假定 links 正确，不重演 r8。
-- 不为提高发布数量强行建立 verified 依据。
-- 不把通用上位法包装成具体技术 direct。
-- 不因缺少全文而编造条款。
-- 不 reset / force push / 覆盖并行提交。
+未经用户明确批准：不进入 Phase 17、不修改 `main`、不切换生产网站、不改动 V3 SQLite 冻结基线。

@@ -220,6 +220,7 @@ def main():
         "reviewStatsByLink": {"level": "review-level (%d links)" % link_total,
                               "verified": rev_dec.get("verified", 0),
                               "rejected": rev_dec.get("rejected", 0),
+                              "superseded": rev_dec.get("superseded", 0),
                               "pending": rev_dec.get("pending", 0)},
         "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE checked by shared release_gate_core",
         "strictGate": {"eligibleHazards": len(eligible_hazards),

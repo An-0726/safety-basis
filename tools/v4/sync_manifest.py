@@ -30,12 +30,14 @@ print("real counts:", counts)
 
 m = json.load(io.open(MANIFEST, encoding="utf-8"))
 m["counts"] = counts
-m["migrationPhase"] = "Phase 16 (final acceptance in progress; production switch pending user approval)"
+m["migrationPhase"] = ("Phase 16 complete: READY_FOR_ACCEPTANCE "
+                       "(all A-J acceptance checks passed; Phase 17 production switch pending explicit user approval)")
 m["batch"] = "v4-final-20260910"
 m["scope"] = (
-    "V4 knowledge base in Phase 16 final acceptance: %d laws, %d lawVersions, %d clauses, "
+    "V4 knowledge base at READY_FOR_ACCEPTANCE: %d laws, %d lawVersions, %d clauses, "
     "%d requirements, %d hazards, %d links, %d evidence, and %d successions. "
     "Candidate release v4-candidate-20260910 remains candidate-only; production is NOT switched. "
+    "See docs/V4_FINAL_ACCEPTANCE_REPORT.md. "
     "Composite-hazard split history remains traceable in docs/V4_HAZARD_SPLIT_TASKS.md."
     % (counts["laws"], counts["lawVersions"], counts["clauses"], counts["requirements"],
        counts["hazards"], counts["links"], counts["evidence"], counts["successions"])

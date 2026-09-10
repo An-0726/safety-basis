@@ -103,8 +103,11 @@ def run_suite(idx_name, idx, strict=True):
 
 
 INDEX_PUB = load()
-INDEX_ALL_PATH = os.path.join(REL, "data", "search-index-all.json")
-INDEX_ALL = json.load(io.open(INDEX_ALL_PATH, encoding="utf-8")) if os.path.exists(INDEX_ALL_PATH) else INDEX_PUB
+# 全量视图位于 data/_internal/（不随公开投影发布）
+INDEX_ALL_PATH = os.path.join(REL, "data", "_internal", "search-index-all.json")
+if not os.path.exists(INDEX_ALL_PATH):
+    raise SystemExit("缺少全量索引：%s（请先运行 tools/v4/build_release.py）" % INDEX_ALL_PATH)
+INDEX_ALL = json.load(io.open(INDEX_ALL_PATH, encoding="utf-8"))
 
 # 链式门禁验证：正式投影 hazard 数 < 全量，且正式投影每条都 publishable=True
 gate_ok = len(INDEX_PUB) < len(INDEX_ALL) and all(r.get("publishable") for r in INDEX_PUB)

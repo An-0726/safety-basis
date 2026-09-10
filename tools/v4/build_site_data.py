@@ -301,11 +301,8 @@ def main():
         "hazardStatuses": ["已核验"],
         "lawStatuses": sorted({x["status"] for x in law_index if x["status"]})})
 
-    # 非发布视图单独存放，避免与公开投影混在一起
-    internal = os.path.join(data, "_internal")
-    wr(os.path.join(internal, "search-index-all.json"), [
-        {"id": hid, "title": h.get("title", ""), "publishable": hid in set(pub)} for hid, h in sorted(hazards.items())
-    ])
+    # 全量视图（data/_internal/）由 build_release.py 生成，这里不再覆盖：
+    # 本脚本只负责公开投影，全量索引需要保留 aliases/keywords/lawNames 等检索字段。
 
     print("网站数据已生成:", data)
     print("  hazards=%d laws=%d clauses=%d" % (len(si), len(law_index), len(used_clauses)))
