@@ -189,6 +189,13 @@ def gate_clause(clause, review, lv_supports_current, lv_struct_ok):
         reasons.append("BLOCK_CLAUSE_TEXT:quote_missing")
     ok, r = _review_binding(clause, review, need_evidence=True)
     reasons += r
+    # 条款级效力：整部标准现行，不代表其中某条没被废止（部分替代场景）。
+    # 被废止条文不得再作为现行依据，其关联会因本项不合格而无法进入发布。
+    if (clause.get("lifecycle") or "active") != "active":
+        # 用 EXCLUDED_ 前缀：这是"实体已被替代、不应发布"，不是数据错误。
+        # strict_release_audit 据此把它归入 excludedEntities 而非 releaseBlockers。
+        reasons.append("EXCLUDED_CLAUSE_NOT_CURRENT:clause_lifecycle_"
+                       + str(clause.get("lifecycle")))
     if not lv_struct_ok:
         reasons.append("BLOCK_VERSION_UNKNOWN:lawVersion_gate_failed")
     elif not lv_supports_current:

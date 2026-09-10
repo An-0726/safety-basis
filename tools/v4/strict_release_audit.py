@@ -75,7 +75,14 @@ def main():
                                       "validityStatus": v["validityStatus"]})
     for cid, v in r.clauses.items():
         if not v["ok"]:
-            release_blockers.append({"entityType": "clause", "id": cid, "reasons": v["reasons"]})
+            # 条款已被替代（部分替代场景下整部标准仍现行、其中个别条文被废止）
+            # 属于历史实体，归入排除；其它失败才是结构/绑定错误，属阻断。
+            if all(str(x).startswith("EXCLUDED_") for x in v["reasons"]):
+                excluded_entities.append({"entityType": "clause", "id": cid,
+                                          "reason": "clause_not_current",
+                                          "reasons": v["reasons"]})
+            else:
+                release_blockers.append({"entityType": "clause", "id": cid, "reasons": v["reasons"]})
 
     # ---- Link：已签署(verified)却没过 gate = 发布路径硬伤；其余按 review 状态分流 ----
     for kid, v in r.links.items():
