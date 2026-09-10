@@ -227,6 +227,11 @@ def gate_link(link, review, hazard, clause, law, clause_ok):
         reasons.append("BLOCK_LINK_APPLICABILITY:applicability_empty")
     if not hazard:
         reasons.append("BLOCK_FOREIGN_KEY:hazard_missing")
+    elif hazard.get("mergedInto") or (hazard.get("lifecycle") or "active") != "active":
+        # §9 已合并/非 active 的 hazard 不进入公开投影；支撑它的 link 也不得计为
+        # 合格关联，否则 eligible_links 会包含实际不会发布的历史追溯关联。
+        reasons.append("BLOCK_LINK_HAZARD_NOT_PUBLISHABLE:"
+                       + ("merged" if hazard.get("mergedInto") else str(hazard.get("lifecycle"))))
     if not clause:
         reasons.append("BLOCK_FOREIGN_KEY:clause_missing")
     ok, r = _review_binding(link, review, need_evidence=False)

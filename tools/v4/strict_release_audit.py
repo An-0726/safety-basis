@@ -89,6 +89,11 @@ def main():
         elif v["decision"] == "pending":
             inventory_warnings.append({"type": "pending_link", "id": kid,
                                        "hazardId": v["hazardId"], "reason": "link review pending"})
+        elif v["decision"] == "superseded":
+            # 目标 hazard 已合并或非 active：关联保留用于历史追溯，不进入发布投影
+            excluded_entities.append({"entityType": "link", "id": kid,
+                                      "hazardId": v["hazardId"],
+                                      "reason": "review_superseded:hazard_not_publishable"})
         elif v["ok"] and v["role"] == "supporting":
             inventory_warnings.append({"type": "supporting_link", "id": kid,
                                        "hazardId": v["hazardId"],

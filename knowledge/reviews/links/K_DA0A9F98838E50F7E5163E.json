@@ -1,20 +1,22 @@
 {
- "entityType": "link",
- "entityId": "K_DA0A9F98838E50F7E5163E",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "c4e25e52696558a1ca49ab5bba27d8fc6729f8c91574684a07adf064ef8c1564",
- "contextHashes": {
-  "hazard": "8f90637aa2b629f11a0a46788503e2be0fe363413e69a72399e83c91ef7878e4",
-  "clause": "46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000"
- },
- "checkedAt": "2026-09-10T14:09:46+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "hazard 包含未制定事故应急救援预案；安全生产法第八十一条要求制定本单位生产安全事故应急救援预案并定期演练，直接覆盖预案缺失这一违法事实；责任制与规章制度要素可另引第二十一条。",
- "reasonCodes": [
-  "DIRECT_CLAUSE_APPLICABLE",
-  "PARTIAL_COVERAGE"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_DA0A9F98838E50F7E5163E",
+  "reviewType": "applicability",
+  "decision": "superseded",
+  "reviewedContentHash": "c4e25e52696558a1ca49ab5bba27d8fc6729f8c91574684a07adf064ef8c1564",
+  "contextHashes": {
+    "hazard": "8f90637aa2b629f11a0a46788503e2be0fe363413e69a72399e83c91ef7878e4",
+    "clause": "46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000"
+  },
+  "checkedAt": "2026-09-10T14:09:46+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "hazard 包含未制定事故应急救援预案；安全生产法第八十一条要求制定本单位生产安全事故应急救援预案并定期演练，直接覆盖预案缺失这一违法事实；责任制与规章制度要素可另引第二十一条。",
+  "reasonCodes": [
+    "DIRECT_CLAUSE_APPLICABLE",
+    "PARTIAL_COVERAGE"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null,
+  "supersededReason": "本条关联的隐患生命周期为 superseded，不进入公开投影，原关联保留用于历史追溯，审核状态由 verified 变更为 superseded。",
+  "supersededAt": "2026-09-10"
 }
