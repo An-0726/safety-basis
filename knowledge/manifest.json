@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-10",
-  "batch": "hazards-007b1",
+  "batch": "hazards-007b2",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -148,19 +148,25 @@
       "hazardsAdded": 10,
       "id": "hazards-007b1",
       "selection": "Conservative verified hazards positions 151-160 in the fixed Stable-ID-sorted 642-candidate set; incremental continuation of hazards-007b. Content-only migration; no verification expansion."
+    },
+    {
+      "evidenceAdded": 37,
+      "hazardsAdded": 50,
+      "id": "hazards-007b2",
+      "selection": "Conservative verified hazards positions 161-210 in the fixed Stable-ID-sorted 642-candidate set; enlarged continuation of hazards-007b. Content-only migration preserves later basis/link review restrictions; no verification expansion."
     }
   ],
   "counts": {
     "clauses": 54,
-    "evidence": 108,
-    "hazards": 160,
+    "evidence": 145,
+    "hazards": 210,
     "lawVersions": 43,
     "laws": 43,
     "successions": 2
   },
   "formatVersion": "4.0-alpha",
   "migrationPhase": "Phase 6",
-  "scope": "Cumulative verified core and all 54 conservative verified clauses; first 160 of 642 conservative verified hazards migrated; links remain deferred until hazard closure.",
+  "scope": "Cumulative verified core and all 54 conservative verified clauses; first 210 of 642 conservative verified hazards migrated; links remain deferred until hazard closure.",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
