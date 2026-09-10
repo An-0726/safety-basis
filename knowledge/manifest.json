@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-10",
-  "batch": "hazards-008",
+  "batch": "links-001",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -166,19 +166,26 @@
       "hazardsAdded": 412,
       "evidenceAdded": 261,
       "selection": "Final closure of conservative verified hazards positions 231-642 in the fixed Stable-ID-sorted 642-candidate set; completes all 642 conservative verified hazards. Content-only migration preserves later basis/link review restrictions; no verification expansion."
+    },
+    {
+      "id": "links-001",
+      "linksAdded": 179,
+      "evidenceAdded": 128,
+      "selection": "All 179 conservative verified links migrated as candidates (decision=pending). V3 status=已核验, latest applicability verification=passed, reason non-empty, normalized role in {direct,supporting,fallback}, in r10 corroboration set. Applicability and role final judgment deferred to ChatGPT review queue; V3 applicability text and verification reason preserved in review sidecar for review context. 178 direct + 1 fallback."
     }
   ],
   "counts": {
     "clauses": 54,
-    "evidence": 420,
+    "evidence": 548,
     "hazards": 642,
     "lawVersions": 43,
     "laws": 43,
-    "successions": 2
+    "successions": 2,
+    "links": 179
   },
   "formatVersion": "4.0-alpha",
   "migrationPhase": "Phase 6",
-  "scope": "Cumulative verified core and all 54 conservative verified clauses; all 642 conservative verified hazards migrated; links remain deferred until hazard closure.",
+  "scope": "Cumulative verified core and all 54 conservative verified clauses; all 642 conservative verified hazards migrated; all 179 conservative verified links migrated as candidates pending ChatGPT applicability review.",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
