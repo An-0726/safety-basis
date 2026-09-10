@@ -85,6 +85,29 @@ function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','
 """
 
 
+def law_number_index():
+    """(lawId, versionKey) -> 标准号/文号。全文库的 version 存的是 versionKey
+    （如 L015、2019），这里从知识树补出「XF 1131-2014」这类直观标识，
+    用于文件名与页面标题。"""
+    out = {}
+    d = os.path.join(ROOT, "knowledge", "law-versions")
+    if not os.path.isdir(d):
+        return out
+    for fn in os.listdir(d):
+        if not fn.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(d, fn), encoding="utf-8") as f:
+                v = json.load(f)
+        except (OSError, ValueError):
+            continue
+        num = (v.get("documentNumber") or "").strip()
+        if num:
+            out[(v.get("lawId"), v.get("versionKey"))] = num
+            out[(v.get("id"), v.get("versionKey"))] = num
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--library")
@@ -96,6 +119,7 @@ def main():
         print("未找到 fulltext.sqlite3（用 --library 或 SAFETY_LIBRARY 指定）", file=sys.stderr)
         return 1
     conn = sqlite3.connect("file:%s?mode=ro" % lib.replace("\\", "/"), uri=True)
+    nidx = law_number_index()
 
     docs = []
     for row in conn.execute("SELECT document_key, document_id, title, version, paragraph_count, "
@@ -103,9 +127,16 @@ def main():
         key, did, title, version, paras, cur, rev, url = row
         docs.append({"key": key, "id": did, "title": title or "", "version": version or "",
                      "paras": paras, "current": cur or "", "review": rev or "", "url": url or "",
-                     "file": safe_name("%s %s" % (version or did, title or ""))})
+                     "label": (nidx.get((did, version), "") or version or did),
+                     "file": safe_name("%s %s" % (nidx.get((did, version), "") or version or did, title or ""))})
     out = os.path.abspath(args.output)
-    os.makedirs(os.path.join(out, "laws"), exist_ok=True)
+    laws_dir = os.path.join(out, "laws")
+    # 先清掉上次生成的页面：文件命名规则变化后若不清，会新旧并存
+    if os.path.isdir(laws_dir):
+        for fn in os.listdir(laws_dir):
+            if fn.endswith(".html"):
+                os.remove(os.path.join(laws_dir, fn))
+    os.makedirs(laws_dir, exist_ok=True)
 
     # 段落
     by_key = {}
