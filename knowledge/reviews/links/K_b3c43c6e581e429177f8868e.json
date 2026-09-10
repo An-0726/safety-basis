@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0","hazard":"0ad31a98603ca9afd68dffe10a7570e3c23783ab468960971981fdf93e683200"},"decision":"pending","entityId":"K_b3c43c6e581e429177f8868e","entityType":"link","evidenceRefs":["E_54ac9ad5ae611fd6d7f2e69d21f2218e62fa00557ce813df7b6a0c3a84f49694"],"migratedFromV3Verification":{"id":"VRF_18fde54371cf3217db71b10e_194","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为冲压机双手按压按钮（安全联锁防护装置）损坏，同H_36D2…；安全生产法第三十六条要求安全设备定期检测保证正常运转、不得破坏防护设备。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"c875d9bc817c47aaed7c5acf5eccbf0e3bc7b7d474a89e55a02fa0ae4e1768e9"}
+{
+  "entityType": "link",
+  "entityId": "K_b3c43c6e581e429177f8868e",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "c875d9bc817c47aaed7c5acf5eccbf0e3bc7b7d474a89e55a02fa0ae4e1768e9",
+  "contextHashes": {
+    "hazard": "0ad31a98603ca9afd68dffe10a7570e3c23783ab468960971981fdf93e683200",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "冲压机双手按压按钮属安全联锁防护装置，安全生产法第36条要求安全设备维护保养检测、不得破坏防护设施，与Hazard双手按压按钮损坏直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_54ac9ad5ae611fd6d7f2e69d21f2218e62fa00557ce813df7b6a0c3a84f49694"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_18fde54371cf3217db71b10e_194",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为冲压机双手按压按钮（安全联锁防护装置）损坏，同H_36D2…；安全生产法第三十六条要求安全设备定期检测保证正常运转、不得破坏防护设备。",
+    "v3Result": "passed"
+  }
+}

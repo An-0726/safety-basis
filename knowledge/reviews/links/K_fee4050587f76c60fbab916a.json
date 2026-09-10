@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"0e644842cffcedba24395e9a0cfa3ad7a4eec23c811b5fa9c9e0721eef3993d1","hazard":"e46e4a7ff64f633824bca8de61f5aa829f58e962d58293f25a6751be4605e7e8"},"decision":"pending","entityId":"K_fee4050587f76c60fbab916a","entityType":"link","evidenceRefs":["E_4a1ca6c6561437cdaab0c3d7c20df3fdf08d603487af85736df4248416e24a8e"],"migratedFromV3Verification":{"id":"VRF_7d629e85a5dcac187ceec9da_286","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为安全出口、疏散走道和疏散楼梯的位置、数量、宽度及疏散距离未满足人员安全疏散要求。安全生产法第四十二条第二款要求生产经营场所设有符合紧急疏散要求、标志明显、保持畅通的出口、疏散通道，与疏散设施须满足安全疏散要求语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"76d481136948abc9fb9c12520bdeaddee0c77867d8a1a41b9f0801f71800f799"}
+{
+  "entityType": "link",
+  "entityId": "K_fee4050587f76c60fbab916a",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "76d481136948abc9fb9c12520bdeaddee0c77867d8a1a41b9f0801f71800f799",
+  "contextHashes": {
+    "hazard": "e46e4a7ff64f633824bca8de61f5aa829f58e962d58293f25a6751be4605e7e8",
+    "clause": "0e644842cffcedba24395e9a0cfa3ad7a4eec23c811b5fa9c9e0721eef3993d1"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第42条第2款要求生产经营场所设有符合紧急疏散要求的出口、疏散通道；安全出口、疏散走道和疏散楼梯的位置、数量、宽度及疏散距离未满足疏散要求即疏散设施不符合紧急疏散要求，direct对应成立（GB55037-2022为技术依据）。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_4a1ca6c6561437cdaab0c3d7c20df3fdf08d603487af85736df4248416e24a8e"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_7d629e85a5dcac187ceec9da_286",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为安全出口、疏散走道和疏散楼梯的位置、数量、宽度及疏散距离未满足人员安全疏散要求。安全生产法第四十二条第二款要求生产经营场所设有符合紧急疏散要求、标志明显、保持畅通的出口、疏散通道，与疏散设施须满足安全疏散要求语义对应。",
+    "v3Result": "passed"
+  }
+}

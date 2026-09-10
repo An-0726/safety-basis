@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"4513949260ef9167cd4e28765642a20211f1bea878623f5107c59dd97a7b56aa"},"decision":"pending","entityId":"K_e67fe6b5a8c7a80db603944b","entityType":"link","evidenceRefs":["E_59790d7949fd81ddb53ad82f95a55efb896f74c47f352aa8b5f78968f57fb8de"],"migratedFromV3Verification":{"id":"VRF_9daf0359e87fffd77feb591f_376","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患含两方面：①暂存区域未设置安全警示标志，对应安全生产法第三十五条在有较大危险因素场所设置明显安全警示标志；②未配备相应品种和数量的消防器材，对应消防法第十六条第一款第（二）项配置消防设施器材。泄漏应急处理设备在95条款中无直接对应（危废应急装备条款仅限危险废物贮存设施场景），不强行关联。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"f9a1771ae4f7d8f51fe7bb176321704fcff0397273090dbf33479d146ec7655a"}
+{
+  "entityType": "link",
+  "entityId": "K_e67fe6b5a8c7a80db603944b",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "f9a1771ae4f7d8f51fe7bb176321704fcff0397273090dbf33479d146ec7655a",
+  "contextHashes": {
+    "hazard": "4513949260ef9167cd4e28765642a20211f1bea878623f5107c59dd97a7b56aa",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard混合独立义务：①暂存区域未设置安全警示标志（第35条覆盖，C030）；②未配备相应品种和数量的消防器材（消防法第16条第1款第（二）项）；③泄漏应急处理设备（需专项依据）；需拆分后分别关联。与K_df15e916判断一致。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "PARTIAL_CLAUSE_COVERAGE"
+  ],
+  "evidenceRefs": [
+    "E_59790d7949fd81ddb53ad82f95a55efb896f74c47f352aa8b5f78968f57fb8de"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_9daf0359e87fffd77feb591f_376",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患含两方面：①暂存区域未设置安全警示标志，对应安全生产法第三十五条在有较大危险因素场所设置明显安全警示标志；②未配备相应品种和数量的消防器材，对应消防法第十六条第一款第（二）项配置消防设施器材。泄漏应急处理设备在95条款中无直接对应（危废应急装备条款仅限危险废物贮存设施场景），不强行关联。",
+    "v3Result": "passed"
+  }
+}

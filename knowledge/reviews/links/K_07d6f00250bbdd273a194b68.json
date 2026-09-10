@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458","hazard":"4cc6e927c217ab0d59ab701f329f181ecb581de1d96219965b302f5ee7e44d4a"},"decision":"pending","entityId":"K_07d6f00250bbdd273a194b68","entityType":"link","evidenceRefs":["E_9f1e8c07915eff433ec012da9960784287284c550763d488090aba6b57598188"],"migratedFromV3Verification":{"id":"VRF_adc7cdf7f722acbc268d2552_251","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患描述与《安全生产法》第二十八条第一款原文一致：应对从业人员进行安全生产教育和培训，使其了解事故应急处理措施、未经培训合格不得上岗，语义完全对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"67fe26138b12175fe396f4b030db1e80d4e25b7e4ee9f24e620654efe1584324"}
+{
+  "entityType": "link",
+  "entityId": "K_07d6f00250bbdd273a194b68",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "67fe26138b12175fe396f4b030db1e80d4e25b7e4ee9f24e620654efe1584324",
+  "contextHashes": {
+    "hazard": "4cc6e927c217ab0d59ab701f329f181ecb581de1d96219965b302f5ee7e44d4a",
+    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第28条第1款要求对从业人员进行安全生产教育和培训、未经培训合格不得上岗作业，与Hazard未对从业人员进行安全生产教育和培训逐字对应，条款直接覆盖该管理义务缺陷。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_9f1e8c07915eff433ec012da9960784287284c550763d488090aba6b57598188"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_adc7cdf7f722acbc268d2552_251",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患描述与《安全生产法》第二十八条第一款原文一致：应对从业人员进行安全生产教育和培训，使其了解事故应急处理措施、未经培训合格不得上岗，语义完全对应。",
+    "v3Result": "passed"
+  }
+}

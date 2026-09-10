@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0","hazard":"5dde559f8d622234a69426ea83c43affb89f09989ad561f1619c76f24cfef935"},"decision":"pending","entityId":"K_716f685d42adb68de066e043","entityType":"link","evidenceRefs":["E_9944b3cf9590a73c523126f8c6fc73060dee50044a3b62a68fc92ebf49d333f6"],"migratedFromV3Verification":{"id":"VRF_985aa1372680ce968b0db71d_429","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"安全阀属于安全设备/安全附件，隐患描述未定期检验。安全生产法第36条第二款规定必须对安全设备进行经常性维护、保养，并定期检测，语义直接对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"71bf481706ea6fc4a6e1a466a9fe9c2c077b2a2fa4c47e65f3dc27fe79d08881"}
+{
+  "entityType": "link",
+  "entityId": "K_716f685d42adb68de066e043",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "71bf481706ea6fc4a6e1a466a9fe9c2c077b2a2fa4c47e65f3dc27fe79d08881",
+  "contextHashes": {
+    "hazard": "5dde559f8d622234a69426ea83c43affb89f09989ad561f1619c76f24cfef935",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全阀属安全设备，安全生产法第36条第2款要求经常性维护保养并定期检测，与Hazard安全阀未定期检验直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_9944b3cf9590a73c523126f8c6fc73060dee50044a3b62a68fc92ebf49d333f6"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_985aa1372680ce968b0db71d_429",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "安全阀属于安全设备/安全附件，隐患描述未定期检验。安全生产法第36条第二款规定必须对安全设备进行经常性维护、保养，并定期检测，语义直接对应。",
+    "v3Result": "passed"
+  }
+}

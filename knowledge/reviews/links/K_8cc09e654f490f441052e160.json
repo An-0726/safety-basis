@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"c052907d28b9264eb67cb27e7f3ae5501f336fb1c954f7f55fadb8f972ef38ac","hazard":"511a87fbaee3995838406c2987bf705fab5dd06522072eef7af45efbe76a5c81"},"decision":"pending","entityId":"K_8cc09e654f490f441052e160","entityType":"link","evidenceRefs":["E_ba60882474bd83b23200953c30fff3b90be5eb89596d8d7ca9d1bfe336d86ef4"],"migratedFromV3Verification":{"id":"VRF_e10b6d7ec90c8552ec97508f_353","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"粉尘废屑储存：不同种类不得混装、严禁与氧化物酸等不相容物质同库存放，对应危废贮存标准4.3分类贮存及避免与不相容物质接触；铝镁等易燃爆炸粉尘废屑应压块压实预处理，对应4.9易燃危险废物应预处理使之稳定后贮存。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"3d9e99e073b1105dea10e496c19f8871fc28a4e394efac61a1b7ea1fed0f0df0"}
+{
+  "entityType": "link",
+  "entityId": "K_8cc09e654f490f441052e160",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "3d9e99e073b1105dea10e496c19f8871fc28a4e394efac61a1b7ea1fed0f0df0",
+  "contextHashes": {
+    "hazard": "511a87fbaee3995838406c2987bf705fab5dd06522072eef7af45efbe76a5c81",
+    "clause": "c052907d28b9264eb67cb27e7f3ae5501f336fb1c954f7f55fadb8f972ef38ac"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard（粉尘废屑储存管理）混合压块压实、干式储存密闭、冷却至常温、分类不混装、镁废屑单层存放等多项独立义务，主要依据为苏安办〔2020〕13号及粉尘防爆相关标准；GB18597-2023第4.9条仅覆盖易燃易爆危废预处理部分，且粉尘废屑是否属危险废物需确认（非危废时GB18597不适用）；需拆分并核实废屑属性后分别关联。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "SCOPE_MISMATCH"
+  ],
+  "evidenceRefs": [
+    "E_ba60882474bd83b23200953c30fff3b90be5eb89596d8d7ca9d1bfe336d86ef4"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_e10b6d7ec90c8552ec97508f_353",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "粉尘废屑储存：不同种类不得混装、严禁与氧化物酸等不相容物质同库存放，对应危废贮存标准4.3分类贮存及避免与不相容物质接触；铝镁等易燃爆炸粉尘废屑应压块压实预处理，对应4.9易燃危险废物应预处理使之稳定后贮存。",
+    "v3Result": "passed"
+  }
+}

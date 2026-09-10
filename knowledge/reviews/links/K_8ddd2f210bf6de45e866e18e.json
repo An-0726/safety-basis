@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0","hazard":"98d8c619a92c035f29029e3a1dc51a6dde398e571cc24183b92072c636e3e390"},"decision":"pending","entityId":"K_8ddd2f210bf6de45e866e18e","entityType":"link","evidenceRefs":["E_9aaf0bd6cdf47f6eeea32a08102cf00a9c99c7c0d2610149874ddb14212e2328"],"migratedFromV3Verification":{"id":"VRF_7535b992c178e39f2312f657_413","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"安全阀属于安全设备，隐患描述其安装不符合要求。安全生产法第36条第一款规定安全设备的设计、制造、安装、使用、检测、维修、改造和报废应当符合国家标准或行业标准，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"6389c00bb9bf3d9cc4c39c5836a035f97cabc22eea28f9ff40d9ad2d1b115608"}
+{
+  "entityType": "link",
+  "entityId": "K_8ddd2f210bf6de45e866e18e",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6389c00bb9bf3d9cc4c39c5836a035f97cabc22eea28f9ff40d9ad2d1b115608",
+  "contextHashes": {
+    "hazard": "98d8c619a92c035f29029e3a1dc51a6dde398e571cc24183b92072c636e3e390",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全阀属安全设备，安全生产法第36条第1款要求安全设备的安装符合国家标准或行业标准；安全阀未铅直安装即安装不符合标准（TSG21-2016为技术依据），direct对应成立。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_9aaf0bd6cdf47f6eeea32a08102cf00a9c99c7c0d2610149874ddb14212e2328"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_7535b992c178e39f2312f657_413",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "安全阀属于安全设备，隐患描述其安装不符合要求。安全生产法第36条第一款规定安全设备的设计、制造、安装、使用、检测、维修、改造和报废应当符合国家标准或行业标准，语义对应。",
+    "v3Result": "passed"
+  }
+}

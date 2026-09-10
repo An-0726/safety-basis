@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"0b5ffec6dfcb1b379f709dc866002da4bed93bb116bf0728d0a8db9202396031"},"decision":"pending","entityId":"K_df15e916c14598de659bbf20","entityType":"link","evidenceRefs":["E_446b138b726e82745980113cfed89cbd22969f824baca749f85e8a94940ed2eb"],"migratedFromV3Verification":{"id":"VRF_9729d967ad0a732ba28b3bda_383","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患含两方面：①储存区域未设置安全警示标志，对应安全生产法第三十五条；②未配备相应品种和数量的消防器材及泄漏应急处理设备，消防器材部分对应消防法第十六条第一款第（二）项。灌装控制流速、接地防静电部分在95条款中无直接对应（仓储防雷接地条款不适用灌装防静电跨接），不强行关联。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"979725a3191a6cac3f171ea5690a1b3abdc0eac481267cb4f1ab36573c590edf"}
+{
+  "entityType": "link",
+  "entityId": "K_df15e916c14598de659bbf20",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "979725a3191a6cac3f171ea5690a1b3abdc0eac481267cb4f1ab36573c590edf",
+  "contextHashes": {
+    "hazard": "0b5ffec6dfcb1b379f709dc866002da4bed93bb116bf0728d0a8db9202396031",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard混合三项独立义务：①储存区域未设置安全警示标志（第35条覆盖，C030）；②灌装时未控制流速、无接地防静电（需《首批重点监管的危险化学品安全措施和应急处置原则》专项依据，C030不覆盖）；③未配备消防器材及泄漏应急处理设备（消防法第16条第1款第（二）项）；需拆分后分别关联。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "PARTIAL_CLAUSE_COVERAGE"
+  ],
+  "evidenceRefs": [
+    "E_446b138b726e82745980113cfed89cbd22969f824baca749f85e8a94940ed2eb"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_9729d967ad0a732ba28b3bda_383",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患含两方面：①储存区域未设置安全警示标志，对应安全生产法第三十五条；②未配备相应品种和数量的消防器材及泄漏应急处理设备，消防器材部分对应消防法第十六条第一款第（二）项。灌装控制流速、接地防静电部分在95条款中无直接对应（仓储防雷接地条款不适用灌装防静电跨接），不强行关联。",
+    "v3Result": "passed"
+  }
+}

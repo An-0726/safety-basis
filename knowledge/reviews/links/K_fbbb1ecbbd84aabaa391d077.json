@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"7561418aa6ac718ec3d8f925fb88ec3eb2ba41b55319d65501f74b172d922ff8","hazard":"b92a24ada9b5f0651663d8b5117d0279cd7525c6c46371f8680b2f26cd662085"},"decision":"pending","entityId":"K_fbbb1ecbbd84aabaa391d077","entityType":"link","evidenceRefs":["E_da41745889004d559d3a8dc44a2090890ec9bd43af9063c9f4cccf35e6dac10f"],"migratedFromV3Verification":{"id":"VRF_eb814bec4a35c173c0735f3a_138","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为企业主要负责人未了解易制毒化学品管理法律法规、不掌握本单位危化品基本知识。C_64588491（安全生产法第5条）规定主要负责人是本单位安全生产第一责任人；C033（安全生产法第27条）要求主要负责人具备与所从事生产经营活动相应的安全生产知识和管理能力，对应主要负责人应掌握相关法规知识的要求。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"ae10cae18aba14e0dba374a00ba0ddc0075d023a26c688b3897ee8085fd3e9a0"}
+{
+  "entityType": "link",
+  "entityId": "K_fbbb1ecbbd84aabaa391d077",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "ae10cae18aba14e0dba374a00ba0ddc0075d023a26c688b3897ee8085fd3e9a0",
+  "contextHashes": {
+    "hazard": "b92a24ada9b5f0651663d8b5117d0279cd7525c6c46371f8680b2f26cd662085",
+    "clause": "7561418aa6ac718ec3d8f925fb88ec3eb2ba41b55319d65501f74b172d922ff8"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard缺陷为主要负责人未了解易制毒化学品管理法律法规及基本知识（知识能力缺陷）；安全生产法第5条仅确立主要负责人第一责任人地位，不直接规定知识能力要求；更直接依据为第27条第1款（具备相应安全生产知识和管理能力，对应K_966f600所关联条款），本条宜降级supporting或改挂C033。",
+  "reasonCodes": [
+    "SCOPE_MISMATCH",
+    "SPECIFIC_CLAUSE_REQUIRED"
+  ],
+  "evidenceRefs": [
+    "E_da41745889004d559d3a8dc44a2090890ec9bd43af9063c9f4cccf35e6dac10f"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_eb814bec4a35c173c0735f3a_138",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为企业主要负责人未了解易制毒化学品管理法律法规、不掌握本单位危化品基本知识。C_64588491（安全生产法第5条）规定主要负责人是本单位安全生产第一责任人；C033（安全生产法第27条）要求主要负责人具备与所从事生产经营活动相应的安全生产知识和管理能力，对应主要负责人应掌握相关法规知识的要求。",
+    "v3Result": "passed"
+  }
+}

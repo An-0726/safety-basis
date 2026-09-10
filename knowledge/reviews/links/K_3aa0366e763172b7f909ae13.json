@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"d85ed39ff57eca2d54fcdbbfd6c17ea303b5b93bf2fc8d8cc6a4daa0bd5594a9"},"decision":"pending","entityId":"K_3aa0366e763172b7f909ae13","entityType":"link","evidenceRefs":["E_878eabbfcca77f4ba558cb1d86c7dcaa4083059bc77ea5ee8a988c014aa5a11d"],"migratedFromV3Verification":{"id":"VRF_38164984e05408e9c3b58a7e_206","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"[C030] 隐患为机器上未有铭牌和操作指示、维护和安全等标牌，安全生产法第三十五条规定在有较大危险因素的设施设备上应设置明显安全警示标志，机器安全标牌属于安全警示标志范畴，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"9ff6313ece3f9e9e0708eeae7180a4d95ae81ce1a56b7aeeff4c28cbfa8d6bed"}
+{
+  "entityType": "link",
+  "entityId": "K_3aa0366e763172b7f909ae13",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "9ff6313ece3f9e9e0708eeae7180a4d95ae81ce1a56b7aeeff4c28cbfa8d6bed",
+  "contextHashes": {
+    "hazard": "d85ed39ff57eca2d54fcdbbfd6c17ea303b5b93bf2fc8d8cc6a4daa0bd5594a9",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard混合铭牌、操作指示标牌、维护和安全标牌三类标牌；安全生产法第35条仅覆盖其中安全警示标志（安全标牌）部分，铭牌与操作指示标牌不属于安全警示标志范畴，其要求源于GB/T25711-2010第3.12.1条等专项设备标准；需拆分后按类别关联。",
+  "reasonCodes": [
+    "PARTIAL_CLAUSE_COVERAGE",
+    "TECHNICAL_OBJECT_MISMATCH"
+  ],
+  "evidenceRefs": [
+    "E_878eabbfcca77f4ba558cb1d86c7dcaa4083059bc77ea5ee8a988c014aa5a11d"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_38164984e05408e9c3b58a7e_206",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "[C030] 隐患为机器上未有铭牌和操作指示、维护和安全等标牌，安全生产法第三十五条规定在有较大危险因素的设施设备上应设置明显安全警示标志，机器安全标牌属于安全警示标志范畴，语义对应。",
+    "v3Result": "passed"
+  }
+}

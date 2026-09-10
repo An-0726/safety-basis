@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7","hazard":"52aaa011977f2f87d6e6e840b32ad782c48608108599ad7c245ebabe120bd2f4"},"decision":"pending","entityId":"K_31fd3915abf3d7d551334656","entityType":"link","evidenceRefs":["E_0f2c83aebbbd91a54f6145f9a582a1b3013d03e88a3362d1018514d21ab81d8c"],"migratedFromV3Verification":{"id":"VRF_ffb4bfed793cf678639728d9_203","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"[C_90478B08DF6F7C6B8A9FE71B21] 隐患为未依法参加工伤社会保险、未为从业人员缴纳保险费，安全生产法第五十一条直接规定生产经营单位必须依法参加工伤保险并为从业人员缴纳保险费，语义完全对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"5bf7f22f86242103329e1de7b7b88c5730e7351050c5675f5cb94c5d10a7517e"}
+{
+  "entityType": "link",
+  "entityId": "K_31fd3915abf3d7d551334656",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "5bf7f22f86242103329e1de7b7b88c5730e7351050c5675f5cb94c5d10a7517e",
+  "contextHashes": {
+    "hazard": "52aaa011977f2f87d6e6e840b32ad782c48608108599ad7c245ebabe120bd2f4",
+    "clause": "7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第51条第1款要求生产经营单位依法参加工伤保险、为从业人员缴纳保险费，与Hazard未依法参加工伤社会保险直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_0f2c83aebbbd91a54f6145f9a582a1b3013d03e88a3362d1018514d21ab81d8c"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_ffb4bfed793cf678639728d9_203",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "[C_90478B08DF6F7C6B8A9FE71B21] 隐患为未依法参加工伤社会保险、未为从业人员缴纳保险费，安全生产法第五十一条直接规定生产经营单位必须依法参加工伤保险并为从业人员缴纳保险费，语义完全对应。",
+    "v3Result": "passed"
+  }
+}

@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8","hazard":"e021b4d72ec4324229e3f57288302ccec28e647b1484ebeedac5dd6c6a62a547"},"decision":"pending","entityId":"K_7caf3e9d8e91a30ec04247bf","entityType":"link","evidenceRefs":["E_335ea64520ea9c9b1454e41d698ba2cb8db01b22033b84266bce7cada3238700"],"migratedFromV3Verification":{"id":"VRF_da1a6cb8678a870875e37fae_214","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"[C035] 隐患为厂内机动车辆投入使用前未经检测检验合格，厂内机动车辆属于特种设备，特种设备安全法第四十条规定未经定期检验或检验不合格的特种设备不得继续使用，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"0162679c0e3e060c331cc6566b11c075f94f7df404229ed70c01d58e35dea6af"}
+{
+  "entityType": "link",
+  "entityId": "K_7caf3e9d8e91a30ec04247bf",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "0162679c0e3e060c331cc6566b11c075f94f7df404229ed70c01d58e35dea6af",
+  "contextHashes": {
+    "hazard": "e021b4d72ec4324229e3f57288302ccec28e647b1484ebeedac5dd6c6a62a547",
+    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard为厂内机动车辆投入使用前未经检测检验合格；特种设备安全法第40条规范的是在用特种设备的定期检验（不得继续使用），投入使用前的检验合格要求更直接依据为《场（厂）内专用机动车辆安全技术规程》TSG81-2022或特设法第25条（监督检验）；40条可作supporting，direct依据待专项核验。",
+  "reasonCodes": [
+    "SPECIFIC_CLAUSE_REQUIRED",
+    "SCOPE_MISMATCH"
+  ],
+  "evidenceRefs": [
+    "E_335ea64520ea9c9b1454e41d698ba2cb8db01b22033b84266bce7cada3238700"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_da1a6cb8678a870875e37fae_214",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "[C035] 隐患为厂内机动车辆投入使用前未经检测检验合格，厂内机动车辆属于特种设备，特种设备安全法第四十条规定未经定期检验或检验不合格的特种设备不得继续使用，语义对应。",
+    "v3Result": "passed"
+  }
+}

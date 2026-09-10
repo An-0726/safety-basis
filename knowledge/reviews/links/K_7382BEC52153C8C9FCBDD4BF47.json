@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"a85a8d8c93db1eb8cb58a9d856015cb330250d9a48d8c908215fab730b88373f","hazard":"bb7f55282a265412163f51f484f0cce7431f957ae00d1f2bf249cf2561ec7ce2"},"decision":"pending","entityId":"K_7382BEC52153C8C9FCBDD4BF47","entityType":"link","evidenceRefs":["E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"],"migratedFromV3Verification":{"id":"VR_25049cf7fe590da4a7d67e9c4c_27","reviewedAt":"2026-09-09T12:26:05+00:00","reviewer":"doubao-work-链式核验","v3Reason":"link内容与法规依据一致，依赖链已修复；经批量核验维持通过。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"639274b0f72b86204ff0d327cbb7bf6301c856d0f0f24656f6911e9c50a10890"}
+{
+  "entityType": "link",
+  "entityId": "K_7382BEC52153C8C9FCBDD4BF47",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "639274b0f72b86204ff0d327cbb7bf6301c856d0f0f24656f6911e9c50a10890",
+  "contextHashes": {
+    "hazard": "bb7f55282a265412163f51f484f0cce7431f957ae00d1f2bf249cf2561ec7ce2",
+    "clause": "a85a8d8c93db1eb8cb58a9d856015cb330250d9a48d8c908215fab730b88373f"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard依据为GB18597-2001（2013修订）第7.8条，条款为现行GB18597-2023第8.2.2条（定期检查危废包装容器及贮存设施）；新旧版本条款语义一致、映射正确，direct对应成立。",
+  "reasonCodes": [
+    "VERSION_MATCHED",
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_25049cf7fe590da4a7d67e9c4c_27",
+    "reviewedAt": "2026-09-09T12:26:05+00:00",
+    "reviewer": "doubao-work-链式核验",
+    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+    "v3Result": "passed"
+  }
+}

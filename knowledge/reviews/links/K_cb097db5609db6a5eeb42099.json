@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458","hazard":"6c468feccd662c57f5a7dc50d7766d21ce1633fc8bc1c5d1dd998ca5fe4556bf"},"decision":"pending","entityId":"K_cb097db5609db6a5eeb42099","entityType":"link","evidenceRefs":["E_e8be148be3827f452f14180db77f5e9577f8fe21896afc8c54e96e507561d984"],"migratedFromV3Verification":{"id":"VRF_5cfe3a5c1cad7c5248f29bc6_259","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患要求对从业人员进行应急教育培训，使其掌握风险防范技能和事故应急措施；《安全生产法》第二十八条规定应对从业人员进行安全生产教育和培训，使其了解事故应急处理措施，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"1cf47d9aeae05f6db0749bd119c999888f1569f1b797a1f124bca747553704f3"}
+{
+  "entityType": "link",
+  "entityId": "K_cb097db5609db6a5eeb42099",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "1cf47d9aeae05f6db0749bd119c999888f1569f1b797a1f124bca747553704f3",
+  "contextHashes": {
+    "hazard": "6c468feccd662c57f5a7dc50d7766d21ce1633fc8bc1c5d1dd998ca5fe4556bf",
+    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第28条第1款要求从业人员了解事故应急处理措施；Hazard未对从业人员进行应急教育和培训（《生产安全事故应急条例》第15条为专项依据）直接落入培训义务。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_e8be148be3827f452f14180db77f5e9577f8fe21896afc8c54e96e507561d984"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_5cfe3a5c1cad7c5248f29bc6_259",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患要求对从业人员进行应急教育培训，使其掌握风险防范技能和事故应急措施；《安全生产法》第二十八条规定应对从业人员进行安全生产教育和培训，使其了解事故应急处理措施，语义对应。",
+    "v3Result": "passed"
+  }
+}

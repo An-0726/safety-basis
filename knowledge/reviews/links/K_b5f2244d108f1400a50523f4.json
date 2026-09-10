@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458","hazard":"013ed747f9ec53ff6601123ba29d9408fbfd0fd3ad967bb87e6c2f420e35dabe"},"decision":"pending","entityId":"K_b5f2244d108f1400a50523f4","entityType":"link","evidenceRefs":["E_05b594b8ef957394b61bf6b79a5fe02995ae7c566fe2c24629a09062e4392707"],"migratedFromV3Verification":{"id":"VRF_e47c0b4fe039f0456ae3f66e_125","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为操作人员未掌握危险化学品基本特性和应急处理方法。C_217217C5（安全生产法第28条）要求对从业人员进行安全生产教育和培训，使其掌握本岗位安全操作技能、了解事故应急处理措施，语义直接对应操作人员危化品特性与应急处理知识要求。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"50e23bb34ec329c538d4c185d4d7436211a18a94f13581b4c7fe2988610afba3"}
+{
+  "entityType": "link",
+  "entityId": "K_b5f2244d108f1400a50523f4",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "50e23bb34ec329c538d4c185d4d7436211a18a94f13581b4c7fe2988610afba3",
+  "contextHashes": {
+    "hazard": "013ed747f9ec53ff6601123ba29d9408fbfd0fd3ad967bb87e6c2f420e35dabe",
+    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第28条第1款要求对从业人员进行安全生产教育和培训，使其掌握本岗位安全操作技能、了解事故应急处理措施；Hazard操作人员未掌握危险化学品基本特性和应急处理方法直接落入该培训义务。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_05b594b8ef957394b61bf6b79a5fe02995ae7c566fe2c24629a09062e4392707"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_e47c0b4fe039f0456ae3f66e_125",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为操作人员未掌握危险化学品基本特性和应急处理方法。C_217217C5（安全生产法第28条）要求对从业人员进行安全生产教育和培训，使其掌握本岗位安全操作技能、了解事故应急处理措施，语义直接对应操作人员危化品特性与应急处理知识要求。",
+    "v3Result": "passed"
+  }
+}

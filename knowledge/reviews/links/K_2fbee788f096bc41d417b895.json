@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"007dce903601f21f4a54b16bde0c9630b25c8565f90bd8f5972e206e48d78670","hazard":"45c15f17b1a4bd008d2cd9bcc17b54adc99b83164188f237527dc3f7679d2392"},"decision":"pending","entityId":"K_2fbee788f096bc41d417b895","entityType":"link","evidenceRefs":["E_b5f2961aa8574badca06e04b7f7a66f477b2c07b27dbddec397e9e52f4f8a9be"],"migratedFromV3Verification":{"id":"VRF_1ed2cd0d3c5916b6828b44c4_432","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"设备安全技术专业检查制度属于安全生产规章制度，隐患描述未建立健全。安全生产法第21条第（二）项规定应组织制定并实施本单位安全生产规章制度和操作规程，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"0ba7de2dfb2fe648d8d98c7e0c6cb23d3d6b9e8684cf9eb2dd7508e7d043241e"}
+{
+  "entityType": "link",
+  "entityId": "K_2fbee788f096bc41d417b895",
+  "reviewType": "applicability",
+  "decision": "rejected",
+  "reviewedContentHash": "0ba7de2dfb2fe648d8d98c7e0c6cb23d3d6b9e8684cf9eb2dd7508e7d043241e",
+  "contextHashes": {
+    "hazard": "45c15f17b1a4bd008d2cd9bcc17b54adc99b83164188f237527dc3f7679d2392",
+    "clause": "007dce903601f21f4a54b16bde0c9630b25c8565f90bd8f5972e206e48d78670"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard为未建立对厂房、氧气管道及阀门、压力容器等的安全技术专业检查制度，其conditions指向《深度冷冻法生产氧气及相关气体安全技术规程》第4.13.3条专项要求；安全生产法第21条第（二）项是组织制定并实施规章制度的通用义务，不足以direct支撑该专项专业检查制度，可保留为supporting，direct依据应为氧气安全技术规程专项条款。",
+  "reasonCodes": [
+    "DIRECT_ROLE_OVERSTATED",
+    "SPECIFIC_CLAUSE_REQUIRED"
+  ],
+  "evidenceRefs": [
+    "E_b5f2961aa8574badca06e04b7f7a66f477b2c07b27dbddec397e9e52f4f8a9be"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_1ed2cd0d3c5916b6828b44c4_432",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "设备安全技术专业检查制度属于安全生产规章制度，隐患描述未建立健全。安全生产法第21条第（二）项规定应组织制定并实施本单位安全生产规章制度和操作规程，语义对应。",
+    "v3Result": "passed"
+  }
+}

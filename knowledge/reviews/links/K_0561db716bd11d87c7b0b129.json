@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"7561418aa6ac718ec3d8f925fb88ec3eb2ba41b55319d65501f74b172d922ff8","hazard":"fc2bc37353bf91a408dd32536bc8d3233c6147f92bf5fba2a8a0287c63cb0186"},"decision":"pending","entityId":"K_0561db716bd11d87c7b0b129","entityType":"link","evidenceRefs":["E_d3242da0bcee218d0eafeb58e53f1ccc68bb8ff63282da785dc1d4dd4f5d3512"],"migratedFromV3Verification":{"id":"VRF_7bea58aa917ab717a7398c01_250","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患要求建立健全生产安全事故应急工作责任制、主要负责人对本单位应急工作全面负责；《安全生产法》第五条规定生产经营单位主要负责人是本单位安全生产第一责任人、对本单位安全生产工作全面负责，语义对应主要负责人全面负责责任。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"fbf790c2fba5ab95d7901bfe89fe571dab936c38e0780d92e9da69b75abf336d"}
+{
+  "entityType": "link",
+  "entityId": "K_0561db716bd11d87c7b0b129",
+  "reviewType": "applicability",
+  "decision": "rejected",
+  "reviewedContentHash": "fbf790c2fba5ab95d7901bfe89fe571dab936c38e0780d92e9da69b75abf336d",
+  "contextHashes": {
+    "hazard": "fc2bc37353bf91a408dd32536bc8d3233c6147f92bf5fba2a8a0287c63cb0186",
+    "clause": "7561418aa6ac718ec3d8f925fb88ec3eb2ba41b55319d65501f74b172d922ff8"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard为未建立健全生产安全事故应急工作责任制，其conditions指向《生产安全事故应急条例》（国务院令第708号）第四条。安全生产法第5条仅确立主要负责人为本单位安全生产第一责任人的总体责任，不足以direct支撑应急工作责任制这一具体义务；正确direct依据为应急条例第四条，安法第5条可作supporting。",
+  "reasonCodes": [
+    "DIRECT_ROLE_OVERSTATED",
+    "SPECIFIC_CLAUSE_REQUIRED"
+  ],
+  "evidenceRefs": [
+    "E_d3242da0bcee218d0eafeb58e53f1ccc68bb8ff63282da785dc1d4dd4f5d3512"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_7bea58aa917ab717a7398c01_250",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患要求建立健全生产安全事故应急工作责任制、主要负责人对本单位应急工作全面负责；《安全生产法》第五条规定生产经营单位主要负责人是本单位安全生产第一责任人、对本单位安全生产工作全面负责，语义对应主要负责人全面负责责任。",
+    "v3Result": "passed"
+  }
+}

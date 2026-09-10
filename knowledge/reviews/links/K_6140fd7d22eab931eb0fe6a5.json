@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"f1d6024d3312326d5d9c84f1cec387324b1b225b27488f785ec58738222614b2"},"decision":"pending","entityId":"K_6140fd7d22eab931eb0fe6a5","entityType":"link","evidenceRefs":["E_86b5d424be5da6d422a0d10818bf9a8afbff3f7613e77ce4ef4d2dd2eccce847"],"migratedFromV3Verification":{"id":"VRF_f3fed178aeec9566851dfdcf_119","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为低温液体贮罐放置场所未张贴'严禁油脂'安全警示标志。低温液体（如氧）贮罐场所为有较大危险因素场所，安全生产法第35条要求在该类场所设置明显安全警示标志，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"90713dfd90878a0dc01a5633c355fe879e0b4d5565a4a9d6770520e46ed0803d"}
+{
+  "entityType": "link",
+  "entityId": "K_6140fd7d22eab931eb0fe6a5",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "90713dfd90878a0dc01a5633c355fe879e0b4d5565a4a9d6770520e46ed0803d",
+  "contextHashes": {
+    "hazard": "f1d6024d3312326d5d9c84f1cec387324b1b225b27488f785ec58738222614b2",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "低温液体贮罐放置场所属有较大危险因素场所（涉及低温/窒息/燃爆风险），安全生产法第35条要求设置明显安全警示标志，与Hazard未张贴严禁油脂安全警示标志直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_86b5d424be5da6d422a0d10818bf9a8afbff3f7613e77ce4ef4d2dd2eccce847"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_f3fed178aeec9566851dfdcf_119",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为低温液体贮罐放置场所未张贴'严禁油脂'安全警示标志。低温液体（如氧）贮罐场所为有较大危险因素场所，安全生产法第35条要求在该类场所设置明显安全警示标志，语义对应。",
+    "v3Result": "passed"
+  }
+}

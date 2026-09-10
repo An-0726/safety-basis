@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af","hazard":"196c2be912d3abddd331a37953d86586a0ed5838fbf9b6276b7fc68d0989dddc"},"decision":"pending","entityId":"K_9a96badb7d35c742d48a0b3c","entityType":"link","evidenceRefs":["E_8fe9635e42123c8935165ea4c837c2fee9d6be4ce1426660b7ecef8e951a518b"],"migratedFromV3Verification":{"id":"VRF_b1da1e52ddfd963b330c1abb_135","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为液化石油气气瓶间缺失“严禁烟火”“易燃易爆”等安全警示标志。C030（安全生产法第35条）要求在有较大危险因素场所设置明显安全警示标志；C001（消防法第16条第一款第二项）要求按标准设置消防安全标志，两者均对应气瓶间缺少警示标志的问题。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"ea9215635045ea08f3cd4acde1fb19855d99a41fcbfa92812ff312ca8386de53"}
+{
+  "entityType": "link",
+  "entityId": "K_9a96badb7d35c742d48a0b3c",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "ea9215635045ea08f3cd4acde1fb19855d99a41fcbfa92812ff312ca8386de53",
+  "contextHashes": {
+    "hazard": "196c2be912d3abddd331a37953d86586a0ed5838fbf9b6276b7fc68d0989dddc",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "消防法第16条第1款第（二）项要求设置消防安全标志；液化石油气气瓶间严禁烟火、易燃易爆标志属典型消防安全标志，direct对应成立（与K_6f18b681所涉安法第35条关联互补）。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_8fe9635e42123c8935165ea4c837c2fee9d6be4ce1426660b7ecef8e951a518b"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_b1da1e52ddfd963b330c1abb_135",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为液化石油气气瓶间缺失“严禁烟火”“易燃易爆”等安全警示标志。C030（安全生产法第35条）要求在有较大危险因素场所设置明显安全警示标志；C001（消防法第16条第一款第二项）要求按标准设置消防安全标志，两者均对应气瓶间缺少警示标志的问题。",
+    "v3Result": "passed"
+  }
+}

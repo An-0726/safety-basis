@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0","hazard":"115d15b9afd8de134569aceda1678c9777e2e3a7a11e2980b36d27f903be28d4"},"decision":"pending","entityId":"K_3857b97364ad7b8f97cd0b80","entityType":"link","evidenceRefs":["E_c58c864bcc6094f68afdf77d15827ee10ad583a096cd56bc35d3b1ec6a0b9a74"],"migratedFromV3Verification":{"id":"VRF_ef449d87b694b4819304efc6_436","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"压力容器属于安全设备，隐患描述其设计、制造、检验、安装不符合标准。安全生产法第36条第一款规定安全设备的设计、制造、安装、使用、检测、维修、改造和报废应当符合国家标准或行业标准，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"185a966f810016c196c281b75ca41f1810599dbf900cb4f3368e3bd948bff600"}
+{
+  "entityType": "link",
+  "entityId": "K_3857b97364ad7b8f97cd0b80",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "185a966f810016c196c281b75ca41f1810599dbf900cb4f3368e3bd948bff600",
+  "contextHashes": {
+    "hazard": "115d15b9afd8de134569aceda1678c9777e2e3a7a11e2980b36d27f903be28d4",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "压力容器属安全设备，安全生产法第36条第1款要求安全设备的设计、制造、安装、使用、检测、维修、改造和报废符合国家标准或行业标准，与Hazard压力容器设计制造检验采购安装未符合有关标准直接对应。Hazard conditions中的GB/T25711（铸造机械）与压力容器对象不符属数据缺陷，另行修复，不影响本条款对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_c58c864bcc6094f68afdf77d15827ee10ad583a096cd56bc35d3b1ec6a0b9a74"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_ef449d87b694b4819304efc6_436",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "压力容器属于安全设备，隐患描述其设计、制造、检验、安装不符合标准。安全生产法第36条第一款规定安全设备的设计、制造、安装、使用、检测、维修、改造和报废应当符合国家标准或行业标准，语义对应。",
+    "v3Result": "passed"
+  }
+}

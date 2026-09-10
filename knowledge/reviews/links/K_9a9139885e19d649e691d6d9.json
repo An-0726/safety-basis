@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0","hazard":"d1fc06491ee7734c5fea76f1350a9a66ec089d7783ba1f37e31687435ed1dbe8"},"decision":"pending","entityId":"K_9a9139885e19d649e691d6d9","entityType":"link","evidenceRefs":["E_0e6df7e31809647cd7ede1a199d20b111295524d34fe14ad9782f5aacac3ecff"],"migratedFromV3Verification":{"id":"VRF_6ceb9077e4c0bc8bdeca431e_435","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"特种设备属于安全设备，隐患描述其设计、制造、安装、维修和检验不符合安全技术规范。安全生产法第36条第一款规定安全设备的设计、制造、安装、使用、检测、维修、改造和报废应当符合国家标准或行业标准，语义直接对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"6ea34074e7a5583a7ef598e917344a305864a881fcb48d0771f24f6f4b43f921"}
+{
+  "entityType": "link",
+  "entityId": "K_9a9139885e19d649e691d6d9",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6ea34074e7a5583a7ef598e917344a305864a881fcb48d0771f24f6f4b43f921",
+  "contextHashes": {
+    "hazard": "d1fc06491ee7734c5fea76f1350a9a66ec089d7783ba1f37e31687435ed1dbe8",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第36条第1款要求安全设备的设计、制造、安装、使用、检测、维修、改造和报废符合国家标准或行业标准；特种设备作为安全设备，其设计制造安装维修检验不符合安全技术规范直接落入该义务。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_0e6df7e31809647cd7ede1a199d20b111295524d34fe14ad9782f5aacac3ecff"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_6ceb9077e4c0bc8bdeca431e_435",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "特种设备属于安全设备，隐患描述其设计、制造、安装、维修和检验不符合安全技术规范。安全生产法第36条第一款规定安全设备的设计、制造、安装、使用、检测、维修、改造和报废应当符合国家标准或行业标准，语义直接对应。",
+    "v3Result": "passed"
+  }
+}

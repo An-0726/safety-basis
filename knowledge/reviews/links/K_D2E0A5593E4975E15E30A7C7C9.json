@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"ac38c51a8257ba53e55735d3e475f0a718c0f1187c94deb81e72c3f2d8818624","hazard":"d0cb0597f2980ab583eb37da5345adb1ea47a3cf9f8075b05cf8f1e3a2a0b03e"},"decision":"pending","entityId":"K_D2E0A5593E4975E15E30A7C7C9","entityType":"link","evidenceRefs":["E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"],"migratedFromV3Verification":{"id":"VR_010a2a75f460a44663cd42a870_12","reviewedAt":"2026-09-09T12:24:37+00:00","reviewer":"doubao-work-链式核验","v3Reason":"link内容与法规依据一致，依赖链已修复；经批量核验维持通过。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"312a21076737097928a177bbf60f84884adf5a545f704cbba0c8006fc81d6b1d"}
+{
+  "entityType": "link",
+  "entityId": "K_D2E0A5593E4975E15E30A7C7C9",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "312a21076737097928a177bbf60f84884adf5a545f704cbba0c8006fc81d6b1d",
+  "contextHashes": {
+    "hazard": "d0cb0597f2980ab583eb37da5345adb1ea47a3cf9f8075b05cf8f1e3a2a0b03e",
+    "clause": "ac38c51a8257ba53e55735d3e475f0a718c0f1187c94deb81e72c3f2d8818624"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard混合GB18597-2001（2013修订）第6.1条六项选址要求（地质稳定/地震烈度、地下水位、环评距离、溶洞区自然灾害、危险品仓库与高压线隔离、下风向）；现行GB18597-2023第5.2条仅覆盖溶洞区、易受自然灾害地区（及生态红线、永久基本农田）部分，其余选址条件需按现行标准逐项核对对应条款后拆分。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "PARTIAL_CLAUSE_COVERAGE"
+  ],
+  "evidenceRefs": [
+    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_010a2a75f460a44663cd42a870_12",
+    "reviewedAt": "2026-09-09T12:24:37+00:00",
+    "reviewer": "doubao-work-链式核验",
+    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+    "v3Result": "passed"
+  }
+}

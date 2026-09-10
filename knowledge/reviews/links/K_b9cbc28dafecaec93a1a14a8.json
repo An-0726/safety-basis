@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0","hazard":"0929aa46a1394fb1a9459d83d967522bbf70793b8e876f12f44f2dfacabd5df0"},"decision":"pending","entityId":"K_b9cbc28dafecaec93a1a14a8","entityType":"link","evidenceRefs":["E_e0c5e07bc49ce349eafc770ec40bb0af5d1fca7cf0a767259845f886e3d922b9"],"migratedFromV3Verification":{"id":"VRF_b81459c44bb998b9b74b1797_431","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患包含两方面：(1)起重机属于特种设备，横梁焊缝和销轴未按要求定期探伤检测，对应特种设备安全法第40条（定期检验）；(2)起重机安全设备未按规定检测维修，对应安全生产法第36条（安全设备检测维修）。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"1db27707ec9fcbd0561361fbe87fea372a574280e504b10fa6ef45e40f5de6b2"}
+{
+  "entityType": "link",
+  "entityId": "K_b9cbc28dafecaec93a1a14a8",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "1db27707ec9fcbd0561361fbe87fea372a574280e504b10fa6ef45e40f5de6b2",
+  "contextHashes": {
+    "hazard": "0929aa46a1394fb1a9459d83d967522bbf70793b8e876f12f44f2dfacabd5df0",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "吊运熔融金属起重机属特种设备/安全设备，安全生产法第36条第1款要求安全设备符合国家标准或行业标准、第2款要求定期检测；不符合吊运熔融金属起重机专项要求及横梁焊缝销轴未定期探伤均落入该义务（探伤检测属定期检测内容）。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_e0c5e07bc49ce349eafc770ec40bb0af5d1fca7cf0a767259845f886e3d922b9"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_b81459c44bb998b9b74b1797_431",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患包含两方面：(1)起重机属于特种设备，横梁焊缝和销轴未按要求定期探伤检测，对应特种设备安全法第40条（定期检验）；(2)起重机安全设备未按规定检测维修，对应安全生产法第36条（安全设备检测维修）。",
+    "v3Result": "passed"
+  }
+}

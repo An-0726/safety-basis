@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a","hazard":"4e9942726a88f089cc06825c003ac1d60d6cab0b4fb50dcccd7e707a1753c7d8"},"decision":"pending","entityId":"K_3815f67a0112957f1fe7907c","entityType":"link","evidenceRefs":["E_1238846cab36bc9ecf6c6d6c75b085774022956576d113f6118a04ef43fbcb00"],"migratedFromV3Verification":{"id":"VRF_6b4511b634ffcd5de19d882b_158","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为主要负责人、安全生产管理人员未经主管部门考核合格并取得安全培训合格证书，对应安全生产法第27条关于主要负责人和安全生产管理人员应当经主管部门考核合格的规定。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"82dd1f7a3a9c2c1a536a9d0c7eda574aa7fdec0b958db08dd07a35ba11f831bf"}
+{
+  "entityType": "link",
+  "entityId": "K_3815f67a0112957f1fe7907c",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "82dd1f7a3a9c2c1a536a9d0c7eda574aa7fdec0b958db08dd07a35ba11f831bf",
+  "contextHashes": {
+    "hazard": "4e9942726a88f089cc06825c003ac1d60d6cab0b4fb50dcccd7e707a1753c7d8",
+    "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第27条第2款的考核合格要求仅适用于危险物品生产/经营/储存/装卸、矿山、金属冶炼、建筑施工、运输等特定行业单位，一般单位仅需具备相应知识和管理能力（第1款）；Hazard未限定企业行业类型，需确认单位是否落入第27条第2款列举范围后方可判定适用性。",
+  "reasonCodes": [
+    "SCOPE_MISMATCH"
+  ],
+  "evidenceRefs": [
+    "E_1238846cab36bc9ecf6c6d6c75b085774022956576d113f6118a04ef43fbcb00"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_6b4511b634ffcd5de19d882b_158",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为主要负责人、安全生产管理人员未经主管部门考核合格并取得安全培训合格证书，对应安全生产法第27条关于主要负责人和安全生产管理人员应当经主管部门考核合格的规定。",
+    "v3Result": "passed"
+  }
+}

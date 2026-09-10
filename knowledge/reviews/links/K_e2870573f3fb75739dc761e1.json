@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af","hazard":"9f3dca4527c23efd4ddc485273224186938e265ab6e6eea0573572393033b6fd"},"decision":"pending","entityId":"K_e2870573f3fb75739dc761e1","entityType":"link","evidenceRefs":["E_bb59f3471768ee36c251431f7d3566f7995872ca107e75fd85b5f3caafef2793"],"migratedFromV3Verification":{"id":"VRF_82e178dcc5f4481c04b99ab9_144","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为仓库未设置醒目的防火（消防安全）标志，对应消防法第16条第一款第（二）项“设置消防安全标志”的要求。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"f7f8c2eace5c1553ea8bdbd90f7a3de0ec3df716e36430b2b23849ac01261cde"}
+{
+  "entityType": "link",
+  "entityId": "K_e2870573f3fb75739dc761e1",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "f7f8c2eace5c1553ea8bdbd90f7a3de0ec3df716e36430b2b23849ac01261cde",
+  "contextHashes": {
+    "hazard": "9f3dca4527c23efd4ddc485273224186938e265ab6e6eea0573572393033b6fd",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "消防法第16条第1款第（二）项要求设置消防安全标志；仓库防火标志属消防安全标志范畴，direct对应成立（专项依据《仓库防火安全管理规则》第四十六条需在数据修复中核验现行有效性）。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_bb59f3471768ee36c251431f7d3566f7995872ca107e75fd85b5f3caafef2793"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_82e178dcc5f4481c04b99ab9_144",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为仓库未设置醒目的防火（消防安全）标志，对应消防法第16条第一款第（二）项“设置消防安全标志”的要求。",
+    "v3Result": "passed"
+  }
+}

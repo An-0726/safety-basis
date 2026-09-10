@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af","hazard":"f2d7a472e622c533be97ead4079e46888a47faa743bb7ce4d5ab50eaa981d030"},"decision":"pending","entityId":"K_9dd57cf2e794004c25f5b15b","entityType":"link","evidenceRefs":["E_9b7d6adf90ae1be3a32ccd2cb5f16ab57bfd6cbff85f949a4b8bb9a5d5044ffd"],"migratedFromV3Verification":{"id":"VRF_c7d1c9dff1fcd11f7393be74_281","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为灭火器保险装置未完好。灭火器属消防器材，消防法第16条第一款第（二）项要求配置消防设施、器材并定期检验维修、确保完好有效，保险装置缺失即器材未保持完好有效，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"88c71c325e8b744ddc3a255b35bf7003b523e8159a6a06dc3c57e50923666331"}
+{
+  "entityType": "link",
+  "entityId": "K_9dd57cf2e794004c25f5b15b",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "88c71c325e8b744ddc3a255b35bf7003b523e8159a6a06dc3c57e50923666331",
+  "contextHashes": {
+    "hazard": "f2d7a472e622c533be97ead4079e46888a47faa743bb7ce4d5ab50eaa981d030",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "灭火器保险装置未完好即消防器材未保持完好有效，消防法第16条第1款第（二）项直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_9b7d6adf90ae1be3a32ccd2cb5f16ab57bfd6cbff85f949a4b8bb9a5d5044ffd"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_c7d1c9dff1fcd11f7393be74_281",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为灭火器保险装置未完好。灭火器属消防器材，消防法第16条第一款第（二）项要求配置消防设施、器材并定期检验维修、确保完好有效，保险装置缺失即器材未保持完好有效，语义对应。",
+    "v3Result": "passed"
+  }
+}

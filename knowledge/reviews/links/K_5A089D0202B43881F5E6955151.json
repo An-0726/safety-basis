@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"97895f5d19ab057d6772f71c634f63cd8af22d4abe8f7eb3be4e576f6c7f821a","hazard":"c48b270b1d7455899e09bff23a1febbaccb07e23aa97b629635c8e04ca42292b"},"decision":"pending","entityId":"K_5A089D0202B43881F5E6955151","entityType":"link","evidenceRefs":["E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"],"migratedFromV3Verification":{"id":"VR_25049cf7fe590da4a7d67e9c4c_6","reviewedAt":"2026-09-09T12:26:05+00:00","reviewer":"doubao-work-链式核验","v3Reason":"link内容与法规依据一致，依赖链已修复；经批量核验维持通过。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"c1d9d228d3e17103e37c1c4784b175462ae634e804e43a9ab12e066bb70d4632"}
+{
+  "entityType": "link",
+  "entityId": "K_5A089D0202B43881F5E6955151",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "c1d9d228d3e17103e37c1c4784b175462ae634e804e43a9ab12e066bb70d4632",
+  "contextHashes": {
+    "hazard": "c48b270b1d7455899e09bff23a1febbaccb07e23aa97b629635c8e04ca42292b",
+    "clause": "97895f5d19ab057d6772f71c634f63cd8af22d4abe8f7eb3be4e576f6c7f821a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard依据为GB18597-2001（2013修订）第6.2.2条，条款为现行GB18597-2023第6.2.2条（液态危废贮存应具有液体泄漏堵截设施）；桶装液体下方无泄漏收集装置即未设堵截设施，新旧版本条款语义一致、映射正确，direct对应成立；Hazard中旧版条号引用需在数据修复中更新。",
+  "reasonCodes": [
+    "VERSION_MATCHED",
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_25049cf7fe590da4a7d67e9c4c_6",
+    "reviewedAt": "2026-09-09T12:26:05+00:00",
+    "reviewer": "doubao-work-链式核验",
+    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+    "v3Result": "passed"
+  }
+}

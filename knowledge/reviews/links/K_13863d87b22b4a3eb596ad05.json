@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af","hazard":"8002192bbe62a1dbe74d2a847913cb66b51423e70cbbce80b26bb7c3dd595a96"},"decision":"pending","entityId":"K_13863d87b22b4a3eb596ad05","entityType":"link","evidenceRefs":["E_65f90f9522ca13922e1b7a516de3908bf61fff74f188daf87d395d281e464cc8"],"migratedFromV3Verification":{"id":"VRF_cc703c66ca5cc6164f6c962f_285","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为灭火器筒体有明显缺陷或机械损伤。消防法第16条第一款第（二）项要求消防器材定期检验维修、确保完好有效，筒体损伤即器材未保持完好有效，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"4ae0e8a83ad4f4232be7026dbff4cfcdbaa06466fed7e4c9f895da2c93eeb77f"}
+{
+  "entityType": "link",
+  "entityId": "K_13863d87b22b4a3eb596ad05",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "4ae0e8a83ad4f4232be7026dbff4cfcdbaa06466fed7e4c9f895da2c93eeb77f",
+  "contextHashes": {
+    "hazard": "8002192bbe62a1dbe74d2a847913cb66b51423e70cbbce80b26bb7c3dd595a96",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard title为灭火器筒体未无明显缺陷和机械损伤，存在双重否定歧义：若字面理解为检查未见缺陷，则非隐患事实（FACT_NOT_HAZARD）；若本意为筒体存在明显缺陷或机械损伤（V3解释），则消防法第16条第1款第（二）项可作为未确保完好有效的direct依据，但更专项依据为GB50444-2008。需先澄清Hazard文本语义。",
+  "reasonCodes": [
+    "FACT_NOT_HAZARD"
+  ],
+  "evidenceRefs": [
+    "E_65f90f9522ca13922e1b7a516de3908bf61fff74f188daf87d395d281e464cc8"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_cc703c66ca5cc6164f6c962f_285",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为灭火器筒体有明显缺陷或机械损伤。消防法第16条第一款第（二）项要求消防器材定期检验维修、确保完好有效，筒体损伤即器材未保持完好有效，语义对应。",
+    "v3Result": "passed"
+  }
+}

@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"ea4120c64057c5279f8c0b859accc19711c9919d4996bf7be53cd13545d3b6a4"},"decision":"pending","entityId":"K_1d9b4ce4e65bdd149dcbb704","entityType":"link","evidenceRefs":["E_483d3bdaaa307f49d93e9b465cb2388451a8fb23064d86d62a777d51d9d843db"],"migratedFromV3Verification":{"id":"VRF_afe0ca659c0336abdf7fb775_124","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为同一库房内隔离储存的危险化学品未设置明显标志。C030（安全生产法第35条）规定在有较大危险因素的生产经营场所和有关设施、设备上应设置明显的安全警示标志，危险化学品储存区域属于有较大危险因素场所，应设明显标志，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"6d73d4ed178a7bc1ef20b82b956ce31c57fc9937ef23311b0652c4a091daaca7"}
+{
+  "entityType": "link",
+  "entityId": "K_1d9b4ce4e65bdd149dcbb704",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6d73d4ed178a7bc1ef20b82b956ce31c57fc9937ef23311b0652c4a091daaca7",
+  "contextHashes": {
+    "hazard": "ea4120c64057c5279f8c0b859accc19711c9919d4996bf7be53cd13545d3b6a4",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "同一库房内隔离储存危险化学品属有较大危险因素场所，安全生产法第35条要求设置明显安全警示标志，与Hazard未设置明显标志直接对应；DB32/T4293-2022第7.4.9条可作为更具体的地方技术依据，不影响本条direct成立。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_483d3bdaaa307f49d93e9b465cb2388451a8fb23064d86d62a777d51d9d843db"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_afe0ca659c0336abdf7fb775_124",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为同一库房内隔离储存的危险化学品未设置明显标志。C030（安全生产法第35条）规定在有较大危险因素的生产经营场所和有关设施、设备上应设置明显的安全警示标志，危险化学品储存区域属于有较大危险因素场所，应设明显标志，语义对应。",
+    "v3Result": "passed"
+  }
+}

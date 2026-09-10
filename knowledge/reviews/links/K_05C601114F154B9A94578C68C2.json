@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"be4ca2a1b079c02ea354c43ccbe319390069d3dabff0279ffb8fc9bd1eeac60f","hazard":"baa14a0b07983db6b2732fb76090ed386c43083b7af1ae5cc311395c5cceda50"},"decision":"pending","entityId":"K_05C601114F154B9A94578C68C2","entityType":"link","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_f60d0818a851d5340d4e03cbae_11","reviewedAt":"2026-09-09T13:36:11+00:00","reviewer":"Codex 主核验","v3Reason":"已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"7a601b19d808a78f2ccea889da38cb1e0c384df076859c2ca9a45907b2038a3c"}
+{
+  "entityType": "link",
+  "entityId": "K_05C601114F154B9A94578C68C2",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "7a601b19d808a78f2ccea889da38cb1e0c384df076859c2ca9a45907b2038a3c",
+  "contextHashes": {
+    "hazard": "baa14a0b07983db6b2732fb76090ed386c43083b7af1ae5cc311395c5cceda50",
+    "clause": "be4ca2a1b079c02ea354c43ccbe319390069d3dabff0279ffb8fc9bd1eeac60f"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第41条第2款要求重大事故隐患排查治理情况及时向负有安全生产监督管理职责的部门和职工大会或职工代表大会报告，与Hazard重大事故隐患治理情况未按要求报告直接对应；applicability中仅在存在重大事故隐患时适用的限定与条款适用条件一致。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_f60d0818a851d5340d4e03cbae_11",
+    "reviewedAt": "2026-09-09T13:36:11+00:00",
+    "reviewer": "Codex 主核验",
+    "v3Reason": "已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。",
+    "v3Result": "passed"
+  }
+}

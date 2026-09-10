@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566","hazard":"78de38dd8bb5bbea460d9072cd0e33d4f4501038c73b053eae8c8ed60eeb5171"},"decision":"pending","entityId":"K_efdb800c8d00fe8307ada299","entityType":"link","evidenceRefs":["E_4db7715ae5a80f88589531e6bb55608e087dd779eb2567aaf29f81c45cb48bf7"],"migratedFromV3Verification":{"id":"VRF_ed0aa91539557619f6eb40d6_157","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为未按规定接受专门安全培训，整改措施明确为特种作业人员经专门安全作业培训、考核合格取得资格证书后上岗，对应安全生产法第30条特种作业人员持证上岗的规定。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"aa728a44cfbd4f19cd13c602703d10a4a67c5e6634df5e274ff1396952a81e1f"}
+{
+  "entityType": "link",
+  "entityId": "K_efdb800c8d00fe8307ada299",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "aa728a44cfbd4f19cd13c602703d10a4a67c5e6634df5e274ff1396952a81e1f",
+  "contextHashes": {
+    "hazard": "78de38dd8bb5bbea460d9072cd0e33d4f4501038c73b053eae8c8ed60eeb5171",
+    "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第30条要求特种作业人员经专门安全作业培训并取得相应资格方可上岗作业，与Hazard未按照国家规定接受专门安全培训直接对应（《生产经营单位安全培训规定》第十八条为专项依据）。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_4db7715ae5a80f88589531e6bb55608e087dd779eb2567aaf29f81c45cb48bf7"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_ed0aa91539557619f6eb40d6_157",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为未按规定接受专门安全培训，整改措施明确为特种作业人员经专门安全作业培训、考核合格取得资格证书后上岗，对应安全生产法第30条特种作业人员持证上岗的规定。",
+    "v3Result": "passed"
+  }
+}

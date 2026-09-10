@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000","hazard":"bd849b87317bdebc7ec4e13dfa55e54eb376f5ae34440e6cf1f0f3e7b200543c"},"decision":"pending","entityId":"K_18fef2d1546e124d7e828d3039","entityType":"link","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_bfefbfe6c06de05da283bb69d6_19","reviewedAt":"2026-09-09T13:36:27+00:00","reviewer":"Codex 主核验","v3Reason":"已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"6862eb7434da941fa574be979cf0b972f3b5e8e53366d712b03a7fec66e8b920"}
+{
+  "entityType": "link",
+  "entityId": "K_18fef2d1546e124d7e828d3039",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6862eb7434da941fa574be979cf0b972f3b5e8e53366d712b03a7fec66e8b920",
+  "contextHashes": {
+    "hazard": "bd849b87317bdebc7ec4e13dfa55e54eb376f5ae34440e6cf1f0f3e7b200543c",
+    "clause": "46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第81条要求制定应急预案并定期组织演练、与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，与Hazard应急预案未与属地预案衔接或未定期组织演练直接对应。Hazard自身note标注尚未完成官方原文终审属Hazard生命周期状态，不影响本条条款覆盖判断，但发布门禁需同步处理。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_bfefbfe6c06de05da283bb69d6_19",
+    "reviewedAt": "2026-09-09T13:36:27+00:00",
+    "reviewer": "Codex 主核验",
+    "v3Reason": "已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。",
+    "v3Result": "passed"
+  }
+}

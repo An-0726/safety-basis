@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"3688a8be30c025984b80e75376ae1f3c3b8a24e30ee9f7cfd8689db7552a9cac"},"decision":"pending","entityId":"K_75ff17fcb059053248fe98c7","entityType":"link","evidenceRefs":["E_5ae568f651eb5621e9086f4e99fd2210626d67601c3389f8eb5e25a6dfbd29e9"],"migratedFromV3Verification":{"id":"VRF_0d81e24ad293d195fc1eeebd_139","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为危化品暂存点无警示标志。C030（安全生产法第35条）要求在有较大危险因素的生产经营场所设置明显安全警示标志，危化品暂存点无警示标志与之对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"37c8c00d4311f78b871141b657022b2578bc90bc8e2d33ef7d144653b2a66b4a"}
+{
+  "entityType": "link",
+  "entityId": "K_75ff17fcb059053248fe98c7",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "37c8c00d4311f78b871141b657022b2578bc90bc8e2d33ef7d144653b2a66b4a",
+  "contextHashes": {
+    "hazard": "3688a8be30c025984b80e75376ae1f3c3b8a24e30ee9f7cfd8689db7552a9cac",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "危化品暂存点属有较大危险因素场所，安全生产法第35条要求设置明显安全警示标志，与Hazard危化品暂存点无警示标志直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_5ae568f651eb5621e9086f4e99fd2210626d67601c3389f8eb5e25a6dfbd29e9"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_0d81e24ad293d195fc1eeebd_139",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为危化品暂存点无警示标志。C030（安全生产法第35条）要求在有较大危险因素的生产经营场所设置明显安全警示标志，危化品暂存点无警示标志与之对应。",
+    "v3Result": "passed"
+  }
+}

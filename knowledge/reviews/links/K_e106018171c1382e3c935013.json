@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"3372eb166cbb3aa1506f7beb19d3445c363c3a61178072d9c03658b05e507d0d","hazard":"5e679234173cc6c3175142f04693cd8d5b04155958bedfda6c3bf36bf2c77098"},"decision":"pending","entityId":"K_e106018171c1382e3c935013","entityType":"link","evidenceRefs":["E_24c01542d3c4aa1b4a937253de99670fee06335cd48bc1cb64985b3a5e40e7dc"],"migratedFromV3Verification":{"id":"VRF_46284737effe3cbaad57898b_163","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为“未了解、掌握其安全技术特性”，对应安全生产法第二十九条采用新工艺/新技术/新材料/新设备时必须了解掌握其安全技术特性的规定，语义直接对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"0e1700d38ea882258b043d313a433b15b6e349e605f80990eaecc23c09e3af83"}
+{
+  "entityType": "link",
+  "entityId": "K_e106018171c1382e3c935013",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "0e1700d38ea882258b043d313a433b15b6e349e605f80990eaecc23c09e3af83",
+  "contextHashes": {
+    "hazard": "5e679234173cc6c3175142f04693cd8d5b04155958bedfda6c3bf36bf2c77098",
+    "clause": "3372eb166cbb3aa1506f7beb19d3445c363c3a61178072d9c03658b05e507d0d"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第29条要求采用新工艺、新技术、新材料或使用新设备时必须了解掌握其安全技术特性并采取有效安全防护措施，与Hazard未了解掌握其安全技术特性直接对应。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_24c01542d3c4aa1b4a937253de99670fee06335cd48bc1cb64985b3a5e40e7dc"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_46284737effe3cbaad57898b_163",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为“未了解、掌握其安全技术特性”，对应安全生产法第二十九条采用新工艺/新技术/新材料/新设备时必须了解掌握其安全技术特性的规定，语义直接对应。",
+    "v3Result": "passed"
+  }
+}

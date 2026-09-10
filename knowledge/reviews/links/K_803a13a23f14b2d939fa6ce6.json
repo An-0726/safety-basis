@@ -1,1 +1,27 @@
-{"contextHashes":{"clause":"4a384567c5b1aae7f83262788a417316ebe223c5d45ca45fcd7c4826b9c6d5a2","hazard":"2bfd1da86ff4666c844ac18bc4b57be195acbc159147cd1771d288371ea9b3f9"},"decision":"pending","entityId":"K_803a13a23f14b2d939fa6ce6","entityType":"link","evidenceRefs":["E_55c8f502a53bde59ad3666aa95a20f0ac0a30b9eb4328bcae02d5ab7f09e968c"],"migratedFromV3Verification":{"id":"VRF_8058822511cc793c16f7e636_191","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为实验室未开展安全检查；安全生产法第四十六条第一款要求安全生产管理人员根据生产经营特点对安全生产状况进行经常性检查，语义对应“开展安全检查”这一要求。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"c5691bdf50941860b773a3a5fe318fcaf89bf15241210aa452a16adb4d66ce2a"}
+{
+  "entityType": "link",
+  "entityId": "K_803a13a23f14b2d939fa6ce6",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "c5691bdf50941860b773a3a5fe318fcaf89bf15241210aa452a16adb4d66ce2a",
+  "contextHashes": {
+    "hazard": "2bfd1da86ff4666c844ac18bc4b57be195acbc159147cd1771d288371ea9b3f9",
+    "clause": "4a384567c5b1aae7f83262788a417316ebe223c5d45ca45fcd7c4826b9c6d5a2"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "安全生产法第46条第1款要求安全生产管理人员对安全生产状况进行经常性检查；Hazard实验室未开展安全检查（GB/T27476.1-2014第4.9.1条为技术依据）直接落入该义务。",
+  "reasonCodes": [
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_55c8f502a53bde59ad3666aa95a20f0ac0a30b9eb4328bcae02d5ab7f09e968c"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_8058822511cc793c16f7e636_191",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为实验室未开展安全检查；安全生产法第四十六条第一款要求安全生产管理人员根据生产经营特点对安全生产状况进行经常性检查，语义对应“开展安全检查”这一要求。",
+    "v3Result": "passed"
+  }
+}

@@ -1,1 +1,28 @@
-{"contextHashes":{"clause":"1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8","hazard":"cb0bba8266ef2bfcfbc394b40246f658cced64d9334b258ab304d9b958fe12ed"},"decision":"pending","entityId":"K_affa50e64ea799b3c1ed437b","entityType":"link","evidenceRefs":["E_f540f1b3e4f3e40ad3d87543ac1520fe307f2b540b9df8bef5208989074d246f"],"migratedFromV3Verification":{"id":"VRF_12d3ac40c954d6a8460e9b5c_428","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"压力容器属于特种设备，隐患描述定期检验不合格或安全装置缺失仍使用。特种设备安全法第40条规定未经定期检验或者检验不合格的特种设备不得继续使用，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"3e4501519f7e64de3186c1ad2b6e487bfd2ca98330d6a83807eb77a6dfd65332"}
+{
+  "entityType": "link",
+  "entityId": "K_affa50e64ea799b3c1ed437b",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "3e4501519f7e64de3186c1ad2b6e487bfd2ca98330d6a83807eb77a6dfd65332",
+  "contextHashes": {
+    "hazard": "cb0bba8266ef2bfcfbc394b40246f658cced64d9334b258ab304d9b958fe12ed",
+    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard按GB45067-2024第4.3条混合压力容器六类重大事故隐患情形：a情形（定期检验结论不符合要求仍使用）由特种设备安全法第40条direct覆盖；b-f情形（改作移动式、安全阀/爆破片/紧急切断装置缺失失效、快开门联锁缺失、氧舱接地缺失、氧舱联锁失效）属安全附件/联锁装置要求，40条不覆盖，需TSG21或GB45067-2024专项条款；需拆分。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "PARTIAL_CLAUSE_COVERAGE"
+  ],
+  "evidenceRefs": [
+    "E_f540f1b3e4f3e40ad3d87543ac1520fe307f2b540b9df8bef5208989074d246f"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_12d3ac40c954d6a8460e9b5c_428",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "压力容器属于特种设备，隐患描述定期检验不合格或安全装置缺失仍使用。特种设备安全法第40条规定未经定期检验或者检验不合格的特种设备不得继续使用，语义对应。",
+    "v3Result": "passed"
+  }
+}
