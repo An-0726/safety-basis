@@ -134,6 +134,7 @@ def main():
                    "places": [p for p, _ in place_counter.most_common()]}, fh, ensure_ascii=False)
 
     dec = Counter(hazard_decision.values())
+    rev_dec = Counter((reviews.get(kid) or {}).get("decision") or "" for kid in links)
     mf = {
         "schemaVersion": 3,
         "dataVersion": "2026.09.10.v4-candidate",
@@ -159,7 +160,10 @@ def main():
         "sourceStateHash": state_hash(src_files),
         "sourceCounts": {"laws": len(laws), "law_versions": len(lvs), "clauses": len(clauses),
                          "hazards": len(hazards), "links": len(links), "requirements": len(load_dir("requirements"))},
-        "reviewStats": dict(dec),
+        "reviewStats": {"level": "hazard-level (dedup by hazardId)", "verified": dec.get("verified", 0),
+                        "rejected": dec.get("rejected", 0), "pending": dec.get("pending", 0)},
+        "reviewStatsByLink": {"level": "review-level (181 links)", "verified": rev_dec.get("verified", 0),
+                              "rejected": rev_dec.get("rejected", 0), "pending": rev_dec.get("pending", 0)},
         "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE PASS; RELEASE pending final acceptance",
         "notes": "V4 candidate release. NOT switched to production. See docs/V4_GATE_REPORT.md and docs/CHAT_HANDOFF.md.",
     }

@@ -6,7 +6,7 @@
 - check_review_binding: PASS
 - scan_evidence_exact: PASS
 
-## Review totals: {"verified": 127, "rejected": 15, "pending": 39}
+## Review totals: {"verified": 128, "rejected": 21, "pending": 32}
 review_total=181
 composite_reviewed=21
 verified_without_evidence=0

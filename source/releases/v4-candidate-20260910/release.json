@@ -3,7 +3,7 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "fae429fff4aad1493d579143b8dbbf40904786ff332f24de949cb07ada47afe6",
+ "sourceStateHash": "6376f16120d0b82aa8e53b0613a69b4bc806fc39f2f35dc82651f333059c300a",
  "sourceCounts": {
   "laws": 68,
   "law_versions": 68,
@@ -13,8 +13,15 @@
   "requirements": 75
  },
  "reviewStats": {
-  "verified": 114,
-  "rejected": 14,
+  "level": "hazard-level (dedup by hazardId)",
+  "verified": 115,
+  "rejected": 20,
+  "pending": 25
+ },
+ "reviewStatsByLink": {
+  "level": "review-level (181 links)",
+  "verified": 128,
+  "rejected": 21,
   "pending": 32
  },
  "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE PASS; RELEASE pending final acceptance",
