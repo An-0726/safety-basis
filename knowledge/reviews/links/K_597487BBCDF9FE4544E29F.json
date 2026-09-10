@@ -1,0 +1,20 @@
+{
+ "entityType": "link",
+ "entityId": "K_597487BBCDF9FE4544E29F",
+ "reviewType": "applicability",
+ "decision": "verified",
+ "reviewedContentHash": "1bba2f8618b7c0d1d897cfd067ca04f207e4390e8df7ccb1e7ac3b77a8419814",
+ "contextHashes": {
+  "hazard": "d5148d3be0020ce5aaaa496f49dfaff61abcc1b8ab4417b062c85524c9e32de8",
+  "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+ },
+ "checkedAt": "2026-09-10T19:30:00+08:00",
+ "reviewer": "Doubao-Agent",
+ "reason": "本隐患涉及《消防法》第二十一条第一款禁止在具有火灾爆炸危险场所吸烟使用明火的规定，现有clause未收录该款原文；role=fallback：以第十六条配置维护义务作为上位法兜底，direct依据（消防法第二十一条第一款原文）需后续补充专项clause。",
+ "reasonCodes": [
+  "FALLBACK_LEGAL_UPPER",
+  "DIRECT_CLAUSE_NEEDED"
+ ],
+ "evidenceRefs": [],
+ "migratedFromV3Verification": null
+}

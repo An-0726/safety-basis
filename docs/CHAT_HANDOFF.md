@@ -1,6 +1,6 @@
 # Safety Basis Chat 续接状态
 
-> 最后更新：2026-09-10（Requirement 校准批次 001）。恢复项目时必须先读取本文件、`knowledge/manifest.json` 与 `chat-v4` 当前真实 HEAD；如有冲突，以 GitHub / Google Drive 真实文件状态为准。
+> 最后更新：2026-09-10（Link backfill 批次 001：5路并发新建123条verified link）。恢复项目时必须先读取本文件、`knowledge/manifest.json` 与 `chat-v4` 当前真实 HEAD；如有冲突，以 GitHub / Google Drive 真实文件状态为准。
 
 ## PROJECT_STATUS
 
@@ -45,18 +45,15 @@ Phase 22 / 最终验收与遗留项收口。基础迁移、link applicability �
 
 ### knowledge / manifest
 
-`knowledge/manifest.json` 当前 counts：laws 74、lawVersions 74、clauses 85、requirements 75、hazards 712、links 209、evidence 567、successions 23；link review 为 186 verified / 23 rejected / 0 pending。
+`knowledge/manifest.json` 当前 counts：laws 74、lawVersions 74、clauses 85、requirements 75、hazards 712、links 332、evidence 567、successions 23；link review 为 309 verified / 23 rejected / 0 pending。
 
 manifest 的实体数量仍正确，但 scope 中“75 requirement drafts”表述已因 Requirement 校准推进而滞后；不要把该文字当作当前全部 Requirement 都未校准的事实。下一次 sync/build 应同步修正描述或批次元数据。
 
 ## Candidate release
 
-当前候选包：`source/releases/v4-candidate-20260910/`。
+当前候选包：`source/releases/v4-candidate-20260910/`（已重建，含123条新增link）。
 
-在本轮 Requirement 修改之前，其 `release.json` 状态为：sourceStateHash=`2ddf4875c0870dca121737404364994becb710db6f184d75d3a3012b8ea5078e`；sourceCounts laws 74 / law_versions 74 / clauses 85 / hazards 712 / links 209 / requirements 75；links 186 verified / 23 rejected / 0 pending；eligibleHazards 162；eligibleLinks 186；production=false。
-
-**注意：本轮已修改 7 个 Requirement 实体，因此上述 candidate 现在是校准前快照。即使实体数量未变化，也必须在后续校准批次收口后重新 build 并重跑 requirement validator、V4 gate 与 strict audit，不能直接沿用校准前 PASS 作为最新结论。**
-
+当前 `release.json` 状态：sourceStateHash=`da30d21c98f9e985`；sourceCounts laws 74 / law_versions 74 / clauses 85 / hazards 712 / links 332 / requirements 75；links 309 verified / 23 rejected / 0 pending；eligibleHazards 268；eligibleLinks 309；production=false。strict audit PASS（releaseBlockers=0），搜索回归20/20 PASS。
 ## 本轮完成
 
 1. 按 HEAD-first 原则恢复真实现场，确认旧 handoff 的“下一轮第一步”已经过时，避免重复执行 manifest 同步、candidate 重建和 pending link 清零。

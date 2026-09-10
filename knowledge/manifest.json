@@ -193,6 +193,11 @@
   {
    "id": "v3-verified-backfill-20260910",
    "selection": "Backfilled 20 V3 verified hazards missing from V4 (title-level); links/evidence review pending for each."
+  },
+  {
+   "id": "link-backfill-20260910-01",
+   "linksAdded": 123,
+   "selection": "5-way concurrent backfill: 消防安全28 + 电气安全/安全标志25 + 安全管理/应急/安全教育28 + 危化品/涂装/粉尘防爆/燃气23 + 设备设施/总图建筑/作业安全/专项EHS19 = 123 new verified links. All reuse existing 85 clauses, no new clauses. Hash bindings verified (0 mismatches)."
   }
  ],
  "counts": {
@@ -200,14 +205,14 @@
   "lawVersions": 74,
   "clauses": 85,
   "hazards": 712,
-  "links": 209,
+  "links": 332,
   "evidence": 567,
   "successions": 23,
   "requirements": 75
  },
  "formatVersion": "4.0-alpha",
  "migrationPhase": "Phase 22 (final acceptance stage; production switch pending user approval)",
- "scope": "V4 knowledge base at final acceptance: catalogue 74 laws/74 lawVersions, 85 clauses, 75 requirement drafts, 712 hazards (642 migrated + 20 V3-verified backfill + 50 composite split), 209 links with full applicability review (186 verified / 23 rejected / 0 pending), 567 evidence, 23 successions. 45 merge groups verified in docs/V4_MERGE_ACCEPTANCE.md. Candidate release v4-candidate-20260910 (production NOT switched).",
+ "scope": "V4 knowledge base at final acceptance: catalogue 74 laws/74 lawVersions, 85 clauses, 75 requirement drafts, 712 hazards (642 migrated + 20 V3-verified backfill + 50 composite split), 332 links with full applicability review (309 verified / 23 rejected / 0 pending), 567 evidence, 23 successions. 45 merge groups verified in docs/V4_MERGE_ACCEPTANCE.md. Candidate release v4-candidate-20260910 (production NOT switched).",
  "source": {
   "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
   "v3ReleaseCorroboration": "reviewed-20260909-r10"
