@@ -1,19 +1,20 @@
 {
- "entityType": "link",
- "entityId": "K_60924DFBEDC56C36B86F47",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "2a47264ff075ac3baa67f9369a62296fd2a9b69df5079f6ee879608570ee086e",
- "contextHashes": {
-  "hazard": "35d6089e4066adcefb0cec29d12a456d0532a59adcbc077f90d63435906db461",
-  "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566"
- },
- "checkedAt": "2026-09-10T14:09:46+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "hazard 为特种作业人员未按规定持证上岗；安全生产法第三十条明确特种作业人员必须经专门安全作业培训取得相应资格方可上岗，直接适用。",
- "reasonCodes": [
-  "DIRECT_CLAUSE_APPLICABLE"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_60924DFBEDC56C36B86F47",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "c6a7b9c17bb9d6fae7476ef084acf87d8ac5ad0e925f5ef63aaf0d84b4773031",
+  "contextHashes": {
+    "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566",
+    "hazard": "35d6089e4066adcefb0cec29d12a456d0532a59adcbc077f90d63435906db461",
+    "link": "c6a7b9c17bb9d6fae7476ef084acf87d8ac5ad0e925f5ef63aaf0d84b4773031"
+  },
+  "checkedAt": "2026-09-10T14:09:46+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "该隐患已具备特种作业主管部门规章的直接依据，《中华人民共和国安全生产法》相关规定作为上位法义务补充保留。",
+  "reasonCodes": [
+    "SUPPORTING_UPPER_LAW"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null
 }
