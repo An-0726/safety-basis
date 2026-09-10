@@ -6,15 +6,9 @@
 
 ACTIVE
 
-## 当前工作面
+## 当前总目标
 
-- GitHub 正式施工分支：`chat-v4`
-- 禁止直接修改 `main`
-- 本地同步盘：`ESH_Codex/work/safety-basis`，用于读取 V3 SQLite/私有原始资料；Google Drive 已同步到本地，施工 Agent 不需要访问 Drive 网站/API。
-- V3 冻结库：`source/master/safety.sqlite3`
-- SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
-- 最新可靠 V3 候选 release：`reviewed-20260909-r10`
-- 生产 selection 仍为 `reviewed-20260909-r4`，不得自行切换。
+在保留 V3 有价值资产、Stable ID、已确认法规/版本/条款、已核验隐患和可靠证据的基础上，建设更适合 Chat 长期维护的 V4 / Chat-first 安全隐患整改依据知识库与速查网站；准确性、时效性、适用性和私有数据隔离优先于迁移数量。
 
 ## 当前 Phase
 
@@ -25,28 +19,52 @@ ACTIVE
   - conservative verified clauses：54 / 54
   - conservative verified hazards：642 / 642，迁移完成
   - conservative link candidates：179 / 179，迁移完成
-  - link applicability 专业复核：**10 / 179 已完成，169 条待复核**
+  - link applicability 专业复核：**15 / 179 已完成，164 条待复核**
 
 不得因工程迁移完成而跳过 link applicability、法规版本和条款适用性门禁。
 
-## 当前 GitHub 基线
+## 当前工作分支
 
-本文件更新前 HEAD：
+- GitHub：`An-0726/safety-basis`
+- 正式施工分支：`chat-v4`
+- 禁止直接修改 `main`
 
-`5f8584c0231cc2173e2e64a7cd56229d46aff0a3` — `review: adjudicate first 10 Phase 6 link candidates`
+## 当前真实基线
+
+### GitHub
+
+本轮恢复时实际 HEAD：
+
+`00c8d530cc651a2666e47396f8980e53853a5bfa`
+
+本轮最新 link review data commit：
+
+`e641a43a4517a086b6862393ed2eb872eb721f0e` — 完成第 11～15 条 Stable-ID 顺序 link applicability 专业复核。
+
+本 handoff commit 位于其后；下一轮仍必须重新读取 `chat-v4` 的真实 HEAD。
 
 近期关键提交：
 
 - `6bbcc18` — 完成 hazards 231～642，至此 642/642 hazards 完成
 - `12cd3e4` — hazards manifest 收口
-- `f26154b` — hazards-008 handoff
 - `899745c` — 迁移 179 条 link candidate
 - `1750884` / 后续 manifest sync — links=179、evidence=548
 - `513c8841e09ecccd2b8ce959e777d316a5541e93` — link candidate migration handoff
 - `5b9df1d2da73a527955d13a533d145b549509aee` — 新增 V4.1 法规驱动知识生产设计
 - `5f8584c0231cc2173e2e64a7cd56229d46aff0a3` — 首批 10 条 link applicability 专业复核
+- `81cdb27864ccf94dd4cc3d55ff4b03913d162070` ～ `e641a43a4517a086b6862393ed2eb872eb721f0e` — 第 11～15 条 link applicability 专业复核
 
 所有分支推进必须 non-force；写入前重新读取 HEAD，若并发前移则先同步并重算差集。
+
+### Google Drive / V3 冻结基线
+
+- 工作面：`ESH_Codex/work/safety-basis`
+- V3 冻结库：`source/master/safety.sqlite3`
+- SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
+- 最新可靠 V3 候选 release：`reviewed-20260909-r10`
+- 生产 selection：`reviewed-20260909-r4`，不得自行切换
+
+本轮没有修改 Drive、V3 SQLite、fulltext、正式 release 或生产网站。
 
 ## 当前 manifest
 
@@ -60,108 +78,101 @@ ACTIVE
 - evidence：548
 - successions：2
 
-manifest 的 `links=179` 表示 179 个 link 实体已迁入，不表示 179 条都已经专业 verified。专业 review 状态由 `knowledge/reviews/links/` 决定。
+manifest 的 `links=179` 只表示 link 实体已经迁入，不代表 179 条都经过专业 applicability verified。专业 review 状态由 `knowledge/reviews/links/` 决定。
+
+## 本轮完成
+
+### 恢复并发后的真实状态
+
+恢复时发现 `chat-v4` 已比旧 handoff 记录的 `5f8584c...` 前移至 `00c8d530...`。经实际文件核对确认：642/642 hazards 与 179/179 link candidates 已迁完，真正断点为 link applicability 专业复核；未重复执行 hazard/link 迁移。
+
+### Link applicability 第 11～15 条
+
+按 Stable-ID 排序继续逐条读取 `Link → Hazard → Clause → Review/Evidence`，完成 5 条专业判断：
+
+11. `K_053502698cf8f03c4ab637f4` — **rejected**：Hazard 明确依赖 GB 50054-2011 第7.6.38的电缆穿管专项技术要求；《消防法》第二十七条第二款只是要求线路敷设符合消防技术标准，不能以当前 `role=direct` 直接证明具体穿管方式。可在改为 supporting/fallback 后另行复核。
+12. `K_0561db716bd11d87c7b0b129` — **rejected**：Hazard 是《生产安全事故应急条例》第四条意义上的应急工作责任制专项义务；《安全生产法》第五条只是主要负责人对安全生产全面负责的一般责任，当前 `role=direct` 过强。
+13. `K_05B2CCBBD57A37BE1D8393A0FE` — **verified**：《安全生产法》第五十一条直接规定依法参加工伤保险并为从业人员缴费，与 Hazard 的对象、义务和条件一致。
+14. `K_05C601114F154B9A94578C68C2` — **verified**：《安全生产法》第四十一条直接要求重大事故隐患排查治理情况及时向监管部门和职代会/职工大会报告，与条件型 Hazard 直接对应。
+15. `K_07d6f00250bbdd273a194b68` — **verified**：《安全生产法》第二十八条对安全生产教育培训、必要知识技能和未经培训合格不得上岗的要求与 Hazard 直接一致。
+
+本批结果：**3 verified / 2 rejected / 0 pending**。
+
+累计前 15 条：首批为 3 verified / 4 rejected / 3 pending；本批新增 3 verified / 2 rejected，因此累计为：
+
+- verified：6
+- rejected：6
+- pending：3
+- reviewed：15 / 179
+- remaining：164
+
+## 本轮修改文件
+
+- `knowledge/reviews/links/K_053502698cf8f03c4ab637f4.json`
+- `knowledge/reviews/links/K_0561db716bd11d87c7b0b129.json`
+- `knowledge/reviews/links/K_05B2CCBBD57A37BE1D8393A0FE.json`
+- `knowledge/reviews/links/K_05C601114F154B9A94578C68C2.json`
+- `knowledge/reviews/links/K_07d6f00250bbdd273a194b68.json`
+- `docs/CHAT_HANDOFF.md`
+
+## 本轮校验
+
+- 5 条 link 均逐条读取并与对应 Hazard、Clause 对照；未继承 V3 `passed` 作为自动结论。
+- 复用既有 review sidecar 中的 `reviewedContentHash`、`contextHashes`、`evidenceRefs` 和 `migratedFromV3Verification`，未伪造旧审查元数据。
+- 复核确认 canonical content hash 算法为排序键、紧凑 JSON 的 SHA-256；抽查现有已审 link 的 `reviewedContentHash` 与算法一致。
+- 两条 rejected 均属于“法规本身有效，但当前 direct link 支撑强度不足”，未删除法规/条款实体。
+- 本轮只修改上述 5 个 link review sidecar 和 handoff；未修改 link 实体、hazard、clause、manifest 实体计数。
+- `main`、生产 selection、V3 SQLite/fulltext、Pages/线上网站均未修改。
+
+## 当前项目状态
+
+V4 核心实体迁移已经完成；Phase 6 当前主要剩余工作不是搬运实体，而是对 179 个 link 的真实适用性逐条专业复核。首 15 条已再次证明历史 V3 `passed` 不能等价为 V4 professional verified。
+
+已暴露的主要质量类型：
+
+- `DIRECT_ROLE_OVERSTATED` / 当前 direct 角色支撑强度不足
+- `SPECIFIC_CLAUSE_REQUIRED`
+- `COMPOSITE_HAZARD`
+- `PARTIAL_CLAUSE_COVERAGE`
+- `FACT_NOT_HAZARD`
+- `SCOPE_MISMATCH`
+- `TECHNICAL_OBJECT_MISMATCH`
 
 ## V4.1 设计补强
 
-新增规范性设计补充：
+规范性补充：`docs/V4_1_REGULATION_DRIVEN_KNOWLEDGE.md`。
 
-`docs/V4_1_REGULATION_DRIVEN_KNOWLEDGE.md`
+核心规则继续有效：
 
-该文件已正式进入 `chat-v4`，在后续合并回总设计前，对以下事项具有规范效力：
+1. 双向知识生产：Hazard-driven 与 Regulation-driven。
+2. 不采用“一条 Clause = 一条 Hazard”，引入 Requirement 中间层。
+3. 完整法规导入后逐条结构化、提炼 Requirement、查重/复用 Hazard，再生成必要 candidate。
+4. 新版本应形成 Clause/Requirement/Hazard/Link 影响清单，不机械替换标准号。
+5. 网站搜索不得退化，aliases、keywords、category、places、法规名称、条款和 Requirement 检查词参与召回。
+6. 搜索可以宽召回，但 verified 仍严门禁，语义相似不能自动证明适用性。
 
-1. Safety Basis 采用双向知识生产：
-   - Hazard-driven：现场隐患 → 法规依据
-   - Regulation-driven：完整法规/标准 → Clause → 原子 Requirement → Hazard candidate → Link
-2. 不采用“一条 Clause = 一条 Hazard”；新增 Requirement 中间层，法规原文、AI 提炼、现场隐患三层分离。
-3. 完整法规导入后应逐条结构化、提炼可检查 Requirement、与已有 Hazard 查重/复用，再生成必要的新 Hazard candidate。
-4. 新法规版本导入要产生 Clause/Requirement/Hazard/Link 影响清单，不允许只机械替换标准号。
-5. V4 网站搜索能力不得退化：标题之外的 aliases、keywords、category、places、法规名称、条款和 Requirement 检查词都应参与召回，并保留相关度排序和搜索回归测试。
-6. 搜索可以宽召回；verified 状态仍必须严门禁，语义相似度不能自动证明法规适用性。
+后续在合适节点整合进 `PROJECT_PLAYBOOK.md`、`ARCHITECTURE_V4_CHAT_FIRST.md`、`GATE_V4.md`，不得阻塞当前 link 复核。
 
-后续应在合适节点把该补充整合进 `PROJECT_PLAYBOOK.md`、`ARCHITECTURE_V4_CHAT_FIRST.md` 和 `GATE_V4.md`，但不得因此阻塞当前 link 复核。
+## 未完成事项
 
-## 179 条 Link Candidate 状态
+1. 剩余 164 条 link applicability 专业复核。
+2. 对 rejected/pending 中暴露出的 role 过强、组合型 Hazard、专项条款缺失等问题形成后续修复队列；当前不要为追求通过率直接改写历史实体。
+3. 补 catalogue law/current version。
+4. 完成 Phase 6 后再按顺序进入 Phase 7。
 
-本地 Agent 已完成 179/179 candidate migration：
+## 下一轮第一步
 
-- 178 `direct`
-- 1 `fallback`
-- 初始 review 全部为 `pending`
-- review sidecar 已保存 V3 applicability reason、contextHashes 和 evidenceRefs
-- 不允许因为 V3 曾 passed 就批量自动升级 V4 verified
+从尚未复核的下一条 Stable-ID 顺序 candidate：
 
-### 已专业复核前 10 条
+`K_0ae618827e98fe36f8b04c7951`
 
-当前结果：**3 verified / 4 rejected / 3 pending**。
-
-1. `K_006af5b6d4446159a05ac5f7b4` — **verified**：消防设施年度检测记录与《消防法》对应条款直接吻合。
-2. `K_00bb5b7226cf0cfd890c781e` — **rejected**：通用消防法线路义务不足以 direct 支撑仓储线路必须穿特定保护管的具体技术要求。
-3. `K_012500360729ae5276213ac4` — **pending**：Hazard 合并多项管理义务，单一 Clause 仅部分覆盖，应拆分或补齐 links。
-4. `K_015967d6f6a697f197ebbdad` — **rejected**：通用安全警示标志义务不能 direct 推出危化品暂存间必须标明“名称、性质、灭火方法”的具体内容。
-5. `K_0193ab27f4a0e63fd8f1ecf5` — **rejected**：Hazard 实际文本为“未见混杂”，不是隐患事实；且员工宿舍条款不能泛化为全部办公生活区域。
-6. `K_01DD57C7DD1768B0CD4B56F12C` — **verified**：GB 18597-2023 第4.6条与危险废物识别标志缺失直接对应；旧 conditions 条号留待清理。
-7. `K_03BF627B0B2DF4D35F2FCF5C39` — **pending**：Hazard 同时混合液体泄漏与气体净化，当前 Clause 仅覆盖液体要求。
-8. `K_04361764d56792472364b113` — **pending**：Hazard 同时包含责任制、规章制度、应急预案等，多义务需拆分/补齐 Clause。
-9. `K_04BD5E63412B9DEE6F3374C7F3` — **rejected**：液体泄漏收集 Hazard 错挂到气体收集净化条款，技术对象明显不一致。
-10. `K_04cdf5ee09cb1c9b9690bc5a` — **verified**：在危化品试剂间属于较大危险因素场所的前提下，通用安全警示标志义务直接适用；不扩张为 GB 13690 等专项危险性公示要求。
-
-上述 review 已写入对应 `knowledge/reviews/links/*.json`，reviewer=`ChatGPT`，并绑定当前 link/hazard/clause hashes。
-
-## 当前暴露出的数据质量问题
-
-第一批 10 条已证明历史 V3 `passed` 不能直接等价为 V4 professional verified，主要问题类型包括：
-
-- `DIRECT_ROLE_OVERSTATED`：依据过宽却标成 direct；
-- `SPECIFIC_CLAUSE_REQUIRED`：需要更具体专项条款；
-- `COMPOSITE_HAZARD`：一条 Hazard 混合多个独立义务；
-- `PARTIAL_CLAUSE_COVERAGE`：单一 Clause 只覆盖 Hazard 一部分；
-- `FACT_NOT_HAZARD`：历史文本实际描述“未发现问题”；
-- `SCOPE_MISMATCH`：法规对象/场景和 Hazard 不一致；
-- `TECHNICAL_OBJECT_MISMATCH`：液体、气体等技术对象错配。
-
-后续应持续使用这些 reasonCodes 做质量归类，并在 Phase 8 集中修复历史 Hazard/Link 结构问题。
-
-## 下一步
-
-### 主任务：继续 169 条 Link applicability 专业复核
-
-从尚未复核的下一条 Stable-ID 排序 candidate 开始，逐条读取：
+开始下一批 link applicability 专业复核。继续逐条读取：
 
 `Link → Hazard → Clause → LawVersion/Law（需要时）→ Review/Evidence`
 
-判断：
+明确判断 role、对象、条件、适用范围、技术要求和版本是否真实覆盖当前 Hazard；建议每 10～20 条形成一个独立 review 工作单元，但宁可少审也不得批量猜测。
 
-- role 是否应为 `direct / supporting / fallback`；
-- applicability 是否真实覆盖当前 Hazard；
-- jurisdiction / 对象 / 条件 / 限值是否匹配；
-- 是否存在新版/旧版条款错挂；
-- 是否需要更具体专项条款；
-- 是否属于组合型 Hazard 需要拆分。
-
-结论规则：
-
-- 明确成立 → `verified`
-- 明确错误 → `rejected`
-- 需要拆分、补证或法规专项核验 → `pending`
-
-不得为了提高通过率而把疑问项强行 verified。
-
-建议每 10～20 条形成一个 review commit；每批结束后更新本文件的累计统计。
-
-### 并行工程任务
-
-本地工程 Agent 可以继续处理不涉及法规最终判断的工作，例如：
-
-- catalogue law/current version 的候选准备；
-- validator / report 工具；
-- V4.1 Requirement schema/脚手架；
-- 搜索回归测试脚手架；
-- 数据质量扫描。
-
-但不得并发修改 ChatGPT 正在复核的同一批 link review sidecar。
-
-## 后续 Phase
+## 后续任务
 
 1. 完成 179 link applicability 专业复核及必要修复。
 2. 补 catalogue law/current version。
@@ -172,7 +183,24 @@ manifest 的 `links=179` 表示 179 个 link 实体已迁入，不表示 179 条
 7. Phase 11～16：候选 release、网站构建、搜索回归、V3/V4 对比、差异修复与验收。
 8. Phase 17：仅用户明确批准后切换生产。
 
-## 明确禁止
+## 法规/标准待核验队列
+
+本轮新增/确认的后续专项核验线索：
+
+- `H_C7284453E8E94532A44FC5F5EF`：应优先核验其声称的《低压配电设计规范》GB 50054-2011 第7.6.38是否准确、现行且具体要求确实对应“穿管保护”；C005不作为该专项技术事实的 direct 证明。
+- `H_407B9F4BFC5A4879B9950C9D87`：优先保留/核验《生产安全事故应急条例》第四条作为专项依据；《安全生产法》第五条仅考虑 supporting/fallback 角色。
+
+## 风险 / 阻塞
+
+- 无需要用户决策的阻塞。
+- 并发施工仍可能使 HEAD 前移；下一轮必须 HEAD-first，不得覆盖并发成果。
+- 部分历史 Hazard 是组合义务或事实表述不规范；link review 应先标 pending/rejected，再在 Phase 8 或专门修复单元处理实体结构，避免边审边大规模改写。
+
+## 用户待决策事项
+
+无。
+
+## 明确禁止事项
 
 - 不修改 `main`
 - 不切换生产网站/Pages 数据源
@@ -184,7 +212,3 @@ manifest 的 `links=179` 表示 179 个 link 实体已迁入，不表示 179 条
 - 不把 V3 passed 无条件继承为 V4 verified
 - 不伪造法规、标准、版本、条款、原文、证据或 review 元数据
 - 不公开私有路径、受限全文、snapshot_ref / legacy payload
-
-## 当前阻塞
-
-无需要用户决策的阻塞。当前工作可以继续推进。
