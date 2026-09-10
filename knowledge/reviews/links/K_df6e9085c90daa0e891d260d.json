@@ -3,17 +3,17 @@
   "entityId": "K_df6e9085c90daa0e891d260d",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T16:30:00+08:00",
-  "reason": "电气作业前未熟悉作业环境并采取相应防护措施。GB/T 13869第5.1.1条要求用电产品周围留有足够的安全通道和工作空间，且不应堆放易燃易爆和腐蚀性物品。电气作业前熟悉环境是安全作业的基本要求，但GB/T 13869 5.1.1条主要针对用电产品周围空间，direct依据需补充GB/T 13869其他条款或电气安全作业规范的具体条款。",
+  "decision": "rejected",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "原关联所引 GB/T 13869-2017 第5.1.1条规范的是『用电产品周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品』，与『电气作业前熟悉作业环境』不是同一事项，属张冠李戴，予以驳回。",
   "reasonCodes": [
-    "FALLBACK_ROLE_CONFIRMED",
-    "ELECTRICAL_WORK_SAFETY"
+    "CLAUSE_SCOPE_MISMATCH",
+    "DIRECT_ROLE_REJECTED"
   ],
   "reviewedContentHash": "2111720093f0548aa08ad5581a16f74ce55a211507033b4c3184ee1e057d0305",
   "contextHashes": {
-    "hazard": "adf568c794c89f85207667ef2098ed690c8357df812ddafafa70f94aad280975",
+    "hazard": "e93a7f2e450b8cc55a2a79d16b5c1c708a0491f426fa29ca770be6ca9ec236c3",
     "clause": "f840bb04cc16cdcbcd0aadbcecb879e828620cf8b81b0281b627b458e0d45489",
     "link": "2111720093f0548aa08ad5581a16f74ce55a211507033b4c3184ee1e057d0305"
   },
