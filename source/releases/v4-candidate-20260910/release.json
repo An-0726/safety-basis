@@ -3,67 +3,42 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "6f2b490dd9261f15abf59c869ba601fdaf21269ab94e0c03b6a60dcfbb585c1c",
+ "sourceStateHash": "9118079c46c3b1f7807f8d23842a498f2008a26ef9d32dc97c7eb8fa7075c99c",
  "sourceCounts": {
   "laws": 68,
   "law_versions": 68,
   "clauses": 76,
-  "hazards": 662,
-  "links": 181,
+  "hazards": 712,
+  "links": 201,
   "requirements": 75
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "verified": 112,
-  "rejected": 17,
-  "pending": 24
+  "verified": 158,
+  "rejected": 19,
+  "pending": 4
  },
  "reviewStatsByLink": {
   "level": "review-level (181 links)",
-  "verified": 128,
-  "rejected": 21,
-  "pending": 32
+  "verified": 174,
+  "rejected": 23,
+  "pending": 4
  },
  "publishStats": {
-  "publishable": 113,
-  "not_publishable": 549,
+  "publishable": 158,
+  "not_publishable": 554,
   "by_status": {
-   "unreviewed": 504,
-   "pending": 24,
-   "verified": 112,
-   "verified_with_pending": 1,
-   "rejected": 17,
-   "verified_with_rejections": 4
+   "verified": 158,
+   "unreviewed": 528,
+   "pending": 4,
+   "rejected": 19,
+   "verified_with_rejections": 3
   }
  },
  "publishWarnList": [
   {
-   "hazardId": "H001",
-   "title": "灭火器失压",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
    "hazardId": "H002",
    "title": "消火栓被遮挡、圈占",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H003",
-   "title": "灭火器被遮挡、取用受阻",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H004",
-   "title": "安全出口无标识且上锁",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -74,74 +49,9 @@
    "title": "电源线路私拉乱接",
    "status": "pending",
    "reasons": [
-    "hazard content review missing or stale",
     "pending links: K_dfbbf4fbb290903fc3cc86b325",
     "stale/unverified links: K_dfbbf4fbb290903fc3cc86b325",
     "no eligible verified direct/fallback link"
-   ]
-  },
-  {
-   "hazardId": "H006",
-   "title": "燃气报警器未联动切断阀",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H007",
-   "title": "燃气场所未安装报警装置",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H008",
-   "title": "纸箱堆积、占用疏散通道",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H009",
-   "title": "电瓶车店电池堆积、堵塞通道",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H010",
-   "title": "电动自行车飞线充电",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H011",
-   "title": "喷漆区现场调漆",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H012",
-   "title": "木粉尘堆积、清理不到位",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H014",
-   "title": "电瓶车店未配置消防器材",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
    ]
   },
   {
@@ -153,80 +63,8 @@
    ]
   },
   {
-   "hazardId": "H020",
-   "title": "安全生产规章制度和操作规程不健全",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H023",
-   "title": "安全生产管理机构或人员配备不符合要求",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
    "hazardId": "H025",
    "title": "消防设施、器材未按要求检验维修",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H026",
-   "title": "灭火器配置数量不足",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H027",
-   "title": "灭火器设置环境条件不符合要求",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H028",
-   "title": "灭火器未按要求维护、维修或报废更换",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H029",
-   "title": "配电线路缺少短路或过负荷保护",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H030",
-   "title": "电气线路防机械损伤措施不足",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H031",
-   "title": "触电危险部位未设置安全警示标志",
-   "status": "unreviewed",
-   "reasons": [
-    "no link"
-   ]
-  },
-  {
-   "hazardId": "H032",
-   "title": "用电设备周围安全通道或工作空间不足",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -617,6 +455,14 @@
    ]
   },
   {
+   "hazardId": "H_02E90FC3EF2AC0B2A8FE6504",
+   "title": "危险化学品仓库未配备有专业知识的技术人员，库房及场所未设专人管理",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_02FEFD347E114E1E979C9589AF",
    "title": "生产经营单位未急预案分为综合应急预案、专项应急预案和现场处置方案",
    "status": "unreviewed",
@@ -681,6 +527,14 @@
    ]
   },
   {
+   "hazardId": "H_07F925FDEFE56C60596FE131",
+   "title": "从事特种设备相关焊接作业人员未按规定持特种设备作业人员证上岗",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_08C1576EE4824ED8BE0CDD56DF",
    "title": "灭火器的摆放,未稳固,其铭牌,未朝外",
    "status": "unreviewed",
@@ -705,8 +559,8 @@
    ]
   },
   {
-   "hazardId": "H_0A53849CB39848628056FDADEB",
-   "title": "车间外乙炔气瓶储藏棚内可燃气体报警器未正常使用",
+   "hazardId": "H_0AB8998CB24041C894BB326A69",
+   "title": "未建立健全全员安全生产责任制,主要负责人(包括法定代表人和实际控制人,下同)是本企业安全生产的第一责任人,对本企业的安全生产工作全面负责",
    "status": "verified",
    "reasons": [
     "hazard content review missing or stale",
@@ -718,7 +572,6 @@
    "title": "对未列入安全风险目录的其他安全风险,经评估确定为较大以上安全风险的,可以一并纳入较大以上安全风险进行管理",
    "status": "rejected",
    "reasons": [
-    "hazard content review missing or stale",
     "rejected links: K_1ce59ea0c2a4692ab95e6a10",
     "stale/unverified links: K_1ce59ea0c2a4692ab95e6a10",
     "no eligible verified direct/fallback link"
@@ -735,6 +588,14 @@
   {
    "hazardId": "H_0B44B29CA3794AEF82EC7CE4F5",
    "title": "工业企业选址未避开自然疫源地",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_0B99DA06B696E759C7E87DCA",
+   "title": "危险化学品储存区域未按标准配备相应品种和数量的消防器材及泄漏应急处理设备",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -759,6 +620,14 @@
   {
    "hazardId": "H_0D8FC0AC95BE4E09908AD3A154",
    "title": "调漆作业使用了可以发生火花的铁质工具",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_0E92EFCE7E9E667C7BE84085",
+   "title": "未建立健全并落实本单位全员安全生产责任制",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -901,6 +770,14 @@
    ]
   },
   {
+   "hazardId": "H_1B474A2ABA0E23143E2FE451",
+   "title": "镁废屑袋装储存未单层存放、存在堆垛存放",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_1B4FBE6B18404FD795AA211BA6",
    "title": "未制定本单位的应急预案演练计划,根据本单位的事故风险特点,每年至少组织一次综合应急预案演练或者专项应急预案演练,每半年至少组织一次现场处置方案演练",
    "status": "unreviewed",
@@ -911,6 +788,14 @@
   {
    "hazardId": "H_1B81EBF78191423C934F8C4A92",
    "title": "工厂、仓库区内,未设置消防车道",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_1C2A273765B749D654E6E278",
+   "title": "仓储场所电气线路、电气设备长时间超负荷运行",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -943,11 +828,9 @@
   {
    "hazardId": "H_1DB6AE75F00A4EB682FA20136E",
    "title": "、暂存区域,未设置安全警示标志,配备相,未品种和数量的消防器材及泄漏应急处理设备",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_e67fe6b5a8c7a80db603944b",
-    "stale/unverified links: K_e67fe6b5a8c7a80db603944b",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -1009,11 +892,9 @@
   {
    "hazardId": "H_22D804731C0D4F90A6BF2A83CD",
    "title": "场(厂)内专用机动车辆有下列情形之一仍继续使用的,,未判定为重大事故隐患。a)定期检验的检验结论为“不合格”。b)电动车辆电源紧急切断装置缺失或失效。c)制动(包括行车、驻车)装置缺失或失效。d)观光列车的牵引连接装置及其二次保护装置缺失或失效。e)非公路用旅游观光车辆超过最大行驶坡度使用",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_b064b1dc6d92606d0199f232",
-    "stale/unverified links: K_b064b1dc6d92606d0199f232",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -1035,6 +916,14 @@
   {
    "hazardId": "H_24319B1A510C4747B950BCCA6F",
    "title": "公共实验室内反应釜装置区域防爆电器安装不规范,部分线路未穿管",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_25CEE684DF2F4D9D73BDB1AB",
+   "title": "钢瓶和容器传送过程中未接地和跨接防止产生静电",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -1115,6 +1004,14 @@
   {
    "hazardId": "H_2BE78B1CC3324F4E8984125CC0",
    "title": "4当道路交叉口为最低标高时,未合理布置和增设雨水口",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_2CFBFBBF338B36F66DA7600F",
+   "title": "危险化学品灌装时未控制流速、未设置接地装置防止静电积聚",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -1461,9 +1358,8 @@
   {
    "hazardId": "H_4164E28510AC475EA9FB48337C",
    "title": "高温室缺少“当心烫伤”安全警示标志",
-   "status": "unreviewed",
+   "status": "verified",
    "reasons": [
-    "stale/unverified links: K_B610A592D9545D785B5273",
     "no eligible verified direct/fallback link"
    ]
   },
@@ -1494,6 +1390,14 @@
   {
    "hazardId": "H_4265E33294BE48548698198937",
    "title": "设有局部排风或全面排风的涂漆作业场所,未进行自然补风",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_431B8FEB2AB957E7454BB140",
+   "title": "危险化学品暂存区域未按国家标准、行业标准配备相应品种和数量的消防器材",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -1534,11 +1438,9 @@
   {
    "hazardId": "H_44549E43707D4EBCB2D1BC7E67",
    "title": "特种设备有下列情形之一仍继续使用的,未判定为重大事故隐患。a)特种设备未取得许可生产、因安全问题国家明令淘汰、已经报废或者达到报废条件。b)特种设备发生过事故,未对其进行全面检查、消除事故隐患。c)未按规定进行监督检验或者监督检验不合格。d)有4.2~4.10中规定的超过规定参数、适用范围的情形",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_1e1990fb9c6ea0747f81ce6c,K_7780c2c2c8f882d67fc9a4e2",
-    "stale/unverified links: K_1e1990fb9c6ea0747f81ce6c,K_7780c2c2c8f882d67fc9a4e2",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -1576,16 +1478,22 @@
   {
    "hazardId": "H_475C71B0AA9E4C08B82E9C8B29",
    "title": "剧毒化学品、监控化学品、易制毒化学品、易制爆危险化学品,未按规定将储存地点、储存数量、流向及管理人员的情况报相关部门备案,剧毒化学品以及构成重大危险源的危险化学品,未在专用仓库内单独存放,并实行双人收发、双人保管制度",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_d84f4527ece67f92e9d0e691",
-    "stale/unverified links: K_d84f4527ece67f92e9d0e691",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
    "hazardId": "H_476086B89F7F49CE80ADD7D3B8",
    "title": "仓储场所内,未禁止吸烟,并在醒目处设置“禁止吸烟”的标志",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_4786C6AB880D073F73CC1A54",
+   "title": "压力容器改作移动式使用，或安全阀/爆破片/紧急切断、快开门联锁、氧舱接地与联锁装置缺失或失效",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -1658,16 +1566,22 @@
   {
    "hazardId": "H_4B099AC576B249B6A7A28AE8E0",
    "title": "、储存区域,未设置安全警示标志。灌装时,未控制流速,且有接地装置,防止静电积聚。配备相,未品种和数量的消防器材及泄漏应急处理设备",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_df15e916c14598de659bbf20",
-    "stale/unverified links: K_df15e916c14598de659bbf20",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
    "hazardId": "H_4BC9042E4503483781755D961E",
    "title": "对于危害严重的生产过程和设备,未根据具体情况提高机械化、自动化程度或采取隔离措施、密闭式生产",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_4BCFEF17729F891A6144A8E0",
+   "title": "未通过信息系统如实记录隐患排查治理情况并向从业人员通报，重大事故隐患记录保存少于五年",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -1814,11 +1728,9 @@
   {
    "hazardId": "H_56B7B9F8379B4E6E93F2342596",
    "title": "未遵守本法和其他有关安全生产的法律、法规,加强安全生产管理,建立健全全员安全生产责任制和安全生产规章制度,加大对安全生产资金、物资、技术、人员的投入保障力度,改善安全生产条件,加强安全生产标准化、信息化建设,构建安全风险分级管控和隐患排查治理双重预防机制,健全风险防范化解机制,提高安全生产水平,确保安全生产",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_012500360729ae5276213ac4,K_401ab2c612e47e5dee84b446,K_af4ab23385017f59f71320fb",
-    "stale/unverified links: K_012500360729ae5276213ac4,K_401ab2c612e47e5dee84b446,K_af4ab23385017f59f71320fb",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -1874,18 +1786,18 @@
    "title": "危化品暂存间未标明储存物品的名称、性质和灭火方法。",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_015967d6f6a697f197ebbdad",
     "stale/unverified links: K_015967d6f6a697f197ebbdad",
     "no eligible verified direct/fallback link"
    ]
   },
   {
-   "hazardId": "H_5C632EB0FC8E4DC586BDF3567E",
-   "title": "中的气瓶必须进行定期检查,使用期满或送检未合格的气瓶禁止继续使用",
-   "status": "verified",
+   "hazardId": "H_5B19995BCDF379CBC019C6BE",
+   "title": "未制定生产安全事故应急救援预案",
+   "status": "unreviewed",
    "reasons": [
-    "hazard content review missing or stale",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -1915,9 +1827,10 @@
   {
    "hazardId": "H_5F59F50EE244471C81C2757635",
    "title": "严格粉尘废屑储存。粉尘废屑,未优先采用机械压块压实处理,确需采用干式储存的,未桶装加盖或袋装封口密闭。粉尘废屑进入储存场所前,未冷却至常温,不同种类的粉尘废屑不得混装储存,严禁与氧化物、过氧化物、酸、爆炸品、易燃物品等在同一场所存放。镁废屑采用袋装储存的,未单层存放,每袋之间保持一定间隙,也可采用不锈钢等不易产生铁锈的货架分层储存,严禁堆垛储存",
-   "status": "pending",
+   "status": "rejected",
    "reasons": [
-    "pending links: K_8cc09e654f490f441052e160,K_9dd4248d0c60a8b88fc4eca1",
+    "hazard content review missing or stale",
+    "rejected links: K_8cc09e654f490f441052e160,K_9dd4248d0c60a8b88fc4eca1",
     "stale/unverified links: K_8cc09e654f490f441052e160,K_9dd4248d0c60a8b88fc4eca1",
     "no eligible verified direct/fallback link"
    ]
@@ -2008,6 +1921,16 @@
    "status": "unreviewed",
    "reasons": [
     "no link"
+   ]
+  },
+  {
+   "hazardId": "H_6306B00BE6624819BAC056740D",
+   "title": "冲压机双手按压按钮损坏",
+   "status": "unreviewed",
+   "reasons": [
+    "hazard content review missing or stale",
+    "stale/unverified links: K_b3c43c6e581e429177f8868e",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2125,6 +2048,14 @@
   {
    "hazardId": "H_67FEC43961B247529D64123BB2",
    "title": "货梯缺少警示标识。",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_68196C0A0FBDDAF0354E0F71",
+   "title": "进行检修和抢修作业时未携带氨气检测仪（检测报警设备）",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -2431,9 +2362,8 @@
   {
    "hazardId": "H_7C95508E54324EB7971918F1E5",
    "title": "车间内部分电箱未张贴安全警告标志",
-   "status": "unreviewed",
+   "status": "verified",
    "reasons": [
-    "stale/unverified links: K_B8ADE8F014895A81A0DB0C",
     "no eligible verified direct/fallback link"
    ]
   },
@@ -2496,11 +2426,9 @@
   {
    "hazardId": "H_83C122272BA54FE1AB0F410B4F",
    "title": "未有泄漏液体收集装置、气体导出口及气体净化装置",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_03BF627B0B2DF4D35F2FCF5C39,K_A3DB2344F3C86DEC1913A194DC",
-    "stale/unverified links: K_03BF627B0B2DF4D35F2FCF5C39,K_A3DB2344F3C86DEC1913A194DC",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -2560,6 +2488,24 @@
    ]
   },
   {
+   "hazardId": "H_8740A8DCB8B04C3F93B030623F",
+   "title": "未根据本单位实际,建立安全生产投入保障、宣传教育培训、隐患排查治理、应急管理、发包(出租)管理等安全生产规章制度",
+   "status": "unreviewed",
+   "reasons": [
+    "hazard content review missing or stale",
+    "stale/unverified links: K_b3f748d826fe03012e0d0a07",
+    "no eligible verified direct/fallback link"
+   ]
+  },
+  {
+   "hazardId": "H_87C7C1197DD2B651CFCACED5",
+   "title": "危险化学品储存区域未按标准配备相应品种和数量的消防器材及泄漏应急处理设备",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
    "title": "主要负责人、安全生产管理人员,未经安监部门考核合格,并取得安全培训合格证书",
    "status": "pending",
@@ -2572,6 +2518,14 @@
   {
    "hazardId": "H_8855020E458243468B914D2815",
    "title": "除尘系统,未按照GB2894的要求设置安全标志,风管,未按照GB7231的要求设置安全标识、识别色、或识别符号",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_8878F6117AAEC0B4576901BA",
+   "title": "剧毒、监控、易制毒、易制爆危险化学品未按规定将储存地点、数量、流向及管理人员报相关部门备案",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -2604,11 +2558,9 @@
   {
    "hazardId": "H_89BC396EBC084489B0CC25B02B",
    "title": "机器上,未有铭牌和操作指示、维护和安全等标牌",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_3aa0366e763172b7f909ae13",
-    "stale/unverified links: K_3aa0366e763172b7f909ae13",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -2654,11 +2606,9 @@
   {
    "hazardId": "H_8C5C628FAFD544CF8FF58A7732",
    "title": "、储存区域,未设置安全警示标志。在传送过程中,钢瓶和容器必须接地和跨接,防止产生静电。搬运时轻装轻卸,防止钢瓶及附件破损,配备相,未品种和数量的消防器材及泄漏应急处理设备",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_6965d51d988d6e730c5bac84",
-    "stale/unverified links: K_6965d51d988d6e730c5bac84",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -2816,11 +2766,9 @@
   {
    "hazardId": "H_997F60F5C9034C5593A316E08F",
    "title": "从事焊接、切割的动火作业人员,未按规定持焊接与热切割或建筑焊工特种作业操作资格证书上岗,从事特种设备相关焊接作业人员,未按规定持特种设备作业人员证上岗,具备相,未动火作业安全技能",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_6ee0642e5ff1afa64ba4bc74,K_d70e5b3487d81efd9d8c0c9b",
-    "stale/unverified links: K_6ee0642e5ff1afa64ba4bc74,K_d70e5b3487d81efd9d8c0c9b",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -2866,11 +2814,9 @@
   {
    "hazardId": "H_9BC92F4558404DA9B14A721492",
    "title": "仓储场所的电气线路、电气设备,未定期检查、检测,禁止长时间超负荷运行",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_86116589ddb30549ec16daeb",
-    "stale/unverified links: K_86116589ddb30549ec16daeb",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -2894,7 +2840,6 @@
    "title": "实验室内一根临时电源线外绝缘层破损",
    "status": "rejected",
    "reasons": [
-    "hazard content review missing or stale",
     "rejected links: K_3437ba48209a6878ff466064",
     "stale/unverified links: K_3437ba48209a6878ff466064",
     "no eligible verified direct/fallback link"
@@ -2911,26 +2856,38 @@
   {
    "hazardId": "H_9D076BD9D82444DCAA72489164",
    "title": "未建立健全各级安全生产责任制和安全规章制度,并制定事故应急救援预案,各级人员,未对其所管辖范围的安全负责",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_04361764d56792472364b113,K_fb679390b1d04cb57eb5f22e",
-    "stale/unverified links: K_04361764d56792472364b113,K_fb679390b1d04cb57eb5f22e",
-    "no eligible verified direct/fallback link"
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_9DA8116AAF559EC8BC14BA1C",
+   "title": "机器上未设置铭牌、操作指示及维护标牌",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
    ]
   },
   {
    "hazardId": "H_9DCBB0D8DB5441A2A3E4811603",
    "title": "未建立健全并落实生产安全事故隐患排查治理制度,定期组织排查本单位的事故隐患,通过相关信息系统如实记录事故隐患排查治理情况,并向从业人员通报。重大事故隐患排查治理情况记录保存期限不得少于五年",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_5de4afe5451e2f834d8d68a2",
-    "stale/unverified links: K_5de4afe5451e2f834d8d68a2",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
    "hazardId": "H_9FDD968713424B6CB3EC721C3D",
    "title": "现场一瓶灭火器已报废,未定期检查",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_A0120A30298373EDAA8F8384",
+   "title": "压力管道安全阀、爆破片装置、紧急切断装置缺失或失效",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -2947,11 +2904,17 @@
   {
    "hazardId": "H_A1696721CCC94F65AE95751A5E",
    "title": "压力管道有下列情形之一仍继续使用的,未判定为重大事故隐患。a)定期检验的检验结论为“不符合要求”或“不允许使用”。b)安全阀、爆破片装置、紧急切断装置缺失或失效",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_7c750e6a1d55afcc8055a107",
-    "stale/unverified links: K_7c750e6a1d55afcc8055a107",
-    "no eligible verified direct/fallback link"
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_A1A5AA5EE13A3444450315AB",
+   "title": "加药设施旁未设置洗眼（喷淋）等防护设施",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
    ]
   },
   {
@@ -3173,7 +3136,6 @@
    "title": "指挥、司索、司机等操作人员必须相互配合,密切协作,严格执行起重机“十不吊”的制度,防止发生事故",
    "status": "rejected",
    "reasons": [
-    "hazard content review missing or stale",
     "rejected links: K_572a04b023a8b17211c06526",
     "stale/unverified links: K_572a04b023a8b17211c06526",
     "no eligible verified direct/fallback link"
@@ -3182,11 +3144,9 @@
   {
    "hazardId": "H_AC55E4B5240544A7AA7A1CB3F8",
    "title": "压力容器有下列情形之一仍继续使用的,未判定为重大事故隐患。a)定期检验的检验结论为“不符合要求”。b)固定式压力容器改作移动式压力容器使用。c)固定式压力容器、移动式压力容器的安全阀、爆破片装置、紧急切断装置缺失或失效。d)快开门式压力容器的快开安全保护联锁装置缺失或失效。e)氧舱的接地装置缺失或失效。f)氧舱安全保护联锁装置(联锁功能)失效",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_affa50e64ea799b3c1ed437b",
-    "stale/unverified links: K_affa50e64ea799b3c1ed437b",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -3232,6 +3192,14 @@
   {
    "hazardId": "H_AD8892D4501D426680ED439882",
    "title": "灭火器的配置、外观等,未按附录C的要求每月进行一次检查。灭火器的检查记录,未予保留",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_AE64CC10CCCDBB67B2A6452E",
+   "title": "危险废物贮存设施未满足地质地震烈度、地下水位、环评距离、与危险品仓库高压线隔离、常年最大风频下风向等其他选址要求",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -3504,6 +3472,14 @@
    ]
   },
   {
+   "hazardId": "H_BF7AA7549F8E1B94012882C9",
+   "title": "粉尘废屑未优先采用机械压块压实处理，干式储存未桶装加盖或袋装封口密闭",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_BFA0B7A7E308410DB3CC9358AB",
    "title": "设置适未的局部排风除尘设施对尘源进行控制",
    "status": "unreviewed",
@@ -3548,6 +3524,25 @@
   {
    "hazardId": "H_C0BEAB6834F44E5CBE05F9CBD0",
    "title": "除建筑高度小于27m的住宅建筑外,民用建筑、厂房和丙类仓库的下列部位,未设置疏散照明:封闭楼梯间、防烟楼梯间及其前室、消防电梯间的前室或合用前室、避难走道、避难层(间",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_C1953CE65F144427890685861E",
+   "title": "危废暂存间内部分桶装液体下方无泄漏液体收集装置。",
+   "status": "rejected",
+   "reasons": [
+    "hazard content review missing or stale",
+    "rejected links: K_E8A0C56B806A3233C4932913EA",
+    "stale/unverified links: K_5A089D0202B43881F5E6955151,K_E8A0C56B806A3233C4932913EA",
+    "no eligible verified direct/fallback link"
+   ]
+  },
+  {
+   "hazardId": "H_C1CE3A649721387F1FC0F7BE",
+   "title": "粉尘废屑未冷却至常温即入库存放，或不同种类混装、与氧化物/过氧化物/酸/爆炸品/易燃物品同场所存放",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -3726,11 +3721,9 @@
   {
    "hazardId": "H_CB180AFAA53646A7A9A5F9D350",
    "title": "为了保护工人的职业健康安全当进人设施内部检修时,未提供一次性衣服、防护罩、防护手套等防护用品。在加药药设施旁边还,未设置洗眼液等防护设施",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_1152264ef036cbcf604e292c",
-    "stale/unverified links: K_1152264ef036cbcf604e292c",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -3822,6 +3815,14 @@
    ]
   },
   {
+   "hazardId": "H_CDCC41FC5CDA320D4E9EB9CA",
+   "title": "场(厂)内专用机动车辆电源紧急切断、制动、牵引连接装置缺失或失效，或超过最大行驶坡度使用",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_CE94D2ACC8C544BCA0FB0AA026",
    "title": "在设备、设施、管线上需要人员操作、检查和维修,并有发生高处坠落危险的部位,未配置扶梯平台、围栏和系挂装置等附属设施",
    "status": "unreviewed",
@@ -3872,12 +3873,9 @@
   {
    "hazardId": "H_D0E34E3CC9C64F458BCCDA4674",
    "title": "危废库选址,未满足如下要求:6.1.1地质结构稳定,地震烈度不超过7度的区域内。6.1.2设施底部必须高于地下水最高水位。6.1.3,未依据环境影响评价结论确定危险废物集中贮存设施的位置及其与周围人群的距离,并经具有审批权的环境保护行政主管部门批准,并可作为规划控制的依据。”6.1.4,未避免建在溶洞区或易遭受严重自然灾害如洪水、滑坡,泥石流、潮汐等影响的地区。6.1.5,未在易燃、易爆等危险品仓库、高压输电线路防护区域以外。6.1.6,未位于居民中心区常年最大风频的下风向",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "hazard content review missing or stale",
-    "pending links: K_D2E0A5593E4975E15E30A7C7C9",
-    "stale/unverified links: K_D2E0A5593E4975E15E30A7C7C9",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -3987,11 +3985,9 @@
   {
    "hazardId": "H_D68030A1FF76475CB16F6AF998",
    "title": "进行检修和抢修作业时,未携带氨气检测仪和正压式空气呼吸器",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "pending links: K_444630456072b2ffd8a11a3d",
-    "stale/unverified links: K_444630456072b2ffd8a11a3d",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -4035,6 +4031,14 @@
    ]
   },
   {
+   "hazardId": "H_D9017B3895E8E59531CF8180",
+   "title": "剧毒化学品未在专用仓库内单独存放，未实行双人收发、双人保管制度",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_D93FC0084ABA465CA3EA98B393",
    "title": "危化品暂存间内灯具不防爆",
    "status": "unreviewed",
@@ -4063,7 +4067,6 @@
    "title": "组织防火检查,及时消除火灾隐患。",
    "status": "rejected",
    "reasons": [
-    "hazard content review missing or stale",
     "rejected links: K_5bfae4aa6d1056875adbfb9a",
     "stale/unverified links: K_5bfae4aa6d1056875adbfb9a",
     "no eligible verified direct/fallback link"
@@ -4150,6 +4153,14 @@
    ]
   },
   {
+   "hazardId": "H_DF6D833C65BF5105247C55E4",
+   "title": "危险化学品暂存区域未配备泄漏应急处理设备",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
    "hazardId": "H_E003FB10D661400C9E0E58C41F",
    "title": "压缩空气站机器间通向室外的门,未保证安全疏散、便于设备的出入和操作管理",
    "status": "unreviewed",
@@ -4203,6 +4214,14 @@
   {
    "hazardId": "H_E1EEEF34C3C4492288BEEB4FD2",
    "title": "存在将不相容的废物混合或合并存放行为",
+   "status": "unreviewed",
+   "reasons": [
+    "no link"
+   ]
+  },
+  {
+   "hazardId": "H_E37EF6102AE03060EDCB51D7",
+   "title": "特种设备发生事故后未全面检查消除隐患，或未取得许可生产、超过规定参数/适用范围使用",
    "status": "unreviewed",
    "reasons": [
     "no link"
@@ -4272,15 +4291,6 @@
    "status": "unreviewed",
    "reasons": [
     "no link"
-   ]
-  },
-  {
-   "hazardId": "H_EA0194690E094674819D251488",
-   "title": "乱拉私接临时电线（违规）",
-   "status": "verified",
-   "reasons": [
-    "hazard content review missing or stale",
-    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4364,15 +4374,6 @@
    ]
   },
   {
-   "hazardId": "H_F3E7D18DBD77459B983AB5CD06",
-   "title": "未见危险化学品安全管理制度",
-   "status": "verified",
-   "reasons": [
-    "hazard content review missing or stale",
-    "no eligible verified direct/fallback link"
-   ]
-  },
-  {
    "hazardId": "H_F4F02200763043459A5AC0FE0A",
    "title": "车间配电控制柜开关违规安装于木板上",
    "status": "unreviewed",
@@ -4394,12 +4395,9 @@
   {
    "hazardId": "H_F57270BED8114BB69A556DEBA2",
    "title": "贮存化学危险品的仓库必须配备有专业知识的技术人员,其库房及场所,未设专人管理,管理人员必须配备可靠的个人安全防护用品",
-   "status": "pending",
+   "status": "unreviewed",
    "reasons": [
-    "hazard content review missing or stale",
-    "pending links: K_8395b048ebdeb9f3dc262905",
-    "stale/unverified links: K_8395b048ebdeb9f3dc262905",
-    "no eligible verified direct/fallback link"
+    "no link"
    ]
   },
   {
@@ -4415,7 +4413,6 @@
    "title": "危险化学品试剂间安全警示标志张贴在门上",
    "status": "pending",
    "reasons": [
-    "hazard content review missing or stale",
     "pending links: K_3af925c80dbe5edabd333656",
     "stale/unverified links: K_3af925c80dbe5edabd333656",
     "no eligible verified direct/fallback link"

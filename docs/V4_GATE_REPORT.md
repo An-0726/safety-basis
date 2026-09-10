@@ -6,20 +6,20 @@
 - check_review_binding: PASS
 - scan_evidence_exact: PASS
 
-## Review totals: {"verified": 128, "rejected": 21, "pending": 32}
-review_total=181
-composite_reviewed=21
-verified_without_evidence=0
+## Review totals: {"verified": 174, "rejected": 23, "pending": 4}
+review_total=201
+composite_reviewed=0
+verified_without_evidence=1
 
 ## Version
 lawVersions_total=68, active-missing-effectiveDate=0
 missing_eff_ids=[]
-successions_total=22
+successions_total=23
 
 ## Gate verdict
 - STRUCTURAL: PASS
-- CONTENT: PASS
-- APPLICABILITY: PASS
+- CONTENT: FAIL
+- APPLICABILITY: FAIL
 - VERSION: PASS
 - EVIDENCE: PASS
 - RELEASE: PASS
