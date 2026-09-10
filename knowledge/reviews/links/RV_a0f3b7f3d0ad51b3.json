@@ -3,17 +3,17 @@
   "entityId": "K_604e31903924e6e2a8ee898a",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T17:15:00+08:00",
-  "reason": "喷漆室通风系统不符合安全要求，违反GB 6514-2023涂装作业安全规程中调漆室及喷漆室通风安全要求。喷漆室必须设置有效的通风系统，控制可燃气体浓度在爆炸极限以下，通风系统不符合要求直接构成火灾爆炸隐患。",
+  "decision": "rejected",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "原关联所引条款实为《工贸企业粉尘防爆安全规定》第十八条『粉尘清理制度』，与『喷漆室通风量』不是同一事项，属张冠李戴，予以驳回；本条 direct 依据已由 GB 14444-2025 第5.3.1条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "SPRAY_BOOTH_VENTILATION"
+    "CLAUSE_SCOPE_MISMATCH",
+    "DIRECT_ROLE_REJECTED"
   ],
   "reviewedContentHash": "a9bb43b65b3c01a3860f735ac034f8dff46f3b1c8c168a18c8fcdfefd07100ef",
   "contextHashes": {
-    "hazard": "44e85ca62f198afdfbd3d0c8f9d6ce15e78126898ab11e04f91e3cbde337af7f",
+    "hazard": "72a42156f8541f454f4ded58d5dacf9706f5a853fd80e189957bdd5ea0b664d9",
     "clause": "02656aa5c614314840661ce1246b5896b715b1837009f032e4a512ecc3128d49",
     "link": "a9bb43b65b3c01a3860f735ac034f8dff46f3b1c8c168a18c8fcdfefd07100ef"
   },

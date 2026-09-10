@@ -4,16 +4,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T17:15:00+08:00",
-  "reason": "有机废气治理系统与主体装置之间未设置阻火器（防火阀），违反危险化学品安全管理条例第二十条危化品单位应当根据危险特性设置防火、防爆、泄压等安全设施设备的要求。有机废气治理系统与主体装置之间必须设置阻火器，防止火焰回窜引发爆炸。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《危险化学品安全管理条例》第二十条属危险作业场所安全设施配置的一般义务，保留为 fallback；本条 direct 依据已由 HJ 2026-2013 第6.5.2条 承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "FLAME_ARRESTER"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "58d7905e6397c0d0fd4dfb058c105ac887d28282134c70b775f51e96091cd638",
+  "reviewedContentHash": "0baa4cadd8f6302e2bc8ffb0b2064e02a820b1b5be06bca66b8ffccf7caf2fa1",
   "contextHashes": {
-    "hazard": "c5fe93a46df262008cd0f590c9e58607d4c2965e84822395af2228902f3d1d60",
+    "hazard": "fc8daf6b55408e99d461146d836827b45703d44d8bc6a727aebaed9380dbf5f8",
     "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c",
     "link": "58d7905e6397c0d0fd4dfb058c105ac887d28282134c70b775f51e96091cd638"
   },
