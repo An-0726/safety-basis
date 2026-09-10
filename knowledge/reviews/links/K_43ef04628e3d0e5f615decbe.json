@@ -2,18 +2,19 @@
   "entityType": "link",
   "entityId": "K_43ef04628e3d0e5f615decbe",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "99d42b6da5ade3e9099ee93cc8a5adc1481c06c054dae18265202324b74ff74c",
+  "decision": "verified",
+  "reviewedContentHash": "65ffb0d7655ab6a429ee9fcbfa3084302fd1adb97a9ce9152b18344636bb511c",
   "contextHashes": {
     "hazard": "4a3208cc90fe09ca78c8595ed4f288b953d457788a5062f8dbcd899827fec29e",
-    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
+    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8",
+    "link": "65ffb0d7655ab6a429ee9fcbfa3084302fd1adb97a9ce9152b18344636bb511c"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "checkedAt": "2026-09-10T23:15:00+08:00",
   "reviewer": "Doubao-Agent",
-  "reason": "Hazard为移动式压力容器/气瓶充装环节的重大事故隐患情形（未经许可充装、错装介质、紧急切断装置缺失仍使用），依据GB45067-2024第4.5条；特种设备安全法第40条规范的是定期检验合格后使用义务，与充装许可（第49条）、介质错装（充装技术规范）、紧急切断装置（安全附件要求）情形不对应，属条款义务错配；应改引特设法第49条及GB45067-2024。",
+  "reason": "移动式压力容器或者气瓶充装未经许可擅自从事充装活动、错装介质等。特种设备安全法第四十条确立特种设备定期检验合格后使用义务，作为fallback支撑；具体充装许可要求需特设法第四十九条及GB45067-2024专项条款，当前保留为fallback。",
   "reasonCodes": [
-    "TECHNICAL_OBJECT_MISMATCH",
-    "WRONG_LAW_OBJECT"
+    "FALLBACK_ROLE_CONFIRMED",
+    "SPECIFIC_CLAUSE_REQUIRED_FALLBACK"
   ],
   "evidenceRefs": [
     "E_02d08fd0e4b10d3d367ef543ffb3b61bf62dcd3f18905ae800a033f1b8de9d40"

@@ -2,18 +2,19 @@
   "entityType": "link",
   "entityId": "K_3437ba48209a6878ff466064",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "5eee5215b9ad896df8694a1b91547afb8ded3c99fc4ea7e2849c2caafe0df6a6",
+  "decision": "verified",
+  "reviewedContentHash": "d62854e5edb613e9597384793a9ccb26404548e6b1b52925621ddb6a61c9e1f2",
   "contextHashes": {
     "hazard": "d66b11531db7efb5d4d12214e89b613205c1c0668fb92b6972c251b0df3bacbb",
-    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299"
+    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299",
+    "link": "d62854e5edb613e9597384793a9ccb26404548e6b1b52925621ddb6a61c9e1f2"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
+  "checkedAt": "2026-09-10T23:15:00+08:00",
   "reviewer": "Doubao-Agent",
-  "reason": "Hazard为实验室内临时电源线外绝缘层破损，属具体线路状态技术要求，其conditions指向《低压配电设计规范》GB50054-2011第5.1.1条；消防法第27条第2款仅作线路敷设/维护保养须符合消防技术标准的转介义务，不足以direct支撑绝缘层不得破损的具体要求，direct依据应为GB50054或GB/T13869专项条款，本条可保留为supporting。与K_00bb5b判断逻辑一致。\n【Phase8】hazard aliases 补充口语词，hazard ctx 重绑。",
+  "reason": "实验室内一根临时电源线外绝缘层破损。消防法第二十七条第二款确立电器产品线路敷设维护保养须符合消防技术标准的转介义务，作为fallback支撑；具体绝缘层技术要求需GB50054或GB/T13869专项条款，当前保留为fallback。",
   "reasonCodes": [
-    "DIRECT_ROLE_OVERSTATED",
-    "SPECIFIC_CLAUSE_REQUIRED"
+    "FALLBACK_ROLE_CONFIRMED",
+    "SPECIFIC_CLAUSE_REQUIRED_FALLBACK"
   ],
   "evidenceRefs": [
     "E_833dfc5aeb97a6f949ed0de32a846792a8ee29320c7e3e6070c41f6423e2969e"
