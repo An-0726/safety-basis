@@ -1,5 +1,9 @@
 # V4 Hazard 拆分任务登记（V4_HAZARD_SPLIT_TASKS）
 
+> 状态：**COMPLETED（已完成）**。2026-09-10 实际提交 `497c413a751e6ca63de075f171a8612b1f976075` 已将下列 21 个复合 Hazard 全部拆分为 50 个单一义务子 Hazard；21 个父实体均设为 `lifecycle=superseded` 并保留 `replacedBy` 追溯关系。原 32 条 pending link 同步完成重判：26 verified、2 rejected、4 保持 pending；随后提交 `2536aa470333d620a729b253a8dfec4df23bf6c7` 完成 merge/split 后 hazard content review hash 重绑，active hazard 不再存在 stale review hash。
+>
+> 本文件现作为**已完成拆分任务的验收清单**保留，不再作为待施工队列。后续剩余 4 条 pending link 仍需按各自 review reason 补证，不得因本拆分任务完成而自动 verified。
+
 > 生成时间：2026-09-10（Pending 39 落定轮）。
 > 复合 Hazard（COMPOSITE_HAZARD）指一条 Hazard 混合多个相互独立的检查义务。
 > 拆分必须保持来源可追踪（V3 原文/Hazard 原实体），不得改变原始历史含义。
