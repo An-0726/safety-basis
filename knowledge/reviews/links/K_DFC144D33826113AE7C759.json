@@ -1,19 +1,20 @@
 {
- "entityType": "link",
- "entityId": "K_DFC144D33826113AE7C759",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "e3533f39f73a997a2ff311182758b76663b4d7da8d65d812b98a32fbe74703b2",
- "contextHashes": {
-  "hazard": "e3985080aa4e9ede92bc8cb1e86f75954b92af2a82ea885898c80f46747d800f",
-  "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
- },
- "checkedAt": "2026-09-10T14:09:26+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "安全生产法第42条规定生产、经营、储存、使用危险物品的车间、商店、仓库不得与员工宿舍在同一座建筑物内，并应当与员工宿舍保持安全距离；H041在危化品使用作业场所内设置生活设施，直接违反该条。",
- "reasonCodes": [
-  "DIRECT_MATCH"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_DFC144D33826113AE7C759",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6376f3a8e33fedb33cc245f8d904e997d0e7df6974c044c40b26b557c40538c6",
+  "contextHashes": {
+    "hazard": "8dba69ce93657635ae8206a736a45c5304bad8cef97ed24c03f30d68b4d69869",
+    "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
+  },
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "《安全生产法》第四十二条第二款属生产经营场所出口与疏散通道的一般要求，保留为 fallback；本条 direct 依据已由 DB32/T 4293-2022 第8.3条承担。",
+  "reasonCodes": [
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null
 }

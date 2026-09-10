@@ -1,19 +1,20 @@
 {
- "entityType": "link",
- "entityId": "K_306A725C6E583ED8DFD2E3",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "b6325f187ae1b90fc754c1683ebfd36165893bd31863879a41c6da3ce6d02cac",
- "contextHashes": {
-  "hazard": "fee25a9edadaa9302593a5e284c0f11cf603bba8b66e94c7cd2f02f4e8dbf577",
-  "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
- },
- "checkedAt": "2026-09-10T19:30:00+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "《安全生产法》第四十二条规定生产、经营、储存、使用危险物品的车间、商店、仓库不得与员工宿舍在同一座建筑物内并应保持安全距离，本隐患直接对应。",
- "reasonCodes": [
-  "DIRECT_CLAUSE_MATCH"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_306A725C6E583ED8DFD2E3",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6a5c5535153488dd0aa635af812c970813839fe04c32eb24e2b8cc963579d97a",
+  "contextHashes": {
+    "hazard": "2aa82e9e56c296f9e196b2d5ccf5346911c496e219dde7d1f6d5c2da103ebf0d",
+    "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
+  },
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "《安全生产法》第四十二条第一款禁止危险物品场所与员工宿舍同建筑，属上位法一般规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第6.3条承担。",
+  "reasonCodes": [
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null
 }
