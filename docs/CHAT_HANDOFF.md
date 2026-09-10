@@ -6,9 +6,8 @@
 
 ACTIVE — Phase 16 最终验收进行中。
 
-当前知识树实测：**77 laws / 77 lawVersions / 105 clauses / 712 hazards / 756 links / 574 evidence / 75 requirements / 23 successions**。
-当前发布链：**644 publishable hazards / 723 eligible links / strictBlockers 0**（另有 21 rejected、12 superseded link）。
-`knowledge/manifest.json` 已与真实树精确对账。
+当前知识树实测：**78 laws / 78 lawVersions / 111 clauses / 712 hazards / 761 links / 576 evidence / 75 requirements / 23 successions**。
+最近一次完整候选发布链验收记录：**644 publishable hazards / strictBlockers 0**；中间内容批次不再为追求候选一致性而机械重建完整 candidate，最终收口阶段统一重建并复验。
 
 ## 当前总目标
 
@@ -24,75 +23,78 @@ Phase 16：最终验收。
 
 ## 当前真实基线
 
-- 本轮到 `c6cb126` 为止已完成 10 个提交（含并行方 2 个），全部经本机全套验收后推送。
+- 本轮核对时 GitHub `chat-v4` 已推进至 `e24c5f4d84d566c2129cbba78e63c474ba67e1a9`；随后新增 H058/H043 重复判定文档提交 `94a356ad96e594a145a10dbe03b48d710cd22509`，本 handoff 更新提交在其后。
+- `e24c5f4` 新增 `tools/v4/ocr_pdf.py`，用于扫描 PDF 的全文检索定位；OCR 结果只用于定位线索，条款引用仍须对原件或第二来源核验。
 - V3 冻结基线：`source/master/safety.sqlite3`，SHA-256 `7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`，未修改。
 - `main`、production、GitHub Pages、V3 SQLite：均未修改。
-- Google Drive 已确认存在 `safety-basis` 工作目录；本轮未使用 Drive 私有原件覆盖 GitHub。
+- Google Drive 已按真实父目录确认 `ESH_Codex/work/safety-basis`，本轮未使用 Drive 私有原件覆盖 GitHub；Drive 工作目录仍保留源码、docs、source、data、tools 等历史工作成果。
 
 ## 本轮完成
 
-### A. 专业终审与依据归位（ZCode 侧，提交 `c1aee4f`–`c6cb126`）
+### A. 既有 Phase 16 专业终审
 
-| 提交 | 内容 |
-|---|---|
-| `c1aee4f` | H046／H048 结构化收口：清理 note 过期说明，重绑 hazard review 与 4 条 link review 内容哈希。 |
-| `82ff33c` | H047 补《江苏省安全生产条例》第十五条第（二）项 direct（新增 `C_JS32_15_2`）；H073 补《消防法》第二十一条第一款 direct（新增 `C074`）；H036／H064／H068 纠正 `SPECIFIC_CLAUSE_REQUIRED` 误标并补齐证据。 |
-| `323fea8` | 已废止条文清理首批：新增 GB 55037-2022 第3.4.5条第1款、第3.4.2条；H066 与 `H_4C083C15…` 改用现行条文；驳回 `H_1F19FA1B…` 的失效关联（发布数 645→644）。 |
-| `e6526e8` | 新建《科研建筑设计标准》JGJ 91-2019 实体与 3 条强制性条文（5.2.4／5.2.5／5.2.6）；H063 与 3 条实验室隐患归位。 |
-| `432b0c4` | `manifest.json` 精确对账；修正 `sync_manifest.py` 的 Phase 22 错误，改为幂等。 |
-| `2e0cb89` | 4 条消防隐患（消火栓、疏散门、疏散照明、疏散指示标志）的泛化条款由 direct 降为 fallback。 |
-| `502bfa3` | **修复门禁漏洞**：`gate_link` 增加「目标 hazard 已合并/非 active」检查；12 条此类 verified 关联改为 superseded；strict audit 增加对应 excluded 分类。eligible links 由虚高的 726 修正为 714。 |
-| `196be91` | 合并 GB 50016-2014 重复版本实体：`C_GB50016_*` 归并到 V3 既有 `L025`，删除 `L_GB50016／LV_GB50016_2014`；laws/lawVersions 77/77 → 76/76。 |
-| `c6cb126` | 仓储类 8 条终审：新增 `C_XF1131_6_8`（堆垛间距五距，覆盖 H052/H053/H054/H055/H069）、`C_XF1131_3_3_1`（消防重点岗位培训，H067）、`C_GB15603_5_9`（易燃与氧化性气体应分离储存，H065）、`C031`（安全生产法第三十一条三同时，H079）；原泛化条款一律降 fallback。clauses 99→103，links 747→755，eligible links 714→722。 |
-| `18ddf82` | 合并并行方 handoff，补充本侧批次记录与真实计数。 |
-| `e9c8f6f` | H039 终审：新建 HJ 2026-2013《吸附法工业有机废气治理工程技术规范》实体（law + lawVersion + evidence + 第6.5.3条／第9.1.2条）；H039 改挂 6.5.3 为 direct，原《危险化学品安全法》第三十七条降 fallback。laws/lawVersions 76/76→77/77，clauses 103→105，links 755→756，eligible links 722→723。 |
+- H046／H048 结构化收口并重绑审核内容哈希。
+- H047 补《江苏省安全生产条例》第十五条第（二）项 direct；H073 补《消防法》第二十一条第一款 direct。
+- 已废止 GB 50016 条文逐步替换为现行依据；失效关联不为维持发布数量而强行保留。
+- 新建 JGJ 91-2019《科研建筑设计标准》必要实体与强制性条文，归位 H063 及实验室隐患。
+- 修复 `gate_link` 未检查目标 hazard 已合并/非 active 的系统性漏洞，12 条历史关联转为 superseded。
+- 合并 GB 50016-2014 重复版本实体。
+- 仓储类、消防类及 H039 等多条隐患已完成直接依据终审或角色降级。
+- 当前 manifest 已对账为 78/78/111/712/761/576/75/23。
 
-### B. 照明/疏散指示依据核验（并行方，提交 `ef64e18`／`65e33cc`）
+### B. 本轮新增：H058 / H043 重复判定
 
-结论见 `docs/reviews/FIRE_LIGHTING_DIRECT_BASIS_REVIEW_20260910.md`：
+已创建 `docs/reviews/H058_H043_DUPLICATE_REVIEW_20260910.md`。
 
-1. `H_69344942331F4E74ACB10315FE`：旧 `GB 50016-2014 10.3.5` 不再作为现行 direct；应核定 `GB 55037-2022 10.1.8`（设置义务）与 `GB 51309-2018 4.5.10(1)`（出口标志灯安装位置）的组合关系，后者为安装位置 direct 候选。
-2. `H_590F1752697D4CA1B2D7F949F0`：**hazard 自身语义冲突**——description 写"备用照明灯具"，title／keywords／measures 写"疏散照明灯具"。必须先做语义校准，不得把旧 `10.3.4` 机械平移；未校准前保持 fallback。
+结论：H058《仓储场所在岗人员消防安全教育频次不足》完整落在 H043《仓储场所未按要求开展消防安全教育培训》的规范义务范围内，没有形成独立检查对象或独立义务边界，**建议 H058 合并至 H043，并保留 H058 Stable ID 作为历史实体**。
+
+本轮未直接执行合并。正式合并前必须先核对 H058 的 links 与 review binding，确认没有 H043 尚未承接的唯一有效依据；随后按现有 merged hazard 处理惯例同步更新 lifecycle、mergedInto、关联状态和审核内容哈希，避免只改 hazard 而遗留可发布关联。
+
+### C. 并发施工状态
+
+本轮观察到 `chat-v4` 在工作期间从 `f82350e6` 继续推进到 `e24c5f4`。最新并行工作新增扫描 PDF OCR 适配器，并已用于定位 JGJ 91-2019 条款。由于存在持续并发，本轮没有盲目覆盖 H058 数据文件。
 
 ## 当前项目状态
 
-- 机器验收：`validate_all` 6/6 PASS、六阶段 Gate PASS、strict audit blockerCount=0、search regression 20/20、确定性构建 PASS。
-- 已完成专项终审：H043、H046、H047、H048、H049、H063、H064、H065、H066、H067、H068、H069、H073、H079、H052–H055，以及 3 条实验室隐患（JGJ 91 强制性条文）与 `H_4C083C15…`（GB 55037 第3.4.2条）。
-- 已纠正的批量误标：H036、H064、H068 的 `SPECIFIC_CLAUSE_REQUIRED`。
-- 已处置的系统性问题：GB 50016 已废止条文引用、指向已合并隐患的虚高 eligible link、GB 50016 重复版本实体、manifest 计数滞后、`sync_manifest.py` 的 Phase 22 错误。
+- Phase 16 继续进行，没有需要用户立即决策的 blocker。
+- 机器验收最近一次完整记录：`validate_all` 6/6 PASS、六阶段 Gate PASS、strict audit blockerCount=0、search regression 20/20、确定性构建 PASS。
+- 上述完整候选验收数据属于最近一次完整构建记录；当前知识树又有增量修改，因此最终 `READY_FOR_ACCEPTANCE` 前必须统一重建 candidate 并重跑全套验收。
+- H058/H043 重复语义已经判定，数据层合并尚未执行。
+- `tools/v4/ocr_pdf.py` 已补上扫描件全文定位能力，但 OCR 文本不能直接作为条款原文的唯一证据。
 
 ## 未完成事项
 
-1. **消防技术 direct 补齐**：`H_69344942331F4E74ACB10315FE`（先查库内是否已有 `GB 51309-2018` law/lawVersion/clause，禁止重复造 ID）、`H_590F1752697D4CA1B2D7F949F0`（先做疏散照明/备用照明语义校准）、`H_2689A44E…`（室内消火栓，需 GB 55036-2022 对应条款）、`H_79D2938F…`（疏散门，描述残缺需先重述）。
-3. **H058 与 H043 疑似重复**（同为仓储消防安全教育培训，均指向 XF 1131-2014 3.3.2），需判定是否合并。
-4. 8 条 `H_*` 的【Phase8】版本待办（GB 5083-2023、GB 15603-2022 已可回填、GB 2894-2025、GB 9448-2025、GB 12801-2025 新版条款号）。
-5. 剩余 36 条 active hazard 的"尚未终审"note 必须随逐条终审收口，**禁止批量删除**。
-6. 20 条 pending Requirement 语义校准。
-7. 8 条 obligation-restatement、47 对近似重复标题。
-8. 复核非官方证据来源（`gzhxaq.com`、`zhc.dicp.ac.cn`、`cli.im`）；补缺 `sourceUrl` 的条款与版本。
-9. 刷新最终 `docs/V3_V4_DIFF_REPORT.md`。
-10. 页面、筛选、law index、PWA/Service Worker、隐私公开投影人工验收。
-11. 知识树稳定后生成完整 final candidate 并跑最终全套验收。
+1. **消防技术 direct 补齐**：`H_69344942331F4E74ACB10315FE`、`H_590F1752697D4CA1B2D7F949F0`、`H_2689A44E…`、`H_79D2938F…`。
+2. **执行 H058 → H043 合并**：先查 H058 全部 links / reviews / 唯一依据，再按现有 merged precedent 原子化处理。
+3. 8 条 `H_*` 的【Phase8】版本待办（含 GB 5083-2023、GB 15603-2022、GB 2894-2025、GB 9448-2025、GB 12801-2025 新版条款号）。
+4. 剩余 active hazard 的“尚未终审”note 随逐条终审收口，禁止批量删除。
+5. 20 条 pending Requirement 语义校准。
+6. obligation-restatement 与近似重复标题继续逐条语义判定。
+7. 复核非官方证据来源并补缺 `sourceUrl`。
+8. 刷新最终 `docs/V3_V4_DIFF_REPORT.md`。
+9. 页面、筛选、law index、PWA/Service Worker、隐私公开投影人工验收。
+10. 知识树稳定后生成完整 final candidate 并跑最终全套验收。
 
 ## 下一轮第一步
 
-**先查库内法规目录，确认是否已存在 `GB 51309-2018` 及其 4.5.6／4.5.7／4.5.10(1) 条款**：存在则复用 Stable ID，不存在则按 V4 结构建立最小必要实体，然后结构化收口 `H_69344942331F4E74ACB10315FE`；同时对 `H_590F1752697D4CA1B2D7F949F0` 做"疏散照明／备用照明"语义校准。每完成一个工作单元后执行完整 `validate_all → build_release → gate_v4 → strict_release_audit → test_search` 并刷新内容绑定。
+**先完成 H058 → H043 合并前置检查**：枚举 H058 当前所有 links 与 hazard/link reviews，确认是否存在 H043 未承接的唯一有效依据；同时找一个已经正确 merged 的 hazard 作为字段和关联状态处理样板。若无独立依据冲突，则执行保留 Stable ID 的合并并刷新相关内容哈希。
+
+普通内容批次只做必要的 schema / 引用 / 局部门禁 / hash binding 校验，不再每个小批次机械重建完整 candidate；只有修改 Gate、构建、公开投影、搜索、隐私或 PWA 等发布链逻辑时立即做对应完整回归。知识树稳定后统一进行最终完整构建、双构建确定性验证和全套验收。
 
 ## 法规/标准待核验队列
 
 - `GB 51309-2018`：库内实体与 4.5.6／4.5.7／4.5.10(1)。
-- `GB 55037-2022`：10.1.8、10.1.9 与照明类 hazard 的关系（3.4.2／3.4.5／7.1.2 已核实原文）。
-- `GB 55036-2022`：3.0.5 室内消火栓条款完整原文（尚未取得）。
-- `HJ 2026-2013`：已完成实体化与 H039 归位。
+- `GB 55037-2022`：10.1.8、10.1.9 与照明类 hazard 的关系。
+- `GB 55036-2022`：室内消火栓直接依据的准确条款定位与原文。
 - Phase8 新版条款号：GB 5083-2023、GB 2894-2025、GB 9448-2025、GB 12801-2025。
 
 ## 风险 / 阻塞
 
 - 当前没有必须用户决策才能继续 Phase 16 的 blocker。
-- **GitHub 存在并发施工**：本轮已实际遇到一次远端领先（`ef64e18`／`65e33cc`）。每次写入前必须重新 fetch，用 merge 而非 force push；handoff 变更可能与并行方互相覆盖，需以最新远端为准再补充。
-- `H_590F1752…` 语义冲突若不先处理，可能把"备用照明"与"疏散照明"错误合并为同一直接依据。
-- 消防技术 direct 仍不完整：4 条消防隐患目前只有 fallback。
-- 机器 gate 全绿不代表法规语义已全部终审；关联层审核历史上有 95% 来自批量流程。
+- **GitHub 存在持续并发施工**：每次写入前必须重新 fetch；禁止 reset / force push；如果目标文件已变化，先吸收真实远端状态再处理。
+- 机器 Gate 全绿不代表法规语义已全部终审；关联层历史审核曾受批量流程污染。
+- OCR 会误识别数字、标准号和条款号，只能用于检索定位，不能作为 clause.quote 的唯一核验来源。
+- H058/H043 合并如不先检查 links / reviews，可能丢失独立依据或留下指向 merged hazard 的错误可发布关联。
 
 ## 用户待决策事项
 
@@ -109,5 +111,5 @@ Phase 16：最终验收。
 - 不为提高发布数量强行建立或 verified 依据。
 - 不把通用上位法包装成具体技术 direct 依据。
 - 不因缺少整本标准全文而编造条款；可靠局部条款可按证据等级核验。
-- 不批量删除"尚未终审"说明制造已完成假象。
+- 不批量删除“尚未终审”说明制造已完成假象。
 - 不 reset / force push / 覆盖并行提交。
