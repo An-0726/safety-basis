@@ -1,28 +1,28 @@
 {
-  "entityType": "link",
-  "entityId": "K_f96c991e54886ffa89aba070",
-  "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "2f9c4cf114e70829b888fd2c1e23c527b4fd1630268b1560d0758bce2cebcbd1",
-  "contextHashes": {
-    "hazard": "10dbbc2d748196efb6cc7fb5280ef73cd6ddc712f39b62b3a518b18a55f6fb40",
-    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299"
-  },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard为实验室内临时电源线外绝缘层破损，属具体线路状态技术要求（conditions指向GB50054-2011第5.1.1条）；消防法第27条第2款为转介性义务，不足以direct支撑绝缘要求，direct依据应为GB50054或GB/T13869专项条款，本条可保留为supporting。与K_3437ba判断一致。另：本Hazard与H_3442CF16D05B9A92A3EAB860B6疑似重复，列入数据修复。",
-  "reasonCodes": [
-    "DIRECT_ROLE_OVERSTATED",
-    "SPECIFIC_CLAUSE_REQUIRED"
-  ],
-  "evidenceRefs": [
-    "E_00bb481128dd2570eeabffae6cfd585ce9a210c327069ca38823a44b9f861dea"
-  ],
-  "migratedFromV3Verification": {
-    "id": "VRF_5e488ac7e1c43f53c8ac8db3_240",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次",
-    "v3Reason": "[C005] 隐患为实验室内临时电源线外绝缘层破损，消防法第二十七条第二款规定电器产品的安装使用及其线路的设计、敷设、维护保养必须符合消防技术标准，线路绝缘层破损属于线路维护保养不符合要求，语义对应。",
-    "v3Result": "passed"
-  }
+ "entityType": "link",
+ "entityId": "K_f96c991e54886ffa89aba070",
+ "reviewType": "applicability",
+ "decision": "rejected",
+ "reviewedContentHash": "2f9c4cf114e70829b888fd2c1e23c527b4fd1630268b1560d0758bce2cebcbd1",
+ "contextHashes": {
+  "hazard": "1688882384f4e4982bb5ebf67372980380267fc7868187a717b64c9ca82efbe1",
+  "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299"
+ },
+ "checkedAt": "2026-09-10T17:00:00+08:00",
+ "reviewer": "Doubao-Agent",
+ "reason": "Hazard为实验室内临时电源线外绝缘层破损，属具体线路状态技术要求（conditions指向GB50054-2011第5.1.1条）；消防法第27条第2款为转介性义务，不足以direct支撑绝缘要求，direct依据应为GB50054或GB/T13869专项条款，本条可保留为supporting。与K_3437ba判断一致。另：本Hazard与H_3442CF16D05B9A92A3EAB860B6疑似重复，列入数据修复。\n【Phase8】hazard aliases 补充口语词，hazard ctx 重绑。",
+ "reasonCodes": [
+  "DIRECT_ROLE_OVERSTATED",
+  "SPECIFIC_CLAUSE_REQUIRED"
+ ],
+ "evidenceRefs": [
+  "E_00bb481128dd2570eeabffae6cfd585ce9a210c327069ca38823a44b9f861dea"
+ ],
+ "migratedFromV3Verification": {
+  "id": "VRF_5e488ac7e1c43f53c8ac8db3_240",
+  "reviewedAt": "2026-09-09T14:38:34+00:00",
+  "reviewer": "并发重验批次",
+  "v3Reason": "[C005] 隐患为实验室内临时电源线外绝缘层破损，消防法第二十七条第二款规定电器产品的安装使用及其线路的设计、敷设、维护保养必须符合消防技术标准，线路绝缘层破损属于线路维护保养不符合要求，语义对应。",
+  "v3Result": "passed"
+ }
 }

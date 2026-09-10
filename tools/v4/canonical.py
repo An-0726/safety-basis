@@ -21,6 +21,8 @@ def canonical_obj(obj):
     if isinstance(obj, dict):
         out = {}
         for k, v in obj.items():
+            if k in ("canonicalHash",):  # 自引用字段不参与 hash
+                continue
             if k in SET_FIELDS and isinstance(v, list):
                 out[k] = sorted(v)
             else:
