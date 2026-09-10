@@ -5,16 +5,16 @@
   "decision": "verified",
   "reviewer": "Doubao-Agent",
   "checkedAt": "2026-09-10T22:30:00+08:00",
-  "reason": "储气罐上必须装设安全阀，储气罐与供气总管之间未装设切断阀，违反安全生产法第三十六条安全设备应当符合国家标准或者行业标准的要求，以及特种设备安全法中压力容器安全附件要求。储气罐必须装设安全阀和切断阀。",
+  "reason": "H_B6EF0722 为压缩空气站储气罐未装设安全阀或未装设切断阀。原 V3 记录引用《压缩空气站设计规范》GB 50029 第3.0.18条，该标准尚未收录于现行全文库、条款原文未核实，故不作为 direct 依据；以《中华人民共和国安全生产法》第三十六条安全设备应符合国家标准或行业标准的通用要求作为兜底依据。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "AIR_RECEIVER_SAFETY_VALVE_SHUTOFF_VALVE"
+    "FALLBACK_GENERAL_DUTY",
+    "DIRECT_CLAUSE_UNVERIFIED"
   ],
-  "reviewedContentHash": "159fa111ab50c571cfb6146fe773e7b5dbe35493d461ef470ba32cb429934ec8",
+  "reviewedContentHash": "c47ef3571212e714dc0069f0e0ba84612d94e9c806497eec3860b2d8b3856efb",
   "contextHashes": {
-    "hazard": "542663394672c0855e8048d6edf7b93bb2e1ffe9cbdbc7ecd620e5ce355bd9f2",
+    "hazard": "d92116b00d10cad494ec5681b0c008ae88a16c8eb13060c2771f0ed8172674a7",
     "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
-    "link": "159fa111ab50c571cfb6146fe773e7b5dbe35493d461ef470ba32cb429934ec8"
+    "link": "c47ef3571212e714dc0069f0e0ba84612d94e9c806497eec3860b2d8b3856efb"
   },
   "evidenceRefs": []
 }
