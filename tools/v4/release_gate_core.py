@@ -46,14 +46,28 @@ PRIVATE_PATH_RE = re.compile(r"[A-Za-z]:\\|/(?:home|Users|mnt)/")
 
 
 # ---- 工具 -----------------------------------------------------------------
-
 def load_dir(root, rel):
-    """读取 knowledge/<rel>/*.json，按 id 建索引。"""
+    """读取 knowledge/<rel>/*.json，普通实体按自身 id 建索引。"""
     out = {}
     for f in glob.glob(os.path.join(root, rel, "*.json")):
         with io.open(f, encoding="utf-8") as fh:
             d = json.load(fh)
         key = d.get("id") or d.get("entityId") or os.path.splitext(os.path.basename(f))[0]
+        out[key] = d
+    return out
+
+
+def load_reviews(root, rel):
+    """读取 review sidecar，按其被审核实体 entityId 建索引。
+
+    review 自身可带独立的 RV_* id；发布门禁查找 review 时必须使用实体 id，
+    否则新式 review 会被误判为缺失。旧 sidecar 若无 entityId，则以文件名兜底。
+    """
+    out = {}
+    for f in glob.glob(os.path.join(root, rel, "*.json")):
+        with io.open(f, encoding="utf-8") as fh:
+            d = json.load(fh)
+        key = d.get("entityId") or os.path.splitext(os.path.basename(f))[0]
         out[key] = d
     return out
 
@@ -92,7 +106,6 @@ def jurisdiction_conflicts(link_code, law_code):
 
 
 # ---- 单层 gate ------------------------------------------------------------
-
 def _review_binding(entity, review, need_evidence):
     """通用 review 绑定检查（§2.4 / §4）。返回 (ok, reasons)。"""
     reasons = []
@@ -234,7 +247,6 @@ def gate_link(link, review, hazard, clause, law, clause_ok):
 
 
 # ---- 主入口 ---------------------------------------------------------------
-
 def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
     """对 knowledge 全量做链式 gate，返回 GateResult（SimpleNamespace）。"""
     if knowledge_dir is None:
@@ -249,11 +261,11 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
     hazards = load_dir(knowledge_dir, "hazards")
     links = load_dir(knowledge_dir, "links")
     reviews = {
-        "laws": load_dir(knowledge_dir, os.path.join("reviews", "laws")),
-        "law_versions": load_dir(knowledge_dir, os.path.join("reviews", "law-versions")),
-        "clauses": load_dir(knowledge_dir, os.path.join("reviews", "clauses")),
-        "hazards": load_dir(knowledge_dir, os.path.join("reviews", "hazards")),
-        "links": load_dir(knowledge_dir, os.path.join("reviews", "links")),
+        "laws": load_reviews(knowledge_dir, os.path.join("reviews", "laws")),
+        "law_versions": load_reviews(knowledge_dir, os.path.join("reviews", "law-versions")),
+        "clauses": load_reviews(knowledge_dir, os.path.join("reviews", "clauses")),
+        "hazards": load_reviews(knowledge_dir, os.path.join("reviews", "hazards")),
+        "links": load_reviews(knowledge_dir, os.path.join("reviews", "links")),
     }
 
     # 1) Law
