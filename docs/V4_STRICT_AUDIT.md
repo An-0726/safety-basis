@@ -1,51 +1,74 @@
 # V4 Strict Release Audit Report
 
 > 最后同步：2026-09-10
-> Phase 16 最终验收状态：`REVIEW_REQUIRED`
+> 技术严格审计：`PASS`
+> Phase 16 总验收：`REVIEW_REQUIRED`
+> 验证基线：`chat-v4` commit `cd29037630c9f52688692ab3f9212bd7dc9fde9d`
+> CI run：`34453384587`
+> candidate sourceStateHash：`545a828e653fe634754d50699c7e321448dbac25396500b15c1a015f1a0e0e5f`
 
-## 说明
-
-本文件原先记录的是较早的 74 laws / 85 clauses / 209 links / 162 eligible hazards 快照，已经不能代表当前 V4 知识规模。该旧统计已停止作为当前验收依据。
-
-## 上一稳定候选的严格审计结果
-
-在 `knowledge/manifest.json` 本轮元数据修正之前，最新稳定 candidate 的共享链式严格审计结果为：
+## 当前严格审计结果
 
 - laws: 75
 - lawVersions: 75
 - clauses: 88
 - hazards: 712
 - links: 735
-- releaseBlockers: 0
 - eligibleHazards: 596
 - eligibleLinks: 666
-- link review: 666 verified / 19 rejected / 0 pending
+- blockerCount: 0
+- warningCount: 60
+- excludedCount: 105
 - strict verdict: PASS
-- candidate `sourceStateHash`: `6b0adf8953769c5aa84b017ff9b0160ea8b0baddaf1bc35f87b2864c09cee9a7`
+- candidate: true
 - production: false
 
-## 为什么当前不能直接继续写 PASS
+## Warning 结构
 
-`tools/v4/build_release.py` 对 `knowledge/**/*.json` 全量计算 `sourceStateHash`。Phase 16 本轮已经修正 `knowledge/manifest.json` 的 `migrationPhase` 和 `scope`，因此上一稳定候选的 hash 只对应修改前知识树。
+当前 60 条 warning：
 
-这不代表新发现了法规内容错误，也不代表原 strict audit 失效；它表示**最终候选必须重新构建并重新执行严格审计**，才能形成当前 HEAD 对应的最终验收证据。
+- 49 条 `active_hazard_without_qualifying_link`
+- 11 条 verified `supporting` link
 
-## 最终严格审计通过条件
+这些 warning 当前不会错误进入公开 release，但必须在 Phase 16 中完成专业分类。不能为了清零 warning 批量把 supporting 改 direct，也不能用泛上位法强行给 49 条 active hazard 建 link。
 
-最终 candidate 稳定后必须确认：
+## Excluded 结构
 
-1. `releaseBlockers == 0`；
-2. 所有公开 hazard 都至少有一条通过共享链式 Gate 的 direct/fallback link；
-3. 不存在当前公开链引用 repealed/upcoming/unknown LawVersion；
-4. rejected/pending/supporting-only 链不会被错误当作发布依据；
-5. candidate `sourceStateHash` 与当前 `knowledge/**/*.json` 一致；
-6. `candidate=true` 且 `production=false`；
-7. 普通 Gate 与 Strict Gate 对 CONTENT/APPLICABILITY/RELEASE 的结论一致。
+当前 105 条 excluded entity：
 
-## 当前结论
+- 67 条 superseded / merged hazard
+- 19 条 rejected link
+- 18 条 repealed lawVersion
+- 1 条 upcoming lawVersion
 
-- 历史稳定候选：`PASS`
-- Phase 16 当前最终候选：`REVIEW_REQUIRED — rebuild + rerun required`
-- production：未切换
+其中 `H_A73EC0543AA24DF583F70E566B` 本轮确认正文为“未见与办公生活区域混杂布置情况”的正向事实，不构成隐患；保留 Stable ID，转为 superseded 历史追溯，其原 direct link 继续 rejected。
 
-最终验收总表见 `docs/V4_FINAL_ACCEPTANCE.md`。
+## 绑定与证据校验
+
+- dangling refs: 0
+- unbound link reviews: 0
+- stale link content hash: 0
+- stale hazard context hash: 0
+- stale clause context hash: 0
+- exact evidence mismatch: 0
+
+本轮同时修正了 `scan_evidence_exact.py`：未在官方域名 allowlist 中配置的法规来源现在记为 `UNMAPPED`，不再误报 `MISMATCHED`；真实 MISMATCHED > 0 会返回非零退出码，使 CI/Gate 真正阻断。
+
+## 其他质量队列
+
+自动质量扫描仍有：
+
+- stale old-standard refs in hazard fields: 14
+- obligation-restatement candidates: 11
+- links to merged hazards: 9
+- partial-replaced standard hazard hits: 12
+- full-replaced standard hazard hits: 0
+
+这些是语义终审候选，不等于已经确认错误。Phase 16 要逐类抽查并给出阻断/非阻断结论。
+
+## 结论
+
+当前知识状态对应的技术 strict audit 已确认 `PASS`，但 Phase 16 仍存在法规版本、Requirement、49 条 active 非发布 hazard、最终 V3/V4 差异和网站/PWA/隐私终审工作，因此项目尚不能进入 `READY_FOR_ACCEPTANCE`。
+
+最终验收总表：`docs/V4_FINAL_ACCEPTANCE.md`
+当前终审库存：`docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`
