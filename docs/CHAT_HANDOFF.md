@@ -36,26 +36,15 @@ ACTIVE
 
 ### knowledge / manifest
 
-`knowledge/manifest.json` 当前仍写：laws 68、lawVersions 68、clauses 76、requirements 75、hazards 662、links 181、evidence 552、successions 22；其中 **hazards=662 已被实际 split 提交超越**。
+`knowledge/manifest.json` 已在 agent5 轮次用 `tools/v4/sync_manifest.py` 对真实文件重新统计，counts 与 scope 一致：laws 69、lawVersions 69、clauses 77、requirements 75、hazards 712、links 201、evidence 559、successions 23。
 
-根据提交链的可核实净变化：原 662 个 hazard 文件 + 50 个新 child hazard，父 hazard 不删除而改为 superseded，因此当前实体文件总数应为 **712**。在 `sync_manifest.py` 对当前 HEAD 做真实文件统计前，不把该推导值冒充脚本最终统计；下一轮优先执行 manifest 同步并回读校验。
+Link review 真实状态（按 `knowledge/reviews/links/*.json` 实际统计）：verified 178 / rejected 23 / pending 0（合计 201）。
 
-Link review 真实状态根据 `497c413...` 对旧 32 pending 的完整处理应由旧 128/21/32 更新为：
-- verified：154
-- rejected：23
-- pending：4
-- 合计：181
-
-下一轮必须用实际 review 文件统计再次校验这组数字，再写入 manifest / candidate release。
+最后 1 条 pending link `K_7caf3e9d8e91a30ec04247bf`（厂内机动车辆投入使用前未经检验合格）已 verified：direct 依据新建 TSG 81-2022《场（厂）内专用机动车辆安全技术规程》首次检验条款（C_7779C0047FBE05F3E7866C1D；市场监管总局2022年第26号公告，2022-12-01施行），并配套 law/LV/clause review/evidence。特设法第二十五条监督检验清单不含场车，故不采用；原 C035（特设法第40条 定期检验）scope mismatch 已解绑。
 
 ## Candidate release
 
-`source/releases/v4-candidate-20260910/` 当前 `release.json` 仍是 split 前旧快照：
-- hazards：662
-- reviewStatsByLink：128 verified / 21 rejected / 32 pending
-- publishable：113
-
-因此该 candidate 已明确 **stale（滞后）**，不能作为当前真实知识状态的发布验收依据。必须在 manifest 同步后重新构建 candidate，并重新执行 validator / gate / strict release audit。
+`source/releases/v4-candidate-20260910/` 已由 `tools/v4/build_release.py` 基于当前 knowledge 重建：sourceCounts laws 69 / law_versions 69 / clauses 77 / hazards 712 / links 201 / requirements 75；reviewStatsByLink verified 178 / rejected 23（pending 0）；eligibleHazards 161；backfill 20/20。`tools/v4/gate_v4.py` 重跑后 STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE/RELEASE 全部 PASS。
 
 production 未切换。
 
@@ -97,26 +86,25 @@ production 未切换。
 ## 当前项目状态
 
 - 21/21 composite hazard 拆分：**完成**。
-- 32 条原 pending link：已处理为 26 verified / 2 rejected / 4 pending。
-- 当前剩余 pending link：**4 条**，仍需按 review reason 补证，禁止强行 verified。
+- Link review：178 verified / 23 rejected / **0 pending**（最后 1 条已解决）。
 - split 新增 child hazard：50。
-- manifest：**已知滞后，待同步**。
-- candidate release：**已知滞后，待重建**。
+- manifest：**已同步**（sync_manifest.py 真实统计，scope 与 counts 一致）。
+- candidate release：**已重建**（build_release.py），gate 全 PASS。
 - Requirement 层：75 条草案仍需逐条校准。
-- 20 条 V3 verified backfill hazard：仍需建立可靠新 link。
-- 45 组 merge 候选已经发生实际 merge 施工迹象（HEAD rebind 记录显示 45 merged parent），但 `docs/V4_MERGE_CANDIDATES.md` 是否已全部验收闭环需下一轮读取真实文件确认，禁止仅凭旧 handoff 继续重复 merge。
+- V3 verified backfill hazard：20/20 已 eligible（strict audit 确认）。
+- 45 组 merge 候选已发生实际 merge 施工；`docs/V4_MERGE_CANDIDATES.md` 是否全部验收闭环仍需读取真实文件确认。
 
 ## 未完成事项
 
-1. 用当前 HEAD 真实文件统计同步 `knowledge/manifest.json`；确认 hazards、active/superseded、link review、evidence 等最终数量。
-2. 基于同步后的 manifest 重新生成 `v4-candidate-20260910` 或新的候选 release，并重新跑 validator / gate / strict release audit。
-3. 处理剩余 4 条 pending link 的证据补强与专业判定。
-4. 为 20 条 V3 verified backfill hazard 建立可靠新 link 并逐条 review。
+1. ~~manifest 同步~~：**已完成**（agent5）。
+2. ~~candidate 重建 + gate/strict audit 重跑~~：**已完成**（agent5；gate 全 PASS，strict audit BLOCK=69）。
+3. ~~剩余 pending link~~：**已完成**（agent5；pending=0）。
+4. 为 20 条 V3 verified backfill hazard 建立可靠新 link 并逐条 review（strict audit 显示已 20/20 eligible，可复核验收）。
 5. Requirement 层 75 条逐条校准 verified + checkItems，禁止批量强行通过。
 6. 核对 45 组 merge candidate 的真实施工与验收状态，避免重复 merge。
-7. 工贸企业重大事故隐患判定标准新旧版本状态核验入库。
-8. GB 50140-2005 / GB 50016-2014 与 GB 55036/55037-2022 partial replacement 复核。
-9. 危化品条例处置关系最终验收留存。
+7. ~~工贸企业重大事故隐患判定标准新旧版本核验~~：**已核验**（agent5）。L019=应急管理部令第10号 2023-05-15 现行，同时废止安监总管四〔2017〕129号；2017旧版未入库，故无 succession 待建。
+8. ~~GB 50140/GB 50016 与 GB 55036/55037 partial replacement 复核~~：**已核验**（agent5）。既有 partially_replaces 关系正确（GB55036→GB50140/GB50016，GB55037→GB50016），旧标准仍 active，无需改。
+9. ~~危化品条例处置关系验收~~：**已核验**（agent5）。LV_HAZCHEM_REG 仍 active、与 LV_HAZCHEM_LAW 为 partially_replaces，未整体废止，符合预期。
 
 ## 下一轮第一步
 
@@ -134,10 +122,10 @@ production 未切换。
 
 ## 法规/标准待核验队列
 
-- 工贸企业重大事故隐患判定标准新旧版本状态：未完成最终入库核验。
-- 剩余 4 条 pending link 涉及专项技术标准/条款证据：按各 review reason 补证。
-- GB 50140-2005 / GB 50016-2014 与 GB 55036/55037-2022 partial replacement：待最终复核。
-- 危化品条例 partially_replaces 关系：已有核验结论，待最终验收留存。
+- 工贸企业重大事故隐患判定标准：**已核验**（L019 现行；2017 旧版未入库）。
+- pending link：**0 条**（最后 1 条 TSG 81-2022 已解决）。
+- GB 50140-2005 / GB 50016-2014 与 GB 55036/55037-2022：**已复核**，既有 partially_replaces 关系正确。
+- 危化品条例 partially_replaces：**已验收留存**（未整体废止）。
 
 ## 风险 / 阻塞
 
