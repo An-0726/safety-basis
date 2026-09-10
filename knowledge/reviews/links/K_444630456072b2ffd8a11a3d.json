@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_444630456072b2ffd8a11a3d",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "a2edef81d22c96c173a014a86b8564ea299cc40298ab64b100b48d90fe60f820",
+  "decision": "verified",
+  "reviewedContentHash": "b271d1070fda68b8e33e9c416969ea7ffa95be4283a7102f1505f5991eef8c0d",
   "contextHashes": {
-    "hazard": "c9de79df3c817b8697eb9d95e74149c0a8b984fd19572543835a785955e2dd3a",
+    "hazard": "0ef01cb60301d6f085b83f2e0388603eba7187fb1671dbb62e46ce4f41341d54",
     "clause": "97a40563b612b68e772f5b7eeabe667f2acd1ee7405eea79428b4577f8294d8b"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合两项防护要求：①正压式空气呼吸器（属劳动防护用品，安全生产法第45条覆盖）；②氨气检测仪（属检测报警设备，非劳动防护用品，45条不覆盖，需《首批重点监管的危险化学品安全措施和应急处置原则》等专项依据）；需拆分或补充专项条款。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_D68030A1FF76475CB16F6AF998）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（进行检修和抢修作业时未携带正压式空气呼吸器）。Clause C016（安全生产法第45条：提供劳动防护用品；正压式空气呼吸器属呼吸类劳动防护用品） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_fd4e6839656d9ca7438d93c39453ffe978e5abdd67709dae4fe1a22f66df6998"

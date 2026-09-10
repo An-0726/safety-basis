@@ -2,17 +2,18 @@
   "entityType": "link",
   "entityId": "K_5de4afe5451e2f834d8d68a2",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "47ba366edaf6dc8fb8cd6495fe70864f8ae28a576ba470adedc19c2416e5c321",
+  "decision": "verified",
+  "reviewedContentHash": "0e9b6e4ea4d68f3d4a044b633ce832e58d3ec775aa686b6a0291ec4d0de460bd",
   "contextHashes": {
-    "hazard": "2c70135b124329ad0b0e1f7fd4e4ac86405470d97bf0caa7166763f7f2ff974c",
+    "hazard": "3a0cf34fe7822311fd73c3b4cc84df913ee6398abebb33aab46a4aed53c2a3ab",
     "clause": "e44dd650430dca4909108922c15cc2707ba3a8f4def06119a5138546bbb5a5db"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合隐患排查治理制度建立、定期排查、信息系统记录通报、重大隐患记录保存等多项义务；C003（第41条第2款节选）覆盖制度建立与排查消除部分，重大事故隐患排查治理情况记录保存期限不少于五年为南京市条例第二十条的地方要求，超出C003覆盖范围，需补充地方条例依据。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_9DCBB0D8DB5441A2A3E4811603）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（未建立健全并落实生产安全事故隐患排查治理制度、未定期组织排查事故隐患）。Clause C003（安全生产法第41条第2款：建立健全并落实隐患排查治理制度，及时发现并消除隐患） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_7bf6a0b95ed0bebbb184330cb0d28c46cefb3d205c9dc8280b43ddb99b79bfba"

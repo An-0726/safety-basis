@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_fb679390b1d04cb57eb5f22e",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "b9462919f11c55a1e3ab559ab8671c462f37cd68071755f721e49dc7e7c93498",
+  "decision": "verified",
+  "reviewedContentHash": "e804d61827c5bce6a3c664127edc2123419bc0e37e1156d646617bfecf1d09fa",
   "contextHashes": {
-    "hazard": "b9a1c591fb8cbd0e7f730a279a5cf249cb163cd955c494fa337307ff8fb14849",
+    "hazard": "774b5524df0bad220808e3ed8e697a8c571ad065334faf8286e6cf15d3853759",
     "clause": "007dce903601f21f4a54b16bde0c9630b25c8565f90bd8f5972e206e48d78670"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合三项义务：①建立健全各级安全生产责任制（第21条第（一）项C018）；②建立健全安全规章制度（第21条第（二）项C019覆盖）；③制定事故应急救援预案（第81条C080）；本条C019仅覆盖②，需拆分后分别关联。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_9D076BD9D82444DCAA72489164）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（未建立健全安全生产规章制度）。Clause C019（安全生产法第21条第（二）项：组织制定并实施安全生产规章制度和操作规程） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_4243a09302c9e0f7bce9a91eeb03db598d14e968dd2ab161b74b044f2c88780e"

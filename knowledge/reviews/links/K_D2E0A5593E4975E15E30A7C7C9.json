@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_D2E0A5593E4975E15E30A7C7C9",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "312a21076737097928a177bbf60f84884adf5a545f704cbba0c8006fc81d6b1d",
+  "decision": "verified",
+  "reviewedContentHash": "123a764f0b516e2f90f3141ded47a4c6a7ef606eec1bcc24f539fd6e7d409cd1",
   "contextHashes": {
-    "hazard": "70e4bc77c53276e869455678ed3dd57280791a9e4517a52a920f21d0a8f537e0",
+    "hazard": "02cb8d93c9561eb600055df3f6218485b7f5f2b48130a0c0c04b8a999c7eb04e",
     "clause": "ac38c51a8257ba53e55735d3e475f0a718c0f1187c94deb81e72c3f2d8818624"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合GB18597-2001（2013修订）第6.1条六项选址要求（地质稳定/地震烈度、地下水位、环评距离、溶洞区自然灾害、危险品仓库与高压线隔离、下风向）；现行GB18597-2023第5.2条仅覆盖溶洞区、易受自然灾害地区（及生态红线、永久基本农田）部分，其余选址条件需按现行标准逐项核对对应条款后拆分。\n【Phase8】hazard note 追加义务复述标记，hazard 内容 hash 已重绑。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_D0E34E3CC9C64F458BCCDA4674）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险废物贮存设施选在溶洞区或易遭受洪水、滑坡、泥石流、潮汐等严重自然灾害影响的地区）。Clause C_94B0EF32（GB18597-2023第5.2条：不应建在溶洞区或易遭受洪水、滑坡、泥石流、潮汐等严重自然灾害影响地区） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"

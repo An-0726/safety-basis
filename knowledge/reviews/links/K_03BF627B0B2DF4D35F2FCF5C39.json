@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_03BF627B0B2DF4D35F2FCF5C39",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "b0c5675f68dff51cac8e7a08395b57f820ab50f6c1e416d6e982e715aa67085d",
+  "decision": "verified",
+  "reviewedContentHash": "8c81103ffc8cd9db854bd15dfd95493b7e14afc6cf594e472e108011173dce0d",
   "contextHashes": {
-    "hazard": "1538306fdd39cfbe13e5f20da118f31f8dc4b024e56a56001df7d1c4a7825f2d",
+    "hazard": "9d2f3d30b5d7fda42f404dbe8244c2d12c67f04bd088246dc3cc13e9666a26e8",
     "clause": "97895f5d19ab057d6772f71c634f63cd8af22d4abe8f7eb3be4e576f6c7f821a"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "ChatGPT",
-  "reason": "该Hazard把‘液体泄漏收集/堵截’与‘气体导出/净化’合并为一条。现行GB 18597-2023第6.2.2只直接覆盖液态危险废物泄漏堵截、渗滤液收集；气体收集和净化属于第6.2.3。当前单一link只能覆盖Hazard的一部分，应确认存在并核验6.2.3对应link，或拆分Hazard后再完成verified。\n修复：该 review clause 为《危险废物贮存污染控制标准》（GB 18597-2023）条款，原 evidence 错误指向消防法页面，现改指生态环境部 GB 18597-2023 官方全文（mee.gov.cn）。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_83C122272BA54FE1AB0F410B4F）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险废物贮存库未设置泄漏液体堵截/收集设施（含渗滤液收集））。Clause C_25299AF（GB18597-2023第6.2.2条：液态危废贮存库设液体泄漏堵截及渗滤液收集设施） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"

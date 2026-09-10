@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_8395b048ebdeb9f3dc262905",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "8b4090b53440f8a8edff5b84e5b0afcea82326b2ce3a58c79142428b2b54faea",
+  "decision": "verified",
+  "reviewedContentHash": "da1d5871e14502691f85a416a795222988b187062389c6bfad2c22e4be0e56cf",
   "contextHashes": {
-    "hazard": "27845094205069e8769c98f90de6f1f9cebff4348b7bdd3c129587a896d67b6b",
+    "hazard": "132b1ed07a2e26a1b2a1abc4d8553957d9bd83bfa544f453b04f31f3a6c7e79a",
     "clause": "97a40563b612b68e772f5b7eeabe667f2acd1ee7405eea79428b4577f8294d8b"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合两项要求：①危化品仓库设专人管理/配备专业技术人员（GB15603-1995第4.4条或《危险化学品安全管理条例》要求，45条不覆盖）；②管理人员配备个人防护用品（安全生产法第45条覆盖）；需拆分后分别关联。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_F57270BED8114BB69A556DEBA2）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险化学品仓库管理人员未配备可靠的个人安全防护用品）。Clause C016（安全生产法第45条：为从业人员提供符合标准的劳动防护用品） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_56b3d410c52d80e52b09a010e83a2a1dc2f74ba3af05b76e51a9b2ca6f1f3f2b"

@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_04361764d56792472364b113",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "bd408cbfcef8daecc0401c69a4325664c5fa8d2dd35bb9f9d0ca8d8c795d0331",
+  "decision": "verified",
+  "reviewedContentHash": "a909b78698fa979d70b1b08b9078167667d20f0e5d941c66287bf542f79ab2f4",
   "contextHashes": {
-    "hazard": "b9a1c591fb8cbd0e7f730a279a5cf249cb163cd955c494fa337307ff8fb14849",
+    "hazard": "c71f681cf6f437a4e9ca2bdb5d532447fcf6d2bd59177b1ff293d0decb535ebe",
     "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "ChatGPT",
-  "reason": "该Hazard同时包含安全生产责任制、安全规章制度、事故应急救援预案和各级人员责任等多个独立要求；C018只直接覆盖全员安全生产责任制及安全生产标准化，不能单独覆盖整条Hazard。应拆分Hazard，或补齐C019及应急预案等Clause并明确各link覆盖范围后再核验。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_9D076BD9D82444DCAA72489164）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（未建立健全各级安全生产责任制）。Clause C018（安全生产法第21条第（一）项：建立健全并落实全员安全生产责任制） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_a80c443ca8f803f474dd9aeb2bdf1c106bc0ff6ebf7a71a0e87c326a30d23722"

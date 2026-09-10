@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_df15e916c14598de659bbf20",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "979725a3191a6cac3f171ea5690a1b3abdc0eac481267cb4f1ab36573c590edf",
+  "decision": "verified",
+  "reviewedContentHash": "cd56b6a01a0bdd76add46b1bee25503cb596df5c3df6b3f32ffe07d543c9fb85",
   "contextHashes": {
-    "hazard": "0b5ffec6dfcb1b379f709dc866002da4bed93bb116bf0728d0a8db9202396031",
+    "hazard": "cf16320db90b68f57b000bac7b717c923bb4ec020905a81627e0009c74e7cc50",
     "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合三项独立义务：①储存区域未设置安全警示标志（第35条覆盖，C030）；②灌装时未控制流速、无接地防静电（需《首批重点监管的危险化学品安全措施和应急处置原则》专项依据，C030不覆盖）；③未配备消防器材及泄漏应急处理设备（消防法第16条第1款第（二）项）；需拆分后分别关联。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_4B099AC576B249B6A7A28AE8E0）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险化学品储存区域未设置明显的安全警示标志）。Clause C030（安全生产法第35条：在有较大危险因素场所设置明显安全警示标志） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_446b138b726e82745980113cfed89cbd22969f824baca749f85e8a94940ed2eb"

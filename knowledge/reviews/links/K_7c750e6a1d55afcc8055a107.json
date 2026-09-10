@@ -2,17 +2,18 @@
   "entityType": "link",
   "entityId": "K_7c750e6a1d55afcc8055a107",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "fe51d406a1c07a15ead9b58e43760162c23a06a2c12e6c75d54ad47048cbc4f0",
+  "decision": "verified",
+  "reviewedContentHash": "ef6ae8f5c0b4ccff5e9eb8259584256afd31d0c3aec1a332af9d06f41181f4eb",
   "contextHashes": {
-    "hazard": "fa0b803ccd5728a728e878235bdfdfd45338217797163aca7ca91c1ffe2da631",
+    "hazard": "702c3137389df8692bf11a4f96d97f7ee8c2855d51dfb3123528cbe6013313d2",
     "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard按GB45067-2024第4.4条混合压力管道重大事故隐患情形：a情形（定期检验结论不符合要求仍使用）由特种设备安全法第40条direct覆盖；b情形（安全阀、爆破片、紧急切断装置缺失或失效）属安全附件要求，需TSG D0001或GB45067-2024专项条款，40条不覆盖；需拆分后补专项依据。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_A1696721CCC94F65AE95751A5E）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（压力管道定期检验结论为不符合要求/不允许使用仍继续使用，未判定为重大事故隐患）。Clause C035（特种设备安全法第40条：检验不合格不得继续使用） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_b419e3682dc7d87ccbcd1e3cc0e71ca6b2cea51a5bd50b3b5b72ec9d0c966ad1"

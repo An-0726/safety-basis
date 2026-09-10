@@ -2,17 +2,18 @@
   "entityType": "link",
   "entityId": "K_d70e5b3487d81efd9d8c0c9b",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "f6c2f5f6b75a901c5c3c169467fae0d62ae6f5a0eb94c299169198963ec700ad",
+  "decision": "verified",
+  "reviewedContentHash": "14bd53f2eed8b3bf1153ba550b642df2290884188ee51f41573482f8c4b79886",
   "contextHashes": {
-    "hazard": "c94ae68b5e405ffe4e6c327404f6e1df867d3d0848f42f8e9479a94d5a0a6fc9",
+    "hazard": "041b24061dfae3a4fde144d494d3cbf32a8abc29f50c1ad9ad060d98de57b3df",
     "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合两类持证义务：①焊接与热切割特种作业证（安全生产法第30条覆盖，C039）；②从事特种设备相关焊接作业人员持特种设备作业人员证（需《特种设备作业人员监督管理办法》/TSG体系依据，30条不覆盖）；需拆分后补专项关联。与K_6ee064判断一致。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_997F60F5C9034C5593A316E08F）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（从事焊接、热切割动火作业的人员未按规定持相应特种作业操作资格证上岗）。Clause C039（安全生产法第30条：特种作业人员经专门培训取得相应资格方可上岗） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_15ad9600decaa324d71a049d3aa8660158a0787eed786d523fbff4983c6fb820"

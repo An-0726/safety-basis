@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_e67fe6b5a8c7a80db603944b",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "f9a1771ae4f7d8f51fe7bb176321704fcff0397273090dbf33479d146ec7655a",
+  "decision": "verified",
+  "reviewedContentHash": "60eed7edf83099b17f165c84081d618d49baa27781810ce2289921a411452d12",
   "contextHashes": {
-    "hazard": "4513949260ef9167cd4e28765642a20211f1bea878623f5107c59dd97a7b56aa",
+    "hazard": "87a7cfc085b4db4ea9718e3f434dc596abfa698368eff01452f8c517f6df738e",
     "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合独立义务：①暂存区域未设置安全警示标志（第35条覆盖，C030）；②未配备相应品种和数量的消防器材（消防法第16条第1款第（二）项）；③泄漏应急处理设备（需专项依据）；需拆分后分别关联。与K_df15e916判断一致。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_1DB6AE75F00A4EB682FA20136E）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险化学品暂存区域未设置明显的安全警示标志）。Clause C030（安全生产法第35条：在有较大危险因素的场所和设施设备上设置明显安全警示标志） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_59790d7949fd81ddb53ad82f95a55efb896f74c47f352aa8b5f78968f57fb8de"

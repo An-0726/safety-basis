@@ -2,17 +2,18 @@
   "entityType": "link",
   "entityId": "K_f0ef428ae23fcba6deb9f379",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "fba36f81ea71f52c1fdb10d3b6e4c6151110724374abbc3049cad1ef4380005e",
+  "decision": "verified",
+  "reviewedContentHash": "2bcfa036e89cad26e20f775c5f298c2c76774b210458af2c5071737a71a8aad4",
   "contextHashes": {
-    "hazard": "4226276b9327cbfb6bbe7a352a7e9e32ac79d24a85dd3d51b214384ded132381",
+    "hazard": "3a16afa163e04eca8bfec3b763236f4ac0c9d36a36aa331e150dca08bc230c29",
     "clause": "7561418aa6ac718ec3d8f925fb88ec3eb2ba41b55319d65501f74b172d922ff8"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合两个义务：①未建立健全全员安全生产责任制（第21条第（一）项C018覆盖）；②主要负责人是安全生产第一责任人并全面负责（第5条C_64588491覆盖）；本条C_64588491仅覆盖②，需补充关联C018后拆分或明确多条款支撑。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_0AB8998CB24041C894BB326A69）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（主要负责人(含法定代表人、实际控制人)未落实本单位安全生产第一责任人责任、未对安全生产工作全面负责）。Clause C_64588491（安全生产法第5条：主要负责人是本单位安全生产第一责任人，对本单位安全生产工作全面负责） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_ca22ddc3698d356d6b2e9404a9c58e69070062ab9110b736220d4335f06d69d7"

@@ -2,17 +2,16 @@
   "entityType": "link",
   "entityId": "K_8cc09e654f490f441052e160",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "rejected",
   "reviewedContentHash": "3d9e99e073b1105dea10e496c19f8871fc28a4e394efac61a1b7ea1fed0f0df0",
   "contextHashes": {
-    "hazard": "511a87fbaee3995838406c2987bf705fab5dd06522072eef7af45efbe76a5c81",
+    "hazard": "2871d3462e047b8b1c55a16a9a8820581e8e626afed653255e7c7d32412df6db",
     "clause": "c052907d28b9264eb67cb27e7f3ae5501f336fb1c954f7f55fadb8f972ef38ac"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard（粉尘废屑储存管理）混合压块压实、干式储存密闭、冷却至常温、分类不混装、镁废屑单层存放等多项独立义务，主要依据为苏安办〔2020〕13号及粉尘防爆相关标准；GB18597-2023第4.9条仅覆盖易燃易爆危废预处理部分，且粉尘废屑是否属危险废物需确认（非危废时GB18597不适用）；需拆分并核实废屑属性后分别关联。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_5F59F50EE244471C81C2757635）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "铝镁机加工粉尘废屑的压块压实/密闭/冷却/分类隔离/镁屑单层存放要求依据苏安办〔2020〕13号及粉尘防爆标准(GB15577)，属涉爆粉尘防火防爆管理；GB18597-2023第4.9条适用于危险废物贮存，铝镁机加工废屑通常不属危险废物，污染防治与防火防爆适用对象不一致。本条(4.9易爆易燃危废预处理)不能直接对应粉尘废屑储存义务，关联不成立；正确 direct 依据待按粉尘防爆专项标准另行建立 clause。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
     "SCOPE_MISMATCH"
   ],
   "evidenceRefs": [

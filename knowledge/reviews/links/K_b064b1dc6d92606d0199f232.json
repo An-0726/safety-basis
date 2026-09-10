@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_b064b1dc6d92606d0199f232",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "469a789ccd92d7eacdc86c0d031e300633526486b4d3716ae47845669e0fb9fb",
+  "decision": "verified",
+  "reviewedContentHash": "b7424e5ffb8f32620eea6bd43131e3aa898917ce41245780c9adcbdc975042c2",
   "contextHashes": {
-    "hazard": "897250dab121f05240866d492b059d835abff7fd83d2bcb507e0184462f01948",
+    "hazard": "7ebacc073946c83231bcdde2c2fc180377913d38832e926653407bd02ac05104",
     "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard按GB45067-2024第4.10条混合场（厂）内专用机动车辆五类重大事故隐患情形：a情形（定期检验结论不合格仍使用）由特种设备安全法第40条direct覆盖；b-e情形（电源紧急切断装置、制动装置、牵引连接装置缺失失效、超最大行驶坡度）属安全装置要求，40条不覆盖，需TSG81或GB45067-2024专项条款；需拆分。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_22D804731C0D4F90A6BF2A83CD）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（场(厂)内专用机动车辆定期检验结论为不合格仍继续使用，未判定为重大事故隐患）。Clause C035（特种设备安全法第40条：未经定期检验或检验不合格的特种设备不得继续使用） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_4c14c2baf574dfaf6935ce4340d6f0933d3a377a5e5715d24c5b8e29e68c4f83"

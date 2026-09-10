@@ -2,17 +2,18 @@
   "entityType": "link",
   "entityId": "K_6ee0642e5ff1afa64ba4bc74",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "1a7834bd68fd8efc2cba80fced117bbfc19a62886e9d9149644ba46d681829f8",
+  "decision": "verified",
+  "reviewedContentHash": "0e2abd1dce3b86d938a112b8b7df8f5238839cde0f4d0274e810ee79b87f9b3e",
   "contextHashes": {
-    "hazard": "c94ae68b5e405ffe4e6c327404f6e1df867d3d0848f42f8e9479a94d5a0a6fc9",
+    "hazard": "041b24061dfae3a4fde144d494d3cbf32a8abc29f50c1ad9ad060d98de57b3df",
     "clause": "88b874574d458aed8436e9d058c41644f8601fa7780b83cde40b9471f85afcd8"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合两类持证义务：①焊接切割动火作业人员持证（消防法第21条第2款覆盖，applicability中C073对应）；②从事特种设备相关焊接作业人员持证（需《特种设备作业人员监督管理办法》/TSG体系依据）；C039（安法第30条）覆盖焊接与热切割特种作业证部分，特种设备焊接作业人员证部分需另行关联。\n修复：该 review clause 为消防法（2021修正）第二十一条第二款（动火作业），原 evidence 为市场监管总局办公厅文件（弱引用），现改指国家法律法规数据库消防法原文（第二十一条第二款）。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_997F60F5C9034C5593A316E08F）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（从事焊接、热切割动火作业的人员未按规定持相应特种作业操作资格证上岗）。Clause C073（消防法第21条第2款：电焊气焊等火灾危险作业人员必须持证上岗） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_bdca1c13112829777cd8ea7f0093499961f0c1562641b2a5d6b9c5f5de4f56e2"

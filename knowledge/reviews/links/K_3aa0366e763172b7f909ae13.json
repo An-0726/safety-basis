@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_3aa0366e763172b7f909ae13",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "9ff6313ece3f9e9e0708eeae7180a4d95ae81ce1a56b7aeeff4c28cbfa8d6bed",
+  "decision": "verified",
+  "reviewedContentHash": "950af235c095ea5b566b89b4fd6aead5667a7d0c0829c5716e306c0586c076de",
   "contextHashes": {
-    "hazard": "d85ed39ff57eca2d54fcdbbfd6c17ea303b5b93bf2fc8d8cc6a4daa0bd5594a9",
+    "hazard": "dca4ab0cad8de1bb28bd3e700888485ca94c26683feda5337cde78c03c142b9a",
     "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard混合铭牌、操作指示标牌、维护和安全标牌三类标牌；安全生产法第35条仅覆盖其中安全警示标志（安全标牌）部分，铭牌与操作指示标牌不属于安全警示标志范畴，其要求源于GB/T25711-2010第3.12.1条等专项设备标准；需拆分后按类别关联。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_89BC396EBC084489B0CC25B02B）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（生产设备/机器上未设置明显的安全警示（安全）标牌）。Clause C030（安全生产法第35条：有关设施设备上设置明显安全警示标志） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "PARTIAL_CLAUSE_COVERAGE",
-    "TECHNICAL_OBJECT_MISMATCH"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_878eabbfcca77f4ba558cb1d86c7dcaa4083059bc77ea5ee8a988c014aa5a11d"

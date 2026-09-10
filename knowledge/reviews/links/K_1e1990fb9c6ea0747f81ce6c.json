@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_1e1990fb9c6ea0747f81ce6c",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "5bc816b00d98eaaf253e41257d45cf641e50ac16be3836051bf3b345dc571754",
+  "decision": "verified",
+  "reviewedContentHash": "6c72c6df10dc2cfdc42cefb26325df313514bdedcf8096090a6379d77a051a4a",
   "contextHashes": {
-    "hazard": "5fbee04d3baa10ddf303f30b232ed3c8bc1ca141545628d1b173cdc4b070c78d",
+    "hazard": "8f0584af86291da4e7f49fb46e807774187a30c98e3043df0aafde56604b5b34",
     "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard按GB45067-2024第4.1条混合多个独立重大事故隐患情形（未取得许可生产/明令淘汰报废/发生事故未全面检查/未监督检验/超参数运行等），且核心缺陷是未判定为重大事故隐患（判定义务），而特种设备安全法第40条仅覆盖未经定期检验或检验不合格不得继续使用部分；需拆分各情形并按情形关联GB45067-2024判定义务与专项条款。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_44549E43707D4EBCB2D1BC7E67）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（特种设备未经定期检验/监督检验，或检验、监督检验不合格仍继续使用，未判定为重大事故隐患）。Clause C035（特种设备安全法第40条：未经定期检验/监督检验或不合格不得继续使用） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_1b91b7b18abe044cd463a9b0fe804a20a0a1cd98ede63040008a74393d198a6e"

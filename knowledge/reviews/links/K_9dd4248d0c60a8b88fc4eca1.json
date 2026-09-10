@@ -2,18 +2,17 @@
   "entityType": "link",
   "entityId": "K_9dd4248d0c60a8b88fc4eca1",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "rejected",
   "reviewedContentHash": "69705787c4d70a638bf1476d49d703709735f642701586b88fb38181f4a565f3",
   "contextHashes": {
-    "hazard": "511a87fbaee3995838406c2987bf705fab5dd06522072eef7af45efbe76a5c81",
+    "hazard": "2871d3462e047b8b1c55a16a9a8820581e8e626afed653255e7c7d32412df6db",
     "clause": "e117beb72013ed39faef574b7869a7aa99f70c7bb59860cfe9561e4a7e7bfd8f"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard（粉尘废屑储存，同K_8cc09e所指Hazard）混合多项独立义务；GB18597-2023第4.3条仅覆盖分类贮存/不相容物质隔离部分，压块、密闭、冷却、单层存放等义务需苏安办〔2020〕13号等专项依据，且粉尘废屑是否属危险废物需确认（决定GB18597适用范围）。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_5F59F50EE244471C81C2757635）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "同 K_8cc09e65：粉尘废屑分类/不相容隔离虽语义相近，但 GB18597-2023第4.3条仅适用于危险废物分类贮存，铝镁机加工废屑通常不属危险废物，适用对象不一致；本条(4.3)关联不成立，正确依据待按粉尘防爆专项标准另行建立 clause。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "SCOPE_MISMATCH"
   ],
   "evidenceRefs": [
     "E_afde136f21cc6874e9f475937180f39399f1d1c492d2ea40c2467207f6070846"

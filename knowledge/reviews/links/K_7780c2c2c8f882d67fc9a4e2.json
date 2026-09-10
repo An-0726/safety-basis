@@ -2,18 +2,18 @@
   "entityType": "link",
   "entityId": "K_7780c2c2c8f882d67fc9a4e2",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "98ab8edc7facdd6a76db9ebd8511a1ced92b28a3334b67f2234f45a12bea660b",
+  "decision": "verified",
+  "reviewedContentHash": "405bce87a36a9a9952a6da709afb5c90e27d28fcb3288a00c72ba22a2add9148",
   "contextHashes": {
-    "hazard": "5fbee04d3baa10ddf303f30b232ed3c8bc1ca141545628d1b173cdc4b070c78d",
+    "hazard": "8e8435fc4b939112b12fa1ee45d994f7fefc376a8f1527bb565e3bd944c7d0cf",
     "clause": "7d4f9745d988d618fdbe967cb58cd7ca11d8de0a96e9665e0bf51d7da300f00e"
   },
-  "checkedAt": "2026-09-10T13:30:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "Hazard（同K_1e1990fb所指Hazard）混合GB45067-2024第4.1条多项独立情形；安全生产法第38条仅覆盖使用国家明令淘汰、已报废的危及生产安全的设备情形，未取得许可生产、发生事故未全面检查、未监督检验、超参数运行等情形不在其内；需拆分各情形并分别关联特设法第40条、GB45067-2024判定义务等。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_44549E43707D4EBCB2D1BC7E67）；拆分后再判定 link 角色。",
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（使用国家明令淘汰、已经报废或达到报废条件的特种设备仍继续使用）。Clause C_D0B92022（安全生产法第38条：不得使用应当淘汰的危及生产安全的工艺、设备） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
   "reasonCodes": [
-    "COMPOSITE_HAZARD",
-    "PARTIAL_CLAUSE_COVERAGE"
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
   ],
   "evidenceRefs": [
     "E_6489ae362d83bb32ca1ee03e21748960830d651c62ec58cc60debfc1715929f2"
