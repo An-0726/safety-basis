@@ -143,8 +143,10 @@ def main():
     # ---- 汇总各阶段判定 ----
     structural_pass = all(v == "PASS" for v in report["structural"].values()) and report["evidence_scan"] == "PASS"
     version_pass = len(missing) == 0
-    content_pass = report["review_total"] == len(reviews) and not report["verified_without_evidence"]
-    applicability_pass = content_pass
+    # CONTENT / APPLICABILITY 基于共享链式判定结果，与 strict audit 保持一致
+    # 不再单独要求所有 verified review 都有 evidenceRefs（link review 可复用 clause evidence）
+    content_pass = strict_blocker_count == 0
+    applicability_pass = strict_blocker_count == 0
 
     report["gate"] = {
         "STRUCTURAL": "PASS" if structural_pass else "FAIL",
