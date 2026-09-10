@@ -6,8 +6,8 @@
 
 ACTIVE — Phase 16 最终验收进行中。
 
-当前知识树实测：**76 laws / 76 lawVersions / 103 clauses / 712 hazards / 755 links / 573 evidence / 75 requirements / 23 successions**。
-当前发布链：**644 publishable hazards / 722 eligible links / strictBlockers 0**（另有 21 rejected、12 superseded link）。
+当前知识树实测：**77 laws / 77 lawVersions / 105 clauses / 712 hazards / 756 links / 574 evidence / 75 requirements / 23 successions**。
+当前发布链：**644 publishable hazards / 723 eligible links / strictBlockers 0**（另有 21 rejected、12 superseded link）。
 `knowledge/manifest.json` 已与真实树精确对账。
 
 ## 当前总目标
@@ -44,6 +44,8 @@ Phase 16：最终验收。
 | `502bfa3` | **修复门禁漏洞**：`gate_link` 增加「目标 hazard 已合并/非 active」检查；12 条此类 verified 关联改为 superseded；strict audit 增加对应 excluded 分类。eligible links 由虚高的 726 修正为 714。 |
 | `196be91` | 合并 GB 50016-2014 重复版本实体：`C_GB50016_*` 归并到 V3 既有 `L025`，删除 `L_GB50016／LV_GB50016_2014`；laws/lawVersions 77/77 → 76/76。 |
 | `c6cb126` | 仓储类 8 条终审：新增 `C_XF1131_6_8`（堆垛间距五距，覆盖 H052/H053/H054/H055/H069）、`C_XF1131_3_3_1`（消防重点岗位培训，H067）、`C_GB15603_5_9`（易燃与氧化性气体应分离储存，H065）、`C031`（安全生产法第三十一条三同时，H079）；原泛化条款一律降 fallback。clauses 99→103，links 747→755，eligible links 714→722。 |
+| `18ddf82` | 合并并行方 handoff，补充本侧批次记录与真实计数。 |
+| `e9c8f6f` | H039 终审：新建 HJ 2026-2013《吸附法工业有机废气治理工程技术规范》实体（law + lawVersion + evidence + 第6.5.3条／第9.1.2条）；H039 改挂 6.5.3 为 direct，原《危险化学品安全法》第三十七条降 fallback。laws/lawVersions 76/76→77/77，clauses 103→105，links 755→756，eligible links 722→723。 |
 
 ### B. 照明/疏散指示依据核验（并行方，提交 `ef64e18`／`65e33cc`）
 
@@ -62,7 +64,6 @@ Phase 16：最终验收。
 ## 未完成事项
 
 1. **消防技术 direct 补齐**：`H_69344942331F4E74ACB10315FE`（先查库内是否已有 `GB 51309-2018` law/lawVersion/clause，禁止重复造 ID）、`H_590F1752697D4CA1B2D7F949F0`（先做疏散照明/备用照明语义校准）、`H_2689A44E…`（室内消火栓，需 GB 55036-2022 对应条款）、`H_79D2938F…`（疏散门，描述残缺需先重述）。
-2. **H039** 有机废气治理防爆：已核到 `HJ 2026-2013 6.5.3`（风机、电机和置于现场的电气仪表等应不低于现场防爆等级；降压解吸回收工艺应采用符合 GB 3836.4 的本安型防爆器件）与 `9.1.2`（电气系统设计应满足 GB 50058 要求），需新建 HJ 2026-2013 实体后入库。
 3. **H058 与 H043 疑似重复**（同为仓储消防安全教育培训，均指向 XF 1131-2014 3.3.2），需判定是否合并。
 4. 8 条 `H_*` 的【Phase8】版本待办（GB 5083-2023、GB 15603-2022 已可回填、GB 2894-2025、GB 9448-2025、GB 12801-2025 新版条款号）。
 5. 剩余 36 条 active hazard 的"尚未终审"note 必须随逐条终审收口，**禁止批量删除**。
@@ -82,7 +83,7 @@ Phase 16：最终验收。
 - `GB 51309-2018`：库内实体与 4.5.6／4.5.7／4.5.10(1)。
 - `GB 55037-2022`：10.1.8、10.1.9 与照明类 hazard 的关系（3.4.2／3.4.5／7.1.2 已核实原文）。
 - `GB 55036-2022`：3.0.5 室内消火栓条款完整原文（尚未取得）。
-- `HJ 2026-2013`：6.5.3、9.1.2（已核实，待建实体）。
+- `HJ 2026-2013`：已完成实体化与 H039 归位。
 - Phase8 新版条款号：GB 5083-2023、GB 2894-2025、GB 9448-2025、GB 12801-2025。
 
 ## 风险 / 阻塞

@@ -1,19 +1,20 @@
 {
- "entityType": "link",
- "entityId": "K_0791F8A7ED36EC89A5C49C",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "37a39fbfab9bf6dae5292658ccb2a9a84673db10f00f477f549a380e6cc382ad",
- "contextHashes": {
-  "hazard": "5f1715672924dc17ac4f356c4082661395a1e8dd265aa696df5a1f17e5c75e24",
-  "clause": "c94e3df21e87a75a90ed96450efe8d5fb2a7f79998a71cf24adbba682b2b0294"
- },
- "checkedAt": "2026-09-10T18:30:00+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "危险化学品安全法第三十七条要求按危险特性配置防爆等安全设施并保证正常使用，有机废气现场电气设备防爆等级不符属于防爆设施不满足要求。",
- "reasonCodes": [
-  "SPECIFIC_CLAUSE_REQUIRED"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_0791F8A7ED36EC89A5C49C",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "0719eb75fc01f479ab96bbf4232e9cd63661968d5e0906dd943945b94c18a8a0",
+  "contextHashes": {
+    "hazard": "79b9f302a636e4965f69662e9ff07420d028984c0ef6663eb79573a71ca931fc",
+    "clause": "c94e3df21e87a75a90ed96450efe8d5fb2a7f79998a71cf24adbba682b2b0294"
+  },
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "《危险化学品安全法》第三十七条要求按危险特性配置防爆等安全设施并保证正常使用，属通用安全设施义务，保留为 fallback；本条 direct 依据已由 HJ 2026-2013 第6.5.3条承担。",
+  "reasonCodes": [
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null
 }
