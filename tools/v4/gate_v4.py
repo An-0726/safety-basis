@@ -45,7 +45,7 @@ def main():
         rc, out = run(script)
         report["structural"][name] = "PASS" if rc == 0 else "FAIL"
     rc, out = run("scan_evidence_exact.py")
-    report["evidence_scan"] = "PASS" if "MISMATCHED reviews: 0" in out else "FAIL"
+    report["evidence_scan"] = "PASS" if rc == 0 else "FAIL"
 
     # CONTENT / APPLICABILITY
     reviews = load_dir(os.path.join("reviews", "links"))
