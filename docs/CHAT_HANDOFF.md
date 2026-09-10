@@ -1,223 +1,190 @@
 # Safety Basis Chat 续接状态
 
-> 最后更新：2026-09-10。每轮必须先读取本文件，再核对 GitHub 与本地同步盘真实状态；冲突时以真实最新资产为准并修正本文件。
+> 最后更新：2026-09-10。每轮先读取 `docs/PROJECT_PLAYBOOK.md`、本文件、`knowledge/manifest.json`，再读取 `chat-v4` 最新 HEAD。若文本与实际 Git 状态不一致，以实际 HEAD/文件为准并修正本文件。
 
 ## PROJECT_STATUS
 
 ACTIVE
 
-## 新窗口续接协议
+## 当前工作面
 
-每次接手必须按以下顺序恢复真实断点：
-
-1. 读取 `docs/PROJECT_PLAYBOOK.md` 和本文件。
-2. 读取 `chat-v4` 当前 HEAD。
-3. 比较本文件最近修改 commit 与 HEAD 的祖先关系和后续 commits。
-4. 核对 `knowledge/manifest.json`、实际实体文件、review sidecar、evidence。
-5. **实际 GitHub 文件状态与最新有效 commit 优先于 handoff 文本。**
-6. data/code 先提交并校验，再单独更新 handoff。
-7. 写入前再次读取 HEAD；分支前移时重算差集，只允许 non-force fast-forward。
-
-判断链：**HEAD → handoff 最后 commit → 中间 commits → manifest/实际文件**。
-
-## 当前总目标
-
-在保留 Codex V3 的 Stable ID、法规身份/版本、条款、隐患、link、evidence、release、网站与审计历史基础上，迁移到 Git-first、Chat 可长期维护的 V4 / Chat-first 架构。优先保证法规版本、条款原文、隐患内容、适用性和隐私正确；降低 SQLite、dependency hash、本地 Code Agent 对日常维护的强依赖。
+- GitHub 正式施工分支：`chat-v4`
+- 禁止直接修改 `main`
+- 本地同步盘：`ESH_Codex/work/safety-basis`，用于读取 V3 SQLite/私有原始资料；Google Drive 已同步到本地，施工 Agent 不需要访问 Drive 网站/API。
+- V3 冻结库：`source/master/safety.sqlite3`
+- SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
+- 最新可靠 V3 候选 release：`reviewed-20260909-r10`
+- 生产 selection 仍为 `reviewed-20260909-r4`，不得自行切换。
 
 ## 当前 Phase
 
-- Phase 1：V3 基线冻结 —— 完成
-- Phase 2：V4 Chat-first 架构 —— 完成
-- Phase 3：V4 门禁设计 —— 完成
-- Phase 4：V3 → V4 数据映射 —— 完成
-- Phase 5：只读迁移原型 —— 完成并验收
-- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；642/642 conservative verified hazard 完成；179/179 conservative verified link 已迁移为 candidate（decision=pending，适用性待 ChatGPT 复核）**
+- Phase 1～5：完成
+- Phase 6：进行中
+  - core laws：43
+  - current verified lawVersions：43
+  - conservative verified clauses：54 / 54
+  - conservative verified hazards：642 / 642，迁移完成
+  - conservative link candidates：179 / 179，迁移完成
+  - link applicability 专业复核：**10 / 179 已完成，169 条待复核**
 
-不得提前进入 Phase 7～10。
+不得因工程迁移完成而跳过 link applicability、法规版本和条款适用性门禁。
 
-## 当前工作分支
+## 当前 GitHub 基线
 
-`chat-v4`。禁止直接修改 `main`。
+本文件更新前 HEAD：
 
-## 当前真实基线
+`5f8584c0231cc2173e2e64a7cd56229d46aff0a3` — `review: adjudicate first 10 Phase 6 link candidates`
 
-### GitHub
+近期关键提交：
 
-本轮接手时真实 HEAD：`fe9c614`（`docs: hand off hazards batch 007b3`），对应 230/642。
+- `6bbcc18` — 完成 hazards 231～642，至此 642/642 hazards 完成
+- `12cd3e4` — hazards manifest 收口
+- `f26154b` — hazards-008 handoff
+- `899745c` — 迁移 179 条 link candidate
+- `1750884` / 后续 manifest sync — links=179、evidence=548
+- `513c8841e09ecccd2b8ce959e777d316a5541e93` — link candidate migration handoff
+- `5b9df1d2da73a527955d13a533d145b549509aee` — 新增 V4.1 法规驱动知识生产设计
+- `5f8584c0231cc2173e2e64a7cd56229d46aff0a3` — 首批 10 条 link applicability 专业复核
 
-本轮新增正式 data commits：
+所有分支推进必须 non-force；写入前重新读取 HEAD，若并发前移则先同步并重算差集。
 
-- `6bbcc18` — `data: complete Phase 6 conservative verified hazards migration (231-642, 412 items)`
-- `12cd3e4` — `data: sync manifest after hazards-008`
-- `f26154b` — `docs: hand off hazards-008`
-- `899745c` — `data: migrate 179 conservative verified links as candidates (Phase 6 links-001)`
-- `a68735e` — `data: sync manifest after links-001`
+## 当前 manifest
 
-正式分支推进仅使用 non-force fast-forward。未修改 `main`。
-
-### 本地同步盘 / V3 冻结基线
-
-工作面：`ESH_Codex/work/safety-basis`（本地同步盘，不访问 Google Drive 网站/API）
-
-`source/master/safety.sqlite3`：
-
-- size：110,002,176 bytes
-- SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
-- schemaVersion：3
-- integrity_check：ok
-- counts：laws 160；law_versions 161；clauses 2603；hazards 1125；links 2298；evidence 1124；verification 16159；law_successions 4
-
-`source/library/fulltext.sqlite3`：21,864,448 bytes；SHA-256 `8cedaf8f73134d78b3d489d862fb1540b2288b9326875c18f0aa23be2024b30e`。
-
-最新可靠 V3 候选 release：`reviewed-20260909-r10`，releaseHash `dc556a01cc24f95a3e6bfb21ebb1f89e13297c6ba469fa7c5d6b343348c0f3d2`。生产选择仍为 `reviewed-20260909-r4`，不得自行切换。
-
-## 本轮完成
-
-### 1. HEAD-first 恢复断点
-
-启动时重新读取 `chat-v4` HEAD、`PROJECT_PLAYBOOK.md`、handoff、manifest，并重新定位本地同步盘冻结 V3 SQLite。发现其他 Agent 已推进至 `fe9c614`（230/642），清理本地冲突的未跟踪文件后 fast-forward 同步，未重复已有批次。
-
-### 2. 重新计算 conservative verified hazard 集合
-
-从冻结 SQLite 只读重算，固定集合仍为 **642**，规则不变：
-
-- `hazards.status=已核验`
-- active，`merged_into` 为空
-- 最新 `entity_type=hazard / check_type=content` verification=`passed`
-- 对应 `verification_details.public_fields_reviewed=1`
-- Stable ID 排序
-
-本轮迁移固定排序第 **231～642 条，共412条**。首条：`H_4D08A17CE8C3456DA78E4D36A5`（实际以 SQLite 排序为准）；末条：`H_FFABAF11E6E54209ABC62D832C`。
-
-### 3. 数据迁移 —— hazards-008 收口
-
-新增 412 个 hazard JSON、412 个 content review sidecar；按 review evidenceRefs 仅补齐缺失的公开 evidence。本轮净新增 **261 个 evidence JSON**（151 个 evidence 已存在于 knowledge 中，跳过不重复写入）。
-
-本轮批次标记：`hazards-008`。
-
-至此 **全部 642 条 conservative verified hazard 迁移完成**。
-
-历史 hazard `conditions`、`measures`、旧标准线索按 Phase 6 原则保真迁移；本轮只迁移已经通过 V3 content review 的 hazard 内容，不把 hazard content verified 扩大解释为法规条款或 link/applicability 已终审。
-
-### 4. 全量校验
-
-对全部 642 条已迁移 hazard 执行全量校验（`tools/v4/validate_hazards.py`）：
-
-- 集合完整性：642/642，与 SQLite 固定集合完全一致，无缺失无多余
-- `reviewedContentHash`：642/642 按 V4 canonical JSON 重算匹配
-- `evidenceRefs`：642/642 指向的 evidence 文件均存在
-- 必填字段（title/description/measures）：642/642 非空
-- lifecycle=active & mergedInto=null：642/642
-- 隐私字段检查（无 legacy_payload/checked/revision/status 泄漏）：642/642
-- review decision=verified：642/642
-- review 未伪造 V3 不存在的 `method` 字段：642/642
-
-### 5. conservative verified link candidate 迁移 —— links-001
-
-在完成 642 hazards 后，继续完成 179 条 conservative verified link 的 candidate 迁移。从冻结 SQLite 查询固定集合：
-
-- `links.status=已核验`
-- 最新 `entity_type=link / check_type=applicability` verification=`passed`
-- verification `reason` 非空
-- normalized role in {direct, supporting, fallback}
-- 在 r10 release corroboration set 中
-- Stable ID 排序
-
-集合总量 **179**（178 direct + 1 fallback）。引用的 49 个 clause 和 158 个 hazard 均已在 V4 knowledge 中。
-
-新增 179 个 link JSON、179 个 applicability review sidecar；按 review evidenceRefs 补齐缺失的公开 evidence，净新增 **128 个 evidence JSON**（51 个已存在跳过）。
-
-**关键决策：所有 179 条 link review 的 decision 设为 `pending`，reasonCodes=`LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW`。** 不自动 verified，遵守 r8 质量事故禁令和项目规则。V3 的 verification 元数据（v3Result=passed、v3Reason 适用性说明）保留在 review sidecar 的 `migratedFromV3Verification` 中，供 ChatGPT 复核时参考。`contextHashes` 绑定当前 hazard 和 clause 内容 hash。
-
-本轮批次标记：`links-001`。
-
-## 本轮修改文件
-
-- `knowledge/hazards/`：新增 412 个 hazard JSON
-- `knowledge/reviews/hazards/`：新增 412 个 content review sidecar
-- `knowledge/links/`：新增 179 个 link JSON（candidate）
-- `knowledge/reviews/links/`：新增 179 个 applicability review sidecar（decision=pending）
-- `knowledge/evidence/`：净新增 389 个 public evidence JSON（261 from hazards + 128 from links）
-- `knowledge/manifest.json`：新增 `hazards-008` 和 `links-001`，累计更新为 hazards=642、links=179、evidence=548
-- `docs/CHAT_HANDOFF.md`：本交接更新
-
-未修改：`main`、V3 SQLite、fulltext SQLite、任何 V3 release、`site-selection.json`、生产网站/Pages 数据源。
-
-## 本轮校验
-
-- conservative hazard 集合重算：642，未扩大 verified 范围
-- 本轮固定区间：231～642，共412条
-- 412/412 active、non-merged、latest content review passed、`public_fields_reviewed=1`
-- 412/412 title / description / measures 非空
-- 412/412 `reviewedContentHash` 按 V4 canonical JSON 生成并绑定对应 hazard 内容
-- review sidecar 未伪造 V3 不存在的 `method` 字段
-- 全量 642 条校验全部通过（详见上方"全量校验"节）
-- manifest 已同步为 batch=`hazards-008`、hazards=642、evidence=420
-- 冻结 V3 DB 未修改；生产 release / Pages 未切换
-- 所有 data branch 更新均为 non-force fast-forward，未发生并发覆盖
-
-## 当前项目状态
-
-`knowledge/` 当前累计：
+`knowledge/manifest.json` 当前实体计数：
 
 - laws：43
-- current verified lawVersions：43
-- verified clauses：54 / 54 conservative set
-- verified hazards：**642 / 642 conservative set（已完成）**
+- lawVersions：43
+- clauses：54
+- hazards：642
+- links：179
 - evidence：548
 - successions：2
-- verified links：**0 / 179 verified；179 / 179 已迁移为 candidate（decision=pending，适用性待 ChatGPT 复核）**
 
-Phase 5 conservative candidate 总量：law 148、current lawVersion 148、clause 54、hazard 642、link 179。
+manifest 的 `links=179` 表示 179 个 link 实体已迁入，不表示 179 条都已经专业 verified。专业 review 状态由 `knowledge/reviews/links/` 决定。
 
-## 未完成事项
+## V4.1 设计补强
 
-1. Phase 6：**179 条 conservative verified link 的适用性复核**。link JSON 和 review sidecar 已迁移为 candidate（decision=pending），V3 适用性文本和 verification reason 已保留在 review sidecar 中供参考。需要 ChatGPT 逐条复核 `direct / supporting / fallback` 角色和 applicability，通过后将 decision 改为 verified。
-2. Phase 6：按价值补充剩余 catalogue law/current version；不阻塞 link 复核主链。
-3. Phase 6 完整校验后才能进入 Phase 7。
+新增规范性设计补充：
 
-## 下一轮第一步
+`docs/V4_1_REGULATION_DRIVEN_KNOWLEDGE.md`
 
-**先按 HEAD-first 协议核对 `chat-v4` HEAD、handoff、manifest 和实际文件。确认 642 hazards 和 179 link candidates 已全部完成后，进入 ChatGPT 适用性复核队列：逐条复核 179 条 link 的 `direct / supporting / fallback` 角色和 applicability，参考 review sidecar 中保留的 V3 v3Reason 适用性说明和 contextHashes 绑定的 hazard/clause 内容。复核通过的 link 将 review decision 从 pending 改为 verified；存在疑问的标记 needs-review 并记录原因。工程 Agent 可同时继续补充 catalogue law/current version 等不涉及法规专业最终判断的 Phase 6 工程工作。data/code 先提交，校验后再更新 handoff；写 Git 前再次读 HEAD，只允许 non-force fast-forward。**
+该文件已正式进入 `chat-v4`，在后续合并回总设计前，对以下事项具有规范效力：
 
-## 后续任务
+1. Safety Basis 采用双向知识生产：
+   - Hazard-driven：现场隐患 → 法规依据
+   - Regulation-driven：完整法规/标准 → Clause → 原子 Requirement → Hazard candidate → Link
+2. 不采用“一条 Clause = 一条 Hazard”；新增 Requirement 中间层，法规原文、AI 提炼、现场隐患三层分离。
+3. 完整法规导入后应逐条结构化、提炼可检查 Requirement、与已有 Hazard 查重/复用，再生成必要的新 Hazard candidate。
+4. 新法规版本导入要产生 Clause/Requirement/Hazard/Link 影响清单，不允许只机械替换标准号。
+5. V4 网站搜索能力不得退化：标题之外的 aliases、keywords、category、places、法规名称、条款和 Requirement 检查词都应参与召回，并保留相关度排序和搜索回归测试。
+6. 搜索可以宽召回；verified 状态仍必须严门禁，语义相似度不能自动证明法规适用性。
 
-1. ~~完成全部642 conservative verified hazard~~（已完成）
-2. ~~迁移179条 conservative verified link 为 candidate~~（已完成，decision=pending）；**复核179条 link 适用性并改为 verified**（待 ChatGPT 逐条判断）
-3. 按价值补 catalogue law/current version。
-4. Phase 7 法规与标准核验框架。
-5. Phase 8 历史报告条款重审。
-6. Phase 9 Validator；Phase 10 Gate。
-7. Phase 11～16 网站构建、候选 release、V3/V4 对比、差异修复和最终验收。
-8. Phase 17 仅经用户明确批准后切生产。
+后续应在合适节点把该补充整合进 `PROJECT_PLAYBOOK.md`、`ARCHITECTURE_V4_CHAT_FIRST.md` 和 `GATE_V4.md`，但不得因此阻塞当前 link 复核。
 
-## 法规/标准待核验队列
+## 179 条 Link Candidate 状态
 
-- 2026年新《中华人民共和国危险化学品安全法》生效后与既有危化框架法规的继续适用/替代边界：Phase 7 用当前官方来源专项核验。
-- conservative 642 中少量 secondary evidence：进入发布链前按 V4 evidence/gate 规则补强或保留 review requirement。
-- 历史 hazard `conditions`/`note` 中旧报告式依据文字、旧标准线索、粗糙整改表述：Phase 6 只保真迁移，不视为 link/applicability 已终审。
-- **179 条 conservative verified link 的适用性和角色（direct/supporting/fallback）判断**：全部进入待 ChatGPT 复核队列，工程 Agent 不得自动 verified。
+本地 Agent 已完成 179/179 candidate migration：
 
-## 风险 / 阻塞
+- 178 `direct`
+- 1 `fallback`
+- 初始 review 全部为 `pending`
+- review sidecar 已保存 V3 applicability reason、contextHashes 和 evidenceRefs
+- 不允许因为 V3 曾 passed 就批量自动升级 V4 verified
 
-- r8 历史质量事故禁令持续有效：禁止批量假定 link/条款适用性正确。
-- 大批量确定性迁移仅适用于 hazard content，不用于 link 适用性自动核验。
-- `tools/v4/migrate_v3.py` 仍存在读取 V3 verification 不存在的 `method` 字段风险；正式迁移不伪造该字段，后续独立代码单元修复。
-- 当前无需要用户决策的真实阻塞。
+### 已专业复核前 10 条
 
-## 用户待决策事项
+当前结果：**3 verified / 4 rejected / 3 pending**。
 
-无。尚未进入生产切换阶段。
+1. `K_006af5b6d4446159a05ac5f7b4` — **verified**：消防设施年度检测记录与《消防法》对应条款直接吻合。
+2. `K_00bb5b7226cf0cfd890c781e` — **rejected**：通用消防法线路义务不足以 direct 支撑仓储线路必须穿特定保护管的具体技术要求。
+3. `K_012500360729ae5276213ac4` — **pending**：Hazard 合并多项管理义务，单一 Clause 仅部分覆盖，应拆分或补齐 links。
+4. `K_015967d6f6a697f197ebbdad` — **rejected**：通用安全警示标志义务不能 direct 推出危化品暂存间必须标明“名称、性质、灭火方法”的具体内容。
+5. `K_0193ab27f4a0e63fd8f1ecf5` — **rejected**：Hazard 实际文本为“未见混杂”，不是隐患事实；且员工宿舍条款不能泛化为全部办公生活区域。
+6. `K_01DD57C7DD1768B0CD4B56F12C` — **verified**：GB 18597-2023 第4.6条与危险废物识别标志缺失直接对应；旧 conditions 条号留待清理。
+7. `K_03BF627B0B2DF4D35F2FCF5C39` — **pending**：Hazard 同时混合液体泄漏与气体净化，当前 Clause 仅覆盖液体要求。
+8. `K_04361764d56792472364b113` — **pending**：Hazard 同时包含责任制、规章制度、应急预案等，多义务需拆分/补齐 Clause。
+9. `K_04BD5E63412B9DEE6F3374C7F3` — **rejected**：液体泄漏收集 Hazard 错挂到气体收集净化条款，技术对象明显不一致。
+10. `K_04cdf5ee09cb1c9b9690bc5a` — **verified**：在危化品试剂间属于较大危险因素场所的前提下，通用安全警示标志义务直接适用；不扩张为 GB 13690 等专项危险性公示要求。
 
-## 明确禁止事项
+上述 review 已写入对应 `knowledge/reviews/links/*.json`，reviewer=`ChatGPT`，并绑定当前 link/hazard/clause hashes。
+
+## 当前暴露出的数据质量问题
+
+第一批 10 条已证明历史 V3 `passed` 不能直接等价为 V4 professional verified，主要问题类型包括：
+
+- `DIRECT_ROLE_OVERSTATED`：依据过宽却标成 direct；
+- `SPECIFIC_CLAUSE_REQUIRED`：需要更具体专项条款；
+- `COMPOSITE_HAZARD`：一条 Hazard 混合多个独立义务；
+- `PARTIAL_CLAUSE_COVERAGE`：单一 Clause 只覆盖 Hazard 一部分；
+- `FACT_NOT_HAZARD`：历史文本实际描述“未发现问题”；
+- `SCOPE_MISMATCH`：法规对象/场景和 Hazard 不一致；
+- `TECHNICAL_OBJECT_MISMATCH`：液体、气体等技术对象错配。
+
+后续应持续使用这些 reasonCodes 做质量归类，并在 Phase 8 集中修复历史 Hazard/Link 结构问题。
+
+## 下一步
+
+### 主任务：继续 169 条 Link applicability 专业复核
+
+从尚未复核的下一条 Stable-ID 排序 candidate 开始，逐条读取：
+
+`Link → Hazard → Clause → LawVersion/Law（需要时）→ Review/Evidence`
+
+判断：
+
+- role 是否应为 `direct / supporting / fallback`；
+- applicability 是否真实覆盖当前 Hazard；
+- jurisdiction / 对象 / 条件 / 限值是否匹配；
+- 是否存在新版/旧版条款错挂；
+- 是否需要更具体专项条款；
+- 是否属于组合型 Hazard 需要拆分。
+
+结论规则：
+
+- 明确成立 → `verified`
+- 明确错误 → `rejected`
+- 需要拆分、补证或法规专项核验 → `pending`
+
+不得为了提高通过率而把疑问项强行 verified。
+
+建议每 10～20 条形成一个 review commit；每批结束后更新本文件的累计统计。
+
+### 并行工程任务
+
+本地工程 Agent 可以继续处理不涉及法规最终判断的工作，例如：
+
+- catalogue law/current version 的候选准备；
+- validator / report 工具；
+- V4.1 Requirement schema/脚手架；
+- 搜索回归测试脚手架；
+- 数据质量扫描。
+
+但不得并发修改 ChatGPT 正在复核的同一批 link review sidecar。
+
+## 后续 Phase
+
+1. 完成 179 link applicability 专业复核及必要修复。
+2. 补 catalogue law/current version。
+3. Phase 7：法规与标准核验框架，纳入完整法规结构化、Requirement 提取、版本影响分析。
+4. Phase 8：历史报告条款与组合型 Hazard 重审。
+5. Phase 9：Validator，增加 Requirement/schema/hash/context 及搜索索引检查。
+6. Phase 10：Gate，增加 Requirement 和搜索非退化验收规则。
+7. Phase 11～16：候选 release、网站构建、搜索回归、V3/V4 对比、差异修复与验收。
+8. Phase 17：仅用户明确批准后切换生产。
+
+## 明确禁止
 
 - 不修改 `main`
-- 不正式切换生产网站/Pages 数据源
-- 不覆盖冻结 V3 SQLite、fulltext、正式 release
+- 不切换生产网站/Pages 数据源
+- 不覆盖 V3 SQLite/fulltext/正式 release
+- 不 force push / force update ref
 - 不恢复 r8 错误关联
-- 不批量把 pending/rejected/merged/invalid 自动改为 verified
-- 不因关键词相似自动核验 link 适用性
-- 不把 hazard content verified 等同于 basis/link verified
-- 不伪造法规、版本、条款、原文、时效、证据等级或 review 元数据
-- 不公开 Drive 私有路径、`snapshot_ref`、legacy payload
-- 不 force 推进 `chat-v4`
+- 不因关键词相似自动核验 Link
+- 不把 hazard content verified 等同于 link applicability verified
+- 不把 V3 passed 无条件继承为 V4 verified
+- 不伪造法规、标准、版本、条款、原文、证据或 review 元数据
+- 不公开私有路径、受限全文、snapshot_ref / legacy payload
+
+## 当前阻塞
+
+无需要用户决策的阻塞。当前工作可以继续推进。
