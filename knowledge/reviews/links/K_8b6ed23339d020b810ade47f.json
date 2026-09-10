@@ -3,18 +3,20 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T22:30:00+08:00",
-  "reason": "有发生坠落危险的部位，未设置扶梯和护栏，违反GB/T 13869-2017第5.1.1条用电产品周围应留有足够的安全通道和工作空间的要求，以及高处作业安全要求。有发生坠落危险的部位必须设置扶梯和护栏。",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "checkedAt": "2026-09-11T07:36:00+08:00",
+  "reason": "GB/T 12801-2008第5.7.1 c)直接规定设备、设施、管线上需要人员操作、检查和维修且存在高处坠落危险时应配置扶梯、平台、围栏和系挂装置等附属设施；与修订后的隐患事实逐项对应。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
-    "FALL_HAZARD_AREA_LADDER_GUARDRAIL"
+    "GBT12801_5_7_1_C_EXACT_MATCH"
   ],
-  "reviewedContentHash": "bafd1da18693230bd9e0b42ff51635a0c8db90de9267137a6584a140c7fa6037",
+  "reviewedContentHash": "bf8622208921967ad28a2a3628f207764f1f0998cfc3523c85c3d21989d25a87",
   "contextHashes": {
-    "hazard": "59189d64c0d04514787d78fc5a41f2218db3885c89fdc0d969a71d1e69ebc645",
-    "clause": "f840bb04cc16cdcbcd0aadbcecb879e828620cf8b81b0281b627b458e0d45489",
-    "link": "bafd1da18693230bd9e0b42ff51635a0c8db90de9267137a6584a140c7fa6037"
+    "hazard": "44f87e2c3659e75e87d9d25b7882a04c8fe9ff7577ce8d021289d91a4e0863d0",
+    "clause": "32482745af3df5c1b582fdc56cf795c7401bc1864a16f415413370cce4e8f861",
+    "link": "bf8622208921967ad28a2a3628f207764f1f0998cfc3523c85c3d21989d25a87"
   },
-  "evidenceRefs": []
+  "evidenceRefs": [
+    "EH_GBT12801_5_7_1_C"
+  ]
 }
