@@ -32,6 +32,7 @@ DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "v4-candidate-20260910")
 SHARD_SIZE = 200
 
 REGION = {"CN": "全国", "CN-32": "江苏", "CN-3201": "南京"}
+STATUS_LABEL = {"active": "现行有效", "upcoming": "即将实施", "repealed": "已废止", "unknown": "待核验"}
 
 _PUNCT = re.compile(r"[，。；：、（）()【】\[\]《》“”‘’'\"·•…—–_-]+")
 
@@ -159,6 +160,7 @@ def main():
             c = clauses[cid]
             lv = lvs.get(c.get("lawVersionId")) or {}
             c_shard_of[cid] = sid
+            validity = lv.get("validityStatus", "unknown")
             recs.append({
                 "id": cid,
                 "article": c.get("articlePath") or c.get("clauseNumber") or "",
@@ -166,7 +168,7 @@ def main():
                 "lawId": lv.get("lawId", ""),
                 "sourceUrl": c.get("sourceUrl") or lv.get("sourceUrl") or "",
                 "checked": clause_checked.get(cid, ""),
-                "status": "现行有效" if (c.get("lifecycle") or "active") == "active" else "已废止",
+                "status": STATUS_LABEL.get(validity, "待核验") if (c.get("lifecycle") or "active") == "active" else "已废止",
                 "region": REGION.get(c.get("jurisdictionCode") or "CN", "全国"),
             })
         clause_shards.append({"id": sid, "url": "data/clauses/%s.json" % sid})
@@ -228,8 +230,8 @@ def main():
     law_index = []
     for lid in sorted(laws):
         law = laws[lid]
-        # 法规库只列现行有效的法规身份；已被替代的历史身份由 succession 表达，
-        # 不作为独立条目出现在公开投影里。
+        # 法规库列出当前法规身份；版本状态由 law-version 决定，不能把 upcoming
+        # 的唯一版本硬标成“现行有效”。
         if law.get("lifecycle") != "active":
             continue
         refs = []
@@ -246,7 +248,10 @@ def main():
                                  "sourceUrl": v.get("sourceUrl", "")})
         if not versions:
             continue
-        active_ver = next((x for x in versions if x["validityStatus"] == "active"), versions[0])
+        active_ver = next((x for x in versions if x["validityStatus"] == "active"), None)
+        upcoming_ver = next((x for x in versions if x["validityStatus"] == "upcoming"), None)
+        display_ver = active_ver or upcoming_ver or versions[0]
+        display_status = "现行有效" if active_ver else STATUS_LABEL.get(display_ver.get("validityStatus"), "待核验")
         all_hids = sorted({hid for ref in refs for hid in ref["hazardIds"]})
         law_index.append({
             "id": lid,
@@ -254,10 +259,10 @@ def main():
             "aliases": law.get("aliases") or [],
             "level": law.get("documentKind", ""),
             "scope": REGION.get(law.get("jurisdictionCode") or "CN", "全国"),
-            "status": "现行有效",
-            "sourceUrl": active_ver.get("sourceUrl") or "",
+            "status": display_status,
+            "sourceUrl": display_ver.get("sourceUrl") or "",
             "issuer": law.get("issuer", ""),
-            "effectiveDate": active_ver.get("effectiveDate", ""),
+            "effectiveDate": display_ver.get("effectiveDate", ""),
             "checked": "",
             "clauseCount": len(refs),
             "hazardCount": len(all_hids),
@@ -282,7 +287,8 @@ def main():
                          "clauses": len(clauses), "links": len(links)},
         "health": {"verifiedHazards": len(si), "pendingHazards": 0,
                    "activeLaws": sum(1 for x in law_index if x["status"] == "现行有效"),
-                   "pendingLaws": 0, "invalidReferences": 0,
+                   "pendingLaws": sum(1 for x in law_index if x["status"] != "现行有效"),
+                   "invalidReferences": 0,
                    "stagedHazards": len(hazards) - len(si), "stagedLaws": 0},
         "files": {"searchIndex": "data/search-index.json",
                   "lawIndex": "data/law-index.json",
