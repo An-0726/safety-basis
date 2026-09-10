@@ -3,16 +3,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T19:30:00+08:00",
-  "reason": "工厂、仓库未设置消防车道（高层厂房、占地面积大于3000m²的甲乙丙类厂房和占地面积大于1500m²的乙丙类仓库未设置环形消防车道），违反消防法第二十八条不得占用、堵塞、封闭消防车通道的要求。消防车道是消防车到达火灾现场进行灭火救援的必要通道。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《中华人民共和国消防法》第二十八条禁止占用、堵塞、封闭消防车通道，属上位法兜底义务，保留为 fallback；本条 direct 依据已由《建筑防火通用规范》GB 55037-2022 第3.4.2条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "FIRE_LANE_REQUIRED"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "6cea9b2702c57469cae35648333e4667a12756d324de737bed04398b69688b27",
+  "reviewedContentHash": "86df9c8129aae236cc25a463519ed09b5331d9b8d579dba11d0aecbdfff5e22c",
   "contextHashes": {
-    "hazard": "0bf28d9d26c570d09ca775210d1b0f20f86943b7833e4a27afce14f77522706b",
+    "hazard": "031e3f690ec29cabb80b694ad6721e9961cb524d8adee3ddb9aed0e1b5ee2033",
     "clause": "abfdef3a692d4d5aaaf9ef30db5fc8fd1011a6018a2df93e9702efe37822c383",
     "link": "6cea9b2702c57469cae35648333e4667a12756d324de737bed04398b69688b27"
   },

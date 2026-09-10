@@ -4,7 +4,7 @@
 
 ## PROJECT_STATUS
 
-ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049、H073 已完成专业终审；H036、H064、H068 的批量误标已纠正。当前知识树实测：76 laws / 76 lawVersions / 94 clauses / 712 hazards / 741 links / 572 evidence，发布链 645 publishable hazards / 721 eligible links / strictBlockers 0。但全库仍存在**公开投影工作中间态泄漏**（39 条 active hazard 的 `note` 仍写"尚未完成逐条官方原文终审；核验完成前不得进入公开运行库"，却已进入 candidate 公开投影）、**已废止标准条文被当作现行依据**（GB 50016-2014 部分强制性条文已被 GB 55037-2022／GB 55036-2022 废止，库中仍有条款与 hazard 字段引用）、8 条 `H_*` 隐患的【Phase8】版本待办、8 处非官方证据来源、20 条 pending Requirement、14 条旧标准引用、12 条 partial-replaced hit、11 条 obligation-restatement、9 条 links-to-merged-hazard、47 对近似重复标题，以及 manifest 精确对账、V3/V4 最终差异和页面/PWA/隐私验收未收口，因此不得标记 READY_FOR_ACCEPTANCE。
+ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049、H073 已完成专业终审；H036、H064、H068 的批量误标已纠正。当前知识树实测：76 laws / 76 lawVersions / 96 clauses / 712 hazards / 743 links / 572 evidence，发布链 644 publishable hazards / 722 eligible links / strictBlockers 0。但全库仍存在**公开投影工作中间态泄漏**（39 条 active hazard 的 `note` 仍写"尚未完成逐条官方原文终审；核验完成前不得进入公开运行库"，却已进入 candidate 公开投影）（最高优先的**已废止标准条文被当作现行依据**问题已完成首批处置：GB 50016-2014 第7.1.3条改用 GB 55037-2022 第3.4.2条、第7.1.8条改用第3.4.5条第1款，一条错误引用已驳回，发布数由 645 如实降至 644；GB 55036-2022 侧与其余废止条文引用仍待处理）、8 条 `H_*` 隐患的【Phase8】版本待办、8 处非官方证据来源、20 条 pending Requirement、14 条旧标准引用、10 条 partial-replaced hit、11 条 obligation-restatement、9 条 links-to-merged-hazard、47 对近似重复标题，以及 manifest 精确对账、V3/V4 最终差异和页面/PWA/隐私验收未收口，因此不得标记 READY_FOR_ACCEPTANCE。
 
 ## 当前总目标
 
@@ -28,19 +28,19 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 
 - laws：76
 - lawVersions：76
-- clauses：94
+- clauses：96
 - hazards：712
-- links：741
+- links：743
 - evidence：572
 - requirements：75
 - successions：23
-- reviews/hazards：712，reviews/links：741，reviews/clauses：94，reviews/laws：76，reviews/law-versions：76
+- reviews/hazards：712，reviews/links：743，reviews/clauses：96，reviews/laws：76，reviews/law-versions：76
 
 最近一次机器发布链结果（本轮重跑）：
 
-- publishable hazards：645
-- eligible links：719
-- link review：719 verified / 20 rejected
+- publishable hazards：644
+- eligible links：722
+- link review：722 verified / 21 rejected
 - strict release blockers：0
 - strict warningCount：11（全部为 supporting_link）
 - strict excludedCount：106
@@ -140,9 +140,9 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 ### 发布链
 
 - total hazards：712
-- active / machine-eligible hazards：645
-- eligible links：719
-- link reviews：719 verified / 20 rejected
+- active / machine-eligible hazards：644
+- eligible links：722
+- link reviews：722 verified / 21 rejected
 - active hazards without qualifying direct/fallback：0
 - superseded/merged hazards：67
 - supporting verified links：11
