@@ -2,15 +2,15 @@
   "entityType": "link",
   "entityId": "K_5bfae4aa6d1056875adbfb9a",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "rejected",
   "reviewedContentHash": "08d9a62778d344fe0744449642f38e326ffd9b3782e746a0eeea671ffc4ea88e",
   "contextHashes": {
-    "hazard": "b9c4842ba59ee6ffd7d541e3df6b316554626f7ad2fb358b3ef8f9e704965469",
+    "hazard": "0cb57d4bb7ef22f610c1c855bcde511fc047b71328cefb0a6190fe3e91c8fb09",
     "clause": "c54c866004f6f7ae69b2245d80df064084683efdb11ce09f898ec3d55d6bfacb"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "checkedAt": "2026-09-10T13:30:00+08:00",
   "reviewer": "Doubao-Agent",
-  "reason": "Hazard文本为消防法第16条第（五）项义务原文复述（组织防火检查，及时消除火灾隐患），未指明具体未组织防火检查或火灾隐患未及时消除的缺陷事实，倾向于FACT_NOT_HAZARD；需确认检查记录中实际发现的缺陷后改写Hazard。",
+  "reason": "Hazard 为消防法第16条第（五）项义务原文复述（'组织防火检查，及时消除火灾隐患'），未指明未组织防火检查或火灾隐患未及时消除的具体缺陷事实；C021 为义务条文本身，关联不成立（Hazard 实体不合格而非条款问题）。已登记 hazard 数据修复任务（须以检查记录中的实际缺陷改写）。",
   "reasonCodes": [
     "FACT_NOT_HAZARD"
   ],

@@ -2,17 +2,18 @@
   "entityType": "link",
   "entityId": "K_13863d87b22b4a3eb596ad05",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "verified",
   "reviewedContentHash": "4ae0e8a83ad4f4232be7026dbff4cfcdbaa06466fed7e4c9f895da2c93eeb77f",
   "contextHashes": {
     "hazard": "8002192bbe62a1dbe74d2a847913cb66b51423e70cbbce80b26bb7c3dd595a96",
     "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "checkedAt": "2026-09-10T13:30:00+08:00",
   "reviewer": "Doubao-Agent",
-  "reason": "Hazard title为灭火器筒体未无明显缺陷和机械损伤，存在双重否定歧义：若字面理解为检查未见缺陷，则非隐患事实（FACT_NOT_HAZARD）；若本意为筒体存在明显缺陷或机械损伤（V3解释），则消防法第16条第1款第（二）项可作为未确保完好有效的direct依据，但更专项依据为GB50444-2008。需先澄清Hazard文本语义。",
+  "reason": "V3 SQLite links 表已核验记录确认：K_13863d87 -> C001（消防法第16条'按照国家标准、行业标准配置消防设施、器材…确保完好有效'）role=直接依据、status=已核验（source=concurrent_reverify_20260909）。灭火器筒体存在明显缺陷/机械损伤即未保持完好有效，消防法16条直接覆盖；Hazard title 双重否定（'未无明显缺陷'）为 V3 同源数据瑕疵，语义按 V3 核验=筒体存在缺陷，不修改原文，仅记录。",
   "reasonCodes": [
-    "FACT_NOT_HAZARD"
+    "DIRECT_MATCH",
+    "V3_VERIFIED_CROSS_REF"
   ],
   "evidenceRefs": [
     "E_65f90f9522ca13922e1b7a516de3908bf61fff74f188daf87d395d281e464cc8"

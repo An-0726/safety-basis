@@ -8,11 +8,16 @@
     "hazard": "b9a1c591fb8cbd0e7f730a279a5cf249cb163cd955c494fa337307ff8fb14849",
     "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
   },
-  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "checkedAt": "2026-09-10T13:30:00+08:00",
   "reviewer": "ChatGPT",
-  "reason": "该Hazard同时包含安全生产责任制、安全规章制度、事故应急救援预案和各级人员责任等多个独立要求；C018只直接覆盖全员安全生产责任制及安全生产标准化，不能单独覆盖整条Hazard。应拆分Hazard，或补齐C019及应急预案等Clause并明确各link覆盖范围后再核验。",
-  "reasonCodes": ["COMPOSITE_HAZARD", "PARTIAL_CLAUSE_COVERAGE"],
-  "evidenceRefs": ["E_a80c443ca8f803f474dd9aeb2bdf1c106bc0ff6ebf7a71a0e87c326a30d23722"],
+  "reason": "该Hazard同时包含安全生产责任制、安全规章制度、事故应急救援预案和各级人员责任等多个独立要求；C018只直接覆盖全员安全生产责任制及安全生产标准化，不能单独覆盖整条Hazard。应拆分Hazard，或补齐C019及应急预案等Clause并明确各link覆盖范围后再核验。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_9D076BD9D82444DCAA72489164）；拆分后再判定 link 角色。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "PARTIAL_CLAUSE_COVERAGE"
+  ],
+  "evidenceRefs": [
+    "E_a80c443ca8f803f474dd9aeb2bdf1c106bc0ff6ebf7a71a0e87c326a30d23722"
+  ],
   "migratedFromV3Verification": {
     "id": "VRF_fed2aaaf6a89f011f51bbfef_256",
     "reviewedAt": "2026-09-09T14:38:34+00:00",

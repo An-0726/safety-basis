@@ -8,11 +8,16 @@
     "hazard": "460035638ede7923fd6866ed12a6e7fb8ab9b4ea9e6d506e2b1e2282d720e1b7",
     "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
   },
-  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "checkedAt": "2026-09-10T13:30:00+08:00",
   "reviewer": "ChatGPT",
-  "reason": "该Hazard把全员安全生产责任制、规章制度、资金投入、双重预防机制等多项独立义务合并在一个实体中；C018只直接覆盖其中的全员安全生产责任制和安全生产标准化。当前link的applicability又同时引用C019、C015、C020，但link实际仅指向C018。应先拆分Hazard或补齐并明确多条Clause的覆盖关系后再决定是否verified。",
-  "reasonCodes": ["COMPOSITE_HAZARD", "PARTIAL_CLAUSE_COVERAGE"],
-  "evidenceRefs": ["E_b47ab44398a36cb40eeb26fb6cc6c3f36798920358437afbfb272c8f4b5729bd"],
+  "reason": "该Hazard把全员安全生产责任制、规章制度、资金投入、双重预防机制等多项独立义务合并在一个实体中；C018只直接覆盖其中的全员安全生产责任制和安全生产标准化。当前link的applicability又同时引用C019、C015、C020，但link实际仅指向C018。应先拆分Hazard或补齐并明确多条Clause的覆盖关系后再决定是否verified。\n【Phase8-20260910】复合隐患：已登记拆分任务 docs/V4_HAZARD_SPLIT_TASKS.md 项（H_56B7B9F8379B4E6E93F2342596）；拆分后再判定 link 角色。",
+  "reasonCodes": [
+    "COMPOSITE_HAZARD",
+    "PARTIAL_CLAUSE_COVERAGE"
+  ],
+  "evidenceRefs": [
+    "E_b47ab44398a36cb40eeb26fb6cc6c3f36798920358437afbfb272c8f4b5729bd"
+  ],
   "migratedFromV3Verification": {
     "id": "VRF_da65b6cb17c1562b2925eb15_182",
     "reviewedAt": "2026-09-09T14:38:34+00:00",

@@ -2,18 +2,17 @@
   "entityType": "link",
   "entityId": "K_1ce59ea0c2a4692ab95e6a10",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "rejected",
   "reviewedContentHash": "275a1cbfddde76c4d6b5e436085bf392f8e8c539b894118f56d6434c64587975",
   "contextHashes": {
-    "hazard": "b59cc73e369b98491a78099143696e73d0291b34eda4e88448b2dd379eaed19f",
+    "hazard": "de63347d0b86c862d05374e117dc1af4ea8d72fce02d49da09ddfb8187c6bd14",
     "clause": "6a7a426c05becb4c97f8e2c3c45cb2f2e5df41d59e0b7279dea51b616fa3916f"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "checkedAt": "2026-09-10T13:30:00+08:00",
   "reviewer": "Doubao-Agent",
-  "reason": "Hazard文本为《江苏省工业企业安全生产风险报告工作实施方案》第九条规范内容复述（可以一并纳入较大以上安全风险进行管理），缺少明确的未履行缺陷事实，倾向于FACT_NOT_HAZARD；且该条为江苏地方规定，安全生产法第41条第1款仅能作为上位supporting。需确认Hazard真实缺陷语义后定。",
+  "reason": "Hazard 为《江苏省工业企业安全生产风险报告工作实施方案》第九条授权性规范复述（'可以一并纳入较大以上安全风险进行管理'）：非缺陷事实、非强制性义务；C024（安法41条第1款）无法与任何'未履行'事实对应，关联不成立。已登记 hazard 数据修复任务（待现场缺陷事实改写或拆分）。",
   "reasonCodes": [
-    "FACT_NOT_HAZARD",
-    "SCOPE_MISMATCH"
+    "FACT_NOT_HAZARD"
   ],
   "evidenceRefs": [
     "E_3148f092bd96bb205819bd7c26548a399b99e2835413cc988c21019d21bfa287"
