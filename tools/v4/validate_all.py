@@ -9,7 +9,14 @@
 5. scan_quality      - 质量扫描（duplicates / dangling / stale refs / obligation patterns）
 6. version_impact    - 版本影响（只报告，不阻塞）
 
-退出码：0=全部通过；1=存在结构性错误（1-3 任一失败）。
+退出码：0=全部通过；1=存在阻断性错误。
+
+阻断集合 = catalogue / requirements / review_binding / evidence_exact：
+- 前三个是结构性错误；
+- scan_evidence_exact 会返回非零（review 引用的证据与其条款所属法规不匹配），
+  属于数据错误，此前被排除在阻断之外，导致它失败时 validate_all 仍报
+  "BLOCKING failures: none" 且退出码 0 —— 与 CI 中 gate_v4 的 EVIDENCE 阶段判定不一致。
+scan_quality / version_impact 是候选清单型报告，只输出不阻断。
 """
 import io
 import os
@@ -26,7 +33,7 @@ STEPS = [
     ("scan_quality", "scan_quality_v4.py"),
     ("version_impact", "version_impact.py"),
 ]
-BLOCKING = {"check_catalogue", "check_requirements", "check_review_binding"}
+BLOCKING = {"check_catalogue", "check_requirements", "check_review_binding", "scan_evidence_exact"}
 
 
 def main():

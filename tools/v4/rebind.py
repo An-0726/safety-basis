@@ -39,6 +39,7 @@ REVIEW_TO_ENTITY = {
     "clauses": "clauses",
     "hazards": "hazards",
     "links": "links",
+    "requirements": "requirements",
 }
 
 
@@ -124,12 +125,21 @@ def main():
                     if args.fix and patch_hash(path, ctx.get("clause"), cur_c):
                         fixed.append({"file": path, "entityId": eid, "kind": "stale_clause_context"})
 
+    # requirement 实体自带 reviewStatus；标记 verified 却没有 sidecar 属于审核留痕缺失
+    req_rev_ids = {rev.get("entityId") for rev, _ in load_reviews(os.path.join("reviews", "requirements"))}
+    for rid, (obj, path) in entities["requirements"].items():
+        if obj.get("reviewStatus") == "verified" and rid not in req_rev_ids:
+            issues.append({"file": path, "entityId": rid, "kind": "verified_without_sidecar"})
+
+    fixed_keys = {(f["file"], f["kind"]) for f in fixed}
+    unfixed = [it for it in issues if (it["file"], it["kind"]) not in fixed_keys]
     report = {
         "checked": {k: len(v) for k, v in entities.items()},
         "issues": issues,
         "issueCount": len(issues),
         "fixed": fixed,
         "fixedCount": len(fixed),
+        "unfixedCount": len(unfixed),
         "fixMode": bool(args.fix),
     }
     if args.json:
@@ -145,10 +155,10 @@ def main():
             if len(issues) > 60:
                 print("  ... and %d more" % (len(issues) - 60))
             if args.fix:
-                print("fixed: %d" % len(fixed))
+                print("fixed: %d, still needing manual attention: %d" % (len(fixed), len(unfixed)))
             else:
                 print("re-run with --fix to refresh them.")
-    return 0 if not issues or args.fix else 2
+    return 0 if not unfixed else 2
 
 
 if __name__ == "__main__":
