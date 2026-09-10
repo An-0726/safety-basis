@@ -4,14 +4,17 @@
  "clauseId": "C_00EDA4F0099D3AD8ED968F56",
  "seq": 1,
  "title": "第二十一条：生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状",
- "description": "生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。",
+ "description": "生产、储存危险化学品的单位应在作业场所设置通信、报警装置，并保证其处于适用状态。",
  "sourceQuote": "生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。",
- "scope": "依据条款适用范围",
- "checkItems": [],
+ "scope": "生产、储存危险化学品的单位",
+ "checkItems": [
+  "核对作业场所是否设置了通信、报警装置。",
+  "核对通信、报警装置是否处于适用状态（含功能验证记录或现场试通）。"
+ ],
  "lifecycle": "active",
- "reviewStatus": "pending",
- "reviewedAt": "",
- "reviewer": "",
- "reviewReason": "AI 草案，待专业校准（checkItems 未填充）",
- "canonicalHash": "b07efb66b33734fef1d8460de7f696547afe31c54d407e4a31af73c5875cd879"
+ "reviewStatus": "verified",
+ "reviewedAt": "2026-09-10T22:40:00+08:00",
+ "reviewer": "ZCode-DeepSeek",
+ "reviewReason": "语义复核：原文为单一义务（设置并保证适用），检核拆为『是否设置』与『是否可用』两项，未新增装置类型或检测周期。",
+ "canonicalHash": "671dae2265e338110eec84dd462e94b6fa43ade5583cbd2d19848afad5cb21bc"
 }
