@@ -4,17 +4,17 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T17:15:00+08:00",
-  "reason": "建设项目安全设施施工单位资质或同步施工不符合要求，违反安全生产法第三十六条'安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准'。安全设施施工必须由具备相应资质的单位承担，并与主体工程同步施工。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "H042 为建设项目安全设施未由取得相应资质的施工单位施工，或未与主体工程同时施工；《安全生产法》第三十一条直接规定建设项目的安全设施必须与主体工程同时设计、同时施工、同时投入生产和使用，确认为 direct 依据。原第三十六条（安全设备的设计、制造、安装等应符合标准）与『建设项目安全设施施工』不是同一事项，降为 fallback。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "SAFETY_FACILITIES"
+    "DIRECT_CLAUSE_CONFIRMED",
+    "THREE_SIMULTANEITIES"
   ],
-  "reviewedContentHash": "3589a9a54724ac84ef7315e082484ce9d4c00db018b74fa92fef9425197ee8ed",
+  "reviewedContentHash": "5794c0157e322614f6d0f10d62b1cea29bab91b8bd170d97ae70393acb25e568",
   "contextHashes": {
     "hazard": "d753eed781426af864a3021b25801f37ed627cd3f8e92410a8f2b5a279fa4644",
-    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
+    "clause": "de630f3167d31d9aa622cf3bc33eea40c17c0fda2b078a2945fe428808d80914",
     "link": "3589a9a54724ac84ef7315e082484ce9d4c00db018b74fa92fef9425197ee8ed"
   },
   "evidenceRefs": []
