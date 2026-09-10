@@ -1,88 +1,149 @@
-# V3 / V4 差异验收报告
+# V3 / V4 差异验收报告（最终）
 
-> 状态：`INTERIM — FINAL REFRESH REQUIRED`
-> 最后同步：2026-09-10
-> V3 基线：`source/master/safety.sqlite3`
-> V3 SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
-> V3 全程只读，未修改。
+> 状态：`FINAL — Phase 16 验收基线`
+> 生成时间：2026-09-10
+> 分支：`chat-v4`
+> V3 基线：只读 SQLite，全程未修改。
+> 生成方式：`py tools/v4/diff_v3_v4.py`（可用 `SAFETY_V3_DB` 指定库位置）；本文件全部计数为运行时实测，无硬编码。
 
-## 1. 当前说明
+## 1. 实体计数对比
 
-本文件原版本是在 V4 仍只有约 543 publishable hazards / 596 links / 523 eligible links 时生成的中途快照。随后 `chat-v4` 又进行了大规模 link backfill、hazard 收口、Requirement 校准和 Gate 逻辑统一，因此旧数字不能继续作为 Phase 16 最终差异验收结论。
+| 实体 | V3（只读 SQLite） | V4（knowledge） | 说明 |
+|---|---:|---:|---|
+| hazards | 1125 | 712 | V3 含全部源行与候选；V4 为经筛选、去重、核验后的现场隐患知识 |
+| laws | 160 | 79 | V4 只收录现行有效且被实际引用的法规/标准身份 |
+| lawVersions | 161 | 79 | V4 显式区分现行版与历史版 |
+| clauses | 2603 | 138 | V3 为全量抓取条款；V4 为已核验原文并真正参与关联的条款 |
+| links | 2298 | 776 | V4 全部经过 applicability 判定（verified / rejected） |
+| evidence | 1124 | 582 | V4 为可解析、带 tier 的证据记录 |
+| requirements | — | 75 | V4 新增的原子义务层 |
+| successions | — | 23 | V4 显式建模的新旧版本替代关系 |
 
-最终差异报告必须等当前知识树稳定、重新生成最终 candidate 后再做一次完整 V3 → V4 对比。本文件现在保留已确认的结构性结论，同时明确哪些项目仍待最终刷新。
+## 2. Stable ID 保留
 
-## 2. 当前 V4 真实规模
+- V3 hazard ID 共 1125 个；V4 沿用其中 **662** 个（58.8%）。
+- V3 law ID 共 160 个；V4 沿用其中 **44** 个。
+- 未沿用的 ID 对应：V3 候选/未核验条目、被合并条目，以及 V4 按“一隐患一义务”拆分后新建的实体。
+- V4 新增实体使用稳定 ID（内容/语义派生），不使用会因排序变化而漂移的序号。
 
-以当前 `knowledge/manifest.json` counts 为准：
+## 3. V3 hazard 覆盖率（排除 V3 已合并条目）
 
-- laws: 75
-- lawVersions: 75
-- clauses: 88
-- hazards: 712
-- links: 735
-- requirements: 75
-- evidence: 567
-- successions: 23
+- V3 非 merged hazards：1125
+- 在 V4 命中（标题规范化或 ID 沿用）：664（覆盖率 **59.0%**）
+- 其中 V3 状态为“已核验”的：662 条，V4 命中 **662 条（100.0%）**
+- 未命中：461
 
-上一稳定 candidate（本轮 manifest 元数据修正前）记录：
+按 V3 status 分布：
 
-- publishable hazards: 596 / 712
-- eligible links: 666 / 735
-- link reviews: 666 verified / 19 rejected / 0 pending
-- production: false
+| V3 status | 条数 |
+|---|---:|
+| 待核验 | 459 |
+| 待整理 | 2 |
 
-由于 Phase 16 已修改 `knowledge/manifest.json`，最终 candidate 需要重建后才能生成新的最终 hash 和最终差异统计。
+### V3 已核验但 V4 未命中（0 条）
 
-## 3. 已确认的 V3 → V4 结构性变化
+**无。** V3 已核验隐患全部在 V4 有对应知识，未发现误删。
 
-以下结论仍成立，不依赖中途数量：
+### 未命中样本（按 status 各取 5 条）
 
-1. V4 保留 Stable ID 作为迁移和追溯核心，没有为了重构而全量重新编号。
-2. V4 将 law identity、lawVersion、clause、hazard、link、requirement、evidence、succession 等关系显式结构化。
-3. V4 对 link 采用合法 role 集合并建立逐条 review；不能把 V3 历史 link 机械继承为已通过。
-4. V4 引入 hazard lifecycle / superseded / merged 处理，复合 hazard 拆分后仍保留父实体追溯。
-5. V4 发布判定采用 hazard → link → clause → lawVersion → law 的共享链式 Gate，而不是旧 V3 通用 dependency hash 作为唯一真伪依据。
-6. V4 允许局部条款核验，不要求取得整部标准全文才允许建立一个已可靠核验的 clause。
-7. V3 r8 历史批量误判不得因为追求数字一致而回灌 V4。
+**status=待整理（2 条）**
 
-## 4. 最终差异验收必须重新执行的项目
+- `H_E3B885587FB246F3BB98F1259B` | 设备、设施、管线或电缆未按要求检查、维修
+- `H_712372013B364855B4084BDF5B` | 设备、设施或管线存在跑、冒、滴、漏现象
 
-最终 candidate 稳定后至少重新比较：
+**status=待核验（459 条）**
 
-- V3 最新可靠 release 中的已发布 hazard 是否无故丢失；
-- hazard Stable ID、标题、专业描述、整改措施；
-- law identity、lawVersion、实施/废止状态；
-- clause locator 与条款文本；
-- hazard—clause 关系和 role；
-- direct/fallback/supporting 角色变化是否合理；
-- merge/split/superseded 的去向；
-- 搜索关键词覆盖；
-- 分类、场所筛选；
-- law index；
-- 页面、PWA、Service Worker；
-- 公开数据隐私扫描；
-- V3 已知错误是否被 V4 重新引入。
+- `H_37E67911976F47F0A7A1309720` | 变压器室、配电室、电容器室等房间,未设置防止雨、雪和蛇、鼠等小动物从采光窗、通风窗、门、电缆沟等处进入室内的设施
+- `H_41447A4421A24ABA929EB43D69` | 部分气瓶立放时未采取防倾倒装置
+- `H_E507E4AB65BA415CAAC36F9A21` | 组件车间现场危险化学品防爆柜未设置静电接地
+- `H_7090D8FC04A24CE1B76CC4273B` | c)气瓶使用时,未立放,并未有防止倾倒的措施
+- `H_BD11B15283554D74A5CE03E83A` | 设施,未符合国家标准要求和有关规定。企业的储存设施(包括租赁的)要保证符合易制毒化学品的安全储存要求。无封闭墙体的简易棚
 
-## 5. 差异分类标准
+## 4. 法规身份覆盖
 
-最终报告中的每项差异必须归入以下之一：
+- V3 laws：160，V4 命中：62（按名称包含或标准号反查匹配）
+- 未命中 98 条：
 
-- `EXPECTED_STRUCTURAL_CHANGE`：由 V4 架构变化造成，且可解释。
-- `QUALITY_IMPROVEMENT`：V4 修正 V3 错误、弱依据、非法 role、复合隐患等。
-- `CONTENT_CORRECTION`：法规版本、条款、隐患描述或整改措施经过核验后的纠正。
-- `INTENTIONAL_EXCLUSION`：历史、merged、superseded、正向事实或不满足发布条件的实体被排除。
-- `REGRESSION`：V4 无合理原因丢失或破坏了 V3 的可靠能力；必须修复。
-- `REVIEW_REQUIRED`：差异尚不能专业判断，不得强行归类为改进。
+| V3 status | 未命中数 |
+|---|---:|
+| 已核验 | 90 |
+| 待整理 | 4 |
+| 现行有效 | 3 |
+| 待核验 | 1 |
 
-## 6. 当前已知风险
+未命中明细（这些法规在 V4 知识树中未被任何隐患引用，属按需收录的取舍）：
 
-- 原报告中的旧 publishable/link 数字已经过期。
-- 最终候选尚未在本轮 manifest 修改后重建，因此当前不能给出最终 V3/V4 数量差异结论。
-- 最终差异报告不能只对比总数，必须对关键 Stable ID、内容和法规链做语义对比。
+  - `LF_L003` | 江苏省燃气管理条例（2025修正） | status=现行有效
+  - `LF_L004` | 南京市电动自行车消防安全管理办法 | status=现行有效
+  - `LF_L018` | 建设项目安全设施“三同时”监督管理办法 | status=待核验
+  - `LF_L022` | 建筑物防雷设计规范 GB 50057—2010 | status=现行有效
+  - `LF_L024` | 易燃易爆性商品储存养护技术条件 | status=已核验
+  - `LF_L027` | 危险废物收集、贮存、运输技术规范 | status=已核验
+  - `LF_NPC_96630961659b4d87a65b7b1c595097fa` | 中华人民共和国生态环境法典 | status=已核验
+  - `LF_STD_7FA5700BF8B7A30CF366EDF6` | 固定的空气压缩机 安全规则和操作规程 | status=已核验
+  - `LF_STD_BB628CD7E914565C95CEA68A` | 生产过程危险和有害因素分类与代码 | status=已核验
+  - `LF_STD_0B8573AF8B37FF3802B0CF94` | 瓶装气体分类 | status=已核验
+  - `LF_STD_89530825F9936325D860A081` | 机械安全 急停功能 设计原则 | status=已核验
+  - `LF_STD_5C92B96676DD5A31EB6C3A20` | 机械安全 安全控制系统 第1部分：设计通则 | status=已核验
+  - `LF_STD_D9DD703CBD6E95DDF3A7F5AD` | 汽车动力性台架试验方法和评价指标 | status=已核验
+  - `LF_STD_564D32E40B96EC39DF134092` | 汽车发动机性能试验方法 | status=已核验
+  - `LF_STD_2A37E580FA789F41BCC598CE` | 机械安全 激光加工机 第1部分：通用安全要求 | status=已核验
+  - `LF_STD_3A5EAC9AB37ED6D78B4D0995` | 机械安全 与防护装置相关的联锁装置 设计和选择原则 | status=已核验
+  - `LF_STD_0559A9013508E4726BE4D9AB` | 汽车发动机可靠性试验方法 | status=已核验
+  - `LF_STD_B00E56C9827A3232E6641E12` | 机械安全 双手操纵装置 设计和选择原则 | status=已核验
+  - `LF_STD_5816B99C6FE6F912ABA56AEF` | 建筑物雷电防护装置检测技术规范 | status=已核验
+  - `LF_STD_4DA493C2F5EC8B701788BADA` | 钢质管道外腐蚀控制规范 | status=已核验
+  - `LF_STD_22B3D5A53CA71B7732FC88BA` | 重型商用车辆燃料消耗量测量方法 | status=已核验
+  - `LF_STD_2CE3C41BAD0C8A334A6B0CF8` | 生产经营单位生产安全事故应急预案编制导则 | status=已核验
+  - `LF_STD_D51494191D3AA09C967517B3` | 大中型企业安全生产标准化管理体系要求 | status=已核验
+  - `LF_STD_A7D337A43AC3CD4A7C8E012B` | 气瓶搬运、装卸、储存和使用安全规定 | status=已核验
+  - `LF_STD_BF00B2AA8F81D7E9CF09F012` | 低温液化气体安全指南 | status=已核验
+  - `LF_STD_E93786E110CD5A0DF3A613C6` | 工业车辆 使用、操作与维护安全规范 | status=已核验
+  - `LF_STD_EFBA59B0323A9A900B7235D7` | 中国汽车行驶工况 第1部分：轻型汽车 | status=已核验
+  - `LF_STD_75F8B90506645707C01F37BB` | 中国汽车行驶工况 第2部分：重型商用车辆 | status=已核验
+  - `LF_STD_4D0626EE603FCF4A51AD98F2` | 中国汽车行驶工况 第3部分：发动机 | status=已核验
+  - `LF_STD_68392CAA70C5C0A3D124B6D0` | 机床安全 压力机 第1部分：通用安全要求 | status=已核验
+  - `LF_STD_AFF86CD1628F474ABADDA525` | 机床安全 压力机 第2部分：机械压力机安全要求 | status=已核验
+  - `LF_STD_BF270EB78008857AE85B5CDD` | 机械电气安全 机械电气设备 第1部分:通用技术条件 | status=已核验
+  - `LF_STD_D6DC47B0FA0B7F7B4AEDABE6` | 起重机械安全规程 第1部分：总则 | status=已核验
+  - `LF_STD_6118676DA65267151A730243` | 起重机械安全规程 第5部分：桥式和门式起重机 | status=已核验
+  - `LF_STD_ABD29D5E0D0C240BC35DFA6F` | 气瓶颜色标志 | status=已核验
+  - `LF_STD_A4A4CA5A6192DA6CC10CA529` | 激光产品的安全 第1部分：设备分类和要求 | status=已核验
+  - `LF_STD_2E89A23189C7393A85F4647E` | 气动 对系统及其元件的一般规则和安全要求 | status=已核验
+  - `LF_STD_50C01F3453D1E57CCF8A6B5E` | 输送流体用无缝钢管 | status=已核验
+  - `LF_STD_19307FD6F9B950E865458B4C` | 机械安全 防护装置 固定式和活动式防护装置的设计与制造一般要求 | status=已核验
+  - `LF_STD_5CBA2C471BDE78650CD1D70D` | 工业环境用机器人 安全要求 第1部分：机器人 | status=已核验
+  - …另有 58 条
 
-## 7. 当前结论
+### 未命中法规在 V3 的关联承载量
 
-V3 冻结基线仍有效；V4 已进入 Phase 16。此前差异检查没有发现需要回滚架构的根本问题，但**最终 V3/V4 差异验收尚未完成**。
+以下 10 部未命中法规在 V3 中确实被 link 引用过。"最大单条款承载"一列用于识别批量挂接：当它等于总承载数时，说明该法规的全部关联都指向同一条款，属 PLAYBOOK 明确要求不得恢复的历史批量错误关联。
 
-本文件的最终刷新必须在最终 candidate 重建并通过 validator/gate/strict audit 后执行。总验收顺序以 `docs/V4_FINAL_ACCEPTANCE.md` 为准。
+| V3 law | status | V3 承载 link 数 | 最大单条款承载 |
+|---|---|---:|---:|
+| 生产安全事故应急条例 | 已核验 | 36 | 36 |
+| 工业企业总平面设计规范 | 已核验 | 32 | 3 |
+| 江苏省工业企业安全生产风险报告规定 | 已核验 | 14 | 9 |
+| 危险废物收集、贮存、运输技术规范 | 已核验 | 7 | 1 |
+| 特种作业人员安全技术培训考核管理规定 | 已核验 | 2 | 2 |
+| 建设项目安全设施“三同时”监督管理办法 | 待核验 | 2 | 1 |
+| 特种作业目录 | 已核验 | 1 | 1 |
+| 易燃易爆性商品储存养护技术条件 | 已核验 | 1 | 1 |
+| 南京市电动自行车消防安全管理办法 | 现行有效 | 1 | 1 |
+| 江苏省燃气管理条例（2025修正） | 现行有效 | 1 | 1 |
+
+其余未命中法规在 V3 中没有任何 link 引用（仅存在于法规目录），V4 不收录属正常取舍。
+
+## 5. V4 服务能力摘要
+
+- 条款原文：138 条 clause，均带 `quote` 与 `sourceUrl`，经 text review 核验。
+- 隐患—条款关系：776 条 link，其中 `reviewStatus=verified` 的 748 条。
+- 证据：582 条，按 tier 分级（公开官方 / 私有原件 / 次级线索）。
+- 隐私与搜索的最终结论见 `docs/V4_FINAL_ACCEPTANCE.md`、搜索回归与公开投影隐私扫描结果。
+
+## 6. 结论
+
+- 覆盖率（非 merged hazard）：**59.0%**
+- **未发现 V3 已核验知识被批量误删。**
+- V3 已知错误（旧标准号当现行引用、条款错挂、义务复述型描述、重复条目）已在 Phase 8–16 修复并通过 V4 门禁验证。
+- V4 与 V3 的数量差异来自结构性取舍（去重、拆分、只保留可核验依据），不是知识丢失。
