@@ -51,8 +51,21 @@ V3 SQLite SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd
 
 `source/releases/v4-candidate-20260910/`（candidate=true, production=false）
 - `release.json` 已按当前 HEAD 重建：sourceStateHash 与当前 knowledge 一致、counts 匹配、reviewStatsByLink=128/21/32。
+- **链式发布门禁已生效**：`search-index.json` 只含 **113 条 publishable hazard**（至少 1 条 eligible verified direct/fallback link + hazard 内容审查通过 + clause 审查通过，与 `strict_release_audit.py` 完全对齐）；全部 662 条 hazard 保留在 `data/hazards/` 和 `search-index-all.json` 供验收查看。
 - Gate 六级：STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE/RELEASE 全部 PASS。
 - production 未切换（需用户批准）。
+
+## 严格发布审计（Strict Release Audit）
+
+GPT 新增 `tools/v4/strict_release_audit.py`（只读）和 `tests/test_v4_strict_release_audit.py`（CI）。
+- **strictVerdict: BLOCK**（157 blockers, 1 warning）
+- eligibleLinks: 126 / 181
+- eligibleHazards: **113 / 662**（与 build_release 链式门禁一致）
+- backfill（20 条补迁）eligible: 0 / 20（全部无 link，正确）
+- Blocker 分类：hazard_content 48、pending_link_on_blocked_hazard 31、law 28、lawVersion 28、clause 22
+- 主要原因：law/lawVersion/clause/hazard 的 review 缺失或 hash stale（非数据错误，是审查覆盖尚未完成）
+- 详细报告：`docs/V4_STRICT_AUDIT.md`
+- 最终 production 切换前必须消除所有 blocker 或经专业验收确认可豁免。
 
 ## 本轮完成
 

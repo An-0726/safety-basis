@@ -14,7 +14,7 @@
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "verified": 114,
+  "verified": 112,
   "rejected": 17,
   "pending": 24
  },
@@ -25,12 +25,12 @@
   "pending": 32
  },
  "publishStats": {
-  "publishable": 117,
-  "not_publishable": 545,
+  "publishable": 113,
+  "not_publishable": 549,
   "by_status": {
-   "unreviewed": 502,
+   "unreviewed": 504,
    "pending": 24,
-   "verified": 114,
+   "verified": 112,
    "verified_with_pending": 1,
    "rejected": 17,
    "verified_with_rejections": 4
@@ -74,8 +74,10 @@
    "title": "电源线路私拉乱接",
    "status": "pending",
    "reasons": [
+    "hazard content review missing or stale",
     "pending links: K_dfbbf4fbb290903fc3cc86b325",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_dfbbf4fbb290903fc3cc86b325",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -703,12 +705,23 @@
    ]
   },
   {
+   "hazardId": "H_0A53849CB39848628056FDADEB",
+   "title": "车间外乙炔气瓶储藏棚内可燃气体报警器未正常使用",
+   "status": "verified",
+   "reasons": [
+    "hazard content review missing or stale",
+    "no eligible verified direct/fallback link"
+   ]
+  },
+  {
    "hazardId": "H_0AEEA3C7BD0D4396AF871679A0",
    "title": "对未列入安全风险目录的其他安全风险,经评估确定为较大以上安全风险的,可以一并纳入较大以上安全风险进行管理",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_1ce59ea0c2a4692ab95e6a10",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_1ce59ea0c2a4692ab95e6a10",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -933,7 +946,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_e67fe6b5a8c7a80db603944b",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_e67fe6b5a8c7a80db603944b",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -998,7 +1012,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_b064b1dc6d92606d0199f232",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_b064b1dc6d92606d0199f232",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1423,7 +1438,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_0561db716bd11d87c7b0b129",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_0561db716bd11d87c7b0b129",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1445,9 +1461,10 @@
   {
    "hazardId": "H_4164E28510AC475EA9FB48337C",
    "title": "高温室缺少“当心烫伤”安全警示标志",
-   "status": "verified",
+   "status": "unreviewed",
    "reasons": [
-    "no verified direct/fallback link"
+    "stale/unverified links: K_B610A592D9545D785B5273",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1520,7 +1537,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_1e1990fb9c6ea0747f81ce6c,K_7780c2c2c8f882d67fc9a4e2",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_1e1990fb9c6ea0747f81ce6c,K_7780c2c2c8f882d67fc9a4e2",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1561,7 +1579,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_d84f4527ece67f92e9d0e691",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_d84f4527ece67f92e9d0e691",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1642,7 +1661,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_df15e916c14598de659bbf20",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_df15e916c14598de659bbf20",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1755,7 +1775,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_218b3c2be87b3f23d86e1a5a",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_218b3c2be87b3f23d86e1a5a",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1796,7 +1817,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_012500360729ae5276213ac4,K_401ab2c612e47e5dee84b446,K_af4ab23385017f59f71320fb",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_012500360729ae5276213ac4,K_401ab2c612e47e5dee84b446,K_af4ab23385017f59f71320fb",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1853,7 +1875,17 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_015967d6f6a697f197ebbdad",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_015967d6f6a697f197ebbdad",
+    "no eligible verified direct/fallback link"
+   ]
+  },
+  {
+   "hazardId": "H_5C632EB0FC8E4DC586BDF3567E",
+   "title": "中的气瓶必须进行定期检查,使用期满或送检未合格的气瓶禁止继续使用",
+   "status": "verified",
+   "reasons": [
+    "hazard content review missing or stale",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -1886,7 +1918,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_8cc09e654f490f441052e160,K_9dd4248d0c60a8b88fc4eca1",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_8cc09e654f490f441052e160,K_9dd4248d0c60a8b88fc4eca1",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2191,7 +2224,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_9f981a2f40e7226ebaa7c211",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_9f981a2f40e7226ebaa7c211",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2397,9 +2431,10 @@
   {
    "hazardId": "H_7C95508E54324EB7971918F1E5",
    "title": "车间内部分电箱未张贴安全警告标志",
-   "status": "verified",
+   "status": "unreviewed",
    "reasons": [
-    "no verified direct/fallback link"
+    "stale/unverified links: K_B8ADE8F014895A81A0DB0C",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2464,7 +2499,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_03BF627B0B2DF4D35F2FCF5C39,K_A3DB2344F3C86DEC1913A194DC",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_03BF627B0B2DF4D35F2FCF5C39,K_A3DB2344F3C86DEC1913A194DC",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2529,7 +2565,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_3815f67a0112957f1fe7907c",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_3815f67a0112957f1fe7907c",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2570,7 +2607,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_3aa0366e763172b7f909ae13",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_3aa0366e763172b7f909ae13",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2619,7 +2657,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_6965d51d988d6e730c5bac84",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_6965d51d988d6e730c5bac84",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2780,7 +2819,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_6ee0642e5ff1afa64ba4bc74,K_d70e5b3487d81efd9d8c0c9b",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_6ee0642e5ff1afa64ba4bc74,K_d70e5b3487d81efd9d8c0c9b",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2829,7 +2869,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_86116589ddb30549ec16daeb",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_86116589ddb30549ec16daeb",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2853,8 +2894,10 @@
    "title": "实验室内一根临时电源线外绝缘层破损",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_3437ba48209a6878ff466064",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_3437ba48209a6878ff466064",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2871,7 +2914,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_04361764d56792472364b113,K_fb679390b1d04cb57eb5f22e",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_04361764d56792472364b113,K_fb679390b1d04cb57eb5f22e",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2880,7 +2924,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_5de4afe5451e2f834d8d68a2",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_5de4afe5451e2f834d8d68a2",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2905,7 +2950,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_7c750e6a1d55afcc8055a107",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_7c750e6a1d55afcc8055a107",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2938,7 +2984,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_43ef04628e3d0e5f615decbe",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_43ef04628e3d0e5f615decbe",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -2971,7 +3018,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_7caf3e9d8e91a30ec04247bf",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_7caf3e9d8e91a30ec04247bf",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3004,7 +3052,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_0193ab27f4a0e63fd8f1ecf5",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_0193ab27f4a0e63fd8f1ecf5",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3124,8 +3173,10 @@
    "title": "指挥、司索、司机等操作人员必须相互配合,密切协作,严格执行起重机“十不吊”的制度,防止发生事故",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_572a04b023a8b17211c06526",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_572a04b023a8b17211c06526",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3134,7 +3185,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_affa50e64ea799b3c1ed437b",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_affa50e64ea799b3c1ed437b",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3239,7 +3291,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_00bb5b7226cf0cfd890c781e",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_00bb5b7226cf0cfd890c781e",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3464,7 +3517,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_2fbee788f096bc41d417b895",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_2fbee788f096bc41d417b895",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3617,7 +3671,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_053502698cf8f03c4ab637f4",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_053502698cf8f03c4ab637f4",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3674,7 +3729,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_1152264ef036cbcf604e292c",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_1152264ef036cbcf604e292c",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3818,8 +3874,10 @@
    "title": "危废库选址,未满足如下要求:6.1.1地质结构稳定,地震烈度不超过7度的区域内。6.1.2设施底部必须高于地下水最高水位。6.1.3,未依据环境影响评价结论确定危险废物集中贮存设施的位置及其与周围人群的距离,并经具有审批权的环境保护行政主管部门批准,并可作为规划控制的依据。”6.1.4,未避免建在溶洞区或易遭受严重自然灾害如洪水、滑坡,泥石流、潮汐等影响的地区。6.1.5,未在易燃、易爆等危险品仓库、高压输电线路防护区域以外。6.1.6,未位于居民中心区常年最大风频的下风向",
    "status": "pending",
    "reasons": [
+    "hazard content review missing or stale",
     "pending links: K_D2E0A5593E4975E15E30A7C7C9",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_D2E0A5593E4975E15E30A7C7C9",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -3932,7 +3990,8 @@
    "status": "pending",
    "reasons": [
     "pending links: K_444630456072b2ffd8a11a3d",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_444630456072b2ffd8a11a3d",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4004,8 +4063,10 @@
    "title": "组织防火检查,及时消除火灾隐患。",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_5bfae4aa6d1056875adbfb9a",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_5bfae4aa6d1056875adbfb9a",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4125,8 +4186,10 @@
    "title": "组织防火检查,及时消除火灾隐患。",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_cb144fd956f2f35643dcb94f",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_cb144fd956f2f35643dcb94f",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4159,7 +4222,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_817f978ac504cebac8791378",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_817f978ac504cebac8791378",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4208,6 +4272,15 @@
    "status": "unreviewed",
    "reasons": [
     "no link"
+   ]
+  },
+  {
+   "hazardId": "H_EA0194690E094674819D251488",
+   "title": "乱拉私接临时电线（违规）",
+   "status": "verified",
+   "reasons": [
+    "hazard content review missing or stale",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4291,6 +4364,15 @@
    ]
   },
   {
+   "hazardId": "H_F3E7D18DBD77459B983AB5CD06",
+   "title": "未见危险化学品安全管理制度",
+   "status": "verified",
+   "reasons": [
+    "hazard content review missing or stale",
+    "no eligible verified direct/fallback link"
+   ]
+  },
+  {
    "hazardId": "H_F4F02200763043459A5AC0FE0A",
    "title": "车间配电控制柜开关违规安装于木板上",
    "status": "unreviewed",
@@ -4303,8 +4385,10 @@
    "title": "实验室内一根临时电源线外绝缘层破损",
    "status": "rejected",
    "reasons": [
+    "hazard content review missing or stale",
     "rejected links: K_f96c991e54886ffa89aba070",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_f96c991e54886ffa89aba070",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4312,8 +4396,10 @@
    "title": "贮存化学危险品的仓库必须配备有专业知识的技术人员,其库房及场所,未设专人管理,管理人员必须配备可靠的个人安全防护用品",
    "status": "pending",
    "reasons": [
+    "hazard content review missing or stale",
     "pending links: K_8395b048ebdeb9f3dc262905",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_8395b048ebdeb9f3dc262905",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4329,8 +4415,10 @@
    "title": "危险化学品试剂间安全警示标志张贴在门上",
    "status": "pending",
    "reasons": [
+    "hazard content review missing or stale",
     "pending links: K_3af925c80dbe5edabd333656",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_3af925c80dbe5edabd333656",
+    "no eligible verified direct/fallback link"
    ]
   },
   {
@@ -4435,7 +4523,8 @@
    "status": "rejected",
    "reasons": [
     "rejected links: K_9f05e8324cfdbddfc61014ff",
-    "no verified direct/fallback link"
+    "stale/unverified links: K_9f05e8324cfdbddfc61014ff",
+    "no eligible verified direct/fallback link"
    ]
   }
  ],

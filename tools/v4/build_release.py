@@ -20,6 +20,9 @@ import sys
 from collections import Counter, defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from canonical import content_hash
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
 REL = os.path.join(ROOT, "source", "releases", "v4-candidate-20260910")
@@ -58,50 +61,102 @@ def main():
         lv_law[vid] = v.get("lawId")
     law_name = {lid: (l.get("name") or l.get("title")) for lid, l in laws.items()}
 
-    # hazard -> lawNames + 聚合发布状态（链式发布门禁）
-    # 规则：一个 hazard 有多个 link 时不被最后一次覆盖；
-    # publishable = 至少 1 条 verified 且 role in {direct, fallback}；
+    # 预加载 clause/hazard review（与 strict_release_audit 对齐）
+    clause_reviews = {}
+    for f in glob.glob(os.path.join(KNOW, "reviews", "clauses", "*.json")):
+        x = json.load(io.open(f, encoding="utf-8"))
+        clause_reviews[x.get("entityId") or os.path.basename(f).replace(".json", "")] = x
+    hazard_reviews = {}
+    for f in glob.glob(os.path.join(KNOW, "reviews", "hazards", "*.json")):
+        x = json.load(io.open(f, encoding="utf-8"))
+        hazard_reviews[x.get("entityId") or os.path.basename(f).replace(".json", "")] = x
+
+    def clause_has_verified_review(cid):
+        rv = clause_reviews.get(cid) or {}
+        if rv.get("decision") != "verified":
+            return False
+        cl = clauses.get(cid) or {}
+        if cl and rv.get("reviewedContentHash") != content_hash(cl):
+            return False
+        return True
+
+    def hazard_content_ok(hid):
+        hz = hazards.get(hid) or {}
+        rv = hazard_reviews.get(hid) or {}
+        if rv.get("decision") != "verified":
+            return False
+        if hz and rv.get("reviewedContentHash") != content_hash(hz):
+            return False
+        for field in ("title", "description", "measures", "category"):
+            if not hz.get(field):
+                return False
+        if (hz.get("lifecycle") or "active") != "active":
+            return False
+        if hz.get("mergedInto"):
+            return False
+        return True
+
+    # hazard -> lawNames + 聚合发布状态（链式发布门禁，与 strict_release_audit 对齐）
+    # 规则：eligible link = review decision=verified + reviewedContentHash 匹配 + contextHashes 匹配 + clause 有 verified review；
+    # publishable hazard = 至少 1 条 eligible link 且 role in {direct, fallback}；
     # pending/rejected link 不进正式发布投影（search-index），但保留在 data/hazards 详情中并标 WARN。
     hazard_links = defaultdict(list)
-    hazard_link_decisions = defaultdict(list)  # hid -> [(decision, role, kid)]
+    hazard_link_decisions = defaultdict(list)  # hid -> [(decision, role, kid, eligible)]
     for kid, l in links.items():
         hid = l.get("hazardId")
         hazard_links[hid].append(l)
-        dec = (reviews.get(kid) or {}).get("decision") or "pending"
+        rv = reviews.get(kid) or {}
+        dec = rv.get("decision") or "pending"
         role = l.get("role") or ""
-        hazard_link_decisions[hid].append((dec, role, kid))
+        # eligible 检查：verified + hash 匹配 + clause 有 verified review（与 strict_release_audit 对齐）
+        eligible = False
+        if dec == "verified":
+            if rv.get("reviewedContentHash") == content_hash(l):
+                ctx = rv.get("contextHashes") or {}
+                hz = hazards.get(hid) or {}
+                cl = clauses.get(l.get("clauseId")) or {}
+                if (not hz or ctx.get("hazard") == content_hash(hz)) and \
+                   (not cl or ctx.get("clause") == content_hash(cl)):
+                    if clause_has_verified_review(l.get("clauseId")):
+                        eligible = True
+        hazard_link_decisions[hid].append((dec, role, kid, eligible))
 
     def aggregate_hazard_status(hid):
         """聚合 hazard 发布状态：返回 (status, publishable, warn_reasons)。"""
         decs = hazard_link_decisions.get(hid, [])
         if not decs:
             return "unreviewed", False, ["no link"]
-        has_verified_direct_or_fallback = any(
-            d == "verified" and r in ("direct", "fallback") for d, r, _ in decs
+        has_eligible_qualifying = any(
+            elig and r in ("direct", "fallback") for _, r, _, elig in decs
         )
-        has_pending = any(d == "pending" for d, _, _ in decs)
-        has_rejected = any(d == "rejected" for d, _, _ in decs)
-        all_verified = all(d == "verified" for d, _, _ in decs)
-        if all_verified:
+        has_pending = any(d == "pending" for d, _, _, _ in decs)
+        has_rejected = any(d == "rejected" for d, _, _, _ in decs)
+        all_eligible = all(elig for _, _, _, elig in decs)
+        if all_eligible and not has_pending and not has_rejected:
             status = "verified"
-        elif has_verified_direct_or_fallback and has_pending:
+        elif has_eligible_qualifying and has_pending:
             status = "verified_with_pending"
-        elif has_verified_direct_or_fallback and has_rejected:
+        elif has_eligible_qualifying and has_rejected:
             status = "verified_with_rejections"
         elif has_pending:
             status = "pending"
-        elif has_rejected and not has_verified_direct_or_fallback:
+        elif has_rejected and not has_eligible_qualifying:
             status = "rejected"
         else:
             status = "unreviewed"
-        publishable = has_verified_direct_or_fallback
+        publishable = has_eligible_qualifying and hazard_content_ok(hid)
         warns = []
+        if not hazard_content_ok(hid):
+            warns.append("hazard content review missing or stale")
         if has_pending:
-            warns.append("pending links: " + ",".join(k for d, _, k in decs if d == "pending"))
+            warns.append("pending links: " + ",".join(k for d, _, k, _ in decs if d == "pending"))
         if has_rejected:
-            warns.append("rejected links: " + ",".join(k for d, _, k in decs if d == "rejected"))
+            warns.append("rejected links: " + ",".join(k for d, _, k, _ in decs if d == "rejected"))
+        stale = [k for _, _, k, elig in decs if not elig]
+        if stale:
+            warns.append("stale/unverified links: " + ",".join(stale))
         if not publishable:
-            warns.append("no verified direct/fallback link")
+            warns.append("no eligible verified direct/fallback link")
         return status, publishable, warns
 
     si = []  # 正式发布投影：只放 publishable
