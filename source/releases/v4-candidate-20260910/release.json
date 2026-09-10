@@ -3,30 +3,30 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "eeeae9d3f3c9e7da4c2b4241a366145f53622f95f473bd1e2203ba77cef51435",
+ "sourceStateHash": "d63133f345e36508a0bc532afbf2a9ec65e744a5a6e4b7f8afcc95d7b964907e",
  "sourceCounts": {
-  "laws": 78,
-  "law_versions": 78,
-  "clauses": 111,
+  "laws": 79,
+  "law_versions": 79,
+  "clauses": 139,
   "hazards": 712,
-  "links": 761,
+  "links": 791,
   "requirements": 75
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "publishableHazards": 644,
-  "notPublishableHazards": 68
+  "publishableHazards": 643,
+  "notPublishableHazards": 69
  },
  "reviewStatsByLink": {
-  "level": "review-level (761 links)",
-  "verified": 728,
-  "rejected": 21,
+  "level": "review-level (791 links)",
+  "verified": 752,
+  "rejected": 25,
   "pending": 0
  },
  "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE checked by shared release_gate_core",
  "strictGate": {
-  "eligibleHazards": 644,
-  "eligibleLinks": 728
+  "eligibleHazards": 643,
+  "eligibleLinks": 752
  },
  "notes": "V4 candidate release. NOT switched to production. Chain-gated via shared release_gate_core: search-index contains only publishable hazards (>=1 eligible direct/fallback link through clause->lawVersion->law); all hazards retained in data/hazards + search-index-all.json with excludedReason. See docs/V4_GATE_REPORT.md."
 }
