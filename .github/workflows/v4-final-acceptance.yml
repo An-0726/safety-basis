@@ -42,6 +42,9 @@ jobs:
           grep -q '"strictVerdict": "PASS"' "${RUNNER_TEMP}/v4-strict-audit.log"
           grep -q '"blockerCount": 0' "${RUNNER_TEMP}/v4-strict-audit.log"
 
+      - name: Generate Phase 16 acceptance inventory
+        run: python tools/v4/final_acceptance_inventory.py
+
       - name: Run candidate search regression
         run: python tools/v4/test_search.py
 
@@ -83,5 +86,6 @@ jobs:
           path: |
             source/releases/v4-candidate-20260910/
             docs/V4_GATE_REPORT.md
+            docs/V4_FINAL_ACCEPTANCE_INVENTORY.md
             ${{ runner.temp }}/v4-gate.log
             ${{ runner.temp }}/v4-strict-audit.log
