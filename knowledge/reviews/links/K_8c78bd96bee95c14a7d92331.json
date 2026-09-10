@@ -3,16 +3,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T16:00:00+08:00",
-  "reason": "重要生产设备控制装置安装位置不当、未配置开车预警信号装置，违反安全生产法第三十六条关于安全设备的设计、制造、安装、使用应当符合国家标准或者行业标准的要求。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《安全生产法》第三十六条要求安全设备的设计、制造、安装、使用等符合国家标准并经常性维护保养，属安全设备环节的一般性义务，保留为 fallback；本条 direct 依据已由生产设备安全卫生设计专项标准的对应条款承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "SAFETY_EQUIPMENT_DESIGN"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "ec543a3c06c4552b97132c3c97f53282a5a6d9e794e733f84821465169532b58",
+  "reviewedContentHash": "e56afc9fd8ff6a0047b53192f6a68d52eeb7cac7201e1e94f706b98046154148",
   "contextHashes": {
-    "hazard": "6286d4ed3c113e5a551dbab154b6a117bdb614a284d8fdac894f16c3e74d6a0d",
+    "hazard": "909c019d0fc825eca1831fe7e75c7d3f227a3b52a518d4d7e66fecb39915c6ae",
     "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
     "link": "ec543a3c06c4552b97132c3c97f53282a5a6d9e794e733f84821465169532b58"
   },

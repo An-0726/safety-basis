@@ -3,16 +3,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T22:45:00+08:00",
-  "reason": "重要生产设备的控制装置未安装在使操作人员能看到整个设备动作的位置上，对于起动设备时看不见全貌的生产设备未配置开车预警信号装置，违反安全生产法第三十六条安全设备应当符合国家标准或者行业标准的要求，以及GB 5083生产设备安全卫生设计总则中控制装置要求。重要生产设备控制装置必须安装在操作人员能看到整个设备动作的位置。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《安全生产法》第三十六条要求安全设备的设计、制造、安装、使用等符合国家标准并经常性维护保养，属安全设备环节的一般性义务，保留为 fallback；本条 direct 依据已由生产设备安全卫生设计专项标准的对应条款承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "IMPORTANT_EQUIPMENT_CONTROL_DEVICE_VISIBILITY_WARNING"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "84006d03454453226abc40ba79cd406dd9f029ea82b1aa5e5a063d1c6199a2c6",
+  "reviewedContentHash": "876949b3de65e699bf84ae6bf6a1afbc29596f6a45d68eccea829f534e00c118",
   "contextHashes": {
-    "hazard": "6286d4ed3c113e5a551dbab154b6a117bdb614a284d8fdac894f16c3e74d6a0d",
+    "hazard": "909c019d0fc825eca1831fe7e75c7d3f227a3b52a518d4d7e66fecb39915c6ae",
     "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
     "link": "84006d03454453226abc40ba79cd406dd9f029ea82b1aa5e5a063d1c6199a2c6"
   },

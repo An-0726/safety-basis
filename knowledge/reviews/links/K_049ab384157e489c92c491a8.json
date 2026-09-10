@@ -3,16 +3,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T21:30:00+08:00",
-  "reason": "生产设备上易发生故障或危险性较大的区域，未配置声、光或声、光组合的报警装置，事故信号宜能显示故障的位置和种类，危险信号未具有足够强度，违反安全生产法第三十六条安全设备应当符合国家标准或者行业标准的要求。易发生故障或危险性较大的区域必须配置报警装置。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《安全生产法》第三十六条要求安全设备的设计、制造、安装、使用等符合国家标准并经常性维护保养，属安全设备环节的一般性义务，保留为 fallback；本条 direct 依据已由生产设备安全卫生设计专项标准的对应条款承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "EQUIPMENT_ALARM_DEVICE"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "c35d1f8c8c56f3c640885873a7b4610bb0831e6f1d8a12d6de9be6a7c8be06a7",
+  "reviewedContentHash": "0a2c4b096aa51d0c42bf095b14694002273ffe878e25f243688f1f4196e63a60",
   "contextHashes": {
-    "hazard": "1c5bce38deede9b314dee0f34f5dc16eafbbad6293d3f79fbedbf35cd1dbbfbe",
+    "hazard": "9053ec75417e7faac15342bba5d09cf991042fe9d1d91ac2364ffed2638c73c0",
     "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
     "link": "c35d1f8c8c56f3c640885873a7b4610bb0831e6f1d8a12d6de9be6a7c8be06a7"
   },
