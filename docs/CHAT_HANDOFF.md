@@ -12,7 +12,7 @@
 
 ## 当前 HEAD
 
-`b23e7cd` — `merge: integrate concurrent link reviews and handoff (bf87c289 lineage)`（最终合并提交，已 push）
+`6d075c6` — `fix: gate evidence verdict via rc`（最终 HEAD，已 push；Gate 五级 PASS，RELEASE 待验收）
 
 > 施工期间检测到并发推进（另一 Agent 的 bf87c289 等 6 个 commit：5 条 link 独立复核 + 中间 handoff）。
 > 已通过 merge 整合：5 条 review 双方结论完全一致（3 verified / 2 rejected，独立互证），保留我方结构化字段版本；
