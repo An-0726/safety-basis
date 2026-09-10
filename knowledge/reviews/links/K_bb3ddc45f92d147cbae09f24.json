@@ -2,13 +2,14 @@
   "entityId": "K_bb3ddc45f92d147cbae09f24",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T20:30:00+08:00",
-  "reason": "照明箱（盘）内配线不整齐，有绞线现象，违反GB 50054-2011低压配电设计规范中配电线路敷设要求。照明箱内配线必须整齐，禁止绞线，防止接触不良和短路。",
+  "decision": "rejected",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "checkedAt": "2026-09-11T07:42:00+08:00",
+  "reason": "驳回原direct判断。C_4cc8db7da64889234b1417aa为GB 50054-2011第6.1.1条，内容是配电线路应装设短路保护和过负荷保护，并不规定照明配电箱内配线整齐、无绞接。隐患conditions所指GB 50303-2015第5.1.12第1项与该事实更匹配，但该标准尚未纳入当前V4法规图谱，故在补入并核验前不得公开。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "LIGHTING_PANEL_WIRING"
+    "CLAUSE_SCOPE_MISMATCH",
+    "DIRECT_ROLE_REJECTED",
+    "REPLACE_WITH_GB50303_5_1_12_1"
   ],
   "reviewedContentHash": "a964705dc284482be76f17e853786f5aefb648d86ac6a0f2126be03e82a7ca71",
   "contextHashes": {
