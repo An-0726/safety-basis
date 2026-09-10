@@ -3,7 +3,7 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "9118079c46c3b1f7807f8d23842a498f2008a26ef9d32dc97c7eb8fa7075c99c",
+ "sourceStateHash": "8a8ef172660717884d01b701bceae6ecf026484d1f99670355c395857121c27b",
  "sourceCounts": {
   "laws": 68,
   "law_versions": 68,
@@ -14,8 +14,8 @@
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "verified": 158,
-  "rejected": 19,
+  "verified": 160,
+  "rejected": 18,
   "pending": 4
  },
  "reviewStatsByLink": {
@@ -28,11 +28,11 @@
   "publishable": 158,
   "not_publishable": 554,
   "by_status": {
-   "verified": 158,
-   "unreviewed": 528,
+   "verified": 160,
+   "unreviewed": 526,
    "pending": 4,
-   "rejected": 19,
-   "verified_with_rejections": 3
+   "rejected": 18,
+   "verified_with_rejections": 4
   }
  },
  "publishWarnList": [
@@ -1926,10 +1926,9 @@
   {
    "hazardId": "H_6306B00BE6624819BAC056740D",
    "title": "冲压机双手按压按钮损坏",
-   "status": "unreviewed",
+   "status": "verified",
    "reasons": [
     "hazard content review missing or stale",
-    "stale/unverified links: K_b3c43c6e581e429177f8868e",
     "no eligible verified direct/fallback link"
    ]
   },
@@ -2490,10 +2489,9 @@
   {
    "hazardId": "H_8740A8DCB8B04C3F93B030623F",
    "title": "未根据本单位实际,建立安全生产投入保障、宣传教育培训、隐患排查治理、应急管理、发包(出租)管理等安全生产规章制度",
-   "status": "unreviewed",
+   "status": "verified",
    "reasons": [
     "hazard content review missing or stale",
-    "stale/unverified links: K_b3f748d826fe03012e0d0a07",
     "no eligible verified direct/fallback link"
    ]
   },
@@ -3532,11 +3530,11 @@
   {
    "hazardId": "H_C1953CE65F144427890685861E",
    "title": "危废暂存间内部分桶装液体下方无泄漏液体收集装置。",
-   "status": "rejected",
+   "status": "verified_with_rejections",
    "reasons": [
     "hazard content review missing or stale",
     "rejected links: K_E8A0C56B806A3233C4932913EA",
-    "stale/unverified links: K_5A089D0202B43881F5E6955151,K_E8A0C56B806A3233C4932913EA",
+    "stale/unverified links: K_E8A0C56B806A3233C4932913EA",
     "no eligible verified direct/fallback link"
    ]
   },
