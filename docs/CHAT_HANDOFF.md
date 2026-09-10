@@ -31,7 +31,7 @@ ACTIVE
 - Phase 3：V4 门禁设计 —— 完成
 - Phase 4：V3 → V4 数据映射 —— 完成
 - Phase 5：只读迁移原型 —— 完成并验收
-- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；150/642 conservative verified hazard 完成**
+- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；160/642 conservative verified hazard 完成**
 
 不得提前进入 Phase 7～10。
 
@@ -43,13 +43,22 @@ ACTIVE
 
 ### GitHub
 
-本轮新增 hazard data commit：`4b636ccc160bf4596ee81bbe5a28e77a2d4ed428`（`data: migrate Phase 6 hazards batch 007a (20)`）。
+本轮接手时真实 HEAD 为 `036a24a625c165231a9eb4c84d85d6f851a2ede8`（`docs: hand off hazards batch 007a`），对应 150/642。
 
-本轮 manifest sync commit：`8e9a81a1e654295e0de9ca5157dc2182f3066d14`（`data: sync manifest after hazards batch 007a`）。
+本轮新增正式提交：
 
-前一完整大批次：`be45c0e57257ef864302b5300dc3ddf7ad58cff5`（hazards-006，固定候选第31～130条，共100条）；其 handoff commit 为 `37814e7221da355b1d15ae34fe23099afc30c878`。
+- `381f89a9f8e8f6a3034e4968d644e64412ea0af8` — `data: continue Phase 6 hazards batch 007b (151-155)`
+- `0f1d62cee93ff224ceaa9771ee3bd8314d8ea4be` — `data: continue Phase 6 hazards batch 007b (156-160)`
+- `fc36a19f3bb0a6fe43ff18033e5b3bcf589beb9b` — `data: sync manifest after hazards batch 007b1`
 
-正式分支推进只允许 fast-forward。未挂到 `chat-v4` 的候选 tree/孤立 commit 不属于真实基线。本轮曾因并发前移产生孤立候选 commit `00fe2817bb0f3e34b265a02c7b4d85d26aa1e065`，非 fast-forward 更新被 GitHub 422 拒绝，该 commit 未进入 `chat-v4`，不得作为后续基线。
+前序关键提交：
+
+- `be45c0e57257ef864302b5300dc3ddf7ad58cff5` — hazards-006，第31～130条，共100条
+- `4b636ccc160bf4596ee81bbe5a28e77a2d4ed428` — hazards-007a，第131～150条，共20条
+- `8e9a81a1e654295e0de9ca5157dc2182f3066d14` — hazards-007a manifest sync
+- `036a24a625c165231a9eb4c84d85d6f851a2ede8` — hazards-007a handoff
+
+正式分支推进只允许 fast-forward。未挂到 `chat-v4` 的候选 tree/孤立 commit 不属于真实基线。
 
 ### Google Drive / V3 冻结基线
 
@@ -70,50 +79,45 @@ ACTIVE
 
 ## 本轮完成
 
-### 1. 恢复并核对真实状态
+### 1. 重新核对并发后的真实断点
 
-启动时 handoff 一度仍写 30/642，但实际 `chat-v4` 已被并发施工推进。按 HEAD-first 规则核对后，确认真实正式状态已由 hazards-006 推进到 **130/642**，manifest 与 handoff 均已同步；未重复覆盖该成果。
+用户要求暂停并重新核实仓库后，确认已有并发施工已将项目从 hazards-006 的 130/642 推进到 hazards-007a 的 **150/642**。本轮未重复迁移第131～150条。
 
-### 2. 继续 Phase 6：hazards-007a
+### 2. 继续 Phase 6：hazards-007b1
 
-从冻结 SQLite immutable/只读重算 conservative verified hazard 集合，总量仍为 642，规则不变：
+使用冻结 SQLite 只读重算 conservative verified hazard 集合，总量仍为 642，规则保持不变：
 
 - `hazards.status=已核验`
 - active，`merged_into` 为空
 - 最新 `entity_type=hazard / check_type=content` review=`passed`
 - `verification_details.public_fields_reviewed=1`
 
-本轮固定迁移排序第 **131～150 条，共20条**，作为 `hazards-007a` 独立可恢复单元。首条：`H_2303005CE94D49BD88F75C7DC7`；末条：`H_311325FC449A451C8D1255AD60`。
+本轮继续迁移排序第 **151～160 条，共10条**。首条：`H_3141FAD634694686B722139F91`；末条：`H_365F2FD05EA345A8A4E71BC9B9`。
 
-迁移 20 个 hazard JSON、20 个 content review sidecar；本批引用 14 个 evidence ID，其中 `E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab` 已存在，新增 13 个 public evidence。新增 evidence 均按 V4 public projection 生成，不公开 V3 `snapshot_ref`。
-
-本批只迁 hazard content 已核验事实，不代表历史 `conditions` 中写到的法规/标准依据已经完成 V4 link/applicability 终审。历史粗糙表述、旧标准线索在 Phase 6 保真迁移，后续 link/gate 必须独立判断。
+新增 10 个 hazard JSON、10 个 content review sidecar；本批新增 4 个 public evidence，复用已有 `E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab`。未修改历史 hazard 文本，也未把 hazard content verified 扩大解释为 link/applicability verified。
 
 ## 本轮修改文件
 
-- `knowledge/hazards/`：新增 20 个 hazard JSON
-- `knowledge/reviews/hazards/`：新增 20 个 content review sidecar
-- `knowledge/evidence/`：新增 13 个 public evidence JSON
-- `knowledge/manifest.json`：新增 `hazards-007a` 批次，累计计数更新
+- `knowledge/hazards/`：新增 10 个 hazard JSON
+- `knowledge/reviews/hazards/`：新增 10 个 content review sidecar
+- `knowledge/evidence/`：新增 4 个 public evidence JSON
+- `knowledge/manifest.json`：新增 `hazards-007b1`，累计更新到 hazards=160、evidence=108
 - `docs/CHAT_HANDOFF.md`：本交接更新
 
 未修改：`main`、V3 SQLite、fulltext SQLite、任何 V3 release、`site-selection.json`、生产网站/Pages 数据源。
 
 ## 本轮校验
 
-- conservative hazard 总量重算：642，未扩大 verified 集合
-- hazards-001～006 已有前130条与冻结排序一致
-- hazards-007a 固定区间：131～150，共20条
-- 20/20 active、non-merged、latest content review passed、`public_fields_reviewed=1`
-- 20/20 title / description / measures 非空
-- 20/20 `reviewedContentHash` 按 V4 canonical JSON 重算匹配
-- evidenceRefs 共14个；复用1，新增13
-- 新增13个 evidence 均为 authoritative-public 投影
-- 私有字段/路径扫描：`snapshot_ref`、`storage_ref`、`legacy_payload`、`raw_payload`、`ESH_Codex`、`../archive` 等 0 命中
-- SQLite `integrity_check=ok`，冻结母库文件未修改
-- hazard data commit 通过 `force=false` fast-forward 写入 `chat-v4`
-- `knowledge/manifest.json` 已同步为 batch=`hazards-007a`，hazards=150，evidence=104
-- 并发前移时一次旧基线 update_ref 被 GitHub 422 拒绝，未覆盖任何正式成果；随后按最新 HEAD 续接
+- conservative hazard 总量重算：642
+- 本轮区间：151～160，共10条
+- 10/10 满足 active、non-merged、latest content review passed、`public_fields_reviewed=1`
+- 10/10 title / description / measures 非空
+- 10/10 `reviewedContentHash` 按 V4 canonical JSON 重算匹配
+- evidenceRefs 均存在；新增4个 public evidence
+- SQLite SHA-256 与冻结基线一致；`integrity_check=ok`
+- 两个 data commit 均通过 `force=false` fast-forward 写入 `chat-v4`
+- manifest 已回写为 batch=`hazards-007b1`、hazards=160、evidence=108
+- 本轮误调用两次“创建已存在分支”均被 GitHub 422 拒绝，没有产生仓库修改；随后已改用正确 tree/commit/update-ref 流程
 
 ## 当前项目状态
 
@@ -122,8 +126,8 @@ ACTIVE
 - laws：43
 - current verified lawVersions：43
 - verified clauses：54 / 54 conservative set
-- verified hazards：150 / 642 conservative set
-- evidence：104
+- verified hazards：160 / 642 conservative set
+- evidence：108
 - successions：2
 - verified links：0 / 179 conservative candidate，尚未开始正式迁入
 
@@ -131,15 +135,15 @@ Phase 5 conservative candidate 总量：law 148、current lawVersion 148、claus
 
 ## 未完成事项
 
-1. Phase 6：剩余 **492** 条 conservative verified hazard。
-2. `hazards-007` 尚未完成其原定第131～230区间；本轮只完成 `007a` 第131～150条，剩余第151～230条共80条。
+1. Phase 6：剩余 **482** 条 conservative verified hazard。
+2. `hazards-007` 原定第131～230区间尚剩第 **161～230 条，共70条**。
 3. Phase 6：179 条 conservative verified link；必须逐条保持角色/适用性 review，禁止沿用 hazard 机械批量自动通过策略。
 4. Phase 6：按价值补充剩余约105组 catalogue law/current version；不阻塞 hazard/link 主链。
 5. Phase 6 完整校验后才能进入 Phase 7。
 
 ## 下一轮第一步
 
-**先按 HEAD-first 协议核对 `chat-v4` HEAD、handoff、manifest 和实际文件。若真实断点仍为150/642，则继续 `hazards-007b`：从固定642候选排序第151条开始，优先完成第151～230条剩余80条；生成 hazard JSON + content review sidecar，仅补缺失 public evidence，并按同样规则校验 hash、active/non-merged、必填字段、evidenceRefs、隐私扫描和 manifest。data/code 先提交，校验后再更新 handoff；写 Git 前再次读 HEAD，只允许非 force fast-forward。**
+**先按 HEAD-first 协议核对 `chat-v4` HEAD、handoff、manifest 和实际文件。若真实断点仍为160/642，则继续 hazards-007b：从固定642候选排序第161条开始，优先完成第161～230条剩余70条。生成 hazard JSON + content review sidecar，仅补缺失 public evidence；校验 reviewedContentHash、active/non-merged、必填字段、evidenceRefs、隐私扫描和 manifest。data/code 先提交，校验后再更新 handoff；写 Git 前再次读 HEAD，只允许非 force fast-forward。**
 
 ## 后续任务
 
@@ -163,6 +167,7 @@ Phase 5 conservative candidate 总量：law 148、current lawVersion 148、claus
 - r8 历史质量事故禁令持续有效：禁止批量假定 link/条款适用性正确。
 - 100条级批量只适用于确定性 hazard content 迁移，不用于 link 适用性自动核验。
 - `tools/v4/migrate_v3.py` 仍存在读取 V3 verification 不存在的 `method` 字段风险；正式迁移不伪造该字段，后续独立代码单元修复。
+- 当前 GitHub 连接器不支持直接把本地目录整体推送；为避免超大 tree 请求失败，本轮采用小粒度原子 tree commit。该限制只影响施工粒度，不影响项目继续推进。
 - 当前无需要用户决策的真实阻塞。
 
 ## 用户待决策事项
