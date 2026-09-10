@@ -45,16 +45,18 @@ def main():
     lvs = load_dir("law-versions")
     succs = load_dir("successions")
 
-    # 1. 近似重复
+    # 1. 近似重复（只统计双方都未被合并的“活跃重复”；已合并的条目 history 由 mergedInto 表达）
     seen = {}
     dups = []
     for hid, h in sorted(hazards.items()):
+        if h.get("mergedInto"):
+            continue
         key = norm(h.get("title", ""))[:60]
         if key in seen and len(key) >= 8:
             dups.append((seen[key], hid, h.get("title", "")[:50]))
         else:
             seen[key] = hid
-    print("== near-duplicate titles: %d ==" % len(dups))
+    print("== active near-duplicate titles: %d ==" % len(dups))
     for a, b, t in dups[:30]:
         print("  %s == %s | %s" % (a, b, t))
 
@@ -91,8 +93,13 @@ def main():
         for field in ("conditions", "note", "measures"):
             txt = str(h.get(field) or "")
             for old_std in replaced:
-                if old_std in txt:
-                    stale.append((hid, field, old_std, h.get("title", "")[:40]))
+                if old_std not in txt:
+                    continue
+                # 说明版本沿革（“原依据 XX 已由 YY 替代”）属于正常记录，不算残留引用
+                ctx = txt[max(0, txt.find(old_std) - 25): txt.find(old_std) + 45]
+                if re.search(r"替代|作废|废止|旧版|原依据|已由|已被", ctx):
+                    continue
+                stale.append((hid, field, old_std, h.get("title", "")[:40]))
     print("== stale old-standard refs in hazard fields: %d ==" % len(stale))
     for s in stale[:40]:
         print("  ", s)

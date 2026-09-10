@@ -61,10 +61,14 @@ def load_reviews(rel):
 
 
 def patch_hash(path, old, new):
-    """只替换文件中的哈希字符串，完全保留原缩进与行尾，避免产生格式噪音。"""
+    """替换文件中的哈希字符串，完全保留原缩进与行尾，避免产生格式噪音。
+
+    link review 会同时把同一哈希写入 reviewedContentHash 与 contextHashes.link，
+    因此这里替换全部出现位置，而不是要求唯一命中。
+    """
     with open(path, "rb") as f:
         raw = f.read().decode("utf-8")
-    if old is None or raw.count(old) != 1:
+    if not old or old not in raw:
         return False
     with open(path, "wb") as f:
         f.write(raw.replace(old, new).encode("utf-8"))
