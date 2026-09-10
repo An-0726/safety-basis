@@ -1,1 +1,22 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"ee9fcf518b65783bd724d49665521cbab4694bd4d10fc8d04602cf41c24e7db5"},"decision":"pending","entityId":"K_04cdf5ee09cb1c9b9690bc5a","entityType":"link","evidenceRefs":["E_b72d316e7d249fecc53b982be0102bc510ab250300748941ccee14b1fe164eae"],"migratedFromV3Verification":{"id":"VRF_fd57b14deb5f3d4e0d2b6c84_131","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为危险化学品试剂间缺少显著的标识。C030（安全生产法第35条）要求在有较大危险因素的生产经营场所设置明显安全警示标志，危险化学品试剂间属有较大危险因素场所，缺少显著标识与之对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"d7af22df655842dfcb916aba8eef4a5666545cc093703e2a567c5c12ed0fd795"}
+{
+  "entityType": "link",
+  "entityId": "K_04cdf5ee09cb1c9b9690bc5a",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "d7af22df655842dfcb916aba8eef4a5666545cc093703e2a567c5c12ed0fd795",
+  "contextHashes": {
+    "hazard": "ee9fcf518b65783bd724d49665521cbab4694bd4d10fc8d04602cf41c24e7db5",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "reviewer": "ChatGPT",
+  "reason": "在该危险化学品试剂间属于有较大危险因素的生产经营场所/设施这一适用前提下，Hazard所述‘缺少显著标识’与C030要求设置明显安全警示标志直接对应。该link仅支撑安全警示标志义务；若要认定GB 13690等专项标准要求的具体化学品危险性公示内容，仍需另引并核验相应专项条款。",
+  "evidenceRefs": ["E_b72d316e7d249fecc53b982be0102bc510ab250300748941ccee14b1fe164eae"],
+  "migratedFromV3Verification": {
+    "id": "VRF_fd57b14deb5f3d4e0d2b6c84_131",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为危险化学品试剂间缺少显著的标识。C030（安全生产法第35条）要求在有较大危险因素的生产经营场所设置明显安全警示标志，危险化学品试剂间属有较大危险因素场所，缺少显著标识与之对应。",
+    "v3Result": "passed"
+  }
+}

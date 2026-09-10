@@ -1,1 +1,23 @@
-{"contextHashes":{"clause":"3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a","hazard":"3f20a96c9d9410d8587fd700d163548dac1722385a63d4bc976cf32e56f9eccc"},"decision":"pending","entityId":"K_015967d6f6a697f197ebbdad","entityType":"link","evidenceRefs":["E_a0c01417a5151afa4ce169dfdd93655687ffb723b8f2e9dd8e6ea885af720db3"],"migratedFromV3Verification":{"id":"VRF_21982c7ed8720ed7b4fcac5c_115","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为危化品暂存间未标明储存物品名称、性质和灭火方法（与H_54347BF9同源）。危化品暂存间为有较大危险因素场所，安全生产法第35条要求设置明显安全警示标志，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"f746dc53b015c755e5fe44d8cd60c6620b77dda2c47dfb4ccebd877eb66645bd"}
+{
+  "entityType": "link",
+  "entityId": "K_015967d6f6a697f197ebbdad",
+  "reviewType": "applicability",
+  "decision": "rejected",
+  "reviewedContentHash": "f746dc53b015c755e5fe44d8cd60c6620b77dda2c47dfb4ccebd877eb66645bd",
+  "contextHashes": {
+    "hazard": "3f20a96c9d9410d8587fd700d163548dac1722385a63d4bc976cf32e56f9eccc",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "reviewer": "ChatGPT",
+  "reason": "C030要求在有较大危险因素的场所、设施设备上设置明显的安全警示标志，但不能直接推出危化品暂存间必须标明储存物品的名称、性质和灭火方法这三个具体内容。当前direct关系把通用警示标志义务扩大成了具体标识内容要求，应寻找并核验对应仓储/危化专项条款；C030若保留只能作为较宽泛的补充依据另行评估。",
+  "reasonCodes": ["DIRECT_ROLE_OVERSTATED", "SPECIFIC_CONTENT_NOT_IN_CLAUSE"],
+  "evidenceRefs": ["E_a0c01417a5151afa4ce169dfdd93655687ffb723b8f2e9dd8e6ea885af720db3"],
+  "migratedFromV3Verification": {
+    "id": "VRF_21982c7ed8720ed7b4fcac5c_115",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为危化品暂存间未标明储存物品名称、性质和灭火方法（与H_54347BF9同源）。危化品暂存间为有较大危险因素场所，安全生产法第35条要求设置明显安全警示标志，语义对应。",
+    "v3Result": "passed"
+  }
+}

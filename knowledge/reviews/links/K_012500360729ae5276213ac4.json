@@ -1,1 +1,23 @@
-{"contextHashes":{"clause":"aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9","hazard":"460035638ede7923fd6866ed12a6e7fb8ab9b4ea9e6d506e2b1e2282d720e1b7"},"decision":"pending","entityId":"K_012500360729ae5276213ac4","entityType":"link","evidenceRefs":["E_b47ab44398a36cb40eeb26fb6cc6c3f36798920358437afbfb272c8f4b5729bd"],"migratedFromV3Verification":{"id":"VRF_da65b6cb17c1562b2925eb15_182","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患为对安全生产法第四条一般义务的违反，其文本逐项列明：建立健全全员安全生产责任制（C018）、组织制定并实施安全生产规章制度和操作规程（C019）、加大安全生产资金投入（C015）、构建安全风险分级管控和隐患排查治理双重预防机制（C020），均与对应条款直接对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"e5608286ca970e9b43f79964c2a2c0d2ba590efa0fd3c36f958288b05909e2d9"}
+{
+  "entityType": "link",
+  "entityId": "K_012500360729ae5276213ac4",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "e5608286ca970e9b43f79964c2a2c0d2ba590efa0fd3c36f958288b05909e2d9",
+  "contextHashes": {
+    "hazard": "460035638ede7923fd6866ed12a6e7fb8ab9b4ea9e6d506e2b1e2282d720e1b7",
+    "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
+  },
+  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "reviewer": "ChatGPT",
+  "reason": "该Hazard把全员安全生产责任制、规章制度、资金投入、双重预防机制等多项独立义务合并在一个实体中；C018只直接覆盖其中的全员安全生产责任制和安全生产标准化。当前link的applicability又同时引用C019、C015、C020，但link实际仅指向C018。应先拆分Hazard或补齐并明确多条Clause的覆盖关系后再决定是否verified。",
+  "reasonCodes": ["COMPOSITE_HAZARD", "PARTIAL_CLAUSE_COVERAGE"],
+  "evidenceRefs": ["E_b47ab44398a36cb40eeb26fb6cc6c3f36798920358437afbfb272c8f4b5729bd"],
+  "migratedFromV3Verification": {
+    "id": "VRF_da65b6cb17c1562b2925eb15_182",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为对安全生产法第四条一般义务的违反，其文本逐项列明：建立健全全员安全生产责任制（C018）、组织制定并实施安全生产规章制度和操作规程（C019）、加大安全生产资金投入（C015）、构建安全风险分级管控和隐患排查治理双重预防机制（C020），均与对应条款直接对应。",
+    "v3Result": "passed"
+  }
+}

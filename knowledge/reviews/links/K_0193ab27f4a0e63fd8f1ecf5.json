@@ -1,1 +1,23 @@
-{"contextHashes":{"clause":"d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e","hazard":"526bdf4edad17f3ce55e504729c468ba5b42e89ba2c3cb5d6931c46b56f46724"},"decision":"pending","entityId":"K_0193ab27f4a0e63fd8f1ecf5","entityType":"link","evidenceRefs":["E_477d81ebb827711ba22c0f57ba9d131b59b38341a4b4c3a3e038d7a09f702394"],"migratedFromV3Verification":{"id":"VRF_d25377ae49a2af8a48253790_129","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"隐患关注危险化学品小包装暂存是否与办公生活区域混杂布置。C050（安全生产法第42条）规定生产、经营、储存、使用危险物品的车间、商店、仓库不得与员工宿舍在同一座建筑物内并应保持安全距离，直接对应危化品储存不得与生活区域混杂的要求。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"1eaac1eb423c07eb4b4c75a3df16ec8bb941d3f590406fb492af2c18db7c577d"}
+{
+  "entityType": "link",
+  "entityId": "K_0193ab27f4a0e63fd8f1ecf5",
+  "reviewType": "applicability",
+  "decision": "rejected",
+  "reviewedContentHash": "1eaac1eb423c07eb4b4c75a3df16ec8bb941d3f590406fb492af2c18db7c577d",
+  "contextHashes": {
+    "hazard": "526bdf4edad17f3ce55e504729c468ba5b42e89ba2c3cb5d6931c46b56f46724",
+    "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
+  },
+  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "reviewer": "ChatGPT",
+  "reason": "该Hazard文本实际表述为‘未见与办公生活区域混杂布置情况’，属于未发现该问题的正向事实，本身不构成所描述的隐患；同时C050的明确对象是危险物品车间、商店、仓库与员工宿舍的同建筑及安全距离要求，不能扩展为所有办公生活区域。当前事实状态和适用范围均不支持该direct关系。",
+  "reasonCodes": ["FACT_NOT_HAZARD", "SCOPE_MISMATCH"],
+  "evidenceRefs": ["E_477d81ebb827711ba22c0f57ba9d131b59b38341a4b4c3a3e038d7a09f702394"],
+  "migratedFromV3Verification": {
+    "id": "VRF_d25377ae49a2af8a48253790_129",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患关注危险化学品小包装暂存是否与办公生活区域混杂布置。C050（安全生产法第42条）规定生产、经营、储存、使用危险物品的车间、商店、仓库不得与员工宿舍在同一座建筑物内并应保持安全距离，直接对应危化品储存不得与生活区域混杂的要求。",
+    "v3Result": "passed"
+  }
+}

@@ -1,1 +1,23 @@
-{"contextHashes":{"clause":"97895f5d19ab057d6772f71c634f63cd8af22d4abe8f7eb3be4e576f6c7f821a","hazard":"1538306fdd39cfbe13e5f20da118f31f8dc4b024e56a56001df7d1c4a7825f2d"},"decision":"pending","entityId":"K_03BF627B0B2DF4D35F2FCF5C39","entityType":"link","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_61fe255032b5cf2c6de7ee906e_23","reviewedAt":"2026-09-09T13:36:07+00:00","reviewer":"Codex 主核验","v3Reason":"已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"b0c5675f68dff51cac8e7a08395b57f820ab50f6c1e416d6e982e715aa67085d"}
+{
+  "entityType": "link",
+  "entityId": "K_03BF627B0B2DF4D35F2FCF5C39",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "b0c5675f68dff51cac8e7a08395b57f820ab50f6c1e416d6e982e715aa67085d",
+  "contextHashes": {
+    "hazard": "1538306fdd39cfbe13e5f20da118f31f8dc4b024e56a56001df7d1c4a7825f2d",
+    "clause": "97895f5d19ab057d6772f71c634f63cd8af22d4abe8f7eb3be4e576f6c7f821a"
+  },
+  "checkedAt": "2026-09-10T10:06:55+08:00",
+  "reviewer": "ChatGPT",
+  "reason": "该Hazard把‘液体泄漏收集/堵截’与‘气体导出/净化’合并为一条。现行GB 18597-2023第6.2.2只直接覆盖液态危险废物泄漏堵截、渗滤液收集；气体收集和净化属于第6.2.3。当前单一link只能覆盖Hazard的一部分，应确认存在并核验6.2.3对应link，或拆分Hazard后再完成verified。",
+  "reasonCodes": ["COMPOSITE_HAZARD", "PARTIAL_CLAUSE_COVERAGE"],
+  "evidenceRefs": ["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],
+  "migratedFromV3Verification": {
+    "id": "VR_61fe255032b5cf2c6de7ee906e_23",
+    "reviewedAt": "2026-09-09T13:36:07+00:00",
+    "reviewer": "Codex 主核验",
+    "v3Reason": "已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。",
+    "v3Result": "passed"
+  }
+}
