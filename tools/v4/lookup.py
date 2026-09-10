@@ -26,6 +26,7 @@
 注意：本工具只读，不写入全文库，也不修改 knowledge 树。
 """
 import argparse
+import json
 import os
 import re
 import sqlite3
@@ -72,13 +73,46 @@ def load_paragraphs(conn, key_filter=None):
     return out
 
 
-def match_docs(docs, needle):
+def law_number_index():
+    """从 knowledge/law-versions 读 (lawId, versionKey) -> documentNumber。
+
+    全文库的文档按 documentId=lawId、version=versionKey 命名以便与知识树对齐，
+    因此文档自身不含标准号（如 "GB 15603-2022"）；这里把标准号补上，
+    使用户可以直接按标准号检索。
+    """
+    out = {}
+    d = os.path.join(ROOT, "knowledge", "law-versions")
+    if not os.path.isdir(d):
+        return out
+    for fn in os.listdir(d):
+        if not fn.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(d, fn), encoding="utf-8") as f:
+                v = json.load(f)
+        except (OSError, ValueError) as exc:
+            # 只吞"文件读不了/不是合法 JSON"；其它异常（如 NameError）必须暴露，
+            # 否则真 bug 会被静默跳过、表现为索引为空。
+            print("  [warn] 跳过无法解析的 lawVersion %s: %s" % (fn, exc), file=sys.stderr)
+            continue
+        num = (v.get("documentNumber") or "").strip()
+        name = (v.get("officialName") or "").strip()
+        if num or name:
+            out[(v.get("lawId"), v.get("versionKey"))] = (num + " " + name).strip()
+    return out
+
+
+def match_docs(docs, needle, number_index=None):
     if not needle:
         return docs
-    n = needle.lower().replace(" ", "")
+    n = needle.lower().replace(" ", "").replace("-", "")
     hit = []
     for d in docs:
-        hay = ((d["title"] or "") + (d["version"] or "") + (d["id"] or "")).lower().replace(" ", "")
+        extra = ""
+        if number_index:
+            extra = number_index.get((d["id"], d["version"]), "")
+        hay = ((d["title"] or "") + (d["version"] or "") + (d["id"] or "") + extra).lower()
+        hay = hay.replace(" ", "").replace("-", "")
         if n in hay:
             hit.append(d)
     return hit
@@ -111,7 +145,7 @@ def main():
                   ((d["title"] or "")[:44], (d["version"] or "")[:22], d["paras"], d["current"]))
         return 0
 
-    sel = match_docs(docs, args.law)
+    sel = match_docs(docs, args.law, law_number_index())
     if args.law and not sel:
         print("库内没有匹配 %r 的法规。以下为全部标题，可据此确认是否缺件：" % args.law)
         for d in sorted(docs, key=lambda x: (x["title"] or "")):
