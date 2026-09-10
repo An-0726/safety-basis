@@ -3,16 +3,17 @@
   "entityId": "K_ee2e9c222050938f61470d1f",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "ea6a08fcf20a797c9acf2ac609ec525e8aa95ecfb2952221093c284caf4dc017",
+  "reviewedContentHash": "0627be685abec4ca64d9fcb521c6798b09ad6b192137883a48938fe12e7a139d",
   "contextHashes": {
-    "hazard": "3b08cfe030bee70d98a40e5ddccf1aee0a350e7b0598c2ffb84318717a6cae64",
+    "hazard": "47d00a964d5fe6bc852f4c0131989f950607ec5017d5e96ad47fb857e0b61fa9",
     "clause": "0e644842cffcedba24395e9a0cfa3ad7a4eec23c811b5fa9c9e0721eef3993d1"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "安全生产法第42条第2款要求生产经营场所设有符合紧急疏散要求的出口、疏散通道；疏散门未直通室外或安全出口即疏散设施不符合紧急疏散要求，direct对应成立（GB50016-2014（2018年版）为技术依据）。",
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "《安全生产法》第四十二条第二款要求生产经营场所和员工宿舍设有符合紧急疏散要求、标志明显、保持畅通的出口和疏散通道，属上位法一般义务，保留为 fallback。本条技术直接依据应依据 GB 55037-2022《建筑防火通用规范》安全疏散相关条款核定，待补充。",
   "reasonCodes": [
-    "DIRECT_MATCH"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_TECHNICAL_CLAUSE_PENDING"
   ],
   "evidenceRefs": [
     "E_2cd8a4c06a8ecf1ceb37ab0149058ce76177406d0808d1fa500f7e3a4c1f163a"

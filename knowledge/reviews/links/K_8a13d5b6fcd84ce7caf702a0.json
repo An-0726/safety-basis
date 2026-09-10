@@ -3,14 +3,14 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T19:30:00+08:00",
-  "reason": "公共建筑、建筑高度大于54m的住宅建筑、高层厂房（库房）和甲乙丙类单多层厂房未设置灯光疏散指示标志，违反安全生产法第三十五条设置明显安全警示标志的要求，以及GB 50016建筑设计防火规范中疏散指示标志设置要求。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《安全生产法》第三十五条要求在较大危险因素场所和有关设施设备上设置明显的安全警示标志，属上位法一般义务，与灯光疏散指示标志的设置范围不构成直接技术对应，降级为 fallback。技术直接依据应依据消防应急照明和疏散指示相关现行规范条款核定，待补充。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "EMERGENCY_EGRESS_LIGHTING_SIGN"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_TECHNICAL_CLAUSE_PENDING"
   ],
-  "reviewedContentHash": "00915d0a2615b0496d3e7e40d2d1da07ea279b26b964cae42499199aa8c6eeaf",
+  "reviewedContentHash": "ec2ff0481a1c33868435f0e30fdda2984692a8ad497a5ca83c21afe125a57448",
   "contextHashes": {
     "hazard": "a6829ace5d1738460d97ded8c997c87764e964913719addcd6706fd7795da7b4",
     "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
