@@ -3,30 +3,30 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "3e329e2a32bf7b2d4f9568db048a40500ca57c821e0111174d397be411f720d6",
+ "sourceStateHash": "57b565b08f94bb78564eed9010000882fb096f4239277614feb3b03093a895eb",
  "sourceCounts": {
   "laws": 85,
   "law_versions": 85,
   "clauses": 177,
   "hazards": 712,
-  "links": 829,
+  "links": 827,
   "requirements": 75
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "publishableHazards": 641,
-  "notPublishableHazards": 71
+  "publishableHazards": 640,
+  "notPublishableHazards": 72
  },
  "reviewStatsByLink": {
-  "level": "review-level (829 links)",
-  "verified": 801,
+  "level": "review-level (827 links)",
+  "verified": 799,
   "rejected": 21,
   "pending": 0
  },
  "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE checked by shared release_gate_core",
  "strictGate": {
-  "eligibleHazards": 641,
-  "eligibleLinks": 801
+  "eligibleHazards": 640,
+  "eligibleLinks": 799
  },
  "notes": "V4 candidate release. NOT switched to production. Chain-gated via shared release_gate_core: search-index contains only publishable hazards (>=1 eligible direct/fallback link through clause->lawVersion->law); all hazards retained under data/_internal/ with excludedReason. Public shards are written by tools/v4/build_site_data.py. See docs/V4_GATE_REPORT.md."
 }
