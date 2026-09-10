@@ -1,103 +1,97 @@
 # V4 Phase 16 Final Acceptance Inventory
 
-> 生成基线：`chat-v4` commit `0a7673149c012cf39238e019c05626ef11e8c285`
-> 生成方式：`tools/v4/final_acceptance_inventory.py`
-> CI run：`34456894682`
-> artifact：`10143845362` / `v4-final-acceptance-0a7673149c012cf39238e019c05626ef11e8c285`
+> 更新日期：2026-09-10
 > 当前用途：Phase 16 终审库存，不等同于生产发布批准。
 
-## Summary
+## 当前候选基线
 
-```json
-{
-  "counts": {
-    "laws": 75,
-    "lawVersions": 75,
-    "clauses": 88,
-    "hazards": 712,
-    "links": 735
-  },
-  "eligibleHazards": 645,
-  "eligibleLinks": 716,
-  "requirementReviewStatus": {
-    "verified": 55,
-    "pending": 20
-  },
-  "linkReviewDecision": {
-    "verified": 716,
-    "rejected": 19
-  },
-  "supportingVerifiedLinks": 11,
-  "activeHazardsWithoutQualifyingLink": 0,
-  "supersededOrMergedHazards": 67
-}
-```
+- 工作分支：`chat-v4`
+- H043 知识修订后的实际分支提交：`4ce976a2f47908cdeadf970c99757dfea04254d2`
+- 已成功完成的 V4 Final Acceptance CI run：`34463598243`
+- artifact id：`10146561825`
+- candidate：`true`
+- production：`false`
+- candidate sourceStateHash：`8b9db3b22f6d07c01cd734286a6d37d8d4c453e355362b9f2eef26606f33a228`
 
-## 本轮关键纠正
+## 真实源码库存
 
-上一版库存曾显示 `eligibleHazards=596`、`eligibleLinks=666`、`activeHazardsWithoutQualifyingLink=49`。Phase 16 复核发现这不是知识树真实缺口，而是 `tools/v4/release_gate_core.py` 的 review sidecar 索引错误：新式 review 同时具有自身 `id=RV_*` 与被审核实体 `entityId` 时，旧加载逻辑优先按 review 自身 id 建索引，而发布门禁后续按 hazard/link/clause/law 的实体 id 查找，导致一批实际已核验的 review 被误判为缺失。
+最新成功候选构建直接统计：
 
-commit `0a767314...` 将普通实体与 review 的加载规则分离：普通实体继续按自身 `id`；review 专门按 `entityId` 建索引，旧 sidecar 无 `entityId` 时才以文件名兜底。修复后全量 V4 Final Acceptance CI 成功，机器库存恢复为 645 个 eligible hazards、716 个 eligible links，当前 active hazard 中没有因“缺 qualifying direct/fallback link”被排除的条目。
+- laws：**76**
+- lawVersions：**76**
+- clauses：**92**
+- hazards：**712**
+- links：**739**
 
-这项纠正只修复门禁读取逻辑，没有修改 `knowledge/**/*.json`，没有新增或自动通过任何法规依据，也没有修改 `main` 或生产网站。
+说明：H043 修订前的成功候选产物已经是 75 laws / 75 lawVersions / 91 clauses / 712 hazards / 738 links。因此本轮 H043 的实际增量严格为：+1 law、+1 lawVersion、+1 clause、+1 link。此前文档和 `knowledge/manifest.json` 中 88 clauses / 735 links 的数字在 H043 开工前就已经滞后，不能把这部分差额误判为本轮新增或数据异常。
 
-## Active hazards without qualifying direct/fallback link
+`knowledge/manifest.json` 当前仍保存旧计数。由于 evidence 目录的精确总数本轮尚未独立完成计数，未用推测数字覆盖该文件；后续需要单独做一次 manifest 精确对账。
 
-当前机器链式门禁结果：**0**。
+## 当前发布链结果
 
-注意：`0` 只表示当前 645 个 active hazard 均至少存在一条通过技术链式 Gate 的 direct/fallback link；它**不等于 645 条隐患的法规适用性已经完成最终人工专业终审**。Phase 16 仍必须继续处理下面的语义复核队列，尤其是过泛的 fallback、地方频次义务、旧标准引用和替代关系，禁止因为机器 Gate 全绿而自动宣布法规终审完成。
+- eligible hazards：**645**
+- eligible links：**719**
+- active hazards without qualifying direct/fallback：**0**
+- link reviews：**719 verified / 20 rejected**
+- supporting verified links：**11**
+- strict release blockers：**0**
+- obligation-restatement candidates：**11**
+- links to merged hazards：**9**
 
-## Verified supporting links
+## H043 专业终审：已完成
 
-当前仍有 11 条 verified supporting link。`supporting` 只能作为补充说明，不能单独使 hazard 获得发布资格：
+H043 已调整为：`仓储场所未按要求开展消防安全教育培训`。
 
-1. `K_2933E4BAE83454CB7EAB5C` → `H_C1CE3A649721387F1FC0F7BE`
-2. `K_2D5D8E4F99C3E4588904DC` → `H_46A4349273C34D2992F88B202F`
-3. `K_2DC831138A211E52DEEEFD` → `H_6D5EBB4E642F489C9717AED728`
-4. `K_4E50636899132D39A208CE` → `H_B62D5B7BB22E4F398116A27DBD`
-5. `K_732967C834ACF1013A4F05` → `H_54D18AD4CE504AD2A8F3967B1F`
-6. `K_83571F5B278BC9BFECC131` → `H_560D75081D1F4B42BEB642811A`
-7. `K_9E8D807315E740BAC846B6` → `H_8941ECA792B945179F517D5278`
-8. `K_B023B253B1A5FED1781FC0` → `H_409EF7D84AB8469C91AEC3385C`
-9. `K_B610A592D9545D785B5273` → `H_4164E28510AC475EA9FB48337C`
-10. `K_B8ADE8F014895A81A0DB0C` → `H_7C95508E54324EB7971918F1E5`
-11. `K_FB1036509AD15909DCBDDC` → `H_6706FA04BB344FA59ED6251058`
+1. 恢复并复用 V3 稳定编号 `LF_L015` / `L015` / `C042`，不另起无关 ID。
+2. `LF_L015 / L015` 对应现行 `XF 1131-2014《仓储场所消防安全管理通则》`。
+3. 修正历史 C042 条款定位错误：由旧的 `第4.1` 改为真实的 `3.3.2`。
+4. 第 3.3.2 条直接规定：仓储场所员工上岗、转岗前应接受消防安全培训；在岗人员至少每半年进行一次消防安全教育。
+5. 新增 H043 → C042 的 `direct` 专项依据。
+6. 原 H043 →《中华人民共和国安全生产法》第二十八条关联保留，但由 `direct` 调整为 `fallback`。该法条属于一般性从业人员安全生产教育培训义务，不能替代仓储消防场景和半年频次的专项要求。
+7. 同步更新 H043 的标题、描述、适用条件、整改措施、说明，以及 law / lawVersion / clause / hazard / link 审核记录和内容哈希绑定。
+8. 证据采用“官方标准状态 + 应急管理部改号公告 + 政府仓储消防检查要求交叉印证 + 可核标准条文文本”的组合，不以第三方标准全文页面单独证明现行效力。
 
-## Superseded / merged hazards
+## 本轮校验
 
-当前共 **67** 条。它们保留用于历史追溯，不进入当前公开投影，除非后续 lifecycle 复核发现数据错误。
+第一次修订后的 CI 中：
 
-## Technical acceptance snapshot
+- integrated validator：PASS
+- candidate build：PASS
+- 共享链式适用性判断：PASS
+- strict release blockers：0
+- 唯一失败项：`scan_evidence_exact`
 
-commit `0a767314...` 的 V4 Final Acceptance CI：
+原因是《安全生产法》第二十八条 fallback 审核记录错误绑定到了仓储消防培训的佐证来源，而不是该法条已有的官方法律证据链。该证据映射问题已经修正。
 
-- integrated validator: PASS
-- candidate build: PASS
-- six-stage Gate: STRUCTURAL / CONTENT / APPLICABILITY / VERSION / EVIDENCE / RELEASE 全 PASS
-- strict audit: PASS
-- release blockers: 0
-- search regression: PASS
-- deterministic candidate build: PASS
-- knowledge mutation check: PASS
-- candidate-only boundary: PASS (`candidate=true`, `production=false`)
-- eligible hazards: 645
-- eligible links: 716
-- candidate sourceStateHash: `545a828e653fe634754d50699c7e321448dbac25396500b15c1a015f1a0e0e5f`
+修正后 V4 Final Acceptance run `34463598243` 成功：
 
-## Remaining semantic queues
+- integrated validator：PASS
+- candidate build：PASS
+- STRUCTURAL：PASS
+- CONTENT：PASS
+- APPLICABILITY：PASS
+- VERSION：PASS
+- EVIDENCE：PASS
+- RELEASE：PASS
+- strict audit：PASS
+- search regression：PASS
+- release blockers：0
+- candidate-only 边界保持：PASS
+- production：未切换
 
-当前机器发布链已经完整，但 Phase 16 尚未完成。仍需人工专业终审：
+## 剩余 Phase 16 队列
 
-- pending Requirements: 20
-- stale old-standard refs in hazard fields: 14
-- partial-replaced standard hazard hits: 12
-- obligation-restatement candidates: 11
-- links to merged hazards: 9
-- 江苏地方具体义务：H046（主要负责人季度全面检查）、H048（年度全面风险辨识）等需核直接地方条款，不能仅以泛化全国法替代具体频次义务
-- H049 事故后组织抢救、及时如实报告应核精确直接法条，不能由应急预案义务替代
-- H043 仓储消防培训应继续确认是否存在更直接的消防专项依据；现有安全生产教育培训条款不能因为技术 Gate 通过就自动视为最佳依据
-- H052-H055、H058、H065、H067、H069、H079 等高价值条目继续做现行版本与适用性专业终审
+- pending Requirements：20
+- stale old-standard refs in hazard fields：14
+- partial-replaced standard hazard hits：12
+- obligation-restatement candidates：11
+- links to merged hazards：9
+- H049：事故发生后组织抢救、及时如实报告的精确直接法条终审
+- H052-H055、H058、H065、H067、H069、H079 等高价值条目继续做现行版本、条款原文和适用范围终审
+- 最终 V3/V4 差异报告刷新
+- 页面、筛选、law index、PWA / Service Worker、隐私公开投影验收
+- 最终 candidate 汇总与最终验收报告
 
 ## 终审原则
 
-机器 Gate 只回答“当前数据链是否满足既定发布规则”，不替代法规专业判断。下一阶段仍按隐患逐条检查监管对象、适用范围、版本时效、条款义务、直接程度和地方/国家关系；证据不足时保持待复核，不为提高覆盖率强行通过。
+机器 Gate 全绿只表示当前数据链满足既定机器发布规则，不等于全部 719 条 qualifying links 已完成人工法规专业终审。Phase 16 继续保持 ACTIVE；在用户明确批准 Phase 17 前，不修改 `main`，不切换生产网站。
