@@ -14,7 +14,7 @@ verified_without_evidence=0
 ## Version
 lawVersions_total=68, active-missing-effectiveDate=0
 missing_eff_ids=[]
-successions_total=19
+successions_total=22
 
 ## Gate verdict
 - STRUCTURAL: PASS
