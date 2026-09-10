@@ -82,6 +82,41 @@ def main():
     comp = [k for k, r in reviews.items() if "COMPOSITE" in str(r.get("reasonCodes") or "")]
     report["composite_reviewed"] = len(comp)
 
+    # RELEASE：candidate 一致性核对（与 build_release.py 同口径）
+    REL = os.path.join(ROOT, "source", "releases", "v4-candidate-20260910")
+    rel_json_path = os.path.join(REL, "release.json")
+    release_verdict = "REVIEW_REQUIRED"
+    release_notes = []
+    if not os.path.exists(rel_json_path):
+        release_notes.append("candidate release.json 不存在")
+    else:
+        try:
+            sys.path.insert(0, TOOLS)
+            import build_release as br
+            rel = json.load(io.open(rel_json_path, encoding="utf-8"))
+            cur_hash = br.state_hash(glob.glob(os.path.join(KNOW, "**", "*.json"), recursive=True))
+            if rel.get("sourceStateHash") != cur_hash:
+                release_notes.append("sourceStateHash 与当前 knowledge 不一致（candidate 过期，需重跑 build_release.py）")
+            cur_counts = {"laws": len(load_dir("laws")), "law_versions": len(load_dir("law-versions")),
+                          "clauses": len(load_dir("clauses")), "hazards": len(load_dir("hazards")),
+                          "links": len(load_dir("links")), "requirements": len(load_dir("requirements"))}
+            sc = rel.get("sourceCounts") or {}
+            for k, v in cur_counts.items():
+                if sc.get(k) != v:
+                    release_notes.append("counts 不一致: %s=%s(rel) vs %s(cur)" % (k, sc.get(k), v))
+            rl = rel.get("reviewStatsByLink") or {}
+            cur_rt = report["review_totals"]
+            if (rl.get("verified") != cur_rt.get("verified") or
+                    rl.get("rejected") != cur_rt.get("rejected") or
+                    rl.get("pending") != cur_rt.get("pending")):
+                release_notes.append("reviewStatsByLink 不一致: %s(rel) vs %s(cur)" % (rl, cur_rt))
+            if not release_notes:
+                release_verdict = "PASS"
+        except Exception as e:  # noqa: BLE001
+            release_notes.append("RELEASE 核对异常: %r" % e)
+    report["release_verdict"] = release_verdict
+    report["release_notes"] = release_notes
+
     # 汇总判定
     structural_pass = all(v == "PASS" for v in report["structural"].values()) and report["evidence_scan"] == "PASS"
     version_pass = len(missing) == 0
@@ -94,7 +129,7 @@ def main():
         "APPLICABILITY": "PASS" if applicability_pass else "FAIL",
         "VERSION": "PASS" if version_pass else "PENDING (%d active LVs lack effectiveDate)" % len(missing),
         "EVIDENCE": "PASS" if report["evidence_scan"] == "PASS" else "FAIL",
-        "RELEASE": "NOT_RUN (candidate build pending)",
+        "RELEASE": release_verdict,
     }
 
     text = []
@@ -118,6 +153,11 @@ def main():
     text.append("## Gate verdict")
     for k, v in report["gate"].items():
         text.append("- %s: %s" % (k, v))
+    if report["release_notes"]:
+        text.append("")
+        text.append("## RELEASE 核对明细")
+        for n in report["release_notes"]:
+            text.append("- %s" % n)
     text.append("")
     text.append("RELEASE 级（candidate build / V3-V4 diff / search regression）在 Phase 19-20 完成后补记；production 切换需用户批准。")
 
