@@ -3,18 +3,19 @@
   "entityId": "K_b9fd0e4e2b1e4dff0f6ddb74",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T17:15:00+08:00",
-  "reason": "门窗未向外开启，违反GB 50016-2014第5.5.15条疏散门设置要求。疏散门应向疏散方向开启，确保紧急情况下人员能够快速疏散。门窗未向外开启直接影响疏散效率和人员安全。",
+  "decision": "rejected",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "驳回原 direct 判断。依据条文《建筑设计防火规范》GB 50016-2014（2018年版）第5.5.15条已被《建筑防火通用规范》GB 55037-2022 废止（住房和城乡建设部2022年第189号公告）；且该条文规范的是公共建筑内房间的疏散门数量，与『门窗未向外开启』（开启方向）并非同一事项。本条正确依据待补：应按 GB 55037-2022 疏散门/安全疏散相关条款核定后重建关联。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "EGRESS_DOOR"
+    "ABOLISHED_CLAUSE",
+    "CLAUSE_SCOPE_MISMATCH",
+    "DIRECT_ROLE_REJECTED"
   ],
   "reviewedContentHash": "6ff939fe6f2d32307d5de98d0a37228c2c30c2a9aee5db3efe9fd778d650a536",
   "contextHashes": {
     "hazard": "a81d5bda34fe6bc56005a4791c44d04b89a299e231b2ddc29d3ecaf8ac58aefe",
-    "clause": "228f6363fdcc4c26480a906057ac27216beaf747c2fc861c2f26e219e5dddd27",
+    "clause": "3abeadd4f6863d48ffc3e2da755c30ed270c258aef3bbef672b36ff864594a77",
     "link": "6ff939fe6f2d32307d5de98d0a37228c2c30c2a9aee5db3efe9fd778d650a536"
   },
   "evidenceRefs": []
