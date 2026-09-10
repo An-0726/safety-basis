@@ -13,7 +13,7 @@ review_total=747, verified_without_evidence=511
 - eligibleHazards=644, eligibleLinks=714, strictBlockers=0
 
 ## Version
-lawVersions_total=77, active-missing-effectiveDate=0
+lawVersions_total=76, active-missing-effectiveDate=0
 successions_total=23
 
 ## Gate verdict
