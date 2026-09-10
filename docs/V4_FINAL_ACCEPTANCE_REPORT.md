@@ -4,7 +4,7 @@
 > 生成时间：2026-09-10
 > 分支：`chat-v4`
 > 候选包：`source/releases/v4-candidate-20260910`
-> `sourceStateHash`：`57b565b08f94bb78`（见候选包 `release.json`，以运行时实测为准）
+> `sourceStateHash`：`209787cacd1a7a51f15c09bbdd3a87d5783716c3bf00b0d50a20ba857de46613`（与当前候选包 `release.json` 一致）
 > `main` / GitHub Pages / production / V3 SQLite：**均未改动**
 
 ---
@@ -25,7 +25,7 @@
 发布判定（共享链式门禁 `release_gate_core`）：
 
 - 可发布隐患 **640 / 712**
-- 合格关联 **799 / 827**（verified 799 / rejected 21 / pending 0）
+- 合格关联 **799 / 827**（verified 799 / rejected 21 / superseded 7 / pending 0）
 
 不可发布的 71 条为已合并或已拆分的 `superseded` 隐患，另有 1 条 active 隐患因现场信息不足暂不发布（见 2.D 与第 4 节），均不进入公开投影。
 
