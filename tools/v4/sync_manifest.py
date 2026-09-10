@@ -30,14 +30,16 @@ print("real counts:", counts)
 
 m = json.load(io.open(MANIFEST, encoding="utf-8"))
 m["counts"] = counts
-m["migrationPhase"] = "Phase 22 (final acceptance stage; production switch pending user approval)"
+m["migrationPhase"] = "Phase 16 (final acceptance in progress; production switch pending user approval)"
 m["batch"] = "v4-final-20260910"
 m["scope"] = (
-    "V4 knowledge base at final acceptance: catalogue 68 laws/68 lawVersions, 76 clauses, "
-    "75 requirement drafts, 662 hazards (642 migrated + 20 V3-verified backfill), 181 links "
-    "with full applicability review (128 verified / 21 rejected / 32 pending), 552 evidence, "
-    "22 successions. Composite hazards registered in docs/V4_HAZARD_SPLIT_TASKS.md. "
-    "Candidate release v4-candidate-20260910 (production NOT switched)."
+    "V4 knowledge base in Phase 16 final acceptance: %d laws, %d lawVersions, %d clauses, "
+    "%d requirements, %d hazards, %d links, %d evidence, and %d successions. "
+    "Candidate release v4-candidate-20260910 remains candidate-only; production is NOT switched. "
+    "Composite-hazard split history remains traceable in docs/V4_HAZARD_SPLIT_TASKS.md."
+    % (counts["laws"], counts["lawVersions"], counts["clauses"], counts["requirements"],
+       counts["hazards"], counts["links"], counts["evidence"], counts["successions"])
 )
-io.open(MANIFEST, "w", encoding="utf-8", newline="\n").write(json.dumps(m, ensure_ascii=False, indent=1) + "\n")
+io.open(MANIFEST, "w", encoding="utf-8", newline="\n").write(
+    json.dumps(m, ensure_ascii=False, indent=1) + "\n")
 print("manifest synced")

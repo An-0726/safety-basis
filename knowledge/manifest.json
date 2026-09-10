@@ -198,21 +198,30 @@
    "id": "link-backfill-20260910-01",
    "linksAdded": 123,
    "selection": "5-way concurrent backfill: 消防安全28 + 电气安全/安全标志25 + 安全管理/应急/安全教育28 + 危化品/涂装/粉尘防爆/燃气23 + 设备设施/总图建筑/作业安全/专项EHS19 = 123 new verified links. All reuse existing 85 clauses, no new clauses. Hash bindings verified (0 mismatches)."
+  },
+  {
+   "id": "phase16-final-review-20260910",
+   "lawsAdded": 1,
+   "lawVersionsAdded": 1,
+   "clausesAdded": 7,
+   "linksAdded": 5,
+   "evidenceAdded": 1,
+   "selection": "Phase 16 specialist final review: H046/H048 handoff-note closeout; H047 Jiangsu Art.15(2) direct; H073 Fire Protection Law Art.21(1) direct; H036/H064/H068 mis-tag correction; GB 50016 abolished clauses replaced by GB 55037-2022 (new clauses and one rejected link); new JGJ 91-2019 entity giving H063 and three laboratory hazards their mandatory clauses. Direct-role overstatements downgraded to fallback; publishable hazards 645->644 as one invalid basis was rejected rather than propped up."
   }
  ],
  "counts": {
-  "laws": 75,
-  "lawVersions": 75,
-  "clauses": 88,
+  "laws": 77,
+  "lawVersions": 77,
+  "clauses": 99,
   "hazards": 712,
-  "links": 735,
-  "evidence": 567,
+  "links": 747,
+  "evidence": 573,
   "successions": 23,
   "requirements": 75
  },
  "formatVersion": "4.0-alpha",
  "migrationPhase": "Phase 16 (final acceptance in progress; production switch pending user approval)",
- "scope": "V4 knowledge base in Phase 16 final acceptance: 75 laws, 75 lawVersions, 88 clauses, 75 requirements, 712 hazards, 735 links (666 verified / 19 rejected / 0 pending in the latest pre-final candidate), 567 evidence, and 23 successions. The latest pre-final candidate has 596 publishable hazards and remains candidate-only; production is NOT switched. Composite-hazard split history remains traceable in docs/V4_HAZARD_SPLIT_TASKS.md.",
+ "scope": "V4 knowledge base in Phase 16 final acceptance: 77 laws, 77 lawVersions, 99 clauses, 75 requirements, 712 hazards, 747 links, 573 evidence, and 23 successions. Candidate release v4-candidate-20260910 remains candidate-only; production is NOT switched. Composite-hazard split history remains traceable in docs/V4_HAZARD_SPLIT_TASKS.md.",
  "source": {
   "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
   "v3ReleaseCorroboration": "reviewed-20260909-r10"
