@@ -6,6 +6,20 @@
 
 ACTIVE
 
+## 新窗口续接协议
+
+每次新开窗口或重新接手本项目，必须按以下顺序判断真实断点，**不能只相信本文件里写的进度数字**：
+
+1. 先读取 `docs/PROJECT_PLAYBOOK.md` 和 `docs/CHAT_HANDOFF.md`。
+2. 读取 `chat-v4` 当前最新 HEAD。
+3. 查询最近一次修改 `docs/CHAT_HANDOFF.md` 的 commit，并与当前 HEAD 比较提交时间和祖先关系。
+4. 如果 HEAD 晚于 handoff commit，必须检查 handoff commit 之后的全部相关 commit，重点核对 `knowledge/manifest.json`、实际实体文件、review sidecar 和其他真实落盘成果。
+5. **实际 GitHub 文件状态和最新有效 commit 优先于 handoff 文本。** 如果实际进度更靠后，先以实际状态继续工作，并在本轮结束前修正本文件。
+6. 每个有效施工单元应先提交 data/code 成果并完成校验，再单独更新本 handoff；handoff 必须写明本轮最新 data commit、当前累计数量、未完成事项、风险和下一步。
+7. 写入前再次读取 HEAD。若并发前移，重新基于最新 HEAD 判断差集；只允许非 force 的安全前移，禁止用旧 handoff 或旧本地状态覆盖新成果。
+
+因此，“handoff 文件看起来更新”本身不代表它一定是最新事实；必须先完成 **HEAD → handoff 最后 commit → 中间 commits → manifest/实际文件** 的比较链。
+
 ## 当前总目标
 
 在保留 Codex V3 的 Stable ID、法规身份/版本、条款、隐患、link、evidence、release、网站与审计历史基础上，迁移到 Git-first、Chat 可长期维护的 V4 / Chat-first 架构。优先保证法规版本、条款原文、隐患内容、适用性和隐私正确；降低 SQLite、dependency hash、本地 Code Agent 对日常维护的强依赖。
@@ -132,7 +146,7 @@ Phase 5 保守 candidate 总量：law 148、current lawVersion 148、clause 54�
 
 ## 下一轮第一步
 
-**执行 `hazards-006`：先重新读取 `chat-v4` HEAD 与本 handoff，确认没有并发新批次；再从冻结 SQLite immutable 只读连接按既定 642 条规则重算候选，排除 `knowledge/hazards/` 已有 30 个 Stable ID，从剩余集合按 Stable ID 顺序取下一批。生成 hazard JSON + content review sidecar，仅补缺失 evidence；迁移前检查 active、非 merge、title/description/measures 非空、latest review=passed、public_fields_reviewed=1；迁移后检查重复 ID、review/evidence 引用、私有字段泄漏和 manifest 计数。写 Git 前再次读取 `chat-v4` HEAD，只允许非 force 的安全前移。**
+**执行 `hazards-006`：先按照“新窗口续接协议”比较当前 HEAD、`CHAT_HANDOFF.md` 最后修改 commit、其后的中间 commits 与 `knowledge/manifest.json`/实际文件状态；确认真实断点后，再从冻结 SQLite immutable 只读连接按既定 642 条规则重算候选，排除 `knowledge/hazards/` 已有 Stable ID，从剩余集合按 Stable ID 顺序取下一批。生成 hazard JSON + content review sidecar，仅补缺失 evidence；迁移前检查 active、非 merge、title/description/measures 非空、latest review=passed、public_fields_reviewed=1；迁移后检查重复 ID、review/evidence 引用、私有字段泄漏和 manifest 计数。写 Git 前再次读取 `chat-v4` HEAD，只允许非 force 的安全前移。**
 
 ## 后续任务
 
