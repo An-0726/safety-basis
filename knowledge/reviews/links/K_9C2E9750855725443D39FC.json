@@ -1,19 +1,21 @@
 {
- "entityType": "link",
- "entityId": "K_9C2E9750855725443D39FC",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "a014c8c6a32d03c44cbdb832fbf3c20fa453c9c687ae29d7c923f1916fdf085f",
- "contextHashes": {
-  "hazard": "6713c91bf998d7a73b5fe33ea9e2bf778e75431d1c046567e8f20826a597c5a1",
-  "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
- },
- "checkedAt": "2026-09-10T18:30:00+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "特种设备安全法第四十条直接规定使用单位应在检验合格有效期届满前一个月提出定期检验要求，未经定期检验或检验不合格不得继续使用，与本隐患违法事实一一对应。",
- "reasonCodes": [
-  "SPECIFIC_CLAUSE_REQUIRED"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_9C2E9750855725443D39FC",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "a014c8c6a32d03c44cbdb832fbf3c20fa453c9c687ae29d7c923f1916fdf085f",
+  "contextHashes": {
+    "hazard": "44887fe8c4499a5fe1dc344d2fee5886bc0450e914a98e82746caaf391f1e97d",
+    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
+  },
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "特种设备安全法第四十条直接规定使用单位应在检验合格有效期届满前一个月提出定期检验要求，未经定期检验或检验不合格不得继续使用，与本隐患违法事实一一对应。 2026-09-10 复核：该条已属现行有效的精确直接条款，原 SPECIFIC_CLAUSE_REQUIRED 标记为批量误标，予以纠正。",
+  "reasonCodes": [
+    "DIRECT_CLAUSE_CONFIRMED"
+  ],
+  "evidenceRefs": [
+    "E_FT_ac45cbae1249f58e0078a776b8a390d5"
+  ],
+  "migratedFromV3Verification": null
 }

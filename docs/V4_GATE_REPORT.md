@@ -6,11 +6,11 @@
 - check_review_binding: PASS
 - scan_evidence_exact: PASS
 
-## Review totals: {"verified": 719, "rejected": 20}
-review_total=739, verified_without_evidence=523
+## Review totals: {"verified": 721, "rejected": 20}
+review_total=741, verified_without_evidence=520
 
 ## Shared chained gate
-- eligibleHazards=645, eligibleLinks=719, strictBlockers=0
+- eligibleHazards=645, eligibleLinks=721, strictBlockers=0
 
 ## Version
 lawVersions_total=76, active-missing-effectiveDate=0
@@ -25,6 +25,6 @@ successions_total=23
 - RELEASE: PASS
 
 ## RELEASE 核对明细
-- strict gate PASS: eligibleHazards=645 eligibleLinks=719
+- strict gate PASS: eligibleHazards=645 eligibleLinks=721
 
 RELEASE 阶段已接入共享链式门禁 release_gate_core；production 切换需用户批准。
