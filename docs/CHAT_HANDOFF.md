@@ -1,20 +1,18 @@
 # Safety Basis Chat 续接状态
 
-> 最后更新：2026-09-10。每轮恢复项目时必须先读取本文件、`docs/V4_FINAL_ACCEPTANCE.md`、`docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`、`knowledge/manifest.json`，并核对 `chat-v4` 当前真实 HEAD 与最新 V4 Final Acceptance CI。聊天历史不得覆盖真实文件状态。
+> 最后更新：2026-09-10。每轮恢复项目时必须先读取本文件、`docs/V4_FINAL_ACCEPTANCE.md`、`docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`、`knowledge/manifest.json`，并重新核对 `chat-v4` 真实 HEAD、最新 V4 Final Acceptance CI 和 Google Drive `ESH_Codex/work/safety-basis`。聊天历史不得覆盖真实文件状态。
 
 ## PROJECT_STATUS
 
-ACTIVE — Phase 16 最终验收正在执行。技术 Validator / Gate / Strict / 搜索 / 确定性构建已在当前知识基线上通过，但人工法规版本、Hazard→Clause 适用性、Requirement、V3/V4 最终差异以及页面/PWA/隐私终审尚未全部收口，因此不得提前标记 READY_FOR_ACCEPTANCE。
+ACTIVE — Phase 16 最终验收继续执行。机器链式 Gate 已修复并全绿，但法规适用性人工专业终审、20 条 pending Requirement、旧标准/替代关系队列、V3/V4 最终差异、页面/PWA/隐私终审尚未收口，因此不得标记 READY_FOR_ACCEPTANCE。
 
 ## 当前总目标
 
-在保留 V3 Stable ID、法规身份/版本/条款、可靠隐患、正确关联、证据、历史 release 和网站能力的基础上，完成 Chat-first V4；由 ChatGPT 负责 Phase 16 最终总检查、问题修复和收口。全部验收通过后再把项目状态改为 `READY_FOR_ACCEPTANCE`；只有用户明确批准才进入 Phase 17、修改 `main` 或切换生产网站。
+在保留 V3 Stable ID、法规身份/版本/条款、可靠隐患、正确关联、证据、历史 release 和网站能力的基础上完成 Chat-first V4。全部 Phase 16 验收通过后才改为 `READY_FOR_ACCEPTANCE`；只有用户明确批准才进入 Phase 17、修改 `main` 或切换生产网站。
 
 ## 当前 Phase
 
 **Phase 16：最终验收。**
-
-不得再使用此前错误的“Phase 22”编号。正式施工顺序仅为用户定义的 Phase 1–17。
 
 ## 当前工作分支
 
@@ -24,13 +22,19 @@ ACTIVE — Phase 16 最终验收正在执行。技术 Validator / Gate / Strict 
 
 ### GitHub / Knowledge
 
-本轮机器终审使用的最新知识基线：
+本轮开工时真实 HEAD：`1a96095c2e8bea21adbcc1dc684c2bfde161bab7`。
 
-`cd29037630c9f52688692ab3f9212bd7dc9fde9d`
+本轮有效代码修复提交：
 
-该基线之后本轮新增的是验收文档/报告提交，不改变 `knowledge/**/*.json`，因此下述 `sourceStateHash` 仍对应当前知识内容。下一轮开工仍必须重新读取实际 HEAD，不能直接假定本文件记录的是远端最新 commit。
+`0a7673149c012cf39238e019c05626ef11e8c285` — `fix: index V4 reviews by entity id`
 
-当前 knowledge counts：
+随后更新终审库存文档：
+
+`49ba9101e9682d4d50335b639fcad8358693bc3d` — `docs: correct Phase 16 inventory after review-index fix`
+
+本文件提交后 HEAD 会再次前移；下一轮必须重新读取分支真实 HEAD，不得仅依赖此处记录。
+
+当前 knowledge counts 未改动：
 
 - laws: 75
 - lawVersions: 75
@@ -41,178 +45,162 @@ ACTIVE — Phase 16 最终验收正在执行。技术 Validator / Gate / Strict 
 - evidence: 567
 - successions: 23
 
-`knowledge/manifest.json` 已纠正为 Phase 16，并将 scope 从历史 68 laws / 662 hazards / 181 links 更新到当前规模。
+本轮**没有修改任何 `knowledge/**/*.json`**，所以 candidate `sourceStateHash` 仍为：
+
+`545a828e653fe634754d50699c7e321448dbac25396500b15c1a015f1a0e0e5f`
 
 ### V3 冻结基线
 
 - `source/master/safety.sqlite3`
 - SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
-- 本轮未修改。
-
-### 当前最新机器 Candidate
-
-知识基线 `cd290376...` 对应的 V4 Final Acceptance CI：
-
-- run id: `34453384587`
-- artifact id: `10142435867`
-- artifact name: `v4-final-acceptance-cd290376`
-- candidate sourceStateHash: `545a828e653fe634754d50699c7e321448dbac25396500b15c1a015f1a0e0e5f`
-- candidate: true
-- production: false
-- publishable hazards / eligible hazards: 596
-- eligible links: 666
-- strict audit: PASS
-- blockerCount: 0
-- warningCount: 60
-- excludedCount: 105
-- search regression: 20/20 PASS
-- deterministic build: PASS
-
-注意：仓库现有 `source/releases/v4-candidate-20260910/` 是知识修改前的 tracked candidate，不应只手工改一个 `release.json` 来冒充完整最新候选。当前最新完整 candidate 证据是上述 CI artifact。待知识树最终稳定后，应生成新的完整 final candidate 路径/版本并整体提交，而不是局部覆盖旧候选。
+- 本轮未修改 SQLite / fulltext。
 
 ### Google Drive
 
-`ESH_Codex/work/safety-basis` 本轮开工已确认可访问。本轮未覆盖 Drive 正式文件，未修改 SQLite/fulltext。
+`ESH_Codex/work/safety-basis` 本轮已确认仍可访问，根目录包含 `.git`、`data/`、`docs/`、`source/`、`tools/`、网站源码等工作资产。本轮没有覆盖 Drive 正式文件。
+
+### 最新机器 Candidate / CI
+
+commit `0a767314...` 对应 V4 Final Acceptance：
+
+- run id: `34456894682`
+- conclusion: SUCCESS
+- artifact id: `10143845362`
+- artifact name: `v4-final-acceptance-0a7673149c012cf39238e019c05626ef11e8c285`
+- candidate: true
+- production: false
+- eligible hazards: **645**
+- eligible links: **716**
+- active hazards without qualifying direct/fallback: **0**
+- superseded/merged hazards: 67
+- link reviews: 716 verified / 19 rejected
+- strict release blockers: 0
+- search regression: PASS
+- deterministic build: PASS
+- knowledge mutation check: PASS
 
 ## 本轮完成
 
-1. 建立正式 Phase 16 总验收框架 `docs/V4_FINAL_ACCEPTANCE.md`，明确 A–J 验收域和 READY_FOR_ACCEPTANCE 条件；确认最终验收由 ChatGPT 负责，用户只需对 Phase 17 生产切换做最终授权。
-2. 修正 `knowledge/manifest.json` 的旧 scope 数字和错误 Phase 22 标记，统一为 Phase 16。
-3. 将旧 `docs/V4_STRICT_AUDIT.md`、`docs/V3_V4_DIFF_REPORT.md` 从过期统计中纠正出来，禁止旧 162/209、543/596 等中途数字继续冒充最终状态。
-4. 新增 `.github/workflows/v4-final-acceptance.yml`，形成自动终审闭环：integrated validator → candidate build → 六阶段 Gate → strict audit → acceptance inventory → search regression → candidate-only 边界 → 两次确定性构建 → knowledge mutation check → artifact。
-5. 新增 `tools/v4/final_acceptance_inventory.py` 和 `docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`，把真实终审库存形成机器可重复生成的报告。
-6. 首轮终审发现此前“只剩 1 条未 publishable hazard”的过程结论不正确。真实非发布结构原为 66 superseded + 50 active 无合格 direct/fallback；本轮进一步纠正一条正向事实后变为 67 superseded/merged + 49 active 无合格 direct/fallback。
-7. 逐条确认 `H_A73EC0543AA24DF583F70E566B` 的正文是“未见与办公生活区域混杂布置情况”，属于正向事实而不是隐患。保留 Stable ID，lifecycle 改为 `superseded`，Hazard review 改为 superseded；其 `K_0193ab27f4a0e63fd8f1ecf5` direct link 继续 rejected，并重新绑定 hazard context hash。
-8. 修复 `tools/v4/scan_evidence_exact.py`：EXPECT 现在是 allowlist；未配置来源只记 UNMAPPED；真实 mismatch 才记 MISMATCHED；MISMATCHED > 0 返回非零退出码，确保 CI/Gate 能真正阻断。
-9. 最新机器终审在知识基线 `cd290376...` 上全绿：六阶段 Gate 全 PASS、Strict PASS、blocker=0、搜索 20/20、确定性构建 PASS、knowledge mutation=0。
-10. 发现 `docs/V4_GATE_REPORT.md` 曾被并发流程污染成 PowerShell/Python traceback；已恢复为当前真实 Gate 结果，并明确“技术 Gate PASS ≠ Phase 16 总验收完成”。
+1. 恢复并核对 GitHub、Google Drive 和上一轮 Phase 16 状态，确认未有并发新提交覆盖本轮开工基线。
+2. 复核 H043 后发现：hazard、link、clause、lawVersion、law 均已有有效 review，但旧 inventory 仍把 H043 判成“无 qualifying link”。
+3. 定位根因到 `tools/v4/release_gate_core.py`：普通实体和 review sidecar 共用 `load_dir()`，而新式 review 同时带有自身 `id=RV_*` 和被审核实体 `entityId`。旧逻辑优先使用 review 自身 `id` 建索引，发布 Gate 后续却按实体 ID 查 review，导致新式 review 被系统性误判为缺失。
+4. 实施最小修复：普通实体仍按自身 `id`；新增 `load_reviews()` 专门按 `entityId` 建索引，无 `entityId` 的旧 sidecar 才以文件名兜底。未修改法规、隐患、关联或 review 内容本身。
+5. 修复后重新跑 V4 Final Acceptance，全套机器验收通过；真实库存由旧的 `596 hazards / 666 links / 49 active missing` 修正为 `645 hazards / 716 links / 0 active missing`。
+6. 更新 `docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`，明确旧“49 条缺依据”是读取逻辑造成的假缺口，不再把这 49 条作为后续逐条补链任务。
+7. 明确新的终审边界：机器 Gate 全绿只证明结构和既定规则链完整，**不代表 716 条法规关联的专业语义全部正确**；仍须继续人工审查过泛 fallback、地方频次义务、旧标准和替代关系。
 
 ## 本轮修改文件
 
-主要文件：
-
-- `docs/V4_FINAL_ACCEPTANCE.md`
+- `tools/v4/release_gate_core.py`
 - `docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`
-- `docs/V4_GATE_REPORT.md`
-- `docs/V4_STRICT_AUDIT.md`
-- `docs/V3_V4_DIFF_REPORT.md`
 - `docs/CHAT_HANDOFF.md`
-- `knowledge/manifest.json`
-- `.github/workflows/v4-final-acceptance.yml`
-- `tools/v4/final_acceptance_inventory.py`
-- `tools/v4/scan_evidence_exact.py`
-- `knowledge/hazards/H_A73EC0543AA24DF583F70E566B.json`
-- `knowledge/reviews/hazards/H_A73EC0543AA24DF583F70E566B.json`
-- `knowledge/reviews/links/K_0193ab27f4a0e63fd8f1ecf5.json`
 
 ## 本轮校验
 
-知识基线 `cd290376...` 的 V4 Final Acceptance CI：
+V4 Final Acceptance run `34456894682`：
 
-- check_catalogue: PASS（75 laws / 75 lawVersions / 88 clauses / 23 successions）
-- check_requirements: PASS（75 requirements）
-- dangling references: 0
-- unbound link reviews: 0
-- stale link content hash: 0
-- stale hazard context hash: 0
-- stale clause context hash: 0
-- exact evidence mismatch: 0
+- integrated validator: PASS
+- candidate build: PASS
 - Gate STRUCTURAL: PASS
 - Gate CONTENT: PASS
 - Gate APPLICABILITY: PASS
 - Gate VERSION: PASS
 - Gate EVIDENCE: PASS
 - Gate RELEASE: PASS
-- strict verdict: PASS
-- blockerCount: 0
-- search regression: 20 / 20 PASS
+- strict audit: PASS
+- release blockers: 0
+- search regression: PASS
+- candidate boundary (`candidate=true`, `production=false`): PASS
 - deterministic double-build: PASS
-- candidate=true / production=false: PASS
 - acceptance tools modified knowledge: NO
+- artifact successfully generated
 
-自动质量扫描仍给出语义终审候选：
+关键修复效果：
 
-- stale old-standard refs in hazard fields: 14
-- obligation-restatement candidates: 11
-- links to merged hazards: 9
-- partial-replaced standard hazard hits: 12
-- full-replaced standard hazard hits: 0
+- eligible hazards: 596 → **645**
+- eligible links: 666 → **716**
+- active hazards without qualifying direct/fallback: 49 → **0**
 
-这些不是自动确认错误，必须在 Phase 16 专业复核后分类。
+这 49 条并不是本轮批量“通过”或新增依据，而是其既有 verified review 被旧 Gate 以错误键读取，修复索引后恢复到正确链式状态。
 
 ## 当前项目状态
 
 ### 发布链
 
 - total hazards: 712
-- publishable: 596
-- eligible links: 666
+- active / machine-eligible hazards: 645
+- superseded/merged hazards: 67
+- eligible links: 716
 - link reviews: 716 verified / 19 rejected
-- 716 是 review 决策口径，666 是通过完整共享链式 Gate 的发布依据口径；不得混用。
+- active hazards without qualifying direct/fallback: 0
+- supporting verified links: 11
+- candidate=true / production=false
 
 ### Requirement
 
 - verified: 55
 - pending: 20
 
-### 非发布库存
+### 仍需人工语义终审的队列
 
-- active hazards without qualifying direct/fallback: 49
-- verified supporting-only links: 11
-- superseded/merged hazards: 67
-- rejected links: 19
-- repealed lawVersions: 18
-- upcoming lawVersion: 1
+机器链完整后，后续重点不再是“给 49 条补 link”，而是审核已有 link 是否真的足够直接、适用和现行：
 
-49 条 active 非发布 hazard 的完整清单已经保存到 `docs/V4_FINAL_ACCEPTANCE_INVENTORY.md`。它们目前不泄漏到公开 release，因此不是当前生产内容 blocker；但 Phase 16 必须逐条判断是否应补直接依据、合法留作 backlog、改类、或确认并非隐患。
+- pending Requirements: 20
+- stale old-standard refs in hazard fields: 14
+- partial-replaced standard hazard hits: 12
+- obligation-restatement candidates: 11
+- links to merged hazards: 9
+- H046 江苏主要负责人“每季度至少一次全面检查”：现有全国法只能作为泛化兜底，必须核江苏现行地方直接条款
+- H048 江苏主要负责人“每年至少一次全面风险辨识”：必须核地方具体频次义务，不能仅以全国风险分级管控制度代替
+- H049 事故发生后组织抢救、及时如实报告：必须核精确直接法条，不能由“制定应急预案”义务替代
+- H043 仓储消防培训：继续确认消防专项直接依据是否优于现有通用安全生产教育培训条款
+- H052-H055、H058、H065、H067、H069、H079 等高价值条目继续做现行版本、条款原文和适用范围终审
 
 ## 未完成事项
 
-1. 对 49 条 active 无合格 direct/fallback 的 hazard 逐条专业终审，不得批量强行建链。
-2. 继续 20 条 pending Requirement 的逐条语义校准。
-3. 对 14 条旧标准引用候选和 12 条 partial-replaced standard hit 做当前官方来源时效核验。
+1. 对上述高价值 link 做专业适用性终审，必要时把过泛的 direct 降为 fallback/supporting 或补更直接依据；不得因为当前 eligible=645 就自动保留所有 link 角色。
+2. 完成 20 条 pending Requirement 的逐条语义校准。
+3. 终审 14 条旧标准引用候选和 12 条 partial-replaced hit，确认当前版本及替代关系。
 4. 处理 11 条 obligation-restatement candidates。
 5. 处理 9 条 links-to-merged-hazard candidates。
-6. 最终刷新 `docs/V3_V4_DIFF_REPORT.md`，做 Stable ID/内容/法规链/搜索/页面语义差异验收。
-7. 完整执行候选网站页面、筛选、law index、PWA/Service Worker、隐私公开投影验收。
-8. 知识树最终稳定后生成新的完整 final candidate，并重跑全套验收；之后生成最终验收报告。
-9. 只有全部完成后才把 PROJECT_STATUS 改为 `READY_FOR_ACCEPTANCE`。
+6. 刷新最终 `docs/V3_V4_DIFF_REPORT.md`。
+7. 执行候选网站页面、筛选、law index、PWA/Service Worker、隐私公开投影验收。
+8. 知识树最终稳定后生成新的完整 final candidate 路径并整体提交，再跑全套最终验收。
+9. 只有全部 Phase 16 收口后才改 `READY_FOR_ACCEPTANCE`。
 
 ## 下一轮第一步
 
-读取本文件和 `docs/V4_FINAL_ACCEPTANCE_INVENTORY.md` 后，从 49 条 active 无合格依据 hazard 中开始**第一批逐条专业终审**，优先处理常见且价值高、可通过当前官方来源明确核验的：
+**不要再按旧 inventory 的 49 条“缺依据”逐条补链。**
 
-`H043`（仓储消防教育培训）、`H046`（江苏主要负责人季度全面检查）、`H048`（江苏年度全面风险辨识）、`H049`（事故抢救和如实报告）、`H052`–`H055`（仓储堆放距离）、`H058`、`H067`、`H069`（仓储消防管理）、`H065`（易燃气体与助燃气体同库）、`H079`（建设项目安全设施设计）。
+先对第一组高风险/高价值既有 link 做法规语义终审：`H046`、`H048`、`H049`、`H043`。逐条读取 hazard → 当前 link/review → clause/lawVersion → 联网核当前官方法规原文和效力 → 判断现有 role 是否合理。重点先解决江苏地方频次条款和 H049 精确事故报告/抢救义务；找到直接条款则规范入库，证据不足则维持现状或降级，禁止为了覆盖率强行 verified。
 
-逐条执行：读取 Hazard → 查现有 links/clauses → 当前官方网页核法规/标准版本与原文 → 判断 direct/fallback/supporting/不适用 → 保存 review/证据 → 每小批次重跑 V4 Final Acceptance CI。不得因为覆盖率目标自动 verified。
-
-如果第一批中某条需要新标准 clause，先核条款原文和现行版本后再新增；找不到可靠证据就继续保持非发布，不阻断其他条目。
+完成这一小批后重新跑 V4 Final Acceptance，并更新 inventory/handoff。
 
 ## 后续任务
 
-1. 继续剩余 49 条 active 非发布 hazard 的风险导向终审。
-2. 穿插完成 20 条 pending Requirement，避免最终阶段只清 links 不清义务层。
-3. 收口版本影响队列（14 / 12）。
-4. 收口 obligation/merged-link 队列（11 / 9）。
-5. 最终 V3/V4 diff。
-6. 页面/PWA/隐私验收。
-7. final candidate + full validator/gate/strict/deterministic rebuild。
-8. 最终验收报告 → `READY_FOR_ACCEPTANCE`。
-9. 用户批准后才进入 Phase 17。
+1. H046 / H048 / H049 / H043 专业终审。
+2. H052-H055、H058、H065、H067、H069、H079 终审。
+3. 20 条 pending Requirement。
+4. 14 条旧标准 + 12 条 partial replacement。
+5. 11 条 obligation-restatement + 9 条 merged-link。
+6. 最终 V3/V4 diff。
+7. 页面/PWA/隐私验收。
+8. final candidate + 全套 validator/gate/strict/deterministic build。
+9. 最终验收报告 → `READY_FOR_ACCEPTANCE`。
+10. 用户批准后才进入 Phase 17。
 
 ## 法规/标准待核验队列
 
 高优先级：
 
-- 2026《中华人民共和国危险化学品安全法》与既有《危险化学品安全管理条例》/相关规章的现行并存、替代和条款适用边界。
-- 江苏省安全生产地方规则：主要负责人季度全面检查、年度风险辨识等具体义务。
-- 仓储消防管理类直接依据：培训、堆垛距离、防雷、重点岗位培训等。
-- 易燃气体与助燃气体分库存放直接技术依据。
+- 江苏省安全生产现行地方法规：主要负责人季度全面检查、年度全面安全风险辨识的具体条款和现行效力。
+- 《中华人民共和国安全生产法》中事故后单位负责人组织抢救、及时如实报告的精确条款。
+- 仓储消防培训、在岗培训频次、消防重点岗位培训的直接消防专项依据。
+- 仓储堆垛距离现行标准版本及条款。
+- 易燃气体与助燃气体同库储存的直接技术依据。
 - 建设项目安全设施设计“三同时”直接依据。
-- 14 条 hazard 旧标准引用候选。
-- 12 条 partial-replaced standard hazard hits。
-
-证据不足的维持 pending/非发布。
+- 2026《中华人民共和国危险化学品安全法》与既有危险化学品行政法规/规章的现行并存和替代边界。
+- 14 条旧标准引用候选、12 条 partial-replaced hits。
 
 ## 风险 / 阻塞
 
@@ -220,29 +208,25 @@ ACTIVE — Phase 16 最终验收正在执行。技术 Validator / Gate / Strict 
 
 已知风险：
 
-- 过去过程报告曾错误声称“只剩 1 条未 publishable hazard”；现已由机器库存纠正为真实 49 条 active 无 qualifying link + 67 条 superseded/merged，后续必须以 inventory 为准。
-- `docs/V4_GATE_REPORT.md` 曾被并发操作污染成 traceback；下一轮开工需回读，发现并发覆盖立即以 CI/真实文件纠正，禁止 force push。
-- tracked `source/releases/v4-candidate-20260910/` 不是当前知识变更后的完整最终候选；不要只更新 release.json hash。最新机器完整候选在 CI artifact，待知识稳定后整体生成新 final candidate。
-- 自动质量扫描的 14/11/9/12 是候选，不可机械当成错误或机械清零。
-- 49 条 active 非发布项目前不会进入公开投影，但是否应进入最终产品仍需逐条专业判断。
+- 旧 Phase 16 inventory 的 49 条 active missing 是 Gate review 索引 bug 导致的错误统计，已修正；任何旧报告若仍出现 596/666/49，应视为过期统计。
+- 当前 645/716 是**机器发布链结果**，不能等同于人工法规专业终审结论。部分新增 link 的 role 仍可能偏泛，下一轮必须从 H046/H048/H049/H043 开始人工复核。
+- `docs/V4_GATE_REPORT.md` 过去曾被并发流程污染；使用统计时优先核最新 CI artifact，不以旧 tracked 报告冒充实时结果。
+- 容器直连 GitHub 偶发 DNS 失败，但 GitHub 连接器读写正常，不构成当前项目阻塞。
 
 ## 用户待决策事项
 
-当前无。
+当前无。Phase 16 可继续自动推进。
 
-未来唯一必须用户决定的高影响事项：Phase 16 全部验收通过、状态达到 `READY_FOR_ACCEPTANCE` 后，是否批准 Phase 17 正式 production 切换。
+只有进入 Phase 17、修改 `main` 或正式切换生产网站时需要用户明确批准。
 
 ## 明确禁止事项
 
-- 不得修改 `main`
-- 不得正式切换 production
-- 不得切换 GitHub Pages 正式数据源
-- 不得用旧 release 覆盖新 release
-- 不得用旧数据库覆盖新数据库
-- 不得修改 V3 冻结 SQLite/fulltext
-- 不得 force push
-- 不得把历史报告中的法规条款未经现行核验直接当当前有效依据
-- 不得为了提高 publishable 数量批量把 link 改 direct/verified
-- 不得使用同一证据机械证明不同条款/隐患
-- 不得把泛上位法包装成具体技术依据
-- 不得让私有 Drive 路径/资料进入公开发布数据
+- 不修改 `main`
+- 不切换生产网站 / GitHub Pages 正式数据源
+- 不覆盖 V3 SQLite 冻结基线
+- 不用旧 release / 旧报告覆盖新成果
+- 不因机器 Gate 全绿自动宣告法规语义全部正确
+- 不批量假定 links 正确，不重演 r8 质量事故
+- 不为提高发布数量强行建立或 verified 依据
+- 不把通用上位法包装成具体技术 direct 依据
+- 不因缺少整本标准全文而编造条款；可靠局部条款可按证据等级核验
