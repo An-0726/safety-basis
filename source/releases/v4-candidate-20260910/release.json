@@ -3,7 +3,7 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "7a87bd7fcbc794c7d42ae37f2aa5e50df478d122f68ddef7d6ddfa7c7b0fcd17",
+ "sourceStateHash": "3a1a04084db3131e7e820befa00c595ec7d3c981fe0aace78d658bf88d347f94",
  "sourceCounts": {
   "laws": 68,
   "law_versions": 68,
@@ -14,25 +14,25 @@
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "verified": 160,
+  "verified": 163,
   "rejected": 18,
-  "pending": 4
+  "pending": 1
  },
  "reviewStatsByLink": {
   "level": "review-level (181 links)",
-  "verified": 174,
+  "verified": 177,
   "rejected": 23,
-  "pending": 4
+  "pending": 1
  },
  "publishStats": {
-  "publishable": 158,
-  "not_publishable": 554,
+  "publishable": 159,
+  "not_publishable": 553,
   "by_status": {
-   "verified": 160,
+   "verified": 163,
    "unreviewed": 526,
-   "pending": 4,
    "rejected": 18,
-   "verified_with_rejections": 4
+   "verified_with_rejections": 4,
+   "pending": 1
   }
  },
  "publishWarnList": [
@@ -47,10 +47,9 @@
   {
    "hazardId": "H005",
    "title": "电源线路私拉乱接",
-   "status": "pending",
+   "status": "verified",
    "reasons": [
-    "pending links: K_dfbbf4fbb290903fc3cc86b325",
-    "stale/unverified links: K_dfbbf4fbb290903fc3cc86b325",
+    "hazard content review missing or stale",
     "no eligible verified direct/fallback link"
    ]
   },
@@ -2505,11 +2504,10 @@
   },
   {
    "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
-   "title": "主要负责人、安全生产管理人员,未经安监部门考核合格,并取得安全培训合格证书",
-   "status": "pending",
+   "title": "主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力",
+   "status": "verified",
    "reasons": [
-    "pending links: K_3815f67a0112957f1fe7907c",
-    "stale/unverified links: K_3815f67a0112957f1fe7907c",
+    "hazard content review missing or stale",
     "no eligible verified direct/fallback link"
    ]
   },
@@ -4404,16 +4402,6 @@
    "status": "unreviewed",
    "reasons": [
     "no link"
-   ]
-  },
-  {
-   "hazardId": "H_F692794FBBA74CFB83648A73CF",
-   "title": "危险化学品试剂间安全警示标志张贴在门上",
-   "status": "pending",
-   "reasons": [
-    "pending links: K_3af925c80dbe5edabd333656",
-    "stale/unverified links: K_3af925c80dbe5edabd333656",
-    "no eligible verified direct/fallback link"
    ]
   },
   {

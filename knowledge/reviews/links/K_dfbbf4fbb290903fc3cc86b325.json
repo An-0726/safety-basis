@@ -2,18 +2,19 @@
   "entityType": "link",
   "entityId": "K_dfbbf4fbb290903fc3cc86b325",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "verified",
   "reviewedContentHash": "40f521f600d9451ee658720ba8264dd2bc14d3a18b659794fb66c6fe7f60e694",
   "contextHashes": {
-    "hazard": "213e5f5be4393e94608029f0e7d7e135eb33a8282d3f4fd0029b6c573e3af8cb",
-    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299"
+    "hazard": "11e72e6d84a8e6fc73bb1cca521d9aca83fbf7e7f81753800cc0474ca5a3ee19",
+    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299",
+    "link": "40f521f600d9451ee658720ba8264dd2bc14d3a18b659794fb66c6fe7f60e694"
   },
-  "checkedAt": "2026-09-10T15:00:00+08:00",
-  "reviewer": "Doubao-Agent-Sub3",
-  "reason": "Hazard电源线路私拉乱接处于概括语待补证状态（note明确需补充可观察缺陷，并按固定线路/临时用电/施工现场/危化企业分别适用标准）；消防法第27条第2款作为fallback兜底关联方向正确，但需Hazard补足具体线路缺陷事实后方可判定link成立度；维持pending。\n【Phase8】hazard aliases 补充口语词，hazard ctx 重绑。\n2026-09-10 终判：维持 pending。Hazard'电源线路私拉乱接'为概括语，note 已要求补充可观察缺陷（接头裸露/绝缘破损/机械防护不足等），且固定线路、临时用电、施工现场、危化企业适用不同消防技术标准。C005（消防法第27条第2款，role=fallback）兜底方向正确，但 hazard 事实与具体适用标准均待补，待 hazard 补足具体线路缺陷并明确适用标准后定夺。",
+  "checkedAt": "2026-09-10T14:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard description已补充具体可观察缺陷（接头裸露、绝缘破损、无机械防护、超负荷串接等），不再是概括语；消防法第二十七条第二款'电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定'直接覆盖电源线路私拉乱接、敷设不规范的事实。C005作为fallback依据成立——在缺少更具体的电气专项标准条款时，消防法27条2款作为上位法兜底依据。direct依据需后续补充GB 50054/GB 50303等电气专项标准条款。",
   "reasonCodes": [
-    "EVIDENCE_INSUFFICIENT",
-    "KEEP_PENDING_NEED_EVIDENCE"
+    "FALLBACK_ROLE_CONFIRMED",
+    "HAZARD_FACT_SPECIFIED"
   ],
   "evidenceRefs": [
     "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"

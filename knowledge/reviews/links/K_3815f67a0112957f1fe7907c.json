@@ -2,18 +2,19 @@
   "entityType": "link",
   "entityId": "K_3815f67a0112957f1fe7907c",
   "reviewType": "applicability",
-  "decision": "pending",
+  "decision": "verified",
   "reviewedContentHash": "82dd1f7a3a9c2c1a536a9d0c7eda574aa7fdec0b958db08dd07a35ba11f831bf",
   "contextHashes": {
-    "hazard": "4e9942726a88f089cc06825c003ac1d60d6cab0b4fb50dcccd7e707a1753c7d8",
-    "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
+    "hazard": "8987ecde38cb6e7eeb3adbf72a304deba462c07c9ff58933b9f82c9c4274484f",
+    "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a",
+    "link": "82dd1f7a3a9c2c1a536a9d0c7eda574aa7fdec0b958db08dd07a35ba11f831bf"
   },
-  "checkedAt": "2026-09-10T15:00:00+08:00",
-  "reviewer": "Doubao-Agent-Sub3",
-  "reason": "安全生产法第27条第2款的考核合格要求仅适用于危险物品生产/经营/储存/装卸、矿山、金属冶炼、建筑施工、运输等特定行业单位，一般单位仅需具备相应知识和管理能力（第1款）；Hazard未限定企业行业类型，需确认单位是否落入第27条第2款列举范围后方可判定适用性。\n2026-09-10 终判：维持 pending。C033（安全生产法第27条）第2款'由主管部门考核合格'仅适用于危险物品生产/经营/储存/装卸、矿山、金属冶炼、建筑施工、运输等列举行业；第1款仅要求具备相应知识和管理能力（不强制考核发证）。本单位是否落入第2款列举行业的现场事实缺失，无法判定本条 direct 适用；待补充单位行业属性后定夺（若不属列举行业，本条降为 supporting 或改挂第1款）。",
+  "checkedAt": "2026-09-10T13:45:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard泛化为'主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力'后，安全生产法第二十七条第一款'生产经营单位的主要负责人和安全生产管理人员必须具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力'直接适用于所有生产经营单位，不限于第二款列举的特定行业。C033作为direct依据成立。",
   "reasonCodes": [
-    "SCOPE_MISMATCH",
-    "KEEP_PENDING_NEED_EVIDENCE"
+    "DIRECT_ROLE_CONFIRMED",
+    "HAZARD_SCOPE_GENERALIZED"
   ],
   "evidenceRefs": [
     "E_1238846cab36bc9ecf6c6d6c75b085774022956576d113f6118a04ef43fbcb00"

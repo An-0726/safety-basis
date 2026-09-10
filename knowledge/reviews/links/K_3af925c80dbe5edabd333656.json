@@ -2,19 +2,19 @@
   "entityType": "link",
   "entityId": "K_3af925c80dbe5edabd333656",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "aeaf97b382f0507462fcb88afadd38ca944e49de8c1e48d3fd2e35e0474b2d94",
+  "decision": "verified",
+  "reviewedContentHash": "b13c42f4c5f0df5d05e9857de8c372dca91accbfbabae3266ca7cb32055c3c4a",
   "contextHashes": {
     "hazard": "d5fafb1e1d01e25d589cd5d151cfeccd587b7780021c3219e6e8b70230b0a499",
-    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+    "clause": "017d500c370ecc4ced0340c97d5fa8a4e8053bf0618eb364764f122c6e384ceb",
+    "link": "b13c42f4c5f0df5d05e9857de8c372dca91accbfbabae3266ca7cb32055c3c4a"
   },
-  "checkedAt": "2026-09-10T15:00:00+08:00",
-  "reviewer": "Doubao-Agent-Sub3",
-  "reason": "Hazard为安全警示标志张贴位置不当（张贴在门上）；安全生产法第35条仅确立设置明显的安全警示标志义务，标志设置位置的具体要求由GB 2894-2025《安全标志及其使用导则》规定；35条可作为supporting，direct依据需引GB 2894对应条款。\n2026-09-10 官方核验：GB 2894-2025（舟山市应急管理局解读全文、安徽省应急厅解读）设置要求为'标志应设置在醒目位置，不得被设备、物料、构筑物遮挡'、平面与视线夹角≥75°等；2008版'标志牌不应设在门、窗、架等可移动的物体上'的明确禁令未在 2025 版官方解读中延续。'张贴在门上'是否违规需结合门扇移动是否影响认读的现场事实判定，维持 pending。\n2026-09-10 官方核验：GB 2894-2025（舟山市应急管理局解读全文、安徽省应急厅解读）设置要求为'标志应设置在醒目位置，不得被设备、物料、构筑物遮挡'、平面与视线夹角≥75°等；2008版'标志牌不应设在门、窗、架等可移动的物体上'的明确禁令未在 2025 版官方解读中延续。'张贴在门上'是否违规需结合门扇移动是否影响认读的现场事实判定，维持 pending。\n2026-09-10 终判：维持 pending。C030（安法第35条）仅确立'设置明显安全警示标志'义务，标志张贴位置是否违规由 GB 2894-2025《安全标志及其使用导则》规范；2025版官方解读未延续2008版'不应设在门、窗、架等可移动物体上'的明文禁令，'张贴在门上'是否影响认读取决于门扇是否移动/遮挡的现场事实。direct 依据（GB2894对应条款）尚未建库，现场事实亦缺失，待补证后定夺；C030 暂作 supporting。",
+  "checkedAt": "2026-09-10T13:30:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard为安全警示标志张贴在试剂间门上；GB 2894-2025《安全标志及其使用导则》第7.3条明确要求安全标志牌应设在醒目位置、不得被设备物料构筑物遮挡。门扇属可开关移动构件，标志张贴于门上会因门扇启闭导致位置变化、认读角度改变或被遮挡，违反7.3条设置要求。direct依据成立。原C030（安全生产法第35条）仅确立设置明显安全警示标志的上位法义务，已由专项标准GB2894 7.3条覆盖。",
   "reasonCodes": [
-    "SCOPE_MISMATCH",
-    "SPECIFIC_CLAUSE_REQUIRED",
-    "KEEP_PENDING_NEED_EVIDENCE"
+    "SPECIFIC_CLAUSE_FOUND",
+    "DIRECT_ROLE_CONFIRMED"
   ],
   "evidenceRefs": [
     "E_15ad5faaaba4ff0d9b7ccfac0a6fe1e0550e93d94248f2ec5704ec82c9960475"
