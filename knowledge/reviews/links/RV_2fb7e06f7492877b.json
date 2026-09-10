@@ -4,16 +4,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T17:15:00+08:00",
-  "reason": "高风险实验室未形成独立防护单元或防火分隔不符合要求，违反GB 50016-2014第6.2.3条'建筑内的甲、乙类生产部位和使用丙类液体的部位应采用耐火极限不低于2.00h的防火隔墙与其他部位分隔'。高风险实验室属于甲乙类或使用丙类液体的部位，必须进行独立防火分隔。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《建筑设计防火规范》GB 50016-2014（2018年版）第6.2.3条属建筑防火分隔的通用规定，保留为 fallback；本条 direct 依据已由科研建筑专项标准 JGJ 91-2019 第5.2.5条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "FIRE_SEPARATION"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "d27f58683d6f45602be7be48411fb84b84d07d6e6a5cb91b61af6c6bf299330a",
+  "reviewedContentHash": "03e7d9467b112fd943ff9e8f5fd5708767d3e87820a5b9cb96f7a3016faf30a8",
   "contextHashes": {
-    "hazard": "5519c45d48f21ddd66c56d89b7b1a22f9873f6b3cf4710ba08d05fc39b194b8a",
+    "hazard": "6edbcf3edbfa79abba5a8dcb3324033746772e52f067f0372dfbc4429a0c687f",
     "clause": "ff3cceb145a11311cfaf743111831f9aa1c4326bbb9b9ac5f99959cdd2805e18",
     "link": "d27f58683d6f45602be7be48411fb84b84d07d6e6a5cb91b61af6c6bf299330a"
   },
