@@ -71,7 +71,8 @@ def main():
         is_partial = s.get("relation") == "partially_replaces"
         hits = []
         for h in hazards:
-            txt = " ".join(str(h.get(k, "")) for k in ("title", "description", "conditions", "note"))
+            # 只扫 conditions/description/title（权威引用）；note 是追溯注释，不计入
+            txt = " ".join(str(h.get(k, "")) for k in ("title", "description", "conditions"))
             # 1) 明确旧年份命中
             if old_year and re.search(re.escape(old_num) + r"[-—–]?" + re.escape(old_year), txt):
                 hits.append((h["id"], "explicit-year", h.get("title", "")))
