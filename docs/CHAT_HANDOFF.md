@@ -31,7 +31,7 @@ ACTIVE
 - Phase 3：V4 门禁设计 —— 完成
 - Phase 4：V3 → V4 数据映射 —— 完成
 - Phase 5：只读迁移原型 —— 完成并验收
-- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；642/642 conservative verified hazard 完成；0/179 conservative verified link 待开始**
+- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；642/642 conservative verified hazard 完成；179/179 conservative verified link 已迁移为 candidate（decision=pending，适用性待 ChatGPT 复核）**
 
 不得提前进入 Phase 7～10。
 
@@ -48,7 +48,10 @@ ACTIVE
 本轮新增正式 data commits：
 
 - `6bbcc18` — `data: complete Phase 6 conservative verified hazards migration (231-642, 412 items)`
-- `12cd3e4` — `data: sync manifest after hazards-008 (all 642 conservative verified hazards complete)`
+- `12cd3e4` — `data: sync manifest after hazards-008`
+- `f26154b` — `docs: hand off hazards-008`
+- `899745c` — `data: migrate 179 conservative verified links as candidates (Phase 6 links-001)`
+- `a68735e` — `data: sync manifest after links-001`
 
 正式分支推进仅使用 non-force fast-forward。未修改 `main`。
 
@@ -109,12 +112,33 @@ ACTIVE
 - review decision=verified：642/642
 - review 未伪造 V3 不存在的 `method` 字段：642/642
 
+### 5. conservative verified link candidate 迁移 —— links-001
+
+在完成 642 hazards 后，继续完成 179 条 conservative verified link 的 candidate 迁移。从冻结 SQLite 查询固定集合：
+
+- `links.status=已核验`
+- 最新 `entity_type=link / check_type=applicability` verification=`passed`
+- verification `reason` 非空
+- normalized role in {direct, supporting, fallback}
+- 在 r10 release corroboration set 中
+- Stable ID 排序
+
+集合总量 **179**（178 direct + 1 fallback）。引用的 49 个 clause 和 158 个 hazard 均已在 V4 knowledge 中。
+
+新增 179 个 link JSON、179 个 applicability review sidecar；按 review evidenceRefs 补齐缺失的公开 evidence，净新增 **128 个 evidence JSON**（51 个已存在跳过）。
+
+**关键决策：所有 179 条 link review 的 decision 设为 `pending`，reasonCodes=`LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW`。** 不自动 verified，遵守 r8 质量事故禁令和项目规则。V3 的 verification 元数据（v3Result=passed、v3Reason 适用性说明）保留在 review sidecar 的 `migratedFromV3Verification` 中，供 ChatGPT 复核时参考。`contextHashes` 绑定当前 hazard 和 clause 内容 hash。
+
+本轮批次标记：`links-001`。
+
 ## 本轮修改文件
 
 - `knowledge/hazards/`：新增 412 个 hazard JSON
 - `knowledge/reviews/hazards/`：新增 412 个 content review sidecar
-- `knowledge/evidence/`：净新增 261 个 public evidence JSON
-- `knowledge/manifest.json`：新增 `hazards-008`，累计更新为 hazards=642、evidence=420
+- `knowledge/links/`：新增 179 个 link JSON（candidate）
+- `knowledge/reviews/links/`：新增 179 个 applicability review sidecar（decision=pending）
+- `knowledge/evidence/`：净新增 389 个 public evidence JSON（261 from hazards + 128 from links）
+- `knowledge/manifest.json`：新增 `hazards-008` 和 `links-001`，累计更新为 hazards=642、links=179、evidence=548
 - `docs/CHAT_HANDOFF.md`：本交接更新
 
 未修改：`main`、V3 SQLite、fulltext SQLite、任何 V3 release、`site-selection.json`、生产网站/Pages 数据源。
@@ -140,26 +164,26 @@ ACTIVE
 - current verified lawVersions：43
 - verified clauses：54 / 54 conservative set
 - verified hazards：**642 / 642 conservative set（已完成）**
-- evidence：420
+- evidence：548
 - successions：2
-- verified links：0 / 179 conservative candidate，尚未开始正式迁入
+- verified links：**0 / 179 verified；179 / 179 已迁移为 candidate（decision=pending，适用性待 ChatGPT 复核）**
 
 Phase 5 conservative candidate 总量：law 148、current lawVersion 148、clause 54、hazard 642、link 179。
 
 ## 未完成事项
 
-1. Phase 6：**179 条 conservative verified link**；必须逐条做角色/适用性 review，禁止把 hazard 的确定性批迁策略用于 link。link 迁移需要判断 `direct / supporting / fallback` 角色和 applicability，属于法规专业判断，不得自动 verified。
-2. Phase 6：按价值补充剩余 catalogue law/current version；不阻塞 link 主链。
+1. Phase 6：**179 条 conservative verified link 的适用性复核**。link JSON 和 review sidecar 已迁移为 candidate（decision=pending），V3 适用性文本和 verification reason 已保留在 review sidecar 中供参考。需要 ChatGPT 逐条复核 `direct / supporting / fallback` 角色和 applicability，通过后将 decision 改为 verified。
+2. Phase 6：按价值补充剩余 catalogue law/current version；不阻塞 link 复核主链。
 3. Phase 6 完整校验后才能进入 Phase 7。
 
 ## 下一轮第一步
 
-**先按 HEAD-first 协议核对 `chat-v4` HEAD、handoff、manifest 和实际文件。确认 642 hazards 已全部完成后，进入 conservative verified link 迁移准备：从冻结 SQLite 查询 179 条 conservative verified link 集合（status=已核验、active、role in {direct,supporting,fallback}、在 r10 corroboration set 中），按 Stable ID 排序。link 迁移必须逐条审查适用性，禁止批量自动 verified；可先批量生成 candidate link JSON + review sidecar（decision=pending/needs-review），将适用性判断留给 ChatGPT 复核队列。同时可继续补充 catalogue law/current version 等不涉及法规专业最终判断的 Phase 6 工程工作。data/code 先提交，校验后再更新 handoff；写 Git 前再次读 HEAD，只允许 non-force fast-forward。**
+**先按 HEAD-first 协议核对 `chat-v4` HEAD、handoff、manifest 和实际文件。确认 642 hazards 和 179 link candidates 已全部完成后，进入 ChatGPT 适用性复核队列：逐条复核 179 条 link 的 `direct / supporting / fallback` 角色和 applicability，参考 review sidecar 中保留的 V3 v3Reason 适用性说明和 contextHashes 绑定的 hazard/clause 内容。复核通过的 link 将 review decision 从 pending 改为 verified；存在疑问的标记 needs-review 并记录原因。工程 Agent 可同时继续补充 catalogue law/current version 等不涉及法规专业最终判断的 Phase 6 工程工作。data/code 先提交，校验后再更新 handoff；写 Git 前再次读 HEAD，只允许 non-force fast-forward。**
 
 ## 后续任务
 
 1. ~~完成全部642 conservative verified hazard~~（已完成）
-2. 迁移/复核179条 conservative verified link；适用性逐条判断。
+2. ~~迁移179条 conservative verified link 为 candidate~~（已完成，decision=pending）；**复核179条 link 适用性并改为 verified**（待 ChatGPT 逐条判断）
 3. 按价值补 catalogue law/current version。
 4. Phase 7 法规与标准核验框架。
 5. Phase 8 历史报告条款重审。
