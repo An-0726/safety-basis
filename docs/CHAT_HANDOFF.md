@@ -17,7 +17,7 @@ ACTIVE
 - Phase 3：V4 门禁设计 —— 完成
 - Phase 4：V3 → V4 数据映射 —— 完成
 - Phase 5：只读迁移原型 —— 完成并验收
-- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；24/642 conservative verified hazard 完成**
+- Phase 6：迁移现有有效知识 —— **进行中：core-laws-001～008 完成；54/54 conservative verified clause 完成；30/642 conservative verified hazard 完成**
 
 不得提前进入 Phase 7～10。
 
@@ -29,7 +29,7 @@ ACTIVE
 
 ### GitHub
 
-本轮最后一个 data commit：`013c2b7fbae5ac9ae196e1113cdd5cb0e71f51e7`（`data: migrate Phase 6 hazards batch 004`）。本 handoff 更新 commit 位于其后；下一轮必须重新读取 `chat-v4` 获取真实最终 HEAD。
+本轮确认的最新 data commit：`e12cfc39d8efccd4b9d52660cb2ebe199c492d55`（`data: migrate Phase 6 hazards batch 005`）。本 handoff 更新 commit 位于其后；下一轮必须重新读取 `chat-v4` 获取真实最终 HEAD。
 
 本轮关键提交：
 
@@ -39,8 +39,9 @@ ACTIVE
 - `b1f7de0792f2fb54e46969a9770a96ce82282dd4` — hazards-002
 - `0e7a2ea582c795e909b8544e7e7dbc6980c2c0ce` — hazards-003
 - `013c2b7fbae5ac9ae196e1113cdd5cb0e71f51e7` — hazards-004
+- `e12cfc39d8efccd4b9d52660cb2ebe199c492d55` — hazards-005
 
-所有正式分支推进均 `force=false` fast-forward。施工中生成但未挂到 `chat-v4` 的孤立候选 commit 不得视为真实基线。
+所有正式分支推进均只允许 fast-forward；施工中生成但未挂到 `chat-v4` 的孤立候选 commit 不得视为真实基线。
 
 ### Google Drive
 
@@ -59,22 +60,22 @@ ACTIVE
 
 最新候选 release：`reviewed-20260909-r10`，releaseHash `dc556a01cc24f95a3e6bfb21ebb1f89e13297c6ba469fa7c5d6b343348c0f3d2`；hazards 242、laws 148、law_versions 150、clauses 52、links 269。r10 只作迁移佐证/差异对比，不是 V4 事实源。生产选择仍为 `reviewed-20260909-r4`，不得自行切换。
 
+本轮重新确认 Drive `safety-basis` 工作目录存在，源码、data、docs、source、tests、tools 等工作树仍在；未发现需要覆盖冻结母库或生产选择的事项。
+
 ## 本轮完成
 
 ### Conservative verified clause 主链闭合
 
 从冻结母库按 Phase 5 保守规则重新筛出 54 条：`status=已核验 + identity_status=confirmed_locator + 最新 text review=passed + authoritative-public evidence + locator 非空`。分 `clauses-001～004` 完成 15+15+15+9 条迁移，共 54/54；父 lawVersion 断链 0，Stable ID 未重编。
 
-### Conservative verified hazard 主链启动
+### Conservative verified hazard 主链继续推进
 
-从 immutable 只读 SQLite 重新筛选，得到 642 条候选，条件固定为：
+固定 conservative hazard 候选总量仍为 642，筛选规则：
 
 - `hazards.status=已核验`
 - active、`merged_into` 为空
 - 最新 `entity_type=hazard/check_type=content` review = `passed`
 - `verification_details.public_fields_reviewed=1`
-
-证据分布：636 authoritative-public、6 secondary。迁移不改变 evidence tier，也不扩大 verified 集合。
 
 已完成：
 
@@ -82,35 +83,31 @@ ACTIVE
 - hazards-002：H018、H019、H021、H022、H024、H025
 - hazards-003：H033、H034、H035、H036、H037、H038
 - hazards-004：H039、H040、H041、H042、H043、H044
+- hazards-005：H045、H046、H047、H048、H049、H050
 
-累计 24/642。每条均保留 V3 Stable ID、title、description、measures、category、conditions、note、mode、aliases、places、keywords；review sidecar 仅继承真实的 id/reviewedAt/reviewer，不伪造 `method`。
+累计 30/642。`hazards-005` 的真实提交只新增 6 个 hazard JSON、6 个 hazard review sidecar，并更新 `knowledge/manifest.json`；相对父提交 `62e08f6482348188ec2d133b837a10b48da0ff09` 为 ahead 1 / behind 0，无无关路径夹带。
 
-H033、H035～H039、H041～H044 等记录的 note 明确写有“候选依据尚未完成逐条官方原文终审/核验完成前不得进入公开运行库”。这些 hazard content 可以迁移，但 **不得把 content verified 等同于 link applicability verified，也不得因此进入公开发布链**；后续 link/gate 必须继续阻断未终审依据。
+hazard content verified 仍不得等同于 link applicability verified；记录中已有“依据未终审/核验完成前不得进入公开运行库”等限制的，必须继续由后续 link/gate 阻断。
 
 ## 本轮修改文件
 
-- `knowledge/clauses/`、`knowledge/reviews/clauses/`：完成 54 条 clause
-- `knowledge/evidence/`：条款阶段补缺失 public evidence，当前累计 54
-- `knowledge/hazards/`：新增 24 条 hazard
-- `knowledge/reviews/hazards/`：新增 24 条 content review sidecar
+- `knowledge/hazards/H045.json`～`H050.json`
+- `knowledge/reviews/hazards/H045.json`～`H050.json`
 - `knowledge/manifest.json`
 - `docs/CHAT_HANDOFF.md`
-- 并发链另新增 `docs/PROJECT_PLAYBOOK.md`，已保留
 
 未修改：`main`、V3 SQLite、fulltext、任何 V3 release、`site-selection.json`、生产网站。
 
 ## 本轮校验
 
-- 冻结 SQLite SHA-256 与基线一致，`integrity_check=ok`
-- conservative clause 候选重算=54，迁移=54
-- clause parent lawVersion 断链=0
-- conservative hazard 候选重算=642
-- hazard evidence tier：636 authoritative-public / 6 secondary
-- 已迁 24 hazard 均 active、无 merge，title/description/measures 非空
-- 已迁 review 均来自最新 passed content review，且 `public_fields_reviewed=1`
-- `hazards-004` 对上一 data commit 比较：ahead_by=1、behind_by=0，恰好 6 hazard + 6 review + manifest 共 13 个预期路径变化
-- 正式 Git 写入均 fast-forward、`force=false`
-- 未迁入 `snapshot_ref`、`legacy_payload` 等私有字段
+- `chat-v4` 写前 HEAD 复核为 `e12cfc39d8efccd4b9d52660cb2ebe199c492d55`
+- `hazards-005` compare：ahead_by=1、behind_by=0
+- 变更路径恰为 6 hazard + 6 review + manifest，共 13 个预期路径
+- `knowledge/manifest.json` 当前 batch=`hazards-005`
+- manifest counts：laws 43；lawVersions 43；clauses 54；hazards 30；evidence 54；successions 2
+- manifest scope 明确为 first 30 of 642 conservative verified hazards；links 继续 deferred
+- 冻结 SQLite SHA-256 基线未改
+- 未修改 `main`、生产网站或生产 release 选择
 
 ## 当前项目状态
 
@@ -119,7 +116,7 @@ H033、H035～H039、H041～H044 等记录的 note 明确写有“候选依据�
 - laws：43
 - current verified lawVersions：43
 - verified clauses：54 / 54 conservative set
-- verified hazards：24 / 642 conservative set
+- verified hazards：30 / 642 conservative set
 - evidence：54
 - successions：2
 - verified links：0 / 179 conservative candidate，尚未开始正式迁入
@@ -128,14 +125,14 @@ Phase 5 保守 candidate 总量：law 148、current lawVersion 148、clause 54�
 
 ## 未完成事项
 
-1. Phase 6：剩余 618 条 conservative verified hazard 分批迁移。
+1. Phase 6：剩余 612 条 conservative verified hazard 分批迁移。
 2. Phase 6：179 条 conservative verified link；必须逐条保持角色/适用性 review，`ROLE_UNCLASSIFIED` 不得自动通过。
 3. Phase 6：按价值补充剩余约 105 组 catalogue law/current version，不阻塞 hazard/link 主链。
 4. 完成 Phase 6 校验后才进入 Phase 7。
 
 ## 下一轮第一步
 
-**执行 `hazards-005`：重新从冻结 SQLite immutable 只读连接按 642 条固定规则计算候选，排除 `knowledge/hazards/` 已有 24 个 Stable ID，从剩余集合按 Stable ID 顺序取下一批；生成 hazard JSON + content review sidecar，仅补缺失 evidence。迁移前检查 active、非 merge、title/description/measures 非空、latest review=passed、public_fields_reviewed=1；迁移后检查重复 ID、review hash、evidence 引用、私有字段泄漏和 manifest 计数。写 Git 前重新读 `chat-v4` HEAD，只允许 `force=false` fast-forward。**
+**执行 `hazards-006`：先重新读取 `chat-v4` HEAD 与本 handoff，确认没有并发新批次；再从冻结 SQLite immutable 只读连接按既定 642 条规则重算候选，排除 `knowledge/hazards/` 已有 30 个 Stable ID，从剩余集合按 Stable ID 顺序取下一批。生成 hazard JSON + content review sidecar，仅补缺失 evidence；迁移前检查 active、非 merge、title/description/measures 非空、latest review=passed、public_fields_reviewed=1；迁移后检查重复 ID、review/evidence 引用、私有字段泄漏和 manifest 计数。写 Git 前再次读取 `chat-v4` HEAD，只允许非 force 的安全前移。**
 
 ## 后续任务
 
@@ -157,7 +154,7 @@ Phase 5 保守 candidate 总量：law 148、current lawVersion 148、clause 54�
 ## 风险 / 阻塞
 
 - r8 历史质量事故禁令持续有效，禁止批量假定 link/条款适用性正确。
-- 曾出现并发分支前移；继续采用每次写前重读 HEAD、只 fast-forward、绝不 force。
+- 已再次观察到并发分支前移；继续采用每次写前重读 HEAD、绝不 force。
 - `tools/v4/migrate_v3.py` 仍存在读取不存在的 V3 verification `method` 字段的代码风险；正式手工迁移不写该字段。应在合适的独立代码单元修复，不得伪造字段。
 - 当前无需要用户决策的阻塞。
 
