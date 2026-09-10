@@ -2,13 +2,14 @@
   "entityId": "K_66a9f1cb4e8c28807fddeb03",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T22:45:00+08:00",
-  "reason": "在吸附操作周期内，吸附了有机气体后吸附床内的温度未低于83°C，当吸附装置内的温度超过83°C时未能自动报警并立即启动降温装置，违反安全生产法第三十六条安全设备应当符合国家标准或者行业标准的要求，以及GB 50016建筑设计防火规范中有机气体吸附温度控制要求。吸附床温度必须低于83°C，超过时必须自动报警并启动降温装置。",
+  "decision": "rejected",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "checkedAt": "2026-09-11T07:42:00+08:00",
+  "reason": "驳回原direct判断。C_0C94FB24040EB78218141DD12F为《安全生产法》第三十六条关于安全设备符合标准、维护保养和定期检测的一般性义务，不包含吸附床83°C阈值、超温自动报警或启动降温装置的具体技术要求。原review虽在理由中提到GB 50016，但实际绑定条款并非该标准，属于引用链与理由不一致。应在找到并核验明确规定83°C阈值的专项标准条款后再公开。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "ADSORPTION_BED_TEMPERATURE_CONTROL_83C"
+    "SPECIFIC_THRESHOLD_UNSUPPORTED",
+    "REVIEW_REASON_BINDING_MISMATCH",
+    "DIRECT_ROLE_REJECTED"
   ],
   "reviewedContentHash": "8bcca42ad3ebf067523df3f4ec9bdff0bb3314a2e5569102fd3473ab66543180",
   "contextHashes": {
