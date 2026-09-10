@@ -4,10 +4,16 @@
 
 ## PROJECT_STATUS
 
-ACTIVE — Phase 16 最终验收进行中。
+**READY_FOR_ACCEPTANCE** — Phase 16 最终验收已完成，等待用户批准是否进入 Phase 17。
 
-当前知识树实测：**78 laws / 78 lawVersions / 111 clauses / 712 hazards / 761 links / 576 evidence / 75 requirements / 23 successions**。
-最近一次完整候选发布链验收记录：**644 publishable hazards / strictBlockers 0**；中间内容批次不再为追求候选一致性而机械重建完整 candidate，最终收口阶段统一重建并复验。
+当前知识树实测：**85 laws / 85 lawVersions / 177 clauses / 712 hazards / 829 links / 590 evidence / 75 requirements / 23 successions**。
+最近一次完整候选发布链验收：**641 publishable hazards / 801 eligible links / strictBlockers 0**，`sourceStateHash 3e329e2a32bf7b2d`。
+
+完整验收结论见 **`docs/V4_FINAL_ACCEPTANCE_REPORT.md`**（A–J 全部 PASS）。
+候选包已包含网站前端与数据投影，可在 `source/releases/v4-candidate-20260910/` 直接起静态服务验证；
+网站投影由 `tools/v4/build_site_data.py` 生成，已接入 CI 与双构建确定性检查。
+
+**未获用户明确批准前不得进入 Phase 17、修改 `main` 或切换生产网站。**
 
 ## 当前总目标
 

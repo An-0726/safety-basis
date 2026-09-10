@@ -1,0 +1,141 @@
+# Safety Basis V4 最终验收报告（Phase 16）
+
+> 状态：**READY_FOR_ACCEPTANCE**
+> 生成时间：2026-09-10
+> 分支：`chat-v4`
+> 候选包：`source/releases/v4-candidate-20260910`
+> `sourceStateHash`：`3e329e2a32bf7b2d4f9568db048a40500ca57c821e0111174d397be411f720d6`
+> `main` / GitHub Pages / production / V3 SQLite：**均未改动**
+
+---
+
+## 1. 知识规模（运行时实测，无硬编码）
+
+| 实体 | 数量 |
+|---|---:|
+| laws | 85 |
+| lawVersions | 85 |
+| clauses | 177 |
+| hazards | 712 |
+| links | 829 |
+| evidence | 590 |
+| requirements | 75 |
+| successions | 23 |
+
+发布判定（共享链式门禁 `release_gate_core`）：
+
+- 可发布隐患 **641 / 712**
+- 合格关联 **801 / 829**（verified 801 / rejected 21 / pending 0）
+
+不可发布的 71 条为已合并或已拆分的 `superseded` 隐患，保留供历史追溯，不进入公开投影。
+
+---
+
+## 2. 验收项结果
+
+### A — 基线、版本与交接一致性 · PASS
+
+- 工作分支 `chat-v4`，全部改动已提交。
+- 知识树与 `docs/CHAT_HANDOFF.md` 状态已同步。
+- V3 冻结基线全程只读，未修改。
+
+### B — 数据结构与引用完整性 · PASS
+
+`validate_all.py` 六项全 PASS：`check_catalogue` / `check_requirements` / `check_review_binding` / `scan_evidence_exact` / `scan_quality` / `version_impact`，BLOCKING failures: none。
+
+- 悬空引用 0；已合并隐患上的悬挂关联 0；活跃重复标题 0。
+- 内容绑定（review ↔ 实体 hash）零失效。
+- 全部 135 项单元测试通过（`py -m unittest discover -s tests`）。
+
+### C — 法规与标准版本终审 · PASS
+
+本轮补录并核验了 6 部 V3 曾引用、V4 缺失的现行法规：
+
+| 法规 | 版本 | 补录内容 |
+|---|---|---|
+| 工业企业总平面设计规范 | GB 50187-2012 | 23 条条款 + 32 条 direct 关联 |
+| 江苏省工业企业安全生产风险报告规定 | 省政府令第140号 | 6 条 + 12 条 direct |
+| 特种作业人员安全技术培训考核管理规定 | 应急管理部令第19号 | 3 条 + 2 条 direct |
+| 特种作业目录 | 应急〔2026〕45号 | 1 条 + 2 条 direct |
+| 建设项目安全设施"三同时"监督管理办法 | 安监总局令第36号 | 3 条 + 2 条 direct |
+| 南京市电动自行车消防安全管理办法 | 2024-07-01 施行 | 1 条 + 1 条 direct |
+
+补录过程中发现并纠正了 V3 的真实错误：GB 50187 的 24 条里有 12 条与现行版本不符、4 条条号错挂（2.0.3→3.0.3、4.2.7→5.2.7、4.2.8→5.2.8、6.4.1→6.4.12），其中人行道宽度沿用了已废止版本的 0.75m（现行为 1.0m）；江苏省 140 号令的 5 条隐患被挂在第三十四条**罚则**上，已改挂对应的行为规范条款。
+
+### D — Hazard → Clause 适用性与 role 终审 · PASS
+
+- 全部 active 隐患均有至少一个通过链式门禁的 `direct`/`fallback` 关联（`activeHazardsWithoutQualifyingLink = 0`）。
+- 本轮如实降级的依据：H078（危废产生单位培训，库内无针对产生单位的直接条款）、H_B6EF0722（GB 50029 未入库）、H_DE7BC857（TSG 23-2021 为 OCR 转录本，条款未逐条核实）。
+- 有直接技术依据后，原《安全生产法》通用条款统一由 `direct` 改判为 `supporting`，避免把泛化义务包装成直接依据。
+
+### E — Requirement 语义终审 · PASS
+
+75 条 Requirement 全部 `verified`，均带审核留痕（`rebind.py` 报告 `verified_without_sidecar = 0`）。
+
+### F — V3 → V4 差异与回归验收 · PASS
+
+详见 `docs/V3_V4_DIFF_REPORT.md`（脚本运行时生成）：
+
+- V3 非合并隐患 1125 条，V4 命中 664 条（59.0%）。
+- **V3 状态为"已核验"的 662 条，V4 命中 662 条（100%），未发现误删。**
+- 未命中的 461 条全部是 V3 自身"待核验/待整理"的条目。
+- 未收录的 V3 法规中，《生产安全事故应急条例》的 36 条关联全部指向"第三条 国务院统一领导…"这一**政府职责条款**，属 PLAYBOOK 明令不得恢复的历史批量错挂。
+
+### G — Release、构建与门禁验收 · PASS
+
+- 六阶段门禁全 PASS：STRUCTURAL / CONTENT / APPLICABILITY / VERSION / EVIDENCE / RELEASE。
+- `strict_release_audit`：`strictVerdict: PASS`、`blockerCount: 0`。
+- 候选边界：`candidate = true`、`production = false`。
+- **双构建确定性**：完整重建两次，产物逐字节一致（含网站投影）。
+- 搜索回归 20/20 通过。
+
+### H — 网站、搜索、页面和 PWA 验收 · PASS
+
+本轮补齐了 Phase 11 缺失的适配层（`tools/v4/build_site_data.py`）。此前发布包用自己的 schema，网站前端需要分片 + `basisRefs` 结构，两者不通，详情页无法显示条款原文。
+
+浏览器实测（对候选包起静态服务）：
+
+- 隐患搜索：641 条入库；关键词"消防培训"精确命中 H043，场所筛选"仓储场所"返回 14 条。
+- 隐患详情：显示专业描述、**法规原文依据**（XF 1131-2014 3.3.2 direct 全条款原文 + 安全生产法第二十八条 fallback 原文）、整改措施、适用说明，每条依据带来源链接与"在法规库查看"。
+- 法规库：67 部现行有效法规；打开《安全色和安全标志》可见收录条款原文与**关联 4 条隐患**（可反向跳转）。
+- 筛选器：主题、场所、法规类别、地区、匹配类型、状态全部有值可选。
+- PWA：Service Worker 已注册并接管（`controlled: true`）；`sw.js` 对 `/data/` 强制 `no-store`，法规状态不会静默回退到旧缓存。
+
+### I — Warning 与非发布库存处置 · PASS
+
+- 全量视图（712 条含未通过门禁者）移至 `data/_internal/`，与公开投影分离；公开目录只含 641 条可发布隐患及其依据。
+- 隐私公开投影扫描 723 个文件：本地绝对路径、用户目录、凭据字段、客户/项目单位名称、私有归档路径命中 **0**；私有证据记录的 `url` 均为空。
+
+### J — 最终验收报告与生产准备 · PASS
+
+本报告。生产切换未执行，等待用户明确批准。
+
+---
+
+## 3. 本轮主要工作（48 → 60 提交）
+
+1. 门禁加固：`rebind` 支持同一哈希多处替换、`check_review_binding` 真实失败、`gate_link` 检查目标隐患状态、`gate_clause` 检查条款效力。
+2. 数据质量：合并重复隐患、清理悬挂关联与中间态说明、义务复述型标题改写为现场缺陷事实、证据等级归一、来源补齐。
+3. 法规补录与纠错：6 部现行法规，含 V3 旧版文本与错挂条号的纠正。
+4. Phase 11 适配层：knowledge → 网站数据契约的投影，使网站详情页真正可显示条款原文。
+5. 差异验收：V3/V4 报告改为运行时生成，新增 Stable ID 保留与批量错挂识别。
+
+---
+
+## 4. 已知遗留与风险（不影响本次验收结论）
+
+| 项 | 说明 | 处置 |
+|---|---|---|
+| GB/T 12801-2008 临期 | 该版本 2026-09-30 到期，GB 12801-2025 自 2026-10-01 实施 | 已在条款审核与隐患说明中记录，到期须切换 |
+| 18 条历史 lawVersion 无 sourceUrl | 均为已被替代的旧版本 | 如实保留空值，不编造链接 |
+| 7 对"整条/分款"条款并存 | 同一法条既有整条实体又有分款实体 | 属粒度设计选择，不做高风险合并 |
+| 601 条隐患无 aliases | 别名是可选辅助检索字段 | 不影响搜索与发布 |
+| 法规全文视图 | 候选包内 `library.html` 可用，但 `data/fulltext/` 未投影 | 待 Phase 17 前与版权边界一并确定 |
+
+---
+
+## 5. 结论
+
+A–J 全部硬检查 PASS，无 BLOCKED、无 REVIEW_REQUIRED、无关键 NOT_RUN。项目达到 **READY_FOR_ACCEPTANCE**。
+
+是否进入 Phase 17（生产切换、合并 `main`、更新 GitHub Pages）需用户明确批准；在此之前 V4 保持候选状态。
