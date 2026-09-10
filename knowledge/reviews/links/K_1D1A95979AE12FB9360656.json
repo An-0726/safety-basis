@@ -1,19 +1,20 @@
 {
- "entityType": "link",
- "entityId": "K_1D1A95979AE12FB9360656",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "357904b006509259c443f59c92d1174ea848f81682d86a212ae434395b86edd5",
- "contextHashes": {
-  "hazard": "45759219df70549b6bd5ca4b4e58bc2dfcac7d92d17c8368d96f3299d06bc803",
-  "clause": "287f97f415a696f15ac98927306fc3f671adcf7d2470043a54b9341d0069a1cf"
- },
- "checkedAt": "2026-09-10T19:30:00+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "《消防法》第二十八条禁止遮挡消火栓、影响其正常使用，本隐患为消火栓周边2m范围内设置障碍物影响操作，条款直接覆盖。",
- "reasonCodes": [
-  "DIRECT_CLAUSE_MATCH"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_1D1A95979AE12FB9360656",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "584b61b787dfb3dc3d08fa3544197834ecb07e2e1051158ce554695193cfdd49",
+  "contextHashes": {
+    "hazard": "2e2a5d614edb01d23c5bacff40f4527415bdbd51f39473b51fe3a1ec1c038cb4",
+    "clause": "287f97f415a696f15ac98927306fc3f671adcf7d2470043a54b9341d0069a1cf"
+  },
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "《消防法》第二十八条第一句禁止损坏、挪用、擅自拆除停用消防设施器材及埋压圈占遮挡消火栓，属上位法一般禁止性规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第10.7条承担。",
+  "reasonCodes": [
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null
 }

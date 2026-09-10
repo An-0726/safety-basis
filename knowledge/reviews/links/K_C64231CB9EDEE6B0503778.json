@@ -1,19 +1,20 @@
 {
- "entityType": "link",
- "entityId": "K_C64231CB9EDEE6B0503778",
- "reviewType": "applicability",
- "decision": "verified",
- "reviewedContentHash": "33109d46a237495344956cb62482efc7f3b46176520423972c27bf6a11366e81",
- "contextHashes": {
-  "hazard": "25361d934d9d14f9c529cc91a80f57627f67f1c9cf23c3af78b263b48f51441d",
-  "clause": "abfdef3a692d4d5aaaf9ef30db5fc8fd1011a6018a2df93e9702efe37822c383"
- },
- "checkedAt": "2026-09-10T19:30:00+08:00",
- "reviewer": "Doubao-Agent",
- "reason": "《消防法》第二十八条规定不得占用、堵塞、封闭疏散通道、安全出口、消防车通道，本隐患直接违反该禁止性规定。",
- "reasonCodes": [
-  "DIRECT_CLAUSE_MATCH"
- ],
- "evidenceRefs": [],
- "migratedFromV3Verification": null
+  "entityType": "link",
+  "entityId": "K_C64231CB9EDEE6B0503778",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "05c1bd5ab702985c06ab50940290333de4953a4a27121af20a1982ecf13761f9",
+  "contextHashes": {
+    "hazard": "5112527425029ff34e8bbba9818cfde6018b52643b788a8c708ec08662e6ac68",
+    "clause": "abfdef3a692d4d5aaaf9ef30db5fc8fd1011a6018a2df93e9702efe37822c383"
+  },
+  "checkedAt": "2026-09-10",
+  "reviewer": "ZCode-DeepSeek",
+  "reason": "《消防法》第二十八条禁止占用、堵塞、封闭疏散通道、安全出口、消防车通道，属上位法一般禁止性规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第10.4条承担。",
+  "reasonCodes": [
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
+  ],
+  "evidenceRefs": [],
+  "migratedFromV3Verification": null
 }
