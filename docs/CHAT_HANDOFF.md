@@ -6,7 +6,7 @@
 
 ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H046、H047、H048、H049、H073；已纠正批量误标：H036、H064、H068；已建立/归位专项依据：H063、H066、H_4C083C15546144588ED7E66C41 及 3 条实验室隐患（JGJ 91-2019 强制性条文、GB 55037-2022）。
 
-当前知识树实测：77 laws / 77 lawVersions / 99 clauses / 712 hazards / 747 links / 573 evidence，发布链 644 publishable hazards / 726 eligible links / strictBlockers 0，`knowledge/manifest.json` 已完成精确对账。
+当前知识树实测：77 laws / 77 lawVersions / 99 clauses / 712 hazards / 747 links / 573 evidence，发布链 644 publishable hazards / 714 eligible links / strictBlockers 0，`knowledge/manifest.json` 已完成精确对账。
 
 仍存在以下未收口项：**公开投影工作中间态泄漏**（36 条 active hazard 的 note 仍写"尚未完成逐条官方原文终审；核验完成前不得进入公开运行库"，却已进入 candidate 公开投影）；**已废止条文遗留**（GB 50016-2014 第5.5.15条关联已驳回，但 GB 55036-2022 侧技术直接依据与部分 hazard 的技术条款仍待补）；8 条 `H_*` 的【Phase8】版本待办；非官方证据来源；20 条 pending Requirement；14 条旧标准引用；10 条 partial-replaced hit；8 条 obligation-restatement；9 条 links-to-merged-hazard；47 对近似重复标题；V3/V4 最终差异与页面/PWA/隐私验收。因此不得标记 READY_FOR_ACCEPTANCE。
 
@@ -43,11 +43,11 @@ ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H0
 最近一次机器发布链结果（本轮重跑）：
 
 - publishable hazards：644
-- eligible links：726
-- link review：726 verified / 21 rejected
+- eligible links：714
+- link review：714 verified / 21 rejected（另有 12 条 superseded、21 条 rejected）
 - strict release blockers：0
 - strict warningCount：12
-- strict excludedCount：106
+- strict excludedCount：119
 - candidate=true / production=false
 
 `knowledge/manifest.json` 已按真实知识树精确对账（本轮完成），计数为 77/77/99/712/747/573/23/75；`tools/v4/sync_manifest.py` 的 Phase 22 错误与硬编码 scope 已修正，重跑幂等。
@@ -84,6 +84,7 @@ ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H0
 | `e6526e8` | 新建《科研建筑设计标准》JGJ 91-2019 实体（law + lawVersion + evidence + 强制性条文 5.2.4／5.2.5／5.2.6）；H063 与 3 条实验室隐患归位，原《危险化学品安全法》第四十一条通用条款降为 fallback。 |
 | `432b0c4` | knowledge/manifest.json 精确对账（77/77/99/712/747/573/23/75）；修正 sync_manifest.py 的 Phase 22 错误与硬编码 scope，改为幂等。 |
 | `2e0cb89` | H_2689A44E…（消火栓）、H_79D2938F…（疏散门）、H_590F1752…（疏散照明）、H_69344942…（疏散指示标志）的泛化条款由 direct 降为 fallback，conditions 更新为现行通用规范。 |
+| `502bfa3` | 修复门禁漏洞：gate_link 增加「目标 hazard 已合并/非 active」检查；12 条指向已合并隐患的 verified 关联改为 superseded；strict audit 增加对应 excluded 分类。eligible links 由虚高的 726 修正为 714，隐患数 644 不变。 |
 
 
 ## 本轮完成（第一批：H046/H048 结构化收口）
@@ -138,8 +139,8 @@ ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H0
 
 - total hazards：712
 - active / machine-eligible hazards：644
-- eligible links：726
-- link reviews：726 verified / 21 rejected
+- eligible links：714
+- link reviews：714 verified / 21 rejected（另有 12 条 superseded）
 - active hazards without qualifying direct/fallback：0
 - superseded/merged hazards：67
 - supporting verified links：11
@@ -176,7 +177,7 @@ ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H0
 4. 清理剩余 36 条 active hazard 的 note 中间态（须随各自专业终审完成，禁止批量删除）。
 5. H052-H055、H058、H065、H067、H069、H079 等高价值 link 终审。
 6. 20 条 pending Requirement 语义校准。
-7. 8 条 obligation-restatement、9 条 links-to-merged-hazard、47 对近似重复标题。
+7. 8 条 obligation-restatement、47 对近似重复标题（9 条 links-to-merged-hazard 已于 `502bfa3` 处置）。
 8. 消除 GB 50016 重复版本实体（L025 与 LV_GB50016_2014），把 C_GB50016_* 归并到 V3 既有 Stable ID。
 9. 复核非官方证据来源（gzhxaq.com、zhc.dicp.ac.cn、cli.im）；补缺 sourceUrl 的条款与版本。
 10. 刷新最终 docs/V3_V4_DIFF_REPORT.md。
@@ -198,6 +199,7 @@ ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H0
 | GB 50016 第7.1.3／7.1.8 条替换为 GB 55037-2022 | 已完成 |
 | GB 50016 第8.2.1／8.1.6 条引用清理与 role 降级 | 已完成 |
 | manifest 精确对账 + sync 工具修正 | 已完成 |
+| links-to-merged-hazard 处置 + 门禁漏洞修复 | 已完成 |
 | GB 50016 重复版本实体合并 | 未完成 |
 | H039 有机废气防爆 | 未完成 |
 | 剩余 36 条 hazard note 中间态 | 未完成 |
