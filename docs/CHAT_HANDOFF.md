@@ -4,7 +4,11 @@
 
 ## PROJECT_STATUS
 
-ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049、H073 已完成专业终审；H036、H064、H068 的批量误标已纠正。当前知识树实测：76 laws / 76 lawVersions / 96 clauses / 712 hazards / 743 links / 572 evidence，发布链 644 publishable hazards / 722 eligible links / strictBlockers 0。但全库仍存在**公开投影工作中间态泄漏**（39 条 active hazard 的 `note` 仍写"尚未完成逐条官方原文终审；核验完成前不得进入公开运行库"，却已进入 candidate 公开投影）（最高优先的**已废止标准条文被当作现行依据**问题已完成首批处置：GB 50016-2014 第7.1.3条改用 GB 55037-2022 第3.4.2条、第7.1.8条改用第3.4.5条第1款，一条错误引用已驳回，发布数由 645 如实降至 644；GB 55036-2022 侧与其余废止条文引用仍待处理）、8 条 `H_*` 隐患的【Phase8】版本待办、8 处非官方证据来源、20 条 pending Requirement、14 条旧标准引用、10 条 partial-replaced hit、11 条 obligation-restatement、9 条 links-to-merged-hazard、47 对近似重复标题，以及 manifest 精确对账、V3/V4 最终差异和页面/PWA/隐私验收未收口，因此不得标记 READY_FOR_ACCEPTANCE。
+ACTIVE — Phase 16 最终验收继续执行。已完成专业终审：H043、H046、H047、H048、H049、H073；已纠正批量误标：H036、H064、H068；已建立/归位专项依据：H063、H066、H_4C083C15546144588ED7E66C41 及 3 条实验室隐患（JGJ 91-2019 强制性条文、GB 55037-2022）。
+
+当前知识树实测：77 laws / 77 lawVersions / 99 clauses / 712 hazards / 747 links / 573 evidence，发布链 644 publishable hazards / 726 eligible links / strictBlockers 0，`knowledge/manifest.json` 已完成精确对账。
+
+仍存在以下未收口项：**公开投影工作中间态泄漏**（36 条 active hazard 的 note 仍写"尚未完成逐条官方原文终审；核验完成前不得进入公开运行库"，却已进入 candidate 公开投影）；**已废止条文遗留**（GB 50016-2014 第5.5.15条关联已驳回，但 GB 55036-2022 侧技术直接依据与部分 hazard 的技术条款仍待补）；8 条 `H_*` 的【Phase8】版本待办；非官方证据来源；20 条 pending Requirement；14 条旧标准引用；10 条 partial-replaced hit；8 条 obligation-restatement；9 条 links-to-merged-hazard；47 对近似重复标题；V3/V4 最终差异与页面/PWA/隐私验收。因此不得标记 READY_FOR_ACCEPTANCE。
 
 ## 当前总目标
 
@@ -26,27 +30,27 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 
 真实知识树实测计数（本轮直接扫描 `knowledge/` 所得，非引用旧文档）：
 
-- laws：76
-- lawVersions：76
-- clauses：96
+- laws：77
+- lawVersions：77
+- clauses：99
 - hazards：712
-- links：743
-- evidence：572
+- links：747
+- evidence：573
 - requirements：75
 - successions：23
-- reviews/hazards：712，reviews/links：743，reviews/clauses：96，reviews/laws：76，reviews/law-versions：76
+- reviews/hazards：712，reviews/links：747，reviews/clauses：99，reviews/laws：77，reviews/law-versions：77
 
 最近一次机器发布链结果（本轮重跑）：
 
 - publishable hazards：644
-- eligible links：722
-- link review：722 verified / 21 rejected
+- eligible links：726
+- link review：726 verified / 21 rejected
 - strict release blockers：0
-- strict warningCount：11（全部为 supporting_link）
+- strict warningCount：12
 - strict excludedCount：106
 - candidate=true / production=false
 
-`knowledge/manifest.json` 仍为旧计数（laws 75 / lawVersions 75 / clauses 88 / links 735 / evidence 567），需精确对账。实测差额为 +1 law、+1 lawVersion、+4 clauses、+4 links、+5 evidence，hazards/successions/requirements 一致。
+`knowledge/manifest.json` 已按真实知识树精确对账（本轮完成），计数为 77/77/99/712/747/573/23/75；`tools/v4/sync_manifest.py` 的 Phase 22 错误与硬编码 scope 已修正，重跑幂等。
 
 ### V3 冻结基线
 
@@ -70,24 +74,17 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 - candidate-only 边界：保持（production=false）
 - 验收工具未反向修改 `knowledge`
 
-## 本轮完成（第二批：重点条目专业终审）
+## 本轮完成（按批次，均已推送 chat-v4）
 
-以下 4 条已完成专项终审并同步刷新全部内容绑定（hazard note 清理 + hazard review + link review 上下文哈希重绑）：
+| 提交 | 内容 |
+|---|---|
+| `c1aee4f` | H046/H048 结构化收口：清理 note 过期说明，重绑 hazard review 与 4 条 link review 内容哈希；重建候选。 |
+| `82ff33c` | H047 补《江苏省安全生产条例》第十五条第（二）项 direct（新增 clause C_JS32_15_2）；H073 补《消防法》第二十一条第一款 direct（新增 clause C074）；H036/H064/H068 纠正 SPECIFIC_CLAUSE_REQUIRED 误标并补齐证据引用。 |
+| `323fea8` | 已废止条文清理首批：新增 GB 55037-2022 第3.4.5条第1款、第3.4.2条；H066 与 H_4C083C15546144588ED7E66C41 改用现行条文并修正 conditions；驳回 H_1F19FA1B951D46C1971E9B59B4 的失效关联（发布数 645→644）。 |
+| `e6526e8` | 新建《科研建筑设计标准》JGJ 91-2019 实体（law + lawVersion + evidence + 强制性条文 5.2.4／5.2.5／5.2.6）；H063 与 3 条实验室隐患归位，原《危险化学品安全法》第四十一条通用条款降为 fallback。 |
+| `432b0c4` | knowledge/manifest.json 精确对账（77/77/99/712/747/573/23/75）；修正 sync_manifest.py 的 Phase 22 错误与硬编码 scope，改为幂等。 |
+| `2e0cb89` | H_2689A44E…（消火栓）、H_79D2938F…（疏散门）、H_590F1752…（疏散照明）、H_69344942…（疏散指示标志）的泛化条款由 direct 降为 fallback，conditions 更新为现行通用规范。 |
 
-1. **H047**（江苏主要负责人年度应急救援演练）：2026-09-10 经江苏省人大常委会官方网站现行文本核对，确认《江苏省安全生产条例》第十五条**第（二）项**（每年至少组织并参与一次生产安全事故应急救援演练）为精确地方直接依据。新增 clause `C_JS32_15_2` 与 direct link `K_2661139972823EF9857702`；原《安全生产法》第八十一条关联保留为 fallback。库内原本只有第十五条第（一）（三）（五）项，第（二）项属缺失。
-2. **H073**（火灾爆炸危险场所违规吸烟、使用明火/动火审批不到位）：经国家法律法规数据库核对，确认《消防法》**第二十一条第一款**（禁止在具有火灾、爆炸危险的场所吸烟、使用明火；明火作业应事先办理审批手续并采取消防安全措施）为精确直接依据。新增 clause `C074` 与 direct link `K_EA09F354EC3A5E1F651995`；原第十六条第一款第（二）项关联保留为 fallback。
-3. **H036**（特种设备未按期办理定期检验）：《特种设备安全法》第四十条与本隐患事实逐字对应，属精确直接条款；原 `SPECIFIC_CLAUSE_REQUIRED` 标记为批量误标（与同条 review 的 reason 自相矛盾），已纠正为 `DIRECT_CLAUSE_CONFIRMED` 并补齐官方证据引用。
-4. **H064**（未按要求设置危险废物贮存设施）、**H068**（不相容危险废物接触或混合贮存）：GB 18597-2023 第 4.1 条、第 4.3 条与隐患事实逐字对应，同样属批量误标，已纠正并补齐证据引用。
-
-### 本轮新增发现（已核实，尚未处置）
-
-5. **公开投影中的失效标准引用**：住建部 2022 年第 189 号公告确认《建筑防火通用规范》GB 55037-2022（2023-06-01 施行）废止了 GB 50016-2014（2018年版）的第 3.3.4、7.1.8（1、2、3）、8.2.1、8.1.6、7.1.3、10.3.1～10.3.3 等 700 余款强制性条文。实测库中有：
-   - `C_GB50016_3_4_1`（第3.4.1条）、`C_GB50016_5_5_15`（第5.5.15条）**本身即已废止条文**，其中 `C_GB50016_5_5_15` 还挂着一条 verified direct link，且其 review 称"疏散门应向疏散方向开启"，与 5.5.15 的"疏散门数量"内容不符（张冠李戴）。
-   - 5 条 hazard 的 `conditions` 公开字段写着已废止依据：`H_2689A44E234A4483B9121C694B`（8.2.1）、`H_4C083C15546144588ED7E66C41`（7.1.3）、`H_79D2938F3C824449ABF92FE5B1`（8.1.6）、`H_590F1752697D4CA1B2D7F949F0`（10.3.4，未列入废止清单）、`H_69344942331F4E74ACB10315FE`（10.3.5，未列入废止清单）。
-   - 上述 5 条 hazard 的关联全部指向《安全生产法》第三十五条、第四十二条或《消防法》第十六条、第二十八条等泛化条款却标为 direct，属"一般性条款占 direct"。
-6. **GB 55037-2022 / GB 55036-2022 有法规实体但无任何条款**：`L029`（建筑防火通用规范）、`L007`（消防设施通用规范）名下 clause 数为 0，导致现行消防技术依据无法落到条款级。
-7. **GB 50016 重复版本实体**：`L025`（lawId `LF_L025`）与 `LV_GB50016_2014`（lawId `L_GB50016`）为同一部 GB 50016-2014（2018年版）的两个并行版本实体，后者为 2026-09-10 新建，3 条 `C_GB50016_*` 条款挂在其下。违反 Stable ID 复用原则。
-8. **47 对近似重复标题**（`scan_quality_v4.py` near-duplicate titles），以及 688 处空字段（多为 V3 迁移批次的 places/keywords/aliases 为空）。
 
 ## 本轮完成（第一批：H046/H048 结构化收口）
 
@@ -141,8 +138,8 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 
 - total hazards：712
 - active / machine-eligible hazards：644
-- eligible links：722
-- link reviews：722 verified / 21 rejected
+- eligible links：726
+- link reviews：726 verified / 21 rejected
 - active hazards without qualifying direct/fallback：0
 - superseded/merged hazards：67
 - supporting verified links：11
@@ -173,41 +170,45 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 
 ## 未完成事项
 
-1. **处置已废止标准条文被当作现行依据**（最高优先）：以 GB 55037-2022 / GB 55036-2022 替代条文替换 GB 50016-2014 已废止条文；重建 `C_GB50016_5_5_15` 的错误 direct 关联；修正 5 条 hazard 的 `conditions` 公开字段（含 `H_4C083C15546144588ED7E66C41`、`H_2689A44E234A4483B9121C694B`、`H_79D2938F3C824449ABF92FE5B1`）；把泛化条款占 direct 的关联降级为 fallback。
-2. 消除 GB 50016 重复版本实体（`L025` 与 `LV_GB50016_2014`），把 `C_GB50016_*` 归并到 V3 既有 Stable ID。
-3. 为 `L029`（GB 55037-2022）、`L007`（GB 55036-2022）补建条款级内容，使消防技术依据可落到条文。
-4. 逐条完成剩余 active hazard 的专业终审，再清理其 `note` 过期说明并刷新绑定；禁止批量删除。
-5. 处置 8 条 `H_*` hazard 的【Phase8】版本待办：确认 GB 15603-2022 / GB 5083-2023 / GB 2894-2025 / GB 9448-2025 / GB 12801-2025 等新版对应条款号，并判断义务条款复述型描述是否改写。
-6. H052-H055、H058、H065、H067、H069、H079 等高价值 link 做现行版本、条款原文和适用范围终审。
-7. 完成 20 条 pending Requirement 逐条语义校准。
-8. 终审 14 条旧标准引用候选和 12 条 partial-replaced hit。
-9. 处理 11 条 obligation-restatement candidates、9 条 links-to-merged-hazard candidates、47 对近似重复标题。
-10. 补 4 条缺 `sourceUrl` 条款与缺 `sourceUrl` 版本的官方来源；复核非官方证据来源（`gzhxaq.com`、`zhc.dicp.ac.cn`、`cli.im`）。
-11. 精确对账并修正 `knowledge/manifest.json`（含 evidence 572），禁止猜数；`tools/v4/sync_manifest.py` 内仍是错误的 Phase 22 与旧 scope 文本，需一并修正。
-12. 刷新最终 `docs/V3_V4_DIFF_REPORT.md`。
-13. 执行候选网站页面、筛选、law index、PWA/Service Worker、隐私公开投影验收（含过期说明泄漏项）。
-14. 知识树最终稳定后生成完整 final candidate 并跑最终全套验收。
-15. 全部 Phase 16 收口后才改 `READY_FOR_ACCEPTANCE`。
+1. **补齐消防技术直接依据**：H_2689A44E…（室内消火栓）、H_79D2938F…（疏散门）、H_590F1752…／H_69344942…（应急照明与疏散指示）现仅有 fallback，需按 GB 55036-2022／GB 55037-2022／GB 51309 对应条款补 direct。
+2. **H039** 有机废气治理防爆：需建立 HJ 2026-2013 条款或确认《危险化学品安全法》第三十七条的适用边界。
+3. 处置 8 条 H_* 的【Phase8】版本待办（GB 5083-2023、GB 15603-2022、GB 2894-2025、GB 9448-2025、GB 12801-2025 新版条款号）。
+4. 清理剩余 36 条 active hazard 的 note 中间态（须随各自专业终审完成，禁止批量删除）。
+5. H052-H055、H058、H065、H067、H069、H079 等高价值 link 终审。
+6. 20 条 pending Requirement 语义校准。
+7. 8 条 obligation-restatement、9 条 links-to-merged-hazard、47 对近似重复标题。
+8. 消除 GB 50016 重复版本实体（L025 与 LV_GB50016_2014），把 C_GB50016_* 归并到 V3 既有 Stable ID。
+9. 复核非官方证据来源（gzhxaq.com、zhc.dicp.ac.cn、cli.im）；补缺 sourceUrl 的条款与版本。
+10. 刷新最终 docs/V3_V4_DIFF_REPORT.md。
+11. 页面、筛选、law index、PWA/Service Worker、隐私公开投影人工验收。
+12. 知识树稳定后生成完整 final candidate 并跑最终全套验收。
+13. 全部收口后才改 READY_FOR_ACCEPTANCE。
+
+
 
 ## 进度看板（本文件维护）
 
 | 项 | 状态 |
 |---|---|
 | H043 / H049 终审 | 已完成 |
-| H046 / H048 终审 + 结构化收口 | 已完成（commit c1aee4f） |
-| H047 江苏条例第十五条第（二）项 direct | 已完成 |
-| H073 消防法第二十一条第一款 direct | 已完成 |
+| H046 / H048 终审 + 结构化收口 | 已完成 |
+| H047 / H073 精确 direct | 已完成 |
 | H036 / H064 / H068 批量误标纠正 | 已完成 |
-| H039 / H063 / H066 终审 | 未完成（依赖 GB 55037-2022 条文化） |
-| 已废止 GB 50016 条文清理 | 未完成（最高优先） |
+| H063 / H066 与 3 条实验室隐患专项依据 | 已完成 |
+| GB 50016 第7.1.3／7.1.8 条替换为 GB 55037-2022 | 已完成 |
+| GB 50016 第8.2.1／8.1.6 条引用清理与 role 降级 | 已完成 |
+| manifest 精确对账 + sync 工具修正 | 已完成 |
 | GB 50016 重复版本实体合并 | 未完成 |
-| 剩余 ~39 条 hazard note 中间态清理 | 未完成 |
+| H039 有机废气防爆 | 未完成 |
+| 剩余 36 条 hazard note 中间态 | 未完成 |
+| 其余队列（Requirement／merged-link／重复标题／diff／页面验收） | 未完成 |
+
+
 
 ## 下一轮第一步
 
-**优先处置"已废止标准条文被当作现行依据"这一类法规正确性问题**（见未完成事项 1-3）：先以住建部 2022 年第 189 号公告为准清点 GB 50016-2014 被废止条文的全部使用者，用 GB 55037-2022 / GB 55036-2022 的现行替代条文重建依据；同时合并 GB 50016 重复版本实体。其次继续 H039/H063/H066 走同一批 GB 55037 条文化，再推进剩余 hazard note 中间态清理。
+**按"消防技术直接依据补齐"继续推进**：优先为 H_2689A44E…（室内消火栓）、H_79D2938F…（疏散门）、H_590F1752…／H_69344942…（应急照明与疏散指示）核定 GB 55036-2022／GB 55037-2022／GB 51309 对应条款并补 direct；随后处理 H039 与 8 条【Phase8】版本待办。每关闭一个工作单元后跑 validate_all → build_release → gate_v4 → strict_release_audit → test_search，确认 eligible 数不下降、blocker 仍为 0，并同步刷新受影响 review 的内容绑定。
 
-每关闭一个工作单元后：跑 validate_all → build_release → gate_v4 → strict_release_audit → test_search，确认 eligible 数不下降、blocker 仍为 0，并同步刷新受影响的 review 内容绑定。
 
 ## 后续任务
 
@@ -242,11 +243,11 @@ ACTIVE — Phase 16 最终验收继续执行。H043、H046、H047、H048、H049�
 
 已知风险：
 
-- **公开投影泄漏工作中间态**：43 条 active hazard 的 `note` 写着"核验完成前不得进入公开运行库"，却已进入 candidate 公开投影。candidate 尚未上线，但这是上线前必须清零的项。
-- 45 条中的过期说明不能批量删除：至少 9 条的 review 自身声明仍缺专项条款，删说明会掩盖真实状态。
+- **公开投影泄漏工作中间态**：36 条 active hazard 的 `note` 写着"核验完成前不得进入公开运行库"，却已进入 candidate 公开投影。candidate 尚未上线，但这是上线前必须清零的项。
+- 剩余 36 条的过期说明不能批量删除：其中若干条的 review 仍声明缺专项条款，删说明会掩盖真实状态；必须逐条终审后清理。
 - 关联层审核 95.4% 来自豆包批量流程，不能等同于逐条专业终审；机器 blocker=0 只说明数据链满足发布规则。
-- `knowledge/manifest.json` 计数滞后，evidence 精确总数（572）已实测但尚未写回。
-- `tools/v4/sync_manifest.py` 会把 `migrationPhase` 写回错误的 Phase 22 并写入旧 scope 文本，使用前必须修正。
+- `knowledge/manifest.json` 已完成精确对账（77/77/99/712/747/573/23/75），`sync_manifest.py` 已修正为幂等；但每次新增实体后仍须重跑对账。
+- 消防技术直接依据仍不完整：4 条消防隐患（消火栓、疏散门、应急照明、疏散指示标志）目前只有 fallback，需按 GB 55036-2022／GB 55037-2022／GB 51309 补齐 direct。
 - `tools/v4/gate_v4.py` 每次运行会整体重写 `docs/V4_GATE_REPORT.md`，人工元信息不保留；人工状态统一维护在本文件与 `docs/V4_FINAL_ACCEPTANCE.md`。
 - `tools/v4/check_review_binding.py` 只按文件名匹配 link id，会静默跳过 19 个 `RV_*` 命名的 review 文件（官方门禁 `release_gate_core.load_reviews` 按 `entityId` 索引，不受影响）。
 - GitHub 可能存在并发提交；每轮必须重新核真实 HEAD，不能依赖本文件记载的旧 SHA。
