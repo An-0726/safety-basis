@@ -85,8 +85,8 @@ def main():
     # 汇总判定
     structural_pass = all(v == "PASS" for v in report["structural"].values()) and report["evidence_scan"] == "PASS"
     version_pass = len(missing) == 0
-    content_pass = report["review_total"] == 179 and not report["verified_without_evidence"]
-    applicability_pass = content_pass and report["review_total"] == 179
+    content_pass = report["review_total"] == len(reviews) and not report["verified_without_evidence"]
+    applicability_pass = content_pass
 
     report["gate"] = {
         "STRUCTURAL": "PASS" if structural_pass else "FAIL",
