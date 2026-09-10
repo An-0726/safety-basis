@@ -4,7 +4,7 @@
  "generatedAt": "2026-09-10",
  "publicScope": "国家法规标准优先，江苏／南京补充",
  "counts": {
-  "hazards": 662,
+  "hazards": 117,
   "laws": 68,
   "lawVersions": 68,
   "clauses": 76,
@@ -18,9 +18,23 @@
   "links": 181
  },
  "health": {
-  "verifiedHazards": 115,
-  "pendingHazards": 25,
-  "rejectedHazards": 20,
-  "unreviewedHazards": 0
+  "verifiedHazards": 114,
+  "pendingHazards": 24,
+  "rejectedHazards": 17,
+  "unreviewedHazards": 502,
+  "verifiedWithPending": 1,
+  "verifiedWithRejections": 4
+ },
+ "publishStats": {
+  "publishable": 117,
+  "not_publishable": 545,
+  "by_status": {
+   "unreviewed": 502,
+   "pending": 24,
+   "verified": 114,
+   "verified_with_pending": 1,
+   "rejected": 17,
+   "verified_with_rejections": 4
+  }
  }
 }

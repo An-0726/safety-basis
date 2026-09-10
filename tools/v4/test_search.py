@@ -59,7 +59,9 @@ def search(idx, q):
     return [r for _, r in scored]
 
 
-# (query, 期望至少命中, 说明)
+# (query, 全量期望至少命中, 说明)
+# 全量 = search-index-all.json（全部 hazard，含待核验/不可发布）
+# 正式投影 = search-index.json（链式门禁后只含 publishable hazard），只记录召回数不设严格阈值
 CASES = [
     ("灭火器", 3, "消防-口语"),
     ("消火栓", 1, "消防-专业"),
@@ -83,17 +85,39 @@ CASES = [
     ("危废", 2, "危废"),
 ]
 
-FAILED = []
-INDEX = load()
-for q, min_hits, label in CASES:
-    hits = search(INDEX, q)
-    top = hits[0]["title"][:40] if hits else "(none)"
-    ok = len(hits) >= min_hits
-    if not ok:
-        FAILED.append((q, label, len(hits), min_hits))
-    print("%-3s %-10s %-12s hits=%-3d top=%s" % ("OK" if ok else "!!", q, label, len(hits), top))
 
-print("\nTOTAL: %d cases, failed: %d" % (len(CASES), len(FAILED)))
-for f in FAILED:
-    print("  FAIL %s (%s): %d < %d" % f)
-sys.exit(1 if FAILED else 0)
+def run_suite(idx_name, idx, strict=True):
+    failed = []
+    print("\n=== %s (%d hazards) ===" % (idx_name, len(idx)))
+    for q, min_hits, label in CASES:
+        hits = search(idx, q)
+        top = hits[0]["title"][:40] if hits else "(none)"
+        if strict:
+            ok = len(hits) >= min_hits
+            if not ok:
+                failed.append((q, label, len(hits), min_hits))
+            print("%-3s %-10s %-12s hits=%-3d top=%s" % ("OK" if ok else "!!", q, label, len(hits), top))
+        else:
+            print("    %-10s %-12s hits=%-3d top=%s" % (q, label, len(hits), top))
+    return failed
+
+
+INDEX_PUB = load()
+INDEX_ALL_PATH = os.path.join(REL, "data", "search-index-all.json")
+INDEX_ALL = json.load(io.open(INDEX_ALL_PATH, encoding="utf-8")) if os.path.exists(INDEX_ALL_PATH) else INDEX_PUB
+
+# 链式门禁验证：正式投影 hazard 数 < 全量，且正式投影每条都 publishable=True
+gate_ok = len(INDEX_PUB) < len(INDEX_ALL) and all(r.get("publishable") for r in INDEX_PUB)
+print("链式门禁验证: 正式投影=%d, 全量=%d, 全部publishable=%s -> %s" % (
+    len(INDEX_PUB), len(INDEX_ALL), all(r.get("publishable") for r in INDEX_PUB),
+    "PASS" if gate_ok else "FAIL"))
+
+FAILED_ALL = run_suite("全量 search-index-all (all hazards, 严格阈值)", INDEX_ALL, strict=True)
+run_suite("正式投影 search-index (publishable only, 记录召回)", INDEX_PUB, strict=False)
+
+print("\n=== 汇总 ===")
+print("链式门禁: %s" % ("PASS" if gate_ok else "FAIL"))
+print("全量搜索: %d cases, failed: %d" % (len(CASES), len(FAILED_ALL)))
+for f in FAILED_ALL:
+    print("  [全量] FAIL %s (%s): %d < %d" % f)
+sys.exit(1 if (FAILED_ALL or not gate_ok) else 0)
