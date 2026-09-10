@@ -1,82 +1,88 @@
-# V3/V4 差异验收报告
+# V3 / V4 差异验收报告
 
-> 生成时间：2026-09-10
-> 基线：V3 SQLite（source/master/safety.sqlite3，SHA-256 7086d945...）vs V4 chat-v4
-> V3 全程只读，未修改
+> 状态：`INTERIM — FINAL REFRESH REQUIRED`
+> 最后同步：2026-09-10
+> V3 基线：`source/master/safety.sqlite3`
+> V3 SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
+> V3 全程只读，未修改。
 
-## 1. 实体数量对比
+## 1. 当前说明
 
-| 实体 | V3 | V4 | 分类 |
-|---|---|---|---|
-| hazards 总数 | 1125 | 712 | expected structural change |
-| hazards active 未合并 | 0* | 646 | V3 status 列全为 NULL |
-| hazards superseded/merged | 0 | 66 | V4 引入 lifecycle |
-| hazards publishable | N/A | 543 (84.1%) | V4 新增链式门禁 |
-| laws | 160 | 75 | expected structural change |
-| lawVersions | 161 | 75 | V4 只保留实际使用版本 |
-| clauses | 2603 | 88 | V3 大量原始导入未筛选 |
-| links 总数 | 2298 | 596 | expected improvement |
-| links eligible | N/A | 523 | V4 全部专业 review |
+本文件原版本是在 V4 仍只有约 543 publishable hazards / 596 links / 523 eligible links 时生成的中途快照。随后 `chat-v4` 又进行了大规模 link backfill、hazard 收口、Requirement 校准和 Gate 逻辑统一，因此旧数字不能继续作为 Phase 16 最终差异验收结论。
 
-*V3 hazards 表 status/merged_into 列全为 NULL，无法区分 active/merged
+最终差异报告必须等当前知识树稳定、重新生成最终 candidate 后再做一次完整 V3 → V4 对比。本文件现在保留已确认的结构性结论，同时明确哪些项目仍待最终刷新。
 
-## 2. V3 已知错误是否被继承
+## 2. 当前 V4 真实规模
 
-| 问题 | V3 | V4 | 结论 |
-|---|---|---|---|
-| 非法 role | 2298 (全部) | 0 | V4 已修复，全部 role∈{direct,supporting,fallback} |
-| dangling link | 0 | 0 | 均无 dangling |
-| 疑似 FACT_NOT_HAZARD 未 reject | 约 169 | 已专业 review 分类 | V4 已区分 verified/rejected/pending |
-| 无 review 的 link | 2298 (全部) | 0 | V4 全部 link 有 review+hash 绑定 |
+以当前 `knowledge/manifest.json` counts 为准：
 
-## 3. 常见隐患搜索覆盖（V4 publishable）
+- laws: 75
+- lawVersions: 75
+- clauses: 88
+- hazards: 712
+- links: 735
+- requirements: 75
+- evidence: 567
+- successions: 23
 
-| 关键词 | V4 总数 | publishable | 覆盖率 |
-|---|---|---|---|
-| 消火栓 | 8 | 8 | 100% |
-| 疏散 | 26 | 22 | 84.6% |
-| 灭火器 | 28 | 25 | 89.3% |
-| 特种设备 | 7 | 7 | 100% |
-| 特种作业 | 4 | 4 | 100% |
-| 培训 | 25 | 24 | 96.0% |
-| 应急 | 31 | 30 | 96.8% |
-| 粉尘 | 20 | 18 | 90.0% |
-| 危险化学品 | 38 | 32 | 84.2% |
-| 电气 | 25 | 17 | 68.0% |
-| 燃气 | 17 | 15 | 88.2% |
-| 有限空间 | 2 | 2 | 100% |
-| 防雷 | 7 | 6 | 85.7% |
-| 涂装 | 1 | 1 | 100% |
+上一稳定 candidate（本轮 manifest 元数据修正前）记录：
 
-电气类覆盖率最低（68%），需后续优先处理。
+- publishable hazards: 596 / 712
+- eligible links: 666 / 735
+- link reviews: 666 verified / 19 rejected / 0 pending
+- production: false
 
-## 4. V4 publishable hazard category 分布
+由于 Phase 16 已修改 `knowledge/manifest.json`，最终 candidate 需要重建后才能生成新的最终 hash 和最终差异统计。
 
-| category | 数量 |
-|---|---|
-| 安全管理 | 117 |
-| 消防安全 | 84 |
-| 危险化学品与危险物质 | 44 |
-| 电气安全 | 43 |
-| 应急与事故管理 | 42 |
-| 安全标志 | 36 |
-| 设备设施 | 32 |
-| 总图与建筑 | 32 |
-| 粉尘防爆 | 30 |
-| 涂装安全 | 23 |
-| 作业安全与个体防护 | 21 |
-| 专项安全与EHS | 19 |
-| 燃气安全 | 10 |
-| 安全教育 | 8 |
+## 3. 已确认的 V3 → V4 结构性变化
 
-## 5. 差异分类总结
+以下结论仍成立，不依赖中途数量：
 
-- **expected improvement**: V4 link 全部专业 review + hash 绑定，质量大幅提升；V3 的 2298 条 link 全部 role 非法且无 review
-- **expected structural change**: V4 经过 merge/拆分/质量筛选，实体数减少但更精准；引入 Requirement 层、lifecycle、succession 等 V3 没有的架构
-- **regression**: 未发现（strict audit PASS，releaseBlockers=0，搜索回归 20/20）
-- **needs expert review**: 剩余约 175 个 active hazard 仍无合格 link，电气类覆盖率最低（68%），需后续优先处理
+1. V4 保留 Stable ID 作为迁移和追溯核心，没有为了重构而全量重新编号。
+2. V4 将 law identity、lawVersion、clause、hazard、link、requirement、evidence、succession 等关系显式结构化。
+3. V4 对 link 采用合法 role 集合并建立逐条 review；不能把 V3 历史 link 机械继承为已通过。
+4. V4 引入 hazard lifecycle / superseded / merged 处理，复合 hazard 拆分后仍保留父实体追溯。
+5. V4 发布判定采用 hazard → link → clause → lawVersion → law 的共享链式 Gate，而不是旧 V3 通用 dependency hash 作为唯一真伪依据。
+6. V4 允许局部条款核验，不要求取得整部标准全文才允许建立一个已可靠核验的 clause。
+7. V3 r8 历史批量误判不得因为追求数字一致而回灌 V4。
 
-## 6. V3 冻结状态确认
+## 4. 最终差异验收必须重新执行的项目
 
-- V3 SQLite SHA-256: `7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`（与预期一致，未修改）
-- V3 全程以 mode=ro 只读访问
+最终 candidate 稳定后至少重新比较：
+
+- V3 最新可靠 release 中的已发布 hazard 是否无故丢失；
+- hazard Stable ID、标题、专业描述、整改措施；
+- law identity、lawVersion、实施/废止状态；
+- clause locator 与条款文本；
+- hazard—clause 关系和 role；
+- direct/fallback/supporting 角色变化是否合理；
+- merge/split/superseded 的去向；
+- 搜索关键词覆盖；
+- 分类、场所筛选；
+- law index；
+- 页面、PWA、Service Worker；
+- 公开数据隐私扫描；
+- V3 已知错误是否被 V4 重新引入。
+
+## 5. 差异分类标准
+
+最终报告中的每项差异必须归入以下之一：
+
+- `EXPECTED_STRUCTURAL_CHANGE`：由 V4 架构变化造成，且可解释。
+- `QUALITY_IMPROVEMENT`：V4 修正 V3 错误、弱依据、非法 role、复合隐患等。
+- `CONTENT_CORRECTION`：法规版本、条款、隐患描述或整改措施经过核验后的纠正。
+- `INTENTIONAL_EXCLUSION`：历史、merged、superseded、正向事实或不满足发布条件的实体被排除。
+- `REGRESSION`：V4 无合理原因丢失或破坏了 V3 的可靠能力；必须修复。
+- `REVIEW_REQUIRED`：差异尚不能专业判断，不得强行归类为改进。
+
+## 6. 当前已知风险
+
+- 原报告中的旧 publishable/link 数字已经过期。
+- 最终候选尚未在本轮 manifest 修改后重建，因此当前不能给出最终 V3/V4 数量差异结论。
+- 最终差异报告不能只对比总数，必须对关键 Stable ID、内容和法规链做语义对比。
+
+## 7. 当前结论
+
+V3 冻结基线仍有效；V4 已进入 Phase 16。此前差异检查没有发现需要回滚架构的根本问题，但**最终 V3/V4 差异验收尚未完成**。
+
+本文件的最终刷新必须在最终 candidate 重建并通过 validator/gate/strict audit 后执行。总验收顺序以 `docs/V4_FINAL_ACCEPTANCE.md` 为准。

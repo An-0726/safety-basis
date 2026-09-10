@@ -1,10 +1,10 @@
 # Safety Basis Chat 续接状态
 
-> 最后更新：2026-09-10（V4 backlog 大规模清理完成：publishable hazards 从 162 提升至 565/712，inventoryWarnings 从 486 降至 92，strict audit PASS / releaseBlockers=0 / Gate 六阶段全 PASS / pending links=0）。恢复项目时必须先读取本文件、`knowledge/manifest.json` 与 `chat-v4` 当前真实 HEAD；如有冲突，以 GitHub 真实文件状态为准。
+> 最后更新：2026-09-10。恢复项目时必须先读取本文件、`knowledge/manifest.json`、`source/releases/v4-candidate-20260910/release.json` 与 `chat-v4` 当前真实 HEAD；如有冲突，以 GitHub 真实文件状态为准。
 
 ## PROJECT_STATUS
 
-ACTIVE — 已达到可提交最终验收状态，等待独立审查方（ChatGPT）终审和用户生产切换决策。
+ACTIVE — V4 已进入最终验收前阶段；候选发布包当前通过既有共享链式门禁，但 production 切换仍需用户明确批准。
 
 ## 当前总目标
 
@@ -12,7 +12,9 @@ ACTIVE — 已达到可提交最终验收状态，等待独立审查方（ChatGP
 
 ## 当前 Phase
 
-Phase 22 / 最终验收前。基础迁移、link applicability 复核（179→0 pending）、复合 Hazard 拆分（21→50 子 hazard）、V3 verified backfill（20/20）、merge 验收（45/45）、严格发布审计主链（三脚本共用 release_gate_core）、Requirement 语义校准（44 发布链 verified）、backlog 大规模清理（468 无 link hazard → 剩余 24 个设计规范类）均已完成。V3/V4 差异验收报告已生成（docs/V3_V4_DIFF_REPORT.md）。
+Phase 22 / 最终验收前。
+
+已完成的主要工作包括：基础迁移、link applicability 复核归零 pending、复合 Hazard 拆分、V3 verified backfill、merge 验收、Requirement 语义校准、共享链式发布判定、V3/V4 差异报告、候选 release 构建和 backlog 大规模清理。
 
 ## 当前工作分支
 
@@ -22,55 +24,118 @@ Phase 22 / 最终验收前。基础迁移、link applicability 复核（179→0 
 
 ### GitHub
 
-- 最近已知 HEAD：`2d96e0d6faf32c5caf2c248a05fc2002536d7be1`（必须重新 `git ls-remote origin chat-v4` 确认真实 HEAD）
-- main 分支：`11a98ca3fa379a9e8a92549ba94dcc074297be1f`（V3 时代，未修改）
-- 本轮关键 commits：
-  - `3046d1d` — link-backfill: 37 new verified links
-  - `bd9de4c` — docs: add V3/V4 diff report; rebuild candidate (543 publishable)
-  - `1a84034` — link-backfill: 27 new verified links (562 publishable)
-  - `2d96e0d` — link-backfill: 3 new verified links (565 publishable)
-- 下一轮仍必须重新读取 `chat-v4` 获取真实最终 HEAD，禁止把本文记录的 SHA 当作永远不变的分支状态。
+- 本轮开工时真实 HEAD：`9936756008616e427145083dc75f22eb05734a3d`
+- 该提交说明：`fix: align gate_v4 CONTENT/APPLICABILITY with shared chained gate; sync manifest; rebuild candidate; 596 publishable hazards; strict PASS`
+- 本轮新增：
+  - `cbefe6a41cefcac76516d8f4a88b3ac9be2316e7` — 同步 `docs/V4_GATE_REPORT.md` 到最新候选包真实状态
+- 本 handoff 提交位于其后；下一轮仍必须重新读取 `chat-v4` 获取真实最终 HEAD。
+- main 分支保持 V3 时代状态，未修改。
 
 ### V3 冻结基线
 
-- `source/master/safety.sqlite3`，SHA-256 `7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`（全程只读，未修改）
+- `source/master/safety.sqlite3`
+- SHA-256：`7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`
+- 全程只读，未修改。
 
-### 当前数据规模（以真实 knowledge/ 为准）
+### 当前知识规模
 
-- laws: 75 / lawVersions: 75 / clauses: 88 / hazards: 712 / links: 705 / requirements: 75 / evidence: 567+ / successions: 23
-- Link review: 632 verified / 23 rejected / 0 pending（全库 pending 归零）
-- publishable hazards: 565 / 712（79.4%）
-- eligible links: 632 / 705
-- strict audit: PASS，releaseBlockers=0，inventoryWarnings=92，excludedEntities=108
-- 普通 Gate 六阶段：全 PASS（STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE/RELEASE）
-- 搜索回归：20/20 PASS
-- candidate sourceStateHash: `899015a98a78b794`
+以 `knowledge/manifest.json` 的 counts 与最新 candidate release 为准：
+
+- laws: 75
+- lawVersions: 75
+- clauses: 88
+- hazards: 712
+- links: 735
+- requirements: 75
+- evidence: 567
+- successions: 23
+
+### 当前 link / 发布状态
+
+最新 `source/releases/v4-candidate-20260910/release.json`：
+
+- Link review: 666 verified / 19 rejected / 0 pending
+- publishable hazards: 596 / 712
+- notPublishable hazards: 116
+- eligible links: 666
+- candidate: true
+- production: false
+- sourceStateHash: `6b0adf8953769c5aa84b017ff9b0160ea8b0baddaf1bc35f87b2864c09cee9a7`
+- 当前 Gate：STRUCTURAL / CONTENT / APPLICABILITY / VERSION / EVIDENCE / RELEASE 全部 PASS
+- strict audit：PASS
 
 ### 核心基础设施
 
-- `tools/v4/release_gate_core.py`（336 行）：三脚本共用的链式发布判定核心
-- `build_release.py` / `strict_release_audit.py` / `gate_v4.py` 全部 `from release_gate_core import evaluate_release_gate`
-- 公开 search-index.json 只含 publishable hazard，全量保留在 search-index-all.json
+- `tools/v4/release_gate_core.py`：共享链式发布判定核心
+- `build_release.py` / `strict_release_audit.py` / `gate_v4.py` 共用同一链式判定逻辑
+- 公开 `search-index.json` 仅含 publishable hazard；全量实体继续保留在非公开发布链数据中
 
-### 剩余 inventoryWarnings（92 个，不阻塞 production）
+## 本轮完成
 
-- 约 24 个厂址/总平面设计规范类 hazard（GB50187 等）：属设计阶段要求，非现场可检查隐患，不强行建 link
-- 其余为 supporting-only link 和非发布链库存 backlog
-- 这些是后续知识库建设遗留项，不影响当前发布安全性
+1. 重新读取 `docs/CHAT_HANDOFF.md`、`knowledge/manifest.json`、最新 `chat-v4` HEAD 与 candidate release。
+2. 发现原 `docs/V4_GATE_REPORT.md` 仍停留在旧快照：CONTENT / APPLICABILITY 显示 FAIL，eligibleHazards 仅 296，与最新候选包不一致。
+3. 已将 `docs/V4_GATE_REPORT.md` 同步到最新候选包：596 publishable hazards、666 eligible links、六阶段 Gate 全 PASS、production=false。
+4. 确认 `knowledge/manifest.json` 的 counts 已同步到当前知识规模，但其 `scope` 文本仍残留早期 68 laws / 662 hazards / 181 links 等旧描述；不得把该 scope 当作当前真实统计。
+5. Google Drive 中 `safety-basis` 工作目录仍可访问；本轮未覆盖 Drive 正式文件。
 
-### 约束遵守确认
+## 本轮修改文件
 
-- main 未修改 ✅
-- production 未切换 ✅
-- GitHub Pages 正式数据源未切换 ✅
-- V3 SQLite 未修改（哈希匹配）✅
-- 无 force push ✅
-- PR #7 未 merge ✅
-- 停在 chat-v4 ✅
+- `docs/V4_GATE_REPORT.md`
+- `docs/CHAT_HANDOFF.md`
 
-## 下一步
+## 本轮校验
 
-1. 交付独立审查方（ChatGPT）做最终终审
-2. 如终审通过，等待用户明确批准后执行 Phase 17 production 切换
-3. 后续可继续处理 92 个 inventoryWarnings（设计规范类 hazard 评估是否保留/合并/删除）
-4. 可继续扩展搜索回归测试覆盖（当前 20/20）
+- 已回读 `chat-v4` 真实 HEAD。
+- 已核对 `knowledge/manifest.json` counts。
+- 已核对 `source/releases/v4-candidate-20260910/release.json` sourceCounts、reviewStats、reviewStatsByLink、strictGate、production 标志和 sourceStateHash。
+- 已确认当前候选包 `production=false`。
+- 未修改 `main`、V3 SQLite、fulltext、GitHub Pages 正式数据源和生产网站。
+
+## 当前项目状态
+
+V4 已具备候选发布条件并处于最终验收前。现有候选包的发布链判定为 PASS，但正式切换仍未授权。
+
+当前主要不是继续大规模迁移，而是：
+
+1. 做最终独立终审；
+2. 清理剩余文档一致性问题；
+3. 如知识树再发生变化，必须重建 candidate 并重跑完整 validator / gate / strict audit；
+4. 仅在用户批准后执行 production 切换。
+
+## 未完成事项
+
+- `knowledge/manifest.json` 的 `scope` 文本仍是旧叙述，需要同步为当前 75 / 75 / 88 / 712 / 735 / 75 等真实规模；counts 本身已经是最新值。
+- 继续独立抽查 596 条 publishable hazard 的代表性法规链、版本时效、Requirement 语义和隐私边界。
+- 评估剩余非阻断库存 warning 是否需要在生产切换前进一步处理。
+- 用户尚未批准 production 切换。
+
+## 下一轮第一步
+
+先修正 `knowledge/manifest.json` 的 `scope` 旧叙述，并再次核对当时真实 HEAD 与 candidate `sourceStateHash`；随后继续最终终审抽查，不得直接切换 production。
+
+## 后续任务
+
+1. 最终独立终审：抽查高风险设备、危化品、消防、电气、粉尘防爆、特种设备、江苏/南京地方依据。
+2. 若终审发现知识树发生任何实质修改，重新 build candidate，并重跑 validator / gate / strict audit。
+3. 扩展搜索回归和页面功能验收。
+4. 用户明确批准后，才进入 production 切换。
+
+## 风险 / 阻塞
+
+- `manifest.scope` 仍有历史数字残留，属于文档一致性问题，不是当前发布链数据断链。
+- 当前 candidate 只能代表其 `sourceStateHash` 对应的知识状态；后续任何知识修改都会使它变成旧快照。
+- 生产切换属于不可逆高影响操作，必须等待用户明确批准。
+
+## 用户待决策事项
+
+- 是否批准最终 production 切换：当前尚未批准。
+
+## 明确禁止事项
+
+- 不得修改 `main`
+- 不得正式切换 production
+- 不得切换 GitHub Pages 正式数据源
+- 不得用旧 release 覆盖当前候选或生产成果
+- 不得修改 V3 冻结 SQLite
+- 不得 force push
+- 不得为了提高发布数量降低法规、条款、适用性或证据准确性要求
