@@ -39,8 +39,8 @@ Phase 16 完成，处于 `READY_FOR_ACCEPTANCE`；Phase 17 未启动。
 ## 当前真实基线
 
 - V3 冻结基线：`source/master/safety.sqlite3`，SHA-256 `7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8`，全程只读。
-- 候选包：`source/releases/v4-candidate-20260910`，同时包含网站前端与数据投影，
-  可直接 `py -m http.server` 起静态服务验收。
+- 候选包：`source/releases/v4-candidate-20260910`，`sourceStateHash = 209787cacd1a7a51f15c09bbdd3a87d5783716c3bf00b0d50a20ba857de46613`；`candidate=true`、`production=false`。
+- 候选包同时包含网站前端与数据投影，可直接 `py -m http.server` 起静态服务验收。
 - 网站投影由 `tools/v4/build_site_data.py` 生成，已接入 CI 与双构建确定性检查。
 
 ## 本轮完成
@@ -53,31 +53,27 @@ Phase 16 完成，处于 `READY_FOR_ACCEPTANCE`；Phase 17 未启动。
      V3 把 5 条隐患挂在第三十四条**罚则**上，已改挂第七/十二/十六/十七/十八条等行为规范条款。
    - 特种作业人员安全技术培训考核管理规定（应急管理部令第19号）、特种作业目录（应急〔2026〕45号）。
    - 建设项目安全设施"三同时"监督管理办法（安监总局令第36号）、南京市电动自行车消防安全管理办法。
-2. **补齐 Phase 11 网站适配层**：此前发布包用自己的数据格式，与网站前端所需的分片 + `basisRefs` 结构不通，
-   详情页无法显示条款原文。`tools/v4/build_site_data.py` 现在从 `knowledge/` 生成公开投影，
-   浏览器实测通过（搜索、场所筛选、隐患详情的条款原文、法规库反查关联隐患、PWA 注册）。
-3. **数据质量清理**：合并完全重复隐患、清理挂在已合并隐患上的悬挂关联与中间态说明、
-   把义务复述型标题改写为现场缺陷事实、证据等级归一、来源补齐、删除重复孤儿条款。
+2. **补齐 Phase 11 网站适配层**：此前发布包用自己的数据格式，与网站前端所需的分片 + `basisRefs` 结构不通，详情页无法显示条款原文。`tools/v4/build_site_data.py` 现在从 `knowledge/` 生成公开投影，浏览器实测通过（搜索、场所筛选、隐患详情的条款原文、法规库反查关联隐患、PWA 注册）。
+3. **数据质量清理**：合并完全重复隐患、清理挂在已合并隐患上的悬挂关联与中间态说明、把义务复述型标题改写为现场缺陷事实、证据等级归一、来源补齐、删除重复孤儿条款。
 4. **V3 → V4 差异验收**：报告改为运行时生成；V3 已核验的 662 条隐患在 V4 的覆盖率为 **100%**，未发现误删。
-5. **门禁加固**：`rebind` 支持同一哈希多处替换、`check_review_binding` 恢复真实失败语义、
-   `gate_link` 检查目标隐患状态、`gate_clause` 检查条款效力。
+5. **门禁加固**：`rebind` 支持同一哈希多处替换、`check_review_binding` 恢复真实失败语义、`gate_link` 检查目标隐患状态、`gate_clause` 检查条款效力。
+6. **验收文档一致性复核**：发现 `docs/V4_FINAL_ACCEPTANCE_REPORT.md` 顶部保留了旧 `sourceStateHash` 前缀 `57b565b08f94bb78`，而当前候选包 `release.json` 的真实值为 `209787ca...`。已确认 `build_release.py` 的该哈希仅由 `knowledge/**/*.json` 计算，因此属于报告陈旧值而非候选包异常；已在提交 `0a12b22e89a01f20abd64337037e6c51132b1353` 修正验收报告，并将完整当前哈希记录到本文件。
 
 ## 本轮修改文件
 
 - 工具：`tools/v4/{build_site_data.py(新), build_release.py, rebind.py, scan_quality_v4.py, diff_v3_v4.py, sync_manifest.py}`
 - 门禁与 CI：`.github/workflows/v4-final-acceptance.yml`
 - 知识：`knowledge/` 下 laws / law-versions / clauses / links / evidence / hazards / reviews 的相应实体
-- 文档：`docs/V4_FINAL_ACCEPTANCE_REPORT.md(新)`、`docs/V3_V4_DIFF_REPORT.md`、`docs/CHAT_HANDOFF.md`、
-  `docs/reviews/H_1F19FA1B...{DATA_QUALITY_REVIEW,CLAUSE_VERIFICATION}_20260910.md`
+- 文档：`docs/V4_FINAL_ACCEPTANCE_REPORT.md`、`docs/V3_V4_DIFF_REPORT.md`、`docs/CHAT_HANDOFF.md`、`docs/reviews/H_1F19FA1B...{DATA_QUALITY_REVIEW,CLAUSE_VERIFICATION}_20260910.md`
 - 测试：`tests/test_master.py`（修正 Windows 下无法删除被占用目录导致的既有失败）
 
 ## 本轮校验
 
-- `validate_all.py` 六项全 PASS（check_catalogue / check_requirements / check_review_binding /
-  scan_evidence_exact / scan_quality / version_impact），BLOCKING failures: none。
+- `validate_all.py` 六项全 PASS（check_catalogue / check_requirements / check_review_binding / scan_evidence_exact / scan_quality / version_impact），BLOCKING failures: none。
 - `gate_v4.py` 六阶段全 PASS；`strict_release_audit.py`：`strictVerdict=PASS`、`blockerCount=0`。
 - 搜索回归 20/20；双构建产物逐字节一致；隐私公开投影扫描 723 个文件零命中。
 - 单元测试 135 项全部通过。
+- 本轮额外核对：`release.json` 与最终验收报告的 `sourceStateHash` 已一致。
 
 ## 当前项目状态
 
@@ -96,21 +92,18 @@ Phase 16 完成，处于 `READY_FOR_ACCEPTANCE`；Phase 17 未启动。
 
 ## 下一轮第一步
 
-等待用户对 `READY_FOR_ACCEPTANCE` 的复核结论。若批准，再规划 Phase 17：
-确认最终发布的具体 Release、`main` 合并方式与 GitHub Pages 切换步骤；未获批准前不做任何生产侧改动。
+等待用户对 `READY_FOR_ACCEPTANCE` 的复核结论。若批准，再规划 Phase 17：确认最终发布的具体 Release、`main` 合并方式与 GitHub Pages 切换步骤；未获批准前不做任何生产侧改动。
 
 ## 法规/标准待核验队列
 
-- `GB/T 12801-2008` 有效期至 **2026-09-30**，新版 `GB 12801-2025《生产过程安全基本要求》` 自 2026-10-01 实施，
-  届时应切换引用（已在条款审核记录与相关隐患说明中登记）。
+- `GB/T 12801-2008` 有效期至 **2026-09-30**，新版 `GB 12801-2025《生产过程安全基本要求》` 自 2026-10-01 实施，届时应切换引用（已在条款审核记录与相关隐患说明中登记）。
 - 18 条已被替代的历史 `lawVersion` 无官方在线来源，如实留空，不编造链接。
 - 7 对"整条/分款"并存的条款属粒度设计选择，不做高风险合并。
 
 ## 风险 / 阻塞
 
 - 本分支存在并发写入者，**每次写入前必须重新 fetch**；出现冲突时人工合并，禁止 reset / force push。
-- 候选包内 `data/_internal/` 为内部审计视图（含未通过门禁的全量隐患），
-  若将来部署该包，必须排除该目录。
+- 候选包内 `data/_internal/` 为内部审计视图（含未通过门禁的全量隐患），若将来部署该包，必须排除该目录。
 
 ## 用户待决策事项
 
