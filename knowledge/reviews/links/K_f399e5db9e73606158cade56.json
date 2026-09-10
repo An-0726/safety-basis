@@ -3,19 +3,22 @@
   "entityId": "K_f399e5db9e73606158cade56",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "f585aa98a768df6507dac6bbffa829dd92485c39f5775feb823057b31cd2704d",
+  "reviewedContentHash": "1ea378b0d3cea8ae1da0312b03c8d7ffb8782fe66347a1e4ca52382f4bc4db53",
   "contextHashes": {
-    "hazard": "3f76879104cfb4532a351168cadb32400bc496217c1965c5a70a22810fe8f711",
-    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+    "hazard": "f02f3c78175d59967796cc86b82cc20d57dd562542d343a6797dc805aa6bccae",
+    "clause": "46db69518cdd8f3aa5f0eab990631ef0a448d127cc3f30b6fe84a8c507042d4a",
+    "link": "1ea378b0d3cea8ae1da0312b03c8d7ffb8782fe66347a1e4ca52382f4bc4db53"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "安全阀属安全设备，安全生产法第36条第2款要求经常性维护保养并定期检测，与Hazard安全阀定期校验（每年至少一次）要求直接对应（TSG21-2016附录B为技术依据）。",
+  "checkedAt": "2026-09-11T07:48:00+08:00",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "reason": "TSG 21-2016第7.2.3.1.3.1条直接规定固定式压力容器安全阀的一般校验周期及允许延期的条件框架；修订后的隐患以‘超过适用校验周期’表述，与条款直接匹配。原《安全生产法》第36条不再承担本条direct角色。",
   "reasonCodes": [
-    "DIRECT_MATCH"
+    "DIRECT_ROLE_CONFIRMED",
+    "TSG21_7_2_3_1_3_1_EXACT_MATCH"
   ],
   "evidenceRefs": [
-    "E_c240a647ca989070bb0c01fdb9b75ebc4aed57fe99730ac5601107d3fbf73d5f"
+    "EH_TSG21_7_2_3_1_3_1",
+    "EH_TSG21_AM1_OFFICIAL"
   ],
   "migratedFromV3Verification": {
     "id": "VRF_b605512fe2892f4a3a1c4365_437",
