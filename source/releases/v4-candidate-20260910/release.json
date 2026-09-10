@@ -3,30 +3,30 @@
  "asOf": "2026-09-10",
  "candidate": true,
  "production": false,
- "sourceStateHash": "cb5f5d1e0c4e321be80e0ea6029ac552a8485edf295c0d32af770d7973448301",
+ "sourceStateHash": "8fb8859de9cc3c54f43172e2946a5c84236b76f917930c6df50c9f7c3a33f0da",
  "sourceCounts": {
   "laws": 75,
   "law_versions": 75,
   "clauses": 88,
   "hazards": 712,
-  "links": 483,
+  "links": 512,
   "requirements": 75
  },
  "reviewStats": {
   "level": "hazard-level (dedup by hazardId)",
-  "publishableHazards": 369,
-  "notPublishableHazards": 343
+  "publishableHazards": 398,
+  "notPublishableHazards": 314
  },
  "reviewStatsByLink": {
-  "level": "review-level (483 links)",
-  "verified": 410,
+  "level": "review-level (512 links)",
+  "verified": 439,
   "rejected": 23,
   "pending": 0
  },
  "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE checked by shared release_gate_core",
  "strictGate": {
-  "eligibleHazards": 369,
-  "eligibleLinks": 410
+  "eligibleHazards": 398,
+  "eligibleLinks": 439
  },
  "notes": "V4 candidate release. NOT switched to production. Chain-gated via shared release_gate_core: search-index contains only publishable hazards (>=1 eligible direct/fallback link through clause->lawVersion->law); all hazards retained in data/hazards + search-index-all.json with excludedReason. See docs/V4_GATE_REPORT.md."
 }
