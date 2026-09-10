@@ -1,5 +1,5 @@
 {
-  "asOf":"2026-09-10","batch":"clauses-004",
+  "asOf":"2026-09-10","batch":"hazards-001",
   "batches":[
     {"evidenceAdded":6,"id":"core-laws-001","lawVersionsAdded":6,"lawsAdded":6,"successionsAdded":2},
     {"evidenceAdded":4,"id":"core-laws-002","lawVersionsAdded":4,"lawsAdded":4,"selection":"Remaining r10 laws with positive current link usage; counts 30, 9, 1, 1.","successionsAdded":0},
@@ -12,10 +12,11 @@
     {"clausesAdded":15,"evidenceAdded":3,"id":"clauses-001","lawVersionsAdded":0,"lawsAdded":0,"selection":"First 15 conservative V3 verified clauses in Stable ID order; status=已核验, confirmed locator, latest text review passed, authoritative public evidence, non-empty locator; parent lawVersion coverage prevalidated.","successionsAdded":0},
     {"clausesAdded":15,"evidenceAdded":3,"id":"clauses-002","lawVersionsAdded":0,"lawsAdded":0,"selection":"Next 15 conservative V3 verified clauses in Stable ID order using the same Phase 5 eligibility rule; parent lawVersion closure and locator uniqueness prevalidated.","successionsAdded":0},
     {"clausesAdded":15,"evidenceAdded":0,"id":"clauses-003","lawVersionsAdded":0,"lawsAdded":0,"selection":"Third 15 conservative V3 verified clauses in Stable ID order; all evidence already existed in knowledge and parent lawVersion closure/locator uniqueness were prevalidated.","successionsAdded":0},
-    {"clausesAdded":9,"evidenceAdded":1,"id":"clauses-004","lawVersionsAdded":0,"lawsAdded":0,"selection":"Final 9 conservative V3 verified clauses in Stable ID order; completes the 54-clause Phase 5 conservative verified set without expanding verification status.","successionsAdded":0}
+    {"clausesAdded":9,"evidenceAdded":1,"id":"clauses-004","lawVersionsAdded":0,"lawsAdded":0,"selection":"Final 9 conservative V3 verified clauses in Stable ID order; completes the 54-clause Phase 5 conservative verified set without expanding verification status.","successionsAdded":0},
+    {"hazardsAdded":6,"evidenceAdded":0,"id":"hazards-001","selection":"First six Stable-ID-sorted conservative verified hazards; V3 status=已核验, latest content review=passed, public_fields_reviewed=1, active lifecycle; no verification expansion."}
   ],
-  "counts":{"clauses":54,"evidence":54,"lawVersions":43,"laws":43,"successions":2},
+  "counts":{"clauses":54,"evidence":54,"hazards":6,"lawVersions":43,"laws":43,"successions":2},
   "formatVersion":"4.0-alpha","migrationPhase":"Phase 6",
-  "scope":"Cumulative verified core plus all 54 conservative verified clauses; verified hazard migration may now begin, links remain deferred until hazard closure.",
+  "scope":"Cumulative verified core and all 54 conservative verified clauses; verified hazard migration started with 6 of 642 conservative candidates; links remain deferred until hazard closure.",
   "source":{"sqliteSha256":"7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8","v3ReleaseCorroboration":"reviewed-20260909-r10"}
 }
