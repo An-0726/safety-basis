@@ -1,1 +1,14 @@
-{"contextHashes":{"clause":"160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299","hazard":"b90224364ef8c0625664588f2bc14ecec677e30e43db860ca705911596917bf5"},"decision":"pending","entityId":"K_053502698cf8f03c4ab637f4","entityType":"link","evidenceRefs":["E_7c613de1eec4a57fa0ffed898e7009e006606079babf2af5ad2ed36b50c529b9"],"migratedFromV3Verification":{"id":"VRF_452f2dff3939ab346e59541e_229","reviewedAt":"2026-09-09T14:38:34+00:00","reviewer":"并发重验批次","v3Reason":"[C005] 隐患为试剂室内电缆未按规范设置穿管保护，消防法第二十七条第二款规定电器产品线路的设计、敷设必须符合消防技术标准，试剂室属有火灾危险场所电缆穿管保护属线路敷设要求，语义对应。","v3Result":"passed"},"reasonCodes":["LINK_APPLICABILITY_REQUIRES_CHATGPT_REVIEW"],"reviewType":"applicability","reviewedContentHash":"6ac4a64318a9baab713105107c25a7571bf3719156f4853301b51c77a34e0393"}
+{
+  "contextHashes": {"clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299", "hazard": "b90224364ef8c0625664588f2bc14ecec677e30e43db860ca705911596917bf5"},
+  "decision": "rejected",
+  "entityId": "K_053502698cf8f03c4ab637f4",
+  "entityType": "link",
+  "evidenceRefs": ["E_7c613de1eec4a57fa0ffed898e7009e006606079babf2af5ad2ed36b50c529b9"],
+  "migratedFromV3Verification": {"id": "VRF_452f2dff3939ab346e59541e_229", "reviewedAt": "2026-09-09T14:38:34+00:00", "reviewer": "并发重验批次", "v3Reason": "[C005] 隐患为试剂室内电缆未按规范设置穿管保护，消防法第二十七条第二款规定电器产品线路的设计、敷设必须符合消防技术标准，试剂室属有火灾危险场所电缆穿管保护属线路敷设要求，语义对应。", "v3Result": "passed"},
+  "reviewType": "applicability",
+  "reviewedContentHash": "6ac4a64318a9baab713105107c25a7571bf3719156f4853301b51c77a34e0393",
+  "checkedAt": "2026-09-10T10:47:00+08:00",
+  "reviewer": "ChatGPT",
+  "reason": "Hazard明确指向GB 50054-2011第7.6.38关于电缆穿管保护的专项技术要求；C005仅规定电器产品及线路的设计、敷设等必须符合消防技术标准和管理规定，能够作为一般性要求，但不能直接证明该电缆必须按所述具体方式设置穿管保护。当前link为role=direct，支撑强度不足，因此不按直接依据通过；如后续调整为补充/兜底角色，可另行复核。",
+  "reasonCodes": ["DIRECT_ROLE_NOT_SUFFICIENTLY_SUPPORTED"]
+}
