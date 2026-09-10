@@ -1,32 +1,32 @@
 {
-  "formatVersion": "safety-release-v1",
-  "asOf": "2026-09-10",
-  "candidate": true,
-  "production": false,
-  "sourceStateHash": "1205c6c26b4249446d9bba8f71de544433f06cd4c467b666e4cb0ea9cfac645f",
-  "sourceCounts": {
-    "laws": 75,
-    "law_versions": 75,
-    "clauses": 88,
-    "hazards": 712,
-    "links": 735,
-    "requirements": 75
-  },
-  "reviewStats": {
-    "level": "hazard-level (dedup by hazardId)",
-    "publishableHazards": 596,
-    "notPublishableHazards": 116
-  },
-  "reviewStatsByLink": {
-    "level": "review-level (735 links)",
-    "verified": 666,
-    "rejected": 19,
-    "pending": 0
-  },
-  "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE checked by shared release_gate_core",
-  "strictGate": {
-    "eligibleHazards": 596,
-    "eligibleLinks": 666
-  },
-  "notes": "V4 candidate release. NOT switched to production. Chain-gated via shared release_gate_core: search-index contains only publishable hazards (>=1 eligible direct/fallback link through clause->lawVersion->law); all hazards retained in data/hazards + search-index-all.json with excludedReason. See docs/V4_GATE_REPORT.md."
+ "formatVersion": "safety-release-v1",
+ "asOf": "2026-09-10",
+ "candidate": true,
+ "production": false,
+ "sourceStateHash": "21031f7ba7165db6dd9b694cf0f043108c4c13e6da6b0be3a9c79141842efc8c",
+ "sourceCounts": {
+  "laws": 76,
+  "law_versions": 76,
+  "clauses": 92,
+  "hazards": 712,
+  "links": 739,
+  "requirements": 75
+ },
+ "reviewStats": {
+  "level": "hazard-level (dedup by hazardId)",
+  "publishableHazards": 645,
+  "notPublishableHazards": 67
+ },
+ "reviewStatsByLink": {
+  "level": "review-level (739 links)",
+  "verified": 719,
+  "rejected": 20,
+  "pending": 0
+ },
+ "gate": "STRUCTURAL/CONTENT/APPLICABILITY/VERSION/EVIDENCE checked by shared release_gate_core",
+ "strictGate": {
+  "eligibleHazards": 645,
+  "eligibleLinks": 719
+ },
+ "notes": "V4 candidate release. NOT switched to production. Chain-gated via shared release_gate_core: search-index contains only publishable hazards (>=1 eligible direct/fallback link through clause->lawVersion->law); all hazards retained in data/hazards + search-index-all.json with excludedReason. See docs/V4_GATE_REPORT.md."
 }
