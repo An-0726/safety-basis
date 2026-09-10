@@ -6,16 +6,15 @@
   "decision": "rejected",
   "reviewer": "ZCode-DeepSeek",
   "checkedAt": "2026-09-10",
-  "reason": "驳回原 direct 判断。依据条文《建筑设计防火规范》GB 50016-2014（2018年版）第5.5.15条已被《建筑防火通用规范》GB 55037-2022 废止（住房和城乡建设部2022年第189号公告）；且该条文规范的是公共建筑内房间的疏散门数量，与『门窗未向外开启』（开启方向）并非同一事项。本条正确依据待补：应按 GB 55037-2022 疏散门/安全疏散相关条款核定后重建关联。",
+  "reason": "驳回原 direct 判断。理由：C_GB50016_5_5_15 规范的是『公共建筑内房间的疏散门数量应经计算确定且不应少于2个』，与『门窗未向外开启』（疏散门开启方向）不是同一事项，属错误引用。需要说明的是：该条强制性虽已被《建筑防火通用规范》GB 55037-2022 废止，但条文本身仍然有效、可以引用；本条之所以驳回是因为内容不匹配，不是因为条文失效。正确依据应为规范疏散门开启方向的条款（如 GB 50016 第6.4.11条，或 GB 55037-2022 安全疏散相关规定），待补。",
   "reasonCodes": [
-    "ABOLISHED_CLAUSE",
     "CLAUSE_SCOPE_MISMATCH",
     "DIRECT_ROLE_REJECTED"
   ],
   "reviewedContentHash": "6ff939fe6f2d32307d5de98d0a37228c2c30c2a9aee5db3efe9fd778d650a536",
   "contextHashes": {
     "hazard": "a81d5bda34fe6bc56005a4791c44d04b89a299e231b2ddc29d3ecaf8ac58aefe",
-    "clause": "3abeadd4f6863d48ffc3e2da755c30ed270c258aef3bbef672b36ff864594a77",
+    "clause": "43ecd1a34bc71e48f7918aee97d4acb1e1075dae8ed413cb139475a8c44e7bbf",
     "link": "6ff939fe6f2d32307d5de98d0a37228c2c30c2a9aee5db3efe9fd778d650a536"
   },
   "evidenceRefs": []
