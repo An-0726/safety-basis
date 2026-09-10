@@ -2,22 +2,22 @@
   "entityType": "link",
   "entityId": "K_7caf3e9d8e91a30ec04247bf",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "0162679c0e3e060c331cc6566b11c075f94f7df404229ed70c01d58e35dea6af",
+  "decision": "verified",
+  "reviewedContentHash": "68c6251809ab6a617352d7a9f455f130df92b8eb64d1b03ef89009c76d2fd5b9",
   "contextHashes": {
     "hazard": "e021b4d72ec4324229e3f57288302ccec28e647b1484ebeedac5dd6c6a62a547",
-    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
+    "clause": "3a1742bbda34257d99d205d7287418e15f41b251eb0617a8e0af322b585e9066",
+    "link": "68c6251809ab6a617352d7a9f455f130df92b8eb64d1b03ef89009c76d2fd5b9"
   },
-  "checkedAt": "2026-09-10T15:00:00+08:00",
-  "reviewer": "Doubao-Agent-Sub3",
-  "reason": "Hazard为厂内机动车辆投入使用前未经检测检验合格；特种设备安全法第40条规范的是在用特种设备的定期检验（不得继续使用），投入使用前的检验合格要求更直接依据为《场（厂）内专用机动车辆安全技术规程》TSG81-2022或特设法第25条（监督检验）；40条可作supporting，direct依据待专项核验。\n2026-09-10 补充：direct 专项依据指向 TSG 81-2022《场（厂）内专用机动车辆安全技术规程》首次检验相关条款或特设法第25条（监督检验），待建立专项 clause/link 后再判定，维持 pending。\n2026-09-10 补充：direct 专项依据指向 TSG 81-2022《场（厂）内专用机动车辆安全技术规程》首次检验相关条款或特设法第25条（监督检验），待建立专项 clause/link 后再判定，维持 pending。\n2026-09-10 终判：维持 pending。Hazard 为厂（场）内专用机动车辆投入使用前未经检测检验合格；C035（特设法第40条）规范的是在用设备的定期检验（不得继续使用），投入使用前检验合格更直接依据为 TSG 81-2022《场（厂）内专用机动车辆安全技术规程》首次检验/特设法第25条监督检验。direct 专项条款尚未建库，C035 暂作 supporting；待 TSG81/特设法25条 clause 建立后定夺。",
+  "checkedAt": "2026-09-10T21:30:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard为厂内机动车辆投入使用前未经有关部门检测检验合格。\n2026-09-10 官方核验：直接依据为现行 TSG 81-2022《场（厂）内专用机动车辆安全技术规程》（市场监管总局2022年第26号公告，2022-12-01施行，替代TSG N0001-2017，官方PDF与公告页已核）。其4.2.1.1明确'场车投入使用前或者改造后进行的定期检验也称首次检验'，使用单位职责要求'在场车首次投入使用前，向特种设备检验机构申请首次检验'，4.2.2.1要求'首次检验的场车，其使用单位应当在使用前及时向检验机构申请检验'。即场（厂）内专用机动车辆投入使用前必须经特种设备检验机构首次检验合格，与隐患语义直接对应，direct依据成立。\n关于特设法第二十五条：其监督检验设备清单为锅炉、压力容器、压力管道元件（制造）及锅炉、压力容器、压力管道、电梯、起重机械、客运索道、大型游乐设施（安装、改造、重大修理），不含场（厂）内专用机动车辆，故第二十五条不构成场车监督检验依据，不采用。原C035（特设法第40条）规范的是在用特种设备的定期检验（不得继续使用），与'投入使用前首次检验'适用阶段不同，scope mismatch，不再作为本link依据。现重绑至TSG81-2022首次检验条款，role=direct。",
   "reasonCodes": [
-    "SPECIFIC_CLAUSE_REQUIRED",
-    "SCOPE_MISMATCH",
-    "KEEP_PENDING_NEED_EVIDENCE"
+    "SPECIFIC_CLAUSE_FOUND",
+    "DIRECT_ROLE_CONFIRMED"
   ],
   "evidenceRefs": [
-    "E_335ea64520ea9c9b1454e41d698ba2cb8db01b22033b84266bce7cada3238700"
+    "E_392571ed8190c5f95eb4ec647612901934d2ffdd0e6e6ab7994e4c4a98aefae0"
   ],
   "migratedFromV3Verification": {
     "id": "VRF_da1a6cb8678a870875e37fae_214",
