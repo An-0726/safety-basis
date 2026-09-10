@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Phase 17: V4 Gate 执行器。
+"""V4 Gate 执行器（六阶段）。
 
-分级判定：STRUCTURAL / CONTENT / APPLICABILITY / VERSION / EVIDENCE / RELEASE。
-输出 gate report（stdout + docs/V4_GATE_REPORT.md）。
-不执行 production 切换（Phase 17 需用户批准）。
+阶段：STRUCTURAL / CONTENT / APPLICABILITY / VERSION / EVIDENCE / RELEASE。
+
+关键修正：RELEASE 不再只核对 sourceStateHash/counts/reviewStats，而是真正调用
+共享链式门禁 release_gate_core。即使 candidate hash 一致，只要严格发布门禁
+releaseBlockers > 0，RELEASE 仍判 BLOCK（禁止显示 PASS）。
+
+输出：stdout + docs/V4_GATE_REPORT.md。不执行 production 切换。
 """
 import glob
 import io
@@ -18,6 +22,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 KNOW = os.path.join(ROOT, "knowledge")
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 DOCS = os.path.join(ROOT, "docs")
+sys.path.insert(0, TOOLS)
+from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 
 
 def run(script):
@@ -26,18 +32,10 @@ def run(script):
     return p.returncode, (p.stdout or "")
 
 
-def load_dir(rel):
-    out = {}
-    for f in glob.glob(os.path.join(KNOW, rel, "*.json")):
-        with io.open(f, encoding="utf-8") as fh:
-            d = json.load(fh)
-        key = d.get("id") or d.get("entityId") or os.path.splitext(os.path.basename(f))[0]
-        out[key] = d
-    return out
-
-
 def main():
     report = {}
+
+    # ---- STRUCTURAL：子脚本健康检查 ----
     report["structural"] = {}
     for name, script in (("check_catalogue", "check_catalogue.py"),
                          ("check_requirements", "check_requirements.py"),
@@ -47,77 +45,102 @@ def main():
     rc, out = run("scan_evidence_exact.py")
     report["evidence_scan"] = "PASS" if rc == 0 else "FAIL"
 
-    # CONTENT / APPLICABILITY
-    reviews = load_dir(os.path.join("reviews", "links"))
+    # ---- 共享链式 Gate（CONTENT / APPLICABILITY / VERSION 的事实来源）----
+    gate = evaluate_release_gate(KNOW)
+
+    reviews = load_dir(KNOW, os.path.join("reviews", "links"))
     dec = Counter(r.get("decision") for r in reviews.values())
     report["review_totals"] = dict(dec)
     report["review_total"] = len(reviews)
 
-    # VERSION: 仅 active 且被实际引用（link/clause/succession newVersion）的 LV 需要 effectiveDate
-    lvs = load_dir("law-versions")
-    clauses = load_dir("clauses")
-    links = load_dir("links")
-    succs = load_dir("successions")
-    used_lv = set()
-    for c in clauses.values():
-        if c.get("lawVersionId"):
-            used_lv.add(c["lawVersionId"])
-    for l in links.values():
-        pass  # clause 已覆盖
+    lvs = load_dir(KNOW, "law-versions")
+    clauses = load_dir(KNOW, "clauses")
+    succs = load_dir(KNOW, "successions")
+    used_lv = set(c.get("lawVersionId") for c in clauses.values() if c.get("lawVersionId"))
     for s in succs.values():
         if s.get("newVersionId"):
             used_lv.add(s["newVersionId"])
-    active = {vid for vid, v in lvs.items() if (v.get("lifecycle") or "active") != "superseded"}
-    missing = sorted(vid for vid in (used_lv & active) if not lvs[vid].get("effectiveDate"))
+    active_lvs = {vid for vid, v in lvs.items() if v.get("validityStatus") == "active"}
+    missing = sorted(vid for vid in (used_lv & active_lvs) if not lvs[vid].get("effectiveDate"))
     report["lawVersions_total"] = len(lvs)
     report["lawVersions_active_no_effectiveDate"] = len(missing)
     report["missing_eff_ids"] = missing
     report["successions_total"] = len(succs)
 
-    # EVIDENCE: verified 无 evidence
-    no_ev = [k for k, r in reviews.items() if r.get("decision") == "verified" and not (r.get("evidenceRefs"))]
+    no_ev = [k for k, r in reviews.items()
+             if r.get("decision") == "verified" and not r.get("evidenceRefs")]
     report["verified_without_evidence"] = no_ev
 
-    # composite / pending 分类
-    comp = [k for k, r in reviews.items() if "COMPOSITE" in str(r.get("reasonCodes") or "")]
-    report["composite_reviewed"] = len(comp)
-
-    # RELEASE：candidate 一致性核对（与 build_release.py 同口径）
+    # ---- RELEASE：candidate 一致性 + 严格链式门禁 ----
     REL = os.path.join(ROOT, "source", "releases", "v4-candidate-20260910")
     rel_json_path = os.path.join(REL, "release.json")
-    release_verdict = "REVIEW_REQUIRED"
     release_notes = []
+
+    # 1) 严格链式门禁（核心）
+    strict_blockers = []
+    for lid, v in gate.laws.items():
+        if not v["ok"]:
+            strict_blockers.append("law %s: %s" % (lid, v["reasons"]))
+    for vid, v in gate.law_versions.items():
+        if not v["ok"]:
+            strict_blockers.append("lawVersion %s: %s" % (vid, v["reasons"]))
+    for cid, v in gate.clauses.items():
+        if not v["ok"]:
+            strict_blockers.append("clause %s: %s" % (cid, v["reasons"]))
+    for kid, v in gate.links.items():
+        if v["decision"] == "verified" and not v["ok"]:
+            strict_blockers.append("link %s: %s" % (kid, v["reasons"]))
+    for hid, v in gate.hazards.items():
+        if v["active"] and not v["merged"] and not v["content_ok"]:
+            strict_blockers.append("hazard %s: %s" % (hid, v["reasons"]))
+    strict_blocker_count = len(strict_blockers)
+
+    # 2) candidate 文件一致性
+    consistency_ok = True
     if not os.path.exists(rel_json_path):
         release_notes.append("candidate release.json 不存在")
+        consistency_ok = False
     else:
         try:
-            sys.path.insert(0, TOOLS)
-            import build_release as br
+            from build_release import state_hash
             rel = json.load(io.open(rel_json_path, encoding="utf-8"))
-            cur_hash = br.state_hash(glob.glob(os.path.join(KNOW, "**", "*.json"), recursive=True))
+            cur_hash = state_hash(glob.glob(os.path.join(KNOW, "**", "*.json"), recursive=True))
             if rel.get("sourceStateHash") != cur_hash:
-                release_notes.append("sourceStateHash 与当前 knowledge 不一致（candidate 过期，需重跑 build_release.py）")
-            cur_counts = {"laws": len(load_dir("laws")), "law_versions": len(load_dir("law-versions")),
-                          "clauses": len(load_dir("clauses")), "hazards": len(load_dir("hazards")),
-                          "links": len(load_dir("links")), "requirements": len(load_dir("requirements"))}
+                release_notes.append("sourceStateHash 与当前 knowledge 不一致（需重跑 build_release.py）")
+                consistency_ok = False
+            cur_counts = {"laws": len(load_dir(KNOW, "laws")),
+                          "law_versions": len(load_dir(KNOW, "law-versions")),
+                          "clauses": len(load_dir(KNOW, "clauses")),
+                          "hazards": len(load_dir(KNOW, "hazards")),
+                          "links": len(load_dir(KNOW, "links")),
+                          "requirements": len(load_dir(KNOW, "requirements"))}
             sc = rel.get("sourceCounts") or {}
             for k, v in cur_counts.items():
                 if sc.get(k) != v:
                     release_notes.append("counts 不一致: %s=%s(rel) vs %s(cur)" % (k, sc.get(k), v))
-            rl = rel.get("reviewStatsByLink") or {}
-            cur_rt = report["review_totals"]
-            if (rl.get("verified") != cur_rt.get("verified") or
-                    rl.get("rejected") != cur_rt.get("rejected") or
-                    rl.get("pending") != cur_rt.get("pending")):
-                release_notes.append("reviewStatsByLink 不一致: %s(rel) vs %s(cur)" % (rl, cur_rt))
-            if not release_notes:
-                release_verdict = "PASS"
+                    consistency_ok = False
         except Exception as e:  # noqa: BLE001
             release_notes.append("RELEASE 核对异常: %r" % e)
+            consistency_ok = False
+
+    if strict_blocker_count > 0:
+        release_verdict = "BLOCK"
+        release_notes.append("strict releaseBlockers=%d（即使 hash 一致也禁止 PASS）" % strict_blocker_count)
+        release_notes.extend(strict_blockers[:20])
+    elif not consistency_ok:
+        release_verdict = "REVIEW_REQUIRED"
+    else:
+        release_verdict = "PASS"
+        release_notes.append("strict gate PASS: eligibleHazards=%d eligibleLinks=%d"
+                             % (len(gate.eligible_hazards), len(gate.eligible_links)))
     report["release_verdict"] = release_verdict
     report["release_notes"] = release_notes
+    report["strictBlockerCount"] = strict_blocker_count
+    report["strictBlockerSample"] = strict_blockers[:30]
+    report["eligibleHazards"] = len(gate.eligible_hazards)
+    report["eligibleLinks"] = len(gate.eligible_links)
 
-    # 汇总判定
+    # ---- 汇总各阶段判定 ----
     structural_pass = all(v == "PASS" for v in report["structural"].values()) and report["evidence_scan"] == "PASS"
     version_pass = len(missing) == 0
     content_pass = report["review_total"] == len(reviews) and not report["verified_without_evidence"]
@@ -133,7 +156,7 @@ def main():
     }
 
     text = []
-    text.append("# V4 Gate Report（2026-09-10, chat-v4）")
+    text.append("# V4 Gate Report（%s）" % gate.as_of)
     text.append("")
     text.append("## Structural")
     for k, v in report["structural"].items():
@@ -141,25 +164,25 @@ def main():
     text.append("- scan_evidence_exact: %s" % report["evidence_scan"])
     text.append("")
     text.append("## Review totals: %s" % json.dumps(report["review_totals"], ensure_ascii=False))
-    text.append("review_total=%d" % report["review_total"])
-    text.append("composite_reviewed=%d" % report["composite_reviewed"])
-    text.append("verified_without_evidence=%d" % len(no_ev))
+    text.append("review_total=%d, verified_without_evidence=%d" % (report["review_total"], len(no_ev)))
+    text.append("")
+    text.append("## Shared chained gate")
+    text.append("- eligibleHazards=%d, eligibleLinks=%d, strictBlockers=%d"
+                % (report["eligibleHazards"], report["eligibleLinks"], report["strictBlockerCount"]))
     text.append("")
     text.append("## Version")
     text.append("lawVersions_total=%d, active-missing-effectiveDate=%d" % (report["lawVersions_total"], len(missing)))
-    text.append("missing_eff_ids=%s" % json.dumps(missing, ensure_ascii=False))
     text.append("successions_total=%d" % report["successions_total"])
     text.append("")
     text.append("## Gate verdict")
     for k, v in report["gate"].items():
         text.append("- %s: %s" % (k, v))
-    if report["release_notes"]:
-        text.append("")
-        text.append("## RELEASE 核对明细")
-        for n in report["release_notes"]:
-            text.append("- %s" % n)
     text.append("")
-    text.append("RELEASE 级（candidate build / V3-V4 diff / search regression）在 Phase 19-20 完成后补记；production 切换需用户批准。")
+    text.append("## RELEASE 核对明细")
+    for n in report["release_notes"]:
+        text.append("- %s" % n)
+    text.append("")
+    text.append("RELEASE 阶段已接入共享链式门禁 release_gate_core；production 切换需用户批准。")
 
     with io.open(os.path.join(DOCS, "V4_GATE_REPORT.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(text))

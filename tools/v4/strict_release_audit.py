@@ -1,247 +1,133 @@
 # -*- coding: utf-8 -*-
-"""Strict V4 release audit aligned with docs/GATE_V4.md.
+"""Strict V4 release audit（只读，不改动 knowledge / release 文件）。
 
-Read-only: it never mutates knowledge or release files.
-It reports entity-review coverage, current-version semantics, eligible links,
-eligible hazards, and final blockers/warnings for candidate production review.
+本脚本只做“分类与汇报”，所有判定逻辑都来自共享核心 release_gate_core。
+它把全量对象拆成三类（对齐 docs/GATE_V4.md §9/§13/§15）：
+
+- releaseBlockers：真正影响“当前发布投影”的硬 blocker。
+  例：已 verified 的 qualifying link 实际指向 repealed/upcoming/unknown 的
+  LawVersion、review hash 漂移、context 漂移、管辖冲突、外键断裂、
+  active hazard 内容硬门禁失败。
+- inventoryWarnings：库存/数据质量软问题（backlog），不杀整个发布。
+  例：active hazard 还没有任何合格 qualifying link（待补依据）、pending link、
+  supporting-only link、可选 evidence 缺失。
+- excludedEntities：历史/非发布实体，本就不该进当前发布投影。
+  例：superseded / mergedInto hazard、superseded law、repealed/upcoming/unknown
+  LawVersion、非 active clause、review=rejected 的 link。
+
+strictVerdict 只由 releaseBlockers 是否非空决定：>0 -> BLOCK，否则 PASS。
 """
-import glob
 import io
 import json
 import os
-import re
 import sys
-from collections import Counter, defaultdict
-from datetime import date
 
+sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from canonical import content_hash
-
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-KNOW = os.path.join(ROOT, "knowledge")
-AS_OF = date(2026, 9, 10)
-ALLOWED_VALIDITY = {"active", "upcoming", "repealed", "unknown"}
-QUALIFYING_ROLES = {"direct", "fallback"}
-
-
-def load_dir(rel):
-    out = {}
-    for f in glob.glob(os.path.join(KNOW, rel, "*.json")):
-        with io.open(f, encoding="utf-8") as fh:
-            d = json.load(fh)
-        key = d.get("id") or d.get("entityId") or os.path.splitext(os.path.basename(f))[0]
-        out[key] = d
-    return out
-
-
-def parse_date(v):
-    if not v:
-        return None
-    try:
-        return date.fromisoformat(v)
-    except Exception:
-        return None
-
-
-def review_ok(entity, review, need_evidence=False):
-    reasons = []
-    if not review:
-        return False, ["review_missing"]
-    if review.get("decision") != "verified":
-        reasons.append("review_not_verified:" + str(review.get("decision")))
-    if review.get("reviewedContentHash") != content_hash(entity):
-        reasons.append("review_hash_stale")
-    if need_evidence and not review.get("evidenceRefs"):
-        reasons.append("authoritative_evidence_missing")
-    return not reasons, reasons
+from release_gate_core import (  # noqa: E402
+    evaluate_release_gate,
+    QUALIFYING_ROLES,
+)
 
 
 def main():
-    laws = load_dir("laws")
-    lvs = load_dir("law-versions")
-    clauses = load_dir("clauses")
-    hazards = load_dir("hazards")
-    links = load_dir("links")
-    reviews = {
-        "laws": load_dir(os.path.join("reviews", "laws")),
-        "law-versions": load_dir(os.path.join("reviews", "law-versions")),
-        "clauses": load_dir(os.path.join("reviews", "clauses")),
-        "hazards": load_dir(os.path.join("reviews", "hazards")),
-        "links": load_dir(os.path.join("reviews", "links")),
-    }
+    r = evaluate_release_gate()
+
+    release_blockers = []
+    inventory_warnings = []
+    excluded_entities = []
+
+    # ---- Law / LawVersion / Clause 结构失败：只有被合格 link 引用才算 blocker ----
+    referenced_lvs = set()
+    referenced_clauses = set()
+    referenced_laws = set()
+    for kid in r.eligible_links:
+        cv = r.clauses.get(r.links[kid]["clauseId"])
+        if cv:
+            referenced_clauses.add(cv["lawVersionId"])
+            # 反查 lawId
+    for vid, v in r.law_versions.items():
+        pass
+    # lawId 反查
+    lv_law = {}
+    # 直接用原始 entity 关系：core 没暴露，这里从 law_versions 拿不到 lawId，
+    # 但结构 blocker 我们用“该 lv 是否被任一 clause 引用且该 clause 被合格 link 引用”
+    for kid in r.eligible_links:
+        cid = r.links[kid]["clauseId"]
+        vid = r.clauses.get(cid, {}).get("lawVersionId")
+        referenced_lvs.add(vid)
+
+    for lid, v in r.laws.items():
+        if not v["ok"]:
+            release_blockers.append({"entityType": "law", "id": lid, "reasons": v["reasons"]})
+    for vid, v in r.law_versions.items():
+        if not v["ok"]:
+            if vid in referenced_lvs:
+                release_blockers.append({"entityType": "lawVersion", "id": vid,
+                                         "reasons": v["reasons"], "note": "referenced by eligible link"})
+            else:
+                excluded_entities.append({"entityType": "lawVersion", "id": vid,
+                                          "reason": "structurally_invalid", "validityStatus": v["validityStatus"]})
+        elif v["validityStatus"] != "active" or not v["supports_current"]:
+            # 非 active 效力 = 历史/即将生效，进目录但不支撑当前 hazard
+            excluded_entities.append({"entityType": "lawVersion", "id": vid,
+                                      "reason": "not_active_support:" + v["validityStatus"],
+                                      "validityStatus": v["validityStatus"]})
+    for cid, v in r.clauses.items():
+        if not v["ok"]:
+            release_blockers.append({"entityType": "clause", "id": cid, "reasons": v["reasons"]})
+
+    # ---- Link：已签署(verified)却没过 gate = 发布路径硬伤；其余按 review 状态分流 ----
+    for kid, v in r.links.items():
+        if v["decision"] == "verified" and not v["ok"]:
+            release_blockers.append({"entityType": "link", "id": kid,
+                                     "hazardId": v["hazardId"], "role": v["role"],
+                                     "reasons": v["reasons"]})
+        elif v["decision"] == "rejected":
+            excluded_entities.append({"entityType": "link", "id": kid,
+                                      "hazardId": v["hazardId"], "reason": "review_rejected"})
+        elif v["decision"] == "pending":
+            inventory_warnings.append({"type": "pending_link", "id": kid,
+                                       "hazardId": v["hazardId"], "reason": "link review pending"})
+        elif v["ok"] and v["role"] == "supporting":
+            inventory_warnings.append({"type": "supporting_link", "id": kid,
+                                       "hazardId": v["hazardId"],
+                                       "reason": "supporting link cannot alone qualify a hazard"})
+
+    # ---- Hazard：内容硬失败且在发布路径(active 非 merged) = blocker；
+    #      历史/合并 = excluded；active 但无合格依据 = inventory backlog ----
+    for hid, v in r.hazards.items():
+        if not v["active"] or v["merged"]:
+            why = "superseded" if not v["active"] else "mergedInto"
+            excluded_entities.append({"entityType": "hazard", "id": hid, "reason": why})
+            continue
+        if not v["content_ok"]:
+            release_blockers.append({"entityType": "hazard", "id": hid,
+                                     "reasons": v["reasons"]})
+        elif hid not in r.eligible_hazards:
+            inventory_warnings.append({
+                "type": "active_hazard_without_qualifying_link", "id": hid,
+                "reason": "active hazard has no eligible direct/fallback link yet (backlog, not published)",
+            })
+
+    eligible_hazard_ids = sorted(r.eligible_hazards)
+    eligible_link_ids = sorted(r.eligible_links)
 
     summary = {
-        "asOf": AS_OF.isoformat(),
-        "entityCounts": {
-            "laws": len(laws), "lawVersions": len(lvs), "clauses": len(clauses),
-            "hazards": len(hazards), "links": len(links),
-        },
-        "reviewCounts": {k: len(v) for k, v in reviews.items()},
-        "reviewDecisionCounts": {
-            k: dict(Counter((x.get("decision") or "") for x in v.values()))
-            for k, v in reviews.items()
-        },
+        "asOf": r.as_of,
+        "entityCounts": r.counts,
+        "releaseBlockers": release_blockers,
+        "inventoryWarnings": inventory_warnings,
+        "excludedEntities": excluded_entities,
+        "eligibleHazards": len(eligible_hazard_ids),
+        "eligibleHazardIds": eligible_hazard_ids,
+        "eligibleLinks": len(eligible_link_ids),
+        "eligibleLinkIds": eligible_link_ids,
+        "strictVerdict": "BLOCK" if release_blockers else "PASS",
+        "blockerCount": len(release_blockers),
+        "warningCount": len(inventory_warnings),
+        "excludedCount": len(excluded_entities),
     }
-    blockers = []
-    warnings = []
-
-    law_ok = {}
-    for lid, law in laws.items():
-        ok, why = review_ok(law, reviews["laws"].get(lid), True)
-        law_ok[lid] = ok
-        if not ok:
-            blockers.append({"type": "law", "id": lid, "reasons": why})
-
-    lv_ok = {}
-    for vid, lv in lvs.items():
-        why = []
-        _, rwhy = review_ok(lv, reviews["law-versions"].get(vid), True)
-        why += rwhy
-        status = lv.get("validityStatus") or "unknown"
-        eff = parse_date(lv.get("effectiveDate"))
-        end = parse_date(lv.get("endDate"))
-        if status not in ALLOWED_VALIDITY:
-            why.append("invalid_validityStatus:" + str(status))
-        if not eff:
-            why.append("effectiveDate_invalid_or_missing")
-        if status == "active" and eff and eff > AS_OF:
-            why.append("active_before_effectiveDate")
-        if status == "active" and end and not (AS_OF < end):
-            why.append("active_past_endDate")
-        if status == "upcoming" and eff and not (eff > AS_OF):
-            why.append("upcoming_not_future")
-        if lv.get("lawId") not in laws:
-            why.append("law_missing")
-        elif not law_ok.get(lv.get("lawId"), False):
-            why.append("law_gate_failed")
-        lv_ok[vid] = not why
-        if why:
-            blockers.append({"type": "lawVersion", "id": vid, "reasons": why})
-
-    clause_ok = {}
-    for cid, cl in clauses.items():
-        why = []
-        _, rwhy = review_ok(cl, reviews["clauses"].get(cid), True)
-        why += rwhy
-        vid = cl.get("lawVersionId")
-        if vid not in lvs:
-            why.append("lawVersion_missing")
-        elif not lv_ok.get(vid, False):
-            why.append("lawVersion_gate_failed")
-        if not cl.get("articlePath"):
-            why.append("articlePath_missing")
-        if not cl.get("quote"):
-            why.append("quote_missing")
-        clause_ok[cid] = not why
-        if why:
-            blockers.append({"type": "clause", "id": cid, "reasons": why})
-
-    hazard_content_ok = {}
-    for hid, hz in hazards.items():
-        why = []
-        _, rwhy = review_ok(hz, reviews["hazards"].get(hid), False)
-        why += rwhy
-        for field in ("title", "description", "measures", "category"):
-            if not hz.get(field):
-                why.append(field + "_missing")
-        if (hz.get("lifecycle") or "active") != "active":
-            why.append("hazard_not_active")
-        if hz.get("mergedInto"):
-            why.append("hazard_merged")
-        public_text = " ".join(str(hz.get(x) or "") for x in ("title", "description", "measures"))
-        if re.search(r"[A-Za-z]:\\|/(?:home|Users|mnt)/", public_text):
-            why.append("possible_private_path")
-        hazard_content_ok[hid] = not why
-        if why:
-            blockers.append({"type": "hazard_content", "id": hid, "reasons": why})
-
-    eligible_links = {}
-    hazard_links = defaultdict(list)
-    link_failures = {}
-    for kid, lk in links.items():
-        hid, cid = lk.get("hazardId"), lk.get("clauseId")
-        hazard_links[hid].append(kid)
-        why = []
-        _, rwhy = review_ok(lk, reviews["links"].get(kid), False)
-        why += rwhy
-        rv = reviews["links"].get(kid) or {}
-        if rv.get("decision") == "verified":
-            if not rv.get("reason"):
-                why.append("reason_missing")
-            ctx = rv.get("contextHashes") or {}
-            if hid in hazards and ctx.get("hazard") != content_hash(hazards[hid]):
-                why.append("hazard_context_stale")
-            if cid in clauses and ctx.get("clause") != content_hash(clauses[cid]):
-                why.append("clause_context_stale")
-        if lk.get("role") not in {"direct", "supporting", "fallback"}:
-            why.append("invalid_role")
-        if (lk.get("lifecycle") or "active") != "active":
-            why.append("link_not_active")
-        if cid not in clauses:
-            why.append("clause_missing")
-        elif not clause_ok.get(cid, False):
-            why.append("clause_gate_failed")
-        if hid not in hazards:
-            why.append("hazard_missing")
-        eligible_links[kid] = not why
-        if why:
-            link_failures[kid] = why
-
-    eligible_hazards = {}
-    hazard_reasons = {}
-    for hid in hazards:
-        why = []
-        if not hazard_content_ok.get(hid, False):
-            why.append("hazard_content_gate_failed")
-        qualifying = [
-            kid for kid in hazard_links.get(hid, [])
-            if eligible_links.get(kid) and links[kid].get("role") in QUALIFYING_ROLES
-        ]
-        if not qualifying:
-            why.append("no_qualifying_verified_link")
-        eligible_hazards[hid] = not why
-        if why:
-            hazard_reasons[hid] = why
-
-    backfill_ids = [
-        "H001","H003","H004","H006","H007","H008","H009","H010","H011","H012",
-        "H014","H020","H023","H026","H027","H028","H029","H030","H031","H032",
-    ]
-    pending_link_ids = sorted(
-        kid for kid, rv in reviews["links"].items() if rv.get("decision") == "pending"
-    )
-    pending_hazards = sorted({links[k].get("hazardId") for k in pending_link_ids if k in links})
-
-    summary.update({
-        "eligibleLinks": sum(eligible_links.values()),
-        "ineligibleLinks": len(links) - sum(eligible_links.values()),
-        "eligibleHazards": sum(eligible_hazards.values()),
-        "blockedHazards": len(hazards) - sum(eligible_hazards.values()),
-        "pendingLinks": len(pending_link_ids),
-        "pendingLinkIds": pending_link_ids,
-        "pendingHazards": len(pending_hazards),
-        "backfill": {
-            "ids": backfill_ids,
-            "withAnyLink": [h for h in backfill_ids if hazard_links.get(h)],
-            "eligible": [h for h in backfill_ids if eligible_hazards.get(h)],
-            "blocked": [h for h in backfill_ids if not eligible_hazards.get(h)],
-        },
-        "blockedHazardIds": sorted(h for h, ok in eligible_hazards.items() if not ok),
-        "linkFailureSample": dict(list(sorted(link_failures.items()))[:50]),
-    })
-
-    for kid in pending_link_ids:
-        hid = links.get(kid, {}).get("hazardId")
-        if eligible_hazards.get(hid):
-            warnings.append({"type": "pending_link_excluded", "id": kid, "hazardId": hid})
-        else:
-            blockers.append({"type": "pending_link_on_blocked_hazard", "id": kid, "hazardId": hid})
-
-    summary["strictVerdict"] = "PASS" if not blockers else "BLOCK"
-    summary["blockerCount"] = len(blockers)
-    summary["warningCount"] = len(warnings)
-    summary["blockers"] = blockers[:300]
-    summary["warnings"] = warnings[:300]
 
     print("=== STRICT_V4_RELEASE_AUDIT ===")
     print(json.dumps(summary, ensure_ascii=False, indent=2))

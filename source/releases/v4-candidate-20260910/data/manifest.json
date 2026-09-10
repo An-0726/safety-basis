@@ -18,21 +18,20 @@
   "links": 201
  },
  "health": {
-  "verifiedHazards": 163,
+  "eligibleHazards": 161,
   "pendingHazards": 1,
   "rejectedHazards": 18,
-  "unreviewedHazards": 526,
-  "verifiedWithPending": 0,
-  "verifiedWithRejections": 4
+  "noLinkHazards": 526,
+  "notEligibleHazards": 6
  },
  "publishStats": {
   "publishable": 161,
-  "not_publishable": 551,
-  "by_status": {
-   "verified": 163,
-   "unreviewed": 526,
+  "notPublishable": 551,
+  "byStatus": {
+   "eligible": 161,
+   "no_link": 526,
+   "not_eligible": 6,
    "rejected": 18,
-   "verified_with_rejections": 4,
    "pending": 1
   }
  }
