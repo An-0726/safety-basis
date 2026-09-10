@@ -1,21 +1,23 @@
 {
-  "id": "RV_e6832b4f4979e0f4",
+  "id": "RV_h043_fallback_20260910",
   "entityId": "K_f1313b10272b1d1f3f163c64",
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T16:30:00+08:00",
-  "reason": "仓储场所未开展消防安全教育培训，违反安全生产法第二十八条'生产经营单位应当对从业人员进行安全生产教育和培训，保证从业人员具备必要的安全生产知识'。消防安全教育属于安全生产教育培训的必要组成部分。",
+  "reviewer": "ChatGPT",
+  "checkedAt": "2026-09-10T17:50:00+08:00",
+  "reason": "《安全生产法》第二十八条是从业人员安全生产教育培训的一般义务，可以支撑H043的上位法责任，但没有仓储消防场景和具体培训频次，因此从direct调整为fallback；专项直接依据改由XF 1131-2014第3.3.2条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "SAFETY_TRAINING"
+    "FALLBACK_ROLE_CONFIRMED",
+    "GENERAL_TRAINING_DUTY"
   ],
-  "reviewedContentHash": "f6b1074cb0b40e1829f91974f497b2a499a58e90690c8e3a1064a870b9091bf3",
+  "reviewedContentHash": "963b874caf0c99c9c56d11b770b53a6d70bfedc32f0b06f9411e0cfffc5a8b1b",
   "contextHashes": {
-    "hazard": "9cbf057d3f6ce35bdc1dc550fbe5dbdcba7fc98e3301e544734b3406669dab65",
+    "hazard": "0afc55f946ba2b8a64f31666115835944c87eeb1f9d42cac6611d60743552728",
     "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458",
-    "link": "f6b1074cb0b40e1829f91974f497b2a499a58e90690c8e3a1064a870b9091bf3"
+    "link": "963b874caf0c99c9c56d11b770b53a6d70bfedc32f0b06f9411e0cfffc5a8b1b"
   },
-  "evidenceRefs": []
+  "evidenceRefs": [
+    "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c"
+  ]
 }
