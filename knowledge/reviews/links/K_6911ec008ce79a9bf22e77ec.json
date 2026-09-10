@@ -4,16 +4,16 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T16:30:00+08:00",
-  "reason": "仓储场所消防重点岗位未接受专项消防培训，违反安全生产法第二十八条安全生产教育和培训要求。消防重点岗位属于需要专项安全培训的岗位，未接受专项培训即上岗构成隐患。",
+  "reviewer": "ZCode-DeepSeek",
+  "checkedAt": "2026-09-10",
+  "reason": "《安全生产法》第二十八条属从业人员安全生产教育培训的一般义务，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第3.3.1条承担。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "SPECIAL_TRAINING"
+    "FALLBACK_ROLE_CONFIRMED",
+    "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "d52ffaca31b5e53e198380fc1d885b10c575c315085bcfaa8510939441babbf5",
+  "reviewedContentHash": "50dd02b61a810c060ab3abba118e8da20e9b6e7c3d589a74f299426827a902d0",
   "contextHashes": {
-    "hazard": "f739e0ed641289a117a3999559e49cf7ac34c530a50397a6e7d37c5a1efabd39",
+    "hazard": "307d189ea75753b9f9ce2e6ecb757328f990cd05cea0b8edbe212a5abaced844",
     "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458",
     "link": "d52ffaca31b5e53e198380fc1d885b10c575c315085bcfaa8510939441babbf5"
   },
