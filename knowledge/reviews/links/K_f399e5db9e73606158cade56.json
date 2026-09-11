@@ -1,0 +1,30 @@
+{
+  "entityType": "link",
+  "entityId": "K_f399e5db9e73606158cade56",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "1ea378b0d3cea8ae1da0312b03c8d7ffb8782fe66347a1e4ca52382f4bc4db53",
+  "contextHashes": {
+    "hazard": "fa87a06c961a86eca6ad7e8ccc4f2cb854005a2b6816c76811db7d6a9d675798",
+    "clause": "46db69518cdd8f3aa5f0eab990631ef0a448d127cc3f30b6fe84a8c507042d4a",
+    "link": "1ea378b0d3cea8ae1da0312b03c8d7ffb8782fe66347a1e4ca52382f4bc4db53"
+  },
+  "checkedAt": "2026-09-11T07:48:00+08:00",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "reason": "TSG 21-2016第7.2.3.1.3.1条直接规定固定式压力容器安全阀的一般校验周期及允许延期的条件框架；修订后的隐患以‘超过适用校验周期’表述，与条款直接匹配。原《安全生产法》第36条不再承担本条direct角色。",
+  "reasonCodes": [
+    "DIRECT_ROLE_CONFIRMED",
+    "TSG21_7_2_3_1_3_1_EXACT_MATCH"
+  ],
+  "evidenceRefs": [
+    "EH_TSG21_7_2_3_1_3_1",
+    "EH_TSG21_AM1_OFFICIAL"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_b605512fe2892f4a3a1c4365_437",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "安全阀属于安全设备/安全附件，隐患描述未按规定定期校验。安全生产法第36条第二款规定必须对安全设备进行经常性维护、保养，并定期检测，语义对应。",
+    "v3Result": "passed"
+  }
+}

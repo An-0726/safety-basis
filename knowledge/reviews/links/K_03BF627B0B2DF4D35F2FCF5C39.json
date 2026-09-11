@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_03BF627B0B2DF4D35F2FCF5C39",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "8c81103ffc8cd9db854bd15dfd95493b7e14afc6cf594e472e108011173dce0d",
+  "contextHashes": {
+    "hazard": "894081586f6ea06bfbddd23dd975096558f5278bfaed5c26f1a4dcb4aced70a2",
+    "clause": "97895f5d19ab057d6772f71c634f63cd8af22d4abe8f7eb3be4e576f6c7f821a"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险废物贮存库未设置泄漏液体堵截/收集设施（含渗滤液收集））。Clause C_25299AF（GB18597-2023第6.2.2条：液态危废贮存库设液体泄漏堵截及渗滤液收集设施） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_61fe255032b5cf2c6de7ee906e_23",
+    "reviewedAt": "2026-09-09T13:36:07+00:00",
+    "reviewer": "Codex 主核验",
+    "v3Reason": "已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。",
+    "v3Result": "passed"
+  }
+}

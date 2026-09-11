@@ -1,0 +1,29 @@
+{
+  "entityType": "link",
+  "entityId": "K_dfbbf4fbb290903fc3cc86b325",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "40f521f600d9451ee658720ba8264dd2bc14d3a18b659794fb66c6fe7f60e694",
+  "contextHashes": {
+    "hazard": "11e72e6d84a8e6fc73bb1cca521d9aca83fbf7e7f81753800cc0474ca5a3ee19",
+    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299",
+    "link": "40f521f600d9451ee658720ba8264dd2bc14d3a18b659794fb66c6fe7f60e694"
+  },
+  "checkedAt": "2026-09-10T14:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard description已补充具体可观察缺陷（接头裸露、绝缘破损、无机械防护、超负荷串接等），不再是概括语；消防法第二十七条第二款'电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定'直接覆盖电源线路私拉乱接、敷设不规范的事实。C005作为fallback依据成立——在缺少更具体的电气专项标准条款时，消防法27条2款作为上位法兜底依据。direct依据需后续补充GB 50054/GB 50303等电气专项标准条款。",
+  "reasonCodes": [
+    "FALLBACK_ROLE_CONFIRMED",
+    "HAZARD_FACT_SPECIFIED"
+  ],
+  "evidenceRefs": [
+    "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_b219c4c7c11337021d8711026a_14",
+    "reviewedAt": "2026-09-09T12:26:18+00:00",
+    "reviewer": "doubao-work-链式核验",
+    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+    "v3Result": "passed"
+  }
+}

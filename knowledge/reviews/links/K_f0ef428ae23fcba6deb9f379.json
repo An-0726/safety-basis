@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_f0ef428ae23fcba6deb9f379",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "2bcfa036e89cad26e20f775c5f298c2c76774b210458af2c5071737a71a8aad4",
+  "contextHashes": {
+    "hazard": "a50b267c7722c69505044548ba9789d1bf374e7442d1f0377ed520a47f402d18",
+    "clause": "7561418aa6ac718ec3d8f925fb88ec3eb2ba41b55319d65501f74b172d922ff8"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（主要负责人(含法定代表人、实际控制人)未落实本单位安全生产第一责任人责任、未对安全生产工作全面负责）。Clause C_64588491（安全生产法第5条：主要负责人是本单位安全生产第一责任人，对本单位安全生产工作全面负责） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_ca22ddc3698d356d6b2e9404a9c58e69070062ab9110b736220d4335f06d69d7"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_d7fe7f9227ec0e6063c1022d_168",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患含两层：①未建立健全全员安全生产责任制，对应安全生产法第二十一条第（一）项；②主要负责人是本企业安全生产第一责任人、全面负责，对应安全生产法第五条，二者均直接对应。",
+    "v3Result": "passed"
+  }
+}

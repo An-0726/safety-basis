@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_444630456072b2ffd8a11a3d",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "b271d1070fda68b8e33e9c416969ea7ffa95be4283a7102f1505f5991eef8c0d",
+  "contextHashes": {
+    "hazard": "9f2035aabcfed75df2a18c3efa11e9dcb996fc40cc5c8118794f1f9996c2455d",
+    "clause": "97a40563b612b68e772f5b7eeabe667f2acd1ee7405eea79428b4577f8294d8b"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（进行检修和抢修作业时未携带正压式空气呼吸器）。Clause C016（安全生产法第45条：提供劳动防护用品；正压式空气呼吸器属呼吸类劳动防护用品） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_fd4e6839656d9ca7438d93c39453ffe978e5abdd67709dae4fe1a22f66df6998"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_34abc93536b395bc3747c012_132",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患为检修抢修作业时未携带氨气检测仪和正压式空气呼吸器。正压式空气呼吸器属于劳动防护用品，C016（安全生产法第45条）要求为从业人员提供符合标准的劳动防护用品并监督正确佩戴使用，语义对应。",
+    "v3Result": "passed"
+  }
+}

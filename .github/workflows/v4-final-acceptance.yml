@@ -1,0 +1,93 @@
+name: V4 Final Acceptance
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  phase16-final-acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run V4 integrated validator
+        run: python tools/v4/validate_all.py
+
+      - name: Build candidate from current knowledge
+        run: |
+          python tools/v4/build_release.py
+          python tools/v4/build_site_data.py
+
+      - name: Run six-stage V4 gate and enforce verdicts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/v4/gate_v4.py | tee "${RUNNER_TEMP}/v4-gate.log"
+          for stage in STRUCTURAL CONTENT APPLICABILITY VERSION EVIDENCE RELEASE; do
+            grep -q -- "- ${stage}: PASS" docs/V4_GATE_REPORT.md
+          done
+
+      - name: Run strict release audit and enforce zero blockers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/v4/strict_release_audit.py | tee "${RUNNER_TEMP}/v4-strict-audit.log"
+          grep -q '"strictVerdict": "PASS"' "${RUNNER_TEMP}/v4-strict-audit.log"
+          grep -q '"blockerCount": 0' "${RUNNER_TEMP}/v4-strict-audit.log"
+
+      - name: Generate Phase 16 acceptance inventory
+        run: python tools/v4/final_acceptance_inventory.py
+
+      - name: Run candidate search regression
+        run: python tools/v4/test_search.py
+
+      - name: Enforce candidate-only production boundary
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path('source/releases/v4-candidate-20260910/release.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          assert data.get('candidate') is True, 'candidate flag must be true'
+          assert data.get('production') is False, 'production must remain false in Phase 16'
+          assert data.get('sourceStateHash'), 'sourceStateHash missing'
+          strict = data.get('strictGate') or {}
+          assert strict.get('eligibleHazards', 0) > 0, 'eligibleHazards missing/zero'
+          assert strict.get('eligibleLinks', 0) > 0, 'eligibleLinks missing/zero'
+          print('candidate boundary PASS:', data['sourceStateHash'])
+          PY
+
+      - name: Verify deterministic candidate build
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp -a source/releases/v4-candidate-20260910 "${RUNNER_TEMP}/candidate-first"
+          python tools/v4/build_release.py
+          python tools/v4/build_site_data.py
+          diff -r "${RUNNER_TEMP}/candidate-first" source/releases/v4-candidate-20260910
+
+      - name: Ensure final-acceptance tools never mutate knowledge
+        run: git diff --exit-code -- knowledge
+
+      - name: Upload rebuilt candidate and audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v4-final-acceptance-${{ github.sha }}
+          if-no-files-found: error
+          path: |
+            source/releases/v4-candidate-20260910/
+            docs/V4_GATE_REPORT.md
+            docs/V4_FINAL_ACCEPTANCE_INVENTORY.md
+            knowledge/links/
+            knowledge/reviews/links/
+            ${{ runner.temp }}/v4-gate.log
+            ${{ runner.temp }}/v4-strict-audit.log

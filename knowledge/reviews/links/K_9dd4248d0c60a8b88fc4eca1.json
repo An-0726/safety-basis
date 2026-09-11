@@ -1,0 +1,27 @@
+{
+  "entityType": "link",
+  "entityId": "K_9dd4248d0c60a8b88fc4eca1",
+  "reviewType": "applicability",
+  "decision": "rejected",
+  "reviewedContentHash": "69705787c4d70a638bf1476d49d703709735f642701586b88fb38181f4a565f3",
+  "contextHashes": {
+    "hazard": "fa955b380f897883840ef1173c1c469fda5242ed06548f9705e15bf20757cec2",
+    "clause": "e117beb72013ed39faef574b7869a7aa99f70c7bb59860cfe9561e4a7e7bfd8f"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "同 K_8cc09e65：粉尘废屑分类/不相容隔离虽语义相近，但 GB18597-2023第4.3条仅适用于危险废物分类贮存，铝镁机加工废屑通常不属危险废物，适用对象不一致；本条(4.3)关联不成立，正确依据待按粉尘防爆专项标准另行建立 clause。",
+  "reasonCodes": [
+    "SCOPE_MISMATCH"
+  ],
+  "evidenceRefs": [
+    "E_afde136f21cc6874e9f475937180f39399f1d1c492d2ea40c2467207f6070846"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_988ab0affc80bd5cd5ef1456_352",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "粉尘废屑储存：不同种类不得混装、严禁与氧化物酸等不相容物质同库存放，对应危废贮存标准4.3分类贮存及避免与不相容物质接触；铝镁等易燃爆炸粉尘废屑应压块压实预处理，对应4.9易燃危险废物应预处理使之稳定后贮存。",
+    "v3Result": "passed"
+  }
+}

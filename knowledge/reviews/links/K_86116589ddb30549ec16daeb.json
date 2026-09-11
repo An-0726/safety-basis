@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_86116589ddb30549ec16daeb",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "c698fb092bf6128088211540c7f0634279ef05d27653fc1a4b0f2266593de148",
+  "contextHashes": {
+    "hazard": "30d0ca73334cf0bc2856d9a13d3e0cfcb984eef63b6c4773316b6a30f86f004f",
+    "clause": "160da8d6cea3fd909c847bcf3eeebfcd61a63d500c95af4d038107050b07f299"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（仓储场所电气线路、电气设备未定期检查、检测）。Clause C005（消防法第27条第2款：电气线路的设计、敷设、维护保养、检测必须符合消防技术标准） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_e64c08562a41ee3e79afd243f3a7097ad3c392cfed1f59b6bf0293837c873e3c"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_8b929f64b1f20371c5d476f3_387",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "仓储场所电气线路、电气设备未定期检查检测、长时间超负荷运行，对应消防法第二十七条第二款：电器产品、燃气用具的安装使用及其线路、管路的设计、敷设、维护保养、检测必须符合消防技术标准和管理规定。",
+    "v3Result": "passed"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_8221AFCE20294F6AA992D4FC73",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "6dd0a939772ec7714ff56277444508b588eef7412f9f1d1bcc44c44f24a40ec6",
+  "contextHashes": {
+    "hazard": "70ce33a67b17d1e3ccbeb291d5ba87b8476c59c6b69fa1d7654e423e6b3095e4",
+    "clause": "d185bf8570d85f2074e90b3657b7dd0bc4f16f186a9f6489f89834134ef81136"
+  },
+  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard依据为GB18597-2001（2013修订）第4.1条，条款为现行GB18597-2023第4.1条（应建造贮存设施或设置贮存场所）；新旧版本语义一致、映射正确，direct对应成立；Hazard中旧版措辞需在数据修复中更新。",
+  "reasonCodes": [
+    "VERSION_MATCHED",
+    "DIRECT_MATCH"
+  ],
+  "evidenceRefs": [
+    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_830647c0376fcaf5fd19747b69_20",
+    "reviewedAt": "2026-09-09T12:26:08+00:00",
+    "reviewer": "doubao-work-链式核验",
+    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+    "v3Result": "passed"
+  }
+}

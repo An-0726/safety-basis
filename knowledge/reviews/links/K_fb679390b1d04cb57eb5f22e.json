@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_fb679390b1d04cb57eb5f22e",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "e804d61827c5bce6a3c664127edc2123419bc0e37e1156d646617bfecf1d09fa",
+  "contextHashes": {
+    "hazard": "f4c0b117936e13f65c0a40f7a7514c66f12608a56785634cefdc63073cac0f84",
+    "clause": "007dce903601f21f4a54b16bde0c9630b25c8565f90bd8f5972e206e48d78670"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（未建立健全安全生产规章制度）。Clause C019（安全生产法第21条第（二）项：组织制定并实施安全生产规章制度和操作规程） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_4243a09302c9e0f7bce9a91eeb03db598d14e968dd2ab161b74b044f2c88780e"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_ac6a391ccad7e6ccb1faa8e7_257",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患同时涉及三方面：①建立健全各级安全生产责任制（对应《安全生产法》第二十一条第（一）项建立健全全员安全生产责任制）；②建立安全规章制度（对应第二十一条第（二）项组织制定并实施安全生产规章制度和操作规程）；③制定事故应急救援预案（对应第八十一条制定本单位应急救援预案）。",
+    "v3Result": "passed"
+  }
+}

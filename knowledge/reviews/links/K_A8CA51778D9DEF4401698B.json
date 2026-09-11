@@ -1,0 +1,19 @@
+{
+ "entityType": "link",
+ "entityId": "K_A8CA51778D9DEF4401698B",
+ "reviewType": "applicability",
+ "decision": "verified",
+ "reviewedContentHash": "00c0b521af08fabf3291a9f724422591b844309342b8f19de583c668c9cf4074",
+ "contextHashes": {
+  "hazard": "deb5250d644bd2d5a35f7d28c0265ed8c05b14d0d950cce135b29b5e0e08fcb4",
+  "clause": "48a8e26582b5890787bf7cc96d78459a40bb86cb169e2cd956d0f4585faf5419"
+ },
+ "checkedAt": "2026-09-10T14:08:10+08:00",
+ "reviewer": "Doubao-Agent",
+ "reason": "Hazard 指配电线路未装设短路保护、过负载（及接地故障）保护；GB 50054-2011《低压配电设计规范》6.1.1 明确要求配电线路应装设短路保护和过负荷保护，hazard 描述的保护缺失与条文直接对应，故 role=direct。",
+ "reasonCodes": [
+  "DIRECT_CLAUSE_MATCH"
+ ],
+ "evidenceRefs": [],
+ "migratedFromV3Verification": null
+}

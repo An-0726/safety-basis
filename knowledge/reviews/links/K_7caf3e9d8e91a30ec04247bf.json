@@ -1,0 +1,29 @@
+{
+  "entityType": "link",
+  "entityId": "K_7caf3e9d8e91a30ec04247bf",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "68c6251809ab6a617352d7a9f455f130df92b8eb64d1b03ef89009c76d2fd5b9",
+  "contextHashes": {
+    "hazard": "989d900c0764781623ce8ce2373e0307067ff065fdb8ae9ac4d04a1ba9746dc0",
+    "clause": "3a1742bbda34257d99d205d7287418e15f41b251eb0617a8e0af322b585e9066",
+    "link": "68c6251809ab6a617352d7a9f455f130df92b8eb64d1b03ef89009c76d2fd5b9"
+  },
+  "checkedAt": "2026-09-10T21:30:00+08:00",
+  "reviewer": "Doubao-Agent",
+  "reason": "Hazard为厂内机动车辆投入使用前未经有关部门检测检验合格。\n2026-09-10 官方核验：直接依据为现行 TSG 81-2022《场（厂）内专用机动车辆安全技术规程》（市场监管总局2022年第26号公告，2022-12-01施行，替代TSG N0001-2017，官方PDF与公告页已核）。其4.2.1.1明确'场车投入使用前或者改造后进行的定期检验也称首次检验'，使用单位职责要求'在场车首次投入使用前，向特种设备检验机构申请首次检验'，4.2.2.1要求'首次检验的场车，其使用单位应当在使用前及时向检验机构申请检验'。即场（厂）内专用机动车辆投入使用前必须经特种设备检验机构首次检验合格，与隐患语义直接对应，direct依据成立。\n关于特设法第二十五条：其监督检验设备清单为锅炉、压力容器、压力管道元件（制造）及锅炉、压力容器、压力管道、电梯、起重机械、客运索道、大型游乐设施（安装、改造、重大修理），不含场（厂）内专用机动车辆，故第二十五条不构成场车监督检验依据，不采用。原C035（特设法第40条）规范的是在用特种设备的定期检验（不得继续使用），与'投入使用前首次检验'适用阶段不同，scope mismatch，不再作为本link依据。现重绑至TSG81-2022首次检验条款，role=direct。",
+  "reasonCodes": [
+    "SPECIFIC_CLAUSE_FOUND",
+    "DIRECT_ROLE_CONFIRMED"
+  ],
+  "evidenceRefs": [
+    "E_392571ed8190c5f95eb4ec647612901934d2ffdd0e6e6ab7994e4c4a98aefae0"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_da1a6cb8678a870875e37fae_214",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "[C035] 隐患为厂内机动车辆投入使用前未经检测检验合格，厂内机动车辆属于特种设备，特种设备安全法第四十条规定未经定期检验或检验不合格的特种设备不得继续使用，语义对应。",
+    "v3Result": "passed"
+  }
+}

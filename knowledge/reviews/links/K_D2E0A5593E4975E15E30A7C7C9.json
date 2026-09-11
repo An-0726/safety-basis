@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_D2E0A5593E4975E15E30A7C7C9",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "123a764f0b516e2f90f3141ded47a4c6a7ef606eec1bcc24f539fd6e7d409cd1",
+  "contextHashes": {
+    "hazard": "e695e66c4cf6c68e9a2d7435c9cc7db30f26925667f83aa7b67fc9b2df503512",
+    "clause": "ac38c51a8257ba53e55735d3e475f0a718c0f1187c94deb81e72c3f2d8818624"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（危险废物贮存设施选在溶洞区或易遭受洪水、滑坡、泥石流、潮汐等严重自然灾害影响的地区）。Clause C_94B0EF32（GB18597-2023第5.2条：不应建在溶洞区或易遭受洪水、滑坡、泥石流、潮汐等严重自然灾害影响地区） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VR_010a2a75f460a44663cd42a870_12",
+    "reviewedAt": "2026-09-09T12:24:37+00:00",
+    "reviewer": "doubao-work-链式核验",
+    "v3Reason": "link内容与法规依据一致，依赖链已修复；经批量核验维持通过。",
+    "v3Result": "passed"
+  }
+}

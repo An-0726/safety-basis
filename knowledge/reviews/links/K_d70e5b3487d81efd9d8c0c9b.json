@@ -1,0 +1,28 @@
+{
+  "entityType": "link",
+  "entityId": "K_d70e5b3487d81efd9d8c0c9b",
+  "reviewType": "applicability",
+  "decision": "verified",
+  "reviewedContentHash": "14bd53f2eed8b3bf1153ba550b642df2290884188ee51f41573482f8c4b79886",
+  "contextHashes": {
+    "hazard": "d7d55f36861505911a24ea4795df24203901ac010cf5126d19557ee48b3b42a5",
+    "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566"
+  },
+  "checkedAt": "2026-09-10T15:00:00+08:00",
+  "reviewer": "Doubao-Agent-Sub3",
+  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（从事焊接、热切割动火作业的人员未按规定持相应特种作业操作资格证上岗）。Clause C039（安全生产法第30条：特种作业人员经专门培训取得相应资格方可上岗） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reasonCodes": [
+    "DIRECT_MATCH",
+    "SPLIT_REASSIGNED"
+  ],
+  "evidenceRefs": [
+    "E_15ad9600decaa324d71a049d3aa8660158a0787eed786d523fbff4983c6fb820"
+  ],
+  "migratedFromV3Verification": {
+    "id": "VRF_8da627a04624fecca55c90b4_423",
+    "reviewedAt": "2026-09-09T14:38:34+00:00",
+    "reviewer": "并发重验批次",
+    "v3Reason": "隐患包含两方面：(1)电焊、气焊等具有火灾危险作业人员必须持证上岗，直接对应消防法第21条第二款；(2)焊接与热切割属于特种作业，人员必须经专门安全作业培训取得资格方可上岗，对应安全生产法第30条。",
+    "v3Result": "passed"
+  }
+}
