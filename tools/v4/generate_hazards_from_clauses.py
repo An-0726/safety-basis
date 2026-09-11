@@ -16,6 +16,7 @@ import argparse
 import io
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone, timedelta
 
@@ -137,9 +138,96 @@ def load_json(path):
         return json.load(f)
 
 
+# ---- AUTO 模式：从条款原文机械反转原子义务句（生成后仍需人工审题+门禁把关）----
+OBLIGATION = re.compile(r"(应|不应|不得|严禁|必须)")
+SPLIT_RE = re.compile(r"(?<=[。；])")
+
+def auto_invert(locator, quote):
+    """把条款拆成原子义务句并反转。返回 [(sentence, title, measures)]。"""
+    text = quote
+    results = []
+    sentences = [s.strip() for s in SPLIT_RE.split(text) if s.strip()]
+    # 合并被换行拆断的碎片：以小写字母/数字开头的碎片并回前句
+    merged = []
+    for s in sentences:
+        if merged and (s[0].isascii() and (s[0].islower() or s[0].isdigit() or s[0] in "ab)")):
+            merged[-1] += s
+        else:
+            merged.append(s)
+    for s in merged:
+        if not OBLIGATION.search(s) or len(s) < 8:
+            continue
+        if s.startswith("注") or "见 GB" in s[:8] or "见GB" in s[:8]:
+            continue
+        measures = s
+        if "不应" in s:
+            title = s.replace("不应", "", 1)
+        elif "不得" in s:
+            title = s.replace("不得", "", 1)
+        elif "严禁" in s:
+            title = "存在违反'" + s.replace("严禁", "", 1) + "'的行为"
+        elif "必须" in s:
+            title = s.replace("必须", "未", 1)
+        else:
+            title = re.sub(r"应", "未", s, count=1)
+        title = clean_title(title)
+        if not title:
+            continue
+        results.append((s, title, measures))
+    return results
+
+
+def clean_title(title):
+    """标题清洗：去 CJK 间空格、截断残句、残留'应'的句子弃用（需人工拆分）。"""
+    title = re.sub(r"(?<=[\u4e00-\u9fff])\s+(?=[\u4e00-\u9fff])", "", title)
+    title = title.strip("。；, ")
+    # 截断以逗号/冒号结尾的残句
+    while title and title[-1] in ",:;，：；)）":
+        title = title[:-1].rstrip("。；, ")
+    # 反转后仍残留“应”=一句多义务，机械反转不可靠，弃用
+    if "应" in title:
+        return None
+    if len(title) < 8:
+        return None
+    if len(title) > 60:
+        cut = title[:60]
+        for sep in ("；", "。", ","):
+            if sep in cut:
+                cut = cut[:cut.rfind(sep)]
+        title = cut.rstrip(",;：: ") + "等"
+    return title
+
+
+TITLE_OVERRIDES = {
+    "H_GBT47236_4_2_1_7": "机器起吊装置的位置设计不正确,起吊时出现偏重而失去稳定性",
+    "H_GBT47236_4_2_5_5": "控制系统中的暂停、停止装置复位后引发危险情况",
+}
+
+
+def auto_specs_for(clauses, exclude_locators):
+    """对未反转的条款生成自动反转 specs。"""
+    specs = []
+    for cid, c in sorted(clauses.items()):
+        if not cid.startswith("C_GBT47236_"):
+            continue
+        loc = cid.replace("C_GBT47236_", "").replace("_", ".")
+        if loc in exclude_locators:
+            continue
+        for seq, (sentence, title, measures) in enumerate(auto_invert(loc, c["quote"]), 1):
+            specs.append(dict(clause=cid.replace("C_GBT47236_", ""),
+                              title=title[:60],
+                              desc=sentence + "（GB/T 47236-2026 第" + loc + "条）。",
+                              measures=measures + "（依据 GB/T 47236-2026 第" + loc + "条整改。）",
+                              keywords=[loc, "铸造机器"],
+                              category="设备设施",
+                              auto=True, seq=seq))
+    return specs
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="实际写入 knowledge；默认 dry-run")
+    ap.add_argument("--auto", action="store_true", help="对 SPECS 未覆盖的条款做机械反转（生成后需人工审题）")
     args = ap.parse_args()
 
     clauses = {}
@@ -152,10 +240,26 @@ def main():
     norm_existing = {hazard_quality.normalized_title(t) for t in existing_titles.values()}
 
     created, errors = [], []
-    for spec in SPECS:
+    specs = list(SPECS)
+    if args.auto:
+        done = {s["clause"] for s in SPECS}
+        for f in os.listdir(os.path.join(KNOW, "hazards")):
+            if f.startswith("H_GBT47236_"):
+                d = load_json(os.path.join(KNOW, "hazards", f))
+                m = re.search(r"GB/T 47236-2026 ([0-9B.]+) 条反转", d.get("note", ""))
+                if m:
+                    done.add(m.group(1))
+        specs += auto_specs_for(clauses, exclude_locators=done)
+        print(f"auto specs: {len(specs) - len(SPECS)} (excluded {len(done)} locators)")
+    for spec in specs:
         cid = "C_GBT47236_" + spec["clause"].replace(".", "_")
         hid = "H_GBT47236_" + spec["clause"].replace(".", "_")
         kid = "K_GBT47236_" + spec["clause"].replace(".", "_")
+        if spec.get("auto"):
+            hid += "_" + str(spec.get("seq", 1))
+            kid += "_" + str(spec.get("seq", 1))
+            if hid in TITLE_OVERRIDES:
+                spec = dict(spec, title=TITLE_OVERRIDES[hid])
         clause = clauses.get(cid)
         if not clause:
             errors.append(f"{hid}: 条款不存在 {cid}")
