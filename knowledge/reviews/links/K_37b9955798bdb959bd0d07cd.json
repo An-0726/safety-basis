@@ -2,13 +2,13 @@
   "entityId": "K_37b9955798bdb959bd0d07cd",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "《安全生产法》第三十六条要求安全设备的设计、制造、安装、使用等符合国家标准并经常性维护保养，属安全设备环节的一般性义务，保留为 fallback；本条 direct 依据已由生产设备安全卫生设计专项标准的对应条款承担。",
+  "decision": "rejected",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "checkedAt": "2026-09-11T10:30:00+08:00",
+  "reason": "该fallback与K_f84551f7219f6393bc017e35指向同一hazard、同一《安全生产法》第三十六条、同一角色，属于重复关联。保留K_f84551f7219f6393bc017e35，本关联驳回以避免公开结果重复展示同一依据。",
   "reasonCodes": [
-    "FALLBACK_ROLE_CONFIRMED",
-    "DIRECT_CLAUSE_ADDED"
+    "DUPLICATE_LINK",
+    "REJECT_DUPLICATE_FALLBACK"
   ],
   "reviewedContentHash": "12bf234190ee6386744fdf08220d0cea803beeddc784f6fc623f99ec000432fb",
   "contextHashes": {

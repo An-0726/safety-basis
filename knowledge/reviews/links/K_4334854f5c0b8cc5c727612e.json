@@ -3,18 +3,19 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T18:00:00+08:00",
-  "reason": "进行焊接及切割操作的地方未配置足够的灭火设备，违反消防法第十六条第一款第（二）项按照国家标准配置消防设施器材的要求。焊接切割属于明火作业，必须配置足够的灭火设备。",
+  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+  "checkedAt": "2026-09-11T10:30:00+08:00",
+  "reason": "将原《消防法》第十六条一般性配置义务替换为GB 9448-2025第7.4.1条专项直接依据。",
   "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "HOT_WORK_FIRE_EXTINGUISHER"
+    "REPLACE_CLAUSE",
+    "DIRECT_MATCH",
+    "GB9448_7_4_1"
   ],
-  "reviewedContentHash": "5c5d9e3bfdca089081ad7e829cce2bab27fa1707d6f4f745321c968cf59ab607",
+  "reviewedContentHash": "7459098ad7f1cfbf5109b98d945234e728b43d9f98a31533b37b788a0e5d165d",
   "contextHashes": {
-    "hazard": "50a5ee9961eeaa0c75f03932e34b21400166c08eca473ff02979d7a87635982a",
-    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
-    "link": "5c5d9e3bfdca089081ad7e829cce2bab27fa1707d6f4f745321c968cf59ab607"
+    "hazard": "74636c5f1b4171bde6764d7c4af7b72cf2bed50957d4b0446e484ba66d94b79c",
+    "clause": "590ee6c5f3459435b8a0c5e9b139269b220be9b8249e9cadb9a2b0574f16a7ca",
+    "link": "7459098ad7f1cfbf5109b98d945234e728b43d9f98a31533b37b788a0e5d165d"
   },
   "evidenceRefs": []
 }

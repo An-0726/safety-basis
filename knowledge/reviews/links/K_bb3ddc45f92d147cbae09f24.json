@@ -2,20 +2,20 @@
   "entityId": "K_bb3ddc45f92d147cbae09f24",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "rejected",
+  "decision": "verified",
   "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "checkedAt": "2026-09-11T07:42:00+08:00",
-  "reason": "驳回原direct判断。C_4cc8db7da64889234b1417aa为GB 50054-2011第6.1.1条，内容是配电线路应装设短路保护和过负荷保护，并不规定照明配电箱内配线整齐、无绞接。隐患conditions所指GB 50303-2015第5.1.12第1项与该事实更匹配，但该标准尚未纳入当前V4法规图谱，故在补入并核验前不得公开。",
+  "checkedAt": "2026-09-11T10:30:00+08:00",
+  "reason": "已移除原GB 50054-2011第6.1.1条错配，改绑GB 50303-2015第5.1.12条第1项；条款对象、适用范围与隐患事实直接一致。",
   "reasonCodes": [
-    "CLAUSE_SCOPE_MISMATCH",
-    "DIRECT_ROLE_REJECTED",
-    "REPLACE_WITH_GB50303_5_1_12_1"
+    "REPLACE_CLAUSE",
+    "DIRECT_MATCH",
+    "GB50303_5_1_12_1"
   ],
-  "reviewedContentHash": "a964705dc284482be76f17e853786f5aefb648d86ac6a0f2126be03e82a7ca71",
+  "reviewedContentHash": "d0901ebd964155207f36d53e36b67bae82c7c3da40d8808b0713c233138aa467",
   "contextHashes": {
-    "hazard": "dc94be8e0bf9d4dd3ecaadabdc9fa72fa718b97e45b47f72740defce10c62371",
-    "clause": "48a8e26582b5890787bf7cc96d78459a40bb86cb169e2cd956d0f4585faf5419",
-    "link": "a964705dc284482be76f17e853786f5aefb648d86ac6a0f2126be03e82a7ca71"
+    "hazard": "a55ebcae2cd3e58c94a670b009c865930b8384d99de2fe323997e434928fb818",
+    "clause": "59e2f7a4209a617bc488560ac6fc50a41373cf3d88ff5a9c2fafd638ae820837",
+    "link": "d0901ebd964155207f36d53e36b67bae82c7c3da40d8808b0713c233138aa467"
   },
   "evidenceRefs": []
 }
