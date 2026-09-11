@@ -40,7 +40,12 @@ jobs:
       - run: node --test tools/tests/*.test.mjs tests/*.test.mjs
       - name: Keep legacy sources and website output unchanged
         run: git diff --exit-code -- content data
-      - name: Prepare the selected reviewed website without private sources
-        run: python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/safety-selected-site"
-      - name: Validate the selected package and full-text hashes
-        run: python tools/pipeline/manage.py verify-site --output "${{ runner.temp }}/safety-selected-site"
+      - name: Validate the selected reviewed release (format-aware)
+        run: |
+          BUNDLE=$(python -c "import json;print(json.load(open('source/releases/site-selection.json'))['bundle'])")
+          if grep -q '"v4SchemaVersion"' "source/releases/${BUNDLE}/data/manifest.json"; then
+            python tools/v4/verify_unified_bundle.py
+          else
+            python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/safety-selected-site"
+            python tools/pipeline/manage.py verify-site --output "${{ runner.temp }}/safety-selected-site"
+          fi

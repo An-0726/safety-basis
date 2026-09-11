@@ -22,8 +22,17 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r tools/pipeline/requirements.txt
-      - name: Prepare only the selected reviewed package
-        run: python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/reviewed-site"
+      - name: Validate and stage the selected reviewed package (format-aware)
+        run: |
+          BUNDLE=$(python -c "import json;print(json.load(open('source/releases/site-selection.json'))['bundle'])")
+          if grep -q '"v4SchemaVersion"' "source/releases/${BUNDLE}/data/manifest.json"; then
+            python tools/v4/validate_all.py
+            python tools/v4/verify_unified_bundle.py --bundle "source/releases/${BUNDLE}"
+            mkdir -p "${{ runner.temp }}/reviewed-site"
+            cp -r "source/releases/${BUNDLE}/." "${{ runner.temp }}/reviewed-site/"
+          else
+            python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/reviewed-site"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: reviewed-safety-site
