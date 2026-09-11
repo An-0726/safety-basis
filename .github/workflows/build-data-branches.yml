@@ -13,13 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      # One-time migration scripts remain archived; CI cannot rewrite statuses.
-      - name: Test public gate in isolated fixtures
-        run: node --test tools/tests/*.test.mjs
-      - name: Build and validate data
-        run: node tools/build-data.mjs
-      - name: Ensure generated data is committed
-        run: git diff --exit-code -- data
+      - run: python -m pip install -r tools/pipeline/requirements.txt
+      - name: Test public gates in isolated fixtures
+        run: node --test tools/tests/*.test.mjs tests/*.test.mjs
+      - name: Validate the V4 knowledge graph without rewriting public data
+        run: python tools/v4/validate_all.py
+      - name: Prepare and verify the selected reviewed release
+        run: |
+          python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/reviewed-site"
+          python tools/pipeline/manage.py verify-site --output "${{ runner.temp }}/reviewed-site"
+      - name: Ensure validators do not mutate governed data
+        run: git diff --exit-code -- knowledge data source/releases

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "dataVersion": "2026.09.09.2d38b8b8b576",
+  "generatedAt": "2026-09-09",
+  "publicScope": "国家法规标准优先，江苏／南京补充",
+  "counts": {
+    "hazards": 242,
+    "laws": 150,
+    "clauses": 52,
+    "links": 269
+  },
+  "sourceCounts": {
+    "hazards": 1125,
+    "laws": 161,
+    "clauses": 2603,
+    "links": 2298
+  },
+  "health": {
+    "verifiedHazards": 242,
+    "pendingHazards": 0,
+    "expiredHazards": 0,
+    "activeLaws": 148,
+    "pendingLaws": 0,
+    "invalidReferences": 0,
+    "stagedHazards": 883,
+    "stagedLaws": 11
+  },
+  "batches": [],
+  "stagedBatches": [],
+  "files": {
+    "searchIndex": "data/search-index.json",
+    "lawIndex": "data/law-index.json",
+    "taxonomy": "data/taxonomy.json"
+  },
+  "hazardShards": [
+    {
+      "id": "h0000",
+      "url": "data/hazards/h0000.json",
+      "count": 242,
+      "firstId": "H_0172A0C527FA44718429207015",
+      "lastId": "H081"
+    }
+  ],
+  "clauseShards": [
+    {
+      "id": "c0000",
+      "url": "data/clauses/c0000.json",
+      "count": 52,
+      "firstId": "C_004A8C263163C1F200F15626EC",
+      "lastId": "C080"
+    }
+  ],
+  "releaseHash": "dc556a01cc24f95a3e6bfb21ebb1f89e13297c6ba469fa7c5d6b343348c0f3d2",
+  "sourceRevision": "2d38b8b8b576446a34f48d3c98f7598ac44c2917c7208872031f9a2fb8b8e889",
+  "asOf": "2026-09-09",
+  "buildToolVersion": "safety-release-v2"
+}

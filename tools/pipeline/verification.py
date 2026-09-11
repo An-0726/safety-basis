@@ -13,6 +13,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from master import dumps
+import hazard_quality
 
 
 TABLES = {"law": "laws", "law_version": "law_versions", "clause": "clauses",
@@ -213,6 +214,7 @@ def preparation_errors(graph, kind, ident):
                for other in graph["laws"]):
             errors.append("已有相同的已确认法规身份，需先合并")
     if kind == "hazard":
+        errors += hazard_quality.text_errors(row["title"])
         if row["mode"] not in ("直接适用", "条件适用", "上位法兜底"):
             errors.append("适用模式无效")
         for field in ("places", "keywords"):
@@ -220,6 +222,13 @@ def preparation_errors(graph, kind, ident):
                 errors.append("缺少 " + field)
         if not row["active_link_ids"]:
             errors.append("没有启用的依据关联")
+        title_key = hazard_quality.normalized_title(row["title"])
+        duplicate_ids = sorted(other["id"] for other in graph["hazards"]
+                               if other["id"] != ident
+                               and other["status"] == "已核验"
+                               and hazard_quality.normalized_title(other["title"]) == title_key)
+        if row["status"] == "已核验" and duplicate_ids:
+            errors.append("存在重复的已核验隐患标题：" + ",".join(duplicate_ids))
     return errors
 
 
