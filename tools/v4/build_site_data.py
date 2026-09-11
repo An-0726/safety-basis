@@ -215,6 +215,8 @@ def main():
             "searchText": searchable([
                 h.get("title", ""), " ".join(h.get("aliases") or []),
                 " ".join(h.get("keywords") or []), h.get("description", ""),
+                h.get("measures", ""), h.get("conditions", ""),
+                " ".join(h.get("places") or []),
                 " ".join(sorted(lns)), " ".join(sorted(stds)), h.get("category", ""),
             ]),
         })
