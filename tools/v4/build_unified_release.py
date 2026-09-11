@@ -35,6 +35,7 @@ R13 = os.path.join(ROOT, "source", "releases", "reviewed-20260911-r13")
 DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "unified-v4-reviewed-20260911-r14")
 SHARD_SIZE = 200
 AS_OF = "2026-09-11"
+DATA_VERSION = "2026.09.11.unified-v4-r14"
 MODEL = "GLM-5.3-Flash (ZCode)"
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "app.js",
@@ -85,9 +86,14 @@ def public_version_title(name, number):
 
 
 def main():
+    global AS_OF, DATA_VERSION
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=DEFAULT_OUT)
+    ap.add_argument("--as-of", dest="as_of", default=AS_OF)
+    ap.add_argument("--data-version", dest="data_version", default=DATA_VERSION)
     args = ap.parse_args()
+    AS_OF = args.as_of
+    DATA_VERSION = args.data_version
     out = os.path.abspath(args.out)
     if os.path.exists(out):
         raise SystemExit("输出目录已存在，拒绝覆盖：" + out)
@@ -311,7 +317,7 @@ def main():
     manifest = {
         "schemaVersion": 2,
         "v4SchemaVersion": 3,
-        "dataVersion": "2026.09.11.unified-v4-r14",
+        "dataVersion": DATA_VERSION,
         "generatedAt": AS_OF,
         "publicScope": "国家法规标准优先，江苏／南京补充；只投影通过链式门禁的隐患",
         "counts": counts,
@@ -335,9 +341,9 @@ def main():
     wr(os.path.join(data, "law-index.json"), law_index, indent=2)
     wr(os.path.join(data, "taxonomy.json"), taxonomy)
 
-    # ---- r13 前端资产与全文库原样并入 ----
+    # ---- 前端资产以仓库根为源头（站点唯一事实来源），全文库自 r13 原样并入 ----
     for asset in SITE_ASSETS:
-        src = os.path.join(R13, asset)
+        src = os.path.join(ROOT, asset)
         dst = os.path.join(out, asset)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copyfile(src, dst)

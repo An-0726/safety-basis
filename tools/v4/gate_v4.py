@@ -13,6 +13,7 @@ import glob
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 from collections import Counter
@@ -92,6 +93,12 @@ def main():
             strict_blockers.append("link %s: %s" % (kid, v["reasons"]))
     for hid, v in gate.hazards.items():
         if v["active"] and not v["merged"] and not v["content_ok"]:
+            # review 被 reject/pending 退回待核验属正常业务分流（实体不进发布投影），
+            # 与 strict_release_audit 的 excluded 口径一致；其余内容失败仍为 blocker。
+            if v["reasons"] and all(
+                    re.match(r"^BLOCK_REVIEW_NOT_VERIFIED:(rejected|pending)$", str(x))
+                    for x in v["reasons"]):
+                continue
             strict_blockers.append("hazard %s: %s" % (hid, v["reasons"]))
     strict_blocker_count = len(strict_blockers)
 

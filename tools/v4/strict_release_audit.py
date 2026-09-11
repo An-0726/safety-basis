@@ -20,6 +20,7 @@ strictVerdict 只由 releaseBlockers 是否非空决定：>0 -> BLOCK，否则 P
 import io
 import json
 import os
+import re
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -108,14 +109,22 @@ def main():
 
     # ---- Hazard：内容硬失败且在发布路径(active 非 merged) = blocker；
     #      历史/合并 = excluded；active 但无合格依据 = inventory backlog ----
+    review_state_only = re.compile(r"^BLOCK_REVIEW_NOT_VERIFIED:(rejected|pending)$")
     for hid, v in r.hazards.items():
         if not v["active"] or v["merged"]:
             why = "superseded" if not v["active"] else "mergedInto"
             excluded_entities.append({"entityType": "hazard", "id": hid, "reason": why})
             continue
         if not v["content_ok"]:
-            release_blockers.append({"entityType": "hazard", "id": hid,
-                                     "reasons": v["reasons"]})
+            # 核验状态类失败（review 被 reject/pending 退回待核验）属正常业务分流，
+            # 实体本就不进发布投影（eligible_hazards 已排除），归入 excluded 而非 blocker；
+            # 内容质量问题（坏文本、字段缺失、hash 漂移等）仍然是 blocker。
+            if v["reasons"] and all(review_state_only.match(str(x)) for x in v["reasons"]):
+                excluded_entities.append({"entityType": "hazard", "id": hid,
+                                          "reason": "hazard_review_not_verified:" + v["reasons"][0]})
+            else:
+                release_blockers.append({"entityType": "hazard", "id": hid,
+                                         "reasons": v["reasons"]})
         elif hid not in r.eligible_hazards:
             inventory_warnings.append({
                 "type": "active_hazard_without_qualifying_link", "id": hid,
