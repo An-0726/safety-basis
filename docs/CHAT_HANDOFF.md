@@ -12,16 +12,16 @@
 
 | 实体 | 数量 |
 |---|---:|
-| laws | 85 |
-| lawVersions | 85 |
-| clauses | 177 |
+| laws | 88 |
+| lawVersions | 88 |
+| clauses | 196 |
 | hazards | 712 |
-| links | 827 |
-| evidence | 590 |
+| links | 839 |
+| evidence | 600 |
 | requirements | 75 |
 | successions | 23 |
 
-候选发布链：**640 publishable hazards / 799 eligible links / strictBlockers 0**，`candidate=true`、`production=false`。
+候选发布链：**639 publishable hazards / 806 eligible links / strictBlockers 0**，`candidate=true`、`production=false`。
 
 ## 当前总目标
 
@@ -82,13 +82,14 @@ Phase 16 完成，处于 `READY_FOR_ACCEPTANCE`；Phase 17 未启动。
 
 ## 未完成事项
 
-1. **`H_1F19FA1B951D46C1971E9B59B4`（门窗未朝外开启）待原始场景确认**。
-   该条描述把门与窗混为同一检查对象，且缺场所类型、使用人数、门的用途，无法判断应适用哪条具体强制要求。
-   已按 `docs/reviews/` 中两份复核记录**不强行补依据**：保留 Stable ID 与历史记录，退出公开投影。
-   因此 `activeHazardsWithoutQualifyingLink = 1` 是**有意保留**，不是遗漏。
-   待恢复原始场景后，应重述为有明确适用边界的"疏散门开启方向不符合要求"类隐患再核验。
-2. 法规全文视图（`library.html`）在候选包内可用，但 `data/fulltext/` 尚未投影，待与版权边界一并确定。
-3. Phase 17 生产切换未启动。
+1. **两条隐患维持不发布**（描述本身不成立，不强行补依据）：
+   - `H_1F19FA1B951D46C1971E9B59B4`（门窗未朝外开启）——门与窗混指、场景不明；
+   - `H_3A5DEC6C74244A949CE3BC9A42`（空压机房配电柜柜门未保持常闭）——无适用于所有工业企业的强制条款。
+   因此 `activeHazardsWithoutQualifyingLink = 2` 是**有意保留**，不是遗漏。
+2. **19 条隐患标题仍是法条原文照抄**（如"起重机械有下列情形之一仍继续使用的,,未判定为重大事故隐患。a)未经首次检验。b)…"），
+   现场人员难以理解，应改写为现场事实表述；不影响发布合规性，可独立成批处理。
+3. 法规全文视图（`library.html`）在候选包内可用，但 `data/fulltext/` 尚未投影，待与版权边界一并确定。
+4. Phase 17 生产切换未启动，部署方式（GitHub Pages 分支／目录、`main` 合并方式）待用户确定。
 
 ## 下一轮第一步
 
