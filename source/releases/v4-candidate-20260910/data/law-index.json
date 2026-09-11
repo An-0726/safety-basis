@@ -975,8 +975,8 @@
     "issuer": "住房和城乡建设部",
     "effectiveDate": "2023-03-01",
     "checked": "",
-    "clauseCount": 0,
-    "hazardCount": 0,
+    "clauseCount": 1,
+    "hazardCount": 1,
     "versions": [
       {
         "id": "L007",
@@ -987,7 +987,15 @@
         "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2022/art_17339_767704.html"
       }
     ],
-    "clauseRefs": [],
+    "clauseRefs": [
+      {
+        "clauseId": "C_GB55036_10_0_5",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_095F0B8A265A45FFAED1B3902F"
+        ]
+      }
+    ],
     "searchText": "消防设施通用规范 gb 55036 2022 gb55036 住房和城乡建设部 gb 55036 2022"
   },
   {
@@ -1148,8 +1156,8 @@
     "issuer": "中华人民共和国公安部（原发布），现由应急管理部归口管理",
     "effectiveDate": "2014-03-01",
     "checked": "",
-    "clauseCount": 8,
-    "hazardCount": 12,
+    "clauseCount": 9,
+    "hazardCount": 13,
     "versions": [
       {
         "id": "L015",
@@ -1204,6 +1212,13 @@
         ]
       },
       {
+        "clauseId": "C_XF1131_6_6",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_3B67F679C467451EA96B99072A"
+        ]
+      },
+      {
         "clauseId": "C_XF1131_6_8",
         "clauseShard": "c0000",
         "hazardIds": [
@@ -1211,7 +1226,8 @@
           "H053",
           "H054",
           "H055",
-          "H069"
+          "H069",
+          "H_3B67F679C467451EA96B99072A"
         ]
       },
       {
@@ -3538,7 +3554,7 @@
     "effectiveDate": "2013-07-01",
     "checked": "",
     "clauseCount": 3,
-    "hazardCount": 3,
+    "hazardCount": 4,
     "versions": [
       {
         "id": "LV_STD_HJ2026_2013",
@@ -3568,7 +3584,8 @@
         "clauseId": "C_HJ2026_6_5_4",
         "clauseShard": "c0000",
         "hazardIds": [
-          "H070"
+          "H070",
+          "H_97AE507CED3143C49C42F6B09F"
         ]
       }
     ],

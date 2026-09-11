@@ -9,22 +9,22 @@
   "counts": {
     "laws": 88,
     "lawVersions": 88,
-    "clauses": 194,
+    "clauses": 196,
     "hazards": 712,
-    "links": 835
+    "links": 839
   },
-  "eligibleHazards": 636,
-  "eligibleLinks": 802,
+  "eligibleHazards": 639,
+  "eligibleLinks": 806,
   "requirementReviewStatus": {
     "verified": 75
   },
   "linkReviewDecision": {
-    "verified": 802,
+    "verified": 806,
     "rejected": 26,
     "superseded": 7
   },
   "supportingVerifiedLinks": 73,
-  "activeHazardsWithoutQualifyingLink": 5,
+  "activeHazardsWithoutQualifyingLink": 2,
   "supersededOrMergedHazards": 71
 }
 ```
@@ -33,11 +33,8 @@
 
 These remain outside the public release until individually adjudicated. They are not automatically errors, but Phase 16 must classify them before final acceptance.
 
-1. `H_095F0B8A265A45FFAED1B3902F` | 消防安全 | 企业一组灭火器设置区域距离焊接明火地点较近,未采取安全措施
-2. `H_1F19FA1B951D46C1971E9B59B4` | 安全管理 | 门窗,未朝外开启
-3. `H_3A5DEC6C74244A949CE3BC9A42` | 电气安全 | 空压机房内配电柜柜门未保持常闭状态
-4. `H_3B67F679C467451EA96B99072A` | 安全管理 | 物料堆放不满足要求
-5. `H_97AE507CED3143C49C42F6B09F` | 安全管理 | 在吸附操作周期内,吸附了有机气体后吸附床内的温度,未低于83°C。当吸附装置内的温度超过83°C时,未能自动报警,并立即启动降温装置
+1. `H_1F19FA1B951D46C1971E9B59B4` | 安全管理 | 门窗,未朝外开启
+2. `H_3A5DEC6C74244A949CE3BC9A42` | 电气安全 | 空压机房内配电柜柜门未保持常闭状态
 
 ## Verified supporting links
 
