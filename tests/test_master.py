@@ -1,6 +1,8 @@
 import json
+import os
 import shutil
 import sqlite3
+import stat
 import sys
 import tempfile
 import unittest
@@ -107,7 +109,10 @@ class MasterMigrationTests(unittest.TestCase):
 
         # Restore the fixture, then introduce an FK break. The schema transaction
         # must roll back the temporary database as a whole.
-        shutil.rmtree(self.root / "content")
+        def make_writable_and_retry(function, path, _error):
+            os.chmod(path, stat.S_IWRITE)
+            function(path)
+        shutil.rmtree(self.root / "content", onexc=make_writable_and_retry)
         shutil.copytree(REPO / "content", self.root / "content")
         links = self.root / "content/links.json"
         values = json.loads(links.read_text(encoding="utf-8"))
