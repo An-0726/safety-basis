@@ -13,7 +13,7 @@
     "hazards": 712,
     "links": 839
   },
-  "eligibleHazards": 639,
+  "eligibleHazards": 637,
   "eligibleLinks": 806,
   "requirementReviewStatus": {
     "verified": 75
@@ -25,7 +25,7 @@
   },
   "supportingVerifiedLinks": 73,
   "activeHazardsWithoutQualifyingLink": 2,
-  "supersededOrMergedHazards": 71
+  "supersededOrMergedHazards": 73
 }
 ```
 
@@ -114,4 +114,4 @@ These remain outside the public release until individually adjudicated. They are
 
 ## Superseded / merged hazards
 
-Count: 71. These are retained for traceability and should remain excluded from the current public projection unless lifecycle review finds a data error.
+Count: 73. These are retained for traceability and should remain excluded from the current public projection unless lifecycle review finds a data error.
