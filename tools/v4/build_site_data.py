@@ -278,8 +278,8 @@ def main():
     mf = {
         "schemaVersion": 2,
         "v4SchemaVersion": 3,
-        "dataVersion": "2026.09.10.v4-candidate",
-        "generatedAt": "2026-09-10",
+        "dataVersion": "2026.09.11",
+        "generatedAt": "2026-09-11",
         "publicScope": "国家法规标准优先，江苏／南京补充；只投影通过链式门禁的隐患",
         "counts": {"hazards": len(si), "laws": len(law_index), "lawVersions": len(lvs),
                    "clauses": len(used_clauses), "links": len(gate.eligible_links)},
