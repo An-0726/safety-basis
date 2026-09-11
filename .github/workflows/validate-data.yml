@@ -31,7 +31,6 @@ jobs:
             python tools/v4/gate_v4.py
             python tools/v4/strict_release_audit.py > "${{ runner.temp }}/strict-audit.json"
             python -c "import json,sys;d=json.loads('\n'.join(open(sys.argv[1],encoding='utf-8').read().splitlines()[1:]));assert d.get('strictVerdict')=='PASS' and d.get('blockerCount')==0, d" "${{ runner.temp }}/strict-audit.json"
-            python -c "import json,sys;d=json.load(open(sys.argv[1]));assert d.get('strictVerdict')=='PASS' and d.get('blockerCount')==0, d" "${{ runner.temp }}/strict-audit.json"
             python tools/v4/verify_unified_bundle.py
           else
             python tools/pipeline/prepare_site.py --output "${{ runner.temp }}/reviewed-site"
