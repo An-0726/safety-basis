@@ -3,17 +3,17 @@
   "entityId": "K_b064b1dc6d92606d0199f232",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "b7424e5ffb8f32620eea6bd43131e3aa898917ce41245780c9adcbdc975042c2",
+  "reviewedContentHash": "31a7b8b8a8fbbe034a61b9588ae98576e074aebe4d965dee09929f4ffa7a0c05",
   "contextHashes": {
+    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8",
     "hazard": "7ebacc073946c83231bcdde2c2fc180377913d38832e926653407bd02ac05104",
-    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
+    "link": "31a7b8b8a8fbbe034a61b9588ae98576e074aebe4d965dee09929f4ffa7a0c05"
   },
   "checkedAt": "2026-09-10T15:00:00+08:00",
   "reviewer": "Doubao-Agent-Sub3",
-  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（场(厂)内专用机动车辆定期检验结论为不合格仍继续使用，未判定为重大事故隐患）。Clause C035（特种设备安全法第40条：未经定期检验或检验不合格的特种设备不得继续使用） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。",
+  "reason": "该隐患的判定准则已由 GB 45067-2024 直接规定；《中华人民共和国特种设备安全法》相关规定作为上位法义务补充保留。",
   "reasonCodes": [
-    "DIRECT_MATCH",
-    "SPLIT_REASSIGNED"
+    "SUPPORTING_UPPER_LAW"
   ],
   "evidenceRefs": [
     "E_4c14c2baf574dfaf6935ce4340d6f0933d3a377a5e5715d24c5b8e29e68c4f83"

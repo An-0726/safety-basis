@@ -155,7 +155,7 @@
     "effectiveDate": "2021-04-29",
     "checked": "",
     "clauseCount": 8,
-    "hazardCount": 102,
+    "hazardCount": 101,
     "versions": [
       {
         "id": "L001",
@@ -187,7 +187,6 @@
           "H_0647B65088564B789D64080EF1",
           "H_07093A790D744FDBB7125B8AD3",
           "H_16A5C551A3BE44329C7B5101CB",
-          "H_1AE5E4731A884338AB8EEDF0D6",
           "H_2689A44E234A4483B9121C694B",
           "H_387CD4000D844D269A439E4D45",
           "H_3E11F1C21C7041598F346E7FA0",
@@ -336,7 +335,7 @@
     "effectiveDate": "2021-09-01",
     "checked": "",
     "clauseCount": 33,
-    "hazardCount": 336,
+    "hazardCount": 332,
     "versions": [
       {
         "id": "L002",
@@ -368,7 +367,6 @@
           "H_1CC145D6F52942A0BCD349369E",
           "H_3642D1A7D0A7422A83E1B0E8BA",
           "H_39C9C17867594712A6A09E1916",
-          "H_3B67F679C467451EA96B99072A",
           "H_3EB09576F2324EFB94DC95C734",
           "H_4E1F7C3FFB724997B5C4EC82C9",
           "H_6265E5BFEBE547CB997660DAAD",
@@ -747,7 +745,6 @@
           "H_86746E9DDF904453A53248278C",
           "H_902B8261A176496C9DCA662834",
           "H_92653C5782964483B3D154937D",
-          "H_97AE507CED3143C49C42F6B09F",
           "H_97B663C8B72F40B2A89B6155CD",
           "H_9BC3E3B8385847459427E344DF",
           "H_9DA8116AAF559EC8BC14BA1C",
@@ -794,8 +791,6 @@
           "H_E42BFE6A0C03418990DE03B652",
           "H_EA29DB8CDDF141028504F2705A",
           "H_EACC1ED8867C4F3DA5FBAC8B49",
-          "H_EAFEE743563A40C59DF6640FA6",
-          "H_EBFBB41F3A9845D2AE18B0D665",
           "H_EC527E40F25347948ADA08A388",
           "H_F63729C889F642C8BBA2F263F0",
           "H_F7B420C2EABB44349EA418891A",
@@ -2323,8 +2318,8 @@
     "issuer": "中华人民共和国卫生部",
     "effectiveDate": "2010-08-01",
     "checked": "",
-    "clauseCount": 0,
-    "hazardCount": 0,
+    "clauseCount": 1,
+    "hazardCount": 1,
     "versions": [
       {
         "id": "LV_STD_1B4FB6D210EFAE3C4CBD4CBA",
@@ -2335,7 +2330,15 @@
         "sourceUrl": "https://www.nhc.gov.cn/ewebeditor/uploadfile/2014/11/20141114162610618.pdf"
       }
     ],
-    "clauseRefs": [],
+    "clauseRefs": [
+      {
+        "clauseId": "C_GBZ1_5_1_2",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_EBFBB41F3A9845D2AE18B0D665"
+        ]
+      }
+    ],
     "searchText": "工业企业设计卫生标准 中华人民共和国卫生部 gbz 1 2010"
   },
   {
@@ -2490,8 +2493,8 @@
     "issuer": "国家市场监督管理总局、国家标准化管理委员会",
     "effectiveDate": "2026-08-01",
     "checked": "",
-    "clauseCount": 2,
-    "hazardCount": 2,
+    "clauseCount": 3,
+    "hazardCount": 3,
     "versions": [
       {
         "id": "LV_STD_872B68E1DA3617B1B2F28BC9",
@@ -2515,6 +2518,13 @@
         "clauseShard": "c0000",
         "hazardIds": [
           "H_5C632EB0FC8E4DC586BDF3567E"
+        ]
+      },
+      {
+        "clauseId": "C_GB9448_7_4_1",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_1AE5E4731A884338AB8EEDF0D6"
         ]
       }
     ],
@@ -2654,8 +2664,8 @@
     "issuer": "国家市场监督管理总局、国家标准化管理委员会",
     "effectiveDate": "2024-12-01",
     "checked": "",
-    "clauseCount": 0,
-    "hazardCount": 0,
+    "clauseCount": 6,
+    "hazardCount": 8,
     "versions": [
       {
         "id": "LV_STD_E7182E7A85BA6017C48B96A8",
@@ -2666,7 +2676,52 @@
         "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53"
       }
     ],
-    "clauseRefs": [],
+    "clauseRefs": [
+      {
+        "clauseId": "C_GB45067_4_1",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_5D5ACB4A6D45FD9CEFC4654D",
+          "H_5F45555A73771FE1F12AB88F"
+        ]
+      },
+      {
+        "clauseId": "C_GB45067_4_10",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_03466ADE0A589C7D890736A6"
+        ]
+      },
+      {
+        "clauseId": "C_GB45067_4_3",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_4786C6AB880D073F73CC1A54",
+          "H_BD32095BBE999606E80E376E"
+        ]
+      },
+      {
+        "clauseId": "C_GB45067_4_4",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_A0120A30298373EDAA8F8384"
+        ]
+      },
+      {
+        "clauseId": "C_GB45067_4_5",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_A35BD266ADB24DF2A32373976A"
+        ]
+      },
+      {
+        "clauseId": "C_GB45067_4_7",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_7AEF9C4474234E6C86D91DF264"
+        ]
+      }
+    ],
     "searchText": "特种设备重大事故隐患判定准则 国家市场监督管理总局 国家标准化管理委员会 gb 45067 2024"
   },
   {
@@ -2727,7 +2782,7 @@
     "aliases": [],
     "level": "强制性国家标准",
     "scope": "全国",
-    "status": "现行有效",
+    "status": "即将实施",
     "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=460626D8FC0EFC7D30C0160D003D185F",
     "issuer": "国家市场监督管理总局、国家标准化管理委员会",
     "effectiveDate": "2026-10-01",
@@ -2758,8 +2813,8 @@
     "issuer": "中华人民共和国国家质量监督检验检疫总局、中国国家标准化管理委员会",
     "effectiveDate": "2009-10-01",
     "checked": "",
-    "clauseCount": 0,
-    "hazardCount": 0,
+    "clauseCount": 1,
+    "hazardCount": 1,
     "versions": [
       {
         "id": "LV_STD_GB12801_2008",
@@ -2770,7 +2825,15 @@
         "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=37E7BD7D47A0F8085504F428526FDC8E"
       }
     ],
-    "clauseRefs": [],
+    "clauseRefs": [
+      {
+        "clauseId": "C_GBT12801_5_7_1_C",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_96B64979BEB2440B93F2D698E8"
+        ]
+      }
+    ],
     "searchText": "生产过程安全卫生要求总则 中华人民共和国国家质量监督检验检疫总局 中国国家标准化管理委员会 gb/t 12801 2008"
   },
   {
@@ -2848,7 +2911,7 @@
     "effectiveDate": "2012-06-01",
     "checked": "",
     "clauseCount": 2,
-    "hazardCount": 42,
+    "hazardCount": 40,
     "versions": [
       {
         "id": "LV_STD_GB50054_2011",
@@ -2869,8 +2932,6 @@
           "H_1A8786209C974B6BB28C4ADFA5",
           "H_2724BCA646E74C1694B53CF8DB",
           "H_2F1B0A9321E844B98E16A6A3CA",
-          "H_37E54F5AFBE14B2EA02D93725D",
-          "H_3A5DEC6C74244A949CE3BC9A42",
           "H_3E588442618F422D926705893B",
           "H_43C6C076F9FC456DB09138A19A",
           "H_46A4349273C34D2992F88B202F",
@@ -2931,7 +2992,7 @@
     "issuer": "中华人民共和国住房和城乡建设部",
     "effectiveDate": "2012-08-01",
     "checked": "",
-    "clauseCount": 23,
+    "clauseCount": 24,
     "hazardCount": 32,
     "versions": [
       {
@@ -3094,8 +3155,7 @@
         "clauseShard": "c0000",
         "hazardIds": [
           "H_1874AF89FE6A417A93B8B94C9F",
-          "H_1D76D551FD524494BB653D71BE",
-          "H_3806FDAC1BA944798E28C0BCDF"
+          "H_1D76D551FD524494BB653D71BE"
         ]
       },
       {
@@ -3103,6 +3163,13 @@
         "clauseShard": "c0000",
         "hazardIds": [
           "H_2303005CE94D49BD88F75C7DC7"
+        ]
+      },
+      {
+        "clauseId": "C_GB50187_7_4_1",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_3806FDAC1BA944798E28C0BCDF"
         ]
       },
       {
@@ -3116,6 +3183,40 @@
       }
     ],
     "searchText": "工业企业总平面设计规范 工业企业总平面设计规范 gb 50187 中华人民共和国住房和城乡建设部 gb 50187 2012"
+  },
+  {
+    "id": "LF_STD_GB50303",
+    "name": "建筑电气工程施工质量验收规范",
+    "aliases": [],
+    "level": "工程建设国家标准",
+    "scope": "全国",
+    "status": "现行有效",
+    "sourceUrl": "https://www.mohurd.gov.cn/cms_files/filemanager/mohurdold/file/2021/20210527/d4cc31f4fb44e2812134acb3bef06364.pdf",
+    "issuer": "中华人民共和国住房和城乡建设部",
+    "effectiveDate": "2016-08-01",
+    "checked": "",
+    "clauseCount": 1,
+    "hazardCount": 1,
+    "versions": [
+      {
+        "id": "LV_STD_GB50303_2015",
+        "documentNumber": "GB 50303-2015",
+        "effectiveDate": "2016-08-01",
+        "endDate": "",
+        "validityStatus": "active",
+        "sourceUrl": "https://www.mohurd.gov.cn/cms_files/filemanager/mohurdold/file/2021/20210527/d4cc31f4fb44e2812134acb3bef06364.pdf"
+      }
+    ],
+    "clauseRefs": [
+      {
+        "clauseId": "C_GB50303_5_1_12_1",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_37E54F5AFBE14B2EA02D93725D"
+        ]
+      }
+    ],
+    "searchText": "建筑电气工程施工质量验收规范 中华人民共和国住房和城乡建设部 gb 50303 2015"
   },
   {
     "id": "LF_STD_GB50444",
@@ -3132,7 +3233,7 @@
     "effectiveDate": "2008-11-01",
     "checked": "",
     "clauseCount": 2,
-    "hazardCount": 10,
+    "hazardCount": 9,
     "versions": [
       {
         "id": "LV_STD_GB50444_2008",
@@ -3148,8 +3249,7 @@
         "clauseId": "C_2cd5ff5b1e930f6d76428257",
         "clauseShard": "c0000",
         "hazardIds": [
-          "H027",
-          "H_095F0B8A265A45FFAED1B3902F"
+          "H027"
         ]
       },
       {
@@ -3317,7 +3417,7 @@
     "effectiveDate": "2018-07-01",
     "checked": "",
     "clauseCount": 2,
-    "hazardCount": 13,
+    "hazardCount": 12,
     "versions": [
       {
         "id": "LV_STD_GBT13869_2017",
@@ -3339,7 +3439,6 @@
           "H_5F55461A7E7E4BF5A2943EA3C6",
           "H_6B9EB3C3F3A144E4962ACC3FB9",
           "H_858E1770E149474B8752F69430",
-          "H_96B64979BEB2440B93F2D698E8",
           "H_C0A67E719B304E40AF25E33F6A",
           "H_CE94D2ACC8C544BCA0FB0AA026",
           "H_D56479550E9846F3B2C831DB7A",
@@ -3356,6 +3455,35 @@
       }
     ],
     "searchText": "用电安全导则 gb/t 13869 2017 gb/t13869 国家市场监督管理总局 国家标准化管理委员会 gb/t 13869 2017"
+  },
+  {
+    "id": "LF_STD_GBT47578",
+    "name": "压力容器定期检验方法",
+    "aliases": [
+      "压力容器定期检验方法",
+      "GB/T 47578"
+    ],
+    "level": "推荐性国家标准",
+    "scope": "全国",
+    "status": "即将实施",
+    "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo",
+    "issuer": "国家市场监督管理总局、国家标准化管理委员会",
+    "effectiveDate": "2026-12-01",
+    "checked": "",
+    "clauseCount": 0,
+    "hazardCount": 0,
+    "versions": [
+      {
+        "id": "LV_STD_GBT47578_2026",
+        "documentNumber": "GB/T 47578-2026",
+        "effectiveDate": "2026-12-01",
+        "endDate": "",
+        "validityStatus": "upcoming",
+        "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo"
+      }
+    ],
+    "clauseRefs": [],
+    "searchText": "压力容器定期检验方法 压力容器定期检验方法 gb/t 47578 国家市场监督管理总局 国家标准化管理委员会 gb/t 47578 2026"
   },
   {
     "id": "LF_STD_HJ2000",
@@ -3550,5 +3678,42 @@
       }
     ],
     "searchText": "场 厂 内专用机动车辆安全技术规程 场 厂 内专用机动车辆安全技术规程 tsg 81 2022 场车规程 国家市场监督管理总局 市场监管总局2022年第26号公告"
+  },
+  {
+    "id": "LF_TSG21_2016",
+    "name": "固定式压力容器安全技术监察规程",
+    "aliases": [
+      "固容规",
+      "TSG 21-2016"
+    ],
+    "level": "特种设备安全技术规范",
+    "scope": "全国",
+    "status": "现行有效",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_b80c6bf8b9a24b1983c37c7d236eda21.html",
+    "issuer": "国家市场监督管理总局",
+    "effectiveDate": "2016-10-01",
+    "checked": "",
+    "clauseCount": 1,
+    "hazardCount": 1,
+    "versions": [
+      {
+        "id": "LV_TSG21_2016_AM1",
+        "documentNumber": "TSG 21—2016（第1号修改单）",
+        "effectiveDate": "2016-10-01",
+        "endDate": "",
+        "validityStatus": "active",
+        "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_b80c6bf8b9a24b1983c37c7d236eda21.html"
+      }
+    ],
+    "clauseRefs": [
+      {
+        "clauseId": "C_TSG21_7_2_3_1_3_1",
+        "clauseShard": "c0000",
+        "hazardIds": [
+          "H_EAFEE743563A40C59DF6640FA6"
+        ]
+      }
+    ],
+    "searchText": "固定式压力容器安全技术监察规程 固容规 tsg 21 2016 国家市场监督管理总局 tsg 21 2016 第1号修改单"
   }
 ]
