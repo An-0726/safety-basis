@@ -1,0 +1,6 @@
+{
+  "title": "release r28: final expansion batch — 283 hazards from eight regulations; expansion phase closed",
+  "head": "data-verify-batch-003",
+  "base": "main",
+  "body": "## Summary\n\n- Ingested clean-text clauses from eight in-force regulations (six needed new law+version+review+evidence chains, built per gate schema): 江苏省消防条例, 74号令, 事故报告和调查处理条例, 培训管理办法, 安评机构办法(2026修订), 罚款处罚规定, 危废收集贮存运输技术规范, 企业安全生产费用办法.\n- 584 candidates reviewed title-by-title: 285 approved, 283 new after title-dedup; 299 dropped (agency/regulator duties, penalties, financial items, fragments, duplicates).\n- Pairing verified 283/283; gate six-phase PASS (1910 hazards / 2289 links, strictBlockers=0), audit PASS, bundle verify clean; site-selection -> r28.\n- Expansion phase closed. Remaining out-of-scope: GB 50057 (needs own schedule), TSG 23/08 (OCR text), GB/T 13869-2026 (awaiting official PDF)."
+}

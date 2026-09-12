@@ -139,7 +139,9 @@ def gate_law_version(lv, review, law_ok, as_of):
 
     返回 (ok, supports_current, reasons)：
     - ok：版本自身结构/身份/review 是否合格；
-    - supports_current：在 as_of 当天能否作为“当前 hazard 的现行依据”。
+    - supports_current：在 as_of 当天能否作为“当前 hazard 的引用依据”。
+      2026-09-13 修订（用户决策）：已发布未实施（upcoming）的版本也可支撑，
+      确保引用始终指向最新发布版；repealed/unknown 仍不可支撑。
     """
     reasons = []
     status = lv.get("validityStatus") or "unknown"
@@ -169,10 +171,13 @@ def gate_law_version(lv, review, law_ok, as_of):
         elif end and not (as_of < end):
             reasons.append("BLOCK_VERSION_EXPIRED:active_past_endDate")
     elif status == "upcoming":
-        # §7 upcoming：可进法规目录，但不能支撑当前 hazard；
-        # 若 effectiveDate <= asOf 仍标 upcoming，属于效力标错，需复核。
+        # §7 upcoming（2026-09-13 修订，用户决策）：已发布未实施的最新版本
+        # 可直接作为当前隐患的引用依据（"我就是要最新的，没生效也没关系"），
+        # 不再等待实施日；effectiveDate <= asOf 仍标 upcoming 属于效力标错，需复核。
         if eff and eff <= as_of:
             reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:upcoming_not_future")
+        else:
+            supports_current = True
     # repealed / unknown：天然不能支撑当前 hazard，不额外记硬错误（它们是 excluded）
 
     return not reasons, supports_current, reasons
@@ -199,7 +204,8 @@ def gate_clause(clause, review, lv_supports_current, lv_struct_ok):
     if not lv_struct_ok:
         reasons.append("BLOCK_VERSION_UNKNOWN:lawVersion_gate_failed")
     elif not lv_supports_current:
-        # §10：关联 upcoming/repealed/unknown version 却试图支撑当前 hazard
+        # §10：关联 repealed/unknown version 却试图支撑当前 hazard
+        # （2026-09-13 起已发布的 upcoming 版本可支撑，见 gate_law_version 修订）
         reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:lawVersion_not_supporting_current")
     return not reasons, reasons
 
