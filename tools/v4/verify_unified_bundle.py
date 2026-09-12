@@ -131,8 +131,10 @@ def main():
     for row in hazards.values():
         bad.check(row.get("status") == "已核验", "隐患分片存在非已核验记录：" + row["id"])
     for row in clauses.values():
-        # Gate 只允许贯通到「现行有效且已生效」版本的关联，条款效力标签必须为现行有效
-        bad.check(row.get("status") == "现行有效", "条款不是现行有效（Gate 应已拦截）：" + row["id"])
+        # 2026-09-13 起门禁允许已发布未实施（upcoming）版本支撑引用（用户决策），
+        # 故条款效力标签接受 现行有效 与 即将生效；repealed/unknown 仍应被 Gate 拦截
+        bad.check(row.get("status") in ("现行有效", "即将生效"),
+                  "条款效力标签不可引用（Gate 应已拦截）：" + row["id"] + " " + str(row.get("status")))
 
     si = rd(os.path.join(bundle, "data", "search-index.json"))
     law_index = rd(os.path.join(bundle, "data", "law-index.json"))
