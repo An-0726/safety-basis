@@ -99,3 +99,15 @@ V4 链路 validate_all / gate_v4 / strict_release_audit 全部 PASS（strictBloc
   已合并部署（PR #20，5c7b1a1f）。保留：24 条手工批次 1 反转隐患 + 全部人工/原内容。
   教训：字符串手术式反转必须配全量标题人工审查，未审查不得上线（已写入 18.15）。
   自动反转隐患候选（约 1000 条）保留在 git 历史与生成器中，待模态词感知反转器重写 + 逐条审题后分批重发。
+
+## 2026-09-12 r23：1001→1245 条自动反转候选全量逐条审校后发布（ZCode 会话续跑）
+
+- 接手停摆会话（5 子代理并发派发全败：cancelled / user concurrency limit exceeded）。改为**串行**派发 5 个审校子代理，全部成功。
+- 发现并回滚前次未提交的错位应用：审题清单来自 exclude=linked 枚举（1245），而 from-file 应用代码硬编码 exclude=set()（1449）→ 标题/描述系统性配对错位（实例：粉尘标题配消防描述）。已 stash 作废。
+- 重建管线：tmp/dump_candidates.py 用与应用路径同一枚举导出 1449 候选 → 剔除基线已挂接条款 → 1245 条切 5 片（tmp/review2_in_1~5.txt）→ 串行审校 → 裁决 KEEP 361 / FIX 487 / DROP 397（政府主体/罚则/定义/残句为主）。
+- 应用 844 条（tmp/apply_r23.txt，行号 N 与 1449 枚举对齐）；dry-run 拦下 5 条（未无坏字×1、正向句×2、基线重名×2），人工改写/降级后全过。
+- 53 条 GB/T 47236 反转候选修掉 --from-file 路径的 H_GBT47236_C_GBT47236 双重前缀 id（文件名+内部字段），并清除 r21 时代遗留的单前缀过期 review（哈希已失效）。
+- 全量配对验证 844/844：标题/描述/链接/审阅与同一枚举严格一致；全库乱码扫描 0。
+- 门禁：validate_all 六项 PASS（BLOCKING none）→ gate_v4 六阶段 PASS（strictBlockers=0，eligible 1496/1674）→ strict_release_audit PASS → 统一包 verify errors=[]。
+- 发布：r23 = unified-v4-reviewed-20260912-r23（releaseHash bae1119b…），site-selection 已切换，**PR #21 合并上线**（26e43792），线上实测 dataVersion=2026.09.12.unified-v4-r23，1496 隐患/1674 关联/174 法规；抽查新标题在线可见。
+- 遗留：526 条 r22 前旧孤儿 review（validate 非阻断，未动）；.git/worktrees 下 wt-agent* 三个死工作树删除被锁（Permission denied）；约 82 部全文效力状态未核验（既有遗留）。
