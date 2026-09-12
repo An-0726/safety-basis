@@ -111,3 +111,13 @@ V4 链路 validate_all / gate_v4 / strict_release_audit 全部 PASS（strictBloc
 - 门禁：validate_all 六项 PASS（BLOCKING none）→ gate_v4 六阶段 PASS（strictBlockers=0，eligible 1496/1674）→ strict_release_audit PASS → 统一包 verify errors=[]。
 - 发布：r23 = unified-v4-reviewed-20260912-r23（releaseHash bae1119b…），site-selection 已切换，**PR #21 合并上线**（26e43792），线上实测 dataVersion=2026.09.12.unified-v4-r23，1496 隐患/1674 关联/174 法规；抽查新标题在线可见。
 - 遗留：526 条 r22 前旧孤儿 review（validate 非阻断，未动）；.git/worktrees 下 wt-agent* 三个死工作树删除被锁（Permission denied）；约 82 部全文效力状态未核验（既有遗留）。
+
+## 2026-09-12 Phase C：90 部法规效力状态全量时效核查（主会话串行完成，零状态翻转）
+
+- 并发结论定案：本账号为单通道（子代理并行 5/3/2 个均失败：concurrency limit exceeded / cancelled / model request failed；主会话内并行 WebSearch 同样超限）。**后续一律主会话串行，不再派子代理**。
+- 方法：先本地核对 90 部版本的文号/生效日/endDate 与新旧版配对，把需联网核实的缩到 ~24 部；主会话逐部 WebSearch（国家法律法规库、应急部、openstd、hbba 标准平台等），裁决逐条落盘 tmp/currency_out_main.json（73 条含本地交叉核对）。
+- 结果：**90/90 状态全部准确，零翻转**。此前会话的新旧版交替（GB12158-2024、GB9448-2025、GBZ188-2025、TSG08-2026、TSG92-2026、应急部令19号特种作业新规等 17 组） endDate 与新版施行日全部吻合；3 个 upcoming（GB/T13869-2026、GB/T47578-2026、GB12801-2025）施行日均为未来，标注正确。
+- 关键确认：应急部令第19号《特种作业人员安全技术培训考核管理规定》2026-06-01 施行的**新版已在库内**（LV_REG_SPECIAL_OPS_2026），交接书担心的更新项实际早已完成。
+- 已写入 7 条审阅备注（前瞻预警）：16号令/40号令/TSG21 修订进行中；GB50140/GB50444/GB50016 强条随 GB55036/55037 废止提示；应急预案管理办法 2026-04 新版备案表格。
+- 公开内容零变化（统一包 releaseHash 与 r24 相同 0979081a…），故**不发布 r25**，线上保持 r24；本核查产物（裁决文件+审阅备注）随本提交入库。
+- 剩余建议：① 237 条无专项条款隐患（职业病系列为主）需扩充已核验条款库后重跑 deepen；② source/library 全文库 82 部原件效力字段仍未核验（本次覆盖的是 knowledge 90 部版本）；③ 煤矿重大事故隐患判定标准已被部令21号修订（2026-05-24），库内无煤矿标准，暂不涉及。
