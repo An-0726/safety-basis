@@ -1,0 +1,6 @@
+{
+  "title": "release r25: retire GB/T 12801-2008 citations ahead of the 2026-10-01 handover",
+  "head": "data-verify-batch-003",
+  "base": "main",
+  "body": "## Summary\n\n- Removed the 20 qualifying links into GB/T 12801-2008 clauses per owner decision (cite published new versions only). 19 hazards return on 2026-10-01 via a scheduled switchover task; 1 retires permanently (advisory clause dropped from the 2025 edition).\n- GB 12801-2025 / GB-T 13869-2026 clause ingestions validated but withheld: the strict gate blocks upcoming-version clauses until their effective dates.\n- GB/T 13869-2017 endDate set to 2027-01-31; its 12 hazards need remapping to a clean 2026 text before then (current OCR text defective).\n- Gate six-phase PASS (1476 / 1855, strictBlockers=0), audit PASS, bundle verify clean; site-selection -> r25."
+}
