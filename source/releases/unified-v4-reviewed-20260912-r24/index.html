@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#183e35">
+  <meta name="description" content="安全隐患与法规依据速查工具：国家法规标准优先，江苏／南京补充。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <title>隐患依据速查 · 安全技术工作台</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./" aria-label="返回隐患依据速查首页">
+    <span class="logo" aria-hidden="true">盾</span>
+    <span>隐患依据速查<small>安全技术工作台</small></span>
+  </a>
+  <nav aria-label="主导航">
+    <button class="nav active" data-view="hazards">隐患速查</button>
+    <button class="nav" data-view="laws">法规库</button>
+    <a class="nav" href="library.html">法规全文</a>
+    <button class="nav" data-view="data">数据状态</button>
+  </nav>
+  <span class="private"><i></i><span id="dbVersion">数据加载中</span></span>
+</header>
+
+<main>
+  <section class="intro">
+    <div>
+      <div class="eyebrow">SAFETY REFERENCE / V2</div>
+      <h1>现场隐患，<span>有据可查。</span></h1>
+      <p>隐患、法规、条款和适用条件分层管理；从现场问题追到原文，也能从法规反查相关隐患。</p>
+      <div class="scope"><span>国家法规标准优先</span><i>＋</i><span>江苏 / 南京补充</span><i>＋</i><span>版本可追溯</span></div>
+    </div>
+    <aside class="principle">
+      <span class="mini">引用原则</span>
+      <strong>直接标准优先<br>适用条件先行</strong>
+      <p>找不到直接条款时，明确标注上位法兜底；法规更新保留核验状态与版本链。</p>
+      <span class="ruleline"></span>
+    </aside>
+  </section>
+
+  <section id="searchView" class="workspace">
+    <div class="sectionhead"><div><h2 id="sectionTitle">隐患速查</h2><p id="sectionHint">现场问题 → 专业描述 → 直接依据 → 整改措施</p></div><span class="shortcut">按 <kbd>/</kbd> 聚焦搜索</span></div>
+    <div class="searchbar"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索数据库" autocomplete="off" spellcheck="false"><button id="clear" class="quiet">清空</button></div>
+
+    <div id="hazardFilters" class="filters">
+      <label>主题<select id="category"></select></label>
+      <label>场所<select id="place"></select></label>
+      <label>法规类别<select id="level"></select></label>
+      <label>地区<select id="region"><option value="">国家＋江苏／南京</option><option value="全国">仅国家依据</option><option value="江苏">江苏补充</option><option value="南京">南京补充</option></select></label>
+      <label>匹配<select id="mode"></select></label>
+      <label>状态<select id="status"></select></label>
+      <button id="reset" class="quiet">重置筛选 ↺</button>
+    </div>
+
+    <div id="lawFilters" class="filters" hidden>
+      <label>法规类别<select id="lawLevel"></select></label>
+      <label>地区<select id="lawRegion"><option value="">全部地区</option><option value="全国">全国</option><option value="江苏">江苏</option><option value="南京">南京</option></select></label>
+      <label>效力状态<select id="lawStatus"></select></label>
+      <button class="quiet" id="resetLawHint" disabled>收录的是本库实际引用条款</button>
+    </div>
+
+    <div class="resultbar"><span><b id="count">0</b> 条匹配 <small id="summary">数据库正在初始化</small></span><span class="legend"><i></i> 原文与适用性分开核验 <em>·</em> 使用前复核现场条件</span></div>
+    <div class="columns"><div id="list" class="list" aria-label="搜索结果"></div><article id="detail" class="detail" aria-live="polite"><div class="empty"><strong>数据库正在初始化</strong></div></article></div>
+  </section>
+
+  <section id="dataView" class="workspace" hidden></section>
+
+  <footer><span>隐患依据速查 <b>·</b> 数据版本 <span id="dbDate">—</span></span><span>原文可追溯 / 条款可复用 / 关联可反查 / 版本可回滚</span></footer>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
