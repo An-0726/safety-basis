@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "safety-hazard-excel-dry-run-v1",
+  "generatedAt": "2026-09-11",
+  "mode": "read-only",
+  "base": {
+    "repository": "An-0726/safety-basis",
+    "commit": "f0acc76ef4813f5e684378dc3252ed1708fbebcf",
+    "xlsx": "D:/Desktop/Safety_Basis_隐患库专业复核_ChatGPT.xlsx"
+  },
+  "fetch": {
+    "treeTruncated": false,
+    "xlsxRows": 634,
+    "hazardPaths": 634,
+    "hazardsFetched": 634,
+    "linkPaths": 839,
+    "linksFetched": 839,
+    "clausesRequested": 163,
+    "clausesFetched": 163,
+    "lawVersionsRequested": 42,
+    "lawVersionsFetched": 42,
+    "errors": [],
+    "missingHazardPaths": []
+  },
+  "coreFieldComparison": {
+    "fieldCounts": {
+      "title": {
+        "exactSame": 424,
+        "different": 210
+      },
+      "description": {
+        "exactSame": 339,
+        "different": 295
+      },
+      "measures": {
+        "exactSame": 438,
+        "different": 196
+      },
+      "conditions": {
+        "exactSame": 269,
+        "different": 365
+      },
+      "category": {
+        "exactSame": 634,
+        "different": 0
+      },
+      "places": {
+        "exactSame": 634,
+        "different": 0
+      }
+    },
+    "rowsWithAnyCoreDiff": 490
+  },
+  "structuredLinkCoverage": {
+    "rowsWithActiveLink": 634,
+    "rowsWithNoActiveLink": 0,
+    "rowsWithActiveDirectLink": 602,
+    "rowsWithNoActiveDirectLink": 32,
+    "rowsWithBasisToLinkedLaw": 572,
+    "rowsWithQuoteContainedInLinkedClause": 572,
+    "basisBlankRows": [
+      "H_1F19FA1B951D46C1971E9B59B4",
+      "H_3A5DEC6C74244A949CE3BC9A42"
+    ],
+    "samples": {
+      "noActiveDirectLink": [
+        {
+          "id": "H078",
+          "title": "危险废物产生单位未对相关工作人员开展培训",
+          "publish": "是"
+        },
+        {
+          "id": "H_528C6C8455A14D97ADEF524650",
+          "title": "未按优先顺序采取降噪措施",
+          "publish": "是"
+        },
+        {
+          "id": "H_B6EF072262744FF68DE47B0341",
+          "title": "储气罐未装设安全阀或储气罐与供气总管之间未装设切断阀",
+          "publish": "是"
+        },
+        {
+          "id": "H_0974E0DD140546B9943A71BC4A",
+          "title": "危险性较大生产设备未由具备资质的单位设计制造和检验",
+          "publish": "是"
+        },
+        {
+          "id": "H_052508D94A934DA88563BD06C0",
+          "title": "对生产中易产生静电的设备和管道未采取消除静电的措施",
+          "publish": "是"
+        },
+        {
+          "id": "H_0B44B29CA3794AEF82EC7CE4F5",
+          "title": "工业企业选址未避开自然疫源地",
+          "publish": "是"
+        },
+        {
+          "id": "H_E8BA94B23294445698371ADAA4",
+          "title": "未建立健全个体防护装备采购、验收、保管、发放、使用和报废管理制度",
+          "publish": "是"
+        },
+        {
+          "id": "H_DE7BC85739664C5EB603237A62",
+          "title": "气瓶使用中存在电焊引弧、未留剩余压力、未装防倒灌装置或对瓶体挖补焊接修理等违规行为",
+          "publish": "是"
+        },
+        {
+          "id": "H_D87EA645288648BA82AF01F8E6",
+          "title": "新组建单位未编制应急预案即开展生产经营活动",
+          "publish": "是"
+        },
+        {
+          "id": "H_1B4FBE6B18404FD795AA211BA6",
+          "title": "未制定应急预案演练计划或未按周期组织演练",
+          "publish": "是"
+        },
+        {
+          "id": "H_4AF088F48DFD4BFA88FD254F28",
+          "title": "未建立液氮储罐泄露应急处置方案",
+          "publish": "是"
+        },
+        {
+          "id": "H_02FEFD347E114E1E979C9589AF",
+          "title": "生产安全事故应急预案体系未根据事故风险和组织体系合理设置",
+          "publish": "是"
+        }
+      ],
+      "basisUnmatched": [
+        {
+          "id": "H_A1A5AA5EE13A3444450315AB",
+          "title": "存在化学性灼伤风险的作业点未就近设置冲淋、洗眼设施",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C016"
+          ]
+        },
+        {
+          "id": "H078",
+          "title": "危险废物产生单位未对相关工作人员开展培训",
+          "activeDirectLinks": 0,
+          "linkedClauseIds": []
+        },
+        {
+          "id": "H_528C6C8455A14D97ADEF524650",
+          "title": "未按优先顺序采取降噪措施",
+          "activeDirectLinks": 0,
+          "linkedClauseIds": []
+        },
+        {
+          "id": "H_ACAF3A4D922349BEB0002C5163",
+          "title": "人行道、车行道布置或间距妨碍人员作业",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C004"
+          ]
+        },
+        {
+          "id": "H_D56479550E9846F3B2C831DB7A",
+          "title": "作业区未留足人员安全活动空间",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_CE94D2ACC8C544BCA0FB0AA026",
+          "title": "存在高处坠落危险的操作、检查或维修部位未设置安全防护设施",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_E77D3F1B02494DD3B47CB196B7",
+          "title": "焊接、切割、钎焊及相关作业未在足够通风条件下进行",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_e58389b89299307a0d45042d"
+          ]
+        },
+        {
+          "id": "H_5F55461A7E7E4BF5A2943EA3C6",
+          "title": "设备操作位置不安全可靠、工作空间不足或危险作业点无退避空间",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_D6C532598F1941618B4A868C74",
+          "title": "设备操作位置不安全可靠或人员活动空间不足",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_AA6382B9890B42B1B70DC3EA3B",
+          "title": "机械企业使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_e58389b89299307a0d45042d"
+          ]
+        },
+        {
+          "id": "H_B552B08A4FD28A8770CDC2BB",
+          "title": "涉氨检修、抢修作业未按要求配备正压式空气呼吸器",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C016"
+          ]
+        },
+        {
+          "id": "H_68196C0A0FBDDAF0354E0F71",
+          "title": "涉氨检修、抢修作业未按要求配备氨气检测仪",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C016"
+          ]
+        }
+      ],
+      "quoteUnmatched": [
+        {
+          "id": "H_A1A5AA5EE13A3444450315AB",
+          "title": "存在化学性灼伤风险的作业点未就近设置冲淋、洗眼设施",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C016"
+          ]
+        },
+        {
+          "id": "H_ACAF3A4D922349BEB0002C5163",
+          "title": "人行道、车行道布置或间距妨碍人员作业",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C004"
+          ]
+        },
+        {
+          "id": "H_D56479550E9846F3B2C831DB7A",
+          "title": "作业区未留足人员安全活动空间",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_CE94D2ACC8C544BCA0FB0AA026",
+          "title": "存在高处坠落危险的操作、检查或维修部位未设置安全防护设施",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_E77D3F1B02494DD3B47CB196B7",
+          "title": "焊接、切割、钎焊及相关作业未在足够通风条件下进行",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_e58389b89299307a0d45042d"
+          ]
+        },
+        {
+          "id": "H_5F55461A7E7E4BF5A2943EA3C6",
+          "title": "设备操作位置不安全可靠、工作空间不足或危险作业点无退避空间",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_D6C532598F1941618B4A868C74",
+          "title": "设备操作位置不安全可靠或人员活动空间不足",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_AA6382B9890B42B1B70DC3EA3B",
+          "title": "机械企业使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_e58389b89299307a0d45042d"
+          ]
+        },
+        {
+          "id": "H_B552B08A4FD28A8770CDC2BB",
+          "title": "涉氨检修、抢修作业未按要求配备正压式空气呼吸器",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C016"
+          ]
+        },
+        {
+          "id": "H_68196C0A0FBDDAF0354E0F71",
+          "title": "涉氨检修、抢修作业未按要求配备氨气检测仪",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C016"
+          ]
+        },
+        {
+          "id": "H_168C8D063803453AA35537D3C2",
+          "title": "潜在危险设备未按规定分散隔离并设置标志",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_111e6a4f843a9547ddddf11b"
+          ]
+        },
+        {
+          "id": "H_417B030F12A14923A978E4DAB2",
+          "title": "当废气产生点较多、彼此距离较远时未适当设多套收集系统",
+          "activeDirectLinks": 1,
+          "linkedClauseIds": [
+            "C_784d9c21cb81fda5b963013f"
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Compared the review workbook with the pinned remote-main knowledge snapshot; no changes were applied.",
+    "Basis and quote matching is whitespace-normalized textual evidence only; it is not a legal-validity, applicability, or approval decision.",
+    "Rows marked 可发布=否, rows without an active direct link, and rows without a textual mapping signal require review before any proposal or release."
+  ]
+}

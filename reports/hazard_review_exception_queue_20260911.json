@@ -1,0 +1,3799 @@
+{
+  "schemaVersion": "safety-hazard-review-exception-queue-v1",
+  "generatedAt": "2026-09-11",
+  "mode": "read-only",
+  "sourceProposalId": "HEXP_cfaa7d2de8270dcbb2dc8d08d1",
+  "base": {
+    "workbook": "D:/Desktop/Safety_Basis_隐患库专业复核_ChatGPT.xlsx",
+    "workbookSha256": "221ea8cf625b62f36d14036bff6dc836d76fe7ca4b1618784b2b0678478dcb39",
+    "worksheet": "隐患明细",
+    "rowCount": 634,
+    "remoteRepository": "An-0726/safety-basis",
+    "remoteMainCommit": "f0acc76ef4813f5e684378dc3252ed1708fbebcf",
+    "remoteKnowledgeBase": "knowledge/"
+  },
+  "fetch": {
+    "linksRequested": 30,
+    "linksFetched": 30,
+    "clausesRequested": 10,
+    "clausesFetched": 10,
+    "lawVersionsRequested": 7,
+    "lawVersionsFetched": 7,
+    "errors": []
+  },
+  "summary": {
+    "exceptionCount": 62,
+    "flagCounts": {
+      "basis_unmatched": 60,
+      "quote_unmatched": 28,
+      "no_active_direct_link": 32,
+      "not_publishable": 3,
+      "basis_blank": 2
+    },
+    "groups": {
+      "basis_unmatched": [
+        "H_A1A5AA5EE13A3444450315AB",
+        "H078",
+        "H_528C6C8455A14D97ADEF524650",
+        "H_ACAF3A4D922349BEB0002C5163",
+        "H_D56479550E9846F3B2C831DB7A",
+        "H_CE94D2ACC8C544BCA0FB0AA026",
+        "H_E77D3F1B02494DD3B47CB196B7",
+        "H_5F55461A7E7E4BF5A2943EA3C6",
+        "H_D6C532598F1941618B4A868C74",
+        "H_AA6382B9890B42B1B70DC3EA3B",
+        "H_B552B08A4FD28A8770CDC2BB",
+        "H_68196C0A0FBDDAF0354E0F71",
+        "H_168C8D063803453AA35537D3C2",
+        "H_B6EF072262744FF68DE47B0341",
+        "H_0974E0DD140546B9943A71BC4A",
+        "H_052508D94A934DA88563BD06C0",
+        "H_0B44B29CA3794AEF82EC7CE4F5",
+        "H_417B030F12A14923A978E4DAB2",
+        "H_6459FF72A542499FBB3E0F70FC",
+        "H_E8BA94B23294445698371ADAA4",
+        "H_DE7BC85739664C5EB603237A62",
+        "H_548F812A3B914C9EA2A02243E5",
+        "H_6B9EB3C3F3A144E4962ACC3FB9",
+        "H_4CB79C3F386A43C883463C2F44",
+        "H_004D8F2994DD43D1A2F418386F",
+        "H_1B2F6A143A9E492DBA2A246473",
+        "H_C9C72BEF81D84D44B8F4A21EA6",
+        "H_D87EA645288648BA82AF01F8E6",
+        "H_1AD2E9632F2C494B9FBA1BFDB1",
+        "H_6CA20375669E46A596BE3866A2",
+        "H_1B4FBE6B18404FD795AA211BA6",
+        "H_4AF088F48DFD4BFA88FD254F28",
+        "H_57A51B8D5D024A1ABC9736CE63",
+        "H_02FEFD347E114E1E979C9589AF",
+        "H_14FF17559BF1415B9F0007905D",
+        "H_076F5EC8768049A3A3917ABB1D",
+        "H_3789CE3F23914775836A360BA3",
+        "H_1251ED2287FB47B6BDED9292D1",
+        "H_20765D530DD84E7A8D59F277CB",
+        "H_108B10FED8E24D248155616659",
+        "H_FBCF449DEB7E4FF380E96780D6",
+        "H_C0BEAB6834F44E5CBE05F9CBD0",
+        "H_08C1576EE4824ED8BE0CDD56DF",
+        "H_582731EF84014F338DD9B04458",
+        "H_6F7D6D7E28DD423B9F40AF8218",
+        "H_366610E8AA084C77844EFFBAAD",
+        "H_1E8A5587D5104804BF2EC4FCA4",
+        "H_05248294EEDD496B9A57C50C91",
+        "H_B0A88B69CC0047CE8BF9D87EB6",
+        "H_8525D185BB224B8C84DA85BCE1",
+        "H_05E3463E093546EF9631C3773D",
+        "H_2724BCA646E74C1694B53CF8DB",
+        "H_01ADBFD09A994DCBA4FDF6B868",
+        "H_401DBF6BDB854433832D909892",
+        "H005",
+        "H_62AD7AADA05F468BAE0F91F5CC",
+        "H_8ECAE760F5A5413D8013602429",
+        "H_265A5682E86D43F0B813544099",
+        "H_CC076DB8C16B4C058C3009E25A",
+        "H_1094F237782E4FC9A7D58CA44E"
+      ],
+      "quote_unmatched": [
+        "H_A1A5AA5EE13A3444450315AB",
+        "H_ACAF3A4D922349BEB0002C5163",
+        "H_D56479550E9846F3B2C831DB7A",
+        "H_CE94D2ACC8C544BCA0FB0AA026",
+        "H_E77D3F1B02494DD3B47CB196B7",
+        "H_5F55461A7E7E4BF5A2943EA3C6",
+        "H_D6C532598F1941618B4A868C74",
+        "H_AA6382B9890B42B1B70DC3EA3B",
+        "H_B552B08A4FD28A8770CDC2BB",
+        "H_68196C0A0FBDDAF0354E0F71",
+        "H_168C8D063803453AA35537D3C2",
+        "H_417B030F12A14923A978E4DAB2",
+        "H_6459FF72A542499FBB3E0F70FC",
+        "H_548F812A3B914C9EA2A02243E5",
+        "H_6B9EB3C3F3A144E4962ACC3FB9",
+        "H_4CB79C3F386A43C883463C2F44",
+        "H_004D8F2994DD43D1A2F418386F",
+        "H_1B2F6A143A9E492DBA2A246473",
+        "H_C9C72BEF81D84D44B8F4A21EA6",
+        "H_1AD2E9632F2C494B9FBA1BFDB1",
+        "H_6CA20375669E46A596BE3866A2",
+        "H_57A51B8D5D024A1ABC9736CE63",
+        "H_3789CE3F23914775836A360BA3",
+        "H_FBCF449DEB7E4FF380E96780D6",
+        "H_582731EF84014F338DD9B04458",
+        "H_366610E8AA084C77844EFFBAAD",
+        "H_CC076DB8C16B4C058C3009E25A",
+        "H_1094F237782E4FC9A7D58CA44E"
+      ],
+      "no_active_direct_link": [
+        "H078",
+        "H_528C6C8455A14D97ADEF524650",
+        "H_B6EF072262744FF68DE47B0341",
+        "H_0974E0DD140546B9943A71BC4A",
+        "H_052508D94A934DA88563BD06C0",
+        "H_0B44B29CA3794AEF82EC7CE4F5",
+        "H_E8BA94B23294445698371ADAA4",
+        "H_DE7BC85739664C5EB603237A62",
+        "H_D87EA645288648BA82AF01F8E6",
+        "H_1B4FBE6B18404FD795AA211BA6",
+        "H_4AF088F48DFD4BFA88FD254F28",
+        "H_02FEFD347E114E1E979C9589AF",
+        "H_14FF17559BF1415B9F0007905D",
+        "H_076F5EC8768049A3A3917ABB1D",
+        "H_1251ED2287FB47B6BDED9292D1",
+        "H_20765D530DD84E7A8D59F277CB",
+        "H_108B10FED8E24D248155616659",
+        "H_C0BEAB6834F44E5CBE05F9CBD0",
+        "H_08C1576EE4824ED8BE0CDD56DF",
+        "H_6F7D6D7E28DD423B9F40AF8218",
+        "H_1E8A5587D5104804BF2EC4FCA4",
+        "H_05248294EEDD496B9A57C50C91",
+        "H_B0A88B69CC0047CE8BF9D87EB6",
+        "H_8525D185BB224B8C84DA85BCE1",
+        "H_05E3463E093546EF9631C3773D",
+        "H_2724BCA646E74C1694B53CF8DB",
+        "H_01ADBFD09A994DCBA4FDF6B868",
+        "H_401DBF6BDB854433832D909892",
+        "H005",
+        "H_62AD7AADA05F468BAE0F91F5CC",
+        "H_8ECAE760F5A5413D8013602429",
+        "H_265A5682E86D43F0B813544099"
+      ],
+      "not_publishable": [
+        "H_AA6382B9890B42B1B70DC3EA3B",
+        "H_1F19FA1B951D46C1971E9B59B4",
+        "H_3A5DEC6C74244A949CE3BC9A42"
+      ],
+      "basis_blank": [
+        "H_1F19FA1B951D46C1971E9B59B4",
+        "H_3A5DEC6C74244A949CE3BC9A42"
+      ]
+    }
+  },
+  "items": [
+    {
+      "order": 4,
+      "hazardId": "H_A1A5AA5EE13A3444450315AB",
+      "title": "存在化学性灼伤风险的作业点未就近设置冲淋、洗眼设施",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "专项安全与EHS",
+        "place": "通用场所",
+        "description": "在可能发生化学性灼伤，或有毒物质可能经皮肤、黏膜吸收造成急性中毒的作业点，未就近设置能够持续供水的冲淋、洗眼等现场应急处理设施。",
+        "measures": "在可能发生化学性灼伤或急性中毒的作业点就近设置持续供水的冲淋、洗眼设施，保证通道无遮挡、标识清晰、随时可用；建立定期放水、检查和维护制度并形成记录。",
+        "conditions": "适用于有可能发生化学性灼伤，或有毒物质可能经皮肤、黏膜吸收引起急性中毒的工作地点或车间。",
+        "directBasis": "《工业企业设计卫生标准》GBZ 1-2010 第8.3、8.3.2条",
+        "quote": "8.3 有可能发生化学性灼伤及经皮肤粘膜吸收引起急性中毒的工作地点或车间，应根据可能产生或存在的职业性有害因素及其危害特点，在工作地点就近设置现场应急处理设施。急救设施应包括：不断水的冲淋、洗眼设施……\n8.3.2 冲淋、洗眼设施应靠近可能发生相应事故的工作地点。",
+        "supplementalBasis": null,
+        "note": "【V4-split-20260910】由 H_CB180AFAA53646A7A9A5F9D350 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《污水处理设备安全技术规范》(GB/T28742-2012) 第4.27条\n\n【ChatGPT专业复核 2026-09-11】原《安全生产法》第45条仅针对劳动防护用品，不能直接支撑洗眼、冲淋设施设置要求，已改为GBZ 1-2010第8.3、8.3.2条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "加药设施旁未设置洗眼（喷淋）等防护设施",
+          "description": "加药设施旁边未设置洗眼液/洗眼喷淋等防护设施",
+          "measures": "在加药设施旁设置洗眼器、喷淋等防护设施并保持可用。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "存在化学性灼伤风险的作业点未就近设置冲淋、洗眼设施",
+          "description": "在可能发生化学性灼伤，或有毒物质可能经皮肤、黏膜吸收造成急性中毒的作业点，未就近设置能够持续供水的冲淋、洗眼等现场应急处理设施。",
+          "measures": "在可能发生化学性灼伤或急性中毒的作业点就近设置持续供水的冲淋、洗眼设施，保证通道无遮挡、标识清晰、随时可用；建立定期放水、检查和维护制度并形成记录。",
+          "conditions": "适用于有可能发生化学性灼伤，或有毒物质可能经皮肤、黏膜吸收引起急性中毒的工作地点或车间。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_0eb2f29cb7737c40d78e2894",
+          "clauseId": "C016",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C016",
+          "articlePath": "第四十五条",
+          "quote": "第四十五条　生产经营单位必须为从业人员提供符合国家标准或者行业标准的劳动防护用品，并监督、教育从业人员按照使用规则佩戴、使用。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 5,
+      "hazardId": "H078",
+      "title": "危险废物产生单位未对相关工作人员开展培训",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "专项安全与EHS",
+        "place": "危险废物贮存场所、工贸企业",
+        "description": "危险废物产生单位未对本单位工作人员开展危险废物相关培训。",
+        "measures": "针对危险废物分类、收集、包装、标识、贮存、转移和应急处置要求开展岗位培训，并保留人员、内容和考核记录。",
+        "conditions": "适用于存在危险废物产生单位未对相关工作人员开展培训相关风险的场所和作业活动。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第二十八条（兜底）",
+        "quote": "第二十八条　生产经营单位应当对从业人员进行安全生产教育和培训，保证从业人员具备必要的安全生产知识，熟悉有关的安全生产规章制度和安全操作规程，掌握本岗位的安全操作技能，了解事故应急处理措施，知悉自身在安全生产方面的权利和义务。未经安全生产教育和培训合格的从业人员，不得上岗作业。\n生产经营单位使用被派遣劳动者的，应当将被派遣劳动者纳入本单位从业人员统一管理，对被派遣劳动者进行岗位安全操作规程和安全操作技能的教育和培训。劳务派遣单位应当对被派遣劳动者进行必要的安全生产教育和培训。\n生产经营单位接收中等职业学校、高等学校学生实习的，应当对实习学生进行相应的安全生产教育和培训，提供必要的劳动防护用品。学校应当协助生产经营单位对实习学生进行安全生产教育和培训。\n生产经营单位应当建立安全生产教育和培训档案，如实记录安全生产教育和培训的时间、内容、参加人员以及考核结果等情况。",
+        "supplementalBasis": null,
+        "note": "依据现行有效法律、法规、规章或标准于2026-09-08完成复核。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。\n\n2026-09-10专业终审：现行全文库内未检索到针对危险废物产生单位培训义务的直接条款——《危险废物收集、贮存、运输技术规范》4.3 的培训要求仅适用于危险废物收集、贮存、运输单位，与产生单位的监管对象不一致，不予采用；本条以《中华人民共和国安全生产法》第二十八条通用的安全生产教育培训义务作为兜底依据，该条现行有效。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。"
+      },
+      "proposedCoreChange": null,
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 15,
+      "hazardId": "H_528C6C8455A14D97ADEF524650",
+      "title": "未按优先顺序采取降噪措施",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "专项安全与EHS",
+        "place": "通用场所",
+        "description": "对存在较高噪声暴露的设备或作业环节，未按照源头削减、工程控制、管理控制和个体防护的优先顺序采取有效降噪措施，人员噪声暴露控制不足。",
+        "measures": "优先从设备选型、工艺和声源控制入手降低噪声；无法满足要求时增设隔声、吸声、消声、减振等工程措施，并结合暴露时间管理和听力防护用品控制剩余风险；整改后开展噪声检测评价。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条（兜底）",
+        "quote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句（含条款列举），已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《纺织机械 安全 要求 第 1 部分: 通用要求》(GB/T 17780. 1-2012)第 5.4.7 条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "未依次采取以下措施减少噪声:a)通过设计减少噪声源在机器设计的初始阶段,,未全面考虑由于使用各种零部件可能产生的噪声,以及避免、消除或在机器设计的初始阶段,,未全面考虑由于使用各种零部件可能产生的噪声,以",
+          "measures": "设备设计时多采用降噪 封闭式罩壳等;制造商 提供采取技术措施降低 噪声后残余风险的资 料。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "对存在较高噪声暴露的设备或作业环节，未按照源头削减、工程控制、管理控制和个体防护的优先顺序采取有效降噪措施，人员噪声暴露控制不足。",
+          "measures": "优先从设备选型、工艺和声源控制入手降低噪声；无法满足要求时增设隔声、吸声、消声、减振等工程措施，并结合暴露时间管理和听力防护用品控制剩余风险；整改后开展噪声检测评价。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 20,
+      "hazardId": "H_ACAF3A4D922349BEB0002C5163",
+      "title": "人行道、车行道布置或间距妨碍人员作业",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "作业安全与个体防护",
+        "place": "通用场所",
+        "description": "作业区人行道、车行道的布置或间隔距离不合理，与设备、物料或辅助设施布置相互影响，妨碍人员正常作业、通行或压缩必要的安全活动空间。",
+        "measures": "重新组织作业区布局，调整设备、工机具、物料以及人行道、车行道的位置和间距，保证人员具有足够的安全活动空间且不妨碍正常作业、通行和应急避险。",
+        "conditions": "适用于生产作业区设备设施、物料和人员/车辆通行路线的布置与组织。",
+        "directBasis": "《生产过程安全卫生要求总则》GB/T 12801-2008 第5.7.5条a)",
+        "quote": "5.7.5 a) 作业区的布置应保证人员有足够的安全活动空间，设备、工机具、辅助设施的布置，生产物料、产品和剩余物料的堆放，人行道、车行道的布置和间隔距离，都不应妨碍人员工作和造成危害。",
+        "supplementalBasis": null,
+        "note": "原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》第5.7.5条a\n\n【ChatGPT专业复核 2026-09-11】按原始conditions所指GB/T 12801-2008第5.7.5条a)恢复直接技术依据；该标准截至2026-09-11仍为现行，GB 12801-2025将于2026-10-01实施。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "人行道、车行道的布置或间距妨碍人员作业",
+          "description": "作业区的布置,未保证人员有足够的安全活动空间。设备、工机具、辅助设施的布置,生产物料、产品和剩余物料的堆放,人行道、车行道的布置和间隔距离,都不应妨碍人员工作和造成危害",
+          "measures": "作业区的布置能保证人员的安全活动空间。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "人行道、车行道布置或间距妨碍人员作业",
+          "description": "作业区人行道、车行道的布置或间隔距离不合理，与设备、物料或辅助设施布置相互影响，妨碍人员正常作业、通行或压缩必要的安全活动空间。",
+          "measures": "重新组织作业区布局，调整设备、工机具、物料以及人行道、车行道的位置和间距，保证人员具有足够的安全活动空间且不妨碍正常作业、通行和应急避险。",
+          "conditions": "适用于生产作业区设备设施、物料和人员/车辆通行路线的布置与组织。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_4f76466df869107acd974e3d",
+          "clauseId": "C004",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C004",
+          "articlePath": "第四十二条第二款",
+          "quote": "生产经营场所和员工宿舍应当设有符合紧急疏散要求、标志明显、保持畅通的出口、疏散通道。禁止占用、锁闭、封堵生产经营场所或者员工宿舍的出口、疏散通道。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 22,
+      "hazardId": "H_D56479550E9846F3B2C831DB7A",
+      "title": "作业区未留足人员安全活动空间",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "作业安全与个体防护",
+        "place": "通用场所",
+        "description": "作业区设备、工机具、辅助设施、物料以及人行道、车行道等布置不合理，未为人员操作、通行和避险留出足够的安全活动空间。",
+        "measures": "重新组织作业区布局，调整设备、工机具、物料以及人行道、车行道的位置和间距，保证人员具有足够的安全活动空间且不妨碍正常作业、通行和应急避险。",
+        "conditions": "适用于生产作业区设备设施、物料和人员/车辆通行路线的布置与组织。",
+        "directBasis": "《生产过程安全卫生要求总则》GB/T 12801-2008 第5.7.5条a)",
+        "quote": "5.7.5 a) 作业区的布置应保证人员有足够的安全活动空间，设备、工机具、辅助设施的布置，生产物料、产品和剩余物料的堆放，人行道、车行道的布置和间隔距离，都不应妨碍人员工作和造成危害。",
+        "supplementalBasis": null,
+        "note": "原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》第5.7.5条a\n\n【ChatGPT专业复核 2026-09-11】按原始conditions所指GB/T 12801-2008第5.7.5条a)恢复直接技术依据；该标准截至2026-09-11仍为现行，GB 12801-2025将于2026-10-01实施。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "作业区的布置,未保证人员有足够的安全活动空间。设备、工机具、辅助设施的布置,生产物料、产品和剩余物料的堆放,人行道、车行道的布置和间隔距离,都不应妨碍人员工作和造成危害",
+          "measures": "作业区的布置能保证人员的安全活动空间。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "作业区设备、工机具、辅助设施、物料以及人行道、车行道等布置不合理，未为人员操作、通行和避险留出足够的安全活动空间。",
+          "measures": "重新组织作业区布局，调整设备、工机具、物料以及人行道、车行道的位置和间距，保证人员具有足够的安全活动空间且不妨碍正常作业、通行和应急避险。",
+          "conditions": "适用于生产作业区设备设施、物料和人员/车辆通行路线的布置与组织。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_cfa7a5c821771401d79d4c2d",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 32,
+      "hazardId": "H_CE94D2ACC8C544BCA0FB0AA026",
+      "title": "存在高处坠落危险的操作、检查或维修部位未设置安全防护设施",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "作业安全与个体防护",
+        "place": "通用场所",
+        "description": "设备、设施或管线上存在需要人员操作、检查、维修且可能发生高处坠落的部位，未按作业需要配置扶梯、平台、防护栏杆或人员系挂等安全设施。",
+        "measures": "对存在高处坠落危险的操作、检查和维修部位逐点辨识，按作业高度、频次和方式设置扶梯、平台、防护栏杆及人员系挂装置等；整改后检查其尺寸、强度、固定状态和可达性。",
+        "conditions": "适用于设备、设施、管线上需要人员操作、检查或维修且存在高处坠落危险的部位。",
+        "directBasis": "《生产过程安全卫生要求总则》GB/T 12801-2008 第5.7.1条c)",
+        "quote": "5.7.1 c) 在设备、设施、管线上需要人员操作、检查和维修，并有发生高处坠落危险的部位，应配置扶梯、平台、围栏和系挂装置等附属设施。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求 总则》(GBT12801-2008) 第 5.7.1 b)条\n\n【ChatGPT专业复核 2026-09-11】原《用电安全导则》5.1.1与高处防护事项不匹配，已按原始conditions恢复GB/T 12801-2008第5.7.1条c)。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "有高处坠落危险的作业部位未配置扶梯平台、围栏和系挂装置",
+          "description": "在设备、设施、管线上需要人员操作、检查和维修,并有发生高处坠落危险的部位,未配置扶梯平台、围栏和系挂装置等附属设施",
+          "measures": "在设备、设施、管线上有高处坠落危险的作业部位配置扶梯平台、围栏和系挂装置。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "存在高处坠落危险的操作、检查或维修部位未设置安全防护设施",
+          "description": "设备、设施或管线上存在需要人员操作、检查、维修且可能发生高处坠落的部位，未按作业需要配置扶梯、平台、防护栏杆或人员系挂等安全设施。",
+          "measures": "对存在高处坠落危险的操作、检查和维修部位逐点辨识，按作业高度、频次和方式设置扶梯、平台、防护栏杆及人员系挂装置等；整改后检查其尺寸、强度、固定状态和可达性。",
+          "conditions": "适用于设备、设施、管线上需要人员操作、检查或维修且存在高处坠落危险的部位。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_cf21263caeb1040e4ceae8fb",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 33,
+      "hazardId": "H_E77D3F1B02494DD3B47CB196B7",
+      "title": "焊接、切割、钎焊及相关作业未在足够通风条件下进行",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "作业安全与个体防护",
+        "place": "通用场所",
+        "description": "焊接、切割、钎焊及相关操作区域自然通风或机械通风能力不足，不能有效控制焊接烟尘、烟气等污染物，作业人员呼吸环境不能得到有效保障。",
+        "measures": "根据焊接、切割、钎焊作业量和污染物产生情况配置足够的自然或机械通风；必要时设置局部排风并优化吸风位置，整改后确认作业区域污染物控制和通风效果满足要求。",
+        "conditions": "适用于焊接、切割、钎焊及有关操作。",
+        "directBasis": "《焊接与切割安全》GB 9448-2025 第6.1条",
+        "quote": "6.1 充分通风：为了保证作业人员在无害的呼吸氛围内工作，所有焊接、切割、钎焊及有关操作应在足够的通风条件下（包括自然通风或机械通风）进行。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《焊接与切割安全》(GB9448-2025)6.1\n\n【ChatGPT专业复核 2026-09-11】原GB 6514-2023条款为涂装调漆要求，与焊接通风不匹配；GB 9448-2025已于2026-08-01实施。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "焊接切割钎焊作业未在足够通风条件下进行",
+          "description": "为了保证作业人员在无害的呼吸氛围内工作,所有焊接、切割、钎焊及有关操作,未在足够的通风条件下(包括自然通风或机械通风)进行",
+          "measures": "在足够的通风条件（自然通风或机械通风）下进行焊接、切割、钎焊作业。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "焊接、切割、钎焊及相关作业未在足够通风条件下进行",
+          "description": "焊接、切割、钎焊及相关操作区域自然通风或机械通风能力不足，不能有效控制焊接烟尘、烟气等污染物，作业人员呼吸环境不能得到有效保障。",
+          "measures": "根据焊接、切割、钎焊作业量和污染物产生情况配置足够的自然或机械通风；必要时设置局部排风并优化吸风位置，整改后确认作业区域污染物控制和通风效果满足要求。",
+          "conditions": "适用于焊接、切割、钎焊及有关操作。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_55bf31c85fd9815351b957b8",
+          "clauseId": "C_e58389b89299307a0d45042d",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_e58389b89299307a0d45042d",
+          "articlePath": "6.2.2.1",
+          "quote": "调配涂料应在调漆室内进行。",
+          "lifecycle": "active",
+          "sourceUrl": "https://xcoss.henan.gov.cn/typtfile/20250317/cebb519d8cd04b12a91ffd200d4730bc.pdf",
+          "lawVersionId": "LV_STD_GB6514",
+          "lawVersion": {
+            "officialName": "涂装作业安全规程 涂漆工艺安全及其通风",
+            "documentNumber": "GB 6514-2023",
+            "validityStatus": "active",
+            "effectiveDate": "2024-10-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=36BD8DC28F82382EA5C25872C5DAC273"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 38,
+      "hazardId": "H_5F55461A7E7E4BF5A2943EA3C6",
+      "title": "设备操作位置不安全可靠、工作空间不足或危险作业点无退避空间",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "作业安全与个体防护",
+        "place": "通用场所",
+        "description": "生产设备供人员操作的工作位置安全性或人机条件不足，作业人员身体活动空间受限，且危险作业点未留出必要的安全退避空间。",
+        "measures": "依据设备操作任务和人体工效要求调整操作位置及周边布置，保证工作位置安全可靠、人员身体各部位可正常活动，并在危险作业点留出足够的安全退避空间；整改后进行现场验证。",
+        "conditions": "适用于生产设备上供人员操作、观察或控制的工作位置。",
+        "directBasis": "《生产设备安全卫生设计总则》GB 5083-2023 第5.7.1条",
+        "quote": "5.7.1 操作位置：生产设备上供人员作业的操作位置应安全可靠，并应满足人机交互功能的要求。其工作空间应保证作业人员的身体各部位在作业中可正常活动。危险作业点应留有安全退避空间。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《生产设备安全卫生设计总则》GB5083-2023第5.7.1条\n\n【ChatGPT专业复核 2026-09-11】原《用电安全导则》5.1.1与设备操作位置要求不匹配，已改为GB 5083-2023第5.7.1条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "设备上供人员作业的操作位置,未安全可靠,并未满足人机交互功能的要求。其工作空间,未保证作业人员的身体各部位在作业中可正常活动。危险作业点,未留有安全退避空间",
+          "measures": "生产设备上供人员作业的工作位置能保证操作人员的头、臂、手、腿、足有充分的活动余地,符合安全生产的要求",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "生产设备供人员操作的工作位置安全性或人机条件不足，作业人员身体活动空间受限，且危险作业点未留出必要的安全退避空间。",
+          "measures": "依据设备操作任务和人体工效要求调整操作位置及周边布置，保证工作位置安全可靠、人员身体各部位可正常活动，并在危险作业点留出足够的安全退避空间；整改后进行现场验证。",
+          "conditions": "适用于生产设备上供人员操作、观察或控制的工作位置。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_5283bed23590eec026ac30ac",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 39,
+      "hazardId": "H_D6C532598F1941618B4A868C74",
+      "title": "设备操作位置不安全可靠或人员活动空间不足",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "作业安全与个体防护",
+        "place": "通用场所",
+        "description": "生产设备供人员作业的操作位置不安全可靠，或其工作空间不足以保证作业人员身体各部位在操作过程中正常活动。",
+        "measures": "结合设备操作动作、人员体位及检维修需要重新核查操作位置，调整设备、操作台和周边障碍物，保证人员正常活动和安全操作；涉及危险作业点的，同时留足安全退避空间。",
+        "conditions": "适用于生产设备上供人员作业的操作位置。",
+        "directBasis": "《生产设备安全卫生设计总则》GB 5083-2023 第5.7.1条",
+        "quote": "5.7.1 操作位置：生产设备上供人员作业的操作位置应安全可靠，并应满足人机交互功能的要求。其工作空间应保证作业人员的身体各部位在作业中可正常活动。危险作业点应留有安全退避空间。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句（含条款列举），已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《生产设备安全卫生设计总则》第5.7条\n\n【ChatGPT专业复核 2026-09-11】原《用电安全导则》5.1.1与设备操作位置要求不匹配，已改为GB 5083-2023第5.7.1条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "设备操作位置不安全可靠或工作空间不足",
+          "description": "设备上供人员作业的工作位置,未安全可靠。其工作空间,未保证操作人员的头、臂、手、腿、足有充分的活动余地。危险作业点,未留有足够的退避空间",
+          "measures": "生产设备上供人员作业的工作位置能保证操作人员的头、臂、手、腿、足有充分的活动余地,符合安全生产的要求。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "设备操作位置不安全可靠或人员活动空间不足",
+          "description": "生产设备供人员作业的操作位置不安全可靠，或其工作空间不足以保证作业人员身体各部位在操作过程中正常活动。",
+          "measures": "结合设备操作动作、人员体位及检维修需要重新核查操作位置，调整设备、操作台和周边障碍物，保证人员正常活动和安全操作；涉及危险作业点的，同时留足安全退避空间。",
+          "conditions": "适用于生产设备上供人员作业的操作位置。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_11af89c62903901bee435b62",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 44,
+      "hazardId": "H_AA6382B9890B42B1B70DC3EA3B",
+      "title": "机械企业使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+      "publishDecision": "否",
+      "flags": [
+        "not_publishable",
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "危险化学品与危险物质",
+        "place": "通用场所",
+        "description": "机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面时，未采取有效通风、隔离、排放等措施，不能防止可燃气体在周边密闭或半密闭空间内积聚。",
+        "measures": "停止在不具备安全条件的区域使用可燃性有机溶剂清洗；辨识周边密闭、半密闭空间和可燃气体积聚路径，采取持续有效通风、隔离或其他防积聚措施，并在恢复作业前确认可燃气体风险得到控制。",
+        "conditions": "适用于机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面的作业。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第七条第（六）项",
+        "quote": "第七条 机械企业有下列情形之一的，应当判定为重大事故隐患：……（六）使用可燃性有机溶剂清洗设备设施、工装器具、地面时，未采取防止可燃气体在周边密闭或者半密闭空间内积聚措施的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(安监总管四[2017]129号)\n\n【ChatGPT专业复核 2026-09-11】按现行应急管理部令第10号第七条第（六）项纠正；该情形属于机械企业重大事故隐患判定项。\n\n【重复处理】与H_582731EF84014F338DD9B04458实质重复，本行保留迁移追踪但不再发布。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "使用易燃易爆稀释剂清洗时未及时清除地沟地坑内集聚的可燃气体",
+          "description": "易燃易爆稀释剂(如天拿水)清洗设备设施,未采取有效措施及时清除集聚在地沟、地坑等有限空间内的可燃气体",
+          "measures": "使用乙醇、柴油等擦拭设备未排到有限空间内",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "机械企业使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+          "description": "机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面时，未采取有效通风、隔离、排放等措施，不能防止可燃气体在周边密闭或半密闭空间内积聚。",
+          "measures": "停止在不具备安全条件的区域使用可燃性有机溶剂清洗；辨识周边密闭、半密闭空间和可燃气体积聚路径，采取持续有效通风、隔离或其他防积聚措施，并在恢复作业前确认可燃气体风险得到控制。",
+          "conditions": "适用于机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面的作业。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_b644067503c36dbfdc056ac3",
+          "clauseId": "C_e58389b89299307a0d45042d",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_e58389b89299307a0d45042d",
+          "articlePath": "6.2.2.1",
+          "quote": "调配涂料应在调漆室内进行。",
+          "lifecycle": "active",
+          "sourceUrl": "https://xcoss.henan.gov.cn/typtfile/20250317/cebb519d8cd04b12a91ffd200d4730bc.pdf",
+          "lawVersionId": "LV_STD_GB6514",
+          "lawVersion": {
+            "officialName": "涂装作业安全规程 涂漆工艺安全及其通风",
+            "documentNumber": "GB 6514-2023",
+            "validityStatus": "active",
+            "effectiveDate": "2024-10-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=36BD8DC28F82382EA5C25872C5DAC273"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 80,
+      "hazardId": "H_B552B08A4FD28A8770CDC2BB",
+      "title": "涉氨检修、抢修作业未按要求配备正压式空气呼吸器",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "危险化学品与危险物质",
+        "place": "通用场所",
+        "description": "涉及氨的检修、抢修作业未配备处于备用状态且能够正常使用的正压式空气呼吸器，发生泄漏或高浓度氨暴露时缺少有效的呼吸防护手段。",
+        "measures": "针对涉氨检修、抢修作业配备满足使用要求的正压式空气呼吸器，落实定点存放、定期检查、气瓶压力和面罩密封性确认；作业人员经培训并掌握正确佩戴使用方法后方可参与应急检修。",
+        "conditions": "适用于涉及重点监管危险化学品“氨”的检修、抢修等作业。",
+        "directBasis": "《首批重点监管的危险化学品安全措施和应急处置原则》安监总厅管三〔2011〕142号（氨—操作安全）",
+        "quote": "《首批重点监管的危险化学品安全措施和应急处置原则》“氨”操作安全提出：根据不同作业环境配备相应的氨气检测仪及防护装置；进行检修和抢修作业时，应携带氨气检测仪和正压式空气呼吸器。",
+        "supplementalBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第四十五条",
+        "note": "【V4-split-20260910】由 H_D68030A1FF76475CB16F6AF998 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《首批重点监管的危险化学品安全措施和应急处置原则》\n\n【ChatGPT专业复核 2026-09-11】将《安全生产法》第45条降为补充依据，直接技术要求改为安监总厅管三〔2011〕142号“氨”安全措施；该文件属于监管参考性安全措施，应注意与具体企业适用法规结合使用。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "进行检修和抢修作业时未携带正压式空气呼吸器",
+          "description": "进行检修和抢修作业时未携带正压式空气呼吸器。",
+          "measures": "检修抢修作业配备正压式空气呼吸器",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "涉氨检修、抢修作业未按要求配备正压式空气呼吸器",
+          "description": "涉及氨的检修、抢修作业未配备处于备用状态且能够正常使用的正压式空气呼吸器，发生泄漏或高浓度氨暴露时缺少有效的呼吸防护手段。",
+          "measures": "针对涉氨检修、抢修作业配备满足使用要求的正压式空气呼吸器，落实定点存放、定期检查、气瓶压力和面罩密封性确认；作业人员经培训并掌握正确佩戴使用方法后方可参与应急检修。",
+          "conditions": "适用于涉及重点监管危险化学品“氨”的检修、抢修等作业。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_444630456072b2ffd8a11a3d",
+          "clauseId": "C016",
+          "role": "direct",
+          "legacyRole": "直接依据",
+          "priority": 10,
+          "applicability": "C016：生产经营单位必须为从业人员提供符合国家标准或者行业标准的劳动防护用品，并监督、教育从业人员按照使用规则佩戴、使用。",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C016",
+          "articlePath": "第四十五条",
+          "quote": "第四十五条　生产经营单位必须为从业人员提供符合国家标准或者行业标准的劳动防护用品，并监督、教育从业人员按照使用规则佩戴、使用。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 81,
+      "hazardId": "H_68196C0A0FBDDAF0354E0F71",
+      "title": "涉氨检修、抢修作业未按要求配备氨气检测仪",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "危险化学品与危险物质",
+        "place": "通用场所",
+        "description": "涉及氨的检修、抢修作业未携带或未配备处于可用状态的氨气检测仪，无法及时识别作业环境中氨气浓度异常和泄漏风险。",
+        "measures": "为涉氨检修、抢修作业配备适用的氨气检测仪，按要求完成检定/校准、功能自检和电量检查；作业前、作业中按风险开展检测，并对报警值、检测记录和仪器维护实施管理。",
+        "conditions": "适用于涉及重点监管危险化学品“氨”的检修、抢修等作业。",
+        "directBasis": "《首批重点监管的危险化学品安全措施和应急处置原则》安监总厅管三〔2011〕142号（氨—操作安全）",
+        "quote": "《首批重点监管的危险化学品安全措施和应急处置原则》“氨”操作安全提出：根据不同作业环境配备相应的氨气检测仪及防护装置；进行检修和抢修作业时，应携带氨气检测仪和正压式空气呼吸器。",
+        "supplementalBasis": null,
+        "note": "【V4-split-20260910】由 H_D68030A1FF76475CB16F6AF998 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《首批重点监管的危险化学品安全措施和应急处置原则》\n\n【ChatGPT专业复核 2026-09-11】原《安全生产法》第45条仅针对劳动防护用品，不能直接支撑气体检测仪要求，已改为安监总厅管三〔2011〕142号“氨”安全措施。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "进行检修和抢修作业时未携带氨气检测仪（检测报警设备）",
+          "description": "进行检修和抢修作业时未携带氨气检测仪",
+          "measures": "检修和抢修作业时携带并正确使用氨气检测仪。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "涉氨检修、抢修作业未按要求配备氨气检测仪",
+          "description": "涉及氨的检修、抢修作业未携带或未配备处于可用状态的氨气检测仪，无法及时识别作业环境中氨气浓度异常和泄漏风险。",
+          "measures": "为涉氨检修、抢修作业配备适用的氨气检测仪，按要求完成检定/校准、功能自检和电量检查；作业前、作业中按风险开展检测，并对报警值、检测记录和仪器维护实施管理。",
+          "conditions": "适用于涉及重点监管危险化学品“氨”的检修、抢修等作业。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_db153548a936d82686dfc31a",
+          "clauseId": "C016",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C016",
+          "articlePath": "第四十五条",
+          "quote": "第四十五条　生产经营单位必须为从业人员提供符合国家标准或者行业标准的劳动防护用品，并监督、教育从业人员按照使用规则佩戴、使用。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 116,
+      "hazardId": "H_168C8D063803453AA35537D3C2",
+      "title": "潜在危险设备未按规定分散隔离并设置标志",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全标志",
+        "place": "通用场所",
+        "description": "具有潜在危险的设备与人员活动区域、其他设备或设施布置关系不合理，未采取必要的分散、隔离措施，或缺少相应的提示、标志和警告信号。",
+        "measures": "结合设备危险特性和人员活动范围重新核查布置，对潜在危险设备采取分散、隔离、防护等措施，并在必要位置设置清晰的提示、警示标志或警告信号；整改后复核安全距离和防护效果。",
+        "conditions": "适用于具有潜在危险的生产设备布置。",
+        "directBasis": "《生产过程安全卫生要求总则》GB/T 12801-2008 第5.7.2条",
+        "quote": "5.7.2 设备布置应结合生产工艺和安全要求进行；对于具有潜在危险的设备，应采取必要的分散、隔离等布置措施，并设置相应的提示、标志和警告信号。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句（含条款列举），已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求 总则》(GBT12801-2008) 第 5.7.2 条\n\n【ChatGPT专业复核 2026-09-11】原《用电安全导则》5.1.1与设备布置不匹配，按原始conditions改为GB/T 12801-2008第5.7.2条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "设备布置的原则:便于操作和维护;发生火灾或出现紧急情况时,便于人员撤离;尽量避免生产装置之间危害因素的相互影响,减小对人员的综合利用;布置具有潜在危险的设备时未根据有关规定进行分散和隔离,并设置必要的提示、标志和警告信号;对振动敏感的设备,应进行隔离或设置屏蔽、防护墙、减振设施等。",
+          "measures": "将具有潜在危险的设备按规定分散和隔离布置，并设置必要的提示、标志和警告信号。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "具有潜在危险的设备与人员活动区域、其他设备或设施布置关系不合理，未采取必要的分散、隔离措施，或缺少相应的提示、标志和警告信号。",
+          "measures": "结合设备危险特性和人员活动范围重新核查布置，对潜在危险设备采取分散、隔离、防护等措施，并在必要位置设置清晰的提示、警示标志或警告信号；整改后复核安全距离和防护效果。",
+          "conditions": "适用于具有潜在危险的生产设备布置。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_2fdf6a4e1f9cf94ffa8580e8",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 154,
+      "hazardId": "H_B6EF072262744FF68DE47B0341",
+      "title": "储气罐未装设安全阀或储气罐与供气总管之间未装设切断阀",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "压缩空气站储气罐未装设安全阀，或储气罐与供气总管之间未装设切断阀。",
+        "measures": "在储气罐上装设安全阀，并在储气罐与供气总管之间装设切断阀。",
+        "conditions": "适用于压缩空气站储气罐及其与供气总管之间的管路。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条（兜底）",
+        "quote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+        "supplementalBasis": null,
+        "note": "2026-09-10专业终审：原 V3 记录引用《压缩空气站设计规范》GB 50029 第3.0.18条，该标准尚未收录于现行全文库、条款原文未核实，故未登记为 direct 依据；本条以《中华人民共和国安全生产法》第三十六条关于安全设备应符合国家标准或行业标准的通用要求作为兜底依据，该专项标准入库并核实原文后应重新核定直接依据。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。"
+      },
+      "proposedCoreChange": null,
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 180,
+      "hazardId": "H_0974E0DD140546B9943A71BC4A",
+      "title": "危险性较大生产设备未由具备资质的单位设计制造和检验",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "危险性较大或重要关键性生产设备的设计、制造、检验单位资质条件不符合相应要求，设备源头安全质量和符合性缺少可靠保证。",
+        "measures": "核查相关生产设备的危险性、重要程度及设计、制造、检验单位资质；对不符合要求的，委托具备相应有效资质的单位开展设计复核、制造质量确认或检验，并完善技术档案。",
+        "conditions": "适用于危险性较大、重要的关键性生产设备。",
+        "directBasis": "《生产过程安全卫生要求总则》GB/T 12801-2008 第5.6.1条",
+        "quote": "5.6.1 应尽量选用自动化程度高的设备；危险性较大的、重要的关键性生产设备，应由具备有效资质的单位进行设计、制造和检验。",
+        "supplementalBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条",
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》GB/T12801-2008第5.6.3条\n\n【ChatGPT专业复核 2026-09-11】原《安全生产法》第36条只能一般性支撑安全设备符合标准要求，直接技术依据改为GB/T 12801-2008第5.6.1条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "未尽量选用自动化程度高的设备",
+          "measures": "委托具备有效资质的单位对危险性较大的生产设备进行设计、制造和检验。",
+          "conditions": "适用于生产设备的相关安全管理。"
+        },
+        "after": {
+          "description": "危险性较大或重要关键性生产设备的设计、制造、检验单位资质条件不符合相应要求，设备源头安全质量和符合性缺少可靠保证。",
+          "measures": "核查相关生产设备的危险性、重要程度及设计、制造、检验单位资质；对不符合要求的，委托具备相应有效资质的单位开展设计复核、制造质量确认或检验，并完善技术档案。",
+          "conditions": "适用于危险性较大、重要的关键性生产设备。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 208,
+      "hazardId": "H_052508D94A934DA88563BD06C0",
+      "title": "对生产中易产生静电的设备和管道未采取消除静电的措施",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "对生产中易产生静电的设备和管道未采取消除静电的措施。",
+        "measures": "对易产生静电的设备和管道设置防静电接地，并定期检测接地电阻。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《纺织工程设计防火规范》GB 50565-2010 第5.1.12条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "conditions"
+        ],
+        "before": {
+          "title": "对生产中易产生静电的设备和管道,未采取消除静电的措施",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "对生产中易产生静电的设备和管道未采取消除静电的措施",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 212,
+      "hazardId": "H_0B44B29CA3794AEF82EC7CE4F5",
+      "title": "工业企业选址未避开自然疫源地",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "工业企业选址未避开自然疫源地，存在传染病传播风险。",
+        "measures": "选址时避开自然疫源地；已建成的采取卫生防护与病媒生物防制措施。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第二十条（兜底）",
+        "quote": "第二十条　生产经营单位应当具备本法和有关法律、行政法规和国家标准或者行业标准规定的安全生产条件；不具备安全生产条件的，不得从事生产经营活动。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》 第5.1.2条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "conditions"
+        ],
+        "before": {
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 221,
+      "hazardId": "H_417B030F12A14923A978E4DAB2",
+      "title": "当废气产生点较多、彼此距离较远时未适当设多套收集系统",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "工业有机废气产生点数量较多且彼此距离较远，但仍采用单一或不合理的收集系统，造成局部收集能力不足、管路过长或废气不能有效收集。",
+        "measures": "根据废气产生点分布、距离、风量及污染物特性重新核算收集系统，对距离较远或相互影响明显的产生点合理分设多套收集系统，完成风量平衡和收集效果验证。",
+        "conditions": "适用于采用吸附法治理工业有机废气且废气产生点较多、彼此距离较远的工程。",
+        "directBasis": "《吸附法工业有机废气治理工程技术规范》HJ 2026-2013 第6.3.1.5条",
+        "quote": "6.3.1.5 当废气产生点较多、彼此距离较远时，应适当分设多套收集系统。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《吸附法工业有机废气治理工程技术规范》HJ2026-2013 6.3.1.5\n\n【ChatGPT专业复核 2026-09-11】原粉尘防爆条款与有机废气收集系统无关，已改为HJ 2026-2013第6.3.1.5条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "当废气产生点较多、彼此距离较远时,未适当设多套收集系统",
+          "description": "废气产生点较多且彼此距离较远时，未适当设置多套收集系统。",
+          "measures": "废气产生点较多且距离较远时，适当增设多套收集系统。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "当废气产生点较多、彼此距离较远时未适当设多套收集系统",
+          "description": "工业有机废气产生点数量较多且彼此距离较远，但仍采用单一或不合理的收集系统，造成局部收集能力不足、管路过长或废气不能有效收集。",
+          "measures": "根据废气产生点分布、距离、风量及污染物特性重新核算收集系统，对距离较远或相互影响明显的产生点合理分设多套收集系统，完成风量平衡和收集效果验证。",
+          "conditions": "适用于采用吸附法治理工业有机废气且废气产生点较多、彼此距离较远的工程。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_3edb0ab2183721d0ef498a2c",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 238,
+      "hazardId": "H_6459FF72A542499FBB3E0F70FC",
+      "title": "未定期检测过滤装置两端的压差",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "吸附法工业有机废气治理系统过滤装置未按要求定期检测进、出口压差，或未通过压差判断过滤阻力和滤料堵塞状态，运行维护缺少有效监控。",
+        "measures": "在过滤装置两端设置或确认压差测量条件，制定压差检测周期和控制值；定期检测并记录压差，达到规定阻力时及时清理或更换过滤材料。",
+        "conditions": "适用于吸附法工业有机废气治理工程的过滤装置。",
+        "directBasis": "《吸附法工业有机废气治理工程技术规范》HJ 2026-2013 第8.1.3条（结合第6.3.2.5条）",
+        "quote": "8.1.3 应定期检测过滤装置两端的压差。\n6.3.2.5 过滤装置两端应装设压差计，当过滤器的阻力超过规定值时应及时清理或更换过滤材料。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《吸附法工业有机废气治理工程技术规范》HJ2026-2013 8.1.3\n\n【ChatGPT专业复核 2026-09-11】原粉尘防爆条款与有机废气过滤装置压差检测无关，已改为HJ 2026-2013相关条款。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "未定期检测过滤装置两端压差，无法及时发现滤料堵塞或失效。",
+          "measures": "定期检测过滤装置两端压差，如实记录并及时更换失效滤料。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "吸附法工业有机废气治理系统过滤装置未按要求定期检测进、出口压差，或未通过压差判断过滤阻力和滤料堵塞状态，运行维护缺少有效监控。",
+          "measures": "在过滤装置两端设置或确认压差测量条件，制定压差检测周期和控制值；定期检测并记录压差，达到规定阻力时及时清理或更换过滤材料。",
+          "conditions": "适用于吸附法工业有机废气治理工程的过滤装置。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_81116356ee17230e73896618",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 241,
+      "hazardId": "H_E8BA94B23294445698371ADAA4",
+      "title": "未建立健全个体防护装备采购、验收、保管、发放、使用和报废管理制度",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "个体防护装备从采购、验收、保管、发放到使用、维护和报废的全生命周期管理制度不健全，无法保证装备选型合规、状态有效和发放使用可追溯。",
+        "measures": "建立个体防护装备全生命周期管理制度，明确需求识别、选型采购、到货验收、保管维护、发放领用、正确使用、定期检查和报废更新要求；建立台账并定期核查执行情况。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第四十五条（兜底）",
+        "quote": "第四十五条　生产经营单位必须为从业人员提供符合国家标准或者行业标准的劳动防护用品，并监督、教育从业人员按照使用规则佩戴、使用。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》GB/T 12801-2008 6.2.5"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "未建立健全劳动防护用品的采购、验收、报关、发放、使用、报废等管理制度",
+          "description": "未建立健全劳动防护用品的采购、验收、报关、发放、使用、报废等管理制度",
+          "measures": "建立劳动防护用品采购、验收、发放、使用、报废等管理制度。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "未建立健全个体防护装备采购、验收、保管、发放、使用和报废管理制度",
+          "description": "个体防护装备从采购、验收、保管、发放到使用、维护和报废的全生命周期管理制度不健全，无法保证装备选型合规、状态有效和发放使用可追溯。",
+          "measures": "建立个体防护装备全生命周期管理制度，明确需求识别、选型采购、到货验收、保管维护、发放领用、正确使用、定期检查和报废更新要求；建立台账并定期核查执行情况。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 261,
+      "hazardId": "H_DE7BC85739664C5EB603237A62",
+      "title": "气瓶使用中存在电焊引弧、未留剩余压力、未装防倒灌装置或对瓶体挖补焊接修理等违规行为",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "气瓶使用中在瓶体上电焊引弧；瓶内气体用尽未留剩余压力（永久气体气瓶剩余压力低于0.5MPa）；可能造成回流的场合使用设备未配置防止倒灌的装置；或气瓶投入使用后对瓶体进行挖补、焊接修理。",
+        "measures": "规范气瓶使用：禁止在瓶体上电焊引弧；瓶内气体不得用尽并留有剩余压力；可能回流场合配置防倒灌装置；不得对瓶体挖补、焊接修理。",
+        "conditions": "适用于气瓶的日常使用和管理。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条（兜底）",
+        "quote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+        "supplementalBasis": null,
+        "note": "2026-09-10专业终审：原 V3 记录引用《气瓶安全技术监察规程》，其现行版本为 TSG 23-2021《气瓶安全技术规程》；现行全文库内该规程为 OCR 转录本，上述各项条款未逐条核实原文，故未登记为 direct 依据。本条以《中华人民共和国安全生产法》第三十六条的通用要求作为兜底依据，待取得可靠条款原文后重新核定。\n\n2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。"
+      },
+      "proposedCoreChange": null,
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 268,
+      "hazardId": "H_548F812A3B914C9EA2A02243E5",
+      "title": "治理工程未先于产生废气的生产工艺设备开启、后于生产工艺设备停机，并实现联锁控制",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "工业有机废气治理设施与产废工艺设备启停顺序或联锁关系不符合要求，存在生产设备运行而治理设施未有效投入的可能。",
+        "measures": "调整废气治理设施与生产工艺设备的控制逻辑，使治理设施先于产废设备启动、后于产废设备停机，并实现可靠联锁控制；整改后进行启停和故障状态联锁测试并留存记录。",
+        "conditions": "适用于吸附法工业有机废气治理工程与产生废气的生产工艺设备。",
+        "directBasis": "《吸附法工业有机废气治理工程技术规范》HJ 2026-2013 第8.2.1条",
+        "quote": "8.2.1 治理工程应先于产生废气的生产工艺设备开启，后于生产工艺设备停机，并实现连锁控制。",
+        "supplementalBasis": null,
+        "note": "原 conditions 字段记录的引用依据为：依据：《吸附法工业有机废气治理工程技术规范》HJ2026-2013 第8.2.1条\n\n【ChatGPT专业复核 2026-09-11】原粉尘防爆条款与有机废气治理设施启停联锁无关，已改为HJ 2026-2013第8.2.1条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "治理工程,未先于产生废气的生产工艺设备开启、后于生产工艺设备停机,并实现联锁控制",
+          "description": "治理工程,未先于产生废气的生产工艺设备开启、后于生产工艺设备停机,并实现联锁控制",
+          "measures": "环保设备先于产生废气的生产工艺设备开启、后于生产工艺设备停机,并实现联锁控制。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "治理工程未先于产生废气的生产工艺设备开启、后于生产工艺设备停机，并实现联锁控制",
+          "description": "工业有机废气治理设施与产废工艺设备启停顺序或联锁关系不符合要求，存在生产设备运行而治理设施未有效投入的可能。",
+          "measures": "调整废气治理设施与生产工艺设备的控制逻辑，使治理设施先于产废设备启动、后于产废设备停机，并实现可靠联锁控制；整改后进行启停和故障状态联锁测试并留存记录。",
+          "conditions": "适用于吸附法工业有机废气治理工程与产生废气的生产工艺设备。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_a3795f08214f108768468c07",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 283,
+      "hazardId": "H_6B9EB3C3F3A144E4962ACC3FB9",
+      "title": "设备布置未便于操作和维护",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "生产设备的安装位置、周边间距或操作维护空间不合理，造成正常操作、巡检、维修或紧急处置不便。",
+        "measures": "结合生产工艺、设备操作面、检维修方式和人员通行需求调整设备布置，保证正常操作、维护和必要的紧急处置空间；整改后通过现场操作和检修可达性验证。",
+        "conditions": "适用于生产设备的平面和空间布置。",
+        "directBasis": "《生产过程安全卫生要求总则》GB/T 12801-2008 第5.7.2条",
+        "quote": "5.7.2 设备布置应结合生产工艺和安全要求进行，并应便于操作和维护。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》第5.7.2条\n\n【ChatGPT专业复核 2026-09-11】原《用电安全导则》5.1.1与一般生产设备布置不匹配，已改为GB/T 12801-2008第5.7.2条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "设备布置,未便于操作和维护",
+          "description": "设备布置未考虑操作和维护需要，检修空间不足。",
+          "measures": "调整设备布置，满足操作、维护和紧急情况下人员撤离的要求。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "设备布置未便于操作和维护",
+          "description": "生产设备的安装位置、周边间距或操作维护空间不合理，造成正常操作、巡检、维修或紧急处置不便。",
+          "measures": "结合生产工艺、设备操作面、检维修方式和人员通行需求调整设备布置，保证正常操作、维护和必要的紧急处置空间；整改后通过现场操作和检修可达性验证。",
+          "conditions": "适用于生产设备的平面和空间布置。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_5a60f8a615609010bad3ab82",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 289,
+      "hazardId": "H_4CB79C3F386A43C883463C2F44",
+      "title": "距下方相邻地板或地面1.2m及以上的平台、通道或工作面敞开边缘未设置防护栏杆",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "平台、通道或工作面敞开边缘距下方相邻地板或地面达到1.2m及以上，但未设置防护栏杆，人员存在从敞开边缘坠落的风险。",
+        "measures": "在符合第4.1.1条适用条件的敞开边缘设置符合GB 4053.3要求的工业防护栏杆；根据实际落差按标准确定栏杆高度、横杆及踢脚板等参数，安装后检查结构强度、固定和连续性。",
+        "conditions": "适用于距下方相邻地板或地面1.2m及以上的平台、通道或工作面的敞开边缘。",
+        "directBasis": "《固定式钢梯及平台安全要求 第3部分：工业防护栏杆及钢平台》GB 4053.3-2009 第4.1.1条",
+        "quote": "4.1.1 距下方相邻地板或地面1.2 m及以上的平台、通道或工作面的所有敞开边缘应设置防护栏杆。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《固定式钢梯及平台安全要求第3部分:工业防护栏杆及钢平台》(GB 4053.3-2009) 第4.1.1条\n\n【ChatGPT专业复核 2026-09-11】原《用电安全导则》5.1.1与工业平台敞开边缘防护不匹配，已恢复GB 4053.3-2009第4.1.1条；同时删除原整改措施中不分落差一律“1.05m”的过度固定写法。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "试验台敞开边缘未设置护栏",
+          "description": "试验台敞开边缘未设置护栏，人员存在坠落风险。",
+          "measures": "在试验台敞开临空边缘加装高度不低于1.05m的固定式防护栏杆，中部设横杆、底部设不低于100mm挡脚板，栏杆能承受规定水平载荷；验收合格后方可恢复使用。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "距下方相邻地板或地面1.2m及以上的平台、通道或工作面敞开边缘未设置防护栏杆",
+          "description": "平台、通道或工作面敞开边缘距下方相邻地板或地面达到1.2m及以上，但未设置防护栏杆，人员存在从敞开边缘坠落的风险。",
+          "measures": "在符合第4.1.1条适用条件的敞开边缘设置符合GB 4053.3要求的工业防护栏杆；根据实际落差按标准确定栏杆高度、横杆及踢脚板等参数，安装后检查结构强度、固定和连续性。",
+          "conditions": "适用于距下方相邻地板或地面1.2m及以上的平台、通道或工作面的敞开边缘。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_1962f11f06a0e741f520687d",
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_111e6a4f843a9547ddddf11b",
+          "articlePath": "5.1.1",
+          "quote": "一般条件下，用电产品的周围应留有足够的安全通道和工作空间，且不应堆放易燃、易爆和腐蚀性物品。",
+          "lifecycle": "active",
+          "sourceUrl": "http://gzhxaq.com/mydata/law/202501/13/17367292294270.htm",
+          "lawVersionId": "LV_STD_GBT13869_2017",
+          "lawVersion": {
+            "officialName": "用电安全导则",
+            "documentNumber": "GB/T 13869-2017",
+            "validityStatus": "active",
+            "effectiveDate": "2018-07-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 300,
+      "hazardId": "H_004D8F2994DD43D1A2F418386F",
+      "title": "门窗未向外开启",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "疏散门（窗）未向疏散方向开启，紧急情况下影响人员快速疏散。",
+        "measures": "按疏散要求将门（窗）调整为向疏散方向开启；涉及窗的部位按现行标准复核是否需要外开。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第四十二条第二款（兜底）",
+        "quote": "生产经营场所和员工宿舍应当设有符合紧急疏散要求、标志明显、保持畅通的出口、疏散通道。禁止占用、锁闭、封堵生产经营场所或者员工宿舍的出口、疏散通道。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "conditions"
+        ],
+        "before": {
+          "title": "门窗,未向外开启",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "门窗未向外开启",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_b9fd0e4e2b1e4dff0f6ddb74",
+          "clauseId": "C_GB50016_5_5_15",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_GB50016_5_5_15",
+          "articlePath": "第5.5.15条",
+          "quote": "公共建筑内房间的疏散门数量应经计算确定且不应少于2个。除托儿所、幼儿园、老年人建筑、医疗建筑、教学建筑内位于走道尽端的房间外，符合下列条件之一的房间可设置1个疏散门：1 位于两个安全出口之间或袋形走道两侧的房间，对于托儿所、幼儿园、老年人建筑，建筑面积不大于50m²；对于医疗建筑、教学建筑，建筑面积不大于75m²；对于其他建筑或场所，建筑面积不大于120m²。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2018/art_17339_235971.html",
+          "lawVersionId": "L025",
+          "lawVersion": {
+            "officialName": "建筑设计防火规范（2018年版）",
+            "documentNumber": "GB 50016-2014",
+            "validityStatus": "active",
+            "effectiveDate": "2018-10-01",
+            "endDate": "",
+            "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2018/art_17339_235971.html"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 301,
+      "hazardId": "H_1F19FA1B951D46C1971E9B59B4",
+      "title": "门窗未朝外开启",
+      "publishDecision": "否",
+      "flags": [
+        "not_publishable",
+        "basis_blank"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "在适用场所或作业条件下，存在“门窗未朝外开启”情形，相关设备设施、作业活动或管理状态未达到适用法规、标准规定的安全要求。可能形成责任、制度、风险管控或隐患治理方面的管理缺口。",
+        "measures": "根据适用法规、标准和现场风险对该项问题实施针对性整改，恢复设备设施、作业条件或管理措施的合规状态；整改完成后组织复查确认，并形成可追溯的检查、维护或管理记录。",
+        "conditions": "适用于生产过程的作业场所及其门窗、疏散通道设置（现场信息不足，具体场所类型与门的用途待确认）。",
+        "directBasis": null,
+        "quote": null,
+        "supplementalBasis": null,
+        "note": "2026-09-10 复核结论：本条现场信息不足——描述中的“门窗”混指门与窗，且未给出建筑或场所类型、使用人数、门的用途与位置，无法判断应适用哪一条具体强制要求。原 V3 conditions 中的《生产过程安全卫生要求总则》GB/T 12801-2008 第5.4.6条属历史线索；本轮已核验该条现行原文（“门窗应向外开启”），但该标准本身有效期至 2026-09-30、新版 GB 12801-2025 自 2026-10-01 实施，且 GB 55037-2022 第7.1.6条仅对列举场所的疏散出口门强制生效，均不足以在场景缺失时认定为直接依据。因此按 docs/reviews/H_1F19FA1B951D46C1971E9B59B4_DATA_QUALITY_REVIEW_20260910.md 的结论不强行补依据，本条保留 Stable ID 与历史记录、不进入公开投影；待恢复原始报告场景后，应重述为有明确适用边界的“疏散门开启方向不符合要求”类隐患再行核验。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures"
+        ],
+        "before": {
+          "title": "门窗,未朝外开启",
+          "description": "门窗,未朝外开启",
+          "measures": "该公司设置了安全通道,疏散指示标志等"
+        },
+        "after": {
+          "title": "门窗未朝外开启",
+          "description": "在适用场所或作业条件下，存在“门窗未朝外开启”情形，相关设备设施、作业活动或管理状态未达到适用法规、标准规定的安全要求。可能形成责任、制度、风险管控或隐患治理方面的管理缺口。",
+          "measures": "根据适用法规、标准和现场风险对该项问题实施针对性整改，恢复设备设施、作业条件或管理措施的合规状态；整改完成后组织复查确认，并形成可追溯的检查、维护或管理记录。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_41f1a6f6b7b47dabca06993e",
+          "clauseId": "C_GB50016_5_5_15",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_GB50016_5_5_15",
+          "articlePath": "第5.5.15条",
+          "quote": "公共建筑内房间的疏散门数量应经计算确定且不应少于2个。除托儿所、幼儿园、老年人建筑、医疗建筑、教学建筑内位于走道尽端的房间外，符合下列条件之一的房间可设置1个疏散门：1 位于两个安全出口之间或袋形走道两侧的房间，对于托儿所、幼儿园、老年人建筑，建筑面积不大于50m²；对于医疗建筑、教学建筑，建筑面积不大于75m²；对于其他建筑或场所，建筑面积不大于120m²。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2018/art_17339_235971.html",
+          "lawVersionId": "L025",
+          "lawVersion": {
+            "officialName": "建筑设计防火规范（2018年版）",
+            "documentNumber": "GB 50016-2014",
+            "validityStatus": "active",
+            "effectiveDate": "2018-10-01",
+            "endDate": "",
+            "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2018/art_17339_235971.html"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 302,
+      "hazardId": "H_1B2F6A143A9E492DBA2A246473",
+      "title": "集气罩配置未与生产工艺协调一致或未利用主体集气系统收集",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "安全管理",
+        "place": "通用场所",
+        "description": "工业有机废气集气罩或收集方式与生产工艺不协调，未优先利用主体生产装置集气系统，或集气罩布置影响正常工艺操作、安装维护及有效收集。",
+        "measures": "结合产废点位置、废气逸散方向和工艺操作重新优化集气罩及收集管路；优先利用主体生产装置集气系统，在不影响工艺操作的前提下保证有效收集，并复核风量和收集效果。",
+        "conditions": "适用于采用吸附法治理工业有机废气的废气收集系统。",
+        "directBasis": "《吸附法工业有机废气治理工程技术规范》HJ 2026-2013 第6.3.1.2条",
+        "quote": "6.3.1.2 应尽可能利用主体生产装置本身的集气系统进行收集。集气罩的配置应与生产工艺协调一致，不影响工艺操作。在保证收集能力的前提下，应结构简单，便于安装和维护管理。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《吸附法工业有机废气治理工程技术规范》 HJ 2026—2013 第6.3.1.2条\n\n【ChatGPT专业复核 2026-09-11】原粉尘防爆条款与有机废气集气罩设计无关，已改为HJ 2026-2013第6.3.1.2条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "未尽可能利用主体生产装置本身的集气系统进行收集。集气罩的配置,未与生产工艺协调一致,不影响工艺操作。在保证收集能力的前提下,未结构简单,便于安装和维护管理",
+          "measures": "废气吸收系统与生产工艺协调一致,不影响工艺操作。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "工业有机废气集气罩或收集方式与生产工艺不协调，未优先利用主体生产装置集气系统，或集气罩布置影响正常工艺操作、安装维护及有效收集。",
+          "measures": "结合产废点位置、废气逸散方向和工艺操作重新优化集气罩及收集管路；优先利用主体生产装置集气系统，在不影响工艺操作的前提下保证有效收集，并复核风量和收集效果。",
+          "conditions": "适用于采用吸附法治理工业有机废气的废气收集系统。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_1b1b46d498e595ee9c240f9e",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 306,
+      "hazardId": "H_C9C72BEF81D84D44B8F4A21EA6",
+      "title": "金属冶炼企业主要负责人、安全生产管理人员未按规定经考核合格",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "金属冶炼企业主要负责人或安全生产管理人员未按照规定完成安全生产知识和管理能力考核并取得合格结果，属于现行重大事故隐患判定情形。",
+        "measures": "立即核查主要负责人、安全生产管理人员考核状态；未按规定考核合格的，按要求完成相应培训和考核，在满足法定要求前不得以不符合资格条件的状态履行相应岗位职责。",
+        "conditions": "适用于金属冶炼企业。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第三条第（三）项",
+        "quote": "第三条 工贸企业有下列情形之一的，应当判定为重大事故隐患：……（三）金属冶炼企业主要负责人、安全生产管理人员未按照规定经考核合格的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》(中华人民共和国应急管理部令第10号)第三条\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "三)金属冶炼企业主要负责人、安全生产管理人员未按照规定经考核合格的",
+          "description": "三)金属冶炼企业主要负责人、安全生产管理人员未按照规定经考核合格的",
+          "measures": "金属冶炼企业主要负责人、安全生产管理人员按规定经考核合格。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "金属冶炼企业主要负责人、安全生产管理人员未按规定经考核合格",
+          "description": "金属冶炼企业主要负责人或安全生产管理人员未按照规定完成安全生产知识和管理能力考核并取得合格结果，属于现行重大事故隐患判定情形。",
+          "measures": "立即核查主要负责人、安全生产管理人员考核状态；未按规定考核合格的，按要求完成相应培训和考核，在满足法定要求前不得以不符合资格条件的状态履行相应岗位职责。",
+          "conditions": "适用于金属冶炼企业。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_fc1f0ca7fa944f1e16dbe0ea",
+          "clauseId": "C020",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C020",
+          "articlePath": "第二十一条第（五）项",
+          "quote": "组织建立并落实安全风险分级管控和隐患排查治理双重预防工作机制，督促、检查本单位的安全生产工作，及时消除生产安全事故隐患；",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 313,
+      "hazardId": "H_D87EA645288648BA82AF01F8E6",
+      "title": "新组建单位未编制应急预案即开展生产经营活动",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "新组建生产经营单位已经开展或准备开展生产经营活动，但尚未根据本单位事故风险和组织体系编制相应的生产安全事故应急预案，事故应急准备缺少基础文件。",
+        "measures": "在开展相关生产经营活动前，根据事故风险和组织体系编制适用的生产安全事故应急预案，并按规定完成评审或论证、公布、培训、演练以及需要履行的备案等程序；形成持续修订和演练机制。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第八十一条（兜底）",
+        "quote": "第八十一条　生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《江苏省生产安 全事故应急预案 管理办法 》(苏 安 监 [2011] 190 号)第十四条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "新组建的生产经营单位在开展生产经营活动前,未编制有关应急预案,并在按照有关规定进行评审、备案、培训和演练后,方可进行生产经营活动",
+          "measures": "企业已编制应急预案,并 经过专家论证,专家意见 附件 18 ,应急演练情况见 附件 19",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "新组建生产经营单位已经开展或准备开展生产经营活动，但尚未根据本单位事故风险和组织体系编制相应的生产安全事故应急预案，事故应急准备缺少基础文件。",
+          "measures": "在开展相关生产经营活动前，根据事故风险和组织体系编制适用的生产安全事故应急预案，并按规定完成评审或论证、公布、培训、演练以及需要履行的备案等程序；形成持续修订和演练机制。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 314,
+      "hazardId": "H_1AD2E9632F2C494B9FBA1BFDB1",
+      "title": "日用玻璃制造企业玻璃窑炉冷却保护系统未设置监测报警装置",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "日用玻璃制造企业玻璃窑炉冷却保护系统未设置能够反映冷却保护状态的监测报警装置，不能及时发现冷却系统异常，属于重大事故隐患判定情形。",
+        "measures": "按设备和工艺要求为玻璃窑炉冷却保护系统设置有效的监测报警装置，合理确定监测参数和报警条件；安装后完成报警功能测试并建立日常检查维护制度。",
+        "conditions": "适用于日用玻璃制造企业玻璃窑炉冷却保护系统。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第八条第（五）项",
+        "quote": "第八条 轻工企业有下列情形之一的，应当判定为重大事故隐患：……（五）日用玻璃制造企业玻璃窑炉的冷却保护系统未设置监测报警装置的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(应急管理部令第10号)第八条:(五)\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "日用玻璃制造企业玻璃窑炉的冷却保护系统未设置监测报警装置的",
+          "description": "日用玻璃制造企业玻璃窑炉的冷却保护系统未设置监测报警装置的",
+          "measures": "为该冷却保护系统设置监测报警装置。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "日用玻璃制造企业玻璃窑炉冷却保护系统未设置监测报警装置",
+          "description": "日用玻璃制造企业玻璃窑炉冷却保护系统未设置能够反映冷却保护状态的监测报警装置，不能及时发现冷却系统异常，属于重大事故隐患判定情形。",
+          "measures": "按设备和工艺要求为玻璃窑炉冷却保护系统设置有效的监测报警装置，合理确定监测参数和报警条件；安装后完成报警功能测试并建立日常检查维护制度。",
+          "conditions": "适用于日用玻璃制造企业玻璃窑炉冷却保护系统。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_5b34899229605eac5019902f",
+          "clauseId": "C_0C94FB24040EB78218141DD12F",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_0C94FB24040EB78218141DD12F",
+          "articlePath": "第三十六条",
+          "quote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 315,
+      "hazardId": "H_6CA20375669E46A596BE3866A2",
+      "title": "易产生机械点燃源的工艺设备前未设置铁、石等杂物去除装置",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "粉碎、研磨、造粒等易产生机械点燃源的工艺设备前未设置铁、石等杂物去除装置，存在异物进入设备产生撞击、摩擦火花并引燃可燃性粉尘的风险。",
+        "measures": "在粉碎、研磨、造粒等相关工艺设备前设置并有效维护除铁、除石等杂物去除装置；属于木制品砂光系统的，按判定标准核查并设置火花探测消除装置，整改后验证功能。",
+        "conditions": "适用于存在粉尘爆炸危险的工贸企业相关粉碎、研磨、造粒等工艺设备。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第十一条第（八）项",
+        "quote": "第十一条 存在粉尘爆炸危险的工贸企业有下列情形之一的，应当判定为重大事故隐患：……（八）粉碎、研磨、造粒等易产生机械点燃源的工艺设备前，未设置铁、石等杂物去除装置，或者木制品加工企业与砂光机连接的风管未设置火花探测消除装置的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》第十一条(八)\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "易产生机械点燃源的工艺设备前未设置铁石等杂物去除装置",
+          "description": "粉碎、研磨、造粒等易产生机械点燃源的工艺设备前,未设置铁、石等杂物去除装置,或者木制品加工企业与砂光机连接的风管未设置火花探测消除装置的",
+          "measures": "在粉碎、研磨、造粒等易产生机械点燃源的工艺设备前设置铁、石等杂物去除装置（或火花探测消除装置）。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "易产生机械点燃源的工艺设备前未设置铁、石等杂物去除装置",
+          "description": "粉碎、研磨、造粒等易产生机械点燃源的工艺设备前未设置铁、石等杂物去除装置，存在异物进入设备产生撞击、摩擦火花并引燃可燃性粉尘的风险。",
+          "measures": "在粉碎、研磨、造粒等相关工艺设备前设置并有效维护除铁、除石等杂物去除装置；属于木制品砂光系统的，按判定标准核查并设置火花探测消除装置，整改后验证功能。",
+          "conditions": "适用于存在粉尘爆炸危险的工贸企业相关粉碎、研磨、造粒等工艺设备。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_05400e4a026ab20d594d9a52",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 318,
+      "hazardId": "H_1B4FBE6B18404FD795AA211BA6",
+      "title": "未制定应急预案演练计划或未按周期组织演练",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "未制定本单位的应急预案演练计划，根据本单位的事故风险特点，每年至少组织一次综合应急预案演练或者专项应急预案演练，每半年至少组织一次现场处置方案演练",
+        "measures": "依据适用法规、标准建立或修订与事故风险和组织体系相适应的生产安全事故应急预案体系，明确适用范围、岗位责任、控制要求和执行程序；完成审核发布、培训宣贯，并通过检查、考核、演练或记录验证其有效执行。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第八十一条（兜底）",
+        "quote": "第八十一条　生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《生产安全事故应急预案管理办法》第三十三条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "未制定本单位的应急预案演练计划,根据本单位的事故风险特点,每年至少组织一次综合应急预案演练或者专项应急预案演练,每半年至少组织一次现场处置方案演练",
+          "measures": "每年制定演练计划,按照规定定期演练",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "未制定本单位的应急预案演练计划，根据本单位的事故风险特点，每年至少组织一次综合应急预案演练或者专项应急预案演练，每半年至少组织一次现场处置方案演练",
+          "measures": "依据适用法规、标准建立或修订与事故风险和组织体系相适应的生产安全事故应急预案体系，明确适用范围、岗位责任、控制要求和执行程序；完成审核发布、培训宣贯，并通过检查、考核、演练或记录验证其有效执行。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 327,
+      "hazardId": "H_4AF088F48DFD4BFA88FD254F28",
+      "title": "未建立液氮储罐泄露应急处置方案",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "企业未建立液氮储罐泄漏应急处置方案，发生泄漏时无章可循。",
+        "measures": "编制液氮储罐泄漏应急处置方案，明确处置流程与职责分工，组织演练并留存记录。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第八十一条（兜底）",
+        "quote": "第八十一条　生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《深度冷冻法生产氧气及相关气体安全技术规程》4.13.1"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "conditions"
+        ],
+        "before": {
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 336,
+      "hazardId": "H_57A51B8D5D024A1ABC9736CE63",
+      "title": "生产期间熔融金属泄漏、喷溅影响范围内相关区域存在积水",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "机械企业生产期间，铸造用熔炼炉、精炼炉、保温炉相关区域或熔融金属泄漏、喷溅影响范围内的规定区域存在积水，可能导致熔融金属与水接触发生喷爆等严重后果。",
+        "measures": "立即清除判定标准所列区域积水，查明渗漏、雨水、工艺用水等来源并采取截水、排水、防渗或管理措施，确保生产期间相关区域持续保持无积水状态并加强巡查。",
+        "conditions": "适用于机械企业铸造生产期间判定标准所列熔融金属相关区域。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第七条第（三）项",
+        "quote": "第七条 机械企业有下列情形之一的，应当判定为重大事故隐患：……（三）生产期间铸造用熔炼炉、精炼炉、保温炉的炉底、炉坑和事故坑，以及熔融金属泄漏、喷溅影响范围内的炉前平台、炉基区域、造型地坑、浇注作业坑和熔融金属转运通道等8类区域存在积水的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)机械行业 第3条\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "熔融金属泄漏喷溅影响范围内区域存在积水",
+          "description": "期间铸造用熔炼炉、精炼炉、保温炉的炉底、炉坑和事故坑,以及熔融金属泄漏、喷溅影响范围内的炉前平台、炉基区域、造型地坑、浇注作业坑和熔融金属转运通道等8类区域存在积水的",
+          "measures": "清除熔融金属泄漏喷溅影响范围内的积水，并采取防止积水措施。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "生产期间熔融金属泄漏、喷溅影响范围内相关区域存在积水",
+          "description": "机械企业生产期间，铸造用熔炼炉、精炼炉、保温炉相关区域或熔融金属泄漏、喷溅影响范围内的规定区域存在积水，可能导致熔融金属与水接触发生喷爆等严重后果。",
+          "measures": "立即清除判定标准所列区域积水，查明渗漏、雨水、工艺用水等来源并采取截水、排水、防渗或管理措施，确保生产期间相关区域持续保持无积水状态并加强巡查。",
+          "conditions": "适用于机械企业铸造生产期间判定标准所列熔融金属相关区域。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_06e1539739f12e5a4775604b",
+          "clauseId": "C_0C94FB24040EB78218141DD12F",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_0C94FB24040EB78218141DD12F",
+          "articlePath": "第三十六条",
+          "quote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 340,
+      "hazardId": "H_02FEFD347E114E1E979C9589AF",
+      "title": "生产安全事故应急预案体系未根据事故风险和组织体系合理设置",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "生产经营单位未根据组织体系、生产规模、危险源和可能发生的事故类型合理设置综合应急预案、专项应急预案或现场处置方案，应急文件层级与实际风险不匹配。",
+        "measures": "依据事故风险、组织体系和现行应急预案管理要求重新梳理预案体系，按适用条件编制综合应急预案、专项应急预案和/或现场处置方案，并完成衔接、培训、演练和动态修订。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第八十一条（兜底）",
+        "quote": "第八十一条　生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《生产安全事故应急预案管理办法》(应急管理部令 第2号)第6条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "生产经营单位未急预案分为综合应急预案、专项应急预案和现场处置方案",
+          "description": "生产经营单位未急预案分为综合应急预案、专项应急预案和现场处置方案",
+          "measures": "按《生产安全事故应急预案管理办法》将应急预案分为综合应急预案、专项应急预案和现场处置方案分别编制，并按规定评审、备案。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "生产安全事故应急预案体系未根据事故风险和组织体系合理设置",
+          "description": "生产经营单位未根据组织体系、生产规模、危险源和可能发生的事故类型合理设置综合应急预案、专项应急预案或现场处置方案，应急文件层级与实际风险不匹配。",
+          "measures": "依据事故风险、组织体系和现行应急预案管理要求重新梳理预案体系，按适用条件编制综合应急预案、专项应急预案和/或现场处置方案，并完成衔接、培训、演练和动态修订。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 343,
+      "hazardId": "H_14FF17559BF1415B9F0007905D",
+      "title": "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "机械企业铸造用熔炼炉、精炼炉或保温炉未设置紧急排放和应急储存设施，发生异常工况时无法安全处置炉内熔融金属，属于重大事故隐患判定情形。",
+        "measures": "结合炉型、容量和工艺条件设置可靠的紧急排放和应急储存设施，明确启用条件、操作程序和维护要求；建成后进行功能验证和应急操作培训，确保异常工况下可安全使用。",
+        "conditions": "适用于机械企业铸造用熔炼炉、精炼炉、保温炉。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第七条第（二）项",
+        "quote": "第七条 机械企业有下列情形之一的，应当判定为重大事故隐患：……（二）铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)机械行业 第2条\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施的",
+          "description": "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施的",
+          "measures": "为熔炼炉、精炼炉、保温炉设置紧急排放和应急储存设施。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施",
+          "description": "机械企业铸造用熔炼炉、精炼炉或保温炉未设置紧急排放和应急储存设施，发生异常工况时无法安全处置炉内熔融金属，属于重大事故隐患判定情形。",
+          "measures": "结合炉型、容量和工艺条件设置可靠的紧急排放和应急储存设施，明确启用条件、操作程序和维护要求；建成后进行功能验证和应急操作培训，确保异常工况下可安全使用。",
+          "conditions": "适用于机械企业铸造用熔炼炉、精炼炉、保温炉。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 345,
+      "hazardId": "H_076F5EC8768049A3A3917ABB1D",
+      "title": "难以避开的建设工程未进行卫生学评估或未明确要求制定应急救援预案",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "建设工程受客观条件限制难以避开可能产生职业健康影响的场所或设施时，未开展必要的卫生学评估，或未在设计和管理中明确相应的应急救援及职业卫生控制要求。",
+        "measures": "对确因条件限制难以避开的建设工程开展卫生学评估，依据评估结果落实工程、管理和个体防护措施；在设计文件和相关管理文件中明确应急救援要求，并监督后续建设、运行阶段落实。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第二十条（兜底）",
+        "quote": "第二十条　生产经营单位应当具备本法和有关法律、行政法规和国家标准或者行业标准规定的安全生产条件；不具备安全生产条件的，不得从事生产经营活动。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》第5.1.3条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "建设工程需要难以避开的,未首先进行卫生学评估,并根据评估结果采取必要的控制措施。设计单位,未明确要求施工单位和建设单位制定施工期间和投产运行后突发公共卫生事件应急救援预案",
+          "measures": "厂址选择避开了可能产生危害健康的场所和设施。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "建设工程受客观条件限制难以避开可能产生职业健康影响的场所或设施时，未开展必要的卫生学评估，或未在设计和管理中明确相应的应急救援及职业卫生控制要求。",
+          "measures": "对确因条件限制难以避开的建设工程开展卫生学评估，依据评估结果落实工程、管理和个体防护措施；在设计文件和相关管理文件中明确应急救援要求，并监督后续建设、运行阶段落实。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 346,
+      "hazardId": "H_3789CE3F23914775836A360BA3",
+      "title": "食品制造企业烘制、油炸设备未设置防过热自动切断装置",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "应急与事故管理",
+        "place": "通用场所",
+        "description": "食品制造企业烘制、油炸设备未设置防止温度异常升高的自动切断装置，设备过热时不能自动切断相应能源或加热过程，属于重大事故隐患判定情形。",
+        "measures": "按设备工艺和风险要求设置防过热自动切断装置，合理确定动作条件，并对温度检测、报警/切断逻辑和执行机构进行功能测试；纳入定期检查维护，严禁失效状态运行。",
+        "conditions": "适用于轻工行业食品制造企业的烘制、油炸设备。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第八条第（一）项",
+        "quote": "第八条 轻工企业有下列情形之一的，应当判定为重大事故隐患：……（一）食品制造企业烘制、油炸设备未设置防过热自动切断装置的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(应急管理部令第10号)第八条:(一)\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "食品制造企业烘制、油炸设备未设置防过热自动切断装置的",
+          "description": "食品制造企业的烘制、油炸设备未设置防过热自动切断装置。",
+          "measures": "为该类设备设置防过热自动切断装置。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "食品制造企业烘制、油炸设备未设置防过热自动切断装置",
+          "description": "食品制造企业烘制、油炸设备未设置防止温度异常升高的自动切断装置，设备过热时不能自动切断相应能源或加热过程，属于重大事故隐患判定情形。",
+          "measures": "按设备工艺和风险要求设置防过热自动切断装置，合理确定动作条件，并对温度检测、报警/切断逻辑和执行机构进行功能测试；纳入定期检查维护，严禁失效状态运行。",
+          "conditions": "适用于轻工行业食品制造企业的烘制、油炸设备。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_90fda26441cf539bf6a7a986",
+          "clauseId": "C_0C94FB24040EB78218141DD12F",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_0C94FB24040EB78218141DD12F",
+          "articlePath": "第三十六条",
+          "quote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+          "lifecycle": "active",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
+          "lawVersionId": "L002",
+          "lawVersion": {
+            "officialName": "中华人民共和国安全生产法",
+            "documentNumber": "主席令〔2021〕第88号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 356,
+      "hazardId": "H_1251ED2287FB47B6BDED9292D1",
+      "title": "各类防雷建构物未设防直击雷的外部防雷装置，并未采取防雷电电涌侵入措施",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "总图与建筑",
+        "place": "通用场所",
+        "description": "各类防雷建构物，未设防直击雷的外部防雷装置，并未采取防雷电电涌侵入措施",
+        "measures": "按 GB 50057 要求设置外部防雷装置及防雷电电涌侵入措施，并定期检测接地电阻。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《建筑物防雷设计规范》(GB50057-2010) 第4.1.1条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "conditions"
+        ],
+        "before": {
+          "title": "各类防雷建构物,未设防直周雷的外部防雷装置,并未采取防雷电电涌浸入措施",
+          "description": "各类防雷建构物,未设防直周雷的外部防雷装置,并未采取防雷电电涌浸入措施",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "各类防雷建构物未设防直击雷的外部防雷装置，并未采取防雷电电涌侵入措施",
+          "description": "各类防雷建构物，未设防直击雷的外部防雷装置，并未采取防雷电电涌侵入措施",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 361,
+      "hazardId": "H_20765D530DD84E7A8D59F277CB",
+      "title": "工业企业厂区总平面布置未明确功能分区或未合理布局",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "总图与建筑",
+        "place": "通用场所",
+        "description": "工业企业总平面布置未结合生产性质、规模、工艺流程、交通运输、自然条件和卫生要求合理划分生产、辅助生产、非生产等功能区域，区域关系或物流、人流组织不合理。",
+        "measures": "结合企业性质、规模、生产流程、交通运输、自然条件及卫生要求优化总平面布局，明确生产区、辅助生产区、非生产区等功能分区，协调人流、物流及危险区域关系，并通过设计复核确认布局合理。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第二十条（兜底）",
+        "quote": "第二十条　生产经营单位应当具备本法和有关法律、行政法规和国家标准或者行业标准规定的安全生产条件；不具备安全生产条件的，不得从事生产经营活动。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》第5.2.1.1条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "工业企业厂区总平面布置,未明确功能分区,可分为生产区、非生产区、辅助生产区。其工程用地,未根据卫生要求,结合工业企业性质、规模、生产流程、交通运输、场地自然条件、技术经济条件等合理布局",
+          "measures": "厂区总平面布置功能分区明确,分为生产区、非生产区、辅助生产区。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "工业企业总平面布置未结合生产性质、规模、工艺流程、交通运输、自然条件和卫生要求合理划分生产、辅助生产、非生产等功能区域，区域关系或物流、人流组织不合理。",
+          "measures": "结合企业性质、规模、生产流程、交通运输、自然条件及卫生要求优化总平面布局，明确生产区、辅助生产区、非生产区等功能分区，协调人流、物流及危险区域关系，并通过设计复核确认布局合理。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 404,
+      "hazardId": "H_108B10FED8E24D248155616659",
+      "title": "过滤式粉末回收装置未有效清粉或未设置压差报警",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "涂装安全",
+        "place": "通用场所",
+        "description": "粉末静电喷涂过滤式回收装置未配置有效的清粉措施，或未通过压差监测报警及时识别过滤阻力异常，容易造成粉末堆积、通风能力下降和喷涂系统异常。",
+        "measures": "为过滤式回收装置配置并保持有效的清粉装置，采取措施防止粉末堆积；设置压差器及报警装置，明确压差设定值，超限时停止作业并清理或检修，整改后进行功能测试。",
+        "conditions": "适用于粉末静电喷涂过滤式粉末回收、净化装置。",
+        "directBasis": "《涂装作业安全规程 粉末静电喷涂工艺安全》GB 15607-2023 第6.4条c)",
+        "quote": "6.4 c) 采用有效的清粉装置；采取措施防止粉末堆积。配置压差器及其报警装置，当压差超出设定值时停止作业。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程粉末静电喷涂工艺安全》(GB15607-2008) 6.4.3\n\n【ChatGPT专业复核 2026-09-11】原依据引用已废止的GB 15607-2008且错误挂接GB 6514条款，已更新为现行GB 15607-2023第6.4条c)。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "过滤式回收装置未采用有效的清粉装置或未自动检测系统阻力",
+          "description": "过滤式回收装置,未采用有效的清粉装置,不宜采用易积聚粉末的折叠式结构。自动喷涂时,未能自动检测系统阻力,当过滤器无气流通过或气流量减少到某设定值时,能停止作业",
+          "measures": "过滤式回收装置采用了有效的清粉装置",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "过滤式粉末回收装置未有效清粉或未设置压差报警",
+          "description": "粉末静电喷涂过滤式回收装置未配置有效的清粉措施，或未通过压差监测报警及时识别过滤阻力异常，容易造成粉末堆积、通风能力下降和喷涂系统异常。",
+          "measures": "为过滤式回收装置配置并保持有效的清粉装置，采取措施防止粉末堆积；设置压差器及报警装置，明确压差设定值，超限时停止作业并清理或检修，整改后进行功能测试。",
+          "conditions": "适用于粉末静电喷涂过滤式粉末回收、净化装置。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 405,
+      "hazardId": "H_FBCF449DEB7E4FF380E96780D6",
+      "title": "粉末静电喷涂通风管道风速、积粉控制或静电接地不符合要求",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "涂装安全",
+        "place": "通用场所",
+        "description": "粉末静电喷涂通风管道未保持防止粉末和静电积聚所需的风速，管内粉末沉积控制不到位，或静电接地不符合要求，存在粉尘积聚和静电点燃风险。",
+        "measures": "调整并维护通风系统，使管道保持能够防止粉末积聚的有效风速；定期检查清理风管，确保除隔爆阀外沉积粉末厚度不超过1mm；按标准核查静电接地连续性和可靠性并留存检查记录。",
+        "conditions": "适用于粉末静电喷涂系统含粉尘的通风管道。",
+        "directBasis": "《涂装作业安全规程 粉末静电喷涂工艺安全》GB 15607-2023 第6.5条",
+        "quote": "6.5 通风管道应保持一定风速，防止粉末和静电积聚，风管内（除隔爆阀外）沉积的粉末厚度应不大于1 mm，静电接地应符合4.8.2的规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程粉末静电喷涂工艺安全》(GB15607-2008) 6.5\n\n【ChatGPT专业复核 2026-09-11】原依据未直接覆盖粉末静电喷涂通风管道要求，已更新为现行GB 15607-2023第6.5条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "通风管道,未保持一定风速,同时,未有良好接地,防止粉末和静电积聚",
+          "description": "通风管道,未保持一定风速,同时,未有良好接地,防止粉末和静电积聚",
+          "measures": "保持通风管道内一定风速并对管道良好接地，防止粉末和静电积聚。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "粉末静电喷涂通风管道风速、积粉控制或静电接地不符合要求",
+          "description": "粉末静电喷涂通风管道未保持防止粉末和静电积聚所需的风速，管内粉末沉积控制不到位，或静电接地不符合要求，存在粉尘积聚和静电点燃风险。",
+          "measures": "调整并维护通风系统，使管道保持能够防止粉末积聚的有效风速；定期检查清理风管，确保除隔爆阀外沉积粉末厚度不超过1mm；按标准核查静电接地连续性和可靠性并留存检查记录。",
+          "conditions": "适用于粉末静电喷涂系统含粉尘的通风管道。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_6b1b8bb56d52df4613ff05b7",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 448,
+      "hazardId": "H_C0BEAB6834F44E5CBE05F9CBD0",
+      "title": "应设疏散照明的建筑部位未设置疏散照明",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "消防安全",
+        "place": "通用场所",
+        "description": "依法或依适用消防技术标准应设置疏散照明的建筑部位未设置疏散照明，或现有照明不能在火灾、停电等情况下为人员安全疏散提供必要照明。",
+        "measures": "先依据建筑用途、人员密度和疏散条件核定疏散照明的设置范围和技术要求；对依法应设置的部位补充设置并完成供电、切换、照度和持续时间等功能检查，纳入消防设施维护管理。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第十六条第一款第（二）项（兜底）",
+        "quote": "按照国家标准、行业标准配置消防设施、器材，设置消防安全标志，并定期组织检验、维修，确保完好有效；",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：GB50016-2014《建筑 设计防火规范(2018 版)》第 10.3.1 条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "description": "民用建筑、厂房和丙类仓库的下 列部位未设置疏散照明: 封闭楼梯 间、防烟楼梯间及其前室、消防电梯 间的前室或合用前室、避难走道、避 难层(间)",
+          "measures": "民用建筑和厂房相应部 位已设有应急照明。",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "依法或依适用消防技术标准应设置疏散照明的建筑部位未设置疏散照明，或现有照明不能在火灾、停电等情况下为人员安全疏散提供必要照明。",
+          "measures": "先依据建筑用途、人员密度和疏散条件核定疏散照明的设置范围和技术要求；对依法应设置的部位补充设置并完成供电、切换、照度和持续时间等功能检查，纳入消防设施维护管理。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 467,
+      "hazardId": "H_08C1576EE4824ED8BE0CDD56DF",
+      "title": "灭火器摆放不稳固或铭牌未朝外",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "消防安全",
+        "place": "消防器材设置点",
+        "description": "灭火器摆放不稳固，或灭火器铭牌未朝外。",
+        "measures": "将灭火器稳固设置并确保铭牌朝外；手提式灭火器按规范设置于灭火器箱内或挂钩、托架上，保持明显、便于取用。",
+        "conditions": "适用于涉及“消防器材设置点”所对应设备、设施、作业或管理活动的检查；具体是否适用，应结合所引法规、标准的行业、场所、对象、触发条件及例外条款判定。",
+        "directBasis": "《建筑灭火器配置设计规范》GB 50140-2005 第5.1.3条",
+        "quote": "5.1.3 灭火器的摆放应稳固，其铭牌应朝外。手提式灭火器宜设置在灭火器箱内或挂钩、托架上，其顶部离地面高度不应大于1.50m；底部离地面高度不宜小于0.08m。灭火器箱不得上锁。",
+        "supplementalBasis": null,
+        "note": "已纠正原错误兜底依据：GB 50140-2005 第6.1.1条规定的是配置数量，与摆放稳固和铭牌朝向无关；本条改按第5.1.3条。\n\n原 conditions 字段记录的引用依据为：依据：《建筑灭火器配置设计规范》GB 50140-2005 第5.1.3条\n\n【ChatGPT专业复核 2026-09-11】已按备注所载纠错结论正式把直接依据从第6.1.1条改为第5.1.3条。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "conditions"
+        ],
+        "before": {
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "conditions": "适用于涉及“消防器材设置点”所对应设备、设施、作业或管理活动的检查；具体是否适用，应结合所引法规、标准的行业、场所、对象、触发条件及例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 493,
+      "hazardId": "H_582731EF84014F338DD9B04458",
+      "title": "机械企业使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "燃气安全",
+        "place": "通用场所",
+        "description": "机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面时，未采取有效通风、隔离、排放等措施，不能防止可燃气体在周边密闭或半密闭空间内积聚。",
+        "measures": "停止在不具备安全条件的区域使用可燃性有机溶剂清洗；辨识周边密闭、半密闭空间和可燃气体积聚路径，采取持续有效通风、隔离或其他防积聚措施，并在恢复作业前确认可燃气体风险得到控制。",
+        "conditions": "适用于机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面的作业。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第七条第（六）项",
+        "quote": "第七条 机械企业有下列情形之一的，应当判定为重大事故隐患：……（六）使用可燃性有机溶剂清洗设备设施、工装器具、地面时，未采取防止可燃气体在周边密闭或者半密闭空间内积聚措施的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》(应急管理部令第10号)第七条\n\n【ChatGPT专业复核 2026-09-11】按现行应急管理部令第10号第七条第（六）项纠正；该情形属于机械企业重大事故隐患判定项。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+          "description": "可燃性有机溶剂清洗设备设施、工装器具、地面时,未采取防止可燃气体在周边密闭或者半密闭空间内积聚措施的",
+          "measures": "使用可燃性有机溶剂清洗设备设施在通风良好的环境下进行",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "机械企业使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+          "description": "机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面时，未采取有效通风、隔离、排放等措施，不能防止可燃气体在周边密闭或半密闭空间内积聚。",
+          "measures": "停止在不具备安全条件的区域使用可燃性有机溶剂清洗；辨识周边密闭、半密闭空间和可燃气体积聚路径，采取持续有效通风、隔离或其他防积聚措施，并在恢复作业前确认可燃气体风险得到控制。",
+          "conditions": "适用于机械企业使用可燃性有机溶剂清洗设备设施、工装器具或地面的作业。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_8ef15056949dade4fd08d040",
+          "clauseId": "C_e58389b89299307a0d45042d",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_e58389b89299307a0d45042d",
+          "articlePath": "6.2.2.1",
+          "quote": "调配涂料应在调漆室内进行。",
+          "lifecycle": "active",
+          "sourceUrl": "https://xcoss.henan.gov.cn/typtfile/20250317/cebb519d8cd04b12a91ffd200d4730bc.pdf",
+          "lawVersionId": "LV_STD_GB6514",
+          "lawVersion": {
+            "officialName": "涂装作业安全规程 涂漆工艺安全及其通风",
+            "documentNumber": "GB 6514-2023",
+            "validityStatus": "active",
+            "effectiveDate": "2024-10-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=36BD8DC28F82382EA5C25872C5DAC273"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 498,
+      "hazardId": "H_6F7D6D7E28DD423B9F40AF8218",
+      "title": "在燃气、空气或氧气的混气管路与燃烧器之间未设阻火器",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "燃气安全",
+        "place": "通用场所",
+        "description": "燃气、空气或氧气的混气管路与燃烧器之间未设置阻火器。",
+        "measures": "根据适用法规、标准和现场风险对该项问题实施针对性整改，恢复设备设施、作业条件或管理措施的合规状态；整改完成后组织复查确认，并形成可追溯的检查、维护或管理记录。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《城镇燃气设计规范》(GB50028-2006)(2020年版) 第10.6.7条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "在燃气、空气或氧气的混气管路与燃烧器之间,未设阻火器",
+          "measures": "燃气管道和燃烧器之间设置了阻火器",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "在燃气、空气或氧气的混气管路与燃烧器之间未设阻火器",
+          "measures": "根据适用法规、标准和现场风险对该项问题实施针对性整改，恢复设备设施、作业条件或管理措施的合规状态；整改完成后组织复查确认，并形成可追溯的检查、维护或管理记录。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 502,
+      "hazardId": "H_366610E8AA084C77844EFFBAAD",
+      "title": "机械、轻工企业使用非水性漆的调漆间或喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "燃气安全",
+        "place": "通用场所",
+        "description": "机械或轻工企业使用非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者有效通风设施，不能及时发现和控制可燃蒸气积聚，属于重大事故隐患判定情形。",
+        "measures": "根据企业行业属性和非水性漆作业实际，在调漆间、喷漆室按判定标准设置固定式可燃气体浓度监测报警装置或者有效通风设施；对已设置设施进行功能测试并保持持续有效运行。",
+        "conditions": "适用于机械、轻工企业使用非水性漆的调漆间、喷漆室。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第七条第（七）项、第八条第（六）项",
+        "quote": "机械企业第七条第（七）项、轻工企业第八条第（六）项均规定：使用非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施的，应当判定为重大事故隐患。",
+        "supplementalBasis": null,
+        "note": "原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》(应急管理部令第10号)第七条\n\n【ChatGPT专业复核 2026-09-11】原GB 55009-2021属于燃气工程规范，与非水性漆调漆/喷漆重大隐患不匹配，已改为应急管理部令第10号直接判定条款。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施的",
+          "description": "非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施的",
+          "measures": "企业无调漆室,喷漆室已安装可燃气体浓度报警器",
+          "conditions": "适用于喷漆室的相关安全管理。"
+        },
+        "after": {
+          "title": "机械、轻工企业使用非水性漆的调漆间或喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施",
+          "description": "机械或轻工企业使用非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者有效通风设施，不能及时发现和控制可燃蒸气积聚，属于重大事故隐患判定情形。",
+          "measures": "根据企业行业属性和非水性漆作业实际，在调漆间、喷漆室按判定标准设置固定式可燃气体浓度监测报警装置或者有效通风设施；对已设置设施进行功能测试并保持持续有效运行。",
+          "conditions": "适用于机械、轻工企业使用非水性漆的调漆间、喷漆室。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_6331677a29c9e5e81ab010c2",
+          "clauseId": "C_3825bb802554cb2f84837bd6",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_3825bb802554cb2f84837bd6",
+          "articlePath": "6.2.1",
+          "quote": "商业燃具或用气设备应设置在通风良好、符合安全使用条件且便于维护操作的场所，并应设置燃气泄漏报警和切断等安全装置。",
+          "lifecycle": "active",
+          "sourceUrl": "http://minquan.gov.cn/upload/main/infopublicity/publicinformation/file/2024/10/22/202410221419202610.pdf",
+          "lawVersionId": "LV_STD_GB55009_2021",
+          "lawVersion": {
+            "officialName": "燃气工程项目规范",
+            "documentNumber": "GB 55009-2021",
+            "validityStatus": "active",
+            "effectiveDate": "2022-01-01",
+            "endDate": "",
+            "sourceUrl": "https://openstd.samr.gov.cn/"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 522,
+      "hazardId": "H_1E8A5587D5104804BF2EC4FCA4",
+      "title": "爆炸危险区域电气设备选型、安装或线路敷设不符合防爆要求",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "存在爆炸危险介质的区域内，电气设备防爆型式、安装方式或线路敷设与区域危险等级不匹配，线路保护、连接和密封措施不符合相应防爆要求。",
+        "measures": "重新确认爆炸危险区域划分、介质类别和设备保护级别，按适用防爆标准复核电气设备选型、安装及线路敷设；更换不符合要求的设备和附件，完善防爆连接、密封和机械保护，并开展专项验收。",
+        "conditions": "适用于存在易燃易爆介质的实验室反应釜区域。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 通用化：原表述含企业现场细节（具体编号/楼层/方位/数量词），已抽象为通用隐患表述，法律依据与整改措施未改动。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures"
+        ],
+        "before": {
+          "title": "实验室反应釜区域防爆电器安装不规范，线路未穿管",
+          "description": "公共实验室反应釜装置区域防爆电器安装不规范，线路未穿管。",
+          "measures": "反应釜装置区域防爆电器按爆炸危险区域等级选型并由专业人员安装验收，未穿管线路全部穿镀锌钢管、接头做防爆密封；整改后委托有资质机构检测防爆电气合格后方可送电。"
+        },
+        "after": {
+          "title": "爆炸危险区域电气设备选型、安装或线路敷设不符合防爆要求",
+          "description": "存在爆炸危险介质的区域内，电气设备防爆型式、安装方式或线路敷设与区域危险等级不匹配，线路保护、连接和密封措施不符合相应防爆要求。",
+          "measures": "重新确认爆炸危险区域划分、介质类别和设备保护级别，按适用防爆标准复核电气设备选型、安装及线路敷设；更换不符合要求的设备和附件，完善防爆连接、密封和机械保护，并开展专项验收。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 527,
+      "hazardId": "H_05248294EEDD496B9A57C50C91",
+      "title": "抛丸机区域电气不符合防爆要求",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "抛丸机区域电气设备不符合防爆要求，粉尘环境下存在点燃风险。",
+        "measures": "将抛丸机区域内电机、开关、灯具、接线盒等电气设备全部更换为符合该爆炸危险区域划分的防爆型产品，线路采用防爆挠性管或镀锌钢管密封敷设；由具备资质的电工施工，整改后做防爆电气验收并留存记录。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)粉尘爆炸 第7条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "conditions"
+        ],
+        "before": {
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 528,
+      "hazardId": "H_B0A88B69CC0047CE8BF9D87EB6",
+      "title": "插头插座未按规定正确接线，保护接地极未单独与保护接地线可靠连接",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "插头插座的安装插头与插座，未按规定正确接线，插座的保护接地极在任何情况下都，未单独与保护接地线可靠连接，不得在插头(座)内将保护接地极与工作中性线连接在一起",
+        "measures": "按规范正确接线，保护接地极单独与保护接地线可靠连接，不得与工作中性线连接。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《用电安全导则》GB/T 13869-2017 5.1.3"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description",
+          "conditions"
+        ],
+        "before": {
+          "description": "插头插座的安装插头与插座,未按规定正确接线,插座的保护接地极在任何情况下都,未单独与保护接地线可靠连接,不得在插头(座)内将保护接地极与工作中性线连接在一起",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "description": "插头插座的安装插头与插座，未按规定正确接线，插座的保护接地极在任何情况下都，未单独与保护接地线可靠连接，不得在插头(座)内将保护接地极与工作中性线连接在一起",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 530,
+      "hazardId": "H_8525D185BB224B8C84DA85BCE1",
+      "title": "木工车间内配电箱底部未封堵，存在积尘现象",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "木工车间内配电箱底部未封堵，箱内存在木粉尘积聚。",
+        "measures": "封堵配电箱底部孔洞，清除箱体积尘，防止木粉尘进入箱体，并纳入清扫制度。",
+        "conditions": "适用于配电箱的相关安全管理。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《粉尘爆炸危险场所用除尘系统安全技术规范》(AQ 4273-2016) 第10.4条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title"
+        ],
+        "before": {
+          "title": "木工车间内配电箱底部未封堵,存在积尘现象"
+        },
+        "after": {
+          "title": "木工车间内配电箱底部未封堵，存在积尘现象"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 533,
+      "hazardId": "H_05E3463E093546EF9631C3773D",
+      "title": "爆炸危险区域照明及其他电气设备未采用符合要求的防爆型式",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "爆炸危险区域内照明、电机或其他电气设备的防爆型式、类别或保护级别与区域危险等级和爆炸性介质特性不匹配，存在电气点燃源风险。",
+        "measures": "根据爆炸危险区域划分和介质特性复核照明及其他电气设备的防爆型式、类别和保护级别，替换不符合要求的设备，规范防爆接线、密封和接地；整改后进行防爆电气专项检查。",
+        "conditions": "适用于电气设备的相关安全管理。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程 涂漆工艺安全及其通风净化》 (GB6514—2008) 第5.1.4.2.2条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures"
+        ],
+        "before": {
+          "title": "照明及各类电气设备,未为防爆型",
+          "description": "照明及各类电气设备未采用防爆型，存在点燃可燃气体风险。",
+          "measures": "企业不涉及调漆室,企业喷漆室内电器为防爆型,安装了可燃气体报警"
+        },
+        "after": {
+          "title": "爆炸危险区域照明及其他电气设备未采用符合要求的防爆型式",
+          "description": "爆炸危险区域内照明、电机或其他电气设备的防爆型式、类别或保护级别与区域危险等级和爆炸性介质特性不匹配，存在电气点燃源风险。",
+          "measures": "根据爆炸危险区域划分和介质特性复核照明及其他电气设备的防爆型式、类别和保护级别，替换不符合要求的设备，规范防爆接线、密封和接地；整改后进行防爆电气专项检查。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 536,
+      "hazardId": "H_2724BCA646E74C1694B53CF8DB",
+      "title": "用电产品停运时未及时切断电源或未查明原因即重新接通",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "用电产品因停电或故障等情况而停止运行时，未及时切断电源。在查明原因、排除故障，并确认已恢复正常后才能重新接通电源",
+        "measures": "制定并落实用电操作规程：停运时及时切断电源，查明原因、排除故障后方可重新接通。",
+        "conditions": "适用于用电产品的相关安全管理。",
+        "directBasis": "《低压配电设计规范》GB 50054-2011 6.1.1（兜底）",
+        "quote": "配电线路应装设短路保护和过负荷保护。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《用电安全导则》 第5.2.1条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description"
+        ],
+        "before": {
+          "description": "用电产品因停电或故障等情况而停止运行时,未及时切断电源。在查明原因、排除故障,并确认已恢复正常后才能重新接通电源"
+        },
+        "after": {
+          "description": "用电产品因停电或故障等情况而停止运行时，未及时切断电源。在查明原因、排除故障，并确认已恢复正常后才能重新接通电源"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 539,
+      "hazardId": "H_01ADBFD09A994DCBA4FDF6B868",
+      "title": "用电产品的绝缘不符合相关标准规定",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "用电产品的绝缘性能不符合相关标准规定，存在漏电触电风险。",
+        "measures": "更换绝缘不符合标准的用电产品，使用前检查绝缘状况并定期检测。",
+        "conditions": "适用于用电产品的相关安全管理。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《用电安全导则》 GB/T 13869-2017 第 4.5 条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title"
+        ],
+        "before": {
+          "title": "用电产品的绝缘,未符合相关标准规定"
+        },
+        "after": {
+          "title": "用电产品的绝缘不符合相关标准规定"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 552,
+      "hazardId": "H_401DBF6BDB854433832D909892",
+      "title": "电气设备金属外壳未设置可靠的保护接地",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "需要进行保护接地的电气设备金属外壳未与保护导体可靠连接，或连接存在松动、腐蚀、断裂等情况，故障情况下不能有效降低触电风险。",
+        "measures": "核查电气设备接地型式和保护要求，对应接地的金属外壳设置连续、可靠的保护导体连接，处理松动、腐蚀等缺陷；整改后开展保护导体连续性或接地有效性检查并记录。",
+        "conditions": "适用于电气设备的相关安全管理。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全基本要求》(GB 12801-2025)第6.4.2条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures"
+        ],
+        "before": {
+          "title": "电气设备的金属外壳,未有良好的接地装置",
+          "description": "电气设备的金属外壳未设置良好的接地装置。",
+          "measures": "项目用电设备金属外壳采取接地保护。"
+        },
+        "after": {
+          "title": "电气设备金属外壳未设置可靠的保护接地",
+          "description": "需要进行保护接地的电气设备金属外壳未与保护导体可靠连接，或连接存在松动、腐蚀、断裂等情况，故障情况下不能有效降低触电风险。",
+          "measures": "核查电气设备接地型式和保护要求，对应接地的金属外壳设置连续、可靠的保护导体连接，处理松动、腐蚀等缺陷；整改后开展保护导体连续性或接地有效性检查并记录。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 553,
+      "hazardId": "H005",
+      "title": "电源线路私拉乱接",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所、电瓶车店、工贸企业",
+        "description": "在适用场所或作业条件下，存在“电源线路私拉乱接”情形，相关设备设施、作业活动或管理状态未达到适用法规、标准规定的安全要求。可能导致触电、电气火灾、短路或异常能量释放风险。",
+        "measures": "由具备相应资格的电工作业人员停电检查并规范改造；按负荷、环境和使用方式选择导线、保护装置与敷设方式，消除裸露接头、破损绝缘等具体缺陷，检测合格后使用。",
+        "conditions": "需补充线路设计、敷设或接线不符合现行消防技术标准的具体事实和条款后再判断。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "“私拉乱接”是概括语，应补充可观察缺陷。固定线路、临时用电、建筑施工及危化企业采用不同标准，不能一律套用施工现场规范。 [Phase22] description补充具体可观察缺陷（接头裸露、绝缘破损、无机械防护、超负荷串接等），使hazard从概括语变为可现场检查的事实；消防法27条2款作为fallback依据成立。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description"
+        ],
+        "before": {
+          "description": "现场电源线路敷设不规范，存在未经规范设置的临时接线或私拉乱接；可观察缺陷包括：接头裸露未做绝缘处理、绝缘层破损未修复、线路无机械防护穿越通道或地面、插座/开关接线松动、超负荷串接多用插座等。固定线路与临时用电分别适用相应电气安全及消防技术标准。"
+        },
+        "after": {
+          "description": "在适用场所或作业条件下，存在“电源线路私拉乱接”情形，相关设备设施、作业活动或管理状态未达到适用法规、标准规定的安全要求。可能导致触电、电气火灾、短路或异常能量释放风险。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 554,
+      "hazardId": "H_62AD7AADA05F468BAE0F91F5CC",
+      "title": "电源线路绝缘破损",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "在适用场所或作业条件下，存在“电源线路绝缘破损”情形，相关设备设施、作业活动或管理状态未达到适用法规、标准规定的安全要求。可能导致触电、电气火灾、短路或异常能量释放风险。",
+        "measures": "更换绝缘破损的电源线路或加装绝缘防护，作业前检查线路绝缘状况并定期维护。",
+        "conditions": "适用于电气线路的绝缘完好性。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 通用化：原表述含企业现场细节（具体编号/楼层/方位/数量词），已抽象为通用隐患表述，法律依据与整改措施未改动。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description"
+        ],
+        "before": {
+          "description": "现场电源线路绝缘层破损。"
+        },
+        "after": {
+          "description": "在适用场所或作业条件下，存在“电源线路绝缘破损”情形，相关设备设施、作业活动或管理状态未达到适用法规、标准规定的安全要求。可能导致触电、电气火灾、短路或异常能量释放风险。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 555,
+      "hazardId": "H_8ECAE760F5A5413D8013602429",
+      "title": "移动使用电气设备未采用完整铜芯橡皮套软电缆作电源线",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "移动使用的电子产品，未采用完整的铜芯橡皮套软电缆或护套软线作为电源线，移动时，未防止电源线拉断或损坏",
+        "measures": "移动使用的电气设备采用完整的铜芯橡皮套软电缆或护套软线作电源线。",
+        "conditions": "适用于电气设备的相关安全管理。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《用电安全导则》(GB/T13869-2017) 第5.2.2条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "description"
+        ],
+        "before": {
+          "description": "移动使用的电子产品,未采用完整的铜芯橡皮套软电缆或护套软线作为电源线,移动时,未防止电源线拉断或损坏"
+        },
+        "after": {
+          "description": "移动使用的电子产品，未采用完整的铜芯橡皮套软电缆或护套软线作为电源线，移动时，未防止电源线拉断或损坏"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 556,
+      "hazardId": "H_3A5DEC6C74244A949CE3BC9A42",
+      "title": "空压机房内配电柜柜门未保持常闭状态",
+      "publishDecision": "否",
+      "flags": [
+        "not_publishable",
+        "basis_blank"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "空压机房内配电柜柜门未保持常闭，粉尘易进入柜内。",
+        "measures": "配电柜柜门保持常闭并加装挂锁或机械联锁，检修后立即关闭上锁；纳入交接班检查和每日巡视项目，确认柜门关闭、防尘防护有效并记录。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": null,
+        "quote": null,
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《国家电气设备安全技术规范》 (GB 19517-2023) 第5.2条"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "conditions"
+        ],
+        "before": {
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_7f3a9fe5096cc08a479517c0",
+          "clauseId": "C_4cc8db7da64889234b1417aa",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_4cc8db7da64889234b1417aa",
+          "articlePath": "6.1.1",
+          "quote": "配电线路应装设短路保护和过负荷保护。",
+          "lifecycle": "active",
+          "sourceUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260424407170672345.pdf",
+          "lawVersionId": "LV_STD_GB50054_2011",
+          "lawVersion": {
+            "officialName": "低压配电设计规范",
+            "documentNumber": "GB 50054-2011",
+            "validityStatus": "active",
+            "effectiveDate": "2012-06-01",
+            "endDate": "",
+            "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2011/art_17339_206925.html"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 559,
+      "hazardId": "H_265A5682E86D43F0B813544099",
+      "title": "装有电器的可开启金属门与金属框架间保护连接不可靠",
+      "publishDecision": "是",
+      "flags": [
+        "no_active_direct_link",
+        "basis_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "配电箱、柜等装有电器的可开启金属门与金属框架保护接地端子之间未设置可靠的柔性保护连接，或连接导体规格、端子固定、标识等不符合相应安装要求。",
+        "measures": "按适用电气安装标准核查可开启金属门的保护连接要求，使用符合要求的柔性保护导体将门与金属框架保护接地端子可靠连接，规范端子、防松和标识；整改后进行导通检查。",
+        "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。",
+        "directBasis": "《中华人民共和国消防法》主席令〔2021〕第81号 第二十七条第二款（兜底）",
+        "quote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《建筑电气工程施工质量验收规范》GB50303-2015 5.1.1"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "装有电器的可开启门，门与金属框架接地端子间未用黄绿绝缘软导线连接并标识",
+          "description": "对于装有电器的可开启门,门和金属框架的接地端子间,未选用截面积不小于4mm2的黄绿色绝缘铜芯软导线连接,并未有标识",
+          "measures": "现场配电箱的金属框架及基础型钢与保护导体可靠连接",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。"
+        },
+        "after": {
+          "title": "装有电器的可开启金属门与金属框架间保护连接不可靠",
+          "description": "配电箱、柜等装有电器的可开启金属门与金属框架保护接地端子之间未设置可靠的柔性保护连接，或连接导体规格、端子固定、标识等不符合相应安装要求。",
+          "measures": "按适用电气安装标准核查可开启金属门的保护连接要求，使用符合要求的柔性保护导体将门与金属框架保护接地端子可靠连接，规范端子、防松和标识；整改后进行导通检查。",
+          "conditions": "适用于生产经营单位中涉及该项设备、设施、作业或管理活动的安全检查；具体适用范围应结合所引法规、标准的行业属性、场所条件、对象、触发条件和例外条款判定。"
+        }
+      },
+      "activeDirectLinks": [],
+      "activeDirectClauses": [],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 569,
+      "hazardId": "H_CC076DB8C16B4C058C3009E25A",
+      "title": "20区粉尘爆炸危险场所电气设备不符合防爆要求",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "电气安全",
+        "place": "通用场所",
+        "description": "除尘器、收尘仓等划分为20区的粉尘爆炸危险场所，电气设备选型、安装或防爆性能不符合相应区域要求，存在电气点燃源引发粉尘爆炸的风险。",
+        "measures": "依据20区危险区域及粉尘特性复核电气设备防爆型式、等级和安装状态，更换不符合要求的设备并规范接线、密封、接地等措施；整改后开展防爆电气专项检查。",
+        "conditions": "适用于存在粉尘爆炸危险、并划分为20区的除尘器、收尘仓等场所。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第十一条第（七）项",
+        "quote": "第十一条 存在粉尘爆炸危险的工贸企业有下列情形之一的，应当判定为重大事故隐患：……（七）除尘器、收尘仓等划分为20区的粉尘爆炸危险场所电气设备不符合防爆要求的。",
+        "supplementalBasis": null,
+        "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》第十一条(七)\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "除尘器、收尘仓等划分为20区的粉尘爆炸危险场所电气设备不符合防爆要求的",
+          "description": "除尘器、收尘仓等划分为20区的粉尘爆炸危险场所电气设备不符合防爆要求的",
+          "measures": "更换该 20 区场所的电气设备，使其符合防爆要求。",
+          "conditions": "适用于电气设备的相关安全管理。"
+        },
+        "after": {
+          "title": "20区粉尘爆炸危险场所电气设备不符合防爆要求",
+          "description": "除尘器、收尘仓等划分为20区的粉尘爆炸危险场所，电气设备选型、安装或防爆性能不符合相应区域要求，存在电气点燃源引发粉尘爆炸的风险。",
+          "measures": "依据20区危险区域及粉尘特性复核电气设备防爆型式、等级和安装状态，更换不符合要求的设备并规范接线、密封、接地等措施；整改后开展防爆电气专项检查。",
+          "conditions": "适用于存在粉尘爆炸危险、并划分为20区的除尘器、收尘仓等场所。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_094ac525e8c2d88d6557084d",
+          "clauseId": "C_4cc8db7da64889234b1417aa",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_4cc8db7da64889234b1417aa",
+          "articlePath": "6.1.1",
+          "quote": "配电线路应装设短路保护和过负荷保护。",
+          "lifecycle": "active",
+          "sourceUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260424407170672345.pdf",
+          "lawVersionId": "LV_STD_GB50054_2011",
+          "lawVersion": {
+            "officialName": "低压配电设计规范",
+            "documentNumber": "GB 50054-2011",
+            "validityStatus": "active",
+            "effectiveDate": "2012-06-01",
+            "endDate": "",
+            "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2011/art_17339_206925.html"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    },
+    {
+      "order": 594,
+      "hazardId": "H_1094F237782E4FC9A7D58CA44E",
+      "title": "遇湿自燃金属粉尘收集、堆放或储存场所未采取防止氢气积聚或防水防潮措施",
+      "publishDecision": "是",
+      "flags": [
+        "basis_unmatched",
+        "quote_unmatched"
+      ],
+      "workbook": {
+        "category": "粉尘防爆",
+        "place": "通用场所",
+        "description": "遇湿自燃金属粉尘收集、堆放、储存场所未采取通风等防止氢气积聚措施，或者采用干式收集、堆放、储存时未采取防水、防潮措施，属于重大事故隐患判定情形。",
+        "measures": "对遇湿自燃金属粉尘收集、堆放和储存场所采取持续有效的通风等措施，防止氢气积聚；采用干式收集、堆放、储存的，应完善防水、防潮、防雨和泄漏水隔离措施，并建立日常检查制度。不得将“必须安装氢气报警器”作为本条统一判定条件，除非另有适用标准明确要求。",
+        "conditions": "适用于存在粉尘爆炸危险的工贸企业遇湿自燃金属粉尘收集、堆放、储存场所。",
+        "directBasis": "《工贸企业重大事故隐患判定标准》应急管理部令第10号 第十一条第（九）项",
+        "quote": "第十一条 存在粉尘爆炸危险的工贸企业有下列情形之一的，应当判定为重大事故隐患：……（九）遇湿自燃金属粉尘收集、堆放、储存场所未采取通风等防止氢气积聚措施，或者干式收集、堆放、储存场所未采取防水、防潮措施的。",
+        "supplementalBasis": null,
+        "note": "原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)粉尘爆炸 第8条\n\n【ChatGPT专业复核 2026-09-11】已改为现行《工贸企业重大事故隐患判定标准》（应急管理部令第10号）的直接判定依据；原上位法或无关条款不再作为直接依据。"
+      },
+      "proposedCoreChange": {
+        "changedFields": [
+          "title",
+          "description",
+          "measures",
+          "conditions"
+        ],
+        "before": {
+          "title": "铝粉危废库房未采取通风措施,未安装氢气报警器,未采取防水防潮措施",
+          "description": "铝粉危废库房未采取通风措施,未安装氢气报警器,未采取防水防潮措施",
+          "measures": "铝粉危废库房增设机械排风并保持连续通风，安装氢气浓度检测报警装置并与排风联锁；地面做防水防潮处理，库房设挡水门槛和防雨措施，定期监测库内湿度并记录。",
+          "conditions": "适用于库房的相关安全管理。"
+        },
+        "after": {
+          "title": "遇湿自燃金属粉尘收集、堆放或储存场所未采取防止氢气积聚或防水防潮措施",
+          "description": "遇湿自燃金属粉尘收集、堆放、储存场所未采取通风等防止氢气积聚措施，或者采用干式收集、堆放、储存时未采取防水、防潮措施，属于重大事故隐患判定情形。",
+          "measures": "对遇湿自燃金属粉尘收集、堆放和储存场所采取持续有效的通风等措施，防止氢气积聚；采用干式收集、堆放、储存的，应完善防水、防潮、防雨和泄漏水隔离措施，并建立日常检查制度。不得将“必须安装氢气报警器”作为本条统一判定条件，除非另有适用标准明确要求。",
+          "conditions": "适用于存在粉尘爆炸危险的工贸企业遇湿自燃金属粉尘收集、堆放、储存场所。"
+        }
+      },
+      "activeDirectLinks": [
+        {
+          "id": "K_21bf0a2199d47218dfba5fe0",
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "role": "direct",
+          "legacyRole": "",
+          "priority": null,
+          "applicability": "全国通用",
+          "lifecycle": "active"
+        }
+      ],
+      "activeDirectClauses": [
+        {
+          "clauseId": "C_784d9c21cb81fda5b963013f",
+          "articlePath": "第十八条",
+          "quote": "粉尘涉爆企业应当按照《粉尘防爆安全规程》等有关国家标准或者行业标准，制定并严格落实粉尘爆炸危险场所的粉尘清理制度，明确清理范围、清理周期、清理方式和责任人员，并在相关粉尘爆炸危险场所醒目位置张贴。相关责任人员应当定期清理粉尘并如实记录，确保可能积尘的粉尘作业区域和设备设施全面及时规范清理。粉尘作业区域应当保证每班清理。",
+          "lifecycle": "active",
+          "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202108/t20210802_394411.shtml",
+          "lawVersionId": "L006",
+          "lawVersion": {
+            "officialName": "工贸企业粉尘防爆安全规定",
+            "documentNumber": "应急管理部令第6号",
+            "validityStatus": "active",
+            "effectiveDate": "2021-09-01",
+            "endDate": "",
+            "sourceUrl": "https://www.gov.cn/gongbao/content/2021/content_5641345.htm"
+          }
+        }
+      ],
+      "reviewQuestions": [
+        "是否保留工作簿的核心字段变更？",
+        "直接依据、依据原文是否与 linked clause 一一对应？",
+        "依据角色应为 direct、fallback，还是需要重新建立关联？",
+        "可发布标记是否有充分的人工依据？"
+      ]
+    }
+  ],
+  "notes": [
+    "This queue expands exception flags into reviewable source and mapping context; no decision or database change was made.",
+    "Workbook basis/quote text and remote clause text are preserved as review evidence; textual similarity is not a legal conclusion.",
+    "The same hazard may appear under multiple flags; flag counts are intentionally not additive."
+  ]
+}

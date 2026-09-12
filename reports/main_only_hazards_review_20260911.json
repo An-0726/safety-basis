@@ -1,0 +1,1211 @@
+{
+  "schemaVersion": "safety-main-only-hazards-review-v1",
+  "generatedAt": "2026-09-11",
+  "mode": "read-only",
+  "base": {
+    "repository": "An-0726/safety-basis",
+    "commit": "f0acc76ef4813f5e684378dc3252ed1708fbebcf",
+    "workbook": "D:/Desktop/Safety_Basis_隐患库专业复核_ChatGPT.xlsx"
+  },
+  "summary": {
+    "remoteKnowledgeHazards": 712,
+    "workbookHazards": 634,
+    "workbookIntersection": 634,
+    "mainOnlyCount": 78,
+    "lifecycleDistribution": {
+      "superseded": 78
+    },
+    "statusDistribution": {
+      "(blank)": 78
+    },
+    "reviewStatusDistribution": {
+      "(blank)": 78
+    },
+    "publishableDistribution": {
+      "(blank)": 78
+    },
+    "stageDistribution": {
+      "(blank)": 78
+    },
+    "categoryDistribution": {
+      "安全管理": 16,
+      "消防安全": 11,
+      "设备设施": 6,
+      "电气安全": 9,
+      "粉尘防爆": 6,
+      "燃气安全": 2,
+      "危险化学品与危险物质": 7,
+      "应急与事故管理": 4,
+      "总图与建筑": 3,
+      "涂装安全": 6,
+      "安全标志": 4,
+      "作业安全与个体防护": 2,
+      "专项安全与EHS": 1,
+      "安全教育": 1
+    }
+  },
+  "remoteManifest": {
+    "schemaVersion": 2,
+    "v4SchemaVersion": 3,
+    "dataVersion": "2026.09.10.v4-candidate",
+    "generatedAt": "2026-09-10",
+    "publicScope": "国家法规标准优先，江苏／南京补充；只投影通过链式门禁的隐患",
+    "counts": {
+      "hazards": 632,
+      "laws": 70,
+      "lawVersions": 88,
+      "clauses": 162,
+      "links": 806
+    },
+    "sourceCounts": {
+      "hazards": 712,
+      "laws": 88,
+      "lawVersions": 88,
+      "clauses": 196,
+      "links": 839
+    },
+    "health": {
+      "verifiedHazards": 632,
+      "pendingHazards": 0,
+      "activeLaws": 68,
+      "pendingLaws": 2,
+      "invalidReferences": 0,
+      "stagedHazards": 80,
+      "stagedLaws": 0
+    },
+    "files": {
+      "searchIndex": "data/search-index.json",
+      "lawIndex": "data/law-index.json",
+      "taxonomy": "data/taxonomy.json"
+    },
+    "hazardShards": [
+      {
+        "id": "h0000",
+        "url": "data/hazards/h0000.json"
+      },
+      {
+        "id": "h0001",
+        "url": "data/hazards/h0001.json"
+      },
+      {
+        "id": "h0002",
+        "url": "data/hazards/h0002.json"
+      },
+      {
+        "id": "h0003",
+        "url": "data/hazards/h0003.json"
+      }
+    ],
+    "clauseShards": [
+      {
+        "id": "c0000",
+        "url": "data/clauses/c0000.json"
+      }
+    ]
+  },
+  "fetch": {
+    "mainOnlyPaths": 78,
+    "fetched": 78,
+    "errors": []
+  },
+  "mainOnlyHazards": [
+    {
+      "id": "H_0AB8998CB24041C894BB326A69",
+      "title": "未建立健全全员安全生产责任制,主要负责人(包括法定代表人和实际控制人,下同)是本企业安全生产的第一责任人,对本企业的安全生产工作全面负责",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_0AB8998CB24041C894BB326A69.json"
+    },
+    {
+      "id": "H_0E92EFCE7E9E667C7BE84085",
+      "title": "未建立健全并落实本单位全员安全生产责任制",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_0E92EFCE7E9E667C7BE84085.json"
+    },
+    {
+      "id": "H_1DB6AE75F00A4EB682FA20136E",
+      "title": "、暂存区域,未设置安全警示标志,配备相应品种和数量的消防器材及泄漏应急处理设备",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_1DB6AE75F00A4EB682FA20136E.json"
+    },
+    {
+      "id": "H_22D804731C0D4F90A6BF2A83CD",
+      "title": "场(厂)内专用机动车辆有下列情形之一仍继续使用的,,未判定为重大事故隐患。a)定期检验的检验结论为“不合格”。b)电动车辆电源紧急切断装置缺失或失效。c)制动(包括行车、驻车)装置缺失或失效。d)观光列车的牵引连接装置及其二次保护装置缺失或失效。e)非公路用旅游观光车辆超过最大行驶坡度使用",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "设备设施",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_22D804731C0D4F90A6BF2A83CD.json"
+    },
+    {
+      "id": "H_24319B1A510C4747B950BCCA6F",
+      "title": "公共实验室内反应釜装置区域防爆电器安装不规范,部分线路未穿管",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_24319B1A510C4747B950BCCA6F.json"
+    },
+    {
+      "id": "H_293D08E1BF204915931B98A457",
+      "title": "产生粉尘、毒物的生产设备未采取密闭或通风净化措施",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "粉尘防爆",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_293D08E1BF204915931B98A457.json"
+    },
+    {
+      "id": "H_323DCD216820476B95E8153AE1",
+      "title": "e)物品堆垛与堆垛之间的距离不小于1m",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_323DCD216820476B95E8153AE1.json"
+    },
+    {
+      "id": "H_3480C7D3E5894161B3E26CA1B0",
+      "title": "可燃性有机溶剂清洗设备设施、工装器具、地面时,未采取防止可燃气体在周边密闭或者半密闭空间内积聚措施的",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "燃气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_3480C7D3E5894161B3E26CA1B0.json"
+    },
+    {
+      "id": "H_38AB017ED1E34FCB964087B0EA",
+      "title": "危险化学品试剂间安全警示标志张贴在门上",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_38AB017ED1E34FCB964087B0EA.json"
+    },
+    {
+      "id": "H_44549E43707D4EBCB2D1BC7E67",
+      "title": "特种设备有下列情形之一仍继续使用的,未判定为重大事故隐患。a)特种设备未取得许可生产、因安全问题国家明令淘汰、已经报废或者达到报废条件。b)特种设备发生过事故,未对其进行全面检查、消除事故隐患。c)未按规定进行监督检验或者监督检验不合格。d)有4.2~4.10中规定的超过规定参数、适用范围的情形",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "设备设施",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_44549E43707D4EBCB2D1BC7E67.json"
+    },
+    {
+      "id": "H_46DA049AC33E40E88F9FA78093",
+      "title": "空压机房内配电柜柜门未保持常闭状态",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_46DA049AC33E40E88F9FA78093.json"
+    },
+    {
+      "id": "H_475C71B0AA9E4C08B82E9C8B29",
+      "title": "剧毒化学品、监控化学品、易制毒化学品、易制爆危险化学品,未按规定将储存地点、储存数量、流向及管理人员的情况报相关部门备案,剧毒化学品以及构成重大危险源的危险化学品,未在专用仓库内单独存放,并实行双人收发、双人保管制度",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_475C71B0AA9E4C08B82E9C8B29.json"
+    },
+    {
+      "id": "H_4873DBAC1A394BA7878AF73626",
+      "title": "物料堆放不满足要求",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_4873DBAC1A394BA7878AF73626.json"
+    },
+    {
+      "id": "H_4B099AC576B249B6A7A28AE8E0",
+      "title": "、储存区域,未设置安全警示标志。灌装时,未控制流速,且有接地装置,防止静电积聚。配备相应品种和数量的消防器材及泄漏应急处理设备",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_4B099AC576B249B6A7A28AE8E0.json"
+    },
+    {
+      "id": "H_5425D2CF14184CBEBB7245567F",
+      "title": "危险化学品试剂间内可燃气体报警器接线处护套线腐蚀脱落,未采用防爆挠性管连接",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_5425D2CF14184CBEBB7245567F.json"
+    },
+    {
+      "id": "H_56B7B9F8379B4E6E93F2342596",
+      "title": "未遵守本法和其他有关安全生产的法律、法规,加强安全生产管理,建立健全全员安全生产责任制和安全生产规章制度,加大对安全生产资金、物资、技术、人员的投入保障力度,改善安全生产条件,加强安全生产标准化、信息化建设,构建安全风险分级管控和隐患排查治理双重预防机制,健全风险防范化解机制,提高安全生产水平,确保安全生产",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_56B7B9F8379B4E6E93F2342596.json"
+    },
+    {
+      "id": "H_5A680299841F47E3974FB596E4",
+      "title": "危化品暂存间未标明储存物品的名称、性质和灭火方法。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_5A680299841F47E3974FB596E4.json"
+    },
+    {
+      "id": "H_5B19995BCDF379CBC019C6BE",
+      "title": "未制定生产安全事故应急救援预案",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "应急与事故管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_5B19995BCDF379CBC019C6BE.json"
+    },
+    {
+      "id": "H_5F59F50EE244471C81C2757635",
+      "title": "严格粉尘废屑储存。粉尘废屑,未优先采用机械压块压实处理,确需采用干式储存的,未桶装加盖或袋装封口密闭。粉尘废屑进入储存场所前,未冷却至常温,不同种类的粉尘废屑不得混装储存,严禁与氧化物、过氧化物、酸、爆炸品、易燃物品等在同一场所存放。镁废屑采用袋装储存的,未单层存放,每袋之间保持一定间隙,也可采用不锈钢等不易产生铁锈的货架分层储存,严禁堆垛储存",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "粉尘防爆",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_5F59F50EE244471C81C2757635.json"
+    },
+    {
+      "id": "H_62A95BDFD9C543AA8643E52470",
+      "title": "抛丸机区域电气不符合防爆要求",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_62A95BDFD9C543AA8643E52470.json"
+    },
+    {
+      "id": "H_6306B00BE6624819BAC056740D",
+      "title": "冲压机双手按压按钮损坏",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_6306B00BE6624819BAC056740D.json"
+    },
+    {
+      "id": "H_633B906805A84D82B0AC69088B",
+      "title": "厂区通道宽度未满足防火间距等要求",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "总图与建筑",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_633B906805A84D82B0AC69088B.json"
+    },
+    {
+      "id": "H_67DD4A08FEA74E05B014D3470C",
+      "title": "设备安装区一处灭火器未成组设置。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "总图与建筑",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_67DD4A08FEA74E05B014D3470C.json"
+    },
+    {
+      "id": "H_6A14A125FBE94A76B2965DEEB8",
+      "title": "液化石油气气瓶间缺失少“严禁烟火”、“易燃易爆” 等安全警示标志",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_6A14A125FBE94A76B2965DEEB8.json"
+    },
+    {
+      "id": "H_73CFA21BD25C4D06B769660539",
+      "title": "现场台钻安全防护罩缺失。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_73CFA21BD25C4D06B769660539.json"
+    },
+    {
+      "id": "H_7992BED0E0864FE488C8F4007F",
+      "title": "企业未对较大以上风险公示",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_7992BED0E0864FE488C8F4007F.json"
+    },
+    {
+      "id": "H_83C122272BA54FE1AB0F410B4F",
+      "title": "未有泄漏液体收集装置、气体导出口及气体净化装置",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_83C122272BA54FE1AB0F410B4F.json"
+    },
+    {
+      "id": "H_85705246544142A28E49D13338",
+      "title": "丙烷汇流排间的风扇非防爆",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "总图与建筑",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_85705246544142A28E49D13338.json"
+    },
+    {
+      "id": "H_8740A8DCB8B04C3F93B030623F",
+      "title": "未根据本单位实际,建立安全生产投入保障、宣传教育培训、隐患排查治理、应急管理、发包(出租)管理等安全生产规章制度",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "应急与事故管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_8740A8DCB8B04C3F93B030623F.json"
+    },
+    {
+      "id": "H_87C7C1197DD2B651CFCACED5",
+      "title": "危险化学品储存区域未按标准配备相应品种和数量的消防器材及泄漏应急处理设备",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_87C7C1197DD2B651CFCACED5.json"
+    },
+    {
+      "id": "H_89BC396EBC084489B0CC25B02B",
+      "title": "机器上,未有铭牌和操作指示、维护和安全等标牌",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_89BC396EBC084489B0CC25B02B.json"
+    },
+    {
+      "id": "H_8A64C27145D64B229F53234268",
+      "title": "易发生危险化学品事故的实验室房门未向疏散方向开启或未设置监测报警及自动灭火系统",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_8A64C27145D64B229F53234268.json"
+    },
+    {
+      "id": "H_8C11A178483A4168809767DCFA",
+      "title": "喷粉室内有非防爆的开关插座",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "涂装安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_8C11A178483A4168809767DCFA.json"
+    },
+    {
+      "id": "H_8C5C628FAFD544CF8FF58A7732",
+      "title": "、储存区域,未设置安全警示标志。在传送过程中,钢瓶和容器必须接地和跨接,防止产生静电。搬运时轻装轻卸,防止钢瓶及附件破损,配备相应品种和数量的消防器材及泄漏应急处理设备",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_8C5C628FAFD544CF8FF58A7732.json"
+    },
+    {
+      "id": "H_8ECDE7A0067044F09C58577BEC",
+      "title": "b)不允许产生粉尘沉积",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "粉尘防爆",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_8ECDE7A0067044F09C58577BEC.json"
+    },
+    {
+      "id": "H_8FB5E0EC57924DEBB03721D98D",
+      "title": "铝粉危废库房未采取通风措施,未安装氢气报警器,未采取防水防潮措施",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "粉尘防爆",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_8FB5E0EC57924DEBB03721D98D.json"
+    },
+    {
+      "id": "H_9257C3284E2644A6BB80CC6B34",
+      "title": "喷漆房内的可燃气体报警仪电源线路不符合防爆规范",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_9257C3284E2644A6BB80CC6B34.json"
+    },
+    {
+      "id": "H_97C294EEF0674528B5099D1C07",
+      "title": "废油漆桶、废稀释剂桶等危险废物未及时收集入库",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "涂装安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_97C294EEF0674528B5099D1C07.json"
+    },
+    {
+      "id": "H_97D66CC1DFE045BA9BF22CB9A9",
+      "title": "四楼危险化学品试剂间内电气线路未敷设在钢管内",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_97D66CC1DFE045BA9BF22CB9A9.json"
+    },
+    {
+      "id": "H_997F60F5C9034C5593A316E08F",
+      "title": "从事焊接、切割的动火作业人员,未按规定持焊接与热切割或建筑焊工特种作业操作资格证书上岗,从事特种设备相关焊接作业人员,未按规定持特种设备作业人员证上岗,具备相应动火作业安全技能",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "设备设施",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_997F60F5C9034C5593A316E08F.json"
+    },
+    {
+      "id": "H_9A17E143EA5B427989E78C95A3",
+      "title": "调漆作业使用了可以发生火花的铁质工具",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "涂装安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_9A17E143EA5B427989E78C95A3.json"
+    },
+    {
+      "id": "H_9BC92F4558404DA9B14A721492",
+      "title": "仓储场所的电气线路、电气设备,未定期检查、检测,禁止长时间超负荷运行",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_9BC92F4558404DA9B14A721492.json"
+    },
+    {
+      "id": "H_9D076BD9D82444DCAA72489164",
+      "title": "未建立健全各级安全生产责任制和安全规章制度,并制定事故应急救援预案,各级人员,未对其所管辖范围的安全负责",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "应急与事故管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_9D076BD9D82444DCAA72489164.json"
+    },
+    {
+      "id": "H_9DCBB0D8DB5441A2A3E4811603",
+      "title": "未建立健全并落实生产安全事故隐患排查治理制度,定期组织排查本单位的事故隐患,通过相关信息系统如实记录事故隐患排查治理情况,并向从业人员通报。重大事故隐患排查治理情况记录保存期限不得少于五年",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "应急与事故管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_9DCBB0D8DB5441A2A3E4811603.json"
+    },
+    {
+      "id": "H_A1696721CCC94F65AE95751A5E",
+      "title": "压力管道有下列情形之一仍继续使用的,未判定为重大事故隐患。a)定期检验的检验结论为“不符合要求”或“不允许使用”。b)安全阀、爆破片装置、紧急切断装置缺失或失效",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "设备设施",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_A1696721CCC94F65AE95751A5E.json"
+    },
+    {
+      "id": "H_A73EC0543AA24DF583F70E566B",
+      "title": "危险化学品主要以小包装形式暂存于试剂柜、仓库等处,未见与办公生活区域混杂布置情况",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_A73EC0543AA24DF583F70E566B.json"
+    },
+    {
+      "id": "H_AC55E4B5240544A7AA7A1CB3F8",
+      "title": "压力容器有下列情形之一仍继续使用的,未判定为重大事故隐患。a)定期检验的检验结论为“不符合要求”。b)固定式压力容器改作移动式压力容器使用。c)固定式压力容器、移动式压力容器的安全阀、爆破片装置、紧急切断装置缺失或失效。d)快开门式压力容器的快开安全保护联锁装置缺失或失效。e)氧舱的接地装置缺失或失效。f)氧舱安全保护联锁装置(联锁功能)失效",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "设备设施",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_AC55E4B5240544A7AA7A1CB3F8.json"
+    },
+    {
+      "id": "H_AD316756AE70497DBE994E0ACD",
+      "title": "货梯缺少警示标识。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全标志",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_AD316756AE70497DBE994E0ACD.json"
+    },
+    {
+      "id": "H_AF69989A559F468F8256FC000B",
+      "title": "气瓶暂存区域无标识,未设置安全警示标示",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全标志",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_AF69989A559F468F8256FC000B.json"
+    },
+    {
+      "id": "H_B5737CA0B76C41E3B1F450E277",
+      "title": "除尘系统的启动,未先于生产加工系统启动,生产加工系统停机时除尘系统,未至少延时停机10min,未在停机后将箱体和灰斗内的粉尘全部清除和卸出",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "粉尘防爆",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_B5737CA0B76C41E3B1F450E277.json"
+    },
+    {
+      "id": "H_BD9E507F756747359D0DAA6ABF",
+      "title": "活性炭吸附装置管道未见安装阻火器(防火阀)",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "涂装安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_BD9E507F756747359D0DAA6ABF.json"
+    },
+    {
+      "id": "H_BE977CD5E6BF4C5CA4F4A04B8A",
+      "title": "设备上供人员作业的操作位置,未安全可靠,并未满足人机交互功能的要求。其工作空间,未保证作业人员的身体各部位在作业中可正常活动。危险作业点,未留有安全退避空间",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "作业安全与个体防护",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_BE977CD5E6BF4C5CA4F4A04B8A.json"
+    },
+    {
+      "id": "H_BF58DEEC69C04BF7BDAE3A6A27",
+      "title": "气瓶存放区域未配置灭火器材",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_BF58DEEC69C04BF7BDAE3A6A27.json"
+    },
+    {
+      "id": "H_C1953CE65F144427890685861E",
+      "title": "危废暂存间内部分桶装液体下方无泄漏液体收集装置。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_C1953CE65F144427890685861E.json"
+    },
+    {
+      "id": "H_C2B93DD5B7D64183BE5AF8E84C",
+      "title": "危险化学品库房内使用非防爆接线盒",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_C2B93DD5B7D64183BE5AF8E84C.json"
+    },
+    {
+      "id": "H_C83AFF63E77544D79C00E9C740",
+      "title": "一行车吊钩防脱钩装置损坏",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "设备设施",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_C83AFF63E77544D79C00E9C740.json"
+    },
+    {
+      "id": "H_CB180AFAA53646A7A9A5F9D350",
+      "title": "为了保护工人的职业健康安全当进人设施内部检修时,未提供一次性衣服、防护罩、防护手套等防护用品。在加药药设施旁边还,未设置洗眼液等防护设施",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "专项安全与EHS",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_CB180AFAA53646A7A9A5F9D350.json"
+    },
+    {
+      "id": "H_CC00D5CD2332429BBDEF3FFF4A",
+      "title": "喷漆作业结束后未能将不能继续使用的油漆及容器放到危废贮存点",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "涂装安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_CC00D5CD2332429BBDEF3FFF4A.json"
+    },
+    {
+      "id": "H_CC4AD0C7B4064A3D8AD9B31CC0",
+      "title": "企业较大风险风险公示栏信息错误",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_CC4AD0C7B4064A3D8AD9B31CC0.json"
+    },
+    {
+      "id": "H_CCB3F453BA5643EFAE44FF64BD",
+      "title": "非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施的",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "燃气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_CCB3F453BA5643EFAE44FF64BD.json"
+    },
+    {
+      "id": "H_CD4406C1D7904CBB99964C7A30",
+      "title": "气瓶临时储存场所无安全警示标志",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全标志",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_CD4406C1D7904CBB99964C7A30.json"
+    },
+    {
+      "id": "H_CEAF10F03D5D472482E621D22E",
+      "title": "氧气瓶使用场所未张贴“严禁油脂”安全警示标志",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全标志",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_CEAF10F03D5D472482E621D22E.json"
+    },
+    {
+      "id": "H_D0E34E3CC9C64F458BCCDA4674",
+      "title": "危险废物贮存设施选址不满足环境保护要求",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_D0E34E3CC9C64F458BCCDA4674.json"
+    },
+    {
+      "id": "H_D3DD215E0D1E4D4A99E6D2D6A9",
+      "title": "e)物品堆垛与堆垛之间的距离不小于1m",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_D3DD215E0D1E4D4A99E6D2D6A9.json"
+    },
+    {
+      "id": "H_D5781C59D4BD4E5697FB4569C1",
+      "title": "喷漆室前部开口外侧电器不符合防爆要求",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "涂装安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_D5781C59D4BD4E5697FB4569C1.json"
+    },
+    {
+      "id": "H_D68030A1FF76475CB16F6AF998",
+      "title": "进行检修和抢修作业时,未携带氨气检测仪和正压式空气呼吸器",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "危险化学品与危险物质",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_D68030A1FF76475CB16F6AF998.json"
+    },
+    {
+      "id": "H_DD22573D773E4A1E87BF7CD42D",
+      "title": "镀镍车间传动部位未设置防护罩",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_DD22573D773E4A1E87BF7CD42D.json"
+    },
+    {
+      "id": "H_DEAE634C1628438D90C18D7B22",
+      "title": "试验台敞开边缘未设置护栏",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_DEAE634C1628438D90C18D7B22.json"
+    },
+    {
+      "id": "H_E078DE4989B64F9F826B4C4AF5",
+      "title": "车间内部分消火栓无明显的标志",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_E078DE4989B64F9F826B4C4AF5.json"
+    },
+    {
+      "id": "H_E144206DA62A4A1F83CCF8F896",
+      "title": "组织防火检查,及时消除火灾隐患。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_E144206DA62A4A1F83CCF8F896.json"
+    },
+    {
+      "id": "H_E3ABC75D6255A1C9F3A37C6A",
+      "title": "危险化学品储存区域未设置明显的安全警示标志",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_E3ABC75D6255A1C9F3A37C6A.json"
+    },
+    {
+      "id": "H_E715E6B91D5F40C8B186546C65",
+      "title": "铝粉除尘系统未安装锁气卸灰装置",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "粉尘防爆",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_E715E6B91D5F40C8B186546C65.json"
+    },
+    {
+      "id": "H_EB182F4D7F44413CBB3C16F674",
+      "title": "的特种作业人员必须按照国家有关规定经专门的安全作业培训,取得相应资格,方可上岗作业",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全教育",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_EB182F4D7F44413CBB3C16F674.json"
+    },
+    {
+      "id": "H_F280E34755FD425A9DBCDDDEB6",
+      "title": "粉碎区域配电箱无法 正常关闭,无法达到 防尘效果。",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_F280E34755FD425A9DBCDDDEB6.json"
+    },
+    {
+      "id": "H_F55588551E454FD9B8D1935E3E",
+      "title": "实验室内一根临时电源线外绝缘层破损",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_F55588551E454FD9B8D1935E3E.json"
+    },
+    {
+      "id": "H_F57270BED8114BB69A556DEBA2",
+      "title": "贮存化学危险品的仓库未配备专业技术人员或未设专人管理",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "安全管理",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_F57270BED8114BB69A556DEBA2.json"
+    },
+    {
+      "id": "H_F7900294DFC14D2785E462A8B5",
+      "title": "吊装作业人员未佩戴安全帽",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "作业安全与个体防护",
+      "places": [
+        "通用场所"
+      ],
+      "remotePath": "knowledge/hazards/H_F7900294DFC14D2785E462A8B5.json"
+    },
+    {
+      "id": "H058",
+      "title": "仓储场所在岗人员消防安全教育频次不足",
+      "lifecycle": "superseded",
+      "status": "",
+      "reviewStatus": "",
+      "publishable": "",
+      "stage": "",
+      "category": "消防安全",
+      "places": [
+        "仓储场所",
+        "仓库"
+      ],
+      "remotePath": "knowledge/hazards/H058.json"
+    }
+  ],
+  "interpretation": [
+    "mainOnlyHazards means present in the pinned remote-main knowledge tree but absent from the attached review workbook.",
+    "Absence from the workbook is an omission/coverage fact only; it is not evidence of deletion, merge, rejection, or legal invalidity.",
+    "Any decision to retain, exclude, merge, or revise these records requires an explicit source/status/review comparison."
+  ]
+}
