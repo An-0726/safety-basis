@@ -204,22 +204,24 @@ TITLE_OVERRIDES = {
 }
 
 
-def auto_specs_for(clauses, exclude_locators):
-    """对未反转的条款生成自动反转 specs。"""
+CATEGORY_BY_PREFIX = [
+    ("C_15577_", "粉尘防爆"), ("C_12158_", "电气安全"), ("C_15607_", "涂装安全"),
+    ("C_48B66BAC_", "作业安全与个体防护"), ("C_9215D855_", "特种设备"),
+]
+
+def auto_specs_for(clauses, exclude_clause_ids):
+    """对所有未关联隐患的已核验条款生成自动反转 specs。"""
     specs = []
     for cid, c in sorted(clauses.items()):
-        if not cid.startswith("C_GBT47236_"):
+        if cid in exclude_clause_ids:
             continue
-        loc = cid.replace("C_GBT47236_", "").replace("_", ".")
-        if loc in exclude_locators:
-            continue
-        for seq, (sentence, title, measures) in enumerate(auto_invert(loc, c["quote"]), 1):
-            specs.append(dict(clause=cid.replace("C_GBT47236_", ""),
-                              title=title[:60],
-                              desc=sentence + "（GB/T 47236-2026 第" + loc + "条）。",
-                              measures=measures + "（依据 GB/T 47236-2026 第" + loc + "条整改。）",
-                              keywords=[loc, "铸造机器"],
-                              category="设备设施",
+        article = c.get("articlePath", "")
+        category = next((cat for pre, cat in CATEGORY_BY_PREFIX if cid.startswith(pre)), "设备设施")
+        for seq, (sentence, title, measures) in enumerate(auto_invert(article, c["quote"]), 1):
+            specs.append(dict(clause=cid, title=title[:60],
+                              desc=sentence + "（" + article + "）。",
+                              measures=measures + "（依据 " + article + " 整改。）",
+                              keywords=[article], category=category,
                               auto=True, seq=seq))
     return specs
 
@@ -243,18 +245,19 @@ def main():
     specs = list(SPECS)
     if args.auto:
         done = {s["clause"] for s in SPECS}
-        for f in os.listdir(os.path.join(KNOW, "hazards")):
-            if f.startswith("H_GBT47236_"):
-                d = load_json(os.path.join(KNOW, "hazards", f))
-                m = re.search(r"GB/T 47236-2026 ([0-9B.]+) 条反转", d.get("note", ""))
-                if m:
-                    done.add(m.group(1))
-        specs += auto_specs_for(clauses, exclude_locators=done)
-        print(f"auto specs: {len(specs) - len(SPECS)} (excluded {len(done)} locators)")
+        for f in os.listdir(os.path.join(KNOW, "links")):
+            d = load_json(os.path.join(KNOW, "links", f))
+            if d.get("clauseId"):
+                done.add(d["clauseId"])
+        specs += auto_specs_for(clauses, exclude_clause_ids=done)
+        print(f"auto specs: {len(specs) - len(SPECS)} (excluded {len(done)} linked/spec clauses)")
     for spec in specs:
-        cid = "C_GBT47236_" + spec["clause"].replace(".", "_")
-        hid = "H_GBT47236_" + spec["clause"].replace(".", "_")
-        kid = "K_GBT47236_" + spec["clause"].replace(".", "_")
+        if spec.get("auto"):
+            cid = spec["clause"]
+        else:
+            cid = "C_GBT47236_" + spec["clause"].replace(".", "_")
+        hid = ("H_GBT47236_" + spec["clause"].replace(".", "_")) if cid.startswith("C_GBT47236_") else ("H" + cid[1:])
+        kid = ("K_GBT47236_" + spec["clause"].replace(".", "_")) if cid.startswith("C_GBT47236_") else ("K" + cid[1:])
         if spec.get("auto"):
             hid += "_" + str(spec.get("seq", 1))
             kid += "_" + str(spec.get("seq", 1))
@@ -294,13 +297,14 @@ def main():
         wr = lambda p, o: (os.makedirs(os.path.dirname(p), exist_ok=True),
                            io.open(p, "w", encoding="utf-8", newline="\n").write(
                                json.dumps(o, ensure_ascii=False, indent=2) + "\n"))
+        hazard_note_law = clauses[link["clauseId"]].get("articlePath", "")
+        hazard = dict(hazard, note="依据 " + hazard_note_law + " 反转生成（GLM，2026-09-12）。")
         wr(os.path.join(KNOW, "hazards", hazard["id"] + ".json"), hazard)
         wr(os.path.join(KNOW, "links", link["id"] + ".json"), link)
         hrev = {"checkedAt": NOW_DATE, "decision": "verified", "entityId": hazard["id"],
                 "entityType": "hazard", "evidenceRefs": [],
-                "reason": "法规驱动生成（GLM）：由 GB/T 47236-2026 " +
-                          hazard["id"].replace("H_GBT47236_", "").replace("_", ".") +
-                          " 条反转生成；标题、描述、措施依据条款原文撰写，关联与依据同步建立。",
+                "reason": "法规驱动生成（GLM）：由已核验条款 " + link["clauseId"] +
+                          " 反转生成；标题、描述、措施依据条款原文撰写，关联与依据同步建立。",
                 "reviewType": "content", "reviewedContentHash": content_hash(hazard),
                 "reviewer": MODEL}
         wr(os.path.join(KNOW, "reviews", "hazards", hazard["id"] + ".json"), hrev)
