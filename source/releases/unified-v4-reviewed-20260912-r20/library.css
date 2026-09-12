@@ -1,0 +1,17 @@
+nav a.nav{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.library-hit{text-align:left;width:100%;cursor:pointer;background:transparent;border:0;border-bottom:1px solid #e1e7e3;padding:18px 20px;color:inherit;font:inherit}
+.library-hit:hover,.library-hit.selected{background:#edf3ee}
+.library-hit strong{display:block;font-size:15px;line-height:1.6}
+.library-hit p{font-size:13px;line-height:1.8;color:#56655f;margin:8px 0 0}
+.library-hit small{display:block;font-size:11px;color:#637c6c;margin-top:6px}
+.library-copy{white-space:pre-wrap;line-height:1.95;overflow-wrap:anywhere}
+.library-article{padding:20px 0;border-bottom:1px solid #e5e9e6;scroll-margin-top:24px}
+.library-article h3{font-size:15px;margin:0 0 10px}
+.library-article p{margin:0;white-space:pre-wrap;line-height:1.95}
+.library-article.hit{border-left:3px solid #537b62;padding-left:16px;background:#f3f7f3}
+.library-toc{display:flex;flex-wrap:wrap;gap:8px;max-height:150px;overflow:auto;margin:16px 0}
+.library-toc button{font-size:12px;padding:5px 9px}
+.library-meta{color:#65776d;font-size:12px;line-height:1.8}
+.library-more{display:block;margin:20px auto}
+mark{background:#f6e7a7;color:inherit;padding:0 1px}
+@media(max-width:760px){header nav{gap:3px}.library-hit{padding:15px}.library-copy{font-size:14px}}
