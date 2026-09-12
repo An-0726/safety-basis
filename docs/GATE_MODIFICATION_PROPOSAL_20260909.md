@@ -536,3 +536,15 @@ def site(as_of, output, node, gate_level):
 ---
 
 **文档结束。** 请用户审阅本方案，确认后开始实施。
+
+## 2026-09-13 已实施变更（用户本人决策，非提案）
+
+**已发布未实施（upcoming）版本的条款可支撑当前隐患引用。**
+
+- 背景：§7 原设计为"upcoming 可进目录但不能支撑隐患"，导致已发布新版（GB 12801-2025、
+  GB/T 13869-2026）的条款入库即整体阻断发布，新旧版切换被迫等实施日。
+- 用户决策原话："我就是要最新的，没生效也没关系。"
+- 变更内容：release_gate_core.gate_law_version 中 upcoming 分支改为 supports_current=True
+  （effectiveDate <= asOf 仍标 upcoming 的效力标错拦截保留）；gate_clause §10 注释、
+  verify_unified_bundle 条款效力标签检查（接受 现行有效/即将生效）同步对齐。
+- 影响：repealed/unknown 仍被排除；引用将始终指向最新发布版，无需再为版本切换排期。
