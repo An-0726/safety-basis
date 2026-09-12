@@ -169,7 +169,9 @@ def auto_invert(locator, quote):
         elif "必须" in s:
             title = s.replace("必须", "未", 1)
         else:
-            title = re.sub(r"应", "未", s, count=1)
+            title = re.sub(r"应当", "未", s, count=1)
+            if title == s:
+                title = re.sub(r"应", "未", s, count=1)
         title = clean_title(title)
         if not title:
             continue
