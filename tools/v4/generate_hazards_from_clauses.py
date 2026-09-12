@@ -154,10 +154,15 @@ def auto_invert(locator, quote):
             merged[-1] += s
         else:
             merged.append(s)
+    REGULATOR = re.compile(r"(监督部门|监督管理部门|消防救援机构|人民政府|主管部门|市场监管|公安部门|应急管理部门|监管部门|监察机构|有关部门|行政部门)")
+    PREFIX = re.compile(r"^第[一二三四五六七八九十百千0-9]{1,4}条\s*")
     for s in merged:
         if not OBLIGATION.search(s) or len(s) < 8:
             continue
         if s.startswith("注") or "见 GB" in s[:8] or "见GB" in s[:8]:
+            continue
+        # 监管职责条款（对政府/部门的义务）不构成现场隐患，跳过（2026-09-12 质量修正）
+        if REGULATOR.search(s):
             continue
         measures = s
         if "不应" in s:
