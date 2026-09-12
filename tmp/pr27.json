@@ -1,0 +1,6 @@
+{
+  "title": "release r27: add 104 hazards from five in-force duty-dense regulations",
+  "head": "data-verify-batch-003",
+  "base": "main",
+  "body": "## Summary\n\n- Ingested clean-text clauses from five verified in-force regulations: 工贸企业重大事故隐患判定标准, 工贸企业粉尘防爆安全规定, 生产安全事故应急预案管理办法, 危险化学品重大危险源监督管理暂行规定, 工贸企业有限空间作业安全规定.\n- 218 candidates reviewed title-by-title in the main session: 110 approved, 104 new after title-dedup; 108 dropped (regulator duties, fragments, list bodies, existing duplicates).\n- Removed 18 duplicate unlinked clause records from double-imported laws.\n- Gate six-phase PASS (1627 / 2006, strictBlockers=0), audit PASS, bundle verify clean; site-selection -> r27."
+}
