@@ -142,68 +142,91 @@ def load_json(path):
 OBLIGATION = re.compile(r"(应|不应|不得|严禁|必须)")
 SPLIT_RE = re.compile(r"(?<=[。；])")
 
+OBLIGATION = re.compile(r"(应|不应|不得|严禁|必须|宜)")
+SPLIT_RE = re.compile(r"(?<=[。；])")
+REGULATOR_RE = re.compile(r"(监督部门|监督管理部门|消防救援机构|人民政府|主管部门|市场监管|公安部门|应急管理部门|监管部门|监察机构|有关部门|行政部门)")
+TITLE_PREFIX = re.compile(r"^第[一二三四五六七八九十百千0-9]{1,4}条\s*")
+
+def clean_title(title):
+    """标题清洗：去条号前缀/序号、去 CJK 间空格、截断残句、残留义务词弃用。"""
+    title = TITLE_PREFIX.sub("", title)
+    title = re.sub(r"^(（?[一二三四五六七八九十]{1,3}）|（?\d{1,3}）|[a-h]\))\s*", "", title)
+    title = re.sub(r"(?<=[一-鿿])\s+(?=[一-鿿])", "", title)
+    title = title.strip("。；, ：: ")
+    if re.search(r"应", title):
+        # 残留义务“应”（排除复合词）→ 机械反转不可靠，弃用
+        for mm in re.finditer(r"应", title):
+            i = mm.start()
+            if title[i:i+2] not in ("适应","应急","应该","供应","相应","反应") and title[i-1:i+1] not in ("适应","应急","应该","供应","相应","反应"):
+                return None
+    if len(title) < 8:
+        return None
+    if len(title) > 60:
+        cut = title[:60]
+        for sep in ("；", "。", "，", ","):
+            if sep in cut:
+                cut = cut[:cut.rfind(sep)]
+        title = cut.rstrip(",;：: ") + "等"
+    return title
+
+COMPOUNDS = ("适应", "应急", "应该", "供应", "相应", "反应", "答应", "应允", "应聘",
+             "应酬", "应运", "应声", "应名", "应分", "应敌", "应诊", "应约", "应景", "应诉")
+LIST_PREFIX = re.compile(r"^(（?[一二三四五六七八九十]{1,3}）?|（?\d{1,3}）?|[a-h]\))\s*")
+MODAL_RE = re.compile(r"应当|应|不得|不应|严禁|必须")
+
+def is_modal_at(s, i):
+    """判断 s[i] 的“应”是否为义务词（排除适应/应急等复合词）。"""
+    if s[i:i+2] in COMPOUNDS or s[i-1:i+1] in COMPOUNDS:
+        return False
+    return True
+
+def invert_sentence(s):
+    """把一句义务句反转；返回 (title, measures) 或 None。"""
+    if "应当" in s:
+        title = s.replace("应当", "未", 1)
+    elif "不应" in s:
+        title = s.replace("不应", "", 1)
+    elif "不得" in s:
+        title = s.replace("不得", "", 1)
+    elif "严禁" in s:
+        title = "存在违反'" + s.replace("严禁", "", 1).strip("。 ") + "'的行为"
+    elif "必须" in s:
+        title = s.replace("必须", "未", 1)
+    else:
+        m = None
+        for mm in MODAL_RE.finditer(s):
+            if mm.group(0) == "应" and is_modal_at(s, mm.start()):
+                m = mm; break
+            if mm.group(0) != "应":
+                m = mm; break
+        if not m:
+            return None
+        title = s[:m.start()] + ("未" if m.group(0) == "应" else "未" + s[m.start()+len(m.group(0)):]) + s[m.end():]
+        if m.group(0) != "应":
+            title = s[:m.start()] + "未" + s[m.end():]
+    title = clean_title(title)
+    return (title, s) if title else None
+
 def auto_invert(locator, quote):
     """把条款拆成原子义务句并反转。返回 [(sentence, title, measures)]。"""
-    text = quote
     results = []
-    sentences = [s.strip() for s in SPLIT_RE.split(text) if s.strip()]
-    # 合并被换行拆断的碎片：以小写字母/数字开头的碎片并回前句
+    sentences = [x.strip() for x in SPLIT_RE.split(quote) if x.strip()]
     merged = []
     for s in sentences:
         if merged and (s[0].isascii() and (s[0].islower() or s[0].isdigit() or s[0] in "ab)")):
             merged[-1] += s
         else:
             merged.append(s)
-    REGULATOR = re.compile(r"(监督部门|监督管理部门|消防救援机构|人民政府|主管部门|市场监管|公安部门|应急管理部门|监管部门|监察机构|有关部门|行政部门)")
-    PREFIX = re.compile(r"^第[一二三四五六七八九十百千0-9]{1,4}条\s*")
     for s in merged:
-        if not OBLIGATION.search(s) or len(s) < 8:
-            continue
         if s.startswith("注") or "见 GB" in s[:8] or "见GB" in s[:8]:
             continue
-        # 监管职责条款（对政府/部门的义务）不构成现场隐患，跳过（2026-09-12 质量修正）
-        if REGULATOR.search(s):
+        s2 = LIST_PREFIX.sub("", s).strip()
+        if len(s2) < 8:
             continue
-        measures = s
-        if "不应" in s:
-            title = s.replace("不应", "", 1)
-        elif "不得" in s:
-            title = s.replace("不得", "", 1)
-        elif "严禁" in s:
-            title = "存在违反'" + s.replace("严禁", "", 1) + "'的行为"
-        elif "必须" in s:
-            title = s.replace("必须", "未", 1)
-        else:
-            title = re.sub(r"应当", "未", s, count=1)
-            if title == s:
-                title = re.sub(r"应", "未", s, count=1)
-        title = clean_title(title)
-        if not title:
-            continue
-        results.append((s, title, measures))
+        r = invert_sentence(s2)
+        if r:
+            results.append((r[1], r[0], r[1]))
     return results
-
-
-def clean_title(title):
-    """标题清洗：去 CJK 间空格、截断残句、残留'应'的句子弃用（需人工拆分）。"""
-    title = re.sub(r"(?<=[\u4e00-\u9fff])\s+(?=[\u4e00-\u9fff])", "", title)
-    title = title.strip("。；, ")
-    # 截断以逗号/冒号结尾的残句
-    while title and title[-1] in ",:;，：；)）":
-        title = title[:-1].rstrip("。；, ")
-    # 反转后仍残留“应”=一句多义务，机械反转不可靠，弃用
-    if "应" in title:
-        return None
-    if len(title) < 8:
-        return None
-    if len(title) > 60:
-        cut = title[:60]
-        for sep in ("；", "。", ","):
-            if sep in cut:
-                cut = cut[:cut.rfind(sep)]
-        title = cut.rstrip(",;：: ") + "等"
-    return title
-
 
 TITLE_OVERRIDES = {
     "H_GBT47236_4_2_1_7": "机器起吊装置的位置设计不正确,起吊时出现偏重而失去稳定性",
@@ -237,6 +260,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="实际写入 knowledge；默认 dry-run")
     ap.add_argument("--auto", action="store_true", help="对 SPECS 未覆盖的条款做机械反转（生成后需人工审题）")
+    ap.add_argument("--from-file", dest="from_file", help="按人工审定清单（N|clause|title）应用，未列入的候选丢弃")
     args = ap.parse_args()
 
     clauses = {}
@@ -250,7 +274,19 @@ def main():
 
     created, errors = [], []
     specs = list(SPECS)
-    if args.auto:
+    if args.from_file:
+        all_specs = auto_specs_for(clauses, exclude_clause_ids=set())
+        fixed_lines = [l.split("|", 2) for l in io.open(args.from_file, encoding="utf-8").read().splitlines() if l.strip()]
+        keep_specs = []
+        for ln in fixed_lines:
+            n = int(ln[0])
+            if 1 <= n <= len(all_specs):
+                spec = dict(all_specs[n - 1])
+                spec["title"] = ln[2]
+                keep_specs.append(spec)
+        specs = list(SPECS) + keep_specs
+        print(f"from-file specs: {len(keep_specs)} (of {len(all_specs)} candidates)")
+    elif args.auto:
         done = {s["clause"] for s in SPECS}
         for f in os.listdir(os.path.join(KNOW, "links")):
             d = load_json(os.path.join(KNOW, "links", f))
@@ -259,7 +295,8 @@ def main():
         specs += auto_specs_for(clauses, exclude_clause_ids=done)
         print(f"auto specs: {len(specs) - len(SPECS)} (excluded {len(done)} linked/spec clauses)")
     for spec in specs:
-        if spec.get("auto"):
+        if spec.get("auto") or args.from_file:
+            spec = dict(spec, auto=True)
             cid = spec["clause"]
         else:
             cid = "C_GBT47236_" + spec["clause"].replace(".", "_")

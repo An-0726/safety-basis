@@ -1,0 +1,6 @@
+{
+  "title": "release r23: publish fully reviewed auto-inversion batch (844 hazards)",
+  "head": "data-verify-batch-003",
+  "base": "main",
+  "body": "## Summary\n\n- All 1245 auto-inversion candidates were reviewed title-by-title in 5 sequential review passes: 361 KEEP / 487 FIX / 397 DROP (regulator-duty subjects, penalty clauses, definitions, fragments).\n- 844 reviewed hazards applied through the from-file generator with enumeration-aligned pairing — this also fixes the title/description cross-pairing found in the earlier uncommitted batch (candidates indexed against a different enumeration than the apply path). 53 GBT47236 double-prefix ids normalized to single-prefix.\n- Every applied hazard verified against the same enumeration: title/description/link/review 844/844 exact match.\n- Gate six-phase PASS (strictBlockers=0), validate_all BLOCKING none, strict_release_audit PASS, bundle verify errors=[].\n- site-selection -> unified-v4-reviewed-20260912-r23; live projection 1496 hazards / 1674 links / 174 laws / 716 clauses."
+}
