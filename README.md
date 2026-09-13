@@ -19,7 +19,7 @@
 
 - `knowledge/`：95个法规身份、96个版本、1,947条条款、1,608项隐患（344项正式活跃 + 1,264项Excel提案）、525个正式关联。
 - `source/publication/`：216项公开目录；15份获准公开全文；140项官方入口。
-- `source/releases/current/`：1522项公开隐患（1506项已核验 + 16项待审核候选）、221项法规版本、1300条正式发布条款、1754个正式关联；候选记录可查但不能直接作为正式依据。
+- `source/releases/current/`：1522项公开隐患（1508项已核验 + 14项待审核候选）、221项法规版本、1302条正式发布条款、1756个正式关联；候选记录可查但不能直接作为正式依据。
 - `source/library/fulltext.sqlite3`：当前169份私有全文；新增PDF只有成功解析或OCR并建立正文索引后才计数。
 - `dist/local/打开本地最终版.cmd`：本地日常使用的唯一总入口；运行 `py -3 tools/build_local_release.py` 可随时重新生成。
 - 1264条Excel新增隐患中仍待外部资料或合并确认的16条，见 `docs/EXCEL_PENDING_VERIFICATION_20260913.md`。
