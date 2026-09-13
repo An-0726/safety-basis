@@ -63,9 +63,9 @@
 - 更新README和维护说明中的数量；
 - 输出法规数量、全文数量、隐患数量、待核验清单和下载清单；
 - 保留外部备份；
-- 本轮正式核验发布提交待本轮校验完成后更新；发布前必须同时更新 `source/releases/site-selection.json`。
-- GitHub Actions正式发布成功后，线上地址为 <https://an-0726.github.io/safety-basis/>。
-- 本轮发布哈希以 `source/releases/current/release.json` 和 `source/releases/site-selection.json` 的同一值为准。
+- 本轮正式核验发布提交为 `4af02234`；`source/releases/current/release.json` 与 `source/releases/site-selection.json` 已同步。
+- GitHub Actions正式发布成功：<https://github.com/An-0726/safety-basis/actions/runs/34765720355>；线上地址为 <https://an-0726.github.io/safety-basis/>。
+- 本轮发布哈希：`d575b21d7ec9ea420873c9a2bb157650c0cce299ec2dac535687d8453ff37c45`。
 
 ## 当前结果边界
 
