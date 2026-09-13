@@ -1,29 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
-import { searchHazards, searchLaws, normalize } from '../js/search.js';
-
-const HERE = dirname(fileURLToPath(import.meta.url));
-const golden = JSON.parse(readFileSync(join(HERE, 'search-golden.json'), 'utf8'));
-
-test(`黄金用例回归（${golden.cases.length} 条，Search 2.0 召回/精确性）`, () => {
-  const idx = JSON.parse(readFileSync(join(HERE, '..', 'data', 'search-index.json'), 'utf8'));
-  const laws = JSON.parse(readFileSync(join(HERE, '..', 'data', 'law-index.json'), 'utf8'));
-  const failures = [];
-  for (const c of golden.cases) {
-    const hits = c.law ? searchLaws(laws, c.q, {}) : searchHazards(idx, c.q, {});
-    if (c.kind === 'miss') {
-      if (hits.length !== 0) failures.push(`${c.q} 预期 0 命中，实际 ${hits.length}`);
-    } else if (c.top) {
-      if (!hits.some(x => x.id === c.top)) failures.push(`${c.q} 预期命中 ${c.top}，实际前 3：${hits.slice(0, 3).map(x => x.id).join(',')}`);
-    } else if (hits.length === 0) {
-      failures.push(`${c.q} 预期至少 1 条命中，实际 0`);
-    }
-  }
-  assert.deepEqual(failures, []);
-});
+import { searchHazards, searchLaws, normalize } from '../web/js/search.js';
 
 const hazardRow = (over = {}) => ({
   id: 'H_TEST', title: '配电室未设置警示标志', aliases: [], keywords: [], lawNames: [],

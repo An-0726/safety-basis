@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """统一发布包（V4 格式）严格校验器。
 
-与 tools/pipeline/site_bundle.verify_bundle（v2 契约）平行的 V4 通道：
+当前公开发布包的唯一 V4 验证通道：
 不访问私有母库内容，只做公开包完整性、引用闭环、与 knowledge 实时 Gate 的一致性、
 防篡改和版权边界检查。任何一项失败都以非零码退出。
 
@@ -12,8 +12,7 @@
   4. manifest / 分片 / search-index / law-index / taxonomy 相互一致，引用全部闭环；
   5. 包内隐患集合 == 实时 evaluate_release_gate(knowledge).eligible_hazards，
      且标题/描述/措施/关联等字段与 knowledge 投影逐字段一致（防篡改）；
-  6. 全文库与 r13 审阅版一致：15 部全文不扩面、136 个官方入口、
-     GB/T 47236-2026 仅 link_only 题录（不公开 PDF 正文），且可检索。
+  6. 全文库与 ``source/publication`` 的获准公开集合一致，受限标准只发布题录。
 """
 import argparse
 import hashlib
@@ -29,7 +28,7 @@ from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
-R13 = os.path.join(ROOT, "source", "releases", "reviewed-20260911-r13")
+PUBLICATION = os.path.join(ROOT, "source", "publication")
 SELECTION = os.path.join(ROOT, "source", "releases", "site-selection.json")
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "app.js",
@@ -191,11 +190,11 @@ def main():
 
     # ---- 全文库边界 ----
     catalog = rd(os.path.join(bundle, "data", "fulltext", "catalog.json"))
-    r13_catalog = rd(os.path.join(R13, "data", "fulltext", "catalog.json"))
+    publication_catalog = rd(os.path.join(PUBLICATION, "fulltext", "catalog.json"))
     docs = catalog["documents"]
     full_text = {d["versionId"] for d in docs if d["textMode"] == "full_text"}
-    r13_full = {d["versionId"] for d in r13_catalog["documents"] if d["textMode"] == "full_text"}
-    bad.check(full_text == r13_full, "公开全文集合与 r13 审阅版不一致（不得扩面）")
+    approved_full = {d["versionId"] for d in publication_catalog["documents"] if d["textMode"] == "full_text"}
+    bad.check(full_text == approved_full, "公开全文集合与 source/publication 获准集合不一致")
     d47236 = [d for d in docs if d.get("versionId") == "LV_STD_GBT47236_2026"]
     if bad.check(len(d47236) == 1, "GB/T 47236-2026 题录缺失"):
         d = d47236[0]

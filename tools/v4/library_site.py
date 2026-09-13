@@ -122,13 +122,23 @@ def main():
     nidx = law_number_index()
 
     docs = []
+    used_files = set()
     for row in conn.execute("SELECT document_key, document_id, title, version, paragraph_count, "
                             "current_status, review_status, official_url FROM documents ORDER BY title, version"):
         key, did, title, version, paras, cur, rev, url = row
+        base_file = safe_name("%s %s" % (nidx.get((did, version), "") or version or did, title or ""))
+        file_name = base_file
+        if file_name.casefold() in used_files:
+            file_name = safe_name("%s [%s]" % (base_file, key))
+        suffix = 2
+        while file_name.casefold() in used_files:
+            file_name = safe_name("%s [%s-%d]" % (base_file, key, suffix))
+            suffix += 1
+        used_files.add(file_name.casefold())
         docs.append({"key": key, "id": did, "title": title or "", "version": version or "",
                      "paras": paras, "current": cur or "", "review": rev or "", "url": url or "",
                      "label": (nidx.get((did, version), "") or version or did),
-                     "file": safe_name("%s %s" % (nidx.get((did, version), "") or version or did, title or ""))})
+                     "file": file_name})
     out = os.path.abspath(args.output)
     laws_dir = os.path.join(out, "laws")
     # 先清掉上次生成的页面：文件命名规则变化后若不清，会新旧并存

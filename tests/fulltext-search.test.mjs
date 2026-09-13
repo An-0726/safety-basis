@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {normalizeText, queryGrams, intersectDocuments, matchingParagraphs} from '../js/fulltext-search.js';
+import {normalizeText, queryGrams, intersectDocuments, matchingParagraphs} from '../web/js/fulltext-search.js';
 
 test('Chinese and full-width references use the same search normalization', () => {
   assert.equal(normalizeText('ＧＢ １２３—２０２６'), 'gb123—2026');

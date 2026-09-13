@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
-"""统一发布包构建器（GLM 接管任务，2026-09-11）。
+"""统一发布包构建器。
 
-生成 unified-v4-reviewed-20260911-r14：
-  - 隐患 / 条款 / 关联：当前 knowledge 的 V4 链式 Gate 公开投影（实时 eligibleHazards）；
-  - 法规目录 / 官方题录入口 / 全文库 / 前端资产：来自经过审阅的 reviewed-20260911-r13；
-  - 法规目录合并 V4 独有且被合格关联引用的法规版本（clause.lawId 统一为法规版本 id）；
-  - 全文库按 r13 原样复制：只含 15 部已批准全文 + 136 个 link_only 官方入口，
-    不包含用户 PDF 正文、未核验条款或 _internal 索引。
+  - 隐患 / 条款 / 关联：来自 ``knowledge/`` 的 V4 链式 Gate 公开投影；
+  - 法规目录与获准公开的全文：来自 ``source/publication/``；
+  - 法规目录合并 knowledge 中独有且被合格关联引用的法规版本；
+  - 私有 PDF、未核验条款和内部索引不会进入公开发布包。
 
 本脚本只生成新目录，不覆盖任何现有发布包、母库或网站数据；
 所有生成文件由脚本确定性写出，禁止手工编辑。
@@ -31,12 +29,13 @@ from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
-R13 = os.path.join(ROOT, "source", "releases", "reviewed-20260911-r13")
-DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "unified-v4-reviewed-20260911-r14")
+PUBLICATION = os.path.join(ROOT, "source", "publication")
+WEB = os.path.join(ROOT, "web")
+DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "current")
 SHARD_SIZE = 200
-AS_OF = "2026-09-11"
-DATA_VERSION = "2026.09.11.unified-v4-r14"
-MODEL = "GLM-5.3-Flash (ZCode)"
+AS_OF = "2026-09-13"
+DATA_VERSION = "2026.09.13.current"
+MODEL = "deterministic local build"
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
@@ -186,7 +185,7 @@ def main():
                 "id": cid,
                 "article": c.get("articlePath") or c.get("clauseNumber") or "",
                 "quote": c.get("quote", ""),
-                # 统一连接键：法规版本 id（与 r13 法规目录/全文目录的 versionId 一致）
+                # 统一连接键：法规版本 id（与发布目录/全文目录的 versionId 一致）
                 "lawId": c.get("lawVersionId", ""),
                 "sourceUrl": c.get("sourceUrl") or lv.get("sourceUrl") or "",
                 "checked": clause_checked.get(cid, ""),
@@ -205,8 +204,8 @@ def main():
                                 for cid, role in basis_of[rec["id"]]]
         wr(p, payload)
 
-    # ---- 法规目录：r13 全量 151 条 + V4 独有且被引用的版本 ----
-    r13_index = rd(os.path.join(R13, "data", "law-index.json"))
+    # ---- 法规目录：统一发布资料源 + knowledge 独有且被引用的版本 ----
+    base_index = rd(os.path.join(PUBLICATION, "law-index.json"))
     clause_haz = defaultdict(set)          # clauseId -> {hazardId}
     version_clause = defaultdict(set)      # versionId -> {clauseId}
     for kid in gate.eligible_links:
@@ -224,7 +223,7 @@ def main():
         return refs
 
     law_index = []
-    for entry in r13_index:
+    for entry in base_index:
         e = dict(entry)
         refs = rebuilt_refs(version_clause.get(e["id"], set()))
         e["clauseRefs"] = refs
@@ -232,8 +231,8 @@ def main():
         e["clauseCount"] = len(refs)
         law_index.append(e)
 
-    r13_ids = {e["id"] for e in r13_index}
-    v4_only = sorted(vid for vid in version_clause if vid not in r13_ids)
+    base_ids = {e["id"] for e in base_index}
+    v4_only = sorted(vid for vid in version_clause if vid not in base_ids)
     for vid in v4_only:
         lv = lvs[vid]
         law = laws.get(lv.get("lawId")) or {}
@@ -312,7 +311,7 @@ def main():
         "lawStatuses": sorted({x["status"] for x in law_index if x["status"]}),
     }
 
-    counts = {"hazards": len(si), "laws": len(law_index), "lawVersions": len(r13_ids) + len(v4_only),
+    counts = {"hazards": len(si), "laws": len(law_index), "lawVersions": len(base_ids) + len(v4_only),
               "clauses": len(used_clauses), "links": len(gate.eligible_links)}
     manifest = {
         "schemaVersion": 2,
@@ -341,13 +340,13 @@ def main():
     wr(os.path.join(data, "law-index.json"), law_index, indent=2)
     wr(os.path.join(data, "taxonomy.json"), taxonomy)
 
-    # ---- 前端资产以仓库根为源头（站点唯一事实来源），全文库自 r13 原样并入 ----
+    # ---- 前端资产以 web/ 为源头；公开全文来自唯一发布资料源 ----
     for asset in SITE_ASSETS:
-        src = os.path.join(ROOT, asset)
+        src = os.path.join(WEB, asset)
         dst = os.path.join(out, asset)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copyfile(src, dst)
-    shutil.copytree(os.path.join(R13, "data", "fulltext"), os.path.join(data, "fulltext"))
+    shutil.copytree(os.path.join(PUBLICATION, "fulltext"), os.path.join(data, "fulltext"))
 
     # ---- 全文目录核对：15 全文 + 136 官方入口，GB/T 47236 只能是 link_only ----
     catalog = rd(os.path.join(data, "fulltext", "catalog.json"))
@@ -417,11 +416,10 @@ def main():
                                "eligibleLinks": len(gate.eligible_links),
                                "strictBlockers": 0}},
         "provenance": {
-            "hazardClauseLinkSource": "knowledge V4 chained-gate public projection",
-            "lawCatalogSource": os.path.basename(R13),
-            "fulltextSource": os.path.basename(R13),
-            "frontendSource": os.path.basename(R13),
-            "r13ReleaseHash": "74c6a9a0f81c885b091e9916d32a047603d95a823c4b47be8bc1c214da624d47",
+            "hazardClauseLinkSource": "knowledge/ chained-gate public projection",
+            "lawCatalogSource": "source/publication/law-index.json",
+            "fulltextSource": "source/publication/fulltext/",
+            "frontendSource": "web/",
         },
         "counts": counts,
         "fullText": {"count": len(full_text), "officialLinkCount": len(link_only),
@@ -437,12 +435,12 @@ def main():
         "counts": counts,
         "gate": {"eligibleHazards": len(gate.eligible_hazards),
                  "eligibleLinks": len(gate.eligible_links)},
-        "lawCatalog": {"fromR13": len(r13_index), "addedFromV4": len(v4_only),
+        "lawCatalog": {"fromPublication": len(base_index), "addedFromKnowledge": len(v4_only),
                        "addedIds": v4_only, "total": len(law_index)},
         "fullText": {"fullTextCount": len(full_text), "officialLinkCount": len(link_only)},
         "notes": [
             "hazard/clause/link 投影与 tools/v4/build_site_data.py 同一契约；clause.lawId 统一为法规版本 id",
-            "r13 的 33 条隐患是本次 632 条的真子集，r13 法规目录、全文库、官方入口全量保留",
+            "法规目录与可公开全文由 source/publication 唯一维护，不依赖历史发布包",
             "GB/T 47236-2026 仅公开题录与官方入口（link_only），未公开 PDF 正文与未核验条款",
         ],
     }
@@ -451,7 +449,7 @@ def main():
 
     print("统一发布包已生成:", out)
     print("  counts:", json.dumps(counts, ensure_ascii=False))
-    print("  法规目录: r13 %d + V4 独有 %d = %d" % (len(r13_index), len(v4_only), len(law_index)))
+    print("  法规目录: publication %d + knowledge 独有 %d = %d" % (len(base_index), len(v4_only), len(law_index)))
     print("  全文: %d 部全文 / %d 官方入口" % (len(full_text), len(link_only)))
     print("  releaseHash:", release_hash)
 

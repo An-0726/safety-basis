@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {VerifiedFiles} from '../js/verified-files.js';
+import {VerifiedFiles} from '../web/js/verified-files.js';
 
 test('release hashes accept exact bytes and reject a different deployment', async () => {
   const original = globalThis.fetch;

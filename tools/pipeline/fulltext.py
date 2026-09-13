@@ -6,10 +6,12 @@ The input is a private manifest with this shape::
       {"documentId": "GB50016", "title": "...", "version": "2014",
        "officialUrl": "https://...", "snapshotPath": "./GB50016.pdf",
        "asOf": "2026-09-09", "currentStatus": "现行有效",
-       "reviewStatus": "待核验"}
+       "reviewStatus": "待核验", "textPath": "./GB50016.ocr.txt"}
     ]}
 
-``snapshotPath`` is read only and is never stored in the library.  A document
+``snapshotPath`` is the immutable original archived by the library.  Optional
+``textPath`` supplies an OCR/search sidecar while preserving the original PDF;
+sidecar text is never treated as a verified clause quote.  A document
 is eligible to be presented as a current basis only when both its current
 status and its explicit review status pass the conservative checks below.
 The library is deliberately separate from the safety master and public data.
@@ -40,7 +42,7 @@ REQUIRED_DOCUMENT_FIELDS = {
     "documentId", "title", "version", "officialUrl", "snapshotPath",
     "asOf", "currentStatus",
 }
-OPTIONAL_DOCUMENT_FIELDS = {"reviewStatus"}
+OPTIONAL_DOCUMENT_FIELDS = {"reviewStatus", "textPath"}
 
 
 class _HtmlParagraphs(HTMLParser):
@@ -259,6 +261,7 @@ def _manifest(path: Path) -> list[dict[str, str]]:
         values["officialUrl"] = _official_url(values["officialUrl"])
         values["asOf"] = _date(values["asOf"], "asOf")
         values["reviewStatus"] = _normal_text(item.get("reviewStatus")) or DEFAULT_REVIEW_STATUS
+        values["textPath"] = _normal_text(item.get("textPath"))
         if "documentId" in values and "version" in values:
             result.append(values)
     keys = [_document_key(item["documentId"], item["version"]) for item in result]
@@ -319,7 +322,12 @@ def import_manifest(library: Path, manifest: Path) -> dict[str, Any]:
         if not source.is_file():
             raise ValueError(f"原件不存在: {doc['documentId']}@{doc['version']}")
         blob = source.read_bytes()
-        paragraphs = extract_paragraphs(blob)
+        text_source = Path(doc["textPath"]) if doc.get("textPath") else source
+        if not text_source.is_absolute():
+            text_source = manifest.parent / text_source
+        if not text_source.is_file():
+            raise ValueError(f"检索文本不存在: {doc['documentId']}@{doc['version']}")
+        paragraphs = extract_paragraphs(text_source.read_bytes())
         prepared.append({
             **doc,
             "blob": blob,
