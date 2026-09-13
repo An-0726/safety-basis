@@ -37,7 +37,7 @@
 - 私有全文测试：23项通过。
 - Node前端测试：13项通过。
 - review绑定：525项，失配0。
-- 已提交并推送Git：`f75e77c6`（`main`与`data-verify-batch-003`）。
+- 已提交并推送Git：`2acb3284`（`main`与`data-verify-batch-003`）。
 
 ## 五、提案层说明
 
@@ -46,7 +46,7 @@
 ## 六、部署状态
 
 - `source/releases/current/` 已通过本地发布包校验并上线，包含1523条隐患（259条已核验 + 1264条待审核候选）。
-- GitHub Actions正式发布运行：<https://github.com/An-0726/safety-basis/actions/runs/34756714508>（success）。
+- GitHub Actions正式发布运行：<https://github.com/An-0726/safety-basis/actions/runs/34757579766>（success）。
 - 线上地址：<https://an-0726.github.io/safety-basis/>。
 - 线上 `release.json` 与 `site-manifest.json` 均核对为本轮候选层发布哈希 `2f5394d2474666d2544eb220f32e01d7af3aaaad479d3aa95ef7b7cce4a04170`。
 - `dist/local/` 是本机离线入口，不是线上部署。
