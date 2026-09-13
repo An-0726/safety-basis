@@ -37,7 +37,7 @@
 - 私有全文测试：23项通过。
 - Node前端测试：13项通过。
 - review绑定：1,782项，失配0。
-- 本轮最终提交：`4af02234`（已推送 `main` 与 `data-verify-batch-003`）。
+- 发布构建提交：`4af02234`；随后仅修正交接统计的提交为 `b17430c0`（均已推送 `main` 与 `data-verify-batch-003`）。
 - GitHub Actions正式发布运行：<https://github.com/An-0726/safety-basis/actions/runs/34765720355>（success）。
 
 ## 五、提案层说明
