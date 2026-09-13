@@ -77,6 +77,10 @@ def article_markers(article):
         markers.extend(["第" + chinese_number(article) + "条", "第" + str(article) + "条"])
     else:
         markers.append("第" + str(article) + "条")
+        # OCR of scanned standards commonly misreads the leading 5 as s/S
+        # (for example ``s.2.6`` in JGJ 91-2019).
+        if str(article).startswith("5."):
+            markers.extend(["s" + str(article)[1:], "S" + str(article)[1:]])
     return markers
 
 
@@ -127,7 +131,8 @@ def main():
     # matched LawVersion.  This closes the gap between a catalog hit and an
     # exact article without treating a title-only match as evidence.
     rows = [r for r in rows if r.get("finalDisposition") in
-            {"fulltext_clause_candidate", "basis_catalog_only", "basis_name_unresolved"}]
+            {"fulltext_clause_candidate", "basis_catalog_only", "basis_name_unresolved",
+             "same_title_review"}]
     gate = evaluate_release_gate(KNOW)
     paragraph_cache = {}
     db = sqlite3.connect(DB_PATH)
@@ -140,6 +145,11 @@ def main():
             skipped.append({"hazardId": hid, "reason": "not_proposed"})
             continue
         article = extract_article(row.get("directBasis"))
+        if row.get("finalDisposition") in {"same_title_review", "duplicate_or_merge"}:
+            # For multi-basis rows the first line is the specific technical
+            # standard; later lines are usually a fallback law article.
+            first_line = str(row.get("directBasis") or "").splitlines()[0]
+            article = extract_article(first_line) or article
         hit_keys = list(dict.fromkeys(
             h.get("documentKey") for h in (row.get("fulltextHits") or []) if h.get("documentKey")
         ))
@@ -160,9 +170,10 @@ def main():
                     catalog.append(vid)
         if not hit_keys and catalog:
             for vid in catalog:
+                doc_no = lvs.get(vid, {}).get("documentNumber", "")
                 for document_key, _document_id, _title, _version in db.execute(
-                    "select document_key,document_id,title,version from documents where version=? or document_key like ?",
-                    (vid, "%\x1f" + vid),
+                    "select document_key,document_id,title,version from documents where version=? or version=? or document_key like ? or document_key like ?",
+                    (vid, doc_no, "%\x1f" + vid, "%\x1f" + doc_no),
                 ).fetchall():
                     hit_keys.append(document_key)
         for key in hit_keys:
@@ -181,9 +192,11 @@ def main():
                 continue
             if not gate.law_versions.get(vid, {}).get("supports_current"):
                 continue
-            key = next((k for v, k in candidates if v == vid), None)
-            if key and article and choose_paragraph(db, key, article, paragraph_cache):
-                selected = (vid, key)
+            for _v, key in candidates:
+                if _v == vid and article and choose_paragraph(db, key, article, paragraph_cache):
+                    selected = (vid, key)
+                    break
+            if selected:
                 break
         if not selected:
             skipped.append({"hazardId": hid, "reason": "article_text_not_located",
