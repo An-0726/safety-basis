@@ -72,7 +72,11 @@ def extract_article(basis):
 
 
 def article_markers(article):
-    markers = [str(article)]
+    article = str(article)
+    # PDF text extraction may normalize decimal separators to full-width
+    # punctuation (for example ``6．2．1``) or ideographic full stop.  Treat
+    # these as the same locator while keeping the quoted source text intact.
+    markers = [article, article.replace(".", "．"), article.replace(".", "。")]
     if str(article).isdigit():
         markers.extend(["第" + chinese_number(article) + "条", "第" + str(article) + "条"])
     else:
