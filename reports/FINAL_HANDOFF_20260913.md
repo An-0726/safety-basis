@@ -1,6 +1,6 @@
 # 安全依据库阶段交接报告（2026-09-13）
 
-> 本报告代表“仓库整理、法规库扩充、第一批隐患回灌和发布包验收”阶段完成，不代表1264条新增隐患已经全部作为当前依据公开发布，也不代表已部署到GitHub Pages。
+> 本报告代表“仓库整理、法规库扩充、第一批隐患回灌、发布包验收和GitHub Pages上线”目标完成。1264条新增隐患仍作为提案隔离，未冒充为当前依据公开发布。
 
 ## 一、仓库与法规库
 
@@ -37,7 +37,7 @@
 - 私有全文测试：23项通过。
 - Node前端测试：13项通过。
 - review绑定：525项，失配0。
-- 未提交或推送Git。
+- 已提交并推送Git：`f75e77c6`（`main`与`data-verify-batch-003`）。
 
 ## 五、提案层说明
 
@@ -45,6 +45,8 @@
 
 ## 六、部署状态
 
-- `source/releases/current/` 已通过本地发布包校验，可以作为当前阶段的部署候选。
-- 尚未执行Git提交、Git推送或GitHub Pages上线。
+- `source/releases/current/` 已通过本地发布包校验并上线。
+- GitHub Actions正式发布运行：<https://github.com/An-0726/safety-basis/actions/runs/34756714508>（success）。
+- 线上地址：<https://an-0726.github.io/safety-basis/>。
+- 线上 `release.json` 与 `site-manifest.json` 均核对为发布哈希 `07117e51e05fc22dd797dc8292b7ee6cf5d5d82174cced247af6d68e97088445`。
 - `dist/local/` 是本机离线入口，不是线上部署。
