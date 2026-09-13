@@ -22,6 +22,7 @@
 - `source/releases/current/`：1522项公开隐患（1506项已核验 + 16项待审核候选）、221项法规版本、1300条正式发布条款、1754个正式关联；候选记录可查但不能直接作为正式依据。
 - `source/library/fulltext.sqlite3`：当前169份私有全文；新增PDF只有成功解析或OCR并建立正文索引后才计数。
 - `dist/local/打开本地最终版.cmd`：本地日常使用的唯一总入口；运行 `py -3 tools/build_local_release.py` 可随时重新生成。
+- 1264条Excel新增隐患中仍待外部资料或合并确认的16条，见 `docs/EXCEL_PENDING_VERIFICATION_20260913.md`。
 
 这些数字统计的是不同层次，不能互相替代。尤其“216项法规目录”不等于“216份全文”。
 
