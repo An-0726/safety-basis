@@ -19,6 +19,7 @@ import html
 import json
 import os
 import re
+import shutil
 import sqlite3
 import sys
 
@@ -124,8 +125,9 @@ def main():
     docs = []
     used_files = set()
     for row in conn.execute("SELECT document_key, document_id, title, version, paragraph_count, "
-                            "current_status, review_status, official_url FROM documents ORDER BY title, version"):
-        key, did, title, version, paras, cur, rev, url = row
+                            "current_status, review_status, official_url, archive_ref "
+                            "FROM documents ORDER BY title, version"):
+        key, did, title, version, paras, cur, rev, url, archive_ref = row
         base_file = safe_name("%s %s" % (nidx.get((did, version), "") or version or did, title or ""))
         file_name = base_file
         if file_name.casefold() in used_files:
@@ -137,16 +139,55 @@ def main():
         used_files.add(file_name.casefold())
         docs.append({"key": key, "id": did, "title": title or "", "version": version or "",
                      "paras": paras, "current": cur or "", "review": rev or "", "url": url or "",
+                     "archive_ref": archive_ref or "",
                      "label": (nidx.get((did, version), "") or version or did),
                      "file": file_name})
     out = os.path.abspath(args.output)
     laws_dir = os.path.join(out, "laws")
+    originals_dir = os.path.join(out, "originals")
     # 先清掉上次生成的页面：文件命名规则变化后若不清，会新旧并存
     if os.path.isdir(laws_dir):
         for fn in os.listdir(laws_dir):
             if fn.endswith(".html"):
                 os.remove(os.path.join(laws_dir, fn))
+    if os.path.isdir(originals_dir):
+        for fn in os.listdir(originals_dir):
+            path = os.path.join(originals_dir, fn)
+            if os.path.isfile(path):
+                os.remove(path)
     os.makedirs(laws_dir, exist_ok=True)
+    os.makedirs(originals_dir, exist_ok=True)
+
+    def original_extension(path):
+        try:
+            with open(path, "rb") as f:
+                head = f.read(16)
+        except OSError:
+            return ".bin"
+        if head.startswith(b"%PDF"):
+            return ".pdf"
+        if head.startswith(b"PK"):
+            return ".docx"
+        if head.lstrip().startswith((b"<", b"<!")):
+            return ".html"
+        return ".txt"
+
+    # The searchable HTML is only an index/viewer.  Expose a local link to
+    # the immutable original snapshot as well.  Hardlinks avoid duplicating
+    # hundreds of megabytes in dist/local when both paths share a volume;
+    # copy is the fallback for filesystems that do not support them.
+    library_root = os.path.dirname(os.path.abspath(lib))
+    for d in docs:
+        source = os.path.join(library_root, d["archive_ref"])
+        if not os.path.isfile(source):
+            continue
+        original_name = d["file"] + original_extension(source)
+        destination = os.path.join(originals_dir, original_name)
+        try:
+            os.link(source, destination)
+        except (OSError, AttributeError):
+            shutil.copyfile(source, destination)
+        d["original_href"] = "../originals/" + original_name
 
     # 段落
     by_key = {}
@@ -161,12 +202,13 @@ def main():
         page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <title>%s %s</title><style>%s</style></head><body>
 <header><h1>%s <span class="meta">%s</span></h1>
-<div class="meta">%s ｜ %s ｜ %d 段 ｜ <a href="../index.html">返回目录</a>%s</div></header>
+<div class="meta">%s ｜ %s ｜ %d 段 ｜ <a href="../index.html">返回目录</a>%s%s</div></header>
 <main style="max-height:none">%s</main></body></html>""" % (
             html.escape(d["title"]), html.escape(d["version"]), CSS,
             html.escape(d["title"]), html.escape(d["version"]),
             html.escape(d["current"] or "-"), html.escape(d["review"] or "-"), len(paras),
             (' ｜ <a href="%s" target="_blank">官方来源</a>' % html.escape(d["url"])) if d["url"] else "",
+            (' ｜ <a href="%s" target="_blank">打开原始文件</a>' % html.escape(d["original_href"])) if d.get("original_href") else "",
             body)
         with open(os.path.join(out, "laws", d["file"] + ".html"), "w", encoding="utf-8", newline="\n") as f:
             f.write(page)
