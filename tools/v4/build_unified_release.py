@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """统一发布包构建器。
 
-  - 隐患 / 条款 / 关联：来自 ``knowledge/`` 的 V4 链式 Gate 公开投影；
+  - 已核验隐患 / 条款 / 关联：来自 ``knowledge/`` 的 V4 链式 Gate 公开投影；
+  - Excel 候选隐患：以明确的“待审核候选”状态公开展示，不冒充已核验依据；
   - 法规目录与获准公开的全文：来自 ``source/publication/``；
   - 法规目录合并 knowledge 中独有且被合格关联引用的法规版本；
   - 私有 PDF、未核验条款和内部索引不会进入公开发布包。
@@ -125,10 +126,16 @@ def main():
     for kid, l in links.items():
         hazard_links[l.get("hazardId")].append(kid)
 
-    pub = sorted(gate.eligible_hazards)
+    # 正式隐患必须通过链式 Gate；用户要求 Excel 的 1264 条候选也全部上线，
+    # 因此把 lifecycle=proposed 的实体作为第二种公开状态投影。候选不计入
+    # eligibleHazards、不生成正式 basisRefs，也不会被当成当前依据。
+    verified_pub = set(gate.eligible_hazards)
+    proposed_pub = {hid for hid, h in hazards.items()
+                    if (h.get("lifecycle") or "active") == "proposed"}
+    pub = sorted(verified_pub | proposed_pub)
     used_clauses, seen_clause = [], set()
-    basis_of = {}
-    for hid in pub:
+    basis_of = {hid: [] for hid in pub}
+    for hid in sorted(verified_pub):
         refs = []
         for kid in hazard_links.get(hid, []):
             # 只投影链式 Gate 完整贯通的关联（link→clause→lawVersion→law 全部合格），
@@ -155,6 +162,7 @@ def main():
         for hid in pub[i:i + SHARD_SIZE]:
             h = hazards[hid]
             h_shard_of[hid] = sid
+            is_verified = hid in verified_pub
             recs.append({
                 "id": hid,
                 "title": h.get("title", ""),
@@ -166,7 +174,11 @@ def main():
                 "aliases": h.get("aliases") or [],
                 "keywords": h.get("keywords") or [],
                 "mode": h.get("mode", ""),
-                "status": "已核验",
+                "status": "已核验" if is_verified else "待审核候选",
+                "publishable": is_verified,
+                "lifecycle": h.get("lifecycle", "active"),
+                "proposalStatus": None if is_verified else h.get("proposalStatus", "待核验"),
+                "sourceRow": None if is_verified else h.get("sourceRow"),
                 "checked": checked_at.get(hid, ""),
                 "basisRefs": [],
             })
@@ -280,16 +292,23 @@ def main():
             scopes.add(REGION.get(c.get("jurisdictionCode") or "CN", "全国"))
             if law.get("documentKind"):
                 lvls.add(law["documentKind"])
+        is_verified = hid in verified_pub
         si.append({
             "id": hid, "title": h.get("title", ""), "aliases": h.get("aliases") or [],
             "category": h.get("category", ""), "places": h.get("places") or [],
-            "keywords": h.get("keywords") or [], "status": "已核验", "publishable": True,
-            "excludedReason": None, "mode": h.get("mode", ""), "checked": checked_at.get(hid, ""),
+            "keywords": h.get("keywords") or [],
+            "status": "已核验" if is_verified else "待审核候选",
+            "publishable": is_verified,
+            "excludedReason": None if is_verified else h.get("proposalStatus", "待核验"),
+            "mode": h.get("mode", ""), "checked": checked_at.get(hid, ""),
+            "proposalStatus": None if is_verified else h.get("proposalStatus", "待核验"),
+            "sourceRow": None if is_verified else h.get("sourceRow"),
             "levels": sorted(lvls), "scopes": sorted(scopes), "lawNames": sorted(lns),
             "stdNumbers": sorted(stds), "shard": h_shard_of[hid],
             "searchText": searchable([
                 h.get("title", ""), " ".join(h.get("aliases") or []),
                 " ".join(h.get("keywords") or []), h.get("description", ""),
+                h.get("conditions", ""), h.get("note", ""),
                 " ".join(sorted(lns)), " ".join(sorted(stds)), h.get("category", ""),
             ]),
         })
@@ -307,7 +326,7 @@ def main():
         "places": [p for p, _ in place_counter.most_common()],
         "lawLevels": sorted(level_counter),
         "hazardModes": sorted(mode_counter),
-        "hazardStatuses": ["已核验"],
+        "hazardStatuses": ["已核验", "待审核候选"],
         "lawStatuses": sorted({x["status"] for x in law_index if x["status"]}),
     }
 
@@ -318,15 +337,15 @@ def main():
         "v4SchemaVersion": 3,
         "dataVersion": DATA_VERSION,
         "generatedAt": AS_OF,
-        "publicScope": "国家法规标准优先，江苏／南京补充；只投影通过链式门禁的隐患",
+        "publicScope": "国家法规标准优先，江苏／南京补充；已核验隐患与明确标注的待审核候选均公开展示",
         "counts": counts,
         "sourceCounts": {"hazards": gate.counts["hazards"], "laws": len(law_index),
                          "clauses": gate.counts["clauses"], "links": gate.counts["links"]},
-        "health": {"verifiedHazards": len(si), "pendingHazards": 0,
+        "health": {"verifiedHazards": len(verified_pub), "pendingHazards": len(proposed_pub),
                    "activeLaws": sum(1 for x in law_index if x["status"] == "现行有效"),
                    "pendingLaws": sum(1 for x in law_index if x["status"] not in ("现行有效", "")),
                    "invalidReferences": 0,
-                   "stagedHazards": gate.counts["hazards"] - len(si), "stagedLaws": 0},
+                   "stagedHazards": gate.counts["hazards"] - len(verified_pub), "stagedLaws": 0},
         "files": {"searchIndex": "data/search-index.json",
                   "lawIndex": "data/law-index.json",
                   "taxonomy": "data/taxonomy.json"},
@@ -414,7 +433,8 @@ def main():
                       "gate": {"asOf": gate.as_of,
                                "eligibleHazards": len(gate.eligible_hazards),
                                "eligibleLinks": len(gate.eligible_links),
-                               "strictBlockers": 0}},
+                               "strictBlockers": 0,
+                               "publicProposalHazards": len(proposed_pub)}},
         "provenance": {
             "hazardClauseLinkSource": "knowledge/ chained-gate public projection",
             "lawCatalogSource": "source/publication/law-index.json",
@@ -440,6 +460,7 @@ def main():
         "fullText": {"fullTextCount": len(full_text), "officialLinkCount": len(link_only)},
         "notes": [
             "hazard/clause/link 投影与 tools/v4/build_site_data.py 同一契约；clause.lawId 统一为法规版本 id",
+            "lifecycle=proposed 的 Excel 候选全部公开展示为待审核候选，不计入 eligibleHazards，不可直接作为正式依据",
             "法规目录与可公开全文由 source/publication 唯一维护，不依赖历史发布包",
             "GB/T 47236-2026 仅公开题录与官方入口（link_only），未公开 PDF 正文与未核验条款",
         ],

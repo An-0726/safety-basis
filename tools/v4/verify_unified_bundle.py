@@ -10,7 +10,7 @@
   2. checksums.json 全覆盖且哈希匹配；文件在公开白名单内（无 _internal、无非 JSON 数据）；
   3. release.json 格式与 releaseHash 复算一致；
   4. manifest / 分片 / search-index / law-index / taxonomy 相互一致，引用全部闭环；
-  5. 包内隐患集合 == 实时 evaluate_release_gate(knowledge).eligible_hazards，
+  5. 包内隐患集合 == 实时 Gate 的正式隐患 + knowledge 中 lifecycle=proposed 的候选隐患，
      且标题/描述/措施/关联等字段与 knowledge 投影逐字段一致（防篡改）；
   6. 全文库与 ``source/publication`` 的获准公开集合一致，受限标准只发布题录。
 """
@@ -128,7 +128,11 @@ def main():
                     continue
                 target[row["id"]] = row
     for row in hazards.values():
-        bad.check(row.get("status") == "已核验", "隐患分片存在非已核验记录：" + row["id"])
+        bad.check(row.get("status") in ("已核验", "待审核候选"),
+                  "隐患分片状态无效：" + row["id"])
+        if row.get("status") == "待审核候选":
+            bad.check(row.get("publishable") is False,
+                      "待审核候选不得标记为可直接发布：" + row["id"])
     for row in clauses.values():
         # 2026-09-13 起门禁允许已发布未实施（upcoming）版本支撑引用（用户决策），
         # 故条款效力标签接受 现行有效 与 即将生效；repealed/unknown 仍应被 Gate 拦截
@@ -165,8 +169,12 @@ def main():
     know_links = load_dir(KNOW, "links")
     know_clauses = load_dir(KNOW, "clauses")
     know_lvs = load_dir(KNOW, "law-versions")
-    bad.check(set(hazards) == gate.eligible_hazards,
-              "公开隐患集合 != 实时 eligibleHazards（%d vs %d）" % (len(hazards), len(gate.eligible_hazards)))
+    proposed_hazards = {hid for hid, src in know_hazards.items()
+                        if (src.get("lifecycle") or "active") == "proposed"}
+    expected_public_hazards = gate.eligible_hazards | proposed_hazards
+    bad.check(set(hazards) == expected_public_hazards,
+              "公开隐患集合 != Gate正式隐患+提案隐患（%d vs %d）" %
+              (len(hazards), len(expected_public_hazards)))
     verified_by_hazard = {}
     for kid in gate.eligible_links:
         l = know_links[kid]
@@ -174,12 +182,16 @@ def main():
             verified_by_hazard.setdefault(l["hazardId"], set()).add((l["clauseId"], l.get("role", "direct")))
     for hid, row in hazards.items():
         src = know_hazards[hid]
-        for field in ("title", "description", "measures", "note", "category", "mode"):
+        for field in ("title", "description", "measures", "note", "category", "mode",
+                      "lifecycle", "proposalStatus", "sourceRow"):
             bad.check(row.get(field) == src.get(field), "隐患字段被改动：%s/%s" % (hid, field))
         for field in ("places", "aliases", "keywords"):
             bad.check((row.get(field) or []) == (src.get(field) or []), "隐患标签被改动：%s/%s" % (hid, field))
         shipped = {(r["clauseId"], r["role"]) for r in row["basisRefs"]}
-        bad.check(shipped == verified_by_hazard.get(hid, set()), "隐患依据集合与 verified 关联不一致：" + hid)
+        if hid in gate.eligible_hazards:
+            bad.check(shipped == verified_by_hazard.get(hid, set()), "隐患依据集合与 verified 关联不一致：" + hid)
+        else:
+            bad.check(not shipped, "待审核候选不得携带正式依据关联：" + hid)
     for cid, row in clauses.items():
         src = know_clauses[cid]
         lv = know_lvs.get(src.get("lawVersionId")) or {}
