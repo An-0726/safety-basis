@@ -34,6 +34,10 @@ SOURCES = {
         ("tmp/web/xf1131-p11-15.ocr.txt", "https://js.119.gov.cn/group1/M00/00/2A/ZYS-ZGGB6A-AT5TaANQHgHPKgLU664.pdf"),
     "LV_META_FC43256C0F595A6F9165697E":
         ("tmp/web/training.pdf", "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/201201/t20120119_405680.shtml"),
+    "LV_STD_GB15607":
+        ("tmp/web/gb15607-2023.ocr.txt", "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359"),
+    "LV_REG_NJ_EBIKE_FIRE_2024":
+        ("tmp/web/xaqf.html", "https://www.nanjing.gov.cn/zdgk/202405/t20240531_4680113.html"),
 }
 
 
@@ -75,6 +79,10 @@ def find_article(text, token):
     return max(hits,key=len) if hits else None
 
 
+def compact(value):
+    return re.sub(r"[^0-9A-Za-z\u4e00-\u9fff]", "", str(value or "")).casefold()
+
+
 def main():
     hazards=load_dir(KNOW,'hazards'); lvs=load_dir(KNOW,'law-versions'); laws=load_dir(KNOW,'laws'); gate=evaluate_release_gate(KNOW)
     rows=read(os.path.join(PROPOSAL,'final-new-hazard-disposition.json'))['rows']
@@ -90,10 +98,15 @@ def main():
                 texts[vid]=re.sub(r'\s+',' ',BeautifulSoup(raw,'html.parser').get_text(' ',strip=True))
     promoted=[];skipped=[]
     for row in rows:
-        if row.get('finalDisposition')!='basis_catalog_only':continue
+        if row.get('finalDisposition') not in {'basis_catalog_only','basis_name_unresolved'}:continue
         hid=row['hazardId'];hz=hazards.get(hid)
         if not hz or hz.get('lifecycle')!='proposed':continue
         vids=[v for v in row.get('catalogNameMatches') or [] if v in SOURCES and v in lvs]
+        if not vids:
+            basis_compact=compact(row.get('directBasis'))
+            vids=[vid for vid in SOURCES if vid in lvs and
+                  ((lvs[vid].get('documentNumber') and compact(lvs[vid].get('documentNumber')) in basis_compact) or
+                   (lvs[vid].get('officialName') and compact(lvs[vid].get('officialName')) in basis_compact))]
         if not vids:continue
         basis_text=str(row.get('directBasis',''))
         if row.get('finalDisposition') == 'basis_catalog_only':
