@@ -45,7 +45,7 @@
 
 **LAST VERIFIED：2026-09-14**
 
-当前 Git 唯一正式主线：`main`。当前阶段工作 PR：**#36 `Phase 4: canonicalize private-library law gaps`**，分支 `phase4-canonical-gaps-20260914`；PR 分支上的 `Validate safety data` 与 `Build current verified website` 已成功，待本次 handoff 更新后重新验收再合并。
+当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）。当前工作分支：`phase5-hazard-reconciliation-20260914`。
 
 公开发布架构已收口：
 
@@ -63,7 +63,7 @@
 - 55 个实际引用法规版本；
 - 1,193 条正式条款；
 - 1,524 个正式关联；
-- 512 条 `proposed` 候选仅留 `knowledge/`，公网候选 0。
+- 519 条 `proposed` 候选仅留 `knowledge/`，公网候选 0；其中目标集内 512 条、目标集外 7 条。
 
 PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联、1,114 个 evidence、28 条 succession、75 条 requirements**。
 
@@ -76,7 +76,7 @@ PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本
 - PR #31：扩展为完整 MASTER ROADMAP；
 - PR #32：完成 PHASE 1 私有母库审计，加入私有母库修复方案、安全维护工具和测试；
 - PR #34：新增 `AGENT_EXECUTION_PROTOCOL.md`，固化“总控判断、本地 Luna 只执行本机操作”的协作边界；
-- PR #36（当前）：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 已成功，待本文件更新后最终验收/合并。
+- PR #36：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 成功并已合并 main。
 
 ---
 
@@ -165,6 +165,26 @@ PR #36 在 canonical 数据提交后已通过：
 - `Validate safety data` — success；
 - `Build current verified website` — success。
 
+### PHASE 5：1,929 目标 ID 与 2,014 knowledge hazards 全量对账 — PASS
+
+权威目标源已固定为本机 `D:\Desktop\隐患库_1929条_新版口径全部整改完成_20260914.xlsx`，工作表 `隐患明细_修订后!A2:R1930`，文件 SHA-256=`c84ec965ce808c780547842a1a82cb7eca01d0a8fdd018c054414b2b5be24a6f`。
+
+- 工作簿 1,929 行、1,929 个唯一隐患 ID：621 条“已修订”、1,308 条“原审查通过/保留”；
+- `knowledge/hazards` 2,014 个文件、2,014 个唯一对象 ID，文件名与对象 ID 一致；
+- 1,929 个目标 ID 全部直接存在于 knowledge，`target-missing=0`；
+- 目标集实际分类：1,409 `target-current`、512 `target-proposed`、8 `target-merged-alias`；
+- knowledge 目标外 85 条不是“85 条重复”：56 条 merged 历史、21 条 split 父项、1 条正向事实非隐患历史、7 条 active 目标外待复核；
+- 全库 64 条 `mergedInto` 边：缺失目标 0、循环 0；
+- 工作簿标题与 knowledge 标题逐字一致 1,861 条；统一中英文标点和空格后一致 1,920 条；另 9 条为实质表述差异，需确认是已审阅专业化改写还是同步遗漏；
+- 8 个目标内 merged alias 已统一为 `superseded`，不删除稳定 ID、merge 去向或证据；
+- 7 个目标外且缺少完整正式 Gate 的实体已统一为 `proposed`，其 8 条 link review 已退回 rejected 并重绑上下文；
+- 9 个实质标题差异均有 verified hazard review，且 Git 历史显示来自正式核验/官方来源核验批次，保留 knowledge 的专业化表述；
+- 最终 lifecycle 库存：1,409 active、519 proposed、86 superseded，共 2,014；
+- `validate_all.py` PASS，`strict_release_audit.py` PASS（blocker 0），正式包现场重建/verify PASS（releaseHash=`9acfc43cba1f2b58bc78307b7ac097e31d09872ebba63b0f470357fd95b47ec0`）；正式发布仍为 1,409 / 55 / 1,193 / 1,524，公网候选 0；
+- pipeline 单元测试 26/26 PASS，Node 测试 13/13 PASS；reconciliation 连续重跑结果确定一致。
+
+可重复执行工具：`tools/maintenance/reconcile_hazard_target_set.py`；受限状态修复工具：`tools/maintenance/apply_hazard_reconciliation_status.py`。机器映射：`docs/hazard-reconciliation.jsonl`。人类报告：`docs/HAZARD_RECONCILIATION.md`。工作簿未修改；私有母库、SQLite、archive 未修改。
+
 ---
 
 ## 5. MASTER ROADMAP
@@ -186,11 +206,11 @@ FTS 修复和完整 document mapping 已闭环；暂不执行非必要物理去�
 ### PHASE 4 — `knowledge/` 法规身份/版本 canonical 化 — DONE
 六个 private canonical gaps 已正式纳管，危险化学品目录修订链已显式建模，private alias 已全部映射 knowledge canonical；PR #36 CI Validate/Build 已成功。
 
-### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — IN PROGRESS
-逐项解释当前正式、当前候选、历史实体、合并别名、目标外实体、目标缺失/待判断，不靠总数猜重复。
+### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — DONE
+完整机器映射和人类报告已生成；目标缺失 0，85 条目标外实体已逐项分类，24 个状态/标题差异已闭环，Gate 和正式包验证通过。
 
 ### PHASE 6 — 候选法规证据回绑与转正 — PENDING
-按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。候选数量以 PHASE 5 对账后的实时结果为准，不再机械沿用旧 512 总数。
+按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。当前实时候选为 519 条（目标集内 512、目标集外 7）。
 
 ### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING
 publication 只挂来源；正式法规数由 knowledge 决定。
@@ -211,26 +231,24 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集逐项对账。**
+**PHASE 6 — 候选法规证据回绑与转正，尚未开始；按用户要求暂停在 PHASE 5/6 边界。**
 
-PHASE 4 的法规 canonical 决策、正式 knowledge 数据、verified reviews、private alias 回填和 CI 验收已经完成。当前不需要 Luna；总控直接读取仓库/Drive 中 2026-09-14 revised workbook 的 staging/mapping 数据和 2,014 个 knowledge hazards 做确定性对账。
+PHASE 5 已完成全量映射、状态闭环、Gate 和发布包验证。本次会话收口后暂停，不进入 PHASE 6 实质回绑；恢复时由总控直接从 519 条 proposed 的证据链缺口盘点开始。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **总控先定位 1,929 目标 ID 的权威 staging/mapping 来源，逐项与 `knowledge/hazards` 2,014 实体做 ID/mergedInto/alias/lifecycle/review 状态对账，输出完整 reconciliation，不以 `2014-1929=85` 反推“重复”。每个 knowledge hazard 和每个目标 ID 都必须有唯一解释。**
+> **恢复工作后进入 PHASE 6：先对 519 条 proposed 按“缺法规身份 / 缺当前适用版本 / 缺具体条款 / 缺逐字原文或官方证据 / 缺适用性审核 / 目标外范围待定”做确定性分组，输出数量和 ID 清单；优先选择可复用已核验条款的高频组作为第一批，证据不足不得转正。**
 
 执行顺序：
 
-1. 定位并固定 2026-09-14 revised workbook 的 1,929 唯一目标 ID 清单及 staging 映射来源；
-2. 全量读取 `knowledge/hazards` 的 `id / title / aliases / lifecycle / mergedInto` 与 hazard review 决策；
-3. 逐项分类：`target-current`、`target-proposed`、`target-merged-alias`、`knowledge-extra-historical/non-target`、`target-missing`、`needs-review`；
-4. 对 621 修订、1,308 保留分别核对实际实体去向，不因标题近似自动合并；
-5. 输出机器可读 mapping + 人类审计报告，明确 2,014 与 1,929 差额的逐实体解释；
-6. Gate/一致性检查通过后更新本文件并自动推进 PHASE 6。
-
-PR #36 只收口 PHASE 3/4。完成本次 handoff 更新后重新等 CI，全绿即合并；PHASE 5 实质数据工作从最新 `main` 新开分支继续。
+1. 全量读取 519 条 proposed 的 hazard/review/link/clause/evidence 状态；
+2. 按证据链缺口和目标内/目标外范围分组；
+3. 输出机器可读 backlog 与人类摘要，不改法规事实；
+4. 选取证据最完整、可复用已核验条款的第一批候选；
+5. 逐项回到官方原文/原始证据核验后再决定是否转正；
+6. 每批完成后重跑 Gate、更新本文件并继续 PHASE 6。
 
 ---
 

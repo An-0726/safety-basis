@@ -2,15 +2,15 @@
   "entityType": "link",
   "entityId": "K_d63a0fe9faaed461738348e9",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "ebe8cb1a0ae38328ab5ede729153b38e332da5abd014bb6d1f494198cd5516de",
   "contextHashes": {
-    "hazard": "c751485803c79b6094e041bee56b4b7cc642694e8d7df0d24e386967d507418c",
+    "hazard": "62df98cbde07bb5a5eabcc78d8da1c9e113f9d10520b9a3c53181344b776d2d4",
     "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
+  "checkedAt": "2026-09-14",
   "reviewer": "Doubao-Agent",
-  "reason": "安全生产法第27条第1款要求主要负责人和安全生产管理人员具备与本单位生产经营活动相应的安全生产知识和管理能力，与Hazard未具备相应安全生产知识和管理能力直接对应（本条不涉及第2款的行业考核要求）。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "reason": "安全生产法第27条第1款要求主要负责人和安全生产管理人员具备与本单位生产经营活动相应的安全生产知识和管理能力，与Hazard未具备相应安全生产知识和管理能力直接对应（本条不涉及第2款的行业考核要求）。（链接降级 supporting 后哈希同步更新，2026-09-12）\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
   "reasonCodes": [
     "DIRECT_MATCH"
   ],
@@ -23,5 +23,7 @@
     "reviewer": "并发重验批次",
     "v3Reason": "隐患为主要负责人和安全生产管理人员应具备相应安全生产知识和管理能力而未具备，与安全生产法第二十七条第一款对应。",
     "v3Result": "passed"
-  }
+  },
+  "phase5ReconciledAt": "2026-09-14",
+  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914"
 }

@@ -22,18 +22,14 @@
 - 实际引用法规版本：55；
 - 正式条款：1,193；
 - 正式关联：1,524；
-- `proposed`：512，仅 `knowledge/` 后台，公网 0；
+- `proposed`：519（目标集内 512、目标集外 7），仅 `knowledge/` 后台，公网 0；
 - knowledge 库存：96 个法规身份、97 个版本、2,843 条条款、2,014 个隐患实体、1,547 个关联。
 
 正式站只发布当前日期 Gate 通过的 active 隐患；`upcoming` 尚未实施版本不得提前支撑当前正式隐患；publication 不再制造第二套正式法规卡。
 
 ## 3. 当前实际任务
 
-当前不是继续堆前端，也不是先大量回绑候选；正在做的是：
-
-**本地私有法规母库 `source/library/` 的实体级只读体检与去重设计。**
-
-云盘直读已确认 `fulltext.sqlite3` 与 archive / incoming / inventory 等都已同步。SQLite 当前已核：170 documents、215,326 检索段、166 个唯一文件 SHA、4 组同 SHA 重复 document；FTS5 倒排索引完整性有损坏提示，但仅在副本上测试过 rebuild，工作母库尚未写入。
+PHASE 1—5 已完成。1,929 个目标隐患 ID 已与 2,014 个 knowledge hazard 全量对账：目标缺失 0；目标外 85 条已分类为 56 条 merged 历史、21 条 split 父项、1 条非隐患历史和 7 条 proposed 范围复核项。当前暂停在 PHASE 5/6 边界，恢复后从 519 条 proposed 的证据链缺口分组开始。
 
 详细事实、限制和精确 `NEXT ACTION` 只维护在 [`AGENTS.md`](../AGENTS.md)，不要在这里再复制一套不断分叉的进度。
 
