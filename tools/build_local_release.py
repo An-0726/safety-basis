@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-"""生成唯一的本地使用版：公开隐患库 + 私有法规全文库。
+"""生成唯一的本地使用版：当前正式公开库 + 私有法规全文库。
 
-输出目录默认是 ``dist/local``，属于可重复生成的本地成品，不提交 Git。
-生成后直接打开 ``dist/local/README.html`` 即可选择使用入口。
+``source/releases/current`` 是生成物，不再提交 Git。本脚本每次运行都会先按当天日期
+校验 knowledge、重建当前正式公开包，再组合本地私有全文入口。私有 PDF/SQLite 只读，
+不会被公开构建器修改。
 """
 from __future__ import annotations
 
 import argparse
+from datetime import date
 import html
 import json
 import shutil
@@ -15,12 +17,17 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "dist" / "local"
-PUBLIC_RELEASE = ROOT / "source" / "releases" / "current"
+RELEASES = ROOT / "source" / "releases"
+PUBLIC_RELEASE = RELEASES / "current"
+SELECTION = RELEASES / "site-selection.json"
 PRIVATE_LIBRARY = ROOT / "source" / "library" / "fulltext.sqlite3"
 LIBRARY_SITE = ROOT / "tools" / "v4" / "library_site.py"
+VALIDATE = ROOT / "tools" / "v4" / "validate_all.py"
+STRICT_AUDIT = ROOT / "tools" / "v4" / "strict_release_audit.py"
+BUILD_PUBLIC = ROOT / "tools" / "v4" / "build_unified_release.py"
+VERIFY_PUBLIC = ROOT / "tools" / "v4" / "verify_unified_bundle.py"
 
 
 def _safe_output(path: Path) -> Path:
@@ -29,6 +36,38 @@ def _safe_output(path: Path) -> Path:
     if resolved == dist_root or dist_root not in resolved.parents:
         raise ValueError("输出目录必须位于仓库 dist/ 之下")
     return resolved
+
+
+def _run(*args: str) -> bool:
+    result = subprocess.run([sys.executable, *map(str, args)], cwd=ROOT, check=False)
+    return result.returncode == 0
+
+
+def _rebuild_public() -> bool:
+    """从当前源码重建公开正式包，不读取旧发布快照。"""
+    if not _run(VALIDATE):
+        return False
+    if not _run(STRICT_AUDIT):
+        return False
+    if PUBLIC_RELEASE.exists():
+        shutil.rmtree(PUBLIC_RELEASE)
+    if SELECTION.exists():
+        SELECTION.unlink()
+
+    as_of = date.today().isoformat()
+    data_version = date.today().strftime("%Y.%m.%d") + ".local"
+    if not _run(BUILD_PUBLIC, "--out", PUBLIC_RELEASE, "--as-of", as_of,
+                "--data-version", data_version):
+        return False
+
+    release = json.loads((PUBLIC_RELEASE / "release.json").read_text(encoding="utf-8"))
+    RELEASES.mkdir(parents=True, exist_ok=True)
+    SELECTION.write_text(json.dumps({
+        "schemaVersion": "safety-site-selection-v1",
+        "bundle": "current",
+        "releaseHash": release["releaseHash"],
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return _run(VERIFY_PUBLIC, "--bundle", PUBLIC_RELEASE)
 
 
 def _counts() -> tuple[dict, int, int]:
@@ -56,18 +95,18 @@ h1{{font-size:30px;margin-bottom:6px}}.sub{{color:#656d76;margin-bottom:28px}}
 code{{font-size:12px;word-break:break-all}}
 </style></head><body>
 <h1>安全依据库・本地最终版</h1>
-<div class="sub">以后日常使用双击“打开本地最终版.cmd”。两个库职责不同，但从本页统一进入。</div>
+<div class="sub">日常使用双击“打开本地最终版.cmd”。公开正式库与私有全文库职责不同，但从本页统一进入。</div>
 <div class="cards">
   <a class="card" href="public/index.html"><h2>查隐患、条款和依据关系</h2>
-    <div><span class="num">{counts.get('hazards', 0)}</span> 条已发布隐患</div>
-    <p>{counts.get('laws', 0)} 项法规/版本，{counts.get('clauses', 0)} 条已发布条款，{counts.get('links', 0)} 个关联。</p>
-    <div class="meta">这是可对外分享的公开精简版。</div></a>
+    <div><span class="num">{counts.get('hazards', 0)}</span> 条当前已核验隐患</div>
+    <p>{counts.get('laws', 0)} 个实际引用法规版本，{counts.get('clauses', 0)} 条正式条款，{counts.get('links', 0)} 个正式关联。</p>
+    <div class="meta">只包含当天 Gate 通过的正式公开投影；候选留在 knowledge 后台。</div></a>
   <a class="card" href="fulltext/index.html"><h2>查法规全文</h2>
     <div><span class="num">{private_docs}</span> 份本地全文</div>
     <p>{private_paragraphs:,} 个可搜索段落，可跨法规检索，也可打开单部法规阅读。</p>
     <div class="meta">这是本地私有完整版，不得整体对外发布。</div></a>
 </div>
-<div class="notice"><b>效力提示：</b>“部分强制性条文废止”不等于整本标准废止。引用时仍应结合整本状态、具体条款状态、强制性和新旧规范冲突关系判断。OCR文字只用于检索定位，正式引用须回看原PDF。</div>
+<div class="notice"><b>效力提示：</b>“最新发布”不等于“当前适用”。尚未实施的 upcoming 版本不能支撑当前正式隐患；OCR 只用于定位，正式引用须回看官方原文或原 PDF。</div>
 <p class="meta">发布哈希：<code>{release_hash}</code></p>
 </body></html>"""
     (output / "README.html").write_text(page, encoding="utf-8", newline="\n")
@@ -113,10 +152,14 @@ def main() -> int:
     args = parser.parse_args()
     output = _safe_output(Path(args.output))
 
-    for required in (PUBLIC_RELEASE / "release.json", PRIVATE_LIBRARY, LIBRARY_SITE):
+    for required in (PRIVATE_LIBRARY, LIBRARY_SITE, VALIDATE, STRICT_AUDIT, BUILD_PUBLIC, VERIFY_PUBLIC):
         if not required.exists():
             print(f"缺少必要文件：{required}", file=sys.stderr)
             return 1
+
+    if not _rebuild_public():
+        print("当前正式公开包重建/验证失败，已停止生成本地最终版。", file=sys.stderr)
+        return 1
 
     if output.exists():
         shutil.rmtree(output)

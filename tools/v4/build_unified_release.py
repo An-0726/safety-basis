@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
-"""统一发布包构建器。
+"""统一正式发布包构建器。
 
-  - 已核验隐患 / 条款 / 关联：来自 ``knowledge/`` 的 V4 链式 Gate 公开投影；
-  - Excel 候选隐患：以明确的“待审核候选”状态公开展示，不冒充已核验依据；
-  - 法规目录与获准公开的全文：来自 ``source/publication/``；
-  - 法规目录合并 knowledge 中独有且被合格关联引用的法规版本；
-  - 私有 PDF、未核验条款和内部索引不会进入公开发布包。
+正式公开站只投影满足当前日期链式 Gate 的内容：
 
-本脚本只生成新目录，不覆盖任何现有发布包、母库或网站数据；
+  knowledge/laws -> knowledge/law-versions -> knowledge/clauses
+      -> knowledge/links -> knowledge/hazards
+
+``source/publication`` 只提供公开全文、官方入口和同 ID 的来源元数据；它不再
+单独创造正式法规卡。``lifecycle=proposed`` 的候选继续保存在 ``knowledge/``
+供审核，但不进入正式发布包。
+
+私有 PDF、SQLite、OCR、未核验条款和内部索引不会进入公开发布包。
 所有生成文件由脚本确定性写出，禁止手工编辑。
-校验见 tools/v4/verify_unified_bundle.py。
 """
 import argparse
 import glob
@@ -22,7 +24,7 @@ import shutil
 import sys
 import unicodedata
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -34,8 +36,8 @@ PUBLICATION = os.path.join(ROOT, "source", "publication")
 WEB = os.path.join(ROOT, "web")
 DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "current")
 SHARD_SIZE = 200
-AS_OF = "2026-09-13"
-DATA_VERSION = "2026.09.13.current"
+AS_OF = "2026-09-14"
+DATA_VERSION = "2026.09.14.current"
 MODEL = "deterministic local build"
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "app.js",
@@ -63,7 +65,8 @@ def rd(p):
 def wr(p, d, indent=None):
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with io.open(p, "w", encoding="utf-8", newline="\n") as f:
-        json.dump(d, f, ensure_ascii=False, indent=indent, separators=None if indent else (",", ":"))
+        json.dump(d, f, ensure_ascii=False, indent=indent,
+                  separators=None if indent else (",", ":"))
 
 
 def sha256_file(p):
@@ -75,13 +78,17 @@ def sha256_file(p):
 
 
 def review_date(r):
-    return (r.get("checkedAt") or (r.get("migratedFromV3Verification") or {}).get("reviewedAt", ""))
+    return (r.get("checkedAt") or
+            (r.get("migratedFromV3Verification") or {}).get("reviewedAt", ""))
 
 
 def public_version_title(name, number):
     number = (number or "").strip()
+
     def norm(v):
-        return re.sub(r"\s+", "", unicodedata.normalize("NFKC", v)).translate(str.maketrans("—–－", "---")).casefold()
+        return (re.sub(r"\s+", "", unicodedata.normalize("NFKC", v))
+                .translate(str.maketrans("—–－", "---")).casefold())
+
     return f"{name} {number}" if number and norm(number) not in norm(name) else name
 
 
@@ -94,12 +101,17 @@ def main():
     args = ap.parse_args()
     AS_OF = args.as_of
     DATA_VERSION = args.data_version
+    try:
+        as_of_date = date.fromisoformat(AS_OF)
+    except ValueError as exc:
+        raise SystemExit("--as-of 必须是 YYYY-MM-DD：" + AS_OF) from exc
+
     out = os.path.abspath(args.out)
     if os.path.exists(out):
         raise SystemExit("输出目录已存在，拒绝覆盖：" + out)
     data = os.path.join(out, "data")
 
-    gate = evaluate_release_gate(KNOW)
+    gate = evaluate_release_gate(KNOW, as_of_date)
     hazards = load_dir(KNOW, "hazards")
     links = load_dir(KNOW, "links")
     clauses = load_dir(KNOW, "clauses")
@@ -123,37 +135,32 @@ def main():
             lv_checked[r["entityId"]] = review_date(r)
 
     hazard_links = defaultdict(list)
-    for kid, l in links.items():
-        hazard_links[l.get("hazardId")].append(kid)
+    for kid, link in links.items():
+        hazard_links[link.get("hazardId")].append(kid)
 
-    # 正式隐患必须通过链式 Gate；用户要求 Excel 的 1264 条候选也全部上线，
-    # 因此把 lifecycle=proposed 的实体作为第二种公开状态投影。候选不计入
-    # eligibleHazards、不生成正式 basisRefs，也不会被当成当前依据。
-    verified_pub = set(gate.eligible_hazards)
-    proposed_pub = {hid for hid, h in hazards.items()
-                    if (h.get("lifecycle") or "active") == "proposed"}
-    pub = sorted(verified_pub | proposed_pub)
+    # ---- 正式隐患：只发布当前日期 Gate 通过的 active 实体 ----
+    pub = sorted(gate.eligible_hazards)
     used_clauses, seen_clause = [], set()
     basis_of = {hid: [] for hid in pub}
-    for hid in sorted(verified_pub):
+    shipped_links = set()
+    order = {"direct": 0, "fallback": 1, "supporting": 2}
+    for hid in pub:
         refs = []
         for kid in hazard_links.get(hid, []):
-            # 只投影链式 Gate 完整贯通的关联（link→clause→lawVersion→law 全部合格），
-            # 比旧 build_site_data 的 decision==verified 口径更严，符合交接说明书 17.6。
             if kid not in gate.eligible_links:
                 continue
             cid = links[kid].get("clauseId")
             if not cid or cid not in clauses:
                 continue
             refs.append((cid, links[kid].get("role", "direct")))
+            shipped_links.add(kid)
             if cid not in seen_clause:
                 seen_clause.add(cid)
                 used_clauses.append(cid)
-        order = {"direct": 0, "fallback": 1, "supporting": 2}
         refs.sort(key=lambda x: order.get(x[1], 9))
         basis_of[hid] = refs
 
-    # ---- 隐患分片（与 build_site_data.py 相同的公开投影字段）----
+    # ---- 隐患分片 ----
     hazard_shards, clause_shards = [], []
     h_shard_of, c_shard_of = {}, {}
     for i in range(0, len(pub), SHARD_SIZE):
@@ -162,7 +169,6 @@ def main():
         for hid in pub[i:i + SHARD_SIZE]:
             h = hazards[hid]
             h_shard_of[hid] = sid
-            is_verified = hid in verified_pub
             recs.append({
                 "id": hid,
                 "title": h.get("title", ""),
@@ -174,17 +180,17 @@ def main():
                 "aliases": h.get("aliases") or [],
                 "keywords": h.get("keywords") or [],
                 "mode": h.get("mode", ""),
-                "status": "已核验" if is_verified else "待审核候选",
-                "publishable": is_verified,
+                "status": "已核验",
+                "publishable": True,
                 "lifecycle": h.get("lifecycle", "active"),
-                "proposalStatus": None if is_verified else h.get("proposalStatus", "待核验"),
-                "sourceRow": None if is_verified else h.get("sourceRow"),
                 "checked": checked_at.get(hid, ""),
                 "basisRefs": [],
             })
         hazard_shards.append({"id": sid, "url": "data/hazards/%s.json" % sid})
-        wr(os.path.join(data, "hazards", sid + ".json"), {"schemaVersion": 2, "records": recs})
+        wr(os.path.join(data, "hazards", sid + ".json"),
+           {"schemaVersion": 2, "records": recs})
 
+    # ---- 正式条款分片 ----
     for i in range(0, len(used_clauses), SHARD_SIZE):
         sid = "c%04d" % (i // SHARD_SIZE)
         recs = []
@@ -197,83 +203,106 @@ def main():
                 "id": cid,
                 "article": c.get("articlePath") or c.get("clauseNumber") or "",
                 "quote": c.get("quote", ""),
-                # 统一连接键：法规版本 id（与发布目录/全文目录的 versionId 一致）
                 "lawId": c.get("lawVersionId", ""),
                 "sourceUrl": c.get("sourceUrl") or lv.get("sourceUrl") or "",
                 "checked": clause_checked.get(cid, ""),
-                "status": STATUS_LABEL.get(validity, "待核验") if (c.get("lifecycle") or "active") == "active" else "已废止",
+                "status": STATUS_LABEL.get(validity, "待核验")
+                          if (c.get("lifecycle") or "active") == "active" else "已废止",
                 "region": REGION.get(c.get("jurisdictionCode") or "CN", "全国"),
             })
         clause_shards.append({"id": sid, "url": "data/clauses/%s.json" % sid})
-        wr(os.path.join(data, "clauses", sid + ".json"), {"schemaVersion": 2, "records": recs})
+        wr(os.path.join(data, "clauses", sid + ".json"),
+           {"schemaVersion": 2, "records": recs})
 
     for i in range(0, len(pub), SHARD_SIZE):
         sid = "h%04d" % (i // SHARD_SIZE)
         p = os.path.join(data, "hazards", sid + ".json")
         payload = rd(p)
         for rec in payload["records"]:
-            rec["basisRefs"] = [{"clauseId": cid, "clauseShard": c_shard_of.get(cid, ""), "role": role}
-                                for cid, role in basis_of[rec["id"]]]
+            rec["basisRefs"] = [
+                {"clauseId": cid, "clauseShard": c_shard_of.get(cid, ""), "role": role}
+                for cid, role in basis_of[rec["id"]]
+            ]
         wr(p, payload)
 
-    # ---- 法规目录：统一发布资料源 + knowledge 独有且被引用的版本 ----
+    # ---- 正式法规索引：knowledge 是身份/版本主源；publication 仅补来源元数据 ----
     base_index = rd(os.path.join(PUBLICATION, "law-index.json"))
-    clause_haz = defaultdict(set)          # clauseId -> {hazardId}
-    version_clause = defaultdict(set)      # versionId -> {clauseId}
-    for kid in gate.eligible_links:
-        l = links[kid]
-        cid = l.get("clauseId")
-        if cid in c_shard_of and l.get("hazardId") in h_shard_of:
-            clause_haz[cid].add(l["hazardId"])
-            version_clause[clauses[cid].get("lawVersionId")].add(cid)
+    publication_by_id = {e["id"]: e for e in base_index}
+    if len(publication_by_id) != len(base_index):
+        raise SystemExit("source/publication/law-index.json 存在重复 id，拒绝发布")
+
+    clause_haz = defaultdict(set)
+    version_clause = defaultdict(set)
+    for kid in shipped_links:
+        link = links[kid]
+        cid = link.get("clauseId")
+        hid = link.get("hazardId")
+        if cid in c_shard_of and hid in h_shard_of:
+            clause_haz[cid].add(hid)
+            vid = clauses[cid].get("lawVersionId")
+            if not vid or vid not in lvs:
+                raise SystemExit("正式条款缺少 knowledge 法规版本：" + str(cid))
+            version_clause[vid].add(cid)
+
+    # 同一个法规身份 + 同一个 versionKey 不允许出现两个正式版本 ID。
+    canonical_keys = {}
+    for vid in sorted(version_clause):
+        lv = lvs[vid]
+        key = (lv.get("lawId"), lv.get("versionKey") or lv.get("effectiveDate") or
+               lv.get("documentNumber") or vid)
+        old = canonical_keys.get(key)
+        if old and old != vid:
+            raise SystemExit("knowledge 存在重复正式法规版本：%s 与 %s" % (old, vid))
+        canonical_keys[key] = vid
 
     def rebuilt_refs(clause_ids):
         refs = []
         for cid in sorted(clause_ids):
-            refs.append({"clauseId": cid, "clauseShard": c_shard_of.get(cid, ""),
-                         "hazardIds": sorted(clause_haz.get(cid, []))})
+            refs.append({
+                "clauseId": cid,
+                "clauseShard": c_shard_of.get(cid, ""),
+                "hazardIds": sorted(clause_haz.get(cid, [])),
+            })
         return refs
 
     law_index = []
-    for entry in base_index:
-        e = dict(entry)
-        refs = rebuilt_refs(version_clause.get(e["id"], set()))
-        e["clauseRefs"] = refs
-        e["hazardCount"] = len({h for r in refs for h in r["hazardIds"]})
-        e["clauseCount"] = len(refs)
-        law_index.append(e)
-
-    base_ids = {e["id"] for e in base_index}
-    v4_only = sorted(vid for vid in version_clause if vid not in base_ids)
-    for vid in v4_only:
+    for vid in sorted(version_clause):
         lv = lvs[vid]
-        law = laws.get(lv.get("lawId")) or {}
-        name = public_version_title(law.get("canonicalName") or law.get("officialName") or vid,
-                                    lv.get("documentNumber"))
+        law = laws.get(lv.get("lawId"))
+        if not law:
+            raise SystemExit("法规版本缺少 knowledge 法规身份：" + vid)
+        source = publication_by_id.get(vid) or {}
+        canonical_name = (law.get("canonicalName") or law.get("officialName") or
+                          lv.get("officialName") or vid)
+        number = lv.get("documentNumber", "")
+        name = public_version_title(canonical_name, number)
+        aliases = list(dict.fromkeys((law.get("aliases") or []) + (source.get("aliases") or [])))
         validity = lv.get("validityStatus", "unknown")
-        status = STATUS_LABEL.get(validity, "待核验")
         refs = rebuilt_refs(version_clause[vid])
-        aliases = law.get("aliases") or []
+        region_code = law.get("jurisdictionCode") or lv.get("scope") or "CN"
         law_index.append({
             "id": vid,
             "name": name,
             "aliases": aliases,
-            "level": law.get("documentKind", ""),
-            "scope": REGION.get(law.get("jurisdictionCode") or "CN", "全国"),
-            "status": status,
-            "checked": (lv_checked.get(vid, "") or "")[:10],
+            "documentNumber": number,
+            "level": law.get("documentKind") or lv.get("level") or source.get("level", ""),
+            "scope": REGION.get(region_code, source.get("scope") or region_code),
+            "status": STATUS_LABEL.get(validity, "待核验"),
+            "checked": (lv_checked.get(vid, "") or source.get("checked", ""))[:10],
             "effectiveDate": lv.get("effectiveDate", ""),
-            "sourceUrl": lv.get("sourceUrl", ""),
-            "replaces": [],
-            "replacedBy": [],
+            "sourceUrl": lv.get("sourceUrl") or source.get("sourceUrl", ""),
+            "replaces": lv.get("replaces") or source.get("replaces") or [],
+            "replacedBy": lv.get("replacedBy") or source.get("replacedBy") or [],
             "clauseRefs": refs,
             "hazardCount": len({h for r in refs for h in r["hazardIds"]}),
             "clauseCount": len(refs),
-            "searchText": searchable([name, " ".join(aliases), law.get("issuer", ""),
-                                      lv.get("documentNumber", "")]),
+            "searchText": searchable([
+                canonical_name, name, " ".join(aliases), law.get("issuer", ""), number,
+                source.get("name", ""),
+            ]),
         })
 
-    # ---- 搜索索引 / 分类（与 build_site_data.py 同一前端契约）----
+    # ---- 搜索索引 / 分类 ----
     si = []
     cat_counter, place_counter = Counter(), Counter()
     mode_counter, level_counter = Counter(), Counter()
@@ -290,21 +319,25 @@ def main():
             if lv.get("documentNumber"):
                 stds.add(lv["documentNumber"])
             scopes.add(REGION.get(c.get("jurisdictionCode") or "CN", "全国"))
-            if law.get("documentKind"):
-                lvls.add(law["documentKind"])
-        is_verified = hid in verified_pub
+            level = law.get("documentKind") or lv.get("level")
+            if level:
+                lvls.add(level)
         si.append({
-            "id": hid, "title": h.get("title", ""), "aliases": h.get("aliases") or [],
-            "category": h.get("category", ""), "places": h.get("places") or [],
+            "id": hid,
+            "title": h.get("title", ""),
+            "aliases": h.get("aliases") or [],
+            "category": h.get("category", ""),
+            "places": h.get("places") or [],
             "keywords": h.get("keywords") or [],
-            "status": "已核验" if is_verified else "待审核候选",
-            "publishable": is_verified,
-            "excludedReason": None if is_verified else h.get("proposalStatus", "待核验"),
-            "mode": h.get("mode", ""), "checked": checked_at.get(hid, ""),
-            "proposalStatus": None if is_verified else h.get("proposalStatus", "待核验"),
-            "sourceRow": None if is_verified else h.get("sourceRow"),
-            "levels": sorted(lvls), "scopes": sorted(scopes), "lawNames": sorted(lns),
-            "stdNumbers": sorted(stds), "shard": h_shard_of[hid],
+            "status": "已核验",
+            "publishable": True,
+            "mode": h.get("mode", ""),
+            "checked": checked_at.get(hid, ""),
+            "levels": sorted(lvls),
+            "scopes": sorted(scopes),
+            "lawNames": sorted(lns),
+            "stdNumbers": sorted(stds),
+            "shard": h_shard_of[hid],
             "searchText": searchable([
                 h.get("title", ""), " ".join(h.get("aliases") or []),
                 " ".join(h.get("keywords") or []), h.get("description", ""),
@@ -314,41 +347,59 @@ def main():
         })
         if h.get("category"):
             cat_counter[h["category"]] += 1
-        for pl in (h.get("places") or []):
+        for pl in h.get("places") or []:
             place_counter[pl] += 1
         if h.get("mode"):
             mode_counter[h["mode"]] += 1
-        for x in lvls:
-            level_counter[x] += 1
+        for level in lvls:
+            level_counter[level] += 1
 
     taxonomy = {
         "categories": [c for c, _ in cat_counter.most_common()],
         "places": [p for p, _ in place_counter.most_common()],
         "lawLevels": sorted(level_counter),
         "hazardModes": sorted(mode_counter),
-        "hazardStatuses": ["已核验", "待审核候选"],
+        "hazardStatuses": ["已核验"],
         "lawStatuses": sorted({x["status"] for x in law_index if x["status"]}),
     }
 
-    counts = {"hazards": len(si), "laws": len(law_index), "lawVersions": len(base_ids) + len(v4_only),
-              "clauses": len(used_clauses), "links": len(gate.eligible_links)}
+    proposed_count = sum(1 for h in hazards.values()
+                         if (h.get("lifecycle") or "active") == "proposed")
+    counts = {
+        "hazards": len(si),
+        "laws": len(law_index),
+        "lawVersions": len(law_index),
+        "clauses": len(used_clauses),
+        "links": len(shipped_links),
+    }
     manifest = {
         "schemaVersion": 2,
         "v4SchemaVersion": 3,
         "dataVersion": DATA_VERSION,
         "generatedAt": AS_OF,
-        "publicScope": "国家法规标准优先，江苏／南京补充；已核验隐患与明确标注的待审核候选均公开展示",
+        "publicScope": "国家法规标准优先，江苏／南京补充；正式站只发布当前日期已核验依据",
         "counts": counts,
-        "sourceCounts": {"hazards": gate.counts["hazards"], "laws": len(law_index),
-                         "clauses": gate.counts["clauses"], "links": gate.counts["links"]},
-        "health": {"verifiedHazards": len(verified_pub), "pendingHazards": len(proposed_pub),
-                   "activeLaws": sum(1 for x in law_index if x["status"] == "现行有效"),
-                   "pendingLaws": sum(1 for x in law_index if x["status"] not in ("现行有效", "")),
-                   "invalidReferences": 0,
-                   "stagedHazards": gate.counts["hazards"] - len(verified_pub), "stagedLaws": 0},
-        "files": {"searchIndex": "data/search-index.json",
-                  "lawIndex": "data/law-index.json",
-                  "taxonomy": "data/taxonomy.json"},
+        "sourceCounts": {
+            "hazards": gate.counts["hazards"],
+            "laws": gate.counts["laws"],
+            "lawVersions": gate.counts["lawVersions"],
+            "clauses": gate.counts["clauses"],
+            "links": gate.counts["links"],
+        },
+        "health": {
+            "verifiedHazards": len(pub),
+            "pendingHazards": proposed_count,
+            "activeLaws": sum(1 for x in law_index if x["status"] == "现行有效"),
+            "pendingLaws": sum(1 for x in law_index if x["status"] not in ("现行有效", "")),
+            "invalidReferences": 0,
+            "stagedHazards": gate.counts["hazards"] - len(pub),
+            "stagedLaws": gate.counts["lawVersions"] - len(law_index),
+        },
+        "files": {
+            "searchIndex": "data/search-index.json",
+            "lawIndex": "data/law-index.json",
+            "taxonomy": "data/taxonomy.json",
+        },
         "hazardShards": hazard_shards,
         "clauseShards": clause_shards,
         "releaseHash": "",
@@ -359,7 +410,7 @@ def main():
     wr(os.path.join(data, "law-index.json"), law_index, indent=2)
     wr(os.path.join(data, "taxonomy.json"), taxonomy)
 
-    # ---- 前端资产以 web/ 为源头；公开全文来自唯一发布资料源 ----
+    # ---- 前端资产与公开全文资料 ----
     for asset in SITE_ASSETS:
         src = os.path.join(WEB, asset)
         dst = os.path.join(out, asset)
@@ -367,7 +418,6 @@ def main():
         shutil.copyfile(src, dst)
     shutil.copytree(os.path.join(PUBLICATION, "fulltext"), os.path.join(data, "fulltext"))
 
-    # ---- 全文目录核对：15 全文 + 136 官方入口，GB/T 47236 只能是 link_only ----
     catalog = rd(os.path.join(data, "fulltext", "catalog.json"))
     docs = catalog["documents"]
     full_text = [d for d in docs if d["textMode"] == "full_text"]
@@ -375,16 +425,15 @@ def main():
     d47236 = [d for d in docs if d.get("versionId") == "LV_STD_GBT47236_2026"]
     if len(d47236) != 1 or d47236[0]["textMode"] != "link_only":
         raise SystemExit("GB/T 47236-2026 题录缺失或不是 link_only，拒绝发布")
-    law_ids = {e["id"] for e in law_index}
-    dangling = [d["versionId"] for d in docs if d["versionId"] not in law_ids]
+
+    # 全文资料库允许收录尚未成为正式依据的题录/未来版本，因此只要求它属于
+    # publication 资料源或 knowledge 法规版本，不能再要求它出现在正式 law-index。
+    source_version_ids = set(publication_by_id) | set(lvs)
+    dangling = sorted({d["versionId"] for d in docs if d.get("versionId") not in source_version_ids})
     if dangling:
-        raise SystemExit("全文目录存在未收录版本：" + ", ".join(dangling))
+        raise SystemExit("全文资料目录存在未知版本：" + ", ".join(dangling))
 
     # ---- release.json / site-manifest.json / checksums.json ----
-    # releaseHash 覆盖规则（verify_unified_bundle.py 按同一规则复算）：
-    #   对除 {checksums.json, release.json, site-manifest.json, data/manifest.json}
-    #   之外的全部文件取 sha256，按 (path, sha256) 排序后做 canonical JSON 再哈希。
-    #   data/manifest.json 不参与覆盖，因此 manifest 可以安全内嵌 releaseHash。
     knowledge_manifest_sha = sha256_file(os.path.join(KNOW, "manifest.json"))
 
     def bundle_hashes(exclude):
@@ -397,21 +446,23 @@ def main():
                     result[rel] = sha256_file(p)
         return result
 
-    COVER_EXCLUDE = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
+    cover_exclude = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
 
     def compute_release_hash():
-        payload = bundle_hashes(COVER_EXCLUDE)
+        payload = bundle_hashes(cover_exclude)
         return hashlib.sha256(
-            json.dumps(sorted(payload.items()), ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+            json.dumps(sorted(payload.items()), ensure_ascii=False,
+                       separators=(",", ":")).encode("utf-8")
         ).hexdigest()
 
     manifest["releaseHash"] = compute_release_hash()
     manifest["sourceRevision"] = knowledge_manifest_sha
-    manifest["buildToolVersion"] = "safety-unified-release-v1"
+    manifest["buildToolVersion"] = "safety-unified-release-v2"
     wr(os.path.join(data, "manifest.json"), manifest, indent=1)
     release_hash = compute_release_hash()
 
-    data_hashes = {rel: h for rel, h in sorted(bundle_hashes(set()).items()) if rel.startswith("data/")}
+    data_hashes = {rel: h for rel, h in sorted(bundle_hashes(set()).items())
+                   if rel.startswith("data/")}
     site_manifest = {
         "schemaVersion": "safety-site-bundle-v1",
         "asOf": AS_OF,
@@ -427,51 +478,74 @@ def main():
         "formatVersion": "safety-unified-release-v1",
         "asOf": AS_OF,
         "releaseHash": release_hash,
-        "generator": {"tool": "tools/v4/build_unified_release.py", "model": MODEL,
-                      "executedAt": datetime.now(timezone.utc).isoformat()},
-        "knowledge": {"manifestSha256": knowledge_manifest_sha,
-                      "gate": {"asOf": gate.as_of,
-                               "eligibleHazards": len(gate.eligible_hazards),
-                               "eligibleLinks": len(gate.eligible_links),
-                               "strictBlockers": 0,
-                               "publicProposalHazards": len(proposed_pub)}},
+        "generator": {
+            "tool": "tools/v4/build_unified_release.py",
+            "model": MODEL,
+            "executedAt": datetime.now(timezone.utc).isoformat(),
+        },
+        "knowledge": {
+            "manifestSha256": knowledge_manifest_sha,
+            "gate": {
+                "asOf": gate.as_of,
+                "eligibleHazards": len(pub),
+                "eligibleLinks": len(shipped_links),
+                "strictBlockers": 0,
+                "publicProposalHazards": 0,
+                "candidateHazardsInKnowledge": proposed_count,
+            },
+        },
         "provenance": {
-            "hazardClauseLinkSource": "knowledge/ chained-gate public projection",
-            "lawCatalogSource": "source/publication/law-index.json",
+            "hazardClauseLinkSource": "knowledge/ current chained-gate projection",
+            "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
             "fulltextSource": "source/publication/fulltext/",
             "frontendSource": "web/",
         },
         "counts": counts,
-        "fullText": {"count": len(full_text), "officialLinkCount": len(link_only),
-                     "gbt47236": "link_only"},
+        "fullText": {
+            "count": len(full_text),
+            "officialLinkCount": len(link_only),
+            "gbt47236": "link_only",
+        },
     }
     wr(os.path.join(out, "release.json"), release, indent=2)
 
     checksums = bundle_hashes({"checksums.json"})
     wr(os.path.join(out, "checksums.json"), checksums, indent=2)
 
+    formal_ids = {e["id"] for e in law_index}
     report = {
-        "asOf": AS_OF, "model": MODEL, "output": out,
+        "asOf": AS_OF,
+        "model": MODEL,
+        "output": out,
         "counts": counts,
-        "gate": {"eligibleHazards": len(gate.eligible_hazards),
-                 "eligibleLinks": len(gate.eligible_links)},
-        "lawCatalog": {"fromPublication": len(base_index), "addedFromKnowledge": len(v4_only),
-                       "addedIds": v4_only, "total": len(law_index)},
-        "fullText": {"fullTextCount": len(full_text), "officialLinkCount": len(link_only)},
+        "gate": {
+            "eligibleHazards": len(pub),
+            "eligibleLinks": len(shipped_links),
+            "candidateHazardsInKnowledge": proposed_count,
+        },
+        "lawCatalog": {
+            "formalKnowledgeVersions": len(law_index),
+            "publicationSourceRecords": len(base_index),
+            "publicationOnlyOrUnused": len(set(publication_by_id) - formal_ids),
+        },
+        "fullText": {
+            "fullTextCount": len(full_text),
+            "officialLinkCount": len(link_only),
+        },
         "notes": [
-            "hazard/clause/link 投影与 tools/v4/build_site_data.py 同一契约；clause.lawId 统一为法规版本 id",
-            "lifecycle=proposed 的 Excel 候选全部公开展示为待审核候选，不计入 eligibleHazards，不可直接作为正式依据",
-            "法规目录与可公开全文由 source/publication 唯一维护，不依赖历史发布包",
-            "GB/T 47236-2026 仅公开题录与官方入口（link_only），未公开 PDF 正文与未核验条款",
+            "正式站只发布当前日期 Gate 通过的 active 隐患；proposed 候选保留在 knowledge，不进入正式包",
+            "正式法规索引只由已发布条款实际引用的 knowledge 法规版本生成",
+            "source/publication 只补公开来源/全文资料，不再制造第二套正式法规身份",
+            "upcoming 版本可保留在知识库和全文资料页，但实施日前不能支撑当前正式隐患",
         ],
     }
-    review_path = out + ".review.json"
-    wr(review_path, report, indent=2)
+    wr(out + ".review.json", report, indent=2)
 
-    print("统一发布包已生成:", out)
+    print("统一正式发布包已生成:", out)
     print("  counts:", json.dumps(counts, ensure_ascii=False))
-    print("  法规目录: publication %d + knowledge 独有 %d = %d" % (len(base_index), len(v4_only), len(law_index)))
-    print("  全文: %d 部全文 / %d 官方入口" % (len(full_text), len(link_only)))
+    print("  正式法规版本: %d；publication 来源记录: %d" % (len(law_index), len(base_index)))
+    print("  knowledge 候选未公开: %d" % proposed_count)
+    print("  全文资料: %d 部全文 / %d 官方入口" % (len(full_text), len(link_only)))
     print("  releaseHash:", release_hash)
 
 

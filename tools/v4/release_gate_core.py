@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """V4 发布门禁共享链式判定核心（Single Source of Truth）。
 
-设计依据 docs/GATE_V4.md。三个脚本（strict_release_audit / build_release /
-gate_v4）都只 import 本模块，不再各自复制一套略有漂移的判断逻辑。
-
-判定链（§11）：
+正式发布链：
     link -> clause -> lawVersion -> law
 同时 link review 的 contextHashes 绑定 hazard + clause。
 
@@ -13,8 +10,11 @@ gate_v4）都只 import 本模块，不再各自复制一套略有漂移的判�
 
 GateResult 同时给出：
 - 每个实体的 gate 判定（ok / reasons）；
-- eligible_links / eligible_hazards（真正可进公开发布投影的集合）；
+- eligible_links / eligible_hazards（真正可进当前正式发布投影的集合）；
 - 供审计做 releaseBlockers / inventoryWarnings / excludedEntities 分类所需的全部原始信号。
+
+效力口径以 docs/LEGAL_STATUS_POLICY.md 为准：已发布但尚未实施的 upcoming 版本可以
+保存在知识库和资料库中，但不能支撑“当前正式隐患依据”。
 """
 import glob
 import io
@@ -26,22 +26,22 @@ from types import SimpleNamespace
 
 from canonical import content_hash
 
-# ---- 常量（与 GATE_V4.md 对齐）-------------------------------------------
+# ---- 常量 -----------------------------------------------------------------
 
-DEFAULT_AS_OF = date(2026, 9, 10)
+DEFAULT_AS_OF = date(2026, 9, 14)
 
-# §7 LawVersion 效力状态
+# LawVersion 效力状态
 ALLOWED_VALIDITY = {"active", "upcoming", "repealed", "unknown"}
 
-# §10/§11 link role 字典
+# link role 字典
 SUPPORTED_ROLES = {"direct", "fallback", "supporting"}
-# §9 qualifying role：direct / fallback 才能单独支撑一个 hazard
+# qualifying role：direct / fallback 才能单独支撑一个 hazard
 QUALIFYING_ROLES = {"direct", "fallback"}
 
 # 全国性管辖代码的等价写法（数据里 link 用 "全国"/"CN"，law 用 "CN"/"CN-32"...）
 NATIONAL_CODES = {"CN", "全国"}
 
-# §14 隐私泄漏：本地绝对路径 / home 目录
+# 隐私泄漏：本地绝对路径 / home 目录
 PRIVATE_PATH_RE = re.compile(r"[A-Za-z]:\\|/(?:home|Users|mnt)/")
 
 
@@ -92,7 +92,7 @@ def _region(code):
 
 
 def jurisdiction_conflicts(link_code, law_code):
-    """§10 jurisdiction 与 hazard/法规使用场景是否明确冲突。
+    """jurisdiction 与 hazard/法规使用场景是否明确冲突。
 
     仅当双方都是“具体地方区域”且不一致时才算冲突；全国性法规/链接不与
     任何具体区域冲突（全国法在地方当然适用）。
@@ -101,13 +101,13 @@ def jurisdiction_conflicts(link_code, law_code):
     if not lc or not kc:
         return False
     if lc == "CN" or kc == "CN":
-        return False  # 全国性一方不构成冲突
+        return False
     return lc != kc
 
 
 # ---- 单层 gate ------------------------------------------------------------
 def _review_binding(entity, review, need_evidence):
-    """通用 review 绑定检查（§2.4 / §4）。返回 (ok, reasons)。"""
+    """通用 review 绑定检查。返回 (ok, reasons)。"""
     reasons = []
     if not review:
         return False, ["BLOCK_REVIEW_MISSING"]
@@ -121,7 +121,7 @@ def _review_binding(entity, review, need_evidence):
 
 
 def gate_law(law, review):
-    """§6 Law 硬门禁：身份有效 + review verified + hash 当前 + authoritative evidence。"""
+    """Law 硬门禁：身份有效 + review verified + hash 当前 + authoritative evidence。"""
     reasons = []
     if not law.get("canonicalName"):
         reasons.append("BLOCK_LAW_IDENTITY:canonicalName_empty")
@@ -129,19 +129,20 @@ def gate_law(law, review):
         reasons.append("BLOCK_LAW_IDENTITY:issuer_empty")
     if not law.get("jurisdictionCode"):
         reasons.append("BLOCK_LAW_IDENTITY:jurisdictionCode_empty")
-    ok, r = _review_binding(law, review, need_evidence=True)
+    _ok, r = _review_binding(law, review, need_evidence=True)
     reasons += r
     return not reasons, reasons
 
 
 def gate_law_version(lv, review, law_ok, as_of):
-    """§7 LawVersion 硬门禁 + asOf 效力判定。
+    """LawVersion 硬门禁 + asOf 效力判定。
 
     返回 (ok, supports_current, reasons)：
     - ok：版本自身结构/身份/review 是否合格；
-    - supports_current：在 as_of 当天能否作为“当前 hazard 的引用依据”。
-      2026-09-13 修订（用户决策）：已发布未实施（upcoming）的版本也可支撑，
-      确保引用始终指向最新发布版；repealed/unknown 仍不可支撑。
+    - supports_current：在 as_of 当天能否作为“当前 hazard 的正式引用依据”。
+
+    upcoming 可以作为合法版本保留，但在 effectiveDate 到达前 supports_current=False；
+    repealed/unknown 同样不能支撑当前正式依据。
     """
     reasons = []
     status = lv.get("validityStatus") or "unknown"
@@ -156,14 +157,13 @@ def gate_law_version(lv, review, law_ok, as_of):
         reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:effectiveDate_invalid")
     if status not in ALLOWED_VALIDITY:
         reasons.append("BLOCK_VERSION_UNKNOWN:invalid_validityStatus:" + str(status))
-    ok, r = _review_binding(lv, review, need_evidence=True)
+    _ok, r = _review_binding(lv, review, need_evidence=True)
     reasons += r
     if not law_ok:
         reasons.append("BLOCK_LAW_IDENTITY:parent_law_gate_failed")
 
     supports_current = False
     if status == "active" and eff:
-        # §7 active：effectiveDate <= asOf AND (endDate null OR asOf < endDate)
         if eff <= as_of and (not end or as_of < end):
             supports_current = True
         elif eff > as_of:
@@ -171,20 +171,18 @@ def gate_law_version(lv, review, law_ok, as_of):
         elif end and not (as_of < end):
             reasons.append("BLOCK_VERSION_EXPIRED:active_past_endDate")
     elif status == "upcoming":
-        # §7 upcoming（2026-09-13 修订，用户决策）：已发布未实施的最新版本
-        # 可直接作为当前隐患的引用依据（"我就是要最新的，没生效也没关系"），
-        # 不再等待实施日；effectiveDate <= asOf 仍标 upcoming 属于效力标错，需复核。
+        # upcoming 是合法的未来版本，但不能提前作为当前正式依据。
+        # 若实施日已经到达仍标 upcoming，则属于效力状态错误，需要复核。
         if eff and eff <= as_of:
             reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:upcoming_not_future")
-        else:
-            supports_current = True
-    # repealed / unknown：天然不能支撑当前 hazard，不额外记硬错误（它们是 excluded）
+        supports_current = False
+    # repealed / unknown：天然不能支撑当前 hazard；作为库存实体保留即可。
 
     return not reasons, supports_current, reasons
 
 
 def gate_clause(clause, review, lv_supports_current, lv_struct_ok):
-    """§8 Clause 硬门禁 + 所属 LawVersion 可支撑当前日期。"""
+    """Clause 硬门禁 + 所属 LawVersion 可支撑当前日期。"""
     reasons = []
     if not clause.get("lawVersionId"):
         reasons.append("BLOCK_FOREIGN_KEY:lawVersionId_missing")
@@ -192,26 +190,20 @@ def gate_clause(clause, review, lv_supports_current, lv_struct_ok):
         reasons.append("BLOCK_CLAUSE_LOCATOR:articlePath_missing")
     if not clause.get("quote"):
         reasons.append("BLOCK_CLAUSE_TEXT:quote_missing")
-    ok, r = _review_binding(clause, review, need_evidence=True)
+    _ok, r = _review_binding(clause, review, need_evidence=True)
     reasons += r
-    # 条款级效力：整部标准现行，不代表其中某条没被废止（部分替代场景）。
-    # 被废止条文不得再作为现行依据，其关联会因本项不合格而无法进入发布。
     if (clause.get("lifecycle") or "active") != "active":
-        # 用 EXCLUDED_ 前缀：这是"实体已被替代、不应发布"，不是数据错误。
-        # strict_release_audit 据此把它归入 excludedEntities 而非 releaseBlockers。
         reasons.append("EXCLUDED_CLAUSE_NOT_CURRENT:clause_lifecycle_"
                        + str(clause.get("lifecycle")))
     if not lv_struct_ok:
         reasons.append("BLOCK_VERSION_UNKNOWN:lawVersion_gate_failed")
     elif not lv_supports_current:
-        # §10：关联 repealed/unknown version 却试图支撑当前 hazard
-        # （2026-09-13 起已发布的 upcoming 版本可支撑，见 gate_law_version 修订）
         reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:lawVersion_not_supporting_current")
     return not reasons, reasons
 
 
 def gate_hazard_content(hazard, review):
-    """§9 Hazard 内容硬门禁（不含法规链）。"""
+    """Hazard 内容硬门禁（不含法规链）。"""
     reasons = []
     for field in ("title", "description", "measures", "category"):
         if not hazard.get(field):
@@ -220,7 +212,7 @@ def gate_hazard_content(hazard, review):
         reasons.append("BLOCK:hazard_not_active")
     if hazard.get("mergedInto"):
         reasons.append("BLOCK:hazard_mergedInto")
-    ok, r = _review_binding(hazard, review, need_evidence=False)
+    _ok, r = _review_binding(hazard, review, need_evidence=False)
     reasons += r
     public_text = " ".join(str(hazard.get(x) or "") for x in ("title", "description", "measures", "note"))
     if PRIVATE_PATH_RE.search(public_text):
@@ -229,7 +221,7 @@ def gate_hazard_content(hazard, review):
 
 
 def gate_link(link, review, hazard, clause, law, clause_ok):
-    """§10 Link 硬门禁。"""
+    """Link 硬门禁。"""
     reasons = []
     role = link.get("role")
     if role not in SUPPORTED_ROLES:
@@ -241,13 +233,11 @@ def gate_link(link, review, hazard, clause, law, clause_ok):
     if not hazard:
         reasons.append("BLOCK_FOREIGN_KEY:hazard_missing")
     elif hazard.get("mergedInto") or (hazard.get("lifecycle") or "active") != "active":
-        # §9 已合并/非 active 的 hazard 不进入公开投影；支撑它的 link 也不得计为
-        # 合格关联，否则 eligible_links 会包含实际不会发布的历史追溯关联。
         reasons.append("BLOCK_LINK_HAZARD_NOT_PUBLISHABLE:"
                        + ("merged" if hazard.get("mergedInto") else str(hazard.get("lifecycle"))))
     if not clause:
         reasons.append("BLOCK_FOREIGN_KEY:clause_missing")
-    ok, r = _review_binding(link, review, need_evidence=False)
+    _ok, r = _review_binding(link, review, need_evidence=False)
     reasons += r
     if review and review.get("decision") == "verified":
         if not review.get("reason"):
@@ -286,14 +276,12 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
         "links": load_reviews(knowledge_dir, os.path.join("reviews", "links")),
     }
 
-    # 1) Law
     laws_v = {}
     for lid, law in laws.items():
         ok, reasons = gate_law(law, reviews["laws"].get(lid))
         laws_v[lid] = {"ok": ok, "reasons": reasons,
                        "canonicalName": law.get("canonicalName") or law.get("name") or law.get("title")}
 
-    # 2) LawVersion
     lvs_v = {}
     for vid, lv in lvs.items():
         law_ok = laws_v.get(lv.get("lawId"), {}).get("ok", False)
@@ -302,7 +290,6 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
                       "validityStatus": lv.get("validityStatus") or "unknown",
                       "reasons": reasons}
 
-    # 3) Clause
     clauses_v = {}
     for cid, cl in clauses.items():
         vid = cl.get("lawVersionId")
@@ -311,7 +298,6 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
                                   lv.get("supports_current", False), lv.get("ok", False))
         clauses_v[cid] = {"ok": ok, "reasons": reasons, "lawVersionId": vid}
 
-    # 4) Hazard 内容
     hazards_v = {}
     for hid, hz in hazards.items():
         ok, reasons = gate_hazard_content(hz, reviews["hazards"].get(hid))
@@ -322,7 +308,6 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
             "review_decision": (reviews["hazards"].get(hid) or {}).get("decision"),
         }
 
-    # 5) Link（链式）
     links_v = {}
     eligible_links = set()
     lv_law = {vid: lvs[vid].get("lawId") for vid in lvs}
@@ -344,7 +329,6 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
         if ok:
             eligible_links.add(kid)
 
-    # 6) Hazard 可发布 = 内容合格 + 至少一条合格 qualifying link
     qualifying_links_by_hazard = {}
     eligible_hazards = set()
     for kid in eligible_links:
