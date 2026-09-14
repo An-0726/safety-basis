@@ -64,8 +64,8 @@
 - 输出法规数量、全文数量、隐患数量、待核验清单和下载清单；
 - 保留外部备份；
 - 本轮新版发布提交为 `56abe345`；`source/releases/current/release.json` 与 `source/releases/site-selection.json` 已同步。
-- GitHub Actions正式发布成功：<https://github.com/An-0726/safety-basis/actions/runs/34797322675>；线上地址为 <https://an-0726.github.io/safety-basis/>。
-- 本轮发布哈希：`3896ceacc85ca3072d5c8b5669d43a3166959d22e3d3f8da49b4f314ada13e3b`。
+- GitHub Actions正式发布成功：<https://github.com/An-0726/safety-basis/actions/runs/34798017816>；线上地址为 <https://an-0726.github.io/safety-basis/>。
+- 本轮发布哈希：`dfd461a195d253c33a9e94638e9044703e75c3e50576290ff7922995214da892`。
 
 ## 当前结果边界
 
