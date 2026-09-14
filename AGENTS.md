@@ -45,7 +45,7 @@
 
 **LAST VERIFIED：2026-09-14**
 
-当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）。当前工作分支：`phase5-hazard-reconciliation-20260914`。
+当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）。PHASE 5 工作分支 `phase5-hazard-reconciliation-20260914` 已提交并推送；当前浏览器未登录 GitHub，PR/CI/合并尚未执行，恢复时先完成该交付闭环。
 
 公开发布架构已收口：
 
@@ -231,24 +231,24 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 6 — 候选法规证据回绑与转正，尚未开始；按用户要求暂停在 PHASE 5/6 边界。**
+**PHASE 5 数据工作 DONE、交付闭环待完成；按用户要求暂停。PHASE 6 尚未开始。**
 
-PHASE 5 已完成全量映射、状态闭环、Gate 和发布包验证。本次会话收口后暂停，不进入 PHASE 6 实质回绑；恢复时由总控直接从 519 条 proposed 的证据链缺口盘点开始。
+PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交与分支推送。本次会话收口后暂停，不进入 PHASE 6 实质回绑。恢复时先为 `phase5-hazard-reconciliation-20260914` 创建 PR，等待 CI 全绿并合并 main；随后再从 519 条 proposed 的证据链缺口盘点开始。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **恢复工作后进入 PHASE 6：先对 519 条 proposed 按“缺法规身份 / 缺当前适用版本 / 缺具体条款 / 缺逐字原文或官方证据 / 缺适用性审核 / 目标外范围待定”做确定性分组，输出数量和 ID 清单；优先选择可复用已核验条款的高频组作为第一批，证据不足不得转正。**
+> **恢复工作后先完成 PHASE 5 Git 交付：为 `phase5-hazard-reconciliation-20260914` 创建 PR，确认 Validate/Build CI 全绿后合并 main，并确认 main 校验成功。完成后再进入 PHASE 6：对 519 条 proposed 按证据链缺口做确定性分组，证据不足不得转正。**
 
 执行顺序：
 
-1. 全量读取 519 条 proposed 的 hazard/review/link/clause/evidence 状态；
-2. 按证据链缺口和目标内/目标外范围分组；
-3. 输出机器可读 backlog 与人类摘要，不改法规事实；
-4. 选取证据最完整、可复用已核验条款的第一批候选；
-5. 逐项回到官方原文/原始证据核验后再决定是否转正；
-6. 每批完成后重跑 Gate、更新本文件并继续 PHASE 6。
+1. 创建 PHASE 5 PR，等待 Validate/Build CI；
+2. CI 全绿后合并 main，并核验 main；
+3. 全量读取 519 条 proposed 的 hazard/review/link/clause/evidence 状态；
+4. 按证据链缺口和目标内/目标外范围分组；
+5. 输出机器可读 backlog 与人类摘要，不改法规事实；
+6. 选取证据最完整、可复用已核验条款的第一批候选，逐项核验后再决定是否转正。
 
 ---
 
