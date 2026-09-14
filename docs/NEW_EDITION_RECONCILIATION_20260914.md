@@ -29,3 +29,9 @@
 - review hash/context binding检查
 
 正式发布前，仍需对517条候选继续做条款和证据回绑；已有同版次已核验条款的151条已先转为正式关联。
+
+## 部署
+
+- GitHub Actions：<https://github.com/An-0726/safety-basis/actions/runs/34797322675>
+- 线上哈希：`3896ceacc85ca3072d5c8b5669d43a3166959d22e3d3f8da49b4f314ada13e3b`
+- 线上条目：1926条（1409正式、517候选；3条重复记录不重复发布）。
