@@ -3,6 +3,9 @@ import {VerifiedFiles} from './verified-files.js';
 
 const joinUrl = (base, path) => `${base.replace(/\/$/,'')}/${path.replace(/^\//,'')}`;
 
+const currentHazards = rows => rows.filter(x => x.status === '已核验' && x.publishable !== false);
+const currentLaws = rows => rows.filter(x => Number(x.clauseCount || 0) > 0);
+
 export class DataStore {
   constructor(base='.') {
     this.base=base;
@@ -38,10 +41,29 @@ export class DataStore {
       this.fetchJson(this.manifest.files.lawIndex),
       this.fetchJson(this.manifest.files.taxonomy)
     ]);
-    this.searchIndex=searchIndex;
-    this.lawIndex=lawIndex;
-    this.taxonomy=taxonomy;
-    this.lawMap=new Map(lawIndex.map(x=>[x.id,x]));
+
+    // 正式网站只投影“当前已核验”视图。候选和无正式条款的 publication 目录项
+    // 仍保留在 knowledge/source 层供审核与来源追溯，但不再混入正式检索结果。
+    this.searchIndex=currentHazards(searchIndex);
+    this.lawIndex=currentLaws(lawIndex);
+    this.taxonomy={
+      ...taxonomy,
+      hazardStatuses:['已核验'],
+      lawStatuses:[...new Set(this.lawIndex.map(x=>x.status).filter(Boolean))].sort()
+    };
+    const health=this.manifest.health||{};
+    this.manifest={
+      ...this.manifest,
+      counts:{...this.manifest.counts,hazards:this.searchIndex.length,laws:this.lawIndex.length,lawVersions:this.lawIndex.length},
+      health:{
+        ...health,
+        verifiedHazards:this.searchIndex.length,
+        pendingHazards:0,
+        activeLaws:this.lawIndex.filter(x=>x.status==='现行有效').length,
+        pendingLaws:this.lawIndex.filter(x=>x.status && x.status!=='现行有效').length
+      }
+    };
+    this.lawMap=new Map(this.lawIndex.map(x=>[x.id,x]));
     return this;
   }
 
@@ -110,8 +132,9 @@ export class DataStore {
       Promise.all([...this.hazardShardUrls.keys()].map(id=>this.loadHazardShard(id))),
       Promise.all([...this.clauseShardUrls.keys()].map(id=>this.loadClauseShard(id)))
     ]);
-    return {purpose:'公开发布数据快照',manifest:this.manifest,laws:this.lawIndex,
-      hazards:hazardShards.flatMap(rows=>[...rows.values()]),
+    const currentIds=new Set(this.searchIndex.map(x=>x.id));
+    return {purpose:'当前已核验公开数据快照',manifest:this.manifest,laws:this.lawIndex,
+      hazards:hazardShards.flatMap(rows=>[...rows.values()]).filter(x=>currentIds.has(x.id)),
       clauses:clauseShards.flatMap(rows=>[...rows.values()])};
   }
 
