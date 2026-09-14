@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#183e35">
-  <meta name="description" content="安全隐患与法规依据速查工具：国家法规标准优先，江苏／南京补充。">
+  <meta name="description" content="安全隐患与法规依据速查工具：只在正式视图展示已核验隐患与实际引用法规版本。">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
   <title>隐患依据速查 · 安全技术工作台</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="current.css">
 </head>
 <body>
 <header>
@@ -22,7 +23,6 @@
     <button class="nav active" data-view="hazards">隐患速查</button>
     <button class="nav" data-view="laws">法规库</button>
     <a class="nav" href="library.html">法规全文</a>
-    <button class="nav" data-view="data">数据状态</button>
   </nav>
   <span class="private"><i></i><span id="dbVersion">数据加载中</span></span>
 </header>
@@ -30,15 +30,15 @@
 <main>
   <section class="intro">
     <div>
-      <div class="eyebrow">SAFETY REFERENCE / V2</div>
+      <div class="eyebrow">CURRENT VERIFIED SAFETY REFERENCE</div>
       <h1>现场隐患，<span>有据可查。</span></h1>
-      <p>隐患、法规、条款和适用条件分层管理；从现场问题追到原文，也能从法规反查相关隐患。</p>
-      <div class="scope"><span>国家法规标准优先</span><i>＋</i><span>江苏 / 南京补充</span><i>＋</i><span>版本可追溯</span></div>
+      <p>正式视图只展示已核验隐患和实际引用的法规版本；候选与来源目录留在后台继续审核，不与正式依据混排。</p>
+      <div class="scope"><span>国家法规标准优先</span><i>＋</i><span>江苏 / 南京补充</span><i>＋</i><span>法规原文可追溯</span></div>
     </div>
     <aside class="principle">
       <span class="mini">引用原则</span>
-      <strong>直接标准优先<br>适用条件先行</strong>
-      <p>找不到直接条款时，明确标注上位法兜底；法规更新保留核验状态与版本链。</p>
+      <strong>原文证据优先<br>适用条件先行</strong>
+      <p>正式依据必须回到法规原文和具体条款；未完成证据链的候选不进入默认正式视图。</p>
       <span class="ruleline"></span>
     </aside>
   </section>
@@ -61,7 +61,7 @@
       <label>法规类别<select id="lawLevel"></select></label>
       <label>地区<select id="lawRegion"><option value="">全部地区</option><option value="全国">全国</option><option value="江苏">江苏</option><option value="南京">南京</option></select></label>
       <label>效力状态<select id="lawStatus"></select></label>
-      <button class="quiet" id="resetLawHint" disabled>收录的是本库实际引用条款</button>
+      <button class="quiet" id="resetLawHint" disabled>仅显示本库实际引用版本</button>
     </div>
 
     <div class="resultbar"><span><b id="count">0</b> 条匹配 <small id="summary">数据库正在初始化</small></span><span class="legend"><i></i> 原文与适用性分开核验 <em>·</em> 使用前复核现场条件</span></div>
