@@ -192,6 +192,22 @@ Google Drive for desktop 已同步项目。Drive 关键词搜索可能漏掉 `.s
 
 后续若再次做 FTS 维护，应先记录本机 `sqlite3.sqlite_version`，并优先以项目实际本机运行时 + 内容不变量 + 搜索抽检联合验收；不要仅凭不同运行时的一次 `PRAGMA integrity_check` 自动覆盖数据库。
 
+### PHASE 3 第二批：170 documents canonical / alias 只读映射 — 总控 PASS
+
+完整映射见 `docs/PRIVATE_LIBRARY_DOCUMENT_MAPPING_20260914.md`。本批未写 SQLite、未删 document/FTS、未移动 archive、未改稳定 ID。
+
+已核结论：
+
+- 4 组 exact-SHA 中，`GB/T 12801-2008` 与 `GB 55036-2022` 同时满足 raw SHA 与 extracted-text SHA 相同，可列为后续“确定性重复”候选；
+- `HJ 2025-2012` 与 `GB 15603-2022` 虽 raw SHA 相同，但历史 extracted-text SHA / paragraph count 不同，只做 alias，不得直接物理删旧 FTS；
+- 18 组同真实版本双身份已经全部归类：12 组已对齐现有 `knowledge` canonical，6 组确认是当前 `knowledge` canonical gap；
+- 6 个 canonical gap 的法规身份和效力已由总控回到官方来源核验，其中 `危险化学品目录（2015版）` 还必须在 PHASE 4 显式表达 2022 柴油调整和 2026 新增 5 种化学品，不能把 2015 静态原文直接冒充 2026-09-14 的完整现行目录；
+- 2 组同标题真实不同版本明确禁止合并：`AQ 4228-2012 / AQ 4228-2025`、`GB/T 13869-2017 / GB/T 13869-2026`；
+- 38 条 legacy `evidence/...` 中只有 `LF_L027 / HJ 2025-2012` 的 raw SHA 在 current `archive/` 有完全相同目标，可安全重绑 `archive/0a78de.../original`；其余 37 条没有同 SHA current archive 目标，继续保留 legacy provenance，禁止按标题猜路径；
+- 7 个 archive-only 历史纯文本派生物继续只作为派生载体，不生成独立法规身份。
+
+本批已经满足 PHASE 3 的 mapping 与回滚前置要求。**不需要为了结束 PHASE 3 立即做 document 物理 DELETE。**后续若要压缩 SQLite，只允许另开独立高风险批次，并先做一致性备份、引用扫描、搜索不变量与回滚验证。
+
 ---
 
 ## 5. MASTER ROADMAP
@@ -210,24 +226,17 @@ knowledge 主导；candidate 不发布；upcoming 不提前支撑；current 现�
 
 FTS 修复与身份归并分批、备份/回滚门禁、私有母库维护脚本和测试已建立，PR #32 已合并并通过 CI。
 
-### PHASE 3 — 私有母库实际修复与确定性去重 — IN PROGRESS
+### PHASE 3 — 私有母库实际修复与确定性去重 — DONE
 
-**第一批 FTS 修复：本机 PASS，云盘同步与内容不变量已由总控独立确认。**
+FTS rebuild 已由本机执行并由总控以云盘同字节文件独立复核；170 documents 的 exact-SHA、same-real-version alias、真实不同版本、knowledge gaps、38 条 legacy `evidence/...` 迁移矩阵已经完成并落入 `docs/PRIVATE_LIBRARY_DOCUMENT_MAPPING_20260914.md`。
 
-下一批只做 document canonical/alias 映射和确定性分类，暂不物理删除：
+当前选择是**先不做物理 DELETE / archive 移动**：身份层已经可确定性解释，物理压缩不是进入 PHASE 4 的前置条件。任何后续 SQLite 物理去重仍须另开高风险批次。
 
-- 4 组同 SHA 双登记逐组确定 canonical / legacy alias；
-- 18 组同真实版本双身份归并映射；
-- 2 组真实不同版本继续分别保留；
-- 38 行旧 `evidence/...` 引用逐项迁移方案；
-- 7 个 archive-only 历史纯文本派生物保持为派生载体，不作为独立法规；
-- document 物理 DELETE / archive 移动必须另开独立高风险批次。
-
-PHASE 3 退出条件：所有 duplicate/alias/legacy document 都有明确 mapping 与回滚方案；任何物理变更前后全文可检索性、archive_ref、SHA 和 evidence traceability 不丢失。
-
-### PHASE 4 — `knowledge/` 法规身份/版本 canonical 化 — PENDING
+### PHASE 4 — `knowledge/` 法规身份/版本 canonical 化 — IN PROGRESS
 
 按真实法规身份、文号、发布机关、效力时间处理。同版本多来源归一 canonical version；真实不同版本分别保留；旧 ID 保留追溯。
+
+当前优先补齐 PHASE 3 已确认的 6 个 canonical gaps，并先处理 `危险化学品目录（2015版）` 的 2015 base + 2022/2026 调整关系，避免把历史静态文本误标为当前完整版本。
 
 ### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — PENDING
 
@@ -271,28 +280,24 @@ py -3 tools/build_local_release.py
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 3 — 私有母库实际修复与确定性去重。**
+**PHASE 4 — `knowledge/` 法规身份/版本 canonical 化。**
 
-FTS 修复批次已经完成并通过本机 + 云盘内容不变量复核。现在进入 **document canonical/alias 映射**。
-
-此阶段由总控自己做法规身份与版本判断；只有必须操作用户本机 SQLite/文件系统时才交给 Luna。
+PHASE 3 的只读 document mapping 已闭环；当前不需要 Luna。总控直接继续做法规身份、版本、修订/替代关系、官方来源与 `knowledge` canonical 设计。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **总控继续只读分析 170 个 SQLite documents，把 4 组同 SHA 双登记和其余同真实版本双身份逐组映射到当前 `knowledge` canonical law/version；区分 canonical、legacy alias、多来源载体、真实不同历史版本、knowledge 未映射项。先产出完整 mapping/变更清单，不删除 document、不移动 archive、不改稳定 ID。**
+> **总控先补齐 PHASE 3 确认的 6 个 `knowledge` canonical gaps：`危险化学品目录（2015版）`、`各类监控化学品名录`、`GB 17914-2013`、`GB 17915-2013`、`GB 17916-2013`、`特种设备安全监察条例（2009修订）`。逐个先查重现有 `knowledge`，再按现有 schema 建/复用 law identity、law version、官方 source/evidence 与必要 succession；其中危险化学品目录必须按 2015 base + 2022/2026 调整建模。完成后运行 knowledge/全量 Gate，并把 6 个 private alias group 回填到正式 canonical ID。暂不做 SQLite 物理 DELETE，不动 candidate 发布边界。**
 
-优先顺序：
+执行顺序：
 
-1. 完成 4 组 exact-SHA 双登记的 canonical/alias 定论；
-2. 完成其余 18 组同真实版本双身份映射；
-3. 明确保留的 2 组真实不同版本；
-4. 将 38 个旧 `evidence/...` 引用纳入迁移矩阵；
-5. 输出“可安全归并 / 仅保留 alias / 待法规核验 / 禁止合并”四类清单；
-6. 更新本文件后再决定是否需要 Luna 执行 SQLite 物理变更。
-
-FTS 兼容性备注不阻塞上述只读 mapping；若后续再次操作 FTS，再让 Luna先报告本机 Python/SQLite 版本。
+1. 逐项扫描现有 `knowledge/laws`、`law-versions`、`evidence`、`successions`，确认无同一真实版本的隐藏重复；
+2. 先建 5 个直接 canonical gap（监控化学品名录、GB 17914/17915/17916、特种设备安全监察条例）；
+3. 单独设计并核验 `危险化学品目录（2015版）` 的修订链，至少覆盖 2015年第5号、2022年第8号、2026年第3号；
+4. 回填/更新 private alias mapping 的 canonicalVersionId，仅在 identity 确认后写；
+5. 运行 validators / strict audit / relevant unit tests；
+6. 更新本文件并自动推进到 PHASE 5，除非 Gate、证据或版本关系出现阻塞。
 
 ---
 
