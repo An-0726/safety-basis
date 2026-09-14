@@ -5,7 +5,7 @@
 
 ## 0. 一句话接手
 
-> **接手 `An-0726/safety-basis`。先读 `AGENTS.md` 和 `AGENT_EXECUTION_PROTOCOL.md`；总控负责法规核验、隐患描述、证据链、knowledge/canonical、candidate、发布与上线判断；只有必须操作用户本机且当前工具做不到的步骤，才生成严格提示词交给本地 Luna 执行，回传后由总控复核。最终目标是数据 Gate 全绿、合并 `main`、GitHub Pages 部署成功并完成线上验收。**
+> **接手 `An-0726/safety-basis`。先读 `AGENTS.md` 和 `AGENT_EXECUTION_PROTOCOL.md`；总控负责法规核验、隐患描述、证据链、knowledge/canonical、candidate、发布与上线判断；只有必须操作用户本机且当前工具做不到的步骤，才生成严格提示词交给本地 Luna 执行，回传后由总控复核。当前工作停在 PHASE 5 的 2,014 knowledge hazards ↔ 1,929 目标 ID 精确对账，尚未完成差集分类；不要把 `2014-1929=85` 当作已证实的重复数。最终目标是数据 Gate 全绿、合并 `main`、GitHub Pages 部署成功并完成线上验收。**
 
 ---
 
@@ -68,6 +68,15 @@
 PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联、1,114 个 evidence、28 条 succession、75 条 requirements**。
 
 新版 Excel 目标集：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
+
+### 转手快照 — 2026-09-14
+
+- PHASE 5 已启动，但**只确认了两侧基数和目标口径，尚未完成逐 ID reconciliation**；
+- 已确认：`knowledge/hazards` 当前共有 **2,014 个隐患实体**；2026-09-14 revised workbook 目标集共有 **1,929 个唯一 ID**；
+- `2,014 - 1,929 = 85` 只是算术差额，**不得解释为 85 个重复项、85 个废弃项或 85 个应删除项**；真实差额必须按 `mergedInto / aliases / lifecycle / review / target membership` 逐实体解释；
+- 本轮在准备转手前曾尝试从 GitHub 目录树继续提取完整 ID，但**精确差集尚未产出，也没有生成可提交的 PHASE 5 mapping/report**；下一位应重新从权威 staging/mapping + `knowledge/hazards` 做确定性全量读取，不依赖聊天里未落盘的中间列表；
+- 本轮**没有修改任何 PHASE 5 hazard 实体、稳定 ID、review、relation、SQLite/FTS/archive**；不要把当前 handoff 文档提交误解为 PHASE 5 数据已处理；
+- 当前最安全的恢复点仍是：先完成 PR #36 的 handoff/CI/merge 闭环，再从最新 `main` 新开 PHASE 5 分支做实质数据对账。
 
 ### 最近 Git 里程碑
 
@@ -215,6 +224,8 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 PHASE 4 的法规 canonical 决策、正式 knowledge 数据、verified reviews、private alias 回填和 CI 验收已经完成。当前不需要 Luna；总控直接读取仓库/Drive 中 2026-09-14 revised workbook 的 staging/mapping 数据和 2,014 个 knowledge hazards 做确定性对账。
 
+**转手状态：** 当前只完成了 PHASE 5 入口确认，尚未形成权威完整 reconciliation。下一位接手者应把聊天中的任何目录树/临时提取都视为非权威中间态，从落盘数据重新全量计算。
+
 ---
 
 ## 7. NEXT ACTION — 下一动作
@@ -225,10 +236,13 @@ PHASE 4 的法规 canonical 决策、正式 knowledge 数据、verified reviews�
 
 1. 定位并固定 2026-09-14 revised workbook 的 1,929 唯一目标 ID 清单及 staging 映射来源；
 2. 全量读取 `knowledge/hazards` 的 `id / title / aliases / lifecycle / mergedInto` 与 hazard review 决策；
-3. 逐项分类：`target-current`、`target-proposed`、`target-merged-alias`、`knowledge-extra-historical/non-target`、`target-missing`、`needs-review`；
-4. 对 621 修订、1,308 保留分别核对实际实体去向，不因标题近似自动合并；
-5. 输出机器可读 mapping + 人类审计报告，明确 2,014 与 1,929 差额的逐实体解释；
-6. Gate/一致性检查通过后更新本文件并自动推进 PHASE 6。
+3. 先做纯 ID 集合核对并保存原始结果：`target ∩ knowledge`、`knowledge - target`、`target - knowledge`；不要跳过这一步直接靠标题猜；
+4. 再逐项分类：`target-current`、`target-proposed`、`target-merged-alias`、`knowledge-extra-historical/non-target`、`target-missing`、`needs-review`；
+5. 对 621 修订、1,308 保留分别核对实际实体去向，不因标题近似自动合并；
+6. 输出机器可读 mapping + 人类审计报告，明确 2,014 与 1,929 差额的逐实体解释；
+7. Gate/一致性检查通过后更新本文件并自动推进 PHASE 6。
+
+**接手者不要依赖上一窗口未落盘的“候选 85 项”列表；本 handoff 明确记录：该精确列表尚未完成。**
 
 PR #36 只收口 PHASE 3/4。完成本次 handoff 更新后重新等 CI，全绿即合并；PHASE 5 实质数据工作从最新 `main` 新开分支继续。
 
