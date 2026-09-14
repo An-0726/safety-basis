@@ -1,179 +1,311 @@
-# AGENTS.md — 仓库长期接手记忆
+# AGENTS.md — PHASE 5 转手入口（2026-09-14）
 
-> **这是 AI / Codex / 新维护者的唯一接手入口。**
-> 本文件记录“现在做到哪、下一步做什么、哪些绝对不能做”。架构和长期规则仍由 `README.md` 与 `docs/` 解释；法规事实必须回到正式知识链和原始证据，不以本文件代替法规原文。
+> **这是本次转手专用入口。** 新总控先读完本文件，再读取远端 `main` 根目录的 `AGENT_EXECUTION_PROTOCOL.md`。不要依赖旧聊天，不要让本地 Luna 自行判断法规、隐患、canonical、candidate、发布或上线。
 
 ## 0. 一句话接手
 
-新窗口只需要收到这句话：
+> **接手 `An-0726/safety-basis`。当前正式主线是远端 `main`，PR #36 已合并；PHASE 0–4 已收口，正在做 PHASE 5：把新版 Excel 的 1,929 个唯一隐患 ID 与 `knowledge/hazards` 的 2,014 个实体做逐 ID 可复算对账。总控负责法规核验、隐患描述、证据链、knowledge/canonical、candidate、发布和上线判断；只有必须操作用户本机且当前工具做不到的步骤，才给 Luna 严格执行提示词。**
 
-> **接手 `An-0726/safety-basis`，先读根目录 `AGENTS.md`，再按其中 `CURRENT MISSION` 从当前状态继续；没有完成只读核验前不要改私有母库。**
+---
 
-接手后不要要求用户重新讲 1250 / 1929 / 2014 / publication / SQLite 的历史，也不要从旧聊天猜状态；以本文件和当前 `main` 为准。
+## 1. 转手时必须先纠正的 Git 状态
 
-## 1. 当前状态快照
+本 `agent-memory-handoff-20260914` 分支只是**转手记忆分支**，不是继续开发的代码基线。它历史上从较早提交分叉，不能拿它覆盖当前 `main`。
 
-**LAST VERIFIED：2026-09-14**
+当前远端正式主线已核到：
 
-当前唯一 Git 主线：`main`。
+- repository：`An-0726/safety-basis`
+- default branch：`main`
+- `main` 当前已包含 PR #36 的 merge commit：`0118a13a307309fcaf3a79ebf09475863774bf72`
+- PR #36：`Phase 4: canonicalize private-library law gaps`
+- PR #36 merged at：`2026-09-14T08:49:40Z`
 
-2026-09-14 正式发布架构已完成收口（PR #29）：
+**新总控开始实质工作前：**
+
+1. 以远端 `main` 为代码/knowledge 唯一正式基线；
+2. 读取 `main:AGENTS.md` 与 `main:AGENT_EXECUTION_PROTOCOL.md`；
+3. 从最新 `main` 新建 PHASE 5 工作分支；
+4. 不要把本 handoff 分支中较旧的 README/HANDOFF 内容反向覆盖 main。
+
+如果本地 checkout 仍停在 `data-verify-batch-003`、`chat-v4` 或其他旧分支，先 fetch 远端并确认 `origin/main`，不要凭本地旧文件判断项目状态。
+
+---
+
+## 2. 总控 / Luna 边界
+
+固定协作模式：
+
+`总控判断与拆解 → 仅在必须本机操作时给 Luna 严格提示词 → Luna 执行 → 总控复核 → 更新 AGENTS.md → 推进 ROADMAP`
+
+### 必须由总控完成
+
+- 法规真实性、效力状态、发布/实施/废止日期核验；
+- 官方原文、具体条/款/项和证据链核验；
+- 隐患描述修订、风险含义、法规适用性；
+- Excel 正式口径与 knowledge 回绑；
+- law / lawVersion / clause / hazard / link canonical 设计；
+- 同法规同版本去重、真实历史版本区分、alias 策略；
+- candidate 是否转正；
+- publication / Gate / Release Candidate / Pages 上线判断；
+- PR 是否可合并、CI/Pages 是否最终 PASS；
+- `AGENTS.md` 的 CURRENT PHASE / NEXT ACTION / ROADMAP 推进。
+
+### Luna 只允许做
+
+仅限当前工具无法完成、必须操作用户本机的动作，例如 Windows 本地 Git/worktree、文件锁、私有 SQLite 写入、本机脚本/构建、同步客户端状态等。Luna 不得自行决定删除/合并 document、法规版本、稳定 ID、隐患描述、正式法规依据或发布策略。
+
+---
+
+## 3. 已完成且不得倒退的阶段
+
+### PHASE 0 — 发布边界收口 — DONE
 
 - `knowledge/` 是唯一正式结构化知识源；
-- `source/publication/` 只承担公开题录、官方入口和获准全文，不创造第二套正式法规身份；
-- `source/library/` 是本地私有法规证据库，不进 Git；
-- `source/releases/current/` 与 `site-selection.json` 是运行时生成物，Git 忽略；
-- 正式站只发布当前日期 Gate 通过的已核验隐患；`proposed` 不进入公网；
-- `upcoming` 尚未实施版本不能提前支撑当前正式隐患；
-- main 的数据校验、正式站 build 和 GitHub Pages deploy 已通过。
+- `source/publication/` 只是公开题录/官方入口/获准全文来源层；
+- `source/library/` 是本地私有证据库，不进 Git；
+- `source/releases/current/` 与 `site-selection.json` 为运行时生成物；
+- `proposed` 不进入公网；
+- `upcoming` 未实施版本不得支撑当前正式隐患。
 
-当前正式发布基线：
+### PHASE 1 — 私有母库审计 — DONE
 
-- 1,409 条正式隐患；
-- 55 个实际引用法规版本；
-- 1,193 条正式条款；
-- 1,524 个正式关联；
-- 512 条 `proposed` 候选仅留 `knowledge/`，正式公开 0 条候选。
+已核基线：
 
-当前 knowledge 库存基线：96 个法规身份、97 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联。新版 Excel 目标集是 1,929 个唯一隐患 ID（621 修订、1,308 保留），它不是正式发布数量。
+- `documents=170`
+- `fulltext_fts=215,326`
+- `documents` 唯一文件 SHA-256 = 166
+- 4 组同一 SHA 双登记
+- 同标题双记录 20 组，其中 2 组是真实不同版本
+- inventory：144 原文件 / 138 唯一 SHA / 6 完全重复
+- 38 条 legacy `evidence/...` 不得按标题猜迁移目标
 
-## 2. 接手后必须先读
+### PHASE 3 — FTS 修复与 document mapping — DONE
 
-在任何写操作前依次读：
+FTS 本机修复已 PASS，且总控独立复核内容不变量：
 
-1. `AGENTS.md`（本文件，当前任务与状态）；
-2. `README.md`（唯一架构、数据口径、发布规则）；
-3. `docs/HANDOFF.md`（人类交接摘要）；
-4. `docs/ARCHITECTURE.md`；
-5. `docs/MAINTENANCE.md`；
-6. `docs/LEGAL_STATUS_POLICY.md`；
-7. `docs/CANDIDATE_REVIEW.md`；
-8. 涉及 source 时再读 `source/README.md` 与 `source/releases/README.md`。
+- documents = 170
+- ftsRows = 215,326
+- paragraphCountSum = 215,326
+- FK errors = 0
+- mismatch = 0
+- `ftsContentSha256=1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`
+- repaired DB SHA-256 = `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`
+- 项目实际本机运行时 `integrity=["ok"]`
 
-如果文档与当前代码冲突，先核代码、CI 和当前数据，再修文档；不要让多份说明长期分叉。
+170 documents mapping 已完成：
 
-## 3. 权威层级
+- `GB/T 12801-2008`、`GB 55036-2022`：raw SHA + extracted-text SHA 均相同，未来可列独立高风险物理去重候选；
+- `HJ 2025-2012`、`GB 15603-2022`：raw SHA 相同但历史抽取不同，只做 alias，不能直接删旧 FTS；
+- 18 组同真实版本双身份已分类；
+- 2 组真实不同版本禁止合并：`AQ 4228-2012 / AQ 4228-2025`、`GB/T 13869-2017 / GB/T 13869-2026`；
+- 38 条 legacy 引用里仅 `HJ 2025-2012` 有同 SHA current archive 目标，其余继续保留 provenance；
+- 当前没有做 document 物理 DELETE / archive 移动。
 
-### 法规证据
+### PHASE 4 — 六个 canonical gaps — DONE
 
-正式引用链固定为：
+PR #36 已合并到 main。新增并核验：
 
-`隐患描述 → 法规身份 → 适用版本 → 具体条/款/项 → 逐字原文 → 官方来源/原始证据 → 适用性审核`
+- `危险化学品目录（2015版）`：同一 law identity 下建 2015 base → 2023 柴油调整后 → 2026 新增 5 种化学品后三个版本状态；
+- `各类监控化学品名录`（工业和信息化部令第52号）；
+- `GB 17914-2013`；
+- `GB 17915-2013`；
+- `GB 17916-2013`；
+- `特种设备安全监察条例（2009修订）`。
 
-硬规则：
+新增合计：6 laws、8 lawVersions、8 authoritative evidence、6 law reviews、8 lawVersion reviews、2 successions。
 
-- AI 摘要、搜索摘要、OCR、TXT、HTML、Excel“条款要点”只能用于定位，不能充当正式法规原文；
-- 找不到官方原文或准确条款时标记“待核实 / 证据不足”，不得编造；
-- 修订/废止/尚未实施版本必须记录效力和适用日期；
-- “最新发布”不等于“当前适用”。
+PHASE 4 后 manifest 已记录：
 
-### 项目数据
+- 102 laws
+- 105 lawVersions
+- 2,843 clauses
+- 2,014 hazards
+- 1,547 links
+- 1,114 evidence
+- 28 successions
+- 75 requirements
 
-- `knowledge/`：正式结构化法规身份、版本、条款、隐患、关联、审核；
-- `source/library/archive/`：私有原始证据归档，应尽量不可变、按 SHA 去重；
-- `source/library/fulltext.sqlite3`：全文检索数据库，可以维护/重建索引，但不是最高法律证据；
-- `source/library/incoming-*`：收件/暂存，不应长期被当成第二套母库；
-- `source/publication/`：公开来源资料层；
-- `source/releases/current/`、`dist/`、网页索引：可重建成品，不得反向当母库。
+private `source/library/document-aliases.json` 已回填 6 个 `canonicalVersionId`，`knowledgeUnmappedTitles=[]`；未写 SQLite/FTS/archive。
 
-## 4. 私有母库当前已核事实
+PR #36 合并前核心 CI：
 
-本地工作仓库约定：
+- `Validate safety data` — success
+- `Build current verified website` — success
 
-`D:\ESH\ESH_Codex\work\safety-basis\`
+---
 
-私有法规母库：
+## 4. CURRENT PHASE — PHASE 5 隐患 1,929 ↔ 2,014 对账 — IN PROGRESS
 
-`D:\ESH\ESH_Codex\work\safety-basis\source\library\`
+### 已核目标集
 
-Google Drive for desktop 已把该项目同步到 **Computers / 我的笔记本电脑** 下。连接器的关键词搜索可能漏掉二进制 SQLite；**不能因为搜索返回 0 就判断文件不存在**。应直接读取已知 `source/library` 文件夹。
+目标工作簿：
 
-云盘目录直读已确认 `source/library/` 包含：
+`隐患库_1929条_新版口径全部整改完成_20260914.xlsx`
 
-- `fulltext.sqlite3`；
-- `archive/`；
-- `incoming-20260910/`；
-- `incoming-20260913/`；
-- `inventory/`；
-- `pending-originals/`；
-- `pending-originals.json`。
+已确认其 `隐患明细_修订后` 为正式对账目标表：
 
-`fulltext.sqlite3` 已分别从云盘本体和聊天上传副本核验，二进制一致。当前只读审计结果：
+- 1,929 行隐患数据；
+- 1,929 个唯一 ID；
+- 重复 ID = 0；
+- 621 修订；
+- 1,308 保留；
+- 说明页口径：已合并（superseded）及未达发布标准条目不导出，因此 **1,929 是目标集，不等于当前正式发布数**。
 
-- 文件大小：106,958,848 bytes；
-- `documents`：170；
-- `fulltext_fts`：215,326；
-- `documents` 中唯一文件 SHA-256：166；
-- 同一 SHA 对应多条 document 的重复组：4 组；
-- `PRAGMA integrity_check` 当前提示：`malformed inverted index for FTS5 table main.fulltext_fts`；
-- 已在**副本**上测试 FTS rebuild，可恢复 integrity `ok`，且 documents / paragraphs 数量不减少；
-- **尚未对工作母库执行 rebuild，也尚未删除/合并任何 document。**
+knowledge 当前有 **2,014 个 hazard 实体**。
 
-`inventory/111-common-laws-20260913.md` 当前记录：144 个原文件、138 个唯一 SHA-256、6 个完全重复文件；并区分现行/历史版本、征求意见稿、指南工作资料、文件名内容不一致等类别。该统计是 inventory 记录，后续仍需与实际 archive / incoming / SQLite 全量对账。
+### 重要未决点：84 / 85 不得猜
 
-## 5. CURRENT MISSION — 当前正在做什么
+历史回灌记录曾写“额外保留 84”，但单纯数量差是：
 
-**当前任务：本地私有法规母库的实体级只读体检与去重设计。**
+`2,014 - 1,929 = 85`
 
-在修改任何私有原件或 SQLite 前，完成：
+因此旧“84”只能视为待核历史统计，**不得直接继承**。必须用实际 ID 集合重新计算：
 
-1. 全量枚举 `fulltext.sqlite3.documents`，识别 4 组同 SHA 重复 document；
-2. 对 `archive/`、`incoming-20260910/`、`incoming-20260913/`、`inventory/` 做实际文件/SHA 对账；
-3. 建立映射：`SQLite document ↔ archive SHA ↔ incoming 原件 ↔ knowledge 法规身份 / 法规版本`；
-4. 对每个疑似重复分类，不混为一种“重复”：
-   - 完全相同文件；
-   - 同一法规 + 同一真实版本 + 多个来源；
-   - 同一法规的真实不同历史版本；
-   - OCR / clean.txt / HTML 等派生物；
-   - 征求意见稿 / 编制说明 / 指南 / 手册 / 检查表；
-   - knowledge 内重复法规身份或重复 version；
-5. 形成“保留 / 合并关系 / 可删除生成物 / 必须保留历史证据 / 待人工判断”清单；
-6. **先给出审计结果和拟操作清单，再对工作母库做任何删除、改名、SQLite 写入或 FTS rebuild。**
+- `target_only = ExcelIDs - KnowledgeIDs`
+- `knowledge_only = KnowledgeIDs - ExcelIDs`
+- `intersection = ExcelIDs ∩ KnowledgeIDs`
 
-当前不要转去继续大量法规回绑，先把母库与实体重复关系整理清楚。
+只有集合结果出来后，才能解释 84/85 的差异；不得先假设 1,929 一定是 2,014 的真子集。
 
-## 6. 绝对禁止事项
+### 前一窗口做到哪里
 
+已经：
+
+- 定位并读取了 1,929 工作簿；
+- 确认目标 sheet 和 1,929 唯一 ID；
+- 定位了 GitHub `knowledge/hazards` 子树，确认库存为 2,014；
+- 尝试从 GitHub connector 的超长 tree JSON 全量抽文件名，但返回体过长/截断，不适合继续靠逐行远程解析。
+
+**尚未完成：**
+
+- 2,014 个实际 hazard ID 的完整集合抽取；
+- 精确 `target_only / knowledge_only / intersection`；
+- 差异项逐 ID lifecycle / alias / mergedInto / Gate / candidate 分类；
+- PHASE 5 对账报告；
+- 任何针对差异项的正式 knowledge 修改。
+
+所以当前不能声称“85 条已经解释”，也不能按旧汇总直接改数据。
+
+---
+
+## 5. NEXT ACTION — 新总控从这里直接继续
+
+### A. 先做纯集合对账，不改数据
+
+从最新 `main` 工作树直接枚举：
+
+`knowledge/hazards/*.json`
+
+用文件名/JSON `id` 形成 2,014 个 `KnowledgeIDs`。同时读取目标工作簿 `隐患明细_修订后` 的 ID 列形成 `ExcelIDs`。
+
+优先在可完整访问仓库文件的环境用脚本一次性计算，不要再通过超长 GitHub tree 响应逐项人工截取。若当前总控环境拿不到本机工作簿文件，才给 Luna 一条严格的“只读导出 ID 列”提示词；Luna 不做分类判断。
+
+第一批输出必须至少包含：
+
+1. `len(ExcelIDs)`、`len(KnowledgeIDs)`、各自重复数；
+2. `target_only` 精确 ID 列表；
+3. `knowledge_only` 精确 ID 列表；
+4. `intersection` 数量；
+5. 是否满足 `ExcelIDs ⊆ KnowledgeIDs`；
+6. 对任何 ID 格式异常/空值单列。
+
+### B. 只深读差异项
+
+集合锁定后，只读取 `target_only + knowledge_only` 以及必要的 alias/mergedInto/review/link/candidate 记录。每个差异 ID 必须分到明确类别，例如：
+
+- active 且应在目标集；
+- proposed / 未达发布 Gate；
+- superseded / mergedInto；
+- 历史 alias；
+- Excel 修订后新 ID；
+- knowledge 保留的历史实体；
+- 真正缺失/错误；
+- 仍需人工核验。
+
+不得因为标题相似或描述相近自动合并稳定 `H_*` ID。
+
+### C. 生成 PHASE 5 可复算报告
+
+建议新增：
+
+`docs/PHASE5_HAZARD_RECONCILIATION_20260914.md`
+
+报告必须能让下一窗口复算，至少记录：
+
+- 输入文件与基线 commit；
+- ID 提取规则；
+- 三个集合的数量与差异 ID；
+- 每个差异项分类、原因、关联证据；
+- 哪些只是状态解释，哪些需要后续写操作；
+- 对旧“84”统计的最终解释；
+- 不得发布的 proposed / superseded 边界。
+
+在报告完成并由总控验收前，**不要批量修改 hazards / links / candidate / publication**。
+
+---
+
+## 6. PHASE 5 EXIT CRITERIA
+
+PHASE 5 只有以下全部满足才算 DONE：
+
+1. 1,929 个目标 ID 全部有唯一明确去向；
+2. 2,014 knowledge hazards 与目标集差异全部逐 ID 解释；
+3. 旧“84 vs 85”统计矛盾被实际集合数据解释；
+4. superseded / mergedInto / alias / proposed / active 不混淆；
+5. 不为追求数量一致而删除历史实体或重编号稳定 ID；
+6. 若需要修正式数据，先形成最小修改批次并经过 Gate；
+7. `proposed` 仍不得进入正式公网；
+8. 对账报告进入 Git 分支，并更新主线 `AGENTS.md` 的 CURRENT PHASE / NEXT ACTION。
+
+---
+
+## 7. 后续 MASTER ROADMAP
+
+- **PHASE 0** — 架构与发布边界：DONE
+- **PHASE 1** — 私有母库实体审计：DONE
+- **PHASE 2** — 私有母库关系/修复准备：DONE
+- **PHASE 3** — FTS 修复 + 170 documents canonical/alias mapping：DONE
+- **PHASE 4** — private canonical gaps → knowledge：DONE
+- **PHASE 5** — 1,929 target hazards ↔ 2,014 knowledge hazards：IN PROGRESS
+- **PHASE 6** — 差异项对应的 evidence / clause / link / candidate 修复与 Gate：PENDING
+- **PHASE 7** — publication/current 私有重建、正式 Release Candidate 全量验收：PENDING
+- **PHASE 8** — PR 合并 main、GitHub Actions / Pages deploy、线上桌面/移动端抽检：PENDING
+- **PHASE 9** — README / HANDOFF / AGENTS 最终一致性收口：PENDING
+
+---
+
+## 8. 不可违反的硬规则
+
+- 法规事实必须回到官方原文/原始证据；AI 摘要、搜索摘要、OCR、Excel 摘要只用于定位；
+- 找不到准确原文或条款时写“待核实 / 证据不足”，不得编造；
+- “最新发布”不等于“当前适用”；历史与 upcoming 版本分别建模；
+- `knowledge/` 是正式结构化知识源；网页、Excel、OCR、旧发布包不得反向覆盖；
 - 不把私有 PDF、SQLite、OCR、企业资料提交 GitHub；
-- 不直接编辑 `source/releases/current/` 或把生成包重新提交 Git；
-- 不为了界面整洁重编号 `LF_* / LV_* / C_* / H_*` 稳定 ID；
-- 不按标题相似直接删除法规或隐患；
+- 不直接编辑 `source/releases/current/` 或把生成包当母库；
+- 不重编号 `LF_* / LV_* / C_* / H_*` 稳定 ID；
+- 不按标题相似删除/合并法规或隐患；
 - 不把同名不同真实版本合并；
-- 不把 publication 的多个来源当成多个法规身份；
-- 不把尚未实施的 upcoming 版本作为当前正式依据；
-- 不从旧 Excel、旧发布包、网页成品、OCR/TXT/HTML 反向覆盖正式知识源；
-- 不在 SQLite 正在被使用/写入时做文件级替换或复制；
-- 不先修/删工作母库再补备份和记录。
+- 不把 upcoming 作为当前正式依据；
+- 不为了“清零 candidate”生成或臆造证据；
+- 不在未完成只读对账前批量改 2,014 hazard 实体；
+- 私有 SQLite 任何写操作必须先有备份、允许动作清单、停止条件和验收标准。
 
-## 7. Git 修改流程
+---
 
-涉及代码、架构、正式数据、候选策略、发布规则或接手状态：
+## 9. Git 工作方式
 
-1. 从最新 `main` 建工作分支；
-2. 修改；
-3. 运行项目现有测试、Gate、构建验证；
-4. 开 PR；
-5. CI 全绿后合并 `main`；
-6. main 的 Pages build/deploy 成功后才算公开站变更完成。
+PHASE 5 实质改动必须从**最新远端 main**建新分支，不从本 handoff 分支继续开发。
 
-不要直接在 main 上做高风险数据改动。
+推荐流程：
 
-## 8. 每次会话结束前必须更新
+`fetch origin/main → 新建 phase5 工作分支 → 只读对账 → 写报告 → 总控验收 → 必要的数据最小修复 → tests/Gate/build → PR → CI 全绿 → merge main → Pages deploy/线上验收`
 
-把仓库当作跨窗口长期记忆，**不能只在聊天里说“做到这里”**。
+本 handoff 分支仅用于帮助旧本地 checkout 找到当前接手状态。
 
-每个实质阶段结束前：
+---
 
-- 更新本 `AGENTS.md` 的 `LAST VERIFIED`、`CURRENT MISSION`、已完成事实和明确的 `NEXT ACTION`；
-- 架构/数据口径/发布规则变化时同步更新根 `README.md`；
-- 人类接手状态有重大变化时同步更新 `docs/HANDOFF.md`；
-- 提交/PR 说明写清：改了什么、为什么、影响哪些数据、是否需要重新审核/重建；
-- 不新增 `final2`、`latest`、日期版 handoff、`docs/history/` 等平行“最终版”。历史交给 Git。
+## 10. LAST VERIFIED
 
-## 9. NEXT ACTION
+`2026-09-14 18:25 +08:00`
 
-新窗口从这里直接继续：
-
-> **只读分析 `source/library/fulltext.sqlite3` 的 170 条 documents，先输出 4 组同 SHA 重复 document 的明细；再把这些 SHA 与云盘 `archive/` 和 `incoming-*` 对上，判断它们是同一原件重复登记、来源别名还是版本关系。不要写数据库。**
-
-完成这一小步后，立刻更新本文件的结果与下一步，再继续下一批。
+远端已确认事实：PR #36 已 merged，merge commit 为 `0118a13a307309fcaf3a79ebf09475863774bf72`。当前真正未完成的工作从 **PHASE 5 集合级逐 ID 对账**开始。
