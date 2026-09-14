@@ -1,53 +1,64 @@
 # 日常维护
 
-本项目只维护一条当前主线。历史阶段说明不在当前树中保留，需追溯时查看 Git 历史；不得从旧 Excel、旧发布包或网页生成物反向覆盖当前知识源。
+本项目只维护一条当前主线。历史从 Git 恢复，不从旧 Excel、旧发布包或网页生成物反向覆盖 `knowledge/`。
 
 ## 法规或标准入库
 
-1. 原件复制到 `source/library/incoming-YYYYMMDD/`，保留用户原文件不动。
-2. 计算 SHA-256 并去重；登记规范名称、编号、版本、来源、效力日期、版权边界和提取质量。
-3. 可提取文本的文件导入 `source/library/fulltext.sqlite3`；乱码或扫描件进入 OCR 队列。SQLite/OCR 只用于检索定位，正式引用仍须回看官方原文或原始文件。
-4. 更新 `knowledge/` 中的法规身份、法规版本、具体条款和核验记录。不能从文件名、搜索摘要或 AI 摘要推断法条和现行性。
-5. 允许公开的目录、官方入口或全文才同步到 `source/publication/`。同一法规版本的多个来源不得在正式法规页生成多个法规身份。
-6. 重建并验证 `source/releases/current/`。
-7. 涉及架构、数据口径、法规归并、候选策略或发布范围的改动，必须同步更新根 `README.md` 和必要的 `docs/HANDOFF.md`。
+1. 原件复制到 `source/library/incoming-YYYYMMDD/`，保留用户原文件不动；
+2. 计算 SHA-256 去重，登记规范名称、编号、版本、来源、发布日期/实施日期、版权边界和提取质量；
+3. 文本/OCR 导入 `source/library/fulltext.sqlite3` 只用于检索定位，正式引用仍回看官方原文或原始文件；
+4. 更新 `knowledge/` 的法规身份、版本、具体条款、隐患、关联和审核记录；
+5. 允许公开的题录、官方入口或全文才同步到 `source/publication/`；多个来源不得制造多个正式法规身份；
+6. 运行完整 Gate、构建和校验；涉及架构/口径/归并/候选策略时同步更新 README 和 HANDOFF。
 
-## 候选处理
+## 候选
 
-候选隐患的含义、去重和转正规则只认 [CANDIDATE_REVIEW](CANDIDATE_REVIEW.md)。候选可以留在 `knowledge/` 中继续审核，但不能冒充已核验法律依据。
+候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。
 
 ## 数量口径
 
-这些数字必须分开报告，不能混为“数据库总数”：
+- 法规身份数：`knowledge/laws/`；
+- 法规版本库存数：`knowledge/law-versions/`；
+- 正式法规页数：当前正式条款实际引用并通过 Gate 的法规版本；
+- publication 数：公开来源/题录项目，不是正式法规身份数；
+- knowledge 隐患数：含 active / proposed / superseded 等全部实体；
+- 正式隐患数：当前日期链式 Gate 通过的已核验隐患；
+- 私有全文数：SQLite 中成功建立正文记录的文档；
+- 公开全文数：`source/publication/fulltext/` 中允许公开分发的全文。
 
-- **法规身份数**：`knowledge/laws/` 中的法规/标准身份；
-- **法规版本数**：`knowledge/law-versions/` 中的真实版本；
-- **正式法规页数量**：当前已核验条款实际引用并进入正式视图的法规版本；
-- **公开资料目录数**：`source/publication/law-index.json` 中的来源/题录项目；它不是正式法规身份数；
-- **隐患知识实体数**：`knowledge/hazards/` 全部实体，包含 active / proposed / superseded；
-- **当前正式隐患数**：通过链式 Gate 的已核验隐患；
-- **全文数**：私有 SQLite 中成功建立正文记录的文档；`link_only` / `metadata_only` 不算全文；
-- **公开全文数**：`source/publication/fulltext/` 中获准公开分发的全文。
+当前 2026-09-14 CI 基线：1,409 条正式隐患、55 个实际引用法规版本、1,193 条正式条款、1,524 个正式关联；512 条 proposed 只留后台。
 
-## 必跑检查
+## 正式发布构建
+
+`source/releases/current/` 与 `source/releases/site-selection.json` 都是**生成物并已 Git 忽略**。不要提交、不要手改、不要拿旧快照做输入。
+
+本地需要单独重建正式包时：
 
 ```text
 py -3 tools/v4/validate_all.py
 py -3 tools/v4/strict_release_audit.py
-py -3 tools/v4/build_unified_release.py --out source/releases/current
+# 先删除本地旧生成物 source/releases/current 和 site-selection.json
+py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
+# 按 release.json 的 releaseHash 生成 site-selection.json 后：
 py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
-py -3 -m unittest discover -s tools/pipeline/tests -v
-node --test tests/*.test.mjs
 ```
 
-构建前若 `source/releases/current/` 已存在，按构建器要求先移走/删除旧生成物后重新生成；不要手工修发布包。构建后确认 `source/releases/site-selection.json` 的 `releaseHash` 与当前发布包一致，并检查 `git diff` 没有混入私有原件或临时文件。
+GitHub Actions 会自动完成删除旧生成物、重建、生成 selection、严格校验和部署。
 
 ## 本地最终版
 
-法规目录、隐患关系或私有全文库更新并验证通过后运行：
+日常本地使用直接运行：
 
 ```powershell
 py -3 tools/build_local_release.py
 ```
 
-生成物位于 `dist/local/`，日常使用统一双击 `dist/local/打开本地最终版.cmd`。其中 `public/` 是公开精简版，`fulltext/` 是本地私有全文阅读版。`dist/` 是可重建成品，不提交 Git，也不作为任何母库反向导入。
+该脚本会自动：
+
+1. 校验 knowledge 和严格 Gate；
+2. 删除本地旧 `source/releases/current/`，从当前源码重建正式公开包；
+3. 验证发布包；
+4. 只读打开 `source/library/fulltext.sqlite3`；
+5. 生成 `dist/local/public`、`dist/local/fulltext` 和统一入口。
+
+`dist/` 与 `source/releases/current/` 都是可重建成品，不提交 Git，也不得反向当母库。
