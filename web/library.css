@@ -14,4 +14,10 @@ nav a.nav{text-decoration:none;display:inline-flex;align-items:center;justify-co
 .library-meta{color:#65776d;font-size:12px;line-height:1.8}
 .library-more{display:block;margin:20px auto}
 mark{background:#f6e7a7;color:inherit;padding:0 1px}
+
+/* Public formal view: stable technical IDs remain in data keys/URLs, but are not shown as labels. */
+.card[data-id^="LV_"] .meta > span:first-child{display:none}
+.detailtop .eyebrow{display:none}
+.relateditem span{display:none}
+
 @media(max-width:760px){header nav{gap:3px}.library-hit{padding:15px}.library-copy{font-size:14px}}
