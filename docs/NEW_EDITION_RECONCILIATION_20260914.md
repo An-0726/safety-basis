@@ -32,6 +32,6 @@
 
 ## 部署
 
-- GitHub Actions：<https://github.com/An-0726/safety-basis/actions/runs/34798017816>
-- 线上哈希：`dfd461a195d253c33a9e94638e9044703e75c3e50576290ff7922995214da892`
+- GitHub Actions：<https://github.com/An-0726/safety-basis/actions/runs/34798762708>
+- 线上哈希：`1c0bee0adff17c1abe7f493ff9173c378af7aef31e36607e8c14c31960ae8bc0`
 - 线上条目：1921条（1409正式、512候选；8条重复记录不重复发布）。
