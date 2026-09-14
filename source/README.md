@@ -1,13 +1,14 @@
 # source 目录说明
 
-`source/` 只承载来源资料、本地私有处理支撑和当前发布包，不再同时保存多代公开架构。
+`source/` 只承载公开来源资料、本地私有处理支撑和发布构建入口，不再在 Git 中保存多代或过期的公开成品。
 
 ```text
 source/
   publication/       经审阅可公开的法规题录、官方入口与获准全文，提交 Git
-  releases/current/  唯一当前公开发布包，提交 Git；禁止人工修数据
+  releases/README.md 发布目录说明，提交 Git
+  releases/current/  当前正式发布包，运行时/本地构建生成，Git 忽略
   releases/site-selection.json
-                     当前发布包哈希选择
+                     构建时生成的当前包哈希选择，Git 忽略
   mappings/          本地 Excel/台账导入映射，tools/pipeline/imports.py 仍在使用
   schemas/           本地 V3 兼容数据库/审阅处理所需 SQL schema 与字典
 
@@ -21,7 +22,9 @@ source/
 
 ## 当前职责
 
-正式法规—条款—隐患关系只维护在根目录 `knowledge/`。`source/publication/` 只负责公开来源与授权边界，不替代 `knowledge/`，也不得因为同一法规存在多个官方来源就在正式法规页生成多个法规身份。
+正式法规—版本—条款—隐患关系只维护在根目录 `knowledge/`。`source/publication/` 只负责公开来源、题录和授权边界，不替代 `knowledge/`，也不得因为同一法规存在多个官方来源就在正式法规页生成多个法规身份。
+
+`source/releases/current/` 是**纯生成物**。GitHub Actions 部署时从当前 `knowledge + source/publication + web` 现场重建；本地运行 `tools/build_local_release.py` 时也会先重建。它不再提交 Git，因此不会出现“源码已经更新、仓库里的 current 还是旧发布包”的双版本问题。
 
 `source/library/fulltext.sqlite3` 是本地私有全文检索数据库。PDF 放进目录不等于已入库；只有完成哈希去重、文本提取或 OCR、题录/版本匹配和必要核验后才增加全文计数。受版权限制而无法合法公开的标准，只登记题录、效力状态和官方入口。
 
@@ -37,4 +40,4 @@ source/
 
 ## 已退出的东西
 
-旧公开 V2/V3 发布器、根 `data/`、`content/`、多编号历史发布包和日期版交接资料均已退出当前主线。历史需要时从 Git 历史或仓库外备份恢复，不再复制回当前 `source/`。
+旧公开 V2/V3 发布器、根 `data/`、`content/`、已提交的 `source/releases/current/` 快照、多编号历史发布包和日期版交接资料均已退出当前主线。历史需要时从 Git 历史或仓库外备份恢复，不再复制回当前 `source/`。
