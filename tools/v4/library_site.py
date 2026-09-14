@@ -2,18 +2,20 @@
 """把私有全文库导出成可直接双击浏览的本地法规查阅站点。
 
 生成物（纯静态、无外部依赖、可离线打开）：
-    index.html            法规清单，支持按名称/标准号过滤
-    laws/<key>.html       单部法规全文（可用浏览器 Ctrl+F 页内检索）
-    search.js             全库段落索引（供 index.html 做跨法规关键词检索）
+    index.html            法规/真实版本组清单
+    groups/<key>.html     一个法规/真实版本下的多个全文载体
+    laws/<key>.html       单个全文载体页面
+    originals/*           对应私有原件/历史载体的本地链接副本
 
-用法：
-    python tools/v4/library_site.py --output ../法规全文查阅
-    python tools/v4/library_site.py --library D:/.../fulltext.sqlite3 --output D:/法规全文查阅
+私有 source/library/document-aliases.json 可把历史 document identity
+归到同一真实法规版本。归组只改变本地展示，不删除 SQLite document、
+FTS 行或 archive 原件。没有 alias 文件时保持旧行为：一条 document 一条目录项。
 
-说明：这是给你自己查阅用的私有副本，直接读取私有全文库；它不经过公开导出
-门禁（public_fulltext），因此**不得**把它当作对外发布的网站。公开站点的全文
-发布仍须走证据与授权门禁。
+说明：这是给用户自己查阅用的私有副本，不经过公开全文授权门禁，不得把
+该站点当作对外发布网站。
 """
+from __future__ import annotations
+
 import argparse
 import html
 import json
@@ -22,12 +24,16 @@ import re
 import shutil
 import sqlite3
 import sys
+from collections import defaultdict
+from typing import Any
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DEFAULT_LIB = os.path.join(ROOT, "source", "library", "fulltext.sqlite3")
+ALIASES_FILE = "document-aliases.json"
+ALIASES_SCHEMA = "safety-fulltext-document-aliases-v1"
 
 
-def resolve_library(arg):
+def resolve_library(arg: str | None) -> str | None:
     for cand in (arg, os.environ.get("SAFETY_LIBRARY"), DEFAULT_LIB):
         if not cand:
             continue
@@ -37,11 +43,168 @@ def resolve_library(arg):
     return None
 
 
-def safe_name(label):
-    """用「标准号/版本 + 法规名称」做文件名，直观可读；仅去掉 Windows 非法字符。"""
-    s = re.sub(r'[\/:*?"<>|]', "_", str(label or "")).strip()
+def safe_name(label: Any) -> str:
+    """生成 Windows 也可用的本地静态文件名。"""
+    s = re.sub(r'[\\/:*?"<>|]', "_", str(label or "")).strip()
     s = re.sub(r"\s+", " ", s)
-    return (s[:110] or "doc")
+    return s[:110] or "doc"
+
+
+def load_law_versions() -> tuple[dict[tuple[str, str], str], dict[str, dict[str, Any]]]:
+    """返回全文标签索引和 version-id -> knowledge metadata。"""
+    number_index: dict[tuple[str, str], str] = {}
+    by_id: dict[str, dict[str, Any]] = {}
+    directory = os.path.join(ROOT, "knowledge", "law-versions")
+    if not os.path.isdir(directory):
+        return number_index, by_id
+
+    for filename in os.listdir(directory):
+        if not filename.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(directory, filename), encoding="utf-8") as fh:
+                version = json.load(fh)
+        except (OSError, ValueError):
+            continue
+
+        vid = str(version.get("id") or "").strip()
+        law_id = str(version.get("lawId") or "").strip()
+        version_key = str(version.get("versionKey") or "").strip()
+        number = str(version.get("documentNumber") or "").strip()
+        if vid:
+            by_id[vid] = version
+        if number and version_key:
+            if law_id:
+                number_index[(law_id, version_key)] = number
+            if vid:
+                number_index[(vid, version_key)] = number
+    return number_index, by_id
+
+
+def load_alias_groups(library_root: str) -> dict[str, dict[str, Any]]:
+    """读取私有 document alias 文件，返回 document_key -> group metadata。
+
+    文件不存在时返回空映射。坏文件 fail closed：拒绝生成本地站点，避免把
+    错误 alias 静默应用到全文库。
+    """
+    path = os.path.join(library_root, ALIASES_FILE)
+    if not os.path.isfile(path):
+        return {}
+
+    try:
+        with open(path, encoding="utf-8") as fh:
+            payload = json.load(fh)
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"{ALIASES_FILE} 无法读取") from exc
+
+    if not isinstance(payload, dict) or payload.get("schemaVersion") != ALIASES_SCHEMA:
+        raise ValueError(f"{ALIASES_FILE} schemaVersion 必须为 {ALIASES_SCHEMA}")
+    groups = payload.get("groups")
+    if not isinstance(groups, list):
+        raise ValueError(f"{ALIASES_FILE} groups 必须为数组")
+
+    by_document: dict[str, dict[str, Any]] = {}
+    seen_group_ids: set[str] = set()
+    for ordinal, group in enumerate(groups, 1):
+        if not isinstance(group, dict):
+            raise ValueError(f"{ALIASES_FILE} groups[{ordinal}] 必须为对象")
+        group_id = str(group.get("groupId") or "").strip()
+        title = str(group.get("title") or "").strip()
+        members = group.get("memberDocumentKeys")
+        classification = str(group.get("classification") or "").strip()
+        canonical = str(group.get("canonicalVersionId") or "").strip()
+        if not group_id or not title or not classification:
+            raise ValueError(f"{ALIASES_FILE} groups[{ordinal}] 缺少 groupId/title/classification")
+        if group_id in seen_group_ids:
+            raise ValueError(f"{ALIASES_FILE} groupId 重复: {group_id}")
+        seen_group_ids.add(group_id)
+        if not isinstance(members, list) or len(members) < 2:
+            raise ValueError(f"{ALIASES_FILE} groups[{ordinal}] 至少需要 2 个 memberDocumentKeys")
+
+        normalized = {
+            "groupId": group_id,
+            "title": title,
+            "classification": classification,
+            "canonicalVersionId": canonical,
+            "note": str(group.get("note") or "").strip(),
+            "memberDocumentKeys": [str(value) for value in members],
+        }
+        for key in normalized["memberDocumentKeys"]:
+            if not key:
+                raise ValueError(f"{ALIASES_FILE} groups[{ordinal}] 存在空 document_key")
+            if key in by_document:
+                raise ValueError(f"{ALIASES_FILE} document_key 同时属于多个组: {key}")
+            by_document[key] = normalized
+    return by_document
+
+
+def group_documents(
+    docs: list[dict[str, Any]],
+    alias_by_document: dict[str, dict[str, Any]],
+    knowledge_by_id: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """把展示目录归成法规/真实版本组，但保留所有底层全文载体。"""
+    doc_by_key = {doc["key"]: doc for doc in docs}
+    grouped: dict[str, dict[str, Any]] = {}
+    consumed: set[str] = set()
+
+    # 仅当 alias 组的所有成员都实际存在于本次 SQLite 中时才归组。
+    unique_groups: dict[str, dict[str, Any]] = {}
+    for meta in alias_by_document.values():
+        unique_groups.setdefault(meta["groupId"], meta)
+
+    for group_id, meta in unique_groups.items():
+        member_keys = meta["memberDocumentKeys"]
+        missing = [key for key in member_keys if key not in doc_by_key]
+        if missing:
+            print(
+                f"警告：{ALIASES_FILE} 组 {group_id} 缺少 {len(missing)} 个 SQLite document，"
+                "本组不应用归组。",
+                file=sys.stderr,
+            )
+            continue
+        members = [doc_by_key[key] for key in member_keys]
+        canonical_id = meta.get("canonicalVersionId") or ""
+        knowledge = knowledge_by_id.get(canonical_id, {}) if canonical_id else {}
+        number = str(knowledge.get("documentNumber") or "").strip()
+        display_title = str(knowledge.get("officialName") or meta["title"]).strip()
+        display_label = number or canonical_id or members[0]["label"]
+        grouped[group_id] = {
+            "group_id": group_id,
+            "title": display_title,
+            "label": display_label,
+            "classification": meta["classification"],
+            "canonical_version_id": canonical_id,
+            "knowledge_mapped": bool(knowledge),
+            "note": meta.get("note") or "",
+            "members": members,
+        }
+        consumed.update(member_keys)
+
+    # 未归组 document 作为单成员组，真实不同版本自然各自保留。
+    for doc in docs:
+        if doc["key"] in consumed:
+            continue
+        singleton_id = "DOC:" + doc["key"]
+        grouped[singleton_id] = {
+            "group_id": singleton_id,
+            "title": doc["title"],
+            "label": doc["label"],
+            "classification": "singleton",
+            "canonical_version_id": "",
+            "knowledge_mapped": False,
+            "note": "",
+            "members": [doc],
+        }
+
+    return sorted(
+        grouped.values(),
+        key=lambda item: (
+            str(item["title"]).casefold(),
+            str(item["label"]).casefold(),
+            str(item["group_id"]).casefold(),
+        ),
+    )
 
 
 CSS = """
@@ -51,200 +214,332 @@ body{margin:0;font:15px/1.75 -apple-system,"Segoe UI","Microsoft YaHei",sans-ser
 header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:14px 22px;z-index:5}
 h1{margin:0 0 8px;font-size:18px}
 .wrap{display:flex;gap:0;min-height:calc(100vh - 92px)}
-aside{width:330px;border-right:1px solid var(--line);overflow:auto;max-height:calc(100vh - 92px);padding:12px}
+aside{width:350px;border-right:1px solid var(--line);overflow:auto;max-height:calc(100vh - 92px);padding:12px}
 main{flex:1;overflow:auto;max-height:calc(100vh - 92px);padding:18px 26px}
 input[type=search]{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:7px;font-size:14px;margin-bottom:10px}
 ul{list-style:none;margin:0;padding:0}
 li a{display:block;padding:8px 10px;border-radius:7px;text-decoration:none;color:var(--fg);font-size:14px}
 li a:hover{background:#f3f4f6}
-li a.on{background:#dbeafe;color:var(--accent);font-weight:600}
 .meta{color:var(--muted);font-size:12px}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:0 7px;margin-left:6px;font-size:11px;color:var(--muted)}
+.warn{color:#8a5a00}
 p.para{margin:0 0 9px;padding:3px 6px;border-radius:4px}
 p.para.hit{background:var(--mark)}
 mark{background:#ffd8a8;padding:0 2px}
 h2{font-size:17px;border-bottom:1px solid var(--line);padding-bottom:8px}
 .notice{background:#fff8e1;border:1px solid #f0d58c;border-radius:7px;padding:9px 12px;font-size:13px;color:#7a5b00;margin-bottom:14px}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:10px 0}
 """
 
 JS_SEARCH = """function doSearch(q){
   const box=document.getElementById('results'); if(!q||q.length<1){box.innerHTML='';box.dataset.hit='';return;}
-  const out=[]; const ql=q.toLowerCase();
+  const out=[]; const ql=q.toLowerCase(); const seen=new Set();
   for(const [key,ps] of Object.entries(SEARCH_DATA)){
+    const doc=DOCS[key]||{};
     for(const [no,txt] of ps){
-      if(txt.toLowerCase().includes(ql)){ out.push([key,no,txt]); if(out.length>=300) break; }
+      if(txt.toLowerCase().includes(ql)){
+        const sig=(doc.group||key)+'\\u001f'+txt;
+        if(seen.has(sig)) continue;
+        seen.add(sig);
+        out.push([key,no,txt]); if(out.length>=300) break;
+      }
     }
     if(out.length>=300) break;
   }
   box.dataset.hit=q;
   box.innerHTML = out.length? out.map(([k,no,t])=>{
-    const i=t.toLowerCase().indexOf(ql);
+    const d=DOCS[k]||{}; const i=t.toLowerCase().indexOf(ql);
     const s=Math.max(0,i-45), e=Math.min(t.length,i+ql.length+45);
-    return '<p class="para hit"><a href="laws/'+k+'.html#'+no+'"><b>'+DOCS[k].title+' '+(DOCS[k].version||'')+'</b></a> #'+no+' …'+esc(t.slice(s,e))+'…</p>';
+    return '<p class="para hit"><a href="laws/'+k+'.html#'+no+'"><b>'+esc(d.title||'')+' '+esc(d.version||'')+'</b></a> #'+no+' …'+esc(t.slice(s,e))+'…</p>';
   }).join('') : '<p class="meta">未找到包含「'+esc(q)+'」的段落。</p>';
 }
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 """
 
 
-def law_number_index():
-    """(lawId, versionKey) -> 标准号/文号。全文库的 version 存的是 versionKey
-    （如 L015、2019），这里从知识树补出「XF 1131-2014」这类直观标识，
-    用于文件名与页面标题。"""
-    out = {}
-    d = os.path.join(ROOT, "knowledge", "law-versions")
-    if not os.path.isdir(d):
-        return out
-    for fn in os.listdir(d):
-        if not fn.endswith(".json"):
-            continue
-        try:
-            with open(os.path.join(d, fn), encoding="utf-8") as f:
-                v = json.load(f)
-        except (OSError, ValueError):
-            continue
-        num = (v.get("documentNumber") or "").strip()
-        if num:
-            out[(v.get("lawId"), v.get("versionKey"))] = num
-            out[(v.get("id"), v.get("versionKey"))] = num
-    return out
-
-
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--library")
-    ap.add_argument("--output", required=True)
-    args = ap.parse_args()
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--library")
+    parser.add_argument("--output", required=True)
+    args = parser.parse_args()
 
     lib = resolve_library(args.library)
     if not lib:
         print("未找到 fulltext.sqlite3（用 --library 或 SAFETY_LIBRARY 指定）", file=sys.stderr)
         return 1
-    conn = sqlite3.connect("file:%s?mode=ro" % lib.replace("\\", "/"), uri=True)
-    nidx = law_number_index()
 
-    docs = []
-    used_files = set()
-    for row in conn.execute("SELECT document_key, document_id, title, version, paragraph_count, "
-                            "current_status, review_status, official_url, archive_ref "
-                            "FROM documents ORDER BY title, version"):
-        key, did, title, version, paras, cur, rev, url, archive_ref = row
-        base_file = safe_name("%s %s" % (nidx.get((did, version), "") or version or did, title or ""))
-        file_name = base_file
-        if file_name.casefold() in used_files:
-            file_name = safe_name("%s [%s]" % (base_file, key))
-        suffix = 2
-        while file_name.casefold() in used_files:
-            file_name = safe_name("%s [%s-%d]" % (base_file, key, suffix))
-            suffix += 1
-        used_files.add(file_name.casefold())
-        docs.append({"key": key, "id": did, "title": title or "", "version": version or "",
-                     "paras": paras, "current": cur or "", "review": rev or "", "url": url or "",
-                     "archive_ref": archive_ref or "",
-                     "label": (nidx.get((did, version), "") or version or did),
-                     "file": file_name})
-    out = os.path.abspath(args.output)
-    laws_dir = os.path.join(out, "laws")
-    originals_dir = os.path.join(out, "originals")
-    # 先清掉上次生成的页面：文件命名规则变化后若不清，会新旧并存
-    if os.path.isdir(laws_dir):
-        for fn in os.listdir(laws_dir):
-            if fn.endswith(".html"):
-                os.remove(os.path.join(laws_dir, fn))
-    if os.path.isdir(originals_dir):
-        for fn in os.listdir(originals_dir):
-            path = os.path.join(originals_dir, fn)
-            if os.path.isfile(path):
-                os.remove(path)
-    os.makedirs(laws_dir, exist_ok=True)
-    os.makedirs(originals_dir, exist_ok=True)
-
-    def original_extension(path):
-        try:
-            with open(path, "rb") as f:
-                head = f.read(16)
-        except OSError:
-            return ".bin"
-        if head.startswith(b"%PDF"):
-            return ".pdf"
-        if head.startswith(b"PK"):
-            return ".docx"
-        if head.lstrip().startswith((b"<", b"<!")):
-            return ".html"
-        return ".txt"
-
-    # The searchable HTML is only an index/viewer.  Expose a local link to
-    # the immutable original snapshot as well.  Hardlinks avoid duplicating
-    # hundreds of megabytes in dist/local when both paths share a volume;
-    # copy is the fallback for filesystems that do not support them.
     library_root = os.path.dirname(os.path.abspath(lib))
-    for d in docs:
-        source = os.path.join(library_root, d["archive_ref"])
-        if not os.path.isfile(source):
-            continue
-        original_name = d["file"] + original_extension(source)
-        destination = os.path.join(originals_dir, original_name)
-        try:
-            os.link(source, destination)
-        except (OSError, AttributeError):
-            shutil.copyfile(source, destination)
-        d["original_href"] = "../originals/" + original_name
+    number_index, knowledge_by_id = load_law_versions()
+    try:
+        alias_by_document = load_alias_groups(library_root)
+    except ValueError as exc:
+        print(f"全文 alias 配置错误：{exc}", file=sys.stderr)
+        return 2
 
-    # 段落
-    by_key = {}
-    for dk, pno, content in conn.execute("SELECT document_key, paragraph_no, content FROM fulltext_fts"):
-        by_key.setdefault(dk, []).append((pno, content or ""))
+    conn = sqlite3.connect("file:%s?mode=ro" % lib.replace("\\", "/"), uri=True)
+    try:
+        docs: list[dict[str, Any]] = []
+        used_files: set[str] = set()
+        for row in conn.execute(
+            "SELECT document_key, document_id, title, version, paragraph_count, "
+            "current_status, review_status, official_url, archive_ref "
+            "FROM documents ORDER BY title, version"
+        ):
+            key, did, title, version, paras, cur, rev, url, archive_ref = row
+            label = number_index.get((did, version), "") or version or did
+            base_file = safe_name("%s %s" % (label, title or ""))
+            file_name = base_file
+            if file_name.casefold() in used_files:
+                file_name = safe_name("%s [%s]" % (base_file, key))
+            suffix = 2
+            while file_name.casefold() in used_files:
+                file_name = safe_name("%s [%s-%d]" % (base_file, key, suffix))
+                suffix += 1
+            used_files.add(file_name.casefold())
+            docs.append(
+                {
+                    "key": key,
+                    "id": did,
+                    "title": title or "",
+                    "version": version or "",
+                    "paras": int(paras or 0),
+                    "current": cur or "",
+                    "review": rev or "",
+                    "url": url or "",
+                    "archive_ref": archive_ref or "",
+                    "label": label,
+                    "file": file_name,
+                }
+            )
 
-    search_data = {}
-    for d in docs:
-        paras = sorted(by_key.get(d["key"], []))
-        body = "\n".join('<p class="para" id="%d">%s</p>' % (no, html.escape(txt))
-                         for no, txt in paras)
-        page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+        display_groups = group_documents(docs, alias_by_document, knowledge_by_id)
+        group_for_document: dict[str, str] = {}
+        for group in display_groups:
+            for member in group["members"]:
+                group_for_document[member["key"]] = group["group_id"]
+
+        out = os.path.abspath(args.output)
+        laws_dir = os.path.join(out, "laws")
+        groups_dir = os.path.join(out, "groups")
+        originals_dir = os.path.join(out, "originals")
+        for directory in (laws_dir, groups_dir, originals_dir):
+            if os.path.isdir(directory):
+                for filename in os.listdir(directory):
+                    path = os.path.join(directory, filename)
+                    if os.path.isfile(path):
+                        os.remove(path)
+            os.makedirs(directory, exist_ok=True)
+
+        def original_extension(path: str) -> str:
+            try:
+                with open(path, "rb") as fh:
+                    head = fh.read(16)
+            except OSError:
+                return ".bin"
+            if head.startswith(b"%PDF"):
+                return ".pdf"
+            if head.startswith(b"PK"):
+                return ".docx"
+            if head.lstrip().startswith((b"<", b"<!")):
+                return ".html"
+            return ".txt"
+
+        for doc in docs:
+            source = os.path.join(library_root, doc["archive_ref"])
+            if not os.path.isfile(source):
+                continue
+            original_name = doc["file"] + original_extension(source)
+            destination = os.path.join(originals_dir, original_name)
+            try:
+                os.link(source, destination)
+            except (OSError, AttributeError):
+                shutil.copyfile(source, destination)
+            doc["original_href"] = "../originals/" + original_name
+
+        by_key: dict[str, list[tuple[int, str]]] = defaultdict(list)
+        for document_key, paragraph_no, content in conn.execute(
+            "SELECT document_key, paragraph_no, content FROM fulltext_fts"
+        ):
+            by_key[document_key].append((int(paragraph_no), content or ""))
+
+        search_data: dict[str, list[list[Any]]] = {}
+        docs_js: dict[str, dict[str, str]] = {}
+        for doc in docs:
+            paragraphs = sorted(by_key.get(doc["key"], []))
+            body = "\n".join(
+                '<p class="para" id="%d">%s</p>' % (no, html.escape(text))
+                for no, text in paragraphs
+            )
+            page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <title>%s %s</title><style>%s</style></head><body>
 <header><h1>%s <span class="meta">%s</span></h1>
 <div class="meta">%s ｜ %s ｜ %d 段 ｜ <a href="../index.html">返回目录</a>%s%s</div></header>
 <main style="max-height:none">%s</main></body></html>""" % (
-            html.escape(d["title"]), html.escape(d["version"]), CSS,
-            html.escape(d["title"]), html.escape(d["version"]),
-            html.escape(d["current"] or "-"), html.escape(d["review"] or "-"), len(paras),
-            (' ｜ <a href="%s" target="_blank">官方来源</a>' % html.escape(d["url"])) if d["url"] else "",
-            (' ｜ <a href="%s" target="_blank">打开原始文件</a>' % html.escape(d["original_href"])) if d.get("original_href") else "",
-            body)
-        with open(os.path.join(out, "laws", d["file"] + ".html"), "w", encoding="utf-8", newline="\n") as f:
-            f.write(page)
-        # 搜索索引：只保留前 600 字，控制体积
-        search_data[d["file"]] = [[no, (t or "")[:600]] for no, t in paras]
-        d["href"] = "laws/%s.html" % d["file"]
+                html.escape(doc["title"]),
+                html.escape(doc["version"]),
+                CSS,
+                html.escape(doc["title"]),
+                html.escape(doc["version"]),
+                html.escape(doc["current"] or "-"),
+                html.escape(doc["review"] or "-"),
+                len(paragraphs),
+                (' ｜ <a href="%s" target="_blank">官方来源</a>' % html.escape(doc["url"]))
+                if doc["url"] else "",
+                (' ｜ <a href="%s" target="_blank">打开原始文件</a>' % html.escape(doc["original_href"]))
+                if doc.get("original_href") else "",
+                body,
+            )
+            with open(
+                os.path.join(laws_dir, doc["file"] + ".html"),
+                "w",
+                encoding="utf-8",
+                newline="\n",
+            ) as fh:
+                fh.write(page)
+            search_data[doc["file"]] = [[no, text[:600]] for no, text in paragraphs]
+            doc["href"] = "laws/%s.html" % doc["file"]
+            docs_js[doc["file"]] = {
+                "title": doc["title"],
+                "version": doc["version"],
+                "group": group_for_document.get(doc["key"], doc["key"]),
+            }
 
-    items = "\n".join(
-        '<li><a href="%s"><b>%s</b> <span class="meta">%s</span><br><span class="meta">%s ｜ %d 段</span></a></li>'
-        % (d["href"], html.escape(d["title"]), html.escape(d["version"]),
-           html.escape(d["current"] or "-"), d["paras"]) for d in docs)
+        # 为多载体组生成一个聚合页；单成员组直接链接全文页。
+        used_group_files: set[str] = set()
+        for group in display_groups:
+            members = group["members"]
+            if len(members) == 1:
+                group["href"] = members[0]["href"]
+                continue
 
-    index = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+            base = safe_name("%s %s" % (group["label"], group["title"]))
+            group_file = base
+            suffix = 2
+            while group_file.casefold() in used_group_files:
+                group_file = safe_name("%s-%d" % (base, suffix))
+                suffix += 1
+            used_group_files.add(group_file.casefold())
+            group["href"] = "groups/%s.html" % group_file
+
+            cards = []
+            for member in members:
+                source_links = []
+                if member.get("url"):
+                    source_links.append(
+                        '<a href="%s" target="_blank">官方来源</a>' % html.escape(member["url"])
+                    )
+                if member.get("original_href"):
+                    source_links.append(
+                        '<a href="../%s" target="_blank">打开原始文件</a>'
+                        % html.escape(member["original_href"])
+                    )
+                links = " ｜ ".join(source_links)
+                cards.append(
+                    '<div class="card"><b><a href="../%s">%s</a></b>'
+                    '<div class="meta">%s ｜ %s ｜ %d 段%s</div></div>'
+                    % (
+                        html.escape(member["href"]),
+                        html.escape(member["version"] or member["label"]),
+                        html.escape(member["current"] or "-"),
+                        html.escape(member["review"] or "-"),
+                        member["paras"],
+                        (" ｜ " + links) if links else "",
+                    )
+                )
+
+            unmapped = group["classification"] == "same_real_version_knowledge_unmapped"
+            status_note = (
+                '<div class="notice">该组已确认属于同一真实版本，但当前 knowledge 尚未建立正式 canonical version。'
+                "这里只做私有全文展示归组，不把它当作正式法规依据。</div>"
+                if unmapped
+                else '<div class="notice">该组的多个 SQLite document 已归到同一真实法规版本。'
+                "底层全文载体仍全部保留，未做物理删除。</div>"
+            )
+            page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>%s</title><style>%s</style></head><body>
+<header><h1>%s <span class="meta">%s</span></h1>
+<div class="meta">%d 个全文载体 ｜ <a href="../index.html">返回目录</a></div></header>
+<main style="max-height:none">%s%s</main></body></html>""" % (
+                html.escape(group["title"]),
+                CSS,
+                html.escape(group["title"]),
+                html.escape(group["label"]),
+                len(members),
+                status_note,
+                "\n".join(cards),
+            )
+            with open(
+                os.path.join(groups_dir, group_file + ".html"),
+                "w",
+                encoding="utf-8",
+                newline="\n",
+            ) as fh:
+                fh.write(page)
+
+        items = []
+        for group in display_groups:
+            members = group["members"]
+            if len(members) == 1:
+                member = members[0]
+                meta = "%s ｜ %d 段" % (member["current"] or "-", member["paras"])
+            else:
+                suffix = (
+                    " ｜ knowledge待映射"
+                    if group["classification"] == "same_real_version_knowledge_unmapped"
+                    else ""
+                )
+                meta = "%d 个全文载体%s" % (len(members), suffix)
+            items.append(
+                '<li><a href="%s"><b>%s</b> <span class="meta">%s</span>'
+                '<br><span class="meta">%s</span></a></li>'
+                % (
+                    html.escape(group["href"]),
+                    html.escape(group["title"]),
+                    html.escape(group["label"]),
+                    html.escape(meta),
+                )
+            )
+
+        index = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <title>法规全文查阅</title><style>%s</style></head><body>
 <header><h1>法规全文查阅（本地私有副本）</h1>
-<input type="search" id="q" placeholder="搜索：法规名称，或全文关键词（如 消火栓、分离储存）" oninput="if(this.value.length>1&&this.value.length<40){filterList(this.value);}else{box.innerHTML='';doSearch(this.value);}">
-<div class="meta">共 %d 部法规；数据来自私有全文库，仅供自查，未经过公开导出授权门禁。</div></header>
+<input type="search" id="q" placeholder="搜索：法规名称，或全文关键词（如 消火栓、分离储存）" oninput="if(this.value.length>1&&this.value.length<40){filterList(this.value);}else{document.getElementById('results').innerHTML='';doSearch(this.value);}">
+<div class="meta">共 %d 个法规/真实版本组；%d 个全文载体；数据来自私有全文库，仅供自查，未经过公开导出授权门禁。</div></header>
 <div class="wrap"><aside><ul id="list">%s</ul></aside>
-<main><div id="results"></div><div id="hint" class="notice">左侧点选法规可读全文（Ctrl+F 页内检索）；上方输入框可直接做<b>跨法规关键词检索</b>（输入法规名则过滤左侧清单）。</div></main></div>
+<main><div id="results"></div><div id="hint" class="notice">左侧目录按法规/真实版本归组；一个组可保留多个历史全文载体。上方输入框仍搜索全部 %d 个载体，不因归组丢失全文。</div></main></div>
 <script>const DOCS=%s;const SEARCH_DATA=%s;%s
 function filterList(q){const ql=q.toLowerCase();let n=0;
  document.querySelectorAll('#list li').forEach(li=>{const t=li.textContent.toLowerCase();const ok=t.includes(ql);li.style.display=ok?'':'none';if(ok)n++;});
- document.getElementById('results').innerHTML='<p class="meta">匹配法规 '+n+' 部。</p>';}</script>
-</body></html>""" % (CSS, len(docs), items,
-                     json.dumps({d["file"]: {"title": d["title"], "version": d["version"]} for d in docs}, ensure_ascii=False),
-                     json.dumps(search_data, ensure_ascii=False),
-                     JS_SEARCH)
-    with open(os.path.join(out, "index.html"), "w", encoding="utf-8", newline="\n") as f:
-        f.write(index)
+ document.getElementById('results').innerHTML='<p class="meta">匹配法规/版本组 '+n+' 个。</p>';}</script>
+</body></html>""" % (
+            CSS,
+            len(display_groups),
+            len(docs),
+            "\n".join(items),
+            len(docs),
+            json.dumps(docs_js, ensure_ascii=False),
+            json.dumps(search_data, ensure_ascii=False),
+            JS_SEARCH,
+        )
+        with open(os.path.join(out, "index.html"), "w", encoding="utf-8", newline="\n") as fh:
+            fh.write(index)
 
-    total = sum(d["paras"] for d in docs)
-    print("已生成: %s" % out)
-    print("  法规 %d 部 / 段落 %d / 页面 %d 个" % (len(docs), total, len(docs) + 1))
-    print("  打开: %s" % os.path.join(out, "index.html"))
-    print("  提示：这是私有自查副本，不可当作对外发布网站。")
-    return 0
+        total = sum(doc["paras"] for doc in docs)
+        multi_groups = sum(1 for group in display_groups if len(group["members"]) > 1)
+        print("已生成: %s" % out)
+        print(
+            "  法规/版本组 %d 个 / 全文载体 %d 个 / 归组 %d 个 / 段落 %d"
+            % (len(display_groups), len(docs), multi_groups, total)
+        )
+        if alias_by_document:
+            print("  已应用私有 alias: %s" % os.path.join(library_root, ALIASES_FILE))
+        else:
+            print("  未发现私有 alias；目录保持一条 document 一项。")
+        print("  打开: %s" % os.path.join(out, "index.html"))
+        print("  提示：这是私有自查副本，不可当作对外发布网站。")
+        return 0
+    finally:
+        conn.close()
 
 
 if __name__ == "__main__":
