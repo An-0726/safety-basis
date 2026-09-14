@@ -1,8 +1,8 @@
-name: Build reviewed website
+name: Build current verified website
 
 on:
   push:
-    branches: [main, data-verify-batch-003]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: reviewed-site-${{ github.ref }}
+  group: current-site-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -22,26 +22,40 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r tools/pipeline/requirements.txt
-      - name: Validate and stage the selected current package
+      - name: Validate knowledge and rebuild the only current package
+        shell: bash
         run: |
-          BUNDLE=$(python -c "import json;print(json.load(open('source/releases/site-selection.json'))['bundle'])")
-          test "${BUNDLE}" = "current"
           python tools/v4/validate_all.py
-          python tools/v4/verify_unified_bundle.py --bundle "source/releases/${BUNDLE}"
-          mkdir -p "${{ runner.temp }}/reviewed-site"
-          cp -r "source/releases/${BUNDLE}/." "${{ runner.temp }}/reviewed-site/"
+          python tools/v4/strict_release_audit.py
+          rm -rf source/releases/current
+          DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}"
+          python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          release=json.loads(Path('source/releases/current/release.json').read_text(encoding='utf-8'))
+          Path('source/releases/site-selection.json').write_text(
+              json.dumps({
+                  'schemaVersion':'safety-site-selection-v1',
+                  'bundle':'current',
+                  'releaseHash':release['releaseHash']
+              }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/current
+          mkdir -p "${{ runner.temp }}/current-site"
+          cp -r source/releases/current/. "${{ runner.temp }}/current-site/"
       - uses: actions/upload-artifact@v4
         with:
-          name: reviewed-safety-site
-          path: ${{ runner.temp }}/reviewed-site
+          name: current-safety-site
+          path: ${{ runner.temp }}/current-site
           if-no-files-found: error
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         with:
-          path: ${{ runner.temp }}/reviewed-site
+          path: ${{ runner.temp }}/current-site
 
   deploy:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -51,6 +65,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy the verified artifact
+      - name: Deploy the verified current artifact
         id: deployment
         uses: actions/deploy-pages@v4
