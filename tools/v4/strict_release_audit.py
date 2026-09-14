@@ -1,23 +1,14 @@
 # -*- coding: utf-8 -*-
 """Strict V4 release audit（只读，不改动 knowledge / release 文件）。
 
-本脚本只做“分类与汇报”，所有判定逻辑都来自共享核心 release_gate_core。
-它把全量对象拆成三类（对齐 docs/GATE_V4.md §9/§13/§15）：
+所有判定逻辑来自 release_gate_core。审计将对象分为：
 
-- releaseBlockers：真正影响“当前发布投影”的硬 blocker。
-  例：已 verified 的 qualifying link 实际指向 repealed/upcoming/unknown 的
-  LawVersion、review hash 漂移、context 漂移、管辖冲突、外键断裂、
-  active hazard 内容硬门禁失败。
-- inventoryWarnings：库存/数据质量软问题（backlog），不杀整个发布。
-  例：active hazard 还没有任何合格 qualifying link（待补依据）、pending link、
-  supporting-only link、可选 evidence 缺失。
-- excludedEntities：历史/非发布实体，本就不该进当前发布投影。
-  例：superseded / mergedInto hazard、superseded law、repealed/upcoming/unknown
-  LawVersion、非 active clause、review=rejected 的 link。
+- releaseBlockers：会污染当前正式发布路径的硬错误；
+- inventoryWarnings：需要继续整改、回绑或补证据，但当前正式投影会自动排除；
+- excludedEntities：历史、未来版本、已合并等本来就不应进入当前正式投影的实体。
 
-strictVerdict 只由 releaseBlockers 是否非空决定：>0 -> BLOCK，否则 PASS。
+strictVerdict 由 releaseBlockers 决定；存在 blocker 时脚本返回非零退出码，CI 必须失败。
 """
-import io
 import json
 import os
 import re
@@ -25,10 +16,15 @@ import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from release_gate_core import (  # noqa: E402
-    evaluate_release_gate,
-    QUALIFYING_ROLES,
-)
+from release_gate_core import evaluate_release_gate  # noqa: E402
+
+
+def has_non_current_reason(reasons):
+    return any(str(x).startswith((
+        "BLOCK_VERSION_NOT_EFFECTIVE:",
+        "BLOCK_VERSION_EXPIRED:",
+        "EXCLUDED_CLAUSE_NOT_CURRENT:",
+    )) for x in (reasons or []))
 
 
 def main():
@@ -38,102 +34,131 @@ def main():
     inventory_warnings = []
     excluded_entities = []
 
-    # ---- Law / LawVersion / Clause 结构失败：只有被合格 link 引用才算 blocker ----
-    referenced_lvs = set()
-    referenced_clauses = set()
-    referenced_laws = set()
-    for kid in r.eligible_links:
-        cv = r.clauses.get(r.links[kid]["clauseId"])
-        if cv:
-            referenced_clauses.add(cv["lawVersionId"])
-            # 反查 lawId
-    for vid, v in r.law_versions.items():
-        pass
-    # lawId 反查
-    lv_law = {}
-    # 直接用原始 entity 关系：core 没暴露，这里从 law_versions 拿不到 lawId，
-    # 但结构 blocker 我们用“该 lv 是否被任一 clause 引用且该 clause 被合格 link 引用”
-    for kid in r.eligible_links:
-        cid = r.links[kid]["clauseId"]
-        vid = r.clauses.get(cid, {}).get("lawVersionId")
-        referenced_lvs.add(vid)
+    eligible_clause_ids = {r.links[kid]["clauseId"] for kid in r.eligible_links}
+    referenced_lvs = {r.clauses[cid]["lawVersionId"] for cid in eligible_clause_ids
+                      if cid in r.clauses}
 
-    for lid, v in r.laws.items():
-        if not v["ok"]:
-            release_blockers.append({"entityType": "law", "id": lid, "reasons": v["reasons"]})
-    for vid, v in r.law_versions.items():
-        if not v["ok"]:
-            if vid in referenced_lvs:
-                release_blockers.append({"entityType": "lawVersion", "id": vid,
-                                         "reasons": v["reasons"], "note": "referenced by eligible link"})
+    # ---- Law / LawVersion ----
+    # Law 身份结构错误只有真正进入当前正式链时才应阻断。当前 core 不暴露
+    # lawVersion->lawId 的投影关系，因此未被当前版本链使用的 law 结构问题作为库存告警。
+    for lid, value in r.laws.items():
+        if not value["ok"]:
+            inventory_warnings.append({
+                "type": "law_identity_not_publishable",
+                "id": lid,
+                "reasons": value["reasons"],
+            })
+
+    for vid, value in r.law_versions.items():
+        if vid in referenced_lvs and not value["ok"]:
+            release_blockers.append({
+                "entityType": "lawVersion", "id": vid,
+                "reasons": value["reasons"], "note": "referenced by current eligible link",
+            })
+        elif value["validityStatus"] != "active" or not value["supports_current"]:
+            excluded_entities.append({
+                "entityType": "lawVersion", "id": vid,
+                "reason": "not_current_support:" + value["validityStatus"],
+                "validityStatus": value["validityStatus"],
+            })
+        elif not value["ok"]:
+            inventory_warnings.append({
+                "type": "law_version_not_publishable",
+                "id": vid,
+                "reasons": value["reasons"],
+            })
+
+    # ---- Clause ----
+    for cid, value in r.clauses.items():
+        if value["ok"]:
+            continue
+        if cid in eligible_clause_ids:
+            release_blockers.append({
+                "entityType": "clause", "id": cid, "reasons": value["reasons"],
+            })
+        elif has_non_current_reason(value["reasons"]):
+            excluded_entities.append({
+                "entityType": "clause", "id": cid,
+                "reason": "clause_not_current",
+                "reasons": value["reasons"],
+            })
+        else:
+            inventory_warnings.append({
+                "type": "clause_not_publishable",
+                "id": cid,
+                "reasons": value["reasons"],
+            })
+
+    # ---- Link ----
+    # 已 verified 但指向未来/历史版本的关联不能进入正式站，但不应阻断其它
+    # 完整链发布；它作为明确的待回绑事项进入 inventoryWarnings。
+    for kid, value in r.links.items():
+        if value["decision"] == "verified" and not value["ok"]:
+            clause_reasons = r.clauses.get(value["clauseId"], {}).get("reasons", [])
+            if has_non_current_reason(clause_reasons):
+                inventory_warnings.append({
+                    "type": "verified_link_non_current_basis",
+                    "id": kid,
+                    "hazardId": value["hazardId"],
+                    "role": value["role"],
+                    "reason": "verified link points to a version not effective for current asOf",
+                    "clauseReasons": clause_reasons,
+                })
             else:
-                excluded_entities.append({"entityType": "lawVersion", "id": vid,
-                                          "reason": "structurally_invalid", "validityStatus": v["validityStatus"]})
-        elif v["validityStatus"] != "active" or not v["supports_current"]:
-            # 非 active 效力 = 历史/即将生效，进目录但不支撑当前 hazard
-            excluded_entities.append({"entityType": "lawVersion", "id": vid,
-                                      "reason": "not_active_support:" + v["validityStatus"],
-                                      "validityStatus": v["validityStatus"]})
-    for cid, v in r.clauses.items():
-        if not v["ok"]:
-            # 条款已被替代（部分替代场景下整部标准仍现行、其中个别条文被废止）
-            # 属于历史实体，归入排除；其它失败才是结构/绑定错误，属阻断。
-            if all(str(x).startswith("EXCLUDED_") for x in v["reasons"]):
-                excluded_entities.append({"entityType": "clause", "id": cid,
-                                          "reason": "clause_not_current",
-                                          "reasons": v["reasons"]})
-            else:
-                release_blockers.append({"entityType": "clause", "id": cid, "reasons": v["reasons"]})
+                release_blockers.append({
+                    "entityType": "link", "id": kid,
+                    "hazardId": value["hazardId"], "role": value["role"],
+                    "reasons": value["reasons"],
+                })
+        elif value["decision"] == "rejected":
+            excluded_entities.append({
+                "entityType": "link", "id": kid,
+                "hazardId": value["hazardId"], "reason": "review_rejected",
+            })
+        elif value["decision"] == "pending":
+            inventory_warnings.append({
+                "type": "pending_link", "id": kid,
+                "hazardId": value["hazardId"], "reason": "link review pending",
+            })
+        elif value["decision"] == "superseded":
+            excluded_entities.append({
+                "entityType": "link", "id": kid,
+                "hazardId": value["hazardId"],
+                "reason": "review_superseded:hazard_not_publishable",
+            })
+        elif value["ok"] and value["role"] == "supporting":
+            inventory_warnings.append({
+                "type": "supporting_link", "id": kid,
+                "hazardId": value["hazardId"],
+                "reason": "supporting link cannot alone qualify a hazard",
+            })
 
-    # ---- Link：已签署(verified)却没过 gate = 发布路径硬伤；其余按 review 状态分流 ----
-    for kid, v in r.links.items():
-        if v["decision"] == "verified" and not v["ok"]:
-            release_blockers.append({"entityType": "link", "id": kid,
-                                     "hazardId": v["hazardId"], "role": v["role"],
-                                     "reasons": v["reasons"]})
-        elif v["decision"] == "rejected":
-            excluded_entities.append({"entityType": "link", "id": kid,
-                                      "hazardId": v["hazardId"], "reason": "review_rejected"})
-        elif v["decision"] == "pending":
-            inventory_warnings.append({"type": "pending_link", "id": kid,
-                                       "hazardId": v["hazardId"], "reason": "link review pending"})
-        elif v["decision"] == "superseded":
-            # 目标 hazard 已合并或非 active：关联保留用于历史追溯，不进入发布投影
-            excluded_entities.append({"entityType": "link", "id": kid,
-                                      "hazardId": v["hazardId"],
-                                      "reason": "review_superseded:hazard_not_publishable"})
-        elif v["ok"] and v["role"] == "supporting":
-            inventory_warnings.append({"type": "supporting_link", "id": kid,
-                                       "hazardId": v["hazardId"],
-                                       "reason": "supporting link cannot alone qualify a hazard"})
-
-    # ---- Hazard：内容硬失败且在发布路径(active 非 merged) = blocker；
-    #      历史/合并 = excluded；active 但无合格依据 = inventory backlog ----
+    # ---- Hazard ----
     review_state_only = re.compile(r"^BLOCK_REVIEW_NOT_VERIFIED:(rejected|pending)$")
-    for hid, v in r.hazards.items():
-        if not v["active"] or v["merged"]:
-            why = "superseded" if not v["active"] else "mergedInto"
+    for hid, value in r.hazards.items():
+        if not value["active"] or value["merged"]:
+            why = "superseded" if not value["active"] else "mergedInto"
             excluded_entities.append({"entityType": "hazard", "id": hid, "reason": why})
             continue
-        if not v["content_ok"]:
-            # 核验状态类失败（review 被 reject/pending 退回待核验）属正常业务分流，
-            # 实体本就不进发布投影（eligible_hazards 已排除），归入 excluded 而非 blocker；
-            # 内容质量问题（坏文本、字段缺失、hash 漂移等）仍然是 blocker。
-            if v["reasons"] and all(review_state_only.match(str(x)) for x in v["reasons"]):
-                excluded_entities.append({"entityType": "hazard", "id": hid,
-                                          "reason": "hazard_review_not_verified:" + v["reasons"][0]})
+        if not value["content_ok"]:
+            if value["reasons"] and all(review_state_only.match(str(x)) for x in value["reasons"]):
+                excluded_entities.append({
+                    "entityType": "hazard", "id": hid,
+                    "reason": "hazard_review_not_verified:" + value["reasons"][0],
+                })
             else:
-                release_blockers.append({"entityType": "hazard", "id": hid,
-                                         "reasons": v["reasons"]})
+                release_blockers.append({
+                    "entityType": "hazard", "id": hid, "reasons": value["reasons"],
+                })
         elif hid not in r.eligible_hazards:
             inventory_warnings.append({
-                "type": "active_hazard_without_qualifying_link", "id": hid,
-                "reason": "active hazard has no eligible direct/fallback link yet (backlog, not published)",
+                "type": "active_hazard_without_current_qualifying_link",
+                "id": hid,
+                "reason": "active hazard has no current effective direct/fallback basis yet",
             })
 
     eligible_hazard_ids = sorted(r.eligible_hazards)
     eligible_link_ids = sorted(r.eligible_links)
-
     summary = {
         "asOf": r.as_of,
         "entityCounts": r.counts,
@@ -152,7 +177,7 @@ def main():
 
     print("=== STRICT_V4_RELEASE_AUDIT ===")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
-    return 0
+    return 1 if release_blockers else 0
 
 
 if __name__ == "__main__":
