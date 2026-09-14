@@ -1,11 +1,11 @@
 # AGENTS.md — 仓库长期接手记忆与总施工计划
 
 > **这是 AI / Codex / 新维护者的唯一实时接手入口。**
-> 新窗口先读本文件，再按 `CURRENT PHASE`、`NEXT ACTION`、`MASTER ROADMAP` 连续执行。完成一个动作后必须更新本文件并自动推进到下一个未完成动作；不要依赖旧聊天解释项目状态。
+> 新窗口必须先读本文件，再读根目录 `AGENT_EXECUTION_PROTOCOL.md`，然后按 `CURRENT PHASE / NEXT ACTION / MASTER ROADMAP` 连续执行。完成一个动作后必须更新本文件并自动推进，不依赖旧聊天解释项目状态。
 
 ## 0. 一句话接手
 
-> **接手 `An-0726/safety-basis`，先读根目录 `AGENTS.md`，按 `CURRENT PHASE / NEXT ACTION / MASTER ROADMAP` 从当前状态继续；最终目标是数据 Gate 全绿、合并 `main`、GitHub Pages 部署成功并完成线上验收。私有母库写操作必须先备份、再验证、可回滚。**
+> **接手 `An-0726/safety-basis`。先读 `AGENTS.md` 和 `AGENT_EXECUTION_PROTOCOL.md`；总控负责法规核验、隐患描述、证据链、knowledge/canonical、candidate、发布与上线判断；只有必须操作用户本机且当前工具做不到的步骤，才生成严格提示词交给本地 Luna 执行，回传后由总控复核。最终目标是数据 Gate 全绿、合并 `main`、GitHub Pages 部署成功并完成线上验收。**
 
 ---
 
@@ -13,14 +13,14 @@
 
 形成一套可长期维护、可审计、可持续部署的安全隐患法规依据网站：
 
-- 私有法规证据库职责清楚：原件、历史版本、来源副本、OCR/文本派生物、全文检索数据库分层；
+- 私有法规证据库分层清楚：原件、历史版本、来源副本、OCR/文本派生物、全文检索数据库各司其职；
 - `knowledge/` 是唯一正式结构化法规/版本/条款/隐患知识源；
-- 同一法规同一真实版本只有一个 canonical identity，多来源只是来源；
-- 正式引用链必须满足：`隐患 → 法规身份 → 适用版本 → 具体条/款/项 → 逐字原文 → 官方/原始证据 → 适用性审核`；
+- 同一法规同一真实版本只有一个 canonical identity，多来源只作为来源；
+- 正式引用链满足：`隐患 → 法规身份 → 适用版本 → 具体条/款/项 → 逐字原文 → 官方/原始证据 → 适用性审核`；
 - `proposed` 候选不得进入正式公共站；
 - 本地私有版可从仓库 + `source/library/` 重建；
 - `main` Validate / Build / Pages Deploy 全绿；
-- 线上完成关键搜索、法规详情、来源链、候选隔离、历史/upcoming、桌面端/移动端抽检；
+- 线上完成搜索、法规详情、来源链、候选隔离、历史/upcoming、桌面/移动端抽检；
 - 任意新窗口不依赖旧聊天即可继续。
 
 ### Definition of Done
@@ -28,7 +28,7 @@
 只有以下全部满足，才算本轮整体整理完成：
 
 1. 私有母库实体、重复、历史版本、派生物关系已解释；
-2. 工作 SQLite 完整性正常，任何修复均有备份和变更记录；
+2. 工作 SQLite 在实际本机运行时完整性正常，任何修复有备份和变更记录；
 3. `knowledge/` 不存在未经解释的同法规同真实版本重复；
 4. 1,929 目标隐患均有明确状态；
 5. 正式记录全部通过 Gate；
@@ -45,9 +45,9 @@
 
 **LAST VERIFIED：2026-09-14**
 
-当前 Git 唯一主线：`main`。
+当前 Git 唯一正式主线：`main`。
 
-已完成公开发布架构收口：
+公开发布架构已收口：
 
 - `knowledge/` 是唯一正式结构化知识源；
 - `source/publication/` 只承担题录、官方入口和获准全文，不创造第二套正式法规身份；
@@ -75,8 +75,8 @@
 - PR #30：建立 `AGENTS.md` 作为仓库长期接手入口；
 - PR #31：扩展为完整 MASTER ROADMAP；
 - PR #32：完成 PHASE 1 私有母库审计，加入私有母库修复方案、安全维护工具和测试；
-- PR #32 已 squash 合并到 `main`：`f88af76d258035350047987d2008125854728fbe`；
-- 该 main 提交的 Validate safety data 与 Build current verified website / Pages 流程均已成功。
+- PR #34：新增 `AGENT_EXECUTION_PROTOCOL.md`，固化“总控判断、本地 Luna 只执行本机操作”的协作边界；
+- PR #32 合并后 main 的 Validate / Build / Pages 已成功；PR #34 合并提交为 `55c641ee99eb2b1691f92b2fbe3c5a363831cb28`。
 
 ---
 
@@ -113,7 +113,7 @@
 
 `D:\ESH\ESH_Codex\work\safety-basis\source\library\`
 
-Google Drive for desktop 已同步项目。Drive 关键词搜索可能漏掉 `.sqlite3` 二进制文件；应直接读取已知 `source/library` 文件夹，不可因搜索 0 条判断文件不存在。
+Google Drive for desktop 已同步项目。Drive 关键词搜索可能漏掉 `.sqlite3` 二进制文件；应直接读取已知 `source/library` 文件夹，不可因搜索 0 条判断不存在。
 
 ### PHASE 1 最终只读审计
 
@@ -130,38 +130,67 @@ Google Drive for desktop 已同步项目。Drive 关键词搜索可能漏掉 `.s
 - 38 行旧 `evidence/...` 引用仍存在，不可按标题猜目标文件；
 - inventory：144 个原文件 / 138 个唯一 SHA / 6 个完全重复；inventory-only 文件不能批量自动导入；
 - `pending-originals` 中 TSG 08-2026、TSG 92-2026 历史待 OCR 载体不能直接再次导入，须先核版本和来源关系；
-- `document_id` 同时存在 `LF_*`、`LV_*`、旧 `Lxxx`、标准号等命名，不能直接当 canonical law-version 主键；
-- 工作母库原始 `PRAGMA integrity_check` 报：`malformed inverted index for FTS5 table main.fulltext_fts`；
-- PHASE 1 未写工作母库、未删除/移动 archive 原件。
+- `document_id` 同时存在 `LF_*`、`LV_*`、旧 `Lxxx`、标准号等命名，不能直接当 canonical law-version 主键。
 
 详细规则：`docs/PRIVATE_LIBRARY_REMEDIATION_PLAN.md`。
 
-### PHASE 3 隔离副本验证（已完成，尚未覆盖工作母库）
+### PHASE 3 第一批：工作母库 FTS5 修复 — 本机 PASS，云盘已同步
 
-2026-09-14 已直接从 Google Drive 当前 `fulltext.sqlite3` 本体重新取得文件，并验证其仍为 106,958,848 bytes。
+本地 Luna 按总控提示词在实际工作库执行，未切分支、未 pull、未清理 worktree、未删除法规原件。
 
-在隔离环境执行：
+本机修复前：
 
-1. 对当前云盘本体只读 audit；
-2. 使用 SQLite Backup API 创建一致性 pre-rebuild 备份；
-3. 从备份复制生成 repaired candidate；
-4. 仅执行：`INSERT INTO fulltext_fts(fulltext_fts) VALUES('rebuild');`；
-5. 对 source / backup / repaired candidate 做全量一致性对比。
+- documents = 170；
+- ftsRows = 215,326；
+- paragraphCountSum = 215,326；
+- foreignKeyErrors = 0；
+- perDocumentParagraphMismatches = []；
+- `ftsContentSha256 = 1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`；
+- `databaseFileSha256 = 0b76727d771c14acaa71d329a65c76518b0226be5e8ef81e7201e574bdce04ab`；
+- **本机运行时修复前 `integrity=["ok"]`**。
 
-验证结果：
+本机创建的一致性备份：
 
-- source：170 documents / 215,326 FTS rows / paragraph_sum 215,326；
-- backup：170 / 215,326 / 215,326；
-- repaired candidate：170 / 215,326 / 215,326；
-- 逐 document FTS 行数不一致：三者均为 0；
-- 全文内容摘要（按 `document_key, paragraph_no, content` 排序计算）三者完全相同：`264275aa1b51d8e0e54ef8fa9d58cba52aa04858ca089d13979071136c95de74`；
-- source `integrity_check`：FTS5 malformed inverted index；
-- repaired candidate `integrity_check`：`ok`；
-- repaired candidate `foreign_key_check`：0 errors。
+`D:\ESH\ESH_Codex\work\safety-basis\source\library\backups\fulltext.sqlite3.bak-20260914-155510+0800`
 
-结论：**FTS rebuild 可以修复当前索引损坏，并保持 documents、段落数和全文内容不变。**
+本机仅执行 FTS rebuild 后：
 
-注意：当前真正工作母库 `source/library/fulltext.sqlite3` 尚未被本轮 PHASE 3 覆盖/替换；只有隔离副本修复成功。
+- documents = 170；
+- ftsRows = 215,326；
+- paragraphCountSum = 215,326；
+- foreignKeyErrors = 0；
+- perDocumentParagraphMismatches = []；
+- `ftsContentSha256` 与修复前完全相同：`1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`；
+- `databaseFileSha256 = 7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`；
+- `integrity=["ok"]`；
+- `invariantErrors=[]`；
+- `manualRestoreRequired=false`；
+- documents 未修改，法规原件未删除，不需要回滚。
+
+本机搜索抽检：
+
+- `洗眼器`：15 条；
+- `危险化学品`：13,864 条；
+- `GB 55036`：707 条。
+
+总控已从 Google Drive 重新下载同一 `fulltext.sqlite3` 独立复核：
+
+- Drive 文件修改时间已更新为 2026-09-14 07:55:35Z；
+- 大小仍为 106,958,848 bytes；
+- 文件 SHA-256 **与本机修复后完全一致**：`7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`；
+- documents = 170；ftsRows = 215,326；paragraphCountSum = 215,326；逐 document mismatch = 0；foreign key errors = 0；
+- `ftsContentSha256` **与本机报告完全一致**：`1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`；
+- 总控环境查询同样得到 `洗眼器=15`、`危险化学品=13,864`、`GB 55036=707`。
+
+#### 重要兼容性备注：FTS5 integrity_check 存在运行时差异
+
+总控当前 Linux/Python 环境使用 SQLite **3.46.1**。对云盘中与本机修复后 SHA 完全相同的数据库，`PRAGMA integrity_check` 仍返回：
+
+`malformed inverted index for FTS5 table main.fulltext_fts`
+
+而本机 Luna 对修复前和修复后数据库均返回 `integrity=["ok"]`。由于**同一字节文件**在两个 SQLite 运行时得到不同 integrity 结果，同时行数、全文摘要、外键和实际 FTS 查询结果全部一致，因此目前将其记录为 **SQLite/FTS5 运行时兼容性差异待解释**，不能据此判断正文或云盘文件损坏。
+
+后续若再次做 FTS 维护，应先记录本机 `sqlite3.sqlite_version`，并优先以项目实际本机运行时 + 内容不变量 + 搜索抽检联合验收；不要仅凭不同运行时的一次 `PRAGMA integrity_check` 自动覆盖数据库。
 
 ---
 
@@ -179,42 +208,22 @@ knowledge 主导；candidate 不发布；upcoming 不提前支撑；current 现�
 
 ### PHASE 2 — 母库整理方案与安全变更清单 — DONE
 
-已完成：
-
-- FTS 索引修复与法规身份去重分批执行；
-- 4 组同 SHA 重复禁止统一直接 DELETE；
-- 真实历史版本继续保留；
-- 7 个 archive-only 文本派生物不作为独立法规，本轮不删；
-- 旧 `evidence/...`、pending、inventory-only 处理门禁；
-- 备份、前后强一致性指标和回滚条件；
-- `docs/PRIVATE_LIBRARY_REMEDIATION_PLAN.md`；
-- `tools/v4/private_library_maintenance.py`；
-- `tools/pipeline/tests/test_private_library_maintenance.py`；
-- PR #32 CI 与 main CI 均通过。
+FTS 修复与身份归并分批、备份/回滚门禁、私有母库维护脚本和测试已建立，PR #32 已合并并通过 CI。
 
 ### PHASE 3 — 私有母库实际修复与确定性去重 — IN PROGRESS
 
-第一批：**FTS 修复**。
+**第一批 FTS 修复：本机 PASS，云盘同步与内容不变量已由总控独立确认。**
 
-已完成：
+下一批只做 document canonical/alias 映射和确定性分类，暂不物理删除：
 
-- 当前云盘数据库重新下载并核对；
-- SQLite Backup API 备份流程在隔离副本跑通；
-- repaired candidate rebuild 成功；
-- 强一致性指标全部通过；
-- integrity 从 FTS malformed 恢复为 `ok`。
+- 4 组同 SHA 双登记逐组确定 canonical / legacy alias；
+- 18 组同真实版本双身份归并映射；
+- 2 组真实不同版本继续分别保留；
+- 38 行旧 `evidence/...` 引用逐项迁移方案；
+- 7 个 archive-only 历史纯文本派生物保持为派生载体，不作为独立法规；
+- document 物理 DELETE / archive 移动必须另开独立高风险批次。
 
-未完成：
-
-1. 确认本机工作 `fulltext.sqlite3` 当前没有程序写入/占用；
-2. 在工作母库旁创建可恢复的一致性备份；
-3. 使用仓库维护工具对**工作母库**执行仅 FTS rebuild；
-4. 对工作母库执行 post-audit 和搜索抽检；
-5. 确认 Google Drive 同步后的本体仍通过相同指标；
-6. 再进入 document alias/canonical mapping；
-7. document 物理删除/合并必须作为独立后续批次，禁止与 FTS rebuild 同批。
-
-退出条件：工作母库 `integrity_check=ok`；170 documents、215,326 rows、全文摘要保持；本地检索正常；备份可恢复；随后才评估确定性重复 document 的物理清理。
+PHASE 3 退出条件：所有 duplicate/alias/legacy document 都有明确 mapping 与回滚方案；任何物理变更前后全文可检索性、archive_ref、SHA 和 evidence traceability 不丢失。
 
 ### PHASE 4 — `knowledge/` 法规身份/版本 canonical 化 — PENDING
 
@@ -264,40 +273,44 @@ py -3 tools/build_local_release.py
 
 **PHASE 3 — 私有母库实际修复与确定性去重。**
 
-当前只允许完成第一批 FTS 修复；**不要同时删除/合并 document，不要移动 archive 原件。**
+FTS 修复批次已经完成并通过本机 + 云盘内容不变量复核。现在进入 **document canonical/alias 映射**。
+
+此阶段由总控自己做法规身份与版本判断；只有必须操作用户本机 SQLite/文件系统时才交给 Luna。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **先确认本机没有程序正在写 `source/library/fulltext.sqlite3`。确认后，用 `tools/v4/private_library_maintenance.py` 在工作母库旁创建一致性备份，仅执行 FTS rebuild，再执行 post-audit；必须保持 170 documents、215,326 FTS rows 和全文内容摘要不变，并得到 `integrity_check=ok`。如果无法确认本机数据库未被占用，不得远程覆盖工作本体，只保留已验证的 repaired candidate，等待安全切换。**
+> **总控继续只读分析 170 个 SQLite documents，把 4 组同 SHA 双登记和其余同真实版本双身份逐组映射到当前 `knowledge` canonical law/version；区分 canonical、legacy alias、多来源载体、真实不同历史版本、knowledge 未映射项。先产出完整 mapping/变更清单，不删除 document、不移动 archive、不改稳定 ID。**
 
-完成后：
+优先顺序：
 
-1. 把工作母库实跑结果写回本文件；
-2. 做中文短词、标准号、条款关键词搜索抽检；
-3. 确认 Drive 同步后的本体一致；
-4. 然后继续 PHASE 3 的 alias/canonical mapping；
-5. document 物理删除必须另开变更批次。
+1. 完成 4 组 exact-SHA 双登记的 canonical/alias 定论；
+2. 完成其余 18 组同真实版本双身份映射；
+3. 明确保留的 2 组真实不同版本；
+4. 将 38 个旧 `evidence/...` 引用纳入迁移矩阵；
+5. 输出“可安全归并 / 仅保留 alias / 待法规核验 / 禁止合并”四类清单；
+6. 更新本文件后再决定是否需要 Luna 执行 SQLite 物理变更。
+
+FTS 兼容性备注不阻塞上述只读 mapping；若后续再次操作 FTS，再让 Luna先报告本机 Python/SQLite 版本。
 
 ---
 
 ## 8. 写操作与风险边界
 
-低风险可自主：只读审计、生成对账报告、在副本上验证、修改 Git 代码/测试/文档（走分支/PR/CI）。
+低风险可自主：法规核验、隐患描述、证据链分析、只读审计、生成 mapping/对账报告、在副本上验证、修改 Git 代码/测试/文档（走分支/PR/CI）。
 
-高风险必须先备份和验证：写工作 SQLite、FTS rebuild 工作母库、删除/移动 archive、合并 documents、删除 knowledge 正式实体、改稳定 ID、大批量正式条款/关联修改。
+高风险必须先备份和验证：写工作 SQLite、删除/移动 archive、合并 documents、删除 knowledge 正式实体、改稳定 ID、大批量正式条款/关联修改。
 
 出现以下任一条件立即停止并回滚/调查：
 
-- documents 数变化；
-- FTS 行数变化；
-- `sum(paragraph_count)` 与 FTS 行数不一致；
+- documents 数意外变化；
+- FTS 行数或 paragraphCountSum 意外变化；
 - 全文内容摘要变化；
 - 任一 document FTS 行数与 `paragraph_count` 不一致；
-- rebuild 后 integrity 仍非 `ok`；
 - 本地全文检索明显缺失；
-- 新增 archive_ref 缺失或 SHA 不一致。
+- archive_ref 缺失或 SHA 不一致；
+- canonical 合并会丢失法规版本、来源或证据链。
 
 ---
 
@@ -313,11 +326,12 @@ py -3 tools/build_local_release.py
 - 不从 Excel/OCR/TXT/HTML 反向覆盖正式知识源；
 - 不在 SQLite 正被写入时替换数据库文件；
 - 不为了 candidate 清零编造证据；
-- 不创建 `final2/latest2` 等平行最终版。
+- 不创建 `final2/latest2` 等平行最终版；
+- 不把法规核验、隐患描述、证据链或 canonical 决策权交给本地 Luna。
 
 ---
 
-## 10. Git 与跨窗口维护规则
+## 10. Git、跨窗口与本地执行器规则
 
 涉及代码、架构、正式数据、候选策略、发布规则或接手状态：
 
@@ -328,14 +342,8 @@ py -3 tools/build_local_release.py
 5. CI 全绿再合并 `main`；
 6. main Pages 成功后才算公开站变更完成。
 
-每个实质阶段结束前必须更新：
+每个实质阶段结束前必须更新：`LAST VERIFIED`、MASTER ROADMAP 状态、当前已核事实、`CURRENT PHASE`、`NEXT ACTION`；架构/口径变化同步 README，人类交接重大变化同步 `docs/HANDOFF.md`。
 
-- `LAST VERIFIED`；
-- MASTER ROADMAP phase 状态；
-- 当前已核事实；
-- `CURRENT PHASE`；
-- `NEXT ACTION`；
-- 架构/口径变化同步 README；
-- 人类交接发生重大变化同步 `docs/HANDOFF.md`。
+协作边界以 `AGENT_EXECUTION_PROTOCOL.md` 为准：**总控负责判断与验收；Luna 只负责当前工具无法完成的本机执行。**本地执行器报告 PASS 后仍必须由总控独立复核。
 
-`NEXT ACTION` 只是光标，`MASTER ROADMAP` 才是总任务。完成一个 NEXT ACTION 后不要停，除非遇到高风险写操作需要确认、本地进程状态无法验证、缺失证据或外部阻塞。
+`NEXT ACTION` 只是光标，`MASTER ROADMAP` 才是总任务。完成一个 NEXT ACTION 后不要停，除非遇到高风险写操作需要确认、本地状态无法验证、缺失证据或外部阻塞。
