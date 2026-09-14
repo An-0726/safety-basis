@@ -21,6 +21,8 @@ node --test tests/*.test.mjs
 
 如果构建器修改了当前包，还要确认 `source/releases/site-selection.json` 的 `releaseHash` 与发布包一致，并检查 `git diff` 没有混入私有原件或临时文件。
 
+候选隐患的状态含义和接手处理流程见 [CANDIDATE_REVIEW_PLAYBOOK_20260914](CANDIDATE_REVIEW_PLAYBOOK_20260914.md)。
+
 ## 数量口径
 
 - 法规库数量：按 `source/publication/law-index.json` 的目录项目统计。

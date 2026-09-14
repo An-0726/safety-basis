@@ -84,7 +84,14 @@ async function renderHazardDetail(){
   setBusy('正在读取隐患详情');
   try{
     const {hazard,bases}=await state.store.getHazardDetail(index);
-    const candidateNotice=hazard.status==='待审核候选'?`<div class="candidateNotice"><strong>待审核候选</strong><p>此条已上线供查询，但尚未完成法规版本、具体条款和适用性审核，不能直接作为正式依据。处置状态：${esc(hazard.proposalStatus||'待核验')}；Excel来源第 ${esc(hazard.sourceRow||'未知')} 行。</p></div>`:'';
+    const proposalHelp={
+      workbook_revised_pending_clause_rebind:{label:'待补齐正式条款证据',text:'下一步：按直接依据定位官方或已授权原文，确认版本与实施状态，核对条款号、原文和适用范围，建立“证据 → 条款 → 直接关联 → 审核记录”链后，才能转为已核验。'},
+      basis_catalog_only:{label:'只有法规题录',text:'下一步：取得可合法核对的全文，定位具体条款并核对适用范围；不能只凭标准名称发布。'},
+      basis_name_unresolved:{label:'法规身份未完全确认',text:'下一步：先确认法规/标准编号、版次和效力状态，再定位条款原文。'},
+      same_title_review:{label:'同名或重复待合并',text:'下一步：与已有隐患比较对象、场景和整改措施，确认合并或保留，再绑定正式条款。'}
+    };
+    const proposal=proposalHelp[hazard.proposalStatus]||{label:'待补充核验材料',text:'下一步：补齐法规版本、具体条款、原文证据和适用性审核；完成前不能直接作为正式依据。'};
+    const candidateNotice=hazard.status==='待审核候选'?`<div class="candidateNotice"><strong>${esc(proposal.label)}</strong><p>这条记录已经上线供查询，但还不是正式法规依据。${esc(proposal.text)}</p><p class="candidateMeta">处置状态：${esc(hazard.proposalStatus||'待核验')}；Excel来源第 ${esc(hazard.sourceRow||'未知')} 行。</p></div>`:'';
     const basisContent=bases.length?bases.map(basisHtml).join(''):`<div class="candidateNotice muted"><strong>暂无已审核条款关联</strong><p>候选依据和待办说明见下方“适用说明 / 兜底条件”。完成核验后才会生成正式关联。</p></div>`;
     $('#detail').innerHTML=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(hazard.id)} / ${esc(hazard.category)}</span>${pill(hazard.status==='已核验'?hazard.mode:hazard.status)}</div><h2>${esc(hazard.title)}</h2><div class="subtitle">${esc(hazard.places.join(' · '))}<br>核验状态：${esc(hazard.status)} · ${esc(hazard.checked||'未填写日期')} · 数据库版本 ${esc(state.store.manifest.dataVersion)}</div></div><div class="detailbody">${candidateNotice}<section class="block"><h3><span class="number">01</span>隐患专业描述</h3><p>${esc(hazard.description)}</p></section><section class="block"><h3><span class="number">02</span>法规原文依据 <small>${bases.length} 条</small></h3>${basisContent}</section><section class="block"><h3><span class="number">03</span>整改措施</h3><p>${esc(hazard.measures)}</p></section><section class="block note"><h3>ⓘ 适用说明 / 兜底条件</h3><p>${esc(hazard.note)}</p></section></div><div class="detailactions"><button class="primary" id="copy">复制整改条目</button><button id="copyfull">复制完整资料</button><button id="share">复制当前链接</button></div>`;
     $('#copy').onclick=()=>copyText(hazardText(hazard,bases),'已复制整改条目');
