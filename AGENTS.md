@@ -45,7 +45,7 @@
 
 **LAST VERIFIED：2026-09-14**
 
-当前 Git 唯一正式主线：`main`。
+当前 Git 唯一正式主线：`main`。当前阶段工作 PR：**#36 `Phase 4: canonicalize private-library law gaps`**，分支 `phase4-canonical-gaps-20260914`；PR 分支上的 `Validate safety data` 与 `Build current verified website` 已成功，待本次 handoff 更新后重新验收再合并。
 
 公开发布架构已收口：
 
@@ -57,7 +57,7 @@
 - `proposed` 不进入公网；
 - `upcoming` 尚未实施版本不能支撑当前正式隐患。
 
-当前正式发布基线：
+当前正式发布基线仍为：
 
 - 1,409 条正式隐患；
 - 55 个实际引用法规版本；
@@ -65,9 +65,9 @@
 - 1,524 个正式关联；
 - 512 条 `proposed` 候选仅留 `knowledge/`，公网候选 0。
 
-当前 knowledge 库存：96 个法规身份、97 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联。
+PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联、1,114 个 evidence、28 条 succession、75 条 requirements**。
 
-新版 Excel 目标集：1,929 个唯一隐患 ID（621 修订、1,308 保留）。它不是正式发布数量。
+新版 Excel 目标集：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
 ### 最近 Git 里程碑
 
@@ -76,7 +76,7 @@
 - PR #31：扩展为完整 MASTER ROADMAP；
 - PR #32：完成 PHASE 1 私有母库审计，加入私有母库修复方案、安全维护工具和测试；
 - PR #34：新增 `AGENT_EXECUTION_PROTOCOL.md`，固化“总控判断、本地 Luna 只执行本机操作”的协作边界；
-- PR #32 合并后 main 的 Validate / Build / Pages 已成功；PR #34 合并提交为 `55c641ee99eb2b1691f92b2fbe3c5a363831cb28`。
+- PR #36（当前）：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 已成功，待本文件更新后最终验收/合并。
 
 ---
 
@@ -105,108 +105,65 @@
 
 ## 4. 私有母库当前已核事实
 
-本地工作仓库：
+本地工作仓库：`D:\ESH\ESH_Codex\work\safety-basis\`
 
-`D:\ESH\ESH_Codex\work\safety-basis\`
-
-私有法规母库：
-
-`D:\ESH\ESH_Codex\work\safety-basis\source\library\`
+私有法规母库：`D:\ESH\ESH_Codex\work\safety-basis\source\library\`
 
 Google Drive for desktop 已同步项目。Drive 关键词搜索可能漏掉 `.sqlite3` 二进制文件；应直接读取已知 `source/library` 文件夹，不可因搜索 0 条判断不存在。
 
 ### PHASE 1 最终只读审计
 
-- SQLite 文件大小：106,958,848 bytes；
-- `documents`：170；
-- `fulltext_fts`：215,326；
-- 唯一文件 SHA-256：166；
-- 同一 SHA 对应多条 document：4 组，共 8 行；
-- `sum(documents.paragraph_count) = count(fulltext_fts) = 215,326`；
-- 每个 document 的 FTS 行数与 `paragraph_count` 一致；
-- 同标题双记录共 20 组，其中 2 组是真实不同版本，其余属于同一真实版本的旧身份/再导入身份/多载体表达；
-- 明确真实不同版本至少包括 `AQ 4228-2012 / AQ 4228-2025`、`GB/T 13869-2017 / GB/T 13869-2026`；
-- current `archive/` 有 136 个 SHA：129 个被当前 `archive_ref` 直接引用，另 7 个是历史纯文本派生物，不是 7 部漏入全文库的法规；
-- 38 行旧 `evidence/...` 引用仍存在，不可按标题猜目标文件；
-- inventory：144 个原文件 / 138 个唯一 SHA / 6 个完全重复；inventory-only 文件不能批量自动导入；
-- `pending-originals` 中 TSG 08-2026、TSG 92-2026 历史待 OCR 载体不能直接再次导入，须先核版本和来源关系；
-- `document_id` 同时存在 `LF_*`、`LV_*`、旧 `Lxxx`、标准号等命名，不能直接当 canonical law-version 主键。
+- SQLite 文件大小：106,958,848 bytes；`documents=170`；`fulltext_fts=215,326`；唯一文件 SHA-256=166；
+- 4 组同一 SHA 双登记，共 8 行；`sum(paragraph_count)=count(fulltext_fts)=215,326`；逐 document FTS 数量一致；
+- 同标题双记录 20 组，其中 2 组是真实不同版本，其余为同真实版本旧身份/再导入/多载体；
+- 明确真实不同版本：`AQ 4228-2012 / AQ 4228-2025`、`GB/T 13869-2017 / GB/T 13869-2026`；
+- current `archive/` 有 136 个 SHA：129 个被当前 `archive_ref` 直接引用，另 7 个为历史纯文本派生物；
+- 38 行旧 `evidence/...` 引用不可按标题猜目标；
+- inventory：144 原文件 / 138 唯一 SHA / 6 完全重复；inventory-only 不可批量自动导入；
+- `pending-originals` 中 TSG 08-2026、TSG 92-2026 待 OCR 载体须先核版本/来源，不可直接再次导入；
+- `document_id` 混有 `LF_*`、`LV_*`、旧 `Lxxx`、标准号，不能直接当 canonical law-version 主键。
 
 详细规则：`docs/PRIVATE_LIBRARY_REMEDIATION_PLAN.md`。
 
-### PHASE 3 第一批：工作母库 FTS5 修复 — 本机 PASS，云盘已同步
+### PHASE 3 第一批：FTS5 修复 — 本机 PASS，云盘内容不变量复核 PASS
 
-本地 Luna 按总控提示词在实际工作库执行，未切分支、未 pull、未清理 worktree、未删除法规原件。
+本机一致性备份：`source\library\backups\fulltext.sqlite3.bak-20260914-155510+0800`。
 
-本机修复前：
+修复后：documents=170；ftsRows=215,326；paragraphCountSum=215,326；FK errors=0；逐 document mismatch=0；`ftsContentSha256=1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd` 未变；数据库文件 SHA-256=`7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`；本机 `integrity=["ok"]`。
 
-- documents = 170；
-- ftsRows = 215,326；
-- paragraphCountSum = 215,326；
-- foreignKeyErrors = 0；
-- perDocumentParagraphMismatches = []；
-- `ftsContentSha256 = 1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`；
-- `databaseFileSha256 = 0b76727d771c14acaa71d329a65c76518b0226be5e8ef81e7201e574bdce04ab`；
-- **本机运行时修复前 `integrity=["ok"]`**。
+搜索抽检：`洗眼器=15`、`危险化学品=13,864`、`GB 55036=707`。总控从 Drive 下载同字节文件独立复核，行数、全文摘要、FK、搜索结果全部一致。
 
-本机创建的一致性备份：
+兼容性备注：总控 Linux/Python SQLite 3.46.1 对同一字节文件的 `PRAGMA integrity_check` 仍报告 FTS5 inverted-index 错误，而项目实际本机运行时为 `ok`。因此后续 FTS 维护以**项目本机运行时 + 内容不变量 + 搜索抽检**联合验收，不允许因异构运行时单项结果自动覆盖数据库。
 
-`D:\ESH\ESH_Codex\work\safety-basis\source\library\backups\fulltext.sqlite3.bak-20260914-155510+0800`
+### PHASE 3 第二批：170 documents canonical / alias 映射 — PASS
 
-本机仅执行 FTS rebuild 后：
+完整报告：`docs/PRIVATE_LIBRARY_DOCUMENT_MAPPING_20260914.md`。
 
-- documents = 170；
-- ftsRows = 215,326；
-- paragraphCountSum = 215,326；
-- foreignKeyErrors = 0；
-- perDocumentParagraphMismatches = []；
-- `ftsContentSha256` 与修复前完全相同：`1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`；
-- `databaseFileSha256 = 7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`；
-- `integrity=["ok"]`；
-- `invariantErrors=[]`；
-- `manualRestoreRequired=false`；
-- documents 未修改，法规原件未删除，不需要回滚。
+- `GB/T 12801-2008`、`GB 55036-2022` raw SHA + extracted-text SHA 均相同，可列为未来独立高风险物理去重候选；
+- `HJ 2025-2012`、`GB 15603-2022` raw SHA 相同但历史抽取文本/段落数不同，只做 alias，不物理删旧 FTS；
+- 18 组同真实版本双身份已分类：12 组原已对齐 knowledge，6 组为 canonical gap；
+- 2 组真实不同版本禁止合并；
+- 38 条 legacy `evidence/...` 中仅 `LF_L027 / HJ 2025-2012` 有同 SHA current archive 目标可安全重绑，其余 37 条继续保留 legacy provenance；
+- 7 个 archive-only 历史纯文本派生物不生成独立法规身份；
+- 当前不做 document 物理 DELETE/archive 移动；任何物理压缩另开高风险批次。
 
-本机搜索抽检：
+### PHASE 4：六个 canonical gaps — PASS
 
-- `洗眼器`：15 条；
-- `危险化学品`：13,864 条；
-- `GB 55036`：707 条。
+已由总控回到官方来源核验，并在 PR #36 建立完整 law/lawVersion/evidence/review/succession 链：
 
-总控已从 Google Drive 重新下载同一 `fulltext.sqlite3` 独立复核：
+- `危险化学品目录（2015版）`：1 个 law identity，显式建模为 2015 base → 2023 柴油调整后 → 2026 新增 5 种化学品后三个版本状态；私有 2015 原件仍映射 2015 版本，不冒充 2026 当前完整状态；
+- `各类监控化学品名录`（工业和信息化部令第52号）；
+- `GB 17914-2013`、`GB 17915-2013`、`GB 17916-2013`；
+- `特种设备安全监察条例（2009修订）`。
 
-- Drive 文件修改时间已更新为 2026-09-14 07:55:35Z；
-- 大小仍为 106,958,848 bytes；
-- 文件 SHA-256 **与本机修复后完全一致**：`7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`；
-- documents = 170；ftsRows = 215,326；paragraphCountSum = 215,326；逐 document mismatch = 0；foreign key errors = 0；
-- `ftsContentSha256` **与本机报告完全一致**：`1caeed69bc50ab7409d8d6ec40e324ad185294fbc1710e011cdbc2a4ac96c8dd`；
-- 总控环境查询同样得到 `洗眼器=15`、`危险化学品=13,864`、`GB 55036=707`。
+新增：6 laws、8 lawVersions、8 authoritative evidence、6 law reviews、8 lawVersion reviews、2 successions；manifest 已更新到 102 laws / 105 lawVersions / 1,114 evidence / 28 successions。review hash 使用仓库 `canonical.py` 口径绑定。
 
-#### 重要兼容性备注：FTS5 integrity_check 存在运行时差异
+私有 `source/library/document-aliases.json` 已在 Drive 原位回填 6 个 `canonicalVersionId`，`knowledgeUnmappedTitles=[]`；其策略仍是 `local_display_grouping_only`，`databaseMutation=false`、`archiveMutation=false`，未写 SQLite/FTS/archive。
 
-总控当前 Linux/Python 环境使用 SQLite **3.46.1**。对云盘中与本机修复后 SHA 完全相同的数据库，`PRAGMA integrity_check` 仍返回：
+PR #36 在 canonical 数据提交后已通过：
 
-`malformed inverted index for FTS5 table main.fulltext_fts`
-
-而本机 Luna 对修复前和修复后数据库均返回 `integrity=["ok"]`。由于**同一字节文件**在两个 SQLite 运行时得到不同 integrity 结果，同时行数、全文摘要、外键和实际 FTS 查询结果全部一致，因此目前将其记录为 **SQLite/FTS5 运行时兼容性差异待解释**，不能据此判断正文或云盘文件损坏。
-
-后续若再次做 FTS 维护，应先记录本机 `sqlite3.sqlite_version`，并优先以项目实际本机运行时 + 内容不变量 + 搜索抽检联合验收；不要仅凭不同运行时的一次 `PRAGMA integrity_check` 自动覆盖数据库。
-
-### PHASE 3 第二批：170 documents canonical / alias 只读映射 — 总控 PASS
-
-完整映射见 `docs/PRIVATE_LIBRARY_DOCUMENT_MAPPING_20260914.md`。本批未写 SQLite、未删 document/FTS、未移动 archive、未改稳定 ID。
-
-已核结论：
-
-- 4 组 exact-SHA 中，`GB/T 12801-2008` 与 `GB 55036-2022` 同时满足 raw SHA 与 extracted-text SHA 相同，可列为后续“确定性重复”候选；
-- `HJ 2025-2012` 与 `GB 15603-2022` 虽 raw SHA 相同，但历史 extracted-text SHA / paragraph count 不同，只做 alias，不得直接物理删旧 FTS；
-- 18 组同真实版本双身份已经全部归类：12 组已对齐现有 `knowledge` canonical，6 组确认是当前 `knowledge` canonical gap；
-- 6 个 canonical gap 的法规身份和效力已由总控回到官方来源核验，其中 `危险化学品目录（2015版）` 还必须在 PHASE 4 显式表达 2022 柴油调整和 2026 新增 5 种化学品，不能把 2015 静态原文直接冒充 2026-09-14 的完整现行目录；
-- 2 组同标题真实不同版本明确禁止合并：`AQ 4228-2012 / AQ 4228-2025`、`GB/T 13869-2017 / GB/T 13869-2026`；
-- 38 条 legacy `evidence/...` 中只有 `LF_L027 / HJ 2025-2012` 的 raw SHA 在 current `archive/` 有完全相同目标，可安全重绑 `archive/0a78de.../original`；其余 37 条没有同 SHA current archive 目标，继续保留 legacy provenance，禁止按标题猜路径；
-- 7 个 archive-only 历史纯文本派生物继续只作为派生载体，不生成独立法规身份。
-
-本批已经满足 PHASE 3 的 mapping 与回滚前置要求。**不需要为了结束 PHASE 3 立即做 document 物理 DELETE。**后续若要压缩 SQLite，只允许另开独立高风险批次，并先做一致性备份、引用扫描、搜索不变量与回滚验证。
+- `Validate safety data` — success；
+- `Build current verified website` — success。
 
 ---
 
@@ -215,89 +172,65 @@ Google Drive for desktop 已同步项目。Drive 关键词搜索可能漏掉 `.s
 状态：`DONE` / `IN PROGRESS` / `PENDING` / `BLOCKED`。
 
 ### PHASE 0 — 架构与发布边界收口 — DONE
-
-knowledge 主导；candidate 不发布；upcoming 不提前支撑；current 现场生成；main CI / Pages 已成功。
+knowledge 主导；candidate 不发布；upcoming 不提前支撑；current 现场生成。
 
 ### PHASE 1 — 私有母库只读实体审计 — DONE
-
-170 documents、archive、incoming、inventory、pending、knowledge 初步身份映射已完成；重复、历史版本、派生物、legacy 引用已分类。
+170 documents、archive、incoming、inventory、pending、knowledge 初步身份映射完成。
 
 ### PHASE 2 — 母库整理方案与安全变更清单 — DONE
-
-FTS 修复与身份归并分批、备份/回滚门禁、私有母库维护脚本和测试已建立，PR #32 已合并并通过 CI。
+修复/归并分批、备份回滚门禁、维护工具和测试已建立。
 
 ### PHASE 3 — 私有母库实际修复与确定性去重 — DONE
+FTS 修复和完整 document mapping 已闭环；暂不执行非必要物理去重。
 
-FTS rebuild 已由本机执行并由总控以云盘同字节文件独立复核；170 documents 的 exact-SHA、same-real-version alias、真实不同版本、knowledge gaps、38 条 legacy `evidence/...` 迁移矩阵已经完成并落入 `docs/PRIVATE_LIBRARY_DOCUMENT_MAPPING_20260914.md`。
+### PHASE 4 — `knowledge/` 法规身份/版本 canonical 化 — DONE
+六个 private canonical gaps 已正式纳管，危险化学品目录修订链已显式建模，private alias 已全部映射 knowledge canonical；PR #36 CI Validate/Build 已成功。
 
-当前选择是**先不做物理 DELETE / archive 移动**：身份层已经可确定性解释，物理压缩不是进入 PHASE 4 的前置条件。任何后续 SQLite 物理去重仍须另开高风险批次。
+### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — IN PROGRESS
+逐项解释当前正式、当前候选、历史实体、合并别名、目标外实体、目标缺失/待判断，不靠总数猜重复。
 
-### PHASE 4 — `knowledge/` 法规身份/版本 canonical 化 — IN PROGRESS
-
-按真实法规身份、文号、发布机关、效力时间处理。同版本多来源归一 canonical version；真实不同版本分别保留；旧 ID 保留追溯。
-
-当前优先补齐 PHASE 3 已确认的 6 个 canonical gaps，并先处理 `危险化学品目录（2015版）` 的 2015 base + 2022/2026 调整关系，避免把历史静态文本误标为当前完整版本。
-
-### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — PENDING
-
-逐项解释当前正式、当前候选、历史实体、合并别名、待判断，不靠总数猜重复。
-
-### PHASE 6 — 512 条候选法规证据回绑与转正 — PENDING
-
-按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。
+### PHASE 6 — 候选法规证据回绑与转正 — PENDING
+按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。候选数量以 PHASE 5 对账后的实时结果为准，不再机械沿用旧 512 总数。
 
 ### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING
-
 publication 只挂来源；正式法规数由 knowledge 决定。
 
 ### PHASE 8 — 前端与本地私有版一致性验收 — PENDING
-
 公网只显示正式数据；本地版加载私有全文；canonical 化不得导致全文链接或 archive_ref 失联。
 
 ### PHASE 9 — 全量验证与 Release Candidate — PENDING
+至少运行 `validate_all.py`、`strict_release_audit.py`、统一 release build/verify、pipeline unit tests、node tests、local release build。
 
-至少运行：
-
-```text
-py -3 tools/v4/validate_all.py
-py -3 tools/v4/strict_release_audit.py
-py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
-py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
-py -3 -m unittest discover -s tools/pipeline/tests -v
-node --test tests/*.test.mjs
-py -3 tools/build_local_release.py
-```
-
-### PHASE 10 — 合并 main、GitHub Pages 部署、线上验收 — PENDING
-
+### PHASE 10 — 最终合并 main、GitHub Pages 部署、线上验收 — PENDING
 工作分支 PR → CI 全绿 → 合并 main → main Validate/Build/Deploy success → 线上抽检。
 
 ### PHASE 11 — 长期维护循环 — PENDING
-
 新法规/版本先入私有证据层，核身份/版本/效力后更新 knowledge；SQLite 定期备份/integrity；每个实质阶段更新本文件。
 
 ---
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 4 — `knowledge/` 法规身份/版本 canonical 化。**
+**PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集逐项对账。**
 
-PHASE 3 的只读 document mapping 已闭环；当前不需要 Luna。总控直接继续做法规身份、版本、修订/替代关系、官方来源与 `knowledge` canonical 设计。
+PHASE 4 的法规 canonical 决策、正式 knowledge 数据、verified reviews、private alias 回填和 CI 验收已经完成。当前不需要 Luna；总控直接读取仓库/Drive 中 2026-09-14 revised workbook 的 staging/mapping 数据和 2,014 个 knowledge hazards 做确定性对账。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **总控先补齐 PHASE 3 确认的 6 个 `knowledge` canonical gaps：`危险化学品目录（2015版）`、`各类监控化学品名录`、`GB 17914-2013`、`GB 17915-2013`、`GB 17916-2013`、`特种设备安全监察条例（2009修订）`。逐个先查重现有 `knowledge`，再按现有 schema 建/复用 law identity、law version、官方 source/evidence 与必要 succession；其中危险化学品目录必须按 2015 base + 2022/2026 调整建模。完成后运行 knowledge/全量 Gate，并把 6 个 private alias group 回填到正式 canonical ID。暂不做 SQLite 物理 DELETE，不动 candidate 发布边界。**
+> **总控先定位 1,929 目标 ID 的权威 staging/mapping 来源，逐项与 `knowledge/hazards` 2,014 实体做 ID/mergedInto/alias/lifecycle/review 状态对账，输出完整 reconciliation，不以 `2014-1929=85` 反推“重复”。每个 knowledge hazard 和每个目标 ID 都必须有唯一解释。**
 
 执行顺序：
 
-1. 逐项扫描现有 `knowledge/laws`、`law-versions`、`evidence`、`successions`，确认无同一真实版本的隐藏重复；
-2. 先建 5 个直接 canonical gap（监控化学品名录、GB 17914/17915/17916、特种设备安全监察条例）；
-3. 单独设计并核验 `危险化学品目录（2015版）` 的修订链，至少覆盖 2015年第5号、2022年第8号、2026年第3号；
-4. 回填/更新 private alias mapping 的 canonicalVersionId，仅在 identity 确认后写；
-5. 运行 validators / strict audit / relevant unit tests；
-6. 更新本文件并自动推进到 PHASE 5，除非 Gate、证据或版本关系出现阻塞。
+1. 定位并固定 2026-09-14 revised workbook 的 1,929 唯一目标 ID 清单及 staging 映射来源；
+2. 全量读取 `knowledge/hazards` 的 `id / title / aliases / lifecycle / mergedInto` 与 hazard review 决策；
+3. 逐项分类：`target-current`、`target-proposed`、`target-merged-alias`、`knowledge-extra-historical/non-target`、`target-missing`、`needs-review`；
+4. 对 621 修订、1,308 保留分别核对实际实体去向，不因标题近似自动合并；
+5. 输出机器可读 mapping + 人类审计报告，明确 2,014 与 1,929 差额的逐实体解释；
+6. Gate/一致性检查通过后更新本文件并自动推进 PHASE 6。
+
+PR #36 只收口 PHASE 3/4。完成本次 handoff 更新后重新等 CI，全绿即合并；PHASE 5 实质数据工作从最新 `main` 新开分支继续。
 
 ---
 
@@ -307,15 +240,7 @@ PHASE 3 的只读 document mapping 已闭环；当前不需要 Luna。总控直�
 
 高风险必须先备份和验证：写工作 SQLite、删除/移动 archive、合并 documents、删除 knowledge 正式实体、改稳定 ID、大批量正式条款/关联修改。
 
-出现以下任一条件立即停止并回滚/调查：
-
-- documents 数意外变化；
-- FTS 行数或 paragraphCountSum 意外变化；
-- 全文内容摘要变化；
-- 任一 document FTS 行数与 `paragraph_count` 不一致；
-- 本地全文检索明显缺失；
-- archive_ref 缺失或 SHA 不一致；
-- canonical 合并会丢失法规版本、来源或证据链。
+出现以下任一条件立即停止并回滚/调查：documents 数意外变化；FTS/paragraphCountSum 意外变化；全文内容摘要变化；逐 document FTS 不一致；全文检索明显缺失；archive_ref/SHA 失联；canonical 合并丢版本/来源/证据链。
 
 ---
 
