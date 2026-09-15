@@ -4,7 +4,7 @@
 
 在线站点：<https://an-0726.github.io/safety-basis/>
 
-> **AI / Codex / 新窗口接手：先读根目录 [`AGENTS.md`](AGENTS.md)。** `AGENTS.md` 是跨窗口的当前任务与接手记忆；本 README 负责长期架构、数据口径和维护硬规则。当前只认 `main` 一条主线、`knowledge/` 一套正式结构化知识源、`source/library/` 一套本地私有证据库。历史“final/latest/日期版”不留在当前目录树，需要追溯时看 Git。
+> **AI / Codex / 新窗口接手：先读根目录 [`AGENTS.md`](AGENTS.md)。** `AGENTS.md` 维护长期工作边界；[PROJECT_STATE](docs/PROJECT_STATE.md) 维护阶段进度与暂停状态；本 README 负责长期架构、数据口径和维护硬规则。当前只认 `main` 一条主线、`knowledge/` 一套正式结构化知识源、`source/library/` 一套本地私有证据库。历史“final/latest/日期版”不留在当前目录树，需要追溯时看 Git。
 
 ## 一、当前唯一架构
 
@@ -113,7 +113,7 @@ GitHub Pages / dist/local public
 - 当前正式发布：1,409 / 55 / 1,193 / 1,524（隐患 / 实际引用法规版本 / 条款 / 关联）；
 - 当前 proposed：519（目标集内 512、目标集外 7），仅后台；
 - publication：公开来源/题录资料层，不等于正式法规数；
-- 私有全文当前已核：170 份全文、215,326 个检索段落；更细的母库审计状态见 `AGENTS.md`。
+- 私有全文当前已核：170 份全文、215,326 个检索段落；更细的母库审计状态见 `docs/PROJECT_STATE.md`。
 
 旧批次“1250”、Excel“1929”、knowledge“2014”、publication 目录数、旧法规卡“223”不能互相当成同一种“数据库总数”。
 
@@ -149,7 +149,7 @@ py -3 tools/build_local_release.py
 
 只维护以下当前文档：
 
-- `AGENTS.md`：AI / 新窗口的唯一当前任务与接手记忆；
+- `AGENTS.md`：长期工作边界；`docs/PROJECT_STATE.md`：唯一阶段状态与恢复计划；
 - `README.md`：项目入口和维护硬规则；
 - `docs/ARCHITECTURE.md`：架构；
 - `docs/MAINTENANCE.md`：日常维护；
@@ -185,10 +185,10 @@ node --test tests/*.test.mjs
 - 严格审计 blocker 现在真正阻断 CI；
 - 删除 Git 中旧 `source/releases/current/` 与旧 selection 快照，改为现场确定性生成；
 - 本地构建同步改为先重建正式公开包，再只读组合私有全文；
-- 新增根 `AGENTS.md` 作为跨聊天窗口的长期接手记忆，任何实质阶段结束前必须更新其中的当前状态和下一步；
+- 新增根 `AGENTS.md` 作为跨聊天窗口的长期接手记忆，阶段状态已迁移至 `docs/PROJECT_STATE.md`，仅实际阶段变化时更新；
 - **未修改私有法规母库、PDF、SQLite、OCR 和稳定 ID。**
 
-以后任何影响架构、数据口径、法规归并、候选策略、发布范围、本地母库位置或停用工具的改动，都必须同步更新本 README；任何影响“当前做到哪/下一步做什么”的实质进展必须同步更新 `AGENTS.md`。提交说明写清：**改了什么、为什么改、影响哪些数据、是否需要重新审核/重建。**
+以后任何影响架构、数据口径、法规归并、候选策略、发布范围、本地母库位置或停用工具的改动，都必须同步更新本 README；实际改变阶段状态或下一步的进展更新 `docs/PROJECT_STATE.md`。提交说明写清：**改了什么、为什么改、影响哪些数据、是否需要重新审核/重建。**
 
 ## 十二、隐私与许可证
 
