@@ -205,7 +205,7 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 **PHASE 5 数据工作与 Git 交付闭环 DONE。** PR #38 已合并到 `main`，合并后的 Validate / Build 已成功；本次接续从 `main@88cc7f7` 建立 `phase6-candidate-evidence-backlog-20260916`。PHASE 6 第一轮确定性 backlog 已生成并复跑稳定：519 条全部覆盖，505 条工作簿修订待重绑、7 条题录线索不足、6 条拒绝关联待重绑、1 条目标外无关联。进一步按“修订表直接依据 + 当前 Gate 条款”筛出 110 条可复用条款候选，其中 38 条 hazard review 当前 hash 已验证、72 条需先补 hazard review。候选仍保持 `proposed`，不修改稳定 ID、不写私有 SQLite。
 
-PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交、分支推送、PR #38、CI 和 main 合并验证。PHASE 6 先从 519 条 `proposed` 的 hazard/review/link/clause/evidence 状态读取与确定性分组开始；证据不足继续 `proposed`。
+PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交、分支推送、PR #38、CI 和 main 合并验证。PHASE 6 已完成 519 条 `proposed` 的 hazard/review/link/clause/evidence 确定性分组，并对 110 条可复用当前条款候选完成选择；第一人工批 `GB 50187-2012` 预审 11 条，其中 10 条可继续做适用性核验、1 条需先重绑。证据不足继续 `proposed`。
 
 ---
 
@@ -215,8 +215,8 @@ PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交�
 
 执行顺序：
 
-1. 从 `docs/phase6-reuse-candidates.jsonl` 选择第一人工批 38 条候选；
-2. 逐项核对法规身份、适用版本、条款原文、原始证据和项目适用性；
+1. 按 `docs/PHASE6_BATCH_GB50187_REVIEW.md` 补齐 10 条候选的项目事实与适用性，并处理 1 条需重绑项；
+2. 在获得批量正式关联写入授权后，建立 direct/fallback link 和当前上下文 review；
 3. 只有完整 Gate 通过后才另开转正批次，否则保持 `proposed` 并记录待核原因；
 4. 完成 PHASE 6 批次后，再单独安排 PR/CI/Pages/线上验收闭环。
 
