@@ -28,6 +28,8 @@ jobs:
         run: |
           python tools/v4/validate_all.py
           python tools/v4/strict_release_audit.py
+      - name: Audit publication source mappings
+        run: python tools/v4/audit_publication.py
       - name: Rebuild and verify a fresh current release
         shell: bash
         run: |
