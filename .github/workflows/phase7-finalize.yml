@@ -1,76 +1,85 @@
-name: Phase 7 publication finalization
+name: Phase 7 state closure
 
 on:
   push:
     branches:
       - phase7-publication-source-hygiene-20260916
     paths:
-      - .phase7-finalize-trigger
+      - .phase7-state-trigger
 
 permissions:
   contents: write
 
 jobs:
-  finalize:
+  close-state:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: python -m pip install -r tools/pipeline/requirements.txt
-
-      - name: Apply PHASE 7 publication canonicalization
-        run: python tools/maintenance/finalize_phase7_publication.py --apply
-
-      - name: Verify governed knowledge was not changed
-        run: git diff --exit-code -- knowledge
-
-      - name: Validate knowledge graph and release gate
-        run: |
-          python tools/v4/validate_all.py
-          python tools/v4/strict_release_audit.py
-
-      - name: Run compatibility and pipeline tests
-        run: |
-          node --test tests/*.test.mjs
-          python -m unittest discover -s tools/pipeline/tests -v
-
-      - name: Rebuild and verify fresh current bundle
+      - name: Mark PHASE 7 complete and pause before PHASE 8
         shell: bash
         run: |
-          rm -rf source/releases/current source/releases/site-selection.json
-          DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}.phase7"
-          python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
           python - <<'PY'
-          import json
           from pathlib import Path
-          release=json.loads(Path('source/releases/current/release.json').read_text(encoding='utf-8'))
-          Path('source/releases/site-selection.json').write_text(
-              json.dumps({
-                  'schemaVersion':'safety-site-selection-v1',
-                  'bundle':'current',
-                  'releaseHash':release['releaseHash']
-              }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-          PY
-          python tools/v4/verify_unified_bundle.py --bundle source/releases/current
+          import re
 
-      - name: Commit PHASE 7 publication source changes only
+          path = Path('docs/PROJECT_STATE.md')
+          text = path.read_text(encoding='utf-8')
+
+          def replace_once(old, new):
+              global text
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'expected one match, got {count}: {old[:80]}')
+              text = text.replace(old, new)
+
+          replace_once(
+              '本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 的 PHASE 5 Git 交付闭环与 PHASE 6 候选证据回绑最终状态。历史统计数字仍按对应阶段记录；PHASE 6 新统计单独明确标注，不将工作分支结果冒充已经合并发布的 `main` 结果。',
+              '本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑和 PHASE 7 publication 来源归整最终状态。历史统计数字仍按对应阶段记录；工作分支新统计单独明确标注，不将未合并结果冒充已经发布的 `main` 结果。'
+          )
+          replace_once(
+              '**PHASE 6 已按用户明确授权全部完成，当前暂停。** PHASE 7 尚未启动；没有新的明确授权，不继续 publication 整理、前端验收、Release Candidate、PR 合并、Pages 部署或线上发布。',
+              '**PHASE 7 已按用户明确授权全部完成，当前暂停。** PHASE 8 尚未启动；没有新的明确授权，不继续前端/本地私有版一致性验收、Release Candidate、PR 合并、Pages 部署或线上发布。'
+          )
+          replace_once(
+              '**LAST VERIFIED：2026-09-16（PHASE 6 工作分支）；`main` 正式发布基线仍停留在 PHASE 5。**',
+              '**LAST VERIFIED：2026-09-16（PHASE 7 工作分支）；`main` 正式发布基线仍停留在 PHASE 5。**'
+          )
+          replace_once(
+              '当前 Git 唯一正式主线仍为 `main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。PHASE 6 当前位于工作分支 `phase6-candidate-evidence-backlog-20260916`，尚未创建/合并 PHASE 6 PR，尚未部署 Pages 或做线上发布。',
+              '当前 Git 唯一正式主线仍为 `main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。PHASE 6/7 连续工作成果当前位于分支 `phase7-publication-source-hygiene-20260916`，尚未创建/合并对应 PR，尚未部署 Pages 或做线上发布。'
+          )
+          replace_once('### PHASE 6 工作分支最新 knowledge 状态', '### PHASE 7 工作分支继承的最新 knowledge 状态')
+          replace_once(
+              '- PHASE 6 工作分支：完成 519 条候选最终处置、20 条正式回绑、499 条证据不足保留 proposed；尚未建立 PHASE 6 PR。',
+              '- PHASE 6 工作分支：完成 519 条候选最终处置、20 条正式回绑、499 条证据不足保留 proposed；\n- PHASE 7 工作分支：publication 题录已 canonical 化为 106 个 law-version 行，全文目录收口为 69 个 canonical 来源关系，审计与验证全部通过；尚未建立 PHASE 6/7 PR。'
+          )
+          anchor = '- 本批未写私有 SQLite/FTS/archive，未修改既有 hazard 稳定 ID，未合并 PR，未部署 Pages，未做线上发布；一次性 workflow 与 trigger 在成功后已从分支清理。\n'
+          phase7 = '''\n### PHASE 7：publication / 官方来源 / 全文资料归整 — PASS\n\n完整人类报告：`docs/PHASE7_PUBLICATION_AUDIT.md`；机器审计：`docs/phase7-publication-audit.json`；可重复执行工具：`tools/maintenance/finalize_phase7_publication.py`。\n\n- `source/publication/law-index.json` 从 216 行归整为 **106 个 canonical law-version 行**，与 `knowledge/law-versions` 形成 1:1 身份投影；publication 不再创建第二套法规/版本身份；\n- 清理 144 个 stale publication IDs，并在需要时通过 canonical ID、精确官方 URL 或“唯一官方名称 + 生效日期”解析到现有 knowledge 版本，不按标题相似猜测；\n- 全文 catalog 从 155 行收口为 **69 个 canonical 来源关系**：其中 **11 份**明确 `official_legal_text` 且 `fullTextReviewed=true` 的获准官方全文继续公开，**58 个**只保留 metadata-only 官方入口；\n- 86 个无法解析到 governed knowledge identity 的旧全文目录行退出 public catalog；对应 publication 文本/索引作为可重建派生物清理，不触碰私有原件、SQLite、OCR 或 archive；\n- 全文搜索索引确定性重建为 **256 个 gram shards**；proposed hazard 泄漏 **0**，private-boundary marker 泄漏 **0**；\n- `knowledge/` 未修改，知识库存继续保持 **103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**，hazard lifecycle 继续为 **1,429 active / 499 proposed / 86 superseded**；\n- 一次性 PHASE 7 workflow run `35095422830` 已 `completed / success`；`validate_all.py`、`strict_release_audit.py`、Node tests、pipeline Python tests、fresh current bundle build 和 `verify_unified_bundle.py` 全部成功；\n- 本批未修改私有 SQLite/FTS/archive，未修改稳定 knowledge IDs，未提交 release/current 生成包，未合并 PR，未部署 Pages，未做线上发布。\n'''
+          if text.count(anchor) != 1:
+              raise SystemExit('phase6 close anchor mismatch')
+          text = text.replace(anchor, anchor + phase7)
+
+          replace_once(
+              '### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING / NOT STARTED\npublication 只挂来源；正式法规数由 knowledge 决定。**当前暂停，未获用户授权不得启动。**',
+              '### PHASE 7 — publication / 官方来源 / 全文资料归整 — DONE\npublication 已收口为 knowledge canonical 身份投影；题录、官方入口、获准全文与搜索索引边界完成归整，proposed/private 泄漏均为 0。'
+          )
+
+          current = '''## 6. CURRENT PHASE — 当前阶段\n\n**PHASE 7 DONE；PAUSED。**\n\n用户已明确授权“继续 PHASE 7 全部完成”。该授权现已完成：publication law index 已从 216 行收口为 106 个 canonical law-version 行；fulltext catalog 从 155 行收口为 69 个 canonical 来源关系，其中 11 份获准官方全文、58 个 metadata-only 官方入口；搜索 gram shards 已确定性重建为 256 个。\n\n当前工作分支 `phase7-publication-source-hygiene-20260916` 继承 PHASE 6 knowledge 状态，`knowledge/` 本阶段零修改：**1,429 active / 499 proposed / 86 superseded / 2,014 total**；manifest 继续为 **103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**。\n\nPHASE 7 自动验证 workflow run `35095422830` 已 `completed / success`，其中 publication canonicalization、knowledge 零修改检查、`validate_all.py`、`strict_release_audit.py`、Node tests、pipeline Python tests、fresh current release build 和 bundle verify 均成功。验证生成的 current release 仅用于工作流检查，没有提交为发布物，也没有触发 Pages/线上发布。\n\n本阶段没有修改私有 SQLite/FTS/archive，没有修改稳定 knowledge IDs，没有 merge PR，没有部署 Pages，没有线上发布。保留 `tools/maintenance/finalize_phase7_publication.py` 与 PHASE 7 人类/机器审计报告作为可重复执行和审计记录；一次性 workflow/trigger 在收尾后清理。\n\n---\n\n## 7. NEXT ACTION — 下一动作\n\n> **PAUSED。PHASE 8 尚未启动。下一动作仅在用户新的明确授权后执行：进入 PHASE 8 前端与本地私有版一致性验收。**\n\n如后续获授权，PHASE 8 从当前 PHASE 7 工作分支状态继续，不重新做 PHASE 7，也不改变 499 条 proposed 的隔离状态。重点验收公网只显示正式数据、本地版可加载私有全文，以及 canonical 化后全文链接或 `archive_ref` 不失联；Release Candidate、PR/合并、Pages 部署和线上验收仍属于后续独立阶段，不得自动越级执行。\n\n---\n'''
+          pattern = r'## 6\. CURRENT PHASE — 当前阶段\n.*?## 7\. NEXT ACTION — 下一动作\n.*?\n---\n'
+          text, n = re.subn(pattern, current, text, flags=re.S)
+          if n != 1:
+              raise SystemExit(f'current/next section replacement count={n}')
+
+          path.write_text(text, encoding='utf-8', newline='\n')
+          PY
+          git diff --check
+
+      - name: Commit PHASE 7 state closure
         shell: bash
         run: |
           git config user.name "phase7-finalizer"
           git config user.email "phase7-finalizer@users.noreply.github.com"
-          git add source/publication docs/PHASE7_PUBLICATION_AUDIT.md docs/phase7-publication-audit.json
-          if git diff --cached --quiet; then
-            echo "No PHASE 7 publication changes to commit"
-            exit 0
-          fi
-          if git diff --cached --name-only | grep -Ev '^(source/publication/|docs/PHASE7_PUBLICATION_AUDIT\.md$|docs/phase7-publication-audit\.json$)' ; then
-            echo "Unexpected staged path" >&2
-            exit 1
-          fi
-          git commit -m "Phase 7: canonicalize publication sources"
+          git add docs/PROJECT_STATE.md
+          git diff --cached --exit-code >/dev/null && { echo "No state change"; exit 1; } || true
+          git commit -m "Mark Phase 7 complete and pause"
           git push
