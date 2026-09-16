@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "phase8-private-audit-v1",
+  "asOf": "2026-09-16",
+  "status": "PASS",
+  "database": {
+    "bytes": 106958848,
+    "sha256": "7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629",
+    "documents": 170,
+    "ftsRows": 215326,
+    "paragraphCountSum": 215326,
+    "perDocumentFtsMismatches": 0
+  },
+  "archiveRefs": {
+    "archiveBackedDocumentRows": 132,
+    "uniqueArchiveHashes": 129,
+    "driveArchiveHashFoldersFound": 129,
+    "legacyEvidenceProvenanceRows": 38,
+    "unknownPrefixes": 0,
+    "archiveShaMismatches": 0
+  },
+  "aliases": {
+    "policyPurpose": "local_display_grouping_only",
+    "formalAuthority": "knowledge",
+    "databaseMutation": false,
+    "archiveMutation": false,
+    "groups": 18,
+    "memberDocumentKeys": 36,
+    "missingMembers": 0,
+    "canonicalVersionIds": 18,
+    "knowledgeUnmappedTitles": 0
+  },
+  "interpretation": {
+    "currentArchiveRefs": "All 129 unique archive SHA directories referenced by current archive/<sha>/original rows were found in the private Drive archive tree.",
+    "legacyEvidenceRefs": "The 38 evidence/... refs remain legacy provenance by design. The local viewer only emits an original-file link when the referenced file exists, so these rows are not converted into broken public/private links.",
+    "mutation": "Read-only audit only; SQLite, FTS and archive were not modified."
+  }
+}
