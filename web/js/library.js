@@ -6,7 +6,7 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;',
 const BASE = 'data/fulltext/';
 const cache = new Map();
 const verifiedFiles = new VerifiedFiles();
-let catalog, index, sequence = 0, selected = '';
+let catalog, index, sequence = 0, selected = '', formalLawIds = new Set();
 
 async function read(path) {
   if (!/^(catalog|search-index)\.json$|^texts\/[A-Za-z0-9_-]+\.json$|^grams\/[0-9a-f]{2}\.json$/.test(path)) throw new Error('目录中的文件路径无效');
@@ -117,7 +117,10 @@ async function showDocument(doc, hitLocation = '') {
   try {
     const text = doc.textMode === 'full_text' ? await read(doc.textPath) : null;
     if (selected !== doc.versionId) return;
-    $('#libraryDetail').innerHTML = `<div class="detailtop"><div class="eyebrow">${doc.textMode === 'full_text' ? '已收全文' : '官方链接'}</div><h2>${esc(doc.title)}</h2><p class="library-meta">${esc(statusLabel(doc.status))} · ${esc(doc.effectiveDate)} 施行<br>目录核验基准：${esc(catalog.asOf)}${text ? ` · ${text.paragraphs.length} 个原文段落` : ''}</p></div><div class="detailbody">${versionNotice(doc)}<section class="block">${officialLink(doc.officialUrl)}<a class="sourcecta" href="./?view=laws&amp;law=${encodeURIComponent(doc.versionId)}">查看收录条款与关联隐患 →</a></section><section class="block" id="textBody"></section></div>`;
+    const formalLawLink = formalLawIds.has(doc.versionId)
+      ? `<a class="sourcecta" href="./?view=laws&amp;law=${encodeURIComponent(doc.versionId)}">查看收录条款与关联隐患 →</a>`
+      : '';
+    $('#libraryDetail').innerHTML = `<div class="detailtop"><div class="eyebrow">${doc.textMode === 'full_text' ? '已收全文' : '官方链接'}</div><h2>${esc(doc.title)}</h2><p class="library-meta">${esc(statusLabel(doc.status))} · ${esc(doc.effectiveDate)} 施行<br>目录核验基准：${esc(catalog.asOf)}${text ? ` · ${text.paragraphs.length} 个原文段落` : ''}</p></div><div class="detailbody">${versionNotice(doc)}<section class="block">${officialLink(doc.officialUrl)}${formalLawLink}</section><section class="block" id="textBody"></section></div>`;
     if (!text) { $('#textBody').textContent = '本库尚未公开此文件的全文，请通过官方入口查阅。'; return; }
     const body = $('#textBody');
     let cursor = hitLocation ? Math.max(0, text.paragraphs.findIndex(row => row.location === hitLocation) - 2) : 0;
@@ -150,7 +153,10 @@ async function showDocument(doc, hitLocation = '') {
 async function boot() {
   try {
     await verifiedFiles.init({required:true});
+    const formalLawsPromise = verifiedFiles.read('data/law-index.json');
     [catalog, index] = await Promise.all([read('catalog.json'), read('search-index.json')]);
+    const formalLaws = await formalLawsPromise;
+    formalLawIds = new Set(formalLaws.map(row => row.id));
     if (catalog.schemaVersion !== 'safety-public-fulltext-v1' || index.schemaVersion !== 'safety-public-fulltext-search-v1') throw new Error('不支持的目录格式');
     const full = catalog.documents.filter(doc => doc.textMode === 'full_text').length;
     $('#libraryDate').textContent = `核验基准 ${catalog.asOf}`;
