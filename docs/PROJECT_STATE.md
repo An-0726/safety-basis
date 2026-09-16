@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-17 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整和 PHASE 8 前端/私有版一致性验收最终状态。历史统计数字仍按对应阶段记录；工作分支新统计单独明确标注，不将未合并结果冒充已经发布的 `main` 结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-17 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收和 PHASE 9 Release Candidate 全量验证最终状态。历史统计数字仍按对应阶段记录；工作分支新统计单独明确标注，不将未合并结果冒充已经发布的 `main` 结果。
 
-**PHASE 8 已按用户明确授权完成，当前暂停。** PHASE 9 尚未启动；没有新的明确授权，不继续 Release Candidate、PR 合并、Pages 部署或线上发布。
+**PHASE 9 已按用户明确授权完成，当前暂停。** PHASE 10 尚未启动；没有新的明确授权，不继续 PR 合并、Pages 部署或线上发布。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,9 +38,9 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-17（PHASE 8 工作分支）；`main` 正式发布基线仍停留在 PHASE 5。**
+**LAST VERIFIED：2026-09-17（PHASE 9 Release Candidate 工作分支）；`main` 正式发布基线仍停留在 PHASE 5。**
 
-当前 Git 唯一正式主线仍为 `main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。PHASE 6/7/8 连续工作成果当前位于分支 `phase8-frontend-private-consistency-20260916`，尚未创建/合并对应发布 PR，尚未部署 Pages 或做线上发布。
+当前 Git 唯一正式主线仍为 `main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。PHASE 6/7/8/9 连续工作成果当前位于分支 `phase9-release-candidate-20260917`，尚未创建/合并最终发布 PR，尚未部署 Pages 或做线上发布。
 
 公开发布架构已收口：
 
@@ -79,7 +79,8 @@ PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；�
 - PR #38：完成 PHASE 5 隐患目标集对账并已合并 main；
 - PHASE 6 工作分支：完成 519 条候选最终处置、20 条正式回绑、499 条证据不足保留 proposed；
 - PHASE 7 工作分支：publication 题录已 canonical 化为 106 个 law-version 行，全文目录收口为 69 个 canonical 来源关系，审计与验证全部通过；
-- PHASE 8 工作分支：公开前端、canonical 跳转和本地私有全文展示边界已验收；公开/私有审计均 PASS，最终 workflow run `35120861560` success；PHASE 6/7/8 尚未进入发布 PR。
+- PHASE 8 工作分支：公开前端、canonical 跳转和本地私有全文展示边界已验收；公开/私有审计均 PASS，最终 workflow run `35120861560` success；
+- PHASE 9 RC 工作分支：公共 RC 全量验证 workflow run `35122196162` success；同一 RC 源码快照结合真实私有 SQLite 完成本地最终版构建，输入库内容哈希不变；PHASE 6/7/8/9 尚未进入最终发布 PR。
 
 ---
 
@@ -206,6 +207,19 @@ PR #36 在 canonical 数据提交后已通过：
 - PHASE 8 finalizer workflow run `35120861560` 已 `completed / success`：frontend/private compatibility tests、`validate_all.py`、`strict_release_audit.py`、fresh current bundle build + verify、公开一致性审计、私有/公开边界检查、公开审计报告提交全部成功；
 - 本阶段没有修改 `knowledge/`、`source/publication/` 的业务数据，没有提交 `source/releases/current/` 生成物，没有 merge PR，没有部署 Pages，没有线上发布；一次性 PHASE 8 workflow/trigger 已在成功后清理。
 
+### PHASE 9：全量验证与 Release Candidate — PASS
+
+公开 RC 验收记录：`docs/phase9-rc-public.json`。
+
+- 工作分支：`phase9-release-candidate-20260917`；公共 RC 验证源提交为 `c74a0970f1cc64e5d2bad9944340304c171050f2`，workflow 自动记录提交为 `c58261f77d77ebe79e73e6f0385060caefab764c`；
+- GitHub Actions run `35122196162` 已 `completed / success`：Node tests、pipeline Python tests、`validate_all.py`、`strict_release_audit.py`、fresh unified release build、`verify_unified_bundle.py`、PHASE 8 regression audit 全部 PASS；
+- 公共 RC 保持 **1,429 hazards / 57 laws / 57 lawVersions / 1,205 clauses / 1,544 links**，strict blockers 0，knowledge 中 499 proposed 在公网仍为 0；publication 仍为 69 个 catalog documents（11 full text + 58 link-only）；
+- 使用 run `35122196162` 上传的同一 RC 源码快照，在本地接入真实私有 `fulltext.sqlite3` 与 `document-aliases.json` 后实际执行 `tools/build_local_release.py`，直接退出码 **0**；
+- 本地最终版生成成功：**170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / 36 canonical alias members**；生成 170 个法规全文页面及统一入口；
+- 私有 SQLite SHA-256 在构建前后均为 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`，alias 文件构建前后哈希也一致，确认本地构建只读、未修改私有库；
+- 本地重建公开包 verify PASS，releaseHash=`680089d53c1fe793bcc71f420093aa1080126e29e4c4d9b2a043849cf01209a9`；该哈希属于本地当日重建产物，不替代公共 RC 报告中的 GitHub Actions RC releaseHash；
+- 本阶段未修改 `knowledge/` 业务数据、未修改私有 SQLite/FTS/archive、未提交 `source/releases/current/` 生成物、未合并 main、未部署 Pages、未做线上验收。
+
 ---
 
 ## 5. MASTER ROADMAP
@@ -239,8 +253,8 @@ publication 已收口为 knowledge canonical 身份投影；题录、官方入�
 ### PHASE 8 — 前端与本地私有版一致性验收 — DONE
 公网仅投影正式 Gate 数据；source-only catalog 不生成错误正式法规跳转；本地私有版 canonical alias、全文和原始文件链接边界已验证；公开/私有审计均 PASS。
 
-### PHASE 9 — 全量验证与 Release Candidate — PENDING
-至少运行 `validate_all.py`、`strict_release_audit.py`、统一 release build/verify、pipeline unit tests、node tests、local release build。
+### PHASE 9 — 全量验证与 Release Candidate — DONE
+公共 RC workflow 与真实私有库 local release build 均已完成并 PASS；输入私有库哈希构建前后不变，proposed/private 发布边界保持不变。
 
 ### PHASE 10 — 最终合并 main、GitHub Pages 部署、线上验收 — PENDING
 工作分支 PR → CI 全绿 → 合并 main → main Validate/Build/Deploy success → 线上抽检。
@@ -252,24 +266,20 @@ publication 已收口为 knowledge canonical 身份投影；题录、官方入�
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 8 DONE；PAUSED。**
+**PHASE 9 DONE；PAUSED。**
 
-用户已明确要求从仓库真实全局状态继续，并确认不应停留在 PHASE 7。PHASE 8 现已完成：公开前端只展示正式 Gate 数据；source-only publication catalog 不再产生无效正式法规跳转；本地私有版使用 canonical alias 展示且不会把 legacy provenance 转成断链原件链接。
+当前工作分支为 `phase9-release-candidate-20260917`。公共 RC workflow run `35122196162` 已成功，`docs/phase9-rc-public.json` 已记录 Node/pipeline tests、完整 Gate、fresh bundle build/verify 和 PHASE 8 regression audit 全部 PASS。公共投影仍为 **1,429 hazards / 1,205 clauses / 57 formal law versions / 1,544 links**，499 proposed 保持公网 0。
 
-当前工作分支 `phase8-frontend-private-consistency-20260916` 继承 PHASE 6/7 的业务数据，`knowledge/` 在 PHASE 8 零修改：**1,429 active / 499 proposed / 86 superseded / 2,014 total**；manifest 继续为 **103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**。
+同一 RC 源码快照已用真实私有 SQLite 完成本地最终版重建：**170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / 36 canonical alias members**，`tools/build_local_release.py` 直接退出码 0。SQLite SHA-256 构建前后均为 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`，alias 文件亦未变化，确认只读。
 
-公开审计 `docs/phase8-public-audit.json` 为 PASS：1,429 public hazards、1,205 public clauses、57 formal law versions、69 catalog documents（11 full text + 58 link-only），499 proposed 保持 public 0，private boundary marker hits 为空。私有审计 `docs/phase8-private-audit.json` 为 PASS：170 documents / 215,326 FTS rows 与 paragraph sum 一致，129/129 current archive SHA folders 找到，18 组 alias 无缺员/无 knowledge unmapped title，且只读未修改 SQLite/FTS/archive。
-
-最终一次性 workflow run `35120861560` 已 `completed / success`，受影响测试、严格 Gate、fresh bundle 构建/校验、公开一致性审计和边界检查全部通过。成功后 PHASE 8 的一次性 workflow/trigger 已清理。误从过期 PHASE 6/7 状态创建的 Draft PR #39 已关闭且未合并，避免重复 Phase 7 工作。
-
-本阶段没有发布 Release Candidate，没有合并 PHASE 6/7/8 到 main，没有部署 Pages，没有做线上验收。
+PHASE 9 没有改变 `knowledge/`、publication 业务数据或私有库内容；没有合并 main、没有部署 Pages、没有线上验收。PHASE 10 必须等待新的明确授权。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **PAUSED。PHASE 9 尚未启动。下一动作仅在用户新的明确授权后执行：进入 PHASE 9 全量验证与 Release Candidate。**
+> **PAUSED。PHASE 9 已完成。下一动作仅在用户新的明确授权后执行：进入 PHASE 10，创建/核对最终发布 PR，等待 CI 全绿后合并 main，再执行 GitHub Pages 部署与线上验收。**
 
-如后续获授权，PHASE 9 从当前 `phase8-frontend-private-consistency-20260916` 的已验证状态继续，不重新做 PHASE 6/7/8，也不改变 499 条 proposed 的隔离状态。至少完成 `validate_all.py`、`strict_release_audit.py`、统一 release build/verify、pipeline unit tests、Node tests 与 local release build，并形成明确的 Release Candidate 验收记录。PR/合并 main、Pages 部署和线上验收仍属于 PHASE 10，不得自动越级执行。
+PHASE 10 开始前不得重新解释或重做 PHASE 6/7/8/9，也不得改变 499 条 proposed 的隔离状态。当前 RC 已完成公共与私有本地双重验证；下一阶段只负责最终合并、main CI/Build/Deploy 和线上抽检。
 
 ---
