@@ -4,8 +4,8 @@
   "reviewType": "applicability",
   "decision": "rejected",
   "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "checkedAt": "2026-09-11T07:42:00+08:00",
-  "reason": "驳回原direct判断。C_4cc8db7da64889234b1417aa为GB 50054-2011第6.1.1条，规定的是配电线路短路保护和过负荷保护，不涉及配电柜柜门保持常闭。当前隐患缺少与其直接对应的现行技术条款，在补入正确标准前不得公开。",
+  "checkedAt": "2026-09-14",
+  "reason": "驳回原direct判断。C_4cc8db7da64889234b1417aa为GB 50054-2011第6.1.1条，规定的是配电线路短路保护和过负荷保护，不涉及配电柜柜门保持常闭。当前隐患缺少与其直接对应的现行技术条款，在补入正确标准前不得公开。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
   "reasonCodes": [
     "CLAUSE_SCOPE_MISMATCH",
     "DIRECT_ROLE_REJECTED",
@@ -13,9 +13,11 @@
   ],
   "reviewedContentHash": "8557b83cad5a58c5952f707bd9af3bae143ca27964f6be46cf5e5208763be669",
   "contextHashes": {
-    "hazard": "86ace368b5678421f404138fea43bc8dc32d373f7e3c54b91800b92113ca4745",
+    "hazard": "3ef15b777469b68f08fd2551d7bf3c735c4c4f48f2f62c89b2da6dc700be7974",
     "clause": "48a8e26582b5890787bf7cc96d78459a40bb86cb169e2cd956d0f4585faf5419",
     "link": "8557b83cad5a58c5952f707bd9af3bae143ca27964f6be46cf5e5208763be669"
   },
-  "evidenceRefs": []
+  "evidenceRefs": [],
+  "phase5ReconciledAt": "2026-09-14",
+  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914"
 }
