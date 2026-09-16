@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的核验记录和阶段计划；2026-09-15 仅重组指令，未重新核验业务数据、CI或线上状态。引用数字不可称为今天的重新核验结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 的 Git 交付闭环与阶段接续状态。业务统计数字仍引用 PHASE 5 已核验记录；除明确标注外，不将其表述为重新抽取结果。
 
-**当前仍按用户要求暂停。** 阅读、审计、修改文档不构成恢复项目。只有用户明确要求恢复相关阶段时，才先核对实际 Git/CI/证据状态，再按其授权范围采用下列计划；计划不是持续执行全部路线图的授权。
+**项目已按用户明确指令恢复。** 本次接续仅推进 PHASE 6 候选证据回绑的确定性盘点；计划不是持续执行全部路线图的授权。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -40,7 +40,7 @@
 
 **LAST VERIFIED：2026-09-14**
 
-当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）。PHASE 5 工作分支 `phase5-hazard-reconciliation-20260914` 已提交并推送；当前浏览器未登录 GitHub，PR/CI/合并尚未执行，用户授权恢复交付时，先核对并完成该交付闭环。
+当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。合并后的 `main` Validate / Build 已成功；Pages 部署与线上抽检尚未在本次接续中重新核验。
 
 公开发布架构已收口：
 
@@ -181,7 +181,7 @@ FTS 修复和完整 document mapping 已闭环；暂不执行非必要物理去�
 ### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — DONE
 完整机器映射和人类报告已生成；目标缺失 0，85 条目标外实体已逐项分类，24 个状态/标题差异已闭环，Gate 和正式包验证通过。
 
-### PHASE 6 — 候选法规证据回绑与转正 — PENDING
+### PHASE 6 — 候选法规证据回绑与转正 — IN PROGRESS
 按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。当前实时候选为 519 条（目标集内 512、目标集外 7）。
 
 ### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING
@@ -203,23 +203,21 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 5 数据工作 DONE、交付闭环待完成；按用户要求暂停。PHASE 6 尚未开始。**
+**PHASE 5 数据工作与 Git 交付闭环 DONE。** PR #38 已合并到 `main`，合并后的 Validate / Build 已成功；本次接续从 `main@88cc7f7` 建立 `phase6-candidate-evidence-backlog-20260916`。PHASE 6 第一轮确定性 backlog 已生成并复跑稳定：519 条全部覆盖，505 条工作簿修订待重绑、7 条题录线索不足、6 条拒绝关联待重绑、1 条目标外无关联。候选仍保持 `proposed`，不修改稳定 ID、不写私有 SQLite。
 
-PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交与分支推送。本次会话收口后暂停，不进入 PHASE 6 实质回绑。恢复时先为 `phase5-hazard-reconciliation-20260914` 创建 PR，等待 CI 全绿并合并 main；随后再从 519 条 proposed 的证据链缺口盘点开始。
+PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交、分支推送、PR #38、CI 和 main 合并验证。PHASE 6 先从 519 条 `proposed` 的 hazard/review/link/clause/evidence 状态读取与确定性分组开始；证据不足继续 `proposed`。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **恢复工作后先完成 PHASE 5 Git 交付：为 `phase5-hazard-reconciliation-20260914` 创建 PR，确认 Validate/Build CI 全绿后合并 main，并确认 main 校验成功。完成后再进入 PHASE 6：对 519 条 proposed 按证据链缺口做确定性分组，证据不足不得转正。**
+> **当前动作：从已生成的 519 条确定性 backlog 中选择第一批证据最完整、可复用已核验条款的候选，逐项回到官方原文/原始证据核验；证据不足继续 `proposed`。**
 
 执行顺序：
 
-1. 创建 PHASE 5 PR，等待 Validate/Build CI；
-2. CI 全绿后合并 main，并核验 main；
-3. 全量读取 519 条 proposed 的 hazard/review/link/clause/evidence 状态；
-4. 按证据链缺口和目标内/目标外范围分组；
-5. 输出机器可读 backlog 与人类摘要，不改法规事实；
-6. 选取证据最完整、可复用已核验条款的第一批候选，逐项核验后再决定是否转正。
+1. 从 `docs/phase6-candidate-backlog.jsonl` 选择第一批候选；
+2. 逐项核对法规身份、适用版本、条款原文、原始证据和项目适用性；
+3. 只有完整 Gate 通过后才另开转正批次，否则保持 `proposed` 并记录待核原因；
+4. 完成 PHASE 6 批次后，再单独安排 PR/CI/Pages/线上验收闭环。
 
 ---
