@@ -1,0 +1,84 @@
+name: Phase 8 frontend and private consistency
+
+on:
+  push:
+    branches:
+      - phase8-frontend-private-consistency-20260916
+    paths:
+      - .phase8-validate-trigger
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r tools/pipeline/requirements.txt
+
+      - name: Align fulltext navigation with formal law index
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('web/js/library.js')
+          text = p.read_text(encoding='utf-8')
+          replacements = [
+              ("let catalog, index, sequence = 0, selected = '';",
+               "let catalog, index, formalLawIds = new Set(), sequence = 0, selected = '';"),
+              ("    $('#libraryDetail').innerHTML = `<div class=\"detailtop\"><div class=\"eyebrow\">${doc.textMode === 'full_text' ? '已收全文' : '官方链接'}</div><h2>${esc(doc.title)}</h2><p class=\"library-meta\">${esc(statusLabel(doc.status))} · ${esc(doc.effectiveDate)} 施行<br>目录核验基准：${esc(catalog.asOf)}${text ? ` · ${text.paragraphs.length} 个原文段落` : ''}</p></div><div class=\"detailbody\">${versionNotice(doc)}<section class=\"block\">${officialLink(doc.officialUrl)}<a class=\"sourcecta\" href=\"./?view=laws&amp;law=${encodeURIComponent(doc.versionId)}\">查看收录条款与关联隐患 →</a></section><section class=\"block\" id=\"textBody\"></section></div>`;",
+               "    const formalLawLink = formalLawIds.has(doc.versionId)\n      ? `<a class=\"sourcecta\" href=\"./?view=laws&amp;law=${encodeURIComponent(doc.versionId)}\">查看收录条款与关联隐患 →</a>`\n      : '<span class=\"library-meta\">当前资料仅作为全文/官方入口，未进入当前正式法规索引。</span>';\n    $('#libraryDetail').innerHTML = `<div class=\"detailtop\"><div class=\"eyebrow\">${doc.textMode === 'full_text' ? '已收全文' : '官方链接'}</div><h2>${esc(doc.title)}</h2><p class=\"library-meta\">${esc(statusLabel(doc.status))} · ${esc(doc.effectiveDate)} 施行<br>目录核验基准：${esc(catalog.asOf)}${text ? ` · ${text.paragraphs.length} 个原文段落` : ''}</p></div><div class=\"detailbody\">${versionNotice(doc)}<section class=\"block\">${officialLink(doc.officialUrl)}${formalLawLink}</section><section class=\"block\" id=\"textBody\"></section></div>`;"),
+              ("    [catalog, index] = await Promise.all([read('catalog.json'), read('search-index.json')]);",
+               "    [catalog, index, formalLawIds] = await Promise.all([\n      read('catalog.json'),\n      read('search-index.json'),\n      verifiedFiles.read('data/law-index.json').then(rows => new Set(rows.map(row => row.id)))\n    ]);")
+          ]
+          for old, new in replacements:
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'expected one replacement match, got {count}: {old[:100]}')
+              text = text.replace(old, new)
+          p.write_text(text, encoding='utf-8', newline='\n')
+          PY
+          git diff --check
+
+      - name: Validate knowledge graph and compatibility tests
+        run: |
+          node --test tests/*.test.mjs
+          python -m unittest discover -s tools/pipeline/tests -v
+          python tools/v4/validate_all.py
+          python tools/v4/strict_release_audit.py
+
+      - name: Build and verify fresh public bundle
+        shell: bash
+        run: |
+          rm -rf source/releases/current source/releases/site-selection.json
+          DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}.phase8"
+          python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/current
+          python tools/maintenance/audit_phase8_consistency.py --bundle source/releases/current --output docs/phase8-public-audit.json
+
+      - name: Ensure governed knowledge and publication sources were not mutated
+        run: git diff --exit-code -- knowledge source/publication
+
+      - name: Commit Phase 8 frontend fix and public audit
+        shell: bash
+        run: |
+          git config user.name "phase8-finalizer"
+          git config user.email "phase8-finalizer@users.noreply.github.com"
+          git add web/js/library.js docs/phase8-public-audit.json
+          if git diff --cached --quiet; then
+            echo "No Phase 8 changes to commit"
+            exit 1
+          fi
+          if git diff --cached --name-only | grep -Ev '^(web/js/library\.js|docs/phase8-public-audit\.json)$'; then
+            echo "Unexpected staged path" >&2
+            exit 1
+          fi
+          git commit -m "Phase 8: align frontend and audit public boundary"
+          git push
