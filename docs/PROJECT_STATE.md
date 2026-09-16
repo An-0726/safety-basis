@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的核验记录和阶段计划；2026-09-15 仅重组指令，未重新核验业务数据、CI或线上状态。引用数字不可称为今天的重新核验结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-17 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收和 PHASE 9 Release Candidate 全量验证最终状态。历史统计数字仍按对应阶段记录；工作分支新统计单独明确标注，不将未合并结果冒充已经发布的 `main` 结果。
 
-**当前仍按用户要求暂停。** 阅读、审计、修改文档不构成恢复项目。只有用户明确要求恢复相关阶段时，才先核对实际 Git/CI/证据状态，再按其授权范围采用下列计划；计划不是持续执行全部路线图的授权。
+**PHASE 9 已按用户明确授权完成，当前暂停。** PHASE 10 尚未启动；没有新的明确授权，不继续 PR 合并、Pages 部署或线上发布。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,9 +38,9 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-14**
+**LAST VERIFIED：2026-09-17（PHASE 9 Release Candidate 工作分支）；`main` 正式发布基线仍停留在 PHASE 5。**
 
-当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）。PHASE 5 工作分支 `phase5-hazard-reconciliation-20260914` 已提交并推送；当前浏览器未登录 GitHub，PR/CI/合并尚未执行，用户授权恢复交付时，先核对并完成该交付闭环。
+当前 Git 唯一正式主线仍为 `main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。PHASE 6/7/8/9 连续工作成果当前位于分支 `phase9-release-candidate-20260917`，尚未创建/合并最终发布 PR，尚未部署 Pages 或做线上发布。
 
 公开发布架构已收口：
 
@@ -52,7 +52,7 @@
 - `proposed` 不进入公网；
 - `upcoming` 尚未实施版本不能支撑当前正式隐患。
 
-当前正式发布基线仍为：
+### `main` 当前正式发布基线（PHASE 5）
 
 - 1,409 条正式隐患；
 - 55 个实际引用法规版本；
@@ -60,9 +60,13 @@
 - 1,524 个正式关联；
 - 519 条 `proposed` 候选仅留 `knowledge/`，公网候选 0；其中目标集内 512 条、目标集外 7 条。
 
-PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联、1,114 个 evidence、28 条 succession、75 条 requirements**。
+### PHASE 8 工作分支继承的最新 knowledge 状态
 
-新版 Excel 目标集：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
+PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条在官方原文、对象适用性、当前 review hash 和完整 Gate 均满足后转为 `active`，499 条因证据、对象、条件、现行数值、条文质量或适用性不足继续保持 `proposed`。PHASE 7/8 未改变该业务状态。因此当前工作分支 lifecycle 为：**1,429 active、499 proposed、86 superseded，共 2,014**。
+
+当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,847 条条款、2,014 个隐患实体、1,567 个关联、1,161 个 evidence、28 条 succession、75 条 requirements**。
+
+新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
 ### 最近 Git 里程碑
 
@@ -71,7 +75,12 @@ PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本
 - PR #31：扩展为完整 MASTER ROADMAP；
 - PR #32：完成 PHASE 1 私有母库审计，加入私有母库修复方案、安全维护工具和测试；
 - PR #34：新增 `AGENT_EXECUTION_PROTOCOL.md`，固化“总控判断、本地 Luna 只执行本机操作”的协作边界；
-- PR #36：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 成功并已合并 main。
+- PR #36：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 成功并已合并 main；
+- PR #38：完成 PHASE 5 隐患目标集对账并已合并 main；
+- PHASE 6 工作分支：完成 519 条候选最终处置、20 条正式回绑、499 条证据不足保留 proposed；
+- PHASE 7 工作分支：publication 题录已 canonical 化为 106 个 law-version 行，全文目录收口为 69 个 canonical 来源关系，审计与验证全部通过；
+- PHASE 8 工作分支：公开前端、canonical 跳转和本地私有全文展示边界已验收；公开/私有审计均 PASS，最终 workflow run `35120861560` success；
+- PHASE 9 RC 工作分支：公共 RC 全量验证 workflow run `35122196162` success；同一 RC 源码快照结合真实私有 SQLite 完成本地最终版构建，输入库内容哈希不变；PHASE 6/7/8/9 尚未进入最终发布 PR。
 
 ---
 
@@ -157,6 +166,60 @@ PR #36 在 canonical 数据提交后已通过：
 
 可重复执行工具：`tools/maintenance/reconcile_hazard_target_set.py`；受限状态修复工具：`tools/maintenance/apply_hazard_reconciliation_status.py`。机器映射：`docs/hazard-reconciliation.jsonl`。人类报告：`docs/HAZARD_RECONCILIATION.md`。工作簿未修改；私有母库、SQLite、archive 未修改。
 
+### PHASE 6：519 条候选法规证据回绑 — PASS
+
+完整人类报告：`docs/PHASE6_FINAL_DISPOSITION.md`；机器明细：`docs/phase6-final-disposition.jsonl`；可重复执行工具：`tools/maintenance/finalize_phase6.py`。
+
+- PHASE 6 基线 519 条 `proposed` 全部生成最终处置，覆盖率 **519/519**；
+- 110 条 exact current reviewed clause 候选全部重新复核，不再把 locator 相同直接等同为可转正；
+- 20 条对象、现行条款逐字原文、官方/原始证据、适用性和当前上下文 review 全部闭环，经 Gate 后转为 `active`；
+- 499 条继续 `proposed`，每条在机器处置清单中保留原因和下一证据动作；其中大量项目属于“未找到精确当前已核条款”或“仅 locator 匹配但语义适用性未证明”，另有错误条款对象、混合对象、数值口径变化、推荐性措辞、原文质量异常等明确原因；
+- 新纳管现行《江苏省生产经营单位安全风险管理条例》（2024-11-01施行），建立 law/version/evidence/review 及第8、11、12、16条逐字官方证据链；对江苏风险辨识、风险管控清单、较大以上风险公示等候选优先采用当前更强、更直接的现行地方性法规；
+- 关键保守判定包括：GB 55037-2022 第3.4.5条现行坡度上限为10%，不拿来支撑“>8%”；该条没有固定“距外墙5m”阈值；GB 50187-2012 第5.7.4条“出入口数量不宜少于2个”不机械当绝对违法；粉尘防爆第十八条不跨对象支撑一般废气收集、压差、集气罩、选址；GB 12158-2024 第7.6条当前 knowledge 文本质量异常，未转正式链；
+- 工作分支最终 lifecycle：**1,429 active、499 proposed、86 superseded，共 2,014**；
+- manifest：**103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**；
+- 一次性 PHASE 6 finalization workflow 完整执行成功：`validate_all.py`、`strict_release_audit.py`、Node tests、pipeline Python tests、fresh current bundle build 和 `verify_unified_bundle.py` 均成功；workflow run `35078569190` conclusion=`success`；
+- 本批未写私有 SQLite/FTS/archive，未修改既有 hazard 稳定 ID，未合并 PR，未部署 Pages，未做线上发布；一次性 workflow 与 trigger 在成功后已从分支清理。
+
+### PHASE 7：publication / 官方来源 / 全文资料归整 — PASS
+
+完整人类报告：`docs/PHASE7_PUBLICATION_AUDIT.md`；机器审计：`docs/phase7-publication-audit.json`；可重复执行工具：`tools/maintenance/finalize_phase7_publication.py`。
+
+- `source/publication/law-index.json` 从 216 行归整为 **106 个 canonical law-version 行**，与 `knowledge/law-versions` 形成 1:1 身份投影；publication 不再创建第二套法规/版本身份；
+- 清理 144 个 stale publication IDs，并在需要时通过 canonical ID、精确官方 URL 或“唯一官方名称 + 生效日期”解析到现有 knowledge 版本，不按标题相似猜测；
+- 全文 catalog 从 155 行收口为 **69 个 canonical 来源关系**：其中 **11 份**明确 `official_legal_text` 且 `fullTextReviewed=true` 的获准官方全文继续公开，**58 个**只保留 metadata-only 官方入口；
+- 86 个无法解析到 governed knowledge identity 的旧全文目录行退出 public catalog；对应 publication 文本/索引作为可重建派生物清理，不触碰私有原件、SQLite、OCR 或 archive；
+- 全文搜索索引确定性重建为 **256 个 gram shards**；proposed hazard 泄漏 **0**，private-boundary marker 泄漏 **0**；
+- `knowledge/` 未修改，知识库存继续保持 **103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**，hazard lifecycle 继续为 **1,429 active / 499 proposed / 86 superseded**；
+- 一次性 PHASE 7 workflow run `35095422830` 已 `completed / success`；`validate_all.py`、`strict_release_audit.py`、Node tests、pipeline Python tests、fresh current bundle build 和 `verify_unified_bundle.py` 全部成功；
+- 本批未修改私有 SQLite/FTS/archive，未修改稳定 knowledge IDs，未提交 release/current 生成包，未合并 PR，未部署 Pages，未做线上发布。
+
+### PHASE 8：前端与本地私有版一致性验收 — PASS
+
+可重复执行审计：`tools/maintenance/audit_phase8_consistency.py`；公开审计：`docs/phase8-public-audit.json`；私有审计：`docs/phase8-private-audit.json`；本地展示回归测试：`tools/pipeline/tests/test_library_site_phase8.py`。
+
+- 公网 fresh bundle 审计 PASS：**1,429** 个正式隐患、**1,205** 个随正式链发布的条款、**57** 个实际正式法规版本；`knowledge/` 中 499 个 proposed 在公网为 **0**；private-boundary marker 命中 **0**；
+- publication 全文/入口边界保持为 **69** 个 catalog documents，其中 **11** 份获准全文、**58** 个 link-only 官方入口；其中 27 个是 catalog-only canonical versions，不被错误当成当前正式法规跳转；
+- `web/js/library.js` 已只对实际 formal law index 中的版本显示“查看收录条款与关联隐患”，source-only 全文/入口不再生成无效正式法规跳转；
+- 本地 `tools/v4/library_site.py` 使用 `document-aliases.json` 仅做私有展示分组/canonical label，不改变正式 authority；只有实际存在的原始文件才生成“打开原始文件”链接，legacy `evidence/...` provenance 不再变成断链；
+- 私有库只读审计 PASS：SQLite **170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / per-document mismatch 0**；132 个 archive-backed document rows 对应 129 个唯一 archive SHA，Drive 当前 archive 中 **129/129** 全部找到；38 条 legacy evidence provenance 保留；unknown prefix 0、archive SHA mismatch 0；
+- private alias 共 **18 groups / 36 member document keys / 18 canonicalVersionIds**，missing members 0、knowledge unmapped titles 0；审计未写 SQLite/FTS/archive；
+- PHASE 8 finalizer workflow run `35120861560` 已 `completed / success`：frontend/private compatibility tests、`validate_all.py`、`strict_release_audit.py`、fresh current bundle build + verify、公开一致性审计、私有/公开边界检查、公开审计报告提交全部成功；
+- 本阶段没有修改 `knowledge/`、`source/publication/` 的业务数据，没有提交 `source/releases/current/` 生成物，没有 merge PR，没有部署 Pages，没有线上发布；一次性 PHASE 8 workflow/trigger 已在成功后清理。
+
+### PHASE 9：全量验证与 Release Candidate — PASS
+
+公开 RC 验收记录：`docs/phase9-rc-public.json`。
+
+- 工作分支：`phase9-release-candidate-20260917`；公共 RC 验证源提交为 `c74a0970f1cc64e5d2bad9944340304c171050f2`，workflow 自动记录提交为 `c58261f77d77ebe79e73e6f0385060caefab764c`；
+- GitHub Actions run `35122196162` 已 `completed / success`：Node tests、pipeline Python tests、`validate_all.py`、`strict_release_audit.py`、fresh unified release build、`verify_unified_bundle.py`、PHASE 8 regression audit 全部 PASS；
+- 公共 RC 保持 **1,429 hazards / 57 laws / 57 lawVersions / 1,205 clauses / 1,544 links**，strict blockers 0，knowledge 中 499 proposed 在公网仍为 0；publication 仍为 69 个 catalog documents（11 full text + 58 link-only）；
+- 使用 run `35122196162` 上传的同一 RC 源码快照，在本地接入真实私有 `fulltext.sqlite3` 与 `document-aliases.json` 后实际执行 `tools/build_local_release.py`，直接退出码 **0**；
+- 本地最终版生成成功：**170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / 36 canonical alias members**；生成 170 个法规全文页面及统一入口；
+- 私有 SQLite SHA-256 在构建前后均为 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`，alias 文件构建前后哈希也一致，确认本地构建只读、未修改私有库；
+- 本地重建公开包 verify PASS，releaseHash=`680089d53c1fe793bcc71f420093aa1080126e29e4c4d9b2a043849cf01209a9`；该哈希属于本地当日重建产物，不替代公共 RC 报告中的 GitHub Actions RC releaseHash；
+- 本阶段未修改 `knowledge/` 业务数据、未修改私有 SQLite/FTS/archive、未提交 `source/releases/current/` 生成物、未合并 main、未部署 Pages、未做线上验收。
+
 ---
 
 ## 5. MASTER ROADMAP
@@ -181,17 +244,17 @@ FTS 修复和完整 document mapping 已闭环；暂不执行非必要物理去�
 ### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — DONE
 完整机器映射和人类报告已生成；目标缺失 0，85 条目标外实体已逐项分类，24 个状态/标题差异已闭环，Gate 和正式包验证通过。
 
-### PHASE 6 — 候选法规证据回绑与转正 — PENDING
-按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。当前实时候选为 519 条（目标集内 512、目标集外 7）。
+### PHASE 6 — 候选法规证据回绑与转正 — DONE
+519/519 候选已形成最终处置；20 条完整 Gate 后转 active，499 条证据/适用性不足继续 proposed 并保留明确原因；110 条 exact 候选全部复核；现行江苏风险管理条例已纳入 canonical 证据链；PHASE 6 验证链全部通过。
 
-### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING
-publication 只挂来源；正式法规数由 knowledge 决定。
+### PHASE 7 — publication / 官方来源 / 全文资料归整 — DONE
+publication 已收口为 knowledge canonical 身份投影；题录、官方入口、获准全文与搜索索引边界完成归整，proposed/private 泄漏均为 0。
 
-### PHASE 8 — 前端与本地私有版一致性验收 — PENDING
-公网只显示正式数据；本地版加载私有全文；canonical 化不得导致全文链接或 archive_ref 失联。
+### PHASE 8 — 前端与本地私有版一致性验收 — DONE
+公网仅投影正式 Gate 数据；source-only catalog 不生成错误正式法规跳转；本地私有版 canonical alias、全文和原始文件链接边界已验证；公开/私有审计均 PASS。
 
-### PHASE 9 — 全量验证与 Release Candidate — PENDING
-至少运行 `validate_all.py`、`strict_release_audit.py`、统一 release build/verify、pipeline unit tests、node tests、local release build。
+### PHASE 9 — 全量验证与 Release Candidate — DONE
+公共 RC workflow 与真实私有库 local release build 均已完成并 PASS；输入私有库哈希构建前后不变，proposed/private 发布边界保持不变。
 
 ### PHASE 10 — 最终合并 main、GitHub Pages 部署、线上验收 — PENDING
 工作分支 PR → CI 全绿 → 合并 main → main Validate/Build/Deploy success → 线上抽检。
@@ -203,23 +266,20 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 5 数据工作 DONE、交付闭环待完成；按用户要求暂停。PHASE 6 尚未开始。**
+**PHASE 9 DONE；PAUSED。**
 
-PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交与分支推送。本次会话收口后暂停，不进入 PHASE 6 实质回绑。恢复时先为 `phase5-hazard-reconciliation-20260914` 创建 PR，等待 CI 全绿并合并 main；随后再从 519 条 proposed 的证据链缺口盘点开始。
+当前工作分支为 `phase9-release-candidate-20260917`。公共 RC workflow run `35122196162` 已成功，`docs/phase9-rc-public.json` 已记录 Node/pipeline tests、完整 Gate、fresh bundle build/verify 和 PHASE 8 regression audit 全部 PASS。公共投影仍为 **1,429 hazards / 1,205 clauses / 57 formal law versions / 1,544 links**，499 proposed 保持公网 0。
+
+同一 RC 源码快照已用真实私有 SQLite 完成本地最终版重建：**170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / 36 canonical alias members**，`tools/build_local_release.py` 直接退出码 0。SQLite SHA-256 构建前后均为 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`，alias 文件亦未变化，确认只读。
+
+PHASE 9 没有改变 `knowledge/`、publication 业务数据或私有库内容；没有合并 main、没有部署 Pages、没有线上验收。PHASE 10 必须等待新的明确授权。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **恢复工作后先完成 PHASE 5 Git 交付：为 `phase5-hazard-reconciliation-20260914` 创建 PR，确认 Validate/Build CI 全绿后合并 main，并确认 main 校验成功。完成后再进入 PHASE 6：对 519 条 proposed 按证据链缺口做确定性分组，证据不足不得转正。**
+> **PAUSED。PHASE 9 已完成。下一动作仅在用户新的明确授权后执行：进入 PHASE 10，创建/核对最终发布 PR，等待 CI 全绿后合并 main，再执行 GitHub Pages 部署与线上验收。**
 
-执行顺序：
-
-1. 创建 PHASE 5 PR，等待 Validate/Build CI；
-2. CI 全绿后合并 main，并核验 main；
-3. 全量读取 519 条 proposed 的 hazard/review/link/clause/evidence 状态；
-4. 按证据链缺口和目标内/目标外范围分组；
-5. 输出机器可读 backlog 与人类摘要，不改法规事实；
-6. 选取证据最完整、可复用已核验条款的第一批候选，逐项核验后再决定是否转正。
+PHASE 10 开始前不得重新解释或重做 PHASE 6/7/8/9，也不得改变 499 条 proposed 的隔离状态。当前 RC 已完成公共与私有本地双重验证；下一阶段只负责最终合并、main CI/Build/Deploy 和线上抽检。
 
 ---

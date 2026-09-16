@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "phase9-rc-public-v1",
+  "phase": 9,
+  "status": "PASS",
+  "sourceCommit": "c74a0970f1cc64e5d2bad9944340304c171050f2",
+  "asOf": "2026-09-16",
+  "dataVersion": "2026.09.16.c74a0970f1cc.rc",
+  "releaseHash": "552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07",
+  "counts": {
+    "hazards": 1429,
+    "laws": 57,
+    "lawVersions": 57,
+    "clauses": 1205,
+    "links": 1544
+  },
+  "knowledgeGate": {
+    "asOf": "2026-09-16",
+    "eligibleHazards": 1429,
+    "eligibleLinks": 1544,
+    "strictBlockers": 0,
+    "publicProposalHazards": 0,
+    "candidateHazardsInKnowledge": 499
+  },
+  "phase8Consistency": {
+    "schemaVersion": "phase8-consistency-audit-v1",
+    "public": {
+      "status": "PASS",
+      "publicHazards": 1429,
+      "publicClauses": 1205,
+      "formalLawVersions": 57,
+      "catalogDocuments": 69,
+      "catalogFullText": 11,
+      "catalogLinkOnly": 58,
+      "catalogOnlyCanonicalVersions": 27,
+      "proposedInKnowledge": 499,
+      "proposedInPublic": 0,
+      "privateBoundaryMarkerHits": [],
+      "errors": []
+    },
+    "status": "PASS"
+  },
+  "checks": {
+    "nodeTests": "PASS",
+    "pipelineTests": "PASS",
+    "validateAll": "PASS",
+    "strictReleaseAudit": "PASS",
+    "freshUnifiedBuild": "PASS",
+    "verifyUnifiedBundle": "PASS",
+    "phase8RegressionAudit": "PASS"
+  },
+  "privateLocalBuild": {
+    "status": "PASS",
+    "sourceSnapshotCommit": "c74a0970f1cc64e5d2bad9944340304c171050f2",
+    "releaseHash": "680089d53c1fe793bcc71f420093aa1080126e29e4c4d9b2a043849cf01209a9",
+    "documents": 170,
+    "ftsRows": 215326,
+    "paragraphCountSum": 215326,
+    "canonicalAliasMembers": 36,
+    "sqliteSha256": "7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629",
+    "sqliteUnchanged": true,
+    "aliasesUnchanged": true,
+    "buildExitCode": 0
+  },
+  "publicationBoundary": "knowledge/source publication/web unchanged by validation"
+}
