@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 的 Git 交付闭环与阶段接续状态。业务统计数字仍引用 PHASE 5 已核验记录；除明确标注外，不将其表述为重新抽取结果。
 
-**项目已按用户明确指令恢复。** 本次接续仅推进 PHASE 6 候选证据回绑的确定性盘点；计划不是持续执行全部路线图的授权。
+**项目已按用户明确指令恢复。** 本次接续仅推进 PHASE 6 候选证据回绑的确定性盘点与第一人工批核验；计划不是持续执行全部路线图的授权。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -203,21 +203,24 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 5 数据工作与 Git 交付闭环 DONE。** PR #38 已合并到 `main`，合并后的 Validate / Build 已成功；本次接续从 `main@88cc7f7` 建立 `phase6-candidate-evidence-backlog-20260916`。PHASE 6 第一轮确定性 backlog 已生成并复跑稳定：519 条全部覆盖，505 条工作簿修订待重绑、7 条题录线索不足、6 条拒绝关联待重绑、1 条目标外无关联。进一步按“修订表直接依据 + 当前 Gate 条款”筛出 110 条可复用条款候选，其中 38 条 hazard review 当前 hash 已验证、72 条需先补 hazard review。候选仍保持 `proposed`，不修改稳定 ID、不写私有 SQLite。
+**PHASE 5 数据工作与 Git 交付闭环 DONE；PHASE 6 IN PROGRESS。** PR #38 已合并到 `main`，合并后的 Validate / Build 已成功；本次接续从 `main@88cc7f7` 建立 `phase6-candidate-evidence-backlog-20260916`。PHASE 6 第一轮确定性 backlog 已生成并复跑稳定：519 条全部覆盖，505 条工作簿修订待重绑、7 条题录线索不足、6 条拒绝关联待重绑、1 条目标外无关联。进一步按“修订表直接依据 + 当前 Gate 条款”筛出 110 条可复用条款候选，其中 38 条 hazard review 当前 hash 已验证、72 条需先补 hazard review。候选仍保持 `proposed`，不修改稳定 ID、不写私有 SQLite。
 
-PHASE 5 已完成全量映射、状态闭环、Gate、发布包验证、提交、分支推送、PR #38、CI 和 main 合并验证。PHASE 6 已完成 519 条 `proposed` 的 hazard/review/link/clause/evidence 确定性分组，并对 110 条可复用当前条款候选完成选择；第一人工批 `GB 50187-2012` 预审 11 条，其中 10 条可继续做适用性核验、1 条需先重绑。证据不足继续 `proposed`。
+第一人工批 `GB 50187-2012` 已完成 11 条原文、对象边界和适用性复核，记录于 `docs/PHASE6_BATCH_GB50187_REVIEW.md`：7 条为 `text_match_pending_project_facts`，2 条为 `conditional_match_pending_narrowing`，2 条为 `wording_fix_or_rebind_required` / `multi_object_rebind_required`。其中 `H_EACC1ED8867C4F3DA5FBAC8B49` 的“不得/禁止选址”与已核第3.0.14条原文“不应选为厂址”不一致；`H_315C5D031AFC4502B69ACB9F38` 混合消防车道、人员疏散、错车三个对象，第5.1.4条不能整体覆盖。本批 `safeToPromoteNow=0`，11 条全部继续 `proposed`。
+
+本批仅修改审查文档和本状态文件；未新增或修改法规事实、条款、evidence、正式 link、link review、hazard lifecycle、稳定 ID、私有 SQLite、archive、发布包或线上站点。仓库没有具体企业/项目的总图、设计图、测量/现场记录，因此对需要项目事实的 9 条只记录事实门槛，不把通用 hazard 标题冒充项目事实。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **当前动作：从已生成的 519 条确定性 backlog 中选择第一批证据最完整、可复用已核验条款的候选，逐项回到官方原文/原始证据核验；证据不足继续 `proposed`。**
+> **当前授权的第一批核验动作已完成，现暂停。继续 PHASE 6 前先解决本批两个证据/对象问题，并明确其余候选的项目事实口径；没有用户新的明确授权，不写正式关联、不转正、不进入后续发布路线。**
 
-执行顺序：
+恢复后的顺序：
 
-1. 按 `docs/PHASE6_BATCH_GB50187_REVIEW.md` 补齐 10 条候选的项目事实与适用性，并处理 1 条需重绑项；
-2. 在获得批量正式关联写入授权后，建立 direct/fallback link 和当前上下文 review；
-3. 只有完整 Gate 通过后才另开转正批次，否则保持 `proposed` 并记录待核原因；
-4. 完成 PHASE 6 批次后，再单独安排 PR/CI/Pages/线上验收闭环。
+1. 核实并修正/确认 `H_EACC1ED8867C4F3DA5FBAC8B49` 的规范措辞与 GB 50187-2012 第3.0.14条强制性范围；证据不足继续 `proposed`；
+2. 为 `H_315C5D031AFC4502B69ACB9F38` 确定拆分/收窄方案，并继续回到官方原文核“错车/会车条件”的精确条款；不得用第5.1.4条替代不存在的“错车”原文；
+3. 为其余 9 条取得具体项目事实，或由用户明确同意本法规库采用何种“通用隐患适用性”事实口径；在此之前不建立 verified applicability；
+4. 只有获得批量正式关联写入授权后，才建立 direct/fallback link 和当前上下文 review；完整 Gate 通过后再另行讨论是否转正；
+5. PR/CI/Pages/线上验收属于后续独立交付动作，本次不自动执行。
 
 ---
