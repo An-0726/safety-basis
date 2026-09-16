@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 的 Git 交付闭环与阶段接续状态。业务统计数字仍引用 PHASE 5 已核验记录；除明确标注外，不将其表述为重新抽取结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 的 PHASE 5 Git 交付闭环与 PHASE 6 候选证据回绑最终状态。历史统计数字仍按对应阶段记录；PHASE 6 新统计单独明确标注，不将工作分支结果冒充已经合并发布的 `main` 结果。
 
-**项目已按用户明确指令恢复。** 本次接续仅推进 PHASE 6 候选证据回绑的确定性盘点与第一人工批核验；计划不是持续执行全部路线图的授权。
+**PHASE 6 已按用户明确授权全部完成，当前暂停。** PHASE 7 尚未启动；没有新的明确授权，不继续 publication 整理、前端验收、Release Candidate、PR 合并、Pages 部署或线上发布。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,9 +38,9 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-14**
+**LAST VERIFIED：2026-09-16（PHASE 6 工作分支）；`main` 正式发布基线仍停留在 PHASE 5。**
 
-当前 Git 唯一正式主线：`main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。合并后的 `main` Validate / Build 已成功；Pages 部署与线上抽检尚未在本次接续中重新核验。
+当前 Git 唯一正式主线仍为 `main`。PR #36 `Phase 4: canonicalize private-library law gaps` 已合并到 `main`（提交 `0118a13a`）；PHASE 5 PR #38 已于 2026-09-16 合并，当前 `main` 合并提交为 `88cc7f7`（完整 SHA：`88cc7f739e154c26f3866857e9c3f6b0ffa7be5f`）。PHASE 6 当前位于工作分支 `phase6-candidate-evidence-backlog-20260916`，尚未创建/合并 PHASE 6 PR，尚未部署 Pages 或做线上发布。
 
 公开发布架构已收口：
 
@@ -52,7 +52,7 @@
 - `proposed` 不进入公网；
 - `upcoming` 尚未实施版本不能支撑当前正式隐患。
 
-当前正式发布基线仍为：
+### `main` 当前正式发布基线（PHASE 5）
 
 - 1,409 条正式隐患；
 - 55 个实际引用法规版本；
@@ -60,9 +60,13 @@
 - 1,524 个正式关联；
 - 519 条 `proposed` 候选仅留 `knowledge/`，公网候选 0；其中目标集内 512 条、目标集外 7 条。
 
-PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本、2,843 条条款、2,014 个隐患实体、1,547 个关联、1,114 个 evidence、28 条 succession、75 条 requirements**。
+### PHASE 6 工作分支最新 knowledge 状态
 
-新版 Excel 目标集：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
+PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条在官方原文、对象适用性、当前 review hash 和完整 Gate 均满足后转为 `active`，499 条因证据、对象、条件、现行数值、条文质量或适用性不足继续保持 `proposed`。因此当前工作分支 lifecycle 为：**1,429 active、499 proposed、86 superseded，共 2,014**。
+
+当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,847 条条款、2,014 个隐患实体、1,567 个关联、1,161 个 evidence、28 条 succession、75 条 requirements**。
+
+新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
 ### 最近 Git 里程碑
 
@@ -71,7 +75,9 @@ PHASE 4 后当前 knowledge 库存：**102 个法规身份、105 个法规版本
 - PR #31：扩展为完整 MASTER ROADMAP；
 - PR #32：完成 PHASE 1 私有母库审计，加入私有母库修复方案、安全维护工具和测试；
 - PR #34：新增 `AGENT_EXECUTION_PROTOCOL.md`，固化“总控判断、本地 Luna 只执行本机操作”的协作边界；
-- PR #36：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 成功并已合并 main。
+- PR #36：完成 PHASE 3 document mapping 收口和 PHASE 4 六个 canonical gaps；CI Validate/Build 成功并已合并 main；
+- PR #38：完成 PHASE 5 隐患目标集对账并已合并 main；
+- PHASE 6 工作分支：完成 519 条候选最终处置、20 条正式回绑、499 条证据不足保留 proposed；尚未建立 PHASE 6 PR。
 
 ---
 
@@ -157,6 +163,21 @@ PR #36 在 canonical 数据提交后已通过：
 
 可重复执行工具：`tools/maintenance/reconcile_hazard_target_set.py`；受限状态修复工具：`tools/maintenance/apply_hazard_reconciliation_status.py`。机器映射：`docs/hazard-reconciliation.jsonl`。人类报告：`docs/HAZARD_RECONCILIATION.md`。工作簿未修改；私有母库、SQLite、archive 未修改。
 
+### PHASE 6：519 条候选法规证据回绑 — PASS
+
+完整人类报告：`docs/PHASE6_FINAL_DISPOSITION.md`；机器明细：`docs/phase6-final-disposition.jsonl`；可重复执行工具：`tools/maintenance/finalize_phase6.py`。
+
+- PHASE 6 基线 519 条 `proposed` 全部生成最终处置，覆盖率 **519/519**；
+- 110 条 exact current reviewed clause 候选全部重新复核，不再把 locator 相同直接等同为可转正；
+- 20 条对象、现行条款逐字原文、官方/原始证据、适用性和当前上下文 review 全部闭环，经 Gate 后转为 `active`；
+- 499 条继续 `proposed`，每条在机器处置清单中保留原因和下一证据动作；其中大量项目属于“未找到精确当前已核条款”或“仅 locator 匹配但语义适用性未证明”，另有错误条款对象、混合对象、数值口径变化、推荐性措辞、原文质量异常等明确原因；
+- 新纳管现行《江苏省生产经营单位安全风险管理条例》（2024-11-01施行），建立 law/version/evidence/review 及第8、11、12、16条逐字官方证据链；对江苏风险辨识、风险管控清单、较大以上风险公示等候选优先采用当前更强、更直接的现行地方性法规；
+- 关键保守判定包括：GB 55037-2022 第3.4.5条现行坡度上限为10%，不拿来支撑“>8%”；该条没有固定“距外墙5m”阈值；GB 50187-2012 第5.7.4条“出入口数量不宜少于2个”不机械当绝对违法；粉尘防爆第十八条不跨对象支撑一般废气收集、压差、集气罩、选址；GB 12158-2024 第7.6条当前 knowledge 文本质量异常，未转正式链；
+- 工作分支最终 lifecycle：**1,429 active、499 proposed、86 superseded，共 2,014**；
+- manifest：**103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**；
+- 一次性 PHASE 6 finalization workflow 完整执行成功：`validate_all.py`、`strict_release_audit.py`、Node tests、pipeline Python tests、fresh current bundle build 和 `verify_unified_bundle.py` 均成功；workflow run `35078569190` conclusion=`success`；
+- 本批未写私有 SQLite/FTS/archive，未修改既有 hazard 稳定 ID，未合并 PR，未部署 Pages，未做线上发布；一次性 workflow 与 trigger 在成功后已从分支清理。
+
 ---
 
 ## 5. MASTER ROADMAP
@@ -181,11 +202,11 @@ FTS 修复和完整 document mapping 已闭环；暂不执行非必要物理去�
 ### PHASE 5 — 2,014 knowledge 隐患实体 ↔ 1,929 目标集对账 — DONE
 完整机器映射和人类报告已生成；目标缺失 0，85 条目标外实体已逐项分类，24 个状态/标题差异已闭环，Gate 和正式包验证通过。
 
-### PHASE 6 — 候选法规证据回绑与转正 — IN PROGRESS
-按“法规身份 → 当前适用版本 → 条/款/项 → 官方原文 → 原始证据 → 适用性审核”处理；证据不足继续 candidate。当前实时候选为 519 条（目标集内 512、目标集外 7）。
+### PHASE 6 — 候选法规证据回绑与转正 — DONE
+519/519 候选已形成最终处置；20 条完整 Gate 后转 active，499 条证据/适用性不足继续 proposed 并保留明确原因；110 条 exact 候选全部复核；现行江苏风险管理条例已纳入 canonical 证据链；PHASE 6 验证链全部通过。
 
-### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING
-publication 只挂来源；正式法规数由 knowledge 决定。
+### PHASE 7 — publication / 官方来源 / 全文资料归整 — PENDING / NOT STARTED
+publication 只挂来源；正式法规数由 knowledge 决定。**当前暂停，未获用户授权不得启动。**
 
 ### PHASE 8 — 前端与本地私有版一致性验收 — PENDING
 公网只显示正式数据；本地版加载私有全文；canonical 化不得导致全文链接或 archive_ref 失联。
@@ -203,24 +224,22 @@ publication 只挂来源；正式法规数由 knowledge 决定。
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 5 数据工作与 Git 交付闭环 DONE；PHASE 6 IN PROGRESS。** PR #38 已合并到 `main`，合并后的 Validate / Build 已成功；本次接续从 `main@88cc7f7` 建立 `phase6-candidate-evidence-backlog-20260916`。PHASE 6 第一轮确定性 backlog 已生成并复跑稳定：519 条全部覆盖，505 条工作簿修订待重绑、7 条题录线索不足、6 条拒绝关联待重绑、1 条目标外无关联。进一步按“修订表直接依据 + 当前 Gate 条款”筛出 110 条可复用条款候选，其中 38 条 hazard review 当前 hash 已验证、72 条需先补 hazard review。候选仍保持 `proposed`，不修改稳定 ID、不写私有 SQLite。
+**PHASE 6 DONE；PAUSED。**
 
-第一人工批 `GB 50187-2012` 已完成 11 条原文、对象边界和适用性复核，记录于 `docs/PHASE6_BATCH_GB50187_REVIEW.md`：7 条为 `text_match_pending_project_facts`，2 条为 `conditional_match_pending_narrowing`，2 条为 `wording_fix_or_rebind_required` / `multi_object_rebind_required`。其中 `H_EACC1ED8867C4F3DA5FBAC8B49` 的“不得/禁止选址”与已核第3.0.14条原文“不应选为厂址”不一致；`H_315C5D031AFC4502B69ACB9F38` 混合消防车道、人员疏散、错车三个对象，第5.1.4条不能整体覆盖。本批 `safeToPromoteNow=0`，11 条全部继续 `proposed`。
+用户已明确授权“完成 PHASE 6 所有工作再停下来”。该授权现已完成：519 条 PHASE 6 基线候选全部取得最终处置，110 条 exact 候选全部复核；20 条在完整证据与 Gate 闭环后转为 active，499 条继续 proposed。新增当前江苏风险管理条例 canonical 链；正式 direct link、hazard review、link applicability review 仅对通过严格白名单和 Gate 的 20 条写入。
 
-本批仅修改审查文档和本状态文件；未新增或修改法规事实、条款、evidence、正式 link、link review、hazard lifecycle、稳定 ID、私有 SQLite、archive、发布包或线上站点。仓库没有具体企业/项目的总图、设计图、测量/现场记录，因此对需要项目事实的 9 条只记录事实门槛，不把通用 hazard 标题冒充项目事实。
+当前工作分支 knowledge lifecycle 为 **1,429 active / 499 proposed / 86 superseded / 2,014 total**。manifest 为 **103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links / 1,161 evidence / 28 successions / 75 requirements**。
+
+PHASE 6 自动验证 workflow run `35078569190` 已 `completed / success`，其中 `validate_all.py`、`strict_release_audit.py`、Node tests、pipeline Python tests、fresh current release build 和 bundle verify 均成功。验证生成的 current release 仅用于工作流检查，没有提交为发布物，也没有触发 Pages/线上发布。
+
+本阶段没有修改私有 SQLite/FTS/archive，没有修改既有稳定 ID，没有 merge PR，没有部署 Pages，没有线上发布。用于一次性执行 PHASE 6 的 workflow 与 trigger 已清理，保留可重复执行的 `tools/maintenance/finalize_phase6.py` 与最终人类/机器处置报告作为审计记录。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **当前授权的第一批核验动作已完成，现暂停。继续 PHASE 6 前先解决本批两个证据/对象问题，并明确其余候选的项目事实口径；没有用户新的明确授权，不写正式关联、不转正、不进入后续发布路线。**
+> **PAUSED。PHASE 7 尚未启动。下一动作仅在用户新的明确授权后执行：进入 PHASE 7 publication / 官方来源 / 全文资料归整。**
 
-恢复后的顺序：
-
-1. 核实并修正/确认 `H_EACC1ED8867C4F3DA5FBAC8B49` 的规范措辞与 GB 50187-2012 第3.0.14条强制性范围；证据不足继续 `proposed`；
-2. 为 `H_315C5D031AFC4502B69ACB9F38` 确定拆分/收窄方案，并继续回到官方原文核“错车/会车条件”的精确条款；不得用第5.1.4条替代不存在的“错车”原文；
-3. 为其余 9 条取得具体项目事实，或由用户明确同意本法规库采用何种“通用隐患适用性”事实口径；在此之前不建立 verified applicability；
-4. 只有获得批量正式关联写入授权后，才建立 direct/fallback link 和当前上下文 review；完整 Gate 通过后再另行讨论是否转正；
-5. PR/CI/Pages/线上验收属于后续独立交付动作，本次不自动执行。
+如后续获授权，PHASE 7 从当前 PHASE 6 工作分支状态继续，不重新做 PHASE 6，也不把 499 条 proposed 强行转正。首先应以 `knowledge/` 的 103 个 canonical law identities / 106 个 versions 为准，整理 publication 题录、官方入口和获准全文的来源关系，同时保持 candidate 隔离和 private/public 边界；PR、合并、Pages、线上验收仍属于后续独立动作，不得自动越级执行。
 
 ---
