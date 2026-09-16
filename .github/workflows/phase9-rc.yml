@@ -39,6 +39,17 @@ jobs:
           rm -rf source/releases/current source/releases/site-selection.json dist
           DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}.rc"
           python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          release=json.loads(Path('source/releases/current/release.json').read_text(encoding='utf-8'))
+          Path('source/releases/site-selection.json').write_text(
+              json.dumps({
+                  'schemaVersion':'safety-site-selection-v1',
+                  'bundle':'current',
+                  'releaseHash':release['releaseHash']
+              }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
           python tools/v4/verify_unified_bundle.py --bundle source/releases/current
           python tools/maintenance/audit_phase8_consistency.py --bundle source/releases/current --output /tmp/phase9-phase8-audit.json
 
