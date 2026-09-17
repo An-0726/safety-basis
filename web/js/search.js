@@ -4,7 +4,7 @@ export const normalize = value => String(value ?? '').normalize('NFKC').toLowerC
   .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g,' ')
   .replace(/\s+/g,' ').trim();
 
-const termsOf = query => normalize(query).split(' ').filter(Boolean);
+
 const allTermsMatch = (text,terms) => terms.every(t=>text.includes(t));
 
 // 概念同义词组（Search 2.0，交接说明书第 8 章）：
@@ -79,7 +79,7 @@ const SYNONYM_GROUPS = [
   ['定期检验','定期检测','定期校验','检定'],
   ['检验','检测','校验'],
   ['维护','保养','维修'],
-  ['遮挡','圈占','堵塞','占用'],
+  ['遮挡','圈占','堵塞','占用','堆物','堆放','障碍','妨碍'],
   ['疏散','逃生'],
   ['充电','飞线充电'],
   ['积尘','粉尘堆积','粉尘沉积'],
@@ -114,6 +114,45 @@ const SYNONYM_GROUPS = [
   ['防护措施','防护装置','安全防护'],
   ['间距','安全间距','安全距离'],
 ];
+// 领域词汇词典（用于无空格中文复合查询切词）
+const VOCAB_SET = new Set(SYNONYM_GROUPS.flat());
+for (const w of ["规范","规程","标准","要求","未设置","缺失","损坏","故障","装置","设施","标志","标识","合格","有效"]) {
+  VOCAB_SET.add(w);
+}
+const SORTED_VOCAB = Array.from(VOCAB_SET).sort((a, b) => b.length - a.length);
+
+const segmentTerm = term => {
+  if (VOCAB_SET.has(term) || term.length < 4) return [term];
+  const result = [];
+  let i = 0;
+  while (i < term.length) {
+    let matched = false;
+    for (const word of SORTED_VOCAB) {
+      if (term.startsWith(word, i)) {
+        result.push(word);
+        i += word.length;
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) {
+      let j = i + 1;
+      while (j < term.length) {
+        if (SORTED_VOCAB.some(w => term.startsWith(w, j))) break;
+        j++;
+      }
+      result.push(term.slice(i, j));
+      i = j;
+    }
+  }
+  return result.filter(w => w.trim().length > 0);
+};
+
+const termsOf = query => {
+  const raw = normalize(query).split(" ").filter(Boolean);
+  return raw.flatMap(segmentTerm);
+};
+
 const variantsOf = term => {
   for (const group of SYNONYM_GROUPS) {
     if (group.includes(term)) return [...new Set([term, ...group])];
@@ -131,7 +170,7 @@ const gramsMatch = (text, term) => {
   const grams = gramsOf(term);
   if (!grams.length) return false;
   const hit = grams.filter(g => text.includes(g)).length;
-  return hit >= Math.ceil(grams.length / 2);
+  return hit >= Math.ceil(grams.length * 0.75);
 };
 const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // 单字符错字容错：把查询词的某一位置替换为通配符（灭活器→/灭.器/ 等），
