@@ -60,9 +60,11 @@ GitHub Pages / dist/local public
 
 历史发布结果由 GitHub Actions artifact / Git commit 的源数据状态追溯，不在当前树长期堆多份成品。
 
-## 2026-09-14 当前正式基线
+## 2026-09-17 当前正式基线
 
-本地严格 Gate 现场重建结果：1,409 条正式隐患、55 个实际引用法规版本、1,193 条正式条款、1,524 个正式关联；519 条 proposed 候选仍在 knowledge 后台，正式包不发布候选。
+当前正式公开投影为：**1,429 条正式隐患、57 个实际引用法规版本、1,205 条正式条款、1,544 个正式关联**；499 条 `proposed` 候选仍只留 `knowledge/`，公网候选 0。publication 目录为 **69 个 canonical 来源关系（11 full_text + 58 link_only）**。
+
+长期发布链除 knowledge 校验和 strict gate 外，还必须执行 `tools/v4/validate_publication_integrity.py`：publication 必须保持 knowledge canonical 身份投影，catalog 与物理全文文件双向一致，search-index / gram shards 可由当前 catalog/全文确定性重算，且 proposed/private 内容不得泄漏。该门禁同时存在于 Validate 与实际 Pages Build 路径。
 
 ## 已退出主线
 
