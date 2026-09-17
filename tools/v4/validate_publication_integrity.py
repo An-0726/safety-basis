@@ -23,6 +23,10 @@ ROOT = Path(__file__).resolve().parents[2]
 KNOW = ROOT / "knowledge"
 PUB = ROOT / "source" / "publication"
 FT = PUB / "fulltext"
+CATALOG_SCHEMA = "safety-public-fulltext-v1"
+SEARCH_SCHEMA = "safety-public-fulltext-search-v1"
+TEXT_SCHEMA = "safety-public-fulltext-text-v1"
+GRAM_SCHEMA = "safety-public-fulltext-grams-v1"
 STATUS = {
     "active": "现行有效",
     "upcoming": "即将生效",
@@ -96,6 +100,8 @@ def expected_search(docs: list[dict], errors: list[str]):
         except Exception as exc:  # pragma: no cover - surfaced in real data CI
             errors.append(f"invalid full-text JSON {text_path}: {exc}")
             continue
+        if payload.get("schemaVersion") != TEXT_SCHEMA:
+            errors.append(f"full-text payload schema mismatch: {vid}")
         if payload.get("versionId") != vid or payload.get("lawId") != doc.get("lawId"):
             errors.append(f"full-text payload identity mismatch: {vid}")
         paragraphs = payload.get("paragraphs")
@@ -184,7 +190,12 @@ def main() -> int:
         if row.get("hazardCount") != len(ref_hazards):
             errors.append(f"publication hazardCount mismatch: {vid}")
 
-    if not isinstance(catalog, dict) or not isinstance(catalog.get("documents"), list):
+    if not isinstance(catalog, dict):
+        errors.append("fulltext catalog must be an object")
+        catalog = {}
+    if catalog.get("schemaVersion") != CATALOG_SCHEMA:
+        errors.append("fulltext catalog schemaVersion mismatch")
+    if not isinstance(catalog.get("documents"), list):
         errors.append("fulltext catalog must contain documents[]")
         docs = []
     else:
@@ -201,10 +212,11 @@ def main() -> int:
 
     referenced_texts: set[str] = set()
     full_text_ids: set[str] = set()
+    pub_id_set = set(x for x in pub_ids if isinstance(x, str))
     for doc in docs:
         vid = doc.get("versionId")
         lv = versions.get(vid)
-        if not lv or vid not in set(pub_ids):
+        if not lv or vid not in pub_id_set:
             errors.append(f"fulltext catalog version is not canonical publication identity: {vid}")
             continue
         if doc.get("lawId") != lv.get("lawId") or doc.get("lawId") not in laws:
@@ -254,6 +266,10 @@ def main() -> int:
     if not isinstance(search_index, dict):
         errors.append("fulltext search-index must be an object")
         search_index = {}
+    if search_index.get("schemaVersion") != SEARCH_SCHEMA:
+        errors.append("fulltext search-index schemaVersion mismatch")
+    if search_index.get("asOf") != catalog.get("asOf"):
+        errors.append("fulltext search-index/catalog asOf mismatch")
     if search_index.get("documents") != expected_docs:
         errors.append("fulltext search-index documents are stale or differ from catalog")
     if search_index.get("gramShards") != expected_shard_map:
@@ -280,7 +296,7 @@ def main() -> int:
             errors.append(f"invalid gram shard {prefix}: {exc}")
             continue
         expected_payload = {
-            "schemaVersion": "safety-public-fulltext-grams-v1",
+            "schemaVersion": GRAM_SCHEMA,
             "grams": grams,
         }
         if payload != expected_payload:
