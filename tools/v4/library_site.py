@@ -147,79 +147,82 @@ def main():
         print("未找到 fulltext.sqlite3（用 --library 或 SAFETY_LIBRARY 指定）", file=sys.stderr)
         return 1
     conn = sqlite3.connect("file:%s?mode=ro" % lib.replace("\\", "/"), uri=True)
-    nidx = law_number_index()
-    library_root = os.path.dirname(os.path.abspath(lib))
-    alias_map = load_alias_map(library_root)
-
-    docs = []
-    used_files = set()
-    for row in conn.execute("SELECT document_key, document_id, title, version, paragraph_count, "
-                            "current_status, review_status, official_url, archive_ref "
-                            "FROM documents ORDER BY title, version"):
-        key, did, title, version, paras, cur, rev, url, archive_ref = row
-        alias = alias_map.get(key) or {}
-        canonical_id = alias.get("canonicalVersionId") or ""
-        label = (nidx.get((canonical_id, ""), "") or nidx.get((did, version), "") or
-                 version or did)
-        base_file = safe_name("%s %s" % (label, title or ""))
-        file_name = base_file
-        if file_name.casefold() in used_files:
-            file_name = safe_name("%s [%s]" % (base_file, key))
-        suffix = 2
-        while file_name.casefold() in used_files:
-            file_name = safe_name("%s [%s-%d]" % (base_file, key, suffix))
-            suffix += 1
-        used_files.add(file_name.casefold())
-        docs.append({"key": key, "id": did, "title": title or "", "version": version or "",
-                     "paras": paras, "current": cur or "", "review": rev or "", "url": url or "",
-                     "archive_ref": archive_ref or "", "canonical_id": canonical_id,
-                     "canonical_title": alias.get("title") or "", "label": label, "file": file_name})
-    out = os.path.abspath(args.output)
-    laws_dir = os.path.join(out, "laws")
-    originals_dir = os.path.join(out, "originals")
-    if os.path.isdir(laws_dir):
-        for fn in os.listdir(laws_dir):
-            if fn.endswith(".html"):
-                os.remove(os.path.join(laws_dir, fn))
-    if os.path.isdir(originals_dir):
-        for fn in os.listdir(originals_dir):
-            path = os.path.join(originals_dir, fn)
-            if os.path.isfile(path):
-                os.remove(path)
-    os.makedirs(laws_dir, exist_ok=True)
-    os.makedirs(originals_dir, exist_ok=True)
-
-    def original_extension(path):
-        try:
-            with open(path, "rb") as f:
-                head = f.read(16)
-        except OSError:
-            return ".bin"
-        if head.startswith(b"%PDF"):
-            return ".pdf"
-        if head.startswith(b"PK"):
-            return ".docx"
-        if head.lstrip().startswith((b"<", b"<!")):
-            return ".html"
-        return ".txt"
-
-    # 可搜索 HTML 只是本地索引/阅读器。仅在 archive_ref 实际存在时生成原件链接，
-    # 因此历史 evidence/... provenance 不会被伪造成一个坏链接。
-    for d in docs:
-        source = os.path.join(library_root, d["archive_ref"])
-        if not os.path.isfile(source):
-            continue
-        original_name = d["file"] + original_extension(source)
-        destination = os.path.join(originals_dir, original_name)
-        try:
-            os.link(source, destination)
-        except (OSError, AttributeError):
-            shutil.copyfile(source, destination)
-        d["original_href"] = "../originals/" + original_name
-
-    by_key = {}
-    for dk, pno, content in conn.execute("SELECT document_key, paragraph_no, content FROM fulltext_fts"):
-        by_key.setdefault(dk, []).append((pno, content or ""))
+    try:
+        nidx = law_number_index()
+        library_root = os.path.dirname(os.path.abspath(lib))
+        alias_map = load_alias_map(library_root)
+    
+        docs = []
+        used_files = set()
+        for row in conn.execute("SELECT document_key, document_id, title, version, paragraph_count, "
+                                "current_status, review_status, official_url, archive_ref "
+                                "FROM documents ORDER BY title, version"):
+            key, did, title, version, paras, cur, rev, url, archive_ref = row
+            alias = alias_map.get(key) or {}
+            canonical_id = alias.get("canonicalVersionId") or ""
+            label = (nidx.get((canonical_id, ""), "") or nidx.get((did, version), "") or
+                     version or did)
+            base_file = safe_name("%s %s" % (label, title or ""))
+            file_name = base_file
+            if file_name.casefold() in used_files:
+                file_name = safe_name("%s [%s]" % (base_file, key))
+            suffix = 2
+            while file_name.casefold() in used_files:
+                file_name = safe_name("%s [%s-%d]" % (base_file, key, suffix))
+                suffix += 1
+            used_files.add(file_name.casefold())
+            docs.append({"key": key, "id": did, "title": title or "", "version": version or "",
+                         "paras": paras, "current": cur or "", "review": rev or "", "url": url or "",
+                         "archive_ref": archive_ref or "", "canonical_id": canonical_id,
+                         "canonical_title": alias.get("title") or "", "label": label, "file": file_name})
+        out = os.path.abspath(args.output)
+        laws_dir = os.path.join(out, "laws")
+        originals_dir = os.path.join(out, "originals")
+        if os.path.isdir(laws_dir):
+            for fn in os.listdir(laws_dir):
+                if fn.endswith(".html"):
+                    os.remove(os.path.join(laws_dir, fn))
+        if os.path.isdir(originals_dir):
+            for fn in os.listdir(originals_dir):
+                path = os.path.join(originals_dir, fn)
+                if os.path.isfile(path):
+                    os.remove(path)
+        os.makedirs(laws_dir, exist_ok=True)
+        os.makedirs(originals_dir, exist_ok=True)
+    
+        def original_extension(path):
+            try:
+                with open(path, "rb") as f:
+                    head = f.read(16)
+            except OSError:
+                return ".bin"
+            if head.startswith(b"%PDF"):
+                return ".pdf"
+            if head.startswith(b"PK"):
+                return ".docx"
+            if head.lstrip().startswith((b"<", b"<!")):
+                return ".html"
+            return ".txt"
+    
+        # 可搜索 HTML 只是本地索引/阅读器。仅在 archive_ref 实际存在时生成原件链接，
+        # 因此历史 evidence/... provenance 不会被伪造成一个坏链接。
+        for d in docs:
+            source = os.path.join(library_root, d["archive_ref"])
+            if not os.path.isfile(source):
+                continue
+            original_name = d["file"] + original_extension(source)
+            destination = os.path.join(originals_dir, original_name)
+            try:
+                os.link(source, destination)
+            except (OSError, AttributeError):
+                shutil.copyfile(source, destination)
+            d["original_href"] = "../originals/" + original_name
+    
+        by_key = {}
+        for dk, pno, content in conn.execute("SELECT document_key, paragraph_no, content FROM fulltext_fts"):
+            by_key.setdefault(dk, []).append((pno, content or ""))
+    finally:
+        conn.close()
 
     search_data = {}
     for d in docs:

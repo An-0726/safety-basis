@@ -89,6 +89,8 @@ PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；�
 - PR #42：完成 PHASE 11 首轮等待态远端审计，刷新 README / MAINTENANCE / HANDOFF 并固化维护触发条件。
 - PR #43：新增 `tools/v4/validate_publication_integrity.py`，把 PHASE 7 一次性 publication canonical / 全文 / search 一致性审计升级为 Validate 与 Pages Build 都必须执行的长期硬门禁；合并后业务 releaseHash 仍为 `552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`。
 - PR #45：为 publication 长期门禁增加正常/失败合成回归测试和 catalog/search/text/gram schema + asOf 契约；合并后 main Validate `35180759610`、Build/Pages `35180759551` 全绿。
+- PR #46：同步 Phase 11 当前状态文档，保持 long-lived 架构与维护文档与实际治理状态一致。
+- PR #47：记录 current-main 本地验收状态（`docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md` 及状态文档同步）；合并提交 `e3d2e2ac689b26c5dc4058e66feff095039b1358`，main Validate run `35199100753`、Build/Pages run `35199100714` 均 success。
 
 ---
 
@@ -287,14 +289,23 @@ PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Vali
 
 私有本地版已在 PHASE 11 对**当前正式 main**重新完成真实母库验收：独立 worktree HEAD=`c2ffe2042a316881f229eea8899156fa897f601d`，现场重建为 **1,429 active / 499 proposed / public proposed 0 / 57 formal law versions / 1,205 clauses / 1,544 links / publication 69（11 full_text + 58 link_only）/ 170 private document carriers**，全部 Gate 与 unified bundle verify 均 PASS。真实 SQLite 仍为 170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / mismatch 0，SHA-256 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`，构建前后 SHA/size/mtime 完全不变；本轮未写 SQLite/FTS/archive。
 
-远端治理仍有一个明确未自动完成项：Issue #44 记录 `main` 当前 `protected=false` 且仓库 rulesets 为空，以及历史远端分支清理分类。本机进一步确认 `gh` CLI 未安装且没有 `GH_TOKEN` / `GITHUB_TOKEN` 管理凭据；当前 GitHub App 对 protection/ruleset 管理写接口返回 `403 Resource not accessible by integration`，因此该项继续显式 OPEN，不把它伪装成已完成。Issue #44 同时明确禁止把 `chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003` 的历史独有提交误当成当前待合并业务。
+远端治理进展：2026-09-17 已为 `main` 正式配置并激活 GitHub Repository Ruleset（ID `23589482`，名称 `Protect main`，状态 `active`），`branches/main` 的 `protected` 状态已技术实测生效（`true`）。技术保护规则完全满足项目治理要求：
+- 变更必须通过 Pull Request 引入（单人维护采用 `required_approving_review_count: 0`，避免自锁死循环）；
+- 必需状态检查强制绑定当前生产 check-runs：`validate` 与 `build`；
+- 禁止 force push（`non_fast_forward`）；
+- 禁止删除 `main`（`deletion`）；
+- 保持 GitHub Pages 从 `main` 自动发布机制正常运转。
+
+Issue #44 中关于 `main` 技术保护的治理目标已完全闭环；Issue #44 继续保持 OPEN，用于跟踪经用户人工批准后的历史远端分支清理工作。Issue #44 依然明确禁止把 `chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003` 的历史独有提交误当成当前待合并业务。
+
+此外，本轮对 `tools/v4/library_site.py` 及测试补齐了 SQLite 连接显式 `close()` 机制，彻底消除了 Windows 环境下文件句柄未释放导致的临时目录清理异常（WinError 32），提升了本地开发与测试的跨平台稳定性。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **当前没有新的正式业务数据待处理；当前-main + 真实私有母库的本地最终版已在 PHASE 11 重新验收通过。PHASE 11 继续保持长期维护等待；下一次触发来自新法规/版本/隐患/证据、候选转正条件满足、CI/Pages 异常、私有库维护不变量异常，或 Issue #44 的仓库治理条件具备。**
+> **当前没有新的正式业务数据待处理；`main` 技术保护已在远端技术强制，当前-main + 真实私有母库的本地最终版验收完备。PHASE 11 继续保持长期维护等待；下一次触发来自新法规/版本/隐患/证据、候选转正条件满足、CI/Pages 异常、私有库维护不变量异常，或 Issue #44 历史远端分支批量清理的人工批准。**
 
 进入下一维护批次时继续遵守现有边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网。每次**正式业务数据**变化后执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance。纯文档/治理/测试变化只执行其受影响检查和正常主线 CI，不为制造新数字而重复业务线上验收。
 
-仓库治理方面，Issue #44 是当前唯一明确 OPEN 项：具备仓库管理写权限后，为 `main` 配置 PR + 必需检查保护并按 issue 中分类清理历史远端分支；在此之前不得把“流程约定”误报为 GitHub 已技术强制。
+仓库治理方面，`main` 技术保护已建立，后续仅剩 Issue #44 列出的历史已合并/被替代分支的批量清理，待用户给出一次性删除批准后执行。
