@@ -9,7 +9,19 @@
 3. 文本/OCR 导入 `source/library/fulltext.sqlite3` 只用于检索定位，正式引用仍回看官方原文或原始文件；
 4. 更新 `knowledge/` 的法规身份、版本、具体条款、隐患、关联和审核记录；
 5. 允许公开的题录、官方入口或全文才同步到 `source/publication/`；多个来源不得制造多个正式法规身份；
-6. 运行完整 Gate、构建和校验；涉及架构/口径/归并/候选策略时同步更新 README 和 HANDOFF。
+6. 运行完整 Gate、构建和校验；涉及架构/口径/归并/候选策略时同步更新 README；交接方式实际变化时再更新 HANDOFF。
+
+## PHASE 11 触发条件
+
+当前处于长期维护等待态。出现下列任一情况才进入新的维护批次：
+
+- 新法规、标准、修订版本、废止/替代关系或官方证据需要纳管；
+- 新隐患、既有隐患修订、候选证据补齐或 `proposed` 转正审核；
+- Validate / strict gate / fresh build / verify / Pages 出现异常；
+- `PROJECT_STATE.md`、README、HANDOFF 与远端实际状态出现实质冲突；
+- 私有 SQLite 到达计划备份/integrity 维护点，或出现文档数、FTS 行数、paragraph sum、archive 引用等不变量异常。
+
+没有上述触发条件时，不为“保持活跃”而改业务数据，不重复正式发布验收，也不把 499 条 `proposed` 强行清零。
 
 ## 候选
 
@@ -26,7 +38,7 @@
 - 私有全文数：SQLite 中成功建立正文记录的文档；
 - 公开全文数：`source/publication/fulltext/` 中允许公开分发的全文。
 
-当前 2026-09-14 本地严格 Gate 基线：1,409 条正式隐患、55 个实际引用法规版本、1,193 条正式条款、1,524 个正式关联；519 条 proposed 只留后台。
+当前 2026-09-17 正式基线：1,429 条正式隐患、57 个实际引用法规版本、1,205 条正式条款、1,544 个正式关联；499 条 proposed 只留后台。knowledge 库存为 103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
 
 ## 正式发布构建
 
@@ -43,7 +55,7 @@ py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YY
 py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
 ```
 
-GitHub Actions 会自动完成删除旧生成物、重建、生成 selection、严格校验和部署。
+GitHub Actions 会自动完成删除旧生成物、重建、生成 selection、严格校验和部署。任何正式业务数据变化仍按现有 Validate → strict gate → fresh build → verify → Pages → online acceptance 链闭环。
 
 ## 本地最终版
 
