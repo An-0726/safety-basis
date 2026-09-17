@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-17 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收、PHASE 9 Release Candidate 全量验证和 PHASE 10 正式合并/Pages 发布/线上验收最终状态。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**PHASE 10 已按用户明确授权完成。** 最终发布已进入 `main`，GitHub Pages 已部署并通过发布产物与公网 HTTP 双重验收；当前进入 PHASE 11 长期维护等待状态。
+**PHASE 10 DONE；PHASE 11 长期维护循环已启动。** 正式业务发布基线继续保持 PHASE 10 已验收结果；2026-09-17 已完成首轮 PHASE 11 远端治理、publication 长期门禁与门禁回归测试，当前回到等待下一维护触发条件的状态。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,9 +38,11 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-17（PHASE 10 正式发布与线上验收）。**
+**LAST VERIFIED：2026-09-17（PHASE 11 首轮维护治理；业务发布仍沿用 PHASE 10 已验收基线）。**
 
-当前 Git 正式主线为 `main`。PHASE 10 最终发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`。PR 合并前 `Validate safety data` 与 `Build current verified website` 均成功；合并后 `main` Validate run `35127304202` 成功，Build/Pages run `35127304262` 的 build 与 deploy job 均成功，部署地址为 `https://an-0726.github.io/safety-basis/`。随后用 GitHub-hosted runner 对该公网地址执行独立 HTTP 验收，workflow run `35128348354` PASS。
+PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`；PR #41 完成 PHASE 10 状态收尾。PHASE 11 首轮维护随后完成：PR #42 收口等待态文档与远端审计；PR #43 将 publication canonical / catalog / 物理全文 / search 派生物一致性固化为长期硬门禁；PR #45 为该门禁补齐合成失败回归测试和 schema/asOf 契约。PR #45 合并提交为 `9e8de313e2321a9b81b8e812155434d7735e463b`，其后 `main` Validate run `35180759610` success，Build/Pages run `35180759551` 的 build 与 deploy 均 success。部署地址仍为 `https://an-0726.github.io/safety-basis/`。
+
+上述 PHASE 11 变更均未修改 governed `knowledge/` / `source/publication/` 业务数据、私有 SQLite/archive 或稳定 ID，因此正式业务发布继续沿用 PHASE 10 公网 HTTP 验收 run `35128348354` 的已验收内容基线；无需因纯治理/测试改动重复业务线上验收。
 
 公开发布架构已收口：
 
@@ -83,6 +85,10 @@ PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；�
 - PHASE 8 工作分支：公开前端、canonical 跳转和本地私有全文展示边界已验收；公开/私有审计均 PASS，最终 workflow run `35120861560` success；
 - PHASE 9 RC 工作分支：公共 RC 全量验证 workflow run `35122196162` success；同一 RC 源码快照结合真实私有 SQLite 完成本地最终版构建，输入库内容哈希不变；
 - PHASE 10：PR #40 已合并 `main`（发布合并提交 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`）；PR checks、main Validate、main Build、Pages Deploy 全绿；已部署 artifact 与公网 HTTP 验收均 PASS。
+- PR #41：完成 PHASE 10 状态收尾和一次性 workflow/trigger 清理，`main` 收口到长期维护入口。
+- PR #42：完成 PHASE 11 首轮等待态远端审计，刷新 README / MAINTENANCE / HANDOFF 并固化维护触发条件。
+- PR #43：新增 `tools/v4/validate_publication_integrity.py`，把 PHASE 7 一次性 publication canonical / 全文 / search 一致性审计升级为 Validate 与 Pages Build 都必须执行的长期硬门禁；合并后业务 releaseHash 仍为 `552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`。
+- PR #45：为 publication 长期门禁增加正常/失败合成回归测试和 catalog/search/text/gram schema + asOf 契约；合并后 main Validate `35180759610`、Build/Pages `35180759551` 全绿。
 
 ---
 
@@ -261,25 +267,33 @@ publication 已收口为 knowledge canonical 身份投影；题录、官方入�
 ### PHASE 10 — 最终合并 main、GitHub Pages 部署、线上验收 — DONE
 PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 success；GitHub Pages 发布成功；对实际部署 artifact 完整性、公开边界、搜索索引/法规索引/全文目录执行验收，并通过 GitHub-hosted runner 对公网 URL 做独立 HTTP 抽检，全部 PASS。
 
-### PHASE 11 — 长期维护循环 — PENDING
-新法规/版本先入私有证据层，核身份/版本/效力后更新 knowledge；SQLite 定期备份/integrity；仅阶段状态实际变化时更新本文件。
+### PHASE 11 — 长期维护循环 — IN PROGRESS
+首轮维护治理已完成：等待态审计、publication 长期完整性门禁及门禁回归测试均已进入 `main`；当前没有新的正式业务数据待发布，回到等待下一法规/版本/隐患/证据/维护触发条件的状态。SQLite 仍按既有规则定期备份/integrity；仅阶段状态实际变化时更新本文件。
 
 ---
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 10 DONE；当前进入 PHASE 11 长期维护等待状态。**
+**PHASE 11 长期维护循环已启动；首轮治理维护 DONE，当前处于等待下一触发条件状态。**
 
-PHASE 10 发布 PR #40 已合并 `main`，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`。PR 级 `Validate safety data` run `35127179006` 与 `Build current verified website` run `35127178998` 均 success；合并后 `main` Validate run `35127304202` success，Build/Pages run `35127304262` 的 build 与 deploy job 均 success。Pages 环境地址为 `https://an-0726.github.io/safety-basis/`。
+2026-09-17 首轮 PHASE 11 维护完成三组实际动作：
 
-实际部署 artifact 已独立抽检：`releaseHash=552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`，首次正式部署 `dataVersion=2026.09.16.3c486cba5142`；288 个声明文件哈希全部匹配；公开数据为 **1,429 hazards / 1,205 clauses / 57 laws / 57 law versions / 1,544 links**；499 proposed 保持公网 0；法规与条款/隐患公开引用断链 0；publication 目录保持 69（11 full_text + 58 link_only）；私有路径/SQLite/archive 标记泄漏 0；HTML 静态资源缺失 0。GitHub-hosted runner 另对正式 Pages URL 做公网 HTTP 抽检，workflow run `35128348354` PASS。
+- PR #42：核对远端 `main` / workflows / Actions / PR / issue / 生成物边界，刷新 README、MAINTENANCE、HANDOFF 并新增等待态审计记录；
+- PR #43：新增只读 `validate_publication_integrity.py` 并同时接入 Validate 与实际 Pages Build，长期阻断 publication 非 canonical 身份、catalog/物理全文不一致、陈旧 search-index/gram shard、proposed/private 泄漏等问题；
+- PR #45：新增 1 个正常通过 + 6 个失败场景的合成回归测试，并固定 catalog / search-index / full-text / gram schema 与 catalog/search `asOf` 一致性。
 
-私有本地版仍以 PHASE 9 已通过的真实 SQLite 验收为准：170 documents / 215,326 FTS rows / 36 canonical alias members；SQLite SHA-256 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629` 构建前后不变。PHASE 10 未改变私有库内容，也未让 499 条 proposed 进入公开站。
+PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Validate run `35180759610` success；Build/Pages run `35180759551` 的 build 与 deploy 均 success。PHASE 11 治理改动没有修改正式业务数据：公开投影仍为 **1,429 hazards / 57 law versions / 1,205 clauses / 1,544 links**，499 proposed 仍保持公网 0，publication 仍为 69（11 full_text + 58 link_only），已验收业务 `releaseHash` 仍为 `552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`。
+
+私有本地版仍以 PHASE 9 已通过的真实 SQLite 验收为准：170 documents / 215,326 FTS rows / 36 canonical alias members；SQLite SHA-256 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`。本轮 PHASE 11 未写 SQLite/FTS/archive。
+
+远端治理仍有一个明确未自动完成项：Issue #44 记录 `main` 当前 `protected=false` 且仓库 rulesets 为空，以及历史远端分支清理分类。当前 GitHub 连接器没有创建 branch protection / ruleset 或删除 branch ref 的管理写接口，因此该项保持显式 OPEN，不把它伪装成已完成。Issue #44 同时明确禁止把 `chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003` 的历史独有提交误当成当前待合并业务。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **PHASE 10 已完成，不再重复发布验收。后续仅在有新的法规、版本、隐患、证据或维护需求时进入 PHASE 11 长期维护循环。**
+> **当前没有新的正式业务数据待处理；PHASE 11 保持长期维护等待。下一次触发来自新法规/版本/隐患/证据、候选转正条件满足、CI/Pages 异常、私有库维护不变量异常，或 Issue #44 的仓库治理条件具备。**
 
-PHASE 11 继续遵守现有治理边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网；每次正式业务数据变化后再重新执行 Validate → Build → Pages → online acceptance。
+进入下一维护批次时继续遵守现有边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网。每次**正式业务数据**变化后执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance。纯文档/治理/测试变化只执行其受影响检查和正常主线 CI，不为制造新数字而重复业务线上验收。
+
+仓库治理方面，Issue #44 是当前唯一明确 OPEN 项：具备仓库管理写权限后，为 `main` 配置 PR + 必需检查保护并按 issue 中分类清理历史远端分支；在此之前不得把“流程约定”误报为 GitHub 已技术强制。
