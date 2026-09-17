@@ -55,4 +55,4 @@
 
 截至 2026-09-17，PHASE 6 已对原 519 条 `proposed` 候选完成 **519/519** 最终处置：其中 20 条在法规身份、现行版本、逐字条款原文、对象适用性和审核链全部满足后转为 `active`；其余 **499 条**因证据、对象、条件、数值口径、条文质量或适用性不足继续保持 `proposed`，并保留明确原因和下一证据动作。
 
-当前 `knowledge/` lifecycle 为 **1,429 active / 499 proposed / 86 superseded**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把 499 条内部 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
+当前 `knowledge/` lifecycle 为 **1,442 active / 487 proposed / 86 superseded**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把 499 条内部 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
