@@ -24,10 +24,11 @@ jobs:
         run: |
           node --test tests/*.test.mjs
           python -m unittest discover -s tools/pipeline/tests -v
-      - name: Validate the V4 knowledge graph and strict current gate
+      - name: Validate knowledge, strict release gate, and publication integrity
         run: |
           python tools/v4/validate_all.py
           python tools/v4/strict_release_audit.py
+          python tools/v4/validate_publication_integrity.py
       - name: Rebuild and verify a fresh current release
         shell: bash
         run: |
