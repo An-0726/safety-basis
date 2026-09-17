@@ -1,0 +1,34 @@
+name: Phase 11 local acceptance state sync
+
+on:
+  push:
+    branches: [phase11-local-acceptance-20260917]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: phase11-local-acceptance-20260917
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply state update
+        run: python tools/maintenance/phase11_local_acceptance_state_once.py
+      - name: Commit state and remove one-shot helpers
+        shell: bash
+        run: |
+          rm tools/maintenance/phase11_local_acceptance_state_once.py
+          rm .github/workflows/phase11-local-acceptance-state.yml
+          git diff --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/PROJECT_STATE.md tools/maintenance/phase11_local_acceptance_state_once.py .github/workflows/phase11-local-acceptance-state.yml
+          git commit -m 'Phase 11: record current-main local acceptance state'
+          git push origin HEAD:phase11-local-acceptance-20260917
