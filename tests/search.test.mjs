@@ -61,3 +61,29 @@ test('扩容同义组：危化品→危险化学品、叉车→厂内机动车�
   const hydrant = hazardRow({ title: '消火栓被遮挡', searchText: '消火栓 遮挡' });
   assert.equal(searchHazards([hydrant], '消防栓', {}).length, 1);
 });
+
+test('无空格中文复合查询（配电箱遮挡）精准切词且拒绝假阳性', () => {
+  const mismatch = hazardRow({
+    id: 'H_MISMATCH',
+    title: '照明配电箱（盘）内配线不整齐或存在绞接',
+    searchText: '照明配电箱 盘 内配线不整齐或存在绞接 配电箱 配电 配线 绞接',
+  });
+  const match = hazardRow({
+    id: 'H_MATCH',
+    title: '配电箱前堆放杂物遮挡操作通道',
+    searchText: '配电箱前堆放杂物遮挡操作通道 配电箱 堆放 堆物 杂物 遮挡 操作 通道',
+  });
+  const hits = searchHazards([mismatch, match], '配电箱遮挡', {});
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].id, 'H_MATCH');
+});
+
+test('复合查询各概念分别支持同义词扩展（配电柜堵塞 / 配电箱堆物）', () => {
+  const row = hazardRow({
+    id: 'H_MATCH',
+    title: '配电箱前堆放杂物遮挡操作通道',
+    searchText: '配电箱前堆放杂物遮挡操作通道 配电箱 堆放 堆物 杂物 遮挡 操作 通道',
+  });
+  assert.equal(searchHazards([row], '配电柜堵塞', {}).length, 1);
+  assert.equal(searchHazards([row], '配电箱堆物', {}).length, 1);
+});
