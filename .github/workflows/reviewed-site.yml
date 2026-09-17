@@ -27,6 +27,7 @@ jobs:
         run: |
           python tools/v4/validate_all.py
           python tools/v4/strict_release_audit.py
+          python tools/v4/validate_publication_integrity.py
           rm -rf source/releases/current
           DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}"
           python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
