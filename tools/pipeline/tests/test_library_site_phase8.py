@@ -17,7 +17,8 @@ spec.loader.exec_module(library_site)
 class LibrarySitePhase8Test(unittest.TestCase):
     def _make_db(self, root: Path):
         db = root / "fulltext.sqlite3"
-        with sqlite3.connect(db) as conn:
+        conn = sqlite3.connect(db)
+        try:
             conn.execute("""
                 CREATE TABLE documents(
                     document_key TEXT PRIMARY KEY,
@@ -50,6 +51,9 @@ class LibrarySitePhase8Test(unittest.TestCase):
                  "evidence/legacy.fulltext.pdf", "2026-09-16T00:00:00Z"),
             )
             conn.execute("INSERT INTO fulltext_fts VALUES (?,?,?)", ("legacy-evidence\x1f2012", 1, "历史证据文本。"))
+            conn.commit()
+        finally:
+            conn.close()
         return db
 
     def test_alias_policy_is_display_only(self):
