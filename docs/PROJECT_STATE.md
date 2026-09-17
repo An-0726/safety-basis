@@ -67,7 +67,7 @@ PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85e
 
 PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条在官方原文、对象适用性、当前 review hash 和完整 Gate 均满足后转为 `active`，499 条因证据、对象、条件、现行数值、条文质量或适用性不足继续保持 `proposed`。PHASE 7/8/9/10 未改变该业务状态。因此当前 `main` lifecycle 为：**1,429 active、499 proposed、86 superseded，共 2,014**。
 
-当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,847 条条款、2,014 个隐患实体、1,567 个关联、1,161 个 evidence、28 条 succession、75 条 requirements**。
+当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,910 条条款、2,014 个隐患实体、1,567 个关联、1,162 个 evidence、28 条 succession、75 条 requirements**。
 
 新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
@@ -298,6 +298,12 @@ PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Vali
 - 保持 GitHub Pages 从 `main` 自动发布机制正常运转。
 
 远端治理与分支清理已完全收口：2026-09-17 经用户明确审批，已从 `origin` 批量清理 29 个已完成/被替代的历史远端分支；明确包含历史独有提交的 3 个分支（`chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003`）严格保留。远端分支只保留主干与上述 3 个归档证据分支。Issue #44 所跟踪的主干技术保护与历史分支清理两项任务均已完全解决，Issue #44 正式 CLOSED（completed）。
+
+新标准收录进展：2026-09-17 完成强制性国家标准《有限空间作业安全技术规范》（GB 46768-2025）的全流程收录与结构化条款入库：
+- 原件入库：官方原件 PDF 归档至 `source/library/archive/e8af78774afffaa1b758a63cc1a8e69b802d345df4da73c197f861248d0bdcf8/original`；
+- 私有全文母库：`fulltext.sqlite3` documents 表新增 1 行至 171 份，全文检索表新增 138 段至 215,464 行，`document-aliases.json` 建立到 canonicalVersionId `LV_STD_624AF774D05822F9B543D281` 的映射；
+- 知识库：新增 1 项权威归档证据（`E_46768_GB46768`），新增 63 条第 4~7 章核心规范条款（`C_46768_4_1_1` 至 `C_46768_7_2`）及逐条 verified review，条款总量增至 2,910；
+- 验证：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、全量单元测试与本地最终版（171 document carriers）构建验证全部 PASS。
 
 ---
 
