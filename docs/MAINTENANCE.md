@@ -17,7 +17,7 @@
 
 - 新法规、标准、修订版本、废止/替代关系或官方证据需要纳管；
 - 新隐患、既有隐患修订、候选证据补齐或 `proposed` 转正审核；
-- Validate / strict gate / fresh build / verify / Pages 出现异常；
+- Validate / strict gate / publication integrity / fresh build / verify / Pages 出现异常；
 - `PROJECT_STATE.md`、README、HANDOFF 与远端实际状态出现实质冲突；
 - 私有 SQLite 到达计划备份/integrity 维护点，或出现文档数、FTS 行数、paragraph sum、archive 引用等不变量异常。
 
@@ -40,6 +40,19 @@
 
 当前 2026-09-17 正式基线：1,429 条正式隐患、57 个实际引用法规版本、1,205 条正式条款、1,544 个正式关联；499 条 proposed 只留后台。knowledge 库存为 103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
 
+## Publication 长期完整性门禁
+
+`source/publication/` 是公开来源层，但它仍必须严格服从 `knowledge/` 的 canonical 身份。日常 CI 通过 `tools/v4/validate_publication_integrity.py` 持续检查：
+
+- `law-index.json` 必须与 `knowledge/law-versions/` 保持 1:1 canonical version ID 投影；
+- 全文 catalog 的 `versionId/lawId`、效力日期、公开权限与 knowledge/目录规则一致；
+- `full_text` 必须有已批准全文、合法 `texts/` 路径和真实文件；`link_only` 不得携带全文文件或全文 hash；
+- catalog 引用的全文文件集合必须与物理 `texts/*.json` 双向完全一致，禁止孤儿全文被复制到公网包；
+- `search-index.json` 与 `grams/*.json` 必须能由当前 catalog/全文确定性重算得到，禁止陈旧搜索派生物继续部署；
+- publication 元数据不得带入 `proposed` 隐患或私有库路径/SQLite 标记。
+
+该门禁只读，不修改 `knowledge/`、publication、SQLite 或 archive；任何失败都必须先调查真实不一致，不能通过修改业务数据“凑通过”。Validate 与实际 Pages Build 两条长期 workflow 都必须执行此门禁。
+
 ## 正式发布构建
 
 `source/releases/current/` 与 `source/releases/site-selection.json` 都是**生成物并已 Git 忽略**。不要提交、不要手改、不要拿旧快照做输入。
@@ -49,13 +62,14 @@
 ```text
 py -3 tools/v4/validate_all.py
 py -3 tools/v4/strict_release_audit.py
+py -3 tools/v4/validate_publication_integrity.py
 # 先删除本地旧生成物 source/releases/current 和 site-selection.json
 py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
 # 按 release.json 的 releaseHash 生成 site-selection.json 后：
 py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
 ```
 
-GitHub Actions 会自动完成删除旧生成物、重建、生成 selection、严格校验和部署。任何正式业务数据变化仍按现有 Validate → strict gate → fresh build → verify → Pages → online acceptance 链闭环。
+GitHub Actions 会自动完成 knowledge 校验、strict gate、publication integrity、删除旧生成物、重建、生成 selection、严格校验和部署。任何正式业务数据变化仍按现有 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance 链闭环。
 
 ## 本地最终版
 

@@ -167,13 +167,16 @@ py -3 tools/build_local_release.py
 ```text
 py -3 tools/v4/validate_all.py
 py -3 tools/v4/strict_release_audit.py
+py -3 tools/v4/validate_publication_integrity.py
 py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
 py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
 py -3 -m unittest discover -s tools/pipeline/tests -v
 node --test tests/*.test.mjs
 ```
 
-严格审计存在 release blocker 时返回非零退出码，CI 必须失败。未来版本、历史版本、候选和待回绑项作为库存/backlog 管理，不得偷偷进入正式投影。
+其中 `validate_publication_integrity.py` 是长期只读硬门禁：要求 publication 保持 knowledge canonical 1:1 身份投影，并检查全文 catalog、物理 `texts/`、全文搜索 index/gram shards 的确定性一致性与公开/私有边界。它同时运行在 Validate 和实际 Pages Build 路径；失败不得通过修改业务数据“凑绿”。
+
+严格审计存在 release blocker 或 publication integrity 失败时，CI 必须失败。未来版本、历史版本、候选和待回绑项作为库存/backlog 管理，不得偷偷进入正式投影。
 
 ## 十一、2026-09-14 架构收口阶段改了什么（历史记录）
 
