@@ -91,6 +91,7 @@ PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；�
 - PR #45：为 publication 长期门禁增加正常/失败合成回归测试和 catalog/search/text/gram schema + asOf 契约；合并后 main Validate `35180759610`、Build/Pages `35180759551` 全绿。
 - PR #46：同步 Phase 11 当前状态文档，保持 long-lived 架构与维护文档与实际治理状态一致。
 - PR #47：记录 current-main 本地验收状态（`docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md` 及状态文档同步）；合并提交 `e3d2e2ac689b26c5dc4058e66feff095039b1358`，main Validate run `35199100753`、Build/Pages run `35199100714` 均 success。
+- PR #48：为 `main` 配置并激活 GitHub Repository Ruleset（ID `23589482`），确立技术保护强制，并修复 Windows 本地 SQLite 文件句柄未关闭问题；PR CI 与 main CI/Pages 全绿。
 
 ---
 
@@ -296,16 +297,14 @@ PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Vali
 - 禁止删除 `main`（`deletion`）；
 - 保持 GitHub Pages 从 `main` 自动发布机制正常运转。
 
-Issue #44 中关于 `main` 技术保护的治理目标已完全闭环；Issue #44 继续保持 OPEN，用于跟踪经用户人工批准后的历史远端分支清理工作。Issue #44 依然明确禁止把 `chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003` 的历史独有提交误当成当前待合并业务。
-
-此外，本轮对 `tools/v4/library_site.py` 及测试补齐了 SQLite 连接显式 `close()` 机制，彻底消除了 Windows 环境下文件句柄未释放导致的临时目录清理异常（WinError 32），提升了本地开发与测试的跨平台稳定性。
+远端治理与分支清理已完全收口：2026-09-17 经用户明确审批，已从 `origin` 批量清理 29 个已完成/被替代的历史远端分支；明确包含历史独有提交的 3 个分支（`chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003`）严格保留。远端分支只保留主干与上述 3 个归档证据分支。Issue #44 所跟踪的主干技术保护与历史分支清理两项任务均已完全解决，Issue #44 正式 CLOSED（completed）。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **当前没有新的正式业务数据待处理；`main` 技术保护已在远端技术强制，当前-main + 真实私有母库的本地最终版验收完备。PHASE 11 继续保持长期维护等待；下一次触发来自新法规/版本/隐患/证据、候选转正条件满足、CI/Pages 异常、私有库维护不变量异常，或 Issue #44 历史远端分支批量清理的人工批准。**
+> **当前没有新的正式业务数据待处理；`main` 技术保护已在远端技术强制，历史分支清理已完全闭环，当前-main + 真实私有母库的本地最终版验收完备。PHASE 11 长期维护循环正式就绪，进入纯粹的长期维护等待态；下一次触发来自新法规/版本/隐患/证据、候选转正条件满足、CI/Pages 异常、私有库维护不变量异常，或用户下达的新业务任务。**
 
 进入下一维护批次时继续遵守现有边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网。每次**正式业务数据**变化后执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance。纯文档/治理/测试变化只执行其受影响检查和正常主线 CI，不为制造新数字而重复业务线上验收。
 
-仓库治理方面，`main` 技术保护已建立，后续仅剩 Issue #44 列出的历史已合并/被替代分支的批量清理，待用户给出一次性删除批准后执行。
+仓库治理方面，所有未结事项已全部清零，日常不盲目频繁改写文件或提交，保持生产环境高度平稳。
