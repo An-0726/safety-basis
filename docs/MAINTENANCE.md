@@ -4,12 +4,13 @@
 
 ## 法规或标准入库
 
-1. 原件复制到 `source/library/incoming-YYYYMMDD/`，保留用户原文件不动；
-2. 计算 SHA-256 去重，登记规范名称、编号、版本、来源、发布日期/实施日期、版权边界和提取质量；
-3. 文本/OCR 导入 `source/library/fulltext.sqlite3` 只用于检索定位，正式引用仍回看官方原文或原始文件；
-4. 更新 `knowledge/` 的法规身份、版本、具体条款、隐患、关联和审核记录；
-5. 允许公开的题录、官方入口或全文才同步到 `source/publication/`；多个来源不得制造多个正式法规身份；
-6. 运行完整 Gate、构建和校验；涉及架构/口径/归并/候选策略时同步更新 README；交接方式实际变化时再更新 HANDOFF。
+1. 先确认法规/标准身份、编号、版次、发布/实施日期和当前效力，再决定证据获取路线；
+2. **优先复用本地私有母库，但不以本地母库为唯一来源。** 本地有已核验原件时直接使用；本地没有、版本不全、原文缺失或效力存疑时，必须主动联网查询权威官方来源；
+3. 官方来源优先使用全国人大/国家法律法规数据库、中国政府网/国务院、发布机关及主管部门官网、国家标准全文公开系统/全国标准信息公共服务平台、对应省市政府或主管部门官网。普通搜索摘要、百科、培训网站、商业法规库和第三方转载仅用于定位；
+4. 官方网页/PDF若能确认现行版本、精确条/款/项或标准条号、完整逐字原文、官方 URL/证据和适用范围，可直接建立 `knowledge/` 中的法规身份、版本、条款、evidence、隐患关联和 review，**不要求先把原件导入 `source/library/` 或先写 `fulltext.sqlite3`**；
+5. 只有需要离线保存、全文检索或补充本地证据库时，才按单独授权流程将原件复制到 `source/library/incoming-YYYYMMDD/`，做 SHA-256 去重、题录匹配、文本/OCR 和 SQLite 维护；SQLite 仍只用于检索定位，不高于官方/原始证据；
+6. 允许公开的题录、官方入口或全文才同步到 `source/publication/`；同一真实版本的多个官方来源只作为多来源，不制造多个正式法规身份；
+7. 运行完整 Gate、构建和校验；涉及架构/口径/归并/候选策略时同步更新 README；交接方式实际变化时再更新 HANDOFF。
 
 ## PHASE 11 触发条件
 
@@ -21,7 +22,7 @@
 - `PROJECT_STATE.md`、README、HANDOFF 与远端实际状态出现实质冲突；
 - 私有 SQLite 到达计划备份/integrity 维护点，或出现文档数、FTS 行数、paragraph sum、archive 引用等不变量异常。
 
-没有上述触发条件时，不为“保持活跃”而改业务数据，不重复正式发布验收，也不把当前 434 条 `proposed` 强行清零。
+没有上述触发条件时，不为“保持活跃”而改业务数据，不重复正式发布验收，也不把当前 `proposed` 强行清零。
 
 ## 候选
 
@@ -38,7 +39,7 @@
 - 私有全文数：SQLite 中成功建立正文记录的文档；
 - 公开全文数：`source/publication/fulltext/` 中允许公开分发的全文。
 
-当前 2026-09-18 正式基线：1,495 条正式隐患、58 个实际引用法规版本、1,267 条正式条款、1,611 个正式关联；434 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 103 laws / 106 lawVersions / 2,920 clauses / 2,015 hazards / 1,634 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
+当前 2026-09-19 正式基线：1,502 条正式隐患、59 个实际引用法规版本、1,276 条正式条款、1,621 个正式关联；421 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 103 laws / 107 lawVersions / 2,940 clauses / 2,015 hazards / 1,645 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
 
 ## Publication 长期完整性门禁
 
