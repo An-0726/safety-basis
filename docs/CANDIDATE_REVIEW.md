@@ -71,5 +71,10 @@
 - 逐条机器明细见 `docs/backlog_434_final_disposition.jsonl`。
 同时闭环合并 1 组 active 重名隐患并修复 14 个 rejected link 的 lifecycle 状态。
 
-当前 `knowledge/` lifecycle 为 **1,494 active / 429 proposed / 92 superseded（共 2,015 hazards）**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把后台 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
+2026-09-19 PHASE 14 GB 18597-2023 危废专项批次复核 18 条危废贮存相关候选（机器明细见 `docs/phase14-gb18597-disposition.jsonl`）：
+- 8 条在现行国家标准 GB 18597-2023 现行有效版本、官方逐字条款、现场适用范围和审核链完整后转为 `active`；
+- 10 条因外部标准依赖（如 HJ 1259-2022、HJ 1276-2022）、行政法定义务（固废法第78、81、85条）或消防器材专业配置要求继续审慎保留 `proposed`。
+
+当前 `knowledge/` lifecycle 为 **1,502 active / 421 proposed / 92 superseded（共 2,015 hazards）**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把后台 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
+
 
