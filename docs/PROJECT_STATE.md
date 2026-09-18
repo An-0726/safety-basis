@@ -339,6 +339,10 @@ GB/T 47236-2026 候选专题批次：2026-09-18 从 487 条 proposed 基线中�
 
 GB/T 47236-2026 独立义务专题批次：同日继续从 471 条 proposed 中复核并转正 26 条。本批只选择条款自身已经完整规定所述义务的项目，不使用外部标准题名、表格标题或推荐性措辞补足缺失判断；全部候选均限定至该标准覆盖设备并补齐当前 hazard/link 审核。批次后 lifecycle 为 **1,484 active / 445 proposed / 86 superseded**；fresh public bundle 为 **1,484 hazards / 58 law versions / 1,258 clauses / 1,600 links / public proposed 0**，releaseHash=`24913cd6f3f6014c0c50d05069ce4741969631011876d1ef8a1a9905512edfa6`。Validate、strict release audit、publication integrity、unified bundle verify 和 15 项 Node 测试均 PASS；未修改私有 SQLite/archive。
 
+### PHASE 12 exact-locator 候选批次 — 2026-09-18
+
+从 445 条 proposed 中复核 15 条精确定位候选，11 条通过当前条款、对象、审核哈希和重复门禁后转为 active；4 条因同条款已有活动隐患保留 proposed。当前 lifecycle 为 **1,495 active / 434 proposed / 86 superseded**；fresh public bundle 为 **1,495 hazards / 58 law versions / 1,267 clauses / 1,611 links / public proposed 0**，releaseHash=`b99833df4c0cbcd8bd3e9f7a14880c74de883e9add5dd22a4a270d3201752643`。Validate、strict release audit、publication integrity、unified bundle verify 和 15 项 Node 测试均 PASS；未修改私有 SQLite/archive。机器明细见 `docs/PHASE12_EXACT_LOCATOR_BATCH.md` 和 `docs/phase12-exact-locator-disposition.jsonl`。
+
 ## 7. NEXT ACTION — 下一动作
 
 > **当前第二个 GB/T 47236-2026 专题批次已完成本地数据、Gate 与 fresh bundle 验证，待提交 PR、CI、合并和 Pages 验收。合并后继续按证据集中的专题批次处理剩余 445 条 proposed；下一批应优先核验被引用标准的具体条款与表格内容，不得只凭交叉引用标题转正。**
