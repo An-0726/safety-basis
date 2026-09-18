@@ -57,4 +57,6 @@
 
 2026-09-18 的 GB/T 47236-2026 专题批次又复核 17 条候选：16 条在现行版本、官方逐字原文、对象语义、设备适用范围和审核哈希完整后转为 `active`；1 条因与既有 active 隐患仅部分重叠，继续 `proposed` 等待拆分或合并方案。机器明细见 `docs/phase11-gbt47236-disposition.jsonl`。
 
-当前 `knowledge/` lifecycle 为 **1,458 active / 471 proposed / 86 superseded**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把后台 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
+同日第二个 GB/T 47236-2026 专题批次复核并转正 26 条本条自身已包含完整操作义务的候选；需依赖被引用标准、表1至表5、推荐性措辞或重复处置才能成立的项目仍保持 `proposed`。机器明细见 `docs/phase11-gbt47236-standalone-disposition.jsonl`。
+
+当前 `knowledge/` lifecycle 为 **1,484 active / 445 proposed / 86 superseded**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把后台 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
