@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收、PHASE 9 Release Candidate 全量验证、PHASE 10 正式发布及 PHASE 11 维护批次。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**PHASE 10 DONE；PHASE 11 长期维护循环持续，PHASE 12 exact-locator 批次已完成。** 2026-09-17 完成远端治理、publication 长期门禁、GB 46768-2025 收录、搜索修复及首批电气隐患转正；2026-09-18 又完成两批 GB/T 47236-2026 候选转正与 PHASE 12 exact-locator 批次。PR #58 已合并至 `main`，Validate / Build / Pages deploy 全绿；当前正式基线为 **1,495 active / 434 proposed / 86 superseded**，继续等待下一候选、法规、版本或证据维护批次。
+**PHASE 10 DONE；PHASE 11 长期维护循环持续，PHASE 12 exact-locator 批次已完成，PHASE 13 全库 434 backlog 最终处置与质量闭环批次已完成。** 2026-09-17 完成远端治理、publication 长期门禁、GB 46768-2025 收录、搜索修复及首批电气隐患转正；2026-09-18 完成两批 GB/T 47236-2026 候选转正、PHASE 12 exact-locator 批次以及 PR #59 文档收尾；接手远端主线 `b24fd495cf52f8948ec5742dc3641c0799337a73`。PHASE 13 全面闭环全库 434 条 proposed backlog 逐条处置，修复 14 个 rejected link 状态不一致与 6 组重名/同义隐患合并，质量扫描器实测零错误，私有本地母库验收通过；当前正式基线为 **1,494 active / 429 proposed / 92 superseded**，公开包为 **1,494 hazards / 58 law versions / 1,266 clauses / 1,610 links / public proposed 0**。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,11 +38,11 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-18（远端 `main=f6cf9ed34a7a42ba70f65336dc91aa4c6ce8a823`、PR #58、最新 Validate / Build / Pages deploy 已核；真实私有母库最近一次完整本地最终版验收仍见下文历史基线）。**
+**LAST VERIFIED：2026-09-18（远端 `main=b24fd495cf52f8948ec5742dc3641c0799337a73`、PR #59 merge、最新 Validate / Build / Pages deploy 已核；真实私有母库最新本地最终版验收详见 `docs/PHASE13_LOCAL_ACCEPTANCE_20260918.md`）。**
 
 PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`；PR #41 完成 PHASE 10 状态收尾。PHASE 11 首轮维护随后完成：PR #42 收口等待态文档与远端审计；PR #43 将 publication canonical / catalog / 物理全文 / search 派生物一致性固化为长期硬门禁；PR #45 为该门禁补齐合成失败回归测试和 schema/asOf 契约。PR #45 合并提交为 `9e8de313e2321a9b81b8e812155434d7735e463b`，其后 `main` Validate run `35180759610` success，Build/Pages run `35180759551` 的 build 与 deploy 均 success。部署地址仍为 `https://an-0726.github.io/safety-basis/`。
 
-PHASE 10 的首次正式发布基线继续作为历史发布证据；其后 PHASE 11 / PHASE 12 已发生正式业务数据变化。当前主线为 `f6cf9ed34a7a42ba70f65336dc91aa4c6ce8a823`（PR #58 merge），对应 Validate run `35321083736` success、Build/Pages run `35321083752` success，且 deploy job success。当前 fresh public bundle 为 **1,495 hazards / 58 law versions / 1,267 clauses / 1,611 links / public proposed 0**，`releaseHash=b99833df4c0cbcd8bd3e9f7a14880c74de883e9add5dd22a4a270d3201752643`。
+PHASE 10 的首次正式发布基线继续作为历史发布证据；其后 PHASE 11 / PHASE 12 / PHASE 13 已发生正式业务数据与生命周期治理。当前接手主线为 `b24fd495cf52f8948ec5742dc3641c0799337a73`（PR #59 merge），对应 Validate run `35344496616` success、Build/Pages run `35344496539` success，且 deploy job success。当前 fresh public bundle 为 **1,494 hazards / 58 law versions / 1,266 clauses / 1,610 links / public proposed 0**，`releaseHash=bb65650ba5e6730d1f2f4dbd950f1ff2d7bc09c8458422d471824722c3f9c31d`。
 
 公开发布架构已收口：
 
@@ -65,7 +65,13 @@ PHASE 10 的首次正式发布基线继续作为历史发布证据；其后 PHAS
 
 ### 当前 knowledge 状态
 
-PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。其后 PHASE 11 新增 1 条正式电气隐患、转正 12 条电气候选，并在 GB/T 47236-2026 两个专题批次中转正 16 + 26 条；PHASE 12 exact-locator 再转正 11 条。因此当前 `main` lifecycle 为：**1,495 active、434 proposed、86 superseded，共 2,015**。
+PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。其后 PHASE 11 新增 1 条正式电气隐患、转正 12 条电气候选，并在 GB/T 47236-2026 两个专题批次中转正 16 + 26 条；PHASE 12 exact-locator 再转正 11 条。
+PHASE 13 全库 434 proposed backlog 最终处置与质量错误修复批次中：
+- 将引用未生效草案的 `H_5E36D9ABBA9321D566592E49_2` 合并至现行依据实体 `H_66B2A0967E8B4E4BAD7749DF_1`（active 减少 1，superseded 增加 1）；
+- 将 5 条重名 proposed 隐患（`H_12158_10_1_2`、`H_12158_4_2_3_5_2`、`H_12158_6_3_2_2`、`H_12158_8_8_5_3`、`H_1764B7439DFE44C1A680A7393E`）合并并设为 superseded（proposed 减少 5，superseded 增加 5）；
+- 434/434 proposed 候选逐条机器处置闭环（`docs/backlog_434_final_disposition.jsonl`），无未经审计悬空候选；
+- 14 个 rejected link 的 lifecycle 与 review 状态修正一致；
+- 最终生命周期为：**1,494 active、429 proposed、92 superseded，共 2,015**。
 
 当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,920 条条款、2,015 个隐患实体、1,634 个关联、1,165 个 evidence、28 条 succession、75 条 requirements**。
 
@@ -101,7 +107,9 @@ PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；�
 - PR #55：记录当时 current-main 的真实私有母库本地验收结果。
 - PR #56：GB/T 47236-2026 直接匹配专题批次转正 16 条候选，1 条部分重叠候选保留 proposed。
 - PR #57：GB/T 47236-2026 独立义务专题批次转正 26 条候选。
-- PR #58：PHASE 12 exact-locator 批次转正 11 条候选；合并提交 `f6cf9ed34a7a42ba70f65336dc91aa4c6ce8a823`，main Validate `35321083736`、Build/Pages `35321083752` 及 deploy 均 success；当前正式基线 **1,495 active / 434 proposed / 86 superseded**。
+- PR #58：PHASE 12 exact-locator 批次转正 11 条候选；合并提交 `f6cf9ed34a7a42ba70f65336dc91aa4c6ce8a823`，main Validate `35321083736`、Build/Pages `35321083752` 及 deploy 均 success。
+- PR #59：更新 `docs/HANDOFF.md` 等治理文档，收敛主线基线为 `b24fd495cf52f8948ec5742dc3641c0799337a73`。
+- PHASE 13 工作分支：434 proposed backlog 逐条处置闭环、质量错误清零、Windows release clean 兼容优化与真实私有母库本地最终版验收。
 
 ---
 
@@ -281,79 +289,43 @@ publication 已收口为 knowledge canonical 身份投影；题录、官方入�
 PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 success；GitHub Pages 发布成功；对实际部署 artifact 完整性、公开边界、搜索索引/法规索引/全文目录执行验收，并通过 GitHub-hosted runner 对公网 URL 做独立 HTTP 抽检，全部 PASS。
 
 ### PHASE 11 — 长期维护循环 — IN PROGRESS
-长期维护已实际运行：除等待态治理与 publication 门禁外，已完成 GB 46768-2025 收录、搜索修复、电气隐患补录/转正、GB/T 47236-2026 两个专题批次及 PHASE 12 exact-locator 批次。当前没有未合并的正式业务数据；剩余 **434 条 proposed** 按证据缺口继续分批处理，SQLite 仍按既有规则定期备份/integrity；仅实际阶段变化时更新本文件。
+长期维护已实际运行：除等待态治理与 publication 门禁外，已完成 GB 46768-2025 收录、搜索修复、电气隐患补录/转正、GB/T 47236-2026 两个专题批次、PHASE 12 exact-locator 批次以及 PHASE 13 全库 434 backlog 处置闭环。当前生命周期为 **1,494 active / 429 proposed / 92 superseded**，SQLite 仍按既有规则保持只读零修改；仅实际阶段变化时更新本文件。
 
 ### PHASE 12 — exact-locator 候选批次 — DONE
 2026-09-18 复核 15 条精确定位候选，11 条通过完整当前条款/对象/审核/重复门禁后转 active，4 条因同条款已有活动隐患继续 proposed；PR #58 已合并并部署，正式公开 proposed 仍为 0。
+
+### PHASE 13 — 全库 434 proposed backlog 最终处置与质量闭环批次 — DONE
+2026-09-18 全面核实全库 434 条 proposed 候选及历史遗留质量问题：
+- 434/434 proposed 候选逐条生成机器可复核处置记录（`docs/backlog_434_final_disposition.jsonl`），实现 100% 审计闭环（无未经核查挂起项）；坚决不为清零强行转正存在 OCR 指数损坏、转致条款缺少指标或废止法规的候选；
+- 修复 14 个 rejected link 的 lifecycle 与 review 状态不一致；
+- 闭环 1 组 active 重名隐患（合并草案实体 `H_5E36D9ABBA9321D566592E49_2` 至现行依据实体 `H_66B2A0967E8B4E4BAD7749DF_1`）；
+- 闭环 5 条 proposed 重名隐患（`H_12158_10_1_2`、`H_12158_4_2_3_5_2`、`H_12158_6_3_2_2`、`H_12158_8_8_5_3`、`H_1764B7439DFE44C1A680A7393E`）合并至 canonical 实体并标为 superseded；
+- 研发独立多维度扫描器（`tools/v4/comprehensive_scanner.py`），全库实测真实错误清零（ERROR=0）；
+- 修复 `tools/build_local_release.py` 在 Windows 环境下的清理重试机制；
+- 真实私有母库（171 documents / 215,464 FTS rows）本地最终版构建与只读零修改验收通过（`docs/PHASE13_LOCAL_ACCEPTANCE_20260918.md`）；
+- 全量门禁（`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、`verify_unified_bundle.py` 及全量测试）全部 PASS。
 
 ---
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PHASE 11 长期维护循环持续；PHASE 12 exact-locator 批次 DONE，当前处于等待下一候选/法规/版本/证据维护批次状态。**
+**PHASE 13 全库 434 proposed backlog 处置与质量闭环批次已完成本地开发与验收，正处于 Git 提交、推送远端分支、创建 Pull Request 及远端 CI/Pages 闭环阶段。**
 
-2026-09-17 首轮 PHASE 11 维护完成四组实际动作：
+最新生命周期：**1,494 active / 429 proposed / 92 superseded（共 2,015）**。
+正式公开包指标：**1,494 hazards / 58 law versions / 1,266 clauses / 1,610 links / public proposed 0**，`releaseHash=bb65650ba5e6730d1f2f4dbd950f1ff2d7bc09c8458422d471824722c3f9c31d`。
 
-- PR #42：核对远端 `main` / workflows / Actions / PR / issue / 生成物边界，刷新 README、MAINTENANCE、HANDOFF 并新增等待态审计记录；
-- PR #43：新增只读 `validate_publication_integrity.py` 并同时接入 Validate 与实际 Pages Build，长期阻断 publication 非 canonical 身份、catalog/物理全文不一致、陈旧 search-index/gram shard、proposed/private 泄漏等问题；
-- PR #45：新增 1 个正常通过 + 6 个失败场景的合成回归测试，并固定 catalog / search-index / full-text / gram schema 与 catalog/search `asOf` 一致性。
-- 首轮本地验收：在独立临时 worktree 上检出 `c2ffe2042a316881f229eea8899156fa897f601d`（与当时最新 `origin/main` 完全一致），复用真实私有 `source/library/` 后执行 `py -3 tools/build_local_release.py`，`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py` 与 `verify_unified_bundle.py` 全部 PASS；完整记录见 `docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md`。
-
-PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Validate run `35180759610` success；Build/Pages run `35180759551` 的 build 与 deploy 均 success。PHASE 11 治理改动没有修改正式业务数据：公开投影仍为 **1,429 hazards / 57 law versions / 1,205 clauses / 1,544 links**，499 proposed 仍保持公网 0，publication 仍为 69（11 full_text + 58 link_only），已验收业务 `releaseHash` 仍为 `552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`。
-
-首轮私有本地版验收的历史结果为：HEAD=`c2ffe2042a316881f229eea8899156fa897f601d`，**1,429 active / 499 proposed / public proposed 0 / 57 formal law versions / 1,205 clauses / 1,544 links / 170 private document carriers**，全部 Gate 与 unified bundle verify 均 PASS。该结果不再代表最新主线统计。
-
-远端治理进展：2026-09-17 已为 `main` 正式配置并激活 GitHub Repository Ruleset（ID `23589482`，名称 `Protect main`，状态 `active`），`branches/main` 的 `protected` 状态已技术实测生效（`true`）。技术保护规则完全满足项目治理要求：
-- 变更必须通过 Pull Request 引入（单人维护采用 `required_approving_review_count: 0`，避免自锁死循环）；
-- 必需状态检查强制绑定当前生产 check-runs：`validate` 与 `build`；
-- 禁止 force push（`non_fast_forward`）；
-- 禁止删除 `main`（`deletion`）；
-- 保持 GitHub Pages 从 `main` 自动发布机制正常运转。
-
-远端治理历史：2026-09-17 经用户明确审批，曾从 `origin` 批量清理 29 个已完成/被替代的历史远端分支，并明确保留 3 个含历史独有提交的归档证据分支（`chat-v4`、`phase3-local-alias-grouping-20260914`、`verify-batch-003`）；Issue #44 已 CLOSED。此后 PHASE 11 / PHASE 12 又产生若干已完成维护临时分支，因此“远端只保留 main + 3 个归档分支”已不再是当前事实。后续可在确认无独有提交后单独做低风险分支 housekeeping；这不构成正式数据或发布 blocker。
-
-新标准收录进展：2026-09-17 完成强制性国家标准《有限空间作业安全技术规范》（GB 46768-2025）的全流程收录与结构化条款入库：
-- 原件入库：官方原件 PDF 归档至 `source/library/archive/e8af78774afffaa1b758a63cc1a8e69b802d345df4da73c197f861248d0bdcf8/original`；
-- 私有全文母库：`fulltext.sqlite3` documents 表新增 1 行至 171 份，全文检索表新增 138 段至 215,464 行，`document-aliases.json` 建立到 canonicalVersionId `LV_STD_624AF774D05822F9B543D281` 的映射；
-- 知识库：新增 1 项权威归档证据（`E_46768_GB46768`），新增 63 条第 4~7 章核心规范条款（`C_46768_4_1_1` 至 `C_46768_7_2`）及逐条 verified review，条款总量增至 2,910；
-- 验证：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、全量单元测试与本地最终版（171 document carriers）构建验证全部 PASS。
+本地私有母库最近一次验收（2026-09-18）：
+- 母库文件：`source/library/fulltext.sqlite3`（文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`）；
+- 构建前后数据库大小、修改时间与 SHA-256 完全一致，确认零修改只读访问；
+- 生成本地法规页面 171 份，耗时 25.41 秒，本地退出码 0。完整报告见 `docs/PHASE13_LOCAL_ACCEPTANCE_20260918.md`。
 
 ---
 
-
-搜索算法升级进展：2026-09-17 完成前端中文复合检索切词与假阳性防护升级（PR #51）：
-- 在 `web/js/search.js` 引入领域词汇最长匹配切词，将无空格连续中文（如 `配电箱遮挡`）自动切分为概念单元并强制 `termsMatch` 概念全命中；
-- 扩容 `遮挡/堵塞/堆物/占用/妨碍` 同义词组，将 2-gram 弱模糊门槛收紧至 75%，彻底消除“配电箱遮挡”命中“配线不整齐或绞接”等假阳性；
-- 单元测试与 GitHub Actions CI 双绿通过并合入主干，Pages 部署成功生效。
-
-高频电气隐患补录进展：2026-09-17 正式收录漏录的高频电气隐患“配电箱（柜）前堆放杂物，操作通道或维护空间被遮挡、占用”（`H_ELEC_PDX_CHANNEL_BLOCKED`）：
-- 关联直接依据 1：《用电安全导则》（GB/T 13869-2017）第 5.1.1 条（用电产品周围安全通道、工作空间及防堆放要求）；
-- 关联直接依据 2：《低压配电设计规范》（GB 50054-2011）第 4.2.5 条表 4.2.5 注 4、注 5（挂墙式配电箱箱前操作通道宽度不宜小于 1m，落地式动力箱柜通道宽度要求）；
-- 补齐条款实体 `C_GB50054_4_2_5_5`、权威证据 `E_GB50054_4_2_5` 及完整 verified review 边车；
-- 知识库 active 隐患数增至 **1,430**，条款数增至 **2,911**，关联数增至 **1,569**，`validate_all.py` 与 `strict_release_audit.py` 均 PASS。
-
-
-高频电气候选隐患首批转正进展：2026-09-17 针对 499 条 proposed 候选开展电气专业攻坚，首批严格核实并转正 12 项高频电气隐患：
-- 转正隐患清单：`H032`（通道/空间不足）、`H_BE5284032A21441CA62FFDE0B2`（安装环境）、`H_AC89D3C3CCF049EF991BA4E42F`（线路绝缘强度）、`H_DEED92095F4043AFB93AB75583`（接地线可靠连接）、`H_B0A88B69CC0047CE8BF9D87EB6`（插头插座接线）、`H_1A8786209C974B6BB28C4ADFA5`（超负荷运行）、`H_2724BCA646E74C1694B53CF8DB`（停运切断电源）、`H_8ECAE760F5A5413D8013602429`（移动设备软电缆）、`H_265A5682E86D43F0B813544099`（箱门软导线跨接及标识）、`H_3E588442618F422D926705893B`（柜台箱金属框架接地）、`H_43C6C076F9FC456DB09138A19A`（配电箱门接地连接）、`H_5565236C0E354D5D8428BC1DEB`（箱体箱门软铜线跨接）；
-- 依据回绑：全部回绑至现行有效标准《用电安全导则》（GB/T 13869-2017）第 5.1.1、5.1.2、5.1.3、5.2.1、5.2.2 条，以及《建筑电气工程施工质量验收规范》（GB 50303-2015）第 5.1.1 条主控项目；
-- 补齐 9 条核心条款实体、2 项权威官方发布/归档原件证据（`E_GBT13869_2017`、`E_GB50303_2015`）及 12 组完整 verified review 边车；
-- 知识库 lifecycle 更新为：**1,442 active / 487 proposed / 86 superseded，总计 2,015**；
-- 条款总数增至 **2,920**，关联总数增至 **1,581**，证据总数增至 **1,165**；全量 Gate 校验均 PASS。
-
-最近一次完整私有母库本地最终版复验（历史基线）：2026-09-18 在同一独立验收 worktree 检出 `125a7afd76d9e1152d9d7f2f9ff70f9cde9e818d`，与当时 `origin/main` 完全一致。真实私有库只读审计为 **171 documents / 215,464 FTS rows / 215,464 paragraphCountSum / mismatch 0 / integrity ok**，SQLite SHA-256 为 `4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，构建前后 SHA/size/mtime 完全不变。现场重建结果为 **1,442 active / 487 proposed / public proposed 0 / 58 formal law versions / 1,216 published clauses / 1,558 published links / 171 private document carriers**，releaseHash=`b1f29e07b00e9e56c53bf4eb1ea7d0c13e84ec31657b895b3a7bdc3c8a2dd094`；全部 Gate 与 unified bundle verify PASS。完整复验记录见 `docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md` 第 6 节。
-
-GB/T 47236-2026 候选专题批次：2026-09-18 从 487 条 proposed 基线中复核 17 条。16 条候选的隐患反向表述与官方归档现行条款直接对应，适用范围统一限定为该标准覆盖的低压铸造机、差压铸造机及其他金属型铸造设备，已补齐 hazard/link 当前审核哈希并转为 active。`H_GBT47236_4_2_2_3` 同时包含运动部件防护与警告标志两个对象，与既有 `H_F8BD176AF46643EA9E3CC56A6F` 仅部分重叠，继续 proposed，未强行合并。本批后 lifecycle 为 **1,458 active / 471 proposed / 86 superseded**；fresh public bundle 为 **1,458 hazards / 58 law versions / 1,232 clauses / 1,574 links / public proposed 0**，releaseHash=`6c67b709ba8405e3a9763ff275b4cb1b7c9c14422754714eab379c44c61f47f0`。Validate、strict release audit、publication integrity 和 unified bundle verify 均 PASS；未修改私有 SQLite/archive。
-
-GB/T 47236-2026 独立义务专题批次：同日继续从 471 条 proposed 中复核并转正 26 条。本批只选择条款自身已经完整规定所述义务的项目，不使用外部标准题名、表格标题或推荐性措辞补足缺失判断；全部候选均限定至该标准覆盖设备并补齐当前 hazard/link 审核。批次后 lifecycle 为 **1,484 active / 445 proposed / 86 superseded**；fresh public bundle 为 **1,484 hazards / 58 law versions / 1,258 clauses / 1,600 links / public proposed 0**，releaseHash=`24913cd6f3f6014c0c50d05069ce4741969631011876d1ef8a1a9905512edfa6`。Validate、strict release audit、publication integrity、unified bundle verify 和 15 项 Node 测试均 PASS；未修改私有 SQLite/archive。
-
-### PHASE 12 exact-locator 候选批次 — 2026-09-18
-
-从 445 条 proposed 中复核 15 条精确定位候选，11 条通过当前条款、对象、审核哈希和重复门禁后转为 active；4 条因同条款已有活动隐患保留 proposed。当前 lifecycle 为 **1,495 active / 434 proposed / 86 superseded**；fresh public bundle 为 **1,495 hazards / 58 law versions / 1,267 clauses / 1,611 links / public proposed 0**，releaseHash=`b99833df4c0cbcd8bd3e9f7a14880c74de883e9add5dd22a4a270d3201752643`。Validate、strict release audit、publication integrity、unified bundle verify 和 15 项 Node 测试均 PASS；未修改私有 SQLite/archive。机器明细见 `docs/PHASE12_EXACT_LOCATOR_BATCH.md` 和 `docs/phase12-exact-locator-disposition.jsonl`。
-
 ## 7. NEXT ACTION — 下一动作
 
-> **PR #58 / PHASE 12 exact-locator 已完成合并、CI 与 Pages 部署；当前无待合并正式业务批次。下一步从剩余 434 条 proposed 中按证据状态分批推进：优先处理已有现行精确条款、原文证据和明确适用对象的候选；涉及交叉引用、表格、条件性/推荐性措辞或重复对象的，必须补齐被引用标准/表格原文并做适用性复核，证据不足继续 proposed，不为清零强行转正。**
+> **推送专有工作分支 `phase13-backlog-closure-20260918` 至远端 GitHub 仓库，创建指向 `main` 的 Pull Request，跟踪 GitHub Actions check-runs（Validate 与 Build），完成合并并验证线上 Pages 部署与状态一致性。**
 
-进入下一维护批次时继续遵守现有边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网。每次**正式业务数据**变化后执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance。纯文档/治理/测试变化只执行其受影响检查和正常主线 CI，不为制造新数字而重复业务线上验收。
-
-仓库核心治理目前无 release blocker；业务维护 backlog 为 **434 条 proposed**，另有一批已完成 PHASE 11 / PHASE 12 临时远端分支可在确认无独有提交后单独清理。日常不为制造进度而频繁改写业务数据。
+未来若开展新法规或新版本收录：
+1. 涉及原件/全文：先入私有来源层并核验效力；
+2. 涉及新条款/隐患：必须满足完整引用链与严格 Release Gate；
+3. 涉及 429 条保留 proposed 隐患：待外部权威新依据、OCR 上标修正版或标准正式生效后再行按专题批次处理，严禁违规转正。

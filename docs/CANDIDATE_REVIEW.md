@@ -59,4 +59,17 @@
 
 同日第二个 GB/T 47236-2026 专题批次复核并转正 26 条本条自身已包含完整操作义务的候选；需依赖被引用标准、表1至表5、推荐性措辞或重复处置才能成立的项目仍保持 `proposed`。机器明细见 `docs/phase11-gbt47236-standalone-disposition.jsonl`。
 
-当前 `knowledge/` lifecycle 为 **1,484 active / 445 proposed / 86 superseded**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把后台 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
+其后 PHASE 12 exact-locator 批次复核 15 条精确定位候选，11 条转为 active，4 条因已有活动隐患继续 proposed。机器明细见 `docs/phase12-exact-locator-disposition.jsonl`。
+
+2026-09-18 PHASE 13 全库 434 backlog 最终处置与质量闭环批次对剩余 434 条 `proposed` 候选完成 **434/434** 机器可追踪最终处置：
+- 5 条重复候选（4 条与既有 active 重名、1 条内部重名）完成 canonical 关系建立并合并为 `superseded`；
+- 401 条因现行条款/版本证据缺口保留 `proposed`（其中 84 条依赖尚未到实施日期的 upcoming 标准；317 条缺少现行有效标准直接条款原文与官方证据）；
+- 14 条因依赖外部表格、附录或标准交叉引用保留 `proposed`；
+- 7 条权威 1929 目标集外实体（Phase 5 确认）归入 `OUT_OF_SCOPE` 保留 `proposed`；
+- 6 条因条款适用对象/条件与隐患不匹配保留 `proposed`；
+- 1 条因用语强度不匹配归入 `REWRITE_HAZARD` 保留 `proposed`；
+- 逐条机器明细见 `docs/backlog_434_final_disposition.jsonl`。
+同时闭环合并 1 组 active 重名隐患并修复 14 个 rejected link 的 lifecycle 状态。
+
+当前 `knowledge/` lifecycle 为 **1,494 active / 429 proposed / 92 superseded（共 2,015 hazards）**。正式公共站只统计当前 Gate 通过的 active 投影，`proposed` 公网数量必须保持 **0**；不得把后台 backlog 加到正式发布总数，也不得为了清零 backlog 降低证据/审核门槛。
+

@@ -50,7 +50,15 @@ def _rebuild_public() -> bool:
     if not _run(STRICT_AUDIT):
         return False
     if PUBLIC_RELEASE.exists():
-        shutil.rmtree(PUBLIC_RELEASE)
+        for _ in range(3):
+            try:
+                shutil.rmtree(PUBLIC_RELEASE)
+                break
+            except Exception:
+                import time
+                time.sleep(0.3)
+        if PUBLIC_RELEASE.exists():
+            subprocess.run(["powershell", "-NoProfile", "-Command", f"Remove-Item -Recurse -Force '{PUBLIC_RELEASE}'"], check=False)
     if SELECTION.exists():
         SELECTION.unlink()
 
@@ -162,7 +170,15 @@ def main() -> int:
         return 1
 
     if output.exists():
-        shutil.rmtree(output)
+        for _ in range(3):
+            try:
+                shutil.rmtree(output)
+                break
+            except Exception:
+                import time
+                time.sleep(0.3)
+        if output.exists():
+            subprocess.run(["powershell", "-NoProfile", "-Command", f"Remove-Item -Recurse -Force '{output}'"], check=False)
     output.mkdir(parents=True)
     shutil.copytree(PUBLIC_RELEASE, output / "public")
 
