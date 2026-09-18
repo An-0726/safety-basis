@@ -22,11 +22,11 @@ source/
 
 ## 当前职责
 
-正式法规—版本—条款—隐患关系只维护在根目录 `knowledge/`。`source/publication/` 只负责公开来源、题录和授权边界，不替代 `knowledge/`，也不得因为同一法规存在多个官方来源就在正式法规页生成多个法规身份。
+正式法规—版本—条款—隐患关系只维护在根目录 `knowledge/`。`source/publication/` 只负责公开来源、题录和授权边界，不替代 `knowledge/`，也不得因为同一法规存在多个官方来源就在正式法规页生成多个法规身份。权威官方互联网来源同样可以直接支撑 `knowledge/` 的 evidence / lawVersion / clause / link / review；不要求先落地到 `source/library/`。
 
 `source/releases/current/` 是**纯生成物**。GitHub Actions 部署时从当前 `knowledge + source/publication + web` 现场重建；本地运行 `tools/build_local_release.py` 时也会先重建。它不再提交 Git，因此不会出现“源码已经更新、仓库里的 current 还是旧发布包”的双版本问题。
 
-`source/library/fulltext.sqlite3` 是本地私有全文检索数据库。PDF 放进目录不等于已入库；只有完成哈希去重、文本提取或 OCR、题录/版本匹配和必要核验后才增加全文计数。受版权限制而无法合法公开的标准，只登记题录、效力状态和官方入口。
+`source/library/fulltext.sqlite3` 是本地私有全文检索数据库，不是正式法规事实的唯一入口。PDF 放进目录不等于已入库；只有完成哈希去重、文本提取或 OCR、题录/版本匹配和必要核验后才增加全文计数。**本地没有某法规/标准时，应继续到发布机关、主管部门、全国人大/政府网或国家标准平台等官方来源查找现行原文；只要官方网页/PDF能完成版本、条款、逐字原文和适用性核验，就可以直接形成正式证据链。** 是否另存私有原件或写入 SQLite 属于离线保存/检索维护，不是正式纳管前置条件。受版权限制而无法合法公开的标准，只在公开层登记题录、效力状态和官方入口，不把受限全文提交 Git。
 
 ## 为什么 `mappings/` 和 `schemas/` 还保留
 
