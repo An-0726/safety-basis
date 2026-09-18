@@ -335,9 +335,11 @@ PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Vali
 
 最新主线本地最终版复验：2026-09-18 在同一独立验收 worktree 检出 `125a7afd76d9e1152d9d7f2f9ff70f9cde9e818d`，与当时 `origin/main` 完全一致。真实私有库只读审计为 **171 documents / 215,464 FTS rows / 215,464 paragraphCountSum / mismatch 0 / integrity ok**，SQLite SHA-256 为 `4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，构建前后 SHA/size/mtime 完全不变。现场重建结果为 **1,442 active / 487 proposed / public proposed 0 / 58 formal law versions / 1,216 published clauses / 1,558 published links / 171 private document carriers**，releaseHash=`b1f29e07b00e9e56c53bf4eb1ea7d0c13e84ec31657b895b3a7bdc3c8a2dd094`；全部 Gate 与 unified bundle verify PASS。完整复验记录见 `docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md` 第 6 节。
 
+GB/T 47236-2026 候选专题批次：2026-09-18 从 487 条 proposed 基线中复核 17 条。16 条候选的隐患反向表述与官方归档现行条款直接对应，适用范围统一限定为该标准覆盖的低压铸造机、差压铸造机及其他金属型铸造设备，已补齐 hazard/link 当前审核哈希并转为 active。`H_GBT47236_4_2_2_3` 同时包含运动部件防护与警告标志两个对象，与既有 `H_F8BD176AF46643EA9E3CC56A6F` 仅部分重叠，继续 proposed，未强行合并。本批后 lifecycle 为 **1,458 active / 471 proposed / 86 superseded**；fresh public bundle 为 **1,458 hazards / 58 law versions / 1,232 clauses / 1,574 links / public proposed 0**，releaseHash=`6c67b709ba8405e3a9763ff275b4cb1b7c9c14422754714eab379c44c61f47f0`。Validate、strict release audit、publication integrity 和 unified bundle verify 均 PASS；未修改私有 SQLite/archive。
+
 ## 7. NEXT ACTION — 下一动作
 
-> **当前没有新的正式业务数据待处理；`main` 技术保护已在远端技术强制，历史分支清理已完全闭环，当前-main + 真实私有母库的本地最终版验收完备。PHASE 11 长期维护循环正式就绪，进入纯粹的长期维护等待态；下一次触发来自新法规/版本/隐患/证据、候选转正条件满足、CI/Pages 异常、私有库维护不变量异常，或用户下达的新业务任务。**
+> **当前 GB/T 47236-2026 专题批次已完成本地数据、Gate 与 fresh bundle 验证，待提交 PR、CI、合并和 Pages 验收。合并后继续按证据集中的专题批次处理剩余 471 条 proposed；优先复核已有精确现行条款且对象边界可独立证明的候选。**
 
 进入下一维护批次时继续遵守现有边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网。每次**正式业务数据**变化后执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance。纯文档/治理/测试变化只执行其受影响检查和正常主线 CI，不为制造新数字而重复业务线上验收。
 
