@@ -5,6 +5,6 @@
 - 架构与维护说明：[README](../README.md)；PHASE 11 触发条件见 [MAINTENANCE](MAINTENANCE.md)。
 - 确需跨环境协作：[执行协议](../AGENT_EXECUTION_PROTOCOL.md)。
 
-当前已进入 **PHASE 11 长期维护等待状态**。PHASE 10 已正式发布并完成线上验收，PR #41 又完成了状态收尾；在没有新的法规、版本、隐患、证据、维护异常或私有库维护触发条件时，不重复发布验收，也不为了推进阶段而修改业务数据。
+当前处于 **PHASE 11 长期维护循环**，PHASE 12 exact-locator 批次已完成并合入 `main`。当前远端主线为 `f6cf9ed34a7a42ba70f65336dc91aa4c6ce8a823`（PR #58），最新 Validate / Build / Pages deploy 均 success；正式基线为 **1,495 active / 434 proposed / 86 superseded**，公开包为 **1,495 hazards / 58 law versions / 1,267 clauses / 1,611 links / public proposed 0**。
 
-最近一次远端维护审计见 [PHASE11_MAINTENANCE_AUDIT_20260917](PHASE11_MAINTENANCE_AUDIT_20260917.md)。阶段事实仍以 `PROJECT_STATE.md` 为唯一长期记录；本文件只保留接手路径和当前交接方式，不复制库存明细。
+接手后先按 `AGENTS.md` 读取边界，再核对远端 `main` / PR / Actions；如文档与远端事实冲突，以远端事实为准。当前下一业务动作是对剩余 **434 条 proposed** 按证据状态继续分批核验：优先现行精确条款 + 原文证据 + 明确适用对象，交叉引用/表格/条件性或重复对象未闭环的一律继续 proposed。阶段事实仍以 `PROJECT_STATE.md` 为唯一长期记录；本文件只保留接手入口和当前摘要。
