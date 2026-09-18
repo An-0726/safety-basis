@@ -101,3 +101,44 @@ Issue #44 继续保持 OPEN。后续具有仓库管理权限时，应对 `main` 
 PASS 部分：当前正式 main 与真实私有母库组合的本地最终版可重复构建，公开/私有边界、正式业务数量、全部长期 Gate 与私有 SQLite 内容不变量均通过。
 
 唯一治理 WARNING：GitHub `main` 尚未由平台技术性强制 PR + required checks + no-force-push + no-delete；该项继续由 Issue #44 显式跟踪。
+
+## 6. 最新主线复验（2026-09-18）
+
+在首轮验收后，PHASE 11 又完成远端治理、GB 46768-2025 收录、搜索修复、电气隐患补录/转正和 GB/T 13869 版本治理校正。为避免把 `c2ffe204` 的历史结果冒充当前状态，本节对最新正式主线重新验收。
+
+### 6.1 代码与远端状态
+
+- 独立验收 worktree HEAD：`125a7afd76d9e1152d9d7f2f9ff70f9cde9e818d`，与复验时 `origin/main` 完全一致；
+- PR #54：`Fix GB/T 13869 current/upcoming version governance`，已合并；
+- GitHub Validate run `35234313626`：success；
+- GitHub Build/Pages run `35234313621`：success；
+- open PR：0；open issue：0。
+
+### 6.2 真实私有 SQLite 只读审计
+
+- size：`106,958,848` bytes；
+- SHA-256：`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`；
+- documents：171；
+- fulltext_fts：215,464；
+- `SUM(paragraph_count)`：215,464；
+- per-document mismatch：0；
+- `ftsContentSha256`：`530b0ff6e6708a84c4e056cad54797e5726d45d2b9f0c578d59625e4e74b3a55`；
+- `PRAGMA foreign_key_check`：0 errors；
+- `PRAGMA integrity_check`：`ok`。
+
+构建前后数据库 SHA-256、size、mtime 完全一致；未写 SQLite/FTS/archive。
+
+### 6.3 最新本地最终版重建
+
+在同一独立 worktree 中执行 `py -3 tools/build_local_release.py`，exit code 0。`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py` 和 `verify_unified_bundle.py` 全部 PASS，blockerCount=0，bundle `ok=true`。
+
+- active hazards：1,442；
+- knowledge proposed：487；
+- public proposed：0；
+- formal law versions：58；
+- published clauses：1,216；
+- published links：1,558；
+- private document carriers：171；
+- releaseHash：`b1f29e07b00e9e56c53bf4eb1ea7d0c13e84ec31657b895b3a7bdc3c8a2dd094`。
+
+首轮验收中的 GitHub 治理 warning 已由后续 PR #48/#49 解决。本次结论为：**LOCAL PHASE 11 CURRENT-MAIN ACCEPTANCE: PASS**。

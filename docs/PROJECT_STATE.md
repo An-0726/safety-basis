@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-17 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收、PHASE 9 Release Candidate 全量验证和 PHASE 10 正式合并/Pages 发布/线上验收最终状态。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收、PHASE 9 Release Candidate 全量验证、PHASE 10 正式发布及 PHASE 11 维护批次。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**PHASE 10 DONE；PHASE 11 长期维护循环已启动。** 正式业务发布基线继续保持 PHASE 10 已验收结果；2026-09-17 已完成首轮 PHASE 11 远端治理、publication 长期门禁与门禁回归测试，当前回到等待下一维护触发条件的状态。
+**PHASE 10 DONE；PHASE 11 长期维护循环已启动。** 2026-09-17 已完成远端治理、publication 长期门禁、GB 46768-2025 收录、搜索修复及首批电气隐患转正；2026-09-18 已对最新 `origin/main` 与真实私有母库重新完成本地最终版验收，当前回到等待下一维护触发条件的状态。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,11 +38,11 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-17（PHASE 11 首轮维护治理；业务发布仍沿用 PHASE 10 已验收基线）。**
+**LAST VERIFIED：2026-09-18（PHASE 11 最新 `origin/main` + 真实私有母库本地最终版验收）。**
 
 PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`；PR #41 完成 PHASE 10 状态收尾。PHASE 11 首轮维护随后完成：PR #42 收口等待态文档与远端审计；PR #43 将 publication canonical / catalog / 物理全文 / search 派生物一致性固化为长期硬门禁；PR #45 为该门禁补齐合成失败回归测试和 schema/asOf 契约。PR #45 合并提交为 `9e8de313e2321a9b81b8e812155434d7735e463b`，其后 `main` Validate run `35180759610` success，Build/Pages run `35180759551` 的 build 与 deploy 均 success。部署地址仍为 `https://an-0726.github.io/safety-basis/`。
 
-上述 PHASE 11 变更均未修改 governed `knowledge/` / `source/publication/` 业务数据、私有 SQLite/archive 或稳定 ID，因此正式业务发布继续沿用 PHASE 10 公网 HTTP 验收 run `35128348354` 的已验收内容基线；无需因纯治理/测试改动重复业务线上验收。
+PHASE 10 的首次正式发布基线继续作为历史发布证据；其后 PHASE 11 已发生正式业务数据变化。最新主线为 `125a7afd76d9e1152d9d7f2f9ff70f9cde9e818d`（PR #54），对应 Validate run `35234313626`、Build/Pages run `35234313621` 均 success，并已使用真实私有母库完成本地最终版重建与只读不变量复核。
 
 公开发布架构已收口：
 
@@ -54,7 +54,7 @@ PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85e
 - `proposed` 不进入公网；
 - `upcoming` 尚未实施版本不能支撑当前正式隐患。
 
-### `main` 当前正式发布基线（PHASE 10）
+### `main` 历史首次正式发布基线（PHASE 10）
 
 - 1,429 条正式隐患；
 - 57 个正式引用法规版本；
@@ -65,9 +65,9 @@ PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85e
 
 ### 当前 knowledge 状态
 
-PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条在官方原文、对象适用性、当前 review hash 和完整 Gate 均满足后转为 `active`，499 条因证据、对象、条件、现行数值、条文质量或适用性不足继续保持 `proposed`。PHASE 7/8/9/10 未改变该业务状态。因此当前 `main` lifecycle 为：**1,429 active、499 proposed、86 superseded，共 2,014**。
+PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。PHASE 11 随后新增 1 条正式电气隐患并将 12 条电气候选转正。因此当前 `main` lifecycle 为：**1,442 active、487 proposed、86 superseded，共 2,015**。
 
-当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,910 条条款、2,014 个隐患实体、1,567 个关联、1,162 个 evidence、28 条 succession、75 条 requirements**。
+当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,920 条条款、2,015 个隐患实体、1,581 个关联、1,165 个 evidence、28 条 succession、75 条 requirements**。
 
 新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
@@ -92,6 +92,12 @@ PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；�
 - PR #46：同步 Phase 11 当前状态文档，保持 long-lived 架构与维护文档与实际治理状态一致。
 - PR #47：记录 current-main 本地验收状态（`docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md` 及状态文档同步）；合并提交 `e3d2e2ac689b26c5dc4058e66feff095039b1358`，main Validate run `35199100753`、Build/Pages run `35199100714` 均 success。
 - PR #48：为 `main` 配置并激活 GitHub Repository Ruleset（ID `23589482`），确立技术保护强制，并修复 Windows 本地 SQLite 文件句柄未关闭问题；PR CI 与 main CI/Pages 全绿。
+- PR #49：记录历史远端分支清理闭环并关闭 Issue #44。
+- PR #50：收录强制性国家标准 GB 46768-2025 及 63 条核心规范条款。
+- PR #51：修复连续中文复合检索切词与假阳性问题。
+- PR #52：补录配电箱（柜）前通道或维护空间被遮挡、占用的高频电气隐患。
+- PR #53：将 12 条证据链完整的常见电气候选转为正式隐患。
+- PR #54：按实施日期门禁校正 GB/T 13869-2017/2026 的 current/upcoming 版本治理；最新主线 CI 与 Pages 均 success。
 
 ---
 
@@ -284,11 +290,11 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 - PR #42：核对远端 `main` / workflows / Actions / PR / issue / 生成物边界，刷新 README、MAINTENANCE、HANDOFF 并新增等待态审计记录；
 - PR #43：新增只读 `validate_publication_integrity.py` 并同时接入 Validate 与实际 Pages Build，长期阻断 publication 非 canonical 身份、catalog/物理全文不一致、陈旧 search-index/gram shard、proposed/private 泄漏等问题；
 - PR #45：新增 1 个正常通过 + 6 个失败场景的合成回归测试，并固定 catalog / search-index / full-text / gram schema 与 catalog/search `asOf` 一致性。
-- 当前-main 本地验收：在独立临时 worktree 上检出 `c2ffe2042a316881f229eea8899156fa897f601d`（与当时最新 `origin/main` 完全一致），复用真实私有 `source/library/` 后执行 `py -3 tools/build_local_release.py`，`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py` 与 `verify_unified_bundle.py` 全部 PASS；完整记录见 `docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md`。
+- 首轮本地验收：在独立临时 worktree 上检出 `c2ffe2042a316881f229eea8899156fa897f601d`（与当时最新 `origin/main` 完全一致），复用真实私有 `source/library/` 后执行 `py -3 tools/build_local_release.py`，`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py` 与 `verify_unified_bundle.py` 全部 PASS；完整记录见 `docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md`。
 
 PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Validate run `35180759610` success；Build/Pages run `35180759551` 的 build 与 deploy 均 success。PHASE 11 治理改动没有修改正式业务数据：公开投影仍为 **1,429 hazards / 57 law versions / 1,205 clauses / 1,544 links**，499 proposed 仍保持公网 0，publication 仍为 69（11 full_text + 58 link_only），已验收业务 `releaseHash` 仍为 `552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`。
 
-私有本地版已在 PHASE 11 对**当前正式 main**重新完成真实母库验收：独立 worktree HEAD=`c2ffe2042a316881f229eea8899156fa897f601d`，现场重建为 **1,429 active / 499 proposed / public proposed 0 / 57 formal law versions / 1,205 clauses / 1,544 links / publication 69（11 full_text + 58 link_only）/ 170 private document carriers**，全部 Gate 与 unified bundle verify 均 PASS。真实 SQLite 仍为 170 documents / 215,326 FTS rows / 215,326 paragraphCountSum / mismatch 0，SHA-256 `7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`，构建前后 SHA/size/mtime 完全不变；本轮未写 SQLite/FTS/archive。
+首轮私有本地版验收的历史结果为：HEAD=`c2ffe2042a316881f229eea8899156fa897f601d`，**1,429 active / 499 proposed / public proposed 0 / 57 formal law versions / 1,205 clauses / 1,544 links / 170 private document carriers**，全部 Gate 与 unified bundle verify 均 PASS。该结果不再代表最新主线统计。
 
 远端治理进展：2026-09-17 已为 `main` 正式配置并激活 GitHub Repository Ruleset（ID `23589482`，名称 `Protect main`，状态 `active`），`branches/main` 的 `protected` 状态已技术实测生效（`true`）。技术保护规则完全满足项目治理要求：
 - 变更必须通过 Pull Request 引入（单人维护采用 `required_approving_review_count: 0`，避免自锁死循环）；
@@ -326,6 +332,8 @@ PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Vali
 - 补齐 9 条核心条款实体、2 项权威官方发布/归档原件证据（`E_GBT13869_2017`、`E_GB50303_2015`）及 12 组完整 verified review 边车；
 - 知识库 lifecycle 更新为：**1,442 active / 487 proposed / 86 superseded，总计 2,015**；
 - 条款总数增至 **2,920**，关联总数增至 **1,581**，证据总数增至 **1,165**；全量 Gate 校验均 PASS。
+
+最新主线本地最终版复验：2026-09-18 在同一独立验收 worktree 检出 `125a7afd76d9e1152d9d7f2f9ff70f9cde9e818d`，与当时 `origin/main` 完全一致。真实私有库只读审计为 **171 documents / 215,464 FTS rows / 215,464 paragraphCountSum / mismatch 0 / integrity ok**，SQLite SHA-256 为 `4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，构建前后 SHA/size/mtime 完全不变。现场重建结果为 **1,442 active / 487 proposed / public proposed 0 / 58 formal law versions / 1,216 published clauses / 1,558 published links / 171 private document carriers**，releaseHash=`b1f29e07b00e9e56c53bf4eb1ea7d0c13e84ec31657b895b3a7bdc3c8a2dd094`；全部 Gate 与 unified bundle verify PASS。完整复验记录见 `docs/PHASE11_LOCAL_ACCEPTANCE_20260917.md` 第 6 节。
 
 ## 7. NEXT ACTION — 下一动作
 
