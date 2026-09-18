@@ -12,21 +12,21 @@
 6. 允许公开的题录、官方入口或全文才同步到 `source/publication/`；同一真实版本的多个官方来源只作为多来源，不制造多个正式法规身份；
 7. 运行完整 Gate、构建和校验；涉及架构/口径/归并/候选策略时同步更新 README；交接方式实际变化时再更新 HANDOFF。
 
-## PHASE 11 触发条件
+## 长期维护触发条件
 
-当前处于长期维护循环；PHASE 12 exact-locator 批次已完成并合入 `main`。出现下列任一情况时进入新的维护批次：
+当前项目已完成全量 proposed 候选逐条核销闭环与最终验收，正式进入长期维护模式（Long-Term Maintenance Mode），业务范围全面冻结。仅当出现下列任一情况时方可开启新的维护批次：
 
 - 新法规、标准、修订版本、废止/替代关系或官方证据需要纳管；
-- 新隐患、既有隐患修订、候选证据补齐或 `proposed` 转正审核；
+- 既有法规到达生效日期（如 upcoming 转为 active）或废止日期；
 - Validate / strict gate / publication integrity / fresh build / verify / Pages 出现异常；
 - `PROJECT_STATE.md`、README、HANDOFF 与远端实际状态出现实质冲突；
 - 私有 SQLite 到达计划备份/integrity 维护点，或出现文档数、FTS 行数、paragraph sum、archive 引用等不变量异常。
 
-没有上述触发条件时，不为“保持活跃”而改业务数据，不重复正式发布验收，也不把当前 `proposed` 强行清零。
+在没有上述触发条件时，严格保持冻结状态，不为“保持活跃”而修改业务数据，不扩增业务范围，也不把经过审慎保留的 184 条 proposed（主要为 upcoming 149 条及需官方依据/适用边界补充项）强行清零。
 
 ## 候选
 
-候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。
+候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。全库 426 条 proposed backlog 已经完成逐条审查与处置闭环，其中 242 条转正 active，184 条分类保留（含 149 条 upcoming 等）。
 
 ## 数量口径
 
@@ -39,7 +39,7 @@
 - 私有全文数：SQLite 中成功建立正文记录的文档；
 - 公开全文数：`source/publication/fulltext/` 中允许公开分发的全文。
 
-当前 2026-09-19 正式基线：1,502 条正式隐患、59 个实际引用法规版本、1,276 条正式条款、1,621 个正式关联；421 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 103 laws / 107 lawVersions / 2,940 clauses / 2,015 hazards / 1,645 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
+当前 2026-09-19 正式基线：1,744 条正式隐患、60 个实际引用法规版本、1,354 条正式条款、1,863 个正式关联；184 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 104 laws / 107 lawVersions / 3,007 clauses / 2,015 hazards / 1,886 links / 1,197 evidence；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
 
 ## Publication 长期完整性门禁
 

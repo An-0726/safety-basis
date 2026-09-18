@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的各项里程碑及 2026-09-19 的 PR #60 与 PR #61 定点纠错专项。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的各项里程碑及 2026-09-19 的 PR #60/#61 纠错、PR #62 治理升级、PR #64 全库 proposed 最终核销及全项目最终验收。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**PHASE 10 DONE；PHASE 11 长期维护循环持续，PR #60 与 PR #61 定点纠错专项已完成本地核验。** 2026-09-17 完成远端治理、publication 长期门禁、GB 46768-2025 收录、搜索修复及首批电气隐患转正；2026-09-18 完成两批 GB/T 47236-2026 候选转正、PHASE 12 exact-locator 批次、PR #60（全库 434 backlog 最终处置）及 PR #61（GB 18597 危废专项收录与转正）。针对 PR #60 与 PR #61 遗留的 blockers 与模型瑕疵，2026-09-19 专项展开定点纠错：危化法第五条替换为官方正式逐字原文；清理指向已合并实体的残留链接；撤销对 GB 12158 5 条 proposed 候选的不当标题合并（恢复为独立 proposed 候选，proposed 从 421 增至 426）；依原件 PDF 精准修复 9 条 active clause 科学计数法指数排版；逐条严格重构缩窄 PR #61 转正的 8 条危废贮存隐患（清除旧版附录A、非官方专用设施、越权防火防雷、消防通讯及宽泛选址，严格补齐触发条件与适用边界）；将 GB 18597 统一归并至既有规范版本卡 `L023`；客观记录私有母库历史写入后恢复备份的事实。当前正式基线为 **1,502 active / 426 proposed / 87 superseded（共 2,015）**，公开包为 **1,502 hazards / 58 law versions / 1,276 clauses / 1,621 links / public proposed 0**，`releaseHash=491d2e5236b2f0b35deb8cc52e029e8731d6cbd46b3d49d8a14d0fd68af61181`。
+**全项目最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。** 2026-09-19 全面完成 PR #60 与 PR #61 定点纠错（PR #63 合并）、PR #62 官方网络证据长效治理规则确立，以及 PR #64 全库 426 条 proposed backlog 逐条处置闭环（242 条转正 active，184 条依规范分类保留）。全量门禁检验 0 blocker、GitHub Actions CI 全绿、GitHub Pages 部署成功，在线站点 100% 吻合。当前正式基线为 **1,744 active / 184 proposed / 87 superseded（共 2,015）**，公开包为 **1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links / public proposed 0**，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,20 +38,15 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-19（分支 `fix-pr60-pr61-remediation-20260919`，基于 main `3fa240a911d18c13ed42c59d0f894d5bc354d4dc`，门禁严格测试全绿）。**
+**LAST VERIFIED：2026-09-19（基于 main `5add09ed84c2a433d07640f178385f66a30c0ce5`，全量门禁严格测试全绿，在线站点 100% 验收通过）。**
 
-PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`；PR #41 完成 PHASE 10 状态收尾。PHASE 11 首轮维护随后完成：PR #42 收口等待态文档与远端审计；PR #43 将 publication canonical / catalog / 物理全文 / search 派生物一致性固化为长期硬门禁；PR #45 为该门禁补齐合成失败回归测试和 schema/asOf 契约。PR #45 合并提交为 `9e8de313e2321a9b81b8e812155434d7735e463b`，其后 `main` Validate run `35180759610` success，Build/Pages run `35180759551` 的 build 与 deploy 均 success。部署地址仍为 `https://an-0726.github.io/safety-basis/`。
-
-PR #60（全库 434 backlog 最终处置与质量闭环）与 PR #61（GB 18597 危废专项）合并后，本轮定点纠偏全面修复了遗留缺陷：
-1. 《危险化学品安全法》第五条纠正为全国人大常委会正式法律原文（主席令第六十四号第5条：全员责任制、双重预防机制）；
-2. 彻底删除指向已合并实体的残留链接（`K_XLSX_FT_F2F31FEEE9DC4C57B899A82F`），`links to merged hazards` 清零；
-3. 撤销对 GB 12158 5 条 proposed 候选的不当标题合并（`H_12158_10_1_2`、`H_12158_4_2_3_5_2`、`H_12158_6_3_2_2`、`H_12158_8_8_5_3`、`H_1764B7439DFE44C1A680A7393E` 恢复为独立 proposed 候选，proposed 从 421 升至 426，superseded 从 92 降至 87）；
-4. 依据原件 PDF 精确修复 9 条 active clause 的科学计数法指数及排版（Unicode 上标），扫描器指数损坏告警彻底清零；
-5. PR #61 转正的 8 条危废贮存隐患逐条严格缩窄重构（清除旧附录A、非官方专用设施、越权防火防雷、消防通讯及宽泛选址，严格补齐 6.2.2 触发条件，理清 6.1.1 与 8.3.5 适用边界），重算 reviews 与 contextHashes；
-6. 删除多余的 `LV_STD_GB18597_2023`，条款统一切换归并至既有规范版本卡 `L023`（挂靠 `LF_L023`），修正 publication 题录；
-7. 明确记录母库曾执行写入后完整恢复纯净备份的事实，物理核实指标一致。
-
-当前 fresh public bundle 为 **1,502 hazards / 58 law versions / 1,276 clauses / 1,621 links / public proposed 0**，`releaseHash=491d2e5236b2f0b35deb8cc52e029e8731d6cbd46b3d49d8a14d0fd68af61181`。
+全库 426 条 proposed backlog 最终核销（PR #64，242 条转正 active，184 条分类保留）已合入 `main`。针对此前遗留的悬空证据引用已全部完成补齐规范，当前全项目指标如下：
+1. **全库生命周期**：**1,744 active / 184 proposed / 87 superseded（共 2,015）**；
+2. **Backlog 对账平衡**：`426 proposed backlog = 242 promoted + 184 remaining proposed`，覆盖率与平衡公式 100% 吻合；
+3. **公开站发布指标**：**1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links / public proposed 0**；
+4. **线上站点核验**：部署地址 `https://an-0726.github.io/safety-basis/`，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`，在线 9 个 hazard shards、7 个 clause shards（全部具有完整有效原文）、manifest 及前端搜索 100% 校验通过；
+5. **门禁与自动化测试**：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、Node 测试及 Python 单元测试全 PASS（blocker 0, error 0, warning 63, stale 0, dangling refs 0）；
+6. **母库物理属性核实**：`source/library/fulltext.sqlite3` 文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`，documents=171，FTS=215,464，`integrity_check` 结果为 `["ok"]`，与纯净备份完全一致。
 
 公开发布架构已收口：
 
@@ -77,10 +72,11 @@ PR #60（全库 434 backlog 最终处置与质量闭环）与 PR #61（GB 18597 
 PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。其后 PHASE 11 新增 1 条正式电气隐患、转正 12 条电气候选，并在 GB/T 47236-2026 两个专题批次中转正 16 + 26 条；PHASE 12 exact-locator 再转正 11 条。
 PHASE 13 全库 434 proposed backlog 最终处置中合并 1 条危化法草案实体。
 PHASE 14 转正 8 条危废核心隐患，其余 10 条危废候选继续审慎保留 proposed。
-本轮纠错专项撤销 5 条 GB 12158 候选的不当标题合并，恢复为 independent proposed 候选。
-最终生命周期为：**1,502 active、426 proposed、87 superseded，共 2,015**。
+PR #63 纠错专项撤销 5 条 GB 12158 候选的不当标题合并，恢复为 independent proposed 候选（421 恢复为 426）。
+PR #64 针对剩余全库 426 条 proposed backlog 展开逐条处置闭环：转正 242 条 active，依规范保留 184 条 proposed。
+最终生命周期为：**1,744 active、184 proposed、87 superseded，共 2,015**。
 
-当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,940 条条款、2,015 个隐患实体、1,644 个关联、1,165 个 evidence、29 条 succession、75 条 requirements**。
+当前知识库库存为：**104 个法规身份、107 个法规版本、3,007 条条款、2,015 个隐患实体、1,886 个关联、1,197 个 evidence、29 条 succession、75 条 requirements**。
 
 新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
@@ -118,8 +114,10 @@ PHASE 14 转正 8 条危废核心隐患，其余 10 条危废候选继续审慎�
 - PR #59：更新 `docs/HANDOFF.md` 等治理文档，收敛主线基线为 `b24fd495cf52f8948ec5742dc3641c0799337a73`。
 - PR #60：PHASE 13 全库 434 proposed backlog 逐条处置闭环、质量错误清零、Windows release clean 兼容优化与真实私有母库本地最终版验收；合并提交 `16891123bbe2dac1627b33ff5716dd1d8cdad138`。
 - PR #61：PHASE 14 GB 18597-2023 危险废物贮存专项收录，转正 8 条危废核心隐患；合并提交 `3fa240a911d18c13ed42c59d0f894d5bc354d4dc`。
-- PR #62：证据获取规则长期治理调整：确立“本地证据库优先，但不是唯一来源；本地没有就主动联网查官方来源”原则；`source/library/` 仅作为本地优先原件与全文检索库，不再作为法规正式纳管的前置条件；官方来源（全国人大/国家法律法规数据库、中国政府网/国务院、发布机关/主管部门官网、国家标准全文公开系统、省市政府官网等）满足现行版本、精确条号、完整原文、官方 URL 与适用性时直接建立正式证据链入 Gate，无需先下载落库或写 SQLite。
-- 纠偏工作分支（`fix-pr60-pr61-remediation-20260919`）：系统定点纠偏 PR #60 与 PR #61 blockers 与模型瑕疵：危化法第五条修复官方逐字原文；清理指向已合并实体的悬空链接；撤销 GB 12158 5 条 proposed 候选的不当标题合并（恢复为独立 proposed 候选，421→426）；9 条 active clause 指数排版依照原件精确恢复；PR #61 8 条危废贮存隐患逐条严格缩窄重构；删除多余的 `LV_STD_GB18597_2023`，条款统一切换归并至规范版本卡 `L023`。
+- PR #63：系统定点纠偏 PR #60 与 PR #61 blockers 与模型瑕疵：危化法第五条修复官方逐字原文；清理指向已合并实体的悬空链接；撤销 GB 12158 5 条 proposed 候选的不当标题合并（恢复为独立 proposed 候选，421→426）；9 条 active clause 指数排版依照原件精确恢复；PR #61 8 条危废贮存隐患逐条严格缩窄重构；删除多余的 `LV_STD_GB18597_2023`，条款统一切换归并至规范版本卡 `L023`；合并提交 `70981323`。
+- PR #62：证据获取规则长期治理调整：确立“本地证据库优先，但不是唯一来源；本地没有就主动联网查官方来源”原则；`source/library/` 仅作为本地优先原件与全文检索库，不再作为法规正式纳管的前置条件；官方来源（全国人大/国家法律法规数据库、中国政府网/国务院、发布机关/主管部门官网、国家标准全文公开系统、省市政府官网等）满足现行版本、精确条号、完整原文、官方 URL 与适用性时直接建立正式证据链入 Gate，无需先下载落库或写 SQLite；合并提交 `9f9000d6`。
+- PR #64：全库 426 条 remaining proposed backlog 8 个专项批次逐条最终核销闭环（242 条转正 active，184 条依规范分类保留），生成主审计与对账报告；合并提交 `5add09ed84c2a433d07640f178385f66a30c0ce5`，main CI 与 Pages 部署全绿。
+- 最终收口与长期维护模式切换：补齐 5 个缺失证据卡、规整 3 条 clause reviews（消除 31 处 dangling evidenceRefs）；全维度审计指标对账 100% 吻合，线上 Pages 站点全量抓取核验 100% 通过；正式宣布业务范围冻结并切换至长期维护模式。
 
 ---
 
@@ -310,44 +308,46 @@ publication 已收口为 knowledge canonical 身份投影；题录、官方入�
 ### PHASE 10 — 最终合并 main、GitHub Pages 部署、线上验收 — DONE
 PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 success；GitHub Pages 发布成功；对实际部署 artifact 完整性、公开边界、搜索索引/法规索引/全文目录执行验收，并通过 GitHub-hosted runner 对公网 URL 做独立 HTTP 抽检，全部 PASS。
 
-### PHASE 11 — 长期维护循环 — IN PROGRESS
-长期维护已实际运行：除等待态治理与 publication 门禁外，已完成 GB 46768-2025 收录、搜索修复、电气隐患补录/转正、GB/T 47236-2026 两个专题批次、PHASE 12 exact-locator 批次、PHASE 13 全库 434 backlog 处置闭环（PR #60）、PHASE 14 GB 18597-2023 危废专项收录（PR #61）、证据获取治理规则长期升级（PR #62）以及 PR #60 与 PR #61 系统定点纠偏专项。当前生命周期为 **1,502 active / 426 proposed / 87 superseded（共 2,015）**；母库物理属性与写入前纯净备份完全一致；仅实际阶段变化时更新本文件。
+### PHASE 11 — 长期维护循环与 Backlog 闭环 — DONE
+长期维护循环与全库 backlog 处置已全面完成：
+- 远端治理与技术保护（PR #48）；
+- publication 物理一致性与检索索引硬门禁（PR #43、PR #45）；
+- GB 46768-2025、GB/T 13869-2017/2026、GB/T 47236-2026、GB 18597-2023 等专项法规标准与高频隐患收录（PR #50~#58, #61）；
+- 确立官方网络证据长效治理规则（PR #62）；
+- 完成 PR #60 与 PR #61 系统定点纠偏专项（PR #63）；
+- 完成全库 426 条 remaining proposed 8 个专项批次逐条最终核销闭环（PR #64），242 条转正 active，184 条依规范分类保留；
+- 补齐历史遗留的 5 张证据卡与 3 条 review 规范化，dangling evidenceRefs 彻底清零；
+- 全库生命周期收口为 **1,744 active / 184 proposed / 87 superseded（共 2,015）**；
+- 公开正式站指标为 **1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links**，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`；
+- 母库物理属性与写入前纯净备份完全一致；
+- GitHub Actions CI 与 GitHub Pages 在线站点 100% 验收通过。
 
-### PR #60 与 PR #61 系统定点纠偏专项 — DONE (LOCAL)
-2026-09-19 全面处置此前遗留的 blockers 与模型偏差：
-- 危险化学品安全法第五条纠正为全国人大常委会正式法律原文（主席令第六十四号第5条）；
-- 删除指向已合并实体的残留链接（`K_XLSX_FT_F2F31FEEE9DC4C57B899A82F`），彻底消除 links to merged hazards 违规；
-- 撤销对 GB 12158 5 条 proposed 候选的不当标题合并（`H_12158_10_1_2`、`H_12158_4_2_3_5_2`、`H_12158_6_3_2_2`、`H_12158_8_8_5_3`、`H_1764B7439DFE44C1A680A7393E` 恢复为独立 proposed 候选，proposed 从 421 增至 426，superseded 从 92 降至 87）；
-- 依据标准原件 PDF 还原 9 条 active clause 的科学计数法指数及排版（Unicode 上标），文本损坏警告清零；
-- 逐条严格重构缩窄 PR #61 转正的 8 条危废隐患（清除旧版附录A、非官方专用设施、越权防火防雷、消防通讯及宽泛选址，补齐触发条件与适用边界），重算 reviews 与 contextHashes；
-- 删除多余的 `LV_STD_GB18597_2023`，条款统一切换归并至既有规范版本卡 `L023`（挂靠 `LF_L023`），修正 publication 题录；
-- 客观记录私有母库历史写入后恢复备份事实，核实物理指标与写入前纯净备份完全一致；
-- 全量门禁（`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、`verify_unified_bundle.py`、Node 测试、Python 单元测试及扫描器）全绿。
+### 全项目最终验收与收口 — DONE (OFFICIAL)
+2026-09-19 全项目最终验收收口完成：
+1. **全库生命周期与对账**：2,015 总隐患（1,744 active、184 proposed、87 superseded），与 426 backlog（242 promoted + 184 remaining proposed）100% 对账平衡；
+2. **条文与原文质量**：3,007 条条款全部校验通过，损坏、截断或空原文为 0；
+3. **关联与审查链条**：1,886 个 links 全部通过 Gate；1,197 个 evidence 实体完整存在；dangling evidenceRefs 为 0；
+4. **在线站点核验**：GitHub Pages（`https://an-0726.github.io/safety-basis/`）9 个 hazard shards、7 个 clause shards、manifest 及前端搜索 100% 校验通过；
+5. **项目状态正式切换**：正式切换至**长期维护模式 (Long-Term Maintenance Mode)**，业务范围全面冻结。
 
 ---
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**PR #60 与 PR #61 系统定点纠偏专项已完成本地全量开发、门禁与验收，正处于 Git 提交、推送远端分支、创建 Pull Request 及远端 CI/Pages 闭环阶段。**
+**全项目最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。**
 
-最新生命周期：**1,502 active / 426 proposed / 87 superseded（共 2,015）**。
-正式公开包指标：**1,502 hazards / 58 law versions / 1,276 clauses / 1,621 links / public proposed 0**，`releaseHash=491d2e5236b2f0b35deb8cc52e029e8731d6cbd46b3d49d8a14d0fd68af61181`。
+最新全库生命周期：**1,744 active / 184 proposed / 87 superseded（共 2,015）**。
+正式公开包指标：**1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links / public proposed 0**，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`。
 
 本地私有母库状态核实：
 - 母库文件：`source/library/fulltext.sqlite3`（文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`）；
-- 已完成备份原位恢复，各项指标与写入前纯净备份完全一致；
-- 本地最终版发布包构建成功，耗时正常，退出码 0。
+- `documents=171`，`fulltext_fts=215,464`，`integrity_check=["ok"]`；
+- 各项指标与纯净备份完全一致。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **推送专有工作分支 `fix-pr60-pr61-remediation-20260919` 至远端 GitHub 仓库，创建指向 `main` 的 Pull Request，跟踪 GitHub Actions check-runs（Validate 与 Build），完成合并并验证线上 Pages 部署与状态一致性。**
+> **保持长期维护待命状态 (Standby Maintenance Mode)。业务范围已冻结，不主动扩大业务范围或为保持活跃而修改业务数据。**
 
-未来法规、标准和 proposed 处理长效路线（依 PR #62 规则执行）：
-1. **本地证据库优先，但不是唯一来源；本地没有就主动联网查官方来源。**
-2. `source/library/` 只是优先使用的本地原件和全文检索库，不是法规正式纳管的前置条件。遇到本地没有某项法规、标准、现行版本或完整条款时，不得因为“本地无原件”停止核验，也不得直接把它长期留在 proposed。
-3. 联网优先查询全国人大/国家法律法规数据库、中国政府网/国务院、发布机关及主管部门官网、国家标准全文公开系统/全国标准信息公共服务平台、省市政府及主管部门官网。
-4. 官方网页/PDF能核实“法规/标准身份 → 当前适用版本 → 精确条/款/项或标准条号 → 完整逐字原文 → 官方 URL/原始证据 → 隐患适用性”全链条时，直接建立正式 evidence / lawVersion / clause / link / review 并进入 Gate，不需要先下载进母库或写 SQLite。
-5. 搜索摘要、AI、OCR、Excel、百科、培训网站、商业法规库和普通第三方转载只能用于找线索，不能代替正式原文。
-6. 严禁把“本地没有法规原件”当成无法继续核验的理由。
+后续仅在满足 [MAINTENANCE.md](MAINTENANCE.md) 规定的明确维护触发条件时（如国家发布新法规或修订标准、既有法规到达生效/废止日期、CI/Pages 异常报警），方可开启针对性的新维护批次。日常遵循 PR #62 确立的“本地母库优先，官方网络权威来源补齐”长效规则。
