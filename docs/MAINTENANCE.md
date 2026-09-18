@@ -13,7 +13,7 @@
 
 ## PHASE 11 触发条件
 
-当前处于长期维护等待态。出现下列任一情况才进入新的维护批次：
+当前处于长期维护循环；PHASE 12 exact-locator 批次已完成并合入 `main`。出现下列任一情况时进入新的维护批次：
 
 - 新法规、标准、修订版本、废止/替代关系或官方证据需要纳管；
 - 新隐患、既有隐患修订、候选证据补齐或 `proposed` 转正审核；
@@ -21,7 +21,7 @@
 - `PROJECT_STATE.md`、README、HANDOFF 与远端实际状态出现实质冲突；
 - 私有 SQLite 到达计划备份/integrity 维护点，或出现文档数、FTS 行数、paragraph sum、archive 引用等不变量异常。
 
-没有上述触发条件时，不为“保持活跃”而改业务数据，不重复正式发布验收，也不把 499 条 `proposed` 强行清零。
+没有上述触发条件时，不为“保持活跃”而改业务数据，不重复正式发布验收，也不把当前 434 条 `proposed` 强行清零。
 
 ## 候选
 
@@ -38,7 +38,7 @@
 - 私有全文数：SQLite 中成功建立正文记录的文档；
 - 公开全文数：`source/publication/fulltext/` 中允许公开分发的全文。
 
-当前 2026-09-17 正式基线：1,429 条正式隐患、57 个实际引用法规版本、1,205 条正式条款、1,544 个正式关联；499 条 proposed 只留后台。knowledge 库存为 103 laws / 106 lawVersions / 2,847 clauses / 2,014 hazards / 1,567 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
+当前 2026-09-18 正式基线：1,495 条正式隐患、58 个实际引用法规版本、1,267 条正式条款、1,611 个正式关联；434 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 103 laws / 106 lawVersions / 2,920 clauses / 2,015 hazards / 1,634 links；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
 
 ## Publication 长期完整性门禁
 
