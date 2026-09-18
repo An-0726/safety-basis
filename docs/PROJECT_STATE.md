@@ -337,9 +337,11 @@ PR #45 合并提交 `9e8de313e2321a9b81b8e812155434d7735e463b` 后，`main` Vali
 
 GB/T 47236-2026 候选专题批次：2026-09-18 从 487 条 proposed 基线中复核 17 条。16 条候选的隐患反向表述与官方归档现行条款直接对应，适用范围统一限定为该标准覆盖的低压铸造机、差压铸造机及其他金属型铸造设备，已补齐 hazard/link 当前审核哈希并转为 active。`H_GBT47236_4_2_2_3` 同时包含运动部件防护与警告标志两个对象，与既有 `H_F8BD176AF46643EA9E3CC56A6F` 仅部分重叠，继续 proposed，未强行合并。本批后 lifecycle 为 **1,458 active / 471 proposed / 86 superseded**；fresh public bundle 为 **1,458 hazards / 58 law versions / 1,232 clauses / 1,574 links / public proposed 0**，releaseHash=`6c67b709ba8405e3a9763ff275b4cb1b7c9c14422754714eab379c44c61f47f0`。Validate、strict release audit、publication integrity 和 unified bundle verify 均 PASS；未修改私有 SQLite/archive。
 
+GB/T 47236-2026 独立义务专题批次：同日继续从 471 条 proposed 中复核并转正 26 条。本批只选择条款自身已经完整规定所述义务的项目，不使用外部标准题名、表格标题或推荐性措辞补足缺失判断；全部候选均限定至该标准覆盖设备并补齐当前 hazard/link 审核。批次后 lifecycle 为 **1,484 active / 445 proposed / 86 superseded**；fresh public bundle 为 **1,484 hazards / 58 law versions / 1,258 clauses / 1,600 links / public proposed 0**，releaseHash=`24913cd6f3f6014c0c50d05069ce4741969631011876d1ef8a1a9905512edfa6`。Validate、strict release audit、publication integrity、unified bundle verify 和 15 项 Node 测试均 PASS；未修改私有 SQLite/archive。
+
 ## 7. NEXT ACTION — 下一动作
 
-> **当前 GB/T 47236-2026 专题批次已完成本地数据、Gate 与 fresh bundle 验证，待提交 PR、CI、合并和 Pages 验收。合并后继续按证据集中的专题批次处理剩余 471 条 proposed；优先复核已有精确现行条款且对象边界可独立证明的候选。**
+> **当前第二个 GB/T 47236-2026 专题批次已完成本地数据、Gate 与 fresh bundle 验证，待提交 PR、CI、合并和 Pages 验收。合并后继续按证据集中的专题批次处理剩余 445 条 proposed；下一批应优先核验被引用标准的具体条款与表格内容，不得只凭交叉引用标题转正。**
 
 进入下一维护批次时继续遵守现有边界：新证据先进入私有来源层并核身份/版本/效力；`knowledge/` 仍是唯一正式结构化事实源；候选必须经完整 Gate 才能转正式；`proposed` 不得直接进入公网。每次**正式业务数据**变化后执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance。纯文档/治理/测试变化只执行其受影响检查和正常主线 CI，不为制造新数字而重复业务线上验收。
 
