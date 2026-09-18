@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收、PHASE 9 Release Candidate 全量验证、PHASE 10 正式发布及 PHASE 11 维护批次。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的 PHASE 5 Git 交付闭环、PHASE 6 候选证据回绑、PHASE 7 publication 来源归整、PHASE 8 前端/私有版一致性验收、PHASE 9 Release Candidate 全量验证、PHASE 10 正式发布、PHASE 11 维护批次、PHASE 12 exact-locator 批次、PHASE 13 全库 434 backlog 最终处置与 PHASE 14 GB 18597-2023 危废专项批次。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**PHASE 10 DONE；PHASE 11 长期维护循环持续，PHASE 12 exact-locator 批次已完成，PHASE 13 全库 434 backlog 最终处置与质量闭环批次已完成。** 2026-09-17 完成远端治理、publication 长期门禁、GB 46768-2025 收录、搜索修复及首批电气隐患转正；2026-09-18 完成两批 GB/T 47236-2026 候选转正、PHASE 12 exact-locator 批次以及 PR #59 文档收尾；接手远端主线 `b24fd495cf52f8948ec5742dc3641c0799337a73`。PHASE 13 全面闭环全库 434 条 proposed backlog 逐条处置，修复 14 个 rejected link 状态不一致与 6 组重名/同义隐患合并，质量扫描器实测零错误，私有本地母库验收通过；当前正式基线为 **1,494 active / 429 proposed / 92 superseded**，公开包为 **1,494 hazards / 58 law versions / 1,266 clauses / 1,610 links / public proposed 0**。
+**PHASE 10 DONE；PHASE 11 长期维护循环持续，PHASE 12 exact-locator 批次已完成，PHASE 13 全库 434 backlog 最终处置与质量闭环已于 PR #60 合并，PHASE 14 GB 18597-2023 危废专项收录与转正已就绪。** 2026-09-17 完成远端治理、publication 长期门禁、GB 46768-2025 收录、搜索修复及首批电气隐患转正；2026-09-18 完成两批 GB/T 47236-2026 候选转正、PHASE 12 exact-locator 批次以及 PR #59 文档收尾；PR #60 合并提交为 `16891123bbe2dac1627b33ff5716dd1d8cdad138`。PHASE 14 基于母库只读零修改原则完成强制性国标 GB 18597-2023 现行版本与 20 条核心条款收录，严格复核 18 条危废候选并转正 8 条危废贮存核心隐患；当前正式基线为 **1,502 active / 421 proposed / 92 superseded**，公开包为 **1,502 hazards / 59 law versions / 1,276 clauses / 1,621 links / public proposed 0**。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,11 +38,13 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-18（远端 `main=b24fd495cf52f8948ec5742dc3641c0799337a73`、PR #59 merge、最新 Validate / Build / Pages deploy 已核；真实私有母库最新本地最终版验收详见 `docs/PHASE13_LOCAL_ACCEPTANCE_20260918.md`）。**
+**LAST VERIFIED：2026-09-19（分支 `phase14-gb18597-hazardous-waste-20260919`，基于 main `16891123bbe2dac1627b33ff5716dd1d8cdad138`，门禁严格测试全绿）。**
 
 PHASE 10 正式发布 PR #40 已合并，发布合并提交为 `3c486cba5142a85ebaef366f04dbc7d4e53a91ba`；PR #41 完成 PHASE 10 状态收尾。PHASE 11 首轮维护随后完成：PR #42 收口等待态文档与远端审计；PR #43 将 publication canonical / catalog / 物理全文 / search 派生物一致性固化为长期硬门禁；PR #45 为该门禁补齐合成失败回归测试和 schema/asOf 契约。PR #45 合并提交为 `9e8de313e2321a9b81b8e812155434d7735e463b`，其后 `main` Validate run `35180759610` success，Build/Pages run `35180759551` 的 build 与 deploy 均 success。部署地址仍为 `https://an-0726.github.io/safety-basis/`。
 
-PHASE 10 的首次正式发布基线继续作为历史发布证据；其后 PHASE 11 / PHASE 12 / PHASE 13 已发生正式业务数据与生命周期治理。当前接手主线为 `b24fd495cf52f8948ec5742dc3641c0799337a73`（PR #59 merge），对应 Validate run `35344496616` success、Build/Pages run `35344496539` success，且 deploy job success。当前 fresh public bundle 为 **1,494 hazards / 58 law versions / 1,266 clauses / 1,610 links / public proposed 0**，`releaseHash=bb65650ba5e6730d1f2f4dbd950f1ff2d7bc09c8458422d471824722c3f9c31d`。
+PHASE 13 PR #60 已合并主线（合并提交 `16891123bbe2dac1627b33ff5716dd1d8cdad138`），实现 434 proposed backlog 逐条机器最终处置闭环与扫描器错误清零。
+PHASE 14 专项收录强制性国家标准《危险废物贮存污染控制标准》（GB 18597-2023），复用母库已有原件 `LF_L023`，母库物理零修改；建立现行版本卡 `LV_STD_GB18597_2023`、版本更替 `LS_GB18597_2001_2023` 及 20 条核心规范条款与完整边车审核；精选转正 8 条危废贮存隐患至 active（11 条 direct links），其余 10 条危废候选继续审慎保留 proposed（详见 `docs/phase14-gb18597-disposition.jsonl`）。
+当前 fresh public bundle 为 **1,502 hazards / 59 law versions / 1,276 clauses / 1,621 links / public proposed 0**，`releaseHash=e9ba28076196e90f70fd5737d73a222068d5ad2dad3263340d654adb52650cf2`。
 
 公开发布架构已收口：
 
@@ -66,14 +68,11 @@ PHASE 10 的首次正式发布基线继续作为历史发布证据；其后 PHAS
 ### 当前 knowledge 状态
 
 PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。其后 PHASE 11 新增 1 条正式电气隐患、转正 12 条电气候选，并在 GB/T 47236-2026 两个专题批次中转正 16 + 26 条；PHASE 12 exact-locator 再转正 11 条。
-PHASE 13 全库 434 proposed backlog 最终处置与质量错误修复批次中：
-- 将引用未生效草案的 `H_5E36D9ABBA9321D566592E49_2` 合并至现行依据实体 `H_66B2A0967E8B4E4BAD7749DF_1`（active 减少 1，superseded 增加 1）；
-- 将 5 条重名 proposed 隐患（`H_12158_10_1_2`、`H_12158_4_2_3_5_2`、`H_12158_6_3_2_2`、`H_12158_8_8_5_3`、`H_1764B7439DFE44C1A680A7393E`）合并并设为 superseded（proposed 减少 5，superseded 增加 5）；
-- 434/434 proposed 候选逐条机器处置闭环（`docs/backlog_434_final_disposition.jsonl`），无未经审计悬空候选；
-- 14 个 rejected link 的 lifecycle 与 review 状态修正一致；
-- 最终生命周期为：**1,494 active、429 proposed、92 superseded，共 2,015**。
+PHASE 13 全库 434 proposed backlog 最终处置与质量错误修复批次中合并 6 条重复隐患，修正 14 个 rejected link。
+PHASE 14 GB 18597-2023 危废专项批次中复核 18 条危废候选，转正 8 条至 `active`，其余 10 条因外部标准依赖、行政法定义务或专业消防要求继续保留 `proposed`。
+最终生命周期为：**1,502 active、421 proposed、92 superseded，共 2,015**。
 
-当前 manifest 库存为：**103 个法规身份、106 个法规版本、2,920 条条款、2,015 个隐患实体、1,634 个关联、1,165 个 evidence、28 条 succession、75 条 requirements**。
+当前 manifest 库存为：**103 个法规身份、107 个法规版本、2,940 条条款、2,015 个隐患实体、1,645 个关联、1,165 个 evidence、29 条 succession、75 条 requirements**。
 
 新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
@@ -109,7 +108,8 @@ PHASE 13 全库 434 proposed backlog 最终处置与质量错误修复批次中�
 - PR #57：GB/T 47236-2026 独立义务专题批次转正 26 条候选。
 - PR #58：PHASE 12 exact-locator 批次转正 11 条候选；合并提交 `f6cf9ed34a7a42ba70f65336dc91aa4c6ce8a823`，main Validate `35321083736`、Build/Pages `35321083752` 及 deploy 均 success。
 - PR #59：更新 `docs/HANDOFF.md` 等治理文档，收敛主线基线为 `b24fd495cf52f8948ec5742dc3641c0799337a73`。
-- PHASE 13 工作分支：434 proposed backlog 逐条处置闭环、质量错误清零、Windows release clean 兼容优化与真实私有母库本地最终版验收。
+- PR #60：PHASE 13 全库 434 proposed backlog 逐条处置闭环、质量错误清零、Windows release clean 兼容优化与真实私有母库本地最终版验收；合并提交 `16891123bbe2dac1627b33ff5716dd1d8cdad138`。
+- PHASE 14 工作分支：GB 18597-2023 危险废物贮存专项收录，转正 8 条危废核心隐患，生命周期升至 1,502 active / 421 proposed / 92 superseded。
 
 ---
 
