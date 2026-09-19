@@ -65,7 +65,7 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 - **1,300 条正式条款**（全部包含逐字官方原文）；
 - **1,788 个正式关联**（全部通过严格 Gate）；
 - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-- `releaseHash=42d660ab34e4eb4531dd24a94c015c74f5ca4eb5c145a767df786b39adbbbe1f`。
+- `releaseHash=ad015d800443fbc561ce27a33f805f733039a313e6b8a750b0972e510dc739f0`。
 
 ### 2. 全库知识源库存（Knowledge Base Total Inventory）
 - **103 个法规身份 (laws)**；

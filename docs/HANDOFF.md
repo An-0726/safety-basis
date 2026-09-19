@@ -28,7 +28,7 @@
    - **1,300 clauses**（全部包含逐字官方原文）；
    - **1,788 links**（全部通过严格 Gate）；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-   - `releaseHash=42d660ab34e4eb4531dd24a94c015c74f5ca4eb5c145a767df786b39adbbbe1f`。
+   - `releaseHash=ad015d800443fbc561ce27a33f805f733039a313e6b8a750b0972e510dc739f0`。
 4. **门禁与测试**：全量自动化门禁与测试（`validate_all.py`、`strict_release_audit.py`、`verify_unified_bundle.py`、`validate_publication_integrity.py`、Node 15/15 tests、Python 35/35 tests）全部 PASS，blocker 彻底归零（0）。
 5. **母库物理属性与操作事实**：`source/library/fulltext.sqlite3` 物理属性（SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`、size=106,958,848、mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`、documents=171、FTS=215,464、integrity=ok）与写入前纯净备份完全一致。
 
