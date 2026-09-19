@@ -491,11 +491,11 @@ for ent in NEW_ENTITIES:
         "description": ent["description"],
         "id": hid,
         "keywords": ent["keywords"],
-        "lifecycle": "active",
+        "lifecycle": "proposed",
         "measures": ent["measures"],
         "mergedInto": None,
-        "mode": "direct",
-        "note": "",
+        "mode": "candidate",
+        "note": "自动导入候选，需逐条完成法规与适用性核验后方可发布。",
         "places": ent["places"],
         "title": ent["title"]
     }
@@ -521,7 +521,7 @@ for ent in NEW_ENTITIES:
         "id": lid,
         "jurisdictionCode": "CN",
         "legacyRole": "直接依据" if ent["linkRole"] == "direct" else "参考依据",
-        "lifecycle": "active",
+        "lifecycle": "proposed",
         "priority": 10 if ent["linkRole"] == "direct" else 5,
         "role": ent["linkRole"]
     }
@@ -567,11 +567,11 @@ for ent in NEW_ENTITIES:
         "entityType": "hazard",
         "entityId": hid,
         "reviewType": "definition",
-        "decision": "verified",
+        "decision": "pending",
         "reviewedContentHash": h_hash,
         "checkedAt": "2026-09-19T16:00:00+08:00",
         "reviewer": "Codex / Changfeng Ingestion Policy",
-        "reason": "长丰县现场排查数据提炼之标准隐患实体，定义、违规事实与精炼实战整改措施经官方标准核实完全成立。",
+        "reason": "自动导入仅生成候选实体，尚未逐条完成法规依据与适用性核验。",
         "evidenceRefs": []
     }
     hr_path = os.path.join(REVIEWS_HAZARDS_DIR, f"{hid}.json")
@@ -598,7 +598,7 @@ for lid, hid, cid in new_links:
         "entityType": "link",
         "entityId": lid,
         "reviewType": "applicability",
-        "decision": "verified",
+        "decision": "pending",
         "reviewedContentHash": l_hash,
         "contextHashes": {
             "hazard": h_hash,
@@ -606,7 +606,7 @@ for lid, hid, cid in new_links:
         },
         "checkedAt": "2026-09-19T16:00:00+08:00",
         "reviewer": "Codex / Changfeng Ingestion Policy",
-        "reason": f"实体 {hid} 与法规条款 {cid} 在适用范围、违法构成要件及法定防范要求上经严格核验完全成立。",
+        "reason": f"自动导入仅建立候选关联 {hid} -> {cid}，尚未逐条完成适用性核验。",
         "evidenceRefs": []
     }
     lr_path = os.path.join(REVIEWS_LINKS_DIR, f"{lid}.json")
