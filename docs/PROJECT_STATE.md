@@ -38,12 +38,30 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-19（基于 main `5add09ed84c2a433d07640f178385f66a30c0ce5`，全量门禁严格测试全绿，在线站点 100% 验收通过）。**
+**LAST VERIFIED：2026-09-19（基于 main `24f0bc68de9a59de89f2a19a7f0e1276fb019f19`，全量门禁严格测试全绿，在线站点 100% 验收通过，五边完全一致）。**
 
-全库 426 条 proposed backlog 最终核销（PR #64，242 条转正 active，184 条分类保留）已合入 `main`。针对此前遗留的悬空证据引用已全部完成补齐规范，当前全项目指标如下：
-1. **全库生命周期**：**1,744 active / 184 proposed / 87 superseded（共 2,015）**；
+全库 426 条 proposed backlog 最终核销（PR #64，242 条转正 active，184 条分类保留）与收尾收口（PR #65，消除 31 处悬空证据引用、全库 manifest 重建）已全部合入 `main`。README / PROJECT_STATE / HANDOFF / knowledge manifest / public manifest 五边数字完全一致，指标如下：
+
+1. **全库知识源库存（Knowledge Base Total Inventory）**：
+   - **104 个法规身份 (laws)**；
+   - **107 个法规版本 (law-versions)**；
+   - **3,007 条法规条款 (clauses)**；
+   - **2,015 个隐患实体 (hazards)**：
+     - **1,744 条现行有效 (active)**；
+     - **184 条分类保留 (proposed)**；
+     - **87 条归并替代 (superseded)**；
+     - 隐患生命周期对账平衡：`1,744 + 184 + 87 = 2,015`（100% 吻合）；
+   - **1,886 个关联 (links)**；
+   - **1,197 个官方证据卡 (evidence)**；
+   - **75 条管理要求 (requirements)**；
+   - **29 条替代演进关系 (successions)**；
 2. **Backlog 对账平衡**：`426 proposed backlog = 242 promoted + 184 remaining proposed`，覆盖率与平衡公式 100% 吻合；
-3. **公开站发布指标**：**1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links / public proposed 0**；
+3. **正式公开站发布指标（Public Release Bundle）**：
+   - **1,744 hazards**（全部为 active 状态，public proposed 严格为 0）；
+   - **60 laws / 60 law versions**（全部具有现行有效条款支撑）；
+   - **1,354 clauses**（全部包含逐字官方原文）；
+   - **1,863 links**（全部通过严格 Gate）；
+   - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
 4. **线上站点核验**：部署地址 `https://an-0726.github.io/safety-basis/`，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`，在线 9 个 hazard shards、7 个 clause shards（全部具有完整有效原文）、manifest 及前端搜索 100% 校验通过；
 5. **门禁与自动化测试**：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、Node 测试及 Python 单元测试全 PASS（blocker 0, error 0, warning 63, stale 0, dangling refs 0）；
 6. **母库物理属性核实**：`source/library/fulltext.sqlite3` 文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`，documents=171，FTS=215,464，`integrity_check` 结果为 `["ok"]`，与纯净备份完全一致。

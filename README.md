@@ -57,17 +57,31 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
 
-2026-09-19 当前正式发布基线（长期维护模式）：
+2026-09-19 当前基线（长期维护模式，五边完全一致）：
 
-- **1,744 条正式隐患**；
-- **60 个实际引用法规版本**；
-- **1,354 条正式条款**；
-- **1,863 个正式关联**；
-- **184 条 proposed 候选留在 knowledge（含 149 条 upcoming 等依规保留项），正式公开 0 条候选**；
-- publication 目录为 **69 个 canonical 来源关系（11 full_text + 58 link_only）**；
+### 1. 正式公开站发布基线（Public Release Bundle）
+- **1,744 条正式隐患**（全部为 active 状态，公开 proposed 严格为 0 条）；
+- **60 个实际引用法规版本**（全部具有现行有效条款支撑）；
+- **1,354 条正式条款**（全部包含逐字官方原文）；
+- **1,863 个正式关联**（全部通过严格 Gate）；
+- **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
 - `releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`。
 
-本项目已完成全库 426 proposed backlog 的逐条审查与最终处置闭环（PR #64，242 条转正 active，184 条依规范分类保留），补齐历史遗留证据卡与规整审查记录（dangling evidenceRefs 彻底清零），全量自动化门禁与 GitHub Actions CI 全绿，在线 GitHub Pages（`https://an-0726.github.io/safety-basis/`）100% 验收通过，正式切换为长期维护模式（Long-Term Maintenance Mode），业务范围全面冻结。历史 1,409、1,429、1,502 等基线均为阶段历史过程数字，不再作为当前正式站口径。
+### 2. 全库知识源库存（Knowledge Base Total Inventory）
+- **104 个法规身份 (laws)**；
+- **107 个法规版本 (law-versions)**；
+- **3,007 条法规条款 (clauses)**；
+- **2,015 个隐患实体 (hazards)**：
+  - **1,744 条现行有效 (active)**；
+  - **184 条分类保留 (proposed)**（含 149 条 upcoming 等依规保留项）；
+  - **87 条归并替代 (superseded)**；
+  - 隐患生命周期平衡：`1,744 + 184 + 87 = 2,015`（100% 对账平衡）；
+- **1,886 个关联 (links)**；
+- **1,197 个官方证据卡 (evidence)**；
+- **75 条管理要求 (requirements)**；
+- **29 条替代演进关系 (successions)**。
+
+本项目已完成全库 426 proposed backlog 的逐条审查与最终处置闭环（PR #64，242 条转正 active，184 条依规范分类保留），补齐历史遗留证据卡与规整审查记录（dangling evidenceRefs 彻底清零），全量自动化门禁与 GitHub Actions CI 全绿，在线 GitHub Pages（`https://an-0726.github.io/safety-basis/`）100% 验收通过，正式切换为长期维护模式（Long-Term Maintenance Mode），业务范围全面冻结。历史 1,409、1,429、1,502 等基线均为阶段历史过程数字，不再作为当前正式站口径。README / PROJECT_STATE / HANDOFF / knowledge manifest / public manifest 五边数字完全一致。
 
 ## 三、法规身份、版本、来源必须分开
 
