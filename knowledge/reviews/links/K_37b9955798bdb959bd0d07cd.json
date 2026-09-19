@@ -2,7 +2,7 @@
   "entityId": "K_37b9955798bdb959bd0d07cd",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "rejected",
+  "decision": "pending",
   "reviewer": "GPT-5.6-Sol legal-semantic-audit",
   "checkedAt": "2026-09-11T10:30:00+08:00",
   "reason": "该fallback与K_f84551f7219f6393bc017e35指向同一hazard、同一《安全生产法》第三十六条、同一角色，属于重复关联。保留K_f84551f7219f6393bc017e35，本关联驳回以避免公开结果重复展示同一依据。",
@@ -16,5 +16,6 @@
     "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
     "link": "d68f2f341e9a620c9adc55d1c9556cbf737d2c4927db1a63a19fbc41ced7b21f"
   },
-  "evidenceRefs": []
+  "evidenceRefs": [],
+  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
 }

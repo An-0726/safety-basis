@@ -2,7 +2,7 @@
   "entityId": "K_7f3a9fe5096cc08a479517c0",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "rejected",
+  "decision": "pending",
   "reviewer": "GPT-5.6-Sol legal-semantic-audit",
   "checkedAt": "2026-09-14",
   "reason": "驳回原direct判断。C_4cc8db7da64889234b1417aa为GB 50054-2011第6.1.1条，规定的是配电线路短路保护和过负荷保护，不涉及配电柜柜门保持常闭。当前隐患缺少与其直接对应的现行技术条款，在补入正确标准前不得公开。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
@@ -19,5 +19,6 @@
   },
   "evidenceRefs": [],
   "phase5ReconciledAt": "2026-09-14",
-  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914"
+  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
 }

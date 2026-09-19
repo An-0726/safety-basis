@@ -6,8 +6,8 @@
 
 ## Result
 
-- `source/publication/law-index.json`: 216 → **106** canonical version rows.
-- Fulltext catalog: 155 → **69** canonical rows; **11** approved official full texts and **58** metadata-only official links.
+- `source/publication/law-index.json`: 107 → **106** canonical version rows.
+- Fulltext catalog: 69 → **69** canonical rows; **11** approved official full texts and **58** metadata-only official links.
 - Proposed-hazard leakage: **0**.
 - Private-boundary marker leakage: **0**.
 - Fulltext search gram shards rebuilt: **256**.
@@ -16,8 +16,8 @@
 
 Publication identity is now a 1:1 projection of `knowledge/law-versions`; publication no longer creates independent law/version identities. Existing full text is retained only when its catalog row has explicit `official_legal_text` permission and `fullTextReviewed=true`; all other public entries are metadata-only official links.
 
-- Stale law-index IDs removed: **144**.
-- Fulltext rows with no governed knowledge identity removed from the public catalog: **86**.
+- Stale law-index IDs removed: **2**.
+- Fulltext rows with no governed knowledge identity removed from the public catalog: **0**.
 
 ## Boundaries
 
