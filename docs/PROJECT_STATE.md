@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的各项里程碑及 2026-09-19 的全量审计修复（依据《安全法规与标准审查工作簿_全量审计修复_20260919.xlsx》）、重复法规与演进关系物理去重、GB 50058 独立建模、跨标准与条款错绑纠治、草稿标记清除与严格门禁 0 blocker 验收。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**全量审计工作簿基准修复与最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。** 依据 2026-09-19 全量审计工作簿完成全库治理：GB 50058-2014 独立建库纳管、C_MEM10_11_7 重大隐患原子条款补齐、两组重复法规版本（JS_RISK_MGMT 与 AQPXGL）物理去重、3 组重复演进关系物理消除、南京条例及事故调查条例官方条文全文写回、关联矩阵 1886 项核验映射、隐患描述措施反转纠偏、草稿标记清理与发布门禁阻断清零（0 blocker）。全量门禁检验 0 blocker、GitHub Actions CI 全绿。当前正式基线为 **1,682 active / 246 proposed / 87 superseded（共 2,015）**，公开包为 **1,680 hazards / 57 laws / 57 law versions / 1,300 clauses / 1,788 links / public proposed 0**，`releaseHash=ad015d800443fbc561ce27a33f805f733039a313e6b8a750b0972e510dc739f0`。
+**全量审计工作簿基准修复与最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。** 依据 2026-09-19 全量审计工作簿完成全库治理：GB 50058-2014 独立建库纳管、C_MEM10_11_7 重大隐患原子条款补齐、两组重复法规版本（JS_RISK_MGMT 与 AQPXGL）物理去重、3 组重复演进关系物理消除、南京条例及事故调查条例官方条文全文写回、关联矩阵 1886 项核验映射、隐患描述措施反转纠偏、草稿标记清理与发布门禁阻断清零（0 blocker）。全量门禁检验 0 blocker、GitHub Actions CI 全绿。当前正式基线为 **1,682 active / 246 proposed / 87 superseded（共 2,015）**，公开包为 **1,680 hazards / 57 laws / 57 law versions / 1,300 clauses / 1,788 links / public proposed 0**，`releaseHash=c30661ae764b29f1428920718d1f98bea191015828361b21813bd9f8f804a2e0`。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -61,7 +61,7 @@
    - **1,300 clauses**（全部包含逐字官方原文）；
    - **1,788 links**（全部通过严格 Gate）；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-3. **发布包哈希与校验**：`releaseHash=ad015d800443fbc561ce27a33f805f733039a313e6b8a750b0972e510dc739f0`，`verify_unified_bundle.py` 100% 校验通过；
+3. **发布包哈希与校验**：`releaseHash=c30661ae764b29f1428920718d1f98bea191015828361b21813bd9f8f804a2e0`，`verify_unified_bundle.py` 100% 校验通过；
 4. **门禁与自动化测试**：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、Node 测试及 Python 单元测试全 PASS（blocker 0, error 0, warning 145, stale 0, dangling refs 0）；
 5. **母库物理属性核实**：`source/library/fulltext.sqlite3` 文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`，documents=171，FTS=215,464，`integrity_check` 结果为 `["ok"]`，与纯净备份完全一致。
 
