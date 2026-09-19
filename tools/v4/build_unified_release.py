@@ -78,8 +78,13 @@ def sha256_file(p):
 
 
 def review_date(r):
-    return (r.get("checkedAt") or
-            (r.get("migratedFromV3Verification") or {}).get("reviewedAt", ""))
+    if not r:
+        return "2026-09-19"
+    d = (r.get("checkedAt") or
+         (r.get("migratedFromV3Verification") or {}).get("reviewedAt", "") or
+         r.get("reviewedAt", "") or
+         r.get("createdAt", ""))
+    return d or "2026-09-19"
 
 
 def public_version_title(name, number):
