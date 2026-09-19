@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的各项里程碑及 2026-09-19 的 PR #60/#61 纠错、PR #62 治理升级、PR #64 全库 proposed 最终核销及全项目最终验收。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的各项里程碑及 2026-09-19 的全量审计修复（依据《安全法规与标准审查工作簿_全量审计修复_20260919.xlsx》）、重复法规与演进关系物理去重、GB 50058 独立建模、跨标准与条款错绑纠治、草稿标记清除与严格门禁 0 blocker 验收。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**全项目最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。** 2026-09-19 全面完成 PR #60 与 PR #61 定点纠错（PR #63 合并）、PR #62 官方网络证据长效治理规则确立，以及 PR #64 全库 426 条 proposed backlog 逐条处置闭环（242 条转正 active，184 条依规范分类保留）。全量门禁检验 0 blocker、GitHub Actions CI 全绿、GitHub Pages 部署成功，在线站点 100% 吻合。当前正式基线为 **1,744 active / 184 proposed / 87 superseded（共 2,015）**，公开包为 **1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links / public proposed 0**，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`。
+**全量审计工作簿基准修复与最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。** 依据 2026-09-19 全量审计工作簿完成全库治理：GB 50058-2014 独立建库纳管、C_MEM10_11_7 重大隐患原子条款补齐、两组重复法规版本（JS_RISK_MGMT 与 AQPXGL）物理去重、3 组重复演进关系物理消除、南京条例及事故调查条例官方条文全文写回、关联矩阵 1886 项核验映射、隐患描述措施反转纠偏、草稿标记清理与发布门禁阻断清零（0 blocker）。全量门禁检验 0 blocker、GitHub Actions CI 全绿。当前正式基线为 **1,682 active / 246 proposed / 87 superseded（共 2,015）**，公开包为 **1,680 hazards / 57 laws / 57 law versions / 1,300 clauses / 1,788 links / public proposed 0**，`releaseHash=31bb6d1aaab330f05bd65c0d207bfb09107d1fab09f1b4ca4e04386ae1f63e60`。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,33 +38,32 @@
 
 ## 2. 当前正式基线
 
-**LAST VERIFIED：2026-09-19（基于 main `24f0bc68de9a59de89f2a19a7f0e1276fb019f19`，全量门禁严格测试全绿，在线站点 100% 验收通过，五边完全一致）。**
+**LAST VERIFIED：2026-09-19（全量审计工作簿纠错修复完成，全量门禁严格测试全绿，五边完全一致）。**
 
-全库 426 条 proposed backlog 最终核销（PR #64，242 条转正 active，184 条分类保留）与收尾收口（PR #65，消除 31 处悬空证据引用、全库 manifest 重建）已全部合入 `main`。README / PROJECT_STATE / HANDOFF / knowledge manifest / public manifest 五边数字完全一致，指标如下：
+全量审计纠错治理已全部落盘。README / PROJECT_STATE / HANDOFF / knowledge manifest / public manifest 五边数字完全一致，指标如下：
 
 1. **全库知识源库存（Knowledge Base Total Inventory）**：
-   - **104 个法规身份 (laws)**；
-   - **107 个法规版本 (law-versions)**；
-   - **3,007 条法规条款 (clauses)**；
+   - **103 个法规身份 (laws)**；
+   - **106 个法规版本 (law-versions)**；
+   - **2,992 条法规条款 (clauses)**；
    - **2,015 个隐患实体 (hazards)**：
-     - **1,744 条现行有效 (active)**；
-     - **184 条分类保留 (proposed)**；
+     - **1,682 条现行有效 (active)**；
+     - **246 条分类保留 (proposed)**；
      - **87 条归并替代 (superseded)**；
-     - 隐患生命周期对账平衡：`1,744 + 184 + 87 = 2,015`（100% 吻合）；
+     - 隐患生命周期对账平衡：`1,682 + 246 + 87 = 2,015`（100% 吻合）；
    - **1,886 个关联 (links)**；
-   - **1,197 个官方证据卡 (evidence)**；
+   - **1,199 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
-   - **29 条替代演进关系 (successions)**；
-2. **Backlog 对账平衡**：`426 proposed backlog = 242 promoted + 184 remaining proposed`，覆盖率与平衡公式 100% 吻合；
-3. **正式公开站发布指标（Public Release Bundle）**：
-   - **1,744 hazards**（全部为 active 状态，public proposed 严格为 0）；
-   - **60 laws / 60 law versions**（全部具有现行有效条款支撑）；
-   - **1,354 clauses**（全部包含逐字官方原文）；
-   - **1,863 links**（全部通过严格 Gate）；
+   - **26 条替代演进关系 (successions)**；
+2. **正式公开站发布指标（Public Release Bundle）**：
+   - **1,680 hazards**（全部为 active 状态，public proposed 严格为 0）；
+   - **57 laws / 57 law versions**（全部具有现行有效条款支撑）；
+   - **1,300 clauses**（全部包含逐字官方原文）；
+   - **1,788 links**（全部通过严格 Gate）；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-4. **线上站点核验**：部署地址 `https://an-0726.github.io/safety-basis/`，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`，在线 9 个 hazard shards、7 个 clause shards（全部具有完整有效原文）、manifest 及前端搜索 100% 校验通过；
-5. **门禁与自动化测试**：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、Node 测试及 Python 单元测试全 PASS（blocker 0, error 0, warning 63, stale 0, dangling refs 0）；
-6. **母库物理属性核实**：`source/library/fulltext.sqlite3` 文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`，documents=171，FTS=215,464，`integrity_check` 结果为 `["ok"]`，与纯净备份完全一致。
+3. **发布包哈希与校验**：`releaseHash=31bb6d1aaab330f05bd65c0d207bfb09107d1fab09f1b4ca4e04386ae1f63e60`，`verify_unified_bundle.py` 100% 校验通过；
+4. **门禁与自动化测试**：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、Node 测试及 Python 单元测试全 PASS（blocker 0, error 0, warning 145, stale 0, dangling refs 0）；
+5. **母库物理属性核实**：`source/library/fulltext.sqlite3` 文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`，documents=171，FTS=215,464，`integrity_check` 结果为 `["ok"]`，与纯净备份完全一致。
 
 公开发布架构已收口：
 

@@ -98,6 +98,7 @@ def main():
     ap.add_argument("--out", default=DEFAULT_OUT)
     ap.add_argument("--as-of", dest="as_of", default=AS_OF)
     ap.add_argument("--data-version", dest="data_version", default=DATA_VERSION)
+    ap.add_argument("--overwrite", action="store_true", help="若输出目录已存在则清空覆盖")
     args = ap.parse_args()
     AS_OF = args.as_of
     DATA_VERSION = args.data_version
@@ -108,7 +109,20 @@ def main():
 
     out = os.path.abspath(args.out)
     if os.path.exists(out):
-        raise SystemExit("输出目录已存在，拒绝覆盖：" + out)
+        if args.overwrite:
+            import stat
+            def _handle_ro(func, path, exc):
+                try:
+                    os.chmod(path, stat.S_IWRITE)
+                    func(path)
+                except Exception:
+                    pass
+            try:
+                shutil.rmtree(out, onexc=_handle_ro)
+            except Exception:
+                shutil.rmtree(out, ignore_errors=True)
+        else:
+            raise SystemExit("输出目录已存在，拒绝覆盖：" + out)
     data = os.path.join(out, "data")
 
     gate = evaluate_release_gate(KNOW, as_of_date)

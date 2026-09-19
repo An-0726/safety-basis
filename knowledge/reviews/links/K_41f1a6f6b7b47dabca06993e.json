@@ -2,7 +2,7 @@
   "entityId": "K_41f1a6f6b7b47dabca06993e",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "rejected",
+  "decision": "pending",
   "reviewer": "ZCode-DeepSeek",
   "checkedAt": "2026-09-14",
   "reason": "驳回原 direct 判断。理由：C_GB50016_5_5_15 规范的是『公共建筑内房间的疏散门数量应经计算确定且不应少于2个』，与『门窗未向外开启』（疏散门开启方向）不是同一事项，属错误引用。需要说明的是：该条强制性虽已被《建筑防火通用规范》GB 55037-2022 废止，但条文本身仍然有效、可以引用；本条之所以驳回是因为内容不匹配，不是因为条文失效。正确依据应为规范疏散门开启方向的条款（如 GB 50016 第6.4.11条，或 GB 55037-2022 安全疏散相关规定），待补。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
@@ -10,13 +10,14 @@
     "CLAUSE_SCOPE_MISMATCH",
     "DIRECT_ROLE_REJECTED"
   ],
-  "reviewedContentHash": "3c4f780023cb8ec90009b73743607218ebd1485b1baa8e02657d282af55430f4",
+  "reviewedContentHash": "051eda58255f1985f40b6496dba083d871e5f1de8c3a06444e3dc63a64cefffd",
   "contextHashes": {
     "hazard": "91666b3b4e8860b2db532e50e7a3ef89dde4da1a4ca24c7efb693c313bea70a8",
     "clause": "329cc8323784c936fe1eca42e22d29be680e9371344f955f78668ebf8fb9f7fa",
-    "link": "3c4f780023cb8ec90009b73743607218ebd1485b1baa8e02657d282af55430f4"
+    "link": "051eda58255f1985f40b6496dba083d871e5f1de8c3a06444e3dc63a64cefffd"
   },
   "evidenceRefs": [],
   "phase5ReconciledAt": "2026-09-14",
-  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914"
+  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
 }

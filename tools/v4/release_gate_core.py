@@ -181,7 +181,65 @@ def gate_law_version(lv, review, law_ok, as_of):
     return not reasons, supports_current, reasons
 
 
-def gate_clause(clause, review, lv_supports_current, lv_struct_ok):
+def _cn_to_int(cn_str):
+    if not cn_str:
+        return None
+    s = str(cn_str).strip()
+    if s.isdigit():
+        return int(s)
+    cn_num = {'零':0, '一':1, '二':2, '三':3, '四':4, '五':5, '六':6, '七':7, '八':8, '九':9}
+    if len(s) == 1 and s in cn_num:
+        return cn_num[s]
+    if s == '十':
+        return 10
+    if s.startswith('十'):
+        return 10 + cn_num.get(s[1:], 0)
+    total = 0
+    r = 0
+    for char in s:
+        if char in cn_num:
+            r = cn_num[char]
+        elif char == '十':
+            if r == 0:
+                r = 1
+            total += r * 10
+            r = 0
+        elif char == '百':
+            if r == 0:
+                r = 1
+            total += r * 100
+            r = 0
+        elif char == '千':
+            if r == 0:
+                r = 1
+            total += r * 1000
+            r = 0
+        elif char == '万':
+            total = (total + r) * 10000
+            r = 0
+        else:
+            return None
+    total += r
+    return total
+
+
+def _extract_primary_article_num(text):
+    """从条款路径或文本中提取主条号数字（如'第十六条' -> '16', '16' -> '16', '5.2.6' -> '5.2.6'）。"""
+    if not text:
+        return None
+    t = str(text).strip()
+    m_cn = re.search(r"第([零一二三四五六七八九十百千万\d]+)条", t)
+    if m_cn:
+        val = _cn_to_int(m_cn.group(1))
+        if val is not None:
+            return str(val)
+    m_num = re.match(r"^(\d+(?:\.\d+)*)", t)
+    if m_num:
+        return m_num.group(1)
+    return None
+
+
+def gate_clause(clause, review, lv_supports_current, lv_struct_ok, lv=None):
     """Clause 硬门禁 + 所属 LawVersion 可支撑当前日期。"""
     reasons = []
     if not clause.get("lawVersionId"):
@@ -199,6 +257,39 @@ def gate_clause(clause, review, lv_supports_current, lv_struct_ok):
         reasons.append("BLOCK_VERSION_UNKNOWN:lawVersion_gate_failed")
     elif not lv_supports_current:
         reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:lawVersion_not_supporting_current")
+
+    # 1. 检查标准号是否与版本一致（防止跨标准严重错挂，如 GB 50058 条款挂到 GB 50140）
+    if lv:
+        std_no = lv.get("documentNumber") or lv.get("standardNo") or ""
+        cid = clause.get("id") or ""
+        quote = clause.get("quote") or ""
+        # 检查 clause ID 中的标准编号（如 C_GB50058_...）
+        m_cid_std = re.match(r"^C_(GB[T]?\d+)", cid, re.I)
+        if m_cid_std and std_no:
+            cid_std_num = re.search(r"\d+", m_cid_std.group(1)).group(0)
+            lv_std_nums = re.findall(r"\d+", std_no)
+            if cid_std_num not in lv_std_nums:
+                reasons.append("BLOCK_CLAUSE_IDENTITY:standard_mismatch")
+        # 检查条款正文开头是否显式声明所属标准（如开头即为 GB 50058-2014）
+        m_head_std = re.match(r"^\s*(GB[\s/T\-]*\d+)", quote[:40], re.I)
+        if m_head_std and std_no:
+            head_std_num = re.search(r"\d+", m_head_std.group(1)).group(0)
+            lv_std_nums = re.findall(r"\d+", std_no)
+            if head_std_num not in lv_std_nums:
+                reasons.append("BLOCK_CLAUSE_IDENTITY:standard_mismatch")
+
+    # 2. 检查条号与正文开头条号一致性
+    path_num = _extract_primary_article_num(clause.get("articlePath"))
+    quote_num = _extract_primary_article_num(clause.get("quote", "")[:40])
+    if path_num is not None and quote_num is not None:
+        if str(path_num) != str(quote_num):
+            reasons.append("BLOCK_CLAUSE_LOCATOR:articlePath_quote_mismatch")
+
+    # 3. 检查第三方聚合源拦截
+    source_url = clause.get("sourceUrl") or ""
+    if "njzq.com.cn" in source_url:
+        reasons.append("BLOCK_CLAUSE_SOURCE:third_party_aggregator")
+
     return not reasons, reasons
 
 
@@ -217,6 +308,8 @@ def gate_hazard_content(hazard, review):
     public_text = " ".join(str(hazard.get(x) or "") for x in ("title", "description", "measures", "note"))
     if PRIVATE_PATH_RE.search(public_text):
         reasons.append("BLOCK_PRIVATE_LEAK:absolute_path_in_public_text")
+    if re.search(r"需核对|需补齐|catalog_only|fulltext_clause_candidate|basis_name_unresolved", public_text):
+        reasons.append("BLOCK_HAZARD_QUALITY:draft_marker_in_active_hazard")
     return not reasons, reasons
 
 
@@ -295,7 +388,8 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
         vid = cl.get("lawVersionId")
         lv = lvs_v.get(vid, {})
         ok, reasons = gate_clause(cl, reviews["clauses"].get(cid),
-                                  lv.get("supports_current", False), lv.get("ok", False))
+                                  lv.get("supports_current", False), lv.get("ok", False),
+                                  lvs.get(vid))
         clauses_v[cid] = {"ok": ok, "reasons": reasons, "lawVersionId": vid}
 
     hazards_v = {}
