@@ -1,8 +1,8 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-18 的各项里程碑及 2026-09-19 的全量审计修复（依据《安全法规与标准审查工作簿_全量审计修复_20260919.xlsx》）、重复法规与演进关系物理去重、GB 50058 独立建模、跨标准与条款错绑纠治、草稿标记清除与严格门禁 0 blocker 验收。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
+本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**全量审计工作簿基准修复与最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。** 依据 2026-09-19 全量审计工作簿完成全库治理：GB 50058-2014 独立建库纳管、C_MEM10_11_7 重大隐患原子条款补齐、两组重复法规版本（JS_RISK_MGMT 与 AQPXGL）物理去重、3 组重复演进关系物理消除、南京条例及事故调查条例官方条文全文写回、关联矩阵 1886 项核验映射、隐患描述措施反转纠偏、草稿标记清理与发布门禁阻断清零（0 blocker）。全量门禁检验 0 blocker、GitHub Actions CI 全绿。当前正式基线为 **1,682 active / 246 proposed / 87 superseded（共 2,015）**，公开包为 **1,680 hazards / 57 laws / 57 law versions / 1,300 clauses / 1,788 links / public proposed 0**，`releaseHash=c30661ae764b29f1428920718d1f98bea191015828361b21813bd9f8f804a2e0`。
+**当前分支记录的是阶段 4 本地 UI 治理预览，不是线上更新或项目最终验收。** 阶段 4 只改公开投影、搜索边界、CI 构建前测试和治理文档；`knowledge/`、`source/publication/`、稳定 ID、法规链接及业务结论未在本轮改写。当前 checkout 的 `knowledge/manifest.json` 报告 **103 laws / 106 law versions / 2,992 clauses / 2,015 hazards / 1,886 links / 1,199 evidence / 26 successions / 75 requirements**。阶段 4 本地预览为 **1,716 hazards / 58 laws / 58 law versions / 1,302 clauses / 1,824 links / public proposed 0**，`asOf=2026-09-19`，`dataVersion=2026.09.19.stage4`，`releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -36,34 +36,30 @@
 
 ---
 
-## 2. 当前正式基线
+## 2. 当前统计与阶段 4 本地预览
 
-**LAST VERIFIED：2026-09-19（全量审计工作簿纠错修复完成，全量门禁严格测试全绿，五边完全一致）。**
+**LAST VERIFIED：2026-09-20（本地阶段 4 包、隔离副本和浏览器代表场景已核验；未宣称线上已部署）。**
 
-全量审计纠错治理已全部落盘。README / PROJECT_STATE / HANDOFF / knowledge manifest / public manifest 五边数字完全一致，指标如下：
+当前 checkout 的 `knowledge/manifest.json` 报告以下源库存；它与公开包是不同统计层级：
 
-1. **全库知识源库存（Knowledge Base Total Inventory）**：
+1. **全库知识源库存（Knowledge Manifest）**：
    - **103 个法规身份 (laws)**；
    - **106 个法规版本 (law-versions)**；
    - **2,992 条法规条款 (clauses)**；
-   - **2,015 个隐患实体 (hazards)**：
-     - **1,682 条现行有效 (active)**；
-     - **246 条分类保留 (proposed)**；
-     - **87 条归并替代 (superseded)**；
-     - 隐患生命周期对账平衡：`1,682 + 246 + 87 = 2,015`（100% 吻合）；
+   - **2,015 个隐患实体 (hazards)**；
    - **1,886 个关联 (links)**；
    - **1,199 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
-2. **正式公开站发布指标（Public Release Bundle）**：
-   - **1,680 hazards**（全部为 active 状态，public proposed 严格为 0）；
-   - **57 laws / 57 law versions**（全部具有现行有效条款支撑）；
-   - **1,300 clauses**（全部包含逐字官方原文）；
-   - **1,788 links**（全部通过严格 Gate）；
+2. **阶段 4 本地公开预览（asOf=2026-09-19）**：
+   - **1,716 hazards**，public `proposed` 为 **0**；
+   - **58 laws / 58 law versions**；
+   - **1,302 clauses**；
+   - **1,824 links**；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-3. **发布包哈希与校验**：`releaseHash=c30661ae764b29f1428920718d1f98bea191015828361b21813bd9f8f804a2e0`，`verify_unified_bundle.py` 100% 校验通过；
-4. **门禁与自动化测试**：`validate_all.py`、`strict_release_audit.py`、`validate_publication_integrity.py`、Node 测试及 Python 单元测试全 PASS（blocker 0, error 0, warning 145, stale 0, dangling refs 0）；
-5. **母库物理属性核实**：`source/library/fulltext.sqlite3` 文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`，documents=171，FTS=215,464，`integrity_check` 结果为 `["ok"]`，与纯净备份完全一致。
+   - `dataVersion=2026.09.19.stage4`；
+   - `releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`；
+3. **验证边界**：阶段 4 外部审查材料位于 `D:\codex romate\reviews\safety-basis-20260919\luna-stage4\`；本地 package / isolated copy / browser evidence 通过不等于线上或 `main` 已更新。
 
 公开发布架构已收口：
 
@@ -75,6 +71,13 @@
 - `proposed` 不进入公网；
 - `upcoming` 尚未实施版本不能支撑当前正式隐患。
 
+### 阶段 4 UI 治理记录（2026-09-20，本地未部署）
+
+- T4.1：仅将任务书批准的 9 组完整句式投影为 `maintenance`；其余备注字符保留在 `business`，源 `note` 不变；主备注、完整资料复制和搜索索引均不再把已批准维护片段当作业务内容。
+- T4.2：workflow 在验证 / 构建前执行 Node 前端测试和 Python pipeline 测试；`deploy` 仍只依赖 `build`，触发器与权限未改。
+- T4.3：README、PROJECT_STATE、HANDOFF 改为区分 knowledge manifest、阶段 4 本地预览和历史批次；19 个未映射场所值、泛化 / 复合分类候选、`H_133DEA3AE07CE30E3CA5CBF4FF_1` 及未批准疑似维护内容均进入外部决策清单，没有转写为事实或法规判断。
+- 外部材料：`D:\codex romate\reviews\safety-basis-20260919\luna-stage4\STATUS.md`、`note-routing-stage4.md`、`classification-decision-stage4.md`、`browser-evidence-stage4.md`。
+
 ### `main` 历史首次正式发布基线（PHASE 10）
 
 - 1,429 条正式隐患；
@@ -84,9 +87,9 @@
 - 499 条 `proposed` 候选仅留 `knowledge/`，公网候选 0。
 - PR #40 首次正式部署验收基线：`releaseHash=552cca4f3e12877c7af1f56cd323220fe6af5631e4b334ffddb04881bbc83a07`，`dataVersion=2026.09.16.3c486cba5142`。后续纯文档收尾提交可能触发等价重部署，不改变 governed knowledge/publication 业务数据。
 
-### 当前 knowledge 状态
+### 历史 knowledge 状态（PHASE 6–PR #64，非当前 manifest）
 
-PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。其后 PHASE 11 新增 1 条正式电气隐患、转正 12 条电气候选，并在 GB/T 47236-2026 两个专题批次中转正 16 + 26 条；PHASE 12 exact-locator 再转正 11 条。
+以下段落仅保留历史处置轨迹，不覆盖本节前面的当前 manifest / 阶段 4 本地预览数字。PHASE 6 从 519 条 `proposed` 基线候选出发，逐条生成最终处置；其中 20 条转为 `active`，499 条继续保持 `proposed`。其后 PHASE 11 新增 1 条正式电气隐患、转正 12 条电气候选，并在 GB/T 47236-2026 两个专题批次中转正 16 + 26 条；PHASE 12 exact-locator 再转正 11 条。
 PHASE 13 全库 434 proposed backlog 最终处置中合并 1 条危化法草案实体。
 PHASE 14 转正 8 条危废核心隐患，其余 10 条危废候选继续审慎保留 proposed。
 PR #63 纠错专项撤销 5 条 GB 12158 候选的不当标题合并，恢复为 independent proposed 候选（421 恢复为 426）。
@@ -134,7 +137,7 @@ PR #64 针对剩余全库 426 条 proposed backlog 展开逐条处置闭环：�
 - PR #63：系统定点纠偏 PR #60 与 PR #61 blockers 与模型瑕疵：危化法第五条修复官方逐字原文；清理指向已合并实体的悬空链接；撤销 GB 12158 5 条 proposed 候选的不当标题合并（恢复为独立 proposed 候选，421→426）；9 条 active clause 指数排版依照原件精确恢复；PR #61 8 条危废贮存隐患逐条严格缩窄重构；删除多余的 `LV_STD_GB18597_2023`，条款统一切换归并至规范版本卡 `L023`；合并提交 `70981323`。
 - PR #62：证据获取规则长期治理调整：确立“本地证据库优先，但不是唯一来源；本地没有就主动联网查官方来源”原则；`source/library/` 仅作为本地优先原件与全文检索库，不再作为法规正式纳管的前置条件；官方来源（全国人大/国家法律法规数据库、中国政府网/国务院、发布机关/主管部门官网、国家标准全文公开系统、省市政府官网等）满足现行版本、精确条号、完整原文、官方 URL 与适用性时直接建立正式证据链入 Gate，无需先下载落库或写 SQLite；合并提交 `9f9000d6`。
 - PR #64：全库 426 条 remaining proposed backlog 8 个专项批次逐条最终核销闭环（242 条转正 active，184 条依规范分类保留），生成主审计与对账报告；合并提交 `5add09ed84c2a433d07640f178385f66a30c0ce5`，main CI 与 Pages 部署全绿。
-- 最终收口与长期维护模式切换：补齐 5 个缺失证据卡、规整 3 条 clause reviews（消除 31 处 dangling evidenceRefs）；全维度审计指标对账 100% 吻合，线上 Pages 站点全量抓取核验 100% 通过；正式宣布业务范围冻结并切换至长期维护模式。
+- 最终收口与长期维护模式切换（历史记录）：补齐 5 个缺失证据卡、规整 3 条 clause reviews（消除 31 处 dangling evidenceRefs）；全维度审计指标对账 100% 吻合，线上 Pages 站点全量抓取核验 100% 通过；正式宣布业务范围冻结并切换至长期维护模式。
 
 ---
 
@@ -288,7 +291,9 @@ PR #36 在 canonical 数据提交后已通过：
 
 ---
 
-## 5. MASTER ROADMAP
+## 5. MASTER ROADMAP（历史记录）
+
+本节保留既有项目路线图和历史验收记录；其中的旧 releaseHash、线上验收结果及阶段统计不覆盖本文件前面的阶段 4 本地预览。
 
 状态：`DONE` / `IN PROGRESS` / `PENDING` / `BLOCKED`。
 
@@ -351,10 +356,10 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**全项目最终验收通过，正式切换为长期维护模式 (Long-Term Maintenance Mode)。业务范围全面收口冻结。**
+**阶段 4 本地 UI 治理预览，未部署；阶段验收材料已生成，等待总控接受。** 业务数据范围保持冻结，本轮没有把候选分类或备注审查线索写回 `knowledge/`。
 
-最新全库生命周期：**1,744 active / 184 proposed / 87 superseded（共 2,015）**。
-正式公开包指标：**1,744 hazards / 60 laws / 60 law versions / 1,354 clauses / 1,863 links / public proposed 0**，`releaseHash=5df466dec1a67757edd0a6a57f44a9cee0d2d84c40406f5efae69d1c31112f1a`。
+当前源库存以 `knowledge/manifest.json` 为准：**103 laws / 106 law versions / 2,992 clauses / 2,015 hazards / 1,886 links / 1,199 evidence / 26 successions / 75 requirements**。
+当前本地预览以阶段 4 `public-release` 为准：**1,716 hazards / 58 laws / 58 law versions / 1,302 clauses / 1,824 links / public proposed 0**，`asOf=2026-09-19`，`dataVersion=2026.09.19.stage4`，`releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`。
 
 本地私有母库状态核实：
 - 母库文件：`source/library/fulltext.sqlite3`（文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`）；
@@ -365,6 +370,6 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 
 ## 7. NEXT ACTION — 下一动作
 
-> **保持长期维护待命状态 (Standby Maintenance Mode)。业务范围已冻结，不主动扩大业务范围或为保持活跃而修改业务数据。**
+> **由总控决定是否接受阶段 4 本地预览；在此之前不部署、不写回生成包到正式 source。业务范围已冻结，不主动扩大业务范围或为保持活跃而修改业务数据。**
 
 后续仅在满足 [MAINTENANCE.md](MAINTENANCE.md) 规定的明确维护触发条件时（如国家发布新法规或修订标准、既有法规到达生效/废止日期、CI/Pages 异常报警），方可开启针对性的新维护批次。日常遵循 PR #62 确立的“本地母库优先，官方网络权威来源补齐”长效规则。

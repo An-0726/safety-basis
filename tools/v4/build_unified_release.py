@@ -28,6 +28,14 @@ from datetime import date, datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from presentation import (  # noqa: E402
+    SCENE_TAG_OPTIONS,
+    display_level,
+    presentation_review,
+    project_hazard,
+    raw_law_level,
+    searchable,
+)
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -40,23 +48,12 @@ AS_OF = "2026-09-14"
 DATA_VERSION = "2026.09.14.current"
 MODEL = "deterministic local build"
 
-SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "app.js",
+SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
 
 REGION = {"CN": "全国", "CN-32": "江苏", "CN-3201": "南京"}
 STATUS_LABEL = {"active": "现行有效", "upcoming": "即将生效", "repealed": "已废止", "unknown": "待核验"}
-_PUNCT = re.compile(r"[，。；：、（）()【】\[\]《》“”‘’'\"·•…—–_-]+")
-
-
-def searchable(parts):
-    """复现前端 js/search.js 的 normalize，保证 searchText 与查询词同形。"""
-    s = " ".join(str(p) for p in parts if p)
-    s = unicodedata.normalize("NFKC", s).lower()
-    s = _PUNCT.sub(" ", s)
-    return re.sub(r"\s+", " ", s).strip()
-
-
 def rd(p):
     with io.open(p, encoding="utf-8") as f:
         return json.load(f)
@@ -85,6 +82,19 @@ def review_date(r):
          r.get("reviewedAt", "") or
          r.get("createdAt", ""))
     return d or "2026-09-19"
+
+
+def normalized_conditions(hazard_id, hazard):
+    """Return source conditions without inventing or coercing applicability text."""
+    value = hazard.get("conditions")
+    if value is None:
+        return ""
+    if not isinstance(value, str):
+        raise SystemExit(
+            "knowledge/hazards/%s.json 的 conditions 必须是字符串、null 或缺失，实际为 %s"
+            % (hazard_id, type(value).__name__)
+        )
+    return value
 
 
 def public_version_title(name, number):
@@ -132,10 +142,20 @@ def main():
 
     gate = evaluate_release_gate(KNOW, as_of_date)
     hazards = load_dir(KNOW, "hazards")
+    hazard_conditions = {
+        hid: normalized_conditions(hid, hazard)
+        for hid, hazard in hazards.items()
+    }
     links = load_dir(KNOW, "links")
     clauses = load_dir(KNOW, "clauses")
     lvs = load_dir(KNOW, "law-versions")
     laws = load_dir(KNOW, "laws")
+    publication_by_id = {
+        e["id"]: e for e in rd(os.path.join(PUBLICATION, "law-index.json"))
+    }
+    hazard_presentation = {
+        hid: project_hazard(hazard, hazard_id=hid) for hid, hazard in hazards.items()
+    }
 
     checked_at = {}
     for f in glob.glob(os.path.join(KNOW, "reviews", "hazards", "*.json")):
@@ -188,14 +208,21 @@ def main():
         for hid in pub[i:i + SHARD_SIZE]:
             h = hazards[hid]
             h_shard_of[hid] = sid
+            note_projection = hazard_presentation[hid]
             recs.append({
                 "id": hid,
                 "title": h.get("title", ""),
                 "description": h.get("description", ""),
                 "measures": h.get("measures", ""),
+                "conditions": hazard_conditions[hid],
                 "note": h.get("note", ""),
+                "noteSegments": note_projection["noteSegments"],
+                "businessNote": note_projection["businessNote"],
+                "maintenanceNote": note_projection["maintenanceNote"],
                 "category": h.get("category", ""),
+                "displayCategory": hazard_presentation[hid]["displayCategory"],
                 "places": h.get("places") or [],
+                "sceneTags": hazard_presentation[hid]["sceneTags"],
                 "aliases": h.get("aliases") or [],
                 "keywords": h.get("keywords") or [],
                 "mode": h.get("mode", ""),
@@ -299,12 +326,14 @@ def main():
         validity = lv.get("validityStatus", "unknown")
         refs = rebuilt_refs(version_clause[vid])
         region_code = law.get("jurisdictionCode") or lv.get("scope") or "CN"
+        raw_level = raw_law_level(law, lv, source)
         law_index.append({
             "id": vid,
             "name": name,
             "aliases": aliases,
             "documentNumber": number,
-            "level": law.get("documentKind") or lv.get("level") or source.get("level", ""),
+            "level": raw_level,
+            "displayLevel": display_level(raw_level, vid),
             "scope": REGION.get(region_code, source.get("scope") or region_code),
             "status": STATUS_LABEL.get(validity, "待核验"),
             "checked": (lv_checked.get(vid, "") or source.get("checked", ""))[:10],
@@ -317,7 +346,7 @@ def main():
             "clauseCount": len(refs),
             "searchText": searchable([
                 canonical_name, name, " ".join(aliases), law.get("issuer", ""), number,
-                source.get("name", ""),
+                source.get("name", ""), raw_level, display_level(raw_level, vid),
             ]),
         })
 
@@ -325,9 +354,17 @@ def main():
     si = []
     cat_counter, place_counter = Counter(), Counter()
     mode_counter, level_counter = Counter(), Counter()
+    display_category_counter = Counter()
+    display_level_counter = Counter()
+    level_records = {}
+    for vid, lv in lvs.items():
+        law = laws.get(lv.get("lawId")) or {}
+        source = publication_by_id.get(vid) or {}
+        raw = raw_law_level(law, lv, source)
+        level_records[vid] = (raw, display_level(raw, vid))
     for hid in pub:
         h = hazards[hid]
-        lns, stds, scopes, lvls = set(), set(), set(), set()
+        lns, stds, scopes, lvls, display_lvls = set(), set(), set(), set(), set()
         for cid, _role in basis_of[hid]:
             c = clauses[cid]
             lv = lvs.get(c.get("lawVersionId")) or {}
@@ -338,21 +375,26 @@ def main():
             if lv.get("documentNumber"):
                 stds.add(lv["documentNumber"])
             scopes.add(REGION.get(c.get("jurisdictionCode") or "CN", "全国"))
-            level = law.get("documentKind") or lv.get("level")
+            level = raw_law_level(law, lv, publication_by_id.get(c.get("lawVersionId")) or {})
             if level:
                 lvls.add(level)
+                display_lvls.add(display_level(level, c.get("lawVersionId", "")))
         si.append({
             "id": hid,
             "title": h.get("title", ""),
             "aliases": h.get("aliases") or [],
             "category": h.get("category", ""),
+            "displayCategory": hazard_presentation[hid]["displayCategory"],
             "places": h.get("places") or [],
+            "sceneTags": hazard_presentation[hid]["sceneTags"],
             "keywords": h.get("keywords") or [],
+            "businessNote": hazard_presentation[hid]["businessNote"],
             "status": "已核验",
             "publishable": True,
             "mode": h.get("mode", ""),
             "checked": checked_at.get(hid, ""),
             "levels": sorted(lvls),
+            "displayLevels": sorted(display_lvls),
             "scopes": sorted(scopes),
             "lawNames": sorted(lns),
             "stdNumbers": sorted(stds),
@@ -360,18 +402,25 @@ def main():
             "searchText": searchable([
                 h.get("title", ""), " ".join(h.get("aliases") or []),
                 " ".join(h.get("keywords") or []), h.get("description", ""),
-                h.get("conditions", ""), h.get("note", ""),
+                hazard_conditions[hid], hazard_presentation[hid]["businessNote"],
                 " ".join(sorted(lns)), " ".join(sorted(stds)), h.get("category", ""),
+                hazard_presentation[hid]["displayCategory"],
+                " ".join(hazard_presentation[hid]["sceneTags"]),
+                " ".join(sorted(display_lvls)),
             ]),
         })
         if h.get("category"):
             cat_counter[h["category"]] += 1
+        if hazard_presentation[hid]["displayCategory"]:
+            display_category_counter[hazard_presentation[hid]["displayCategory"]] += 1
         for pl in h.get("places") or []:
             place_counter[pl] += 1
         if h.get("mode"):
             mode_counter[h["mode"]] += 1
         for level in lvls:
             level_counter[level] += 1
+        for level in display_lvls:
+            display_level_counter[level] += 1
 
     taxonomy = {
         "categories": [c for c, _ in cat_counter.most_common()],
@@ -380,6 +429,9 @@ def main():
         "hazardModes": sorted(mode_counter),
         "hazardStatuses": ["已核验"],
         "lawStatuses": sorted({x["status"] for x in law_index if x["status"]}),
+        "displayCategories": sorted(display_category_counter),
+        "sceneTagOptions": list(SCENE_TAG_OPTIONS),
+        "displayLevels": sorted(display_level_counter),
     }
 
     proposed_count = sum(1 for h in hazards.values()
@@ -532,8 +584,30 @@ def main():
     wr(os.path.join(out, "checksums.json"), checksums, indent=2)
 
     formal_ids = {e["id"] for e in law_index}
+    public_hazards = {hid: hazards[hid] for hid in pub}
+    public_roles = [role for refs in basis_of.values() for _cid, role in refs]
+    presentation = presentation_review(
+        public_hazards,
+        level_records,
+        modes=[h.get("mode", "") for h in public_hazards.values()],
+        roles=public_roles,
+    )
+    presentation["scope"] = "public eligible hazards; source fields remain unchanged"
+    presentation["sourcePlaceValues"] = len({
+        place for hazard in hazards.values() for place in (hazard.get("places") or [])
+        if isinstance(place, str)
+    })
+    presentation["sourceUnknownModes"] = sorted({
+        h.get("mode", "") for h in hazards.values()
+        if h.get("mode", "") not in ("direct", "conditional")
+    })
+    presentation["sourceUnknownRoles"] = sorted({
+        link.get("role", "direct") for link in links.values()
+        if link.get("role", "direct") not in ("direct", "supporting")
+    })
     report = {
         "asOf": AS_OF,
+        "releaseHash": release_hash,
         "model": MODEL,
         "output": out,
         "counts": counts,
@@ -551,6 +625,7 @@ def main():
             "fullTextCount": len(full_text),
             "officialLinkCount": len(link_only),
         },
+        "presentation": presentation,
         "notes": [
             "正式站只发布当前日期 Gate 通过的 active 隐患；proposed 候选保留在 knowledge，不进入正式包",
             "正式法规索引只由已发布条款实际引用的 knowledge 法规版本生成",

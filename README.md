@@ -57,31 +57,37 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
 
-2026-09-19 当前基线（全量审计修复完成，长期维护模式，五边完全一致）：
+2026-09-19 当前数据基线（阶段 4 本地 UI 治理预览，未部署）：
 
-### 1. 正式公开站发布基线（Public Release Bundle）
-- **1,680 条正式隐患**（全部为 active 状态，公开 proposed 严格为 0 条）；
-- **57 个实际引用法规版本**（全部具有现行有效条款支撑）；
-- **1,300 条正式条款**（全部包含逐字官方原文）；
-- **1,788 个正式关联**（全部通过严格 Gate）；
+### 1. 阶段 4 本地公开包（Local Public Preview）
+
+阶段 4 只调整公开投影、搜索边界、构建前测试和治理文档；`knowledge/`、`source/publication/`、稳定 ID、法规链接及业务结论未在本轮改写。当前实际生成的本地预览为：
+
+- **1,716 条公开隐患记录**；公开 `proposed` 候选为 **0**；
+- **58 个法规身份 / 58 个法规版本**；
+- **1,302 条公开条款**；
+- **1,824 条公开关联**；
 - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-- `releaseHash=c30661ae764b29f1428920718d1f98bea191015828361b21813bd9f8f804a2e0`。
+- `asOf=2026-09-19`，`dataVersion=2026.09.19.stage4`；
+- `releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`。
 
-### 2. 全库知识源库存（Knowledge Base Total Inventory）
+包位置、备注分流报告、分类决策清单和浏览器证据见外部审查目录：
+`D:\codex romate\reviews\safety-basis-20260919\luna-stage4\`。这些是本地验收材料，不表示线上站点或 `main` 已更新。
+
+### 2. 全库知识源清单（Knowledge Manifest）
+
+当前 `knowledge/manifest.json` 报告：
+
 - **103 个法规身份 (laws)**；
 - **106 个法规版本 (law-versions)**；
 - **2,992 条法规条款 (clauses)**；
-- **2,015 个隐患实体 (hazards)**：
-  - **1,682 条现行有效 (active)**；
-  - **246 条分类保留 (proposed)**；
-  - **87 条归并替代 (superseded)**；
-  - 隐患生命周期平衡：`1,682 + 246 + 87 = 2,015`（100% 对账平衡）；
+- **2,015 个隐患实体 (hazards)**；
 - **1,886 个关联 (links)**；
 - **1,199 个官方证据卡 (evidence)**；
 - **75 条管理要求 (requirements)**；
 - **26 条替代演进关系 (successions)**。
 
-本项目已依据《安全法规与标准审查工作簿_全量审计修复_20260919.xlsx》完成全量审计纠错治理：GB 50058 独立建模消除跨标准错绑、工贸重大隐患原子条款补齐、两组重复法规版本去重合并、演进关系去重、南京条例等条款官方条文全文写回、关联矩阵 1886 项核验映射、隐患描述与措施反转纠正、草稿标记清理与发布门禁阻断彻底清零（0 blocker, PASS），全量自动化门禁与 GitHub Actions CI 全绿，正式切换为长期维护模式（Long-Term Maintenance Mode），业务范围全面冻结。README / PROJECT_STATE / HANDOFF / knowledge manifest / public manifest 五边数字完全一致。
+知识源库存、公开预览包和历史批次是不同统计层级；本节只把实际 manifest / 生成包的口径作为当前基线，不再用“README / PROJECT_STATE / HANDOFF / manifest / public manifest 五边完全一致”概括不同层级。
 
 ## 三、法规身份、版本、来源必须分开
 
@@ -128,16 +134,15 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 ## 六、数量必须按层次报告
 
-当前知识源/库存与正式发布不是同一个数字：
+当前知识源、公开预览和目标集不是同一个数字：
 
-- knowledge：103 个法规身份、107 个法规版本、2,940 条条款、2,015 个隐患实体（1,502 active / 421 proposed / 92 superseded）、1,645 个关联；
-- 新版 Excel 目标集：1,929 个唯一隐患 ID（621 条修订、1,308 条保留）；
-- 当前正式发布：1,502 / 59 / 1,276 / 1,621（隐患 / 实际引用法规版本 / 条款 / 关联）；
-- 当前 proposed：421，仅后台；
-- publication：69 个 canonical 来源关系（11 full_text + 58 link_only），不等于正式法规数；
-- 私有全文当前已核：171 份全文、215,464 个检索段落；更细的母库审计状态见 `docs/PROJECT_STATE.md`。
+- `knowledge/manifest.json`：103 个法规身份、106 个法规版本、2,992 条条款、2,015 个隐患实体、1,886 个关联、1,199 个 evidence、26 条 succession、75 条 requirements；
+- 阶段 4 本地公开预览：1,716 条隐患、58 个法规身份 / 58 个法规版本、1,302 条条款、1,824 条关联、69 个 canonical 来源关系；
+- 新版 Excel 目标集：1,929 个唯一隐患 ID（621 条修订、1,308 条保留），它不是正式发布数量；
+- 私有全文母库统计属于另一层级，具体以 `docs/PROJECT_STATE.md` 中有证据的本地核验记录为准；
+- 历史批次中的“1250”“1502”“1680”等数字只保留为历史记录，不作为当前公开包统计。
 
-旧批次“1250”、Excel“1929”、knowledge“2014”、publication 目录数、旧法规卡“223”不能互相当成同一种“数据库总数”。
+报告数量时必须同时写明来源文件、`asOf` / `dataVersion` 和是否为本地预览；不能把不同层级相加或互相替代。
 
 ## 七、为什么 Git 不再保存 `source/releases/current/`
 
@@ -187,14 +192,16 @@ py -3 tools/build_local_release.py
 `main` 是唯一自动部署分支。核心检查：
 
 ```text
+node --test tests/*.test.mjs
+py -3 -m unittest discover -s tools/pipeline/tests -v
 py -3 tools/v4/validate_all.py
 py -3 tools/v4/strict_release_audit.py
 py -3 tools/v4/validate_publication_integrity.py
 py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
 py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
-py -3 -m unittest discover -s tools/pipeline/tests -v
-node --test tests/*.test.mjs
 ```
+
+CI 在 `build` job 的数据验证和构建前执行 Node 22 前端测试与 Python pipeline 测试；本地阶段 4 的审查包不等于线上部署结果。
 
 其中 `validate_publication_integrity.py` 是长期只读硬门禁：要求 publication 保持 knowledge canonical 1:1 身份投影，并检查全文 catalog、物理 `texts/`、全文搜索 index/gram shards 的确定性一致性与公开/私有边界。它同时运行在 Validate 和实际 Pages Build 路径；失败不得通过修改业务数据“凑绿”。
 

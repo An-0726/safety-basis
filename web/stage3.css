@@ -1,0 +1,37 @@
+.more-filters{position:relative;align-self:stretch}
+.more-filters summary{cursor:pointer;list-style:none;border:1px solid var(--line);background:#f9faf7;color:var(--green);padding:8px 11px;border-radius:5px;font-size:11px;white-space:nowrap}
+.more-filters summary::-webkit-details-marker{display:none}
+.more-filters summary::after{content:'⌄';margin-left:7px;color:var(--muted)}
+.more-filters[open] summary::after{content:'⌃'}
+.more-filter-items{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px;border:1px solid var(--line);background:#fff;border-radius:7px;position:absolute;right:0;top:calc(100% + 6px);z-index:10;box-shadow:0 8px 22px #263d3015}
+.more-filter-items label{white-space:nowrap}
+.loadmore{display:block;width:100%;margin-top:8px;background:#f7faf4;color:var(--green);font-size:12px}
+.record-info{border-top:1px solid var(--line);margin-top:22px;padding-top:14px}
+.record-info summary{cursor:pointer;color:#54735a;font-size:12px;font-weight:700;list-style:none}
+.record-info summary::-webkit-details-marker{display:none}
+.record-info summary::before{content:'＋';margin-right:5px}
+.record-info[open] summary::before{content:'－'}
+.record-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
+.record-grid div{border:1px solid #e3e7df;border-radius:6px;padding:10px;background:#fafbf8;min-width:0}
+.record-grid span{display:block;color:#899287;font-size:10px;margin-bottom:5px}
+.record-grid strong{display:block;font-size:11px;line-height:1.7;overflow-wrap:anywhere}
+.record-grid .record-places{grid-column:1/-1}
+.record-info .linkbutton{font-size:11px}
+.maintenance-record{border:1px solid #e6dfc8;border-radius:6px;margin-top:22px;padding:13px 14px;background:#fffaf0}
+.maintenance-record summary{cursor:pointer;color:#8b753e;font-size:12px;font-weight:700;list-style:none}
+.maintenance-record summary::-webkit-details-marker{display:none}
+.maintenance-record summary::before{content:'＋';margin-right:5px}
+.maintenance-record[open] summary::before{content:'－'}
+.maintenance-record p{font-size:12px;line-height:1.9;margin:12px 0;color:#877648;white-space:pre-line}
+.maintenance-record .linkbutton{font-size:11px;color:#8b753e}
+.detailactions #backResults{display:none}
+#list:focus{outline:2px solid #afcba9;outline-offset:-2px}
+@media(max-width:780px){
+  .more-filter-items{position:static;margin-top:6px;box-shadow:none;display:grid;grid-template-columns:1fr}
+  .more-filter-items label,.more-filter-items select{width:100%;max-width:none}
+  .record-grid{grid-template-columns:1fr 1fr}
+  .record-grid .record-places{grid-column:1/-1}
+  .detail h2{scroll-margin-top:90px}
+  #list{scroll-margin-top:90px}
+  .detailactions #backResults{display:block;min-width:100%}
+}
