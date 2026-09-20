@@ -1,0 +1,65 @@
+name: Apply PR70 audit quarantine (one shot)
+
+on:
+  push:
+    branches: [audit/engineering-20260920]
+    paths:
+      - tools/audit/quarantine_cf_pr70.py
+      - .github/workflows/apply-cf-audit-quarantine.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-cf-pr70-audit-quarantine
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: github.repository == 'An-0726/safety-basis' && github.ref == 'refs/heads/audit/engineering-20260920'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/engineering-20260920
+          fetch-depth: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Python dependencies
+        run: python -m pip install -r tools/pipeline/requirements.txt
+      - name: Quarantine PR70 reviews
+        run: python tools/audit/quarantine_cf_pr70.py
+      - name: Run repository tests and gates
+        run: |
+          node --test tests/*.test.mjs
+          python -m unittest discover -s tools/pipeline/tests -v
+          python tools/v4/validate_all.py
+          python tools/v4/strict_release_audit.py
+      - name: Build and verify isolated release
+        run: |
+          rm -rf source/releases/cf-audit
+          python tools/v4/build_unified_release.py --out source/releases/cf-audit --as-of 2026-09-21 --data-version "cf-audit-${GITHUB_SHA}"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          release = json.loads(Path('source/releases/cf-audit/release.json').read_text(encoding='utf-8'))
+          selection = {'schemaVersion':'safety-site-selection-v1','bundle':'cf-audit','releaseHash':release['releaseHash']}
+          Path('source/releases/cf-audit-selection.json').write_text(json.dumps(selection, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/cf-audit --selection source/releases/cf-audit-selection.json
+      - name: Commit quarantine only
+        run: |
+          git add -- knowledge/reviews/hazards/H_CF_*.json knowledge/reviews/links/K_CF_*.json
+          if git diff --cached --quiet; then
+            echo "No quarantine changes needed."
+            exit 0
+          fi
+          git config user.name ChatGPT
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix: quarantine unverified PR70 hazard links'
+          git push origin HEAD:refs/heads/audit/engineering-20260920
