@@ -54,7 +54,7 @@ jobs:
           python tools/v4/verify_unified_bundle.py --bundle source/releases/commerce-audit --selection source/releases/commerce-audit-selection.json
       - name: Commit data remediation
         run: |
-          git add -- knowledge
+          git add -- knowledge source/publication/law-index.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name ChatGPT
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

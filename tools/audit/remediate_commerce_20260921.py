@@ -64,6 +64,22 @@ wr(KNOW/'reviews'/'hazards'/f"{h['id']}.json", rev(h,'hazard','verified','defini
 kr=rev(k,'link','verified','applicability','隐患与GB 14784-2013第4.1.11条i）的适用对象、急停形式及距离条件直接对应。',[ev2['id']],{'contextHashes':{'hazard':content_hash(h),'clause':content_hash(cl),'link':content_hash(k)}})
 wr(KNOW/'reviews'/'links'/f"{k['id']}.json",kr)
 
+# Keep source/publication/law-index.json a 1:1 metadata projection of law versions.
+pub_index_path=ROOT/'source'/'publication'/'law-index.json'
+pub_index=rd(pub_index_path)
+pub_index=[row for row in pub_index if row.get('id') != lv['id']]
+pub_index.append({
+ 'id':lv['id'],'name':'带式输送机 安全规范 GB 14784-2013',
+ 'aliases':['带式输送机 安全规范','GB 14784-2013'],'documentNumber':lv['documentNumber'],
+ 'level':lv['level'],'scope':'全国','status':'现行有效','checked':'2026-09-21',
+ 'effectiveDate':lv['effectiveDate'],'sourceUrl':lv['sourceUrl'],'replaces':[],'replacedBy':[],
+ 'clauseRefs':[{'clauseId':cl['id'],'clauseShard':'','hazardIds':[h['id']]}],
+ 'hazardCount':1,'clauseCount':1,
+ 'searchText':'lv std gb14784 2013 带式输送机 安全规范 gb 14784 2013 国家质量监督检验检疫总局 国家标准化管理委员会 cn'
+})
+pub_index.sort(key=lambda row: str(row.get('id') or ''))
+wr(pub_index_path,pub_index)
+
 canon_id='H_43C6C076F9FC456DB09138A19A'; canon=rd(KNOW/'hazards'/f'{canon_id}.json')
 old_title=canon['title']; canon.update({
  'title':'装有电器的可开启配电箱（柜）门与金属框架未可靠连接',
