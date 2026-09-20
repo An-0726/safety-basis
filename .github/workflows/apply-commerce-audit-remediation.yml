@@ -1,0 +1,62 @@
+name: Apply commerce audit remediation (one shot)
+
+on:
+  push:
+    branches: [audit/engineering-20260920]
+    paths:
+      - tools/audit/remediate_commerce_20260921.py
+      - .github/workflows/apply-commerce-audit-remediation.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-commerce-audit-remediation
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: github.repository == 'An-0726/safety-basis' && github.ref == 'refs/heads/audit/engineering-20260920'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/engineering-20260920
+          fetch-depth: 30
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: python -m pip install -r tools/pipeline/requirements.txt
+      - name: Apply commerce remediation
+        run: python tools/audit/remediate_commerce_20260921.py
+      - name: Run all gates
+        run: |
+          node --test tests/*.test.mjs
+          python -m unittest discover -s tools/pipeline/tests -v
+          python tools/v4/validate_all.py
+          python tools/v4/strict_release_audit.py
+          python tools/v4/validate_publication_integrity.py
+      - name: Build and verify isolated release
+        run: |
+          rm -rf source/releases/commerce-audit
+          python tools/v4/build_unified_release.py --out source/releases/commerce-audit --as-of 2026-09-21 --data-version "commerce-audit-${GITHUB_SHA}"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          release=json.loads(Path('source/releases/commerce-audit/release.json').read_text(encoding='utf-8'))
+          Path('source/releases/commerce-audit-selection.json').write_text(json.dumps({'schemaVersion':'safety-site-selection-v1','bundle':'commerce-audit','releaseHash':release['releaseHash']},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/commerce-audit --selection source/releases/commerce-audit-selection.json
+      - name: Commit data remediation
+        run: |
+          git add -- knowledge
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name ChatGPT
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix: remediate commerce inspection hazard basis'
+          git push origin HEAD:refs/heads/audit/engineering-20260920
