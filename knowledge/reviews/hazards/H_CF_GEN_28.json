@@ -2,10 +2,10 @@
   "entityType": "hazard",
   "entityId": "H_CF_GEN_28",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "2f17cc60f4bd76f8107ceb4237ccc4c1b696a59d51963da81fc1c8d9fc2d606c",
-  "checkedAt": "2026-09-21T00:20:00+08:00",
+  "decision": "verified",
+  "reviewedContentHash": "a96f5d59b1cd1114587f283cfaf902282463295025f621f42c259f63c68ae534",
+  "checkedAt": "2026-09-21T00:55:00+08:00",
   "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "2026-09-21工程级审计发现PR #70批量导入存在重复实体、泛化direct依据及适用条件不足；本隐患暂时退出正式发布，待逐条去重并完成直接技术条款复核后再决定恢复。",
+  "reason": "工程审计确认本条与 H040 重复/实质重叠；采用superseded+mergedInto保留历史，不再独立发布。",
   "evidenceRefs": []
 }

@@ -2,14 +2,15 @@
   "entityType": "link",
   "entityId": "K_CF_MAJOR_03_C_PDDB_11",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "fb66517c18a3355ceae17a3361c2542cb6c1c1f14e8c04d906a8d31dc1c0ee7d",
+  "decision": "superseded",
+  "reviewedContentHash": "5037b62873bbda69a6b5039fb6829f9619b009459dbbcc1054cfe00ac83ef13e",
   "contextHashes": {
-    "hazard": "e65a2bbfae3c8b696eb4e3cb0fc44800dbc5cd78ececed9fe08279850579317f",
-    "clause": "9ce6b26b0539169182a6347434155c44e1ec420bd041610dacead8d39a097118"
+    "hazard": "0c6172048802a2671c928c4a0f255e75625eef4b15624398cb18742f51eb60b9",
+    "clause": "9ce6b26b0539169182a6347434155c44e1ec420bd041610dacead8d39a097118",
+    "link": "5037b62873bbda69a6b5039fb6829f9619b009459dbbcc1054cfe00ac83ef13e"
   },
-  "checkedAt": "2026-09-21T00:20:00+08:00",
+  "checkedAt": "2026-09-21T00:55:00+08:00",
   "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "2026-09-21工程级审计撤销PR #70批量verified/direct结论：现有关联未证明该条款可直接覆盖本隐患全部构成要件，需逐条复核后另建或恢复合格关联。",
+  "reason": "源隐患 H_CF_MAJOR_03 已归并至 H_FCB_18_1，原PR #70关联仅保留历史，不参与发布。",
   "evidenceRefs": []
 }
