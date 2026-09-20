@@ -491,11 +491,11 @@ for ent in NEW_ENTITIES:
         "description": ent["description"],
         "id": hid,
         "keywords": ent["keywords"],
-        "lifecycle": "active",
+        "lifecycle": "proposed",
         "measures": ent["measures"],
         "mergedInto": None,
-        "mode": "direct",
-        "note": "",
+        "mode": "candidate",
+        "note": "批量导入候选：必须逐条完成重复性、适用条件、直接技术条款和证据链复核后方可转为正式。",
         "places": ent["places"],
         "title": ent["title"]
     }
@@ -567,11 +567,11 @@ for ent in NEW_ENTITIES:
         "entityType": "hazard",
         "entityId": hid,
         "reviewType": "definition",
-        "decision": "verified",
+        "decision": "pending",
         "reviewedContentHash": h_hash,
         "checkedAt": "2026-09-19T16:00:00+08:00",
         "reviewer": "Codex / Changfeng Ingestion Policy",
-        "reason": "长丰县现场排查数据提炼之标准隐患实体，定义、违规事实与精炼实战整改措施经官方标准核实完全成立。",
+        "reason": "批量导入仅完成候选标准化，不自动等同于法规适用性或正式发布核验；须逐条独立复核后再转正。",
         "evidenceRefs": []
     }
     hr_path = os.path.join(REVIEWS_HAZARDS_DIR, f"{hid}.json")
@@ -598,7 +598,7 @@ for lid, hid, cid in new_links:
         "entityType": "link",
         "entityId": lid,
         "reviewType": "applicability",
-        "decision": "verified",
+        "decision": "pending",
         "reviewedContentHash": l_hash,
         "contextHashes": {
             "hazard": h_hash,
@@ -606,7 +606,7 @@ for lid, hid, cid in new_links:
         },
         "checkedAt": "2026-09-19T16:00:00+08:00",
         "reviewer": "Codex / Changfeng Ingestion Policy",
-        "reason": f"实体 {hid} 与法规条款 {cid} 在适用范围、违法构成要件及法定防范要求上经严格核验完全成立。",
+        "reason": f"批量导入候选关联 {hid} -> {cid} 尚未完成逐条语义适用性和直接依据审查，不得自动进入正式发布。",
         "evidenceRefs": []
     }
     lr_path = os.path.join(REVIEWS_LINKS_DIR, f"{lid}.json")

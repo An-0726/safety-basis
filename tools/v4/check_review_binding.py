@@ -28,9 +28,11 @@ def load_dir(sub, by_entity_id=False):
             continue
         with open(os.path.join(d, fn), encoding="utf-8") as f:
             obj = json.load(f)
-        # review 文件名可能是 review 自身 id（RV_*）而非被审实体 id，
-        # 必须按 entityId 索引，否则这些 review 会被静默跳过。
-        key = (obj.get("entityId") or os.path.splitext(fn)[0]) if by_entity_id else os.path.splitext(fn)[0]
+        # Legacy filenames are not guaranteed to equal the internal Stable ID.
+        # Index ordinary entities by obj.id and reviews by entityId.
+        key = (obj.get("entityId") if by_entity_id else obj.get("id")) or os.path.splitext(fn)[0]
+        if key in out:
+            raise ValueError(f"duplicate entity id in {sub}: {key}")
         out[key] = obj
     return out
 
@@ -42,15 +44,18 @@ def main():
     reviews = load_dir(os.path.join("reviews", "links"), by_entity_id=True)
 
     stale_link, stale_hazard, stale_clause, unbound = [], [], [], []
+    missing_link, missing_hazard, missing_clause, id_mismatch = [], [], [], []
     for kid, rev in sorted(reviews.items()):
         link = links.get(kid)
         if link is None:
+            missing_link.append(kid)
             print(f"MISSING LINK ENTITY for review {kid}")
             continue
         h = rev.get("contextHashes") or {}
         if not rev.get("reviewedContentHash"):
             unbound.append((kid, "reviewedContentHash"))
         if link.get("id") != kid:
+            id_mismatch.append((kid, link.get("id")))
             print(f"LINK ID MISMATCH review={kid} entity={link.get('id')}")
         try:
             lh = content_hash(link)
@@ -66,12 +71,14 @@ def main():
             if h.get("hazard") != hh:
                 stale_hazard.append((kid, h.get("hazard"), hh))
         else:
+            missing_hazard.append((kid, hid))
             print(f"MISSING HAZARD {hid} for link {kid}")
         if cid and cid in clauses:
             ch = content_hash(clauses[cid])
             if h.get("clause") != ch:
                 stale_clause.append((kid, h.get("clause"), ch))
         else:
+            missing_clause.append((kid, cid))
             print(f"MISSING CLAUSE {cid} for link {kid}")
 
     print(f"reviews total: {len(reviews)}")
@@ -85,7 +92,12 @@ def main():
     print(f"stale clause ctx: {len(stale_clause)}")
     for x in stale_clause[:20]:
         print("   ", x[0], "rev=", x[1][:16], "now=", x[2][:16])
-    bad = len(stale_link) + len(stale_hazard) + len(stale_clause) + len(unbound)
+    print(f"missing link entities: {len(missing_link)} {missing_link[:10]}")
+    print(f"missing hazard refs: {len(missing_hazard)} {missing_hazard[:10]}")
+    print(f"missing clause refs: {len(missing_clause)} {missing_clause[:10]}")
+    print(f"link id mismatches: {len(id_mismatch)} {id_mismatch[:10]}")
+    bad = (len(stale_link) + len(stale_hazard) + len(stale_clause) + len(unbound)
+           + len(missing_link) + len(missing_hazard) + len(missing_clause) + len(id_mismatch))
     if bad:
         print(f"BINDING FAILURES: {bad}（可使用 tools/v4/rebind.py --fix 批量刷新）")
     return 1 if bad else 0
