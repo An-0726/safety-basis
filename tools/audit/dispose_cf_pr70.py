@@ -58,8 +58,9 @@ for hid in ALL:
         h['note']=prefix+'2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。'
         hr['decision']='pending'
         hr['reason']='工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。'
+        l['lifecycle']='superseded'
         lr['decision']='rejected'
-        lr['reason']='PR #70批量关联未证明该条款可直接支持本隐患全部构成要件；关联拒绝，后续如有合格直接依据应新建/重新审核。'
+        lr['reason']='PR #70批量关联未证明该条款可直接支持本隐患全部构成要件；关联拒绝并标记superseded，仅保留历史。后续如有合格直接依据应新建/重新审核。'
 
     wr(hp,h); wr(lp,l)
     hr['reviewedContentHash']=content_hash(h); hr['checkedAt']=STAMP; hr['reviewer']='ChatGPT / Engineering Audit'
