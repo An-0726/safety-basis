@@ -76,3 +76,39 @@ jobs:
       - name: Deploy the verified current artifact
         id: deployment
         uses: actions/deploy-pages@v4
+
+  online_verify:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Chromium acceptance dependency
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Verify deployed GitHub Pages with real Chromium
+        run: |
+          mkdir -p "${RUNNER_TEMP}/online-verify"
+          for attempt in 1 2 3; do
+            if python tools/browser/audit_browser.py \
+              --url https://an-0726.github.io/safety-basis/ \
+              --out "${RUNNER_TEMP}/online-verify/browser-public.json"; then
+              exit 0
+            fi
+            if [ "${attempt}" -lt 3 ]; then
+              sleep 15
+            fi
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deployed-site-browser-evidence
+          path: ${{ runner.temp }}/online-verify
+          if-no-files-found: warn
+          retention-days: 7
