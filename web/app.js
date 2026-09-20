@@ -48,6 +48,48 @@ function setDataDateHeader(manifest,releaseManifest){
   if($('#dbDate'))$('#dbDate').textContent=dataDate;
   return dataDate;
 }
+const HISTORICAL_REFERENCE_PREFIX='原 conditions 字段记录的引用依据为：';
+function reliableNoteSegments(hazard={}){
+  const segments=hazard.noteSegments;
+  if(!Array.isArray(segments)||!segments.every(segment=>segment&&['business','maintenance'].includes(segment.kind)&&typeof segment.text==='string'))return null;
+  const rawNote=typeof hazard.note==='string'?hazard.note:null;
+  const combined=segments.map(segment=>segment.text).join('');
+  return rawNote===null||combined===rawNote?segments:null;
+}
+function removeKnownMaintenance(note,maintenanceNote){
+  const maintenance=String(maintenanceNote??'').split(/\r?\n/).filter(Boolean);
+  if(!maintenance.length)return note;
+  let remaining=note;
+  let business='';
+  for(const text of maintenance){
+    const index=remaining.indexOf(text);
+    if(index<0)return note;
+    business+=remaining.slice(0,index);
+    remaining=remaining.slice(index+text.length);
+  }
+  return business+remaining;
+}
+function noteTextForDisplay(hazard={}){
+  if(typeof hazard.businessNote==='string')return hazard.businessNote;
+  const rawNote=typeof hazard.note==='string'?hazard.note:'';
+  const segments=reliableNoteSegments(hazard);
+  if(segments)return segments.filter(segment=>segment.kind==='business').map(segment=>segment.text).join('');
+  return typeof hazard.maintenanceNote==='string'&&hazard.maintenanceNote.trim()
+    ? removeKnownMaintenance(rawNote,hazard.maintenanceNote)
+    : rawNote;
+}
+function publicNoteParts(hazard={}){
+  const business=[];
+  const historicalReferences=[];
+  for(const line of noteTextForDisplay(hazard).split(/\r?\n/)){
+    if(line.startsWith(HISTORICAL_REFERENCE_PREFIX)){
+      let reference=line.slice(HISTORICAL_REFERENCE_PREFIX.length);
+      if(reference.startsWith('依据：'))reference=reference.slice('依据：'.length);
+      if(reference.trim())historicalReferences.push(reference.trim());
+    }else business.push(line);
+  }
+  return {businessNote:business.join('\n').trim(),historicalReferences};
+}
 function modeLabel(value){return ({direct:'直接适用',conditional:'有条件适用'})[value]||value||'未标注'}
 function roleLabel(value){return ({direct:'直接依据',supporting:'辅助依据'})[value]||value||'未标注'}
 function displayCategoryOf(row){return row.displayCategory??row.category??''}
@@ -151,9 +193,13 @@ function lawCard(r){return `<button class="card ${r.id===state.selectedLaw?'sele
 function selectHazard(id){state.selectedHazard=id;state.pendingDetailScroll=true;renderResults({mode:'selection'})}
 function selectLaw(id){state.selectedLaw=id;state.pendingDetailScroll=true;renderResults({mode:'selection'})}
 
-function technicalInfoHtml({id,checked,places=[]}){
+function historicalReferenceHtml(references=[]){
+  if(!references.length)return '';
+  return `<div class="history-reference"><span>历史引用（不替代当前依据）</span>${references.map(reference=>`<p>${esc(reference)}</p>`).join('')}</div>`;
+}
+function technicalInfoHtml({id,checked,places=[],historicalReferences=[]}){
   const placeText=places.length?places.join('；'):'未填写/不适用';
-  return `<details class="record-info"><summary>条目信息</summary><div class="record-grid"><div><span>完整 ID</span><strong>${esc(id)}</strong></div><div><span>核验时间</span><strong>${esc(checked||'未填写')}</strong></div><div><span>数据版本</span><strong>${esc(state.store.manifest.dataVersion)}</strong></div><div class="record-places"><span>原始场所</span><strong>${esc(placeText)}</strong></div></div><button id="copyRecordId" class="linkbutton">复制编号</button></details>`;
+  return `<details class="record-info"><summary>条目信息</summary><div class="record-grid"><div><span>完整 ID</span><strong>${esc(id)}</strong></div><div><span>核验时间</span><strong>${esc(checked||'未填写')}</strong></div><div><span>数据版本</span><strong>${esc(state.store.manifest.dataVersion)}</strong></div><div class="record-places"><span>原始场所</span><strong>${esc(placeText)}</strong></div></div>${historicalReferenceHtml(historicalReferences)}<button id="copyRecordId" class="linkbutton">复制编号</button></details>`;
 }
 function backToResults(){const list=$('#list');if(!list)return;list.focus?.({preventScroll:true});list.scrollIntoView?.({block:'start'})}
 function bindDetailUtilities(id,checked,places){
@@ -188,20 +234,18 @@ async function renderHazardDetail(){
     const candidateNotice=hazard.status==='待审核候选'?`<div class="candidateNotice"><strong>${esc(proposal.label)}</strong><p>这条记录已经上线供查询，但还不是正式法规依据。${esc(proposal.text)}</p><p class="candidateMeta">处置状态：${esc(hazard.proposalStatus||'待核验')}；Excel来源第 ${esc(hazard.sourceRow||'未知')} 行。</p></div>`:'';
     const basisContent=bases.length?bases.map(basisHtml).join(''):`<div class="candidateNotice muted"><strong>暂无已审核条款关联</strong><p>候选依据和待办说明需完成核验后才能生成正式关联。</p></div>`;
     const conditions=hazard.conditions||'';
-    const businessNote=String(hazard.businessNote??hazard.note??'');
-    const maintenanceNote=String(hazard.maintenanceNote||'');
+    const noteParts=publicNoteParts(hazard);
+    const businessNote=noteParts.businessNote;
     const conditionsBlock=conditions?`<section class="block"><h3><span class="number">02</span>适用条件</h3><p>${esc(conditions)}</p></section>`:'';
     const basisNumber=conditions?'03':'02';
     const measuresNumber=conditions?'04':'03';
     const noteBlock=businessNote.trim()?`<section class="block note"><h3>补充说明</h3><p>${esc(businessNote.trim())}</p></section>`:'';
-    const maintenanceBlock=maintenanceNote.trim()?`<details class="maintenance-record"><summary>维护记录</summary><p>${esc(maintenanceNote.trim())}</p><button type="button" id="copyMaintenance" class="linkbutton">复制维护记录</button></details>`:'';
-    const html=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(hazard.displayCategory||displayCategoryOf(hazard))}</span>${pill(hazard.status==='已核验'?modeLabel(hazard.mode):hazard.status)}</div><h2>${esc(hazard.title)}</h2><div class="subtitle">${esc((hazard.places||[]).join(' · '))}<br>核验状态：${esc(hazard.status)} · ${esc(dateOnly(hazard.checked))} · 数据日期 ${esc(dataDateOf(state.store.manifest,state.store.verifiedFiles?.manifest))}</div></div><div class="detailbody">${candidateNotice}<section class="block"><h3><span class="number">01</span>隐患专业描述</h3><p>${esc(hazard.description)}</p></section>${conditionsBlock}<section class="block"><h3><span class="number">${basisNumber}</span>法规原文依据 <small>${bases.length} 条</small></h3>${basisContent}</section><section class="block"><h3><span class="number">${measuresNumber}</span>整改措施</h3><p>${esc(hazard.measures)}</p></section>${noteBlock}${maintenanceBlock}${technicalInfoHtml({id:hazard.id,checked:hazard.checked,places:hazard.places||[]})}</div><div class="detailactions"><button class="primary" id="copy">复制整改条目</button><button id="copyfull">复制完整资料</button><button id="share">复制当前链接</button><button id="backResults">返回结果</button></div>`;
+    const html=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(hazard.displayCategory||displayCategoryOf(hazard))}</span>${pill(hazard.status==='已核验'?modeLabel(hazard.mode):hazard.status)}</div><h2>${esc(hazard.title)}</h2><div class="subtitle">${esc((hazard.places||[]).join(' · '))}<br>核验状态：${esc(hazard.status)} · ${esc(dateOnly(hazard.checked))} · 数据日期 ${esc(dataDateOf(state.store.manifest,state.store.verifiedFiles?.manifest))}</div></div><div class="detailbody">${candidateNotice}<section class="block"><h3><span class="number">01</span>隐患专业描述</h3><p>${esc(hazard.description)}</p></section>${conditionsBlock}<section class="block"><h3><span class="number">${basisNumber}</span>法规原文依据 <small>${bases.length} 条</small></h3>${basisContent}</section><section class="block"><h3><span class="number">${measuresNumber}</span>整改措施</h3><p>${esc(hazard.measures)}</p></section>${noteBlock}${technicalInfoHtml({id:hazard.id,checked:hazard.checked,places:hazard.places||[],historicalReferences:noteParts.historicalReferences})}</div><div class="detailactions"><button class="primary" id="copy">复制整改条目</button><button id="copyfull">复制完整资料</button><button id="share">复制当前链接</button><button id="backResults">返回结果</button></div>`;
     if(!detailRequests.isCurrent(request)) return;
     $('#detail').innerHTML=html;
     if(!detailRequests.isCurrent(request)) return;
     $('#copy').onclick=()=>copyText(hazardText(hazard,bases),'已复制整改条目');
     $('#copyfull').onclick=()=>copyText(hazardFullText(hazard,bases),'已复制完整资料');
-    if($('#copyMaintenance'))$('#copyMaintenance').onclick=()=>copyText(maintenanceNote.trim(),'已复制维护记录');
     $('#share').onclick=()=>copyText(location.href,'已复制当前链接');
     bindDetailUtilities(hazard.id,hazard.checked,hazard.places||[]);
     $$('.lawjump').forEach(b=>b.onclick=()=>{state.selectedLaw=b.dataset.law;switchView('laws',{keepQuery:false})});
@@ -210,7 +254,7 @@ async function renderHazardDetail(){
 
 function basisHtml({ref,clause,law,sourceUrl}){const chkDate=clause.checked?dateOnly(clause.checked):'已核验';return `<div class="basis"><div class="basismeta"><span>${pill(roleLabel(ref.role))}</span><span class="article">${esc(law.displayLevel||law.level)} · ${esc(law.scope)} · ${esc(law.status)}</span></div><h4>${esc(law.name)}</h4><span class="article">${esc(clause.article)} · 条款核验：${esc(chkDate)}</span><blockquote>${esc(clause.quote||'尚未录入原文，请核验后补充。')}</blockquote><div class="basislinks">${sourceUrl?`<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}<button class="linkbutton lawjump" data-law="${esc(law.id)}">在法规库查看</button></div></div>`}
 function hazardText(h,bases){const conditions=h.conditions||'';return `${h.title}\n\n隐患专业描述：\n${h.description}${conditions?`\n\n适用条件：\n${conditions}`:''}\n\n法规依据：\n${bases.map(x=>`《${x.law.name}》${x.clause.article}\n${x.clause.quote}`).join('\n\n')}\n\n整改措施：\n${h.measures}`}
-function hazardFullText(h,bases){const note=String(h.businessNote??h.note??'');return `${hazardText(h,bases)}${note.trim()?`\n\n补充说明：\n${note.trim()}`:''}\n\n核验状态：${h.status}；核验日期：${h.checked||'未填写'}；数据库版本：${state.store.manifest.dataVersion}。`}
+function hazardFullText(h,bases){const note=publicNoteParts(h);const sections=[hazardText(h,bases)];if(note.businessNote)sections.push(`补充说明：\n${note.businessNote}`);if(note.historicalReferences.length)sections.push(`历史引用（不替代当前依据）：\n${note.historicalReferences.join('\n\n')}`);sections.push(`核验状态：${h.status}；核验日期：${h.checked||'未填写'}；数据库版本：${state.store.manifest.dataVersion}。`);return sections.join('\n\n')}
 
 async function renderLawDetail(){
   const request=detailRequests.begin('laws',state.selectedLaw);

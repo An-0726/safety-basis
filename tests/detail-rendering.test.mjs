@@ -123,7 +123,7 @@ function loadApp({removeHazardErrorGuard = false} = {}) {
     map.set(id, queue);
     return pending;
   };
-  const queueHazard = (id, title, {conditions = '', note = '', businessNote, maintenanceNote, checked = '2026-09-19', omitConditions = false, omitNote = false, bases = []} = {}) => {
+  const queueHazard = (id, title, {conditions = '', note = '', businessNote, maintenanceNote, noteSegments, checked = '2026-09-19', omitConditions = false, omitNote = false, bases = []} = {}) => {
     if (!store.searchIndex.some(row => row.id === id)) store.searchIndex.push({id});
     const hazard = {
       id,
@@ -140,6 +140,7 @@ function loadApp({removeHazardErrorGuard = false} = {}) {
     };
     if (businessNote !== undefined) hazard.businessNote = businessNote;
     if (maintenanceNote !== undefined) hazard.maintenanceNote = maintenanceNote;
+    if (noteSegments !== undefined) hazard.noteSegments = noteSegments;
     if (omitConditions) delete hazard.conditions;
     if (omitNote) delete hazard.note;
     return addQueue(hazardQueues, id, {hazard, bases});
@@ -313,32 +314,113 @@ test('真实渲染区分适用条件和补充说明，并在两类复制中保�
   assert.match(fullText, /补充说明：\n补充 <限制> & 备注/);
 });
 
-test('真实渲染将维护备注折叠分流，并使业务/维护复制内容互斥', async () => {
+test('真实截图候选不显示维护日志，并将历史引用放入默认折叠条目信息', async () => {
+  const maintenance = '2026-09-11 修订：原 measures 字段直接照抄隐患描述，已改写为针对该隐患的可执行整改措施。';
+  const historical = '原 conditions 字段记录的引用依据为：依据：《化学化工实验室安全管理规范》第10.1.9条';
+  const candidates = [
+    ['H_4164E28510AC475EA9FB48337C', '高温室缺少当心烫伤'],
+    ['H_9AA3291056764D6F82100EA716', '气瓶使用场所缺少当心窒息'],
+  ];
+
+  for (const [id, title] of candidates) {
+    const harness = loadApp();
+    const pending = harness.queueHazard(id, title, {
+      note: maintenance + historical,
+      businessNote: historical,
+      maintenanceNote: maintenance,
+      bases: [{
+        ref: {role: 'direct', hazardIds: [id]},
+        clause: {article: '第10.1.9条', quote: '正式依据原文', checked: '2026-09-19'},
+        law: {id: 'L-LAB', name: '化学化工实验室安全管理规范', level: '国家标准', displayLevel: '国家标准', scope: '全国', status: '现行有效'},
+        sourceUrl: '',
+      }],
+    });
+    harness.selectHazard(id);
+    const render = harness.api.renderHazardDetail();
+    pending.deferred.resolve();
+    await render;
+
+    const html = detailHtml(harness);
+    assert.match(html, /<details class="record-info">/);
+    assert.match(html, /历史引用（不替代当前依据）/);
+    assert.match(html, /化学化工实验室安全管理规范》第10\.1\.9条/);
+    assert.doesNotMatch(html, /维护记录|copyMaintenance|2026-09-11 修订/);
+    assert.doesNotMatch(html, /原 conditions 字段记录的引用依据为：/);
+
+    const itemText = await clickCopy(harness, 'copy');
+    const fullText = await clickCopy(harness, 'copyfull');
+    assert.match(itemText, /正式依据原文/);
+    assert.match(fullText, /正式依据原文/);
+    assert.match(fullText, /历史引用（不替代当前依据）：/);
+    assert.match(fullText, /化学化工实验室安全管理规范》第10\.1\.9条/);
+    assert.doesNotMatch(fullText, /原 conditions 字段记录的引用依据为：|2026-09-11 修订|维护记录/);
+  }
+});
+
+test('补充说明保留业务限制，历史引用和旧包维护分流不改正式条件/依据', async () => {
+  const maintenance = '2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。';
+  const historical = '原 conditions 字段记录的引用依据为：依据：《化学化工实验室安全管理规范》第10.1.9条';
+  const business = '仅在气瓶使用场所适用；须结合现场气瓶种类确认。';
+  const id = 'H-MIXED-NOTE';
   const harness = loadApp();
-  const pending = harness.queueHazard('H-MAINT', '维护分流记录', {
-    note: '源备注必须保持不变',
-    businessNote: '业务说明 <保留> & 可搜索',
-    maintenanceNote: '2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。',
+  const pending = harness.queueHazard(id, '业务限制与历史引用', {
+    conditions: '适用于气瓶使用场所；须结合现场气瓶种类确认具体要求。',
+    note: `${maintenance}${business}\n${historical}`,
+    businessNote: `${business}\n${historical}`,
+    maintenanceNote: maintenance,
+    bases: [{
+      ref: {role: 'direct', hazardIds: [id]},
+      clause: {article: '第10.1.9条', quote: '正式法规原文', checked: '2026-09-19'},
+      law: {id: 'L-LAB', name: '化学化工实验室安全管理规范', level: '国家标准', displayLevel: '国家标准', scope: '全国', status: '现行有效'},
+      sourceUrl: '',
+    }],
   });
-  harness.selectHazard('H-MAINT');
+  harness.selectHazard(id);
   const render = harness.api.renderHazardDetail();
   pending.deferred.resolve();
   await render;
 
   const html = detailHtml(harness);
   assert.match(html, /补充说明/);
-  assert.match(html, /业务说明 &lt;保留&gt; &amp; 可搜索/);
-  assert.match(html, /<details class="maintenance-record">/);
-  assert.match(html, /维护记录/);
-  assert.match(html, /2026-09-11 修订：原 description 与 title 完全相同/);
+  assert.match(html, /仅在气瓶使用场所适用；须结合现场气瓶种类确认。/);
+  assert.match(html, /适用条件/);
+  assert.match(html, /正式法规原文/);
+  assert.match(html, /历史引用（不替代当前依据）/);
+  assert.doesNotMatch(html, /原 conditions 字段记录的引用依据为：|2026-09-11 修订|维护记录/);
 
-  const itemText = await clickCopy(harness, 'copy');
   const fullText = await clickCopy(harness, 'copyfull');
-  const maintenanceText = await clickCopy(harness, 'copyMaintenance');
-  assert.doesNotMatch(itemText, /业务说明|维护记录|2026-09-11/);
-  assert.match(fullText, /业务说明 <保留> & 可搜索/);
-  assert.doesNotMatch(fullText, /2026-09-11/);
-  assert.equal(maintenanceText, '2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。');
+  assert.match(fullText, /适用条件：\n适用于气瓶使用场所；须结合现场气瓶种类确认具体要求。/);
+  assert.match(fullText, /补充说明：\n仅在气瓶使用场所适用；须结合现场气瓶种类确认。/);
+  assert.match(fullText, /法规依据：\n《化学化工实验室安全管理规范》第10\.1\.9条\n正式法规原文/);
+  assert.match(fullText, /历史引用（不替代当前依据）：\n《化学化工实验室安全管理规范》第10\.1\.9条/);
+  assert.doesNotMatch(fullText, /原 conditions 字段记录的引用依据为：|2026-09-11 修订/);
+});
+
+test('旧包缺少 businessNote 时仅按可靠分段或已知维护文本回退', async () => {
+  const maintenance = '2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。';
+  const historical = '原 conditions 字段记录的引用依据为：依据：《化学化工实验室安全管理规范》第10.1.9条';
+  const id = 'H-OLD-PACKAGE';
+  const harness = loadApp();
+  const note = maintenance + historical;
+  const pending = harness.queueHazard(id, '旧包兼容记录', {
+    note,
+    maintenanceNote: maintenance,
+    noteSegments: [
+      {kind: 'maintenance', text: maintenance, start: 0, end: maintenance.length},
+      {kind: 'business', text: historical, start: maintenance.length, end: note.length},
+    ],
+  });
+  harness.selectHazard(id);
+  const render = harness.api.renderHazardDetail();
+  pending.deferred.resolve();
+  await render;
+
+  const html = detailHtml(harness);
+  assert.match(html, /历史引用（不替代当前依据）/);
+  assert.doesNotMatch(html, /2026-09-11 修订|原 conditions 字段记录的引用依据为：|维护记录|copyMaintenance/);
+  const fullText = await clickCopy(harness, 'copyfull');
+  assert.match(fullText, /历史引用（不替代当前依据）：/);
+  assert.doesNotMatch(fullText, /2026-09-11 修订|原 conditions 字段记录的引用依据为：/);
 });
 
 test('详情副标题只显示数据日期，完整资料和条目信息仍保留版本', async () => {
@@ -359,8 +441,9 @@ test('详情副标题只显示数据日期，完整资料和条目信息仍保�
   assert.match(html, /数据版本/);
   const fullText = await clickCopy(harness, 'copyfull');
   assert.match(fullText, /数据库版本：vm-test-version/);
-  const maintenanceText = await clickCopy(harness, 'copyMaintenance');
-  assert.equal(maintenanceText, '2026-09-11 修订：原整改措施已改写为可执行动作。');
+  assert.match(fullText, /补充说明：\n业务说明/);
+  assert.doesNotMatch(html, /维护记录|copyMaintenance|2026-09-11 修订/);
+  assert.doesNotMatch(fullText, /维护记录|2026-09-11 修订/);
 });
 
 test('真实渲染兼容缺失、空字符串和 null 条件/备注，且不生成空区块或空复制标题', async () => {
