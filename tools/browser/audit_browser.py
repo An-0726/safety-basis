@@ -8,13 +8,14 @@ import argparse
 import functools
 import http.server
 import json
+import re
 import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 
 def require(condition, message):
@@ -74,7 +75,7 @@ def main():
 
             def home(suffix=''):
                 page.goto(base + suffix, wait_until='domcontentloaded')
-                page.wait_for_function("Number(document.querySelector('#count')?.textContent) > 0")
+                expect(page.locator('#count')).to_have_text(re.compile(r'^[1-9][0-9]*$'))
                 return page
 
             def detail_ready():
@@ -132,7 +133,7 @@ def main():
 
             def empty_check():
                 home(); page.fill('#search', '不存在的测试词ZYX987654321')
-                page.wait_for_function("document.querySelector('#count').textContent === '0'")
+                expect(page.locator('#count')).to_have_text('0')
                 require('没有找到' in page.locator('#list').inner_text(), 'Empty-state explanation missing')
                 return {'count': 0, 'text': page.locator('#list').inner_text()}
             run('empty_results', empty_check)
@@ -175,7 +176,7 @@ def main():
             run('hazard_law_bidirectional_navigation', cross_navigation)
 
             def unavailable():
-                home('?id=H004'); page.wait_for_function("document.querySelector('#detail').textContent.includes('H004')")
+                home('?id=H004'); expect(page.locator('#detail')).to_contain_text('H004')
                 text = page.locator('#detail').inner_text()
                 require('未' in text or '候选' in text, 'Unpublished ID silently selected another hazard')
                 return {'id': 'H004', 'text': text}
@@ -183,7 +184,7 @@ def main():
 
             def unknown():
                 home('?id=H_AUDIT_UNKNOWN_ZYX987')
-                page.wait_for_function("document.querySelector('#detail').textContent.includes('H_AUDIT_UNKNOWN_ZYX987')")
+                expect(page.locator('#detail')).to_contain_text('H_AUDIT_UNKNOWN_ZYX987')
                 require(page.locator('#detail h2').count() == 0, 'Unknown ID silently selected a published record')
                 return {'message': page.locator('#detail').inner_text()}
             run('unknown_ID_deep_link', unknown)
@@ -196,7 +197,7 @@ def main():
                 paragraphs = page.locator('.library-article').count()
                 require(paragraphs > 0, 'Full text does not render')
                 page.fill('#textQuery', '安全'); page.locator('#librarySearch button[type=submit]').click()
-                page.wait_for_function("document.querySelector('#libraryResultCount').textContent.includes('处匹配')")
+                expect(page.locator('#libraryResultCount')).to_contain_text('处匹配')
                 return {'catalog': count, 'paragraphs': paragraphs, 'search': page.locator('#libraryResultCount').inner_text()}
             run('fulltext_catalog_read_and_search', fulltext)
 
