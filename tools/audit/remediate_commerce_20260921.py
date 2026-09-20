@@ -163,6 +163,83 @@ if fire_path.is_file():
         review['reviewer']='ChatGPT / Engineering Audit'
         wr(review_path,review)
 
+
+# Reconcile the final two active-but-unpublished hazards.
+# 1) H_AD27... duplicates the canonical warehouse five-distance hazard.
+dup_hid='H_AD27C51EB8E840D5BA2F0365E0'
+dup_target='H_3B67F679C467451EA96B99072A'
+dup_path=KNOW/'hazards'/f'{dup_hid}.json'
+if dup_path.is_file():
+    dup=rd(dup_path)
+    dup['lifecycle']='superseded'
+    dup['mode']='candidate'
+    dup['mergedInto']=dup_target
+    dup['note']=((dup.get('note') or '').strip()+'\n\n' if (dup.get('note') or '').strip() else '') + f'2026-09-21工程审计：本条与 {dup_target} 的仓储“五距”问题实质重复，保留Stable ID并归并。'
+    wr(dup_path,dup)
+    dup_review_path=KNOW/'reviews'/'hazards'/f'{dup_hid}.json'
+    dup_review=rd(dup_review_path)
+    dup_review['decision']='verified'
+    dup_review['reviewedContentHash']=content_hash(dup)
+    dup_review['checkedAt']=STAMP
+    dup_review['reviewer']='ChatGPT / Engineering Audit'
+    dup_review['reason']=f'与 {dup_target} 重复，采用superseded+mergedInto保留历史；不再独立发布。'
+    wr(dup_review_path,dup_review)
+    for kid in ('K_822C6B6F2FF836A7505B9AC2','K_b67c9cf04d4ca5cd9c59a81f'):
+        lp=KNOW/'links'/f'{kid}.json'
+        link=rd(lp)
+        link['lifecycle']='superseded'
+        if 'status' in link:
+            link['status']='superseded'
+        wr(lp,link)
+        refresh_link_review(kid,decision='superseded',reason=f'源隐患 {dup_hid} 已归并至 {dup_target}；原关联仅保留历史，不参与发布。')
+
+# 2) H_F3E7... has a valid direct current clause; promote that direct link.
+chem_hid='H_F3E7D18DBD77459B983AB5CD06'
+chem_path=KNOW/'hazards'/f'{chem_hid}.json'
+if chem_path.is_file():
+    chem=rd(chem_path)
+    old_title=chem.get('title') or ''
+    chem['title']='危险化学品单位未建立、健全安全管理规章制度'
+    chem['description']='危险化学品单位未建立、健全安全管理规章制度，危险化学品安全管理职责和要求缺少制度化依据。'
+    chem['measures']='建立、健全危险化学品安全管理规章制度和岗位安全责任制度，明确危险化学品采购、储存、使用、处置等环节的管理职责与要求，并组织培训、执行检查和持续更新。'
+    chem['conditions']='适用于《危险化学品安全管理条例》调整范围内的危险化学品单位；现场应先确认企业危险化学品活动及其法定责任范围。'
+    chem['aliases']=sorted(set((chem.get('aliases') or [])+([old_title] if old_title else [])))
+    chem['keywords']=['危险化学品','安全管理制度','规章制度','岗位安全责任制度','危化品管理制度']
+    chem['lifecycle']='active'
+    chem['mode']='direct'
+    chem['note']=((chem.get('note') or '').strip()+'\n\n' if (chem.get('note') or '').strip() else '') + '2026-09-21工程审计：按《危险化学品安全管理条例》第四条收紧隐患对象和表述，并恢复直接依据发布资格。'
+    wr(chem_path,chem)
+    chem_review_path=KNOW/'reviews'/'hazards'/f'{chem_hid}.json'
+    chem_review=rd(chem_review_path)
+    chem_review['decision']='verified'
+    chem_review['reviewedContentHash']=content_hash(chem)
+    chem_review['checkedAt']=STAMP
+    chem_review['reviewer']='ChatGPT / Engineering Audit'
+    chem_review['reason']='《危险化学品安全管理条例》第四条直接要求危险化学品单位建立、健全安全管理规章制度和岗位安全责任制度；本次仅收紧适用对象与现场表述。'
+    wr(chem_review_path,chem_review)
+
+    direct_id='K_4342E9035FFA26360EAFE5E1'
+    direct_path=KNOW/'links'/f'{direct_id}.json'
+    direct=rd(direct_path)
+    direct['lifecycle']='active'
+    direct.pop('status',None)
+    direct['role']='direct'
+    direct['applicability']='适用于《危险化学品安全管理条例》调整范围内的危险化学品单位未建立、健全安全管理规章制度的情形。'
+    direct['reason']='《危险化学品安全管理条例》第四条直接要求危险化学品单位建立、健全安全管理规章制度和岗位安全责任制度。'
+    wr(direct_path,direct)
+    refresh_link_review(direct_id,decision='verified',reason='第四条直接规定危险化学品单位建立、健全安全管理规章制度和岗位安全责任制度，与本隐患构成直接对应。')
+
+    # The Safety Production Law link remains supporting; only refresh context after wording changes.
+    refresh_link_review('K_fb03012279815a93d9c99124',decision='verified',reason='《安全生产法》第三十九条第二款作为危险物品专门安全管理制度的上位法补充；直接依据仍以《危险化学品安全管理条例》第四条为主。')
+
+if not any(x.get('id')=='active-unpublished-reconciliation-20260921' for x in m.setdefault('batches',[])):
+    m['batches'].append({
+      'id':'active-unpublished-reconciliation-20260921',
+      'hazardsMerged':1,
+      'linksPromoted':1,
+      'selection':'Reconcile the final two active hazards excluded from public release: merge duplicate warehouse five-distance hazard and verify the direct hazardous-chemical management-system link.'
+    })
+
 from collections import Counter
 entity_dirs={'laws':'laws','lawVersions':'law-versions','clauses':'clauses','hazards':'hazards','links':'links','evidence':'evidence','successions':'successions','requirements':'requirements'}
 for key,d in entity_dirs.items():
