@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**当前分支记录的是阶段 4 本地 UI 治理预览，不是线上更新或项目最终验收。** 阶段 4 只改公开投影、搜索边界、CI 构建前测试和治理文档；`knowledge/`、`source/publication/`、稳定 ID、法规链接及业务结论未在本轮改写。当前 checkout 的 `knowledge/manifest.json` 报告 **103 laws / 106 law versions / 2,992 clauses / 2,015 hazards / 1,886 links / 1,199 evidence / 26 successions / 75 requirements**。阶段 4 本地预览为 **1,716 hazards / 58 laws / 58 law versions / 1,302 clauses / 1,824 links / public proposed 0**，`asOf=2026-09-19`，`dataVersion=2026.09.19.stage4`，`releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`。
+**当前分支为 2026-09-21 工程级审计整改发布候选，尚未宣称线上已部署。** 本轮已经修改 `knowledge/`、`source/publication/`、发布门禁和网页路由，但保留 Stable ID 和历史记录。当前 checkout 的 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,680 active / 276 proposed / 97 superseded**。最终 QA 公开包为 **1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；GitHub Actions run `35525485280` 全绿。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -36,30 +36,31 @@
 
 ---
 
-## 2. 当前统计与阶段 4 本地预览
+## 2. 当前统计与工程审计最终 QA
 
-**LAST VERIFIED：2026-09-20（本地阶段 4 包、隔离副本和浏览器代表场景已核验；未宣称线上已部署）。**
+**LAST VERIFIED：2026-09-21（审计分支最终 QA 全绿；尚待合并 main、Pages 部署及线上复验）。**
 
 当前 checkout 的 `knowledge/manifest.json` 报告以下源库存；它与公开包是不同统计层级：
 
 1. **全库知识源库存（Knowledge Manifest）**：
-   - **103 个法规身份 (laws)**；
-   - **106 个法规版本 (law-versions)**；
-   - **2,992 条法规条款 (clauses)**；
-   - **2,015 个隐患实体 (hazards)**；
-   - **1,886 个关联 (links)**；
-   - **1,199 个官方证据卡 (evidence)**；
+   - **104 个法规身份 (laws)**；
+   - **107 个法规版本 (law-versions)**；
+   - **2,993 条法规条款 (clauses)**；
+   - **2,053 个隐患实体 (hazards)**；
+   - **1,923 个关联 (links)**；
+   - **1,201 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
-2. **阶段 4 本地公开预览（asOf=2026-09-19）**：
-   - **1,716 hazards**，public `proposed` 为 **0**；
+   - 生命周期：**1,680 active / 276 proposed / 97 superseded**。
+2. **工程审计最终 QA 公开包（asOf=2026-09-21）**：
+   - **1,679 hazards**，public `proposed` 为 **0**；
    - **58 laws / 58 law versions**；
    - **1,302 clauses**；
-   - **1,824 links**；
+   - **1,788 links**；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-   - `dataVersion=2026.09.19.stage4`；
-   - `releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`；
-3. **验证边界**：阶段 4 外部审查材料位于 `D:\codex romate\reviews\safety-basis-20260919\luna-stage4\`；本地 package / isolated copy / browser evidence 通过不等于线上或 `main` 已更新。
+   - QA `dataVersion=engineering-qa-d253138344f950d39827c6123a99f7a0fdedd94d`；
+   - QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
+3. **验证结果**：GitHub Actions run `35525485280` 中 Node/Python 测试、`validate_all`、strict release audit、publication integrity、comprehensive scanner、公开分类全量审计、统一包重建/验证和 Chromium 严格交互测试均 PASS；scanner 为 **0 ERROR / 1 WARNING**，唯一 WARNING 是已 superseded 的历史法条复述式标题，保留历史不改写。该结果仍是审计分支候选验收，不等于线上 `main` 已部署。
 
 公开发布架构已收口：
 
@@ -96,7 +97,7 @@ PR #63 纠错专项撤销 5 条 GB 12158 候选的不当标题合并，恢复为
 PR #64 针对剩余全库 426 条 proposed backlog 展开逐条处置闭环：转正 242 条 active，依规范保留 184 条 proposed。
 最终生命周期为：**1,744 active、184 proposed、87 superseded，共 2,015**。
 
-当前知识库库存为：**104 个法规身份、107 个法规版本、3,007 条条款、2,015 个隐患实体、1,886 个关联、1,197 个 evidence、29 条 succession、75 条 requirements**。
+该历史阶段知识库库存记录为：**104 个法规身份、107 个法规版本、3,007 条条款、2,015 个隐患实体、1,886 个关联、1,197 个 evidence、29 条 succession、75 条 requirements**。
 
 新版 Excel 目标集仍为：**1,929 个唯一隐患 ID（621 修订、1,308 保留）**。它不是正式发布数量。
 
@@ -356,10 +357,10 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**阶段 4 本地 UI 治理预览，未部署；阶段验收材料已生成，等待总控接受。** 业务数据范围保持冻结，本轮没有把候选分类或备注审查线索写回 `knowledge/`。
+**2026-09-21 工程级审计整改发布候选已完成分支级最终 QA，待 PR 合并、main CI/Pages 部署和线上复验。** 本轮已经直接修复确定的数据/关联/网页问题；证据不足的 SDS、实验室酒精和灭火器维修合格证等事项保留候选边界，没有为凑发布数量强行转正。
 
-当前源库存以 `knowledge/manifest.json` 为准：**103 laws / 106 law versions / 2,992 clauses / 2,015 hazards / 1,886 links / 1,199 evidence / 26 successions / 75 requirements**。
-当前本地预览以阶段 4 `public-release` 为准：**1,716 hazards / 58 laws / 58 law versions / 1,302 clauses / 1,824 links / public proposed 0**，`asOf=2026-09-19`，`dataVersion=2026.09.19.stage4`，`releaseHash=a5818cd0f25645aa4e340549767036f2278f5108d35a88fee30f213cd0d3024c`。
+当前源库存以 `knowledge/manifest.json` 为准：**104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**；生命周期为 **1,680 active / 276 proposed / 97 superseded**。
+当前最终 QA 公开包为：**1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
 
 本地私有母库状态核实：
 - 母库文件：`source/library/fulltext.sqlite3`（文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`）；
@@ -370,6 +371,6 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 
 ## 7. NEXT ACTION — 下一动作
 
-> **由总控决定是否接受阶段 4 本地预览；在此之前不部署、不写回生成包到正式 source。业务范围已冻结，不主动扩大业务范围或为保持活跃而修改业务数据。**
+> **下一动作：将本工程审计候选通过 PR 合并至 `main`，等待 main Validate / Build / Pages Deploy 全绿后，对实际线上站点重新执行浏览器/HTTP 验收并回写最终部署状态。**
 
-后续仅在满足 [MAINTENANCE.md](MAINTENANCE.md) 规定的明确维护触发条件时（如国家发布新法规或修订标准、既有法规到达生效/废止日期、CI/Pages 异常报警），方可开启针对性的新维护批次。日常遵循 PR #62 确立的“本地母库优先，官方网络权威来源补齐”长效规则。
+本轮部署验收完成后重新进入长期维护模式。后续仅在满足 [MAINTENANCE.md](MAINTENANCE.md) 的明确触发条件时开启针对性维护批次，并继续遵循“本地母库优先、官方网络权威来源补齐”的证据规则。

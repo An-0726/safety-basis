@@ -91,13 +91,65 @@ function publicNoteParts(hazard={}){
   return {businessNote:business.join('\n').trim(),historicalReferences};
 }
 function modeLabel(value){return ({direct:'直接适用',conditional:'有条件适用'})[value]||value||'未标注'}
-function roleLabel(value){return ({direct:'直接依据',supporting:'辅助依据'})[value]||value||'未标注'}
+function roleLabel(value){return ({direct:'直接依据',indirect:'间接依据',supporting:'间接／辅助依据',fallback:'上位法／兜底依据'})[value]||value||'未标注'}
 function displayCategoryOf(row){return row.displayCategory??row.category??''}
 function displayLevelOf(row){return row.displayLevel??row.level??''}
 function currentFilters(){return state.view==='hazards'?{category:$('#category').value,sceneTag:$('#scene').value,displayLevel:$('#level').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value}:{displayLevel:$('#lawLevel').value,level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
 
-function loadUrlState(){const p=new URLSearchParams(location.search);state.view=['hazards','laws','data'].includes(p.get('view'))?p.get('view'):'hazards';state.query=p.get('q')||'';state.selectedHazard=p.get('id')||'';state.selectedLaw=p.get('law')||''}
-function syncUrl(){const p=new URLSearchParams();if(state.view!=='hazards')p.set('view',state.view);if(state.query)p.set('q',state.query);if(state.view==='hazards'&&state.selectedHazard)p.set('id',state.selectedHazard);if(state.view==='laws'&&state.selectedLaw)p.set('law',state.selectedLaw);history.replaceState(null,'',`${location.pathname}${p.size?'?'+p.toString():''}${location.hash}`)}
+const URL_FILTERS={
+  hazards:{category:'#category',scene:'#scene',level:'#level',region:'#region',mode:'#mode'},
+  laws:{level:'#lawLevel',region:'#lawRegion',status:'#lawStatus'},
+  data:{},
+};
+
+export function parseRoute(search=''){
+  const p=new URLSearchParams(search);
+  const view=['hazards','laws','data'].includes(p.get('view'))?p.get('view'):'hazards';
+  const filters={};
+  for(const key of Object.keys(URL_FILTERS[view]))filters[key]=p.get(key)||(key==='scene'?p.get('sceneTag'):'')||'';
+  return {view,query:p.get('q')||'',selectedHazard:view==='hazards'?(p.get('id')||''):'',
+    selectedLaw:view==='laws'?(p.get('law')||''):'',filters};
+}
+
+export function routeQuery(route={}){
+  const view=['hazards','laws','data'].includes(route.view)?route.view:'hazards';
+  const p=new URLSearchParams();
+  if(view!=='hazards')p.set('view',view);
+  if(route.query)p.set('q',route.query);
+  if(view==='hazards'&&route.selectedHazard)p.set('id',route.selectedHazard);
+  if(view==='laws'&&route.selectedLaw)p.set('law',route.selectedLaw);
+  for(const key of Object.keys(URL_FILTERS[view])){
+    const value=route.filters?.[key];
+    if(value)p.set(key,value);
+  }
+  return p.toString();
+}
+
+function loadUrlState(){
+  const route=parseRoute(location.search);
+  state.view=route.view;state.query=route.query;
+  state.selectedHazard=route.selectedHazard;state.selectedLaw=route.selectedLaw;
+  return route;
+}
+function applyUrlFilters(route){
+  for(const fields of Object.values(URL_FILTERS))for(const selector of Object.values(fields)){
+    const select=$(selector);if(select)select.value='';
+  }
+  for(const [key,selector] of Object.entries(URL_FILTERS[route.view])){
+    const select=$(selector),value=route.filters[key]||'';
+    // Ignore unknown values instead of silently hiding the whole database.
+    if(select&&[...select.options].some(option=>option.value===value))select.value=value;
+  }
+  updateFilterSummary();
+}
+function syncUrl(historyMode='replace'){
+  const filters={};
+  for(const [key,selector] of Object.entries(URL_FILTERS[state.view]||{}))filters[key]=$(selector)?.value||'';
+  const query=routeQuery({...state,filters});
+  const url=`${location.pathname}${query?'?'+query:''}${location.hash}`;
+  if(`${location.pathname}${location.search}${location.hash}`===url)return;
+  history[historyMode==='push'?'pushState':'replaceState'](null,'',url);
+}
 
 function initFilters(){const t=state.store.taxonomy;
   const categories=t.displayCategories||t.categories||[];
@@ -112,8 +164,12 @@ function initFilters(){const t=state.store.taxonomy;
   $('#lawStatus').innerHTML='<option value="">全部已核验版本</option>'+t.lawStatuses.map(status=>`<option value="${esc(status)}">${esc(lawStatusLabel(status))}</option>`).join('');
 }
 
-function switchView(view,{keepQuery=false,initial=false}={}){
+function switchView(view,{keepQuery=false,initial=false,targetId=null,historyMode='push'}={}){
   state.view=view;state.visibleCount=MAX_RENDER;state.pendingDetailScroll=false;if(!keepQuery)state.query='';
+  if(targetId!==null){
+    if(view==='hazards')state.selectedHazard=targetId;else if(view==='laws')state.selectedLaw=targetId;
+    for(const selector of Object.values(URL_FILTERS[view]||{}))if($(selector))$(selector).value='';
+  }
   $$('.nav').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
   $('#searchView').hidden=view==='data';$('#dataView').hidden=view!=='data';
   $('#hazardFilters').hidden=view!=='hazards';$('#lawFilters').hidden=view!=='laws';
@@ -123,8 +179,8 @@ function switchView(view,{keepQuery=false,initial=false}={}){
   if(view==='data'){
     detailRequests.invalidate();
     renderDataView();
-  }else renderResults({mode:initial?'initial':'view-change'});
-  syncUrl();
+  }else renderResults({mode:initial||targetId!==null?'initial':'view-change',historyMode});
+  syncUrl(historyMode);
 }
 
 function resolveSelectedId(rows,currentId,mode,allRows){
@@ -137,7 +193,7 @@ function resolveSelectedId(rows,currentId,mode,allRows){
   return currentId;
 }
 
-function renderResults({mode='normal'}={}){
+function renderResults({mode='normal',historyMode='replace'}={}){
   const list=$('#list');
   const filterChanged=mode==='filter-change';
   const viewChanged=mode==='view-change';
@@ -179,7 +235,7 @@ function renderResults({mode='normal'}={}){
     else if(state.selectedLaw)renderUnavailable(state.selectedLaw,'法规版本');
     else renderLawDetail();
   }
-  syncUrl();
+  syncUrl(historyMode);
 }
 
 function renderUnavailable(id,kind){
@@ -190,8 +246,8 @@ function renderUnavailable(id,kind){
 function hazardCard(r){return `<button class="card ${r.id===state.selectedHazard?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedHazard}"><div class="meta"><span>${esc(displayCategoryOf(r))}</span>${pill(r.status==='已核验'?modeLabel(r.mode):r.status)}</div><h3>${esc(r.title)}</h3><p>${esc((r.sceneTags||r.places||[]).join(' · ')||'未细分场景')}</p><span class="arrow">↗</span></button>`}
 function lawCard(r){return `<button class="card ${r.id===state.selectedLaw?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedLaw}"><div class="meta"><span>${esc(displayLevelOf(r))}</span>${pill(r.status)}</div><h3>${esc(r.name)}</h3><p>${esc(r.scope)} · ${r.clauseCount} 条收录条款 · 关联 ${r.hazardCount} 条隐患</p><span class="arrow">↗</span></button>`}
 
-function selectHazard(id){state.selectedHazard=id;state.pendingDetailScroll=true;renderResults({mode:'selection'})}
-function selectLaw(id){state.selectedLaw=id;state.pendingDetailScroll=true;renderResults({mode:'selection'})}
+function selectHazard(id){state.selectedHazard=id;state.pendingDetailScroll=true;renderResults({mode:'selection',historyMode:'push'})}
+function selectLaw(id){state.selectedLaw=id;state.pendingDetailScroll=true;renderResults({mode:'selection',historyMode:'push'})}
 
 function historicalReferenceHtml(references=[]){
   if(!references.length)return '';
@@ -248,7 +304,7 @@ async function renderHazardDetail(){
     $('#copyfull').onclick=()=>copyText(hazardFullText(hazard,bases),'已复制完整资料');
     $('#share').onclick=()=>copyText(location.href,'已复制当前链接');
     bindDetailUtilities(hazard.id,hazard.checked,hazard.places||[]);
-    $$('.lawjump').forEach(b=>b.onclick=()=>{state.selectedLaw=b.dataset.law;switchView('laws',{keepQuery:false})});
+    $$('.lawjump').forEach(b=>b.onclick=()=>switchView('laws',{targetId:b.dataset.law}));
   }catch(err){if(detailRequests.isCurrent(request)) showError(err)}
 }
 
@@ -276,7 +332,7 @@ async function renderLawDetail(){
     $('#copylaw').onclick=()=>copyText(lawText(detail),'已复制法规资料');
     $('#share').onclick=()=>copyText(location.href,'已复制当前链接');
     bindDetailUtilities(law.id,law.checked,[]);
-    $$('.hazardjump').forEach(b=>b.onclick=()=>{state.selectedHazard=b.dataset.id;switchView('hazards',{keepQuery:false})});
+    $$('.hazardjump').forEach(b=>b.onclick=()=>switchView('hazards',{targetId:b.dataset.id}));
   }catch(err){if(detailRequests.isCurrent(request)) showError(err)}
 }
 function lawClauseHtml(ref,c){return `<div class="basis"><div class="basismeta"><strong class="articletitle">${esc(c.article)}</strong>${pill(c.status)}</div><blockquote>${esc(c.quote||'原文待核验')}</blockquote><div class="article">核验日期：${esc(dateOnly(c.checked))} · 关联 ${ref.hazardIds.length} 条隐患</div></div>`}
@@ -304,21 +360,26 @@ function bind(){
   $$('.nav[data-view]').forEach(b=>b.onclick=()=>switchView(b.dataset.view));
   $('#search').oninput=()=>{state.query=$('#search').value;renderResults({mode:'filter-change'})};
   $('#clear').onclick=()=>{$('#search').value='';state.query='';renderResults({mode:'filter-change'});$('#search').focus()};
-  const resetFilters=()=>{$$('#hazardFilters select,#lawFilters select').forEach(x=>x.value='');$('#search').value='';state.query='';renderResults({mode:'filter-change'})};
+  const resetFilters=()=>{$$('#hazardFilters select,#lawFilters select').forEach(x=>x.value='');$('#search').value='';state.query='';renderResults({mode:'filter-change',historyMode:'push'})};
   $('#reset').onclick=resetFilters;
   $('#resetLaw').onclick=resetFilters;
-  $$('#hazardFilters select,#lawFilters select').forEach(x=>x.onchange=()=>renderResults({mode:'filter-change'}));
+  $$('#hazardFilters select,#lawFilters select').forEach(x=>x.onchange=()=>renderResults({mode:'filter-change',historyMode:'push'}));
+  window.addEventListener('popstate',()=>{
+    if(!state.store)return;
+    const route=loadUrlState();applyUrlFilters(route);
+    switchView(route.view,{keepQuery:true,initial:true,historyMode:'replace'});
+  });
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();if(state.view==='data')switchView('hazards');$('#search').focus()}});
 }
 
 async function boot(){
-  loadUrlState();bind();
+  const route=loadUrlState();bind();
   try{
     state.store=await new DataStore('.').init();
-    initFilters();
+    initFilters();applyUrlFilters(route);
     setDataDateHeader(state.store.manifest,state.store.verifiedFiles?.manifest);
     $('#search').value=state.query;
-    switchView(state.view,{keepQuery:true,initial:true});
+    switchView(state.view,{keepQuery:true,initial:true,historyMode:'replace'});
     if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
   }catch(err){showError(err);$('#list').innerHTML='<div class="empty"><strong>数据库未能初始化</strong></div>'}
 }

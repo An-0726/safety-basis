@@ -2,14 +2,15 @@
   "entityType": "link",
   "entityId": "K_CF_GEN_10_C_0C94FB24040EB78218141DD12F",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "a8058e49ab2e5eac7c4fc447df870f41615217f3a9f53a1c4a50b5ee32bb212f",
+  "decision": "rejected",
+  "reviewedContentHash": "6d6e19af3f14cac7b5dc5c83d2e685b9b9c7a55ffcdc9cb8d64ba2b3d0c1ca28",
   "contextHashes": {
-    "hazard": "556eda1909ac2ca7b24cec09c26a5890d6cb94c62c798bbc88386141b91caef9",
-    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0"
+    "hazard": "4e7279be6ad51df2509ab3c54ee1e10f1809bebff59779a2e3e5410f8e5b74c7",
+    "clause": "39736aea6c75c57f5c13b0e1f4102dce5c7aef14ef198beab8b9bd4bd770c1a0",
+    "link": "6d6e19af3f14cac7b5dc5c83d2e685b9b9c7a55ffcdc9cb8d64ba2b3d0c1ca28"
   },
-  "checkedAt": "2026-09-19T16:00:00+08:00",
-  "reviewer": "Codex / Changfeng Ingestion Policy",
-  "reason": "实体 H_CF_GEN_10 与法规条款 C_0C94FB24040EB78218141DD12F 在适用范围、违法构成要件及法定防范要求上经严格核验完全成立。",
+  "checkedAt": "2026-09-21T00:55:00+08:00",
+  "reviewer": "ChatGPT / Engineering Audit",
+  "reason": "PR #70批量关联未证明该条款可直接支持本隐患全部构成要件；关联拒绝并标记superseded，仅保留历史。后续如有合格直接依据应新建/重新审核。",
   "evidenceRefs": []
 }

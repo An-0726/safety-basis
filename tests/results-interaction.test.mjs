@@ -91,7 +91,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     navigator: {clipboard: {writeText: async () => {}}},
     console: {error() {}, log() {}},
     location: {href: 'http://test.invalid/index.html', search: '', pathname: '/index.html', hash: ''},
-    history: {replaceState() {}},
+    history: {replaceState() {}, pushState() {}},
     setTimeout() { return 0; },
     clearTimeout() {},
     URLSearchParams,
