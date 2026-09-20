@@ -1,0 +1,38 @@
+name: Engineering audit (isolated)
+
+on:
+  push:
+    branches: [audit/engineering-20260920]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: engineering-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+          persist-credentials: false
+      - name: Capture committed source and Git baseline
+        shell: bash
+        run: |
+          mkdir -p "${RUNNER_TEMP}/engineering-audit"
+          git status --porcelain=v1 > "${RUNNER_TEMP}/engineering-audit/git-status.txt"
+          git branch --show-current > "${RUNNER_TEMP}/engineering-audit/git-branch.txt"
+          git log -20 --format='%H %aI %s' > "${RUNNER_TEMP}/engineering-audit/git-log.txt"
+          git rev-parse HEAD > "${RUNNER_TEMP}/engineering-audit/source-commit.txt"
+          git archive --format=zip HEAD -o "${RUNNER_TEMP}/engineering-audit/source.zip"
+          sha256sum "${RUNNER_TEMP}/engineering-audit/source.zip" > "${RUNNER_TEMP}/engineering-audit/source.sha256"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: engineering-audit-source
+          path: ${{ runner.temp }}/engineering-audit
+          if-no-files-found: error
+          retention-days: 7
