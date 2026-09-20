@@ -1,13 +1,25 @@
-name: Final engineering QA (read only)
-# rerun-after-remediation-20260921-v2
-# rerun-after-remediation-20260921
+name: Engineering QA
+
 on:
+  workflow_dispatch:
   push:
     branches: [audit/engineering-20260920]
     paths:
+      - knowledge/**
+      - source/publication/**
+      - web/**
+      - tests/**
+      - tools/v4/**
+      - tools/pipeline/**
+      - tools/browser/**
       - .github/workflows/final-engineering-qa.yml
+      - docs/PROJECT_STATE.md
+      - docs/HANDOFF.md
+      - README.md
+
 permissions:
   contents: read
+
 jobs:
   qa:
     runs-on: ubuntu-latest
@@ -15,7 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: audit/engineering-20260920
           fetch-depth: 30
       - uses: actions/setup-python@v5
         with:
@@ -36,49 +47,49 @@ jobs:
           python tools/v4/validate_publication_integrity.py
       - name: Comprehensive repository scanner
         run: |
-          mkdir -p "${RUNNER_TEMP}/final-qa"
-          python tools/v4/comprehensive_scanner.py | tee "${RUNNER_TEMP}/final-qa/comprehensive-scanner.log"
-          cp docs/scan_findings.jsonl "${RUNNER_TEMP}/final-qa/scan_findings.jsonl"
+          mkdir -p "${RUNNER_TEMP}/engineering-qa"
+          python tools/v4/comprehensive_scanner.py | tee "${RUNNER_TEMP}/engineering-qa/comprehensive-scanner.log"
+          cp docs/scan_findings.jsonl "${RUNNER_TEMP}/engineering-qa/scan_findings.jsonl"
           python - <<'PY'
           import json
           from pathlib import Path
-          p=Path('docs/scan_findings.jsonl')
-          rows=[json.loads(x) for x in p.read_text(encoding='utf-8').splitlines() if x.strip()]
+          rows=[json.loads(x) for x in Path('docs/scan_findings.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
           errors=[x for x in rows if x.get('severity')=='ERROR']
           warnings=[x for x in rows if x.get('severity')=='WARNING']
           print({'errors':len(errors),'warnings':len(warnings)})
           if errors:
-              for row in errors[:50]: print(json.dumps(row,ensure_ascii=False))
+              for row in errors[:50]:
+                  print(json.dumps(row,ensure_ascii=False))
               raise SystemExit(1)
           PY
-      - name: Build isolated final QA bundle
+      - name: Build isolated QA bundle
         run: |
-          rm -rf source/releases/final-qa
-          python tools/v4/build_unified_release.py --out source/releases/final-qa --as-of 2026-09-21 --data-version "final-qa-${GITHUB_SHA}"
+          rm -rf source/releases/engineering-qa
+          python tools/v4/build_unified_release.py --out source/releases/engineering-qa --as-of "$(date -u +%F)" --data-version "engineering-qa-${GITHUB_SHA}"
           python - <<'PY'
           import json
           from pathlib import Path
-          r=json.loads(Path('source/releases/final-qa/release.json').read_text(encoding='utf-8'))
-          Path('source/releases/final-qa-selection.json').write_text(json.dumps({'schemaVersion':'safety-site-selection-v1','bundle':'final-qa','releaseHash':r['releaseHash']},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          r=json.loads(Path('source/releases/engineering-qa/release.json').read_text(encoding='utf-8'))
+          Path('source/releases/engineering-qa-selection.json').write_text(json.dumps({'schemaVersion':'safety-site-selection-v1','bundle':'engineering-qa','releaseHash':r['releaseHash']},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           PY
-          python tools/v4/verify_unified_bundle.py --bundle source/releases/final-qa --selection source/releases/final-qa-selection.json
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/engineering-qa --selection source/releases/engineering-qa-selection.json
       - name: Full taxonomy audit
         run: |
-          python tools/review/audit_public_taxonomy.py --bundle source/releases/final-qa --out-dir "${RUNNER_TEMP}/final-qa/taxonomy" --output-stem final-taxonomy
+          python tools/review/audit_public_taxonomy.py --bundle source/releases/engineering-qa --out-dir "${RUNNER_TEMP}/engineering-qa/taxonomy" --output-stem taxonomy
       - name: Strict Chromium acceptance
         run: |
-          python tools/browser/audit_browser.py --bundle source/releases/final-qa --out "${RUNNER_TEMP}/final-qa/browser-local.json"
-          python tools/browser/audit_browser.py --url https://an-0726.github.io/safety-basis/ --out "${RUNNER_TEMP}/final-qa/browser-public-observe.json" --observe
+          python tools/browser/audit_browser.py --bundle source/releases/engineering-qa --out "${RUNNER_TEMP}/engineering-qa/browser-local.json"
+          python tools/browser/audit_browser.py --url https://an-0726.github.io/safety-basis/ --out "${RUNNER_TEMP}/engineering-qa/browser-public-observe.json" --observe
       - name: Capture source baseline
         if: always()
         run: |
-          git status --porcelain=v1 > "${RUNNER_TEMP}/final-qa/git-status.txt"
-          git rev-parse HEAD > "${RUNNER_TEMP}/final-qa/source-commit.txt"
-          git log -20 --format='%H %aI %s' > "${RUNNER_TEMP}/final-qa/git-log.txt"
+          git status --porcelain=v1 > "${RUNNER_TEMP}/engineering-qa/git-status.txt"
+          git rev-parse HEAD > "${RUNNER_TEMP}/engineering-qa/source-commit.txt"
+          git log -20 --format='%H %aI %s' > "${RUNNER_TEMP}/engineering-qa/git-log.txt"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: final-engineering-qa-evidence
-          path: ${{ runner.temp }}/final-qa
+          name: engineering-qa-evidence
+          path: ${{ runner.temp }}/engineering-qa
           if-no-files-found: error
           retention-days: 7
