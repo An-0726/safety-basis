@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**当前分支为 2026-09-21 工程级审计整改发布候选，尚未宣称线上已部署。** 本轮已经修改 `knowledge/`、`source/publication/`、发布门禁和网页路由，但保留 Stable ID 和历史记录。当前 checkout 的 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,681 active / 276 proposed / 96 superseded**。最终 QA 公开包为 **1,679 hazards / 58 laws / 58 law versions / 1,302 clauses / 1,788 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=4f491c8bf655236ca61e8df14a39769fb981937360e69f5f913225f42cc001b8`；GitHub Actions run `35524378609` 全绿。
+**当前分支为 2026-09-21 工程级审计整改发布候选，尚未宣称线上已部署。** 本轮已经修改 `knowledge/`、`source/publication/`、发布门禁和网页路由，但保留 Stable ID 和历史记录。当前 checkout 的 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,680 active / 276 proposed / 97 superseded**。最终 QA 公开包为 **1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；GitHub Actions run `35525485280` 全绿。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -51,16 +51,16 @@
    - **1,201 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
-   - 生命周期：**1,681 active / 276 proposed / 96 superseded**。
+   - 生命周期：**1,680 active / 276 proposed / 97 superseded**。
 2. **工程审计最终 QA 公开包（asOf=2026-09-21）**：
    - **1,679 hazards**，public `proposed` 为 **0**；
    - **58 laws / 58 law versions**；
    - **1,302 clauses**；
    - **1,788 links**；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-   - QA `dataVersion=final-qa-b70ac88dfa5cce298841780494cdbc559e48dc77`；
-   - QA `releaseHash=4f491c8bf655236ca61e8df14a39769fb981937360e69f5f913225f42cc001b8`。
-3. **验证结果**：GitHub Actions run `35524378609` 中 Node/Python 测试、`validate_all`、strict release audit、publication integrity、comprehensive scanner、公开分类全量审计、统一包重建/验证和 Chromium 严格交互测试均 PASS；scanner 为 **0 ERROR / 1 WARNING**，唯一 WARNING 是已 superseded 的历史法条复述式标题，保留历史不改写。该结果仍是审计分支候选验收，不等于线上 `main` 已部署。
+   - QA `dataVersion=engineering-qa-d253138344f950d39827c6123a99f7a0fdedd94d`；
+   - QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
+3. **验证结果**：GitHub Actions run `35525485280` 中 Node/Python 测试、`validate_all`、strict release audit、publication integrity、comprehensive scanner、公开分类全量审计、统一包重建/验证和 Chromium 严格交互测试均 PASS；scanner 为 **0 ERROR / 1 WARNING**，唯一 WARNING 是已 superseded 的历史法条复述式标题，保留历史不改写。该结果仍是审计分支候选验收，不等于线上 `main` 已部署。
 
 公开发布架构已收口：
 
@@ -359,8 +359,8 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 
 **2026-09-21 工程级审计整改发布候选已完成分支级最终 QA，待 PR 合并、main CI/Pages 部署和线上复验。** 本轮已经直接修复确定的数据/关联/网页问题；证据不足的 SDS、实验室酒精和灭火器维修合格证等事项保留候选边界，没有为凑发布数量强行转正。
 
-当前源库存以 `knowledge/manifest.json` 为准：**104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**；生命周期为 **1,681 active / 276 proposed / 96 superseded**。
-当前最终 QA 公开包为：**1,679 hazards / 58 laws / 58 law versions / 1,302 clauses / 1,788 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=4f491c8bf655236ca61e8df14a39769fb981937360e69f5f913225f42cc001b8`。
+当前源库存以 `knowledge/manifest.json` 为准：**104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**；生命周期为 **1,680 active / 276 proposed / 97 superseded**。
+当前最终 QA 公开包为：**1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
 
 本地私有母库状态核实：
 - 母库文件：`source/library/fulltext.sqlite3`（文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`）；

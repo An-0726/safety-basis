@@ -63,15 +63,15 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 本轮已对仓库架构、数据账面、PR #70 批量隐患、商贸近期检查问题、发布门禁和网页路由执行工程级审计及整改。审计分支最终 QA 重新从当前 `knowledge + source/publication + web` 构建公开包，结果为：
 
-- **1,679 条公开隐患记录**；公开 `proposed` 候选为 **0**；
-- **58 个法规身份 / 58 个法规版本**；
-- **1,302 条公开条款**；
-- **1,788 条公开关联**；
+- **1,680 条公开隐患记录**；公开 `proposed` 候选为 **0**；
+- **59 个法规身份 / 59 个法规版本**；
+- **1,303 条公开条款**；
+- **1,790 条公开关联**；
 - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
 - `asOf=2026-09-21`；
-- QA 基线 `dataVersion=final-qa-b70ac88dfa5cce298841780494cdbc559e48dc77`；
-- QA 基线 `releaseHash=4f491c8bf655236ca61e8df14a39769fb981937360e69f5f913225f42cc001b8`；
-- GitHub Actions 最终 QA run `35524378609`：自动门禁、全库 scanner、分类全量审计、构建验证和 Chromium 严格交互测试全部通过。
+- QA 基线 `dataVersion=engineering-qa-d253138344f950d39827c6123a99f7a0fdedd94d`；
+- QA 基线 `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；
+- GitHub Actions 最终 QA run `35525485280`：自动门禁、全库 scanner、分类全量审计、构建验证和 Chromium 严格交互测试全部通过。
 
 该包是审计分支的发布候选验收结果；在本分支合并 `main` 且 Pages 部署完成前，不把它表述为线上正式版本。
 
@@ -87,7 +87,7 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 - **1,201 个官方证据卡 (evidence)**；
 - **75 条管理要求 (requirements)**；
 - **26 条替代演进关系 (successions)**；
-- 隐患生命周期：**1,681 active / 276 proposed / 96 superseded**。
+- 隐患生命周期：**1,680 active / 276 proposed / 97 superseded**。
 
 知识源库存、公开包和历史批次是不同统计层级；当前账面以实际 manifest 和最终 QA 生成包为准，历史数字仅保留在明确标注的历史阶段记录中。
 
@@ -138,8 +138,8 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 当前知识源、公开预览和目标集不是同一个数字：
 
-- `knowledge/manifest.json`：104 个法规身份、107 个法规版本、2,993 条条款、2,053 个隐患实体、1,923 个关联、1,201 个 evidence、26 条 succession、75 条 requirements；隐患生命周期为 1,681 active / 276 proposed / 96 superseded；
-- 工程审计最终 QA 公开包：1,679 条隐患、58 个法规身份 / 58 个法规版本、1,302 条条款、1,788 条关联、69 个 canonical 来源关系；
+- `knowledge/manifest.json`：104 个法规身份、107 个法规版本、2,993 条条款、2,053 个隐患实体、1,923 个关联、1,201 个 evidence、26 条 succession、75 条 requirements；隐患生命周期为 1,680 active / 276 proposed / 97 superseded；
+- 工程审计最终 QA 公开包：1,679 条隐患、59 个法规身份 / 59 个法规版本、1,302 条条款、1,788 条关联、69 个 canonical 来源关系；
 - 新版 Excel 目标集：1,929 个唯一隐患 ID（621 条修订、1,308 条保留），它不是正式发布数量；
 - 私有全文母库统计属于另一层级，具体以 `docs/PROJECT_STATE.md` 中有证据的本地核验记录为准；
 - 历史批次中的“1250”“1502”“1680”等数字只保留为历史记录，不作为当前公开包统计。
