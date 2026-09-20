@@ -83,6 +83,7 @@ jobs:
       - name: Capture source baseline
         if: always()
         run: |
+          mkdir -p "${RUNNER_TEMP}/engineering-qa"
           git status --porcelain=v1 > "${RUNNER_TEMP}/engineering-qa/git-status.txt"
           git rev-parse HEAD > "${RUNNER_TEMP}/engineering-qa/source-commit.txt"
           git log -20 --format='%H %aI %s' > "${RUNNER_TEMP}/engineering-qa/git-log.txt"
