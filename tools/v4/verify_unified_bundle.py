@@ -16,6 +16,13 @@ from datetime import date
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from presentation import (  # noqa: E402
+    SCENE_TAG_OPTIONS,
+    display_level,
+    project_hazard,
+    raw_law_level,
+    searchable,
+)
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -23,7 +30,7 @@ KNOW = os.path.join(ROOT, "knowledge")
 PUBLICATION = os.path.join(ROOT, "source", "publication")
 SELECTION = os.path.join(ROOT, "source", "releases", "site-selection.json")
 
-SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "app.js",
+SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
 COVER_EXCLUDE = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
@@ -39,6 +46,41 @@ class Failures(list):
 def rd(p):
     with io.open(p, encoding="utf-8") as f:
         return json.load(f)
+
+
+def check_hazard_conditions(bad, hazard_id, row, source):
+    """Validate the public conditions projection against its source field."""
+    source_value = source.get("conditions")
+    expected = "" if source_value is None else source_value
+    if not isinstance(source_value, (str, type(None))):
+        bad.check(
+            False,
+            "源隐患 conditions 必须是字符串、null 或缺失：" + hazard_id,
+        )
+        return
+    bad.check(
+        isinstance(row.get("conditions"), str),
+        "公开隐患 conditions 必须是字符串：" + hazard_id,
+    )
+    bad.check(
+        row.get("conditions") == expected,
+        "隐患 conditions 与源字段不一致：" + hazard_id,
+    )
+
+
+def check_hazard_presentation(bad, hazard_id, row, search_row, source):
+    """Recompute public hazard display projection instead of trusting the bundle."""
+    expected = project_hazard(source, hazard_id=hazard_id)
+    for field in ("displayCategory", "sceneTags"):
+        bad.check(row.get(field) == expected[field],
+                  "隐患展示投影被改动：%s/%s" % (hazard_id, field))
+        bad.check(search_row.get(field) == expected[field],
+                  "搜索索引展示投影被改动：%s/%s" % (hazard_id, field))
+    for field in ("noteSegments", "businessNote", "maintenanceNote"):
+        bad.check(row.get(field) == expected[field],
+                  "隐患备注投影被改动：%s/%s" % (hazard_id, field))
+    bad.check(search_row.get("businessNote") == expected["businessNote"],
+              "搜索索引业务备注投影被改动：" + hazard_id)
 
 
 def sha256_file(p):
@@ -146,12 +188,21 @@ def main():
     si = rd(os.path.join(bundle, "data", "search-index.json"))
     law_index = rd(os.path.join(bundle, "data", "law-index.json"))
     taxonomy = rd(os.path.join(bundle, "data", "taxonomy.json"))
+    si_by_id = {row["id"]: row for row in si}
     law_ids = {e["id"] for e in law_index}
     si_ids = {r["id"] for r in si}
     bad.check(si_ids == set(hazards), "search-index 与隐患分片集合不一致")
     bad.check(len(law_ids) == len(law_index), "法规目录存在重复 id")
     bad.check(taxonomy.get("hazardStatuses") == ["已核验"],
               "正式 taxonomy 不得包含候选状态")
+    bad.check(taxonomy.get("sceneTagOptions") == list(SCENE_TAG_OPTIONS),
+              "taxonomy sceneTagOptions 与受控场景字典不一致")
+    bad.check(set(taxonomy.get("displayCategories", [])) ==
+              {row.get("displayCategory") for row in si},
+              "taxonomy displayCategories 与搜索索引不一致")
+    bad.check(set(taxonomy.get("displayLevels", [])) ==
+              {row.get("displayLevel") for row in law_index},
+              "taxonomy displayLevels 与法规索引不一致")
 
     for row in clauses.values():
         bad.check(row["lawId"] in law_ids, "条款法规引用断链：" + row["id"])
@@ -187,6 +238,9 @@ def main():
     know_links = load_dir(KNOW, "links")
     know_clauses = load_dir(KNOW, "clauses")
     know_lvs = load_dir(KNOW, "law-versions")
+    know_laws = load_dir(KNOW, "laws")
+    publication_index = rd(os.path.join(PUBLICATION, "law-index.json"))
+    publication_by_id = {entry["id"]: entry for entry in publication_index}
 
     bad.check(set(hazards) == gate.eligible_hazards,
               "正式隐患集合 != 当前 Gate eligibleHazards（%d vs %d）" %
@@ -203,6 +257,38 @@ def main():
 
     for hid, row in hazards.items():
         src = know_hazards[hid]
+        check_hazard_conditions(bad, hid, row, src)
+        check_hazard_presentation(bad, hid, row, si_by_id.get(hid, {}), src)
+        expected_display_levels = set()
+        law_names, standard_numbers = set(), set()
+        for cid, _role in verified_by_hazard.get(hid, set()):
+            clause_source = know_clauses[cid]
+            vid = clause_source.get("lawVersionId")
+            lv = know_lvs.get(vid) or {}
+            law = know_laws.get(lv.get("lawId")) or {}
+            source = publication_by_id.get(vid) or {}
+            name = law.get("canonicalName") or law.get("officialName") or lv.get("officialName")
+            if name:
+                law_names.add(name)
+            if lv.get("documentNumber"):
+                standard_numbers.add(lv["documentNumber"])
+            raw_level = raw_law_level(law, lv, source)
+            expected_display_levels.add(display_level(raw_level, vid))
+        bad.check(si_by_id.get(hid, {}).get("displayLevels") ==
+                  sorted(expected_display_levels),
+                  "搜索索引 displayLevels 展示投影被改动：" + hid)
+        source_projection = project_hazard(src, hazard_id=hid)
+        expected_search_text = searchable([
+            src.get("title", ""), " ".join(src.get("aliases") or []),
+            " ".join(src.get("keywords") or []), src.get("description", ""),
+            src.get("conditions") or "", source_projection["businessNote"],
+            " ".join(sorted(law_names)), " ".join(sorted(standard_numbers)),
+            src.get("category", ""), source_projection["displayCategory"],
+            " ".join(source_projection["sceneTags"]),
+            " ".join(sorted(expected_display_levels)),
+        ])
+        bad.check(si_by_id.get(hid, {}).get("searchText") == expected_search_text,
+                  "搜索索引 searchText 与业务备注投影不一致：" + hid)
         for field in ("title", "description", "measures", "note", "category", "mode", "lifecycle"):
             bad.check(row.get(field) == src.get(field),
                       "隐患字段被改动：%s/%s" % (hid, field))
@@ -230,6 +316,13 @@ def main():
         lv = know_lvs.get(entry["id"])
         if not bad.check(lv is not None, "正式法规不是 knowledge 法规版本：" + entry["id"]):
             continue
+        law = know_laws.get(lv.get("lawId")) or {}
+        source = publication_by_id.get(entry["id"]) or {}
+        expected_raw_level = raw_law_level(law, lv, source)
+        bad.check(entry.get("level") == expected_raw_level,
+                  "法规原始 level 被改动：" + entry["id"])
+        bad.check(entry.get("displayLevel") == display_level(expected_raw_level, entry["id"]),
+                  "法规 displayLevel 展示投影被改动：" + entry["id"])
         bad.check(lv.get("validityStatus") == "active",
                   "正式法规版本不是 active：" + entry["id"])
         eff = lv.get("effectiveDate") or ""

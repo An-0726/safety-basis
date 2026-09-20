@@ -7,6 +7,23 @@ export const normalize = value => String(value ?? '').normalize('NFKC').toLowerC
 
 const allTermsMatch = (text,terms) => terms.every(t=>text.includes(t));
 
+const displayCategoryOf = row => row.displayCategory ?? row.category ?? '';
+const displayLevelsOf = row => Array.isArray(row.displayLevels) ? row.displayLevels : (row.levels || []);
+const sceneTagsOf = row => Array.isArray(row.sceneTags) ? row.sceneTags : [];
+const sceneFilterMatch = (row, value) => {
+  if(!value) return true;
+  const tags=sceneTagsOf(row);
+  return value==='__unclassified__' || value==='未细分场景'
+    ? tags.length===0
+    : tags.includes(value);
+};
+const modeMatches = (row, value) => {
+  if(!value) return true;
+  if(row.mode===value) return true;
+  return (value==='direct' && row.mode==='直接适用') ||
+    (value==='conditional' && row.mode==='有条件适用');
+};
+
 // 概念同义词组（Search 2.0，交接说明书第 8 章）：
 // 查询词命中间组内任一变体即可召回，解决口语词与库内规范用语不一致（如 配电房→配电室/配电箱）。
 // 组表来源：语料挖掘（712 隐患 keywords/aliases + 173 法规别名，缩略词对按字序匹配）+ 领域常用口语，
@@ -214,7 +231,7 @@ const hazardScore=(r,q,terms)=>{
     else score+=2;
   }
   if(r.status==='已核验') score+=3;
-  if(r.mode==='直接适用') score+=2;
+  if(r.mode==='direct' || r.mode==='直接适用') score+=2;
   return score;
 };
 
@@ -223,11 +240,15 @@ export function searchHazards(rows, query, filters={}) {
   const out=[];
   for(const r of rows){
     if(r.status==='已失效' && filters.status!=='已失效') continue;
-    if(filters.category && r.category!==filters.category) continue;
+    if(filters.category && displayCategoryOf(r)!==filters.category) continue;
+    if(filters.displayCategory && displayCategoryOf(r)!==filters.displayCategory) continue;
     if(filters.place && !r.places.includes(filters.place)) continue;
-    if(filters.level && !r.levels.includes(filters.level)) continue;
+    if(filters.sceneTag && !sceneFilterMatch(r,filters.sceneTag)) continue;
+    if(filters.scene && !sceneFilterMatch(r,filters.scene)) continue;
+    if(filters.level && !displayLevelsOf(r).includes(filters.level)) continue;
+    if(filters.displayLevel && !displayLevelsOf(r).includes(filters.displayLevel)) continue;
     if(filters.region && !scopeMatch(r.scopes,filters.region)) continue;
-    if(filters.mode && r.mode!==filters.mode) continue;
+    if(!modeMatches(r,filters.mode)) continue;
     if(filters.status && r.status!==filters.status) continue;
     if(terms.length && !termsMatch(r.searchText,terms)) continue;
     out.push({row:r,score:hazardScore(r,q,terms)});
@@ -259,7 +280,8 @@ export function searchLaws(rows, query, filters={}) {
   const out=[];
   for(const r of rows){
     if(r.status==='已废止' && filters.status!=='已废止') continue;
-    if(filters.level && r.level!==filters.level) continue;
+    if(filters.level && (r.displayLevel??r.level)!==filters.level) continue;
+    if(filters.displayLevel && (r.displayLevel??r.level)!==filters.displayLevel) continue;
     if(filters.region && !scopeMatch([r.scope],filters.region)) continue;
     if(filters.status && r.status!==filters.status) continue;
     if(terms.length && !termsMatch(r.searchText,terms)) continue;

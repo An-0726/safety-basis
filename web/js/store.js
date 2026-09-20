@@ -44,10 +44,21 @@ export class DataStore {
 
     // 正式网站只投影“当前已核验”视图。候选和无正式条款的 publication 目录项
     // 仍保留在 knowledge/source 层供审核与来源追溯，但不再混入正式检索结果。
-    this.searchIndex=currentHazards(searchIndex);
-    this.lawIndex=currentLaws(lawIndex);
+    this.searchIndex=currentHazards(searchIndex).map(row=>({
+      ...row,
+      displayCategory:row.displayCategory??row.category??'',
+      sceneTags:Array.isArray(row.sceneTags)?row.sceneTags:[],
+      displayLevels:Array.isArray(row.displayLevels)?row.displayLevels:(row.levels||[]),
+    }));
+    this.lawIndex=currentLaws(lawIndex).map(row=>({
+      ...row,
+      displayLevel:row.displayLevel??row.level??'',
+    }));
     this.taxonomy={
       ...taxonomy,
+      displayCategories:taxonomy.displayCategories||[...new Set(this.searchIndex.map(x=>x.displayCategory).filter(Boolean))].sort(),
+      sceneTagOptions:taxonomy.sceneTagOptions||[],
+      displayLevels:taxonomy.displayLevels||[...new Set(this.lawIndex.map(x=>x.displayLevel).filter(Boolean))].sort(),
       hazardStatuses:['已核验'],
       lawStatuses:[...new Set(this.lawIndex.map(x=>x.status).filter(Boolean))].sort()
     };

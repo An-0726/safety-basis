@@ -12,6 +12,7 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="library.css">
+  <link rel="stylesheet" href="stage3.css">
 </head>
 <body>
 <header>
@@ -49,23 +50,20 @@
 
     <div id="hazardFilters" class="filters">
       <label>主题<select id="category"></select></label>
-      <label>场所<select id="place"></select></label>
-      <label>法规类别<select id="level"></select></label>
+      <label>适用场景<select id="scene"></select></label>
       <label>地区<select id="region"><option value="">国家＋江苏／南京</option><option value="全国">仅国家依据</option><option value="江苏">江苏补充</option><option value="南京">南京补充</option></select></label>
-      <label>匹配<select id="mode"></select></label>
-      <label>状态<select id="status"></select></label>
+      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label></div></details>
       <button id="reset" class="quiet">重置筛选 ↺</button>
     </div>
 
     <div id="lawFilters" class="filters" hidden>
-      <label>法规类别<select id="lawLevel"></select></label>
       <label>地区<select id="lawRegion"><option value="">全部地区</option><option value="全国">全国</option><option value="江苏">江苏</option><option value="南京">南京</option></select></label>
-      <label>效力状态<select id="lawStatus"></select></label>
-      <button class="quiet" id="resetLawHint" disabled>仅显示本库实际引用版本</button>
+      <details id="lawMoreFilters" class="more-filters"><summary>更多筛选 <span id="lawFilterCount"></span></summary><div class="more-filter-items"><label>依据类型<select id="lawLevel"></select></label><label>效力状态<select id="lawStatus"></select></label></div></details>
+      <button class="quiet" id="resetLaw" type="button">重置筛选 ↺</button>
     </div>
 
     <div class="resultbar"><span><b id="count">0</b> 条匹配 <small id="summary">数据库正在初始化</small></span><span class="legend"><i></i> 原文与适用性分开核验 <em>·</em> 使用前复核现场条件</span></div>
-    <div class="columns"><div id="list" class="list" aria-label="搜索结果"></div><article id="detail" class="detail" aria-live="polite"><div class="empty"><strong>数据库正在初始化</strong></div></article></div>
+    <div class="columns"><div id="list" class="list" tabindex="-1" aria-label="搜索结果"></div><article id="detail" class="detail" aria-live="polite"><div class="empty"><strong>数据库正在初始化</strong></div></article></div>
   </section>
 
   <section id="dataView" class="workspace" hidden></section>

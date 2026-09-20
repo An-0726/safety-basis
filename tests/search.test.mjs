@@ -87,3 +87,41 @@ test('复合查询各概念分别支持同义词扩展（配电柜堵塞 / 配�
   assert.equal(searchHazards([row], '配电柜堵塞', {}).length, 1);
   assert.equal(searchHazards([row], '配电箱堆物', {}).length, 1);
 });
+
+test('受控展示字段支持主题、场景、依据类型和未细分场景筛选', () => {
+  const rows = [
+    hazardRow({id: 'H_ELEC', displayCategory: '电气安全', sceneTags: ['电气与配电'], displayLevels: ['国家标准']}),
+    hazardRow({id: 'H_UNCLASSIFIED', displayCategory: '电气安全', sceneTags: [], displayLevels: ['国家标准']}),
+    hazardRow({id: 'H_OTHER', displayCategory: '机械与设备安全', sceneTags: ['机械加工'], displayLevels: ['行业标准']}),
+  ];
+  assert.deepEqual(searchHazards(rows, '', {category: '电气安全', sceneTag: '电气与配电', displayLevel: '国家标准'}).map(x => x.id), ['H_ELEC']);
+  assert.deepEqual(searchHazards(rows, '', {sceneTag: '__unclassified__'}).map(x => x.id), ['H_UNCLASSIFIED']);
+  assert.deepEqual(searchHazards(rows, '', {category: '机械与设备安全'}).map(x => x.id), ['H_OTHER']);
+});
+
+test('稳定编号展示覆盖后的主题筛选仍可召回，且不把原始主题当展示主题', () => {
+  const corrected = hazardRow({
+    id: 'H_133DEA3AE07CE30E3CA5CBF4FF_1',
+    category: '设备设施',
+    displayCategory: '安全管理',
+    searchText: '设备设施 安全管理 现场管理',
+  });
+  assert.deepEqual(searchHazards([corrected], '', {category: '安全管理'}).map(x => x.id), [corrected.id]);
+  assert.equal(searchHazards([corrected], '', {category: '设备设施'}).length, 0);
+});
+
+test('直接适用的英文枚举仍参与排序加分，旧中文值也兼容', () => {
+  const direct = hazardRow({id: 'H_DIRECT', mode: 'direct', title: '安全问题', searchText: '安全问题'});
+  const conditional = hazardRow({id: 'H_CONDITIONAL', mode: 'conditional', title: '安全问题', searchText: '安全问题'});
+  assert.equal(searchHazards([conditional, direct], '安全', {}).at(0).id, 'H_DIRECT');
+  assert.equal(searchHazards([hazardRow({mode: '直接适用'})], '', {}).length, 1);
+});
+
+test('法规索引优先使用 displayLevel 筛选并兼容旧 level 字段', () => {
+  const laws = [
+    {id: 'L_A', name: 'A', aliases: [], level: '强制性国家标准', displayLevel: '国家标准', scope: '全国', status: '现行有效', searchText: 'a'},
+    {id: 'L_B', name: 'B', aliases: [], level: '行业标准', scope: '全国', status: '现行有效', searchText: 'b'},
+  ];
+  assert.deepEqual(searchLaws(laws, '', {displayLevel: '国家标准'}).map(x => x.id), ['L_A']);
+  assert.deepEqual(searchLaws([{...laws[1]}], '', {level: '行业标准'}).map(x => x.id), ['L_B']);
+});

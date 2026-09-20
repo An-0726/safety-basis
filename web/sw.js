@@ -1,6 +1,6 @@
 'use strict';
-const SHELL = 'safety-basis-shell-v6';
-const SHELL_FILES = ['./', './index.html', './library.html', './style.css', './library.css', './app.js',
+const SHELL = 'safety-basis-shell-v7';
+const SHELL_FILES = ['./', './index.html', './library.html', './style.css', './library.css', './stage3.css', './app.js',
   './js/store.js', './js/search.js', './js/library.js', './js/fulltext-search.js', './js/verified-files.js',
   './manifest.webmanifest', './icon.svg'];
 self.addEventListener('install', event => {
