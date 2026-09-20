@@ -1,22 +1,22 @@
 {
-  "checkedAt": "2026-09-11",
+  "checkedAt": "2026-09-21T00:30:00+08:00",
   "contextHashes": {
+    "hazard": "9b11c4ddd79376477b01df7920f0389f760dec4f6f0c5e8f04bb78d9f43ed810",
     "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
-    "hazard": "47f5b0721dad0dfa9a3063bab16b8a585e81339962e528d3798f7a6b3611d9fa",
-    "link": "27b53a090014505c76e813d7088cc70c814067f16ee805ac54a57b70fbdad5b1"
+    "link": "9aeaf82b5844b7e3744a10e8a807dced7440deacb0cd8a2c4a1d03b074731f18"
   },
-  "decision": "pending",
+  "decision": "verified",
   "entityId": "K_FIX_3B67F679C4_8",
   "entityType": "link",
   "evidenceRefs": [
     "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb"
   ],
-  "reason": "XF 1131-2014 第6.8条规定库房内堆放物品与楼板、照明灯、墙、柱之间的最小距离，对应本隐患“墙距、垛距、灯距、顶距”不符的情形，确认为 direct 依据。",
+  "reason": "XF 1131-2014第6.8条逐项规定库房堆垛与楼板/平屋顶、照明灯、墙、柱及相邻堆垛的最小距离，直接支持“五距”隐患。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED"
   ],
   "reviewType": "applicability",
-  "reviewedContentHash": "27b53a090014505c76e813d7088cc70c814067f16ee805ac54a57b70fbdad5b1",
-  "reviewer": "ZCode-DeepSeek",
+  "reviewedContentHash": "9aeaf82b5844b7e3744a10e8a807dced7440deacb0cd8a2c4a1d03b074731f18",
+  "reviewer": "ChatGPT / Engineering Audit",
   "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
 }

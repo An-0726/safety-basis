@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-19",
+  "asOf": "2026-09-21",
   "batch": "v4-final-20260910",
   "batches": [
     {
@@ -404,15 +404,26 @@
       "id": "audit-workbook-remediation-20260919",
       "selection": "全量审计工作簿基准修复：GB 50058独立建库、重大隐患条款原子化补齐、重复法规与演进关系物理去重、南京条例等条款官方条文全文写回、关联矩阵1886项核验映射、隐患描述措施反转纠正、草稿标记清理与发布门禁阻断清零。",
       "note": "消除已知P0错绑，门禁通过严格发布审计 (strictVerdict=PASS, 0 blockers)"
+    },
+    {
+      "id": "commerce-audit-remediation-20260921",
+      "lawsAdded": 1,
+      "lawVersionsAdded": 1,
+      "clausesAdded": 1,
+      "hazardsAdded": 2,
+      "hazardsMerged": 2,
+      "linksAdded": 1,
+      "evidenceAdded": 2,
+      "selection": "Engineering audit remediation: GB 14784-2013 conveyor emergency stop; cabinet-door duplicate merge; XF 1131-2014 five-distance direct link; extinguisher repair-certificate candidate boundary."
     }
   ],
   "counts": {
-    "laws": 103,
-    "lawVersions": 106,
-    "clauses": 2992,
-    "hazards": 2051,
-    "links": 1922,
-    "evidence": 1199,
+    "laws": 104,
+    "lawVersions": 107,
+    "clauses": 2993,
+    "hazards": 2053,
+    "links": 1923,
+    "evidence": 1201,
     "successions": 26,
     "requirements": 75
   },
@@ -423,19 +434,19 @@
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
   },
-  "laws": 103,
-  "lawVersions": 106,
-  "clauses": 2992,
-  "hazards": 2051,
-  "links": 1922,
-  "evidence": 1199,
+  "laws": 104,
+  "lawVersions": 107,
+  "clauses": 2993,
+  "hazards": 2053,
+  "links": 1923,
+  "evidence": 1201,
   "successions": 26,
-  "activeHazards": 1718,
-  "proposedHazards": 246,
-  "supersededHazards": 87,
+  "activeHazards": 1717,
+  "proposedHazards": 247,
+  "supersededHazards": 89,
   "lifecycle": {
-    "active": 1718,
-    "proposed": 246,
-    "superseded": 87
+    "active": 1717,
+    "proposed": 247,
+    "superseded": 89
   }
 }
