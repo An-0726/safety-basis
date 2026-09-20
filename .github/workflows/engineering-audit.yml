@@ -49,8 +49,17 @@ jobs:
           python tools/v4/validate_publication_integrity.py
       - name: Build isolated test bundle
         run: |
-          python tools/v4/build_unified_release.py --out "${RUNNER_TEMP}/engineering-audit/bundle" --as-of "$(date -u +%F)" --data-version "audit-${GITHUB_SHA}"
-          python tools/v4/verify_unified_bundle.py --bundle "${RUNNER_TEMP}/engineering-audit/bundle"
+          # Preserve the production verifier contract in this isolated checkout.
+          python tools/v4/build_unified_release.py --out source/releases/audit --as-of "$(date -u +%F)" --data-version "audit-${GITHUB_SHA}"
+          python - <<'PY_SELECTION'
+          import json
+          from pathlib import Path
+          release = json.loads(Path('source/releases/audit/release.json').read_text(encoding='utf-8'))
+          selection = {'schemaVersion': 'safety-site-selection-v1', 'bundle': 'audit', 'releaseHash': release['releaseHash']}
+          Path('source/releases/audit-selection.json').write_text(json.dumps(selection, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY_SELECTION
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/audit --selection source/releases/audit-selection.json
+          cp -a source/releases/audit "${RUNNER_TEMP}/engineering-audit/bundle"
       - name: Observe baseline browser defects
         run: |
           python tools/browser/audit_browser.py --bundle "${RUNNER_TEMP}/engineering-audit/bundle" --out "${RUNNER_TEMP}/engineering-audit/browser-local.json" --observe
