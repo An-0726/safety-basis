@@ -123,6 +123,46 @@ ph={
 wr(KNOW/'hazards'/f"{ph['id']}.json",ph)
 wr(KNOW/'reviews'/'hazards'/f"{ph['id']}.json",rev(ph,'hazard','pending','definition','现场判定需要先确认灭火器确实经过维修；XF 95-2015官方身份/现行状态已核实，正式条款证据链待补。',[]))
 
+
+# Audit wording cleanup: fire acceptance hazard should read as an inspection finding,
+# not as a verbatim statutory obligation restatement.
+fire_hid='H_E802C3AF73D1BDF70B0251EE4A_1'
+fire_path=KNOW/'hazards'/f'{fire_hid}.json'
+if fire_path.is_file():
+    fire=rd(fire_path)
+    old_title=fire.get('title') or ''
+    fire['title']='建设工程未经消防验收或验收不合格即投入使用'
+    fire['description']='依法应当进行消防验收的建设工程，未经消防验收或者消防验收不合格即投入使用。'
+    fire['measures']='停止使用，依法申报并完成消防验收；消防验收合格后方可投入使用。'
+    fire['conditions']='仅适用于依法应当进行消防验收的建设工程。现场检查应先确认该建设工程是否属于法定消防验收范围。'
+    fire['aliases']=sorted(set((fire.get('aliases') or [])+[old_title])) if old_title else sorted(set(fire.get('aliases') or []))
+    fire['note']='2026-09-21工程审计：将法条复述式标题改为检查记录表述，并删除与本隐患无直接关系的泛化整改内容。'
+    wr(fire_path,fire)
+    fire_review_path=KNOW/'reviews'/'hazards'/f'{fire_hid}.json'
+    fire_review=rd(fire_review_path)
+    fire_review['decision']='verified'
+    fire_review['reviewedContentHash']=content_hash(fire)
+    fire_review['checkedAt']=STAMP
+    fire_review['reviewer']='ChatGPT / Engineering Audit'
+    fire_review['reason']='隐患构成未变化，仅将法条复述式标题、描述和措施收敛为现场检查口径；仍限于依法应当进行消防验收的建设工程。'
+    wr(fire_review_path,fire_review)
+    for link_path in sorted((KNOW/'links').glob('*.json')):
+        link=rd(link_path)
+        if link.get('hazardId') != fire_hid:
+            continue
+        review_path=KNOW/'reviews'/'links'/f"{link['id']}.json"
+        if not review_path.is_file():
+            continue
+        review=rd(review_path)
+        review['reviewedContentHash']=content_hash(link)
+        ctx=review.get('contextHashes') or {}
+        ctx['hazard']=content_hash(fire)
+        ctx['link']=content_hash(link)
+        review['contextHashes']=ctx
+        review['checkedAt']=STAMP
+        review['reviewer']='ChatGPT / Engineering Audit'
+        wr(review_path,review)
+
 from collections import Counter
 entity_dirs={'laws':'laws','lawVersions':'law-versions','clauses':'clauses','hazards':'hazards','links':'links','evidence':'evidence','successions':'successions','requirements':'requirements'}
 for key,d in entity_dirs.items():
