@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**当前分支为 2026-09-21 工程级审计整改发布候选，尚未宣称线上已部署。** 本轮已经修改 `knowledge/`、`source/publication/`、发布门禁和网页路由，但保留 Stable ID 和历史记录。当前 checkout 的 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,680 active / 276 proposed / 97 superseded**。最终 QA 公开包为 **1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；GitHub Actions run `35525485280` 全绿。
+**2026-09-21 工程级审计整改已通过 PR #74 合并 `main` 并正式部署 GitHub Pages。** `knowledge/`、`source/publication/`、发布门禁和网页路由已完成本轮整改，Stable ID 和历史记录保持可追溯。当前 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,680 active / 276 proposed / 97 superseded**。正式公开包为 **1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，`releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；main Validate run `35525815957`、Build/Deploy/Online Verify run `35525815952` 全绿。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -38,7 +38,7 @@
 
 ## 2. 当前统计与工程审计最终 QA
 
-**LAST VERIFIED：2026-09-21（审计分支最终 QA 全绿；尚待合并 main、Pages 部署及线上复验）。**
+**LAST VERIFIED：2026-09-21（PR #74 已合并 main；main Validate / Build / Pages Deploy / Online Chromium Verify 全绿）。**
 
 当前 checkout 的 `knowledge/manifest.json` 报告以下源库存；它与公开包是不同统计层级：
 
@@ -52,15 +52,15 @@
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
    - 生命周期：**1,680 active / 276 proposed / 97 superseded**。
-2. **工程审计最终 QA 公开包（asOf=2026-09-21）**：
-   - **1,679 hazards**，public `proposed` 为 **0**；
-   - **58 laws / 58 law versions**；
-   - **1,302 clauses**；
-   - **1,788 links**；
+2. **当前正式公开包（asOf=2026-09-21）**：
+   - **1,680 hazards**，public `proposed` 为 **0**；
+   - **59 laws / 59 law versions**；
+   - **1,303 clauses**；
+   - **1,790 links**；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-   - QA `dataVersion=engineering-qa-d253138344f950d39827c6123a99f7a0fdedd94d`；
-   - QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
-3. **验证结果**：GitHub Actions run `35525485280` 中 Node/Python 测试、`validate_all`、strict release audit、publication integrity、comprehensive scanner、公开分类全量审计、统一包重建/验证和 Chromium 严格交互测试均 PASS；scanner 为 **0 ERROR / 1 WARNING**，唯一 WARNING 是已 superseded 的历史法条复述式标题，保留历史不改写。该结果仍是审计分支候选验收，不等于线上 `main` 已部署。
+   - `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；
+   - main merge commit=`d2384ea38e41b40a7cad6dc3b1f3acc5fc8aeee3`。
+3. **验证结果**：main Validate run `35525815957` PASS；Build/Deploy/Online Verify run `35525815952` PASS。部署后真实 Chromium 已对 1,680 hazards / 1,790 links / 59 laws 全量计数、搜索、筛选 URL、back/forward、hazard↔law、深链接、全文检索、upcoming 状态和 390px 移动端完成验收。
 
 公开发布架构已收口：
 

@@ -1,15 +1,15 @@
 # 2026-09-21 工程级审计与整改报告
 
-> 状态：审计分支发布候选已完成全量自动 QA；尚待通过 PR 合并 main、Pages 部署及线上复验。
+> 状态：已于 2026-09-21 通过 PR #74 合并 `main`；main `validate` / `build`、GitHub Pages 部署及部署后真实 Chromium 线上验收全部通过，现为正式上线版本。
 
 ## 一、总体结果
 
 - 审计分支：`audit/engineering-20260920`。
 - 最终知识库存：104 laws / 107 lawVersions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements。
 - 隐患生命周期：1,680 active / 276 proposed / 97 superseded。
-- 最终公开候选包：1,680 hazards / 59 laws / 59 lawVersions / 1,303 clauses / 1,790 links；public proposed=0。
-- 最终 QA releaseHash：`bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
-- Engineering QA run `35525485280`：自动门禁、comprehensive scanner、分类全量审计、统一包重建/验证、Chromium 桌面/移动端严格验收全部 PASS；scanner 0 ERROR / 1 WARNING。
+- 正式公开包：1,680 hazards / 59 laws / 59 lawVersions / 1,303 clauses / 1,790 links；public proposed=0。
+- 正式发布 releaseHash：`bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
+- 合并前当前 HEAD 的 Engineering QA run `35525735684` 全部 PASS；合并后 main Validate run `35525815957`、Build/Deploy/Online Verify run `35525815952` 全部 PASS。
 
 ## 二、主要问题
 
@@ -79,7 +79,7 @@
 - 保留当前简洁 UI，不做后台式重构。
 - 修复 filter 状态进入 URL、分享链接 reload、浏览器 back/forward、hazard-law 双向跳转。
 - 本地最终包 Chromium：desktop、mobile 390px、全量已发布 hazard/law/quote/count 校验全部 PASS。
-- 审计时线上站点仍为旧 main（1,716 hazards），因此线上 observed defect 仅作为部署前基线；必须在本 PR 合并并 Pages 部署后重新验收。
+- PR #74 合并后已完成真实线上 Chromium 复验：1,680 hazards / 1,790 links / 59 laws 全量计数一致；精确搜索、错别字模糊搜索、同义词搜索、空结果、分类/场所/地区分享链接 reload、浏览器 back/forward、hazard↔law 双向跳转、H004/未知 ID 深链接、法规全文检索、upcoming 状态、390px 手机端及 JavaScript 错误检查全部 PASS。
 
 ## 七、自动测试与门禁
 
@@ -92,6 +92,9 @@
 - 统一公开包 build + verify：PASS。
 - taxonomy 全量审计：PASS。
 - Chromium 严格本地验收：PASS。
+- main `validate`：PASS（run `35525815957`）。
+- main `build` + Pages `deploy` + 部署后 `online_verify`：PASS（run `35525815952`）。
+- 正式线上公开包：1,680 hazards / 59 laws / 59 lawVersions / 1,303 clauses / 1,790 links，public proposed=0。
 
 ## 八、仍无法确认的问题
 
@@ -101,16 +104,17 @@
 
 ## 九、Git 变更
 
-- 分支：`audit/engineering-20260920`。
-- 所有修改均通过普通 fast-forward 提交；未 force push、未重写历史。
+- 审计分支：`audit/engineering-20260920`；PR #74 `audit: complete 2026-09-21 engineering audit and remediation` 已合并。
+- main 合并提交：`d2384ea38e41b40a7cad6dc3b1f3acc5fc8aeee3`。
+- 所有修改均通过正常 PR / fast-forward 提交链完成；未 force push、未重写历史。
 - 旧 PR #71 已因与本轮全量审计结论冲突而关闭并留说明。
-- `main` 受 ruleset 保护：必须经 PR，required checks 为 `validate`、`build`。
+- `main` ruleset 要求 `validate`、`build`，本次均已通过。
 
 ## 十、耗时
 
 - 审计墙钟起点：2026-09-20 18:57（UTC+8，首个隔离工程审计 run）。
-- 分支最终候选 QA：2026-09-21 01:20（UTC+8）完成。
-- 墙钟约 6 小时 23 分钟；其中包含多次用户中断/恢复、GitHub Actions 排队与浏览器依赖安装。
+- 分支最终 QA：2026-09-21 01:25（UTC+8）通过；PR #74 合并于 01:25，Pages 部署及线上复验于约 01:26 完成。
+- 从首次隔离审计 run 到正式上线约 6 小时 29 分钟；其中包含多次用户中断/恢复、GitHub Actions 排队与浏览器依赖安装。
 - 主要阶段：仓库/网页基线约 1 小时；manifest/门禁与数据差额追踪约 1 小时；PR #70 + 商贸专项整改约 40 分钟；全库 QA、回归修复、清理与文档收口约 1 小时；其余时间为中断恢复及 CI/依赖等待。
 
-本报告记录的是合并前发布候选；合并 main、Pages 部署和线上复验结果将在部署完成后补写。
+本报告已补记正式部署结果：PR #74 已合并 main，Pages 部署与线上 Chromium 验收均已完成并通过。
