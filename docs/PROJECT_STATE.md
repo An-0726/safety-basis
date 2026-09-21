@@ -2,7 +2,7 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**2026-09-21 工程级审计整改已通过 PR #74 合并 `main` 并正式部署 GitHub Pages。** `knowledge/`、`source/publication/`、发布门禁和网页路由已完成本轮整改，Stable ID 和历史记录保持可追溯。当前 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,680 active / 276 proposed / 97 superseded**。正式公开包为 **1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，`releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；main Validate run `35525815957`、Build/Deploy/Online Verify run `35525815952` 全绿。
+**2026-09-21 工程级审计整改及商贸集团检查全量补库均已正式部署 GitHub Pages。** PR #76 对当前“商贸集团检查”文件夹 16 份检查记录执行全量补库：134 条来源事项实现 134/134 去向覆盖，已有 canonical 隐患复用，复合问题拆分，缺口新增为通用候选；不把企业名称、联系人、照片等原始企业资料写入知识库。当前 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,101 hazards / 1,924 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,681 active / 323 proposed / 97 superseded**。正式公开包为 **1,681 hazards / 59 laws / 59 law versions / 1,304 clauses / 1,791 links / public proposed 0**，`asOf=2026-09-21`，`releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；main Validate run `35553278277`、Build/Deploy/Online Verify run `35553278312` 全绿。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -36,9 +36,9 @@
 
 ---
 
-## 2. 当前统计与工程审计最终 QA
+## 2. 当前统计与正式部署状态
 
-**LAST VERIFIED：2026-09-21（PR #74 已合并 main；main Validate / Build / Pages Deploy / Online Chromium Verify 全绿）。**
+**LAST VERIFIED：2026-09-21（PR #76 已合并 main；商贸集团16份检查记录全量补库后，main Validate / Build / Pages Deploy / Online Chromium Verify 全绿）。**
 
 当前 checkout 的 `knowledge/manifest.json` 报告以下源库存；它与公开包是不同统计层级：
 
@@ -46,21 +46,21 @@
    - **104 个法规身份 (laws)**；
    - **107 个法规版本 (law-versions)**；
    - **2,993 条法规条款 (clauses)**；
-   - **2,053 个隐患实体 (hazards)**；
-   - **1,923 个关联 (links)**；
+   - **2,101 个隐患实体 (hazards)**；
+   - **1,924 个关联 (links)**；
    - **1,201 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
-   - 生命周期：**1,680 active / 276 proposed / 97 superseded**。
+   - 生命周期：**1,681 active / 323 proposed / 97 superseded**。
 2. **当前正式公开包（asOf=2026-09-21）**：
-   - **1,680 hazards**，public `proposed` 为 **0**；
+   - **1,681 hazards**，public `proposed` 为 **0**；
    - **59 laws / 59 law versions**；
-   - **1,303 clauses**；
-   - **1,790 links**；
+   - **1,304 clauses**；
+   - **1,791 links**；
    - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-   - `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；
-   - main merge commit=`d2384ea38e41b40a7cad6dc3b1f3acc5fc8aeee3`。
-3. **验证结果**：main Validate run `35525815957` PASS；Build/Deploy/Online Verify run `35525815952` PASS。部署后真实 Chromium 已对 1,680 hazards / 1,790 links / 59 laws 全量计数、搜索、筛选 URL、back/forward、hazard↔law、深链接、全文检索、upcoming 状态和 390px 移动端完成验收。
+   - `releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；
+   - main merge commit=`fdd973190e76d53b02a1cfaddea1c2b6af9dcdca`（PR #76）。
+3. **验证结果**：main Validate run `35553278277` PASS；Build/Deploy/Online Verify run `35553278312` PASS。部署后真实 Chromium 已对 1,681 hazards / 1,791 links / 59 laws 执行线上验收；商贸补库详细来源去向见 `docs/commerce-ingest-map-20260921.jsonl`。
 
 公开发布架构已收口：
 
