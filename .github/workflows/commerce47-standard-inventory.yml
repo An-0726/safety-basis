@@ -1,0 +1,20 @@
+name: Commerce standards inventory
+on:
+  push:
+    branches: [formalize/commerce-47-20260921]
+    paths:
+      - tools/audit/commerce47_standard_inventory.py
+      - .github/workflows/commerce47-standard-inventory.yml
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: formalize/commerce-47-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/audit/commerce47_standard_inventory.py
