@@ -1,0 +1,29 @@
+name: Commerce basis match audit
+on:
+  push:
+    branches: [audit/commerce-full-ingest-20260921]
+    paths:
+      - tools/audit/commerce_basis_match.py
+      - .github/workflows/commerce-basis-match.yml
+permissions:
+  contents: read
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/commerce-full-ingest-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          mkdir -p "${RUNNER_TEMP}/commerce-basis"
+          python tools/audit/commerce_basis_match.py --out "${RUNNER_TEMP}/commerce-basis/report.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: commerce-basis-match-report
+          path: ${{ runner.temp }}/commerce-basis/report.json
+          if-no-files-found: error
+          retention-days: 7
