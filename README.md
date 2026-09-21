@@ -57,21 +57,21 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
 
-2026-09-21 工程审计正式发布基线（`main` / GitHub Pages 已部署）：
+2026-09-21 工程审计 + 商贸集团检查全量补库正式发布基线（`main` / GitHub Pages 已部署）：
 
 ### 1. 当前正式公开包（Production Public Bundle）
 
-本轮已对仓库架构、数据账面、PR #70 批量隐患、商贸近期检查问题、发布门禁和网页路由执行工程级审计及整改。PR #74 已合并 `main`，当前 GitHub Pages 正式包结果为：
+工程审计后，PR #76 又对当前商贸集团检查文件夹 16 份 Word 进行全量补库，134 条来源事项 134/134 有知识库去向。已有 canonical 隐患直接复用，复合问题拆分，缺口新增通用候选；当前 GitHub Pages 正式包结果为：
 
-- **1,680 条公开隐患记录**；公开 `proposed` 候选为 **0**；
+- **1,681 条公开隐患记录**；公开 `proposed` 候选为 **0**；
 - **59 个法规身份 / 59 个法规版本**；
-- **1,303 条公开条款**；
-- **1,790 条公开关联**；
+- **1,304 条公开条款**；
+- **1,791 条公开关联**；
 - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
 - `asOf=2026-09-21`；
-- 正式 `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；
-- PR #74 merge commit=`d2384ea38e41b40a7cad6dc3b1f3acc5fc8aeee3`；
-- main Validate run `35525815957` PASS；Build/Pages Deploy/Online Chromium Verify run `35525815952` PASS。
+- 正式 `releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；
+- PR #76 merge commit=`fdd973190e76d53b02a1cfaddea1c2b6af9dcdca`；
+- main Validate run `35553278277` PASS；Build/Pages Deploy/Online Chromium Verify run `35553278312` PASS。
 
 部署后真实 Chromium 已验证搜索、模糊搜索、筛选分享 URL、浏览器前进后退、hazard↔law 双向跳转、H004/未知 ID 深链接、法规全文检索、upcoming 状态和 390px 手机端。
 
@@ -82,12 +82,12 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 - **104 个法规身份 (laws)**；
 - **107 个法规版本 (law-versions)**；
 - **2,993 条法规条款 (clauses)**；
-- **2,053 个隐患实体 (hazards)**；
-- **1,923 个关联 (links)**；
+- **2,101 个隐患实体 (hazards)**；
+- **1,924 个关联 (links)**；
 - **1,201 个官方证据卡 (evidence)**；
 - **75 条管理要求 (requirements)**；
 - **26 条替代演进关系 (successions)**；
-- 隐患生命周期：**1,680 active / 276 proposed / 97 superseded**。
+- 隐患生命周期：**1,681 active / 323 proposed / 97 superseded**。
 
 知识源库存、公开包和历史批次是不同统计层级；当前账面以实际 manifest 和最终 QA 生成包为准，历史数字仅保留在明确标注的历史阶段记录中。
 
