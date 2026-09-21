@@ -1,0 +1,26 @@
+name: Commerce 47 exact basis scan
+on:
+  push:
+    branches: [formalize/commerce-47-20260921]
+    paths:
+      - tools/audit/commerce47_exact_basis.py
+      - tools/audit/commerce47_legacy_basis.json
+      - .github/workflows/commerce47-exact-basis.yml
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: formalize/commerce-47-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/audit/commerce47_exact_basis.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: commerce47-exact-basis
+          path: /tmp/commerce47-exact.json
+          retention-days: 7
