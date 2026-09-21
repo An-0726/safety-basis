@@ -1,0 +1,25 @@
+name: Hazard summary export
+on:
+  push:
+    branches: [audit/commerce-full-ingest-20260921]
+    paths:
+      - tools/audit/export_hazard_summary.py
+      - .github/workflows/export-hazard-summary.yml
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/commerce-full-ingest-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/audit/export_hazard_summary.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hazard-summary
+          path: /tmp/hazard-summary.json
+          retention-days: 7
