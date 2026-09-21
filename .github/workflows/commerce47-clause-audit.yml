@@ -1,0 +1,26 @@
+name: Commerce 47 clause audit
+on:
+  push:
+    branches: [audit/commerce-promote-47-20260921]
+    paths:
+      - tools/audit/commerce47_clause_match.py
+      - .github/workflows/commerce47-clause-audit.yml
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/commerce-promote-47-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/audit/commerce47_clause_match.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: commerce47-clause-match
+          path: /tmp/commerce47-clause-match.json
+          retention-days: 7
