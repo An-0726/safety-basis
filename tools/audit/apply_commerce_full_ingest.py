@@ -22,8 +22,7 @@ byid={x["candidateId"]:x for x in cand["items"]}
 theme_by_sc={}
 for hid,t in THEMES.items():
     for sc in t["scs"]:
-        if sc in theme_by_sc: raise SystemExit("candidate in multiple themes: "+sc)
-        theme_by_sc[sc]=hid
+        theme_by_sc.setdefault(sc,[]).append(hid)
 all_ids=set(byid)
 covered=set(EXISTING)|set(theme_by_sc)
 if all_ids!=covered:
@@ -71,7 +70,7 @@ rows=[]
 for sc in sorted(all_ids,key=lambda x:int(x[2:])):
     c=byid[sc]
     targets=list(EXISTING.get(sc,[]))
-    if sc in theme_by_sc: targets.append(theme_by_sc[sc])
+    if sc in theme_by_sc: targets.extend(theme_by_sc[sc])
     mapped=[]
     for target in targets:
         hz=rd(K/"hazards"/(target+".json"))
