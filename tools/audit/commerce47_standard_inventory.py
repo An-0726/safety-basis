@@ -15,7 +15,7 @@ for t in TARGETS:
     nt=norm(t); matches=[]
     for lv in lvs.values():
         n=norm(lv.get("documentNumber"))
-        if n and (nt==n or nt in n or n in nt):
+        if n and (nt==n or (len(n)>=8 and len(nt)>=8 and (nt in n or n in nt))):
             law=laws.get(lv.get("lawId"),{})
             rows=sorted(bylv.get(lv["id"],[]),key=lambda x:str(x.get("articlePath","")))
             matches.append({"lawVersionId":lv["id"],"documentNumber":lv.get("documentNumber"),"validityStatus":lv.get("validityStatus"),
