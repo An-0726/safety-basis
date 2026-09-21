@@ -57,11 +57,11 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
 
-2026-09-21 当前工程审计候选基线（审计分支，待合并部署）：
+2026-09-21 工程审计正式发布基线（`main` / GitHub Pages 已部署）：
 
-### 1. 工程审计最终 QA 公开包（Final QA Public Bundle）
+### 1. 当前正式公开包（Production Public Bundle）
 
-本轮已对仓库架构、数据账面、PR #70 批量隐患、商贸近期检查问题、发布门禁和网页路由执行工程级审计及整改。审计分支最终 QA 重新从当前 `knowledge + source/publication + web` 构建公开包，结果为：
+本轮已对仓库架构、数据账面、PR #70 批量隐患、商贸近期检查问题、发布门禁和网页路由执行工程级审计及整改。PR #74 已合并 `main`，当前 GitHub Pages 正式包结果为：
 
 - **1,680 条公开隐患记录**；公开 `proposed` 候选为 **0**；
 - **59 个法规身份 / 59 个法规版本**；
@@ -69,11 +69,11 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 - **1,790 条公开关联**；
 - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
 - `asOf=2026-09-21`；
-- QA 基线 `dataVersion=engineering-qa-d253138344f950d39827c6123a99f7a0fdedd94d`；
-- QA 基线 `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；
-- GitHub Actions 最终 QA run `35525485280`：自动门禁、全库 scanner、分类全量审计、构建验证和 Chromium 严格交互测试全部通过。
+- 正式 `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`；
+- PR #74 merge commit=`d2384ea38e41b40a7cad6dc3b1f3acc5fc8aeee3`；
+- main Validate run `35525815957` PASS；Build/Pages Deploy/Online Chromium Verify run `35525815952` PASS。
 
-该包是审计分支的发布候选验收结果；在本分支合并 `main` 且 Pages 部署完成前，不把它表述为线上正式版本。
+部署后真实 Chromium 已验证搜索、模糊搜索、筛选分享 URL、浏览器前进后退、hazard↔law 双向跳转、H004/未知 ID 深链接、法规全文检索、upcoming 状态和 390px 手机端。
 
 ### 2. 全库知识源清单（Knowledge Manifest）
 
