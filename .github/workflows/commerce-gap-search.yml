@@ -1,0 +1,25 @@
+name: Commerce gap lexical audit
+on:
+  push:
+    branches: [audit/commerce-full-ingest-20260921]
+    paths:
+      - tools/audit/commerce_gap_search.py
+      - .github/workflows/commerce-gap-search.yml
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/commerce-full-ingest-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/audit/commerce_gap_search.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: commerce-gap-search
+          path: /tmp/commerce-gap-search.json
+          retention-days: 7
