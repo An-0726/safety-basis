@@ -1,0 +1,27 @@
+name: Commerce 47 source snapshot
+on:
+  push:
+    branches: [fix/commerce47-formal-20260921]
+    paths: [.github/workflows/commerce47-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Archive exact source and baseline
+        run: |
+          mkdir -p "${RUNNER_TEMP}/commerce47"
+          git status --porcelain=v1 > "${RUNNER_TEMP}/commerce47/git-status.txt"
+          git rev-parse HEAD > "${RUNNER_TEMP}/commerce47/source-commit.txt"
+          git archive --format=zip -o "${RUNNER_TEMP}/commerce47/source.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: commerce47-source
+          path: ${{ runner.temp }}/commerce47
+          retention-days: 7
+          if-no-files-found: error
