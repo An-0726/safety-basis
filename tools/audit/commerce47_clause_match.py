@@ -41,7 +41,7 @@ for h in sorted(targets,key=lambda x:x["id"]):
         if not q: continue
         lv=lvs.get(c.get("lawVersionId"),{})
         status=lv.get("validityStatus")
-        if status not in (None,"current","现行有效","现行使用中"):
+        if status not in (None,"active","current","现行有效","现行使用中"):
             continue
         ctext=" ".join([c.get("articlePath",""),q])
         base=0.62*jac(grams(htext),grams(ctext))+0.38*SequenceMatcher(None,norm(h.get("title")),norm(q[:100])).ratio()
