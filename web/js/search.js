@@ -5,7 +5,6 @@ export const normalize = value => String(value ?? '').normalize('NFKC').toLowerC
   .replace(/\s+/g,' ').trim();
 
 
-const allTermsMatch = (text,terms) => terms.every(t=>text.includes(t));
 
 const displayCategoryOf = row => row.displayCategory ?? row.category ?? '';
 const displayLevelsOf = row => Array.isArray(row.displayLevels) ? row.displayLevels : (row.levels || []);
@@ -133,7 +132,7 @@ const SYNONYM_GROUPS = [
 ];
 // 领域词汇词典（用于无空格中文复合查询切词）
 const VOCAB_SET = new Set(SYNONYM_GROUPS.flat());
-for (const w of ["规范","规程","标准","要求","未设置","缺失","损坏","故障","装置","设施","标志","标识","合格","有效"]) {
+for (const w of ["灭火器","培训","失压","规范","规程","标准","要求","未设置","缺失","损坏","故障","装置","设施","标志","标识","合格","有效"]) {
   VOCAB_SET.add(w);
 }
 const SORTED_VOCAB = Array.from(VOCAB_SET).sort((a, b) => b.length - a.length);
@@ -176,38 +175,36 @@ const variantsOf = term => {
   }
   return [term];
 };
-// 返回 2=原词命中，1=同义变体命中，0.5=二元切词多数命中（弱召回），
-// 0.25=单字符错字容错（单字符通配），0=未命中。
-// 二元切词兜底解决中文整句无空格查询（如“配电房警示标志”）拆不出词导致的 0 命中。
-const gramsOf = term => {
-  const chars = Array.from(term);
-  return chars.length < 3 ? [] : [...new Set(chars.slice(0, -1).map((c, i) => c + chars[i + 1]))];
+// 正确的领域词不能对正文做单字通配或散落字片匹配：
+// “安全员”不能因为正文有“安全阀/安全出口”就命中。
+const termsMatch = (text, groups) => groups.every(variants=>variants.some(t=>text.includes(t)));
+
+// 只为词典外的中文词提供单字替换或相邻错序纠正；歧义时不猜。
+// 在当前筛选范围内完全没有原词/同义词结果时，才启用纠正查询。
+const isTypoOf = (term, word) => {
+  if(!/^[\u4e00-\u9fff]{3,}$/.test(term) || term.length!==word.length) return false;
+  const differences=[];
+  for(let i=0;i<term.length;i++) if(term[i]!==word[i]) differences.push(i);
+  if(differences.length===1) return true;
+  if(differences.length!==2) return false;
+  const [a,b]=differences;
+  return b===a+1 && term[a]===word[b] && term[b]===word[a];
 };
-const gramsMatch = (text, term) => {
-  const grams = gramsOf(term);
-  if (!grams.length) return false;
-  const hit = grams.filter(g => text.includes(g)).length;
-  return hit >= Math.ceil(grams.length * 0.75);
+const correctedTerm = term => {
+  if(VOCAB_SET.has(term)) return term;
+  const candidates=SORTED_VOCAB.filter(word=>isTypoOf(term,word));
+  return candidates.length===1 ? candidates[0] : term;
 };
-const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-// 单字符错字容错：把查询词的某一位置替换为通配符（灭活器→/灭.器/ 等），
-// 仅在原词、同义变体、二元切词全部未命中时作为最弱召回使用。
-const fuzzyRe = term => {
-  const chars = Array.from(term);
-  if (chars.length < 3) return null;
-  const parts = chars.map((c, i) => chars.map((x, j) => (j === i ? '.' : escapeRe(x))).join(''));
-  try { return new RegExp(parts.join('|')); } catch { return null; }
+const matchingRows = (rows, terms) => {
+  if(!terms.length) return {rows,terms};
+  const groups=terms.map(variantsOf);
+  const exact=rows.filter(r=>termsMatch(r.searchText,groups));
+  if(exact.length) return {rows:exact,terms};
+  const corrected=terms.map(correctedTerm);
+  if(corrected.every((t,i)=>t===terms[i])) return {rows:[],terms};
+  const correctedGroups=corrected.map(variantsOf);
+  return {rows:rows.filter(r=>termsMatch(r.searchText,correctedGroups)),terms:corrected};
 };
-const tokenMatch = (text, term) => {
-  if (text.includes(term)) return 2;
-  for (const v of variantsOf(term)) {
-    if (v !== term && text.includes(v)) return 1;
-  }
-  if (gramsMatch(text, term)) return 0.5;
-  const re = fuzzyRe(term);
-  return re && re.test(text) ? 0.25 : 0;
-};
-const termsMatch = (text,terms) => terms.every(t=>tokenMatch(text,t)>0);
 
 const scopeMatch = (scopes, region) => !region || scopes.some(x => region==='全国' ? x==='全国' : x.includes(region));
 
@@ -250,11 +247,13 @@ export function searchHazards(rows, query, filters={}) {
     if(filters.region && !scopeMatch(r.scopes,filters.region)) continue;
     if(!modeMatches(r,filters.mode)) continue;
     if(filters.status && r.status!==filters.status) continue;
-    if(terms.length && !termsMatch(r.searchText,terms)) continue;
-    out.push({row:r,score:hazardScore(r,q,terms)});
+    out.push(r);
   }
-  out.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
-  return out.map(x=>x.row);
+  const matched=matchingRows(out,terms);
+  const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
+  const scored=matched.rows.map(row=>({row,score:hazardScore(row,rankingQuery,matched.terms)}));
+  scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
+  return scored.map(x=>x.row);
 }
 
 const lawScore=(r,q,terms)=>{
@@ -284,9 +283,11 @@ export function searchLaws(rows, query, filters={}) {
     if(filters.displayLevel && (r.displayLevel??r.level)!==filters.displayLevel) continue;
     if(filters.region && !scopeMatch([r.scope],filters.region)) continue;
     if(filters.status && r.status!==filters.status) continue;
-    if(terms.length && !termsMatch(r.searchText,terms)) continue;
-    out.push({row:r,score:lawScore(r,q,terms)});
+    out.push(r);
   }
-  out.sort((a,b)=>b.score-a.score || a.row.name.localeCompare(b.row.name,'zh-CN'));
-  return out.map(x=>x.row);
+  const matched=matchingRows(out,terms);
+  const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
+  const scored=matched.rows.map(row=>({row,score:lawScore(row,rankingQuery,matched.terms)}));
+  scored.sort((a,b)=>b.score-a.score || a.row.name.localeCompare(b.row.name,'zh-CN'));
+  return scored.map(x=>x.row);
 }
