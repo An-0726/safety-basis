@@ -2,7 +2,9 @@
 
 本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
 
-**2026-09-21 工程级审计整改及商贸集团检查全量补库均已正式部署 GitHub Pages。** PR #76 对当前“商贸集团检查”文件夹 16 份检查记录执行全量补库：134 条来源事项实现 134/134 去向覆盖，已有 canonical 隐患复用，复合问题拆分，缺口新增为通用候选；不把企业名称、联系人、照片等原始企业资料写入知识库。当前 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,101 hazards / 1,924 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,681 active / 323 proposed / 97 superseded**。正式公开包为 **1,681 hazards / 59 laws / 59 law versions / 1,304 clauses / 1,791 links / public proposed 0**，`asOf=2026-09-21`，`releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；main Validate run `35553278277`、Build/Deploy/Online Verify run `35553278312` 全绿。
+**2026-09-23 法规反查补库批次已完成本地核验。** GB 46768-2025 新增 16 条正式隐患并对 7 条既有隐患补充 8 条关联；GB 15607-2023 将 2 条已存在候选收紧适用范围后转正，另新增 1 条正式隐患。现有 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,118 hazards / 1,951 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,700 active / 321 proposed / 97 superseded**。本地按 `asOf=2026-09-23` 构建并核验的正式包为 **1,700 hazards / 60 law versions / 1,330 clauses / 1,818 links / public proposed 0**。逐条边界、剩余缺口和条文截断问题见 [隐患库法规反查与首批补录](HAZARD_COVERAGE_AUDIT_20260923.md)。本段不代表公网已更新。
+
+**2026-09-21 工程级审计整改及商贸集团检查全量补库均已正式部署 GitHub Pages。** PR #76 对当前“商贸集团检查”文件夹 16 份检查记录执行全量补库：134 条来源事项实现 134/134 去向覆盖，已有 canonical 隐患复用，复合问题拆分，缺口新增为通用候选；不把企业名称、联系人、照片等原始企业资料写入知识库。当时 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,101 hazards / 1,924 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,681 active / 323 proposed / 97 superseded**。正式公开包为 **1,681 hazards / 59 laws / 59 law versions / 1,304 clauses / 1,791 links / public proposed 0**，`asOf=2026-09-21`，`releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；main Validate run `35553278277`、Build/Deploy/Online Verify run `35553278312` 全绿。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
