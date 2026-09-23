@@ -50,6 +50,7 @@ MODEL = "deterministic local build"
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
+               "js/search-vocabulary.js",
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
 
 REGION = {"CN": "全国", "CN-32": "江苏", "CN-3201": "南京"}
