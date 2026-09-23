@@ -54,6 +54,12 @@
 
 该门禁只读，不修改 `knowledge/`、publication、SQLite 或 archive；任何失败都必须先调查真实不一致，不能通过修改业务数据“凑通过”。Validate 与实际 Pages Build 两条长期 workflow 都必须执行此门禁。
 
+## 站内检索词库维护
+
+`web/js/search-vocabulary.js` 是公开站隐患与法规检索的词库。`EQUIVALENT_GROUPS` 只放可以互查的名称、简称和口语写法；`RELATED_GROUPS` 放相近但不等同的设备或概念，仅在原词及同义词均无结果时回退；`SEGMENT_TERMS` 用于拆解没有空格的中文组合查询。新增词先用库内标题、别名或实际失败查询确认用途，并为召回和不应命中的结果补充 `tests/search.test.mjs` 用例。不得把相反状态、不同法规身份或不同技术要求合并成同义词。
+
+词库只影响查找，不创建隐患、法规、条款或正式关联；没有已核验条目的词可能仍显示零结果。新增前端模块时，同步维护发布包的 `SITE_ASSETS` 清单与 `web/sw.js` 离线缓存清单。
+
 ## 正式发布构建
 
 `source/releases/current/` 与 `source/releases/site-selection.json` 都是**生成物并已 Git 忽略**。不要提交、不要手改、不要拿旧快照做输入。

@@ -32,6 +32,7 @@ SELECTION = os.path.join(ROOT, "source", "releases", "site-selection.json")
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
+               "js/search-vocabulary.js",
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
 COVER_EXCLUDE = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
 
