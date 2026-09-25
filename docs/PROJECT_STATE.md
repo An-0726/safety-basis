@@ -1,10 +1,12 @@
 # 项目阶段状态与恢复计划
 
-本文件保留截至 2026-09-14 的业务核验记录，并补记 2026-09-16 至 2026-09-19 的各项里程碑。历史统计数字仍按对应阶段记录；不得将历史阶段数字冒充当前发布结果。
+本文件保留历史阶段业务核验记录；历史统计数字只代表对应阶段，不得冒充当前发布结果。
 
-**2026-09-23 法规反查补库批次已完成本地核验。** GB 46768-2025 新增 16 条正式隐患并对 7 条既有隐患补充 8 条关联；GB 15607-2023 将 2 条已存在候选收紧适用范围后转正，另新增 1 条正式隐患。现有 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,118 hazards / 1,951 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,700 active / 321 proposed / 97 superseded**。本地按 `asOf=2026-09-23` 构建并核验的正式包为 **1,700 hazards / 60 law versions / 1,330 clauses / 1,818 links / public proposed 0**。逐条边界、剩余缺口和条文截断问题见 [隐患库法规反查与首批补录](HAZARD_COVERAGE_AUDIT_20260923.md)。本段不代表公网已更新。
+**CURRENT VERIFIED：2026-09-26，已部署公网并完成真实 Chromium 线上验收。** PR #80 完成 2026 云盘现场问题首批定向补库；PR #81 将法规效力判断使用的 `asOf` 日历日期统一为 `Asia/Shanghai`（中国标准时间），消除 UTC 日期在中国实施日当天最多 8 小时的滞后。当前 `main` head 为 `7231cd24c9a971123c44f972537e528fa855469a`。
 
-**2026-09-21 工程级审计整改及商贸集团检查全量补库均已正式部署 GitHub Pages。** PR #76 对当前“商贸集团检查”文件夹 16 份检查记录执行全量补库：134 条来源事项实现 134/134 去向覆盖，已有 canonical 隐患复用，复合问题拆分，缺口新增为通用候选；不把企业名称、联系人、照片等原始企业资料写入知识库。当时 `knowledge/manifest.json` 为 **104 laws / 107 law versions / 2,993 clauses / 2,101 hazards / 1,924 links / 1,201 evidence / 26 successions / 75 requirements**，生命周期为 **1,681 active / 323 proposed / 97 superseded**。正式公开包为 **1,681 hazards / 59 laws / 59 law versions / 1,304 clauses / 1,791 links / public proposed 0**，`asOf=2026-09-21`，`releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；main Validate run `35553278277`、Build/Deploy/Online Verify run `35553278312` 全绿。
+当前 `knowledge/manifest.json` 为 **105 laws / 108 law versions / 2,996 clauses / 2,121 hazards / 1,955 links / 1,202 evidence / 26 successions / 75 requirements**，生命周期 **1,704 active / 320 proposed / 97 superseded**。正式公开包 `asOf=2026-09-26` 为 **1,704 hazards / 61 laws / 61 law versions / 1,333 clauses / 1,822 links / public proposed 0**，`releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`。main Validate run `36169948637`、Build/Pages Deploy/Online Verify run `36169948666` 全部成功；线上 Chromium 实际计数与构建期预期完全一致。
+
+本轮云盘筛查及隐患补库审计见 [2026 云盘现场隐患补库审计](DRIVE_HAZARD_INGEST_20260926.md)。最新安全现状评价报告 110 项检查均为“符合”，未把预防性建议伪造成现场隐患；已正式化 4 个重复出现且直接依据闭环的高频问题。legacy `.xls` 打分表与既有 1,929 条目标集的来源差异仍待单独核对，未在未确认差异前重复灌库。
 
 ## 1. ULTIMATE GOAL — 最终目标
 
@@ -40,30 +42,31 @@
 
 ## 2. 当前统计与正式部署状态
 
-**LAST VERIFIED：2026-09-23（PR #79 已合并 main；对应 Validate / Build / Pages Deploy / Online Verify 全绿）。**
+**LAST VERIFIED：2026-09-26（PR #80 数据补库 + PR #81 China-time asOf 均已合并 main；Validate / Build / Pages Deploy / Online Verify 全绿）。**
 
 当前 checkout 的 `knowledge/manifest.json` 与已部署公开包分别为：
 
 1. **全库知识源库存（Knowledge Manifest）**：
-   - **104 个法规身份 (laws)**；
-   - **107 个法规版本 (law-versions)**；
-   - **2,993 条法规条款 (clauses)**；
-   - **2,118 个隐患实体 (hazards)**；
-   - **1,951 个关联 (links)**；
-   - **1,201 个官方证据卡 (evidence)**；
+   - **105 个法规身份 (laws)**；
+   - **108 个法规版本 (law-versions)**；
+   - **2,996 条法规条款 (clauses)**；
+   - **2,121 个隐患实体 (hazards)**；
+   - **1,955 个关联 (links)**；
+   - **1,202 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
-   - 生命周期：**1,700 active / 321 proposed / 97 superseded**。
-2. **当前正式公开包（asOf=2026-09-23）**：
-   - **1,700 hazards**，public `proposed` 为 **0**；
-   - **60 laws / 60 law versions**；
-   - **1,330 clauses**；
-   - **1,818 links**；
-   - `releaseHash=e90426307506851ca35c2980bcc81ba6c1c7b35df8adf3c64cde64cd8d5e7276`；
-   - main merge commit=`5e914ae82e9ead0eac7f0e64383556c16fdc556c`（PR #79）。
-3. **验证结果**：main Validate run `35852503379` PASS；Build/Deploy/Online Verify run `35852503526` PASS。Online Verify 实际核对 **1,700 hazards / 60 laws / 60 lawVersions / 1,330 clauses / 1,818 links**，与构建输出一致。
+   - 生命周期：**1,704 active / 320 proposed / 97 superseded**。
+2. **当前正式公开包（asOf=2026-09-26）**：
+   - **1,704 hazards**，public `proposed` 为 **0**；
+   - **61 laws / 61 law versions**；
+   - **1,333 clauses**；
+   - **1,822 links**；
+   - `releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`；
+   - 当前 main head=`7231cd24c9a971123c44f972537e528fa855469a`。
+3. **验证结果**：main Validate run `36169948637` PASS；Build/Deploy/Online Verify run `36169948666` PASS。Online Verify 实际核对 **1,704 hazards / 61 laws / 61 lawVersions / 1,333 clauses / 1,822 links**，无 JavaScript 未处理错误，桌面/390px 手机端及检索、深链接、双向法规跳转均通过。
 
 公开发布架构已收口：
+
 
 
 - `knowledge/` 是唯一正式结构化知识源；
@@ -359,20 +362,25 @@ PR #40 checks 全绿后已合并 `main`；main Validate/Build/Deploy 全部 succ
 
 ## 6. CURRENT PHASE — 当前阶段
 
-**2026-09-21 工程级审计整改发布候选已完成分支级最终 QA，待 PR 合并、main CI/Pages 部署和线上复验。** 本轮已经直接修复确定的数据/关联/网页问题；证据不足的 SDS、实验室酒精和灭火器维修合格证等事项保留候选边界，没有为凑发布数量强行转正。
+**长期维护模式，2026 云盘现场隐患覆盖审计继续进行。** 2026-09-26 首批高频问题已正式部署：安全标志褪色、变配电室防小动物、安全出口/疏散指示灯具失效、消防控制室专用电话故障。直接依据、review hash、publication 1:1 投影、fresh build、Pages 和线上 Chromium 均已闭环。
 
-当前源库存以 `knowledge/manifest.json` 为准：**104 laws / 107 law versions / 2,993 clauses / 2,053 hazards / 1,923 links / 1,201 evidence / 26 successions / 75 requirements**；生命周期为 **1,680 active / 276 proposed / 97 superseded**。
-当前最终 QA 公开包为：**1,680 hazards / 59 laws / 59 law versions / 1,303 clauses / 1,790 links / public proposed 0**，`asOf=2026-09-21`，QA `releaseHash=bf2418ce9d28737813a62fc2b3f7a51b552b4fba4106121452b0183a3323d5bc`。
+当前源库存以 `knowledge/manifest.json` 为准：**105 laws / 108 law versions / 2,996 clauses / 2,121 hazards / 1,955 links / 1,202 evidence / 26 successions / 75 requirements**；生命周期 **1,704 active / 320 proposed / 97 superseded**。
 
-本地私有母库状态核实：
-- 母库文件：`source/library/fulltext.sqlite3`（文件大小 106,958,848 bytes，SHA-256=`4ef901054478a8299cc8180f7b8de78c85baae677f94a828bcaab70a2677467f`，mtime(UTC)=`2026-09-17T10:11:19.831234+00:00`）；
-- `documents=171`，`fulltext_fts=215,464`，`integrity_check=["ok"]`；
-- 各项指标与纯净备份完全一致。
+当前正式公开包：**1,704 hazards / 61 laws / 61 law versions / 1,333 clauses / 1,822 links / public proposed 0**，`asOf=2026-09-26`，`releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`。
+
+本轮没有把企业报告、照片、联系人、签字等私有资料提交 Git；只把去企业化后的通用隐患和权威证据链纳管。
 
 ---
 
 ## 7. NEXT ACTION — 下一动作
 
-> **下一动作：将本工程审计候选通过 PR 合并至 `main`，等待 main Validate / Build / Pages Deploy 全绿后，对实际线上站点重新执行浏览器/HTTP 验收并回写最终部署状态。**
+> **下一动作：继续做 2026 真实现场资料 → canonical 隐患覆盖差异审计，优先处理高频现场问题且必须有完整直接依据；不以“尚未关联的条款数量”作为补隐患目标。**
 
-本轮部署验收完成后重新进入长期维护模式。后续仅在满足 [MAINTENANCE.md](MAINTENANCE.md) 的明确触发条件时开启针对性维护批次，并继续遵循“本地母库优先、官方网络权威来源补齐”的证据规则。
+具体顺序：
+
+1. 对已确认属于 2026 的富鼎、云阳、达达、皖维、龙亢、闽乐及商贸检查问题继续与全库 active/proposed 去重；
+2. 单独核对 7–9 月 legacy `.xls` 标准化打分表与既有 1,929 条目标集的来源重叠，确认真实差异后再补库；
+3. 已有 canonical 隐患优先复用；proposed 只有在现行版本、完整原文、authoritative evidence 和适用性全部闭环时转正；
+4. 继续关注此前明确的 GB 46768-2025 剩余条款、GB 15607-2023 截断条文等问题，但不把“未关联条款”直接等价为“缺少隐患”。
+
+每个维护批次仍执行 Validate → strict gate → publication integrity → fresh build → verify → Pages → online acceptance 全链闭环。
