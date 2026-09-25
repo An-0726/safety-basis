@@ -59,38 +59,45 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 ### 1. 当前正式公开包（Production Public Bundle）
 
-**当前线上基线为 2026-09-23。** 在 2026-09-21 商贸集团 16 份检查记录全量补库基础上，2026-09-23 又完成 GB 46768-2025《有限空间作业安全技术规范》和 GB 15607-2023《涂装作业安全规程 粉末静电喷涂工艺安全》的法规反查补库；merge commit `5e914ae82e9ead0eac7f0e64383556c16fdc556c` 对应的 Validate、Build、Pages Deploy 和 Online Verify 均已成功。
+**当前线上基线为 2026-09-26。** PR #80 完成 2026 云盘现场问题首批定向补库，PR #81 将 CI/正式发布的 `asOf` 日历日期统一为 `Asia/Shanghai`（中国标准时间）；当前 `main` 包含 merge commit `7231cd24c9a971123c44f972537e528fa855469a`。
 
 当前 GitHub Pages 正式包为：
 
-- **1,700 条公开隐患记录**；公开 `proposed` 候选为 **0**；
-- **60 个法规身份 / 60 个法规版本**；
-- **1,330 条公开条款**；
-- **1,818 条公开关联**；
-- `asOf=2026-09-23`；
-- `releaseHash=e90426307506851ca35c2980bcc81ba6c1c7b35df8adf3c64cde64cd8d5e7276`；
-- main Validate run `35852503379` PASS；
-- Build / Pages Deploy / Online Verify run `35852503526` PASS。
+- **1,704 条公开隐患记录**；公开 `proposed` 候选为 **0**；
+- **61 个法规身份 / 61 个法规版本**；
+- **1,333 条公开条款**；
+- **1,822 条公开关联**；
+- `asOf=2026-09-26`；
+- `releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`；
+- main Validate run `36169948637` PASS；
+- Build / Pages Deploy / Online Verify run `36169948666` PASS。
 
-线上 Chromium 验证确认发布站实际读取 **1,700 hazards / 60 laws / 60 lawVersions / 1,330 clauses / 1,818 links**，与构建期预期一致。
+线上真实 Chromium 验证确认发布站实际读取 **1,704 hazards / 61 laws / 61 lawVersions / 1,333 clauses / 1,822 links**，与构建期预期一致。
+
+本轮新增/转正的 4 个高频现场问题为：
+
+- `H_COM_SIGN_FADED`：安全警示标志褪色、污损或辨识度不足，由 proposed 转 active，直接依据 GB 2894-2025 第7.4.1条；
+- `H_ELECTRICAL_ROOM_SMALL_ANIMAL_PROTECTION`：变配电室缺少防止蛇、鼠等小动物进入的设施，直接依据 GB 50053-2013 第6.2.4条；
+- `H_EXIT_SIGN_LAMP_FAULT`：安全出口或疏散指示标志灯具损坏、不能正常指示，先以《消防法》第十六条第一款第（二）项形成直接法定义务；
+- `H_FIRE_CONTROL_PHONE_FAULT`：消防控制室消防专用电话总机或专用通信功能失效，直接依据 GB 55036-2022 第12.0.10条。
 
 ### 2. 全库知识源清单（Knowledge Manifest）
 
 当前 `knowledge/manifest.json` 报告：
 
-- **104 个法规身份 (laws)**；
-- **107 个法规版本 (law-versions)**；
-- **2,993 条法规条款 (clauses)**；
-- **2,118 个隐患实体 (hazards)**；
-- **1,951 个关联 (links)**；
-- **1,201 个官方证据卡 (evidence)**；
+- **105 个法规身份 (laws)**；
+- **108 个法规版本 (law-versions)**；
+- **2,996 条法规条款 (clauses)**；
+- **2,121 个隐患实体 (hazards)**；
+- **1,955 个关联 (links)**；
+- **1,202 个官方证据卡 (evidence)**；
 - **75 条管理要求 (requirements)**；
 - **26 条替代演进关系 (successions)**；
-- 隐患生命周期：**1,700 active / 321 proposed / 97 superseded**。
+- 隐患生命周期：**1,704 active / 320 proposed / 97 superseded**。
 
-其中 2026-09-21 的商贸集团检查全量补库仍是重要历史里程碑：16 份 Word、134 条来源事项实现 134/134 去向覆盖；2026-09-23 的法规反查又新增/转正有限空间与粉末静电喷涂相关正式隐患并补充直接关联。
+2026 云盘资料筛查中，最新的南京明生医药安全现状评价报告 7 个评价单元共 110 项均为“符合”，报告明确未列需限期整改的不符合项，因此未把预防性建议伪造成现场隐患。历史商贸集团 16 份 Word / 134 条来源事项仍保持 134/134 去向覆盖；2026-09-20 粮库急停、五距等事项此前工程审计已处理，不重复造 ID。
 
-知识源库存、公开包和历史批次是不同统计层级；当前账面以实际 manifest、对应 main commit 和最终 QA 生成包为准，历史数字仅保留在明确标注的历史阶段记录中。
+知识源库存、公开包和历史批次是不同统计层级；当前账面以实际 manifest、对应 `main`、CI fresh build 和线上 Chromium 结果为准，历史数字仅保留在明确标注的历史阶段记录中。
 
 ## 三、法规身份、版本、来源必须分开
 
@@ -139,11 +146,12 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 当前知识源、公开包和目标集不是同一个数字：
 
-- 当前 `knowledge/manifest.json`（2026-09-23 main）：104 laws / 107 lawVersions / 2,993 clauses / **2,118 hazards** / **1,951 links** / 1,201 evidence / 26 successions / 75 requirements；生命周期 **1,700 active / 321 proposed / 97 superseded**；
-- 当前正式公开包（`asOf=2026-09-23`）：**1,700 hazards / 60 laws / 60 lawVersions / 1,330 clauses / 1,818 links / public proposed 0**，`releaseHash=e90426307506851ca35c2980bcc81ba6c1c7b35df8adf3c64cde64cd8d5e7276`；
+- 当前 `knowledge/manifest.json`（2026-09-26 main）：105 laws / 108 lawVersions / 2,996 clauses / **2,121 hazards** / **1,955 links** / 1,202 evidence / 26 successions / 75 requirements；生命周期 **1,704 active / 320 proposed / 97 superseded**；
+- 当前正式公开包（`asOf=2026-09-26`）：**1,704 hazards / 61 laws / 61 lawVersions / 1,333 clauses / 1,822 links / public proposed 0**，`releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`；
 - 新版 Excel 目标集：1,929 个唯一隐患 ID（621 条修订、1,308 条保留），它不是正式发布数量；
+- 2026 云盘 legacy `.xls` 打分表仍需做与既有 1,929 目标集的来源差异审计；在差异确认前不得重复导入；
 - 私有全文母库统计属于另一层级，具体以 `docs/PROJECT_STATE.md` 中有证据的本地核验记录为准；
-- 历史批次中的“1250”“1502”“1680”“1681”等数字只保留为历史记录，不作为当前公开包统计。
+- 历史批次中的“1250”“1502”“1680”“1681”“1700”等数字只保留为历史记录，不作为当前公开包统计。
 
 报告数量时必须同时写明来源文件、`asOf` / `dataVersion` 和是否为知识库存或正式发布包；不能把不同层级相加或互相替代。
 
