@@ -33,8 +33,9 @@ jobs:
         shell: bash
         run: |
           rm -rf source/releases/current source/releases/site-selection.json
-          DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}.validate"
-          python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
+          BUILD_DATE="$(TZ=Asia/Shanghai date +%F)"
+          DATA_VERSION="$(TZ=Asia/Shanghai date +%Y.%m.%d).${GITHUB_SHA::12}.validate"
+          python tools/v4/build_unified_release.py --out source/releases/current --as-of "${BUILD_DATE}" --data-version "${DATA_VERSION}"
           python - <<'PY'
           import json
           from pathlib import Path
