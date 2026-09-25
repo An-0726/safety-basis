@@ -40,31 +40,31 @@
 
 ## 2. 当前统计与正式部署状态
 
-**LAST VERIFIED：2026-09-21（PR #76 已合并 main；商贸集团16份检查记录全量补库后，main Validate / Build / Pages Deploy / Online Chromium Verify 全绿）。**
+**LAST VERIFIED：2026-09-23（PR #79 已合并 main；对应 Validate / Build / Pages Deploy / Online Verify 全绿）。**
 
-当前 checkout 的 `knowledge/manifest.json` 报告以下源库存；它与公开包是不同统计层级：
+当前 checkout 的 `knowledge/manifest.json` 与已部署公开包分别为：
 
 1. **全库知识源库存（Knowledge Manifest）**：
    - **104 个法规身份 (laws)**；
    - **107 个法规版本 (law-versions)**；
    - **2,993 条法规条款 (clauses)**；
-   - **2,101 个隐患实体 (hazards)**；
-   - **1,924 个关联 (links)**；
+   - **2,118 个隐患实体 (hazards)**；
+   - **1,951 个关联 (links)**；
    - **1,201 个官方证据卡 (evidence)**；
    - **75 条管理要求 (requirements)**；
    - **26 条替代演进关系 (successions)**；
-   - 生命周期：**1,681 active / 323 proposed / 97 superseded**。
-2. **当前正式公开包（asOf=2026-09-21）**：
-   - **1,681 hazards**，public `proposed` 为 **0**；
-   - **59 laws / 59 law versions**；
-   - **1,304 clauses**；
-   - **1,791 links**；
-   - **69 个 canonical 来源关系**（11 份获准公开全文 + 58 个官方链接入口）；
-   - `releaseHash=c69264f35bb6e046692b60f1833d1d808c7c764bc56b6f626c17e771770902e3`；
-   - main merge commit=`fdd973190e76d53b02a1cfaddea1c2b6af9dcdca`（PR #76）。
-3. **验证结果**：main Validate run `35553278277` PASS；Build/Deploy/Online Verify run `35553278312` PASS。部署后真实 Chromium 已对 1,681 hazards / 1,791 links / 59 laws 执行线上验收；商贸补库详细来源去向见 `docs/commerce-ingest-map-20260921.jsonl`。
+   - 生命周期：**1,700 active / 321 proposed / 97 superseded**。
+2. **当前正式公开包（asOf=2026-09-23）**：
+   - **1,700 hazards**，public `proposed` 为 **0**；
+   - **60 laws / 60 law versions**；
+   - **1,330 clauses**；
+   - **1,818 links**；
+   - `releaseHash=e90426307506851ca35c2980bcc81ba6c1c7b35df8adf3c64cde64cd8d5e7276`；
+   - main merge commit=`5e914ae82e9ead0eac7f0e64383556c16fdc556c`（PR #79）。
+3. **验证结果**：main Validate run `35852503379` PASS；Build/Deploy/Online Verify run `35852503526` PASS。Online Verify 实际核对 **1,700 hazards / 60 laws / 60 lawVersions / 1,330 clauses / 1,818 links**，与构建输出一致。
 
 公开发布架构已收口：
+
 
 - `knowledge/` 是唯一正式结构化知识源；
 - `source/publication/` 只承担题录、官方入口和获准全文，不创造第二套正式法规身份；
