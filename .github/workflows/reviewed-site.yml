@@ -36,8 +36,9 @@ jobs:
           python tools/v4/strict_release_audit.py
           python tools/v4/validate_publication_integrity.py
           rm -rf source/releases/current
-          DATA_VERSION="$(date -u +%Y.%m.%d).${GITHUB_SHA::12}"
-          python tools/v4/build_unified_release.py --out source/releases/current --as-of "$(date -u +%F)" --data-version "${DATA_VERSION}"
+          BUILD_DATE="$(TZ=Asia/Shanghai date +%F)"
+          DATA_VERSION="$(TZ=Asia/Shanghai date +%Y.%m.%d).${GITHUB_SHA::12}"
+          python tools/v4/build_unified_release.py --out source/releases/current --as-of "${BUILD_DATE}" --data-version "${DATA_VERSION}"
           python - <<'PY'
           import json
           from pathlib import Path
