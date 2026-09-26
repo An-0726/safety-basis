@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H_EC527E40… 为不能通过一个开关迅速中断若干个能造成危险的运动单元；GB 5083-2023 第5.6.6.1条列举应配置急停装置的四种情形，其中『不能通过一个停止装置快速中断若干个能造成危险的单元』与本条事实逐字对应，确认为 direct 依据。",
+  "reviewer": "Codex 本地原件逐条纠错 20260926",
+  "checkedAt": "2026-09-26T17:21:38+08:00",
+  "reason": "逐项复核本次更正条款原文与隐患原定义对应；重绑实际上下文哈希。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "SPECIFIC_TECHNICAL_STANDARD",
@@ -14,9 +14,9 @@
   "reviewedContentHash": "9aac76076ab31045ecc9560b407e6d2d08eb14abded990b71d518f6d51b0ad64",
   "contextHashes": {
     "hazard": "d00ec61a7a812ccd8ce1f534c5767bbe3d953067532fdb3421e7b9e750a583d9",
-    "clause": "78de8a1e24b0906f433d7d3985f69b466eb50dd9fa90316a5a5b82f5a9a3502d",
-    "link": "9aac76076ab31045ecc9560b407e6d2d08eb14abded990b71d518f6d51b0ad64"
+    "clause": "e299593e3e5b1ece79ec38c91ec4a759fef1423666fc825bbac107b36408185b"
   },
-  "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "evidenceRefs": [
+    "E_GB5083_2023_LOCAL_ORIGINAL_20260926"
+  ]
 }
