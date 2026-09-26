@@ -58,21 +58,23 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
 
 <!-- CURRENT_STATE_BEGIN -->
-## 当前统一状态（2026-09-26，本维护增量待远端验收）
+## 当前统一状态（2026-09-26，已部署的受控增量；全量任务未完成）
 
 `knowledge/manifest.json`：**107 laws / 110 law versions / 3,000 clauses / 2,127 hazards / 1,959 links / 1,209 evidence / 26 successions / 75 requirements**；生命周期 **1,706 active / 324 proposed / 97 superseded**。
 
-本分支已验证本地公开包 `releaseHash=13479ca8932aef06fddc53b8f3685f175c4db01c4a7dade95b0b230379fd95a7`。本地 Gate 构建的公开范围：**1,706 hazards / 62 laws / 62 law versions / 1,336 clauses / 1,825 links / public proposed 0**，`asOf=2026-09-26`。这不是本增量已经公网部署的声明；本批 PR、main Actions、Pages 与 Online Verify 必须在部署后另行记录。
+正式网站已验收：**1,706 hazards / 62 laws / 62 law versions / 1,336 clauses / 1,825 links / public proposed 0**，`asOf=2026-09-26`；`releaseHash=b434abeed503709615bade08ce3b43e02802e9be7cc9d983b68b7565e856b3bc`。该哈希来自实际公网`release.json`及`data/manifest.json`交叉核验，不是仅本地构建值。
 
-最近实际核实的旧线上快照：main `72fd38489a54e8797da4a757690c1ab9f241b040`（PR #82），Validate `36170580281` 与 Build/Pages/Online Verify `36170580283` 均成功；旧公开包 **1,704 hazards / 61 laws / 61 law versions / 1,333 clauses / 1,822 links**，`releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`。旧数据/构建规则提交 `7231cd24c9a971123c44f972537e528fa855469a` 与本次核验的 main 快照不是同一个概念。
+可追溯验收锚点：知识增量PR #83合并`520023209c9329cf76ffb5fdc24728163e56f84d`；确定性构建修复PR #84合并`eceaf9cfa45b02b469620e3d938b9f105dd93606`；对应main Validate `36210224851`及Build/Pages/Online Verify `36210224805`全部成功，真实Chromium浏览器17项通过、0项失败。公网直接核验时间：`2026-09-26T10:02:49+08:00`。状态文档后续提交不冒充新的业务数据提交，也不将上述验收锚点误称为永不变化的当前main。完整凭证见`docs/ONLINE_VERIFY_20260926_FIELD_INCREMENT.json`。
 
-本批新增 **6 个隐患实体（1 active、5 proposed）**，另将既有气瓶防倾倒候选 **1 条转正**；新增 **2 laws / 2 versions / 4 clauses / 4 links / 7 evidence**。供应方说明书义务不替代使用单位义务；一般报警故障不自动认定为重大事故隐患。
+本批新增**6个隐患实体（1 active、5 proposed）**，另将既有气瓶防倾倒候选**1条转正**；新增**2 laws / 2 versions / 4 clauses / 4 links / 7 evidence**。叉车钥匙条款和关联仍待原页证据复核；供应方说明书义务不替代使用单位义务，一般报警故障不自动认定为重大事故隐患。
 
-2026 全量项目任务**尚未完成**：已登记 **43 份来源载体**、形成 **782 条原始记录行**；其中 **45 条完成细分处置**、**12 条排除**、**725 条仍待逐条审核**。45 条形成 55 项处置记录，已定位 **39 个不同 canonical 实体**（既有 active 13、既有 proposed 17、沿 superseded/mergedInto 归并 3、真缺口 6）；另有 6 个细分事项待事实或依据核实。该39个不是782条记录的最终去重数，计数分类不重复相加。
+2026全量项目任务**尚未完成**：已登记**43份来源载体**（40份有2026正文或同项目正文关联、2份日期待核、1份归属冲突），形成**782条原始记录行**；其中**45条完成细分处置、12条排除、725条待逐条审核**。45条形成55项处置，已定位**39个不同canonical实体**（既有active 13、既有proposed 17、沿superseded/mergedInto归并3、真缺口6）；另有6个细分事项待事实或依据核实。39不是782行的最终去重数，43也不是独立项目数或全盘扫描完成证明。
 
-来源纠错：某审阅稿“110项符合”附有预填且未经现场核实说明，不能作为现场零隐患证明；某原始评分表与另一来源70条描述完全相同，已隔离归属冲突；往年事实、正向表述却扣分、纯照片镜像、未见标志不等于未检等均不直接转为现场隐患。源文件未渲染、未生成预览、未转换格式。
+来源纠错：审阅稿110项符合带有预填且未经现场核实说明，不能证明现场零隐患；某评分表与另一来源70条描述完全相同，已隔离归属冲突；往年事实、正向表述却扣分、纯照片镜像、未见标志不等于未检等均不直接转为现场隐患。原文件未渲染、未生成预览、未转换格式。
 
-审计与恢复：[FIELD_SOURCE_AUDIT_20260926](docs/FIELD_SOURCE_AUDIT_20260926.md)，机器计数见 `docs/field-source-progress-20260926.json`，逐项去向见 `docs/field-source-disposition-20260926.jsonl`。私有源文件标识、原始文本及企业/个人信息不进入 GitHub。
+技术验收：71项前端测试、55项流水线测试通过；严格发布审计0阻断、140项库存告警，不能据此宣称全库无质量问题。实体发现顺序反转及不同Python哈希种子的两次构建，数据文件逐字节一致；跨环境依据排序和条款分片导致的哈希漂移已修复。
+
+恢复入口：`docs/FIELD_SOURCE_AUDIT_20260926.md`、`docs/field-source-progress-20260926.json`、`docs/field-source-disposition-20260926.jsonl`。私有源文件标识、原始文本、企业及个人信息不进入GitHub。此前日期、数量、提交和发布哈希均仅为各自历史阶段数据，不覆盖本块当前业务统计。
 <!-- CURRENT_STATE_END -->
 
 ## 三、法规身份、版本、来源必须分开
