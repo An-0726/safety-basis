@@ -13,21 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          ref: 72fd38489a54e8797da4a757690c1ab9f241b040
-          persist-credentials: false
-      - name: Archive only tracked public repository files at the verified baseline
+          python-version: '3.12'
+      - name: Download hash-pinned read-only legacy workbook parser
         shell: bash
         run: |
-          test "$(git rev-parse HEAD)" = "72fd38489a54e8797da4a757690c1ab9f241b040"
-          git archive --format=tar.gz --output="${RUNNER_TEMP}/safety-basis-baseline-72fd384.tar.gz" HEAD
-          sha256sum "${RUNNER_TEMP}/safety-basis-baseline-72fd384.tar.gz" > "${RUNNER_TEMP}/source-snapshot.sha256"
+          mkdir -p "${RUNNER_TEMP}/audit-reader"
+          python -m pip download --no-deps --only-binary=:all: --index-url https://pypi.org/simple xlrd==2.0.2 --dest "${RUNNER_TEMP}/audit-reader"
+          cd "${RUNNER_TEMP}/audit-reader"
+          echo 'ea762c3d29f4cca48d82df517b6d89fbce4db3107f9d78713e48cd321d5c9aa9  xlrd-2.0.2-py2.py3-none-any.whl' | sha256sum --check
       - uses: actions/upload-artifact@v4
         with:
-          name: safety-basis-source-snapshot-72fd384
-          path: |
-            ${{ runner.temp }}/safety-basis-baseline-72fd384.tar.gz
-            ${{ runner.temp }}/source-snapshot.sha256
+          name: legacy-workbook-reader-xlrd-2.0.2
+          path: ${{ runner.temp }}/audit-reader/*.whl
           if-no-files-found: error
           retention-days: 3
