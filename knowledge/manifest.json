@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-26",
-  "batch": "explosion-electrical-original-20260926",
+  "batch": "factory-office-obligations-20260926",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -625,20 +625,27 @@
       "proposedMerged": 1,
       "clausesCorrected": 3,
       "evidenceAdded": 1
+    },
+    {
+      "id": "factory-office-obligations-20260926",
+      "hazardsAdded": 2,
+      "clausesAdded": 1,
+      "linksAdded": 2,
+      "evidenceAdded": 0
     }
   ],
   "counts": {
     "laws": 109,
     "lawVersions": 112,
-    "clauses": 3010,
-    "hazards": 2128,
-    "links": 1968,
+    "clauses": 3011,
+    "hazards": 2130,
+    "links": 1970,
     "evidence": 1233,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
-  "migrationPhase": "2026-09-26：725条原始记录已逐项阅读拆分895项，包含条件复用与待核；正式版本补查及二次审核继续。已上线PR92为1667正式，本批变更待发布。",
+  "migrationPhase": "2026-09-26：725行已逐项阅读拆分899项，另141行补查拆167项；含条件复用及待核。PR93已上线核验1661正式；本批补丙类厂房辅助用房两个具体缺口，来源版本及手写证据继续核查。",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
@@ -646,16 +653,16 @@
   },
   "laws": 109,
   "lawVersions": 112,
-  "clauses": 3010,
-  "hazards": 2128,
-  "links": 1968,
+  "clauses": 3011,
+  "hazards": 2130,
+  "links": 1970,
   "evidence": 1233,
   "successions": 26,
-  "activeHazards": 1661,
+  "activeHazards": 1663,
   "proposedHazards": 354,
   "supersededHazards": 113,
   "lifecycle": {
-    "active": 1661,
+    "active": 1663,
     "proposed": 354,
     "superseded": 113
   }
