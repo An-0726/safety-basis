@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "checkedAt": "2026-09-11T10:30:00+08:00",
-  "reason": "已移除原GB 50054-2011第6.1.1条错配，改绑GB 50303-2015第5.1.12条第1项；条款对象、适用范围与隐患事实直接一致。",
+  "reviewer": "Codex 原文及适用性审计 20260926",
+  "checkedAt": "2026-09-26T19:47:46+08:00",
+  "reason": "完整原文及适用对象纠正；候选或历史关联保持原决定。",
   "reasonCodes": [
     "REPLACE_CLAUSE",
     "DIRECT_MATCH",
@@ -13,10 +13,10 @@
   ],
   "reviewedContentHash": "d0901ebd964155207f36d53e36b67bae82c7c3da40d8808b0713c233138aa467",
   "contextHashes": {
-    "hazard": "81b467f0177a8d5a53a810b66e15d58dc3c3b281bfac9b28171a193e1c2c07c7",
-    "clause": "59e2f7a4209a617bc488560ac6fc50a41373cf3d88ff5a9c2fafd638ae820837",
-    "link": "d0901ebd964155207f36d53e36b67bae82c7c3da40d8808b0713c233138aa467"
+    "hazard": "126200099e4e8f512c870f3e86691e9a90faf3ff1c2fffc663d9df9f321f8963",
+    "clause": "f72ca2f8ddac7d644f6634b49302bda2bcfa2430334dbda9ed88bdb77d2669c0"
   },
-  "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "evidenceRefs": [
+    "E_GB50303_2015"
+  ]
 }

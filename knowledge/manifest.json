@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-26",
-  "batch": "risk-archive-duplicate-20260926",
+  "batch": "explosion-electrical-original-20260926",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -585,20 +585,60 @@
       "proposedMerged": 1,
       "evidenceAdded": 1,
       "clausesCorrected": 2
+    },
+    {
+      "id": "core-law-fragments-20260926",
+      "hazardsAdded": 0,
+      "clausesCorrected": 10,
+      "hazardScopesCorrected": 2,
+      "evidenceAdded": 1
+    },
+    {
+      "id": "electrical-quote-scope-20260926",
+      "hazardsAdded": 0,
+      "clausesCorrected": 4,
+      "hazardScopesCorrected": 1
+    },
+    {
+      "id": "signs-pump-scope-20260926",
+      "hazardsAdded": 1,
+      "hazardsWithdrawn": 2,
+      "hazardsMerged": 1,
+      "clausesAdded": 1,
+      "clausesCorrected": 1,
+      "evidenceAdded": 1,
+      "linksAdded": 1
+    },
+    {
+      "id": "gbt13869-official-original-20260926",
+      "hazardsAdded": 0,
+      "hazardsPromoted": 1,
+      "clausesCorrected": 9,
+      "clausesAdded": 1,
+      "linksAdded": 1,
+      "evidenceAdded": 1
+    },
+    {
+      "id": "explosion-electrical-original-20260926",
+      "hazardsAdded": 0,
+      "hazardsWithdrawn": 5,
+      "proposedMerged": 1,
+      "clausesCorrected": 3,
+      "evidenceAdded": 1
     }
   ],
   "counts": {
     "laws": 109,
     "lawVersions": 112,
-    "clauses": 3008,
-    "hazards": 2127,
-    "links": 1966,
-    "evidence": 1229,
+    "clauses": 3010,
+    "hazards": 2128,
+    "links": 1968,
+    "evidence": 1233,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
-  "migrationPhase": "2026-09-26：PR91消防纠错已部署1670条；续审责任制及风险管理，339行细审，剩余386行及本地正式版本核查继续。",
+  "migrationPhase": "2026-09-26：725条原始记录已逐项阅读拆分895项，包含条件复用与待核；正式版本补查及二次审核继续。已上线PR92为1667正式，本批变更待发布。",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
@@ -606,17 +646,17 @@
   },
   "laws": 109,
   "lawVersions": 112,
-  "clauses": 3008,
-  "hazards": 2127,
-  "links": 1966,
-  "evidence": 1229,
+  "clauses": 3010,
+  "hazards": 2128,
+  "links": 1968,
+  "evidence": 1233,
   "successions": 26,
-  "activeHazards": 1667,
-  "proposedHazards": 349,
-  "supersededHazards": 111,
+  "activeHazards": 1661,
+  "proposedHazards": 354,
+  "supersededHazards": 113,
   "lifecycle": {
-    "active": 1667,
-    "proposed": 349,
-    "superseded": 111
+    "active": 1661,
+    "proposed": 354,
+    "superseded": 113
   }
 }
