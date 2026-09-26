@@ -1,0 +1,100 @@
+{
+  "verifiedAt": "2026-09-26T20:33:18+08:00",
+  "site": "https://an-0726.github.io/safety-basis/",
+  "pr": "https://github.com/An-0726/safety-basis/pull/93",
+  "mergeCommit": "250f251ea581195a37645601acb47a945418e8b5",
+  "releaseHash": "e2ba94be3a4e896910438999b40e983e73081766bf3eaf2437a5eb66b47ae01d",
+  "counts": {
+    "hazards": 1661,
+    "laws": 67,
+    "lawVersions": 67,
+    "clauses": 1340,
+    "links": 1796
+  },
+  "candidateHazardsInKnowledge": 354,
+  "publicProposalHazards": 0,
+  "verifiedFiles": [
+    {
+      "path": "data/clauses/c0000.json",
+      "sha256": "a17af3ddfef2c2bd42781ac9abd08f1994a947b9a75ac90e21b25f6a13300b9c"
+    },
+    {
+      "path": "data/clauses/c0001.json",
+      "sha256": "54f085b24bd2e4288e8b21a008e2e18fe97536664ec0014eac5d3b4d660a34c8"
+    },
+    {
+      "path": "data/clauses/c0002.json",
+      "sha256": "b346beb1ae603de5a88e104ad7e789ade7ed2b05867e2d92413d807720c03f24"
+    },
+    {
+      "path": "data/clauses/c0003.json",
+      "sha256": "9d69c5af148807f8c264ae673a20510923510de1a015c7650a766759533bd8a0"
+    },
+    {
+      "path": "data/clauses/c0004.json",
+      "sha256": "362c8520c46aa51fac7b71d61e94c5e4af28791aa6304ff4ba691840708e4395"
+    },
+    {
+      "path": "data/clauses/c0005.json",
+      "sha256": "c86b947b0fe974ad45d27f7e1b2b0c86b59309c5877c60365d2a11db7a6ba97e"
+    },
+    {
+      "path": "data/clauses/c0006.json",
+      "sha256": "ecb91d9d413fc672aa11a0b86cbbaf917f1fa426dc9921c2b7c8a632dc6ab878"
+    },
+    {
+      "path": "data/hazards/h0000.json",
+      "sha256": "9953b293f80ea9c69a80860564b4074a0192fda589aabafbaa69e3e4b4b0ef17"
+    },
+    {
+      "path": "data/hazards/h0001.json",
+      "sha256": "99119b885a9dd2d949524a804bbf0b3be3098801abf2c44d59d20a6018236b60"
+    },
+    {
+      "path": "data/hazards/h0002.json",
+      "sha256": "ff9661edb8b64660c5135e3d4b1267254dd00bea9dbb3ba5f4e5c72ef3578a18"
+    },
+    {
+      "path": "data/hazards/h0003.json",
+      "sha256": "a6fd56ac119f699734b5d79bfdf28f7eff98dacf05742b8aa69a0622b02800f5"
+    },
+    {
+      "path": "data/hazards/h0004.json",
+      "sha256": "4eb892f26e49c4c534cca7938ca44aacf2568f43298fde0fe70e204138b38674"
+    },
+    {
+      "path": "data/hazards/h0005.json",
+      "sha256": "0e0e89c2fe3c5fa200025990645f3224c7fc95f1c9bec3cdda0371bb3dfb5a89"
+    },
+    {
+      "path": "data/hazards/h0006.json",
+      "sha256": "0d010581d674588cbbabee3a131fc42cffb46832d16cb362aabce9664d1bfcdf"
+    },
+    {
+      "path": "data/hazards/h0007.json",
+      "sha256": "b8675c4911abe372ac1343b67fe9b455d9cacdaa87af680eb6d9ecc8f02212a7"
+    },
+    {
+      "path": "data/hazards/h0008.json",
+      "sha256": "5ea884840c120f48d382d55cb0b942fb89389b233872d6bb21f7c99b09113e58"
+    }
+  ],
+  "semanticChecks": [
+    "seven withdrawn IDs absent",
+    "one merged active and one merged proposed ID absent",
+    "fire pump and child socket IDs present",
+    "pump automatic-ready wording",
+    "child accessibility boundary",
+    "electrical EPL table and dangerous zone prerequisites"
+  ],
+  "wholeTaskComplete": false,
+  "successfulWorkflows": [
+    36242193845,
+    36242193967
+  ],
+  "workflowJobs": {
+    "build": "success",
+    "deploy": "success",
+    "online_verify": "success"
+  }
+}
