@@ -1,0 +1,33 @@
+name: Temporary 2026 ingestion source snapshot
+
+on:
+  push:
+    branches: [maintenance/20260926-project-ingest]
+    paths: [.github/workflows/ingest-audit-snapshot-20260926.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 72fd38489a54e8797da4a757690c1ab9f241b040
+          persist-credentials: false
+      - name: Archive only tracked public repository files at the verified baseline
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD)" = "72fd38489a54e8797da4a757690c1ab9f241b040"
+          git archive --format=tar.gz --output="${RUNNER_TEMP}/safety-basis-baseline-72fd384.tar.gz" HEAD
+          sha256sum "${RUNNER_TEMP}/safety-basis-baseline-72fd384.tar.gz" > "${RUNNER_TEMP}/source-snapshot.sha256"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: safety-basis-source-snapshot-72fd384
+          path: |
+            ${{ runner.temp }}/safety-basis-baseline-72fd384.tar.gz
+            ${{ runner.temp }}/source-snapshot.sha256
+          if-no-files-found: error
+          retention-days: 3
