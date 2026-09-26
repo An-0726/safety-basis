@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H_86746E9D… 为设备因意外起动危及人身安全时未配置具有强制作用的安全防护装置；GB 5083-2023 第5.6.4.2条逐字对应（该条承继原 GB 5083-1999 第5.6.3.2条），确认为 direct 依据。",
+  "reviewer": "Codex 本地原件逐条纠错 20260926",
+  "checkedAt": "2026-09-26T17:21:38+08:00",
+  "reason": "逐项复核本次更正条款原文与隐患原定义对应；重绑实际上下文哈希。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "SPECIFIC_TECHNICAL_STANDARD",
@@ -14,9 +14,9 @@
   "reviewedContentHash": "4309854109ee8fde776d861e18f42670463c306a88ca553b63e78b161287fe41",
   "contextHashes": {
     "hazard": "aa843316d16c9b2275e3d26bcf21a3a144aa8fb656d2f9ee21e04fecdcaaecf8",
-    "clause": "acde4080ebc8df027c3e3aa1c61099f4e7e7ceadd9fc7366a2fdbd5b8d0c4666",
-    "link": "4309854109ee8fde776d861e18f42670463c306a88ca553b63e78b161287fe41"
+    "clause": "19b4a076e3613c07fb14f51e4e25d03d94ffba14b8d6f76860ed3500379ecc79"
   },
-  "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "evidenceRefs": [
+    "E_GB5083_2023_LOCAL_ORIGINAL_20260926"
+  ]
 }
