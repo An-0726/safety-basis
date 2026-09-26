@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-26",
-  "batch": "field-source-original-audit-20260926",
+  "batch": "grinder-catalog-supplement-20260926",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -492,31 +492,41 @@
       "hazardsReturnedToCandidate": 9,
       "clausesRechecked": 14,
       "selection": "本地原件核GB5083-2023，撤回错误引文和不适用关联，复用既有实体，不新增重复隐患。"
+    },
+    {
+      "id": "grinder-catalog-supplement-20260926",
+      "hazardsAdded": 0,
+      "lawsAdded": 1,
+      "lawVersionsAdded": 1,
+      "clausesAdded": 1,
+      "linksAdded": 1,
+      "evidenceAdded": 2,
+      "selection": "无除尘砂轮机来源统一复用H024，补官方目录具体项目与适用限制。"
     }
   ],
   "counts": {
-    "laws": 107,
-    "lawVersions": 110,
-    "clauses": 3000,
+    "laws": 108,
+    "lawVersions": 111,
+    "clauses": 3001,
     "hazards": 2127,
-    "links": 1959,
-    "evidence": 1212,
+    "links": 1960,
+    "evidence": 1214,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
-  "migrationPhase": "Long-term maintenance: dated baseline main 72fd38489a54e8797da4a757690c1ab9f241b040 was verified with Validate 36170580281 and Build/Pages/Online Verify 36170580283. This branch adds a curated increment from actual 2026 records; broader source extraction and pending adjudication are not claimed complete. Deployment of this increment must be verified separately.",
-  "scope": "Knowledge inventory: 107 laws / 110 lawVersions / 3000 clauses / 2127 hazards / 1959 links / 1209 evidence / 26 successions / 75 requirements; lifecycle 1706 active / 324 proposed / 97 superseded. Public counts are Gate-generated; proposed and unresolved field facts do not enter the official site.",
+  "migrationPhase": "2026-09-26：PR88纠错已经上线；本批继续来源去重及直接依据核验。725行全量审核尚未完成，不把初审或已部署增量当作全量完成。",
+  "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
   },
-  "laws": 107,
-  "lawVersions": 110,
-  "clauses": 3000,
+  "laws": 108,
+  "lawVersions": 111,
+  "clauses": 3001,
   "hazards": 2127,
-  "links": 1959,
-  "evidence": 1212,
+  "links": 1960,
+  "evidence": 1214,
   "successions": 26,
   "activeHazards": 1695,
   "proposedHazards": 331,
