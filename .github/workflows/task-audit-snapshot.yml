@@ -1,0 +1,32 @@
+name: Temporary task audit snapshot
+
+on:
+  push:
+    branches: [maintenance/20260926-full-source-audit]
+    paths: [.github/workflows/task-audit-snapshot.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 72fd38489a54e8797da4a757690c1ab9f241b040
+          persist-credentials: false
+      - name: Archive public tracked source only
+        shell: bash
+        run: |
+          mkdir -p "${RUNNER_TEMP}/task-audit-source"
+          git archive --format=zip HEAD -o "${RUNNER_TEMP}/task-audit-source/tracked-source-72fd384.zip"
+          git rev-parse HEAD > "${RUNNER_TEMP}/task-audit-source/source-commit.txt"
+          sha256sum "${RUNNER_TEMP}/task-audit-source/tracked-source-72fd384.zip" > "${RUNNER_TEMP}/task-audit-source/SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: task-audit-tracked-source-72fd384
+          path: ${{ runner.temp }}/task-audit-source/
+          if-no-files-found: error
+          retention-days: 1
