@@ -46,7 +46,8 @@ def main():
     # 法规/标准 -> 期望的 evidence 官方来源域名（精确 host / 子域名判定）。
     # 这是一个逐步扩展的 allowlist，不是“未列入即错误”的 denylist。
     EXPECT = [
-        ("中华人民共和国消防法", ("flk.npc.gov.cn", "www.npc.gov.cn", "www.gov.cn")),
+        # 北京市政府公开的2021修正全文已核验；仅补充此精确官方域名。
+        ("中华人民共和国消防法", ("flk.npc.gov.cn", "www.npc.gov.cn", "www.gov.cn", "www.beijing.gov.cn")),
         ("中华人民共和国安全生产法", ("flk.npc.gov.cn", "www.mem.gov.cn", "www.gov.cn", "npc.gov.cn")),
         ("危险废物贮存污染控制标准", ("mee.gov.cn",)),
         ("中华人民共和国特种设备安全法", ("samr.gov.cn", "flk.npc.gov.cn", "www.gov.cn")),
