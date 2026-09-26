@@ -159,23 +159,25 @@ def main():
     }
 
     checked_at = {}
-    for f in glob.glob(os.path.join(KNOW, "reviews", "hazards", "*.json")):
+    for f in sorted(glob.glob(os.path.join(KNOW, "reviews", "hazards", "*.json"))):
         r = rd(f)
         if r.get("entityId"):
             checked_at[r["entityId"]] = review_date(r)
     clause_checked = {}
-    for f in glob.glob(os.path.join(KNOW, "reviews", "clauses", "*.json")):
+    for f in sorted(glob.glob(os.path.join(KNOW, "reviews", "clauses", "*.json"))):
         r = rd(f)
         if r.get("entityId"):
             clause_checked[r["entityId"]] = review_date(r)
     lv_checked = {}
-    for f in glob.glob(os.path.join(KNOW, "reviews", "law-versions", "*.json")):
+    for f in sorted(glob.glob(os.path.join(KNOW, "reviews", "law-versions", "*.json"))):
         r = rd(f)
         if r.get("entityId"):
             lv_checked[r["entityId"]] = review_date(r)
 
     hazard_links = defaultdict(list)
-    for kid, link in links.items():
+    # Filesystem discovery order must not change published references or hashes.
+    for kid in sorted(links):
+        link = links[kid]
         hazard_links[link.get("hazardId")].append(kid)
 
     # ---- 正式隐患：只发布当前日期 Gate 通过的 active 实体 ----
@@ -197,8 +199,11 @@ def main():
             if cid not in seen_clause:
                 seen_clause.add(cid)
                 used_clauses.append(cid)
-        refs.sort(key=lambda x: order.get(x[1], 9))
+        refs.sort(key=lambda x: (order.get(x[1], 9), x[0], x[1]))
         basis_of[hid] = refs
+
+    # Canonical ID order also fixes clause shard boundaries across checkouts.
+    used_clauses.sort()
 
     # ---- 隐患分片 ----
     hazard_shards, clause_shards = [], []
