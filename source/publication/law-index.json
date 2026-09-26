@@ -396,7 +396,7 @@
     "level": "法律",
     "scope": "全国",
     "status": "现行有效",
-    "checked": "2026-09-16",
+    "checked": "2026-09-26",
     "effectiveDate": "2021-09-01",
     "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4",
     "replaces": [],
@@ -495,13 +495,12 @@
         "clauseId": "C030",
         "clauseShard": "",
         "hazardIds": [
+          "H031",
           "H055",
           "H_4164E28510AC475EA9FB48337C",
           "H_67303D31915B4AC0A6902EB975",
           "H_69344942331F4E74ACB10315FE",
-          "H_7C95508E54324EB7971918F1E5",
           "H_993643C76F7041BDA19B0C5EED",
-          "H_AD27C51EB8E840D5BA2F0365E0",
           "H_AD6D645EFFCC4F3FB9624C20C4",
           "H_ADB66DA5A436491FA3D95D5A42",
           "H_E6C12F6DD8F24889AAC94161A2"
@@ -588,6 +587,13 @@
           "H_EA29DB8CDDF141028504F2705A",
           "H_EC527E40F25347948ADA08A388",
           "H_FEE8D0BD627F4772B00620F8AD"
+        ]
+      },
+      {
+        "clauseId": "C_133DEA3AE07CE30E3CA5CBF4FF",
+        "clauseShard": "",
+        "hazardIds": [
+          "H_133DEA3AE07CE30E3CA5CBF4FF_1"
         ]
       },
       {
@@ -727,7 +733,6 @@
           "H_CCBA1E83E15A914C14219FE7",
           "H_CDCC41FC5CDA320D4E9EB9CA",
           "H_DA51F5A674B44D6F8FB98F1D62",
-          "H_E2FE0448F5224F5AB7F12E635F",
           "H_F7B420C2EABB44349EA418891A"
         ]
       },
@@ -955,8 +960,7 @@
         "clauseId": "C_XLSX_FT_C2E6FAAB062C09B76A5CEFE8",
         "clauseShard": "",
         "hazardIds": [
-          "H_4AF088F48DFD4BFA88FD254F28",
-          "H_E51FA12B567243999FBEBB99DA"
+          "H_4AF088F48DFD4BFA88FD254F28"
         ]
       },
       {
@@ -1005,8 +1009,8 @@
         ]
       }
     ],
-    "hazardCount": 177,
-    "clauseCount": 70,
+    "hazardCount": 174,
+    "clauseCount": 71,
     "searchText": "l002 中华人民共和国安全生产法 主席令〔2021〕第88号 安全生产法 全国人民代表大会常务委员会 主席令〔2021〕第88号 cn"
   },
   {
@@ -1172,7 +1176,7 @@
     "level": "强制性国家标准",
     "scope": "全国",
     "status": "现行有效",
-    "checked": "2026-09-16",
+    "checked": "2026-09-26",
     "effectiveDate": "2023-03-01",
     "sourceUrl": "https://zjw.sh.gov.cn/wjhb/20230428/baf0b1f88d354d60a56fc27576e54610.html",
     "replaces": [],
@@ -1229,10 +1233,17 @@
         "hazardIds": [
           "H_FIRE_CONTROL_PHONE_FAULT"
         ]
+      },
+      {
+        "clauseId": "C_GB55036_3_0_12",
+        "clauseShard": "",
+        "hazardIds": [
+          "H_FIRE_PUMP_NOT_AUTO_READY"
+        ]
       }
     ],
-    "hazardCount": 16,
-    "clauseCount": 6,
+    "hazardCount": 17,
+    "clauseCount": 7,
     "searchText": "l007 消防设施通用规范 gb 55036 2022 gb 55036 2022 gb55036 住房和城乡建设部 gb 55036 2022 cn"
   },
   {
@@ -8131,7 +8142,7 @@
     "level": "强制性国家标准",
     "scope": "全国",
     "status": "现行有效",
-    "checked": "2026-09-16",
+    "checked": "2026-09-26",
     "effectiveDate": "2026-03-01",
     "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=26CD7C428F2BF6AE971F84D22D7B72BB",
     "replaces": [],
@@ -8141,14 +8152,20 @@
         "clauseId": "C_CF69BD977AABD92CE9BBE5",
         "clauseShard": "",
         "hazardIds": [
-          "H_4164E28510AC475EA9FB48337C",
-          "H_7C95508E54324EB7971918F1E5",
-          "H_F692794FBBA74CFB83648A73CF"
+          "H031",
+          "H_4164E28510AC475EA9FB48337C"
+        ]
+      },
+      {
+        "clauseId": "C_GB2894_7_4_1",
+        "clauseShard": "",
+        "hazardIds": [
+          "H_COM_SIGN_FADED"
         ]
       }
     ],
     "hazardCount": 3,
-    "clauseCount": 1,
+    "clauseCount": 2,
     "searchText": "lv std 25c17fdceb1b519cab94dbea 安全色和安全标志 gb 2894 2025 国家市场监督管理总局 国家标准化管理委员会 gb 2894 2025 cn"
   },
   {
@@ -10189,42 +10206,25 @@
     "level": "国家标准",
     "scope": "全国",
     "status": "现行有效",
-    "checked": "2026-09-16",
+    "checked": "2026-09-26",
     "effectiveDate": "2014-10-01",
     "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2014/art_17339_727834.html",
     "replaces": [],
     "replacedBy": [],
     "clauseRefs": [
       {
-        "clauseId": "C_GB50058_5_2_1",
-        "clauseShard": "",
-        "hazardIds": [
-          "H_D93FC0084ABA465CA3EA98B393"
-        ]
-      },
-      {
         "clauseId": "C_GB50058_5_2_2",
         "clauseShard": "",
         "hazardIds": [
-          "H_0BE49AFFA4884C639EE50FD565",
           "H_62B9B3FCB70F4FF6A3BE35E1D8",
-          "H_D0EAF3CFD56D4A489D92506D44"
-        ]
-      },
-      {
-        "clauseId": "C_GB50058_5_4_1",
-        "clauseShard": "",
-        "hazardIds": [
-          "H_1E8A5587D5104804BF2EC4FCA4",
-          "H_46A4349273C34D2992F88B202F",
-          "H_560D75081D1F4B42BEB642811A",
           "H_6D5EBB4E642F489C9717AED728",
-          "H_F614BEC4119D450791E1687E24"
+          "H_D0EAF3CFD56D4A489D92506D44",
+          "H_D93FC0084ABA465CA3EA98B393"
         ]
       }
     ],
-    "hazardCount": 9,
-    "clauseCount": 3,
+    "hazardCount": 4,
+    "clauseCount": 1,
     "searchText": "lv std gb50058 2014 爆炸危险环境电力装置设计规范 gb 50058 2014 中华人民共和国住房和城乡建设部 gb 50058 2014 cn"
   },
   {
@@ -10698,9 +10698,9 @@
     "level": "推荐性国家标准",
     "scope": "全国",
     "status": "现行有效",
-    "checked": "2026-09-16",
+    "checked": "2026-09-26",
     "effectiveDate": "2018-07-01",
-    "sourceUrl": "https://openstd.samr.gov.cn/",
+    "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=1C5996A8BAD63FF484CCFE024D98849C",
     "replaces": [],
     "replacedBy": [],
     "clauseRefs": [
@@ -10760,10 +10760,17 @@
         "hazardIds": [
           "H_8ECAE760F5A5413D8013602429"
         ]
+      },
+      {
+        "clauseId": "C_GBT13869_7_1",
+        "clauseShard": "",
+        "hazardIds": [
+          "H_COM_CHILD_SOCKET_PROTECT"
+        ]
       }
     ],
-    "hazardCount": 9,
-    "clauseCount": 8,
+    "hazardCount": 10,
+    "clauseCount": 9,
     "searchText": "lv std gbt13869 2017 用电安全导则 gb/t 13869 2017 gb/t 13869 2017 gb/t13869 国家市场监督管理总局 国家标准化管理委员会 gb/t 13869 2017 cn"
   },
   {
