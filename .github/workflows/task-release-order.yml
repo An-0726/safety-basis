@@ -1,0 +1,45 @@
+name: Apply release-order regression fix
+on:
+  push:
+    branches: [fix/20260926-release-order]
+    paths: [.github/workflows/task-release-order.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply exact reviewed two-file patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = "fix/20260926-release-order"
+          test "$(git rev-parse HEAD^)" = "520023209c9329cf76ffb5fdc24728163e56f84d"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "520023209c9329cf76ffb5fdc24728163e56f84d"
+          python - <<'PY'
+          import base64,hashlib,lzma,os,pathlib,subprocess
+          encoded='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'
+          patch=lzma.decompress(base64.b64decode(encoded))
+          assert hashlib.sha256(patch).hexdigest()=='31b8e37604786ee804fe263314ba183a7309f105ff9c4d846eae15e99acadec7'
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'release-order.patch';p.write_bytes(patch)
+          subprocess.run(['git','apply','--index','--check',str(p)],check=True)
+          subprocess.run(['git','apply','--index',str(p)],check=True)
+          assert set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines())=={'tools/v4/build_unified_release.py','tools/pipeline/tests/test_unified_release_reproducibility.py'}
+          PY
+          git rm .github/workflows/task-release-order.yml
+          python -m pip install -r tools/pipeline/requirements.txt
+          python -m unittest discover -s tools/pipeline/tests -v
+          python tools/v4/validate_all.py
+          test "$(git ls-remote origin refs/heads/fix/20260926-release-order | cut -f1)" = "$GITHUB_SHA"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "520023209c9329cf76ffb5fdc24728163e56f84d"
+          git config user.name ChatGPT
+          git config user.email chatgpt@users.noreply.github.com
+          git commit -m 'fix: stabilize basis ordering and clause shards across release builds'
+          git push origin HEAD:refs/heads/fix/20260926-release-order
