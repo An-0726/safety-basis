@@ -1,0 +1,30 @@
+name: Temporary full-queue audit snapshot
+on:
+  push:
+    branches: [maintenance/20260926-full-queue-review]
+    paths: [.github/workflows/task-full-queue-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 8f9e9537283857ac52d24a6fd02903e7f03da78c
+          persist-credentials: false
+      - name: Archive tracked public source only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "${RUNNER_TEMP}/full-queue-source"
+          git archive --format=zip HEAD -o "${RUNNER_TEMP}/full-queue-source/source-8f9e953.zip"
+          git rev-parse HEAD > "${RUNNER_TEMP}/full-queue-source/source-commit.txt"
+          sha256sum "${RUNNER_TEMP}/full-queue-source/source-8f9e953.zip" > "${RUNNER_TEMP}/full-queue-source/SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: full-queue-source-8f9e953
+          path: ${{ runner.temp }}/full-queue-source/
+          if-no-files-found: error
+          retention-days: 1
