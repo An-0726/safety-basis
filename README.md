@@ -57,47 +57,23 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
 
-### 1. 当前正式公开包（Production Public Bundle）
+<!-- CURRENT_STATE_BEGIN -->
+## 当前统一状态（2026-09-26，本维护增量待远端验收）
 
-**当前线上基线为 2026-09-26。** PR #80 完成 2026 云盘现场问题首批定向补库，PR #81 将 CI/正式发布的 `asOf` 日历日期统一为 `Asia/Shanghai`（中国标准时间）；当前 `main` 包含 merge commit `7231cd24c9a971123c44f972537e528fa855469a`。
+`knowledge/manifest.json`：**107 laws / 110 law versions / 3,000 clauses / 2,127 hazards / 1,959 links / 1,209 evidence / 26 successions / 75 requirements**；生命周期 **1,706 active / 324 proposed / 97 superseded**。
 
-当前 GitHub Pages 正式包为：
+本分支已验证本地公开包 `releaseHash=13479ca8932aef06fddc53b8f3685f175c4db01c4a7dade95b0b230379fd95a7`。本地 Gate 构建的公开范围：**1,706 hazards / 62 laws / 62 law versions / 1,336 clauses / 1,825 links / public proposed 0**，`asOf=2026-09-26`。这不是本增量已经公网部署的声明；本批 PR、main Actions、Pages 与 Online Verify 必须在部署后另行记录。
 
-- **1,704 条公开隐患记录**；公开 `proposed` 候选为 **0**；
-- **61 个法规身份 / 61 个法规版本**；
-- **1,333 条公开条款**；
-- **1,822 条公开关联**；
-- `asOf=2026-09-26`；
-- `releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`；
-- main Validate run `36169948637` PASS；
-- Build / Pages Deploy / Online Verify run `36169948666` PASS。
+最近实际核实的旧线上快照：main `72fd38489a54e8797da4a757690c1ab9f241b040`（PR #82），Validate `36170580281` 与 Build/Pages/Online Verify `36170580283` 均成功；旧公开包 **1,704 hazards / 61 laws / 61 law versions / 1,333 clauses / 1,822 links**，`releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`。旧数据/构建规则提交 `7231cd24c9a971123c44f972537e528fa855469a` 与本次核验的 main 快照不是同一个概念。
 
-线上真实 Chromium 验证确认发布站实际读取 **1,704 hazards / 61 laws / 61 lawVersions / 1,333 clauses / 1,822 links**，与构建期预期一致。
+本批新增 **6 个隐患实体（1 active、5 proposed）**，另将既有气瓶防倾倒候选 **1 条转正**；新增 **2 laws / 2 versions / 4 clauses / 4 links / 7 evidence**。供应方说明书义务不替代使用单位义务；一般报警故障不自动认定为重大事故隐患。
 
-本轮新增/转正的 4 个高频现场问题为：
+2026 全量项目任务**尚未完成**：已登记 **43 份来源载体**、形成 **782 条原始记录行**；其中 **45 条完成细分处置**、**12 条排除**、**725 条仍待逐条审核**。45 条形成 55 项处置记录，已定位 **39 个不同 canonical 实体**（既有 active 13、既有 proposed 17、沿 superseded/mergedInto 归并 3、真缺口 6）；另有 6 个细分事项待事实或依据核实。该39个不是782条记录的最终去重数，计数分类不重复相加。
 
-- `H_COM_SIGN_FADED`：安全警示标志褪色、污损或辨识度不足，由 proposed 转 active，直接依据 GB 2894-2025 第7.4.1条；
-- `H_ELECTRICAL_ROOM_SMALL_ANIMAL_PROTECTION`：变配电室缺少防止蛇、鼠等小动物进入的设施，直接依据 GB 50053-2013 第6.2.4条；
-- `H_EXIT_SIGN_LAMP_FAULT`：安全出口或疏散指示标志灯具损坏、不能正常指示，先以《消防法》第十六条第一款第（二）项形成直接法定义务；
-- `H_FIRE_CONTROL_PHONE_FAULT`：消防控制室消防专用电话总机或专用通信功能失效，直接依据 GB 55036-2022 第12.0.10条。
+来源纠错：某审阅稿“110项符合”附有预填且未经现场核实说明，不能作为现场零隐患证明；某原始评分表与另一来源70条描述完全相同，已隔离归属冲突；往年事实、正向表述却扣分、纯照片镜像、未见标志不等于未检等均不直接转为现场隐患。源文件未渲染、未生成预览、未转换格式。
 
-### 2. 全库知识源清单（Knowledge Manifest）
-
-当前 `knowledge/manifest.json` 报告：
-
-- **105 个法规身份 (laws)**；
-- **108 个法规版本 (law-versions)**；
-- **2,996 条法规条款 (clauses)**；
-- **2,121 个隐患实体 (hazards)**；
-- **1,955 个关联 (links)**；
-- **1,202 个官方证据卡 (evidence)**；
-- **75 条管理要求 (requirements)**；
-- **26 条替代演进关系 (successions)**；
-- 隐患生命周期：**1,704 active / 320 proposed / 97 superseded**。
-
-2026 云盘资料筛查中，最新的南京明生医药安全现状评价报告 7 个评价单元共 110 项均为“符合”，报告明确未列需限期整改的不符合项，因此未把预防性建议伪造成现场隐患。历史商贸集团 16 份 Word / 134 条来源事项仍保持 134/134 去向覆盖；2026-09-20 粮库急停、五距等事项此前工程审计已处理，不重复造 ID。
-
-知识源库存、公开包和历史批次是不同统计层级；当前账面以实际 manifest、对应 `main`、CI fresh build 和线上 Chromium 结果为准，历史数字仅保留在明确标注的历史阶段记录中。
+审计与恢复：[FIELD_SOURCE_AUDIT_20260926](docs/FIELD_SOURCE_AUDIT_20260926.md)，机器计数见 `docs/field-source-progress-20260926.json`，逐项去向见 `docs/field-source-disposition-20260926.jsonl`。私有源文件标识、原始文本及企业/个人信息不进入 GitHub。
+<!-- CURRENT_STATE_END -->
 
 ## 三、法规身份、版本、来源必须分开
 
@@ -144,16 +120,9 @@ source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
 
 ## 六、数量必须按层次报告
 
-当前知识源、公开包和目标集不是同一个数字：
+当前数量统一取本页“当前统一状态”与 `knowledge/manifest.json`。知识库库存、通过 Gate 的公开包、原始来源记录、规范实体和历史目标集是不同统计口径，不得混用。历史 1,929 项目标集（621 项修订、1,308 项保留）与历史 16 份检查表/134项来源映射不等于本次2026全量任务已经完成。
 
-- 当前 `knowledge/manifest.json`（2026-09-26 main）：105 laws / 108 lawVersions / 2,996 clauses / **2,121 hazards** / **1,955 links** / 1,202 evidence / 26 successions / 75 requirements；生命周期 **1,704 active / 320 proposed / 97 superseded**；
-- 当前正式公开包（`asOf=2026-09-26`）：**1,704 hazards / 61 laws / 61 lawVersions / 1,333 clauses / 1,822 links / public proposed 0**，`releaseHash=c144beeaa60ed4ff4fbb3dc3ec1da92d45103cdd82cab6c29c6e8bcf57d73a90`；
-- 新版 Excel 目标集：1,929 个唯一隐患 ID（621 条修订、1,308 条保留），它不是正式发布数量；
-- 2026 云盘 legacy `.xls` 打分表仍需做与既有 1,929 目标集的来源差异审计；在差异确认前不得重复导入；
-- 私有全文母库统计属于另一层级，具体以 `docs/PROJECT_STATE.md` 中有证据的本地核验记录为准；
-- 历史批次中的“1250”“1502”“1680”“1681”“1700”等数字只保留为历史记录，不作为当前公开包统计。
-
-报告数量时必须同时写明来源文件、`asOf` / `dataVersion` 和是否为知识库存或正式发布包；不能把不同层级相加或互相替代。
+历史阶段数字仅代表明确标注的当时结果；当前 `main`、manifest、对应CI产物与实际线上核验共同确定现状。本次仍有725条原始行待逐条审核，不能以已保存台账或算法候选匹配冒充完成去重。
 
 ## 七、为什么 Git 不再保存 `source/releases/current/`
 
