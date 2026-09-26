@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "field-increment-online-proof-v1",
+  "checkedAt": "2026-09-26T10:02:49+08:00",
+  "taskComplete": false,
+  "scope": "This curated increment and its deterministic release are deployed; all-2026 source review remains incomplete.",
+  "dataMergeCommit": "520023209c9329cf76ffb5fdc24728163e56f84d",
+  "verifiedBuildCommit": "eceaf9cfa45b02b469620e3d938b9f105dd93606",
+  "pullRequests": [
+    83,
+    84
+  ],
+  "releaseHash": "b434abeed503709615bade08ce3b43e02802e9be7cc9d983b68b7565e856b3bc",
+  "asOf": "2026-09-26",
+  "dataVersion": "2026.09.26.eceaf9cfa45b",
+  "manifestSha256": "486a627a760f35a8c976001b8dab22b28130347c89688db59fd2c033191c1ec6",
+  "knowledgeCounts": {
+    "laws": 107,
+    "lawVersions": 110,
+    "clauses": 3000,
+    "hazards": 2127,
+    "links": 1959,
+    "evidence": 1209,
+    "successions": 26,
+    "requirements": 75
+  },
+  "lifecycle": {
+    "active": 1706,
+    "superseded": 97,
+    "proposed": 324
+  },
+  "publicCounts": {
+    "hazards": 1706,
+    "laws": 62,
+    "lawVersions": 62,
+    "clauses": 1336,
+    "links": 1825
+  },
+  "publicProposed": 0,
+  "checks": {
+    "directLiveHttp": true,
+    "liveReleaseAndManifestHashMatch": true,
+    "liveManifestMatchesKnowledge": true,
+    "allActionsExactHeadSuccess": true,
+    "browserPassed": 17,
+    "browserFailed": 0,
+    "localAndRemoteBusinessDataByteIdentical": true
+  },
+  "actions": {
+    "36210224851": {
+      "url": "https://github.com/An-0726/safety-basis/actions/runs/36210224851",
+      "headSha": "eceaf9cfa45b02b469620e3d938b9f105dd93606",
+      "conclusion": "success",
+      "completedAt": "2026-09-26T01:59:36Z",
+      "jobs": {
+        "validate": "success"
+      }
+    },
+    "36210224805": {
+      "url": "https://github.com/An-0726/safety-basis/actions/runs/36210224805",
+      "headSha": "eceaf9cfa45b02b469620e3d938b9f105dd93606",
+      "conclusion": "success",
+      "completedAt": "2026-09-26T02:00:42Z",
+      "jobs": {
+        "build": "success",
+        "deploy": "success",
+        "online_verify": "success"
+      }
+    }
+  },
+  "browserArtifactId": 10895775105,
+  "browserEvidence": {
+    "startedAt": "2026-09-26T02:00:28.234568+00:00",
+    "target": "https://an-0726.github.io/safety-basis/",
+    "observeOnly": false,
+    "checks": [
+      {
+        "name": "desktop_home",
+        "pass": true,
+        "evidence": {
+          "count": 1706,
+          "title": "安排有职业禁忌的劳动者从事其所禁忌的作业"
+        },
+        "seconds": 1.019
+      },
+      {
+        "name": "all_published_hazards_laws_quotes_and_counts",
+        "pass": true,
+        "evidence": {
+          "hazards": 1706,
+          "links": 1825,
+          "laws": 62,
+          "expected": {
+            "hazards": 1706,
+            "laws": 62,
+            "lawVersions": 62,
+            "clauses": 1336,
+            "links": 1825
+          },
+          "errors": []
+        },
+        "seconds": 1.494
+      },
+      {
+        "name": "search_exact",
+        "pass": true,
+        "evidence": {
+          "query": "灭火器",
+          "count": "38"
+        },
+        "seconds": 0.189
+      },
+      {
+        "name": "search_typo",
+        "pass": true,
+        "evidence": {
+          "query": "灭活器",
+          "count": "38"
+        },
+        "seconds": 0.156
+      },
+      {
+        "name": "search_synonym",
+        "pass": true,
+        "evidence": {
+          "query": "配电房",
+          "count": "3"
+        },
+        "seconds": 0.16
+      },
+      {
+        "name": "empty_results",
+        "pass": true,
+        "evidence": {
+          "count": 0,
+          "text": "没有找到匹配内容\n\n可缩短关键词、清除筛选，或在后续资料整理时补入数据库。"
+        },
+        "seconds": 0.148
+      },
+      {
+        "name": "category_share_reload",
+        "pass": true,
+        "evidence": {
+          "filter": "电气安全",
+          "count": "159",
+          "url": "https://an-0726.github.io/safety-basis/?id=H_DEED92095F4043AFB93AB75583&category=%E7%94%B5%E6%B0%94%E5%AE%89%E5%85%A8"
+        },
+        "seconds": 0.38
+      },
+      {
+        "name": "scene_share_reload",
+        "pass": true,
+        "evidence": {
+          "filter": "仓储与物流",
+          "count": "16",
+          "url": "https://an-0726.github.io/safety-basis/?id=H062&scene=%E4%BB%93%E5%82%A8%E4%B8%8E%E7%89%A9%E6%B5%81"
+        },
+        "seconds": 0.337
+      },
+      {
+        "name": "region_share_reload",
+        "pass": true,
+        "evidence": {
+          "filter": "江苏",
+          "count": "172",
+          "url": "https://an-0726.github.io/safety-basis/?id=H_JS140_%E5%8D%81%E4%BA%8C_2&region=%E6%B1%9F%E8%8B%8F"
+        },
+        "seconds": 0.398
+      },
+      {
+        "name": "browser_back_forward",
+        "pass": true,
+        "evidence": {
+          "previous": [
+            "H_6265E5BFEBE547CB997660DAAD"
+          ],
+          "next": [
+            "H_EXIT_SIGN_LAMP_FAULT"
+          ]
+        },
+        "seconds": 0.705
+      },
+      {
+        "name": "hazard_law_bidirectional_navigation",
+        "pass": true,
+        "evidence": {
+          "lawId": "LV_STD_GB50444_2008",
+          "hazardId": "H_095F0B8A265A45FFAED1B3902F"
+        },
+        "seconds": 0.474
+      },
+      {
+        "name": "unpublished_H004_deep_link",
+        "pass": true,
+        "evidence": {
+          "id": "H004",
+          "text": "此隐患未在当前已核验库中发布\n\n链接编号：H004\n\n可能尚待核验、已撤下或编号有误。请从列表选择其他内容，或搜索已核验的依据。"
+        },
+        "seconds": 0.135
+      },
+      {
+        "name": "unknown_ID_deep_link",
+        "pass": true,
+        "evidence": {
+          "message": "此隐患未在当前已核验库中发布\n\n链接编号：H_AUDIT_UNKNOWN_ZYX987\n\n可能尚待核验、已撤下或编号有误。请从列表选择其他内容，或搜索已核验的依据。"
+        },
+        "seconds": 0.115
+      },
+      {
+        "name": "fulltext_catalog_read_and_search",
+        "pass": true,
+        "evidence": {
+          "catalog": "69 份法规 · 显示 69 项",
+          "paragraphs": 100,
+          "search": "1310 处匹配 · 显示 80 项"
+        },
+        "seconds": 1.452
+      },
+      {
+        "name": "upcoming_not_current",
+        "pass": true,
+        "evidence": {
+          "title": "生产过程安全基本要求 GB 12801-2025"
+        },
+        "seconds": 0.152
+      },
+      {
+        "name": "mobile_390px_search_and_detail",
+        "pass": true,
+        "evidence": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "count": "38"
+        },
+        "seconds": 1.24
+      },
+      {
+        "name": "no_unhandled_javascript_errors",
+        "pass": true,
+        "evidence": null,
+        "seconds": 0.0
+      }
+    ],
+    "browserVersion": "153.0.8010.12",
+    "seconds": 9.203,
+    "passed": 17,
+    "failed": 0,
+    "finishedAt": "2026-09-26T02:00:37.437399+00:00"
+  },
+  "remainingUnreviewedRows": 725,
+  "strictBlockers": 0,
+  "strictInventoryWarnings": 140
+}
