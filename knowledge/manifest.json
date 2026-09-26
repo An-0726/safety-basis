@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-26",
-  "batch": "grinder-catalog-supplement-20260926",
+  "batch": "training-record-dedup-20260926",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -502,38 +502,63 @@
       "linksAdded": 1,
       "evidenceAdded": 2,
       "selection": "无除尘砂轮机来源统一复用H024，补官方目录具体项目与适用限制。"
+    },
+    {
+      "id": "institution-review-20260926",
+      "hazardsAdded": 0,
+      "hazardsPromoted": 1,
+      "lawsAdded": 1,
+      "lawVersionsAdded": 1,
+      "clausesAdded": 2,
+      "linksAdded": 2,
+      "evidenceAdded": 2,
+      "selection": "制度评估与动态更新复用H_CF_GEN_25，按推荐性标准限定条件补证转正。"
+    },
+    {
+      "id": "emergency-original-text-correction-20260926",
+      "hazardsAdded": 0,
+      "clausesRechecked": 79,
+      "evidenceAdded": 1,
+      "selection": "规章合并正文核验，纠正修改决定误当条文、数字遗漏及网页污染；现有条款与隐患稳定编号保留。"
+    },
+    {
+      "id": "training-record-dedup-20260926",
+      "hazardsAdded": 0,
+      "hazardsMerged": 1,
+      "evidenceAdded": 1,
+      "selection": "培训记录同义实体按实际义务归并，保留两个直接法源和原稳定编号。"
     }
   ],
   "counts": {
-    "laws": 108,
-    "lawVersions": 111,
-    "clauses": 3001,
+    "laws": 109,
+    "lawVersions": 112,
+    "clauses": 3003,
     "hazards": 2127,
-    "links": 1960,
-    "evidence": 1214,
+    "links": 1962,
+    "evidence": 1218,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
-  "migrationPhase": "2026-09-26：PR88纠错已经上线；本批继续来源去重及直接依据核验。725行全量审核尚未完成，不把初审或已部署增量当作全量完成。",
+  "migrationPhase": "2026-09-26：PR89已部署并核验1695条；本批补证制度评估既有候选。725行全量细审仍在进行。",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
   },
-  "laws": 108,
-  "lawVersions": 111,
-  "clauses": 3001,
+  "laws": 109,
+  "lawVersions": 112,
+  "clauses": 3003,
   "hazards": 2127,
-  "links": 1960,
-  "evidence": 1214,
+  "links": 1962,
+  "evidence": 1218,
   "successions": 26,
   "activeHazards": 1695,
-  "proposedHazards": 331,
-  "supersededHazards": 101,
+  "proposedHazards": 330,
+  "supersededHazards": 102,
   "lifecycle": {
     "active": 1695,
-    "proposed": 331,
-    "superseded": 101
+    "proposed": 330,
+    "superseded": 102
   }
 }
