@@ -1,0 +1,61 @@
+{
+  "verifiedAt": "2026-09-26T15:08:31+08:00",
+  "pr": "https://github.com/An-0726/safety-basis/pull/86",
+  "mergeCommit": "0ced65a2b4ea1c2f92f0ccda7cfc7f649cead60d",
+  "validateRun": 36225602753,
+  "buildDeployOnlineRun": 36225602782,
+  "release": {
+    "formatVersion": "safety-unified-release-v1",
+    "asOf": "2026-09-26",
+    "releaseHash": "2d51c7d707a126ef7122837239ca4e8672eccd898eb67aad2a8984c9879236f2",
+    "generator": {
+      "tool": "tools/v4/build_unified_release.py",
+      "model": "deterministic local build",
+      "executedAt": "2026-09-26T15:03:36.782693+08:00"
+    },
+    "knowledge": {
+      "manifestSha256": "34ef24f9e49036966de977ddc9f367917b87a23d9c7344adc6603f9aea7fc751",
+      "gate": {
+        "asOf": "2026-09-26",
+        "eligibleHazards": 1707,
+        "eligibleLinks": 1826,
+        "strictBlockers": 0,
+        "publicProposalHazards": 0,
+        "candidateHazardsInKnowledge": 323
+      }
+    },
+    "provenance": {
+      "hazardClauseLinkSource": "knowledge/ current chained-gate projection",
+      "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
+      "fulltextSource": "source/publication/fulltext/",
+      "frontendSource": "web/"
+    },
+    "counts": {
+      "hazards": 1707,
+      "laws": 63,
+      "lawVersions": 63,
+      "clauses": 1337,
+      "links": 1826
+    },
+    "fullText": {
+      "count": 11,
+      "officialLinkCount": 58,
+      "gbt47236": "link_only"
+    }
+  },
+  "manifestSummary": {
+    "dataVersion": "2026.09.26.0ced65a2b4ea",
+    "releaseHash": "2d51c7d707a126ef7122837239ca4e8672eccd898eb67aad2a8984c9879236f2",
+    "counts": {
+      "hazards": 1707,
+      "laws": 63,
+      "lawVersions": 63,
+      "clauses": 1337,
+      "links": 1826
+    },
+    "sourceRevision": "34ef24f9e49036966de977ddc9f367917b87a23d9c7344adc6603f9aea7fc751"
+  },
+  "localExactByteReleaseHash": "2d51c7d707a126ef7122837239ca4e8672eccd898eb67aad2a8984c9879236f2",
+  "verification": "Both public JSON manifests match local build from exact Git input bytes; CI build, deploy, online_verify passed",
+  "scope": "Existing forklift candidate promoted; zero newly created hazard entities; full source audit remains incomplete"
+}

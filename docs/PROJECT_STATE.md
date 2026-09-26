@@ -1,15 +1,15 @@
 # 项目阶段状态与恢复计划
 
 <!-- CURRENT_STATE_BEGIN -->
-## 当前统一状态（2026-09-26，本地接手补证；全量任务未完成）
+## 当前统一状态（2026-09-26，补证增量已上线；全量任务未完成）
 
 当前知识源：**107 laws / 110 law versions / 3,000 clauses / 2,127 hazards / 1,959 links / 1,210 evidence / 26 successions / 75 requirements**；生命周期 **1,707 active / 323 proposed / 97 superseded**。
 
 本轮复用既有叉车无人看管钥匙候选 `H_FORKLIFT_UNATTENDED_KEY`，官方原页取得并完整核验后转正；其既有条款、关联同时通过核验。**新增隐患实体0条，既有候选转正1条，新增证据1条**。驾驶员仍看管的短暂停车不能仅凭钥匙未拔认定本项。
 
-本轮本地生成包：**1,707 hazards / 63 laws / 63 law versions / 1,337 clauses / 1,826 links / public proposed 0**；`asOf=2026-09-26`，`releaseHash=90c4fe78ddf3cec2c856f8ec2a6f19a8a63d523060b32a9acdaf7a3d7342c2f5`。这仍是本地结果，远端检查、部署和线上验收尚待完成。
+本轮已部署并直接核验：**1,707 hazards / 63 laws / 63 law versions / 1,337 clauses / 1,826 links / public proposed 0**；`asOf=2026-09-26`，`releaseHash=2d51c7d707a126ef7122837239ca4e8672eccd898eb67aad2a8984c9879236f2`。PR #86合并`0ced65a2b4ea1c2f92f0ccda7cfc7f649cead60d`；main Validate `36225602753`及Build/Deploy/Online Verify `36225602782`全部成功；本机于15:08:31+08:00交叉核对两份公网清单。凭证见`docs/ONLINE_VERIFY_20260926_RESUME.json`。
 
-最近已直接核验的正式网站仍为**1,706 hazards / 62 laws / 62 law versions / 1,336 clauses / 1,825 links**；`releaseHash=b434abeed503709615bade08ce3b43e02802e9be7cc9d983b68b7565e856b3bc`，本机核验时间2026-09-26 14:24:49+08:00，源码基线`8f9e9537283857ac52d24a6fd02903e7f03da78c`。没有用本地构建冒充上线。
+接手时已部署基线为1,706条正式隐患（14:24:49直接核验）；本轮增加1条正式展示来自既有候选转正，知识库实体总数仍为2,127。初次本地构建因Windows检出换行转换得到不同字节哈希；确认工作副本干净后，将285个输入恢复为与Git对象逐字节一致的内容，再构建得到与线上相同哈希。没有修改知识含义或手改生成包。
 
 全量任务仍未完成。原43份来源载体、782行基线（45行已细分审核、12行排除、725行待最终审核）保持不变。本机已为725行形成初审意见：428行匹配候选、287行事实/依据/匹配待核、10行内部重复，**不能将初审称为最终审核，也不能把287称为新增缺口**。其中128行确认与2026-09-21已处理商贸来源重合，历史映射指向79个当前实体；两种统计维度不能相加，79也不是全量最终去重数。
 
