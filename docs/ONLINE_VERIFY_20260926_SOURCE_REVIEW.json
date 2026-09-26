@@ -1,0 +1,154 @@
+{
+  "release": {
+    "formatVersion": "safety-unified-release-v1",
+    "asOf": "2026-09-26",
+    "releaseHash": "4ece7f7e46cb48ed21510ace2fd2dd892ec3c9192fa23bcf9078ab7637db148d",
+    "generator": {
+      "tool": "tools/v4/build_unified_release.py",
+      "model": "deterministic local build",
+      "executedAt": "2026-09-26T09:59:54.476285+00:00"
+    },
+    "knowledge": {
+      "manifestSha256": "5c4c9538a8673f92f26fb521bf7518237335ca2c82e00b0c8390df3befc8fd3e",
+      "gate": {
+        "asOf": "2026-09-26",
+        "eligibleHazards": 1695,
+        "eligibleLinks": 1815,
+        "strictBlockers": 0,
+        "publicProposalHazards": 0,
+        "candidateHazardsInKnowledge": 331
+      }
+    },
+    "provenance": {
+      "hazardClauseLinkSource": "knowledge/ current chained-gate projection",
+      "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
+      "fulltextSource": "source/publication/fulltext/",
+      "frontendSource": "web/"
+    },
+    "counts": {
+      "hazards": 1695,
+      "laws": 65,
+      "lawVersions": 65,
+      "clauses": 1333,
+      "links": 1815
+    },
+    "fullText": {
+      "count": 11,
+      "officialLinkCount": 58,
+      "gbt47236": "link_only"
+    }
+  },
+  "manifest": {
+    "schemaVersion": 2,
+    "v4SchemaVersion": 3,
+    "dataVersion": "2026.09.26.955206f25490",
+    "generatedAt": "2026-09-26",
+    "publicScope": "国家法规标准优先，江苏／南京补充；正式站只发布当前日期已核验依据",
+    "counts": {
+      "hazards": 1695,
+      "laws": 65,
+      "lawVersions": 65,
+      "clauses": 1333,
+      "links": 1815
+    },
+    "sourceCounts": {
+      "hazards": 2127,
+      "laws": 108,
+      "lawVersions": 111,
+      "clauses": 3001,
+      "links": 1960
+    },
+    "health": {
+      "verifiedHazards": 1695,
+      "pendingHazards": 331,
+      "activeLaws": 65,
+      "pendingLaws": 0,
+      "invalidReferences": 0,
+      "stagedHazards": 432,
+      "stagedLaws": 46
+    },
+    "files": {
+      "searchIndex": "data/search-index.json",
+      "lawIndex": "data/law-index.json",
+      "taxonomy": "data/taxonomy.json"
+    },
+    "hazardShards": [
+      {
+        "id": "h0000",
+        "url": "data/hazards/h0000.json"
+      },
+      {
+        "id": "h0001",
+        "url": "data/hazards/h0001.json"
+      },
+      {
+        "id": "h0002",
+        "url": "data/hazards/h0002.json"
+      },
+      {
+        "id": "h0003",
+        "url": "data/hazards/h0003.json"
+      },
+      {
+        "id": "h0004",
+        "url": "data/hazards/h0004.json"
+      },
+      {
+        "id": "h0005",
+        "url": "data/hazards/h0005.json"
+      },
+      {
+        "id": "h0006",
+        "url": "data/hazards/h0006.json"
+      },
+      {
+        "id": "h0007",
+        "url": "data/hazards/h0007.json"
+      },
+      {
+        "id": "h0008",
+        "url": "data/hazards/h0008.json"
+      }
+    ],
+    "clauseShards": [
+      {
+        "id": "c0000",
+        "url": "data/clauses/c0000.json"
+      },
+      {
+        "id": "c0001",
+        "url": "data/clauses/c0001.json"
+      },
+      {
+        "id": "c0002",
+        "url": "data/clauses/c0002.json"
+      },
+      {
+        "id": "c0003",
+        "url": "data/clauses/c0003.json"
+      },
+      {
+        "id": "c0004",
+        "url": "data/clauses/c0004.json"
+      },
+      {
+        "id": "c0005",
+        "url": "data/clauses/c0005.json"
+      },
+      {
+        "id": "c0006",
+        "url": "data/clauses/c0006.json"
+      }
+    ],
+    "releaseHash": "4ece7f7e46cb48ed21510ace2fd2dd892ec3c9192fa23bcf9078ab7637db148d",
+    "sourceRevision": "5c4c9538a8673f92f26fb521bf7518237335ca2c82e00b0c8390df3befc8fd3e",
+    "buildToolVersion": "safety-unified-release-v2"
+  },
+  "verifiedAt": "2026-09-26T18:01:27+08:00",
+  "pr": "https://github.com/An-0726/safety-basis/pull/89",
+  "mergeCommit": "955206f254903a21caf642733f5dcff9047471e5",
+  "successfulWorkflows": [
+    36234420816,
+    36234420801
+  ]
+}
