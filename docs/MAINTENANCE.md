@@ -14,19 +14,20 @@
 
 ## 长期维护触发条件
 
-当前项目已完成全量 proposed 候选逐条核销闭环与最终验收，正式进入长期维护模式（Long-Term Maintenance Mode），业务范围全面冻结。仅当出现下列任一情况时方可开启新的维护批次：
+历史批次已完成其声明范围内的候选处置并进入长期维护模式（Long-Term Maintenance Mode）；这不表示当前所有来源、所有候选或2026全量项目任务已完成。业务范围按明确授权维护。仅当出现下列任一情况时方可开启新的维护批次：
 
+- 用户明确授权处理新的真实现场项目资料、补齐既有候选证据或开展来源覆盖审计；
 - 新法规、标准、修订版本、废止/替代关系或官方证据需要纳管；
 - 既有法规到达生效日期（如 upcoming 转为 active）或废止日期；
 - Validate / strict gate / publication integrity / fresh build / verify / Pages 出现异常；
 - `PROJECT_STATE.md`、README、HANDOFF 与远端实际状态出现实质冲突；
 - 私有 SQLite 到达计划备份/integrity 维护点，或出现文档数、FTS 行数、paragraph sum、archive 引用等不变量异常。
 
-在没有上述触发条件时，严格保持冻结状态，不为“保持活跃”而修改业务数据，不扩增业务范围，也不把经过审慎保留的 184 条 proposed（主要为 upcoming 149 条及需官方依据/适用边界补充项）强行清零。
+在没有上述触发条件时，严格保持冻结状态，不为“保持活跃”而修改业务数据，不扩增业务范围，也不把证据或适用边界尚未满足发布条件的 proposed 强行清零。候选数量以当前 manifest 和物理库存为准，不能沿用旧批次数量。
 
 ## 候选
 
-候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。全库 426 条 proposed backlog 已经完成逐条审查与处置闭环，其中 242 条转正 active，184 条分类保留（含 149 条 upcoming 等）。
+候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。历史 2026-09-19 批次的 426 条 proposed backlog 曾处置为 242 条转正、184 条保留（含 149 条 upcoming 等）；这不是当前候选库存。2026-09-26 PR #82历史核验快照库存为320条 proposed；本次维护分支库存为324条 proposed，正式站公开 proposed=0。
 
 ## 数量口径
 
@@ -39,7 +40,9 @@
 - 私有全文数：SQLite 中成功建立正文记录的文档；
 - 公开全文数：`source/publication/fulltext/` 中允许公开分发的全文。
 
-当前 2026-09-19 正式基线：1,744 条正式隐患、60 个实际引用法规版本、1,354 条正式条款、1,863 个正式关联；184 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 104 laws / 107 lawVersions / 3,007 clauses / 2,015 hazards / 1,886 links / 1,197 evidence；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
+历史阶段数据（2026-09-19，非当前发布基线）：1,744 条正式隐患、60 个实际引用法规版本、1,354 条正式条款、1,863 个正式关联；184 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 104 laws / 107 lawVersions / 3,007 clauses / 2,015 hazards / 1,886 links / 1,197 evidence；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
+
+当前统计统一见 README、PROJECT_STATE、HANDOFF 与 `knowledge/manifest.json`；全库库存、当前可发布包、历史批次三种口径不得混用。
 
 ## Publication 长期完整性门禁
 

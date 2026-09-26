@@ -9,7 +9,10 @@
 
 strictVerdict 由 releaseBlockers 决定；存在 blocker 时脚本返回非零退出码，CI 必须失败。
 """
+import argparse
 import json
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 import os
 import re
 import sys
@@ -27,8 +30,13 @@ def has_non_current_reason(reasons):
     )) for x in (reasons or []))
 
 
-def main():
-    r = evaluate_release_gate()
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Strict release audit for an explicit effective date")
+    parser.add_argument("--as-of", type=date.fromisoformat,
+                        default=datetime.now(ZoneInfo("Asia/Shanghai")).date(),
+                        help="Effective date (YYYY-MM-DD); defaults to the current date in Asia/Shanghai")
+    args = parser.parse_args(argv)
+    r = evaluate_release_gate(as_of=args.as_of)
 
     release_blockers = []
     inventory_warnings = []

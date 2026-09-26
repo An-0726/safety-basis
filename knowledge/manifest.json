@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-26",
-  "batch": "drive-hazard-ingest-20260926",
+  "batch": "field-source-audit-increment-20260926",
   "batches": [
     {
       "evidenceAdded": 6,
@@ -464,38 +464,49 @@
       "linksAdded": 4,
       "evidenceAdded": 1,
       "selection": "2026 cloud inspection follow-up: promote faded/damaged safety signs with GB 2894-2025 7.4.1; add electrical-room small-animal protection using GB 50053-2013 6.2.4; add damaged/nonfunctional exit-sign lamp using Fire Protection Law Art.16(1)(2); add fire-control-room dedicated phone fault using GB 55036-2022 12.0.10. Enterprise-specific records were genericized and no private report/photo data was committed."
+    },
+    {
+      "id": "field-source-audit-increment-20260926",
+      "lawsAdded": 2,
+      "lawVersionsAdded": 2,
+      "clausesAdded": 4,
+      "hazardsAdded": 6,
+      "hazardsPromoted": 1,
+      "linksAdded": 4,
+      "evidenceAdded": 7,
+      "selection": "Curated actual-field increment: promote existing cylinder anti-tip candidate using two complete officially quoted clauses; add chemical-user SDS/label provision using complete current Hazardous Chemicals Safety Law Article 51. Add five proposed gaps including unattended forklift key removal; its official search quotation is stored for locating only because source-page retrieval failed. Correct major-hazard Article 14 scope and search aliases. This does not complete all 2026 source scanning or per-row adjudication."
     }
   ],
   "counts": {
-    "laws": 105,
-    "lawVersions": 108,
-    "clauses": 2996,
-    "hazards": 2121,
-    "links": 1955,
-    "evidence": 1202,
+    "laws": 107,
+    "lawVersions": 110,
+    "clauses": 3000,
+    "hazards": 2127,
+    "links": 1959,
+    "evidence": 1209,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
-  "migrationPhase": "Long-term maintenance: 2026 cloud inspection follow-up staged on maintenance/20260926-drive-hazard-ingest; four high-frequency items received complete direct-basis review chains. Public deployment remains the 2026-09-23 baseline until this batch is merged and Pages verification passes.",
-  "scope": "Current branch knowledge inventory: 105 laws / 108 lawVersions / 2996 clauses / 2121 hazards / 1955 links / 1202 evidence / 26 successions / 75 requirements; hazard lifecycle 1704 active / 320 proposed / 97 superseded. Public release remains Gate-generated; proposed, superseded, non-current, and unqualified records remain excluded.",
+  "migrationPhase": "Long-term maintenance: dated baseline main 72fd38489a54e8797da4a757690c1ab9f241b040 was verified with Validate 36170580281 and Build/Pages/Online Verify 36170580283. This branch adds a curated increment from actual 2026 records; broader source extraction and pending adjudication are not claimed complete. Deployment of this increment must be verified separately.",
+  "scope": "Knowledge inventory: 107 laws / 110 lawVersions / 3000 clauses / 2127 hazards / 1959 links / 1209 evidence / 26 successions / 75 requirements; lifecycle 1706 active / 324 proposed / 97 superseded. Public counts are Gate-generated; proposed and unresolved field facts do not enter the official site.",
   "source": {
     "sqliteSha256": "7086d945eef1b6ea74b28c1af94e87e37d1b520b18caed2e1064f8855fd76bc8",
     "v3ReleaseCorroboration": "reviewed-20260909-r10"
   },
-  "laws": 105,
-  "lawVersions": 108,
-  "clauses": 2996,
-  "hazards": 2121,
-  "links": 1955,
-  "evidence": 1202,
+  "laws": 107,
+  "lawVersions": 110,
+  "clauses": 3000,
+  "hazards": 2127,
+  "links": 1959,
+  "evidence": 1209,
   "successions": 26,
-  "activeHazards": 1704,
-  "proposedHazards": 320,
+  "activeHazards": 1706,
+  "proposedHazards": 324,
   "supersededHazards": 97,
   "lifecycle": {
-    "active": 1704,
-    "proposed": 320,
-    "superseded": 97
+    "active": 1706,
+    "superseded": 97,
+    "proposed": 324
   }
 }
