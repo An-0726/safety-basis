@@ -3,22 +3,20 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "本条的「未设置在安全出口和人员密集场所疏散门的正上方」事实，与 GB 51309-2018 第4.5.10条第1款「应安装在安全出口或疏散门内侧上方居中的位置」直接对应，确认为 direct 依据。",
+  "reviewer": "Codex 原文及适用性审计 20260926",
+  "checkedAt": "2026-09-26T19:02:50+08:00",
+  "reason": "核出口标志灯第4.5.10条第1款：内侧上方居中；受限时允许门两侧且开门不得遮挡，不要求所有标志灯必须唯一正上方。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "INSTALLATION_POSITION"
   ],
-  "reviewedContentHash": "356925cf281429b78288876c7052e45baa88452a52dd1e849ee7b22064a6effc",
+  "reviewedContentHash": "63315f2456662461b87895b71792c9dfe78bd62af0ee0bf651a64985d99c039b",
   "contextHashes": {
-    "hazard": "01c0733e23c55b8541f7952966336ed846540f453db8033645f949800cb55cd7",
-    "clause": "c27c06c665bf0ea8355899788cb30a1ba8388122d682d95b014f64a073276f0c",
-    "link": "356925cf281429b78288876c7052e45baa88452a52dd1e849ee7b22064a6effc"
+    "hazard": "7b9d332a1092c9a4d535370c20a133db39f7eac444286775672bbe70c43eb600",
+    "clause": "5c0152ead973f7ecc46ad21d6d64e00d8c9fef5b745100980e48ec4e43348c50"
   },
   "evidenceRefs": [
-    "E_ab1e57d0b8fa7d09faa216720cb334d0e8c3ae18df1d535d205799feab6dc17b",
-    "E_PRIV_GB51309_2018"
-  ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "E_GB51309_HENAN_GUIDE_20260926",
+    "E_GB55036_SUPERSESSION_SH_20260926"
+  ]
 }
