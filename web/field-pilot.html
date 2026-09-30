@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>隐患速查 · 24例本地试点</title><link rel="stylesheet" href="field-pilot.css"></head>
+<body>
+<header><div><p class="eyebrow">隐患速查 / 本地试点</p><h1>从现场问题找到具体检查项</h1><p>24例候选 · 适用条件与法律依据尚待闭合 · 未作为正式检查结论</p></div><a href="index.html">对照原正式速查 →</a></header>
+<main>
+<section class="toolbar" aria-label="搜索与用途筛选">
+<label for="query">搜索对象或缺陷</label><input id="query" type="search" placeholder="可燃气体报警、防爆电气、灭火器数量…" autocomplete="off">
+<div class="quick"><button data-q="可燃气体报警">可燃气体报警</button><button data-q="防爆电气">防爆电气</button><button data-q="灭火器">灭火器</button><button data-q="有限空间">有限空间</button></div>
+<label for="inspection">检查用途</label><select id="inspection"><option value="core_onsite_inspection">现场检查</option><option value="document_review">资料核查</option><option value="special_review">专项评价</option><option value="legal_obligation">法规义务</option><option value="undetermined">待定</option></select>
+<p id="summary" role="status">正在加载本地候选…</p>
+</section>
+<div class="workspace"><section id="results" aria-label="检索结果"></section><article id="detail" aria-live="polite"><p>选择一条检查项查看描述、适用条件、依据及整改。</p></article></div>
+</main><script type="module" src="js/field-pilot.js"></script>
+</body></html>
