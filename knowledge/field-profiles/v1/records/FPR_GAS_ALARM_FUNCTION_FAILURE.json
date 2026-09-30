@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "FPR_GAS_ALARM_FUNCTION_FAILURE",
+  "revision": 1,
+  "hazardId": "H_A9E3881B83F84709B23CF8EB2C",
+  "title": "承担生产安全监测功能的可燃气体报警装置功能失效",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "适用于生产经营单位已设置并承担生产安全监测功能的可燃气体报警装置。须明确所检测介质、设备应实现的报警输出及符合设备要求的测试方法，并有受控测试记录证明功能失效。 测试应依据已核实的适用功能要求及设备说明，明确测试覆盖的探测、控制或输出环节；仅凭局部自检或单一环节模拟，不扩大认定未经测试的系统功能失效。法律、行政法规对相关专项安全另有规定的，适用其规定。"
+    ],
+    "excludes": [
+      "不凭未安装一体式声光报警器认定系统失效",
+      "不凭未提供设计图纸或外观照片认定功能失效",
+      "不据本条确定所有场所必须设置气体探测器或具体安装高度",
+      "关闭、破坏行为及未按期检测与功能失效分别判断",
+      "本项不自动构成重大事故隐患；重大判定另按适用的具体条、款、项核实。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "requiredOutputConfirmed",
+      "testScopeConfirmed"
+    ]
+  },
+  "findingTemplate": {
+    "text": "{{device}}在{{testConditions}}下未发出应实现的{{requiredOutput}}；本次确认的故障范围为{{verifiedScope}}。",
+    "slots": [
+      {
+        "key": "device",
+        "label": "报警装置位置及编号"
+      },
+      {
+        "key": "testConditions",
+        "label": "经核实的受控测试条件"
+      },
+      {
+        "key": "requiredOutput",
+        "label": "该装置应实现的报警输出"
+      },
+      {
+        "key": "verifiedScope",
+        "label": "本次测试实际覆盖且已证实失效的环节"
+      }
+    ]
+  },
+  "evidenceRequirements": [
+    "设备用途、所检测介质和生产安全保护功能资料",
+    "经核实的适用功能要求及设备说明",
+    "所需报警输出、受控测试方法及覆盖环节",
+    "测试条件、操作过程及失败结果记录；不得凭局部自检扩大故障范围"
+  ],
+  "correctiveDirection": "由具备相应能力的人员检查探测、控制和信号传输环节，修复或更换故障组件；依据设备要求完成受控功能测试，确认报警输出恢复并留存签字记录。故障期间依据泄漏风险采取相应防控措施，不以停用报警消除故障提示。 故障期间风险控制为基于风险的整改方向，不声称本款规定了固定技术方案。",
+  "basisLinkIds": [
+    "K_57811f53c66fb66140b074fc"
+  ]
+}

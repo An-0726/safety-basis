@@ -11,6 +11,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import sys
 from datetime import date
 
@@ -24,6 +25,8 @@ from presentation import (  # noqa: E402
     searchable,
 )
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
+from field_profiles import public_projection  # noqa: E402
+from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
@@ -35,6 +38,13 @@ SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3
                "js/search-vocabulary.js",
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
 COVER_EXCLUDE = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
+FIELD_PROFILE_FILE = 'data/field-profiles.json'
+PRIVATE_PROFILE_KEYS = {'inventory', 'hazardsWithoutProfiles', 'excludedProfiles',
+                        'orphanReviewIds', 'reviewedProfileHash', 'dependencyFingerprint',
+                        'semanticChecks', 'basisScopeReasons', 'internalNotes',
+                        'sourceRefs', 'fieldReview', 'reviewer', 'reviewedContentHash',
+                        'contextHashes', 'evidenceRefs', 'reviewedOn', 'profileRevision',
+                        'profileCount', 'publishedCount', 'orphanReviewCount'}
 
 
 class Failures(list):
@@ -110,11 +120,66 @@ def expected_release_hash(bundle):
     ).hexdigest()
 
 
+def private_profile_keys(value):
+    """Find structural private fields, including attempts to hide them elsewhere."""
+    found = set()
+    if isinstance(value, dict):
+        found.update(set(value) & PRIVATE_PROFILE_KEYS)
+        for child in value.values():
+            found.update(private_profile_keys(child))
+    elif isinstance(value, list):
+        for child in value:
+            found.update(private_profile_keys(child))
+    return found
+
+
+def check_field_profiles(bad, payload, expected, manifest, release, hazards, clauses, law_ids):
+    """Require the exact governed projection and resolvable existing public joins."""
+    bad.check(json.dumps(payload, ensure_ascii=False, sort_keys=True) ==
+              json.dumps(expected, ensure_ascii=False, sort_keys=True),
+              'field profiles 与当前日期已审核的精确公开投影不一致')
+    bad.check(manifest.get('files', {}).get('fieldProfiles') == FIELD_PROFILE_FILE,
+              'manifest fieldProfiles 文件引用不一致')
+    count = len(expected['records'])
+    for owner, value in [('manifest', manifest), ('release', release)]:
+        bad.check(type(value.get('counts', {}).get('fieldProfiles')) is int and
+                  value['counts']['fieldProfiles'] == count,
+                  owner + ' fieldProfiles 数量不一致')
+    # Walk the trusted expected structure so a malformed public record reports
+    # rejection above instead of crashing the verifier or widening its joins.
+    for profile in expected['records']:
+        ident, hid = profile['id'], profile['hazardId']
+        hazard = hazards.get(hid)
+        if not bad.check(hazard is not None, 'field profile 隐患引用断链：' + ident):
+            continue
+        source = profile['sourceHazard']
+        bad.check(source['id'] == hid and hazard.get('title') == source['title'] and
+                  hazard.get('conditions') == (source['conditions'] or ''),
+                  'field profile 源隐患标题/conditions 不一致：' + ident)
+        selected = {basis['linkId'] for basis in profile['bases']}
+        bad.check(selected == set(profile['basisLinkIds']) and
+                  len(selected) == len(profile['bases']),
+                  'field profile selected links 不一致：' + ident)
+        for basis in profile['bases']:
+            clause = clauses.get(basis['clauseId'])
+            bad.check(clause is not None and clause.get('lawId') == basis['lawVersionId'] and
+                      basis['lawVersionId'] in law_ids,
+                      'field profile 法规条款引用断链：' + ident + '/' + basis['linkId'])
+            bad.check(any(ref.get('clauseId') == basis['clauseId'] and
+                          ref.get('role') == basis['role'] for ref in hazard.get('basisRefs', [])),
+                      'field profile 依据不在源隐患公开依据中：' + ident + '/' + basis['linkId'])
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--bundle", default=None)
     ap.add_argument("--selection", default=SELECTION)
     args = ap.parse_args()
+    with stable_knowledge_snapshot(KNOW) as (snapshot, source_hash):
+        return verify(args, str(snapshot), source_hash)
+
+
+def verify(args, KNOW, source_hash):
     bad = Failures()
 
     sel = rd(args.selection)
@@ -136,12 +201,13 @@ def main():
         if rel in files:
             bad.check(sha256_file(files[rel]) == expected, "哈希不匹配：" + rel)
 
-    allowed = ({"checksums.json", "release.json", "site-manifest.json"} | set(SITE_ASSETS)
-               | {rel for rel in files if rel.startswith("data/") and rel.endswith(".json")})
-    stray = sorted(rel for rel in files if rel not in allowed)
-    bad.check(not stray, "发布包含白名单之外文件：" + ", ".join(stray[:10]))
     bad.check(not any(rel.startswith("data/_internal") for rel in files),
               "发布包含 _internal 索引")
+    for rel, path in files.items():
+        if rel.endswith('.json'):
+            private_keys = private_profile_keys(rd(path))
+            bad.check(not private_keys, '公开包包含私有 field profile 字段：' + rel +
+                      ' ' + ', '.join(sorted(private_keys)))
 
     release = rd(os.path.join(bundle, "release.json"))
     bad.check(release.get("formatVersion") == "safety-unified-release-v1",
@@ -155,6 +221,27 @@ def main():
 
     manifest = rd(os.path.join(bundle, "data", "manifest.json"))
     site_manifest = rd(os.path.join(bundle, "site-manifest.json"))
+    public_files = {'searchIndex': 'data/search-index.json', 'lawIndex': 'data/law-index.json',
+                    'taxonomy': 'data/taxonomy.json', 'fieldProfiles': FIELD_PROFILE_FILE}
+    bad.check(manifest.get('files') == public_files, 'manifest files 必须恰好为公开消费入口')
+    allowed = ({'checksums.json', 'release.json', 'site-manifest.json', 'data/manifest.json'} |
+               set(SITE_ASSETS) | set(public_files.values()) |
+               {'data/fulltext/' + rel for rel in all_files(os.path.join(PUBLICATION, 'fulltext'))})
+    safe_shard_paths = True
+    for kind, prefix in [('hazardShards', 'hazards/h'), ('clauseShards', 'clauses/c')]:
+        for shard in manifest.get(kind, []):
+            url = shard.get('url', '')
+            if bad.check(isinstance(url, str) and re.fullmatch('data/' + prefix + r'\d{4}\.json', url),
+                         '非法分片文件引用：' + str(url)):
+                allowed.add(url)
+            else:
+                safe_shard_paths = False
+    stray = sorted(set(files) - allowed)
+    bad.check(not stray, '发布包含白名单之外文件：' + ', '.join(stray[:10]))
+    bad.check(set(files) == allowed, '公开包与预期公开文件集合不一致')
+    if not safe_shard_paths:
+        print(json.dumps({'ok': False, 'errors': list(bad)}, ensure_ascii=False, indent=2))
+        return 1
     bad.check(manifest.get("schemaVersion") == 2 and manifest.get("v4SchemaVersion") == 3,
               "manifest 格式标记无效")
     bad.check(manifest.get("releaseHash") == actual_hash, "manifest releaseHash 不一致")
@@ -165,6 +252,15 @@ def main():
     except ValueError:
         as_of = None
         bad.append("release.asOf 不是有效日期")
+    if as_of is None:
+        print(json.dumps({'ok': False, 'errors': list(bad)}, ensure_ascii=False, indent=2))
+        return 1
+    bad.check(manifest.get('generatedAt') == release.get('asOf') == site_manifest.get('asOf'),
+              '公开清单日期不一致')
+    bad.check(release.get('knowledge', {}).get('gate', {}).get('asOf') == as_of.isoformat(),
+              'Gate 日期与 release.asOf 不一致')
+    bad.check(release.get('knowledge', {}).get('snapshotSha256') == source_hash,
+              'knowledge 快照与当前稳定源不一致')
 
     # ---- 分片与索引 ----
     hazards, clauses = {}, {}
@@ -234,7 +330,7 @@ def main():
               "manifest counts 与正式数据不一致")
 
     # ---- 与实时 Gate / knowledge 一致性 ----
-    gate = evaluate_release_gate(KNOW, as_of) if as_of else evaluate_release_gate(KNOW)
+    gate = evaluate_release_gate(KNOW, as_of)
     know_hazards = load_dir(KNOW, "hazards")
     know_links = load_dir(KNOW, "links")
     know_clauses = load_dir(KNOW, "clauses")
@@ -242,6 +338,12 @@ def main():
     know_laws = load_dir(KNOW, "laws")
     publication_index = rd(os.path.join(PUBLICATION, "law-index.json"))
     publication_by_id = {entry["id"]: entry for entry in publication_index}
+
+    expected_profiles = public_projection(KNOW, as_of=as_of)['public']
+    if bad.check(FIELD_PROFILE_FILE in files, '缺少 governed field profiles 公开文件'):
+        check_field_profiles(bad, rd(files[FIELD_PROFILE_FILE]), expected_profiles,
+                             manifest, release, hazards, clauses, law_ids)
+    bad.check(release.get('counts') == counts, 'release/manifest counts 不一致')
 
     bad.check(set(hazards) == gate.eligible_hazards,
               "正式隐患集合 != 当前 Gate eligibleHazards（%d vs %d）" %
@@ -368,6 +470,7 @@ def main():
             "laws": len(law_index),
             "clauses": len(clauses),
             "links": counts["links"],
+            "fieldProfiles": len(expected_profiles['records']),
         },
         "gate": {
             "asOf": gate.as_of,

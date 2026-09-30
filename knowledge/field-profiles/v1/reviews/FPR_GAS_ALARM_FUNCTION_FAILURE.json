@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_GAS_ALARM_FUNCTION_FAILURE",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "dot / independent legal and field-template review",
+  "reviewedOn": "2026-09-30",
+  "reason": "独立逐项审核精确profile：既有安全设备经有效受控测试证实功能失效，适用安全生产法第三十六条第二款；是已核通用安全设备隐患的条件式细化，不认证企业事实或现场频次，不增加同一事实的重复隐患计数。安装、布点、联锁和重大隐患判定不得自动推出。",
+  "basisScopeReasons": {
+    "K_57811f53c66fb66140b074fc": "关联明确安全设备正常运转及维护检测义务；本profile限已配置并承担生产安全保护功能的可燃气体报警装置，经覆盖相应环节的有效受控测试确认报警功能失效，属于上游义务内的收窄应用。定位第三十六条第二款，完整第三十六条原文随原实体保存。"
+  },
+  "semanticChecks": {
+    "applicability": true,
+    "correctiveDirection": true,
+    "evidenceRequirements": true,
+    "findingTemplate": true,
+    "routing": true,
+    "scopeContainment": true
+  },
+  "reviewEvidence": {
+    "profileFileSha256": "228f81cd5fbb54c07004472b2072f4f54c157a731ea22792a9e9943b4509cfd8",
+    "officialText": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+    "currentLawCatalogue": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html"
+  },
+  "reviewedProfileHash": "56a0cf6998fbb6d8de1c5a340901a7caffcc263b9558a9aa7591e4a731b81424",
+  "dependencyFingerprint": "f788b8e2aac921dcd53666afc2e131e8fdda1e7699ce5342c169c998cd5616dc"
+}
