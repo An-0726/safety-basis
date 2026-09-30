@@ -19,8 +19,10 @@ import test_field_profiles as fixtures
 
 
 class FieldProfileReleaseTests(unittest.TestCase):
+    fixture_type = fixtures.FieldProfileTests
+
     def setUp(self):
-        self.fixture = fixtures.FieldProfileTests()
+        self.fixture = self.fixture_type()
         self.fixture.setUp()
         self.addCleanup(self.fixture.doCleanups)
         self.root = self.fixture.root
@@ -127,6 +129,52 @@ class FieldProfileReleaseTests(unittest.TestCase):
         rc, report = self.verify()
         self.assertEqual(rc, 0, report)
         self.assertEqual(report['counts']['fieldProfiles'], 1)
+
+    def test_profile_kind_is_structural_and_builder_emits_only_authored_kind(self):
+        f = self.fixture
+        self.assertEqual(validator.validate_namespace(self.root)['errors'], [])
+        self.build()
+        row = self.read('data/field-profiles.json')['records'][0]
+        self.assertEqual('profileKind' in row, 'profileKind' in f.profile)
+        if 'profileKind' in f.profile:
+            self.assertEqual(row['profileKind'], f.profile['profileKind'])
+        self.assertEqual(row['findingTemplate'], f.profile['findingTemplate'])
+        self.assertIs(row['observedViolation'], False)
+        for kind in ('unknown', None, {}, []):
+            f.profile['profileKind'] = kind
+            f.save_profile()
+            self.assertIn('FPR_TEST:PROFILE_KIND', validator.validate_namespace(self.root)['errors'])
+
+    def test_resealed_kind_and_template_tampering_fail_full_verifier(self):
+        self.build()
+        expected = self.read('data/field-profiles.json')
+        missing = object()
+        for key, value in (
+                ('profileKind', missing),
+                ('profileKind', 'conditional_template'),
+                ('profileKind', 'routing_only'),
+                ('profileKind', None),
+                ('profileKind', {}),
+                ('profileKind', []),
+                ('findingTemplate', None),
+                ('findingTemplate', {}),
+                ('findingTemplate', {'text': 'At {{location}}',
+                                     'slots': [{'key': 'location', 'label': 'Location'}]})):
+            with self.subTest(key=key, value=value):
+                payload = copy.deepcopy(expected)
+                row = payload['records'][0]
+                if value is missing:
+                    row.pop(key, None)
+                else:
+                    row[key] = value
+                if payload == expected:
+                    continue
+                (self.out / 'data/field-profiles.json').write_text(json.dumps(payload), encoding='utf-8')
+                self.reseal()
+                rc, report = self.verify()
+                self.assertEqual(rc, 1, report)
+                self.assertTrue(any('精确公开投影' in error for error in report['errors']), report)
+                self.assertFalse(any('哈希' in error or 'Hash' in error for error in report['errors']), report)
 
     def test_empty_unreviewed_and_undetermined_profiles_preserve_hazards_search(self):
         self.build()
@@ -255,6 +303,21 @@ class FieldProfileReleaseTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'changed during release snapshot'):
                 with release_snapshot.stable_knowledge_snapshot(self.root):
                     self.fail('unstable source was accepted')
+
+
+class ExplicitConditionalFieldProfileReleaseTests(FieldProfileReleaseTests):
+    fixture_type = fixtures.ExplicitConditionalFieldProfileTests
+
+
+class RoutingOnlyFieldProfileReleaseTests(FieldProfileReleaseTests):
+    fixture_type = fixtures.RoutingOnlyFieldProfileTests
+
+    def test_routing_only_template_rejected_by_structural_validator(self):
+        self.fixture.profile['findingTemplate'] = {
+            'text': 'At {{location}}', 'slots': [{'key': 'location', 'label': 'Location'}]}
+        self.fixture.save_profile()
+        self.assertIn('FPR_TEST:PROFILE_ROUTING_ONLY_TEMPLATE',
+                      validator.validate_namespace(self.root)['errors'])
 
 
 if __name__ == '__main__':

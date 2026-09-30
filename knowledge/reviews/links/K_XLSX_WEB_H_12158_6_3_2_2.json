@@ -2,17 +2,17 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_6_3_2_2",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "aa6ec231a5995d09934c0fb5440107e0fa0d50f4e6f0f6ed0f94f240f108484e",
   "contextHashes": {
     "hazard": "8679cb03a293b1da93d352288ba249c743f68dfa82d1e5476c4126e7a3abb6ce",
     "clause": "35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2条导电及亚导体电阻率。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-09-30T12:25:50Z",
+  "reviewer": "Codex source-integrity recovery review 20260930",
+  "reason": "撤回原verified审核。隐患所述爆炸性气体环境中外露静电非导体部件最大宽度、表面积及超限评价，与实际关联C_12158_4_2_2_3的接地/静电泄漏电阻要求对象和指标不同。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
   "evidenceRefs": [
     "E_SAMR_GB12158_2024"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
 }
