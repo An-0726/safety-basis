@@ -1,18 +1,19 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
-    "clause": "3bfd81c57b51081658a84523e5e3f78caf7bc5c364cf5cfac1bb09c100b7a886",
-    "hazard": "6d2b999469ab9be6c12ceae1c61b6db4f5111ddfb2e321c3307a1282f311fc82"
+    "hazard": "bf97d5d5c411941559e2a24ab4a510574b0de22adc8f1c15244fad8c8c1dd759",
+    "clause": "3bfd81c57b51081658a84523e5e3f78caf7bc5c364cf5cfac1bb09c100b7a886"
   },
   "decision": "verified",
   "entityId": "K_XLSX_5168434ab8029683af6b74d0",
   "entityType": "link",
   "evidenceRefs": [
-    "E_FCB_L006"
+    "E_FCB_L006",
+    "E_REMEDIATION_20260930_MEM6"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "reason": "第6号令19条要求作业点最高温度恢复常温后方可生产。新措施补足温度前提，清场本身不再构成复产许可，范围仍限对应粉尘涉爆检修动火。",
   "reviewType": "applicability",
   "reviewedContentHash": "66776574ac0c6e82063391c7dbdd6344466ab5318eafb3dcb7137cca8c62781c",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_FCB_19_4；条款：C_FCB_19；保留direct角色。"
 }

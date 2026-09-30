@@ -1,13 +1,17 @@
 {
-  "checkedAt": "2026-09-16",
+  "checkedAt": "2026-09-30",
   "decision": "verified",
   "entityId": "H_96106D7519F84C2DA149BB5819",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_PDDB_L019"
+    "E_PDDB_L019",
+    "E_REMEDIATION_20260930_MEM10",
+    "E_REMEDIATION_20260930_MEM6",
+    "E_REMEDIATION_20260930_GB15577"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+  "reason": "第10号令11(4)具有两个独立分支；第6号令15条及GB15577第8.1.7条进一步确认金属粉尘应负压，不能以火花探测消除豁免。其他可燃粉尘正压吹送的防点燃措施不能移植为金属粉尘例外。原description已含两分支，修正title/keywords/conditions及link并未新添无根据对象。",
   "reviewType": "content",
-  "reviewedContentHash": "8813cb9e0cc15ce70b16904173e316ddd6b79e0c637642577421d0e3ea9f80f4",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reviewedContentHash": "6275b1ad29a336236039c1cb26cef23aaa7113a36c82f6e1626bb49b5240031f",
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。"
 }

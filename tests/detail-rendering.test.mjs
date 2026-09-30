@@ -188,14 +188,14 @@ test('页头数据日期优先使用明确 asOf，旧包缺失时清晰回退', 
     {asOf: '2026-09-18', generatedAt: '2026-09-20T01:00:00+08:00'},
     {asOf: '2026-09-19'},
   );
-  assert.equal(harness.header.dbVersion.textContent, '数据日期 2026-09-19');
+  assert.equal(harness.header.dbVersion.textContent, '核验快照 2026-09-19');
   assert.equal(harness.header.dbDate.textContent, '2026-09-19');
   assert.doesNotMatch(harness.header.dbVersion.textContent, /数据库版本|dataVersion|stage/);
 
   harness.api.setDataDateHeader({generatedAt: '2026-09-20T01:00:00+08:00'}, {});
-  assert.equal(harness.header.dbVersion.textContent, '数据日期 2026-09-20');
+  assert.equal(harness.header.dbVersion.textContent, '构建日期 2026-09-20 · 核验日期未提供');
   harness.api.setDataDateHeader({}, {});
-  assert.equal(harness.header.dbVersion.textContent, '数据日期 未提供');
+  assert.equal(harness.header.dbVersion.textContent, '快照日期未提供');
 });
 
 async function clickCopy(harness, id) {

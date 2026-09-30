@@ -1,18 +1,19 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
-    "clause": "0c9a5108cbf47233fdc595b157bd492b9fa49220f2a9c73e3a61db3e0d2ffd6f",
-    "hazard": "d8c11bbb85abef418138d209e8c3a240255d7ef47ed1799dfe1996e8552342fb"
+    "hazard": "910577ff6efea7d136597b1e50528972e58a03c531102c1ff251d8f860fa8638",
+    "clause": "0c9a5108cbf47233fdc595b157bd492b9fa49220f2a9c73e3a61db3e0d2ffd6f"
   },
   "decision": "verified",
   "entityId": "K_XLSX_6cfb819dfd23b4fc5b30c46e",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_15577_GB 15577",
+    "E_REMEDIATION_20260930_GB15577"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "reason": "6.3.3有防过热火花和防可燃粉尘进入外壳两项防止义务；新措施完整恢复第二防止，不将一般粉尘环境泛化为粉尘爆炸环境。",
   "reviewType": "applicability",
   "reviewedContentHash": "2063d0ad7b36b4c6bfb9af44f8dcd1384e5e23190b4bb6e6da522424a45c5f8f",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_6_3_3_2；条款：C_15577_6_3_3；保留direct角色。"
 }

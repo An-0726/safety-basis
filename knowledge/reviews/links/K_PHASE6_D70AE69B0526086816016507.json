@@ -1,18 +1,21 @@
 {
-  "checkedAt": "2026-09-16",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
-    "clause": "9ce6b26b0539169182a6347434155c44e1ec420bd041610dacead8d39a097118",
-    "hazard": "8813cb9e0cc15ce70b16904173e316ddd6b79e0c637642577421d0e3ea9f80f4"
+    "hazard": "6275b1ad29a336236039c1cb26cef23aaa7113a36c82f6e1626bb49b5240031f",
+    "clause": "9ce6b26b0539169182a6347434155c44e1ec420bd041610dacead8d39a097118"
   },
   "decision": "verified",
   "entityId": "K_PHASE6_D70AE69B0526086816016507",
   "entityType": "link",
   "evidenceRefs": [
-    "E_PDDB_L019"
+    "E_PDDB_L019",
+    "E_REMEDIATION_20260930_MEM10",
+    "E_REMEDIATION_20260930_MEM6",
+    "E_REMEDIATION_20260930_GB15577"
   ],
-  "reason": "《工贸企业重大事故隐患判定标准》第十一条对应金属粉尘正压除尘/吹送及火花探测消除要求。",
+  "reason": "第10号令11(4)具有两个独立分支；第6号令15条及GB15577第8.1.7条进一步确认金属粉尘应负压，不能以火花探测消除豁免。其他可燃粉尘正压吹送的防点燃措施不能移植为金属粉尘例外。原description已含两分支，修正title/keywords/conditions及link并未新添无根据对象。",
   "reviewType": "applicability",
-  "reviewedContentHash": "d81eafd82fbc3d6c215840f0989f818772604fee8a255ea75d34fa44852e14d9",
-  "reviewer": "ChatGPT PHASE6 final review 20260916",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "537fd3abdd4b97970255f7e5a6a0e3e7ef029003d501336279e49d09f359e8aa",
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_96106D7519F84C2DA149BB5819；条款：C_PDDB_11；保留direct角色。"
 }

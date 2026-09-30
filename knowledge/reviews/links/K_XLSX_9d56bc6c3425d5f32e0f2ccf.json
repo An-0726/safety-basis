@@ -1,18 +1,20 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
-    "clause": "e0cb158108027dc34b5fb00b8222ddf42fef4a2920eb63d0d0a9b4a74f2553c1",
-    "hazard": "59e24e5180673ccc5c9e97ba6d280df077f225646df1be8b2b24d341805982b5"
+    "hazard": "5a1ee2a5ee786172a78cace2292e8a14f4e98480f709902a48f077f649d8da83",
+    "clause": "e0cb158108027dc34b5fb00b8222ddf42fef4a2920eb63d0d0a9b4a74f2553c1"
   },
   "decision": "verified",
   "entityId": "K_XLSX_9d56bc6c3425d5f32e0f2ccf",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_15577_GB 15577",
+    "E_REMEDIATION_20260930_GB15577",
+    "E_REMEDIATION_20260930_MEM6"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "reason": "7.1.3及第6号令15条均不允许单独隔爆。新措施明确该禁止条件，并要求核定适用控爆方式，不把仅装隔爆视为完成整改；不把此条一概等同于第10号令11(3)的干式除尘重大隐患判据。",
   "reviewType": "applicability",
   "reviewedContentHash": "a85b51059336c83ef5d70a65adc90594b7ae66bda1921539978264dd09ba8569",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_7_1_3_1；条款：C_15577_7_1_3；保留direct角色。"
 }

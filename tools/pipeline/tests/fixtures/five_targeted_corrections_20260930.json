@@ -1,0 +1,696 @@
+{
+  "asOf": "2026-09-30",
+  "scope": "Five targeted knowledge corrections. These exact text and provenance regressions do not implement field-state adjudication or certify unrelated records.",
+  "entities": [
+    {
+      "path": "knowledge/hazards/H_46A01ECE8B9C4AD0A9D66A841C.json",
+      "contentHash": "710cc5ee45604d139428a902c6406716804d9429db1c018f622be580b2bda22e",
+      "fileSha256": "287e811f370ca377d9327fd0a11173486f920c19ddce1019e8408a7f01c8e27f"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C.json",
+      "contentHash": "f7bc9e311c70f275579f0f686cc39ee6793d266cedf9921b6b2581d46ae1644a",
+      "fileSha256": "e9bd5b6e9aec081a5cbbf953ffaf5623af8d5bdf789ddff4477d88e6ba108c91"
+    },
+    {
+      "path": "knowledge/hazards/H_A35BD266ADB24DF2A32373976A.json",
+      "contentHash": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+      "fileSha256": "f17da10e07d70634ccd58d4aa691204af61b07e80f33b873e8443363a3212bc2"
+    },
+    {
+      "path": "knowledge/links/K_GB45067_A35BD266ADB2_5.json",
+      "contentHash": "3375a6ee425a5f67eef8a0cd5f7d8febcf7284b71868c2999f3ddb672e861143",
+      "fileSha256": "f8a5c48ff7dad6e06770aa01e2ae167369616ee7093f139e3408be0c87479276"
+    },
+    {
+      "path": "knowledge/links/K_43ef04628e3d0e5f615decbe.json",
+      "contentHash": "4580dd486abf55ffd65402c971eb5cee40b7b016ca37cf9e4048fc6d8a113901",
+      "fileSha256": "50d6585bc9c8b7e5d3701c235f4965992ba860c883339e6af6919b3664005dfa"
+    },
+    {
+      "path": "knowledge/hazards/H_JSXF_58_1.json",
+      "contentHash": "24d6ae0ecd43731985b4b4fb5574385b8cc9323f1686926743988cad6dd10b3c",
+      "fileSha256": "0f9d7befe2f48acd279fe708b165fb9ff2532ba78184c7a8b634ce5b34c204a9"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_FT_4996B3C832602A8FE3E7F750.json",
+      "contentHash": "27859e8c3baa57d00aefc63bd750bae74fbdfd05e16fbef244d376f4acbce056",
+      "fileSha256": "b65948065fbf084d6c4559d3f67f611522b550653c58a6c9cc8e7c042c70f992"
+    },
+    {
+      "path": "knowledge/hazards/H_JSXF_58_2.json",
+      "contentHash": "a5c713f0b5f8f77c20bc5b042f626ebc916c7f40f7793b95cb7df8450507b64d",
+      "fileSha256": "dc8d36d56454535f6cd757ccf4d99533a38d04e426646ae3d1a3321f63a98374"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_FT_1412F9552C73E6C403C39E08.json",
+      "contentHash": "0d0fb8a61f81b82c30ba225f9b414a622df8db8236329e6a789d204ab48f88ed",
+      "fileSha256": "015badbbb3c6aa60604ecbde2294287b0f58a7573da7f1145a3fa516531a2538"
+    },
+    {
+      "path": "knowledge/hazards/H_JSXF_53_3.json",
+      "contentHash": "584096d0026c6ffb5a2e5955859fd7ae4d5ff5096e2ff0f942fde7bbe9a5ab78",
+      "fileSha256": "253943609df98524588a262b89df86f0a829ac55a7943b03b96246afe5e45a16"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C.json",
+      "contentHash": "9143c1b907b0e279f1c23ff22b9e10f23ca60faf3a173985571104a8a6c443ad",
+      "fileSha256": "7442426f32efe970d27e335a3fd79fe0c7d53fd236d37a393585742262440e89"
+    },
+    {
+      "path": "knowledge/clauses/C_JSXF_58.json",
+      "contentHash": "cdc05d6af884dc32d292efc50c60da71746d9c7aa65d7fc231b1cac8a48d3a2e",
+      "fileSha256": "8a69dea2adb35d6d135c8dcba64e6d2a699dc90569e635b52c5b1c290b8435ca"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "knowledge/reviews/hazards/H_46A01ECE8B9C4AD0A9D66A841C.json",
+      "record": {
+        "entityType": "hazard",
+        "entityId": "H_46A01ECE8B9C4AD0A9D66A841C",
+        "reviewType": "content",
+        "decision": "verified",
+        "reviewedContentHash": "710cc5ee45604d139428a902c6406716804d9429db1c018f622be580b2bda22e",
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "独立目视核对GB15577-2018第8.1.5及第1章：等电位连接、可靠接地、接地电阻严格小于100Ω是并列要求；100Ω不合格，任一缺陷均可触发。法兰跨接线属于原文完整要求。适用对象为粉尘爆炸危险场所的除尘系统，四类排除场所完整保留；复用C_15577_8_1_5，不以GB12158一般接地条款支撑100Ω阈值。",
+        "evidenceRefs": [
+          "E_BOUNDARY_20260930_GB15577"
+        ]
+      },
+      "fileSha256": "874594016cff2c786bd9f624f4efd56ac80aba93683b0158aa5138dfe18f6cbc"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C.json",
+      "record": {
+        "entityType": "link",
+        "entityId": "K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewedContentHash": "f7bc9e311c70f275579f0f686cc39ee6793d266cedf9921b6b2581d46ae1644a",
+        "contextHashes": {
+          "hazard": "710cc5ee45604d139428a902c6406716804d9429db1c018f622be580b2bda22e",
+          "clause": "bc6d06b12891ea67acc097df0752c05ec5f71ab43d3ec0398b98570a6dc4e8e8"
+        },
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "GB15577-2018第8.1.5完整原文直接支持除尘系统等电位连接、可靠接地、小于100Ω和法兰跨接线。100Ω不符合；适用范围按第1章。撤回旧GB12158依据的错配论证。",
+        "evidenceRefs": [
+          "E_BOUNDARY_20260930_GB15577"
+        ]
+      },
+      "fileSha256": "b8c97564e15c22ebcb28cf6beb8bd44b59604e88e7532284f717e1f9dbabd109"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_A35BD266ADB24DF2A32373976A.json",
+      "record": {
+        "entityType": "hazard",
+        "entityId": "H_A35BD266ADB24DF2A32373976A",
+        "reviewType": "content",
+        "decision": "verified",
+        "reviewedContentHash": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "独立核对GB45067-2024第4.5：a未经许可擅自充装、b错装介质、c紧急切断装置缺失或失效且仍继续使用三项分别成立；仅c有限定仍继续使用，不能扩展为所有充装违规。第1章排除范围与引言判定主体均应明确。特种设备安全法第49条是许可、充装前后检查记录和禁止不合规充装的supporting义务，不是重大隐患三项判据。",
+        "evidenceRefs": [
+          "E_BOUNDARY_20260930_GB45067",
+          "E_BOUNDARY_20260930_TSELAW"
+        ]
+      },
+      "fileSha256": "bc765a7c8068df085321fb2234de02d5311ff5034f165a0c7962d84740046e8a"
+    },
+    {
+      "path": "knowledge/reviews/links/K_GB45067_A35BD266ADB2_5.json",
+      "record": {
+        "entityType": "link",
+        "entityId": "K_GB45067_A35BD266ADB2_5",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewedContentHash": "3375a6ee425a5f67eef8a0cd5f7d8febcf7284b71868c2999f3ddb672e861143",
+        "contextHashes": {
+          "hazard": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+          "clause": "553cc97d3e9233ad65db1d6cd96f3a1cfd7cdb3e834b79b95a6b8d33e6b0da24"
+        },
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "direct仅由GB45067-2024第4.5三项支持；a/b不附加仍继续使用，c须紧急切断装置缺失或失效且仍继续使用。完整范围排除和使用单位/监管部门/技术机构角色已核；监管监督检查判定在4.5中仅a项。不得并入第49条上位法证据冒充本条原文。",
+        "evidenceRefs": [
+          "E_BOUNDARY_20260930_GB45067"
+        ]
+      },
+      "fileSha256": "8f7ef7962418c10a4caa0059b42afe339a215117179a82e3a86724438bd92744"
+    },
+    {
+      "path": "knowledge/reviews/links/K_43ef04628e3d0e5f615decbe.json",
+      "record": {
+        "entityType": "link",
+        "entityId": "K_43ef04628e3d0e5f615decbe",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewedContentHash": "4580dd486abf55ffd65402c971eb5cee40b7b016ca37cf9e4048fc6d8a113901",
+        "contextHashes": {
+          "hazard": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+          "clause": "bf3a28a0bcc1bb73f3e8982f9095518210d7c058a3e3da8103b457a648ca8870"
+        },
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "supporting仅由特种设备安全法第49条充装许可、充装前后检查记录、禁止不符合安全技术规范要求的充装义务支持；不保留第40条定检错配，亦不把本法第49条当作重大隐患三项判据。evidenceRefs仅列SAMR安全法原文，不混入GB45067标准证据。",
+        "evidenceRefs": [
+          "E_BOUNDARY_20260930_TSELAW"
+        ]
+      },
+      "fileSha256": "6e6b2796f5b0df0e7c9d8a1994d6474b2f781afd00ff297ee62249516afe414d"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_JSXF_58_1.json",
+      "record": {
+        "entityType": "hazard",
+        "entityId": "H_JSXF_58_1",
+        "reviewType": "content",
+        "decision": "verified",
+        "reviewedContentHash": "24d6ae0ecd43731985b4b4fb5574385b8cc9323f1686926743988cad6dd10b3c",
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏人大第58条第一款全文直接规定学校及其他教育机构定期组织师生参观消防科普教育场馆、开展应急疏散演练；第91条属于执法权限程序。未规定统一半年频次、考核或岗位准入。两项活动分别核查，任一未定期落实均可形成该知识条目缺陷；仅江苏范围，学校同时属重点单位时另按第二款核查。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "fa9970c79dc2d222e1dcbef28412631c9cbb76c867bc00c5079e90cc2875acdc"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_FT_4996B3C832602A8FE3E7F750.json",
+      "record": {
+        "entityType": "link",
+        "entityId": "K_XLSX_FT_4996B3C832602A8FE3E7F750",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewedContentHash": "27859e8c3baa57d00aefc63bd750bae74fbdfd05e16fbef244d376f4acbce056",
+        "contextHashes": {
+          "hazard": "24d6ae0ecd43731985b4b4fb5574385b8cc9323f1686926743988cad6dd10b3c",
+          "clause": "cdc05d6af884dc32d292efc50c60da71746d9c7aa65d7fc231b1cac8a48d3a2e"
+        },
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏人大第58条第一款全文直接规定学校及其他教育机构定期组织师生参观消防科普教育场馆、开展应急疏散演练；第91条属于执法权限程序。未规定统一半年频次、考核或岗位准入。两项活动分别核查，任一未定期落实均可形成该知识条目缺陷；仅江苏范围，学校同时属重点单位时另按第二款核查。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "10321283020bd24a6e11dca77fb0407429016808b3652b3193831d685830c08f"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_JSXF_58_2.json",
+      "record": {
+        "entityType": "hazard",
+        "entityId": "H_JSXF_58_2",
+        "reviewType": "content",
+        "decision": "verified",
+        "reviewedContentHash": "a5c713f0b5f8f77c20bc5b042f626ebc916c7f40f7793b95cb7df8450507b64d",
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏人大第58条第二款规定消防安全重点单位每半年至少组织开展一次灭火和应急疏散演练，两项内容均需保留；年度两次不能自动替代每半年至少一次，一般巡查或培训不替代演练。第93条将符合重点单位界定标准的个体工商户纳入相应职责；不能仅以普通单位/人员密集场所身份替代重点单位属性。旧第91条不是依据。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "757db8e9095e71931f6593dcf684294993406ac9d051c34205fcc71f431de85a"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_FT_1412F9552C73E6C403C39E08.json",
+      "record": {
+        "entityType": "link",
+        "entityId": "K_XLSX_FT_1412F9552C73E6C403C39E08",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewedContentHash": "0d0fb8a61f81b82c30ba225f9b414a622df8db8236329e6a789d204ab48f88ed",
+        "contextHashes": {
+          "hazard": "a5c713f0b5f8f77c20bc5b042f626ebc916c7f40f7793b95cb7df8450507b64d",
+          "clause": "cdc05d6af884dc32d292efc50c60da71746d9c7aa65d7fc231b1cac8a48d3a2e"
+        },
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏人大第58条第二款规定消防安全重点单位每半年至少组织开展一次灭火和应急疏散演练，两项内容均需保留；年度两次不能自动替代每半年至少一次，一般巡查或培训不替代演练。第93条将符合重点单位界定标准的个体工商户纳入相应职责；不能仅以普通单位/人员密集场所身份替代重点单位属性。旧第91条不是依据。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "f43064ed8f5b75176fbafb91f88ec7d44570bc2274f9db8d3f7b19ad26f9b920"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_JSXF_53_3.json",
+      "record": {
+        "entityType": "hazard",
+        "entityId": "H_JSXF_53_3",
+        "reviewType": "content",
+        "decision": "verified",
+        "reviewedContentHash": "584096d0026c6ffb5a2e5955859fd7ae4d5ff5096e2ff0f942fde7bbe9a5ab78",
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏第53条第三款第一句的主体为业主和物业使用人，语气为提高防范意识并避免进入住宅电梯和户内。与南京第50条第二款的禁止进入不同；不得虚构物业服务企业劝阻义务、全省统一禁止或处罚结论。住宅电梯/户内任一场景均属防范对象；保留既有省级稳定C/H/K，不另建重复南京条目。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "541748bc5829e251d4c17c05fa1db502bd72dd7168c4e067c2cdcbc1602c26c4"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C.json",
+      "record": {
+        "entityType": "link",
+        "entityId": "K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewedContentHash": "9143c1b907b0e279f1c23ff22b9e10f23ca60faf3a173985571104a8a6c443ad",
+        "contextHashes": {
+          "hazard": "584096d0026c6ffb5a2e5955859fd7ae4d5ff5096e2ff0f942fde7bbe9a5ab78",
+          "clause": "0c4194f64e29b59e65a12e27ac0455292d00ecc6bba5c1082c759e16fdc500ca"
+        },
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏第53条第三款第一句的主体为业主和物业使用人，语气为提高防范意识并避免进入住宅电梯和户内。与南京第50条第二款的禁止进入不同；不得虚构物业服务企业劝阻义务、全省统一禁止或处罚结论。住宅电梯/户内任一场景均属防范对象；保留既有省级稳定C/H/K，不另建重复南京条目。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "81c3a0696c7956a2edc6aef1c22ddb37efafba1e91fafe1ee3d5b2a688db8ff7"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JSXF_58.json",
+      "record": {
+        "entityType": "clause",
+        "entityId": "C_JSXF_58",
+        "reviewType": "text",
+        "decision": "verified",
+        "reviewedContentHash": "cdc05d6af884dc32d292efc50c60da71746d9c7aa65d7fc231b1cac8a48d3a2e",
+        "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+        "reviewer": "Codex独立实质核验20260930",
+        "reason": "江苏人大2023修订全文第58条两款逐字核准（仅排版空白不同）；第2条明确限本省行政区域，lawVersion.scope为CN-32，故改后jurisdictionCode=CN-32正确。第58条学校定期义务与重点单位每半年频次各归各款；不是第91条执法权限程序。",
+        "evidenceRefs": [
+          "E_FIRE_CORRECTION_JSXF_20260930"
+        ]
+      },
+      "fileSha256": "a6e3897af8d698d51a5689dc458f8f03ac77df1533bb818871e142958f3206af"
+    }
+  ],
+  "sources": {
+    "GB15577": {
+      "identity": "GB 15577-2018《粉尘防爆安全规程》",
+      "issued": "2018-11-19",
+      "effective": "2019-06-01",
+      "status": "现行有效",
+      "publisher": "国家市场监督管理总局、中国国家标准化管理委员会",
+      "statusUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+      "replacementChainUrl": "https://std.samr.gov.cn/gb/search/gbDetailed?id=7AC3075CD345B4B1E05397BE0A0AC4DE",
+      "fulltextUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+      "checkedPages": [
+        3,
+        7
+      ],
+      "checkedAt": "2026-09-30",
+      "sourcePdfSha256": "1cd35b2f56874673b41f99e82db10d0d973a7f8dbd1a9f1dade2008fbaa97c74"
+    },
+    "GB45067": {
+      "identity": "GB 45067-2024《特种设备重大事故隐患判定准则》",
+      "issued": "2024-11-28",
+      "effective": "2024-12-01",
+      "status": "现行有效",
+      "publisher": "国家市场监督管理总局、国家标准化管理委员会",
+      "statusUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53",
+      "replacementChainUrl": "https://std.samr.gov.cn/gb/search/gbDetailed?id=281E70489E02C9D3E06397BE0A0A73E0",
+      "publicationPage": "https://www.zhanjiang.gov.cn/zdlyxxgk/aqsc/zdscaqsgyhbg/content/post_2149213.html",
+      "fulltextUrl": "https://www.zhanjiang.gov.cn/attachment/0/272/272839/2149213.pdf",
+      "checkedPages": [
+        6,
+        7,
+        8
+      ],
+      "checkedAt": "2026-09-30",
+      "sourcePdfSha256": "e6d4f74b3cb4fec1b3a62244e1e2ed79932cba8be550889ba917721a9d47bea7"
+    },
+    "TSELAW": {
+      "identity": "《中华人民共和国特种设备安全法》（2013年主席令第4号）",
+      "issued": "2013-06-29",
+      "effective": "2014-01-01",
+      "status": "现行有效",
+      "publisher": "全国人民代表大会常务委员会；中华人民共和国主席公布",
+      "statusUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+      "fulltextUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+      "checkedAt": "2026-09-30"
+    },
+    "JSXF": {
+      "identity": "《江苏省消防条例》（2023年第二次修订）",
+      "documentNumber": "江苏省人大常委会公告第102号",
+      "issuer": "江苏省人民代表大会常务委员会",
+      "amendedOn": "2023-01-12",
+      "issued": "2023-01-12",
+      "effective": "2023-05-01",
+      "status": "现行有效",
+      "checkedAt": "2026-09-30",
+      "officialFulltextUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+      "statusUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99085"
+    },
+    "NJXF": {
+      "identity": "《南京市消防条例》（2024修订、2025批准公布）",
+      "documentNumber": "南京市人大常委会公告第27号",
+      "issuer": "南京市人民代表大会常务委员会",
+      "amendedOn": "2024-12-26",
+      "approvedOn": "2025-01-14",
+      "issued": "2025-02-08",
+      "effective": "2025-05-01",
+      "status": "现行有效",
+      "statusConfidenceNote": "基于批准公布施行正文、当前市级法规目录仍列该版、2026人大回眸正面确认施行及未发现后续替代的综合判断；目录页面并无单独逐条“现行有效”状态字段，不能伪称有。",
+      "checkedAt": "2026-09-30",
+      "officialFulltextUrl": "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html",
+      "statusUrl": "https://rd.nanjing.gov.cn/lfgz_0/sjfg_1/",
+      "currencyCorroborationUrl": "https://rd.nanjing.gov.cn/yw/202601/t20260116_5770264.html"
+    }
+  },
+  "clauses": {
+    "gb15577_8_1_5": {
+      "sourceId": "GB15577",
+      "articlePath": "8.1.5，PDF第7页（印刷页5）",
+      "fullClauseQuote": "除尘系统的导电部件应进行等电位连接，并可靠接地，接地电阻应小于100Ω；管道连接法兰应采用跨接线。",
+      "quoteSha256": "e7f7ac3c4a5e52595053469803d74eb47c37536f1e4741d4d93a4ac8b74e1ebe",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "gb15577_scope": {
+      "sourceId": "GB15577",
+      "articlePath": "第1章全文，PDF第3页（印刷页1）",
+      "fullClauseQuote": "本标准规定了粉尘防爆安全总则、粉尘爆炸危险场所的建（构）筑物的结构与布局、防止粉尘云与粉尘层着火、粉尘爆炸的控制、除尘系统、粉尘控制与清理、设备设施检修和个体防护。\n本标准适用于粉尘爆炸危险场所的工程及工艺设计、生产加工、存储、设备运行与维护。\n本标准不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。",
+      "quoteSha256": "699347c842499bc879573c9cb4f4aba479c6989ec91226ed507dfecb70bd7678",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "gb45067_4_5": {
+      "sourceId": "GB45067",
+      "articlePath": "4.5全文，PDF第8页（印刷页2）",
+      "fullClauseQuote": "4.5 移动式压力容器或者气瓶充装有下列情形之一的，应判定为重大事故隐患。\na) 未经许可，擅自从事移动式压力容器充装或者气瓶充装活动。\nb) 移动式压力容器、气瓶错装介质。\nc) 充装设备设施上的紧急切断装置缺失或失效，仍继续使用的。",
+      "quoteSha256": "a7b1d051dd9c2b0189b1f46d5de030d3e32c46613fdb3e6259d403d14f59e7ca",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "gb45067_scope": {
+      "sourceId": "GB45067",
+      "articlePath": "第1章全文，PDF第7页（印刷页1）",
+      "fullClauseQuote": "本文件规定了特种设备重大事故隐患的术语和定义、判定准则。\n本文件适用于对使用过程的特种设备重大事故隐患判定。\n本文件不适用于：\na) 军事装备、核设施、航空航天器使用的特种设备；\nb) 铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备，房屋建筑工地、市政工程工地用起重机械和场（厂）内专用机动车辆；\nc) 按照特种设备安全技术规范规定不需要办理使用登记的特种设备。",
+      "quoteSha256": "7e9aedb74fe6440f2e0eaba2d08b81468c8da1883bb9ec24c7f4a7e10fe08979",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "gb45067_intro": {
+      "sourceId": "GB45067",
+      "articlePath": "引言全文，PDF第6页（印刷页Ⅳ）",
+      "fullClauseQuote": "本文件中特种设备重大事故隐患判定的主体责任为特种设备使用单位；特种设备安全监督管理部门监督检查判定的项目限于4.1a)、4.1b)、4.1c)、4.2a)、4.3a)、4.4a)、4.5a)、4.6a)、4.7a)、4.7b)、4.8a)、4.9a)、4.10a)；特种设备检验机构或技术机构通过监督检验、定期检验或相应技术服务对特种设备重大事故隐患的判定提供技术支持。\n发现除4.1～4.10以外的其他可能导致发生特种设备事故的情形，使用单位可根据导致事故发生的可能性大小及事故后果的严重程度进行判定。",
+      "quoteSha256": "b67ca64c97d3eacfe34eb463cc7e66fb522b18af7bf1a008858c2e121a2075d0",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "tse40": {
+      "sourceId": "TSELAW",
+      "articlePath": "第四十条全文",
+      "fullClauseQuote": "第四十条 特种设备使用单位应当按照安全技术规范的要求，在检验合格有效期届满前一个月向特种设备检验机构提出定期检验要求。\n特种设备检验机构接到定期检验要求后，应当按照安全技术规范的要求及时进行安全性能检验。特种设备使用单位应当将定期检验标志置于该特种设备的显著位置。\n未经定期检验或者检验不合格的特种设备，不得继续使用。",
+      "quoteSha256": "362dd27fd1fa7eed3d66a6e164744b3aac1989421191d473e124e3eae3fdcba6",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "tse49": {
+      "sourceId": "TSELAW",
+      "articlePath": "第四十九条全文",
+      "fullClauseQuote": "第四十九条 移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动：\n（一）有与充装和管理相适应的管理人员和技术人员；\n（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n（三）有健全的充装管理制度、责任制度、处理措施。\n充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+      "quoteSha256": "11f1fe1bca88221ab3510f52bec21d1ccc8668b00d21b9ffc9776a95bde9acd6",
+      "normalization": "仅统一版式空白和全半角标点；条款文字、限定条件及例外完整保留。"
+    },
+    "jsxf2": {
+      "sourceId": "JSXF",
+      "articlePath": "第二条全文",
+      "fullClauseQuote": "第二条 本省行政区域内的火灾预防、扑救和相关应急救援工作，适用本条例。",
+      "quoteSha256": "b3ad52e71721e5607ee989a60a1b38899a3daf5db2357d55ea2c55755cc7a4ce",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "jsxf53": {
+      "sourceId": "JSXF",
+      "articlePath": "第五十三条（三款全文；本项只用第三款第一句）",
+      "fullClauseQuote": "第五十三条 人员密集场所应当根据需要配套设置电动自行车集中停放区域、建设集中充电设施。\n新建、改建住宅小区，建设单位应当同步建设充电设施或者预留充电设施建设条件，推动电动自行车集中停放、充电。\n业主和物业使用人应当提高消防安全防范意识，避免电动自行车或者其蓄电池进入住宅的电梯和户内。禁止违反用电安全要求私拉电线和插座为电动汽车、电动自行车充电。禁止在楼梯间、楼道等疏散通道、安全出口、消防车通道及其两侧影响通行的区域停放电动自行车。",
+      "quoteSha256": "7c3628b3d1b4a2a27d4c0881bc38ee441afc8932c0be0df3773bb64a5d8fd1aa",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "jsxf58": {
+      "sourceId": "JSXF",
+      "articlePath": "第五十八条（两款全文）",
+      "fullClauseQuote": "第五十八条 学校及其他教育机构应当定期组织师生参观消防科普教育场馆，开展应急疏散演练。\n消防安全重点单位应当每半年至少组织开展一次灭火和应急疏散演练。",
+      "quoteSha256": "e6cee2997a5a97bdab63bfd3118a7943cf0dd2014c29f6126b9d2e29ef8f77b8",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "jsxf91": {
+      "sourceId": "JSXF",
+      "articlePath": "第九十一条全文（旧错链，仅用于排除）",
+      "fullClauseQuote": "第九十一条 《中华人民共和国消防法》第五十八条第一款由住房和城乡建设主管部门、消防救援机构按照各自的职责依法实施。\n有下列情形之一，对经济和社会生活影响较大，责令停产停业、停止使用、停止施工的，报请本级人民政府依法决定：\n（一）涉及本地区经济发展的重大项目、重点单位的；\n（二）涉及单位、场所、人员数量众多，可能影响社会稳定的；\n（三）涉及城市公用事业的；\n（四）其他对经济和社会生活影响较大的情形。\n住房和城乡建设主管部门、消防救援机构可以委托符合法定条件的组织，对有关违反消防安全管理的行为依法实施行政处罚。",
+      "quoteSha256": "61b345865202a7b33e8a546700d6f96d3b97a541a17fbf767ba6f97c1b78a121",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "jsxf93": {
+      "sourceId": "JSXF",
+      "articlePath": "第九十三条全文",
+      "fullClauseQuote": "第九十三条 符合消防安全重点单位界定标准的个体工商户，应当依法履行消防安全重点单位的消防安全职责，承担单位法律责任。",
+      "quoteSha256": "3efcbaaa5d12f9fb3c8f923eb40332956c5b90a9190a16c9200684e5b94b7389",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "jsxf94": {
+      "sourceId": "JSXF",
+      "articlePath": "第九十四条全文",
+      "fullClauseQuote": "第九十四条 本条例自2023年5月1日起施行。",
+      "quoteSha256": "ad58a8d3cb643dacae48372904573aee10fdef6865bedd7c650e654751424e87",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "njxf2": {
+      "sourceId": "NJXF",
+      "articlePath": "第二条（两款全文）",
+      "fullClauseQuote": "第二条 本市行政区域内的消防工作和相关应急救援工作，适用本条例。\n法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定。",
+      "quoteSha256": "e24c4fcd92719a4053178886f66efe61baa6126ba51e073512e97b2731841c6a",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "njxf50": {
+      "sourceId": "NJXF",
+      "articlePath": "第五十条（六款全文；第二款禁止与第六款运营主体义务分别定位）",
+      "fullClauseQuote": "第五十条 地铁站、车站、客运码头、医院、商场、农贸市场、文化体育场馆、公园等公共交通设施、公共建筑、公共场所，以及住宅小区、单位等应当按照有关标准，规划和配套建设电动自行车集中停放充电场所，与主体工程同步设计、同步建设、同步验收，并按照规定同步交付使用。 业主和物业使用人应当提高消防安全防范意识，禁止电动自行车或者其蓄电池进入住宅的电梯和户内；禁止违反用电安全要求私拉电线和插座为电动自行车充电；禁止在公共门厅、楼梯间、楼道等疏散通道、安全出口、消防车通道及其两侧影响通行的区域停放电动自行车。 使用电动自行车从事快递、外卖等配送活动的企业，应当建立内部管理规章制度，加强对配送人员的管理，督促配送人员规范停放电动自行车和进行安全充电，在站点设置集中停放场地以及充换电设施。 设置电动自行车集中充电场所和充电设施应当符合国家和省、市有关标准和规范，不得占用、堵塞消防车通道、安全出口和疏散通道，不得影响消防设施的正常使用；利用民用建筑架空层设置的，应当采取有效防火分隔等措施，符合消防安全要求。 新建电动汽车停放充电场所应当符合国家和省、市有关规定和技术标准。鼓励既有电动汽车停放充电场所按照现行有关规定和技术标准进行改造。 电动自行车、电动汽车集中停放充电场所和充电设施的运营主体应当落实消防安全管理主体责任，制定消防安全制度、操作规程，加强日常检查、巡查，及时劝阻和制止违规停放、充电的行为。",
+      "quoteSha256": "c66dd5e6949ea5b47e3fa922254404d03878dd6a36a1b6b6148184f33e30e487",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    },
+    "njxf76": {
+      "sourceId": "NJXF",
+      "articlePath": "第七十六条全文",
+      "fullClauseQuote": "第七十六条 本条例自2025年5月1日起施行。",
+      "quoteSha256": "7dce134766c38e2d7e709610795bd40a8325ba702816b1ccd70b4b520c12913b",
+      "normalization": "仅规范排版空白，保留条、款、句完整文字；库内人工数字前缀不当作官方正文。"
+    }
+  },
+  "bindings": [
+    {
+      "linkId": "K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C",
+      "hazardId": "H_46A01ECE8B9C4AD0A9D66A841C",
+      "clauseId": "C_15577_8_1_5",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "role": "direct",
+      "jurisdictionCode": "CN",
+      "exactLocator": "8.1.5；第1章范围",
+      "reviewedContentHash": "f7bc9e311c70f275579f0f686cc39ee6793d266cedf9921b6b2581d46ae1644a",
+      "contextHashes": {
+        "hazard": "710cc5ee45604d139428a902c6406716804d9429db1c018f622be580b2bda22e",
+        "clause": "bc6d06b12891ea67acc097df0752c05ec5f71ab43d3ec0398b98570a6dc4e8e8"
+      },
+      "exactEvidenceRefs": [
+        "E_BOUNDARY_20260930_GB15577"
+      ],
+      "sourceId": "GB15577"
+    },
+    {
+      "linkId": "K_GB45067_A35BD266ADB2_5",
+      "hazardId": "H_A35BD266ADB24DF2A32373976A",
+      "clauseId": "C_GB45067_4_5",
+      "lawVersionId": "LV_STD_E7182E7A85BA6017C48B96A8",
+      "role": "direct",
+      "jurisdictionCode": "CN",
+      "exactLocator": "4.5 a)、b)、c)；第1章；引言",
+      "reviewedContentHash": "3375a6ee425a5f67eef8a0cd5f7d8febcf7284b71868c2999f3ddb672e861143",
+      "contextHashes": {
+        "hazard": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+        "clause": "553cc97d3e9233ad65db1d6cd96f3a1cfd7cdb3e834b79b95a6b8d33e6b0da24"
+      },
+      "exactEvidenceRefs": [
+        "E_BOUNDARY_20260930_GB45067"
+      ],
+      "sourceId": "GB45067"
+    },
+    {
+      "linkId": "K_43ef04628e3d0e5f615decbe",
+      "hazardId": "H_A35BD266ADB24DF2A32373976A",
+      "clauseId": "C_7D2425A6472F9ED7098B49315B",
+      "lawVersionId": "L014",
+      "role": "supporting",
+      "jurisdictionCode": "全国",
+      "exactLocator": "第四十九条",
+      "reviewedContentHash": "4580dd486abf55ffd65402c971eb5cee40b7b016ca37cf9e4048fc6d8a113901",
+      "contextHashes": {
+        "hazard": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+        "clause": "bf3a28a0bcc1bb73f3e8982f9095518210d7c058a3e3da8103b457a648ca8870"
+      },
+      "exactEvidenceRefs": [
+        "E_BOUNDARY_20260930_TSELAW"
+      ],
+      "sourceId": "TSELAW"
+    },
+    {
+      "linkId": "K_XLSX_FT_4996B3C832602A8FE3E7F750",
+      "hazardId": "H_JSXF_58_1",
+      "clauseId": "C_JSXF_58",
+      "lawVersionId": "LV_NPC_ff808181864a5d91018653f61bbd4f61",
+      "role": "direct",
+      "jurisdictionCode": "CN-32",
+      "exactLocator": "第五十八条第一款；第二条",
+      "reviewedContentHash": "27859e8c3baa57d00aefc63bd750bae74fbdfd05e16fbef244d376f4acbce056",
+      "contextHashes": {
+        "hazard": "24d6ae0ecd43731985b4b4fb5574385b8cc9323f1686926743988cad6dd10b3c",
+        "clause": "cdc05d6af884dc32d292efc50c60da71746d9c7aa65d7fc231b1cac8a48d3a2e"
+      },
+      "exactEvidenceRefs": [
+        "E_FIRE_CORRECTION_JSXF_20260930"
+      ],
+      "sourceId": "JSXF"
+    },
+    {
+      "linkId": "K_XLSX_FT_1412F9552C73E6C403C39E08",
+      "hazardId": "H_JSXF_58_2",
+      "clauseId": "C_JSXF_58",
+      "lawVersionId": "LV_NPC_ff808181864a5d91018653f61bbd4f61",
+      "role": "direct",
+      "jurisdictionCode": "CN-32",
+      "exactLocator": "第五十八条第二款；第九十三条；第二条",
+      "reviewedContentHash": "0d0fb8a61f81b82c30ba225f9b414a622df8db8236329e6a789d204ab48f88ed",
+      "contextHashes": {
+        "hazard": "a5c713f0b5f8f77c20bc5b042f626ebc916c7f40f7793b95cb7df8450507b64d",
+        "clause": "cdc05d6af884dc32d292efc50c60da71746d9c7aa65d7fc231b1cac8a48d3a2e"
+      },
+      "exactEvidenceRefs": [
+        "E_FIRE_CORRECTION_JSXF_20260930"
+      ],
+      "sourceId": "JSXF"
+    },
+    {
+      "linkId": "K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C",
+      "hazardId": "H_JSXF_53_3",
+      "clauseId": "C_XLSX_FT_F493199CB619FF9A58E3C95A",
+      "lawVersionId": "LV_NPC_ff808181864a5d91018653f61bbd4f61",
+      "role": "direct",
+      "jurisdictionCode": "CN-32",
+      "exactLocator": "第五十三条第三款第一句；第二条",
+      "reviewedContentHash": "9143c1b907b0e279f1c23ff22b9e10f23ca60faf3a173985571104a8a6c443ad",
+      "contextHashes": {
+        "hazard": "584096d0026c6ffb5a2e5955859fd7ae4d5ff5096e2ff0f942fde7bbe9a5ab78",
+        "clause": "0c4194f64e29b59e65a12e27ac0455292d00ecc6bba5c1082c759e16fdc500ca"
+      },
+      "exactEvidenceRefs": [
+        "E_FIRE_CORRECTION_JSXF_20260930"
+      ],
+      "sourceId": "JSXF"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E_BOUNDARY_20260930_GB15577",
+      "sourceId": "GB15577",
+      "record": {
+        "id": "E_BOUNDARY_20260930_GB15577",
+        "tier": "authoritative-public",
+        "url": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+        "locator": "8.1.5，PDF第7页（印刷页5）；第1章全文，PDF第3页（印刷页1）",
+        "page": null,
+        "retrievedAt": "2026-09-30T13:03:00Z",
+        "snapshotSha256": "bd24524598d8dbb37b909b72dc8430634deec852a0a03df68e074d9f28ff33a3",
+        "notes": "snapshotSha256是经独立核对的UTF-8完整条款摘录文件哈希，不是源PDF/HTML文件哈希。重新打开SAMR两平台现行状态/全部替代2007链和浙江官方PDF；独立目视核对同源PDF第3、7页，确认范围及8.1.5。"
+      },
+      "snapshotText": "8.1.5，PDF第7页（印刷页5）\n除尘系统的导电部件应进行等电位连接，并可靠接地，接地电阻应小于100Ω；管道连接法兰应采用跨接线。\n\n第1章全文，PDF第3页（印刷页1）\n本标准规定了粉尘防爆安全总则、粉尘爆炸危险场所的建（构）筑物的结构与布局、防止粉尘云与粉尘层着火、粉尘爆炸的控制、除尘系统、粉尘控制与清理、设备设施检修和个体防护。\n本标准适用于粉尘爆炸危险场所的工程及工艺设计、生产加工、存储、设备运行与维护。\n本标准不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。\n",
+      "snapshotTextSha256": "bd24524598d8dbb37b909b72dc8430634deec852a0a03df68e074d9f28ff33a3",
+      "fileSha256": "e2d790eebc1ae6f8c872c314fb16e7d4a569af52f858b0646cc5ecceb2856255"
+    },
+    {
+      "id": "E_BOUNDARY_20260930_GB45067",
+      "sourceId": "GB45067",
+      "record": {
+        "id": "E_BOUNDARY_20260930_GB45067",
+        "tier": "authoritative-public",
+        "url": "https://www.zhanjiang.gov.cn/attachment/0/272/272839/2149213.pdf",
+        "locator": "4.5全文，PDF第8页（印刷页2）；第1章全文，PDF第7页（印刷页1）；引言全文，PDF第6页（印刷页Ⅳ）",
+        "page": null,
+        "retrievedAt": "2026-09-30T13:03:00Z",
+        "snapshotSha256": "99c002fd480b7d654d7c7c2bb3947d459d20ec37dd39391b27bb149cb7d71ced",
+        "notes": "snapshotSha256是经独立核对的UTF-8完整条款摘录文件哈希，不是源PDF/HTML文件哈希。重新打开SAMR两平台及湛江应急局发布页，并由其附件链接打开11页PDF；独立目视核对缓存同源PDF第6、7、8页，确认引言、范围和4.5。"
+      },
+      "snapshotText": "4.5全文，PDF第8页（印刷页2）\n4.5 移动式压力容器或者气瓶充装有下列情形之一的，应判定为重大事故隐患。\na) 未经许可，擅自从事移动式压力容器充装或者气瓶充装活动。\nb) 移动式压力容器、气瓶错装介质。\nc) 充装设备设施上的紧急切断装置缺失或失效，仍继续使用的。\n\n第1章全文，PDF第7页（印刷页1）\n本文件规定了特种设备重大事故隐患的术语和定义、判定准则。\n本文件适用于对使用过程的特种设备重大事故隐患判定。\n本文件不适用于：\na) 军事装备、核设施、航空航天器使用的特种设备；\nb) 铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备，房屋建筑工地、市政工程工地用起重机械和场（厂）内专用机动车辆；\nc) 按照特种设备安全技术规范规定不需要办理使用登记的特种设备。\n\n引言全文，PDF第6页（印刷页Ⅳ）\n本文件中特种设备重大事故隐患判定的主体责任为特种设备使用单位；特种设备安全监督管理部门监督检查判定的项目限于4.1a)、4.1b)、4.1c)、4.2a)、4.3a)、4.4a)、4.5a)、4.6a)、4.7a)、4.7b)、4.8a)、4.9a)、4.10a)；特种设备检验机构或技术机构通过监督检验、定期检验或相应技术服务对特种设备重大事故隐患的判定提供技术支持。\n发现除4.1～4.10以外的其他可能导致发生特种设备事故的情形，使用单位可根据导致事故发生的可能性大小及事故后果的严重程度进行判定。\n",
+      "snapshotTextSha256": "99c002fd480b7d654d7c7c2bb3947d459d20ec37dd39391b27bb149cb7d71ced",
+      "fileSha256": "fcdd81cdfd0db1b3bbbc1fdbc7c4e593e711af19d911f5b8655a9160ee8780ae"
+    },
+    {
+      "id": "E_BOUNDARY_20260930_TSELAW",
+      "sourceId": "TSELAW",
+      "record": {
+        "id": "E_BOUNDARY_20260930_TSELAW",
+        "tier": "authoritative-public",
+        "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+        "locator": "第四十条全文；第四十九条全文",
+        "page": null,
+        "retrievedAt": "2026-09-30T13:03:00Z",
+        "snapshotSha256": "8885b8aaa22b1c48b915c915b4389b0037948469e0c5af42178b97acfa8b333e",
+        "notes": "snapshotSha256是经独立核对的UTF-8完整条款摘录文件哈希，不是源PDF/HTML文件哈希。重新打开SAMR官方全文核第40、49条，并核2026-08-28现行有效法律目录社会法第22项（2013年通过版本）。"
+      },
+      "snapshotText": "第四十条全文\n第四十条 特种设备使用单位应当按照安全技术规范的要求，在检验合格有效期届满前一个月向特种设备检验机构提出定期检验要求。\n特种设备检验机构接到定期检验要求后，应当按照安全技术规范的要求及时进行安全性能检验。特种设备使用单位应当将定期检验标志置于该特种设备的显著位置。\n未经定期检验或者检验不合格的特种设备，不得继续使用。\n\n第四十九条全文\n第四十九条 移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动：\n（一）有与充装和管理相适应的管理人员和技术人员；\n（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n（三）有健全的充装管理制度、责任制度、处理措施。\n充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。\n",
+      "snapshotTextSha256": "8885b8aaa22b1c48b915c915b4389b0037948469e0c5af42178b97acfa8b333e",
+      "fileSha256": "a300923215479cb9a9968f94c8e22933db5f29e369e7116940c39c7bfcac72ce"
+    },
+    {
+      "id": "E_FIRE_CORRECTION_JSXF_20260930",
+      "sourceId": "JSXF",
+      "record": {
+        "id": "E_FIRE_CORRECTION_JSXF_20260930",
+        "tier": "authoritative-public",
+        "url": "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+        "locator": "第二条全文; 第五十三条（三款全文；本项只用第三款第一句）; 第五十八条（两款全文）; 第九十一条全文（旧错链，仅用于排除）; 第九十三条全文; 第九十四条全文",
+        "page": null,
+        "retrievedAt": "2026-09-30T13:15:15.476888+00:00",
+        "snapshotSha256": "56a97b7ff54a6a0dbd01a77a39bc9b841b85deab7177eabc56354050ff4f7a31",
+        "notes": "snapshotSha256是经独立核对的UTF-8完整条款摘录文件哈希，不是源PDF/HTML文件哈希。重新打开江苏人大2023修订全文核第2、53、58、91、93、94条，商务部官方法规平台明示现行有效、公告102号、2023-01-12发布和2023-05-01实施。未发现后续废止/替代。"
+      },
+      "snapshotText": "第二条 本省行政区域内的火灾预防、扑救和相关应急救援工作，适用本条例。\n\n第五十三条 人员密集场所应当根据需要配套设置电动自行车集中停放区域、建设集中充电设施。\n新建、改建住宅小区，建设单位应当同步建设充电设施或者预留充电设施建设条件，推动电动自行车集中停放、充电。\n业主和物业使用人应当提高消防安全防范意识，避免电动自行车或者其蓄电池进入住宅的电梯和户内。禁止违反用电安全要求私拉电线和插座为电动汽车、电动自行车充电。禁止在楼梯间、楼道等疏散通道、安全出口、消防车通道及其两侧影响通行的区域停放电动自行车。\n\n第五十八条 学校及其他教育机构应当定期组织师生参观消防科普教育场馆，开展应急疏散演练。\n消防安全重点单位应当每半年至少组织开展一次灭火和应急疏散演练。\n\n第九十一条 《中华人民共和国消防法》第五十八条第一款由住房和城乡建设主管部门、消防救援机构按照各自的职责依法实施。\n有下列情形之一，对经济和社会生活影响较大，责令停产停业、停止使用、停止施工的，报请本级人民政府依法决定：\n（一）涉及本地区经济发展的重大项目、重点单位的；\n（二）涉及单位、场所、人员数量众多，可能影响社会稳定的；\n（三）涉及城市公用事业的；\n（四）其他对经济和社会生活影响较大的情形。\n住房和城乡建设主管部门、消防救援机构可以委托符合法定条件的组织，对有关违反消防安全管理的行为依法实施行政处罚。\n\n第九十三条 符合消防安全重点单位界定标准的个体工商户，应当依法履行消防安全重点单位的消防安全职责，承担单位法律责任。\n\n第九十四条 本条例自2023年5月1日起施行。\n",
+      "snapshotTextSha256": "56a97b7ff54a6a0dbd01a77a39bc9b841b85deab7177eabc56354050ff4f7a31",
+      "fileSha256": "3eefb326a20fe898a0c230db2e5dec2a6a0302b66a871db1afcf78ba60dbe0da"
+    }
+  ],
+  "preservedFieldProfileFiles": {
+    "knowledge/field-profiles/v1/README.md": "e1f084daabd1d38b01921c20496dc0cdeb59deb39d17db2e511f494322fce472",
+    "knowledge/field-profiles/v1/records/FPR_EXTINGUISHER_ACCESS_BLOCKED.json": "5563b7fcebd32d4cb9d946a9943d9f4a00ee583102337677d0e355fcd912b3cc",
+    "knowledge/field-profiles/v1/records/FPR_EXTINGUISHER_BRACKET_OBSTRUCTION.json": "92391af878037b9b7fea5d0197da46a95bbf8032069db31c0a0b54094882da5d",
+    "knowledge/field-profiles/v1/records/FPR_GAS_ALARM_FUNCTION_FAILURE.json": "228f81cd5fbb54c07004472b2072f4f54c157a731ea22792a9e9943b4509cfd8",
+    "knowledge/field-profiles/v1/reviews/FPR_EXTINGUISHER_ACCESS_BLOCKED.json": "ea5888c513c58b0f318fdc57c21d439f9bc04155fc271a6055b5cfe23d270160",
+    "knowledge/field-profiles/v1/reviews/FPR_EXTINGUISHER_BRACKET_OBSTRUCTION.json": "c9e592e9147a888c17dda8a8a527b856125e1b061200b9ae34ba16b5a3e58a3e",
+    "knowledge/field-profiles/v1/reviews/FPR_GAS_ALARM_FUNCTION_FAILURE.json": "01ccb3872cd871a865b735a87603d3efa65667a3817e0c73e4283719295351f3"
+  },
+  "canonicalInventory": {
+    "laws": {
+      "count": 109,
+      "sha256": "7a52a3d36e0f9f05e70ce60b1c624d335111b19564b4b092c2c20643ad50a2a1"
+    },
+    "law-versions": {
+      "count": 112,
+      "sha256": "29289929a5a123289c1ab8e4e3709cc2991e4da7fdc8499d87077965715dafb0"
+    },
+    "clauses": {
+      "count": 3011,
+      "sha256": "b854c734b1f93f769dbe25724333ba17371d9132eeca2e233e23aa0f7142cc47"
+    },
+    "hazards": {
+      "count": 2130,
+      "sha256": "326e7fbccdf528b071331a5094729d209082356452810e1f7b0631418096031e"
+    },
+    "links": {
+      "count": 1970,
+      "sha256": "b757c3a77e641bf6be92408d61fa70edb13f9b4c39b21c959beaad733895ea10"
+    }
+  },
+  "totalEvidenceCount": 1248
+}

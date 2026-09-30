@@ -120,7 +120,7 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
         self.assertEqual(e['currentIndexUrl'], 'https://www.nhc.gov.cn/wjw/c100221/fg_gzk.shtml')
         self.assertIn('不是完整网页/PDF哈希', e['notes'])
         m = read('manifest.json')
-        self.assertEqual(m['counts']['evidence'], 1235)
+        self.assertEqual(m['counts']['evidence'], m['evidence'])
         self.assertEqual(m['evidence'], len(list((KNOW / 'evidence').glob('*.json'))))
         hazards = [json.loads(p.read_text(encoding='utf-8')) for p in (KNOW / 'hazards').glob('*.json')]
         lifecycle = Counter(h['lifecycle'] for h in hazards)

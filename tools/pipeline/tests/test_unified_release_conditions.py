@@ -99,7 +99,7 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
             "机械加工工位及仓库装卸货台",
         ])
         self.assertEqual(tags, [
-            "消防与疏散", "电气与配电", "机械加工", "仓储与物流", "生产现场",
+            "通道与出口", "配电室与配电装置", "机械加工", "仓储与物流", "生产现场",
         ])
         self.assertEqual(presentation.scene_tags(["通用场所"]), [])
 

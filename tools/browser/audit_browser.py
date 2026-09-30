@@ -139,7 +139,10 @@ def main():
             run('empty_results', empty_check)
 
             def filter_roundtrip(selector, value, parameter):
-                home(); page.select_option(selector, value)
+                home()
+                if selector == '#scene':
+                    page.locator('#hazardMoreFilters summary').click()
+                page.select_option(selector, value)
                 page.wait_for_timeout(100)
                 before = page.locator('#count').inner_text(); shared = page.url
                 require(parse_qs(urlparse(shared).query).get(parameter) == [value], f'Shared URL omits {parameter}: {shared}')

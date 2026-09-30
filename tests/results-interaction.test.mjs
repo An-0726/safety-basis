@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {searchHazards, searchLaws} from '../web/js/search.js';
+import {searchHazardsDetailed, searchLawsDetailed} from '../web/js/search.js';
 
 const APP_SOURCE = fs.readFileSync(new URL('../web/app.js', import.meta.url), 'utf8')
   .replace(/\r\n/g, '\n');
@@ -20,6 +20,9 @@ class FakeElement {
     this.classList = {toggle() {}, add() {}, remove() {}};
     this.children = new Map();
     this.cards = [];
+    this.filterButtons = [];
+    this.options = [{value: '', textContent: ''}];
+    this.open = false;
     this._innerHTML = '';
     this.focused = false;
     this.scrolledIntoView = false;
@@ -29,6 +32,11 @@ class FakeElement {
     this._innerHTML = String(value);
     this.children = new Map();
     this.cards = [];
+    this.filterButtons = [];
+    this.options = [...this._innerHTML.matchAll(/<option value="([^"]*)">([^<]*)<\/option>/g)].map(match=>({value:match[1],textContent:match[2]}));
+    for(const match of this._innerHTML.matchAll(/data-filter="([^"]+)"/g)){
+      const button=new FakeElement('chip');button.dataset.filter=match[1];this.filterButtons.push(button);
+    }
     for (const match of this._innerHTML.matchAll(/\bid="([^"]+)"/g)) {
       if (!this.children.has(match[1])) this.children.set(match[1], new FakeElement(match[1]));
     }
@@ -41,12 +49,14 @@ class FakeElement {
   }
 
   get innerHTML() { return this._innerHTML; }
+  get selectedOptions() { return this.options.filter(option=>option.value===this.value); }
   querySelector(selector) {
     if (selector.startsWith('#')) return this.children.get(selector.slice(1)) || null;
     return null;
   }
   querySelectorAll(selector) {
     if (selector === '.card') return this.cards;
+    if (selector === 'button[data-filter]') return this.filterButtons;
     return [];
   }
   focus() { this.focused = true; }
@@ -63,6 +73,8 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     'detail', 'toast', 'search', 'category', 'scene', 'level', 'region', 'mode',
     'lawLevel', 'lawRegion', 'lawStatus', 'count', 'summary', 'list',
     'hazardFilterCount', 'lawFilterCount', 'searchView', 'dataView',
+    'activeFilters', 'searchNotice', 'hazardMoreFilters', 'lawMoreFilters',
+    'clear', 'reset', 'resetLaw', 'hazardFilters', 'lawFilters', 'sectionTitle', 'sectionHint',
   ];
   const elements = new Map(ids.map(id => [id, new FakeElement(id)]));
   const document = {
@@ -78,6 +90,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     },
     querySelectorAll(selector) {
       if (selector === '.card') return elements.get('list').cards;
+      if(selector === '#hazardFilters select,#lawFilters select')return ['category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
       return [];
     },
     addEventListener() {},
@@ -85,8 +98,8 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   };
   const context = {
     document,
-    searchHazards,
-    searchLaws,
+    searchHazardsDetailed,
+    searchLawsDetailed,
     DataStore: class {},
     navigator: {clipboard: {writeText: async () => {}}},
     console: {error() {}, log() {}},
@@ -98,13 +111,14 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     URL,
     Blob,
     encodeURIComponent,
+    addEventListener() {},
   };
   context.window = context;
   let source = APP_SOURCE
     .replace(/^import[^\n]*\n/gm, '')
     .replace(/^export /gm, '')
     .replace("if(typeof document!=='undefined') boot();", '');
-  source += '\n globalThis.__testApi={state,renderResults,selectHazard,selectLaw};';
+  source += '\n globalThis.__testApi={state,renderResults,selectHazard,selectLaw,bind,initFilters,applyUrlFilters};';
   vm.createContext(context);
   new vm.Script(source, {filename: 'web/app.js'}).runInContext(context);
 
@@ -146,6 +160,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   context.__testApi.state.store = {
     searchIndex: rows,
     lawIndex: lawRows,
+    taxonomy:{displayCategories:['电气安全'],displayLevels:['国家标准'],sceneTagOptions:['生产现场','不存在的现场','未细分场景'],hazardModes:['direct','conditional'],lawStatuses:['现行有效']},
     manifest: {dataVersion: 'test-version'},
     getHazardDetail(index) {
       return Promise.resolve({hazard: {...index, description: '描述', measures: '措施', conditions: '', note: ''}, bases: []});
@@ -369,4 +384,65 @@ test('法规视图切换始终重置为首条并保持列表详情一致', async
   assert.equal(api.state.selectedLaw, api.state.results[0].id);
   assert.match(list.innerHTML, new RegExp(`data-id="${api.state.results[0].id}"[^>]*aria-pressed="true"`));
   assert.doesNotMatch(list.innerHTML, new RegExp(`data-id="${api.state.results[180].id}"`));
+});
+
+
+test('只有专业分类和地区常显，现场标签及其他条件渐进展示',()=>{
+  const html=fs.readFileSync(new URL('../web/index.html',import.meta.url),'utf8');
+  const filters=html.slice(html.indexOf('id="hazardFilters"'),html.indexOf('id="lawFilters"'));
+  const primary=filters.slice(0,filters.indexOf('<details'));
+  assert.match(primary,/专业分类/);assert.match(primary,/id="region"/);
+  assert.doesNotMatch(primary,/id="scene"|id="level"|id="mode"|适用场景/);
+  assert.match(filters,/<details[^>]+>[\s\S]*id="scene"[\s\S]*id="level"[\s\S]*id="mode"/);
+  assert.match(html,/id="search"[^>]+aria-describedby="searchHelp"/);
+  assert.match(html,/id="scene"[^>]+aria-describedby="sceneHelp"/);
+});
+
+test('现场选项只显示真实结果中的标签，无泛主题或空选项',()=>{
+  const {api,elements}=loadResultsApp();api.initFilters();
+  assert.match(elements.get('scene').innerHTML,/生产现场/);
+  assert.match(elements.get('scene').innerHTML,/未标注具体现场/);
+  assert.doesNotMatch(elements.get('scene').innerHTML,/不存在的现场|适用：/);
+});
+
+test('隐藏筛选计数与可移除条件同步，移除不清空用户查询',async()=>{
+  const {api,elements}=loadResultsApp();api.initFilters();
+  elements.get('search').value='隐患';elements.get('scene').value='生产现场';
+  elements.get('level').value='国家标准';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(elements.get('hazardFilterCount').textContent,'（2）');
+  assert.match(elements.get('activeFilters').innerHTML,/现场标签：生产现场/);
+  const chip=elements.get('activeFilters').filterButtons.find(button=>button.dataset.filter==='scene');
+  chip.click();await settle();
+  assert.equal(elements.get('scene').value,'');assert.equal(elements.get('search').value,'隐患');
+  assert.equal(elements.get('level').value,'国家标准');
+  assert.equal(elements.get('hazardFilterCount').textContent,'（1）');
+  assert.equal(elements.get('scene').focused,true);
+});
+
+test('共享链接高级条件自动展开，已删除旧标签明确提示未恢复',async()=>{
+  const {api,elements}=loadResultsApp();api.initFilters();
+  api.applyUrlFilters({view:'hazards',filters:{scene:'生产现场',level:'国家标准'}});
+  assert.equal(elements.get('hazardMoreFilters').open,true);
+  api.renderResults({mode:'initial'});await settle();
+  assert.equal(elements.get('hazardFilterCount').textContent,'（2）');
+  api.applyUrlFilters({view:'hazards',filters:{scene:'电气与配电'}});
+  api.renderResults({mode:'initial'});await settle();
+  assert.match(elements.get('searchNotice').textContent,/电气与配电.*已不再提供/);
+  assert.equal(elements.get('searchNotice').hidden,false);
+  elements.get('scene').value='生产现场';api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(elements.get('searchNotice').hidden,true);
+});
+
+test('清空仅清查询，全部重置清查询和条件，仍恢复首条与列表',async()=>{
+  const {api,elements}=loadResultsApp();api.initFilters();api.bind();
+  elements.get('search').value='隐患';elements.get('category').value='电气安全';
+  elements.get('scene').value='生产现场';api.renderResults({mode:'filter-change'});await settle();
+  elements.get('clear').click();await settle();
+  assert.equal(elements.get('search').value,'');assert.equal(elements.get('scene').value,'生产现场');
+  assert.equal(elements.get('category').value,'电气安全');assert.equal(elements.get('search').focused,true);
+  elements.get('reset').click();await settle();
+  assert.equal(elements.get('category').value,'');assert.equal(elements.get('scene').value,'');
+  assert.equal(elements.get('activeFilters').hidden,true);
+  assert.equal(api.state.results.length,365);assert.equal(api.state.selectedHazard,api.state.results[0].id);
 });

@@ -1,18 +1,20 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
-    "clause": "eb07ef83e9e4985a3f0b32528bcd624425fed4001f62d0577b6151de26050480",
-    "hazard": "c05720b6dbb1522199bc0dc099fa9db71f10ff1df7596663bf44728192f9ac85"
+    "hazard": "8d82c87cb0a828dde5db062011ea7c460c5ca27819e284e9a6c05410c694906d",
+    "clause": "eb07ef83e9e4985a3f0b32528bcd624425fed4001f62d0577b6151de26050480"
   },
   "decision": "verified",
   "entityId": "K_XLSX_0dac466595d5a96b9c29c60f",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_15577_GB 15577",
+    "E_REMEDIATION_20260930_GB15577",
+    "E_REMEDIATION_20260930_MEM6"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "reason": "8.3.2无合规干式巷道除尘风道例外。独立修订为绝对禁止并停止原有使用，改用合规钢质风管，保留强度要求；同时纠正hazard及link误套总平面布置范围。不能以粉尘沉降、通风改良等保留被禁止结构。",
   "reviewType": "applicability",
-  "reviewedContentHash": "dbb523c94289a5c8158aa861390af0e07723c78b559c7e7ed42e0e8ae89042fb",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "cbf3d54ddaff2ca1a57d6019a0d6bf189bb844bfedeb63e59f8b369855a7a132",
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_8_3_2_1；条款：C_15577_8_3_2；保留direct角色。"
 }

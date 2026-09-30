@@ -1,18 +1,19 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
-    "clause": "537143407cb54b5b2c2c81ce1ca7de2c5aae405bf7fc5e229cdd8ebde8f30d52",
-    "hazard": "acf259d554ecb9d88f5f7544755ad39a24c86e3a9dd6f865356460a946e194a7"
+    "hazard": "b6996447f7d754f0ac12a560a2a82d8e59c6b37a01a9d45e5ee3be38211986a6",
+    "clause": "537143407cb54b5b2c2c81ce1ca7de2c5aae405bf7fc5e229cdd8ebde8f30d52"
   },
   "decision": "verified",
   "entityId": "K_XLSX_FT_1F35024B7A16662886FFAAD7",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_E546061F015A00C74F3AC1AC"
+    "E_XLSX_FT_E546061F015A00C74F3AC1AC",
+    "E_REMEDIATION_20260930_NHC5"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "NHC5第12条主语是产生职业病危害的用人单位的工作场所。独立修订保持这个单位层级范围，不缩为仅产生危害的某一房间；不得住人恢复明确禁止。description去除无依据的不相容物质风险模板。",
   "reviewType": "applicability",
   "reviewedContentHash": "ea5ef1d24bab73897fc0cc7153fdedf3cf464187c27b6fdfebff02c53b88abac",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_ZJWS_12_2；条款：C_XLSX_FT_F0512157014847162731801A；保留direct角色。"
 }
