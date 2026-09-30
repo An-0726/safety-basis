@@ -1,19 +1,22 @@
 {
-  "checkedAt": "2026-09-30",
-  "contextHashes": {
-    "hazard": "4ed2175503f0712484fcc78ab2e466af6094a60e4e63b1dbb28c5ea459966037",
-    "clause": "51c00096011b8cf93f17ec55b864362c0b61bed91100d43c312cf654c75b9446"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_577A6055EF9B053BBAF2DA7F",
+  "reviewType": "applicability",
   "entityType": "link",
+  "entityId": "K_XLSX_FT_577A6055EF9B053BBAF2DA7F",
+  "decision": "verified",
+  "reviewedContentHash": "e735c2cf49bb51bc9476a1ceb8a16dfa707a4f4a324bc2dab1a0ffbb8f2c6217",
   "evidenceRefs": [
     "E_XLSX_FT_8ECF45A925A1AB305A639CEB",
-    "E_REMEDIATION_20260930_MEM13"
+    "E_REMEDIATION_20260930_MEM13",
+    "E_72b7188a148af91cc79aad3c97dcb9cd7611286790858514f4efc9d53b4a7a52",
+    "E_XLSX_FT_52EE92815856956C92B3D4CC",
+    "E_XLSX_FT_F8BFF2631FB9A86595C65DEF"
   ],
-  "reason": "第12条原文为防止未经审批进入，物理隔离对象限可能产生有毒物质的有限空间，解除人是监护人员且时点为作业前；第7、14条审批与作业条件仍须履行。新措施恢复否定词并消除无关报送模板，未把解除隔离等同于准许进入。",
-  "reviewType": "applicability",
-  "reviewedContentHash": "10187c83882c7d90f2bdf33c78d22edd9caf67111d0660aa568adc56b594d3db",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_48B66BAC_12_1；条款：C_XLSX_FT_C4756DBEECEC08166BCF3A4E；保留direct角色。限制：未改description仍残留不相容物质风险模板，不能将该模板当作现场已核风险结论；本次只批准准入/物理隔离措施修复。"
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "本direct关联仍准确对应第13号令第十二条的物理隔离义务；applicability与修订后hazard.conditions逐字一致，只约束第二、三条所称工贸企业可能产生有毒物质的有限空间。对监护人员正常作业前解除隔离设置误判排除，未增设审批与解除隔离的先后；第七、十四条只作准入边界解释，不取代第十二条作为本关联的直接依据。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。",
+  "contextHashes": {
+    "hazard": "922723364c203de5c868dd0a4d5c4bf2e7de4e8912d1a84b1ecc98693694556f",
+    "clause": "51c00096011b8cf93f17ec55b864362c0b61bed91100d43c312cf654c75b9446"
+  }
 }

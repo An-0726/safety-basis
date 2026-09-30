@@ -81,7 +81,7 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
                 self.assertEqual(review['entityType'], row['entityType'])
                 self.assertEqual(review['decision'], 'verified')
                 self.assertEqual(review['checkedAt'], '2026-09-30')
-                self.assertEqual(review['reviewer'], 'Codex逐项内容复核20260930')
+                self.assertEqual(review['reviewer'], row.get('reviewer', 'Codex逐项内容复核20260930'))
                 self.assertEqual(review['reason'], row['semanticReviewReason'])
                 self.assertEqual(review['reviewedContentHash'], row['reviewedContentHash'])
                 self.assertEqual(review['reviewedContentHash'], content_hash(entity))

@@ -1,15 +1,16 @@
 {
-  "checkedAt": "2026-09-30",
-  "decision": "verified",
-  "entityId": "H_1AD0D576979A2F4717DA1E73D1_2",
+  "reviewType": "content",
   "entityType": "hazard",
+  "entityId": "H_1AD0D576979A2F4717DA1E73D1_2",
+  "decision": "verified",
+  "reviewedContentHash": "66d4a46cb6c865a7a57c3994dee4f0f1169056c409a4cf131b51d8c3bb5fdb54",
   "evidenceRefs": [
     "E_XLSX_FT_D7EAE95C2C926E60C57D23CF",
-    "E_REMEDIATION_20260930_TSELAW"
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
   ],
-  "reason": "特设法19条明确不合格或国家淘汰设备不得生产。新措施恢复停止生产，不以设备使用登记/继续使用验收替代生产义务。整改建议只针对生产单位和拟生产设备。",
-  "reviewType": "content",
-  "reviewedContentHash": "b7b28390a05d749c6676b03d01ab37c3a3efe0dc43778f383233cce53d8d2ad8",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。限制：当前places仍是使用运行场景的泛化标签；本次生产措施和引用对象明确。本内容批准不等于现有路由标签已全面精确，应由路由专项按生产场景处理，不能以此机械签署全部分类。"
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "已完整核对本条title、description、measures、conditions、places及唯一direct依据。特种设备安全法第十九条义务主体为生产单位，第二条所称生产包括设计、制造、安装、改造、修理；删除使用现场参数套句及泛使用场所，要求有实际生产活动和适用技术要求不符合项或国家明令淘汰匹配证据。安全性能要求与适用能效指标均为合规要求，不符合任一适用要求不能认定合格，不将法条连接词误读为两项须同时不符；国家明令淘汰为独立禁止分支。仅拟生产计划或使用现场状态不能证明违法生产，但实际设计等活动不以制成成品为前提。title沿用法条禁止性表述，measures逐字保留，其中拟生产核查属于预防整改，不是已违法生产事实。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。"
 }

@@ -1,19 +1,20 @@
 {
-  "checkedAt": "2026-09-30",
-  "contextHashes": {
-    "hazard": "b7b28390a05d749c6676b03d01ab37c3a3efe0dc43778f383233cce53d8d2ad8",
-    "clause": "00f51c343234b310c81b20dd1f770a43224d32f44f6462e5a86d4cba55c0ee03"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_37CD3E91ACE44C6753C6D078",
+  "reviewType": "applicability",
   "entityType": "link",
+  "entityId": "K_XLSX_FT_37CD3E91ACE44C6753C6D078",
+  "decision": "verified",
+  "reviewedContentHash": "11d8e59435d7d65166604f7ec66c686f50ef8734771f913e9184cceaff2454a7",
   "evidenceRefs": [
     "E_XLSX_FT_D7EAE95C2C926E60C57D23CF",
-    "E_REMEDIATION_20260930_TSELAW"
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
   ],
-  "reason": "特设法19条明确不合格或国家淘汰设备不得生产。新措施恢复停止生产，不以设备使用登记/继续使用验收替代生产义务。整改建议只针对生产单位和拟生产设备。",
-  "reviewType": "applicability",
-  "reviewedContentHash": "c122299849709948ad695d39cb4c146962729affbc1579ae39762e2dce655070",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_1AD0D576979A2F4717DA1E73D1_2；条款：C_XLSX_FT_C4669AF1D3D00BCB1E1EB704；保留direct角色。限制：当前places仍是使用运行场景的泛化标签；本次生产措施和引用对象明确。本内容批准不等于现有路由标签已全面精确，应由路由专项按生产场景处理，不能以此机械签署全部分类。"
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "本direct关联继续对应特种设备安全法第十九条，applicability与修订后hazard.conditions逐字一致，主体和行为限于生产单位及第二条定义的生产活动。使用登记、使用状态或拟生产计划不能替代实际生产证据；应按适用技术规范/标准逐项核查性能或能效不符合项，国家明令淘汰另行匹配，不设置性能和能效同时不符合的门槛。未将使用、经营、充装义务或任何技术标准的范围/排除项混入本法律关联。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。",
+  "contextHashes": {
+    "hazard": "66d4a46cb6c865a7a57c3994dee4f0f1169056c409a4cf131b51d8c3bb5fdb54",
+    "clause": "00f51c343234b310c81b20dd1f770a43224d32f44f6462e5a86d4cba55c0ee03"
+  }
 }

@@ -1,15 +1,16 @@
 {
-  "checkedAt": "2026-09-30",
-  "decision": "verified",
-  "entityId": "H_8300469D69145B0731074A2CC4_1",
+  "reviewType": "content",
   "entityType": "hazard",
+  "entityId": "H_8300469D69145B0731074A2CC4_1",
+  "decision": "verified",
+  "reviewedContentHash": "a883feb9993edbdffa62a51b69dcab18de05982818ca581ea218cd650af1b143",
   "evidenceRefs": [
     "E_XLSX_FT_5040D8C5C98FA2D9B8BB8ABA",
-    "E_REMEDIATION_20260930_TSELAW"
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
   ],
-  "reason": "特设法48(1)要求达到法定报废条件时履行报废、消除使用功能和注销，32条禁止已报废设备使用。新措施正确排除通用继续使用验收尾句；达到设计年限本身与达到报废条件区分，未把单纯年限届满等同于一律报废。",
-  "reviewType": "content",
-  "reviewedContentHash": "2adba0031ca080e7a5c43d9470a73873493f987e524a42f8229e35f6fed7bf57",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。"
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "已完整核对本条title、description、measures、conditions、places及唯一direct依据。特种设备安全法第四十八条第一款报废前提为存在严重事故隐患且无改造、修理价值，或者达到适用安全技术规范规定的其他报废条件；标题概括法定报废，正文明确且/或者结构并删除无关安全防护、识别、监测、应急缺失套句，责任主体限使用单位。第二款只允许第一款报废条件以外且达到设计年限仍可以继续使用的设备在完成检验或安全评估、登记变更并加强安全保障后继续使用，不能把年限届满一律判为报废或默认延寿。第三十二条第二款禁止使用已经报废的设备；既有measures中的报废、消除使用功能、注销及不得继续使用逐字保留。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。"
 }

@@ -1,19 +1,20 @@
 {
-  "checkedAt": "2026-09-30",
-  "contextHashes": {
-    "hazard": "2adba0031ca080e7a5c43d9470a73873493f987e524a42f8229e35f6fed7bf57",
-    "clause": "0b6e428fb9fc7df3ca62d6f5aa2775a9befd3bd7c0974b4e7bc297e764465242"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_22FEB45749D557358459D371",
+  "reviewType": "applicability",
   "entityType": "link",
+  "entityId": "K_XLSX_FT_22FEB45749D557358459D371",
+  "decision": "verified",
+  "reviewedContentHash": "0c7785e04e6f168f36cbc85e27db63d3607739e7e1179ab3a72e876faafe4a4c",
   "evidenceRefs": [
     "E_XLSX_FT_5040D8C5C98FA2D9B8BB8ABA",
-    "E_REMEDIATION_20260930_TSELAW"
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
   ],
-  "reason": "特设法48(1)要求达到法定报废条件时履行报废、消除使用功能和注销，32条禁止已报废设备使用。新措施正确排除通用继续使用验收尾句；达到设计年限本身与达到报废条件区分，未把单纯年限届满等同于一律报废。",
-  "reviewType": "applicability",
-  "reviewedContentHash": "9cec31ef6e2d1d5bba9895a1d10ead178425962b060a58cf17744accb2e1f58d",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_8300469D69145B0731074A2CC4_1；条款：C_XLSX_FT_F5017E8CD5805FA33228B67F；保留direct角色。"
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "本direct关联仍准确对应特种设备安全法第四十八条第一款报废义务；applicability与修订后hazard.conditions逐字一致，主体限使用单位，触发条件为严重事故隐患与无改造修理价值同时成立，或其他适用安全技术规范报废条件成立。第四十八条第二款仅用于区分设计年限与法定报废，第三十二条第二款仅用于排除已报废设备延寿；不把上述边界条款、其他标准或一般使用管理场景替换为本关联直接依据。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。",
+  "contextHashes": {
+    "hazard": "a883feb9993edbdffa62a51b69dcab18de05982818ca581ea218cd650af1b143",
+    "clause": "0b6e428fb9fc7df3ca62d6f5aa2775a9befd3bd7c0974b4e7bc297e764465242"
+  }
 }
