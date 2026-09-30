@@ -104,6 +104,30 @@ def validate(profile, knowledge):
         if profile['lifecycle'] != hazard['lifecycle']:
             raise ValueError(f"{profile['id']}: lifecycle drift")
 
+def review_overlays(knowledge, profiles):
+    """Optional private, versioned annotations bound to reviewed source contexts."""
+    path = Path(knowledge)/'field-profiles-pilot/review-overlay.json'
+    if not path.exists():
+        return {}
+    data = read(path)
+    if data.get('schemaVersion') != 1 or data.get('formalApproval') is not False or not data.get('reviewId'):
+        raise ValueError('invalid candidate review overlay')
+    profiles = {p['id']: p for p in profiles}
+    result = {}
+    for item in data.get('cases', []):
+        ident = item.get('id')
+        if ident not in profiles or ident in result:
+            raise ValueError('unknown or duplicate overlay case')
+        if item.get('sourceContextFingerprint') != context(profiles[ident], knowledge):
+            raise ValueError('stale review overlay: ' + ident)
+        if set(item) != {'id', 'sourceContextFingerprint', 'requires', 'excludes', 'pending', 'sources'}:
+            raise ValueError('unsupported review overlay fields')
+        for key in ('requires', 'excludes', 'pending', 'sources'):
+            if not isinstance(item[key], list) or not item[key] or not all(isinstance(x, str) and x.strip() for x in item[key]):
+                raise ValueError('incomplete review overlay: ' + key)
+        result[ident] = dict(copy.deepcopy(item), reviewId=data['reviewId'])
+    return result
+
 def projection(knowledge):
     knowledge = Path(knowledge)
     profiles = [read(path) for path in sorted((knowledge/'field-profiles-pilot/records').glob('*.json'))]
@@ -111,11 +135,14 @@ def projection(knowledge):
         raise ValueError('pilot must contain exactly 24 unique cases')
     for profile in profiles:
         validate(profile, knowledge)
+    overlays = review_overlays(knowledge, profiles)
     result = []
     for profile in profiles:
         p = copy.deepcopy(profile)
         # Audit bindings are used by the builder, not piled into the user interface.
         p.pop('fieldReview')
+        if p['id'] in overlays:
+            p['reviewOverlay'] = overlays[p['id']]
         p['publishable'] = False
         p['status'] = ('本地候选 · 候选依据已核，现场事实待证实'
                        if p.get('basisCheck', {}).get('status') == 'candidate_basis_checked'

@@ -38,3 +38,7 @@ python tools/v4/build_unified_release.py --out <独立预览目录> --as-of 2026
 manifest 的 `files` 使用当前公开文件的 Git LF 字节口径；`originalSnapshotFiles` 保留原迁移清单，`originalSnapshotCommit` 固定原公开提交。原构建器快照记录为28381 bytes / ad1d4d476724c680426cca22fc159613c17abb91d55d9f9c3c9ee4d0175fade0；原公开 Git blob 实际为27732 bytes / ce5f3c9ced19a273feaadfba66e72ba6826b308cc5abe5502ac90e2a99a370fe。迁移方说明差异来自混合换行，云端未取得原始混合换行字节，不把该说明替代逐字校验。
 
 私有恢复器若仍绑定原快照，应先在精确原提交恢复并核验，再应用此CI修复；或由迁移方更新恢复器的公开文件清单。不得绕过恢复器差异拒绝检查，也不得自动重签真实候选审核指纹。
+
+## 版本化私有审核补充
+
+试点投影可读取私有 `knowledge/field-profiles-pilot/review-overlay.json`。每个条目绑定原记录及上游证据的 contextFingerprint，只补充适用范围、排除条件、待核事项及出处，不修改原记录/证据/审核指纹，不提升批准状态；绑定过期或字段异常时构建失败。补充内容同时进入详情和复制文本，普通构建不携带此层。覆盖层及真实验收包留在私有仓库，公开测试仅使用合成内容。

@@ -92,6 +92,29 @@ class PilotTests(unittest.TestCase):
         (self.knowledge/'field-profiles-pilot/records/SYN_00.json').unlink()
         with self.assertRaisesRegex(ValueError,'24 unique'):projection(self.knowledge)
 
+    def test_review_overlay_is_bound_and_never_changes_original_records(self):
+        for i in range(24):
+            row=copy.deepcopy(self.profile);row['id']=f'SYN_{i:02}'
+            self.sign(row);self.put(f'field-profiles-pilot/records/{row["id"]}.json',row)
+        original=self.knowledge/'field-profiles-pilot/records/SYN_00.json'
+        before=original.read_bytes();row=json.loads(before)
+        item={'id':'SYN_00','sourceContextFingerprint':row['fieldReview']['contextFingerprint'],
+              'requires':['Synthetic scope'],'excludes':['Synthetic exception'],
+              'pending':['Synthetic pending fact'],'sources':['Synthetic locator']}
+        overlay={'schemaVersion':1,'reviewId':'synthetic-r1','formalApproval':False,'cases':[item]}
+        rel='field-profiles-pilot/review-overlay.json'
+        self.put(rel,overlay);payload=projection(self.knowledge)
+        self.assertEqual(payload['records'][0]['reviewOverlay']['excludes'],['Synthetic exception'])
+        self.assertEqual(original.read_bytes(),before)
+        self.assertNotIn('reviewOverlay',payload['records'][1])
+        for key,value in [('sourceContextFingerprint','stale'),('pending',[]),('id','missing')]:
+            changed=copy.deepcopy(overlay);changed['cases'][0][key]=value;self.put(rel,changed)
+            with self.assertRaises(ValueError):projection(self.knowledge)
+        changed=copy.deepcopy(overlay);changed['formalApproval']=True;self.put(rel,changed)
+        with self.assertRaises(ValueError):projection(self.knowledge)
+        changed=copy.deepcopy(overlay);changed['cases'][0]['candidateStatus']='approved';self.put(rel,changed)
+        with self.assertRaises(ValueError):projection(self.knowledge)
+
     def test_missing_private_material_is_not_acceptance(self):
         result=subprocess.run([sys.executable,str(ROOT/'tools/v4/check_field_pilot_acceptance.py'),
             '--knowledge',str(self.knowledge)],capture_output=True,text=True)
