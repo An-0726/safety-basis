@@ -1,0 +1,67 @@
+{
+  "asOf": "2026-09-30",
+  "baseRuntimeCommit": "fb1da8aa16e5695f2108d0c61f6f3938a0446846",
+  "scope": "Publish only public runtime code and verified version-boundary correction; private 24-case records remain excluded.",
+  "tests": {
+    "node": {
+      "passed": 74,
+      "failed": 0,
+      "skipped": 0
+    },
+    "python": {
+      "passed": 64,
+      "failed": 0
+    },
+    "versionBoundaryTests": 4,
+    "strictAuditToday": "PASS",
+    "strictAudit20261001": "PASS",
+    "validateAll": "PASS",
+    "publicationIntegrity": "PASS",
+    "bundleIntegrity": "PASS",
+    "browserLocal": "NOT_RUN_SUCCESSFULLY: Chromium launch restricted; existing post-deploy Actions browser verification required"
+  },
+  "publicBundle": {
+    "formatVersion": "safety-unified-release-v1",
+    "asOf": "2026-09-30",
+    "releaseHash": "2ae56139dea735013ec959740ee80e72d22e86b17c6273e6812c2b90c61be820",
+    "generator": {
+      "tool": "tools/v4/build_unified_release.py",
+      "model": "deterministic local build"
+    },
+    "knowledge": {
+      "manifestSha256": "07642cd4067532041cdcd5160df427be8764812f00ea5a5fbf4bb4a5fbc5556e",
+      "gate": {
+        "asOf": "2026-09-30",
+        "eligibleHazards": 1663,
+        "eligibleLinks": 1798,
+        "strictBlockers": 0,
+        "publicProposalHazards": 0,
+        "candidateHazardsInKnowledge": 354
+      }
+    },
+    "provenance": {
+      "hazardClauseLinkSource": "knowledge/ current chained-gate projection",
+      "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
+      "fulltextSource": "source/publication/fulltext/",
+      "frontendSource": "web/"
+    },
+    "counts": {
+      "hazards": 1663,
+      "laws": 67,
+      "lawVersions": 67,
+      "clauses": 1341,
+      "links": 1798
+    },
+    "fullText": {
+      "count": 11,
+      "officialLinkCount": 58,
+      "gbt47236": "link_only"
+    }
+  },
+  "privateIsolation": {
+    "candidateRecordsPublished": 0,
+    "pilotAssetsInDefaultBundle": false,
+    "privateOriginalsPublished": false
+  },
+  "deploymentStatus": "PENDING_PR_CI_MERGE_AND_PAGES"
+}

@@ -22,6 +22,7 @@ import os
 import re
 import shutil
 import sys
+from pathlib import Path
 import unicodedata
 from collections import Counter, defaultdict
 from datetime import date, datetime, timezone
@@ -115,6 +116,7 @@ def main():
     ap.add_argument("--as-of", dest="as_of", default=AS_OF)
     ap.add_argument("--data-version", dest="data_version", default=DATA_VERSION)
     ap.add_argument("--overwrite", action="store_true", help="若输出目录已存在则清空覆盖")
+    ap.add_argument("--field-profiles-pilot", action="store_true", help="仅本地：额外生成隔离的24例现场试点页面，不改变正式索引")
     args = ap.parse_args()
     AS_OF = args.as_of
     DATA_VERSION = args.data_version
@@ -124,6 +126,9 @@ def main():
         raise SystemExit("--as-of 必须是 YYYY-MM-DD：" + AS_OF) from exc
 
     out = os.path.abspath(args.out)
+    if args.field_profiles_pilot and (Path(out).is_relative_to(Path(DEFAULT_OUT).resolve()) or
+                                     Path(out).is_relative_to(Path(ROOT, 'dist').resolve())):
+        raise SystemExit('试点不能写入正式current或dist输出，请使用独立本地预览目录')
     if os.path.exists(out):
         if args.overwrite:
             import stat
@@ -509,6 +514,10 @@ def main():
     dangling = sorted({d["versionId"] for d in docs if d.get("versionId") not in source_version_ids})
     if dangling:
         raise SystemExit("全文资料目录存在未知版本：" + ", ".join(dangling))
+
+    if args.field_profiles_pilot:
+        from field_profiles_pilot import build_pilot
+        build_pilot(KNOW, WEB, out)
 
     # ---- release.json / site-manifest.json / checksums.json ----
     knowledge_manifest_sha = sha256_file(os.path.join(KNOW, "manifest.json"))

@@ -239,7 +239,7 @@ def _extract_primary_article_num(text):
     return None
 
 
-def gate_clause(clause, review, lv_supports_current, lv_struct_ok, lv=None):
+def gate_clause(clause, review, lv_supports_current, lv_struct_ok, lv=None, lv_reasons=None):
     """Clause 硬门禁 + 所属 LawVersion 可支撑当前日期。"""
     reasons = []
     if not clause.get("lawVersionId"):
@@ -254,7 +254,13 @@ def gate_clause(clause, review, lv_supports_current, lv_struct_ok, lv=None):
         reasons.append("EXCLUDED_CLAUSE_NOT_CURRENT:clause_lifecycle_"
                        + str(clause.get("lifecycle")))
     if not lv_struct_ok:
-        reasons.append("BLOCK_VERSION_UNKNOWN:lawVersion_gate_failed")
+        # Preserve a purely temporal failure so strict auditing can distinguish
+        # expired/future inventory from malformed or unreviewed current facts.
+        temporal = ("BLOCK_VERSION_EXPIRED:", "BLOCK_VERSION_NOT_EFFECTIVE:active_before_effectiveDate")
+        if lv_reasons and all(str(reason).startswith(temporal) for reason in lv_reasons):
+            reasons.extend(lv_reasons)
+        else:
+            reasons.append("BLOCK_VERSION_UNKNOWN:lawVersion_gate_failed")
     elif not lv_supports_current:
         reasons.append("BLOCK_VERSION_NOT_EFFECTIVE:lawVersion_not_supporting_current")
 
@@ -389,7 +395,7 @@ def evaluate_release_gate(knowledge_dir=None, as_of=DEFAULT_AS_OF):
         lv = lvs_v.get(vid, {})
         ok, reasons = gate_clause(cl, reviews["clauses"].get(cid),
                                   lv.get("supports_current", False), lv.get("ok", False),
-                                  lvs.get(vid))
+                                  lvs.get(vid), lv.get("reasons", []))
         clauses_v[cid] = {"ok": ok, "reasons": reasons, "lawVersionId": vid}
 
     hazards_v = {}
