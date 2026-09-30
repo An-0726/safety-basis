@@ -25,8 +25,8 @@ def permuted(root, rel):
     entities = original(root, rel)
     return {key: entities[key] for key in sorted(entities, reverse=reverse)}
 builder.load_dir = permuted
-sys.argv = ['builder', '--out', sys.argv[1], '--as-of', '2026-09-26',
-            '--data-version', '2026.09.26.reproducibility-test']
+sys.argv = ['builder', '--out', sys.argv[1], '--as-of', '2026-09-30',
+            '--data-version', '2026.09.30.reproducibility-test']
 builder.main()
 """
         releases = ROOT / 'source' / 'releases'

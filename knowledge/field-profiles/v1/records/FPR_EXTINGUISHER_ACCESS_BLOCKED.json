@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "FPR_EXTINGUISHER_ACCESS_BLOCKED",
+  "revision": 2,
+  "hazardId": "H003",
+  "title": "灭火器前堆物阻碍取用",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "适用于建设工程中消防设施使用和维护涉及的灭火器设置。",
+      "已确认灭火器点位和人员取用路径",
+      "所堆物品确实阻碍人员接近或取出灭火器，具体受阻环节已核实"
+    ],
+    "excludes": [
+      "不凭单张照片中有物品就推定取用必然受阻",
+      "不与支架卡阻、疏散通道堵塞混为同一缺陷",
+      "不编造普遍适用的净距要求；重大事故隐患另按适用判定标准核实",
+      "同一事实不与支架卡阻模板重复计入"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved"
+    ]
+  },
+  "findingTemplate": {
+    "text": "{{location}}前堆放{{objects}}，阻碍{{blockedStep}}，影响灭火器便捷取用。",
+    "slots": [
+      {
+        "key": "location",
+        "label": "灭火器设置点"
+      },
+      {
+        "key": "objects",
+        "label": "阻挡取用的物品"
+      },
+      {
+        "key": "blockedStep",
+        "label": "现场已确认受阻的接近或取出环节"
+      }
+    ]
+  },
+  "evidenceRequirements": [
+    "灭火器点位及周边照片",
+    "障碍物范围和取用路径观察记录",
+    "物品确实阻挡取用的证据"
+  ],
+  "correctiveDirection": "移除取用路径上的物品，恢复明显且便于取用的灭火器设置点，保持人员安全疏散条件。",
+  "basisLinkIds": [
+    "K_7C49E1C2BC09D20074353FDE"
+  ]
+}

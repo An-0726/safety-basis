@@ -38,6 +38,8 @@ from presentation import (  # noqa: E402
     searchable,
 )
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
+from field_profiles import public_projection  # noqa: E402
+from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
@@ -45,8 +47,6 @@ PUBLICATION = os.path.join(ROOT, "source", "publication")
 WEB = os.path.join(ROOT, "web")
 DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "current")
 SHARD_SIZE = 200
-AS_OF = "2026-09-14"
-DATA_VERSION = "2026.09.14.current"
 MODEL = "deterministic local build"
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
@@ -110,21 +110,27 @@ def public_version_title(name, number):
 
 
 def main():
-    global AS_OF, DATA_VERSION
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=DEFAULT_OUT)
-    ap.add_argument("--as-of", dest="as_of", default=AS_OF)
-    ap.add_argument("--data-version", dest="data_version", default=DATA_VERSION)
+    ap.add_argument("--as-of", dest="as_of", required=True, help="明确的 Gate/模板投影日期 YYYY-MM-DD")
+    ap.add_argument("--data-version", dest="data_version", default=None,
+                    help="省略时按 --as-of 生成 YYYY.MM.DD.current")
     ap.add_argument("--overwrite", action="store_true", help="若输出目录已存在则清空覆盖")
     ap.add_argument("--field-profiles-pilot", action="store_true", help="仅本地：额外生成隔离的24例现场试点页面，不改变正式索引")
     args = ap.parse_args()
-    AS_OF = args.as_of
-    DATA_VERSION = args.data_version
     try:
-        as_of_date = date.fromisoformat(AS_OF)
+        as_of_date = date.fromisoformat(args.as_of)
     except ValueError as exc:
-        raise SystemExit("--as-of 必须是 YYYY-MM-DD：" + AS_OF) from exc
+        raise SystemExit("--as-of 必须是 YYYY-MM-DD：" + args.as_of) from exc
 
+    with stable_knowledge_snapshot(KNOW, include_pilot=args.field_profiles_pilot) as (snapshot, source_hash):
+        build(args, snapshot, source_hash, as_of_date)
+
+
+def build(args, knowledge, source_hash, as_of_date):
+    KNOW = str(knowledge)
+    AS_OF = as_of_date.isoformat()
+    DATA_VERSION = args.data_version or AS_OF.replace('-', '.') + '.current'
     out = os.path.abspath(args.out)
     if args.field_profiles_pilot and (Path(out).is_relative_to(Path(DEFAULT_OUT).resolve()) or
                                      Path(out).is_relative_to(Path(ROOT, 'dist').resolve())):
@@ -147,6 +153,9 @@ def main():
     data = os.path.join(out, "data")
 
     gate = evaluate_release_gate(KNOW, as_of_date)
+    # Publish only the governed allowlist. Private coverage/review inventory is
+    # deliberately neither written to the bundle nor advertised as completion.
+    field_profiles = public_projection(KNOW, as_of=as_of_date)['public']
     hazards = load_dir(KNOW, "hazards")
     hazard_conditions = {
         hid: normalized_conditions(hid, hazard)
@@ -453,6 +462,7 @@ def main():
         "lawVersions": len(law_index),
         "clauses": len(used_clauses),
         "links": len(shipped_links),
+        "fieldProfiles": len(field_profiles['records']),
     }
     manifest = {
         "schemaVersion": 2,
@@ -481,6 +491,7 @@ def main():
             "searchIndex": "data/search-index.json",
             "lawIndex": "data/law-index.json",
             "taxonomy": "data/taxonomy.json",
+            "fieldProfiles": "data/field-profiles.json",
         },
         "hazardShards": hazard_shards,
         "clauseShards": clause_shards,
@@ -491,6 +502,7 @@ def main():
     wr(os.path.join(data, "search-index.json"), si)
     wr(os.path.join(data, "law-index.json"), law_index, indent=2)
     wr(os.path.join(data, "taxonomy.json"), taxonomy)
+    wr(os.path.join(data, "field-profiles.json"), field_profiles)
 
     # ---- 前端资产与公开全文资料 ----
     for asset in SITE_ASSETS:
@@ -571,6 +583,7 @@ def main():
         },
         "knowledge": {
             "manifestSha256": knowledge_manifest_sha,
+            "snapshotSha256": source_hash,
             "gate": {
                 "asOf": gate.as_of,
                 "eligibleHazards": len(pub),
@@ -585,6 +598,7 @@ def main():
             "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
             "fulltextSource": "source/publication/fulltext/",
             "frontendSource": "web/",
+            "fieldProfileSource": "governed v1 semantic-review and dated-gate public projection; reusable templates only",
         },
         "counts": counts,
         "fullText": {

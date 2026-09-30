@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "FPR_EXTINGUISHER_BRACKET_OBSTRUCTION",
+  "revision": 2,
+  "hazardId": "H003",
+  "title": "推车式灭火器被支架卡阻，取用受阻",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "适用于建设工程中消防设施使用和维护涉及的灭火器设置。",
+      "已确认器材为配置使用的推车式灭火器，实际支架或其固定部件造成取出卡阻",
+      "安全试取已证实无法便捷取用，实际卡阻部位明确"
+    ],
+    "excludes": [
+      "不将特定支架型号或某一种固定方式作为普遍法定要求",
+      "不与压力不足、失压、疏散出口堵塞混为同一缺陷",
+      "设置点存在视线障碍不当然违法，须结合位置指示及实际取用条件判断",
+      "仅因周边堆物阻挡接近或取出的，使用堆物受阻模板；同一事实不重复计入"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved"
+    ]
+  },
+  "findingTemplate": {
+    "text": "{{device}}推车式灭火器被{{obstruction}}卡阻，不能顺畅取出。",
+    "slots": [
+      {
+        "key": "device",
+        "label": "器材位置和编号"
+      },
+      {
+        "key": "obstruction",
+        "label": "实际支架卡阻部位"
+      }
+    ]
+  },
+  "evidenceRequirements": [
+    "器材及支架型号、存放方式资料",
+    "器材和卡阻部位照片",
+    "符合设备使用要求的安全试取记录"
+  ],
+  "correctiveDirection": "调整固定或存放方式，必要时更换兼容支架，消除卡阻；复核器材便于取用且不影响人员安全疏散。",
+  "basisLinkIds": [
+    "K_7C49E1C2BC09D20074353FDE"
+  ]
+}
