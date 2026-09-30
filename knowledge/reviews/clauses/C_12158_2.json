@@ -1,13 +1,14 @@
 {
-  "checkedAt": "2026-09-12",
-  "decision": "verified",
+  "checkedAt": "2026-09-30T12:25:50Z",
+  "decision": "rejected",
   "entityId": "C_12158_2",
   "entityType": "clause",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "条文核验：GB 12158-2024 第2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。",
+  "reason": "撤回原verified文本审核。C_12158_2标为“第2条”，引文却以“/s……(3)”残缺公式起始，并续接烃类液体流速、鹤管内径及装车流速内容；不是可确认条号和完整性的原文。待取得当前适用版本准确原文、公式及精确定位后重新审核，不据模型或OCR猜补。",
   "reviewType": "text",
   "reviewedContentHash": "2f3cdc1dd4be2dce00a22524e8ae87b4fdde3603bd2e50c9d9bfe30b7c3f8fac",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "reviewer": "Codex source-integrity recovery review 20260930",
+  "notes": "本次保留原实体、quote、articlePath、reviewedContentHash及原evidenceRefs；拒绝的是其可作为已核验原文的审核结论。"
 }

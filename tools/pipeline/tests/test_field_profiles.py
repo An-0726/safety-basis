@@ -1,6 +1,7 @@
 """Synthetic-only governance tests. No real approvals or pilot fixtures written."""
 import copy
 from datetime import date
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -9,13 +10,15 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'v4'))
 from canonical import content_hash
-from field_profiles import (CHECKS, FIELDS, PROFILE_ROOT, ProfileContext, public_projection,
+from field_profiles import (CHECKS, FIELDS, PUBLIC_FIELDS, PROFILE_ROOT, ProfileContext, public_projection,
                             review_bindings, validate_profile)
 
 AS_OF = date(2026, 9, 30)
 
 
 class FieldProfileTests(unittest.TestCase):
+    profile_kind = None
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
@@ -40,6 +43,10 @@ class FieldProfileTests(unittest.TestCase):
                         'evidenceRequirements': ['Onsite observation and applicable requirement'],
                         'correctiveDirection': 'Restore required condition and verify it',
                         'basisLinkIds': [self.link['id']]}
+        if self.profile_kind is not None:
+            self.profile['profileKind'] = self.profile_kind
+        if self.profile_kind == 'routing_only':
+            self.profile['findingTemplate'] = None
         self.save_profile()
         self.approve_synthetic()
 
@@ -85,6 +92,78 @@ class FieldProfileTests(unittest.TestCase):
         self.assertIn('defectObserved', out['public']['records'][0]['applicability']['perUseFacts'])
         self.assertEqual(out, self.project())
 
+    def test_kind_is_optional_public_and_never_normalized(self):
+        before = copy.deepcopy(self.profile)
+        bindings = review_bindings(self.profile, self.root)
+        expected_hash = hashlib.sha256(json.dumps(before, ensure_ascii=False,
+                                      sort_keys=True, separators=(',', ':'),
+                                      allow_nan=False).encode()).hexdigest()
+        self.assertEqual(bindings['reviewedProfileHash'], expected_hash)
+        row = self.project()['public']['records'][0]
+        self.assertEqual(self.profile, before)
+        self.assertEqual(PUBLIC_FIELDS, FIELDS | {'profileKind'})
+        self.assertNotIn('profileKind', FIELDS)
+        if self.profile_kind is None:
+            self.assertNotIn('profileKind', row)
+        else:
+            self.assertEqual(row['profileKind'], self.profile_kind)
+        self.assertEqual(row['findingTemplate'], before['findingTemplate'])
+
+    def test_malformed_kinds_fail_closed_without_type_errors(self):
+        for kind in (None, False, True, 0, 1, [], {}, ['routing_only'],
+                     '', 'routing', 'ROUTING_ONLY', 'routing_only ',
+                     ' conditional_template', '/home/private/kind'):
+            with self.subTest(kind=kind):
+                self.profile['profileKind'] = kind
+                self.assertIn('PROFILE_KIND', validate_profile(self.profile))
+                with self.assertRaisesRegex(ValueError, 'PROFILE_KIND'):
+                    review_bindings(self.profile, self.root)
+                self.save_profile()
+                self.blocked('PROFILE_KIND')
+
+    def test_kind_changes_require_fresh_review_binding(self):
+        if self.profile_kind == 'routing_only':
+            # Both kinds allow null for this non-onsite route, isolating the
+            # kind itself from template/route changes in the review hash.
+            self.profile.update(contentDisposition='document_check',
+                                inspectionClass='document_review',
+                                defaultFieldEntry='exclude')
+            self.save_profile()
+            self.approve_synthetic()
+            self.profile['profileKind'] = 'conditional_template'
+        elif self.profile_kind is None:
+            self.profile['profileKind'] = 'conditional_template'
+        else:
+            del self.profile['profileKind']
+        self.save_profile()
+        self.blocked('PROFILE_REVIEW_STALE:reviewedProfileHash')
+
+    def test_every_semantic_check_and_exact_scope_is_required(self):
+        original = copy.deepcopy(self.review)
+        for key in CHECKS:
+            for value in (False, None, 1, 'true'):
+                with self.subTest(key=key, value=value):
+                    self.review = copy.deepcopy(original)
+                    self.review['semanticChecks'][key] = value
+                    self.save_review()
+                    self.blocked('PROFILE_SEMANTIC_REVIEW_INCOMPLETE')
+            self.review = copy.deepcopy(original)
+            del self.review['semanticChecks'][key]
+            self.save_review()
+            self.blocked('PROFILE_SEMANTIC_REVIEW_INCOMPLETE')
+        for reasons in ({}, {'K_OTHER': 'Unrelated scope'}, {'K_TEST': ''},
+                        {'K_TEST': 'Scope', 'K_EXTRA': 'Extra'}):
+            self.review = copy.deepcopy(original)
+            self.review['basisScopeReasons'] = reasons
+            self.save_review()
+            self.blocked('PROFILE_SCOPE_REVIEW_INCOMPLETE')
+
+    def test_onsite_facts_are_required_for_every_kind(self):
+        for fact in ('applicableRequirementConfirmed', 'siteTriggerConfirmed', 'defectObserved'):
+            bad = copy.deepcopy(self.profile)
+            bad['applicability']['perUseFacts'].remove(fact)
+            self.assertIn('PROFILE_ONSITE_FACTS', validate_profile(bad))
+
     def test_profile_edit_and_revision_stale_review(self):
         self.profile['title'] = 'Changed meaning'
         self.save_profile()
@@ -92,6 +171,16 @@ class FieldProfileTests(unittest.TestCase):
         self.profile['revision'] += 1
         self.save_profile()
         self.blocked('PROFILE_REVIEW_IDENTITY')
+
+    def test_private_authoring_metadata_is_still_review_bound(self):
+        self.profile['internalNotes'] = {'private': 'Synthetic draft only'}
+        self.save_profile()
+        self.blocked('PROFILE_REVIEW_STALE:reviewedProfileHash')
+        self.approve_synthetic()
+        self.assertNotIn('internalNotes', self.project()['public']['records'][0])
+        self.profile['internalNotes']['private'] = 'Changed synthetic draft'
+        self.save_profile()
+        self.blocked('PROFILE_REVIEW_STALE:reviewedProfileHash')
 
     def test_all_upstream_content_and_review_changes_invalidate(self):
         for rel in ('hazards/H_TEST.json', 'links/K_TEST.json', 'clauses/C_TEST.json', 'law-versions/LV_TEST.json', 'laws/LF_TEST.json', 'evidence/E_TEST.json', 'reviews/links/K_TEST.json'):
@@ -241,7 +330,8 @@ class FieldProfileTests(unittest.TestCase):
         self.save_profile()
         self.approve_synthetic()
         row = self.project()['public']['records'][0]
-        self.assertEqual(set(row), FIELDS | {'recordKind', 'observedViolation', 'bases', 'sourceHazard'})
+        self.assertEqual(set(row), (PUBLIC_FIELDS & self.profile.keys()) |
+                         {'recordKind', 'observedViolation', 'bases', 'sourceHazard'})
         self.assertNotIn('private', json.dumps(row))
         self.assertNotIn('reviewer', json.dumps(self.project()['public']))
         self.profile['title'] = '/workspace/private/data'
@@ -283,8 +373,13 @@ class FieldProfileTests(unittest.TestCase):
             bad[key] = {}
             self.assertTrue(validate_profile(bad), key)
         bad = copy.deepcopy(self.profile)
-        bad['findingTemplate']['text'] += ' {{undeclared}}'
-        self.assertIn('PROFILE_TEMPLATE_PLACEHOLDERS', validate_profile(bad))
+        if self.profile_kind == 'routing_only':
+            bad['findingTemplate'] = {'text': 'At {{location}}',
+                                      'slots': [{'key': 'location', 'label': 'Location'}]}
+            self.assertIn('PROFILE_ROUTING_ONLY_TEMPLATE', validate_profile(bad))
+        else:
+            bad['findingTemplate']['text'] += ' {{undeclared}}'
+            self.assertIn('PROFILE_TEMPLATE_PLACEHOLDERS', validate_profile(bad))
         with self.assertRaises(TypeError):
             public_projection(self.root, as_of='2026-09-30')
 
@@ -356,6 +451,68 @@ class FieldProfileTests(unittest.TestCase):
         self.review['reviewedOn'] = '2026-10-01'
         self.save_review()
         self.blocked('PROFILE_REVIEW_FUTURE')
+
+
+class ExplicitConditionalFieldProfileTests(FieldProfileTests):
+    """The additive explicit kind keeps every legacy template requirement."""
+    profile_kind = 'conditional_template'
+
+    def test_explicit_and_implicit_conditional_templates_have_same_rules(self):
+        before = copy.deepcopy(self.profile)
+        del self.profile['profileKind']
+        self.assertEqual(validate_profile(before), validate_profile(self.profile))
+        self.assertNotEqual(review_bindings(before, self.root)['reviewedProfileHash'],
+                            review_bindings(self.profile, self.root)['reviewedProfileHash'])
+        for kind in ('conditional_template', None):
+            bad = copy.deepcopy(before)
+            if kind is None:
+                del bad['profileKind']
+            bad['findingTemplate'] = None
+            self.assertIn('PROFILE_TEMPLATE', validate_profile(bad))
+
+
+class RoutingOnlyFieldProfileTests(FieldProfileTests):
+    """Run the full governance suite with a template-free routing profile too."""
+    profile_kind = 'routing_only'
+
+    def test_routing_only_requires_explicit_null_for_every_route(self):
+        for disposition, cls, entry in (
+                ('onsite_finding', 'core_onsite_inspection', 'include'),
+                ('document_check', 'document_review', 'exclude'),
+                ('special_check', 'special_review', 'exclude'),
+                ('legal_obligation', 'legal_obligation', 'exclude'),
+                ('counterexample', 'special_review', 'exclude'),
+                ('undetermined', 'undetermined', 'undetermined')):
+            with self.subTest(disposition=disposition):
+                self.profile.update(contentDisposition=disposition,
+                                    inspectionClass=cls, defaultFieldEntry=entry,
+                                    findingTemplate=None)
+                self.assertEqual(validate_profile(self.profile), [])
+                for template in ({}, [], '', False, 0, 'Completed finding',
+                                 {'text': 'At {{location}}',
+                                  'slots': [{'key': 'location', 'label': 'Location'}]}):
+                    self.profile['findingTemplate'] = template
+                    self.assertIn('PROFILE_ROUTING_ONLY_TEMPLATE', validate_profile(self.profile))
+                    self.save_profile()
+                    self.blocked('PROFILE_ROUTING_ONLY_TEMPLATE')
+                del self.profile['findingTemplate']
+                self.assertIn('PROFILE_FIELDS_MISSING', validate_profile(self.profile))
+
+    def test_null_template_does_not_relax_route_or_required_content(self):
+        for key, value, error in (
+                ('inspectionClass', 'document_review', 'PROFILE_ROUTING_CONFLICT'),
+                ('evidenceRequirements', [], 'PROFILE_EVIDENCE_REQUIREMENTS'),
+                ('correctiveDirection', '', 'PROFILE_CONTENT_MISSING:correctiveDirection'),
+                ('basisLinkIds', [], 'PROFILE_BASIS_LINKS')):
+            bad = copy.deepcopy(self.profile)
+            bad[key] = value
+            self.assertIn(error, validate_profile(bad))
+
+    def test_removing_routing_kind_does_not_make_null_onsite_template_legacy_valid(self):
+        del self.profile['profileKind']
+        self.assertIn('PROFILE_TEMPLATE', validate_profile(self.profile))
+        self.save_profile()
+        self.blocked('PROFILE_TEMPLATE')
 
 
 if __name__ == '__main__':

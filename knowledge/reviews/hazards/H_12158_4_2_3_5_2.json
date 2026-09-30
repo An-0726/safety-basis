@@ -2,12 +2,13 @@
   "entityType": "hazard",
   "entityId": "H_12158_4_2_3_5_2",
   "reviewType": "definition",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "checkedAt": "2026-09-30T12:25:50Z",
+  "reviewer": "Codex source-integrity recovery review 20260930",
+  "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
   "evidenceRefs": [
     "E_SAMR_GB12158_2024"
-  ]
+  ],
+  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
 }

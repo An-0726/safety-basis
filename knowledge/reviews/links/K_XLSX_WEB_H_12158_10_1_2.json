@@ -2,17 +2,17 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_10_1_2",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "6fe472607b6127e80672c791336c78a9786345111e838617dbebb684511a08bf",
   "contextHashes": {
     "hazard": "0e8a0d83530361b03f09dec30dee440b595adb54017b2e913d52d26fef6f3cc3",
     "clause": "14bf1b4978144ef732c681e9b90176b33fa5acb41a2c0ac987cf806ffaa225c4"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第10.1条防静电接地跨接。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-09-30T12:25:50Z",
+  "reviewer": "Codex source-integrity recovery review 20260930",
+  "reason": "撤回原verified审核。隐患把GB/T 22845写为法兰、阀门、接头的防静电跨接依据；实际所关联C_12158_10_1（第10.1条）的对象是人员防护服、安全鞋及手套，其中GB/T 22845明确对应手套。对象及义务不符。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
   "evidenceRefs": [
     "E_SAMR_GB12158_2024"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
 }

@@ -20,23 +20,39 @@ frontend interaction change is included.
 
 ## Record schema
 
-All fields below are required. Top-level private authoring metadata is permitted,
+All fields below except `profileKind` are required. Top-level private authoring metadata is permitted,
 review-bound, and excluded from the public projection. Nested public structures
 are exact allowlists; unsupported keys in them are invalid.
 
 | Field | Contract |
 | --- | --- |
 | `schemaVersion` | Integer `1` |
+| `profileKind` | Optional: `conditional_template` or `routing_only`. Absence retains legacy conditional-template behavior; an explicit null, unknown value or wrong type is invalid |
 | `id`, `revision`, `hazardId` | Identity as above |
 | `title` | Nonempty reusable profile title |
 | `inspectionClass` | `core_onsite_inspection`, `document_review`, `special_review`, `legal_obligation`, or `undetermined` |
 | `defaultFieldEntry` | `include`, `conditional`, `exclude`, or `undetermined`; this is routing, never an observed finding |
 | `contentDisposition` | `onsite_finding`, `document_check`, `special_check`, `legal_obligation`, `counterexample`, or `undetermined` |
 | `applicability` | Exactly `requires`, `excludes`, `perUseFacts`: arrays of unique nonempty strings; requires and perUseFacts must be nonempty; an explicitly empty excludes list is permitted |
-| `findingTemplate` | For onsite findings: exactly `{text, slots}`, with `{{slotKey}}` placeholders and slots `{key, label}`; all placeholders must match declared unique keys. Otherwise null |
+| `findingTemplate` | Required even when null. For `routing_only`, always null, including onsite routes. For explicit or implicit `conditional_template` on an onsite route: exactly `{text, slots}`, with `{{slotKey}}` placeholders and slots `{key, label}`; all placeholders must match declared unique keys. Otherwise null |
 | `evidenceRequirements` | Nonempty array of unique nonempty evidence-instruction strings |
 | `correctiveDirection` | Nonempty correction guidance, separate from the finding template |
 | `basisLinkIds` | Nonempty unique array of exact existing link IDs |
+
+`routing_only` expresses reviewed routing and scope without authoring a finding
+template. It is not a finding, a shortcut to approval, or an automatic conversion
+of a candidate. It retains every required routing, applicability, onsite fact,
+evidence, corrective-direction, basis, semantic-review and dated-Gate rule below.
+An onsite routing-only profile may use `include` or `conditional`, but that is
+only an inspection-entry decision; `findingTemplate` stays explicitly null and
+`observedViolation` stays false. No production records or reviews are created by
+adding support for this kind.
+
+There is no default-field injection or migration. The optional kind is read as a
+behavioral default only; it is not added to source objects, review-hash inputs or
+public objects when absent. Existing kind-less records, reviews and public
+payloads remain byte-compatible. Authoring, changing or removing an explicit
+kind changes the complete profile hash and requires a fresh independent review.
 
 Onsite findings must use `core_onsite_inspection`. Document, special and legal
 obligation dispositions must use their corresponding class and have
@@ -66,6 +82,13 @@ A review must contain:
 - `basisScopeReasons`: exactly the selected link IDs mapped to nonempty reasoning
   explaining why that particular legal requirement supports this profile within
   its subject, equipment/process, regional and triggering scope
+
+The same semantic checks apply to both kinds. For `routing_only`, a true
+`findingTemplate` check confirms that no template is supplied and the profile is
+used only for its reviewed route/scope. It does not approve a finding or invent
+per-use observations. Neither a null template nor a routing-only label waives
+the independent review, exact selected-link scope reasons, dependency binding,
+source-hazard eligibility or the explicit projection date.
 
 An eligible hazard is necessary but **not sufficient**: an eligible link about
 activated-carbon VOC treatment does not support a generic gas/dust electrical
@@ -128,8 +151,9 @@ Unselected proposed associations are still fingerprinted but do not themselves
 satisfy or defeat selected-link eligibility. An unreviewed new association first
 invalidates the previous semantic review and requires fresh judgment.
 
-`public` is exactly `{schemaVersion, asOf, records}`. Records have the allowlisted
-record fields plus:
+`public` is exactly `{schemaVersion, asOf, records}`. `FIELDS` remains the required
+field set; `PUBLIC_FIELDS` additionally allows `profileKind`, emitted only when
+explicitly authored. Records have those allowlisted record fields plus:
 
 - `recordKind: reusable_field_profile`
 - `observedViolation: false`
@@ -139,7 +163,7 @@ record fields plus:
   lawJurisdictionCode
 
 The downstream UI must preserve these restrictions and distinguish routes.
-It must never interpret inclusion, template approval, or an empty enterprise-fact
+It must never interpret inclusion, routing review, template approval, or an empty enterprise-fact
 form as proof of a real violation. It must escape all text when rendering HTML.
 Legal quote/detail text can be joined from the existing Gate-approved bundle by
 the emitted stable IDs; private entity/review objects must not be copied wholesale.
@@ -217,12 +241,18 @@ They cover content/revision and dependency changes, association additions/remova
 expiry, missing evidence/data, unknown/unreviewed profiles, explicit semantic
 review and per-link scope, proposed isolation, non-onsite routes, public allowlists,
 empty and variable inventories, duplicate IDs, malformed data and date handling.
+The full governance suite runs for legacy implicit templates, explicit conditional
+templates and routing-only records. Additional checks cover malformed kinds,
+mandatory null routing templates, identical semantic-check requirements,
+kind/private-metadata review binding, no default injection and onsite facts.
 
 Release regression tests:
 `python -m unittest discover -s tools/pipeline/tests -p test_field_profile_release.py -v`.
 They cover aggregate registration, schema/reference failures, absent/unreviewed/
 undetermined coverage, exact data preservation, public consumer joins, expiry,
 field/link/condition/routing/type tampering, private metadata and extra-file
-rejection, pilot isolation and snapshot mutation detection. The existing release
+rejection, pilot isolation and snapshot mutation detection. This suite also runs
+for all three kind representations and verifies that resealing kind/template
+tampering cannot bypass the exact public projection. The existing release
 reproducibility test compares all production data bytes across discovery/hash-seed
 orders, including the new governed payload.

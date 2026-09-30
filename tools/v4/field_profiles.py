@@ -15,6 +15,7 @@ from release_gate_core import evaluate_release_gate
 
 SCHEMA_VERSION = 1
 PROFILE_ROOT = 'field-profiles/v1'
+PROFILE_KINDS = {'conditional_template', 'routing_only'}
 ID = re.compile(r'^FPR_[A-Za-z0-9_\-]+$')
 CLASSES = {'core_onsite_inspection', 'document_review', 'special_review', 'legal_obligation', 'undetermined'}
 ENTRIES = {'include', 'conditional', 'exclude', 'undetermined'}
@@ -25,6 +26,9 @@ CHECKS = {'routing', 'applicability', 'findingTemplate', 'evidenceRequirements',
 FIELDS = {'schemaVersion', 'id', 'revision', 'hazardId', 'title', 'inspectionClass',
           'defaultFieldEntry', 'contentDisposition', 'applicability', 'findingTemplate',
           'evidenceRequirements', 'correctiveDirection', 'basisLinkIds'}
+# The kind is additive, not a required field or a normalization step. Legacy
+# records keep their original review hashes and public bytes when it is absent.
+PUBLIC_FIELDS = FIELDS | {'profileKind'}
 # Safe serialization is allowlisted, including every nested object. Private review
 # and drafting metadata is never copied. This pattern rejects common local paths
 # in intentionally public text; it cannot detect all personal information in prose.
@@ -62,6 +66,9 @@ def validate_profile(profile):
     errors = []
     if not FIELDS <= profile.keys():
         errors.append('PROFILE_FIELDS_MISSING')
+    kind = profile.get('profileKind', 'conditional_template')
+    if not isinstance(kind, str) or kind not in PROFILE_KINDS:
+        errors.append('PROFILE_KIND')
     if type(profile.get('schemaVersion')) is not int or profile['schemaVersion'] != SCHEMA_VERSION:
         errors.append('PROFILE_SCHEMA_VERSION')
     if not isinstance(profile.get('id'), str) or not ID.fullmatch(profile['id']):
@@ -92,7 +99,10 @@ def validate_profile(profile):
     if not _strings(profile.get('evidenceRequirements'), True):
         errors.append('PROFILE_EVIDENCE_REQUIREMENTS')
     template = profile.get('findingTemplate')
-    if disposition != 'onsite_finding':
+    if kind == 'routing_only':
+        if template is not None:
+            errors.append('PROFILE_ROUTING_ONLY_TEMPLATE')
+    elif disposition != 'onsite_finding':
         if template is not None:
             errors.append('PROFILE_NON_ONSITE_TEMPLATE')
     elif not isinstance(template, dict) or set(template) != {'text', 'slots'} or not _text(template.get('text')) or not isinstance(template.get('slots'), list) or not template['slots']:
@@ -108,7 +118,7 @@ def validate_profile(profile):
         if not matches or matches != set(keys) or len(keys) != len(set(keys)) or '{{' in PLACEHOLDER.sub('', template['text']) or '}}' in PLACEHOLDER.sub('', template['text']):
             errors.append('PROFILE_TEMPLATE_PLACEHOLDERS')
     # Reject leaks in public allowlisted values, not arbitrary private metadata.
-    if PRIVATE.search(json.dumps({k: profile[k] for k in FIELDS if k in profile}, ensure_ascii=False)):
+    if PRIVATE.search(json.dumps({k: profile[k] for k in PUBLIC_FIELDS if k in profile}, ensure_ascii=False)):
         errors.append('PROFILE_PRIVATE_TEXT')
     return sorted(set(errors))
 
@@ -337,9 +347,9 @@ def public_projection(knowledge, *, as_of):
         if errors:
             inventory.append({'profileId': ident, 'reasons': sorted(set(errors))})
             continue
-        public = {key: copy.deepcopy(profile[key]) for key in sorted(FIELDS)}
+        public = {key: copy.deepcopy(profile[key]) for key in sorted(PUBLIC_FIELDS) if key in profile}
         # Never claim an actual inspection occurred merely because its reusable
-        # template passed review. Runtime facts belong to the individual use.
+        # routing or template passed review. Runtime facts belong to each use.
         public['sourceHazard'] = source_hazard
         public['bases'] = bases
         public['recordKind'] = 'reusable_field_profile'

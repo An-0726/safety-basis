@@ -598,7 +598,7 @@ def build(args, knowledge, source_hash, as_of_date):
             "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
             "fulltextSource": "source/publication/fulltext/",
             "frontendSource": "web/",
-            "fieldProfileSource": "governed v1 semantic-review and dated-gate public projection; reusable templates only",
+            "fieldProfileSource": "governed v1 semantic-review and dated-gate public projection; reviewed routing and conditional templates, never actual findings",
         },
         "counts": counts,
         "fullText": {
