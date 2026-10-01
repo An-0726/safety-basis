@@ -10,6 +10,10 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from power_fixture import CLAUSES as POWER_CLAUSES, EVIDENCE as POWER_EVIDENCE, VERSION as POWER_VERSION
+from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VERSION as COAL_VERSION
+from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CONSTRUCTION_EVIDENCE
+from city_gas_fixture import CLAUSES as GAS_CLAUSES, EVIDENCE as GAS_EVIDENCE
 from sector_directory_fixture import LAWS as SECTOR_LAWS, VERSIONS as SECTOR_VERSIONS, EVIDENCE as SECTOR_EVIDENCE
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -98,6 +102,9 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
             self.assertEqual({row for row in rows if row[0] in sector_ids},
                              {(ident, 'active' if kind == 'laws' else None) for ident in sector_ids})
             rows = [row for row in rows if row[0] not in sector_ids]
+            gas_ids = GAS_CLAUSES | CONSTRUCTION_CLAUSES | COAL_CLAUSES | POWER_CLAUSES if kind == 'clauses' else frozenset()
+            self.assertEqual({row for row in rows if row[0] in gas_ids}, {(ident, 'active') for ident in gas_ids})
+            rows = [row for row in rows if row[0] not in gas_ids]
             self.assertEqual(len(rows), expected['count'])
             digest = hashlib.sha256(json.dumps(rows, ensure_ascii=False,
                                               separators=(',', ':')).encode()).hexdigest()
@@ -166,7 +173,13 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
 
     def test_manifest_counts_and_bounded_batch_totals(self):
         manifest = read('knowledge/manifest.json')
-        self.assertEqual(manifest['batch'], 'sector-major-directory-metadata-20261001')
+        self.assertEqual(manifest['batch'], 'civil-fireworks-reference-reading-20261001')
+        self.assertEqual(sum(b['id'] == 'noncoal-reference-reading-20261001' for b in manifest['batches']), 1)
+        self.assertEqual(sum(b['id'] == 'power-full-criteria-20261001' for b in manifest['batches']), 1)
+        self.assertEqual(sum(b['id'] == 'coal-full-criteria-20261001' for b in manifest['batches']), 1)
+        self.assertEqual(sum(b['id'] == 'construction-full-criteria-20261001' for b in manifest['batches']), 1)
+        self.assertEqual(sum(b['id'] == 'city-gas-full-criteria-20261001' for b in manifest['batches']), 1)
+        self.assertEqual(sum(b['id'] == 'sector-major-directory-metadata-20261001' for b in manifest['batches']), 1)
         self.assertEqual(sum(b['id'] == 'aq3067-metadata-reference-only-20261001' for b in manifest['batches']), 1)
         self.assertTrue(any(b['id'] == 'gb12801-first-sentence-transition-20261001'
                             for b in manifest['batches']))
@@ -176,7 +189,7 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         # The later GB12801 slice adds two original-PDF records; the
         # historical batch entry below remains exactly as originally reviewed.
         # AQ3067 contributes only one further, explicitly identified metadata PDF record.
-        expected_evidence = 1248 + len(SCOPE_SUCCESSOR['evidence']) + 2 + 1 + len(SECTOR_EVIDENCE)
+        expected_evidence = 1248 + len(SCOPE_SUCCESSOR['evidence']) + 2 + 1 + len(SECTOR_EVIDENCE) + len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE)
         self.assertTrue((KNOW / 'evidence/E_AQ3067_2026_MEM_PDF.json').is_file())
         self.assertEqual(manifest['counts']['evidence'], expected_evidence)
         self.assertEqual(manifest['evidence'], expected_evidence)

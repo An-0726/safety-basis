@@ -1,0 +1,692 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Public read-only projection. Counts, companion membership, exact source identities, and all review/evidence bindings are additionally checked against the dated source projection by the release verifier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "asOf",
+    "catalogScope",
+    "referenceOnly",
+    "currentDeterminationBasis",
+    "reviewedCurrentClauseCount",
+    "directHazardCount",
+    "standaloneDeterminationAllowed",
+    "allIndustryCoverage",
+    "notice",
+    "readingGroupCount",
+    "sourceDocumentCount",
+    "firstLevelItemCount",
+    "readingGroups"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "safety-major-criteria-reading-v1"
+    },
+    "asOf": {
+      "$ref": "#/$defs/date"
+    },
+    "catalogScope": {
+      "type": "string",
+      "const": "official_source_reading_only"
+    },
+    "referenceOnly": {
+      "type": "boolean",
+      "const": true
+    },
+    "currentDeterminationBasis": {
+      "type": "boolean",
+      "const": false
+    },
+    "reviewedCurrentClauseCount": {
+      "type": "integer",
+      "const": 0
+    },
+    "directHazardCount": {
+      "type": "integer",
+      "const": 0
+    },
+    "standaloneDeterminationAllowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "allIndustryCoverage": {
+      "type": "boolean",
+      "const": false
+    },
+    "notice": {
+      "type": "string",
+      "const": "本区仅供官方原文查阅，不授予本站现行判定依据资格；未知施行日不作推定，不能据此自动作现场判定。"
+    },
+    "readingGroupCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sourceDocumentCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "firstLevelItemCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "readingGroups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/readingGroup"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "checked": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/date"
+        },
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](?:\\.[0-9]+)?(?:Z|[+-](?:[01][0-9]|2[0-3]):[0-5][0-9])$"
+        }
+      ]
+    },
+    "officialUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[gG][oO][vV]\\.[cC][nN](?:[/?#][^\\s\\\\]*)?$",
+      "not": {
+        "pattern": "%(?:0[0-9a-fA-F]|1[0-9a-fA-F]|7[fF])"
+      }
+    },
+    "directoryGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "role"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "role": {
+          "enum": [
+            "primary",
+            "supplement"
+          ]
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "articleLabel",
+        "quote"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "articleLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "items"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "sourceIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lawId",
+        "lawVersionId",
+        "title",
+        "documentNumber",
+        "versionKey",
+        "issuer",
+        "documentKind",
+        "legalNature",
+        "officialLink",
+        "officialTextLink",
+        "publicationDate",
+        "effectiveDate",
+        "effectiveDateNote",
+        "scopeHint",
+        "scopeCaveat",
+        "directoryGroup",
+        "requiredCompanionIds",
+        "supplementsReferenceId"
+      ],
+      "properties": {
+        "lawId": {
+          "$ref": "#/$defs/id"
+        },
+        "lawVersionId": {
+          "$ref": "#/$defs/id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "documentNumber": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "versionKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "issuer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "documentKind": {
+          "enum": [
+            "部门规章",
+            "部门规范性文件",
+            "部门规范性文件（补充判定情形）",
+            "部门规范性文件（以通知印发的判定标准）",
+            "部门规范性文件（通知所附判定标准）"
+          ]
+        },
+        "legalNature": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "officialLink": {
+          "$ref": "#/$defs/officialUrl"
+        },
+        "officialTextLink": {
+          "$ref": "#/$defs/officialUrl"
+        },
+        "publicationDate": {
+          "$ref": "#/$defs/date"
+        },
+        "effectiveDate": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effectiveDateNote": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 1000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$"
+        },
+        "scopeHint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "scopeCaveat": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "directoryGroup": {
+          "$ref": "#/$defs/directoryGroup"
+        },
+        "requiredCompanionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "supplementsReferenceId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "effectiveDate": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "effectiveDateNote": {
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "directoryGroup": {
+                "properties": {
+                  "role": {
+                    "const": "primary"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "supplementsReferenceId": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "directoryGroup": {
+                "properties": {
+                  "role": {
+                    "const": "supplement"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "supplementsReferenceId": {
+                "$ref": "#/$defs/id"
+              },
+              "requiredCompanionIds": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "currentUseEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceDate",
+        "sourceUrl",
+        "summary"
+      ],
+      "properties": {
+        "sourceDate": {
+          "$ref": "#/$defs/date"
+        },
+        "sourceUrl": {
+          "$ref": "#/$defs/officialUrl"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        }
+      }
+    },
+    "officialClarification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "appliesToItemIds",
+        "textMode",
+        "text",
+        "sourceDate",
+        "sourceUrl",
+        "sourcePages",
+        "checked",
+        "isOfficialNormText"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "appliesToItemIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "textMode": {
+          "enum": [
+            "reviewed_summary",
+            "official_link_pending"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "sourceDate": {
+          "$ref": "#/$defs/date"
+        },
+        "sourceUrl": {
+          "$ref": "#/$defs/officialUrl"
+        },
+        "sourcePages": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1000
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "checked": {
+          "$ref": "#/$defs/checked"
+        },
+        "isOfficialNormText": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directoryReferenceId",
+        "sourceIdentity",
+        "noticeText",
+        "sections",
+        "firstLevelItemCount",
+        "fullTextReviewed",
+        "checked",
+        "currentUseEvidence",
+        "officialClarifications"
+      ],
+      "properties": {
+        "directoryReferenceId": {
+          "$ref": "#/$defs/id"
+        },
+        "sourceIdentity": {
+          "$ref": "#/$defs/sourceIdentity"
+        },
+        "noticeText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          },
+          "minItems": 1
+        },
+        "firstLevelItemCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fullTextReviewed": {
+          "type": "boolean",
+          "const": true
+        },
+        "checked": {
+          "$ref": "#/$defs/checked"
+        },
+        "currentUseEvidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/currentUseEvidence"
+          },
+          "minItems": 1
+        },
+        "officialClarifications": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/officialClarification"
+          }
+        }
+      }
+    },
+    "publicationBasis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "basis",
+        "legalSourceUrl",
+        "checked",
+        "referenceTextPublicationApproved"
+      ],
+      "properties": {
+        "basis": {
+          "type": "string",
+          "const": "copyright_law_article_5_official_administrative_document"
+        },
+        "legalSourceUrl": {
+          "$ref": "#/$defs/officialUrl"
+        },
+        "checked": {
+          "$ref": "#/$defs/checked"
+        },
+        "referenceTextPublicationApproved": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "readingGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "directoryGroupId",
+        "primaryReferenceId",
+        "requiredReferenceIds",
+        "readingReason",
+        "warning",
+        "checked",
+        "documents",
+        "publicationBasis"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "directoryGroupId": {
+          "$ref": "#/$defs/id"
+        },
+        "primaryReferenceId": {
+          "$ref": "#/$defs/id"
+        },
+        "requiredReferenceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "readingReason": {
+          "type": "string",
+          "const": "effective_date_not_fully_verified"
+        },
+        "warning": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "pattern": "^[^\\u0000-\\u0009\\u000b-\\u001f]*$",
+          "allOf": [
+            {
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "checked": {
+          "$ref": "#/$defs/checked"
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/document"
+          },
+          "minItems": 1
+        },
+        "publicationBasis": {
+          "$ref": "#/$defs/publicationBasis"
+        }
+      }
+    }
+  }
+}

@@ -92,6 +92,8 @@ PR93已经上线并逐个核对全部隐患和条款分片，正式1661条、候
 
 ### 重大判定目录与隐患专题
 
+后续正文补齐从政府行政规范性文件逐批推进：建城规〔2023〕4号第一至十一条及建质规〔2024〕5号第一至十八条经过独立逐字、范围与公开依据审核后可完整显示，无需创建隐患；题录与正文通过精确版本互链。新的完整正文声明需独立绑定review，不能用metadata-only审核升级。详见[当前缺口与分组计划](docs/MAJOR_CRITERIA_NEXT_COVERAGE.md)；原工贸、GB 45067与AQ入口保持各自已核边界。
+
 统一构建额外输出受控 `major-criteria-catalog` 与 `major-criteria-topic`。第一版为工贸令第10号、GB 45067-2024两个明确版本的已核判定范围，保留整条/列项/直接关联隐患三种计数；不称整部全文或全行业覆盖。规范目录与专业分类正交，无H/K条款无需造隐患也可展示；专题仅收精确current direct链，关键词或泛文本提及不得自动纳入。旧source、正式发布集合和field profile隐私边界不因此放松。
 
 两文件由稳定知识快照生成，受当前日期Gate、显式源内容pin、原review和证据约束，并纳入统一manifest、checksums、releaseHash与严格重算验收。配置及完整schema见[重大判定契约](docs/MAJOR_CRITERIA_CONTRACT.md)。

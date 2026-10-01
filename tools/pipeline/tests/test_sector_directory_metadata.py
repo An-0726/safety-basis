@@ -2,6 +2,10 @@
 import hashlib,json,sys,unittest
 from pathlib import Path
 from datetime import date
+from power_fixture import CLAUSES as POWER_CLAUSES, EVIDENCE as POWER_EVIDENCE, VERSION as POWER_VERSION
+from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VERSION as COAL_VERSION
+from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CONSTRUCTION_EVIDENCE
+from city_gas_fixture import CLAUSES as GAS_CLAUSES, EVIDENCE as GAS_EVIDENCE
 from sector_directory_fixture import LAWS,VERSIONS,EVIDENCE
 ROOT=Path(__file__).resolve().parents[3];KNOW=ROOT/'knowledge';PUB=ROOT/'source/publication'
 sys.path.insert(0,str(ROOT/'tools/v4'))
@@ -24,9 +28,13 @@ class SectorDirectoryMetadataTests(unittest.TestCase):
         manifest=read(KNOW/'manifest.json');batch=next(b for b in manifest['batches'] if b['id']=='sector-major-directory-metadata-20261001')
         self.assertEqual({k:batch[k] for k in ['lawsAdded','lawVersionsAdded','evidenceAdded','identityMetadataReviewsAdded','versionMetadataReviewsAdded']},
                          {'lawsAdded':9,'lawVersionsAdded':9,'evidenceAdded':25,'identityMetadataReviewsAdded':9,'versionMetadataReviewsAdded':9})
-        self.assertEqual({k:manifest['counts'][k] for k in ['laws','lawVersions','evidence','clauses','hazards','links','successions']},
+        historical_counts = dict(manifest['counts'])
+        historical_counts['clauses'] -= len(GAS_CLAUSES) + len(CONSTRUCTION_CLAUSES) + len(COAL_CLAUSES) + len(POWER_CLAUSES); historical_counts['evidence'] -= len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE)
+        self.assertEqual({k:historical_counts[k] for k in ['laws','lawVersions','evidence','clauses','hazards','links','successions']},
                          {'laws':119,'lawVersions':122,'evidence':1290,'clauses':3011,'hazards':2131,'links':1971,'successions':26})
-        for row in (KNOW/'clauses').glob('*.json'):self.assertNotIn(read(row).get('lawVersionId'),VERSIONS)
+        for row in (KNOW/'clauses').glob('*.json'):
+            clause=read(row)
+            if clause['id'] not in GAS_CLAUSES | CONSTRUCTION_CLAUSES | COAL_CLAUSES | POWER_CLAUSES:self.assertNotIn(clause.get('lawVersionId'),VERSIONS)
 
     def test_real_projection_separates_groups_documents_and_unknown_dates(self):
         records=load_records(KNOW);self.assertEqual(len(records),9)

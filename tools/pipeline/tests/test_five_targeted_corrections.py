@@ -11,6 +11,10 @@ from pathlib import Path
 import re
 import sys
 import unittest
+from power_fixture import CLAUSES as POWER_CLAUSES, EVIDENCE as POWER_EVIDENCE, VERSION as POWER_VERSION
+from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VERSION as COAL_VERSION
+from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CONSTRUCTION_EVIDENCE
+from city_gas_fixture import CLAUSES as GAS_CLAUSES, EVIDENCE as GAS_EVIDENCE
 from sector_directory_fixture import LAWS as SECTOR_LAWS, VERSIONS as SECTOR_VERSIONS, EVIDENCE as SECTOR_EVIDENCE
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -77,6 +81,9 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
             self.assertEqual({row for row in rows if row[0] in sector_ids},
                              {(ident, 'active' if kind == 'laws' else None) for ident in sector_ids})
             rows = [row for row in rows if row[0] not in sector_ids]
+            gas_ids = GAS_CLAUSES | CONSTRUCTION_CLAUSES | COAL_CLAUSES | POWER_CLAUSES if kind == 'clauses' else frozenset()
+            self.assertEqual({row for row in rows if row[0] in gas_ids}, {(ident, 'active') for ident in gas_ids})
+            rows = [row for row in rows if row[0] not in gas_ids]
             self.assertEqual(len(rows), expected['count'])
             self.assertEqual(hashlib.sha256(json.dumps(rows, ensure_ascii=False,
                 separators=(',', ':')).encode()).hexdigest(), expected['sha256'])
@@ -300,7 +307,7 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
                                       'thirteen_scope_corrections_20260930.json').read_text(encoding='utf-8'))
         self.assertEqual(len(scope_successor['evidence']), 14)
         # Later batches add exactly two GB12801 records and one AQ3067 metadata PDF record.
-        expected = FIXTURE['totalEvidenceCount'] + len(scope_successor['evidence']) + 2 + 1 + len(SECTOR_EVIDENCE)
+        expected = FIXTURE['totalEvidenceCount'] + len(scope_successor['evidence']) + 2 + 1 + len(SECTOR_EVIDENCE) + len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE)
         self.assertTrue((KNOW / 'evidence/E_AQ3067_2026_MEM_PDF.json').is_file())
         self.assertEqual(manifest['counts']['evidence'], expected)
         self.assertEqual(manifest['evidence'], expected)

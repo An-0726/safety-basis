@@ -9,10 +9,11 @@
 5. check_major_criteria - controlled catalog schema / 引用；不自动核准条款或全量覆盖
 6. check_major_criteria_references - reference-only metadata/short-topic结构，不核准全文
 7. check_major_criteria_directory - 通用文件题录、null日期说明及主补充关系
-8. check_review_binding - review content hash 绑定
-9. scan_evidence_exact - review evidence 与 clause 法规匹配
-10. scan_quality      - 质量扫描（duplicates / dangling / stale refs / obligation patterns）
-11. version_impact    - 版本影响（只报告，不阻塞）
+8. check_major_criteria_reading - 独立原文查阅结构，不授予当前依据资格
+9. check_review_binding - review content hash 绑定
+10. scan_evidence_exact - review evidence 与 clause 法规匹配
+11. scan_quality      - 质量扫描（duplicates / dangling / stale refs / obligation patterns）
+12. version_impact    - 版本影响（只报告，不阻塞）
 
 退出码：0=全部通过；1=存在阻断性错误。
 
@@ -38,12 +39,13 @@ STEPS = [
     ("check_major_criteria", "check_major_criteria.py"),
     ("check_major_criteria_references", "check_major_criteria_references.py"),
     ("check_major_criteria_directory", "check_major_criteria_directory.py"),
+    ("check_major_criteria_reading", "check_major_criteria_reading.py"),
     ("check_review_binding", "check_review_binding.py"),
     ("scan_evidence_exact", "scan_evidence_exact.py"),
     ("scan_quality", "scan_quality_v4.py"),
     ("version_impact", "version_impact.py"),
 ]
-BLOCKING = {"check_manifest", "check_catalogue", "check_requirements", "check_field_profiles", "check_major_criteria", "check_major_criteria_references", "check_major_criteria_directory", "check_review_binding", "scan_evidence_exact"}
+BLOCKING = {"check_manifest", "check_catalogue", "check_requirements", "check_field_profiles", "check_major_criteria", "check_major_criteria_references", "check_major_criteria_directory", "check_major_criteria_reading", "check_review_binding", "scan_evidence_exact"}
 
 
 def main():

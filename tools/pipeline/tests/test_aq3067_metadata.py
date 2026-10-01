@@ -7,6 +7,10 @@ from pathlib import Path
 import re
 import sys
 import unittest
+from power_fixture import CLAUSES as POWER_CLAUSES, EVIDENCE as POWER_EVIDENCE, VERSION as POWER_VERSION
+from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VERSION as COAL_VERSION
+from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CONSTRUCTION_EVIDENCE
+from city_gas_fixture import CLAUSES as GAS_CLAUSES, EVIDENCE as GAS_EVIDENCE
 from sector_directory_fixture import LAWS as SECTOR_LAWS, VERSIONS as SECTOR_VERSIONS, EVIDENCE as SECTOR_EVIDENCE
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -136,8 +140,8 @@ class AQ3067MetadataBoundaryTests(unittest.TestCase):
                           'identityMetadataReviewsAdded': 1, 'versionMetadataReviewsAdded': 1})
         self.assertEqual(manifest['counts']['laws'] - len(SECTOR_LAWS), 110)
         self.assertEqual(manifest['counts']['lawVersions'] - len(SECTOR_VERSIONS), 113)
-        self.assertEqual(manifest['counts']['evidence'] - len(SECTOR_EVIDENCE), 1265)
-        self.assertEqual(manifest['counts']['clauses'], 3011)
+        self.assertEqual(manifest['counts']['evidence'] - len(SECTOR_EVIDENCE) - len(GAS_EVIDENCE) - len(CONSTRUCTION_EVIDENCE) - len(COAL_EVIDENCE) - len(POWER_EVIDENCE), 1265)
+        self.assertEqual(manifest['counts']['clauses'] - len(GAS_CLAUSES) - len(CONSTRUCTION_CLAUSES) - len(COAL_CLAUSES) - len(POWER_CLAUSES), 3011)
         self.assertEqual(manifest['counts']['hazards'], 2131)
         self.assertEqual(manifest['counts']['links'], 1971)
         self.assertEqual(manifest['counts']['successions'], 26)
