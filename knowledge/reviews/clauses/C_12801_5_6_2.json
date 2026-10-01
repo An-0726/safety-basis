@@ -1,13 +1,33 @@
 {
-  "checkedAt": "2026-09-12",
-  "decision": "verified",
-  "entityId": "C_12801_5_6_2",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_12801_2025"
-  ],
-  "reason": "条文核验：GB 12801-2025 第5.6.2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。",
+  "entityId": "C_12801_5_6_2",
   "reviewType": "text",
+  "decision": "verified",
   "reviewedContentHash": "0fac0368061bc5c85d46eb57c1a59b070bf25ba5802fe80c60acd6923821848d",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "checkedAt": "2026-10-01T00:55:56+08:00",
+  "reviewer": "Codex GB12801有界独立原件审阅",
+  "reason": "独立目读正式PDF第11页/印刷第5页的第5.6.2条，全文两句与现有quote逐字一致（仅去版面空白）；条号5.6.2准确。第一句平台、通道或工作面防坠落与第二句栏杆下部踢脚板义务分别存在。保留完整两句，不改条文、不冒充80条全文重审。",
+  "evidenceRefs": [
+    "E_GB12801_SCOPE_5_6_2_20261001"
+  ],
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId"
+  ],
+  "notes": "本次逐项实质审阅限本记录的reviewedFields及reason所列对象、义务和适用边界。全对象hash是内容绑定，不认证全库、现场事实或现场profile准入；未变review以previousReview完整保留。",
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "decision": "verified",
+    "entityId": "C_12801_5_6_2",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_12801_2025"
+    ],
+    "reason": "条文核验：GB 12801-2025 第5.6.2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。",
+    "reviewType": "text",
+    "reviewedContentHash": "0fac0368061bc5c85d46eb57c1a59b070bf25ba5802fe80c60acd6923821848d",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
+  },
+  "previousReviewFileSha256": "555ad0653abdcc51281bd56a04424734af988e1572583f88333693067e147311"
 }

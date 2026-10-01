@@ -56,6 +56,14 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
             rows = sorted((obj['id'], obj.get('lifecycle'))
                           for file in (KNOW / kind).glob('*.json')
                           for obj in [json.loads(file.read_text(encoding='utf-8'))])
+            # Preserve this historical inventory verbatim after excluding only
+            # the separately reviewed, semantically distinct GB12801 successor.
+            successor = {'hazards': 'H_GB12801_2025_5_6_2_S1',
+                         'links': 'K_GB12801_2025_5_6_2_S1'}.get(kind)
+            if successor:
+                self.assertEqual([row for row in rows if row[0] == successor],
+                                 [(successor, 'active')])
+                rows = [row for row in rows if row[0] != successor]
             self.assertEqual(len(rows), expected['count'])
             self.assertEqual(hashlib.sha256(json.dumps(rows, ensure_ascii=False,
                 separators=(',', ':')).encode()).hexdigest(), expected['sha256'])
@@ -273,12 +281,17 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
             with self.subTest(path=path):
                 self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected_hash)
 
-    def test_manifest_only_gains_four_evidence_records(self):
+    def test_manifest_preserves_four_prior_additions_and_exact_scope_successor(self):
         manifest = read('knowledge/manifest.json')
-        self.assertEqual(manifest['counts']['evidence'], FIXTURE['totalEvidenceCount'])
-        self.assertEqual(manifest['evidence'], FIXTURE['totalEvidenceCount'])
-        self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), FIXTURE['totalEvidenceCount'])
-        self.assertEqual(manifest['lifecycle'], {'active': 1663, 'proposed': 354, 'superseded': 113})
+        scope_successor = json.loads((Path(__file__).parent / 'fixtures' /
+                                      'thirteen_scope_corrections_20260930.json').read_text(encoding='utf-8'))
+        self.assertEqual(len(scope_successor['evidence']), 14)
+        # Exactly two original-PDF evidence records belong to the later GB12801 slice.
+        expected = FIXTURE['totalEvidenceCount'] + len(scope_successor['evidence']) + 2
+        self.assertEqual(manifest['counts']['evidence'], expected)
+        self.assertEqual(manifest['evidence'], expected)
+        self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), expected)
+        self.assertEqual(manifest['lifecycle'], {'active': 1664, 'proposed': 354, 'superseded': 113})
 
     def test_dated_gate_admits_all_five_hazards_and_six_exact_links(self):
         gate = evaluate_release_gate(KNOW, date.fromisoformat(FIXTURE['asOf']))

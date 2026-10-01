@@ -1,19 +1,59 @@
 {
   "checkedAt": "2026-09-30",
+  "clauseId": "C_XLSX_FT_ECFF3AD1E421385385A5F5A4",
   "contextHashes": {
-    "hazard": "1a1923c59be7ee93b93f5ca179fab7938233596bf374acdbe04d5818afca1beb",
-    "clause": "701fa107b5e34c99f1eb1ce305ceca072bc0752a8aaf35fde0629fc5d5557fd5"
+    "clause": "701fa107b5e34c99f1eb1ce305ceca072bc0752a8aaf35fde0629fc5d5557fd5",
+    "hazard": "cbcca1f34328aa87301742b05207a57fee688d15e3c7fd30a9d6502664c79605"
   },
   "decision": "verified",
   "entityId": "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_B0BCFE3357EFC34F3570BC89",
-    "E_REMEDIATION_20260930_JSXF"
+    "E_SCOPE_20260930_JSXF_2_51_92_94"
   ],
-  "reason": "江苏条例51(2)精确包含站台层、站厅付费区、乘客疏散区及疏散通道禁商铺，并允许运营/广告设施使用不燃、难燃材料。新措施纠正保留违规商铺和过度收紧材质两类问题，未把所有车站商业区域一律禁商铺。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_SCOPE_20260930_JSXF_2_51_92_94"
+    ]
+  },
+  "historySha256": "eadf26b7856b9a740cbd50420062b5613caa0b012a7f87d45d5cdb15cda7dfbc",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "701fa107b5e34c99f1eb1ce305ceca072bc0752a8aaf35fde0629fc5d5557fd5",
+      "hazard": "1a1923c59be7ee93b93f5ca179fab7938233596bf374acdbe04d5818afca1beb"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_B0BCFE3357EFC34F3570BC89",
+      "E_REMEDIATION_20260930_JSXF"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_JSXF_51_2；条款：C_XLSX_FT_ECFF3AD1E421385385A5F5A4；保留direct角色。",
+    "reason": "江苏条例51(2)精确包含站台层、站厅付费区、乘客疏散区及疏散通道禁商铺，并允许运营/广告设施使用不燃、难燃材料。新措施纠正保留违规商铺和过度收紧材质两类问题，未把所有车站商业区域一律禁商铺。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "b746e54e0bbe31c6a30d9bf124290cfc492e936b9e2f8e384e45851e92c8dfbe",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "c16a6daf0fa556af5361f695613a19903963d5c7c0962662b46f8a9aba7bf91b",
+  "reason": "C_XLSX_FT_ECFF3AD1E421385385A5F5A4第51条第二款是两支义务的直接依据；第2条确定江苏地域，第92条不能用来混同普通铁路系统与城市轨道交通。材料义务不缩成仅四类禁店空间，两个违规分支独立OR，不要求既开店又材质不合格。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "b746e54e0bbe31c6a30d9bf124290cfc492e936b9e2f8e384e45851e92c8dfbe",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_JSXF_51_2；条款：C_XLSX_FT_ECFF3AD1E421385385A5F5A4；保留direct角色。"
+  "reviewedContentHash": "4b52860bcccabbbe3b3a37fcfb0df99b8b8b93b6f6ab8096d3e9a5bbf16aa80f",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于江苏省行政区域内城市轨道交通：车站站台层、站厅付费区、乘客疏散区以及疏散通道不得设置商铺；运营设施和广告设施应采用不燃、难燃材料。不得扩大为车站全部商业区域一律禁设商铺，也不得把难燃材料一概排除。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

@@ -1,20 +1,62 @@
 {
   "checkedAt": "2026-09-30",
+  "clauseId": "C_15577_8_4_10",
   "contextHashes": {
-    "hazard": "ca5001266a08bf68032ee89fb975446dfeb3612084ae292b28a0db231a99c65b",
-    "clause": "b82ab1692448d50a27599ea32d8e0d9967e726384e0668f4deae131298c5d801"
+    "clause": "b82ab1692448d50a27599ea32d8e0d9967e726384e0668f4deae131298c5d801",
+    "hazard": "dbdb7e6a0394232ba307d2df74be97dd016f41cf61c17ea3e3d56b5b74036258"
   },
   "decision": "verified",
   "entityId": "K_XLSX_980b2f519aadf71057a3a550",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577",
-    "E_REMEDIATION_20260930_GB15577",
-    "E_REMEDIATION_20260930_MEM6"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_8_4_10"
   ],
-  "reason": "8.4.10明确及时清泥和开停机均保持水槽、过滤池良好通风；新措施恢复通风方向，适用湿式粉尘除尘。未新增一律水洗粉尘等危险建议。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_8_4_10"
+    ]
+  },
+  "historySha256": "87238ca1640faa4145564ee9f8bab31d672d050cad0a0e78b65e213518ddb53a",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "b82ab1692448d50a27599ea32d8e0d9967e726384e0668f4deae131298c5d801",
+      "hazard": "ca5001266a08bf68032ee89fb975446dfeb3612084ae292b28a0db231a99c65b"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_980b2f519aadf71057a3a550",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577",
+      "E_REMEDIATION_20260930_MEM6"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_8_4_10_2；条款：C_15577_8_4_10；保留direct角色。",
+    "reason": "8.4.10明确及时清泥和开停机均保持水槽、过滤池良好通风；新措施恢复通风方向，适用湿式粉尘除尘。未新增一律水洗粉尘等危险建议。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "096ecaa5ce43a748e6fad9d34f46d02afe455cb2944e481e0697028bbc900199",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "38b72d9c39702f2f37d87e7066775f269ccf2ac472f22655f1e0db35436538d6",
+  "reason": "C_15577_8_4_10全条已目视核对，新link只将本实体对应到分号后的泥浆清除和开停机通风义务；不将前半水量、流速、监测报警要求误当本实体已完整审阅的义务，也不把所有水槽、水池纳入该湿式除尘条款。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "096ecaa5ce43a748e6fad9d34f46d02afe455cb2944e481e0697028bbc900199",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_8_4_10_2；条款：C_15577_8_4_10；保留direct角色。"
+  "reviewedContentHash": "2392d7c9e69f045e73016fd48c5d5af4db69b5df3a52b2a1005b4ff11817d769",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的湿式除尘系统，核查沉淀泥浆清除及水槽（箱）、水质过滤池（箱）在开机和停机状态下的良好通风。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

@@ -124,8 +124,16 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
         self.assertEqual(m['evidence'], len(list((KNOW / 'evidence').glob('*.json'))))
         hazards = [json.loads(p.read_text(encoding='utf-8')) for p in (KNOW / 'hazards').glob('*.json')]
         lifecycle = Counter(h['lifecycle'] for h in hazards)
-        self.assertEqual(len(hazards), 2130)
-        self.assertEqual(lifecycle, {'active': 1663, 'proposed': 354, 'superseded': 113})
+        # Original containment inventory remains unchanged; only the separately
+        # reviewed first-sentence GB12801 successor is a later addition.
+        successor = [h for h in hazards if h['id'] == 'H_GB12801_2025_5_6_2_S1']
+        self.assertEqual(len(successor), 1)
+        self.assertEqual(successor[0]['lifecycle'], 'active')
+        historical = [h for h in hazards if h['id'] != 'H_GB12801_2025_5_6_2_S1']
+        self.assertEqual(len(historical), 2130)
+        self.assertEqual(Counter(h['lifecycle'] for h in historical),
+                         {'active': 1663, 'proposed': 354, 'superseded': 113})
+        self.assertEqual(lifecycle, {'active': 1664, 'proposed': 354, 'superseded': 113})
         self.assertEqual(m['lifecycle'], lifecycle)
 
 

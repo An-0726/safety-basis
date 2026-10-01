@@ -4,12 +4,56 @@
   "entityId": "H_15577_6_3_3_2",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_15577_GB 15577",
-    "E_REMEDIATION_20260930_GB15577"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_6_3_3"
   ],
-  "reason": "6.3.3有防过热火花和防可燃粉尘进入外壳两项防止义务；新措施完整恢复第二防止，不将一般粉尘环境泛化为粉尘爆炸环境。",
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_6_3_3"
+    ],
+    "/places": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_6_3_3"
+    ]
+  },
+  "historySha256": "f47ff440619c03f1e766e861edfb19dae73eac3966e50e1807d8e3aecab707e2",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "decision": "verified",
+    "entityId": "H_15577_6_3_3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+    "reason": "6.3.3有防过热火花和防可燃粉尘进入外壳两项防止义务；新措施完整恢复第二防止，不将一般粉尘环境泛化为粉尘爆炸环境。",
+    "reviewType": "content",
+    "reviewedContentHash": "910577ff6efea7d136597b1e50528972e58a03c531102c1ff251d8f860fa8638",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "3b65558fde5621baf3a5560b9957f627616ed0a4f6815ff24b361778d4452803",
+  "reason": "已读第6.3.3完整条文。最终conditions准确保留分号后的电气设备或线路过热及火花防止义务，并完整表达可燃性粉尘不得进入产生电火花或高温部件的外壳内；places明确电气设备和线路，未将粉尘生产、储存设备泛作为本项对象。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "content",
-  "reviewedContentHash": "910577ff6efea7d136597b1e50528972e58a03c531102c1ff251d8f860fa8638",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。"
+  "reviewedContentHash": "374fc3c60a735d37637da8de3eca5ab48fba56093a6309d4e350a7b4be65b001",
+  "reviewedFields": [
+    "/conditions",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于GB 15577-2018范围内粉尘爆炸危险场所用电气设备和线路，本项核查防止由电气设备或线路产生的过热及火花，以及防止可燃性粉尘进入产生电火花或高温部件的外壳内。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+    "/places": [
+      "粉尘爆炸危险场所的电气设备和线路"
+    ]
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930"
 }

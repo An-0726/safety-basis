@@ -1,19 +1,61 @@
 {
   "checkedAt": "2026-09-30",
+  "clauseId": "C_XLSX_FT_5A6D40FDAE2B5699DC9CD7A6",
   "contextHashes": {
-    "hazard": "292209dde4ecf1810a2f69fc8b09671b813fdf48851aa003b520c33d6ec7b30e",
-    "clause": "a065bebfd661273f1b12fca6d12ac95edeb81be8c474373e255bbd2ea14d373e"
+    "clause": "a065bebfd661273f1b12fca6d12ac95edeb81be8c474373e255bbd2ea14d373e",
+    "hazard": "92cf44565284f6ee14b98774a55b583f216f5f9e40c85d74d5724d8dce2f6b72"
   },
   "decision": "verified",
   "entityId": "K_XLSX_FT_082B1A3E8801780BEA71CEE7",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_3FC36F6742AAFC66E7F7C26B",
-    "E_REMEDIATION_20260930_TSELAW"
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
   ],
-  "reason": "28条列明禁止出租的六类条件，新措施恢复未取得许可并明确国家淘汰、已经报废等设备撤出出租；维护检验补齐不构成报废设备重新出租的例外。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_REMEDIATION_20260930_TSELAW",
+      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
+    ]
+  },
+  "historySha256": "c856b898d2458975ae96b1f6495d514b80ee6b34cd2456fba0522129a381ef4a",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "a065bebfd661273f1b12fca6d12ac95edeb81be8c474373e255bbd2ea14d373e",
+      "hazard": "292209dde4ecf1810a2f69fc8b09671b813fdf48851aa003b520c33d6ec7b30e"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_082B1A3E8801780BEA71CEE7",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_3FC36F6742AAFC66E7F7C26B",
+      "E_REMEDIATION_20260930_TSELAW"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_A9E328C34EF033693BC2FEEF3F_1；条款：C_XLSX_FT_5A6D40FDAE2B5699DC9CD7A6；保留direct角色。",
+    "reason": "28条列明禁止出租的六类条件，新措施恢复未取得许可并明确国家淘汰、已经报废等设备撤出出租；维护检验补齐不构成报废设备重新出租的例外。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "dc12e39c92fa8ed4b46c0f3a8ce2cdd61603675ed9b8afaa025c057c01a6dc6f",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "4479998b7e787b7128ad1f0731704c30dd57df661b2d6a115f3b5cff2e1f6dc2",
+  "reason": "C_XLSX_FT_5A6D40FDAE2B5699DC9CD7A6第28条直接支撑本实体，六种禁止情形分别成立而非共同必要条件。新applicability以实际出租事实支持本实体的已出租不合格认定，不否定一般出租前预防检查；现行版本证据与具体禁租条文证据各负其责。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "dc12e39c92fa8ed4b46c0f3a8ce2cdd61603675ed9b8afaa025c057c01a6dc6f",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_A9E328C34EF033693BC2FEEF3F_1；条款：C_XLSX_FT_5A6D40FDAE2B5699DC9CD7A6；保留direct角色。"
+  "reviewedContentHash": "2edcf080af834b77a99c3e330effcf4b3dcc70c07cbfdfa75d3c54751f45cb6e",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于特种设备出租单位及其实际出租活动。不得出租未取得许可生产、国家明令淘汰、已经报废、未按安全技术规范维护保养、未经检验或者检验不合格的特种设备。应逐项核对实际涉及的禁止分支；补齐维护检验资料不能使淘汰或报废设备恢复出租资格。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

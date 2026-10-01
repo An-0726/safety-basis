@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_JSXF_53_3",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_three_fire_routing_profiles（2026-09-30）",
+  "reason": "本次已直接复读江苏省人大2023修订现行文本并核官方现行性，逐字段完成实质审阅。legal_obligation/exclude/legal_obligation表达对预防义务的检索核查路径，不是现场缺陷自动判定。应当提高防范意识、避免进入仍为法规要求；排除默认现场入口不等于免除该义务。K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C为CN-32的direct关联，连接江苏省消防条例2023修订版C_XLSX_FT_F493199CB619FF9A58E3C95A。全文保留第53条三款，本profile只使用第三款第一句：江苏住宅的业主和物业使用人对电动自行车或其蓄电池进入住宅电梯/户内负有提高防范意识、避免进入的要求。该句支持法定义务路由，不能支持省级统一禁止进入、行政处罚、物业服务企业劝阻或重大隐患认定。同款充电/停放禁止和南京条文不得混用。 findingTemplate为null、observedViolation为false、perUseFacts只含待核名称；材料仅作核验路径，不新创法定档案格式。核查、整改文字均不得跳过个案适用性和实际事实。结论仅绑定本profile及完整依赖hash，不涵盖其他19份草案，不作实际违法、行政处罚或重大隐患判定。",
+  "reviewedOn": "2026-09-30",
+  "reviewedProfileHash": "2e76740906ebd94050d6e4cffbdd185b4bf005de1318bfefbcbf11ec74292c73",
+  "dependencyFingerprint": "c6e72172f7c5c92c91cb9c32d6f96fe528229a14a240ed1ca428f1424cba2ede",
+  "semanticChecks": {
+    "applicability": true,
+    "correctiveDirection": true,
+    "evidenceRequirements": true,
+    "findingTemplate": true,
+    "routing": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C": "K_XLSX_NEW14_A9E65CF2ADA49CC4F1A5B24C为CN-32的direct关联，连接江苏省消防条例2023修订版C_XLSX_FT_F493199CB619FF9A58E3C95A。全文保留第53条三款，本profile只使用第三款第一句：江苏住宅的业主和物业使用人对电动自行车或其蓄电池进入住宅电梯/户内负有提高防范意识、避免进入的要求。该句支持法定义务路由，不能支持省级统一禁止进入、行政处罚、物业服务企业劝阻或重大隐患认定。同款充电/停放禁止和南京条文不得混用。"
+  },
+  "reviewEvidence": {
+    "formalReviewReportSha256": "608641558111fd60a65691e446824c9b67e0edb727bd466c15267fa3c9e6feba",
+    "profileFileSha256": "d98abc6102675ff3956a663a7513d45156399d0c0b1a3d9250ec20bb387d0e0d",
+    "officialSources": [
+      "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+      "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99085",
+      "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html"
+    ],
+    "reviewedExactLocator": "第53条第三款第一句；第2条地域；同款后两句仅用于划分边界",
+    "usageConstraints": [
+      "不能把本项不形成统一禁止解释成允许进入或排除其他适用法规；实际城市与适用规则仍须另外核实。",
+      "与第53条前两款建设/场所责任、第三款后两句充电/停放禁止分开，不由材料复核重写为这些责任。",
+      "住宅电梯和户内是原文所列两种防范场景，核查不要求同时发生。"
+    ],
+    "commonInterpretiveBoundaries": [
+      "routing_only和defaultFieldEntry=exclude只是用途/默认入口，不是法律义务不适用或实际合规的断言。",
+      "perUseFacts是待核事实名称，不是布尔值，也不是可由代码直接求AND/OR的判定式。",
+      "evidenceRequirements是必要核验建议，不能把未规定格式的计划、纪要、台账或个人名册变成新增法定义务；资料缺失与未实际履职必须区分。",
+      "学校定期两活动与重点单位每半年演练是不同款、可重叠适用但不可偷换主体；综合演练可同时包含灭火和疏散内容。",
+      "省第53条第三款第一句的避免进入保持原语气；其后禁止充电/停放及市级禁止条款不能移植为全省进入禁令。",
+      "资料核查/法定义务路由不支持无条件现场隐患、重大隐患、行政处罚或已观测违规推断。",
+      "不将整改建议当作已核定违法，也不将补做未来活动视为消除已确证历史期间的不履职事实。"
+    ],
+    "sourceSnapshotEqualsHistorical": true
+  }
+}

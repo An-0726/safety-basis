@@ -1,19 +1,61 @@
 {
   "checkedAt": "2026-09-30",
+  "clauseId": "C_15577_10_7",
   "contextHashes": {
-    "hazard": "e39aef13d6fa5410afbcd0cf5179cdeb4d7d7dcb7871661d5e78e2e268020047",
-    "clause": "52d80345a84a8e6e8ce0bae3a11f5e3d2ccf34940adb3b390133dc9e844fa16e"
+    "clause": "52d80345a84a8e6e8ce0bae3a11f5e3d2ccf34940adb3b390133dc9e844fa16e",
+    "hazard": "e0fdba7da88d26e47a86fc0f5018fdea3112616bd161d0b1405127f11a42595a"
   },
   "decision": "verified",
   "entityId": "K_XLSX_1719648a5f11c8a86f429277",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577",
-    "E_REMEDIATION_20260930_GB15577"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_10_7"
   ],
-  "reason": "10.7明确粉尘爆炸危险场所禁止交叉作业，新措施恢复禁止指令，计划协调和现场监督是对应执行措施。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_10_7"
+    ]
+  },
+  "historySha256": "51de9ea5da67ee121ad19d4bb5bdd08ff36fed003d126253c14e94a8d611b6b7",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "52d80345a84a8e6e8ce0bae3a11f5e3d2ccf34940adb3b390133dc9e844fa16e",
+      "hazard": "e39aef13d6fa5410afbcd0cf5179cdeb4d7d7dcb7871661d5e78e2e268020047"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_1719648a5f11c8a86f429277",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_10_7_1；条款：C_15577_10_7；保留direct角色。",
+    "reason": "10.7明确粉尘爆炸危险场所禁止交叉作业，新措施恢复禁止指令，计划协调和现场监督是对应执行措施。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "44e16514808b260974b11b9d2ca2ef35bddcb6964823d2af65e0ffa29c513721",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "12c6b016730013aaf71b8af9eae89018e05d2e8e0e877707e8d7e17e5f8016d9",
+  "reason": "C_15577_10_7直接支持按规程程序作业和危险场所禁交叉作业；新link范围与第10章检修上下文共同阅读，既不能仅限机器维修漏掉设施维护，也不将此条推广为任意场所任意并行活动的一般禁令。两个义务分别检查，交叉作业事实和程序执行事实分别取证。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "44e16514808b260974b11b9d2ca2ef35bddcb6964823d2af65e0ffa29c513721",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_10_7_1；条款：C_15577_10_7；保留direct角色。"
+  "reviewedContentHash": "2eec7e886cf473aa31e2970b03de0ee356a0730eab82f53f65d86ab3994698a6",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的设备设施检修作业及相关检修维护，本项核查按照设备检修维护规程和程序作业，以及粉尘爆炸危险场所禁止交叉作业的要求。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

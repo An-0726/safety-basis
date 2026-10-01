@@ -19,10 +19,23 @@ from release_gate_core import evaluate_release_gate
 
 FIXTURE = json.loads((Path(__file__).parent / 'fixtures' /
                       'reviewed_remediation_20260930.json').read_text(encoding='utf-8'))
+SCOPE_SUCCESSOR = json.loads((Path(__file__).parent / 'fixtures' /
+                            'thirteen_scope_corrections_20260930.json').read_text(encoding='utf-8'))
+SCOPE_ENTITIES = {row['path']: row for row in SCOPE_SUCCESSOR['entities']}
 
 
 def read(rel):
     return json.loads((ROOT / rel).read_text(encoding='utf-8'))
+
+
+def historical_entity(rel):
+    """Keep this batch's original judgment, while guarding its exact successor."""
+    if rel in SCOPE_ENTITIES:
+        row = SCOPE_ENTITIES[rel]
+        if read(rel) != row['record']:
+            raise AssertionError('Source differs from its reviewed successor: ' + rel)
+        return row['beforeRecord']
+    return read(rel)
 
 
 def hazard(hid):
@@ -59,11 +72,19 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         self.assertEqual(len(FIXTURE['entities']), 25)
         for row in FIXTURE['entities']:
             with self.subTest(path=row['path']):
-                self.assertEqual(content_hash(read(row['path'])), row['contentHash'])
+                self.assertEqual(content_hash(historical_entity(row['path'])), row['contentHash'])
         for kind, expected in FIXTURE['canonicalInventory'].items():
             rows = sorted((obj['id'], obj.get('lifecycle'))
                           for file in (KNOW / kind).glob('*.json')
                           for obj in [json.loads(file.read_text(encoding='utf-8'))])
+            # Preserve this historical inventory verbatim after excluding only
+            # the separately reviewed, semantically distinct GB12801 successor.
+            successor = {'hazards': 'H_GB12801_2025_5_6_2_S1',
+                         'links': 'K_GB12801_2025_5_6_2_S1'}.get(kind)
+            if successor:
+                self.assertEqual([row for row in rows if row[0] == successor],
+                                 [(successor, 'active')])
+                rows = [row for row in rows if row[0] != successor]
             self.assertEqual(len(rows), expected['count'])
             digest = hashlib.sha256(json.dumps(rows, ensure_ascii=False,
                                               separators=(',', ':')).encode()).hexdigest()
@@ -74,8 +95,14 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         counts = Counter()
         for row in FIXTURE['reviews']:
             with self.subTest(path=row['path']):
-                review = read(row['path'])
-                entity = read(row['path'].replace('/reviews', ''))
+                current_review = read(row['path'])
+                entity_path = row['path'].replace('/reviews', '')
+                # A later exact-scope review preserves the prior full record.
+                # Do not rewrite this historical batch's reason or claim it
+                # originally approved the successor scope.
+                review = (current_review['previousReview'] if entity_path in SCOPE_ENTITIES
+                          else current_review)
+                entity = historical_entity(entity_path)
                 counts[row['entityType']] += 1
                 self.assertEqual(review['entityId'], row['entityId'])
                 self.assertEqual(review['entityType'], row['entityType'])
@@ -91,8 +118,8 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
                     self.assertEqual(review['evidenceRefs'], row['exactEvidenceRefs'])
                 self.assertIn('本次审核限', review['notes'])
                 if row['entityType'] == 'link':
-                    self.assertEqual(review['contextHashes']['hazard'], content_hash(hazard(entity['hazardId'])))
-                    self.assertEqual(review['contextHashes']['clause'], content_hash(read(f"knowledge/clauses/{entity['clauseId']}.json")))
+                    self.assertEqual(review['contextHashes']['hazard'], content_hash(historical_entity(f"knowledge/hazards/{entity['hazardId']}.json")))
+                    self.assertEqual(review['contextHashes']['clause'], content_hash(historical_entity(f"knowledge/clauses/{entity['clauseId']}.json")))
                     if 'link' in review['contextHashes']:
                         self.assertEqual(review['contextHashes']['link'], content_hash(entity))
         self.assertEqual(counts, {'hazard': 20, 'link': 22, 'clause': 1})
@@ -126,11 +153,16 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
 
     def test_manifest_counts_and_bounded_batch_totals(self):
         manifest = read('knowledge/manifest.json')
-        self.assertEqual(manifest['batch'], FIXTURE['batch'])
-        # Four separately reviewed boundary/source corrections followed this batch.
-        self.assertEqual(manifest['counts']['evidence'], 1248)
-        self.assertEqual(manifest['evidence'], 1248)
-        self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), 1248)
+        self.assertEqual(manifest['batch'], 'gb12801-first-sentence-transition-20261001')
+        # The historical batch remains intact; its later scope successor adds
+        # exactly fourteen separately traced source-specific evidence records.
+        self.assertEqual(len(SCOPE_SUCCESSOR['evidence']), 14)
+        # The later GB12801 slice adds two original-PDF records; the
+        # historical batch entry below remains exactly as originally reviewed.
+        expected_evidence = 1248 + len(SCOPE_SUCCESSOR['evidence']) + 2
+        self.assertEqual(manifest['counts']['evidence'], expected_evidence)
+        self.assertEqual(manifest['evidence'], expected_evidence)
+        self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), expected_evidence)
         batch = next(b for b in manifest['batches'] if b['id'] == FIXTURE['batch'])
         self.assertEqual({k: batch[k] for k in ('evidenceAdded', 'hazardsCorrected',
             'linkScopesCorrected', 'clauseTextsCorrected', 'hazardReviewsUpdated',
@@ -138,7 +170,7 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
             'evidenceAdded': 9, 'hazardsCorrected': 20, 'linkScopesCorrected': 4,
             'clauseTextsCorrected': 1, 'hazardReviewsUpdated': 20,
             'linkReviewsUpdated': 22, 'clauseReviewsUpdated': 1})
-        self.assertEqual(manifest['lifecycle'], {'active': 1663, 'proposed': 354, 'superseded': 113})
+        self.assertEqual(manifest['lifecycle'], {'active': 1664, 'proposed': 354, 'superseded': 113})
 
     def test_gb45067_scope_and_stop_repair_reinspection_restart_order(self):
         cases = [

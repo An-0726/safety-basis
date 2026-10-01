@@ -4,12 +4,53 @@
   "entityId": "H_644EEE5EC12221D39672FE26E2_4",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_WEB_93AC33EC11E80A9DD9F94677",
-    "E_REMEDIATION_20260930_NJXF"
+    "E_SCOPE_20260930_NJXF_2_42_76"
   ],
-  "reason": "南京条例42(2)专指歌舞娱乐放映游艺场所包厢包间，同步声音或者视像警报及火灾初期消除原音画、播送警报。新措施恢复可执行警报切换，未扩成所有普通房间必须装此系统。",
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_SCOPE_20260930_NJXF_2_42_76"
+    ],
+    "/places": [
+      "E_SCOPE_20260930_NJXF_2_42_76"
+    ]
+  },
+  "historySha256": "9feb2ca90b0261e6ebf0c90f3254022ddeae30aa53537c98e271701f447dbfbf",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "decision": "verified",
+    "entityId": "H_644EEE5EC12221D39672FE26E2_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_93AC33EC11E80A9DD9F94677",
+      "E_REMEDIATION_20260930_NJXF"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+    "reason": "南京条例42(2)专指歌舞娱乐放映游艺场所包厢包间，同步声音或者视像警报及火灾初期消除原音画、播送警报。新措施恢复可执行警报切换，未扩成所有普通房间必须装此系统。",
+    "reviewType": "content",
+    "reviewedContentHash": "6beb7fbf9934a4dc17d51ca32ffc452a26fadda3ef0aeac9dac3f365339b10e7",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "264be135b0ca89ac5d68028dfab1846322f3b3141582d53b51f008aad14e9119",
+  "reason": "第42条第二款精确对象为歌舞娱乐放映游艺场所包厢、包间，要求同步声音或者视像警报并具备火灾初期消除原音画、播送警报功能。最终conditions/places保留对象和“或者”选择，不将第一款公共娱乐场所一般规定扩为全部房间的相同义务；第2条特别规定优先保留正确。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "content",
-  "reviewedContentHash": "6beb7fbf9934a4dc17d51ca32ffc452a26fadda3ef0aeac9dac3f365339b10e7",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。"
+  "reviewedContentHash": "504d50476e5d82193af80cbd9ee730ba6808e553bab415420d93404b7961806c",
+  "reviewedFields": [
+    "/conditions",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于南京市行政区域内歌舞娱乐放映游艺场所的包厢、包间，核查同步声音或者视像警报及火灾发生初期消除原有画面音响、播送火灾警报的功能；不扩展为所有房间或所有公共娱乐场所空间。法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定。",
+    "/places": [
+      "南京市歌舞娱乐放映游艺场所包厢、包间"
+    ]
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930"
 }
