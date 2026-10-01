@@ -8,7 +8,8 @@ import tempfile
 
 FORMAL_NAMESPACES = ('hazards', 'links', 'clauses', 'law-versions', 'laws', 'evidence',
                      'reviews', 'field-profiles/v1/records', 'field-profiles/v1/reviews',
-                     'major-criteria/v1', 'major-criteria-references/v1', 'major-criteria-directory/v1')
+                     'major-criteria/v1', 'major-criteria-references/v1', 'major-criteria-directory/v1',
+                     'major-criteria-reading/v1')
 
 
 def source_hashes(root, *, include_pilot=False):

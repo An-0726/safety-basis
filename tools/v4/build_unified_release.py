@@ -45,6 +45,7 @@ from major_criteria_references import (public_projection as reference_projection
                                        project_publication, REFERENCE_FILE)  # noqa: E402
 from major_criteria_directory import (public_projection as directory_projection,
                                      project_publication as project_directory_publication, DIRECTORY_FILE)  # noqa: E402
+from major_criteria_reading import (public_projection as reading_projection, READING_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -61,7 +62,7 @@ SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
                "major-criteria.html", "major-criteria.css",
                "js/major-criteria.js", "js/major-criteria-model.js",
-               "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js")
+               "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js", "js/normative-content.js", "js/major-criteria-reading-model.js")
 
 REGION = {"CN": "全国", "CN-32": "江苏", "CN-3201": "南京"}
 STATUS_LABEL = {"active": "现行有效", "upcoming": "即将生效", "repealed": "已废止", "unknown": "待核验"}
@@ -168,6 +169,7 @@ def build(args, knowledge, source_hash, as_of_date):
     major_criteria = major_criteria_projection(KNOW, as_of=as_of_date)
     references = reference_projection(KNOW, PUBLICATION, as_of=as_of_date)
     directory = directory_projection(KNOW, PUBLICATION, as_of=as_of_date)
+    reading = reading_projection(KNOW, PUBLICATION, as_of=as_of_date)
     hazards = load_dir(KNOW, "hazards")
     hazard_conditions = {
         hid: normalized_conditions(hid, hazard)
@@ -480,6 +482,9 @@ def build(args, knowledge, source_hash, as_of_date):
         "majorCriteriaAssociations": len(major_criteria['topic']['associations']),
         "majorCriteriaDirectoryGroups": directory['public']['directoryGroupCount'],
         "majorCriteriaDirectoryDocuments": directory['public']['documentCount'],
+        "majorCriteriaReadingGroups": reading["public"]["readingGroupCount"],
+        "majorCriteriaReadingDocuments": reading["public"]["sourceDocumentCount"],
+        "majorCriteriaReadingFirstLevelItems": reading["public"]["firstLevelItemCount"],
         "majorCriteriaReferenceStandards": len(references['public']['referenceEntries']),
         "majorCriteriaSearchTopics": sum(e['searchTopicCount'] for e in references['public']['referenceEntries']),
     }
@@ -488,7 +493,7 @@ def build(args, knowledge, source_hash, as_of_date):
         "v4SchemaVersion": 3,
         "dataVersion": DATA_VERSION,
         "generatedAt": AS_OF,
-        "publicScope": "国家法规标准优先，江苏／南京补充；正式站只发布当前日期已核验依据",
+        "publicScope": "国家法规标准优先，江苏／南京补充；现行依据与官方资料查阅分别展示，查阅不授予现行判定资格",
         "counts": counts,
         "sourceCounts": {
             "hazards": gate.counts["hazards"],
@@ -515,6 +520,7 @@ def build(args, knowledge, source_hash, as_of_date):
             "majorCriteriaTopic": "data/major-criteria-topic.json",
             "majorCriteriaReferences": REFERENCE_FILE,
             "majorCriteriaDirectory": DIRECTORY_FILE,
+            "majorCriteriaReading": READING_FILE,
         },
         "hazardShards": hazard_shards,
         "clauseShards": clause_shards,
@@ -530,6 +536,7 @@ def build(args, knowledge, source_hash, as_of_date):
     wr(os.path.join(data, "major-criteria-topic.json"), major_criteria['topic'])
     wr(os.path.join(out, REFERENCE_FILE), references['public'])
     wr(os.path.join(out, DIRECTORY_FILE), directory['public'])
+    wr(os.path.join(out, READING_FILE), reading['public'])
 
     # ---- 前端资产与公开全文资料 ----
     for asset in SITE_ASSETS:
@@ -633,6 +640,7 @@ def build(args, knowledge, source_hash, as_of_date):
             "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
             "fulltextSource": "source/publication/fulltext/",
             "frontendSource": "web/",
+            "majorCriteriaReadingSource": "independently reviewed source text for reading only; unknown dates preserved; no current C/H/K eligibility or count",
             "majorCriteriaDirectorySource": "exact reviewed metadata-only directory; dated currentness and required companion groups; never normative eligibility",
             "majorCriteriaReferenceSource": "controlled reviewed metadata and short search topics only; no normative text, clauses, H/K or field determination",
             "majorCriteriaSource": "controlled exact reviewed C/LV catalog and direct H/K/C/LV topic; independent of professional categories; not actual findings",

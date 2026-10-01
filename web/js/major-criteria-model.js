@@ -1,5 +1,7 @@
 // Pure model for the controlled major-criteria catalog. No DOM, fetch, or app boot.
 import {searchLawsDetailed, searchHazardsDetailed, normalize as normalized} from './search.js';
+import {administrativeNumberMatches} from './major-criteria-directory-model.js';
+import {validateNormativeClause} from './normative-content.js';
 
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const text = value => typeof value === 'string' && value.trim().length > 0;
@@ -60,7 +62,7 @@ export function validateMajorData(catalog, topic, searchIndex, expectedAsOf) {
     byHazard.set(row.id, row);
   }
 
-  const byStandard = new Map(), byVersion = new Map(), clauseVersions = new Map();
+  const byStandard = new Map(), byVersion = new Map(), clauseVersions = new Map(), tableIds = new Set();
   for (const standard of catalog.standards) {
     check(object(standard) && text(standard.id) && !byStandard.has(standard.id), 'STANDARD_ID');
     check(text(standard.lawVersionId) && !byVersion.has(standard.lawVersionId), 'STANDARD_VERSION_ID');
@@ -73,8 +75,21 @@ export function validateMajorData(catalog, topic, searchIndex, expectedAsOf) {
     const scope = standard.officialScope;
     check(object(scope) && text(scope.label) && Array.isArray(scope.sourceUrls) &&
       scope.sourceUrls.length > 0 && scope.sourceUrls.every(sourceUrl) &&
-      scope.wholeStandardComplete === false, 'OFFICIAL_SCOPE');
+      typeof scope.wholeStandardComplete === 'boolean', 'OFFICIAL_SCOPE');
+    if (Object.hasOwn(standard, 'publicationBasis')) {
+      const p = standard.publicationBasis;
+      check(object(p) && Object.keys(p).sort().join(',') === 'basis,checked,fullTextPublicationApproved,legalSourceUrl' &&
+        p.basis === 'copyright_law_article_5_official_administrative_document' &&
+        p.fullTextPublicationApproved === true && sourceUrl(p.legalSourceUrl) &&
+        new URL(p.legalSourceUrl).hostname.endsWith('.gov.cn') &&
+        typeof p.checked === 'string' && dateText(p.checked.slice(0, 10)) && p.checked.slice(0, 10) <= catalog.asOf &&
+        (p.checked.length === 10 || (/[zZ]|[+-]\d{2}:\d{2}$/.test(p.checked) && Number.isFinite(Date.parse(p.checked)))),
+      'PUBLICATION_BASIS');
+    }
+    check(!scope.wholeStandardComplete || standard.publicationBasis?.fullTextPublicationApproved === true,
+      'COMPLETE_BODY_REVIEW');
     check(Array.isArray(standard.clauses), 'CLAUSES');
+    let tableCount = 0;
     for (const clause of standard.clauses) {
       check(object(clause) && text(clause.clauseId) && !clauseVersions.has(clause.clauseId), 'CLAUSE_ID');
       clauseVersions.set(clause.clauseId, clause.lawVersionId);
@@ -85,13 +100,39 @@ export function validateMajorData(catalog, topic, searchIndex, expectedAsOf) {
           (dateText(clause.checked.slice(0, 10)) && (clause.checked.length === 10 || Number.isFinite(Date.parse(clause.checked))))) &&
         sourceUrl(clause.sourceUrl), 'CLAUSE_CONTENT');
       ids(clause.directHazardIds, 'CLAUSE_HAZARD_IDS');
+      for (const id of validateNormativeClause(clause)) {
+        check(!tableIds.has(id), 'TABLE_ID_DUPLICATE'); tableIds.add(id); tableCount++;
+      }
+      if (Object.hasOwn(clause, 'applicationNotes')) {
+        check(Array.isArray(clause.applicationNotes) && clause.applicationNotes.length > 0 &&
+          standard.publicationBasis?.fullTextPublicationApproved === true, 'APPLICATION_NOTES');
+        const sources = new Set();
+        for (const note of clause.applicationNotes) {
+          check(object(note) && Object.keys(note).sort().join(',') === 'checked,isOfficialNormText,kind,sourceDate,sourceUrl,summary' &&
+            note.kind === 'official_application_clarification' && note.isOfficialNormText === false &&
+            text(note.summary) && note.summary.length <= 1000 && sourceUrl(note.sourceUrl) &&
+            !/\s/u.test(note.sourceUrl) && new URL(note.sourceUrl).hostname.endsWith('.gov.cn') &&
+            dateText(note.sourceDate) && note.sourceDate <= catalog.asOf &&
+            note.checked === standard.publicationBasis.checked && note.sourceDate <= note.checked.slice(0, 10) &&
+            !sources.has(note.sourceUrl), 'APPLICATION_NOTE_CONTENT');
+          sources.add(note.sourceUrl);
+        }
+      }
     }
     const coverage = standard.coverage;
     check(object(coverage) && ['reviewed_scope_complete', 'partial'].includes(coverage.status) &&
       ['reviewedClauseCount', 'reviewedWholeClauseCount', 'reviewedSubitemClauseCount', 'expectedWholeClauseCount']
         .every(key => count(coverage[key])) && nullableCount(coverage.expectedJudgmentItemCount) &&
-      nullableCount(coverage.reviewedJudgmentItemCount) && coverage.wholeStandardComplete === false,
+      nullableCount(coverage.reviewedJudgmentItemCount) && typeof coverage.wholeStandardComplete === 'boolean',
     'STANDARD_COVERAGE');
+    check(coverage.wholeStandardComplete === scope.wholeStandardComplete &&
+      (!coverage.wholeStandardComplete || coverage.status === 'reviewed_scope_complete'), 'COMPLETE_BODY_COVERAGE');
+    if (tableCount || Object.hasOwn(coverage, 'expectedTableCount') || Object.hasOwn(coverage, 'reviewedTableCount')) {
+      check(standard.publicationBasis?.fullTextPublicationApproved === true && count(coverage.expectedTableCount) &&
+        coverage.expectedTableCount > 0 && count(coverage.reviewedTableCount) &&
+        coverage.reviewedTableCount === tableCount && coverage.expectedTableCount >= tableCount &&
+        (coverage.status !== 'reviewed_scope_complete' || coverage.expectedTableCount === tableCount), 'TABLE_COVERAGE');
+    }
     check(coverage.reviewedClauseCount === standard.clauses.length &&
       coverage.reviewedWholeClauseCount === standard.clauses.length &&
       coverage.reviewedSubitemClauseCount === 0 &&
@@ -143,6 +184,23 @@ export function validateMajorData(catalog, topic, searchIndex, expectedAsOf) {
   return {catalog, topic, standards: catalog.standards, hazards: topic.hazardIds.map(id => byHazard.get(id))};
 }
 
+/** Metadata and normative views may describe the same exact version after a
+ * separately approved text publication. They keep separate counts and roles.
+ */
+export function validateDirectoryCatalogLinks(model, directory) {
+  const versions = new Map(model.standards.map(row => [row.lawVersionId, row]));
+  for (const entry of directory.entries) {
+    const standard = versions.get(entry.lawVersionId);
+    if (!standard) continue;
+    const v = standard.standardVersion;
+    check(standard.publicationBasis?.fullTextPublicationApproved === true &&
+      entry.lawId === v.lawId && [v.name, `${v.name} ${v.documentNumber}`].includes(entry.title) &&
+      entry.documentNumber === v.documentNumber &&
+      entry.versionKey === v.versionKey && entry.effectiveDate === v.effectiveDate,
+    'DIRECTORY_CATALOG_IDENTITY');
+  }
+}
+
 function cleanRoute(route = {}) {
   const value = object(route) ? route : {};
   const clean = key => typeof value[key] === 'string' ? value[key].trim() : '';
@@ -170,7 +228,8 @@ export function majorRouteQuery(route) {
 /** Query terms only narrow the controlled catalog/topic; they never infer H membership. */
 export function selectMajorResults(model, route = {}) {
   const value = cleanRoute(route);
-  const scopedStandards = model.standards.filter(row => !value.standard || row.lawVersionId === value.standard);
+  const scopedStandards = model.standards.filter(row => (!value.standard || row.lawVersionId === value.standard) &&
+    administrativeNumberMatches(row.standardVersion.documentNumber, value.query));
   const versions = new Set(scopedStandards.map(row => row.lawVersionId));
   const associations = model.topic.associations.filter(row => versions.has(row.lawVersionId));
   const scopedIds = new Set(associations.map(row => row.hazardId));
@@ -181,7 +240,8 @@ export function selectMajorResults(model, route = {}) {
     id: clause.clauseId, name: `${standard.standardVersion.name} ${clause.article}`,
     documentNumber: standard.standardVersion.documentNumber, aliases: [], status: clause.status,
     searchText: normalized([standard.standardVersion.name, standard.standardVersion.documentNumber,
-      standard.standardVersion.versionKey, standard.officialScope.label, clause.article, clause.quote].join(' ')),
+      standard.standardVersion.versionKey, clause.article, clause.quote,
+      ...(clause.applicationNotes || []).map(note => note.summary)].join(' ')),
   })));
   const clauseMatch=searchLawsDetailed(clauseRows, value.query);
   const matchingClauseIds = new Set(clauseMatch.rows.map(row => row.id));

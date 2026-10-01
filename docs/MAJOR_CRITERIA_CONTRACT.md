@@ -66,3 +66,43 @@ Topic 顶层：`schemaVersion:1`, `asOf`, `wholeNormNotFieldFinding:true`, `asso
 ## 官方查阅入口扩展
 
 独立 reference-only v1 见 [官方查阅入口契约](MAJOR_CRITERIA_REFERENCE_CONTRACT.md)。其题录/短主题不改变本v1的22条规范正文、直接关联集合或计数；不可拿短主题替代完整判定条款。
+
+## 2026-10-01 完整行政正文扩展
+
+首批新增建城规〔2023〕4号的第一至十一条完整标准正文。原两部22条保持原选集，新的11条没有H/K。11是正文条数；判定计数是20个编号列项，加第八及十条2个整条判据，合计22，不能称为官方编号的22项。范围与后续缺口见[正文补齐计划](MAJOR_CRITERIA_NEXT_COVERAGE.md)。
+
+新选择可含 `publication:{basis,legalSourceUrl,evidenceIds}`；basis仅支持 `copyright_law_article_5_official_administrative_document`。这不是按标题自动识别的许可：还必须有 `major-criteria/v1/reviews/<LV>.json` 的独立正文／公开范围审核，reviewScope为 `official_administrative_document_text_completeness_and_publication`，fullQuotePublicationReady为true。
+
+`scope_review_bindings`只读计算选择内容哈希、全部LF/LV/C实体及原reviews、正文与权利证据的依赖指纹，不签审。新增metadata-only版本不能仅靠原题录review加入正文；即便wholeStandardComplete为false也须独立公开范围审核。完整正文声明必须有该审核，任一整条或依赖缺失、变动、失效或未来审查时整部退出，不留不完整的“全文”声称。
+
+`officialScope.wholeStandardComplete`和coverage同字段允许true，但只在上述独立审核及全部正文C的原Gate通过时输出。公开可选字段 `publicationBasis:{basis,legalSourceUrl,checked,fullTextPublicationApproved:true}`只表达此行政正文范围已审，不表示技术标准获得复制授权。原两部选集仍false，allIndustryCoverage仍false。
+
+目录题录保持独立metadata-only契约，可与已审正文共享精确LV。前端只在LF、LV、名称、文号、版本及实施日一致且规范目录有独立公开范围审核时提供“另见已审正文”链接。两个视图的数量不相加，题录不能因链接存在被升级为现场判定依据。AQ参考入口继续保持独立，不复制其完整技术标准。
+
+### 房屋市政施工正文
+
+接续同一版本纳入建质规〔2024〕5号第一至十八条。正文来自[东莞住建官方原DOCX附件](https://zjj.dg.gov.cn/attachment/0/310/310193/4323450.docx)，[上海住建官方全文](https://zjw.sh.gov.cn/xwfb/20241224/8929913b394e4777b7ccb79921251af4.html)逐条交叉核对；仅存在第五条第（四）项4个嵌套编号标点差异，采用原附件的`1.`至`4.`，没有改写判定条件。原件DOCX字节hash与正式通知PDF提取文本hash分开记录，不互相冒充。
+
+第四至十五条共51个一级列项，加第十六及十七条2个整条判据，共53；第五（四）的4个风险预兆保留“之一，且未及时处理”的父条件，不再次加总。18是正文条数，53是此种明确层级口径的判定项数，不是53个现场隐患。第三条施工范围、各条且／或条件、第十八条施行及2022版废止规定完整保留。
+
+复用既有LF/LV，不新增H/K，不将房屋市政施工条件套给投运设施；与燃气相同，每条C及整部公开范围分别独立审核。10月1日累计目录4部、51整条；原2部受控范围仍22条，新增完整行政正文为燃气11条与房屋市政18条。AQ的53个短主题和行业题录8组9文件继续独立计数。
+
+### 煤矿正文、内嵌表格与主管部门适用说明
+
+煤矿第21号令复用既有LF/LV，受控选择为第一至二十一条及第五、六条内全部7表。第三条17项是目录，不重复计数；第四至二十条共123个一级列项，不把它们称为123个独立叶子条件。井工/露天、灾害条件、例外与嵌套子项均随原文保留。原件页码、题注与PDF版式不作为条文正文复制。
+
+含表的C新增严格 `contentParts`，按原文顺序交错保存text与table。表格具有id、caption、columnCount、headerRows、bodyRows、sourcePages；单元格仅有text、colSpan、rowSpan。校验必须形成无洞、无重叠的完整网格，表2的跨页续行不能被截断，表4的合并条件及表6/7的多层头保留。`quote`必须逐字等于这些节点的确定性文本投影，制表符和换行仅表示布局，不能另造第二套判据。选择中的 `tableIds` 精确声明本条必备表格；缺表、错序或fallback不一致时，整部完整正文退出。
+
+主管部门后续答复以选择中的 `applicationNotes` 绑定其所属C、原创摘要、官方来源及答复日期、独立证据。公开时每条说明明确 `isOfficialNormText:false`，呈现在规范引文之外，不能把答复直接拼入或改写法条。说明日期不得晚于构建日期或本次公开范围审核日期，证据URL、层级及快照hash必须有效。审核依赖绑定全部说明及证据；改动任一限定将使旧审核失效。
+
+本类正文只接受 `official_administrative_document_text_tables_applicability_and_publication` 的独立范围审核。旧的纯文字范围审核即使重新绑定hash，也不能授权表格和后续适用说明。公开coverage可增加 `expectedTableCount` 与 `reviewedTableCount`，同正文条数、题录数、H数分开显示。7张表不是7个新增H；本批21C仍无H/K。正式引用前仍须阅读完整作用范围和官方说明，页面不作现场自动认定。
+
+### 电力规章正文与附件边界
+
+国家发展改革委令第41号（2026年）本批收录第一至三十八条，其中第二章第五至十三条48个编号项，加第十四条1个整条兜底，共49项。第十六条7项治理制度不计入判定项数。保留第三十五条“以上”“超过”含本数、“以下”不含本数的原文定义，及第三十六条主营业务电力企业、国家能源局监管水电站范围。第三条对危化、消防、特种设备另有规定的转致及每条设备容量、电压和评估前提不删改。
+
+正式附件《重大隐患信息报告单》有表外栏位、12行、两处电话副栏和表下备注，本批只链接官方原件，未复制为条款。因此38条选集可为 `reviewed_scope_complete`，但 `wholeStandardComplete` 必须为false；不制造“第三十九条”，不把完整判定范围等同含附件整部文件完整。
+
+凡存在独立publication scope review的选集都原子发布：任一选定条款未通过下游Gate，完整选集退出，即使它因附件排除而 `wholeStandardComplete=false`。这样第三十五或三十六条不能丢失后仍留下孤立判据；原无publication字段的两部受控范围保持原契约。
+
+旧国能综通安全〔2022〕123号的废止根据国家能源局2026年第3号公告附件1第15项；不把本令7月1日施行虚写成旧文同时废止，也不连带宣布国能发安全规〔2022〕116号废止。既有canonical LF/LV、metadata review与普通H/K不变，新正文及这项效力证据另受精确scope审核绑定。

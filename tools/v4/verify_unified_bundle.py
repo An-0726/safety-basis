@@ -34,6 +34,7 @@ from major_criteria_references import (public_projection as reference_projection
                                        project_publication, REFERENCE_FILE)  # noqa: E402
 from major_criteria_directory import (public_projection as directory_projection,
                                      project_publication as project_directory_publication, DIRECTORY_FILE)  # noqa: E402
+from major_criteria_reading import (public_projection as reading_projection, READING_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -47,7 +48,7 @@ SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
                "major-criteria.html", "major-criteria.css",
                "js/major-criteria.js", "js/major-criteria-model.js",
-               "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js")
+               "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js", "js/normative-content.js", "js/major-criteria-reading-model.js")
 COVER_EXCLUDE = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
 FIELD_PROFILE_FILE = 'data/field-profiles.json'
 PRIVATE_PROFILE_KEYS = {'inventory', 'hazardsWithoutProfiles', 'excludedProfiles',
@@ -238,7 +239,8 @@ def verify(args, KNOW, source_hash):
     public_files = {'searchIndex': 'data/search-index.json', 'lawIndex': 'data/law-index.json',
                     'taxonomy': 'data/taxonomy.json', 'fieldProfiles': FIELD_PROFILE_FILE,
                     'majorCriteriaCatalog': CATALOG_FILE, 'majorCriteriaTopic': TOPIC_FILE,
-                    'majorCriteriaReferences': REFERENCE_FILE, 'majorCriteriaDirectory': DIRECTORY_FILE}
+                    'majorCriteriaReferences': REFERENCE_FILE, 'majorCriteriaDirectory': DIRECTORY_FILE,
+                    'majorCriteriaReading': READING_FILE}
     bad.check(manifest.get('files') == public_files, 'manifest files 必须恰好为公开消费入口')
     allowed = ({'checksums.json', 'release.json', 'site-manifest.json', 'data/manifest.json'} |
                set(SITE_ASSETS) | set(public_files.values()) |
@@ -369,6 +371,10 @@ def verify(args, KNOW, source_hash):
     if bad.check(REFERENCE_FILE in files, '缺少重大判定官方查阅入口文件'):
         bad.check(rd(files[REFERENCE_FILE]) == expected_references['public'],
                   '官方查阅入口精确投影不一致；不得添加正文或判定结论')
+    expected_reading = reading_projection(KNOW, PUBLICATION, as_of=as_of)
+    if bad.check(READING_FILE in files, '缺少独立官方原文查阅文件'):
+        bad.check(rd(files[READING_FILE]) == expected_reading['public'],
+                  '官方原文查阅精确投影不一致；不得授予现行依据资格或拆开主补文件')
     expected_major = major_criteria_projection(KNOW, as_of=as_of)
     for key, path in [('catalog', CATALOG_FILE), ('topic', TOPIC_FILE)]:
         if bad.check(path in files, '缺少重大判定公开文件：' + path):
@@ -381,6 +387,9 @@ def verify(args, KNOW, source_hash):
             'majorCriteriaAssociations': len(expected_major['topic']['associations']),
             'majorCriteriaDirectoryGroups': expected_directory['public']['directoryGroupCount'],
             'majorCriteriaDirectoryDocuments': expected_directory['public']['documentCount'],
+            'majorCriteriaReadingGroups': expected_reading['public']['readingGroupCount'],
+            'majorCriteriaReadingDocuments': expected_reading['public']['sourceDocumentCount'],
+            'majorCriteriaReadingFirstLevelItems': expected_reading['public']['firstLevelItemCount'],
             'majorCriteriaReferenceStandards': len(expected_references['public']['referenceEntries']),
             'majorCriteriaSearchTopics': sum(e['searchTopicCount'] for e in expected_references['public']['referenceEntries'])}.items():
         bad.check(counts.get(key) == value, '重大判定计数不一致：' + key)

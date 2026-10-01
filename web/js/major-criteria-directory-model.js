@@ -195,6 +195,15 @@ function literalMatch(fields, term) {
   return fields.some(field => pattern.test(field));
 }
 
+/** Explicit administrative numbers/orders identify the document itself, even
+ * when its body cites another (including repealed) document. Ordinary body
+ * keywords and article numbers remain available to the caller's text search.
+ */
+export function administrativeNumberMatches(documentNumber, queryText) {
+  const query = prepareQuery(typeof queryText === 'string' ? queryText : '');
+  return query.official.every(wanted => literalMatch([compact(documentNumber)], wanted));
+}
+
 function matches(entry, group, query) {
   // A number mentioned in a scope hint or another document's title must not
   // become this document's identity. All designation checks use documentNumber.

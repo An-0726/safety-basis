@@ -4,6 +4,7 @@ from pathlib import Path
 
 from field_profiles import ProfileContext
 from major_criteria import load_config, _chain
+from normative_content import validate_clause_content
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -21,9 +22,18 @@ def validate_namespace(knowledge):
             clause = context.entities['clauses'].get(cid)
             if clause is None or clause.get('lawVersionId') != vid:
                 errors.append('MAJOR_CLAUSE_REFERENCE:' + cid)
+            elif 'contentParts' in clause or selected.get('tableIds'):
+                try:
+                    validate_clause_content(clause, selected.get('tableIds', []))
+                except ValueError as exc:
+                    errors.append(str(exc) + ':' + cid)
             for key, value in _chain(context, 'clauses', cid).items():
                 if value is None and not key.startswith('reviews/'):
                     errors.append('MAJOR_DEPENDENCY_MISSING:' + key)
+        for note in standard.get('applicationNotes', []):
+            evidence = context.entities['evidence'].get(note['evidenceId'])
+            if evidence is None or evidence.get('url') != note['sourceUrl']:
+                errors.append('MAJOR_APPLICATION_NOTE_EVIDENCE:' + note['evidenceId'])
         for selected in standard['topicLinks'] + standard['pendingTopicLinks']:
             kid = selected['linkId']
             link = context.entities['links'].get(kid)

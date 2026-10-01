@@ -15,6 +15,10 @@ import re
 import sys
 import tempfile
 import unittest
+from power_fixture import CLAUSES as POWER_CLAUSES, EVIDENCE as POWER_EVIDENCE, VERSION as POWER_VERSION
+from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VERSION as COAL_VERSION
+from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CONSTRUCTION_EVIDENCE
+from city_gas_fixture import EVIDENCE as GAS_EVIDENCE
 from sector_directory_fixture import EVIDENCE as SECTOR_EVIDENCE
 from unittest.mock import patch
 
@@ -288,13 +292,13 @@ class ThirteenScopeProvenanceTests(unittest.TestCase):
         # Preserve the fourteen-record historical fixture; two later original-
         # PDF records belong to GB12801; the third exact ID is metadata-only AQ3067.
         later_ids = {'E_GB12801_EFFECTIVE_20261001', 'E_GB12801_SCOPE_5_6_2_20261001',
-                     'E_AQ3067_2026_MEM_PDF'} | SECTOR_EVIDENCE
+                     'E_AQ3067_2026_MEM_PDF'} | SECTOR_EVIDENCE | GAS_EVIDENCE | CONSTRUCTION_EVIDENCE | COAL_EVIDENCE | POWER_EVIDENCE
         evidence_ids = {p.stem for p in (KNOW / 'evidence').glob('*.json')}
         self.assertTrue(later_ids <= evidence_ids)
         self.assertEqual(len(evidence_ids - later_ids), 1262)
-        self.assertEqual(manifest['counts']['evidence'], 1265 + len(SECTOR_EVIDENCE))
-        self.assertEqual(manifest['evidence'], 1265 + len(SECTOR_EVIDENCE))
-        self.assertEqual(len(evidence_ids), 1265 + len(SECTOR_EVIDENCE))
+        self.assertEqual(manifest['counts']['evidence'], 1265 + len(SECTOR_EVIDENCE) + len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE))
+        self.assertEqual(manifest['evidence'], 1265 + len(SECTOR_EVIDENCE) + len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE))
+        self.assertEqual(len(evidence_ids), 1265 + len(SECTOR_EVIDENCE) + len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE))
 
 
 class ThirteenScopeGateTests(unittest.TestCase):

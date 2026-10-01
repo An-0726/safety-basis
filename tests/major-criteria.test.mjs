@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateMajorData, parseMajorRoute, majorRouteQuery, selectMajorResults,
+import {validateMajorData, validateDirectoryCatalogLinks, parseMajorRoute, majorRouteQuery, selectMajorResults,
   snapshotNoticeText} from '../web/js/major-criteria-model.js';
 
 const asOf = '2026-10-01';
@@ -166,7 +166,7 @@ const invalidCases = [
   ['未知条文粒度', data => { data.catalog.standards[0].clauses[0].granularity = 'subitem'; }, 'CLAUSE_GRANULARITY'],
   ['缺正文', data => { data.catalog.standards[0].clauses[0].quote = ''; }, 'CLAUSE_CONTENT'],
   ['脚本来源链接', data => { data.catalog.standards[0].clauses[0].sourceUrl = 'javascript:alert(1)'; }, 'CLAUSE_CONTENT'],
-  ['夸大全标准完整度', data => { data.catalog.standards[0].coverage.wholeStandardComplete = true; }, 'STANDARD_COVERAGE'],
+  ['夸大全标准完整度', data => { data.catalog.standards[0].coverage.wholeStandardComplete = true; }, 'COMPLETE_BODY_COVERAGE'],
   ['错误条文数量', data => { data.catalog.standards[0].coverage.reviewedClauseCount = 99; }, 'COVERAGE_COUNTS'],
   ['完整范围的判定项数量矛盾', data => {
     data.catalog.standards[0].coverage.expectedJudgmentItemCount = 4;
@@ -226,4 +226,54 @@ test('审核日期及辖区仍拒绝缺字段、乱类型和无效日期', () =>
     const data=fixture();data.topic.associations[0].jurisdictionCode=value;
     assert.throws(()=>validate(data),/ASSOCIATION_CONTENT/);
   }
+});
+
+function fullBody(data=fixture()) {
+  const s=data.catalog.standards[0];
+  s.officialScope.wholeStandardComplete=true;s.coverage.wholeStandardComplete=true;
+  s.publicationBasis={basis:'copyright_law_article_5_official_administrative_document',legalSourceUrl:'https://www.nsfc.gov.cn/copyright',checked:'2026-10-01T11:37:27+00:00',fullTextPublicationApproved:true};
+  return data;
+}
+test('complete official administrative body requires its separate publication review',()=>{
+  const data=fullBody();assert.equal(validate(data).standards[0].coverage.wholeStandardComplete,true);
+  delete data.catalog.standards[0].publicationBasis;
+  assert.throws(()=>validate(data),/COMPLETE_BODY_REVIEW/);
+});
+for(const [name,change] of [
+  ['future review',p=>p.checked='2026-10-02'],['missing timezone',p=>p.checked='2026-10-01T11:00:00'],
+  ['nonofficial rights source',p=>p.legalSourceUrl='https://example.com/copyright'],
+  ['metadata approval only',p=>p.fullTextPublicationApproved=false],['different legal basis',p=>p.basis='official_website_exists']
+])test(`complete body rejects ${name}`,()=>{const data=fullBody();change(data.catalog.standards[0].publicationBasis);assert.throws(()=>validate(data),/PUBLICATION_BASIS/);});
+test('complete body cannot retain a partial-coverage label',()=>{const data=fullBody();data.catalog.standards[0].coverage.status='partial';assert.throws(()=>validate(data),/COMPLETE_BODY_COVERAGE/);});
+test('directory can link only the exact reviewed normative version without creating clauses or H',()=>{
+  const data=fullBody(),m=validate(data),v=m.standards[0].standardVersion;
+  const entry={lawVersionId:'LV-A',lawId:v.lawId,title:v.name,documentNumber:v.documentNumber,versionKey:v.versionKey,effectiveDate:v.effectiveDate};
+  assert.doesNotThrow(()=>validateDirectoryCatalogLinks(m,{entries:[entry]}));
+  assert.doesNotThrow(()=>validateDirectoryCatalogLinks(m,{entries:[{...entry,title:`${v.name} ${v.documentNumber}`}]}));
+  for(const key of ['lawId','title','documentNumber','versionKey','effectiveDate'])assert.throws(()=>validateDirectoryCatalogLinks(m,{entries:[{...entry,[key]:'wrong'}]}),/DIRECTORY_CATALOG_IDENTITY/);
+  delete m.standards[0].publicationBasis;
+  assert.throws(()=>validateDirectoryCatalogLinks(m,{entries:[entry]}),/DIRECTORY_CATALOG_IDENTITY/);
+});
+
+test('shared scope notes do not make every article match a cited article number or exception',()=>{
+  const data=fixture(),s=data.catalog.standards[0];
+  s.officialScope.label='第九条保留经营者责任前提，第六条例外需核对';
+  s.clauses[0].article='第9条';s.clauses[0].quote='第九条 经营者发现问题后未按规定采取措施';
+  s.clauses[1].article='第6条';s.clauses[1].quote='第六条 除确需穿过且已采取有效防护措施外';
+  const result=selectMajorResults(validate(data),{standard:'LV-A',query:'第九条'});
+  assert.deepEqual(result.standards[0].clauses.map(c=>c.clauseId),['C-A1']);
+  assert.deepEqual(selectMajorResults(validate(data),{standard:'LV-A',query:'有效防护'}).standards[0].clauses.map(c=>c.clauseId),['C-A2']);
+});
+
+test('explicit administrative numbers match current identity and do not inherit a repealed citation',()=>{
+  const data=fixture(),s=data.catalog.standards[0];
+  s.standardVersion.documentNumber='建质规〔2024〕5号';s.standardVersion.versionKey='建质规〔2024〕5号';
+  s.clauses[0].article='第18条';s.clauses[0].quote='第十八条 本标准执行。2022版（建质规〔2022〕2号）同时废止。';
+  const m=validate(data);
+  assert.deepEqual(selectMajorResults(m,{query:'建质规〔2022〕2号'}).standards,[]);
+  assert.equal(selectMajorResults(m,{query:'建质规〔2024〕5号'}).standards[0].clauses.length,2);
+  assert.deepEqual(selectMajorResults(m,{query:'建质规〔2024〕5号 第18条'}).standards[0].clauses.map(c=>c.clauseId),['C-A1']);
+  assert.deepEqual(selectMajorResults(m,{query:'2022版'}).standards[0].clauses.map(c=>c.clauseId),['C-A1']);
+  s.standardVersion.documentNumber='应急管理部令第21号';s.clauses[0].quote='依据应急管理部令第8号。';
+  assert.deepEqual(selectMajorResults(validate(data),{standard:'LV-A',query:'应急管理部令第8号'}).standards,[]);
 });
