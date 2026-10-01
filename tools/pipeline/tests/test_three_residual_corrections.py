@@ -99,8 +99,11 @@ class ThreeResidualProvenanceTests(unittest.TestCase):
         for row in FIXTURE['entities']:
             if '/links/' in row['path']:
                 self.assertIn(row['record']['id'], gate.eligible_links)
-        self.assertEqual(len(gate.eligible_hazards), 1657)
-        self.assertEqual(len(gate.eligible_links), 1791)
+        # Current projection additionally excludes the four independently reviewed
+        # MEM10 wrong-source chains. The new containment suite reconstructs the
+        # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
+        self.assertEqual(len(gate.eligible_hazards), 1653)
+        self.assertEqual(len(gate.eligible_links), 1787)
         self.assertNotIn('H_12158_10_1_2', gate.eligible_hazards)
 
     def test_three_templates_removed_and_short_space_title(self):

@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import sys
 import unittest
+from sector_directory_fixture import LAWS as SECTOR_LAWS, VERSIONS as SECTOR_VERSIONS, EVIDENCE as SECTOR_EVIDENCE
 
 ROOT = Path(__file__).resolve().parents[3]
 KNOW = ROOT / 'knowledge'
@@ -64,6 +65,18 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
                 self.assertEqual([row for row in rows if row[0] == successor],
                                  [(successor, 'active')])
                 rows = [row for row in rows if row[0] != successor]
+            # Exclude only the independently reviewed AQ3067 metadata identities;
+            # they add no clauses, hazards, links or succession decisions.
+            metadata_id = {'laws': 'LF_AQ3067',
+                           'law-versions': 'LV_AQ3067_2026'}.get(kind)
+            if metadata_id:
+                self.assertEqual([row for row in rows if row[0] == metadata_id],
+                                 [(metadata_id, 'active' if kind == 'laws' else None)])
+                rows = [row for row in rows if row[0] != metadata_id]
+            sector_ids = {'laws': SECTOR_LAWS, 'law-versions': SECTOR_VERSIONS}.get(kind, frozenset())
+            self.assertEqual({row for row in rows if row[0] in sector_ids},
+                             {(ident, 'active' if kind == 'laws' else None) for ident in sector_ids})
+            rows = [row for row in rows if row[0] not in sector_ids]
             self.assertEqual(len(rows), expected['count'])
             self.assertEqual(hashlib.sha256(json.dumps(rows, ensure_ascii=False,
                 separators=(',', ':')).encode()).hexdigest(), expected['sha256'])
@@ -286,8 +299,9 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
         scope_successor = json.loads((Path(__file__).parent / 'fixtures' /
                                       'thirteen_scope_corrections_20260930.json').read_text(encoding='utf-8'))
         self.assertEqual(len(scope_successor['evidence']), 14)
-        # Exactly two original-PDF evidence records belong to the later GB12801 slice.
-        expected = FIXTURE['totalEvidenceCount'] + len(scope_successor['evidence']) + 2
+        # Later batches add exactly two GB12801 records and one AQ3067 metadata PDF record.
+        expected = FIXTURE['totalEvidenceCount'] + len(scope_successor['evidence']) + 2 + 1 + len(SECTOR_EVIDENCE)
+        self.assertTrue((KNOW / 'evidence/E_AQ3067_2026_MEM_PDF.json').is_file())
         self.assertEqual(manifest['counts']['evidence'], expected)
         self.assertEqual(manifest['evidence'], expected)
         self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), expected)

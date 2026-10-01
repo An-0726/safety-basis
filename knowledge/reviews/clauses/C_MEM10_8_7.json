@@ -1,11 +1,26 @@
 {
-  "decision": "verified",
+  "decision": "rejected",
   "entityId": "C_MEM10_8_7",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_MEM_ORDER_10"
+    "E_PDDB_L019"
   ],
   "reviewType": "text",
   "reviewedContentHash": "4f907b4a6c0126b9497fdd8182ae399427a239d4c98480213682714ff5427b4f",
-  "checkedAt": "2026-09-19T00:00:00+08:00"
+  "checkedAt": "2026-10-01T16:28:30+08:00",
+  "reviewer": "Codex independent MEM10 exact-field review 20261001",
+  "reason": "撤回原verified逐字文本审核。原quote将第八条引导句、第（七）项及重大隐患结论拼接转述，并加入“轻工行业企业”，不属于官方逐字原文。主题与第（七）项对应，但不能以语义相近替代精确引用。源fragment、articlePath及稳定ID保留；关联已另经独立实质审阅改接既有完整官方第八条C_PDDB_8并限定第（七）项，未把整条改写成单项。",
+  "notes": "本条是转述冒充逐字问题，与两条行业/条号/原文严重错配分别记录。当前拒绝仅涉及原逐字资格；不据此断言相应H实体不存在或无普通安全问题。旧审核及其reviewedContentHash保存在previousReview和现有绑定中。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_MEM10_8_7",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_MEM_ORDER_10"
+    ],
+    "reviewType": "text",
+    "reviewedContentHash": "4f907b4a6c0126b9497fdd8182ae399427a239d4c98480213682714ff5427b4f",
+    "checkedAt": "2026-09-19T00:00:00+08:00"
+  },
+  "previousReviewFileSha256": "ac8ae8510f9eef4d354e99edd0d11681fd0538ed676f3ab36510db01ae4f8234"
 }

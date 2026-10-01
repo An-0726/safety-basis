@@ -33,7 +33,7 @@ class FakeElement {
     this.children = new Map();
     this.cards = [];
     this.filterButtons = [];
-    this.options = [...this._innerHTML.matchAll(/<option value="([^"]*)">([^<]*)<\/option>/g)].map(match=>({value:match[1],textContent:match[2]}));
+    this.options = [...this._innerHTML.matchAll(/<option value="([^"]*)"[^>]*>([^<]*)<\/option>/g)].map(match=>({value:match[1],textContent:match[2]}));
     for(const match of this._innerHTML.matchAll(/data-filter="([^"]+)"/g)){
       const button=new FakeElement('chip');button.dataset.filter=match[1];this.filterButtons.push(button);
     }
@@ -73,7 +73,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     'detail', 'toast', 'search', 'category', 'scene', 'level', 'region', 'mode',
     'lawLevel', 'lawRegion', 'lawStatus', 'count', 'summary', 'list',
     'hazardFilterCount', 'lawFilterCount', 'searchView', 'dataView',
-    'activeFilters', 'searchNotice', 'hazardMoreFilters', 'lawMoreFilters',
+    'activeFilters', 'searchNotice', 'hazardMoreFilters', 'lawMoreFilters', 'majorTopicNotice',
     'clear', 'reset', 'resetLaw', 'hazardFilters', 'lawFilters', 'sectionTitle', 'sectionHint',
   ];
   const elements = new Map(ids.map(id => [id, new FakeElement(id)]));
@@ -118,7 +118,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     .replace(/^import[^\n]*\n/gm, '')
     .replace(/^export /gm, '')
     .replace("if(typeof document!=='undefined') boot();", '');
-  source += '\n globalThis.__testApi={state,renderResults,selectHazard,selectLaw,bind,initFilters,applyUrlFilters};';
+  source += '\n globalThis.__testApi={state,renderResults,selectHazard,selectLaw,bind,initFilters,applyUrlFilters,basisHtml,hazardText,hazardFullText};';
   vm.createContext(context);
   new vm.Script(source, {filename: 'web/app.js'}).runInContext(context);
 
@@ -445,4 +445,72 @@ test('清空仅清查询，全部重置清查询和条件，仍恢复首条与�
   assert.equal(elements.get('category').value,'');assert.equal(elements.get('scene').value,'');
   assert.equal(elements.get('activeFilters').hidden,true);
   assert.equal(api.state.results.length,365);assert.equal(api.state.selectedHazard,api.state.results[0].id);
+});
+
+test('重大隐患查询别名显示解释但保留用户输入，清空后提示消失',async()=>{
+  const {api,elements}=loadResultsApp({rowCount:1});api.initFilters();api.bind();
+  Object.assign(api.state.store.searchIndex[0],{title:'重大事故隐患判定条件',searchText:'重大事故隐患 判定条件'});
+  elements.get('search').value='重大隐患';api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(api.state.results.length,1);
+  assert.equal(elements.get('search').value,'重大隐患');
+  assert.match(elements.get('searchNotice').textContent,/按检索别名.*重大事故隐患.*不代表现场已构成/);
+  assert.equal(elements.get('searchNotice').hidden,false);
+  elements.get('clear').click();await settle();
+  assert.equal(elements.get('searchNotice').hidden,true);
+});
+
+test('旧重大分类URL保留窄结果并提示专题，移除chip及历史恢复不扩大或循环',async()=>{
+  const {api,elements}=loadResultsApp({rowCount:3});
+  const legacy='重大事故隐患判定';
+  api.state.store.taxonomy.displayCategories.push(legacy);
+  Object.assign(api.state.store.searchIndex[0],{category:legacy,displayCategory:legacy});
+  api.initFilters();
+  const options=elements.get('category').innerHTML;
+  assert.match(options,/<option value="重大事故隐患判定" hidden disabled>/);
+  assert.doesNotMatch(options,/<option value="重大事故隐患判定">/);
+  const restore=()=>{api.applyUrlFilters({view:'hazards',filters:{category:legacy}});api.renderResults({mode:'initial'});};
+  restore();await settle();
+  assert.equal(api.state.results.length,1);assert.equal(elements.get('majorTopicNotice').hidden,false);
+  elements.get('activeFilters').filterButtons.find(button=>button.dataset.filter==='category').click();await settle();
+  assert.equal(elements.get('category').value,'');assert.equal(api.state.results.length,3);
+  assert.equal(elements.get('majorTopicNotice').hidden,true);
+  restore();await settle();
+  assert.equal(api.state.results.length,1);assert.equal(elements.get('category').value,legacy);
+  assert.equal(elements.get('majorTopicNotice').hidden,false);
+  api.applyUrlFilters({view:'hazards',filters:{category:'电气安全'}});api.renderResults({mode:'initial'});await settle();
+  assert.equal(api.state.results.length,2);assert.equal(elements.get('majorTopicNotice').hidden,true);
+});
+
+test('旧分类提示与主导航都提供明确专题入口，不把专业记录批量改类',()=>{
+  const html=fs.readFileSync(new URL('../web/index.html',import.meta.url),'utf8');
+  assert.match(html,/id="majorTopicNotice"[^>]+hidden/);
+  assert.match(html,/此筛选仅保留旧分类中的记录/);
+  assert.ok((html.match(/href="major-criteria\.html"/g)||[]).length>=2);
+});
+
+test('每条K的依据适用范围独立显示并随两种复制输出保留，不从H宽条件推断',()=>{
+  const {api}=loadResultsApp({rowCount:1});
+  const h={title:'锂电池测试隐患',description:'测试描述',conditions:'仓库通用宽条件',measures:'测试整改',note:'',status:'已核验',checked:'2026-10-01'};
+  const common={clause:{article:'第八条',quote:'第一项……第七项……',checked:'2026-10-01'},law:{id:'L019',name:'测试判定标准',level:'部门规章',scope:'全国',status:'现行有效'},sourceUrl:'https://example.org/standard'};
+  const narrow={...common,ref:{role:'direct',linkId:'K_NARROW',applicability:'仅限轻工企业第八条第（七）项，不含其余列项'}};
+  const other={...common,ref:{role:'direct',linkId:'K_OTHER',applicability:'另一K独立限制 <不得扩大>'}};
+  const html=api.basisHtml(narrow),otherHtml=api.basisHtml(other);
+  assert.match(html,/本条依据适用范围.*仅限轻工企业第八条第（七）项/);
+  assert.doesNotMatch(html,/仓库通用宽条件|另一K独立限制/);
+  assert.match(otherHtml,/另一K独立限制 &lt;不得扩大&gt;/);
+  for(const text of [api.hazardText(h,[narrow,other]),api.hazardFullText(h,[narrow,other])]){
+    assert.equal((text.match(/本条依据适用范围：/g)||[]).length,2);
+    assert.match(text,/仅限轻工企业第八条第（七）项/);assert.match(text,/另一K独立限制/);
+  }
+  assert.doesNotMatch(api.basisHtml({...common,ref:{role:'direct'}}),/本条依据适用范围/);
+});
+
+
+test('逐K复制保留范围首尾空白和换行，不因展示判空改变原值',()=>{
+  const {api}=loadResultsApp({rowCount:1});
+  const scope='  仅限轻工企业\n第八条第（七）项  ';
+  const h={title:'测试',description:'描述',measures:'整改',conditions:'',note:'',status:'已核验',checked:'2026-10-01'};
+  const basis={ref:{role:'direct',linkId:'K_SCOPE',applicability:scope},clause:{article:'第八条',quote:'正文',checked:'2026-10-01'},law:{id:'L019',name:'测试标准',level:'部门规章',scope:'全国',status:'现行有效'},sourceUrl:'https://example.org/standard'};
+  for(const value of [api.hazardText(h,[basis]),api.hazardFullText(h,[basis])])assert.ok(value.includes('本条依据适用范围：'+scope+'\n正文'));
+  assert.ok(api.basisHtml(basis).includes(scope));
 });

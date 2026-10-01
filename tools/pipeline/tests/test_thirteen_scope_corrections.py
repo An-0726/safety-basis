@@ -15,6 +15,7 @@ import re
 import sys
 import tempfile
 import unittest
+from sector_directory_fixture import EVIDENCE as SECTOR_EVIDENCE
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -285,14 +286,15 @@ class ThirteenScopeProvenanceTests(unittest.TestCase):
                          {e['id'] for e in FIXTURE['evidence'] if e['newInThisBatch']})
         manifest = read('knowledge/manifest.json')
         # Preserve the fourteen-record historical fixture; two later original-
-        # PDF evidence records belong only to the reviewed GB12801 transition.
-        later_ids = {'E_GB12801_EFFECTIVE_20261001', 'E_GB12801_SCOPE_5_6_2_20261001'}
+        # PDF records belong to GB12801; the third exact ID is metadata-only AQ3067.
+        later_ids = {'E_GB12801_EFFECTIVE_20261001', 'E_GB12801_SCOPE_5_6_2_20261001',
+                     'E_AQ3067_2026_MEM_PDF'} | SECTOR_EVIDENCE
         evidence_ids = {p.stem for p in (KNOW / 'evidence').glob('*.json')}
         self.assertTrue(later_ids <= evidence_ids)
         self.assertEqual(len(evidence_ids - later_ids), 1262)
-        self.assertEqual(manifest['counts']['evidence'], 1264)
-        self.assertEqual(manifest['evidence'], 1264)
-        self.assertEqual(len(evidence_ids), 1264)
+        self.assertEqual(manifest['counts']['evidence'], 1265 + len(SECTOR_EVIDENCE))
+        self.assertEqual(manifest['evidence'], 1265 + len(SECTOR_EVIDENCE))
+        self.assertEqual(len(evidence_ids), 1265 + len(SECTOR_EVIDENCE))
 
 
 class ThirteenScopeGateTests(unittest.TestCase):
@@ -318,8 +320,11 @@ class ThirteenScopeGateTests(unittest.TestCase):
         self.assertTrue(TARGETS <= gate.eligible_hazards)
         self.assertTrue({r['linkId'] for r in FIXTURE['sourceFamilies'].values()} <= gate.eligible_links)
         self.assertNotIn('H_12158_10_1_2', gate.eligible_hazards)
-        self.assertEqual(len(gate.eligible_hazards), 1657)
-        self.assertEqual(len(gate.eligible_links), 1791)
+        # Current projection additionally excludes the four independently reviewed
+        # MEM10 wrong-source chains. The new containment suite reconstructs the
+        # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
+        self.assertEqual(len(gate.eligible_hazards), 1653)
+        self.assertEqual(len(gate.eligible_links), 1787)
 
     def test_changed_sources_cannot_reuse_any_old_content_or_context_review(self):
         root = self.snapshot()

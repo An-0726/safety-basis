@@ -39,6 +39,12 @@ from presentation import (  # noqa: E402
 )
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 from field_profiles import public_projection  # noqa: E402
+from basis_refs import basis_sort_key, project_basis_reference  # noqa: E402
+from major_criteria import public_projection as major_criteria_projection  # noqa: E402
+from major_criteria_references import (public_projection as reference_projection,
+                                       project_publication, REFERENCE_FILE)  # noqa: E402
+from major_criteria_directory import (public_projection as directory_projection,
+                                     project_publication as project_directory_publication, DIRECTORY_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -52,7 +58,10 @@ MODEL = "deterministic local build"
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
                "js/search-vocabulary.js",
-               "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
+               "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
+               "major-criteria.html", "major-criteria.css",
+               "js/major-criteria.js", "js/major-criteria-model.js",
+               "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js")
 
 REGION = {"CN": "全国", "CN-32": "江苏", "CN-3201": "南京"}
 STATUS_LABEL = {"active": "现行有效", "upcoming": "即将生效", "repealed": "已废止", "unknown": "待核验"}
@@ -156,6 +165,9 @@ def build(args, knowledge, source_hash, as_of_date):
     # Publish only the governed allowlist. Private coverage/review inventory is
     # deliberately neither written to the bundle nor advertised as completion.
     field_profiles = public_projection(KNOW, as_of=as_of_date)['public']
+    major_criteria = major_criteria_projection(KNOW, as_of=as_of_date)
+    references = reference_projection(KNOW, PUBLICATION, as_of=as_of_date)
+    directory = directory_projection(KNOW, PUBLICATION, as_of=as_of_date)
     hazards = load_dir(KNOW, "hazards")
     hazard_conditions = {
         hid: normalized_conditions(hid, hazard)
@@ -199,7 +211,6 @@ def build(args, knowledge, source_hash, as_of_date):
     used_clauses, seen_clause = [], set()
     basis_of = {hid: [] for hid in pub}
     shipped_links = set()
-    order = {"direct": 0, "fallback": 1, "supporting": 2}
     for hid in pub:
         refs = []
         for kid in hazard_links.get(hid, []):
@@ -208,12 +219,12 @@ def build(args, knowledge, source_hash, as_of_date):
             cid = links[kid].get("clauseId")
             if not cid or cid not in clauses:
                 continue
-            refs.append((cid, links[kid].get("role", "direct")))
+            refs.append((cid, links[kid].get("role", "direct"), kid))
             shipped_links.add(kid)
             if cid not in seen_clause:
                 seen_clause.add(cid)
                 used_clauses.append(cid)
-        refs.sort(key=lambda x: (order.get(x[1], 9), x[0], x[1]))
+        refs.sort(key=lambda x: basis_sort_key(links[x[2]]))
         basis_of[hid] = refs
 
     # Canonical ID order also fixes clause shard boundaries across checkouts.
@@ -286,8 +297,8 @@ def build(args, knowledge, source_hash, as_of_date):
         payload = rd(p)
         for rec in payload["records"]:
             rec["basisRefs"] = [
-                {"clauseId": cid, "clauseShard": c_shard_of.get(cid, ""), "role": role}
-                for cid, role in basis_of[rec["id"]]
+                project_basis_reference(links[kid], c_shard_of[cid])
+                for cid, _role, kid in basis_of[rec["id"]]
             ]
         wr(p, payload)
 
@@ -385,7 +396,7 @@ def build(args, knowledge, source_hash, as_of_date):
     for hid in pub:
         h = hazards[hid]
         lns, stds, scopes, lvls, display_lvls = set(), set(), set(), set(), set()
-        for cid, _role in basis_of[hid]:
+        for cid, _role, _kid in basis_of[hid]:
             c = clauses[cid]
             lv = lvs.get(c.get("lawVersionId")) or {}
             law = laws.get(lv.get("lawId")) or {}
@@ -463,6 +474,14 @@ def build(args, knowledge, source_hash, as_of_date):
         "clauses": len(used_clauses),
         "links": len(shipped_links),
         "fieldProfiles": len(field_profiles['records']),
+        "majorCriteriaStandards": len(major_criteria['catalog']['standards']),
+        "majorCriteriaClauses": sum(len(s['clauses']) for s in major_criteria['catalog']['standards']),
+        "majorCriteriaHazards": len(major_criteria['topic']['hazardIds']),
+        "majorCriteriaAssociations": len(major_criteria['topic']['associations']),
+        "majorCriteriaDirectoryGroups": directory['public']['directoryGroupCount'],
+        "majorCriteriaDirectoryDocuments": directory['public']['documentCount'],
+        "majorCriteriaReferenceStandards": len(references['public']['referenceEntries']),
+        "majorCriteriaSearchTopics": sum(e['searchTopicCount'] for e in references['public']['referenceEntries']),
     }
     manifest = {
         "schemaVersion": 2,
@@ -492,6 +511,10 @@ def build(args, knowledge, source_hash, as_of_date):
             "lawIndex": "data/law-index.json",
             "taxonomy": "data/taxonomy.json",
             "fieldProfiles": "data/field-profiles.json",
+            "majorCriteriaCatalog": "data/major-criteria-catalog.json",
+            "majorCriteriaTopic": "data/major-criteria-topic.json",
+            "majorCriteriaReferences": REFERENCE_FILE,
+            "majorCriteriaDirectory": DIRECTORY_FILE,
         },
         "hazardShards": hazard_shards,
         "clauseShards": clause_shards,
@@ -503,6 +526,10 @@ def build(args, knowledge, source_hash, as_of_date):
     wr(os.path.join(data, "law-index.json"), law_index, indent=2)
     wr(os.path.join(data, "taxonomy.json"), taxonomy)
     wr(os.path.join(data, "field-profiles.json"), field_profiles)
+    wr(os.path.join(data, "major-criteria-catalog.json"), major_criteria['catalog'])
+    wr(os.path.join(data, "major-criteria-topic.json"), major_criteria['topic'])
+    wr(os.path.join(out, REFERENCE_FILE), references['public'])
+    wr(os.path.join(out, DIRECTORY_FILE), directory['public'])
 
     # ---- 前端资产与公开全文资料 ----
     for asset in SITE_ASSETS:
@@ -512,6 +539,14 @@ def build(args, knowledge, source_hash, as_of_date):
         shutil.copyfile(src, dst)
     shutil.copytree(os.path.join(PUBLICATION, "fulltext"), os.path.join(data, "fulltext"))
 
+    # Controlled reference entries use their true metadata/topic review date.
+    # Do not copy an unapproved reference into the legacy library through a side door.
+    for name in ("catalog.json", "search-index.json"):
+        path = os.path.join(data, "fulltext", name)
+        original = rd(path)
+        projected = project_directory_publication(project_publication(original, references), directory)
+        if projected != original:
+            wr(path, projected, indent=2)
     catalog = rd(os.path.join(data, "fulltext", "catalog.json"))
     docs = catalog["documents"]
     full_text = [d for d in docs if d["textMode"] == "full_text"]
@@ -598,6 +633,9 @@ def build(args, knowledge, source_hash, as_of_date):
             "lawCatalogSource": "knowledge/law-versions referenced by eligible links; source/publication enriches source metadata only",
             "fulltextSource": "source/publication/fulltext/",
             "frontendSource": "web/",
+            "majorCriteriaDirectorySource": "exact reviewed metadata-only directory; dated currentness and required companion groups; never normative eligibility",
+            "majorCriteriaReferenceSource": "controlled reviewed metadata and short search topics only; no normative text, clauses, H/K or field determination",
+            "majorCriteriaSource": "controlled exact reviewed C/LV catalog and direct H/K/C/LV topic; independent of professional categories; not actual findings",
             "fieldProfileSource": "governed v1 semantic-review and dated-gate public projection; reviewed routing and conditional templates, never actual findings",
         },
         "counts": counts,
@@ -614,7 +652,7 @@ def build(args, knowledge, source_hash, as_of_date):
 
     formal_ids = {e["id"] for e in law_index}
     public_hazards = {hid: hazards[hid] for hid in pub}
-    public_roles = [role for refs in basis_of.values() for _cid, role in refs]
+    public_roles = [role for refs in basis_of.values() for _cid, role, _kid in refs]
     presentation = presentation_review(
         public_hazards,
         level_records,

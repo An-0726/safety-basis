@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "major-criteria-local-acceptance/v1",
+  "asOf": "2026-10-01",
+  "baseCommit": "a22f0f55c1cecf12dfd10325d7b4fda0f1d8973c",
+  "localOnly": true,
+  "remoteUpload": false,
+  "deployment": false,
+  "existingLegalEntitiesOrReviewsChanged": false,
+  "controlledScope": {
+    "standardCount": 2,
+    "canonicalWholeClauses": 22,
+    "subitemClauseRecords": 0,
+    "l019EnumeratedItems": 64,
+    "gb45067LetteredItems": 47,
+    "gb45067CrossReferenceCaution": "4.1d is a cross-reference, not an additional independent leaf finding",
+    "allIndustryCoverage": false,
+    "wholeStandardComplete": false,
+    "directHazards": 20,
+    "pendingAssociations": 4
+  },
+  "validation": {
+    "nodeTests": 86,
+    "nodePassed": 86,
+    "pythonTests": 356,
+    "pythonPassed": 356,
+    "newMajorCriteriaTests": 19,
+    "validateAll": "PASS",
+    "publicationIntegrity": "PASS",
+    "schemasBothDates": "PASS",
+    "diffCheck": "PASS",
+    "dualDate": {
+      "20260930": {
+        "releaseHash": "9347be2013f3dafd705579ce5abf2a2abcc900ac20bbaf3dd795f08a860bd546",
+        "counts": {
+          "hazards": 1657,
+          "laws": 67,
+          "lawVersions": 67,
+          "clauses": 1340,
+          "links": 1791,
+          "fieldProfiles": 6,
+          "majorCriteriaStandards": 2,
+          "majorCriteriaClauses": 22,
+          "majorCriteriaHazards": 20,
+          "majorCriteriaAssociations": 20
+        },
+        "verifyOk": true,
+        "verifyErrors": [],
+        "strictVerdict": "PASS",
+        "strictBlockers": 0,
+        "legacyPublicDataFilesByteCompared": 289,
+        "legacyPublicDataChanged": 0
+      },
+      "20261001": {
+        "releaseHash": "4eee025795c34eadf92805456fbee8d122edb433bb563946811639d6b4b82ddf",
+        "counts": {
+          "hazards": 1657,
+          "laws": 67,
+          "lawVersions": 67,
+          "clauses": 1340,
+          "links": 1791,
+          "fieldProfiles": 6,
+          "majorCriteriaStandards": 2,
+          "majorCriteriaClauses": 22,
+          "majorCriteriaHazards": 20,
+          "majorCriteriaAssociations": 20
+        },
+        "verifyOk": true,
+        "verifyErrors": [],
+        "strictVerdict": "PASS",
+        "strictBlockers": 0,
+        "legacyPublicDataFilesByteCompared": 289,
+        "legacyPublicDataChanged": 0
+      }
+    }
+  },
+  "sourceEvidence": {
+    "l019OfficialText": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202305/t20230523_451578.shtml",
+    "l019OfficialCount": "https://www.mem.gov.cn/xw/ztzl/2023zt/zzpc2023/dybs_5536/202305/t20230524_451669.shtml",
+    "gb45067Identity": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53",
+    "gb45067OfficialOriginalPublisherPage": "https://www.shidian.gov.cn/info/4492/3706283.htm",
+    "gb45067OriginalPages": 11,
+    "gb45067ExtractedTextSha256": "df2f4de28e710e66e8ff1566ae7e62f0ec07cbc33b3cc5e1e4e57dc1fe58ef16",
+    "gb45067HashKind": "extracted text; not a PDF byte hash",
+    "gb45067ClausesCompared": 10,
+    "gb45067Normalization": [
+      "whitespace and page headers/numbers",
+      "comma/parenthesis fullwidth forms",
+      "range wave character"
+    ]
+  },
+  "releaseCautions": [
+    "Backend-only local work, not deployment approval. Existing legacy wrong C_MEM10_13 and C_MEM10_4_2 links must be contained separately before deployment; only the new topic excludes them here.",
+    "A separately approved migration of K_XLSX_WEB_H_B3F07B77A1834B489F43F05A0D to C_PDDB_8 invalidates its old topic pin. Update only that explicit selector against the independently reviewed new chain and preserve the light-industry / article 8 item 7 applicability.",
+    "No raw private originals, extraction files, audit inventory, generated bundles or review signatures are included."
+  ],
+  "files": {
+    "README.md": "1f3b812d73daca3d85c754b706d97f6a5ba38dad07db7d8b832d94ed6429edca",
+    "docs/MAJOR_CRITERIA_CONTRACT.md": "9d9a9864ccb091a6926efc54126ae815c4eb67a190977749aaa8816520de2d9b",
+    "knowledge/major-criteria/v1/catalog.json": "c5dd7df72635f558753436d8c7a6dec8e37d86ddf10af4e5e63aa29770b7d8d8",
+    "tools/v4/major_criteria.py": "22530a86bfbf4b4c073641a6290c1f6504aa84a2abf833327c06fb30889e79b3",
+    "tools/v4/check_major_criteria.py": "d88525f5e3b36061a9ef182561f6c93023d60edd445f9e41ee2d1f87d9509d45",
+    "tools/v4/build_unified_release.py": "4156e0ab81ba3d8f9d95bcc437456c83480bd79b5fdb9904fbd171a2dcb7fc51",
+    "tools/v4/verify_unified_bundle.py": "2d54da8c6c19d1620006430dbdfa7fdd4998ba06823cfe1529672b1f36d5849c",
+    "tools/v4/release_snapshot.py": "fd22e2ff453a1ecefb0da94654a5d06c44b8c91e7a8f3a8d1f9facfafe1ce267",
+    "tools/v4/validate_all.py": "7b523e660c812b25c864c6aedfd64b9cc39e541c165996944546bfeeb51ff120",
+    "tools/pipeline/tests/test_major_criteria.py": "c2b243d28be42b3c3bb380fd265bd159ba9947dc3be0877d03a84deb6d4a5ead",
+    "tools/v4/schemas/major-criteria-catalog.schema.json": "463385a1acbb2fe222f4804fc82039abb1641bada06ddb4578c460e2b4da09d4",
+    "tools/v4/schemas/major-criteria-topic.schema.json": "ef5141e76b66dfb2de5ee6314006ee263fe6f2667691e21104346119893b236e"
+  }
+}
