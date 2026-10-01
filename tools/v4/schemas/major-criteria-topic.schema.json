@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "major-criteria-topic v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "asOf",
+    "wholeNormNotFieldFinding",
+    "associations",
+    "hazardIds",
+    "coverage"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "wholeNormNotFieldFinding": {
+      "const": true
+    },
+    "associations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "hazardId",
+          "linkId",
+          "clauseId",
+          "lawVersionId",
+          "role",
+          "applicability",
+          "jurisdictionCode"
+        ],
+        "properties": {
+          "hazardId": {
+            "type": "string"
+          },
+          "linkId": {
+            "type": "string"
+          },
+          "clauseId": {
+            "type": "string"
+          },
+          "lawVersionId": {
+            "type": "string"
+          },
+          "role": {
+            "const": "direct"
+          },
+          "applicability": {
+            "type": "string"
+          },
+          "jurisdictionCode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "hazardIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "excludedAssociationCount",
+        "excludedHazardCount",
+        "exclusionReason"
+      ],
+      "properties": {
+        "excludedAssociationCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "excludedHazardCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "exclusionReason": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

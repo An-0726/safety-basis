@@ -2,7 +2,8 @@
 """统一正式发布包严格校验器。
 
 公开包只允许包含当前日期链式 Gate 通过的正式隐患、其实际引用条款和对应的
-knowledge 法规版本。候选仍可存在于 knowledge，但不得进入正式包。
+knowledge 法规版本。独立受控重大判定目录可另含已核且当前有效、无H/K关联的条款。
+候选仍可存在于 knowledge，但不得进入正式包。
 ``source/publication`` 的全文/题录资料可包含未被当前隐患引用的版本；它们属于
 “法规全文/资料库”，不因此成为正式法规卡。
 """
@@ -26,6 +27,13 @@ from presentation import (  # noqa: E402
 )
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 from field_profiles import public_projection  # noqa: E402
+from basis_refs import basis_sort_key, project_basis_reference  # noqa: E402
+from major_criteria import (public_projection as major_criteria_projection,
+                            CATALOG_FILE, TOPIC_FILE)  # noqa: E402
+from major_criteria_references import (public_projection as reference_projection,
+                                       project_publication, REFERENCE_FILE)  # noqa: E402
+from major_criteria_directory import (public_projection as directory_projection,
+                                     project_publication as project_directory_publication, DIRECTORY_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -36,7 +44,10 @@ SELECTION = os.path.join(ROOT, "source", "releases", "site-selection.json")
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
                "js/search-vocabulary.js",
-               "js/library.js", "js/fulltext-search.js", "js/verified-files.js")
+               "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
+               "major-criteria.html", "major-criteria.css",
+               "js/major-criteria.js", "js/major-criteria-model.js",
+               "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js")
 COVER_EXCLUDE = {"checksums.json", "release.json", "site-manifest.json", "data/manifest.json"}
 FIELD_PROFILE_FILE = 'data/field-profiles.json'
 PRIVATE_PROFILE_KEYS = {'inventory', 'hazardsWithoutProfiles', 'excludedProfiles',
@@ -166,7 +177,10 @@ def check_field_profiles(bad, payload, expected, manifest, release, hazards, cla
                       basis['lawVersionId'] in law_ids,
                       'field profile 法规条款引用断链：' + ident + '/' + basis['linkId'])
             bad.check(any(ref.get('clauseId') == basis['clauseId'] and
-                          ref.get('role') == basis['role'] for ref in hazard.get('basisRefs', [])),
+                          ref.get('role') == basis['role'] and ref.get('linkId') == basis['linkId'] and
+                          ref.get('applicability') == basis['applicability'] and
+                          ref.get('jurisdictionCode') == basis['jurisdictionCode']
+                          for ref in hazard.get('basisRefs', [])),
                       'field profile 依据不在源隐患公开依据中：' + ident + '/' + basis['linkId'])
 
 
@@ -222,7 +236,9 @@ def verify(args, KNOW, source_hash):
     manifest = rd(os.path.join(bundle, "data", "manifest.json"))
     site_manifest = rd(os.path.join(bundle, "site-manifest.json"))
     public_files = {'searchIndex': 'data/search-index.json', 'lawIndex': 'data/law-index.json',
-                    'taxonomy': 'data/taxonomy.json', 'fieldProfiles': FIELD_PROFILE_FILE}
+                    'taxonomy': 'data/taxonomy.json', 'fieldProfiles': FIELD_PROFILE_FILE,
+                    'majorCriteriaCatalog': CATALOG_FILE, 'majorCriteriaTopic': TOPIC_FILE,
+                    'majorCriteriaReferences': REFERENCE_FILE, 'majorCriteriaDirectory': DIRECTORY_FILE}
     bad.check(manifest.get('files') == public_files, 'manifest files 必须恰好为公开消费入口')
     allowed = ({'checksums.json', 'release.json', 'site-manifest.json', 'data/manifest.json'} |
                set(SITE_ASSETS) | set(public_files.values()) |
@@ -264,6 +280,7 @@ def verify(args, KNOW, source_hash):
 
     # ---- 分片与索引 ----
     hazards, clauses = {}, {}
+    clause_shard_by_id = {}
     for key, target in (("hazardShards", hazards), ("clauseShards", clauses)):
         for shard in manifest[key]:
             payload = rd(os.path.join(bundle, shard["url"]))
@@ -271,6 +288,8 @@ def verify(args, KNOW, source_hash):
                 if not bad.check(row["id"] not in target, "分片记录重复：" + row["id"]):
                     continue
                 target[row["id"]] = row
+                if key == "clauseShards":
+                    clause_shard_by_id[row["id"]] = shard["id"]
 
     for row in hazards.values():
         bad.check(row.get("status") == "已核验", "正式包出现非已核验隐患：" + row["id"])
@@ -343,6 +362,31 @@ def verify(args, KNOW, source_hash):
     if bad.check(FIELD_PROFILE_FILE in files, '缺少 governed field profiles 公开文件'):
         check_field_profiles(bad, rd(files[FIELD_PROFILE_FILE]), expected_profiles,
                              manifest, release, hazards, clauses, law_ids)
+    expected_directory = directory_projection(KNOW, PUBLICATION, as_of=as_of)
+    if bad.check(DIRECTORY_FILE in files, '缺少官方文件题录目录'):
+        bad.check(rd(files[DIRECTORY_FILE]) == expected_directory['public'], '官方文件题录目录精确投影不一致')
+    expected_references = reference_projection(KNOW, PUBLICATION, as_of=as_of)
+    if bad.check(REFERENCE_FILE in files, '缺少重大判定官方查阅入口文件'):
+        bad.check(rd(files[REFERENCE_FILE]) == expected_references['public'],
+                  '官方查阅入口精确投影不一致；不得添加正文或判定结论')
+    expected_major = major_criteria_projection(KNOW, as_of=as_of)
+    for key, path in [('catalog', CATALOG_FILE), ('topic', TOPIC_FILE)]:
+        if bad.check(path in files, '缺少重大判定公开文件：' + path):
+            bad.check(rd(files[path]) == expected_major[key], '重大判定精确公开投影不一致：' + key)
+    major_standards = expected_major['catalog']['standards']
+    for key, value in {
+            'majorCriteriaStandards': len(major_standards),
+            'majorCriteriaClauses': sum(len(s['clauses']) for s in major_standards),
+            'majorCriteriaHazards': len(expected_major['topic']['hazardIds']),
+            'majorCriteriaAssociations': len(expected_major['topic']['associations']),
+            'majorCriteriaDirectoryGroups': expected_directory['public']['directoryGroupCount'],
+            'majorCriteriaDirectoryDocuments': expected_directory['public']['documentCount'],
+            'majorCriteriaReferenceStandards': len(expected_references['public']['referenceEntries']),
+            'majorCriteriaSearchTopics': sum(e['searchTopicCount'] for e in expected_references['public']['referenceEntries'])}.items():
+        bad.check(counts.get(key) == value, '重大判定计数不一致：' + key)
+    for association in expected_major['topic']['associations']:
+        bad.check(association['hazardId'] in hazards and association['clauseId'] in clauses and
+                  association['lawVersionId'] in law_ids, '重大判定关联公开链断裂：' + association['linkId'])
     bad.check(release.get('counts') == counts, 'release/manifest counts 不一致')
 
     bad.check(set(hazards) == gate.eligible_hazards,
@@ -350,12 +394,14 @@ def verify(args, KNOW, source_hash):
               (len(hazards), len(gate.eligible_hazards)))
 
     verified_by_hazard = {}
+    verified_links_by_hazard = {}
     shipped_link_count = 0
     for kid in gate.eligible_links:
         link = know_links[kid]
         hid, cid = link.get("hazardId"), link.get("clauseId")
         if hid in gate.eligible_hazards and cid in know_clauses:
             verified_by_hazard.setdefault(hid, set()).add((cid, link.get("role", "direct")))
+            verified_links_by_hazard.setdefault(hid, []).append(link)
             shipped_link_count += 1
 
     for hid, row in hazards.items():
@@ -398,6 +444,10 @@ def verify(args, KNOW, source_hash):
         for field in ("places", "aliases", "keywords"):
             bad.check((row.get(field) or []) == (src.get(field) or []),
                       "隐患标签被改动：%s/%s" % (hid, field))
+        expected_basis_refs = [project_basis_reference(link, clause_shard_by_id.get(link['clauseId'], 'missing'))
+                               for link in sorted(verified_links_by_hazard.get(hid, []), key=basis_sort_key)]
+        bad.check(row.get('basisRefs') == expected_basis_refs,
+                  '隐患逐K依据身份或适用范围与精确源投影不一致：' + hid)
         shipped = {(r["clauseId"], r["role"]) for r in row["basisRefs"]}
         bad.check(shipped == verified_by_hazard.get(hid, set()),
                   "隐患依据集合与 Gate 关联不一致：" + hid)
@@ -438,8 +488,12 @@ def verify(args, KNOW, source_hash):
     # ---- 全文/题录资料边界 ----
     catalog = rd(os.path.join(bundle, "data", "fulltext", "catalog.json"))
     publication_catalog = rd(os.path.join(PUBLICATION, "fulltext", "catalog.json"))
-    bad.check(catalog == publication_catalog,
-              "公开全文/题录资料必须与 source/publication/fulltext/catalog.json 完全一致")
+    bad.check(catalog == project_directory_publication(project_publication(publication_catalog, expected_references), expected_directory),
+              "公开全文/题录资料必须与受控日期投影一致")
+    search_source = rd(os.path.join(PUBLICATION, "fulltext", "search-index.json"))
+    bad.check(rd(os.path.join(bundle, "data/fulltext/search-index.json")) ==
+              project_directory_publication(project_publication(search_source, expected_references), expected_directory),
+              "全文检索题录必须与受控日期投影一致")
     docs = catalog["documents"]
     full_text = {d["versionId"] for d in docs if d["textMode"] == "full_text"}
     d47236 = [d for d in docs if d.get("versionId") == "LV_STD_GBT47236_2026"]

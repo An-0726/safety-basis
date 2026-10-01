@@ -6,6 +6,35 @@ export const normalize = value => String(value ?? '').normalize('NFKC').toLowerC
   .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g,' ')
   .replace(/\s+/g,' ').trim();
 
+// Parse only recognized GB designations, never compact all prose or match a
+// standard number as an arbitrary numeric substring. Keep family and year.
+const STANDARD_NUMBER = /\bgb(?:\s*\/\s*([tz])|\s*(t))?[\s_-]*(\d+(?:\.\d+)?)(?:\s*[-_/—–]\s*(\d+)|\s+(\d+))?(?![a-z0-9.])/gi;
+const extractStandardNumbers = value => {
+  const standards=[];
+  const remainder=String(value??'').normalize('NFKC').replace(STANDARD_NUMBER,(_match,kind,compactT,number,year,spacedYear)=>{
+    standards.push({family:`gb${kind||compactT?`/${(kind||compactT).toLowerCase()}`:''}`,number,year:year||spacedYear||''});
+    return ' ';
+  });
+  return {standards,remainder};
+};
+const prepareQuery = query => {
+  const original=String(query??'').normalize('NFKC');
+  const aliasExpanded=original.includes('重大隐患');
+  // This expands a search phrase only. It grants no classification, source
+  // coverage, or conclusion that a real site has a major accident hazard.
+  const expanded=original.replaceAll('重大隐患','重大事故隐患');
+  return {...extractStandardNumbers(expanded),expanded,queryNotice:aliasExpanded
+    ? '已将“重大隐患”按检索别名“重大事故隐患”展开。检索结果不代表现场已构成重大事故隐患，仍须核实判定条件和现场事实。'
+    : ''};
+};
+const standardsMatch = (row, wanted, kind) => {
+  if(!wanted.length)return true;
+  // Match dedicated identities only. A title mentioning another standard is
+  // not evidence that this row is that standard or has its current basis.
+  const values=kind==='hazards'?(row.stdNumbers||[]):[row.documentNumber||''];
+  const available=values.flatMap(value=>extractStandardNumbers(value).standards);
+  return wanted.every(q=>available.some(s=>s.family===q.family&&s.number===q.number&&(!q.year||s.year===q.year)));
+};
 
 
 const displayCategoryOf = row => row.displayCategory ?? row.category ?? '';
@@ -38,7 +67,9 @@ const groupMap = groups => {
   }
   return map;
 };
-const EQUIVALENTS = groupMap(EQUIVALENT_GROUPS);
+// Keep literal abbreviation hits as well as the expanded formal phrase.
+// This vocabulary is for retrieval only, never the major-hazard topic catalog.
+const EQUIVALENTS = groupMap([...EQUIVALENT_GROUPS,['重大事故隐患','重大隐患']]);
 const RELATED = groupMap(RELATED_GROUPS);
 const VOCAB_SET = new Set([...EQUIVALENTS.keys(), ...RELATED.keys(), ...SEGMENT_TERMS.map(normalize)]);
 const SORTED_VOCAB = Array.from(VOCAB_SET).sort((a, b) => b.length - a.length);
@@ -147,9 +178,10 @@ const hazardScore=(r,q,terms)=>{
 };
 
 export function searchHazardsDetailed(rows, query, filters={}) {
-  const q=normalize(query), terms=termsOf(query);
+  const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
   const out=[];
   for(const r of rows){
+    if(!standardsMatch(r,prepared.standards,'hazards')) continue;
     if(r.status==='已失效' && filters.status!=='已失效') continue;
     if(filters.category && displayCategoryOf(r)!==filters.category) continue;
     if(filters.displayCategory && displayCategoryOf(r)!==filters.displayCategory) continue;
@@ -167,7 +199,7 @@ export function searchHazardsDetailed(rows, query, filters={}) {
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map(row=>({row,score:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
-  return {rows:scored.map(x=>x.row),matchKind:matched.matchKind,interpretedQuery:matched.terms.join(' ')};
+  return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:prepared.queryNotice};
 }
 
 const lawScore=(r,q,terms)=>{
@@ -189,9 +221,10 @@ const lawScore=(r,q,terms)=>{
 };
 
 export function searchLawsDetailed(rows, query, filters={}) {
-  const q=normalize(query), terms=termsOf(query);
+  const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
   const out=[];
   for(const r of rows){
+    if(!standardsMatch(r,prepared.standards,'laws')) continue;
     if(r.status==='已废止' && filters.status!=='已废止') continue;
     if(filters.level && (r.displayLevel??r.level)!==filters.level) continue;
     if(filters.displayLevel && (r.displayLevel??r.level)!==filters.displayLevel) continue;
@@ -203,7 +236,7 @@ export function searchLawsDetailed(rows, query, filters={}) {
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map(row=>({row,score:lawScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.name.localeCompare(b.row.name,'zh-CN'));
-  return {rows:scored.map(x=>x.row),matchKind:matched.matchKind,interpretedQuery:matched.terms.join(' ')};
+  return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:prepared.queryNotice};
 }
 
 // Preserve the original array API for the field pilot, callers and stored links.

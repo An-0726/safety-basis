@@ -3,16 +3,35 @@
   "entityId": "K_XLSX_WEB_H_B3F07B77A1834B489F43F05A0D",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "81671d5cb6f86775a7b3a0ff9516c4f37875ded7f641e8420dfd486f362e643c",
+  "reviewedContentHash": "84953282223e4ad5444d57954b048fcdf8777106abb98c5944a08e1742cde059",
   "contextHashes": {
     "hazard": "8d1e02e8e4284e2ebd7e2b4c14db6f125a03658fae7966a2f41ac534814b3d4a",
-    "clause": "4f907b4a6c0126b9497fdd8182ae399427a239d4c98480213682714ff5427b4f"
+    "clause": "657142b3729d923f1bf5304317fbdefd4408716833cd87f93b152c1514080252"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，应急管理部令第10号第八条第(七)项重大隐患。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-01T16:28:30+08:00",
+  "reviewer": "Codex independent MEM10 exact-field review 20261001",
+  "reason": "经独立字段级实质审阅，现K仅指向官方第八条完整原文C_PDDB_8中的第（七）项：轻工企业锂离子电池储存仓库未对故障电池采取有效物理隔离措施。已核引导句的轻工主体及第（七）项仓库、故障电池、有效物理隔离条件；K.applicability明确该边界，不套用其余六项或所有仓库。C_MEM10_8_7原拼接转述不作为逐字原文继续使用。本次只批准精确K字段及该关联，不重写或扩批H定义。",
   "evidenceRefs": [
-    "E_MEM_ORDER_10"
+    "E_PDDB_L019"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "从C_MEM10_8_7改接既有完整C_PDDB_8，保留H及目标整条原始字节。界面和用途专题须逐字显示并使用本K的轻工企业/第（七）项适用范围；H的泛化conditions不应覆盖该窄范围。旧审核完整保存在previousReview，不以更新hash代替语义审阅。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_B3F07B77A1834B489F43F05A0D",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "81671d5cb6f86775a7b3a0ff9516c4f37875ded7f641e8420dfd486f362e643c",
+    "contextHashes": {
+      "hazard": "8d1e02e8e4284e2ebd7e2b4c14db6f125a03658fae7966a2f41ac534814b3d4a",
+      "clause": "4f907b4a6c0126b9497fdd8182ae399427a239d4c98480213682714ff5427b4f"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，应急管理部令第10号第八条第(七)项重大隐患。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MEM_ORDER_10"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ab6ea2ef26e307a6a8142d257fac1bef6cf49a66f86331f6fd52f88682deac95"
 }

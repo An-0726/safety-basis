@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "asOf",
+    "catalogScope",
+    "allIndustryCoverage",
+    "wholeNormNotFieldFinding",
+    "notice",
+    "referenceEntries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "safety-major-criteria-references-v1"
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "catalogScope": {
+      "type": "string",
+      "const": "official_reference_entries_only"
+    },
+    "allIndustryCoverage": {
+      "type": "boolean",
+      "const": false
+    },
+    "wholeNormNotFieldFinding": {
+      "type": "boolean",
+      "const": true
+    },
+    "notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "referenceEntries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "lawId",
+          "lawVersionId",
+          "title",
+          "standardNumber",
+          "versionKey",
+          "issuer",
+          "checked",
+          "effectiveDate",
+          "validityStatus",
+          "officialLink",
+          "officialTextLink",
+          "contentKind",
+          "textMode",
+          "publicationPermission",
+          "fullTextReviewed",
+          "fullQuotePublicationReady",
+          "publicationReady",
+          "reviewedClauseCount",
+          "directHazardCount",
+          "standaloneDeterminationAllowed",
+          "wholeStandardComplete",
+          "searchTopicCount",
+          "searchTopics"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lawId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lawVersionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "standardNumber": {
+            "type": "string",
+            "minLength": 1
+          },
+          "versionKey": {
+            "type": "string",
+            "minLength": 1
+          },
+          "issuer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "checked": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "validityStatus": {
+            "type": "string",
+            "const": "active"
+          },
+          "officialLink": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://[^/@?#\\s]+\\.gov\\.cn(?:[/:?#]|$)"
+          },
+          "officialTextLink": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://[^/@?#\\s]+\\.gov\\.cn(?:[/:?#]|$)"
+          },
+          "contentKind": {
+            "type": "string",
+            "const": "reference_only"
+          },
+          "textMode": {
+            "type": "string",
+            "const": "link_only"
+          },
+          "publicationPermission": {
+            "type": "string",
+            "const": "metadata_only"
+          },
+          "fullTextReviewed": {
+            "type": "boolean",
+            "const": false
+          },
+          "fullQuotePublicationReady": {
+            "type": "boolean",
+            "const": false
+          },
+          "publicationReady": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "metadata",
+              "searchTopics",
+              "fullText"
+            ],
+            "properties": {
+              "metadata": {
+                "type": "boolean",
+                "const": true
+              },
+              "searchTopics": {
+                "type": "boolean",
+                "const": true
+              },
+              "fullText": {
+                "type": "boolean",
+                "const": false
+              }
+            }
+          },
+          "reviewedClauseCount": {
+            "type": "integer",
+            "const": 0
+          },
+          "directHazardCount": {
+            "type": "integer",
+            "const": 0
+          },
+          "standaloneDeterminationAllowed": {
+            "type": "boolean",
+            "const": false
+          },
+          "wholeStandardComplete": {
+            "type": "boolean",
+            "const": false
+          },
+          "searchTopicCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "searchTopics": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "article",
+                "searchTopic",
+                "contentKind",
+                "isOfficialQuote",
+                "standaloneDeterminationAllowed"
+              ],
+              "properties": {
+                "article": {
+                  "type": "string",
+                  "pattern": "^[1-9]\\d*(?:\\.(?:0|[1-9]\\d*))*$"
+                },
+                "searchTopic": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 16,
+                  "pattern": "^[\\u3400-\\u9fffA-Za-z0-9 ]+$"
+                },
+                "contentKind": {
+                  "type": "string",
+                  "const": "search_topic_only"
+                },
+                "isOfficialQuote": {
+                  "type": "boolean",
+                  "const": false
+                },
+                "standaloneDeterminationAllowed": {
+                  "type": "boolean",
+                  "const": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

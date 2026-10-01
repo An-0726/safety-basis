@@ -19,6 +19,8 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+from major_criteria_directory import approved_status_overrides
+
 ROOT = Path(__file__).resolve().parents[2]
 KNOW = ROOT / "knowledge"
 PUB = ROOT / "source" / "publication"
@@ -124,6 +126,13 @@ def expected_search(docs: list[dict], errors: list[str]):
     return index_docs, dict(shards), gram_shards
 
 
+def metadata_date_equal(left, right):
+    # Preserve an explicitly unknown date; reject bool/numeric values. This is
+    # source metadata consistency only, never a current C/H date exception.
+    return (isinstance(left, (str, type(None))) and isinstance(right, (str, type(None))) and
+            (left or '') == (right or ''))
+
+
 def main() -> int:
     errors: list[str] = []
     try:
@@ -134,6 +143,7 @@ def main() -> int:
         pub_index = read_json(PUB / "law-index.json")
         catalog = read_json(FT / "catalog.json")
         search_index = read_json(FT / "search-index.json")
+        directory_statuses = approved_status_overrides(KNOW, PUB)
     except Exception as exc:
         print(json.dumps({"ok": False, "errors": [str(exc)]}, ensure_ascii=False, indent=2))
         return 1
@@ -165,11 +175,11 @@ def main() -> int:
             continue
         if row.get("documentNumber", "") != (lv.get("documentNumber") or ""):
             errors.append(f"publication documentNumber drift: {vid}")
-        if row.get("effectiveDate", "") != (lv.get("effectiveDate") or ""):
+        if not metadata_date_equal(row.get("effectiveDate", ""), lv.get("effectiveDate")):
             errors.append(f"publication effectiveDate drift: {vid}")
         if row.get("sourceUrl", "") != (lv.get("sourceUrl") or ""):
             errors.append(f"publication sourceUrl drift: {vid}")
-        expected_status = STATUS.get(lv.get("validityStatus") or "unknown", "待核验")
+        expected_status = directory_statuses.get(vid, STATUS.get(lv.get("validityStatus") or "unknown", "待核验"))
         if row.get("status") != expected_status:
             errors.append(f"publication status drift: {vid}")
         refs = row.get("clauseRefs") or []
@@ -223,7 +233,7 @@ def main() -> int:
             errors.append(f"fulltext catalog lawId mismatch: {vid}")
         if not HTTP.match(str(doc.get("officialUrl") or "")):
             errors.append(f"fulltext catalog has non-http officialUrl: {vid}")
-        if doc.get("effectiveDate", "") != (lv.get("effectiveDate") or ""):
+        if not metadata_date_equal(doc.get("effectiveDate", ""), lv.get("effectiveDate")):
             errors.append(f"fulltext catalog effectiveDate drift: {vid}")
 
         mode = doc.get("textMode")

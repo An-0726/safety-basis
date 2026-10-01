@@ -1,0 +1,333 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "catalogScope",
+    "allIndustryCoverage",
+    "wholeNormNotFieldFinding",
+    "asOf",
+    "notice",
+    "directoryGroupCount",
+    "documentCount",
+    "directoryGroups",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "safety-major-criteria-directory-v1"
+    },
+    "catalogScope": {
+      "type": "string",
+      "const": "controlled_official_metadata_directory"
+    },
+    "allIndustryCoverage": {
+      "type": "boolean",
+      "const": false
+    },
+    "wholeNormNotFieldFinding": {
+      "type": "boolean",
+      "const": true
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "directoryGroupCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "documentCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "directoryGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "primaryReferenceId",
+          "documentIds"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "primaryReferenceId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "documentIds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_]+$"
+            }
+          }
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "directoryGroup",
+          "requiredCompanionIds",
+          "scopeCaveat",
+          "supplementsReferenceId",
+          "lawVersionId",
+          "scopeHint",
+          "officialLink",
+          "criterionKind",
+          "officialTextLink",
+          "effectiveDateNote",
+          "referenceStatus",
+          "legalNature",
+          "id",
+          "statusAsOf",
+          "lawId",
+          "title",
+          "documentNumber",
+          "versionKey",
+          "issuer",
+          "documentKind",
+          "publicationDate",
+          "effectiveDate",
+          "statusLabel",
+          "checked",
+          "contentKind",
+          "textMode",
+          "publicationPermission",
+          "fullTextReviewed",
+          "fullQuotePublicationReady",
+          "publicationReady",
+          "reviewedClauseCount",
+          "directHazardCount",
+          "searchTopicCount",
+          "standaloneDeterminationAllowed",
+          "wholeStandardComplete"
+        ],
+        "properties": {
+          "directoryGroup": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "label",
+              "role"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_]+$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48
+              },
+              "role": {
+                "enum": [
+                  "primary",
+                  "supplement"
+                ]
+              }
+            }
+          },
+          "requiredCompanionIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_]+$"
+            }
+          },
+          "scopeCaveat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "supplementsReferenceId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_]+$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "lawVersionId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "scopeHint": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "officialLink": {
+            "type": "string",
+            "format": "uri"
+          },
+          "criterionKind": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "officialTextLink": {
+            "type": "string",
+            "format": "uri"
+          },
+          "effectiveDateNote": {
+            "type": "string",
+            "maxLength": 180
+          },
+          "referenceStatus": {
+            "enum": [
+              "current",
+              "current_in_use"
+            ]
+          },
+          "legalNature": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "statusAsOf": {
+            "type": "string",
+            "format": "date"
+          },
+          "lawId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documentNumber": {
+            "type": "string",
+            "minLength": 1
+          },
+          "versionKey": {
+            "type": "string",
+            "minLength": 1
+          },
+          "issuer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "documentKind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publicationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "effectiveDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "statusLabel": {
+            "enum": [
+              "现行有效",
+              "现行使用中"
+            ]
+          },
+          "checked": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contentKind": {
+            "type": "string",
+            "const": "official_document_reference_only"
+          },
+          "textMode": {
+            "type": "string",
+            "const": "link_only"
+          },
+          "publicationPermission": {
+            "type": "string",
+            "const": "metadata_only"
+          },
+          "fullTextReviewed": {
+            "type": "boolean",
+            "const": false
+          },
+          "fullQuotePublicationReady": {
+            "type": "boolean",
+            "const": false
+          },
+          "publicationReady": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "metadata",
+              "fullText"
+            ],
+            "properties": {
+              "metadata": {
+                "type": "boolean",
+                "const": true
+              },
+              "fullText": {
+                "type": "boolean",
+                "const": false
+              }
+            }
+          },
+          "reviewedClauseCount": {
+            "type": "integer",
+            "const": 0
+          },
+          "directHazardCount": {
+            "type": "integer",
+            "const": 0
+          },
+          "searchTopicCount": {
+            "type": "integer",
+            "const": 0
+          },
+          "standaloneDeterminationAllowed": {
+            "type": "boolean",
+            "const": false
+          },
+          "wholeStandardComplete": {
+            "type": "boolean",
+            "const": false
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "major-criteria-catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "asOf",
+    "wholeNormNotFieldFinding",
+    "catalogScope",
+    "allIndustryCoverage",
+    "standards"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "wholeNormNotFieldFinding": {
+      "const": true
+    },
+    "catalogScope": {
+      "const": "controlled_reviewed_standards_only"
+    },
+    "allIndustryCoverage": {
+      "const": false
+    },
+    "standards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "lawVersionId",
+          "standardVersion",
+          "officialScope",
+          "coverage",
+          "clauses",
+          "directHazardIds",
+          "directHazardCount"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "lawVersionId": {
+            "type": "string"
+          },
+          "standardVersion": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "lawId",
+              "name",
+              "documentNumber",
+              "versionKey",
+              "officialSourceUrl",
+              "effectiveDate",
+              "endDate",
+              "validityStatus"
+            ],
+            "properties": {
+              "lawId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "documentNumber": {
+                "type": "string"
+              },
+              "versionKey": {
+                "type": "string"
+              },
+              "officialSourceUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "effectiveDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "validityStatus": {
+                "const": "active"
+              }
+            }
+          },
+          "officialScope": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "sourceUrls",
+              "wholeStandardComplete"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "sourceUrls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "wholeStandardComplete": {
+                "const": false
+              }
+            }
+          },
+          "coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "reviewedClauseCount",
+              "reviewedWholeClauseCount",
+              "reviewedSubitemClauseCount",
+              "expectedWholeClauseCount",
+              "expectedJudgmentItemCount",
+              "reviewedJudgmentItemCount",
+              "wholeStandardComplete"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "reviewed_scope_complete",
+                  "partial"
+                ]
+              },
+              "reviewedClauseCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "reviewedWholeClauseCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "reviewedSubitemClauseCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "expectedWholeClauseCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "expectedJudgmentItemCount": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "reviewedJudgmentItemCount": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "wholeStandardComplete": {
+                "const": false
+              }
+            }
+          },
+          "clauses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "clauseId",
+                "article",
+                "quote",
+                "lawVersionId",
+                "sourceUrl",
+                "checked",
+                "status",
+                "granularity",
+                "directHazardIds"
+              ],
+              "properties": {
+                "clauseId": {
+                  "type": "string"
+                },
+                "article": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "lawVersionId": {
+                  "type": "string"
+                },
+                "sourceUrl": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "checked": {
+                  "type": "string"
+                },
+                "status": {
+                  "const": "现行有效"
+                },
+                "granularity": {
+                  "enum": [
+                    "whole_clause",
+                    "subitem"
+                  ]
+                },
+                "directHazardIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                }
+              }
+            }
+          },
+          "directHazardIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "directHazardCount": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

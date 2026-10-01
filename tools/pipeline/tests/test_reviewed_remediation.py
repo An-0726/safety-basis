@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from sector_directory_fixture import LAWS as SECTOR_LAWS, VERSIONS as SECTOR_VERSIONS, EVIDENCE as SECTOR_EVIDENCE
 
 ROOT = Path(__file__).resolve().parents[3]
 KNOW = ROOT / 'knowledge'
@@ -85,6 +86,18 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
                 self.assertEqual([row for row in rows if row[0] == successor],
                                  [(successor, 'active')])
                 rows = [row for row in rows if row[0] != successor]
+            # Exclude only the independently reviewed AQ3067 metadata identities;
+            # they add no clauses, hazards, links or succession decisions.
+            metadata_id = {'laws': 'LF_AQ3067',
+                           'law-versions': 'LV_AQ3067_2026'}.get(kind)
+            if metadata_id:
+                self.assertEqual([row for row in rows if row[0] == metadata_id],
+                                 [(metadata_id, 'active' if kind == 'laws' else None)])
+                rows = [row for row in rows if row[0] != metadata_id]
+            sector_ids = {'laws': SECTOR_LAWS, 'law-versions': SECTOR_VERSIONS}.get(kind, frozenset())
+            self.assertEqual({row for row in rows if row[0] in sector_ids},
+                             {(ident, 'active' if kind == 'laws' else None) for ident in sector_ids})
+            rows = [row for row in rows if row[0] not in sector_ids]
             self.assertEqual(len(rows), expected['count'])
             digest = hashlib.sha256(json.dumps(rows, ensure_ascii=False,
                                               separators=(',', ':')).encode()).hexdigest()
@@ -153,13 +166,18 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
 
     def test_manifest_counts_and_bounded_batch_totals(self):
         manifest = read('knowledge/manifest.json')
-        self.assertEqual(manifest['batch'], 'gb12801-first-sentence-transition-20261001')
+        self.assertEqual(manifest['batch'], 'sector-major-directory-metadata-20261001')
+        self.assertEqual(sum(b['id'] == 'aq3067-metadata-reference-only-20261001' for b in manifest['batches']), 1)
+        self.assertTrue(any(b['id'] == 'gb12801-first-sentence-transition-20261001'
+                            for b in manifest['batches']))
         # The historical batch remains intact; its later scope successor adds
         # exactly fourteen separately traced source-specific evidence records.
         self.assertEqual(len(SCOPE_SUCCESSOR['evidence']), 14)
         # The later GB12801 slice adds two original-PDF records; the
         # historical batch entry below remains exactly as originally reviewed.
-        expected_evidence = 1248 + len(SCOPE_SUCCESSOR['evidence']) + 2
+        # AQ3067 contributes only one further, explicitly identified metadata PDF record.
+        expected_evidence = 1248 + len(SCOPE_SUCCESSOR['evidence']) + 2 + 1 + len(SECTOR_EVIDENCE)
+        self.assertTrue((KNOW / 'evidence/E_AQ3067_2026_MEM_PDF.json').is_file())
         self.assertEqual(manifest['counts']['evidence'], expected_evidence)
         self.assertEqual(manifest['evidence'], expected_evidence)
         self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), expected_evidence)
@@ -254,9 +272,12 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         for r in FIXTURE['reviews']:
             if r['entityType'] == 'link':
                 self.assertIn(r['entityId'], gate.eligible_links)
-        self.assertEqual(len(gate.eligible_hazards), 1657)
-        self.assertEqual(len(gate.eligible_links), 1791)
-        self.assertEqual(len({gate.links[k]['clauseId'] for k in gate.eligible_links}), 1340)
+        # Current projection additionally excludes the four independently reviewed
+        # MEM10 wrong-source chains. The new containment suite reconstructs the
+        # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
+        self.assertEqual(len(gate.eligible_hazards), 1653)
+        self.assertEqual(len(gate.eligible_links), 1787)
+        self.assertEqual(len({gate.links[k]['clauseId'] for k in gate.eligible_links}), 1338)
         self.assertNotIn('H_12158_10_1_2', gate.eligible_hazards)
 
 

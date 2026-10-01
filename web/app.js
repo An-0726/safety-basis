@@ -5,6 +5,7 @@ import {searchHazardsDetailed,searchLawsDetailed} from './js/search.js';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MAX_RENDER=120;
+const LEGACY_MAJOR_CATEGORY='重大事故隐患判定';
 const state={view:'hazards',selectedHazard:'',selectedLaw:'',query:'',store:null,results:[],visibleCount:MAX_RENDER,pendingDetailScroll:false,routeWarnings:[]};
 
 export function createDetailRequestGuard(getCurrentState){
@@ -184,7 +185,9 @@ function initFilters(){const t=state.store.taxonomy;
   const availableScenes=new Set(state.store.searchIndex.flatMap(row=>row.sceneTags||[]));
   const scenes=(t.sceneTagOptions||[]).filter(tag=>tag==='未细分场景'||availableScenes.has(tag));
   const modes=t.hazardModes||[];
-  $('#category').innerHTML='<option value="">全部专业分类</option>'+categories.map(option).join('');
+  // The major-criteria topic is independent of professional categories. Keep
+  // the old value hidden only to preserve old URLs without widening results.
+  $('#category').innerHTML='<option value="">全部专业分类</option>'+categories.filter(value=>value!==LEGACY_MAJOR_CATEGORY).map(option).join('')+`<option value="${LEGACY_MAJOR_CATEGORY}" hidden disabled>重大事故隐患判定（旧分类）</option>`;
   $('#scene').innerHTML='<option value="">全部现场标签</option>'+(scenes.length?scenes.map(value=>optionPair(value,value==='未细分场景'?'未标注具体现场':value)).join(''):'');
   $('#level').innerHTML='<option value="">全部依据类型</option>'+levels.map(option).join('');
   $('#mode').innerHTML='<option value="">全部适用方式</option>'+modes.map(value=>optionPair(value,modeLabel(value))).join('');
@@ -231,6 +234,7 @@ function renderResults({mode='normal',historyMode='replace'}={}){
   state.query=$('#search').value.trim();
   const filters=currentFilters();
   updateFilterSummary();
+  if($('#majorTopicNotice'))$('#majorTopicNotice').hidden=state.view!=='hazards'||filters.category!==LEGACY_MAJOR_CATEGORY;
   const match=state.view==='hazards'?searchHazardsDetailed(state.store.searchIndex,state.query,filters):searchLawsDetailed(state.store.lawIndex,state.query,filters);
   const rows=match.rows;
   showSearchNotice(match);
@@ -342,8 +346,9 @@ async function renderHazardDetail(){
   }catch(err){if(detailRequests.isCurrent(request)) showError(err)}
 }
 
-function basisHtml({ref,clause,law,sourceUrl}){const chkDate=clause.checked?dateOnly(clause.checked):'已核验';return `<div class="basis"><div class="basismeta"><span>${pill(roleLabel(ref.role))}</span><span class="article">${esc(law.displayLevel||law.level)} · ${esc(law.scope)} · ${esc(law.status)}</span></div><h4>${esc(law.name)}</h4><span class="article">${esc(clause.article)} · 条款核验：${esc(chkDate)}</span><blockquote>${esc(clause.quote||'尚未录入原文，请核验后补充。')}</blockquote><div class="basislinks">${sourceUrl?`<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}<button class="linkbutton lawjump" data-law="${esc(law.id)}">在法规库查看</button></div></div>`}
-function hazardText(h,bases){const conditions=h.conditions||'';return `${h.title}\n\n隐患专业描述：\n${h.description}${conditions?`\n\n适用条件：\n${conditions}`:''}\n\n法规依据：\n${bases.map(x=>`《${x.law.name}》${x.clause.article}\n${x.clause.quote}`).join('\n\n')}\n\n整改措施：\n${h.measures}`}
+function basisApplicability(ref){return typeof ref?.applicability==='string'&&ref.applicability.trim()?ref.applicability:''}
+function basisHtml({ref,clause,law,sourceUrl}){const chkDate=clause.checked?dateOnly(clause.checked):'已核验',scope=basisApplicability(ref);return `<div class="basis" data-link-id="${esc(ref.linkId||'')}"><div class="basismeta"><span>${pill(roleLabel(ref.role))}</span><span class="article">${esc(law.displayLevel||law.level)} · ${esc(law.scope)} · ${esc(law.status)}</span></div><h4>${esc(law.name)}</h4><span class="article">${esc(clause.article)} · 条款核验：${esc(chkDate)}</span>${scope?`<div class="basis-applicability"><strong>本条依据适用范围</strong><p>${esc(scope)}</p></div>`:''}<blockquote>${esc(clause.quote||'尚未录入原文，请核验后补充。')}</blockquote><div class="basislinks">${sourceUrl?`<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}<button class="linkbutton lawjump" data-law="${esc(law.id)}">在法规库查看</button></div></div>`}
+function hazardText(h,bases){const conditions=h.conditions||'';return `${h.title}\n\n隐患专业描述：\n${h.description}${conditions?`\n\n适用条件：\n${conditions}`:''}\n\n法规依据：\n${bases.map(x=>`《${x.law.name}》${x.clause.article}${basisApplicability(x.ref)?`\n本条依据适用范围：${basisApplicability(x.ref)}`:''}\n${x.clause.quote}`).join('\n\n')}\n\n整改措施：\n${h.measures}`}
 function hazardFullText(h,bases){const note=publicNoteParts(h);const sections=[hazardText(h,bases)];if(note.businessNote)sections.push(`补充说明：\n${note.businessNote}`);if(note.historicalReferences.length)sections.push(`历史引用（不替代当前依据）：\n${note.historicalReferences.join('\n\n')}`);sections.push(`核验状态：${h.status}；核验日期：${h.checked||'未填写'}；数据库版本：${state.store.manifest.dataVersion}。`);return sections.join('\n\n')}
 
 async function renderLawDetail(){
@@ -397,7 +402,7 @@ function showSearchNotice(match){
     : match.matchKind==='corrected'
       ? `当前筛选下没有原词结果，按“${match.interpretedQuery}”尝试纠错。请确认是否符合原意。`
       : '';
-  node.textContent=[...state.routeWarnings,node.textContent].filter(Boolean).join(' ');
+  node.textContent=[...state.routeWarnings,match.queryNotice,node.textContent].filter(Boolean).join(' ');
   node.hidden=!node.textContent;
 }
 function renderActiveFilters(){

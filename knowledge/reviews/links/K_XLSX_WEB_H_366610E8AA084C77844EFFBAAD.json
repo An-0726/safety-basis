@@ -2,17 +2,36 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_366610E8AA084C77844EFFBAAD",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "865a745525dd1ac9453236cfb7aa7f15decde8a0a8b211143c4b9582c670e4b6",
   "contextHashes": {
     "hazard": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
     "clause": "c0caa086f87485dda2312f56dec7042e7e01635c4e25c101ed8fc6b838e4783b"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，应急管理部令第10号第十三条有限空间气体报警重大隐患。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-01T16:17:30+08:00",
+  "reviewer": "Codex MEM10 source-integrity containment 20261001",
+  "reason": "撤回原verified适用性审核。该关联引用的C_MEM10_13不具备其声明的准确原文与定位资格，不能继续作为该隐患已核直接判据。官方第十三条针对具有硫化氢、一氧化碳等中毒风险的工贸企业有限空间作业，仅列辨识/台账且警示标志，以及审批、先通风再检测后作业、现场监护两项情形；当前quote为检测报警仪器/应急救援装备句，不是该条逐字原文。 本次只隔离失实审核资格；未更改quote、关联目标、稳定ID或lifecycle，未批准替代依据。须重新核对精确现行条款、对象、范围及适用性后实质审阅，不得自动重签。",
   "evidenceRefs": [
-    "E_MEM_ORDER_10_2023"
+    "E_PDDB_L019"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "2026-10-01重新读取应急管理部官方第10号令完整HTML，并经独立语义核对确认两项错配。E_PDDB_L019复用既有正确官方全文证据卡；未伪造新网页/PDF下载哈希。完整旧审核保存在previousReview，保留原reviewedContentHash及contextHashes只为追溯被撤回内容；不等于原审核继续有效。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_366610E8AA084C77844EFFBAAD",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "865a745525dd1ac9453236cfb7aa7f15decde8a0a8b211143c4b9582c670e4b6",
+    "contextHashes": {
+      "hazard": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
+      "clause": "c0caa086f87485dda2312f56dec7042e7e01635c4e25c101ed8fc6b838e4783b"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，应急管理部令第10号第十三条有限空间气体报警重大隐患。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MEM_ORDER_10_2023"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "a8966eb250c2fe6ecf66d12f27f36c7d8b9540e553cfc66f151c9ab1ee19aa68"
 }

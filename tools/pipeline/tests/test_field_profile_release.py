@@ -38,6 +38,9 @@ class FieldProfileReleaseTests(unittest.TestCase):
         self.fixture.put('publication/fulltext/catalog.json', {'documents': [{
             'versionId': 'LV_STD_GBT47236_2026', 'textMode': 'link_only',
             'officialUrl': 'https://openstd.samr.gov.cn/', 'effectiveDate': '2026-09-01'}]})
+        self.fixture.put('publication/fulltext/search-index.json', {'documents': [{
+            'versionId': 'LV_STD_GBT47236_2026', 'textMode': 'link_only',
+            'officialUrl': 'https://openstd.samr.gov.cn/', 'effectiveDate': '2026-09-01'}]})
         self.out = self.root / 'source/releases/test'
         self.selection = self.root / 'selection.json'
 

@@ -8,3 +8,5 @@ nav a.nav{text-decoration:none;display:inline-flex;align-items:center;justify-co
 .candidateNotice.muted{margin-top:0;background:#fafbf7;border-color:#e2e7dc;color:#6e7b6a}
 .candidateNotice.muted strong{color:#5c7058}
 .candidateNotice.muted p{color:#6e7b6a}
+/* The separate criteria entry must not squeeze the shared mobile header. */
+@media(max-width:780px){header{height:auto;min-height:72px;flex-wrap:wrap;align-content:center;padding-top:10px;padding-bottom:6px}header nav{order:3;flex-basis:100%;width:100%;justify-content:flex-start;flex-wrap:wrap;height:auto;min-height:44px}header nav .nav{min-height:44px}header .private{display:none}}

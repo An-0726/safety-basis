@@ -6,15 +6,18 @@
 2. check_catalogue   - schema / 引用完整性（law-lawVersion-clause-succession）
 3. check_requirements- Requirement 层（ref / hash / review meta / lifecycle）
 4. check_field_profiles - governed profile schema / 引用；不要求全量分类或审批完成
-5. check_review_binding - review content hash 绑定
-6. scan_evidence_exact - review evidence 与 clause 法规匹配
-7. scan_quality      - 质量扫描（duplicates / dangling / stale refs / obligation patterns）
-8. version_impact    - 版本影响（只报告，不阻塞）
+5. check_major_criteria - controlled catalog schema / 引用；不自动核准条款或全量覆盖
+6. check_major_criteria_references - reference-only metadata/short-topic结构，不核准全文
+7. check_major_criteria_directory - 通用文件题录、null日期说明及主补充关系
+8. check_review_binding - review content hash 绑定
+9. scan_evidence_exact - review evidence 与 clause 法规匹配
+10. scan_quality      - 质量扫描（duplicates / dangling / stale refs / obligation patterns）
+11. version_impact    - 版本影响（只报告，不阻塞）
 
 退出码：0=全部通过；1=存在阻断性错误。
 
-阻断集合 = manifest / catalogue / requirements / field_profiles / review_binding / evidence_exact：
-- 前五个是结构性错误；field_profiles 不把缺失/未审核覆盖率当作完成或全局阻断；
+阻断集合 = manifest / catalogue / requirements / field_profiles / major_criteria / major_criteria_references / major_criteria_directory / review_binding / evidence_exact：
+- 前八个是结构性错误；field_profiles / major_criteria / major_criteria_references 不把缺失/未审核覆盖率当作完成或全局阻断；
 - scan_evidence_exact 会返回非零（review 引用的证据与其条款所属法规不匹配），
   属于数据错误，此前被排除在阻断之外，导致它失败时 validate_all 仍报
   "BLOCKING failures: none" 且退出码 0 —— 与 CI 中 gate_v4 的 EVIDENCE 阶段判定不一致。
@@ -32,12 +35,15 @@ STEPS = [
     ("check_catalogue", "check_catalogue.py"),
     ("check_requirements", "check_requirements.py"),
     ("check_field_profiles", "check_field_profiles.py"),
+    ("check_major_criteria", "check_major_criteria.py"),
+    ("check_major_criteria_references", "check_major_criteria_references.py"),
+    ("check_major_criteria_directory", "check_major_criteria_directory.py"),
     ("check_review_binding", "check_review_binding.py"),
     ("scan_evidence_exact", "scan_evidence_exact.py"),
     ("scan_quality", "scan_quality_v4.py"),
     ("version_impact", "version_impact.py"),
 ]
-BLOCKING = {"check_manifest", "check_catalogue", "check_requirements", "check_field_profiles", "check_review_binding", "scan_evidence_exact"}
+BLOCKING = {"check_manifest", "check_catalogue", "check_requirements", "check_field_profiles", "check_major_criteria", "check_major_criteria_references", "check_major_criteria_directory", "check_review_binding", "scan_evidence_exact"}
 
 
 def main():

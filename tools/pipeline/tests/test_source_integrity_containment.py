@@ -73,10 +73,12 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
             self.assertNotIn('K_XLSX_WEB_' + hid, self.gate.eligible_links)
             self.assertEqual(self.gate.hazards[hid]['reasons'],
                              ['BLOCK_REVIEW_NOT_VERIFIED:rejected'])
-        self.assertEqual(len(self.gate.eligible_hazards), 1657)
-        self.assertEqual(len(self.gate.eligible_links), 1791)
+        # Current projection additionally excludes four MEM10 wrong-source chains;
+        # the separate containment suite verifies exact historical count recovery.
+        self.assertEqual(len(self.gate.eligible_hazards), 1653)
+        self.assertEqual(len(self.gate.eligible_links), 1787)
         self.assertEqual(len({self.gate.links[k]['clauseId']
-                              for k in self.gate.eligible_links}), 1340)
+                              for k in self.gate.eligible_links}), 1338)
 
     def test_corrupt_formula_clause_is_preserved_and_not_publishable(self):
         clause = read('clauses/C_12158_2.json')
