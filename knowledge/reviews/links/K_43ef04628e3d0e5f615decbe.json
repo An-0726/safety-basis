@@ -3,27 +3,15 @@
   "entityId": "K_43ef04628e3d0e5f615decbe",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "733050418a55f506bad85158cb2cebc9317f3bf2ddc8edbd3b9ee622f620e052",
+  "reviewedContentHash": "4580dd486abf55ffd65402c971eb5cee40b7b016ca37cf9e4048fc6d8a113901",
   "contextHashes": {
-    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8",
-    "hazard": "b75644025e05f35bbd416046bc92a8f4060ab9ad891b0d3ac6271d660739e336",
-    "link": "733050418a55f506bad85158cb2cebc9317f3bf2ddc8edbd3b9ee622f620e052"
+    "hazard": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+    "clause": "bf3a28a0bcc1bb73f3e8982f9095518210d7c058a3e3da8103b457a648ca8870"
   },
-  "checkedAt": "2026-09-10T23:15:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "该隐患的判定准则已由 GB 45067-2024 直接规定；《中华人民共和国特种设备安全法》相关规定作为上位法义务补充保留。",
-  "reasonCodes": [
-    "SUPPORTING_UPPER_LAW"
-  ],
+  "checkedAt": "2026-09-30T13:24:58.061850+00:00",
+  "reviewer": "Codex独立实质核验20260930",
+  "reason": "supporting仅由特种设备安全法第49条充装许可、充装前后检查记录、禁止不符合安全技术规范要求的充装义务支持；不保留第40条定检错配，亦不把本法第49条当作重大隐患三项判据。evidenceRefs仅列SAMR安全法原文，不混入GB45067标准证据。",
   "evidenceRefs": [
-    "E_02d08fd0e4b10d3d367ef543ffb3b61bf62dcd3f18905ae800a033f1b8de9d40"
-  ],
-  "migratedFromV3Verification": {
-    "id": "VRF_d113789a285d558e6dfecf89_425",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次",
-    "v3Reason": "移动式压力容器属于特种设备，隐患描述未经许可擅自充装或紧急切断装置缺失仍使用。特种设备安全法第40条规定未经定期检验或者检验不合格的特种设备不得继续使用，语义对应。",
-    "v3Result": "passed"
-  },
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+    "E_BOUNDARY_20260930_TSELAW"
+  ]
 }

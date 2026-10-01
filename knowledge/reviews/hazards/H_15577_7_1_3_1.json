@@ -1,13 +1,60 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "decision": "verified",
   "entityId": "H_15577_7_1_3_1",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_7_1_3"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_7_1_3"
+    ],
+    "/places": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_7_1_3"
+    ]
+  },
+  "historySha256": "59d3136dfd733a3eb84acf41ed8443b26fe2d187a5be5407980456264e257e5b",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "decision": "verified",
+    "entityId": "H_15577_7_1_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577",
+      "E_REMEDIATION_20260930_MEM6"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+    "reason": "7.1.3及第6号令15条均不允许单独隔爆。新措施明确该禁止条件，并要求核定适用控爆方式，不把仅装隔爆视为完成整改；不把此条一概等同于第10号令11(3)的干式除尘重大隐患判据。",
+    "reviewType": "content",
+    "reviewedContentHash": "5a1ee2a5ee786172a78cace2292e8a14f4e98480f709902a48f077f649d8da83",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "f761a3b9cac74133903ba7c3b92698232c8d31508e402d76e8cfc1b4b3e266ee",
+  "reason": "第7.1.3的直接对象正是存在粉尘爆炸危险的工艺设备，要求采用泄爆、抑爆和隔爆、抗爆中的一种或多种方式且不得单独隔爆。最终conditions及places准确锁定该对象，“适用控爆措施”结合未变条款原文阅读，未增设标准以外行业排除。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "content",
-  "reviewedContentHash": "59e24e5180673ccc5c9e97ba6d280df077f225646df1be8b2b24d341805982b5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "d09646196cc6c2554533843a8630a5936158cd879c6345d567bdcde4c4273003",
+  "reviewedFields": [
+    "/conditions",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于GB 15577-2018范围内存在粉尘爆炸危险的工艺设备，本项核查采用适用控爆措施且不能单独采取隔爆。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+    "/places": [
+      "存在粉尘爆炸危险的工艺设备"
+    ]
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930"
 }

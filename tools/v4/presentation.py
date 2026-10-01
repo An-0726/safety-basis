@@ -15,6 +15,12 @@ CATEGORY_ALIASES = {
     "安全教育": "安全教育培训",
     "安全生产管理": "安全管理",
     "专项安全与EHS": "综合安全",
+    # Exact label variants reviewed against the existing records and bases:
+    # H_FORKLIFT_UNATTENDED_KEY, H_WORKPLACE_CHEM_SDS_MISSING, H_CF_GEN_18.
+    # Navigation labels only: no equipment/chemical/legal-scope equivalence.
+    "特种设备安全": "特种设备",
+    "危险化学品安全": "危险化学品与危险物质",
+    "设备设施安全": "设备设施",
 }
 
 # 仅用于公开前台的稳定编号展示投影。原始 ``category`` 字段、标题、场所、
@@ -110,29 +116,41 @@ ENVIRONMENT_LEVEL_OVERRIDES = {
     "LV_YJFGZ": "行业标准",
 }
 
+# UI navigation clues, not legal applicability or a second professional category.
+# Only explicit source ``places`` phrases may produce these tags. Never inspect
+# titles, keywords, descriptions or conditions; generic professional obligations
+# (消防责任、培训、职业卫生等) intentionally remain untagged.
 SCENE_RULES = (
-    ("消防与疏散", ("消防", "疏散")),
-    ("电气与配电", ("电气", "用电", "配电", "电焊", "受电", "控制柜")),
-    ("特种设备", ("特种设备", "电梯", "锅炉", "压力容器", "气瓶", "场车", "叉车", "起重", "行车", "吊车", "索道", "游乐设施", "储气罐", "电动葫芦")),
-    ("机械加工", ("机械", "机加工", "冲压", "剪切", "砂轮", "五金", "模具", "机加清洗")),
+    ("通道与出口", ("疏散通道", "疏散走道", "安全出口", "消防车道", "地面通道")),
+    ("配电室与配电装置", ("配电室", "配电房", "配电间", "配电箱", "配电柜", "配电屏", "电气控制柜", "照明控制柜")),
+    ("电梯", ("电梯",)),
+    ("锅炉", ("锅炉",)),
+    ("压力容器与储气罐", ("压力容器", "储气罐")),
+    ("气瓶", ("气瓶",)),
+    ("叉车与场车", ("叉车", "场车")),
+    ("起重设备", ("起重", "行车作业", "行车操作", "各类型行车", "吊车", "电动葫芦")),
+    ("索道与游乐设施", ("索道", "游乐设施")),
+    ("机械加工", ("机械加工", "机加工", "冲压", "剪切机床", "砂轮机", "五金打磨", "机加清洗")),
     ("粉尘与除尘", ("粉尘", "除尘")),
-    ("化学品管理", ("化学品", "危化品", "危险物品", "油料", "润滑加油")),
-    ("危废与污染治理", ("危险废物", "废气", "污水处理")),
-    ("燃气使用", ("燃气", "可燃气体燃烧")),
+    ("危化品储存场所", ("危化品库房", "危化品储存", "危险化学品仓库", "危险化学品储存")),
+    ("危废贮存场所", ("危险废物贮存场所", "危险废物收集、暂存或贮存场所")),
+    ("废气与污水处理设施", ("废气治理设施", "污水处理")),
+    ("燃气使用", ("燃气使用", "可燃气体燃烧装置")),
     ("有限空间", ("有限空间",)),
-    ("动火与焊割", ("动火", "焊接", "气焊", "二保焊", "焊割", "切割", "热切割")),
-    ("高处作业", ("高处", "坠落")),
+    ("动火与焊割", ("动火", "焊接", "气焊", "焊割", "热切割")),
+    ("高处作业", ("高处作业", "高处施工", "脚手架")),
     ("涂装作业", ("涂装", "喷漆", "喷粉", "调漆", "喷涂")),
-    ("仓储与物流", ("仓储", "仓库", "库房", "库区", "原料库", "成品库", "物料仓", "物流", "装卸", "货台")),
-    ("职业健康与防护", ("职业病", "个体防护")),
-    ("应急管理", ("应急", "事故报告", "事故处置")),
-    ("培训与资格", ("培训", "考核", "资格", "特种作业人员")),
-    ("建筑与厂区", ("建筑", "总平面", "厂区", "厂房", "宿舍", "建设项目")),
-    ("实验与化验", ("实验室", "化验室", "科研")),
-    ("标志与警示", ("标志", "警示", "标识", "管线识别")),
+    ("仓储与物流", ("仓储", "仓库", "库房", "库区", "原料库", "成品库", "物料仓", "物流", "装卸", "货台", "冷库")),
     ("生产现场", ("车间", "工位", "流水线", "台位", "操作区域")),
+    ("实验与化验", ("实验室", "化验室")),
+    ("消防控制与泵房", ("消防控制室", "消防水泵房", "消防水泵控制室")),
+    ("电动自行车充电", ("电动自行车停放充电", "电动自行车充电")),
+    ("施工现场", ("施工现场", "施工作业面")),
+    ("宿舍", ("宿舍",)),
+    ("餐饮与厨房", ("餐饮", "厨房")),
 )
 SCENE_TAGS = tuple(tag for tag, _fragments in SCENE_RULES)
+# Keep the existing serialized sentinel for shared routes and older callers.
 SCENE_TAG_OPTIONS = SCENE_TAGS + ("未细分场景",)
 
 DISPLAY_MODE_MAP = {
@@ -232,7 +250,7 @@ def raw_law_level(law, law_version, publication=None):
 
 
 def scene_tags(places):
-    """Project original places to the ordered union of explicitly approved tags."""
+    """Project only recorded place/equipment/activity clues, never applicability."""
     texts = [place for place in (places or []) if isinstance(place, str)]
     return [tag for tag, fragments in SCENE_RULES
             if any(fragment in text for text in texts for fragment in fragments)]

@@ -5,18 +5,19 @@
   "decision": "verified",
   "reviewedContentHash": "c79d8fcf52bd1f275a22e5de29041f081ce5cc0ecae74a21d547687d90fbcd48",
   "contextHashes": {
+    "hazard": "7743123c287507e12f09d3fbfc46f52f90e0514faa3453f2bdd1b003f57acb06",
     "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8",
-    "hazard": "00e67c969e84336bdcdaa453b5cdd779701748dcf87e2c37c2ba2df83825cf17",
     "link": "c79d8fcf52bd1f275a22e5de29041f081ce5cc0ecae74a21d547687d90fbcd48"
   },
-  "checkedAt": "2026-09-10T15:00:00+08:00",
-  "reviewer": "Doubao-Agent-Sub3",
-  "reason": "该隐患的判定准则已由 GB 45067-2024 直接规定；《中华人民共和国特种设备安全法》相关规定作为上位法义务补充保留。",
+  "checkedAt": "2026-09-30",
+  "reviewer": "Codex逐项内容复核20260930",
+  "reason": "4.3a的触发是定检结论不符合要求且仍使用，不能把整改符合要求写成重大隐患。新措施修正结论及停用顺序；独立补齐第1章压力容器适用与排除条件到hazard和direct link。建筑工地排除项仅针对起重机械/场车，不错误扩大为所有工地压力容器均排除。",
   "reasonCodes": [
     "SUPPORTING_UPPER_LAW"
   ],
   "evidenceRefs": [
-    "E_f540f1b3e4f3e40ad3d87543ac1520fe307f2b540b9df8bef5208989074d246f"
+    "E_f540f1b3e4f3e40ad3d87543ac1520fe307f2b540b9df8bef5208989074d246f",
+    "E_REMEDIATION_20260930_TSELAW"
   ],
   "migratedFromV3Verification": {
     "id": "VRF_12d3ac40c954d6a8460e9b5c_428",
@@ -25,5 +26,5 @@
     "v3Reason": "压力容器属于特种设备，隐患描述定期检验不合格或安全装置缺失仍使用。特种设备安全法第40条规定未经定期检验或者检验不合格的特种设备不得继续使用，语义对应。",
     "v3Result": "passed"
   },
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_BD32095BBE999606E80E376E；条款：C035；保留supporting角色。本上位法仅支持停用义务，不单独构成GB 45067重大隐患判定依据或发布资格。"
 }

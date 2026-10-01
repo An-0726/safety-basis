@@ -1,13 +1,59 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "decision": "verified",
   "entityId": "H_15577_10_7_1",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_10_7"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_10_7"
+    ],
+    "/places": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_10_7"
+    ]
+  },
+  "historySha256": "c15b8655001e57e1c3118d457ff42bcdb8a44bc0bf391e4134937dd1fd82dbc5",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "decision": "verified",
+    "entityId": "H_15577_10_7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+    "reason": "10.7明确粉尘爆炸危险场所禁止交叉作业，新措施恢复禁止指令，计划协调和现场监督是对应执行措施。",
+    "reviewType": "content",
+    "reviewedContentHash": "e39aef13d6fa5410afbcd0cf5179cdeb4d7d7dcb7871661d5e78e2e268020047",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "7347be3ccd55e4554a4f30264d390940de385ca74f426278ca073fcfb99f37b0",
+  "reason": "第10.1条对象为设备设施，第10.2条包括检修维护，第10.7条要求依照设备检修维护规程和程序作业并禁止交叉作业。最终“设备设施检修作业及相关检修维护”保留设施、维护上下文，同时去除原源泛化到所有生产输送储存环节的范围。标准排除项准确。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "content",
-  "reviewedContentHash": "71e7e49561ab5b7427e89310cc03dd97de9a5d66e65b55b0ae32e52c421d7606",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "e0fdba7da88d26e47a86fc0f5018fdea3112616bd161d0b1405127f11a42595a",
+  "reviewedFields": [
+    "/conditions",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的设备设施检修作业及相关检修维护，本项核查按照设备检修维护规程和程序作业，以及粉尘爆炸危险场所禁止交叉作业的要求。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+    "/places": [
+      "粉尘爆炸危险场所的设备设施检修作业及相关检修维护"
+    ]
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930"
 }

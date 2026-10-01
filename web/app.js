@@ -1,11 +1,11 @@
 'use strict';
 import {DataStore} from './js/store.js';
-import {searchHazards,searchLaws} from './js/search.js';
+import {searchHazardsDetailed,searchLawsDetailed} from './js/search.js';
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MAX_RENDER=120;
-const state={view:'hazards',selectedHazard:'',selectedLaw:'',query:'',store:null,results:[],visibleCount:MAX_RENDER,pendingDetailScroll:false};
+const state={view:'hazards',selectedHazard:'',selectedLaw:'',query:'',store:null,results:[],visibleCount:MAX_RENDER,pendingDetailScroll:false,routeWarnings:[]};
 
 export function createDetailRequestGuard(getCurrentState){
   if(typeof getCurrentState!=='function') throw new TypeError('getCurrentState must be a function');
@@ -44,9 +44,24 @@ function dataDateOf(manifest={},releaseManifest={}){
 }
 function setDataDateHeader(manifest,releaseManifest){
   const dataDate=dataDateOf(manifest,releaseManifest);
-  if($('#dbVersion'))$('#dbVersion').textContent=`数据日期 ${dataDate}`;
+  const explicit=releaseManifest?.asOf||manifest?.asOf;
+  if($('#dbVersion'))$('#dbVersion').textContent=explicit?`核验快照 ${dataDate}`:(dataDate==='未提供'?'快照日期未提供':`构建日期 ${dataDate} · 核验日期未提供`);
   if($('#dbDate'))$('#dbDate').textContent=dataDate;
+  updateSnapshotNotice(explicit?dataDate:'');
   return dataDate;
+}
+export function snapshotNoticeText(dataDate,today){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(dataDate))return '当前数据缺少明确快照日期。使用前请复核法规现行效力与现场条件。';
+  if(dataDate<today)return `本页为 ${dataDate} 核验快照，未校验此后的法规变化。使用前请复核现行效力与现场条件。`;
+  if(dataDate>today)return `快照日期 ${dataDate} 晚于当前日期，请先核对数据版本与实施日期。`;
+  return '';
+}
+function updateSnapshotNotice(dataDate){
+  const node=$('#snapshotNotice');if(!node)return;
+  const parts=new Intl.DateTimeFormat('en',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const part=type=>parts.find(value=>value.type===type)?.value;
+  const today=`${part('year')}-${part('month')}-${part('day')}`;
+  node.textContent=snapshotNoticeText(dataDate,today);node.hidden=!node.textContent;
 }
 const HISTORICAL_REFERENCE_PREFIX='原 conditions 字段记录的引用依据为：';
 function reliableNoteSegments(hazard={}){
@@ -131,16 +146,28 @@ function loadUrlState(){
   state.selectedHazard=route.selectedHazard;state.selectedLaw=route.selectedLaw;
   return route;
 }
+export function canonicalCategoryFilter(value,rows=[]){
+  if(!value||rows.some(row=>displayCategoryOf(row)===value))return value;
+  const targets=new Set(rows.filter(row=>row.category===value).map(displayCategoryOf));
+  // An old label may migrate only when the shipped, reviewed projection gives
+  // it one unambiguous destination. Never infer a category from title words.
+  return targets.size===1?[...targets][0]:value;
+}
 function applyUrlFilters(route){
+  state.routeWarnings=[];
   for(const fields of Object.values(URL_FILTERS))for(const selector of Object.values(fields)){
     const select=$(selector);if(select)select.value='';
   }
   for(const [key,selector] of Object.entries(URL_FILTERS[route.view])){
-    const select=$(selector),value=route.filters[key]||'';
+    const select=$(selector),rawValue=route.filters[key]||'';
+    const value=key==='category'?canonicalCategoryFilter(rawValue,state.store.searchIndex):rawValue;
     // Ignore unknown values instead of silently hiding the whole database.
     if(select&&[...select.options].some(option=>option.value===value))select.value=value;
+    else if(value)state.routeWarnings.push(`链接中的筛选“${value}”已不再提供，请重新选择。`);
   }
   updateFilterSummary();
+  if($('#hazardMoreFilters'))$('#hazardMoreFilters').open=['#scene','#level','#mode'].some(id=>$(id)?.value);
+  if($('#lawMoreFilters'))$('#lawMoreFilters').open=['#lawLevel','#lawStatus'].some(id=>$(id)?.value);
 }
 function syncUrl(historyMode='replace'){
   const filters={};
@@ -154,10 +181,11 @@ function syncUrl(historyMode='replace'){
 function initFilters(){const t=state.store.taxonomy;
   const categories=t.displayCategories||t.categories||[];
   const levels=t.displayLevels||t.lawLevels||[];
-  const scenes=t.sceneTagOptions||[];
+  const availableScenes=new Set(state.store.searchIndex.flatMap(row=>row.sceneTags||[]));
+  const scenes=(t.sceneTagOptions||[]).filter(tag=>tag==='未细分场景'||availableScenes.has(tag));
   const modes=t.hazardModes||[];
-  $('#category').innerHTML='<option value="">全部主题</option>'+categories.map(option).join('');
-  $('#scene').innerHTML='<option value="">全部适用场景</option>'+(scenes.length?scenes.map(value=>optionPair(value,value==='未细分场景'?'未细分场景':'适用：'+value)).join(''):'');
+  $('#category').innerHTML='<option value="">全部专业分类</option>'+categories.map(option).join('');
+  $('#scene').innerHTML='<option value="">全部现场标签</option>'+(scenes.length?scenes.map(value=>optionPair(value,value==='未细分场景'?'未标注具体现场':value)).join(''):'');
   $('#level').innerHTML='<option value="">全部依据类型</option>'+levels.map(option).join('');
   $('#mode').innerHTML='<option value="">全部适用方式</option>'+modes.map(value=>optionPair(value,modeLabel(value))).join('');
   $('#lawLevel').innerHTML='<option value="">全部依据类型</option>'+levels.map(option).join('');
@@ -199,11 +227,14 @@ function renderResults({mode='normal',historyMode='replace'}={}){
   const viewChanged=mode==='view-change';
   const initialDeepLink=mode==='initial';
   const previousScrollTop=filterChanged||viewChanged?0:(list?.scrollTop||0);
-  if(filterChanged||viewChanged){state.visibleCount=MAX_RENDER;state.pendingDetailScroll=false;}
+  if(filterChanged||viewChanged){state.visibleCount=MAX_RENDER;state.pendingDetailScroll=false;state.routeWarnings=[];}
   state.query=$('#search').value.trim();
   const filters=currentFilters();
   updateFilterSummary();
-  const rows=state.view==='hazards'?searchHazards(state.store.searchIndex,state.query,filters):searchLaws(state.store.lawIndex,state.query,filters);
+  const match=state.view==='hazards'?searchHazardsDetailed(state.store.searchIndex,state.query,filters):searchLawsDetailed(state.store.lawIndex,state.query,filters);
+  const rows=match.rows;
+  showSearchNotice(match);
+  renderActiveFilters();
   state.results=rows;
   if(state.view==='hazards'){
     state.selectedHazard=resolveSelectedId(rows,state.selectedHazard,mode,state.store.searchIndex);
@@ -218,8 +249,8 @@ function renderResults({mode='normal',historyMode='replace'}={}){
   $('#count').textContent=rows.length;
   $('#summary').textContent=rows.length
     ? `已展示 ${shownRows.length} / ${rows.length}；${state.view==='hazards'?'选择隐患查看完整依据':'选择法规查看收录条款与关联隐患'}`
-    : '可缩短关键词、清除筛选，或在后续资料整理时补入数据库。';
-  const empty=rows.length?'':'<div class="empty"><strong>没有找到匹配内容</strong><p>可缩短关键词、清除筛选，或在后续资料整理时补入数据库。</p></div>';
+    : '试试缩短关键词或移除筛选；未检索到不代表不存在相关要求。';
+  const empty=rows.length?'':'<div class="empty"><strong>没有找到匹配内容</strong><p>试试缩短关键词或移除筛选。</p><p>未检索到不代表不存在相关要求。</p></div>';
   const more=shownRows.length<rows.length?`<button type="button" id="loadMore" class="loadmore">加载更多（再显示 ${Math.min(MAX_RENDER,rows.length-shownRows.length)} 条）</button>`:'';
   list.innerHTML=rows.length?shownRows.map(state.view==='hazards'?hazardCard:lawCard).join('')+more:empty;
   list.scrollTop=previousScrollTop;
@@ -243,7 +274,10 @@ function renderUnavailable(id,kind){
   $('#detail').innerHTML=`<div class="empty"><strong>此${esc(kind)}未在当前已核验库中发布</strong><p>链接编号：${esc(id)}</p><p>可能尚待核验、已撤下或编号有误。请从列表选择其他内容，或搜索已核验的依据。</p></div>`
 }
 
-function hazardCard(r){return `<button class="card ${r.id===state.selectedHazard?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedHazard}"><div class="meta"><span>${esc(displayCategoryOf(r))}</span>${pill(r.status==='已核验'?modeLabel(r.mode):r.status)}</div><h3>${esc(r.title)}</h3><p>${esc((r.sceneTags||r.places||[]).join(' · ')||'未细分场景')}</p><span class="arrow">↗</span></button>`}
+function hazardCard(r){
+  const clues=(r.sceneTags||[]).join(' · ');
+  return `<button class="card ${r.id===state.selectedHazard?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedHazard}"><div class="meta"><span>${esc(displayCategoryOf(r))}</span>${pill(r.status==='已核验'?modeLabel(r.mode):r.status)}</div><h3>${esc(r.title)}</h3>${clues?`<p>${esc(clues)}</p>`:''}<span class="arrow">↗</span></button>`;
+}
 function lawCard(r){return `<button class="card ${r.id===state.selectedLaw?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedLaw}"><div class="meta"><span>${esc(displayLevelOf(r))}</span>${pill(r.status)}</div><h3>${esc(r.name)}</h3><p>${esc(r.scope)} · ${r.clauseCount} 条收录条款 · 关联 ${r.hazardCount} 条隐患</p><span class="arrow">↗</span></button>`}
 
 function selectHazard(id){state.selectedHazard=id;state.pendingDetailScroll=true;renderResults({mode:'selection',historyMode:'push'})}
@@ -350,10 +384,37 @@ async function clearOfflineCache(){try{if('caches' in window){for(const k of awa
 function showError(err){console.error(err);$('#detail').innerHTML=`<div class="empty error"><strong>数据读取失败</strong><p>${esc(err?.message||err)}</p><button id="retry">重新加载</button></div>`;$('#retry')?.addEventListener('click',()=>location.reload())}
 
 function updateFilterSummary(){
-  const hazardCount=['#level','#mode'].filter(id=>$(id)?.value).length;
+  const hazardCount=['#scene','#level','#mode'].filter(id=>$(id)?.value).length;
   const lawCount=['#lawLevel','#lawStatus'].filter(id=>$(id)?.value).length;
   if($('#hazardFilterCount'))$('#hazardFilterCount').textContent=hazardCount?`（${hazardCount}）`:'';
   if($('#lawFilterCount'))$('#lawFilterCount').textContent=lawCount?`（${lawCount}）`:'';
+}
+
+function showSearchNotice(match){
+  const node=$('#searchNotice');if(!node)return;
+  node.textContent=match.matchKind==='related'
+    ? '当前筛选下没有原词或同义词结果，以下为相关概念参考。请核对设备、作业对象与适用条件。'
+    : match.matchKind==='corrected'
+      ? `当前筛选下没有原词结果，按“${match.interpretedQuery}”尝试纠错。请确认是否符合原意。`
+      : '';
+  node.textContent=[...state.routeWarnings,node.textContent].filter(Boolean).join(' ');
+  node.hidden=!node.textContent;
+}
+function renderActiveFilters(){
+  const node=$('#activeFilters');if(!node)return;
+  const labels={category:'专业分类',scene:'现场标签',level:'依据类型',region:'地区',mode:'适用方式',status:'效力状态'};
+  const entries=Object.entries(URL_FILTERS[state.view]||{}).filter(([,selector])=>$(selector)?.value);
+  node.hidden=!entries.length;
+  node.innerHTML=entries.map(([key,selector])=>{
+    const select=$(selector),label=select.selectedOptions?.[0]?.textContent||select.value;
+    return `<button type="button" class="filter-chip" data-filter="${esc(key)}" aria-label="移除${esc(labels[key])}：${esc(label)}">${esc(labels[key])}：${esc(label)} <span aria-hidden="true">×</span></button>`;
+  }).join('');
+  node.querySelectorAll('button[data-filter]').forEach(button=>button.onclick=()=>{
+    const selector=URL_FILTERS[state.view]?.[button.dataset.filter];if(!selector)return;
+    $(selector).value='';renderResults({mode:'filter-change',historyMode:'push'});
+    const disclosure=$(selector).closest?.('details');
+    if(disclosure&&!disclosure.open)disclosure.querySelector('summary')?.focus();else $(selector).focus();
+  });
 }
 
 function bind(){
@@ -368,6 +429,9 @@ function bind(){
     if(!state.store)return;
     const route=loadUrlState();applyUrlFilters(route);
     switchView(route.view,{keepQuery:true,initial:true,historyMode:'replace'});
+  });
+  document.addEventListener('visibilitychange',()=>{
+    if(!document.hidden&&state.store)setDataDateHeader(state.store.manifest,state.store.verifiedFiles?.manifest);
   });
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();if(state.view==='data')switchView('hazards');$('#search').focus()}});
 }

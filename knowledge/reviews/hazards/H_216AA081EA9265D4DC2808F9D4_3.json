@@ -1,13 +1,56 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "decision": "verified",
   "entityId": "H_216AA081EA9265D4DC2808F9D4_3",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_WEB_E04E2E3F4C10159205FB7D6D"
+    "E_SCOPE_20260930_NJXF_2_52_76"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_SCOPE_20260930_NJXF_2_52_76"
+    ],
+    "/places": [
+      "E_SCOPE_20260930_NJXF_2_52_76"
+    ]
+  },
+  "historySha256": "9b8a897180da7ca268b3d492561fa723dab02c8e3688bff049f83d5ad7510d65",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "decision": "verified",
+    "entityId": "H_216AA081EA9265D4DC2808F9D4_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E04E2E3F4C10159205FB7D6D",
+      "E_REMEDIATION_20260930_NJXF"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+    "reason": "南京条例52(2)适用设置消防控制室的单位，要求接入、实时传输和正常使用，禁止擅拆停用。新措施恢复禁止且未把监测系统替代单位主体责任。",
+    "reviewType": "content",
+    "reviewedContentHash": "e3247456e0fb521f3cde956c305256e67dacfe03385f891c41d504390325809c",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "f6a4c507d5d143dccbefc02b903d728cbe892984f8f39ef6d01a6a3678c98f85",
+  "reason": "2025施行的南京条例第52条第二款明确主体为设置消防控制室的单位，要求接入监测系统、实时传输、保证联网及网络正常、禁止擅拆停用；第三款保留单位主体责任。最终conditions与places准确恢复该主体，并将第2条第二款“另有规定从其规定”完整保留为条件性优先规则，未扩成南京所有单位。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "content",
-  "reviewedContentHash": "82b9ec321f27e6c374ed8d48b019c3a13ad96b57496ceafd9c2ced731bcc7157",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "29874fc64cc94b89fe949551ed9a83dafb14bf100d0c209ea48f9a6cfb0bb5d0",
+  "reviewedFields": [
+    "/conditions",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于南京市行政区域内设置消防控制室的单位，核查消防设施运行状态信息接入城市消防远程监控中心监测系统并实时传输，以及联网设施和传输网络正常使用、不得擅自拆除或停用。监测信息采集不替代单位消防安全主体责任。法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定。",
+    "/places": [
+      "南京市设置消防控制室的单位"
+    ]
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930"
 }

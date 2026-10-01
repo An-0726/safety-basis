@@ -1,23 +1,25 @@
 {
-  "checkedAt": "2026-09-11",
+  "checkedAt": "2026-09-30",
   "contextHashes": {
+    "hazard": "7743123c287507e12f09d3fbfc46f52f90e0514faa3453f2bdd1b003f57acb06",
     "clause": "fc2f908d57a30ce45652f7382cd26bd1c915c1bed8b8da1c4168298eaf6f17b7",
-    "hazard": "00e67c969e84336bdcdaa453b5cdd779701748dcf87e2c37c2ba2df83825cf17",
-    "link": "d8c37c8bbe69c73184f031ffb8f2552f7b130d32fc9bfef6f6fcec36d79a1f42"
+    "link": "1360d47f880a3d4e7a19fb36f269c79cddebac52a7630670a33f0c18379a4954"
   },
   "decision": "verified",
   "entityId": "K_GB45067_BD32095BBE99_3",
   "entityType": "link",
   "evidenceRefs": [
-    "E_GB45067_2024"
+    "E_GB45067_2024",
+    "E_REMEDIATION_20260930_GB45067",
+    "E_REMEDIATION_20260930_TSELAW"
   ],
-  "reason": "该隐患为“压力容器定期检验结论为不符合要求仍继续使用，未判定为重大事故隐患”；GB 45067-2024《特种设备重大事故隐患判定准则》第4.3条 直接规定该情形仍继续使用的应判定为重大事故隐患，与本条隐患事实逐项对应，确认为 direct 依据。",
+  "reason": "4.3a的触发是定检结论不符合要求且仍使用，不能把整改符合要求写成重大隐患。新措施修正结论及停用顺序；独立补齐第1章压力容器适用与排除条件到hazard和direct link。建筑工地排除项仅针对起重机械/场车，不错误扩大为所有工地压力容器均排除。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "MAJOR_HAZARD_CRITERION"
   ],
   "reviewType": "applicability",
-  "reviewedContentHash": "d8c37c8bbe69c73184f031ffb8f2552f7b130d32fc9bfef6f6fcec36d79a1f42",
-  "reviewer": "ZCode-DeepSeek",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "1360d47f880a3d4e7a19fb36f269c79cddebac52a7630670a33f0c18379a4954",
+  "reviewer": "Codex逐项内容复核20260930",
+  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_BD32095BBE999606E80E376E；条款：C_GB45067_4_3；保留direct角色。"
 }

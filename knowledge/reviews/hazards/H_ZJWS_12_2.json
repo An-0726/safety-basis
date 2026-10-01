@@ -1,13 +1,59 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
   "decision": "verified",
   "entityId": "H_ZJWS_12_2",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_FT_E546061F015A00C74F3AC1AC"
+    "E_SCOPE_20260930_NHC5_CURRENT_BODY",
+    "E_SCOPE_20260930_NHC5_CURRENT_STATUS"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_SCOPE_20260930_NHC5_CURRENT_BODY",
+      "E_SCOPE_20260930_NHC5_CURRENT_STATUS"
+    ],
+    "/places": [
+      "E_SCOPE_20260930_NHC5_CURRENT_BODY",
+      "E_SCOPE_20260930_NHC5_CURRENT_STATUS"
+    ]
+  },
+  "historySha256": "b585d51a6078cf59b7deb41aaad2f5468a7c81313c86b1b009d1e95d7d4215da",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "decision": "verified",
+    "entityId": "H_ZJWS_12_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E546061F015A00C74F3AC1AC",
+      "E_REMEDIATION_20260930_NHC5"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+    "reason": "NHC5第12条主语是产生职业病危害的用人单位的工作场所。独立修订保持这个单位层级范围，不缩为仅产生危害的某一房间；不得住人恢复明确禁止。description去除无依据的不相容物质风险模板。",
+    "reviewType": "content",
+    "reviewedContentHash": "b6996447f7d754f0ac12a560a2a82d8e59c6b37a01a9d45e5ee3be38211986a6",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "8833077db369ed2a161a1fff1d82f5d68402296d3628054aff5cd03f13dfd805",
+  "reason": "现行第5号令第12条导语的主语是产生职业病危害的用人单位的工作场所，第（二）项分别要求工作生活分开、工作场所不得住人；第57条定义包括劳动者职业活动所有地点及施工场所。最终范围正确保留单位层级限制，不缩成某个直接产害房间，也不扩大到没有相关危害的所有单位。最小化无关病历取证说明与布局用途核查相称。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "content",
-  "reviewedContentHash": "acf259d554ecb9d88f5f7544755ad39a24c86e3a9dd6f865356460a946e194a7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "064eefe84a775ff773266761565350a2611141ea4871e72887877ffa796f23a0",
+  "reviewedFields": [
+    "/conditions",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于产生职业病危害的用人单位的工作场所，核查工作场所与生活场所分开、工作场所不得住人。单位层级适用范围不缩为仅产生危害的某个房间；本项核查布局及实际用途，不要求收集个人病历、健康检查结果等无关信息。",
+    "/places": [
+      "产生职业病危害的用人单位的工作场所"
+    ]
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930"
 }

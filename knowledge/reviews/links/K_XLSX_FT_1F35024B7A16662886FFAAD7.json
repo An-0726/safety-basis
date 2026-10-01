@@ -1,18 +1,61 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
+  "clauseId": "C_XLSX_FT_F0512157014847162731801A",
   "contextHashes": {
     "clause": "537143407cb54b5b2c2c81ce1ca7de2c5aae405bf7fc5e229cdd8ebde8f30d52",
-    "hazard": "acf259d554ecb9d88f5f7544755ad39a24c86e3a9dd6f865356460a946e194a7"
+    "hazard": "064eefe84a775ff773266761565350a2611141ea4871e72887877ffa796f23a0"
   },
   "decision": "verified",
   "entityId": "K_XLSX_FT_1F35024B7A16662886FFAAD7",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_E546061F015A00C74F3AC1AC"
+    "E_SCOPE_20260930_NHC5_CURRENT_BODY",
+    "E_SCOPE_20260930_NHC5_CURRENT_STATUS"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_SCOPE_20260930_NHC5_CURRENT_BODY",
+      "E_SCOPE_20260930_NHC5_CURRENT_STATUS"
+    ]
+  },
+  "historySha256": "db5224aa3d739b4e1754f60c3a9d23ee0457e3b944242330a2975ab3b2beeb2f",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "537143407cb54b5b2c2c81ce1ca7de2c5aae405bf7fc5e229cdd8ebde8f30d52",
+      "hazard": "b6996447f7d754f0ac12a560a2a82d8e59c6b37a01a9d45e5ee3be38211986a6"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_1F35024B7A16662886FFAAD7",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_E546061F015A00C74F3AC1AC",
+      "E_REMEDIATION_20260930_NHC5"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_ZJWS_12_2；条款：C_XLSX_FT_F0512157014847162731801A；保留direct角色。",
+    "reason": "NHC5第12条主语是产生职业病危害的用人单位的工作场所。独立修订保持这个单位层级范围，不缩为仅产生危害的某一房间；不得住人恢复明确禁止。description去除无依据的不相容物质风险模板。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "ea5ef1d24bab73897fc0cc7153fdedf3cf464187c27b6fdfebff02c53b88abac",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "4e9d6d2ba6e5e30225e5fab7c484c68caae64b887c3bb5b2c0478459e3233584",
+  "reason": "C_XLSX_FT_F0512157014847162731801A第12条（二）为直接依据，必须连同导语及第57条定义阅读。单位产生危害属性和工作场所身份为边界，工作与生活分隔、禁止住人两支分别检查；新link无需个体病例或健康结果才能判断布局用途，且没有否定第30—34条另行健康监护与档案义务。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "ea5ef1d24bab73897fc0cc7153fdedf3cf464187c27b6fdfebff02c53b88abac",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "8e32892acee304aad28915811484039972fcf513bac87a38a7eb7ec8dd1e9c80",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于产生职业病危害的用人单位的工作场所，核查工作场所与生活场所分开、工作场所不得住人。单位层级适用范围不缩为仅产生危害的某个房间；本项核查布局及实际用途，不要求收集个人病历、健康检查结果等无关信息。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

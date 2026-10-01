@@ -1,18 +1,61 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
+  "clauseId": "C_15577_10_5",
   "contextHashes": {
     "clause": "eaa70f02e23bf952e13579133fb0517c0ed94bc26cd794346a84372e4bff0564",
-    "hazard": "f8187b29c67b8e9637a97f7da040ba681e00838997691893a3f709ead3ca9fca"
+    "hazard": "fd0e55a319c0b60555109c8214977945ca8809c8d11d64d969b0fd2c6df2cca6"
   },
   "decision": "verified",
   "entityId": "K_XLSX_3776bf115b97bd829f4208bf",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_10_5"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_10_5"
+    ]
+  },
+  "historySha256": "650fb53d82a0e07c0fbc6bce47e32803db90c86ca09f582df977db7be942d931",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "eaa70f02e23bf952e13579133fb0517c0ed94bc26cd794346a84372e4bff0564",
+      "hazard": "c68425d8bbf7735f933f224d7490b382712c947d29198329164b7f2b202fef44"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_3776bf115b97bd829f4208bf",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_10_5_1；条款：C_15577_10_5；保留direct角色。",
+    "reason": "10.5完整条文明确防火花工具及禁止铁质检修工具，新措施准确恢复禁止义务；适用对象仍限粉尘爆炸危险场所检修。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "876415fb49767c07f9d8e406b8088834814bb9f4d2f583d64d1c6ba7bb14ce3e",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "891199caa3e5fe38eacb24ffa7fb5e6ff74a4d46897dcde1ff4f4796e7e14929",
+  "reason": "C_15577_10_5是检修工具要求的直接依据，结合第1章和第3.1—3.3确认危险场所而非一切普通粉尘作业。新applicability直接关联该工具义务，不把火花已发生、铁工具已使用或爆炸已发生设为核查入口；防爆工具要求和禁铁要求分别核查。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "876415fb49767c07f9d8e406b8088834814bb9f4d2f583d64d1c6ba7bb14ce3e",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "9da840c8bcc231c8d6df466fcb5e2df6f9b68d0e83ba0b444c0d19fde09b9fb9",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的检修作业及其检修作业工具，本项核查采用防止产生火花的防爆工具，以及禁止使用铁质检修作业工具。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

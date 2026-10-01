@@ -1,18 +1,61 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
+  "clauseId": "C_15577_6_3_3",
   "contextHashes": {
     "clause": "0c9a5108cbf47233fdc595b157bd492b9fa49220f2a9c73e3a61db3e0d2ffd6f",
-    "hazard": "d8c11bbb85abef418138d209e8c3a240255d7ef47ed1799dfe1996e8552342fb"
+    "hazard": "374fc3c60a735d37637da8de3eca5ab48fba56093a6309d4e350a7b4be65b001"
   },
   "decision": "verified",
   "entityId": "K_XLSX_6cfb819dfd23b4fc5b30c46e",
   "entityType": "link",
   "evidenceRefs": [
-    "E_15577_GB 15577"
+    "E_SCOPE_20260930_GB15577_CH1_TERMS",
+    "E_SCOPE_20260930_GB15577_6_3_3"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_SCOPE_20260930_GB15577_CH1_TERMS",
+      "E_SCOPE_20260930_GB15577_6_3_3"
+    ]
+  },
+  "historySha256": "f9705433ca6b0e7e22bb75aab3589dc89e0db09a7b4383b802402c2ad434a123",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "0c9a5108cbf47233fdc595b157bd492b9fa49220f2a9c73e3a61db3e0d2ffd6f",
+      "hazard": "910577ff6efea7d136597b1e50528972e58a03c531102c1ff251d8f860fa8638"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_6cfb819dfd23b4fc5b30c46e",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_6_3_3_2；条款：C_15577_6_3_3；保留direct角色。",
+    "reason": "6.3.3有防过热火花和防可燃粉尘进入外壳两项防止义务；新措施完整恢复第二防止，不将一般粉尘环境泛化为粉尘爆炸环境。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "2063d0ad7b36b4c6bfb9af44f8dcd1384e5e23190b4bb6e6da522424a45c5f8f",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "48d209e36ff8e6b138174e92871576af97d26fd4072825c6692a72646c12c41a",
+  "reason": "C_15577_6_3_3对本实体的直接支持限其分号后防点燃、防粉尘进入两类义务；新applicability不把参考标准的全部技术内容冒充本次已核内容。第1章覆盖设计、运行维护等阶段，不能要求实际过热、实际火花或实际进尘后才核查预防措施。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "2063d0ad7b36b4c6bfb9af44f8dcd1384e5e23190b4bb6e6da522424a45c5f8f",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "85f795e81baae6a27d1e856f06a3ce6e857dfe8d3d23a307003b46f6ae831c37",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于GB 15577-2018范围内粉尘爆炸危险场所用电气设备和线路，本项核查防止由电气设备或线路产生的过热及火花，以及防止可燃性粉尘进入产生电火花或高温部件的外壳内。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

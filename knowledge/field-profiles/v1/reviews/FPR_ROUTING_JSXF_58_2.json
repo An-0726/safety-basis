@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_JSXF_58_2",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_three_fire_routing_profiles（2026-09-30）",
+  "reason": "本次已直接复读江苏省人大2023修订现行文本并核官方现行性，逐字段完成实质审阅。document_review/exclude/document_check用于重点单位身份、半年时间窗、实际演练日期及内容的材料核查。它不把普通单位一律认定为重点单位，也不因路由通过即产生现场重大事故/火灾隐患结论。K_XLSX_FT_1412F9552C73E6C403C39E08为CN-32的direct关联，连接江苏省消防条例2023修订版C_JSXF_58。第58条第二款直接支持已确认重点单位每半年至少一次灭火和应急疏散演练，两个内容都需核实；依法定界定标准纳入的个体工商户由同版第93条支持相同职责，该完整条文已在本次官方正文及被绑定的E_FIRE_CORRECTION_JSXF_20260930证据摘录复核。第93条仅是主体适用的补充上下文，直接演练依据仍为第58条第二款。普通单位/人员密集场所不能自动纳入，学校身份不能替代重点单位条件，年度总数不能自动替代逐半年要求；不存在无需个案事实即可判重大隐患的依据。 findingTemplate为null、observedViolation为false、perUseFacts只含待核名称；材料仅作核验路径，不新创法定档案格式。核查、整改文字均不得跳过个案适用性和实际事实。结论仅绑定本profile及完整依赖hash，不涵盖其他19份草案，不作实际违法、行政处罚或重大隐患判定。",
+  "reviewedOn": "2026-09-30",
+  "reviewedProfileHash": "26604ad9a1676e66a46b56420d5984639b08e5b74848e6b338151b8f7a4d03e1",
+  "dependencyFingerprint": "16d9ae1d278c2759ed0bad705e28d44767375c00498280fccf1a6a4604d4474b",
+  "semanticChecks": {
+    "applicability": true,
+    "correctiveDirection": true,
+    "evidenceRequirements": true,
+    "findingTemplate": true,
+    "routing": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_FT_1412F9552C73E6C403C39E08": "K_XLSX_FT_1412F9552C73E6C403C39E08为CN-32的direct关联，连接江苏省消防条例2023修订版C_JSXF_58。第58条第二款直接支持已确认重点单位每半年至少一次灭火和应急疏散演练，两个内容都需核实；依法定界定标准纳入的个体工商户由同版第93条支持相同职责，该完整条文已在本次官方正文及被绑定的E_FIRE_CORRECTION_JSXF_20260930证据摘录复核。第93条仅是主体适用的补充上下文，直接演练依据仍为第58条第二款。普通单位/人员密集场所不能自动纳入，学校身份不能替代重点单位条件，年度总数不能自动替代逐半年要求；不存在无需个案事实即可判重大隐患的依据。"
+  },
+  "reviewEvidence": {
+    "formalReviewReportSha256": "608641558111fd60a65691e446824c9b67e0edb727bd466c15267fa3c9e6feba",
+    "profileFileSha256": "d6544431aec6e3b7fe3d5d4c9b17bf4d377b9ed2ce5bb216b7450a86297b2081",
+    "officialSources": [
+      "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+      "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99085",
+      "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html"
+    ],
+    "reviewedExactLocator": "第58条第二款；第2条地域；第93条特定个体工商户同责",
+    "usageConstraints": [
+      "核查前确定适用的半年窗口；本次只确认法条频次，不另创窗口计算方法，不对未到期期间提前认定未履职。",
+      "第93条已由当前完整证据对象绑定，并非另行选定的独立profile basis；它只支持符合界定标准的个体工商户主体延伸，不改变演练直接依据。",
+      "资料缺失不自动等于未实际演练；一般培训/巡查不能替代，但包含灭火和疏散内容的一次综合演练可以按适用要求核查。"
+    ],
+    "commonInterpretiveBoundaries": [
+      "routing_only和defaultFieldEntry=exclude只是用途/默认入口，不是法律义务不适用或实际合规的断言。",
+      "perUseFacts是待核事实名称，不是布尔值，也不是可由代码直接求AND/OR的判定式。",
+      "evidenceRequirements是必要核验建议，不能把未规定格式的计划、纪要、台账或个人名册变成新增法定义务；资料缺失与未实际履职必须区分。",
+      "学校定期两活动与重点单位每半年演练是不同款、可重叠适用但不可偷换主体；综合演练可同时包含灭火和疏散内容。",
+      "省第53条第三款第一句的避免进入保持原语气；其后禁止充电/停放及市级禁止条款不能移植为全省进入禁令。",
+      "资料核查/法定义务路由不支持无条件现场隐患、重大隐患、行政处罚或已观测违规推断。",
+      "不将整改建议当作已核定违法，也不将补做未来活动视为消除已确证历史期间的不履职事实。"
+    ],
+    "sourceSnapshotEqualsHistorical": true
+  }
+}

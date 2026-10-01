@@ -1,13 +1,16 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
-  "entityId": "H_1AD0D576979A2F4717DA1E73D1_2",
-  "entityType": "hazard",
-  "evidenceRefs": [
-    "E_XLSX_FT_D7EAE95C2C926E60C57D23CF"
-  ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
   "reviewType": "content",
-  "reviewedContentHash": "04754439c24b710055ec09d1c44822fb590b5ac8c7b42d4a960d75a24362246e",
-  "reviewer": "Codex正式核验批次20260913"
+  "entityType": "hazard",
+  "entityId": "H_1AD0D576979A2F4717DA1E73D1_2",
+  "decision": "verified",
+  "reviewedContentHash": "66d4a46cb6c865a7a57c3994dee4f0f1169056c409a4cf131b51d8c3bb5fdb54",
+  "evidenceRefs": [
+    "E_XLSX_FT_D7EAE95C2C926E60C57D23CF",
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
+  ],
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "已完整核对本条title、description、measures、conditions、places及唯一direct依据。特种设备安全法第十九条义务主体为生产单位，第二条所称生产包括设计、制造、安装、改造、修理；删除使用现场参数套句及泛使用场所，要求有实际生产活动和适用技术要求不符合项或国家明令淘汰匹配证据。安全性能要求与适用能效指标均为合规要求，不符合任一适用要求不能认定合格，不将法条连接词误读为两项须同时不符；国家明令淘汰为独立禁止分支。仅拟生产计划或使用现场状态不能证明违法生产，但实际设计等活动不以制成成品为前提。title沿用法条禁止性表述，measures逐字保留，其中拟生产核查属于预防整改，不是已违法生产事实。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。"
 }

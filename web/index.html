@@ -31,7 +31,7 @@
 <main>
   <section class="intro">
     <div>
-      <div class="eyebrow">CURRENT VERIFIED SAFETY REFERENCE</div>
+      <div class="eyebrow">VERIFIED SAFETY REFERENCE</div>
       <h1>现场隐患，<span>有据可查。</span></h1>
       <p>正式视图只展示已核验隐患和实际引用的法规版本；候选与来源目录留在后台继续审核，不与正式依据混排。</p>
       <div class="scope"><span>国家法规标准优先</span><i>＋</i><span>江苏 / 南京补充</span><i>＋</i><span>法规原文可追溯</span></div>
@@ -46,23 +46,26 @@
 
   <section id="searchView" class="workspace">
     <div class="sectionhead"><div><h2 id="sectionTitle">隐患速查</h2><p id="sectionHint">现场问题 → 专业描述 → 直接依据 → 整改措施</p></div><span class="shortcut">按 <kbd>/</kbd> 聚焦搜索</span></div>
-    <div class="searchbar"><span aria-hidden="true">⌕</span><input id="search" aria-label="搜索数据库" autocomplete="off" spellcheck="false"><button id="clear" class="quiet">清空</button></div>
+    <div id="snapshotNotice" class="snapshot-notice" role="status" hidden></div>
+    <div class="searchbar"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索数据库" aria-describedby="searchHelp" autocomplete="off" spellcheck="false"><button id="clear" class="quiet" type="button">清空</button></div>
+    <p id="searchHelp" class="search-help">输入设备、现场问题或法规名称；多个关键词用空格分开</p>
 
     <div id="hazardFilters" class="filters">
-      <label>主题<select id="category"></select></label>
-      <label>适用场景<select id="scene"></select></label>
+      <label>专业分类<select id="category"></select></label>
       <label>地区<select id="region"><option value="">国家＋江苏／南京</option><option value="全国">仅国家依据</option><option value="江苏">江苏补充</option><option value="南京">南京补充</option></select></label>
-      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label></div></details>
-      <button id="reset" class="quiet">重置筛选 ↺</button>
+      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>场所 / 设备 / 作业<select id="scene" aria-describedby="sceneHelp"></select></label><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label><p id="sceneHelp">现场标签仅整理条目已记录的场所信息，不能代替适用条件判断；未标注不代表不适用。</p></div></details>
+      <button id="reset" class="quiet" type="button">全部重置 ↺</button>
     </div>
 
     <div id="lawFilters" class="filters" hidden>
       <label>地区<select id="lawRegion"><option value="">全部地区</option><option value="全国">全国</option><option value="江苏">江苏</option><option value="南京">南京</option></select></label>
       <details id="lawMoreFilters" class="more-filters"><summary>更多筛选 <span id="lawFilterCount"></span></summary><div class="more-filter-items"><label>依据类型<select id="lawLevel"></select></label><label>效力状态<select id="lawStatus"></select></label></div></details>
-      <button class="quiet" id="resetLaw" type="button">重置筛选 ↺</button>
+      <button class="quiet" id="resetLaw" type="button">全部重置 ↺</button>
     </div>
 
-    <div class="resultbar"><span><b id="count">0</b> 条匹配 <small id="summary">数据库正在初始化</small></span><span class="legend"><i></i> 原文与适用性分开核验 <em>·</em> 使用前复核现场条件</span></div>
+    <div id="activeFilters" class="active-filters" aria-label="当前筛选条件" hidden></div>
+    <p id="searchNotice" class="search-notice" role="status" hidden></p>
+    <div class="resultbar"><span role="status" aria-live="polite" aria-atomic="true"><b id="count">0</b> 条匹配 <small id="summary">数据库正在初始化</small></span><span class="legend"><i></i> 原文与适用性分开核验 <em>·</em> 使用前复核现场条件</span></div>
     <div class="columns"><div id="list" class="list" tabindex="-1" aria-label="搜索结果"></div><article id="detail" class="detail" aria-live="polite"><div class="empty"><strong>数据库正在初始化</strong></div></article></div>
   </section>
 

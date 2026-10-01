@@ -106,17 +106,18 @@ const correctedTerm = term => {
   return candidates.length===1 ? candidates[0] : term;
 };
 const matchingRows = (rows, terms) => {
-  if(!terms.length) return {rows,terms};
+  if(!terms.length) return {rows,terms,matchKind:'all'};
   const groups=terms.map(variantsOf);
   const exact=rows.filter(r=>termsMatch(r.searchText,groups));
-  if(exact.length) return {rows:exact,terms};
+  if(exact.length) return {rows:exact,terms,matchKind:'standard'};
   const relatedGroups=terms.map(relatedVariantsOf);
   const related=rows.filter(r=>termsMatch(r.searchText,relatedGroups));
-  if(related.length) return {rows:related,terms};
+  if(related.length) return {rows:related,terms,matchKind:'related'};
   const corrected=terms.map(correctedTerm);
-  if(corrected.every((t,i)=>t===terms[i])) return {rows:[],terms};
+  if(corrected.every((t,i)=>t===terms[i])) return {rows:[],terms,matchKind:'none'};
   const correctedGroups=corrected.map(variantsOf);
-  return {rows:rows.filter(r=>termsMatch(r.searchText,correctedGroups)),terms:corrected};
+  const correctedRows=rows.filter(r=>termsMatch(r.searchText,correctedGroups));
+  return {rows:correctedRows,terms:corrected,matchKind:correctedRows.length?'corrected':'none'};
 };
 
 const scopeMatch = (scopes, region) => !region || scopes.some(x => region==='全国' ? x==='全国' : x.includes(region));
@@ -145,7 +146,7 @@ const hazardScore=(r,q,terms)=>{
   return score;
 };
 
-export function searchHazards(rows, query, filters={}) {
+export function searchHazardsDetailed(rows, query, filters={}) {
   const q=normalize(query), terms=termsOf(query);
   const out=[];
   for(const r of rows){
@@ -166,7 +167,7 @@ export function searchHazards(rows, query, filters={}) {
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map(row=>({row,score:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
-  return scored.map(x=>x.row);
+  return {rows:scored.map(x=>x.row),matchKind:matched.matchKind,interpretedQuery:matched.terms.join(' ')};
 }
 
 const lawScore=(r,q,terms)=>{
@@ -187,7 +188,7 @@ const lawScore=(r,q,terms)=>{
   return score;
 };
 
-export function searchLaws(rows, query, filters={}) {
+export function searchLawsDetailed(rows, query, filters={}) {
   const q=normalize(query), terms=termsOf(query);
   const out=[];
   for(const r of rows){
@@ -202,5 +203,13 @@ export function searchLaws(rows, query, filters={}) {
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map(row=>({row,score:lawScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.name.localeCompare(b.row.name,'zh-CN'));
-  return scored.map(x=>x.row);
+  return {rows:scored.map(x=>x.row),matchKind:matched.matchKind,interpretedQuery:matched.terms.join(' ')};
+}
+
+// Preserve the original array API for the field pilot, callers and stored links.
+export function searchHazards(rows, query, filters={}) {
+  return searchHazardsDetailed(rows,query,filters).rows;
+}
+export function searchLaws(rows, query, filters={}) {
+  return searchLawsDetailed(rows,query,filters).rows;
 }

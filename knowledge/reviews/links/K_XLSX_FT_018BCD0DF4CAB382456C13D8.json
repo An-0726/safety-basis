@@ -1,18 +1,61 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-09-30",
+  "clauseId": "C_XLSX_FT_B5EB332AAF1DF679189544DF",
   "contextHashes": {
-    "clause": "8e94a87de70f8d2e5d1eb3641bddac0666b19764d33f41debf44b1af61416ca4",
-    "hazard": "23250768c17853a01735cad562acce22baff31814571f9e13b6fd792b6b1056e"
+    "clause": "8c77133b5b7f916b84a2f5cde5e207bf4514072bf6e5ffd071f8f6fed7ce363f",
+    "hazard": "48dacf79727b8a9d23eeb6c44b45267535f4a306df934a9536efb5dae6aeb4cd"
   },
   "decision": "verified",
   "entityId": "K_XLSX_FT_018BCD0DF4CAB382456C13D8",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_5040D8C5C98FA2D9B8BB8ABA"
+    "E_REMEDIATION_20260930_TSELAW",
+    "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_REMEDIATION_20260930_TSELAW",
+      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
+    ]
+  },
+  "historySha256": "4c74291a7f755236fe1bb37902759398b0fafa8d270ec2d7d954d1feac52e838",
+  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "clause": "8c77133b5b7f916b84a2f5cde5e207bf4514072bf6e5ffd071f8f6fed7ce363f",
+      "hazard": "c8937aaedf06e5edf1ac18bde51b7df5cc14f598a20f2372d640a7eaf719c4e8"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_018BCD0DF4CAB382456C13D8",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_5040D8C5C98FA2D9B8BB8ABA",
+      "E_REMEDIATION_20260930_TSELAW"
+    ],
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_8300469D69145B0731074A2CC4_2；条款：C_XLSX_FT_B5EB332AAF1DF679189544DF；保留direct角色。",
+    "reason": "48(2)原先错误引用48(1)，必须连同条款全文改正。独立修订明确可以继续使用而非仅拟继续使用，排除48(1)报废条件及32条已报废/明令淘汰设备；检验或者评估、登记变更和加强检验检测保养的要求全部保留。全库反向查找此被改条款只有该一个link。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "a1e62a662520ef1c73e936693f69c023824c31621107c6365b8a39d2af743cab",
+    "reviewer": "Codex逐项内容复核20260930"
+  },
+  "previousReviewFileSha256": "5ddc074318d2eddb8a4be3d5633ffbf18a9eff1b2d77037965e676db42122190",
+  "reason": "C_XLSX_FT_B5EB332AAF1DF679189544DF第48条第二款直接支持延用程序和加强措施，第一款及第32条提供不可借延用程序复活报废/淘汰设备的边界。检验“或者”安全评估须依适用安全技术规范选择，不能一律要求二者并行或任意择一；同法原文证据只使用这些locators，现行目录只支持版本状态。",
+  "reviewEvidence": {
+    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+    "profileAdmission": false,
+    "siteFactsVerified": false,
+    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+  },
   "reviewType": "applicability",
-  "reviewedContentHash": "a1e62a662520ef1c73e936693f69c023824c31621107c6365b8a39d2af743cab",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "204bffea7fb2df1b95fb599064037a5b183322031699b30c0834db345cc80dac",
+  "reviewedFields": [
+    "/applicability"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于不属于特种设备安全法第四十八条第一款报废条件、未被国家明令淘汰且未已经报废，达到设计使用年限并按安全技术规范可以继续使用的特种设备及其使用单位。继续使用前须按规范通过检验或者安全评估并办理使用登记证书变更；允许继续使用后应加强检验、检测和维护保养。是否已通过检验或者安全评估、是否已办理使用登记证书变更属于本项核查内容，不作为进入核查范围的前提；未履行前述义务而继续使用的情形不得漏查。"
+  },
+  "reviewer": "Codex十三项源范围独立复核20260930",
+  "roleRetained": "direct"
 }

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_JSXF_58_1",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_three_fire_routing_profiles（2026-09-30）",
+  "reason": "本次已直接复读江苏省人大2023修订现行文本并核官方现行性，逐字段完成实质审阅。document_review/exclude/document_check适合核查组织安排及实际履职材料；法规要求实际开展两项活动，资料路由不能把有计划等同完成，也不能把未提供某种材料直接等同未开展。K_XLSX_FT_4996B3C832602A8FE3E7F750为CN-32的direct关联，连接江苏省消防条例2023修订版C_JSXF_58。选定的直接义务为第58条第一款：江苏省内学校及其他教育机构定期组织师生参观消防科普教育场馆、开展应急疏散演练。本profile把两项活动的安排与执行分开核查，使用document_review/exclude且无现场模板。第二款的每半年至少一次仅因另行确认重点单位属性才可能另外适用，不能在本项覆盖所有学校；第91条不作为组织演练义务依据。本项不增加统一考核、岗位准入、固定文件格式或重大隐患结论。 findingTemplate为null、observedViolation为false、perUseFacts只含待核名称；材料仅作核验路径，不新创法定档案格式。核查、整改文字均不得跳过个案适用性和实际事实。结论仅绑定本profile及完整依赖hash，不涵盖其他19份草案，不作实际违法、行政处罚或重大隐患判定。",
+  "reviewedOn": "2026-09-30",
+  "reviewedProfileHash": "7d68356767522e39fda24d2d56ca03662063c629d1c8964b4268355d5b4d961c",
+  "dependencyFingerprint": "362909cc3893363e03a2898da8ffe432749ab220857dafcee6d627ec71add1a1",
+  "semanticChecks": {
+    "applicability": true,
+    "correctiveDirection": true,
+    "evidenceRequirements": true,
+    "findingTemplate": true,
+    "routing": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_FT_4996B3C832602A8FE3E7F750": "K_XLSX_FT_4996B3C832602A8FE3E7F750为CN-32的direct关联，连接江苏省消防条例2023修订版C_JSXF_58。选定的直接义务为第58条第一款：江苏省内学校及其他教育机构定期组织师生参观消防科普教育场馆、开展应急疏散演练。本profile把两项活动的安排与执行分开核查，使用document_review/exclude且无现场模板。第二款的每半年至少一次仅因另行确认重点单位属性才可能另外适用，不能在本项覆盖所有学校；第91条不作为组织演练义务依据。本项不增加统一考核、岗位准入、固定文件格式或重大隐患结论。"
+  },
+  "reviewEvidence": {
+    "formalReviewReportSha256": "608641558111fd60a65691e446824c9b67e0edb727bd466c15267fa3c9e6feba",
+    "profileFileSha256": "f8d2a98236c16ebc7b2150591078b2be0b02dff769f57c2fa54608681f87ad22",
+    "officialSources": [
+      "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+      "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99085",
+      "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html"
+    ],
+    "reviewedExactLocator": "第58条第一款；第2条地域；第58条第二款仅作主体/频次对照",
+    "usageConstraints": [
+      "本款未规定具体次数/周期不等于实际学校没有其他已生效法规或行业要求；本次未穷尽所有学校监管规范。",
+      "具备重点单位属性的学校可同时受第二款约束，必须独立核实该属性。",
+      "缺少书面计划/纪要与没有实际组织活动应区分；不能反推，需补充合理证据核查。"
+    ],
+    "commonInterpretiveBoundaries": [
+      "routing_only和defaultFieldEntry=exclude只是用途/默认入口，不是法律义务不适用或实际合规的断言。",
+      "perUseFacts是待核事实名称，不是布尔值，也不是可由代码直接求AND/OR的判定式。",
+      "evidenceRequirements是必要核验建议，不能把未规定格式的计划、纪要、台账或个人名册变成新增法定义务；资料缺失与未实际履职必须区分。",
+      "学校定期两活动与重点单位每半年演练是不同款、可重叠适用但不可偷换主体；综合演练可同时包含灭火和疏散内容。",
+      "省第53条第三款第一句的避免进入保持原语气；其后禁止充电/停放及市级禁止条款不能移植为全省进入禁令。",
+      "资料核查/法定义务路由不支持无条件现场隐患、重大隐患、行政处罚或已观测违规推断。",
+      "不将整改建议当作已核定违法，也不将补做未来活动视为消除已确证历史期间的不履职事实。"
+    ],
+    "sourceSnapshotEqualsHistorical": true
+  }
+}

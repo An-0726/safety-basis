@@ -1,13 +1,18 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
-  "entityId": "H_48B66BAC_12_1",
-  "entityType": "hazard",
-  "evidenceRefs": [
-    "E_XLSX_FT_8ECF45A925A1AB305A639CEB"
-  ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
   "reviewType": "content",
-  "reviewedContentHash": "64f655e8177708e893b41f66159d4d461cbfea1a9ee54ae265948f0170297c0e",
-  "reviewer": "Codex正式核验批次20260913"
+  "entityType": "hazard",
+  "entityId": "H_48B66BAC_12_1",
+  "decision": "verified",
+  "reviewedContentHash": "922723364c203de5c868dd0a4d5c4bf2e7de4e8912d1a84b1ecc98693694556f",
+  "evidenceRefs": [
+    "E_XLSX_FT_8ECF45A925A1AB305A639CEB",
+    "E_REMEDIATION_20260930_MEM13",
+    "E_72b7188a148af91cc79aad3c97dcb9cd7611286790858514f4efc9d53b4a7a52",
+    "E_XLSX_FT_52EE92815856956C92B3D4CC",
+    "E_XLSX_FT_F8BFF2631FB9A86595C65DEF"
+  ],
+  "reviewer": "Codex三条残余独立法律语义复核20260930",
+  "checkedAt": "2026-09-30",
+  "reason": "已完整核对本条title、description、measures、conditions、places及唯一direct依据。第13号令第二、三、十二条将物理隔离义务限于工贸企业中符合有限空间定义且可能产生有毒物质的空间；删除无条文支持的不相容物质风险套句，标题改为未按规定采取物理隔离措施。第十二条允许监护人员在作业前解除物理隔离，不得仅凭入口开放判为隔离未落实，也不以实际发生未经审批进入作为缺失隔离的必要前提。第七、十四条审批与作业条件独立适用；原文未明确审批与解除隔离的先后，本补丁不增设该顺序。既有measures逐字保留且与上述边界一致。",
+  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。"
 }
