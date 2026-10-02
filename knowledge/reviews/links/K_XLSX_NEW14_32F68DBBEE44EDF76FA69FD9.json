@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
-    "hazard": "9969ba0092effde6a6f0ea02b45cbd6b8e61d107cbe54508513eec4c470577dd"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_32F68DBBEE44EDF76FA69FD9",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_32F68DBBEE44EDF76FA69FD9",
   "reviewType": "applicability",
-  "reviewedContentHash": "372af6e5ede328393e87caa1f1fbc9b7034940bcaf827432c7e19a3037b83ee8",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "6bfec6fee0fbca4ddafb910ab82410139521bbce5de8793ab317134a47dfd1c9",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "候选指出旧C条号/引文错配成立。本轮已取得准确技术原文，因此无需只因旧链错误就改成另一条通用消防器材H。 优先保留原H/K稳定ID，为L025新建第8.1.12的精确C并改连；补H/K适用设计与设施对象边界。原C只改为实际第67条，绝不偷换quote。",
+  "evidenceRefs": [
+    "E_CITATION_GB50016_8112_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "5de1948663a074703bc8bbc59daa72ca187e0606e4685374e35a10ca3d9189bc",
+    "clause": "c480c1b5b7152e95b4ddb8496fa59b4af21a7716d0aa30ffd0b62fa36053f310"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
+      "hazard": "9969ba0092effde6a6f0ea02b45cbd6b8e61d107cbe54508513eec4c470577dd"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_32F68DBBEE44EDF76FA69FD9",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "372af6e5ede328393e87caa1f1fbc9b7034940bcaf827432c7e19a3037b83ee8",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "87e8e950d1c66a37dbc4d608c9647be02352017e4174d6b76d90fd6c4440e760"
 }

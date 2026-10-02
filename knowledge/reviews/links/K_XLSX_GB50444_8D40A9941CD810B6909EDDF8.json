@@ -1,18 +1,41 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "530bc0ef62e0539984d854bbc6a237d92d7434cd52378403dc0156e8b04feb96",
-    "hazard": "82b67c24b280ec67030a6204c3d978d26dc8e8609a2eb3ad8363a5307c86059c"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_GB50444_8D40A9941CD810B6909EDDF8",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_GB50444_5_3_1"
-  ],
-  "reason": "隐患与条款原文直接对应，关联角色为直接依据。",
+  "entityId": "K_XLSX_GB50444_8D40A9941CD810B6909EDDF8",
   "reviewType": "applicability",
-  "reviewedContentHash": "9e08bc8efff9b607749ab43ded741d84056ae037650add836fc67dcd704d8b09",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "4273bfa6a6dc3f3abed3c4600368611097340cd13546d780077f4138e4beb603",
+  "checkedAt": "2026-10-02T23:38:02+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "2026-10-02第5.3.1直接支持适用建筑范围内已经核实机械损伤的灭火器及时维修分支。第1.0.2排除生产或储存炸药、弹药、火工品、花炮的厂房或库房；达到GB55036第10.0.8报废条件的按报废要求处理，不据本关联建议维修后复用。",
+  "evidenceRefs": [
+    "E_XLSX_GB50444_5_3_1",
+    "E_MOHURD_GB50444_2008",
+    "E_CITATION_GB50444_CURRENT_20261002",
+    "E_GB55036_SUPERSESSION_SH_20260926",
+    "E_GB55036_SH_ORIGINAL_20260926"
+  ],
+  "notes": "仅确认本条正文、适用范围、维修与报废边界；不认定具体现场损伤或整改完成，不批准其他旧条文。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "530bc0ef62e0539984d854bbc6a237d92d7434cd52378403dc0156e8b04feb96",
+      "hazard": "82b67c24b280ec67030a6204c3d978d26dc8e8609a2eb3ad8363a5307c86059c"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_GB50444_8D40A9941CD810B6909EDDF8",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_GB50444_5_3_1"
+    ],
+    "reason": "隐患与条款原文直接对应，关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "9e08bc8efff9b607749ab43ded741d84056ae037650add836fc67dcd704d8b09",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "e07232d6b53f1d73655fce99875777944aa2e106ff818f47bd1930c26cfc83b6",
+  "contextHashes": {
+    "hazard": "412efbb8a4565c40fdfdb230ee06b541b2a28dbd8d7eb936b4031cdbff9f5bb3",
+    "clause": "3616331747eed2e34bf36d3e97b866b3d14c5dc596173bdd753f77c5f200fef6"
+  }
 }

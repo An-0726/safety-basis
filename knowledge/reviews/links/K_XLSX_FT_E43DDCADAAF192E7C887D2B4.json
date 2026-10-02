@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "76689abb402e342b0c206efdf5899d107682da2d49988c87a36072a7a30ec99a",
-    "hazard": "18d92c31a3f4842196a65724795e30427a253bf1943f8aba9ab1563a579502cf"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_E43DDCADAAF192E7C887D2B4",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_E6F642E61AFE1D7E03E98727"
-  ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "entityId": "K_XLSX_FT_E43DDCADAAF192E7C887D2B4",
   "reviewType": "applicability",
-  "reviewedContentHash": "6a0646185d3b8dee1d9b9c329c4312a77604bb4cafa8c06b5a667ca0cda596f8",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "d460d9f9b2fe4eeca433a7aaf76647cdb08857a0554006d5a4a1c20a128f5184",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "原C只有第一款设备经常维护/定期自行检查，第二款是独立的附件及保护装置定期校验检修义务；更换到经官方实核的整条后才覆盖。 特种设备安全法第三十九条第二款直接规定使用单位对安全附件、安全保护装置定期校验、检修并作出记录；不以第一款设备本体自行检查替代第二款。",
+  "evidenceRefs": [
+    "E_CITATION_TSE2013_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "9259c1ffd96f4c4d021d10da9bfa197962f2443f2da7397b0fef315a76541411",
+    "clause": "f6443125ce478dd8c5155388ce4fc80e6bdf2dfb1029b77f16230e87d57f49be"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "76689abb402e342b0c206efdf5899d107682da2d49988c87a36072a7a30ec99a",
+      "hazard": "18d92c31a3f4842196a65724795e30427a253bf1943f8aba9ab1563a579502cf"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_E43DDCADAAF192E7C887D2B4",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_E6F642E61AFE1D7E03E98727"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "6a0646185d3b8dee1d9b9c329c4312a77604bb4cafa8c06b5a667ca0cda596f8",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "0a10f341262ea7b49105443949fd302e56d69a201e2128a910a037dddcf05b52"
 }

@@ -1,21 +1,40 @@
 {
-  "entityId": "K_199989467c019b0789b69f66",
   "entityType": "link",
+  "entityId": "K_199989467c019b0789b69f66",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T20:30:00+08:00",
-  "reason": "物品堆垛与堆垛之间的距离不小于1m，违反安全生产法第三十五条设置明显安全警示标志的要求，以及仓储场所防火安全管理要求。物品堆垛之间必须保持足够安全距离，便于消防扑救和人员疏散。",
-  "reasonCodes": [
-    "DIRECT_ROLE_CONFIRMED",
-    "WAREHOUSE_STACKING_DISTANCE"
-  ],
+  "decision": "rejected",
   "reviewedContentHash": "bfc05ebf99195df98e730941e42c90cd5628e5b7696558aabaea800081d3f758",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "官方安全生产法第35条全文只有明显安全警示标志要求，没有物品堆垛间距1m要求。当前reason同时误述条文和违规关系，是明确实质错链。 撤回该K的direct审核并退出当前有效依据，保留稳定ID与历史；H055的间距1m只可由正确第6.8(e)技术分支在完整范围审核后支持，不能重用第35条作为数值依据。",
+  "evidenceRefs": [
+    "E_CITATION_SAFE2021_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
   "contextHashes": {
-    "hazard": "d65b13e0ca15b727d19bf939efdcb30b5cdbe35e2e435fb4b89287b23344f51d",
-    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
-    "link": "bfc05ebf99195df98e730941e42c90cd5628e5b7696558aabaea800081d3f758"
+    "hazard": "a5611cbf6f59104d95046f9f5f2fbf0bd4c24b8338adbd903b483a948060f91e",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
   },
-  "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousReview": {
+    "entityId": "K_199989467c019b0789b69f66",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Doubao-Agent",
+    "checkedAt": "2026-09-10T20:30:00+08:00",
+    "reason": "物品堆垛与堆垛之间的距离不小于1m，违反安全生产法第三十五条设置明显安全警示标志的要求，以及仓储场所防火安全管理要求。物品堆垛之间必须保持足够安全距离，便于消防扑救和人员疏散。",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "WAREHOUSE_STACKING_DISTANCE"
+    ],
+    "reviewedContentHash": "bfc05ebf99195df98e730941e42c90cd5628e5b7696558aabaea800081d3f758",
+    "contextHashes": {
+      "hazard": "d65b13e0ca15b727d19bf939efdcb30b5cdbe35e2e435fb4b89287b23344f51d",
+      "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
+      "link": "bfc05ebf99195df98e730941e42c90cd5628e5b7696558aabaea800081d3f758"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "32946a4d984f420554e40ae270c5b205fa3b6b471b4b77428d6f5f5776422662"
 }

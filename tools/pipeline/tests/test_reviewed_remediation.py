@@ -290,9 +290,10 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         # Current projection additionally excludes the four independently reviewed
         # MEM10 wrong-source chains. The new containment suite reconstructs the
         # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
-        self.assertEqual(len(pre_commerce_gate(gate).eligible_hazards), 1653)
-        self.assertEqual(len(pre_commerce_gate(gate).eligible_links), 1787)
-        self.assertEqual(len({gate.links[k]['clauseId'] for k in pre_commerce_gate(gate).eligible_links}), 1338)
+        cohort = pre_commerce_gate(gate)
+        self.assertEqual(len(cohort.eligible_hazards), 1653)
+        self.assertEqual(len(cohort.eligible_links), 1787)
+        self.assertEqual(len({cohort.links[k]['clauseId'] for k in cohort.eligible_links}), 1338)
         self.assertNotIn('H_12158_10_1_2', gate.eligible_hazards)
 
 

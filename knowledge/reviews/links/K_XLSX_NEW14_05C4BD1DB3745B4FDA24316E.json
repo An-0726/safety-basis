@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
-    "hazard": "0f62b20db2ad502b66cd560bef8dcbadcb69f3c8504f5fe19a408a802241ff85"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_05C4BD1DB3745B4FDA24316E",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_05C4BD1DB3745B4FDA24316E",
   "reviewType": "applicability",
-  "reviewedContentHash": "d7e4048dbc7d1d42c66e22f947f62d542be4f5f61183d3054dc1655ad7f2b107",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "024d8541960471c9baa364ac692f2c88f65e8d79843d3884205dd01c21faef3a",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "存在比C001更精确的部门规章第46条第一句；不需要把本项变成一般消防器材标志。 保留H/K稳定ID，新建公安部令第6号第46条完整C并只消费第一句；建立版本/证据后重新审核，原C仍单独纠正条号。",
+  "evidenceRefs": [
+    "E_CITATION_WAREHOUSE_RULE46_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "51a4a04bda06c5e26c63cddf493fb649516cb590da1b32ba43dbdece208b5c1a",
+    "clause": "ac2a13946f33c1127a05c422eb3eb5c9610e8a93f20a29bf6937a575fb2a6d14"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
+      "hazard": "0f62b20db2ad502b66cd560bef8dcbadcb69f3c8504f5fe19a408a802241ff85"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_05C4BD1DB3745B4FDA24316E",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "d7e4048dbc7d1d42c66e22f947f62d542be4f5f61183d3054dc1655ad7f2b107",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "16443aa92ab5c29f001d87215e00140c3980586cc11fe01e1a99c39606cc07eb"
 }

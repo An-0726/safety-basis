@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "957fb630721a5337f0945a7512858c76519ad74f88b616b1bcaccc9884a9f44f",
-    "hazard": "6908629eb84e49246c1a04697ca6621e49a0941480c5d0a31e18e9e4870b8839"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_62DBBEBEBB480DFEC9E3FD5E",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_E97798E77AB03A0E228B048D"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_62DBBEBEBB480DFEC9E3FD5E",
   "reviewType": "applicability",
-  "reviewedContentHash": "3efe2abff6d9fadd8c7e880d29a3c9f77c314f8bf05e3e165901dc260d8be44e",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "02b419c5d02a16fcbbb34ea9ba8c1d4da6e1e90af2d35424f36c63aca999d56a",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "H实际对应全国第58条从业人员义务；不能由江苏第71条单位处罚替代。原H描述/措施直接粘贴正向法律句而非隐患表述，需同步清理。 安全生产法第五十八条直接规定从业人员接受培训和掌握本职安全知识技能、事故预防与应急处理能力的义务。",
+  "evidenceRefs": [
+    "E_CITATION_SAFE2021_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "3c8c16e46704efba47c4d4046e13d76e7935ce408b60242e8570e70fbba673ee",
+    "clause": "6e241a99878676c184421c29f177d59c8e24c8a949330116dbf41925676645cb"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "957fb630721a5337f0945a7512858c76519ad74f88b616b1bcaccc9884a9f44f",
+      "hazard": "6908629eb84e49246c1a04697ca6621e49a0941480c5d0a31e18e9e4870b8839"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_62DBBEBEBB480DFEC9E3FD5E",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_E97798E77AB03A0E228B048D"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "3efe2abff6d9fadd8c7e880d29a3c9f77c314f8bf05e3e165901dc260d8be44e",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "8fcfa9559f7b692d20395aae1d10d531d8d2e000a36c063318b399d44b66c11f"
 }

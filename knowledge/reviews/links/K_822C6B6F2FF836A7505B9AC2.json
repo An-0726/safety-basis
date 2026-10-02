@@ -1,17 +1,36 @@
 {
-  "checkedAt": "2026-09-21T00:30:00+08:00",
+  "entityType": "link",
+  "entityId": "K_822C6B6F2FF836A7505B9AC2",
+  "reviewType": "applicability",
+  "decision": "superseded",
+  "reviewedContentHash": "9fee9fcb6197cfe1a37949a5bbba9212cb6ed331192486b9a92e79aa3bd9be30",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "保留既有superseded状态；2026-10-02条款原文校正仅记录依赖变化，不恢复该历史关联的当前适用资格。",
+  "evidenceRefs": [
+    "E_CITATION_XF1131_2014_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
   "contextHashes": {
     "hazard": "ce3c43f5b482482a57e061f67ca68a3e1fa51fbe7e63e1af4099511b949fc5ed",
-    "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
-    "link": "9fee9fcb6197cfe1a37949a5bbba9212cb6ed331192486b9a92e79aa3bd9be30"
+    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
   },
-  "decision": "superseded",
-  "entityId": "K_822C6B6F2FF836A7505B9AC2",
-  "entityType": "link",
-  "evidenceRefs": [],
-  "reason": "源隐患 H_AD27C51EB8E840D5BA2F0365E0 已归并至 H_3B67F679C467451EA96B99072A；原关联仅保留历史，不参与发布。",
-  "reviewType": "applicability",
-  "reviewedContentHash": "9fee9fcb6197cfe1a37949a5bbba9212cb6ed331192486b9a92e79aa3bd9be30",
-  "reviewer": "ChatGPT / Engineering Audit",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "previousReview": {
+    "checkedAt": "2026-09-21T00:30:00+08:00",
+    "contextHashes": {
+      "hazard": "ce3c43f5b482482a57e061f67ca68a3e1fa51fbe7e63e1af4099511b949fc5ed",
+      "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
+      "link": "9fee9fcb6197cfe1a37949a5bbba9212cb6ed331192486b9a92e79aa3bd9be30"
+    },
+    "decision": "superseded",
+    "entityId": "K_822C6B6F2FF836A7505B9AC2",
+    "entityType": "link",
+    "evidenceRefs": [],
+    "reason": "源隐患 H_AD27C51EB8E840D5BA2F0365E0 已归并至 H_3B67F679C467451EA96B99072A；原关联仅保留历史，不参与发布。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "9fee9fcb6197cfe1a37949a5bbba9212cb6ed331192486b9a92e79aa3bd9be30",
+    "reviewer": "ChatGPT / Engineering Audit",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousReviewFileSha256": "1eba27f20921486ca2d9717e4af061adf732863db1c84df048d3c4553230c334"
 }

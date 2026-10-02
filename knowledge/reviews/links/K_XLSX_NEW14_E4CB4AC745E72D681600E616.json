@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
-    "hazard": "19667246e5125131a531c417fa2bae23f925f4b2f1d3ba58c1a866674ec64c57"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_E4CB4AC745E72D681600E616",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_E4CB4AC745E72D681600E616",
   "reviewType": "applicability",
-  "reviewedContentHash": "fe4c8ce877188b1d5092ace8d6893f2790069dcff051198e67f8c08e81f08cf2",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "3183edd631b76c0ca6f5a8f8a4988d2d35393bdcd4fb27b64c5e2c9c3b726401",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "在第16条责任单位范围内可采用一般配置义务，但气瓶介质、灭火剂适配和检查频次不由C001统一规定。 单独改连C001并删除未闭证的固定灭火剂、检查周期等具体指令；若要求具体选型另建技术链。",
+  "evidenceRefs": [
+    "E_CITATION_FIRELAW2021_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "8aed93ecc8f1d2e5a0d044f98c97c903c7454df30aeab954b774da410124cfbe",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
+      "hazard": "19667246e5125131a531c417fa2bae23f925f4b2f1d3ba58c1a866674ec64c57"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_E4CB4AC745E72D681600E616",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "fe4c8ce877188b1d5092ace8d6893f2790069dcff051198e67f8c08e81f08cf2",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "1bd5d3c1d0ac0fb8c56311061c9bfa1c9900f91bbd8545ae1c2b12c8ccbbe1fe"
 }
