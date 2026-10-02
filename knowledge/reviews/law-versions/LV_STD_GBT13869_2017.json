@@ -3,11 +3,54 @@
   "entityId": "LV_STD_GBT13869_2017",
   "reviewType": "version",
   "decision": "verified",
-  "reviewedContentHash": "de374981f8ad3244012429fc3e79f43706aced34b14fdd0060f0c8ab9cc7570f",
-  "checkedAt": "2026-09-26T20:14:09+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
+  "reviewedContentHash": "f71984336085b6c8d2f353390c4c59eab954deb9641cc33fbde07429a6cbad78",
+  "checkedAt": "2026-10-02",
+  "reviewer": "Codex 官方题录日期边界核验 20261002",
   "evidenceRefs": [
-    "E_GBT13869_SAMR_ORIGINAL_20260926"
+    "E_GBT13869_SAMR_ORIGINAL_20260926",
+    "E_G26_2026"
   ],
-  "reason": "官方正确题录确认2017版现行与实施日；2026版未来生效信息保持原有核验，不提前替代当前版。"
+  "reason": "仅核准2017版排他终止日由2027-01-31修正为2027-02-01。官方2026版题录明示2027-02-01实施并全部代替2017版；仓库asOf < endDate规则据此保留旧版至2027-01-31。原有条文、适用性及当前准入范围不变；2026版保持upcoming，实施日到达仍须另行复核，不自动转正。",
+  "previousReview": {
+    "entityType": "law_version",
+    "entityId": "LV_STD_GBT13869_2017",
+    "reviewType": "version",
+    "decision": "verified",
+    "reviewedContentHash": "de374981f8ad3244012429fc3e79f43706aced34b14fdd0060f0c8ab9cc7570f",
+    "checkedAt": "2026-09-26T20:14:09+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "evidenceRefs": [
+      "E_GBT13869_SAMR_ORIGINAL_20260926"
+    ],
+    "reason": "官方正确题录确认2017版现行与实施日；2026版未来生效信息保持原有核验，不提前替代当前版。"
+  },
+  "previousReviewFileSha256": "45347f2893b73acd42faab4beffff3b647e59c0fab0dbc964071113381050c4e",
+  "dateBoundaryVerification": {
+    "checkedAsOf": "2026-10-02",
+    "scope": "official-metadata-only; no new fulltext or field finding approval",
+    "sources": [
+      {
+        "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=1C5996A8BAD63FF484CCFE024D98849C",
+        "locator": "标准号、标准状态、发布日期、实施日期",
+        "observed": {
+          "documentNumber": "GB/T 13869-2017",
+          "status": "现行",
+          "publishedDate": "2017-12-29",
+          "effectiveDate": "2018-07-01"
+        }
+      },
+      {
+        "url": "https://std.samr.gov.cn/gb/search/gbDetailedCNF?id=55B3892F95A2336AE06397BE0A0A4BF9",
+        "locator": "基础信息：标准号、发布日期、实施日期、全部代替标准；页面状态",
+        "observed": {
+          "documentNumber": "GB/T 13869-2026",
+          "status": "即将实施",
+          "publishedDate": "2026-07-02",
+          "effectiveDate": "2027-02-01",
+          "fullyReplaces": "GB/T 13869-2017"
+        }
+      }
+    ],
+    "interpretation": "endDate为仓库排他边界；由新版实施及全部替代关系推导为2027-02-01，非声称网页另列旧版废止日。既有证据快照哈希不冒充本次网页快照。"
+  }
 }
