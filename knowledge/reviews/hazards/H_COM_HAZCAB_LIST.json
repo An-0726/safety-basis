@@ -2,22 +2,35 @@
   "entityType": "hazard",
   "entityId": "H_COM_HAZCAB_LIST",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "e7a4ea0753979834b93979180a01bcf12f98e3eccd4d96745a0f5b31ac93d952",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "危化条例第20条不是“柜外张贴物料清单”的直接义务；清单、SDS、标签、台账和公告牌不是同一种要求。不把名为防爆柜当作柜内物料已属危化品。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_HAZCAB_LIST",
+  "decision": "rejected",
+  "reviewedContentHash": "27f653f6a9dda5b2a8c0216cb88168c518a9fd49df43ae163d7b06f03f1d18e5",
+  "checkedAt": "2026-10-02T10:38:00Z",
+  "reviewer": "Commerce remaining-gap claim and applicability integration",
+  "reason": "排除南京普通商贸危化柜必须柜外张贴物料清单的通用强制主张。现行危化品安全法出入库登记、SDS、标签和储存安全标志不等于柜门清单；不得从未见外贴清单推定无台账。",
+  "evidenceRefs": [
+    "E_COM_HAZCAB_LAW_SCOPE_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_HAZCAB_LIST",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "65d0ce0d01ba51fdfcee05419b970aae343b252c3a94e72b0210169a634a2930",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
+    "reviewedContentHash": "e7a4ea0753979834b93979180a01bcf12f98e3eccd4d96745a0f5b31ac93d952",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "危化条例第20条不是“柜外张贴物料清单”的直接义务；清单、SDS、标签、台账和公告牌不是同一种要求。不把名为防爆柜当作柜内物料已属危化品。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_HAZCAB_LIST",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_HAZCAB_LIST",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "65d0ce0d01ba51fdfcee05419b970aae343b252c3a94e72b0210169a634a2930",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
   }
 }

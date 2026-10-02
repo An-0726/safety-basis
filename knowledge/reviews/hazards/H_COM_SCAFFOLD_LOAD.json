@@ -2,22 +2,40 @@
   "entityType": "hazard",
   "entityId": "H_COM_SCAFFOLD_LOAD",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "012f9b5b5cb07a1a514587807798a6a3430aad1abf35094d5cabf57e01a43f69",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "集中堆放较重物料只是荷载核查线索；重物不自动等于超载。原GB51210第11.2.1的强条地位须结合GB55023公告核，不以旧强条单独认定。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SCAFFOLD_LOAD",
+  "decision": "verified",
+  "reviewedContentHash": "8a51dbc2f255ec3c5ecfee66b017a836e3831f22dfc46fd35852f9032d4cdf1a",
+  "checkedAt": "2026-10-02T10:35:00Z",
+  "reviewer": "Commerce construction and special-equipment remaining-gap source review",
+  "reason": "回到GB55023-2022现行强制5.3.1单句；政府主管部门完整复现本条及发布公告均已核。旧GB51210-2016第11.2.1强条废止事实已核，不以旧强条继续认定；原重物来源未证明超载。",
+  "evidenceRefs": [
+    "E_COM_GB55023_5_3_1_GD_20261002",
+    "E_COM_GB55023_NOTICE_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_SCAFFOLD_LOAD",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "68d6afbbc748443dfef75320bbcc1fc1d9fe7177da0688bc703621f91ea4da0c",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
-  }
+    "reviewedContentHash": "012f9b5b5cb07a1a514587807798a6a3430aad1abf35094d5cabf57e01a43f69",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "集中堆放较重物料只是荷载核查线索；重物不自动等于超载。原GB51210第11.2.1的强条地位须结合GB55023公告核，不以旧强条单独认定。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SCAFFOLD_LOAD",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_SCAFFOLD_LOAD",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "68d6afbbc748443dfef75320bbcc1fc1d9fe7177da0688bc703621f91ea4da0c",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_SCAFFOLD_LOAD",
+  "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+  "reviewIndependenceNote": "主体作者实审保留；root非作者已实际读取原页/官方原文、范围、当前技术使用证据并重新计算H/K/C/LV哈希，记录另存。本地定义准入不确认原企业事件。"
 }

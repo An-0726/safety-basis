@@ -3,21 +3,36 @@
   "entityId": "H_COM_FORKLIFT_INFO_VERIFY",
   "reviewType": "definition",
   "decision": "pending",
-  "reviewedContentHash": "539ea4a8cd4577b0b75c0ff57c1f44c5aa6e66e13329ec08956d5c91d59379c9",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "原件第8项为现场未见标志/检验信息，不能推出逾期未检。使用登记标志展示和定期检验是两个事实；保留核验，已有检验逾期H不能直接接收此来源。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_FORKLIFT_INFO_VERIFY",
+  "reviewedContentHash": "4faf4d4bb609e19aace7ac9a8263ced0b44888e306c123ef0290f93beb20a033",
+  "checkedAt": "2026-10-02T10:35:00Z",
+  "reviewer": "Commerce construction and special-equipment remaining-gap source review",
+  "reason": "TSG08-2026完整原页已闭环；将原未见信息分拆为使用标志、车牌固定、使用登记和定期检验四个核验分支。4.12.1附H式一使用标志和4.12.2(2)附J车牌不是同一件；有驾驶室对象按4.12.2(2)另核挡风玻璃张贴。原未见信息既不能证车牌未固定，也不能证逾期未检。法律原文缺口已消除，剩余为真实现场取证，保留核验型定义，不制造未见照片的违法通用断言。",
+  "evidenceRefs": [
+    "E_COM_TSG08_2026_TEXT_20261002",
+    "E_COM_TSG08_2026_NOTICE_20261002",
+    "E_COM_TSG08_2026_IMPLEMENT_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_FORKLIFT_INFO_VERIFY",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "49fc0edfcb9ff6f40f00fda84e11cce09feca085c2dfd90f5615a32469f8de44",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
+    "reviewedContentHash": "539ea4a8cd4577b0b75c0ff57c1f44c5aa6e66e13329ec08956d5c91d59379c9",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "原件第8项为现场未见标志/检验信息，不能推出逾期未检。使用登记标志展示和定期检验是两个事实；保留核验，已有检验逾期H不能直接接收此来源。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_FORKLIFT_INFO_VERIFY",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_FORKLIFT_INFO_VERIFY",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "49fc0edfcb9ff6f40f00fda84e11cce09feca085c2dfd90f5615a32469f8de44",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
   }
 }

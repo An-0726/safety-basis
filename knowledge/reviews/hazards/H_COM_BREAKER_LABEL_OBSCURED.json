@@ -2,14 +2,13 @@
   "entityType": "hazard",
   "entityId": "H_COM_BREAKER_LABEL_OBSCURED",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "f092e3e27b91664f8d7723ae59bacdfb9c63db0ebc3bff06de4e0984e2333f3d",
-  "checkedAt": "2026-10-02T16:47:00+08:00",
-  "reviewer": "Codex Commerce original-page electrical review",
-  "reason": "原件证据已齐但候选语义不能直接纳入5.2.10第2项：正确、齐全不应被无说明改写为清晰/可识别/不被遮挡。本轮不新建direct/fallback K，不把H偷换为编号缺失或错误；保持原稳定ID和全部来源别名，精确记录适用性缺口。",
+  "decision": "verified",
+  "reviewedContentHash": "5e4cb226f946aba7350a19a1b462004b31ae7230e09913680d57fe948f819db1",
+  "checkedAt": "2026-10-02T10:33:00+00:00",
+  "reviewer": "Codex 电气候选收窄核验",
+  "reason": "原源D09文本明确安全警示标识的辨识受影响，收窄到GB2894意义的安全标志牌；不把普通设备回路编号、名称和功能标记视为安全标志，也不引用GB50303第5.2.10推导可读性。",
   "evidenceRefs": [
-    "E_COM_GB50303_ORIGINAL_20261002",
-    "E_COM_GB55024_PARTIAL_REPEAL_20261002"
+    "E_GB2894_XIAN_ORIGINAL_20260926"
   ],
   "reviewedFields": [
     "/id",
@@ -27,29 +26,65 @@
     "/mergedInto",
     "/proposalStatus"
   ],
-  "notes": "逐条目核原件和适用范围；仅为通用条件定义及本次所列条款，不认定原企业事件，不确认既有使用期违法，不批准标准全文再发布。",
+  "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_BREAKER_LABEL_OBSCURED",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "47219454acd27d82d9ff17b3da0bdbd019f8269b82ba770c6fb81e672a3dff63",
-    "checkedAt": "2026-10-02T16:00:00+08:00",
-    "reviewer": "dot / item-level source and applicability review",
-    "reason": "原引JGJ392—2016第4.5.3(1)须核商店建筑配电标识的完整原文和现行范围。贴纸本身不是隐患，须确实遮挡回路识别或安全标识。",
-    "evidenceRefs": [],
-    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_BREAKER_LABEL_OBSCURED",
+    "reviewedContentHash": "f092e3e27b91664f8d7723ae59bacdfb9c63db0ebc3bff06de4e0984e2333f3d",
+    "checkedAt": "2026-10-02T16:47:00+08:00",
+    "reviewer": "Codex Commerce original-page electrical review",
+    "reason": "原件证据已齐但候选语义不能直接纳入5.2.10第2项：正确、齐全不应被无说明改写为清晰/可识别/不被遮挡。本轮不新建direct/fallback K，不把H偷换为编号缺失或错误；保持原稳定ID和全部来源别名，精确记录适用性缺口。",
+    "evidenceRefs": [
+      "E_COM_GB50303_ORIGINAL_20261002",
+      "E_COM_GB55024_PARTIAL_REPEAL_20261002"
+    ],
+    "reviewedFields": [
+      "/id",
+      "/title",
+      "/description",
+      "/measures",
+      "/conditions",
+      "/category",
+      "/places",
+      "/aliases",
+      "/keywords",
+      "/lifecycle",
+      "/mode",
+      "/note",
+      "/mergedInto",
+      "/proposalStatus"
+    ],
+    "notes": "逐条目核原件和适用范围；仅为通用条件定义及本次所列条款，不认定原企业事件，不确认既有使用期违法，不批准标准全文再发布。",
     "previousReview": {
       "entityType": "hazard",
       "entityId": "H_COM_BREAKER_LABEL_OBSCURED",
       "reviewType": "definition",
       "decision": "pending",
-      "reviewedContentHash": "d2815998a32e5b25f7602ed8e0d95ef826b95545a2fe9408fc2c1c374c68a42e",
-      "checkedAt": "2026-09-21T09:25:00+08:00",
-      "reviewer": "ChatGPT / Commerce Full Ingest",
-      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-      "evidenceRefs": []
-    }
+      "reviewedContentHash": "47219454acd27d82d9ff17b3da0bdbd019f8269b82ba770c6fb81e672a3dff63",
+      "checkedAt": "2026-10-02T16:00:00+08:00",
+      "reviewer": "dot / item-level source and applicability review",
+      "reason": "原引JGJ392—2016第4.5.3(1)须核商店建筑配电标识的完整原文和现行范围。贴纸本身不是隐患，须确实遮挡回路识别或安全标识。",
+      "evidenceRefs": [],
+      "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_BREAKER_LABEL_OBSCURED",
+      "previousReview": {
+        "entityType": "hazard",
+        "entityId": "H_COM_BREAKER_LABEL_OBSCURED",
+        "reviewType": "definition",
+        "decision": "pending",
+        "reviewedContentHash": "d2815998a32e5b25f7602ed8e0d95ef826b95545a2fe9408fc2c1c374c68a42e",
+        "checkedAt": "2026-09-21T09:25:00+08:00",
+        "reviewer": "ChatGPT / Commerce Full Ingest",
+        "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+        "evidenceRefs": []
+      }
+    },
+    "previousReviewFileSha256": "ec5b91e682c1ceff4aa91d8bb55c50a2ae995147182f4b2097d7922406beff5d"
   },
-  "previousReviewFileSha256": "ec5b91e682c1ceff4aa91d8bb55c50a2ae995147182f4b2097d7922406beff5d"
+  "previousReviewFileSha256": "90106cab59040ddb5e0c1d1139dcaef88ab296aa6b9ed6f8d47ea97deeaf1b7b",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_BREAKER_LABEL_OBSCURED",
+  "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+  "reviewIndependenceNote": "主体作者实审保留；root非作者已实际读取原页/官方原文、范围、当前技术使用证据并重新计算H/K/C/LV哈希，记录另存。本地定义准入不确认原企业事件。"
 }

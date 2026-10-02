@@ -1,0 +1,138 @@
+{
+  "items": [
+    {
+      "action": "admitted_narrowed_definition",
+      "admissionScope": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+      "appliedContentHash": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+      "appliedLifecycle": "active",
+      "appliedLinkIds": [
+        "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2"
+      ],
+      "appliedTitle": "移动插排电源线未按用电安全技术要求选型",
+      "canonicalHazardId": null,
+      "caseEvidenceStillRequired": true,
+      "continuationBaseCommit": "3d9479ec81b900e3f50ed95468819e0504652d10",
+      "continuationReviewedAsOf": "2026-10-02",
+      "continuedFromDisposition": {
+        "action": "scope_split_required",
+        "appliedContentHash": "3aa17ffe58ab310682fc57fa811a2ab7dfbd265403ba2b02a1efe9d103025dd0",
+        "appliedLifecycle": "proposed",
+        "appliedTitle": "插排或临时接线直接放置在可燃物上",
+        "canonicalHazardId": null,
+        "caseEvidenceStillRequired": true,
+        "decisionReason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+        "definitionAdmissionGaps": [
+          "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。"
+        ],
+        "fieldViolationEstablished": false,
+        "hazardId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+        "independentLegalReviewStatus": "not_applicable_to_unresolved_or_excluded_definition",
+        "independentScopeCommentApplied": true,
+        "minimumProjectEvidence": [
+          "插排位置及周围可燃物",
+          "若另判违规接线须记录线型/连接/负荷"
+        ],
+        "officialSourcesChecked": [
+          "https://std.samr.gov.cn/gb/search/gbDetailed?id=N1sPm%2FYzMfc%3D&mode=p"
+        ],
+        "originalCitations": [
+          "《中华人民共和国消防法》第二十七条规定，电器产品及其线路的安装、使用、敷设和维护保养必须符合消防技术标准及管理规定。",
+          "《用电安全导则》（GB/T13869-2017）"
+        ],
+        "preReviewContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
+        "releaseEligibleByThisDisposition": false,
+        "remediationEstablished": false,
+        "reusedClauseIds": [],
+        "reviewDecision": "pending",
+        "reviewedAsOf": "2026-10-02",
+        "sourceCandidateIds": [
+          "SC087",
+          "SC118"
+        ],
+        "sourceDocumentCodes": [
+          "D10",
+          "D15"
+        ],
+        "sourceDocumentTextOnly": true,
+        "sourceRead": {
+          "mode": "original_check_record_text",
+          "originalStatementMatched": true,
+          "photosOrFunctionalTestsVerified": false
+        },
+        "sourceReadAsOf": "2026-10-02",
+        "sourceRevisionBoundary": "已对照当前可访问来源文本和原SC表述；未证明历史文件字节未变，未作原始签名/照片真实性鉴定。",
+        "title": "插排或临时接线直接放置在可燃物上",
+        "withdrawnMerge": {
+          "reason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+          "target": "H032"
+        }
+      },
+      "decisionReason": "电源线选型为独立原子，按父任务独立审查意见新建H；只核推荐技术对象，不覆盖旧可燃物判据，不确认SC118原文件或现场。",
+      "definitionAdmissionGaps": [],
+      "evidenceRefs": [
+        "E_GBT13869_SAMR_ORIGINAL_20260926",
+        "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+      ],
+      "fieldViolationEstablished": false,
+      "hazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+      "independentScopeCommentApplied": true,
+      "minimumProjectEvidence": [
+        "交流≤1000V/直流≤1500V的移动用电产品属性",
+        "实际电源线护套/导体结构及连接状态",
+        "SC118原文件和现场未重新证实，不以映射表直接确认缺陷"
+      ],
+      "officialSourcesChecked": [
+        "https://openstd.samr.gov.cn/bzgk/std/viewGb?hcno=1C5996A8BAD63FF484CCFE024D98849C",
+        "https://std.samr.gov.cn/gb/search/gbDetailed?id=N1sPm%2FYzMfc%3D&mode=p"
+      ],
+      "originalCitations": [
+        "《用电安全导则》（GB/T13869-2017）"
+      ],
+      "preReviewContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
+      "releaseEligibleByThisDisposition": false,
+      "remainingSourceClaims": [
+        "SC087纸箱等可燃物直接放置：不自动认定易燃物；现行地方营业性演出/文物建筑规范直接禁令有地域/对象限制",
+        "SC118“易燃物覆盖在线缆上”属性、关系、现行直接规范均需独立核",
+        "MEM2023征求意见稿表15不可用；对应GB/T47799—2026于2027-02-01实施，当前不得提前采用"
+      ],
+      "remediationEstablished": false,
+      "reusedClauseIds": [
+        "C_GBT13869_5_2_2_mobile"
+      ],
+      "reviewDecision": "verified",
+      "reviewedAsOf": "2026-10-02",
+      "sourceCandidateIds": [
+        "SC118"
+      ],
+      "sourceDocumentCodes": [
+        "D15"
+      ],
+      "sourceDocumentTextOnly": true,
+      "sourceRead": {
+        "mode": "prior_ingest_map_and_bounded_original_text",
+        "originalStatementMatched": false,
+        "photosOrFunctionalTestsVerified": false
+      },
+      "sourceReadAsOf": "2026-10-02",
+      "sourceRevisionBoundary": "已对照当前可访问来源文本和原SC表述；未证明历史文件字节未变，未作原始签名/照片真实性鉴定。",
+      "title": "插排或临时接线直接放置在可燃物上",
+      "withdrawnMerge": {
+        "reason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+        "target": "H032"
+      },
+      "splitFromHazardId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+      "originalCandidateDispositionUnchanged": false,
+      "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b"
+    }
+  ],
+  "originalHazardPreserved": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+  "sourceCandidateIds": [
+    "SC118"
+  ],
+  "sourceDocumentCodes": [
+    "D15"
+  ],
+  "sourceRecordState": "prior_mapping_text_only_not_new_site_finding"
+}

@@ -1,0 +1,738 @@
+{
+  "baselineCommit": "9cafe88cfac0d66f10321bc83f1cc5e7029b72f2",
+  "asOf": "2026-10-02",
+  "summary": {
+    "existingCandidatesAdmitted": 8,
+    "newAtomicDefinitionsAdmitted": 1,
+    "conditionalMerge": 1,
+    "unsupportedGenericPredicatesNotAdmitted": 9,
+    "verificationProtocolComplete": 1
+  },
+  "items": [
+    {
+      "hazardId": "H_COM_BREAKER_LABEL_OBSCURED",
+      "action": "narrow_and_activate",
+      "reason": "原源D09文本明确安全警示标识的辨识受影响，收窄到GB2894意义的安全标志牌；不把普通设备回路编号、名称和功能标记视为安全标志，也不引用GB50303第5.2.10推导可读性。",
+      "title": "配电装置安全标志牌被贴纸等遮挡",
+      "description": "配电箱、开关等配电装置上已设置的安全标志牌被贴纸或其他物品遮挡。",
+      "conditions": "仅适用于生产经营单位及公共场所按风险和有关规定设置的GB2894安全标志牌；普通回路名称、功能标签不在本条范围。",
+      "measures": "立即清除遮挡物，恢复安全标志牌可识别性；必要时更换或重新设置标志牌，并至少每半年检查一次。",
+      "admissionScope": "安全标志牌被遮挡这一原子分支；2026-03-01后依据GB2894—2025第7.4.1(e)。",
+      "minimumProjectEvidence": [
+        "确认被遮挡内容确为安全标志牌而非普通回路标签",
+        "现场照片、遮挡范围和实际认读情况"
+      ],
+      "remainingSourceClaims": [
+        "普通回路名称、功能及操作位置标签被遮挡：GB50303第5.2.6(4)原页已核但其清晰要求语法涉及接线端子编号，且是施工验收阶段；不据此认定既有运行期所有开关标识遮挡均违反该条"
+      ],
+      "evidenceRefs": [
+        "E_GB2894_XIAN_ORIGINAL_20260926"
+      ],
+      "clauseIds": [
+        "C_GB2894_7_4_1"
+      ],
+      "linkIds": [
+        "K_COM_BREAKER_SIGN_GB2894_7_4_1"
+      ],
+      "fieldViolationEstablished": false,
+      "independentLegalReviewStatus": "not_yet_independently_reviewed",
+      "reviewedAsOf": "2026-10-02"
+    },
+    {
+      "hazardId": "H_COM_INSULATING_PPE_TEST",
+      "action": "narrow_and_activate",
+      "reason": "新增AQ6111—2023第6.2.10完整现行直接义务，限定为国家规定应定期强制检验的绝缘个体防护装备，并把检验、记录、明显位置检验标识和有效期分别核查；未见标识不能证明未试验。",
+      "title": "依法需定期强制检验的绝缘个体防护装备检验管理不符合要求",
+      "description": "属于国家规定应进行定期强制检验的绝缘个体防护装备，未由具有资质的机构定期检验和记录，或明显位置未粘贴检验标识、未明确检验有效期。",
+      "conditions": "先证明具体绝缘手套、靴等是用人单位配备使用的个体防护装备，且依法属于国家规定应定期强制检验的对象；再据具体品类、等级、作业和适用规定核定周期。普通鞋、绝缘操作杆等非穿戴PPE不得套用此条。",
+      "measures": "核定具体装备的定期强制检验要求，委托有资质机构检验并留存记录；在明显位置粘贴检验标识并注明有效期。未检验合格或有效状态未确认前停止使用。",
+      "admissionScope": "AQ6111第6.2.10条件定义；不预设所有装备半年，不以缺标签证明未检验。",
+      "minimumProjectEvidence": [
+        "装备名称、型号、等级与用途",
+        "适用国家强制定检要求及具体周期",
+        "唯一编号、最新报告、有效期和标识"
+      ],
+      "remainingSourceClaims": [
+        "SC019实际是否逾周期仍须DL/T1476或GB26860对应品类完整试验表",
+        "SC107普通绝缘鞋未见标签：先识别产品和国家定检义务，不自动认定绝缘靴或辅助绝缘靴"
+      ],
+      "evidenceRefs": [
+        "E_COM_AQ6111_OFFICIAL_20261002"
+      ],
+      "clauseIds": [
+        "C_AQ6111_2023_6_2_10"
+      ],
+      "linkIds": [
+        "K_COM_PPE_AQ6111_6_2_10"
+      ],
+      "fieldViolationEstablished": false,
+      "independentLegalReviewStatus": "not_yet_independently_reviewed",
+      "reviewedAsOf": "2026-10-02"
+    },
+    {
+      "hazardId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+      "action": "excluded_unsupported_claim",
+      "reason": "原可燃物直接布置判据未闭环；电源线是不同事实原子，新建H_COM_MOBILE_ELECTRIC_CORD_SELECTION并保留原H。",
+      "title": "移动插排电源线未采用规定的完整软电缆或护套软线",
+      "description": "移动使用的插排等用电产品，其电源线未采用完整的铜芯橡皮套软电缆或护套软线，例如经核实使用单层绝缘绞合导线作电源线。",
+      "conditions": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。",
+      "measures": "停止使用不符合要求的电源线，改用规格匹配的完整铜芯橡皮套软电缆或护套软线，并防止移动时拉断或损坏。",
+      "admissionScope": "仅原来源组合中的移动插排电源线选型分支，不解决直接放置普通可燃物/覆盖线路的独立主张。",
+      "minimumProjectEvidence": [
+        "移动使用方式和电源线实际结构、护套及铜芯",
+        "SC118原文件重新读取或照片；目前仅源映射表支持",
+        "可燃物支线另核物性、设备种类、布置和适用规范"
+      ],
+      "remainingSourceClaims": [
+        "SC087纸箱等可燃物直接放置：不自动认定易燃物；现行地方营业性演出/文物建筑规范直接禁令有地域/对象限制",
+        "SC118“易燃物覆盖在线缆上”属性、关系、现行直接规范均需独立核",
+        "MEM2023征求意见稿表15不可用；对应GB/T47799—2026于2027-02-01实施，当前不得提前采用"
+      ],
+      "evidenceRefs": [
+        "E_GBT13869_SAMR_ORIGINAL_20260926"
+      ],
+      "clauseIds": [],
+      "linkIds": [],
+      "fieldViolationEstablished": false,
+      "independentLegalReviewStatus": "not_yet_independently_reviewed",
+      "reviewedAsOf": "2026-10-02",
+      "splitAtomicHazardIds": [
+        "H_COM_MOBILE_ELECTRIC_CORD_SELECTION"
+      ]
+    },
+    {
+      "hazardId": "H_COM_ELECTRIC_CABINET_CONTAMINATION",
+      "action": "exclude_generic_direct_claim",
+      "reason": "本轮重庆官方PDF搜索索引显示9.3.2.2含箱柜内部无杂物、积尘、积水、积油直接要求；但完整身份原页及现行性尚未核，地域亦不能套到南京商贸；不列正式证据。GB/T13869第5.2.1是选择产品时确认说明书环境和条件；未取得实际说明书前不能凭一般可能风险认定柜内任何灰尘油污均违反维护义务。排除本H作为全国通用直接标准隐患的当前准入主张，不称柜内污染无风险。",
+      "title": "配电箱（柜）内积尘或存在杂物、油污等污染",
+      "description": "配电箱（柜）内部积尘或存在烟头、杂物、油污等污染物，影响或可能影响电气散热、绝缘及安全操作。",
+      "conditions": "适用于配电箱（柜）内部污染已影响或可能影响电气安全的情形。",
+      "measures": "停电后清理箱柜内杂物和油污，检查导线、端子和电器元件状态，修复箱门并防止污染再次进入。",
+      "admissionScope": "不准入本轮正式定义",
+      "minimumProjectEvidence": [
+        "设备类型、额定电压、制造商说明书允许环境及清洁维护条文",
+        "污染位置、种类、量与绝缘/散热/操作实际影响"
+      ],
+      "remainingSourceClaims": [
+        "真实污染影响和实际制造商要求尚未证实；不得改成柜外堆物或安全设备维护缺陷"
+      ],
+      "evidenceRefs": [],
+      "clauseIds": [],
+      "linkIds": [],
+      "fieldViolationEstablished": false,
+      "independentLegalReviewStatus": "not_yet_independently_reviewed",
+      "reviewedAsOf": "2026-10-02"
+    },
+    {
+      "hazardId": "H_COM_COLDROOM_FAN_BLOCKED",
+      "action": "exclude_generic_direct_claim",
+      "reason": "本轮确认现行GB/T30134—2025，但5.1.21不再是旧版制冷系统维修保养条：2025版相关内容迁至5.1.22；另新增5.4.20为设备定期清洁维护及记录，不能把通用维护义务改写为任何风口被物遮挡的统一净距义务。已发现现行GB/T28009—2025自2026-03-01实施，旧GB28009不能沿用。原记录仅“制冷空调排风扇”不能判断机房安全通风/蒸发器/冷凝器。排除该笼统全国直接定义准入，而非保留旧条号作待核依据。",
+      "title": "冷库通风或制冷设备进出风口被遮挡",
+      "description": "冷库制冷、通风设备的进风口或出风口被货物、杂物遮挡，影响正常通风散热。",
+      "conditions": "需结合具体设备说明书和冷库设计要求确认必要净空。",
+      "measures": "清理设备周边和进出风口遮挡物，保持必要通风空间并检查设备运行状态。",
+      "admissionScope": "不准入本轮正式定义",
+      "minimumProjectEvidence": [
+        "设备铭牌、型号、用途、实际被挡位置",
+        "制造商进出风净空和设计通风资料",
+        "如果是机房安全通风，另取相应现行完整条文"
+      ],
+      "remainingSourceClaims": [
+        "5.1.22、5.4.20仅第三方全文定位，未获得官方原页，不能作为正式C",
+        "设备身份和安全通风或散热具体义务不明；不得假定氨系统或机房事故风机"
+      ],
+      "evidenceRefs": [],
+      "clauseIds": [],
+      "linkIds": [],
+      "fieldViolationEstablished": false,
+      "independentLegalReviewStatus": "not_yet_independently_reviewed",
+      "reviewedAsOf": "2026-10-02"
+    },
+    {
+      "hazardId": "H_COM_FLAME_FAILURE_VERIFY",
+      "action": "promote_narrow_definition",
+      "reason": "原“无法确认”不能当作缺失；6.2.5完整条文支持收窄后的未设置定义。",
+      "title": "商业燃具未设置熄火保护装置",
+      "description": "属于适用燃气工程的商业燃具，经产品资料、结构核查或其他可靠核验确认未设置规定的熄火保护装置。",
+      "conditions": "限GB55009—2021第1.0.2及6.2节的商业燃具。排除工业企业内部生产用燃气工程等范围排除对象。原来源“无法确认”仅表示待核，不能据此认定未设置；本定义不涵盖尚未核实直接功能条文的“装置失效”分支。",
+      "measures": "核对燃具类别、产品结构与适用要求；确认未设置的，应设置合规熄火保护装置或更换符合要求的商业燃具，并按规定验收。",
+      "admissionScope": "限GB55009—2021第1.0.2及6.2节的商业燃具。排除工业企业内部生产用燃气工程等范围排除对象。原来源“无法确认”仅表示待核，不能据此认定未设置；本定义不涵盖尚未核实直接功能条文的“装置失效”分支。",
+      "minimumProjectEvidence": [
+        "实际设备/气瓶类型及用途",
+        "直接危险状态的可靠现场或产品证据",
+        "适用的布置或保护条件"
+      ],
+      "remainingSourceClaims": [
+        "原来源未确认的企业事实保留待核，不自动转换为已成立",
+        "未纳入的广义原描述不附带准入"
+      ],
+      "evidenceRefs": [
+        "E_COM_GB55009_6_2_5_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_GB55009_6_2_5"
+      ],
+      "linkIds": [
+        "K_COM_GAS_GAP_20261002_FLAME_FAILURE_VERIFY"
+      ]
+    },
+    {
+      "hazardId": "H_COM_LPG_NEAR_HEAT",
+      "action": "promote_narrow_definition",
+      "reason": "正式扫描原件9.2及第1章范围逐字目核，收窄到本条直接规定的对象与危险状态，保留推荐性效力和排除对象，不混用GB9448的一般5m/耐火屏障。",
+      "title": "使用中的液化石油气气瓶靠近热源放置",
+      "description": "适用范围内使用中的液化石油气气瓶靠近热源放置，未防止气瓶意外受热。",
+      "conditions": "限GB/T34525—2017第1章范围内的气瓶：正常环境温度−40℃～60℃、公称容积0.4L～3000L、公称工作压力0.2MPa～35MPa且压力与容积乘积≥1.0MPa·L的所列类型。排除固定使用的瓶式压力容器、车用气瓶、长管拖车/管束式集装箱用大容积气瓶及该章其他排除对象；不是只凭“集装格”称谓判定对象。该推荐性标准支持技术隐患，不独立作为行政处罚依据。本H仅引用9.2 a）靠近热源分支。普通可燃杂物在附近不自动属于本H，也未建立任何钢瓶—热源统一数值净距。",
+      "measures": "将气瓶移至满足安全使用环境的地点，避开热源并防止意外受热；明火/火花作业另按适用条文核对。",
+      "admissionScope": "限GB/T34525—2017第1章范围内的气瓶：正常环境温度−40℃～60℃、公称容积0.4L～3000L、公称工作压力0.2MPa～35MPa且压力与容积乘积≥1.0MPa·L的所列类型。排除固定使用的瓶式压力容器、车用气瓶、长管拖车/管束式集装箱用大容积气瓶及该章其他排除对象；不是只凭“集装格”称谓判定对象。该推荐性标准支持技术隐患，不独立作为行政处罚依据。本H仅引用9.2 a）靠近热源分支。普通可燃杂物在附近不自动属于本H，也未建立任何钢瓶—热源统一数值净距。",
+      "minimumProjectEvidence": [
+        "实际设备/气瓶类型及用途",
+        "直接危险状态的可靠现场或产品证据",
+        "适用的布置或保护条件"
+      ],
+      "remainingSourceClaims": [
+        "原来源未确认的企业事实保留待核，不自动转换为已成立",
+        "未纳入的广义原描述不附带准入"
+      ],
+      "evidenceRefs": [
+        "E_COM_GBT34525_ORIGINAL_20261002",
+        "E_COM_GBT34525_STATUS_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_GBT34525_9_2"
+      ],
+      "linkIds": [
+        "K_COM_GAS_GAP_20261002_LPG_NEAR_HEAT"
+      ]
+    },
+    {
+      "hazardId": "H_COM_OXY_CUTTING_DISTANCE",
+      "action": "promote_narrow_definition",
+      "reason": "正式扫描原件9.2及第1章范围逐字目核，收窄到本条直接规定的对象与危险状态，保留推荐性效力和排除对象，不混用GB9448的一般5m/耐火屏障。",
+      "title": "氧气气瓶安放地点10m内进行明火或可能产生火花的切割作业",
+      "description": "适用范围内的氧气气瓶（含经核实由此类气瓶组成的供氧集束设施）安放地点周围10m范围内进行有明火或可能产生火花的切割作业。",
+      "conditions": "限GB/T34525—2017第1章范围内的气瓶：正常环境温度−40℃～60℃、公称容积0.4L～3000L、公称工作压力0.2MPa～35MPa且压力与容积乘积≥1.0MPa·L的所列类型。排除固定使用的瓶式压力容器、车用气瓶、长管拖车/管束式集装箱用大容积气瓶及该章其他排除对象；不是只凭“集装格”称谓判定对象。该推荐性标准支持技术隐患，不独立作为行政处罚依据。仅引用9.2 a）的明火/火花作业分支，高空作业按地面垂直投影距离；激光切割是否产生明火/火花须有实际工艺证据。不得改写为所有激光设施统一5m，也不得从本条推导耐火屏障可豁免10m。一般热渣/辐射且无明火火花的情形未纳入此分支。",
+      "measures": "将适用氧气气瓶与相关明火或可能产生火花的作业布置调整至符合9.2 a）要求的位置；固定瓶式压力容器等对象须另查其适用规范。",
+      "admissionScope": "限GB/T34525—2017第1章范围内的气瓶：正常环境温度−40℃～60℃、公称容积0.4L～3000L、公称工作压力0.2MPa～35MPa且压力与容积乘积≥1.0MPa·L的所列类型。排除固定使用的瓶式压力容器、车用气瓶、长管拖车/管束式集装箱用大容积气瓶及该章其他排除对象；不是只凭“集装格”称谓判定对象。该推荐性标准支持技术隐患，不独立作为行政处罚依据。仅引用9.2 a）的明火/火花作业分支，高空作业按地面垂直投影距离；激光切割是否产生明火/火花须有实际工艺证据。不得改写为所有激光设施统一5m，也不得从本条推导耐火屏障可豁免10m。一般热渣/辐射且无明火火花的情形未纳入此分支。",
+      "minimumProjectEvidence": [
+        "实际设备/气瓶类型及用途",
+        "直接危险状态的可靠现场或产品证据",
+        "适用的布置或保护条件"
+      ],
+      "remainingSourceClaims": [
+        "原来源未确认的企业事实保留待核，不自动转换为已成立",
+        "未纳入的广义原描述不附带准入"
+      ],
+      "evidenceRefs": [
+        "E_COM_GBT34525_ORIGINAL_20261002",
+        "E_COM_GBT34525_STATUS_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_GBT34525_9_2"
+      ],
+      "linkIds": [
+        "K_COM_GAS_GAP_20261002_OXY_CUTTING_DISTANCE"
+      ]
+    },
+    {
+      "hazardId": "H_COM_GAS_CYL_ELEC_PROX",
+      "action": "exclude_unsupported_general_predicate",
+      "reason": "排除“任意气瓶—任意电箱过近”独立判据；11.5.5针对受电击危险，未给电箱净距，警示标志应另分支。",
+      "newFinding": "本轮取得GB/T34525完整原件，9.1 o）仅规定不应在气瓶上进行电焊引弧，9.2 a）只涵盖靠近热源及明火/火花作业，均不能把邻接完整电箱自动判为违规；GB9448官方预览新窗口locale错误且直接预览回跳题录，未取得完整11.5.5。",
+      "title": "氧气瓶等气瓶与电气设备布置过近",
+      "description": "氧气瓶等气瓶与配电箱等电气设备布置过近，未充分避开可能的电气火花、热源或碰撞影响。",
+      "conditions": "需结合气瓶介质、作业方式和具体电气设备确定适用间距及隔离要求。",
+      "measures": "调整气瓶使用、暂存位置，与电气设备及其他点火源保持适当安全间距，并落实固定和警示措施。",
+      "admissionScope": "本輪不准入该广义通用判据；未认定原企业无风险",
+      "minimumProjectEvidence": [
+        "相关工艺/设备及实际危险状态，仅用于应用，不代替法源原文"
+      ],
+      "remainingSourceClaims": [
+        "本轮取得GB/T34525完整原件，9.1 o）仅规定不应在气瓶上进行电焊引弧，9.2 a）只涵盖靠近热源及明火/火花作业，均不能把邻接完整电箱自动判为违规；GB9448官方预览新窗口locale错误且直接预览回跳题录，未取得完整11.5.5。"
+      ],
+      "evidenceRefs": [
+        "E_RESEARCH_GB9448_STATUS_20261002",
+        "E_RESEARCH_GB9448_SH_GUIDANCE_20261002",
+        "E_COM_GBT34525_ORIGINAL_20261002"
+      ],
+      "clauseIds": [],
+      "linkIds": []
+    },
+    {
+      "hazardId": "H_COM_GAS_HOSE_ELECTRIC",
+      "action": "exclude_unsupported_general_predicate",
+      "reason": "排除软管紧邻电箱的统一距离判据；不把气瓶条文对象换成软管，也不把未证明泄漏写成存在泄漏。",
+      "newFinding": "官方指引11.3支持泄漏、烧坏、磨损、老化或其他缺陷软管，未支持完整电箱邻接的统一距离；GB55009第5.3.3禁止燃气用户管道进入变配电室，但不涵盖焊割氧气软管邻电气控制箱。",
+      "title": "氧气或可燃气体软管紧邻电气设备布置",
+      "description": "氧气、可燃气体软管紧邻电气控制箱等电气设备布置，气体泄漏后可能受到电气火花影响。",
+      "conditions": "需结合气体介质、软管布置和电气设备型式核定安全要求。",
+      "measures": "重新调整气路与电气设备布置，避免软管紧邻可能产生电弧、火花或高温的电气设备。",
+      "admissionScope": "本輪不准入该广义通用判据；未认定原企业无风险",
+      "minimumProjectEvidence": [
+        "相关工艺/设备及实际危险状态，仅用于应用，不代替法源原文"
+      ],
+      "remainingSourceClaims": [
+        "官方指引11.3支持泄漏、烧坏、磨损、老化或其他缺陷软管，未支持完整电箱邻接的统一距离；GB55009第5.3.3禁止燃气用户管道进入变配电室，但不涵盖焊割氧气软管邻电气控制箱。"
+      ],
+      "evidenceRefs": [
+        "E_RESEARCH_GB9448_STATUS_20261002",
+        "E_RESEARCH_GB9448_SH_GUIDANCE_20261002",
+        "E_COM_GB55009_6_2_5_20261002"
+      ],
+      "clauseIds": [],
+      "linkIds": []
+    },
+    {
+      "hazardId": "H_COM_FLASHBACK_ARRESTOR",
+      "action": "exclude_unsupported_general_predicate",
+      "reason": "原通用LPG管路未装回火防止器仍不准入；定向钢筋气压焊可另收窄但须原件条文。",
+      "newFinding": "新核国标电子书库JGJ18—2012现行，2012-08-01实施、代替2003版。第三方展示4.7.4(1)确有瓶出口干式回火防止器，与2003版“装置包括防止器”不同；不能继续说该句疑似不存在，但本轮未得官方原页。GB/T34525 9.1 k）是防止倒灌，不是所有LPG管路防回火义务；TSG23 8.6.9(3)同样是条件性防倒灌。",
+      "title": "可燃气体气瓶供气管路未设置适用回火防止装置",
+      "description": "焊接、切割等作业使用的可燃气体气瓶供气管路未见适用的回火防止装置。",
+      "conditions": "适用范围取决于具体焊接切割工艺和供气系统，不能跨工艺机械套用。",
+      "measures": "核实气体种类、作业工艺和供气系统要求，按适用标准设置回火防止装置并检查其完好性。",
+      "admissionScope": "本輪不准入该广义通用判据；未认定原企业无风险",
+      "minimumProjectEvidence": [
+        "相关工艺/设备及实际危险状态，仅用于应用，不代替法源原文"
+      ],
+      "remainingSourceClaims": [
+        "新核国标电子书库JGJ18—2012现行，2012-08-01实施、代替2003版。第三方展示4.7.4(1)确有瓶出口干式回火防止器，与2003版“装置包括防止器”不同；不能继续说该句疑似不存在，但本轮未得官方原页。GB/T34525 9.1 k）是防止倒灌，不是所有LPG管路防回火义务；TSG23 8.6.9(3)同样是条件性防倒灌。"
+      ],
+      "evidenceRefs": [
+        "E_RESEARCH_JGJ18_STATUS_20261002",
+        "E_COM_GBT34525_ORIGINAL_20261002",
+        "E_RESEARCH_TSG23_PARTIAL_20261002"
+      ],
+      "clauseIds": [],
+      "linkIds": []
+    },
+    {
+      "title": "电动自行车蓄电池集中堆放且缺少防火管理",
+      "description": "大量电动自行车蓄电池集中、密集堆放，未落实分类、防火分隔或安全存放措施。",
+      "conditions": "具体防火分隔和数量限制应按地方规定、建筑条件及电池类型核定。",
+      "measures": "减少集中堆放量，划定安全存放区域，按电池类型和场所要求落实防火分隔、监控及异常电池隔离措施。",
+      "hazardId": "H_COM_EV_BATTERY_STORAGE",
+      "action": "excluded_unsupported_claim",
+      "reason": "排除大量/密集集中堆放本身即违反分类、防火分隔法定义务的原泛化定义。南京348号办法第12条第二项约束使用者违反消防规定在住宅、宿舍、办公楼等室内存放/充电，不等于销售维修库存禁止集中存放；第10条仅适用集中充电设施。",
+      "admissionScope": "不准入原泛化强制定义。保留原H及SC稳定，已证实直接分支按精确对象另行使用，不把来源推定成分支事实。",
+      "minimumProjectEvidence": [
+        "只能用于未来精确分支事实核验，不能把当前缺事实当原泛化定义的准入条件"
+      ],
+      "remainingSourceClaims": [
+        "使用者室内违反消防规定存放：南京地域、使用者、相应消防禁止条件确认后另建定义，不把库存密集来源改写成已违法室内存放",
+        "销售维修库存：GB/T44676-2024现行题录已核，但检索到的2023原文为征求意见稿GB/TXXXXX，不得充正式全文；无完整正式条文暂不准入该分支",
+        "废旧/损坏电池：第8条回收台账可支撑生产销售维修者回收服务/台账义务，不支撑任何库存的分类净距阈值；另建管理义务，不伪称来源已发现未建台账"
+      ],
+      "evidenceRefs": [
+        "E_COM_NJ348_20261002"
+      ],
+      "clauseIds": [],
+      "linkIds": [],
+      "sourceUrls": [
+        "https://www.nanjing.gov.cn/zdgk/202405/t20240531_4680113.html"
+      ],
+      "originalHAndSCPreserved": true
+    },
+    {
+      "title": "南京电动自行车集中充电场所和设施未落实消防安全设置或运营管理要求",
+      "description": "南京市行政区域内电动自行车集中充电场所和设施占用、堵塞消防车通道、安全出口、疏散通道或影响消防设施正常使用；利用民用建筑架空层设置时未采取符合消防安全要求的有效防火分隔；运营主体未落实消防安全制度、操作规程、日常检查巡查、设施正常运行及符合要求的消防设施和视频监控等明确义务。",
+      "conditions": "仅适用南京市行政区域。集中充电设施包括为电动自行车或其蓄电池集中提供电能的交流充电控制器、换电柜、充电柜等；不泛化为任何锂电设备。须按责任主体分开判定：第一款设置义务、第二款运营主体义务、第三款场所提供主体义务。“未固定区域”或“与可燃物混杂”单一外观不得自动认定满足本H；必须对应已经证实的直接缺陷。“专用锂电池灭火器”一概配置主张排除。设备具体参数和消防设施选型数量另按适用现行标准核定。",
+      "measures": "按第十条恢复消防通道和消防设施功能；民用建筑架空层按适用标准落实有效防火分隔；明确集中充电设施运营主体与场所提供主体，制定落实消防安全制度、操作规程、巡查及设施维护。场所提供主体按第三款制定灭火和应急疏散预案并组织针对性演练。",
+      "hazardId": "H_COM_EV_CHARGING_AREA",
+      "action": "admit_narrowed",
+      "reason": "南京348号办法第十条直接义务已核完整原文；实质改义限定南京、电动自行车集中充电、对应设置/运营/场所提供主体",
+      "admissionScope": "仅适用南京市行政区域。集中充电设施包括为电动自行车或其蓄电池集中提供电能的交流充电控制器、换电柜、充电柜等；不泛化为任何锂电设备。须按责任主体分开判定：第一款设置义务、第二款运营主体义务、第三款场所提供主体义务。“未固定区域”或“与可燃物混杂”单一外观不得自动认定满足本H；必须对应已经证实的直接缺陷。“专用锂电池灭火器”一概配置主张排除。设备具体参数和消防设施选型数量另按适用现行标准核定。",
+      "minimumProjectEvidence": [
+        "南京场所位置",
+        "设施确为电动自行车或其电池集中充电设施",
+        "对应责任主体（运营/场所提供）",
+        "至少一项第十条直接缺陷及照片/记录/制度核验；不能仅凭未固定区域或专用灭火器缺失"
+      ],
+      "remainingSourceClaims": [
+        "专用锂电灭火器一概义务已排除",
+        "其他锂电设备充电区域不自动适用",
+        "可燃物混杂单一描述须核对应现行标准直接要求，不用第10条自行制造净距"
+      ],
+      "evidenceRefs": [
+        "E_COM_NJ348_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_NJEBIKE_10"
+      ],
+      "linkIds": [
+        "K_COM_20261002_EV_CHARGING_NJ10"
+      ],
+      "originalHAndSCPreserved": true
+    },
+    {
+      "title": "危险化学品储存柜未设置物料清单或内容不可核验",
+      "description": "危险化学品储存柜未见清晰、可核验的物料清单，无法快速确认柜内物料种类及数量。",
+      "conditions": "物料清单的具体法定要求需结合企业危险化学品管理制度及适用标准进一步核验。",
+      "measures": "建立并及时更新柜内物料清单，确保名称、数量等信息与实际存放一致。",
+      "hazardId": "H_COM_HAZCAB_LIST",
+      "action": "excluded_unsupported_claim",
+      "reason": "排除南京普通商贸危化柜必须柜外张贴物料清单的通用强制主张。现行危化品安全法出入库登记、SDS、标签和储存安全标志不等于柜门清单；不得从未见外贴清单推定无台账。",
+      "admissionScope": "不准入原泛化强制定义。保留原H及SC稳定，已证实直接分支按精确对象另行使用，不把来源推定成分支事实。",
+      "minimumProjectEvidence": [
+        "对未贴柜门清单/周边木板本身的原强制主张已排除，不以未来现场材料补足不存在的直接关联。若另判台账缺失、通风/消防设施受阻，必须另有对应制度记录或功能受阻事实；不能从来源自动推定。"
+      ],
+      "remainingSourceClaims": [
+        "保留原H及SC来源稳定，仅作为管理改进建议/原始来源记录，不保留无界限待核承诺",
+        "地方实验室管理文件及南京大学内部制度有清单要求，但属于实验室/特定单位对象；江北新区环评PDF是项目措施而不是适用于所有企业的立法，不能靠政府网站托管冒充通用法源"
+      ],
+      "evidenceRefs": [
+        "E_COM_HAZCAB_LAW_SCOPE_20261002"
+      ],
+      "clauseIds": [
+        "C_03BA3BFFA73DDEFE94C3ACED",
+        "C_DBD6E2B5ACAB595BE7EA59D3"
+      ],
+      "linkIds": [],
+      "sourceUrls": [
+        "https://rd.nanjing.gov.cn/lfgz_0/sjfg_1/202505/t20250506_5140620.html",
+        "https://sys.njupt.edu.cn/2024/0229/c13056a255981/page.htm",
+        "https://njna.nanjing.gov.cn/njsjbxqglwyh/202511/P020251125636858195084.pdf"
+      ],
+      "clauseRole": "scope_comparison_only_not_direct_basis",
+      "originalHAndSCPreserved": true
+    },
+    {
+      "title": "危险化学品储存柜周边堆放可燃杂物",
+      "description": "危险化学品储存柜、防火安全柜周边堆放木板、包装物等可燃杂物，影响安全管理。",
+      "conditions": "需先确认柜内物料危险性和储存柜用途。",
+      "measures": "清理储存柜周边可燃杂物，保持周边整洁并与点火源、热源保持安全距离。",
+      "hazardId": "H_COM_HAZCAB_SURROUNDINGS",
+      "action": "excluded_unsupported_claim",
+      "reason": "排除普通南京/江苏商贸柜周边可燃杂物或1m范围杂物即法定违规的原通用强制主张；可作为安全改进建议。",
+      "admissionScope": "不准入原泛化强制定义。保留原H及SC稳定，已证实直接分支按精确对象另行使用，不把来源推定成分支事实。",
+      "minimumProjectEvidence": [
+        "对未贴柜门清单/周边木板本身的原强制主张已排除，不以未来现场材料补足不存在的直接关联。若另判台账缺失、通风/消防设施受阻，必须另有对应制度记录或功能受阻事实；不能从来源自动推定。"
+      ],
+      "remainingSourceClaims": [
+        "南京应急局2023指引第47项也含1000mm禁杂物，但依据栏明确参考深圳DB4403/T79-2020第6.1条，不改变该推荐地方标准的地域和强度。第49项引用江苏DB32/T4293-2022第7.6.2条，只明确周边无明火、散发火花地点和表面炽热设备，不能据此把木板包装物认定为上述对象。原柜周边事实如确实堵塞通风、疏散、消防设备，分别适用直接既有H，不推定发生。"
+      ],
+      "evidenceRefs": [
+        "E_COM_HAZCAB_LAW_SCOPE_20261002"
+      ],
+      "clauseIds": [
+        "C_03BA3BFFA73DDEFE94C3ACED",
+        "C_DBD6E2B5ACAB595BE7EA59D3"
+      ],
+      "linkIds": [],
+      "sourceUrls": [
+        "https://safety.nanjing.gov.cn/zwfw/zlxz/202312/P020231205627257956236.pdf",
+        "https://yjglj.sh.gov.cn/xxgk/xxgkml/xzzf/zfjc/20211203/2fd940b76c6c4960bf516b9f30d3d380.html"
+      ],
+      "clauseRole": "scope_comparison_only_not_direct_basis",
+      "originalHAndSCPreserved": true
+    },
+    {
+      "title": "危险房屋未设置警示和防误入管控措施",
+      "description": "经鉴定或已明确存在危险的房屋周边、出入口未设置明显警示和有效防止人员误入的管控措施。",
+      "conditions": "仅在房屋危险状态已有鉴定或其他可靠依据确认时适用。",
+      "measures": "设置醒目警示和围挡、警戒或封闭措施，并按房屋安全鉴定结论落实停止使用、加固或拆除等措施。",
+      "hazardId": "H_COM_DANGEROUS_BUILDING_CONTROL",
+      "action": "split_warning_and_exclude_universal_barrier_claim",
+      "reason": "警示分支可直接按既有安法35/H_ADB66DA5A436491FA3D95D5A42条件使用；排除所有危房所有经营者一律围挡封闭的泛化义务。南京条例27条治理、24(3)(4)迁出、29条不得继续使用、31条未消险前不得使用是精确可准入分支，但不是原来源已证明拒绝治理或继续使用。",
+      "admissionScope": "警示分支按全国安法35归并已有H；南京危房治理/停止使用分支完整法源已补，可另建精确定义；原无条件围挡强制要求排除",
+      "minimumProjectEvidence": [
+        "生产经营场所较大危险因素已有可靠证据才可用安法35警示分支",
+        "南京房屋安全鉴定报告、危险类别和治理通知",
+        "房屋责任人/使用人身份",
+        "若采用停止使用分支：鉴定要求停止使用/整体拆除或不能继续使用，及未迁出/继续使用事实"
+      ],
+      "remainingSourceClaims": [
+        "原警示主张按C030/H_ADB66DA5A436491FA3D95D5A42条件归并",
+        "原任意经营者一律围挡封闭主张排除",
+        "停止使用和拒绝治理义务存在，但原来源没有证明这些新缺陷，不能直接把aliases当已证实事实"
+      ],
+      "evidenceRefs": [
+        "E_COM_NJ_HOUSE_SAFETY_20261002"
+      ],
+      "clauseIds": [
+        "C030",
+        "C_COM_NJHOUSE_24",
+        "C_COM_NJHOUSE_27",
+        "C_COM_NJHOUSE_29",
+        "C_COM_NJHOUSE_31",
+        "C_COM_NJHOUSE_32"
+      ],
+      "linkIds": [
+        "K_B9C36F483F82583A0C308B44D0"
+      ],
+      "originalHAndSCPreserved": true
+    },
+    {
+      "hazardId": "H_COM_SAFETY_NET_DEFECT",
+      "action": "admitted_narrowed_definition",
+      "title": "建筑施工安全网绑扎不牢固或网间不严密",
+      "description": "建筑工程施工高处作业中的安全网未绑扎牢固，或者网间连接不严密。",
+      "conditions": "仅适用于JGJ80-2016第1.0.2范围内建筑工程施工高处作业安全网搭设。只用第8.2.1第一句，不包含未证明的支撑架强度、稳定性或一般网体初始下垂；平网正常下垂/缓冲空间不单独视为缺陷。",
+      "measures": "按施工方案检查系绳、结点及网间拼接，恢复牢固绑扎和严密连接；不把所有平网一概拉成无缓冲的绷紧状态。",
+      "reason": "官方完整原件8.2.1已闭环，删去“明显松弛”外观即判缺陷的广义分支；所用8.2.1并非公告列明被废止的强制条文，不冒称本条原强条。",
+      "admissionScope": "仅适用于JGJ80-2016第1.0.2范围内建筑工程施工高处作业安全网搭设。只用第8.2.1第一句，不包含未证明的支撑架强度、稳定性或一般网体初始下垂；平网正常下垂/缓冲空间不单独视为缺陷。",
+      "minimumProjectEvidence": [
+        "施工属性及网型",
+        "系绳绑扎结点/网间实际缝隙与方案要求",
+        "支撑架另按完整设计核验"
+      ],
+      "remainingSourceClaims": [
+        "原松弛/缠绕若未证明影响绑扎或严密性，继续只作复查线索"
+      ],
+      "evidenceRefs": [
+        "E_COM_JGJ80_8_2_1_20261002",
+        "E_COM_JGJ80_PARTIAL_REPEAL_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_JGJ80_2016_8_2_1"
+      ],
+      "linkIds": [
+        "K_COM_GAP_SAFETY_NET_DEFECT_JGJ80_2016_8_2_1"
+      ]
+    },
+    {
+      "hazardId": "H_COM_SCAFFOLD_LOAD",
+      "action": "admitted_narrowed_definition",
+      "title": "施工脚手架作业层荷载超过荷载设计值",
+      "description": "施工脚手架作业层实际荷载超过其荷载设计值。",
+      "conditions": "限工程建设施工脚手架的作业层。须取得专项方案/设计确定的适用荷载，并对同范围实际材料、人员、机具及荷载分布进行可靠比较。较重材料或集中堆放本身不是超载成立的证据；不得用通用3kN/m²等替代具体设计值。",
+      "measures": "停止超载使用并控制作业层材料、人员和机具荷载，按专项方案处置集中荷载；卸料后检查结构状态，确认满足设计要求再使用。",
+      "reason": "回到GB55023-2022现行强制5.3.1单句；政府主管部门完整复现本条及发布公告均已核。旧GB51210-2016第11.2.1强条废止事实已核，不以旧强条继续认定；原重物来源未证明超载。",
+      "admissionScope": "限工程建设施工脚手架的作业层。须取得专项方案/设计确定的适用荷载，并对同范围实际材料、人员、机具及荷载分布进行可靠比较。较重材料或集中堆放本身不是超载成立的证据；不得用通用3kN/m²等替代具体设计值。",
+      "minimumProjectEvidence": [
+        "脚手架类型与专项方案/设计荷载",
+        "实测物料重量、人员、机具及分布",
+        "同量纲同受力范围比较与计算"
+      ],
+      "remainingSourceClaims": [
+        "原集中堆放较重物料仅是核查线索，未在本轮认定个案超载"
+      ],
+      "evidenceRefs": [
+        "E_COM_GB55023_5_3_1_GD_20261002",
+        "E_COM_GB55023_NOTICE_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_GB55023_2022_5_3_1"
+      ],
+      "linkIds": [
+        "K_COM_GAP_SCAFFOLD_LOAD_GB55023_2022_5_3_1"
+      ]
+    },
+    {
+      "hazardId": "H_COM_FORKLIFT_INFO_VERIFY",
+      "action": "verification_protocol_complete",
+      "title": "叉车使用标志或定期检验有效信息现场无法核验",
+      "description": "现场未见有效特种设备使用标志或可核验的定期检验信息，暂无法确认在用叉车是否处于检验有效期内。",
+      "conditions": "仅限目录范围内场（厂）内专用机动车辆叉车；分别核对H式一使用标志、J式车牌固定、有驾驶室时挡风玻璃张贴及使用登记/检验报告。标志现场未见不自动等于未登记、车牌缺失或检验逾期。",
+      "measures": "记录设备身份、驾驶室/车牌/使用标志实际状态，调取匹配的登记证和检验报告。确认具体缺陷后使用相应直接义务；仅缺信息时先完成核验，不从无法确认直接推出法律禁止继续使用。",
+      "reason": "TSG08-2026完整原页已闭环；将原未见信息分拆为使用标志、车牌固定、使用登记和定期检验四个核验分支。4.12.1附H式一使用标志和4.12.2(2)附J车牌不是同一件；有驾驶室对象按4.12.2(2)另核挡风玻璃张贴。原未见信息既不能证车牌未固定，也不能证逾期未检。法律原文缺口已消除，剩余为真实现场取证，保留核验型定义，不制造未见照片的违法通用断言。",
+      "admissionScope": "核验工作流完整，不准入为已成立的直接隐患",
+      "minimumProjectEvidence": [
+        "设备目录/身份",
+        "实际车牌固定状况与驾驶室是否存在",
+        "H式一标志及登记证/定检报告匹配和有效期"
+      ],
+      "remainingSourceClaims": [
+        "原SC134/D16未见信息仍不能判逾期未检；待现场真实分支证实后适用相应义务"
+      ],
+      "evidenceRefs": [
+        "E_COM_TSG08_2026_TEXT_20261002",
+        "E_COM_TSG08_2026_NOTICE_20261002",
+        "E_COM_TSG08_2026_IMPLEMENT_20261002"
+      ],
+      "clauseIds": [
+        "C_COM_TSG08_2026_4_12_1",
+        "C_COM_TSG08_2026_4_12_2_2"
+      ],
+      "linkIds": []
+    }
+  ],
+  "addedEntityIds": {
+    "laws": [
+      "LF_REG_NJ_HOUSE_SAFETY",
+      "LF_STD_AQ6111",
+      "LF_STD_GB55023",
+      "LF_STD_JGJ80",
+      "LF_STD_TSG08_2026"
+    ],
+    "lawVersions": [
+      "LV_REG_NJ_HOUSE_SAFETY_2017",
+      "LV_STD_AQ6111_2023",
+      "LV_STD_GB55023_2022",
+      "LV_STD_JGJ80_2016",
+      "LV_STD_TSG08_2026"
+    ],
+    "clauses": [
+      "C_AQ6111_2023_6_2_10",
+      "C_COM_GB55009_6_2_5",
+      "C_COM_GB55023_2022_5_3_1",
+      "C_COM_GBT34525_9_2",
+      "C_COM_JGJ80_2016_8_2_1",
+      "C_COM_NJEBIKE_10",
+      "C_COM_NJHOUSE_24",
+      "C_COM_NJHOUSE_27",
+      "C_COM_NJHOUSE_29",
+      "C_COM_NJHOUSE_31",
+      "C_COM_NJHOUSE_32",
+      "C_COM_TSG08_2026_4_12_1",
+      "C_COM_TSG08_2026_4_12_2_2"
+    ],
+    "hazards": [],
+    "links": [
+      "K_COM_20261002_EV_CHARGING_NJ10",
+      "K_COM_BREAKER_SIGN_GB2894_7_4_1",
+      "K_COM_GAP_SAFETY_NET_DEFECT_JGJ80_2016_8_2_1",
+      "K_COM_GAP_SCAFFOLD_LOAD_GB55023_2022_5_3_1",
+      "K_COM_GAS_GAP_20261002_FLAME_FAILURE_VERIFY",
+      "K_COM_GAS_GAP_20261002_LPG_NEAR_HEAT",
+      "K_COM_GAS_GAP_20261002_OXY_CUTTING_DISTANCE",
+      "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+      "K_COM_PPE_AQ6111_6_2_10"
+    ],
+    "evidence": [
+      "E_COM_AQ6111_OFFICIAL_20261002",
+      "E_COM_GB55009_6_2_5_20261002",
+      "E_COM_GB55023_5_3_1_GD_20261002",
+      "E_COM_GB55023_NOTICE_20261002",
+      "E_COM_GBT34525_ORIGINAL_20261002",
+      "E_COM_GBT34525_STATUS_20261002",
+      "E_COM_HAZCAB_LAW_SCOPE_20261002",
+      "E_COM_JGJ80_8_2_1_20261002",
+      "E_COM_JGJ80_PARTIAL_REPEAL_20261002",
+      "E_COM_NJ348_20261002",
+      "E_COM_NJ_HOUSE_SAFETY_20261002",
+      "E_COM_TSG08_2026_IMPLEMENT_20261002",
+      "E_COM_TSG08_2026_NOTICE_20261002",
+      "E_COM_TSG08_2026_TEXT_20261002"
+    ],
+    "successions": []
+  },
+  "siteViolationEstablished": false,
+  "summaryNote": "19原候选是8限定准入+1条件归并+9原泛化主张不准入+1核验协议闭环；另1新电源线原子H。不能把通用定义纳管称为19个现场事实闭环。",
+  "newAtomicHazards": [
+    {
+      "action": "admitted_narrowed_definition",
+      "admissionScope": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+      "appliedContentHash": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+      "appliedLifecycle": "active",
+      "appliedLinkIds": [
+        "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2"
+      ],
+      "appliedTitle": "移动插排电源线未按用电安全技术要求选型",
+      "canonicalHazardId": null,
+      "caseEvidenceStillRequired": true,
+      "continuationBaseCommit": "3d9479ec81b900e3f50ed95468819e0504652d10",
+      "continuationReviewedAsOf": "2026-10-02",
+      "continuedFromDisposition": {
+        "action": "scope_split_required",
+        "appliedContentHash": "3aa17ffe58ab310682fc57fa811a2ab7dfbd265403ba2b02a1efe9d103025dd0",
+        "appliedLifecycle": "proposed",
+        "appliedTitle": "插排或临时接线直接放置在可燃物上",
+        "canonicalHazardId": null,
+        "caseEvidenceStillRequired": true,
+        "decisionReason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+        "definitionAdmissionGaps": [
+          "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。"
+        ],
+        "fieldViolationEstablished": false,
+        "hazardId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+        "independentLegalReviewStatus": "not_applicable_to_unresolved_or_excluded_definition",
+        "independentScopeCommentApplied": true,
+        "minimumProjectEvidence": [
+          "插排位置及周围可燃物",
+          "若另判违规接线须记录线型/连接/负荷"
+        ],
+        "officialSourcesChecked": [
+          "https://std.samr.gov.cn/gb/search/gbDetailed?id=N1sPm%2FYzMfc%3D&mode=p"
+        ],
+        "originalCitations": [
+          "《中华人民共和国消防法》第二十七条规定，电器产品及其线路的安装、使用、敷设和维护保养必须符合消防技术标准及管理规定。",
+          "《用电安全导则》（GB/T13869-2017）"
+        ],
+        "preReviewContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
+        "releaseEligibleByThisDisposition": false,
+        "remediationEstablished": false,
+        "reusedClauseIds": [],
+        "reviewDecision": "pending",
+        "reviewedAsOf": "2026-10-02",
+        "sourceCandidateIds": [
+          "SC087",
+          "SC118"
+        ],
+        "sourceDocumentCodes": [
+          "D10",
+          "D15"
+        ],
+        "sourceDocumentTextOnly": true,
+        "sourceRead": {
+          "mode": "original_check_record_text",
+          "originalStatementMatched": true,
+          "photosOrFunctionalTestsVerified": false
+        },
+        "sourceReadAsOf": "2026-10-02",
+        "sourceRevisionBoundary": "已对照当前可访问来源文本和原SC表述；未证明历史文件字节未变，未作原始签名/照片真实性鉴定。",
+        "title": "插排或临时接线直接放置在可燃物上",
+        "withdrawnMerge": {
+          "reason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+          "target": "H032"
+        }
+      },
+      "decisionReason": "电源线选型为独立原子，按父任务独立审查意见新建H；只核推荐技术对象，不覆盖旧可燃物判据，不确认SC118原文件或现场。",
+      "definitionAdmissionGaps": [],
+      "evidenceRefs": [
+        "E_GBT13869_SAMR_ORIGINAL_20260926",
+        "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+      ],
+      "fieldViolationEstablished": false,
+      "hazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "independentLegalReviewStatus": "awaiting_root_independent_source_review",
+      "independentScopeCommentApplied": true,
+      "minimumProjectEvidence": [
+        "交流≤1000V/直流≤1500V的移动用电产品属性",
+        "实际电源线护套/导体结构及连接状态",
+        "SC118原文件和现场未重新证实，不以映射表直接确认缺陷"
+      ],
+      "officialSourcesChecked": [
+        "https://openstd.samr.gov.cn/bzgk/std/viewGb?hcno=1C5996A8BAD63FF484CCFE024D98849C",
+        "https://std.samr.gov.cn/gb/search/gbDetailed?id=N1sPm%2FYzMfc%3D&mode=p"
+      ],
+      "originalCitations": [
+        "《用电安全导则》（GB/T13869-2017）"
+      ],
+      "preReviewContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
+      "releaseEligibleByThisDisposition": false,
+      "remainingSourceClaims": [
+        "SC087纸箱等可燃物直接放置：不自动认定易燃物；现行地方营业性演出/文物建筑规范直接禁令有地域/对象限制",
+        "SC118“易燃物覆盖在线缆上”属性、关系、现行直接规范均需独立核",
+        "MEM2023征求意见稿表15不可用；对应GB/T47799—2026于2027-02-01实施，当前不得提前采用"
+      ],
+      "remediationEstablished": false,
+      "reusedClauseIds": [
+        "C_GBT13869_5_2_2_mobile"
+      ],
+      "reviewDecision": "verified",
+      "reviewedAsOf": "2026-10-02",
+      "sourceCandidateIds": [
+        "SC118"
+      ],
+      "sourceDocumentCodes": [
+        "D15"
+      ],
+      "sourceDocumentTextOnly": true,
+      "sourceRead": {
+        "mode": "prior_ingest_map_and_bounded_original_text",
+        "originalStatementMatched": false,
+        "photosOrFunctionalTestsVerified": false
+      },
+      "sourceReadAsOf": "2026-10-02",
+      "sourceRevisionBoundary": "已对照当前可访问来源文本和原SC表述；未证明历史文件字节未变，未作原始签名/照片真实性鉴定。",
+      "title": "插排或临时接线直接放置在可燃物上",
+      "withdrawnMerge": {
+        "reason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+        "target": "H032"
+      },
+      "splitFromHazardId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+      "originalCandidateDispositionUnchanged": false
+    }
+  ]
+}

@@ -2,22 +2,16 @@
   "entityType": "hazard",
   "entityId": "H_COM_EV_CHARGING_AREA",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "cf71d337ac3fbd592292375f2865efe7a028841c37b94e5cf0c75308f8e44a05",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "原引GB17761—2018已被2024版替代，且整车产品标准不直接证明场所必须固定充电区域或配置“专用锂电池灭火器”。按实际场所充电规则另核，排除该一概配置说法。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EV_CHARGING_AREA",
-  "previousReview": {
-    "entityType": "hazard",
-    "entityId": "H_COM_EV_CHARGING_AREA",
-    "reviewType": "definition",
-    "decision": "pending",
-    "reviewedContentHash": "99df733ec2a94ccb0c45de1bf77386cbea5f2f7c45bacf3388867041aa44f9eb",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
-  }
+  "decision": "verified",
+  "reviewedContentHash": "80b38bf237edac769931f146d38722b9579e12608974a9453dd976163f89fa20",
+  "checkedAt": "2026-10-02T10:27:00Z",
+  "reviewer": "Commerce official-law substantive review 20261002",
+  "evidenceRefs": [
+    "E_COM_NJ348_20261002"
+  ],
+  "reason": "南京348号办法第十条完整现行直接义务闭环；排除所有锂电设备及专用锂电灭火器泛化。按主体和可证实缺陷判定，现场事实不凭source alias推定。",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_EV_CHARGING_AREA",
+  "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+  "reviewIndependenceNote": "主体作者实审保留；root非作者已实际读取原页/官方原文、范围、当前技术使用证据并重新计算H/K/C/LV哈希，记录另存。本地定义准入不确认原企业事件。"
 }

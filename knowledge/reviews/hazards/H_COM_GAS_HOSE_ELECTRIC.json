@@ -2,22 +2,37 @@
   "entityType": "hazard",
   "entityId": "H_COM_GAS_HOSE_ELECTRIC",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "33704b229306e97fd0efbd2b86dff26ff52ec8a79248d1bf35318ea1a83c438a",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "原GB9448—2025第11.5.5是气瓶布置条文，不直接规定软管邻近电箱；必须回到软管防损伤、防热源和具体电气点燃源要求，排除机械套用气瓶间距。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_GAS_HOSE_ELECTRIC",
+  "decision": "rejected",
+  "reviewedContentHash": "620e2dcad22aaeb936175f6acd2e8bc489a91a01a98fdb38645649e6085cb5e1",
+  "checkedAt": "2026-10-02T10:38:00Z",
+  "reviewer": "Commerce remaining-gap claim and applicability integration",
+  "reason": "排除软管紧邻电箱的统一距离判据；不把气瓶条文对象换成软管，也不把未证明泄漏写成存在泄漏。",
+  "evidenceRefs": [
+    "E_RESEARCH_GB9448_STATUS_20261002",
+    "E_RESEARCH_GB9448_SH_GUIDANCE_20261002",
+    "E_COM_GB55009_6_2_5_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_GAS_HOSE_ELECTRIC",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "fced60163791e76b47eb66e183d6094020fbbe4857dbb9bab737b52c6c119b17",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
+    "reviewedContentHash": "33704b229306e97fd0efbd2b86dff26ff52ec8a79248d1bf35318ea1a83c438a",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "原GB9448—2025第11.5.5是气瓶布置条文，不直接规定软管邻近电箱；必须回到软管防损伤、防热源和具体电气点燃源要求，排除机械套用气瓶间距。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_GAS_HOSE_ELECTRIC",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_GAS_HOSE_ELECTRIC",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "fced60163791e76b47eb66e183d6094020fbbe4857dbb9bab737b52c6c119b17",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
   }
 }

@@ -44,6 +44,8 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
                       (ROOT / 'docs/commerce-candidate-dispositions-20261002.jsonl')
                       .read_text(encoding='utf-8').splitlines()]
         cls.by_hazard = {row['hazardId']: row for row in cls.ledger}
+        cls.atomic = read(ROOT / 'docs/commerce-remaining-gap-atomic-splits-20261002.json')['items']
+        cls.all_admitted_rows = dict(cls.by_hazard, **{r['hazardId']:r for r in cls.atomic})
         cls.entities = {kind: {row['id']: row for p in (KNOW / kind).glob('*.json')
                               for row in [read(p)]}
                         for kind in FOLDERS.values()}
@@ -53,15 +55,19 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
         self.assertEqual(len(batches), 1)
         batch = batches[0]
         self.assertEqual(batch['baselineCommit'], FIXTURE['baselineCommit'])
-        self.assertEqual(batch['addedEntityIds'], FIXTURE['addedEntityIds'])
-        self.assertEqual(batch['admittedHazardIds'], FIXTURE['admittedHazardIds'])
-        self.assertEqual(batch['hazardsAdmitted'], 18)
-        self.assertEqual(batch['candidatesReviewed'], 44)
-        self.assertEqual(batch['conditionalCanonicalMerges'], 6)
-        self.assertEqual(batch['outOfScopeRejected'], 1)
-        self.assertEqual({key: len(ids) for key, ids in batch['addedEntityIds'].items()},
-                         {'laws': 5, 'lawVersions': 5, 'clauses': 23, 'hazards': 0,
-                          'links': 29, 'evidence': 20, 'successions': 0})
+        self.assertEqual(batch, FIXTURE['originalBatchReceipt'])
+        continuation = [b for b in self.manifest['batches'] if b['id'] == FIXTURE['continuationBatchReceipt']['id']]
+        self.assertEqual(len(continuation), 1)
+        # Review metadata is bound by the disposition checker, not this inventory receipt.
+        actual = dict(continuation[0]); expected = dict(FIXTURE['continuationBatchReceipt'])
+        for key in ['independentLegalReview', 'independentReviewRef', 'independentReviewSha256']:
+            actual.pop(key, None); expected.pop(key, None)
+        self.assertEqual(actual, expected)
+        self.assertEqual(actual['hazardsAdmitted'], 9)
+        self.assertEqual(actual['existingCandidatesAdmitted'], 8)
+        self.assertEqual(actual['newAtomicHazardsAdmitted'], 1)
+        union = {k: sorted(set(batch['addedEntityIds'][k] + actual['addedEntityIds'][k])) for k in FIXTURE['addedEntityIds']}
+        self.assertEqual(union, FIXTURE['addedEntityIds'])
 
     def test_exact_inventory_delta_preserves_every_original_canonical_id(self):
         for key, kind in FOLDERS.items():
@@ -74,7 +80,7 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
                 self.assertEqual(len(historical), expected['count'])
                 self.assertEqual(ids_sha256(historical), expected['idsSha256'])
                 self.assertEqual(self.manifest['counts'][key], len(current))
-        self.assertEqual(ADDED_IDS['hazards'], frozenset())
+        self.assertEqual(ADDED_IDS['hazards'], frozenset(FIXTURE['newAtomicHazardIds']))
         self.assertEqual(ADDED_IDS['successions'], frozenset())
 
     def test_all_44_exact_original_source_mappings_and_prior_hashes_are_retained(self):
@@ -101,26 +107,29 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
                 self.assertIs(row['fieldViolationEstablished'], False)
                 self.assertIs(row['remediationEstablished'], False)
 
-    def test_18_admissions_6_merges_and_remaining_candidates_are_explicit(self):
+    def test_exact_two_round_dispositions_and_atomic_split_are_explicit(self):
         active = {hid for hid in CANDIDATE_IDS if self.entities['hazards'][hid]['lifecycle'] == 'active'}
         merged = {hid for hid in CANDIDATE_IDS if self.entities['hazards'][hid]['lifecycle'] == 'superseded'}
         excluded = {hid for hid, row in self.by_hazard.items() if row['action'] == 'out_of_scope'}
-        self.assertEqual(active, ADMITTED_IDS)
+        self.assertEqual(active, ADMITTED_IDS - set(FIXTURE['newAtomicHazardIds']))
         self.assertEqual(merged, set(FIXTURE['mergedHazardIds']))
         self.assertEqual(excluded, set(FIXTURE['outOfScopeHazardIds']))
-        self.assertEqual((len(active), len(merged), len(excluded)), (18, 6, 1))
-        pending = CANDIDATE_IDS - active - merged - excluded
-        self.assertEqual(len(pending), 19)
-        for hid in pending | excluded:
+        self.assertEqual((len(active), len(merged), len(excluded)), (26, 7, 1))
+        unsupported = set(FIXTURE['unsupportedClaimHazardIds'])
+        pending = CANDIDATE_IDS - active - merged - excluded - unsupported
+        self.assertEqual(unsupported, {hid for hid, row in self.by_hazard.items() if row['action'] == 'excluded_unsupported_claim'})
+        self.assertEqual(len(unsupported), 9)
+        self.assertEqual(pending, set(FIXTURE['verificationProtocolIds']))
+        for hid in pending | excluded | unsupported:
             self.assertEqual(self.entities['hazards'][hid]['lifecycle'], 'proposed')
-        self.assertIn('H_COM_BREAKER_LABEL_OBSCURED', pending)
-        self.assertIn('H_COM_PLUGSTRIP_COMBUSTIBLE', pending)
+        self.assertIn('H_COM_BREAKER_LABEL_OBSCURED', active)
+        self.assertIn('H_COM_PLUGSTRIP_COMBUSTIBLE', unsupported)
         self.assertEqual(self.manifest['lifecycle'],
                          Counter(h['lifecycle'] for h in self.entities['hazards'].values()))
 
     def test_every_new_link_is_an_exact_admitted_source_chain(self):
         ledger_links = {kid for hid in ADMITTED_IDS
-                        for kid in self.by_hazard[hid]['appliedLinkIds']}
+                        for kid in self.all_admitted_rows[hid]['appliedLinkIds']}
         self.assertEqual(ledger_links, ADDED_IDS['links'])
         actual_incoming = {kid for kid, link in self.entities['links'].items()
                            if link['hazardId'] in ADMITTED_IDS}
@@ -143,7 +152,7 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
 
     def assert_exact_release_cohort(self, gate):
         """One exact-set contract shared by the real Gate and negative mutations."""
-        self.assertEqual(set(gate.eligible_hazards) & CANDIDATE_IDS, ADMITTED_IDS)
+        self.assertEqual(set(gate.eligible_hazards) & (CANDIDATE_IDS | set(FIXTURE['newAtomicHazardIds'])), ADMITTED_IDS)
         self.assertTrue(ADDED_IDS['links'] <= set(gate.eligible_links))
         historical = pre_commerce_gate(gate)
         for key, ids in [('eligibleHazards', historical.eligible_hazards),
@@ -151,12 +160,12 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
             expected = FIXTURE['baselineGate'][key]
             self.assertEqual(len(ids), expected['count'], key)
             self.assertEqual(ids_sha256(ids), expected['idsSha256'], key)
-        self.assertEqual(len(gate.eligible_hazards), 1653 + 18)
-        self.assertEqual(len(gate.eligible_links), 1787 + 29)
+        self.assertEqual(len(gate.eligible_hazards), 1653 + len(ADMITTED_IDS))
+        self.assertEqual(len(gate.eligible_links), 1787 + len(ADDED_IDS['links']))
         self.assertFalse((CANDIDATE_IDS - ADMITTED_IDS) & set(gate.eligible_hazards))
 
 
-    def test_real_gate_adds_only_the_18_expected_hazards_and_keeps_every_old_hazard(self):
+    def test_real_gate_adds_only_exact_reviewed_two_round_hazards_and_keeps_old_set(self):
         self.assert_exact_release_cohort(evaluate_release_gate(KNOW, date(2026, 10, 2)))
 
     def test_exact_release_contract_rejects_an_unadmitted_candidate(self):
@@ -222,7 +231,7 @@ class CommerceCohortHelperTests(unittest.TestCase):
         current['counts']['evidence'] += 1
         changed = pre_commerce_manifest(current)
         self.assertEqual(changed['counts']['evidence'], historical['counts']['evidence'] + 1)
-        self.assertEqual(before['counts']['evidence'] - historical['counts']['evidence'], 20)
+        self.assertEqual(before['counts']['evidence'] - historical['counts']['evidence'], len(ADDED_IDS['evidence']))
         self.assertEqual(before, read(KNOW / 'manifest.json'))
 
 
