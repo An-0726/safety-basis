@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_ZJWS_12_2",
+  "revision": 3,
+  "hazardId": "H_ZJWS_12_2",
+  "title": "产生职业病危害用人单位工作生活分开与禁住人核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于产生职业病危害的用人单位的工作场所，核查工作场所与生活场所分开、工作场所不得住人。单位层级适用范围不缩为仅产生危害的某个房间；本项核查布局及实际用途，不要求收集个人病历、健康检查结果等无关信息。",
+      "确认单位产生职业病危害及被检地点属于其工作场所；不扩大到无该主体前提的全部单位，也不缩为某个直接产害或检出危害的房间。",
+      "分支一核工作与生活场所的实际布局和分开状态；分支二核工作场所实际住人。两支独立，不要求未分开和住人同时发生。",
+      "住人只有在主张该分支时才要求实际用途事实；床、椅或休息设施外观不单独证明有人居住。"
+    ],
+    "excludes": [
+      "不能只限于某个检出危害因素的房间而忽略该用人单位工作场所范围。",
+      "无职业病危害主体前提时不按本项直接适用；不从床椅外观单独推定有人居住。",
+      "无产生职业病危害主体前提不按本项直接认定。",
+      "本项不以病历、体检或个体健康信息为必要证据；这不否定另行健康监护义务。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "occupationalHazardEmployerAndWorkplaceScopeVerified",
+      "selectedBranchRecorded",
+      "workAndLivingLayoutAndSeparationVerifiedIfAsserted",
+      "actualResidentialUseVerifiedIfAsserted"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核单位危害识别/申报或相关工艺、物料和作业资料确认主体；不调职工体检、诊断或接触者名册。",
+    "布局分支核平面关系、分隔及实际工作/生活用途；居住分支另核脱敏实际用途/安排，不收住户身份或私人生活影像。",
+    "资料、照片不完整只能形成待核；确认现场用途需相互匹配证据，不能由模板或休息设施推定住宿。",
+    "仅提取本项必要的设备/点位编号、岗位角色、时点、结论和限制条件；去标识化，不收集账号密码、身份证、个人健康资料或无关合同信息。本候选不填任何真实现场值。"
+  ],
+  "correctiveDirection": "按查明分支落实工作与生活场所分开；仅在已证实工作场所住人时停止对应住宿并妥善调整地点。复核空间分隔及实际用途，不预设已经有人员居住。",
+  "basisLinkIds": [
+    "K_XLSX_FT_1F35024B7A16662886FFAAD7"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "现场工作生活用途及分隔可观察，适用主体是产生职业病危害的用人单位，不缩为单个有害房间，也不需要个人健康信息。",
+  "authoringBasisRationale": {
+    "K_XLSX_FT_1F35024B7A16662886FFAAD7": "精确direct范围：第十二条导语及第（二）项；第五十七条工作场所定义；第六十条施行及原规定废止。产生职业病危害的用人单位的工作场所，包括劳动者进行职业活动的所有地点及建设单位施工场所；事实按选定分支独立核查，本候选不产生现场成立结论。"
+  },
+  "authoringReviewFlags": [
+    "independentSemanticReviewRequired",
+    "branchSpecificFactsNotAutomaticallyTrue"
+  ],
+  "authoringStatus": "private_revision2_candidate_awaiting_independent_semantic_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "064eefe84a775ff773266761565350a2611141ea4871e72887877ffa796f23a0",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalDraftReference": {
+    "sha256": "b45b13acbc979dcb939b369c59b099bf56a0e408a946c570d829ffb9a6309712"
+  },
+  "substantiveRevisionRationale": [
+    "替换旧危害岗位/作业活动入口，保持单位层级的全部工作场所边界。",
+    "把actualResidentialUseConfirmed改为IfAsserted并明确双分支独立，整改住宿只用于已证实分支。"
+  ]
+}

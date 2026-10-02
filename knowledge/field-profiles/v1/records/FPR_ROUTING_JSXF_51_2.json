@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_JSXF_51_2",
+  "revision": 3,
+  "hazardId": "H_JSXF_51_2",
+  "title": "江苏轨道交通禁商铺区域与设施材料核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于江苏省行政区域内城市轨道交通：车站站台层、站厅付费区、乘客疏散区以及疏散通道不得设置商铺；运营设施和广告设施应采用不燃、难燃材料。不得扩大为车站全部商业区域一律禁设商铺，也不得把难燃材料一概排除。",
+      "确认江苏地域及城市轨道交通对象，按实际主张选择禁设商铺分支或设施材料分支。",
+      "禁商铺只对站台层、站厅付费区、乘客疏散区、疏散通道核区域和实际商铺用途；材料分支单独核运营设施及广告设施，不限于四类禁商铺区。",
+      "两分支独立OR：禁商铺判断不要求另证明材料问题，材料判断不要求先有违规商铺；不燃和难燃均保留。"
+    ],
+    "excludes": [
+      "不把车站全部商业区域一律作为禁止商铺区域。",
+      "难燃材料不得仅因不是不燃材料而按本条判不符合；不扩至江苏以外。",
+      "不扩大为车站所有商业区域一律禁商铺，不扩至江苏外。",
+      "不以难燃不是不燃就判不符合，不把材料要求缩到四类禁店区域，不将第一/三款其他义务混入。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "jiangsuUrbanRailScopeVerified",
+      "selectedBranchRecorded",
+      "prohibitedZoneAndActualShopUseVerifiedIfAsserted",
+      "operationalOrAdvertisingFacilityIdentityVerifiedIfAsserted",
+      "installedMaterialFirePerformanceVerifiedIfAsserted"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "禁商铺分支核功能分区图、收费边界、疏散空间边界和实际点位用途，定位是否落入四类区域。",
+    "材料分支核实运营/广告设施身份、实装材料与燃烧性能证明或检测资料的一致性；外观和资料未提供不能单独判燃烧性能。",
+    "仅将已查明分支作为对应整改依据，另一分支无缺陷时不自动要求整改。",
+    "仅提取本项必要的设备/点位编号、岗位角色、时点、结论和限制条件；去标识化，不收集账号密码、身份证、个人健康资料或无关合同信息。本候选不填任何真实现场值。"
+  ],
+  "correctiveDirection": "若确认法定禁设区域实际设置商铺，纠正对应商铺设置；若确认运营或广告设施材料不符合不燃/难燃要求，则对相应材料整改。分别复核对应分支，不要求两个问题并存，也不按单一分支自动处置另一分支。",
+  "basisLinkIds": [
+    "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "精确区域、商铺用途和设施材料可现场结合材料证明核查，必须保留江苏地域及不燃或难燃两种合规材料。",
+  "authoringBasisRationale": {
+    "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154": "精确direct范围：第五十一条第二款；第二条为江苏地域，第九十二条不把城市轨道交通与普通铁路系统混同。江苏省城市轨道交通的法定禁商铺区域及运营设施、广告设施；事实按选定分支独立核查，本候选不产生现场成立结论。"
+  },
+  "authoringReviewFlags": [
+    "independentSemanticReviewRequired",
+    "branchSpecificFactsNotAutomaticallyTrue"
+  ],
+  "authoringStatus": "private_revision2_candidate_awaiting_independent_semantic_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "cbcca1f34328aa87301742b05207a57fee688d15e3c7fd30a9d6502664c79605",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalDraftReference": {
+    "sha256": "204f19010f55e375c2f8c85c641807c1d0de942faa5493015a2d97b9ff388a45"
+  },
+  "substantiveRevisionRationale": [
+    "替换江苏泛消防范围并显式标注两支OR和材料对象范围。",
+    "将平铺事实名改为IfAsserted，整改方向改为与查明分支匹配，避免全项推断。"
+  ]
+}

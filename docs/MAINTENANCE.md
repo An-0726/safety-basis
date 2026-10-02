@@ -27,7 +27,7 @@
 
 ## 候选
 
-候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。历史 2026-09-19 批次的 426 条 proposed backlog 曾处置为 242 条转正、184 条保留（含 149 条 upcoming 等）；这不是当前候选库存。2026-09-26 PR #82历史核验快照库存为320条 proposed；本次维护分支库存为324条 proposed，正式站公开 proposed=0。
+候选规则只认 `docs/CANDIDATE_REVIEW.md`。`proposed` 可留在 knowledge 继续审核，但**不得进入正式发布包**。历史 2026-09-19 批次的 426 条 proposed backlog 曾处置为 242 条转正、184 条保留（含 149 条 upcoming 等）；这不是当前候选库存。2026-09-26 PR #82历史核验快照库存为320条 proposed，其后当时维护分支为324条；两者均非当前库存。当前数量以PROJECT_STATE与当前manifest为准，正式站公开 proposed=0。
 
 ## 数量口径
 
@@ -42,7 +42,7 @@
 
 历史阶段数据（2026-09-19，非当前发布基线）：1,744 条正式隐患、60 个实际引用法规版本、1,354 条正式条款、1,863 个正式关联；184 条 proposed 只留后台，公开 proposed=0。knowledge 库存为 104 laws / 107 lawVersions / 3,007 clauses / 2,015 hazards / 1,886 links / 1,197 evidence；publication 为 69 个 canonical 来源关系（11 full_text + 58 link_only）。
 
-当前统计统一见 README、PROJECT_STATE、HANDOFF 与 `knowledge/manifest.json`；全库库存、当前可发布包、历史批次三种口径不得混用。
+当前阶段与已核上线数量统一见 [PROJECT_STATE](PROJECT_STATE.md)；源库存取 `knowledge/manifest.json`，公开数量取相应发布manifest。README与HANDOFF不再维护重复状态块；库存、当前可发布包、已上线包与历史批次不得混用。
 
 ## Publication 长期完整性门禁
 
@@ -98,3 +98,12 @@ py -3 tools/build_local_release.py
 5. 生成 `dist/local/public`、`dist/local/fulltext` 和统一入口。
 
 `dist/` 与 `source/releases/current/` 都是可重建成品，不提交 Git，也不得反向当母库。
+
+## 归档脚本的私有输入
+
+`tools/archive/maintenance_legacy/` 只留历史维护逻辑，不是当前发布入口；使用前仍须单独确认任务、输入版本和写入范围。本轮未执行这些脚本的历史业务逻辑。
+
+- 已有命令行的工作簿工具须显式传 `--xlsx`，资料目录工具须传 `--source`，不再提供个人机器路径默认值
+- 其余历史工作簿工具须设置 `SAFETY_BASIS_WORKBOOK_20260913` 或 `SAFETY_BASIS_WORKBOOK_20260914`，对应脚本注明的工作簿版本；缺值或文件不存在即退出
+- 历史全量整治脚本还须显式设置 `SAFETY_BASIS_REPO_ROOT` 与 `SAFETY_BASIS_AUDIT_SCRATCH`，两者必须是已存在目录；这只是路径检查，不代表允许执行或已验证业务内容
+- 公开文档只保留仓库相对位置、输入文件版本及核验摘要。新提交的脱敏不改写已有 Git 历史；交付补丁也不得附带被移除的私人路径或现场身份

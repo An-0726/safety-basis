@@ -26,7 +26,6 @@ from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[2]
 KNOWLEDGE = ROOT / "knowledge"
-DEFAULT_XLSX = Path(r"D:/Desktop/隐患库_1929条_新版口径全部整改完成_20260914.xlsx")
 DEFAULT_AS_OF = "2026-09-16"
 
 sys.path.insert(0, str(ROOT / "tools" / "v4"))
@@ -298,7 +297,7 @@ def write_markdown(path: Path, metadata: dict[str, Any], records: list[dict[str,
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
+    parser.add_argument("--xlsx", type=Path, required=True)
     parser.add_argument("--as-of", default=DEFAULT_AS_OF)
     parser.add_argument("--jsonl", type=Path, default=ROOT / "docs" / "phase6-reuse-candidates.jsonl")
     parser.add_argument("--markdown", type=Path, default=ROOT / "docs" / "PHASE6_REUSE_CANDIDATES.md")

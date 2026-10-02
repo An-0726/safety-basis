@@ -17,7 +17,6 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_SOURCE = Path(r"D:\Desktop\模板\111常用法规标准")
 DEFAULT_OUTPUT = ROOT / "source" / "library" / "inventory" / "111-common-laws-20260913"
 
 # 仅列已经明确查到新版的旧版；不能把“强条废止”混入这里。
@@ -210,7 +209,7 @@ def classify(path: Path, digest: str, duplicate_rank: int, db_hashes: dict, db_i
 def main() -> int:
     global args_source
     ap = argparse.ArgumentParser()
-    ap.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
+    ap.add_argument("--source", type=Path, required=True)
     ap.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     ns = ap.parse_args()
     args_source = ns.source.resolve()

@@ -1,5 +1,7 @@
 # Source-integrity containment recovery — 2026-09-30
 
+> 历史批次记录：下文数字、待办与发布状态仅代表本文件所记时点；唯一现况与保留缺口见 [PROJECT_STATE](PROJECT_STATE.md)，不得用本页重设当前阶段。
+
 ## Result and boundary
 
 This targeted correction is based on commit `a5cc5e5ccc82c7b062a683217cdf855091946fca`. The canonical source records, official occupational-health text, current regulations index and resulting Gate decisions were independently rechecked.

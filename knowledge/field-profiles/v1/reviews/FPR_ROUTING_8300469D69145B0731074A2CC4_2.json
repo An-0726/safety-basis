@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_8300469D69145B0731074A2CC4_2",
+  "profileRevision": 3,
+  "decision": "verified",
+  "reviewer": "dot：独立最终隐私修订复核",
+  "reason": "本次独立核对revision2与revision3全部字段，变化仅删除私有历史路径及修订号递增；逐字阅读最终适用边界、六维语义评估和精确关联依据，核实全部依赖字节与原独立审阅一致。官方原文及现行状态核验来自所列原独立审阅证据，本次未声称重新联网逐条核法。保留原审阅的用途限制，批准此隐私修订版本；不形成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T17:10:52.261869+00:00",
+  "reviewedProfileHash": "87b0914f34f7046176754ffca8f9090207b56201f8e4cf52d18a2dd9dca9c85c",
+  "dependencyFingerprint": "6e6b000adb3faaaa7be0493b73b8a58df50d9b349c37dd0d809be360f47b8678",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_FT_018BCD0DF4CAB382456C13D8": "K_XLSX_FT_018BCD0DF4CAB382456C13D8精确关联C_XLSX_FT_B5EB332AAF1DF679189544DF；中华人民共和国特种设备安全法（主席令〔2013〕第4号，2013-06-29发布，2014-01-01施行；地域CN）。第48条第二款；第48条第一款、第32条第二款及第2条为边界；第100、101条为适用监管与施行上下文。设计年限已达且法律及适用安全技术规范允许延用的非报废/非淘汰设备；已检评通过和登记变更绝不作为进入核查前提，故未检评先延用不会漏查。 不签任何个案设备延寿结论，不允许报废或淘汰设备补材料恢复资格。逐次确认设备身份、法定监管范围及适用技术规范，并核对第100条特殊监管对象边界，不对军事装备、核设施、航空航天器擅套本法。 不规定全类别统一年限；年限及时间起点、期限由同一设备与适用规范证据提供。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "e00c0c3a9b2909ba9ce10071e3f2647ee169b446864093598dabf07ec8614517",
+    "officialSources": [
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+      "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+        "locator": "SAMR官方正文第2、28、32、48、100、101条；第48条web行229—231"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_FT_018BCD0DF4CAB382456C13D8",
+        "clauseId": "C_XLSX_FT_B5EB332AAF1DF679189544DF",
+        "lawVersionId": "L014",
+        "lawId": "LF_L014",
+        "officialName": "中华人民共和国特种设备安全法",
+        "officialNumber": "主席令〔2013〕第4号",
+        "publishedOn": "2013-06-29",
+        "effectiveOn": "2014-01-01",
+        "currentStatusAssessment": "现行有效；现行目录基准日2026-08-28",
+        "statusSources": [
+          "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true,
+    "revision3ReviewScope": "仅私有路径删除与修订号更新；最终公共业务语义和全部依赖与原独立批准内容一致。官方来源核验沿用绑定的原独立审阅记录。"
+  }
+}

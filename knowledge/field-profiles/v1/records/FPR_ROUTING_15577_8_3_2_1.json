@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_15577_8_3_2_1",
+  "revision": 1,
+  "hazardId": "H_15577_8_3_2_1",
+  "title": "粉尘除尘风管材质、结构与强度核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "适用于GB 15577-2018范围内粉尘爆炸危险场所的除尘系统风管；核查钢质材料、禁止采用干式巷道式构筑物及风管设计强度要求。普通通风管道不直接适用；煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用本标准。",
+      "确认是粉尘爆炸危险场所除尘系统风管，核对风管与除尘器的对应关系及设计强度。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用GB 15577-2018；不构成粉尘爆炸危险的普通粉尘场景不适用本项。",
+      "普通通风管道不直接适用；不存在所谓合规干式巷道式除尘风道例外。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "dustDuctFunctionConfirmed",
+      "ductMaterialAndStructureConfirmed",
+      "designStrengthComparisonConfirmed"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对系统图与现场风管路径、材质证明及结构照片，区分除尘风管和普通通风管。",
+    "取得同一系统风管与除尘器设计强度资料或合规技术核实记录；不因缺图纸直接判定强度不足。",
+    "仅核验和记录本项必要的设备、点位、时间、岗位角色及证据结论；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或与本项无关的完整材料。"
+  ],
+  "correctiveDirection": "粉尘爆炸危险场所的除尘风管应采用钢质材料制造，禁止采用干式巷道式构筑物作为除尘风道；停止使用现有干式巷道式构筑物除尘风道，改用符合要求的除尘风管。风管设计强度不得小于除尘器设计强度。整改后核对风管材质、结构、强度及实际运行条件并留存记录。",
+  "basisLinkIds": [
+    "K_XLSX_0dac466595d5a96b9c29c60f"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "钢质风管和禁用巷道结构有现场对象，强度须资料或技术核查配合；按除尘系统收窄。",
+  "authoringBasisRationale": {
+    "K_XLSX_0dac466595d5a96b9c29c60f": "第8.3.2条明确钢质材料、禁止干式巷道式构筑物、风管强度不低于除尘器三项；选择当前direct链且保留标准范围排除，不扩为一般建筑总平面要求。"
+  },
+  "authoringReviewFlags": [
+    "needsDefinitionSplit:非钢质风管与干式巷道两类缺陷",
+    "needsDefinitionSplit:材质结构与设计强度应分别取证"
+  ],
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "a3129d99198f368d537b8ee55b696477ec86f5c8",
+  "sourceAsOf": "2026-09-30",
+  "sourceHazardContentHash": "8d82c87cb0a828dde5db062011ea7c460c5ca27819e284e9a6c05410c694906d",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false
+}

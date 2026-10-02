@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_FCB_19_4",
+  "revision": 3,
+  "hazardId": "H_FCB_19_4",
+  "title": "粉尘涉爆检修动火后清场与复产前温度核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于粉尘涉爆工贸企业，对粉尘爆炸危险场所设备设施或除尘系统实施动火检修维修后拟恢复或已经恢复生产的场景。作业后须妥善清理现场，作业点最高温度恢复常温后方可重新开始生产；本项不因普通粉尘或普通动火场景而直接适用。",
+      "确认粉尘涉爆工贸主体、危险场所设备设施/除尘系统、实际动火检修维修及作业结束后的拟复产或已经复产阶段。",
+      "中性核查现场清理、残留热源/积尘和作业点最高温度是否恢复常温，区分拟复产检查与已经复产的实际时间线；清场完成或温度已合格都不作为进入核查的前提。",
+      "本稳定H只覆盖既定动火后复产子集，第19条对其他检修维修的完整义务不因此被否定或被本候选全部覆盖。"
+    ],
+    "excludes": [
+      "非工贸主体不以本项直接适用。",
+      "普通非粉尘涉爆动火不直接套用本项。",
+      "没有复产事实时不虚构已经恢复生产；不得为测试提前启动设备。",
+      "非工贸、普通非粉尘涉爆场景不能直接套用。",
+      "不擅定常温数值，不以平均温度代最高温度，不以已清场代温度合格。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "industrialTradeDustExplosionAndHotWorkScopeVerified",
+      "cleanupStatusVerified",
+      "maximumPointTemperatureValueUnitMethodLocationTimeVerified",
+      "normalTemperatureComparisonBasisVerified",
+      "plannedOrActualRestartStageVerified",
+      "restartChronologyVerifiedIfAlreadyRestarted"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核必要专项作业审批/方案摘录、对象、动火结束及拟/实际复产时点，不以计划时间替代运行事实。",
+    "取得清理、残留热源、积尘的中性事实及作业点最高温度测量结果、单位、方法、点位、时点和常温判断依据；如已复产，对照时序判断之前是否满足两项条件。",
+    "缺记录不等于未清场或未降温；未实际复产不能写已违规复产，不得为核验提前启动设备。",
+    "仅提取本项必要的设备/点位编号、岗位角色、时点、结论和限制条件；去标识化，不收集账号密码、身份证、个人健康资料或无关合同信息。本候选不填任何真实现场值。"
+  ],
+  "correctiveDirection": "动火检修维修后妥善清理现场，确认作业点最高温度恢复常温后方可重新开始生产；保留必要复产检查证据。拟复产时不满足条件则不得复产，已复产事实须另按实际时间线核定；不得虚构既成复产。",
+  "basisLinkIds": [
+    "K_XLSX_5168434ab8029683af6b74d0"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "作业后清场和恢复生产的时点有可观察状态，但须真实时间线和最高温度证据，单纯干净外观不足。",
+  "authoringBasisRationale": {
+    "K_XLSX_5168434ab8029683af6b74d0": "精确direct范围：第十九条末句的作业后清理及作业点最高温度恢复常温后方可生产；第二、三条为主体/粉尘危险范围。粉尘涉爆工贸企业针对危险场所设备设施或除尘系统动火检修维修后的拟/已复产场景；事实按选定分支独立核查，本候选不产生现场成立结论。"
+  },
+  "authoringReviewFlags": [
+    "independentSemanticReviewRequired",
+    "branchSpecificFactsNotAutomaticallyTrue"
+  ],
+  "authoringStatus": "private_revision2_candidate_awaiting_independent_semantic_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "f0f7b6f5982e7ce74f307b70bf2ccb7b0759835357960edff1478fa6c2b51745",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalDraftReference": {
+    "sha256": "51d8e93cfc5a5fe1a849f73ca1638c1e5b3c17f6d60521775f6fdf396af0244a"
+  },
+  "substantiveRevisionRationale": [
+    "替换旧通用粉尘入口，明确动火后拟/已复产。",
+    "将requires[2]“已恢复常温”改为是否恢复的中性核查。",
+    "将evidenceRequirements[1]从只请求合规温度证明改为所有测量结果与实际复产时间比较，并保留常温不设数字和最高点要求。"
+  ]
+}

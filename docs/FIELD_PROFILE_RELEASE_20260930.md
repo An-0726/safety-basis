@@ -1,5 +1,8 @@
 # Backend field-profile release scope — 2026-09-30
 
+> 历史批次记录：下文数字、待办与发布状态仅代表本文件所记时点；唯一现况与保留缺口见 [PROJECT_STATE](PROJECT_STATE.md)，不得用本页重设当前阶段。
+> The projection below is historical; subsequent reviewed profiles and formal UI work are tracked in PROJECT_STATE.
+
 This change adds the governed reusable field-profile backend and its formal release validation. It does not complete the whole library's field classification, migrate the private pilot wholesale, or redesign the frontend.
 
 ## Included

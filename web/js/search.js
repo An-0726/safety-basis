@@ -183,6 +183,7 @@ export function searchHazardsDetailed(rows, query, filters={}) {
   for(const r of rows){
     if(!standardsMatch(r,prepared.standards,'hazards')) continue;
     if(r.status==='已失效' && filters.status!=='已失效') continue;
+    if(filters.inspectionClass && !(r.inspectionClasses||[]).includes(filters.inspectionClass)) continue;
     if(filters.category && displayCategoryOf(r)!==filters.category) continue;
     if(filters.displayCategory && displayCategoryOf(r)!==filters.displayCategory) continue;
     if(filters.place && !r.places.includes(filters.place)) continue;

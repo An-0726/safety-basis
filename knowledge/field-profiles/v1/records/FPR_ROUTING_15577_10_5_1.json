@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_15577_10_5_1",
+  "revision": 2,
+  "hazardId": "H_15577_10_5_1",
+  "title": "粉尘爆炸危险场所检修工具核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的检修作业及其检修作业工具，本项核查采用防止产生火花的防爆工具，以及禁止使用铁质检修作业工具。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+      "确认属于GB 15577-2018范围内粉尘爆炸危险场所，并存在可对应设备设施、点位及任务的检修作业或检修准备。",
+      "核查该检修任务的防止产生火花的防爆工具及禁用铁质检修作业工具要求；准备状态只作中性预防核查，实际作业/使用状态另取证，不以准备或计划填入既成违规。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用GB 15577-2018；不构成粉尘爆炸危险的普通粉尘场景不适用本项。",
+      "普通仓库中存放铁质工具、外观颜色、缺少工具台账，均不能单独证明在本检修任务中已经违规使用；准备核查发现不适合工具也不得写成已使用。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "dustExplosionScopeConfirmed",
+      "maintenanceTaskAndStageIdentified",
+      "toolMaterialAndProtectionAssessed",
+      "toolPreparationOrUseEvidenceIdentified"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对粉尘性质、危险辨识资料及检修任务/点位/阶段；核查不以已发生火花为前提。",
+    "核对准备或使用工具的材质、型号、制造商性能资料及现场对应关系；照片颜色不能代替材质确认，也不得撞击或试打火花取证。",
+    "防火花防爆工具要求与铁质工具禁用分别记录；只有实际使用证据才描述已违规使用。",
+    "本项为条件式检查入口，未设置现场事实值；检查入口不以缺陷已经发生为条件。现场正向缺陷判断必须另外满足适用性、触发条件及对应分支的事实证据，不把未知当作符合或违规。",
+    "仅核验本项必要的设备或设施标识、点位、时段、岗位角色及相关证据；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或无关完整材料。"
+  ],
+  "correctiveDirection": "为适用检修任务配备并使用防止产生火花的防爆工具，禁止使用铁质检修作业工具；对准备阶段发现的不适用工具，在作业前替换并复核，实际违规使用则按相应作业安全要求纠正并核验。",
+  "basisLinkIds": [
+    "K_XLSX_3776bf115b97bd829f4208bf"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "先确认粉尘爆炸危险场所及设备设施检修任务，再分阶段核对应工具。准备阶段仅是从第10.5条工具义务和第10.4条检修前上下文导出的中性预防核查解释，并非法条或源conditions/measures明示的独立义务；不得将计划使用、已选备或库存铁质工具认定为已经违规使用。",
+  "authoringBasisRationale": {
+    "K_XLSX_3776bf115b97bd829f4208bf": "GB 15577-2018范围内粉尘爆炸危险场所的检修作业及其检修作业工具；本次另将与该检修任务相关的准备状态列为中性预防核查解释；第10.5条及源conditions/measures本身未明示“作业准备”。 先确认粉尘爆炸危险场所及设备设施检修任务，再分阶段核对应工具。准备阶段仅是从第10.5条工具义务和第10.4条检修前上下文导出的中性预防核查解释，并非法条或源conditions/measures明示的独立义务；不得将计划使用、已选备或库存铁质工具认定为已经违规使用。 direct仅支持下述相应义务，不外推为其他条款、技术认证或重大事故隐患结论。"
+  },
+  "authoringReviewFlags": [
+    "independentProfileReviewPending:revision2私有候选未获正式profile批准",
+    "branchEvidenceRequired:复合要求必须独立判断，不把所有分支事实合并为AND"
+  ],
+  "authoringStatus": "private_revision2_awaiting_independent_profile_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "fd0e55a319c0b60555109c8214977945ca8809c8d11d64d969b0fd2c6df2cca6",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalAuthoringReviewFlags": [
+    "scopeReviewNeeded:源conditions及link泛化模板需按本项主体、对象和触发条件精确收窄"
+  ],
+  "sourceScopeRevisionAssessment": "本次已按原件及冻结源核验精确conditions、places及所选link；旧requires已实质替换。此结论不等于profile批准。",
+  "sourceTree": "f7854fd5bfe1cb73353280de52a495dbae7c3ba1",
+  "revision2SemanticChanges": [
+    "用已修源精确conditions替换复制的粉尘全环节泛化requires。",
+    "把旧稿局限于实际检修/使用的入口补充为准备与作业分阶段；准备仅为本次中性预防核查解释，不能称法规或源conditions/measures明示该阶段。",
+    "将toolUseConfirmed改为分阶段的toolPreparationOrUseEvidenceIdentified；旧authoringRationale中“实际使用”改为准备/使用区分。",
+    "增加准备、计划或库存工具均不等于已违规使用及不得试打火花的证据边界；无实际检修违背要求的相应证据不填既成缺陷。"
+  ],
+  "semanticBoundary": "仅复用路由；无现场事实值、无新H结论、无findingTemplate、无正式review。defectObserved为将来现场判断所需事实名，不是检查入口已发生缺陷的断言。"
+}

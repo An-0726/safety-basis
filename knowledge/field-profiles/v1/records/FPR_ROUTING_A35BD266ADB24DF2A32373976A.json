@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_A35BD266ADB24DF2A32373976A",
+  "revision": 1,
+  "hazardId": "H_A35BD266ADB24DF2A32373976A",
+  "title": "移动式压力容器或气瓶充装第4.5条三分支重大隐患专项核查",
+  "inspectionClass": "special_review",
+  "defaultFieldEntry": "exclude",
+  "contentDisposition": "special_check",
+  "applicability": {
+    "requires": [
+      "适用于GB 45067-2024第1章范围内移动式压力容器或者气瓶充装的重大事故隐患判定；本条对应第4.5条三项具体情形。排除军事装备、核设施、航空航天器，铁路机车、海上设施和船舶、矿山井下使用的特种设备，以及民用机场专用设备；排除按安全技术规范不需要办理使用登记的特种设备。房屋建筑工地、市政工程工地的排除项仅为起重机械和场（厂）内专用机动车辆，不扩大为所有工地压力容器。其他违规情形应另据适用条款或按该标准引言进行风险判定，不得仅凭“存在违规”一律判为重大事故隐患。重大事故隐患判定的主体责任为特种设备使用单位；按该标准引言，特种设备安全监督管理部门监督检查判定在本条中仅限4.5a)，检验机构或技术机构提供技术支持，不把4.5b)、4.5c)写成该标准列明的监管部门监督检查判定项目。",
+      "本规格仅作GB 45067-2024第4.5条a）、b）、c）三种情形的分别核查；须明确设备、充装活动、责任主体及具体分支，不能笼统以“违规充装”代替判据。",
+      "a）为未经许可擅自从事移动式压力容器或气瓶充装活动；b）为移动式压力容器、气瓶错装介质；这两项不附加“仍继续使用”条件。",
+      "c）为充装设备设施上的紧急切断装置缺失或失效，并且仍继续使用；缺失/失效与该状态下继续使用两项事实均须确认。",
+      "重大事故隐患判定主体责任为特种设备使用单位；监管部门依据本标准开展监督检查判定，在第4.5条中仅列a）项；检验机构或技术机构提供技术支持，不能把b）、c）写成引言列明的监管监督检查判定项目。"
+    ],
+    "excludes": [
+      "军事装备、核设施、航空航天器使用的特种设备；铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备；按安全技术规范不需要办理使用登记的特种设备。",
+      "第1章房屋建筑工地、市政工程工地排除对象仅为起重机械和场（厂）内专用机动车辆，不扩大排除所有工地压力容器。",
+      "第4.5条三项以外的一般充装违规，不得仅凭“存在违规”按本条认定重大事故隐患；按其他适用条款或引言风险判定另行办理。",
+      "仅未见许可证副本不等于未经许可实际充装；仅介质资料不完整不等于错装；c项已停用且无仍继续使用事实不得自动满足该分支。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "equipmentFillingActivityAndExclusionsConfirmed",
+      "criterionBranchSelectedAndFactsConfirmed",
+      "branchAActualUnlicensedFillingConfirmedIfSelected",
+      "branchBWrongMediumConfirmedIfSelected",
+      "branchCEmergencyCutoffDefectAndContinuedUseConfirmedIfSelected",
+      "determinationActorAndAuthorityScopeConfirmed",
+      "existingMajorHazardDeterminationAndTreatmentStatusConfirmed"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对充装对象、设备分类、登记义务和特殊场所适用性；将设备、充装设施、时间与相应业务记录对应，分别排除标准不适用情形。",
+    "a）核对许可有效期、范围和实际充装活动，必要时通过可追溯许可核验资料确认；未展示许可证不得直接推定未经许可。",
+    "b）核对容器/气瓶允许介质、实际充入介质及其识别和充装记录，必要时使用依法取得的检测/技术确认，不能凭标签缺失直接推定错装。",
+    "c）核对紧急切断装置缺失或失效的现场/安全功能测试材料，并以运行、充装及停用记录交叉确认该状态下仍继续使用；不得仅凭缺失照片忽略继续使用条件，不为测试而制造危险工况。",
+    "对选中分支核查使用单位的重大事故隐患判定、治理及复核记录；记录责任角色和本标准对监管监督检查项目的限制，不让资料核查替代主体判定。",
+    "材料仅保留核验必需的设备、设施、对象类别、机构结论、日期和业务状态，使用脱敏编号；不要求姓名、身份证号、联系方式、人员健康信息、账户或登录凭据。可复用规格不写入任何真实单位、现场数值或已观察结论。",
+    "仅核验和记录本项必要的设备、点位、时间、岗位角色及证据结论；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或与本项无关的完整材料。"
+  ],
+  "correctiveDirection": "分别核实三项判据：未经许可擅自充装的立即停止该充装活动；错装介质或紧急切断装置缺失、失效等问题，应停止相关充装设备设施使用并按安全技术规范安全处置和整改。对第4.5条a）、b）或c）完整事实成立的，由相应主体按本标准作重大事故隐患判定和治理；仅c）要求仍继续使用，不加到a）、b），也不泛化其他违规。复核许可、介质匹配、紧急切断功能及其他法定充装条件，满足要求后方可恢复充装，保留检查、处置和复核记录。",
+  "basisLinkIds": [
+    "K_GB45067_A35BD266ADB2_5"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "重大隐患专业判定依赖分支事实、触发与主体范围，统一special_review/exclude；不作为泛化的违规充装现场清单或自动重大结论。",
+  "authoringBasisRationale": {
+    "K_GB45067_A35BD266ADB2_5": "该全国性direct链为GB 45067-2024第4.5条完整三分支。规格仅按a未经许可实际充装、b错装介质、c紧急切断装置缺失/失效且仍继续使用分别核实；a/b不增加继续使用条件。完整保留第1章排除以及房建市政排除不覆盖全部压力容器的限制，并按引言区分使用单位主体责任、监管部门只列4.5a）的监督检查判定与技术机构支持。特设法第49条supporting只补充许可和安全充装义务，未选入basisLinkIds，更不代替三项重大判据。"
+  },
+  "authoringReviewFlags": [
+    "needsDefinitionSplit:充装许可、错装介质、紧急切断且仍用三分支证据和判定主体须分别记录",
+    "threeIndependentBranches",
+    "continuedUseConditionOnlyBranchC",
+    "regulatorListedBranchOnlyA"
+  ],
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "a3129d99198f368d537b8ee55b696477ec86f5c8",
+  "sourceAsOf": "2026-09-30",
+  "sourceHazardContentHash": "e830425364df1021ea2ff05c92dd9fccac2788cc73e25843d76c46db69f73c8a",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false
+}

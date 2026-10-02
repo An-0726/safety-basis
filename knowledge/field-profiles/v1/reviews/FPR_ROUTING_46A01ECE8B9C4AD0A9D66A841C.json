@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_46A01ECE8B9C4AD0A9D66A841C",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_six_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立复核官方现行状态、必要正文与关键页范围/引言，并逐字段审核；签署前再次确认最终record原字节与全部依赖没有漂移。core_onsite_inspection / conditional / onsite_finding只表示现场检查路由，与routing_only+null模板相容；仍需真实适用性及独立缺陷证据。 仅GB 15577适用粉尘爆炸危险场所的除尘系统导电部件及实际存在的管道连接法兰，四类标准排除保留。等电位、可靠接地、严格<100Ω、法兰跨接是并列要求，一个合格不替代其余。 profileKind=routing_only且findingTemplate显式null；本次只审核路由/取证要求，不准许自动生成现场缺陷或以空事实表证明违规。 对象、涉爆属性和连接状态独立核实；数值断言须有效方法/仪器、测点、日期、数值及Ω；IfAsserted/IfApplicable避免因缺数值证据阻断已独立查明的连接缺陷。 逐项补足等电位、可靠接地、严格小于100Ω、法兰跨接并复核功能，不发明4Ω/10Ω替代边界，不用外观代替电气连续性。 K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C精确指C_15577_8_1_5，对象、四项义务与严格边界一致；没有选用已撤回的GB12158错配链。法兰检查来自同条全义务范围，但不能凭该项单独自动复制H标题的接地缺陷。 本决定仅为该可复用规则的语义签审，不构成个案违规、重大隐患或处罚结论。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:28:48.600406+00:00",
+  "reviewedProfileHash": "1b6efdcdcafc5fb6995c76f2bb199ea3dcd1a2c77c1e733dfe8b656066685efb",
+  "dependencyFingerprint": "4d497d200278b24a7e1f2bdb4a05e98654e51b32bc0add9fd8a229b4584a0cb7",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C": "K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C精确指C_15577_8_1_5，对象、四项义务与严格边界一致；没有选用已撤回的GB12158错配链。法兰检查来自同条全义务范围，但不能凭该项单独自动复制H标题的接地缺陷。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "0df39bec2e8b22100ae10a6cda0dc18a785909fc89b4a01cc8d3fdc1fe55d21a",
+    "profileFileSha256": "ed946890ab7bc463a6b1bf3a7d7d93231c9fc01eea79297c2363212d9f2b93a2",
+    "officialSources": [
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+      "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+        "locator": "标准身份、现行状态、2018-11-19发布、2019-06-01实施"
+      },
+      {
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+        "locator": "PDF第3页/印刷页1范围及定义；第7页/印刷页5之8.1.5和8.1.7；第8页/印刷页6之8.3.2"
+      }
+    ],
+    "usageConstraints": [
+      "本review只批准可复用路由及核验定义，不证明任何真实企业、设备或现场存在缺陷；observedViolation保持false。",
+      "routing_only及显式null模板不授权自动生成已观测现场结论；conditional或exclude只是用途/入口，不等同适用性已证实、实际合规或免除法定义务。",
+      "perUseFacts仅为待核事实名，不是事实值，也不是可自动按AND/OR运算的表达式；必须按原条款及实际分支核验。",
+      "evidenceRequirements为核验建议，不增设法律未要求的统一文书格式、个人名册或资料保管义务；资料缺失不能自动等同未履职或设备功能失效。",
+      "个案事实缺口只限制对应结论；已核实独立分支可以继续，不能因另一分支资料缺失而取消已证实的适用要求。",
+      "当前已经停用、有效整改或后续合格结论不自动消除历史已确证的不符合事实，也不能把旧不利结论无条件视为当前缺陷。",
+      "本决定仅覆盖本profile最终字节及完整依赖；未来修改、新增求值或改变路由须重新审核。"
+    ],
+    "counterexampleReasoningNotSiteTests": [
+      "测值100Ω：不满足“小于100Ω”。",
+      "电阻80Ω但等电位或可靠接地缺失：不能判四项全部符合。",
+      "普通办公室设备保护接地：本profile不适用。",
+      "没有测量，但确有可定位的断开连接：只能认定已核实连接事实，不能附加电阻不合格。",
+      "不存在管道连接法兰：跨接项记不适用，不制造法兰缺陷。"
+    ],
+    "nonblockingAuthoringClarifications": [],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

@@ -1,7 +1,15 @@
 'use strict';
 import {VerifiedFiles} from './verified-files.js';
+import {profileEnvelope, validateProfileJoin, profileSummary} from './field-profiles.js';
 
 const joinUrl = (base, path) => `${base.replace(/\/$/,'')}/${path.replace(/^\//,'')}`;
+
+export function publicSourceUrl(...values) {
+  return values.find(value=>{
+    if(typeof value!=='string' || !/^https?:\/\//.test(value)) return false;
+    try { const url=new URL(value);return ['http:','https:'].includes(url.protocol)&&!url.username&&!url.password; } catch { return false; }
+  })||'';
+}
 
 const currentHazards = rows => rows.filter(x => x.status === '已核验' && x.publishable !== false);
 const currentLaws = rows => rows.filter(x => Number(x.clauseCount || 0) > 0);
@@ -19,6 +27,8 @@ export class DataStore {
     this.hazardCache=new Map();
     this.clauseCache=new Map();
     this.lawMap=new Map();
+    this.fieldProfiles=new Map();
+    this.fieldProfileNotice='';
   }
 
   async fetchJson(path, {fresh=false}={}) {
@@ -75,8 +85,42 @@ export class DataStore {
       }
     };
     this.lawMap=new Map(this.lawIndex.map(x=>[x.id,x]));
+    await this.loadFieldProfiles();
     return this;
   }
+
+  async loadFieldProfiles() {
+    this.fieldProfiles.clear();
+    if(!this.manifest.files.fieldProfiles) return;
+    try {
+      // Never use the legacy unverified fetch fallback for governed profiles.
+      const payload=await this.verifiedFiles.read(this.manifest.files.fieldProfiles);
+      const records=profileEnvelope(payload,this.verifiedFiles.manifest,this.manifest);
+      const checked=[];
+      for(const profile of records) {
+        const index=this.searchIndex.find(row=>row.id===profile.hazardId);
+        if(!index) throw new Error('核查场景对应条目不在当前发布包中');
+        const detail=await this.getHazardDetail(index);
+        if(!validateProfileJoin(profile,detail,payload.asOf)) throw new Error('核查场景与精确依据关联不一致');
+        checked.push(profile);
+      }
+      // Commit only after the entire advertised payload and every join pass.
+      for(const profile of checked) {
+        const rows=this.fieldProfiles.get(profile.hazardId)||[];
+        rows.push(profile);this.fieldProfiles.set(profile.hazardId,rows);
+      }
+    } catch {
+      this.fieldProfiles.clear();
+      this.fieldProfileNotice='核查场景暂不可用：发布包或精确依据校验未通过。原条目仍可查阅，请核对适用条件。';
+    }
+    this.searchIndex=this.searchIndex.map(row=>{
+      const profiles=this.fieldProfiles.get(row.id)||[];
+      return {...row,fieldProfiles:profiles,inspectionClasses:[...new Set(profiles.map(p=>p.inspectionClass))],
+        profileSummary:profileSummary(profiles),searchText:[row.searchText,...profiles.map(p=>p.title)].join(' ').toLowerCase()};
+    });
+  }
+
+  getFieldProfiles(hazardId) { return this.fieldProfiles.get(hazardId)||[]; }
 
   async loadHazardShard(id) {
     if(this.hazardCache.has(id)) return this.hazardCache.get(id);
@@ -124,7 +168,7 @@ export class DataStore {
     for(const ref of hazard.basisRefs) {
       const clause=await this.getClause(ref);
       const law=this.getLaw(clause.lawId);
-      bases.push({ref,clause,law,sourceUrl:clause.sourceUrl || law.sourceUrl});
+      bases.push({ref,clause,law,sourceUrl:publicSourceUrl(clause.sourceUrl,law.sourceUrl)});
     }
     return {hazard,bases};
   }

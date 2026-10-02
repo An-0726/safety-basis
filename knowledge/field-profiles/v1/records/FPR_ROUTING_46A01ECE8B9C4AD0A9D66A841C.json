@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_46A01ECE8B9C4AD0A9D66A841C",
+  "revision": 1,
+  "hazardId": "H_46A01ECE8B9C4AD0A9D66A841C",
+  "title": "粉尘爆炸危险场所除尘系统导电部件等电位与接地检查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "适用于GB 15577-2018规定的粉尘爆炸危险场所除尘系统导电部件的等电位连接和接地；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。",
+      "适用于GB 15577-2018规定的粉尘爆炸危险场所除尘系统导电部件的等电位连接和接地；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。 GB 15577-2018第8.1.5条直接规定等电位连接、可靠接地、接地电阻小于100Ω及法兰跨接线。",
+      "仅核查GB 15577-2018适用的粉尘爆炸危险场所除尘系统导电部件及其管道连接法兰，不泛化至所有生产场所、普通通风管道或全部电气保护接地。",
+      "第8.1.5条等电位连接、可靠接地、接地电阻小于100Ω及管道连接法兰跨接线为并列要求；任一实际不符合均需独立核实，不能因一个指标合格而省略其余检查。",
+      "接地电阻必须严格小于100Ω，100Ω不符合；读数必须对应被检对象、有效测试方法和仪器，不以目视替代电阻检测或任意套用其他接地阈值。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。",
+      "未确认粉尘爆炸危险属性、除尘系统归属或导电部件对象的普通通风/清洁场景；仅凭“通用场所”标签不得纳入。",
+      "仅因设计文件未列项、检测报告未提供或数值无法对应测点，就认定未接地或电阻不合格。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "combustibleDustExplosionScopeConfirmed",
+      "exclusionStatusConfirmed",
+      "conductiveDustCollectionPartConfirmed",
+      "equipotentialAndGroundingConditionObserved",
+      "groundResistanceMeasurementValidatedIfAsserted",
+      "flangeJumperConditionObservedIfApplicable"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对粉尘及生产工艺危险属性、场所分类和除尘系统结构资料，确认第1章适用且不在四类排除场所。",
+    "现场核对导电部件等电位连接、可靠接地及管道法兰跨接线的设置和有效性，记录可定位的脱敏部件/测点编号及实际缺陷；不得仅凭线路外观推断全部电气连续性。",
+    "采用适用安全测试方法取得对应测点的接地电阻检测记录，保留数值、单位、测点、时间、方法及仪器有效性；确认小于100Ω，等于100Ω亦不符合。",
+    "复核整改前后记录及相同对象的对应关系；专业检测需安全作业条件，不为验证故障而制造火花或解除安全防护。",
+    "材料仅保留核验必需的设备、设施、对象类别、机构结论、日期和业务状态，使用脱敏编号；不要求姓名、身份证号、联系方式、人员健康信息、账户或登录凭据。可复用规格不写入任何真实单位、现场数值或已观察结论。",
+    "仅核验和记录本项必要的设备、点位、时间、岗位角色及证据结论；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或与本项无关的完整材料。"
+  ],
+  "correctiveDirection": "对除尘系统导电部件落实等电位连接并可靠接地，确保接地电阻严格小于100Ω，管道连接法兰设置跨接线；对具体缺陷逐项整改并用适用检测方法复核连接有效性及电阻，保留检测与复核记录。不得用其他接地标准的一般条款代替本条100Ω边界，也不以电阻单项合格代替全部要求。",
+  "basisLinkIds": [
+    "K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "条款对象及实际缺陷可由现场检查与适用测量核验，采用conditional现场入口；标准本身不直接证明任何现场已存在缺陷。",
+  "authoringBasisRationale": {
+    "K_XLSX_WEB_H_46A01ECE8B9C4AD0A9D66A841C": "该全国性direct链精确指向GB 15577-2018第8.1.5条，要求对象是适用粉尘爆炸危险场所除尘系统导电部件及管道连接法兰。规格完整保留等电位连接、可靠接地、小于100Ω、法兰跨接线及第1章四类排除场所，且仅对实测或实查缺陷作有条件现场路由。未选择旧GB12158错配依据，未将100Ω写成合格，也不扩至一般用电场所。"
+  },
+  "authoringReviewFlags": [
+    "needsDefinitionSplit:连接状态与电阻测试",
+    "strictResistanceLessThan100Ohm",
+    "parallelRequirementsNotSubstitutable"
+  ],
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "a3129d99198f368d537b8ee55b696477ec86f5c8",
+  "sourceAsOf": "2026-09-30",
+  "sourceHazardContentHash": "710cc5ee45604d139428a902c6406716804d9429db1c018f622be580b2bda22e",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false
+}

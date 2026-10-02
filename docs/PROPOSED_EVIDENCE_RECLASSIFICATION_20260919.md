@@ -55,7 +55,7 @@
 
 ## 三、Proposed 候选证据缺口全量明细表（代表性与重点候选示例）
 
-完整 426 条机器清单见 [`docs/proposed_evidence_reclassification.jsonl`](file:///D:/ESH/ESH_Codex/work/safety-basis/docs/proposed_evidence_reclassification.jsonl)。
+完整 426 条机器清单见 [`docs/proposed_evidence_reclassification.jsonl`](proposed_evidence_reclassification.jsonl)。
 
 | hazardId | 隐患名称 | 当前 proposed 原因 | 重新核验后的分类 | 缺什么 | 已找到的官方来源 | 拟用法规/标准 | 拟用条款 | 是否有希望直接闭环 |
 |---|---|---|---|---|---|---|---|---|

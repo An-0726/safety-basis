@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {INSPECTION_LABELS} from '../web/js/field-profiles.js';
 import {searchHazardsDetailed, searchLawsDetailed} from '../web/js/search.js';
 
 const APP_SOURCE = fs.readFileSync(new URL('../web/app.js', import.meta.url), 'utf8')
@@ -70,7 +71,7 @@ class FakeElement {
 
 function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   const ids = [
-    'detail', 'toast', 'search', 'category', 'scene', 'level', 'region', 'mode',
+    'detail', 'toast', 'search', 'inspectionClass', 'category', 'scene', 'level', 'region', 'mode',
     'lawLevel', 'lawRegion', 'lawStatus', 'count', 'summary', 'list',
     'hazardFilterCount', 'lawFilterCount', 'searchView', 'dataView',
     'activeFilters', 'searchNotice', 'hazardMoreFilters', 'lawMoreFilters', 'majorTopicNotice',
@@ -90,7 +91,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     },
     querySelectorAll(selector) {
       if (selector === '.card') return elements.get('list').cards;
-      if(selector === '#hazardFilters select,#lawFilters select')return ['category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
+      if(selector === '#hazardFilters select,#lawFilters select')return ['inspectionClass','category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
       return [];
     },
     addEventListener() {},
@@ -98,7 +99,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   };
   const context = {
     document,
-    searchHazardsDetailed,
+    searchHazardsDetailed, INSPECTION_LABELS,
     searchLawsDetailed,
     DataStore: class {},
     navigator: {clipboard: {writeText: async () => {}}},
@@ -180,6 +181,22 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
 async function settle() {
   await new Promise(resolve => setImmediate(resolve));
 }
+
+test('数据初始化未完成时输入不报错，加载后保留查询并正常检索', async () => {
+  const {api, elements} = loadResultsApp();
+  const store = api.state.store;
+  api.state.store = null;
+  api.bind();
+  elements.get('search').value = '隐患 12';
+  assert.doesNotThrow(() => elements.get('search').oninput());
+  assert.equal(api.state.query, '隐患 12');
+  assert.equal(elements.get('list').cards.length, 0);
+  api.state.store = store;
+  api.renderResults({mode: 'initial'});
+  await settle();
+  assert.equal(elements.get('search').value, '隐患 12');
+  assert.ok(api.state.results.length > 0);
+});
 
 test('真实结果列表支持加载更多、深链接展开、选择保持批次和滚动位置', async () => {
   const {api, elements} = loadResultsApp();
@@ -513,4 +530,15 @@ test('逐K复制保留范围首尾空白和换行，不因展示判空改变原�
   const basis={ref:{role:'direct',linkId:'K_SCOPE',applicability:scope},clause:{article:'第八条',quote:'正文',checked:'2026-10-01'},law:{id:'L019',name:'测试标准',level:'部门规章',scope:'全国',status:'现行有效'},sourceUrl:'https://example.org/standard'};
   for(const value of [api.hazardText(h,[basis]),api.hazardFullText(h,[basis])])assert.ok(value.includes('本条依据适用范围：'+scope+'\n正文'));
   assert.ok(api.basisHtml(basis).includes(scope));
+});
+
+test('核查用途可选，default不排除无配置记录；深链、Back式恢复与无结果重置',async()=>{
+  const {api,elements}=loadResultsApp({rowCount:4});api.state.store.searchIndex[1].inspectionClasses=['document_review'];api.initFilters();api.bind();
+  api.renderResults({mode:'initial'});await settle();assert.equal(api.state.results.length,4);
+  api.applyUrlFilters({view:'hazards',filters:{inspectionClass:'document_review'}});api.renderResults({mode:'initial'});await settle();assert.equal(api.state.results.length,1);assert.equal(api.state.selectedHazard,'H001');
+  assert.equal(elements.get('hazardMoreFilters').open,true);
+  elements.get('search').value='doesnotexist';api.renderResults({mode:'filter-change'});await settle();assert.equal(api.state.results.length,0);
+  api.state.profileSelections.set('H001','FPR_DOC');elements.get('reset').onclick();await settle();assert.equal(api.state.results.length,4);assert.equal(elements.get('inspectionClass').value,'');assert.equal(api.state.profileSelections.size,0);
+  api.applyUrlFilters({view:'hazards',filters:{inspectionClass:'document_review'}});api.renderResults({mode:'initial'});await settle();assert.equal(api.state.results.length,1);
+  api.applyUrlFilters({view:'hazards',filters:{inspectionClass:'removed_class'}});api.renderResults({mode:'initial'});await settle();assert.equal(api.state.results.length,4);assert.match(elements.get('searchNotice').textContent,/已不再提供/);
 });

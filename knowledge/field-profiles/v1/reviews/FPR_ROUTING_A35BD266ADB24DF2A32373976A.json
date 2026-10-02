@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_A35BD266ADB24DF2A32373976A",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_six_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立复核官方现行状态、必要正文与关键页范围/引言，并逐字段审核；签署前再次确认最终record原字节与全部依赖没有漂移。special_review / exclude / special_check合理，三分支重大判定不作为泛化“违规充装”自动现场入口。 GB 45067章1适用充装对象及活动，a未经许可实际充装 OR b错装介质 OR c(紧急切断缺失OR失效)AND仍继续使用；只给c加仍用，不把三分支变AND。监管按本标准监督检查判定仅列a，使用单位对b/c的主体责任仍在。 profileKind=routing_only且findingTemplate显式null；本次只审核路由/取证要求，不准许自动生成现场缺陷或以空事实表证明违规。 IfSelected字段与许可核验/实际活动、容器允许介质/实际介质、切断缺陷/继续使用分别对应；主体权限与既有判定治理另行核。未展示许可、无标签或缺失照片不能替代完整分支事实。 停止未经许可充装，错装或切断缺陷按安全技术规范安全处置，分支成立时作重大判定并复核恢复条件；未要求危险故障试验，未泛化所有充装违规。 K_GB45067_A35BD266ADB2_5直接指C_GB45067_4_5完整a/b/c，精确保留章1排除、房建/市政排除仅场车/起重机械、引言监管列明仅4.5a及单位主体责任。第49条supporting是许可/安全充装背景，不是重大三分支来源。 本决定仅为该可复用规则的语义签审，不构成个案违规、重大隐患或处罚结论。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:28:48.600406+00:00",
+  "reviewedProfileHash": "7d5e413c428242ad351bb703136291615044c5365c876ff083a7e30481b38710",
+  "dependencyFingerprint": "4997eb137b5a86f1441d15f6f56cc71f0b075cd4f3d0d9e6284e59674e5406e8",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_GB45067_A35BD266ADB2_5": "K_GB45067_A35BD266ADB2_5直接指C_GB45067_4_5完整a/b/c，精确保留章1排除、房建/市政排除仅场车/起重机械、引言监管列明仅4.5a及单位主体责任。第49条supporting是许可/安全充装背景，不是重大三分支来源。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "0df39bec2e8b22100ae10a6cda0dc18a785909fc89b4a01cc8d3fdc1fe55d21a",
+    "profileFileSha256": "c94a1a46391d91fc2a452ae7aafc5dac703742ca5ae84db2f4ca4c65fe594c3d",
+    "officialSources": [
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53",
+      "https://www.zhanjiang.gov.cn/attachment/0/272/272839/2149213.pdf",
+      "https://www.xunwu.gov.cn/xwxxxgk/xwyjglj63/202608/b23877eca1224f19a64f175706d5b477.shtml",
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+      "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53",
+        "locator": "标准身份、现行状态、2024-11-28发布、2024-12-01实施"
+      },
+      {
+        "sourceUrl": "https://www.zhanjiang.gov.cn/attachment/0/272/272839/2149213.pdf",
+        "locator": "PDF第6页引言；第7页/印刷页1范围；第8页/印刷页2之4.3/4.5/4.10a；第9页4.10余项"
+      },
+      {
+        "sourceUrl": "https://www.xunwu.gov.cn/xwxxxgk/xwyjglj63/202608/b23877eca1224f19a64f175706d5b477.shtml",
+        "locator": "范围及4.3、4.5、4.10"
+      },
+      {
+        "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+        "locator": "2013-06-29通过，第2、40、49条；第101条自2014-01-01施行"
+      },
+      {
+        "sourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+        "locator": "现行有效法律目录（截至2026-08-28），社会法第22项，网页内容第542行；find短词未命中后已重新定位正文确认。"
+      }
+    ],
+    "usageConstraints": [
+      "本review只批准可复用路由及核验定义，不证明任何真实企业、设备或现场存在缺陷；observedViolation保持false。",
+      "routing_only及显式null模板不授权自动生成已观测现场结论；conditional或exclude只是用途/入口，不等同适用性已证实、实际合规或免除法定义务。",
+      "perUseFacts仅为待核事实名，不是事实值，也不是可自动按AND/OR运算的表达式；必须按原条款及实际分支核验。",
+      "evidenceRequirements为核验建议，不增设法律未要求的统一文书格式、个人名册或资料保管义务；资料缺失不能自动等同未履职或设备功能失效。",
+      "个案事实缺口只限制对应结论；已核实独立分支可以继续，不能因另一分支资料缺失而取消已证实的适用要求。",
+      "当前已经停用、有效整改或后续合格结论不自动消除历史已确证的不符合事实，也不能把旧不利结论无条件视为当前缺陷。",
+      "本决定仅覆盖本profile最终字节及完整依赖；未来修改、新增求值或改变路由须重新审核。"
+    ],
+    "counterexampleReasoningNotSiteTests": [
+      "未经许可实际发生充装后即停止：a不额外需要仍继续使用。",
+      "错装介质已发生：b不额外要求继续使用。",
+      "切断装置缺失但相关设备已停用且没有缺陷下继续使用事实：c不完整。",
+      "充装记录缺页：不能据此直接认定a、b、c任一。",
+      "监管列明只含a：不等于b/c非重大，也不免除使用单位排查判定。"
+    ],
+    "nonblockingAuthoringClarifications": [],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

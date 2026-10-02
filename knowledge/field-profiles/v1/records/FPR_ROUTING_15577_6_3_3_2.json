@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_15577_6_3_3_2",
+  "revision": 2,
+  "hazardId": "H_15577_6_3_3_2",
+  "title": "粉尘爆炸危险场所电气防点燃与外壳防进尘核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于GB 15577-2018范围内粉尘爆炸危险场所用电气设备和线路，本项核查防止由电气设备或线路产生的过热及火花，以及防止可燃性粉尘进入产生电火花或高温部件的外壳内。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+      "确认粉尘爆炸危险范围及对应电气设备和线路；识别产生电火花或高温部件及其外壳。",
+      "分别核防止电气设备或线路过热及火花、防止可燃性粉尘进入上述外壳的预防措施；不以实际点燃或进尘为检查入口。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用GB 15577-2018；不构成粉尘爆炸危险的普通粉尘场景不适用本项。",
+      "本项仅对应第6.3.3条分号后的两类防止义务；不据此认证规范性引用文件的全部版本、全部电气选型或完整防爆合格性。",
+      "不将外表积尘、设计未注明或照片观感直接推断为内部进尘、过热、火花或措施无效。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "electricalEquipmentAndWiringIdentified",
+      "ignitionSourceProtectionAssessed",
+      "relevantEnclosureDustIngressProtectionAssessed",
+      "branchSpecificEvidenceIdentified"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对粉尘性质、区域、设备和线路型号及相关外壳资料，定位防点燃与防进尘措施。",
+    "分别核防过热火花及外壳防进尘措施的存在和有效性，必要时由适当专业人员提供安全检验、检测或维护记录。",
+    "不得要求带电开盖、破坏防护、制造过热/火花/粉尘侵入；设计资料未注明或外观照片单独不能证明现场缺陷。",
+    "本项为条件式检查入口，未设置现场事实值；检查入口不以缺陷已经发生为条件。现场正向缺陷判断必须另外满足适用性、触发条件及对应分支的事实证据，不把未知当作符合或违规。",
+    "仅核验本项必要的设备或设施标识、点位、时段、岗位角色及相关证据；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或无关完整材料。"
+  ],
+  "correctiveDirection": "采取适用措施防止电气设备或线路产生过热及火花，并防止可燃性粉尘进入产生电火花或高温部件的外壳内；按已核设备和工况复核两类措施有效性，具体检测在安全条件下实施。",
+  "basisLinkIds": [
+    "K_XLSX_6cfb819dfd23b4fc5b30c46e"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "电气设备/线路及外壳的预防性安全核查，不要求实际过热、火花或粉尘侵入先发生。",
+  "authoringBasisRationale": {
+    "K_XLSX_6cfb819dfd23b4fc5b30c46e": "GB 15577-2018范围内粉尘爆炸危险场所用电气设备和线路；涉及产生电火花或高温部件的外壳。 电气设备/线路及外壳的预防性安全核查，不要求实际过热、火花或粉尘侵入先发生。 direct仅支持下述相应义务，不外推为其他条款、技术认证或重大事故隐患结论。"
+  },
+  "authoringReviewFlags": [
+    "independentProfileReviewPending:revision2私有候选未获正式profile批准",
+    "branchEvidenceRequired:复合要求必须独立判断，不把所有分支事实合并为AND"
+  ],
+  "authoringStatus": "private_revision2_awaiting_independent_profile_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "374fc3c60a735d37637da8de3eca5ab48fba56093a6309d4e350a7b4be65b001",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalAuthoringReviewFlags": [
+    "needsDefinitionSplit:过热火花防护与外壳进尘合并",
+    "scopeReviewNeeded:源conditions及link泛化模板需按本项主体、对象和触发条件精确收窄",
+    "needsDefinitionSplit:过热火花防护与外壳防进尘应分别取证"
+  ],
+  "sourceScopeRevisionAssessment": "本次已按原件及冻结源核验精确conditions、places及所选link；旧requires已实质替换。此结论不等于profile批准。",
+  "sourceTree": "f7854fd5bfe1cb73353280de52a495dbae7c3ba1",
+  "revision2SemanticChanges": [
+    "替换全粉尘环节泛化范围，限具体电气设备和线路。",
+    "明确两项均为预防义务，去除必须已有过热/火花/进尘才进入核查的歧义。",
+    "用分支assessed命名代替看似全体必须肯定的confirmed，并保留不得带电开盖等安全边界。",
+    "保留完整条文，但精确direct用途仅为分号后；不声称已核规范性引用文件的全部技术内容。"
+  ],
+  "semanticBoundary": "仅复用路由；无现场事实值、无新H结论、无findingTemplate、无正式review。defectObserved为将来现场判断所需事实名，不是检查入口已发生缺陷的断言。"
+}

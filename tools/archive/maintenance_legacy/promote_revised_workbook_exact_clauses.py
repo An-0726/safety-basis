@@ -11,11 +11,19 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import os
 from pathlib import Path
 
 from openpyxl import load_workbook
 
 import sys
+# Explicit private input; no personal-machine fallback.
+XLSX_INPUT = os.environ.get("SAFETY_BASIS_WORKBOOK_20260914", "").strip()
+if not XLSX_INPUT:
+    raise SystemExit("Set SAFETY_BASIS_WORKBOOK_20260914 to the required workbook before running this archived tool")
+XLSX = Path(XLSX_INPUT).expanduser()
+if not XLSX.is_file():
+    raise SystemExit("SAFETY_BASIS_WORKBOOK_20260914 must name an existing workbook file")
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "v4"))
 from canonical import content_hash  # noqa: E402
@@ -23,7 +31,6 @@ from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 
 KNOW = ROOT / "knowledge"
 PROPOSAL = ROOT / "source" / "proposals" / "excel-20260914"
-XLSX = Path(r"D:/Desktop/隐患库_1929条_新版口径全部整改完成_20260914.xlsx")
 AS_OF = "2026-09-14"
 
 

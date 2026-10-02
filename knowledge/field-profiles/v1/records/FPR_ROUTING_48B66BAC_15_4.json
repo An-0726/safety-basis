@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_48B66BAC_15_4",
+  "revision": 3,
+  "hazardId": "H_48B66BAC_15_4",
+  "title": "有限空间盲目施救与监护制止行为核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于工贸企业有限空间作业中发生未做好安全措施盲目施救行为，核查监护人员是否予以制止。平时预案、培训或演练不能证明曾发生该事件；不得为核验而制造危险救援。监护职责不赋予未经安全保障进入有限空间救援的许可。",
+      "确认属于工贸企业有限空间作业，并有可可靠核实的未做好安全措施而盲目施救行为，包括正在发生的行为；不要求已经入内、完成施救或发生伤亡。",
+      "核监护责任、履职机会和实际制止行为，未制止须单独证明；第15条末句未把被制止者限定为原作业人员。",
+      "平时预案、培训和演练可核准备工作，但不能替代本事件事实；不得制造危险施救，监护职责不授权无安全保障进入救援。"
+    ],
+    "excludes": [
+      "无实际盲目施救情境，不以培训或演练不足直接认定本项。",
+      "不构成有限空间的普通封闭场所不直接适用；不得为检查安排危险施救。",
+      "普通封闭房间、不属工贸企业有限空间作业或者没有实际盲目施救事件，不按本事件候选认定。",
+      "本候选未发生不表示一般监护、预案、培训或演练义务免除；不得把施救现场复演当取证方法。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "industrialTradeAndConfinedSpaceOperationConfirmed",
+      "unsafeRescueActionAndSafetyDeficiencyVerified",
+      "monitorDutyAndOpportunityVerified",
+      "stopActionOrFailureVerified",
+      "eventChronologyVerified"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "以去标识化事件时间线、可靠观察或处置记录定位实际施救行为、安全措施缺失及监护角色。",
+    "分别核监护责任/可制止机会与实际制止情况；未取得材料、监护能力不足或有事故后果均不能单独代替未制止证明。",
+    "核对应危险、处置方案和可用装备的必要摘录；不收集伤病诊断、姓名身份或无关完整事故卷宗。",
+    "仅提取本项必要的设备/点位编号、岗位角色、时点、结论和限制条件；去标识化，不收集账号密码、身份证、个人健康资料或无关合同信息。本候选不填任何真实现场值。"
+  ],
+  "correctiveDirection": "在确认未做好安全措施盲目施救时制止危险行为；发生有限空间事故后依现场处置方案组织科学施救。复核监护职责、处置方案、装备及培训演练准备；准备改进不被写成已经发生未制止事件的证明。",
+  "basisLinkIds": [
+    "K_XLSX_FT_DD461077A70ADF5DAD2D90E7"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "仅在实际有限空间应急施救行为可可靠核实时条件化进入，平时缺台账不能证明监护人员未制止。",
+  "authoringBasisRationale": {
+    "K_XLSX_FT_DD461077A70ADF5DAD2D90E7": "精确direct范围：第十五条第二款末句；第十五条第一款及第二款其余句为监护、撤离、应急处置上下文；第二、三条为主体/空间定义。工贸企业有限空间作业监护人员在实际发生或正在发生的盲目施救情境；事实按选定分支独立核查，本候选不产生现场成立结论。"
+  },
+  "authoringReviewFlags": [
+    "independentSemanticReviewRequired",
+    "branchSpecificFactsNotAutomaticallyTrue"
+  ],
+  "authoringStatus": "private_revision2_candidate_awaiting_independent_semantic_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "3422ebdfc18280fb963525adca545bb643322037e009becba90a9159853c111b",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalDraftReference": {
+    "sha256": "966c2f7d347b60be1c527ae8470836e52b9ed7848e940bc220d2f50e921d6d1a"
+  },
+  "substantiveRevisionRationale": [
+    "替换旧泛化有限空间全环节入口，明确实际/正在发生事件和监护机会。",
+    "明确被制止者不限原作业人员；不把已入内或已伤亡设为触发条件。"
+  ]
+}

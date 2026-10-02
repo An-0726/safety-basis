@@ -21,6 +21,17 @@ HID, KID, OLD_C, NEW_C = (FIXTURE[k] for k in
                          ('hazardId', 'linkId', 'oldClauseId', 'targetClauseId'))
 
 
+# This repair protects the original six; later independently reviewed profiles may be added.
+ORIGINAL_PROFILE_IDS = {
+    'FPR_EXTINGUISHER_ACCESS_BLOCKED',
+    'FPR_EXTINGUISHER_BRACKET_OBSTRUCTION',
+    'FPR_GAS_ALARM_FUNCTION_FAILURE',
+    'FPR_ROUTING_JSXF_53_3',
+    'FPR_ROUTING_JSXF_58_1',
+    'FPR_ROUTING_JSXF_58_2',
+}
+
+
 def read(path):
     return json.loads((ROOT / path).read_text(encoding='utf-8'))
 
@@ -39,7 +50,7 @@ class Mem10ParaphraseRepairTests(unittest.TestCase):
 
     def evaluate(self, state, day='2026-10-01'):
         def source(_root, rel):
-            return copy.deepcopy(state[rel])
+            return copy.deepcopy(state[rel.replace('\\', '/')])
         with patch.object(gate, 'load_dir', source), patch.object(gate, 'load_reviews', source):
             return gate.evaluate_release_gate(KNOW, date.fromisoformat(day))
 
@@ -144,7 +155,9 @@ class Mem10ParaphraseRepairTests(unittest.TestCase):
         for path in (KNOW / 'field-profiles/v1/records').glob('*.json'):
             profile = json.loads(path.read_text(encoding='utf-8'))
             self.assertEqual(review_bindings(profile, ctx), review_bindings(profile, before))
-        self.assertEqual(len(public_projection(KNOW, as_of=date(2026, 10, 1))['public']['records']), 6)
+        published_ids = {profile['id'] for profile in
+                         public_projection(KNOW, as_of=date(2026, 10, 1))['public']['records']}
+        self.assertTrue(ORIGINAL_PROFILE_IDS <= published_ids)
 
 
 if __name__ == '__main__':

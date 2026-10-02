@@ -20,8 +20,18 @@ import sys
 from pathlib import Path
 
 # 路径常量
-REPO_ROOT = Path(r"D:\ESH\ESH_Codex\work\safety-basis")
-SCRATCH = Path(r"C:\Users\XGZ\.gemini\antigravity\brain\29cbbf42-b2d0-4baa-884c-a8dc9edf2e21\scratch")
+REPO_ROOT_INPUT = os.environ.get("SAFETY_BASIS_REPO_ROOT", "").strip()
+if not REPO_ROOT_INPUT:
+    raise SystemExit("Set SAFETY_BASIS_REPO_ROOT explicitly before running this archived tool")
+REPO_ROOT = Path(REPO_ROOT_INPUT).expanduser()
+if not REPO_ROOT.is_dir():
+    raise SystemExit("SAFETY_BASIS_REPO_ROOT must name an existing directory")
+SCRATCH_INPUT = os.environ.get("SAFETY_BASIS_AUDIT_SCRATCH", "").strip()
+if not SCRATCH_INPUT:
+    raise SystemExit("Set SAFETY_BASIS_AUDIT_SCRATCH explicitly before running this archived tool")
+SCRATCH = Path(SCRATCH_INPUT).expanduser()
+if not SCRATCH.is_dir():
+    raise SystemExit("SAFETY_BASIS_AUDIT_SCRATCH must name an existing directory")
 KNOWLEDGE = REPO_ROOT / "knowledge"
 
 # 引入 canonical content_hash

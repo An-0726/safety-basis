@@ -4,14 +4,14 @@
 
 ## 1. 验收代码快照
 
-- 独立临时 worktree：`D:\ESH\ESH_Codex\work\safety-basis-main-acceptance`
+- 独立临时 worktree：本机独立临时验收工作树（绝对位置不公开）
 - worktree HEAD：`c2ffe2042a316881f229eea8899156fa897f601d`
 - 该 SHA 与验收时最新 `origin/main` 完全一致（PR #46 合并提交）。
 - 原工作区保持在原分支/HEAD，没有 reset、覆盖、rebase 或分支删除。
 
 ## 2. 真实私有 SQLite 只读验收
 
-真实母库：`D:\ESH\ESH_Codex\work\safety-basis\source\library\fulltext.sqlite3`
+真实母库：`source/library/fulltext.sqlite3`（仓库相对位置）
 
 - size：`106,958,848` bytes
 - SHA-256：`7b6916e314bb10b686b3595b7760b408816b893795d7fc4b7b6d535d07dca629`

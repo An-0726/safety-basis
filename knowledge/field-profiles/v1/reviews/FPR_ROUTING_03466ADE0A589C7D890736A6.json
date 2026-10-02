@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_03466ADE0A589C7D890736A6",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_six_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立复核官方现行状态、必要正文与关键页范围/引言，并逐字段审核；签署前再次确认最终record原字节与全部依赖没有漂移。special_review / exclude / special_check准确表达限定设备与时序的重大隐患专项核查，不把报告缺页、设备故障或未检一般义务变成普通现场缺陷入口。 限定GB 45067第1章使用过程内的场车，特殊领域、不需使用登记及房建/市政工地场车除外；第4.10a须同一设备的准确“不合格”定检结论与该结论下仍继续使用共同成立。 profileKind=routing_only且findingTemplate显式null；本次只审核路由/取证要求，不准许自动生成现场缺陷或以空事实表证明违规。 完整定检报告、设备匹配、出具日期、运行/调度/停用互证及后续复检整改时序足以定义最少取证；未判定、已判定待治理和已闭环分开核实，不能从缺材料倒推未判定。 停止不合格设备继续使用、依法整改检验和恢复条件与特设法40条义务背景一致；重大判据仍仅4.10a。 K_GB45067_03466ADE0A58_10直接指C_GB45067_4_10，仅消费a项，保留章1范围、定检准确结论及继续使用组合，不消费同条b-e或把特设法40条supporting替换成重大判据。监管列明4.10a与使用单位主体责任已分开。 本决定仅为该可复用规则的语义签审，不构成个案违规、重大隐患或处罚结论。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:28:48.600406+00:00",
+  "reviewedProfileHash": "3ff30d568875dc7c1635c1e6ec1cb9a1ed931112fb5dc7f73cf831045f766eba",
+  "dependencyFingerprint": "fe36fd4cd6de61ceecbaf349976700f47f746071dee578918f484abdf7f86869",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_GB45067_03466ADE0A58_10": "K_GB45067_03466ADE0A58_10直接指C_GB45067_4_10，仅消费a项，保留章1范围、定检准确结论及继续使用组合，不消费同条b-e或把特设法40条supporting替换成重大判据。监管列明4.10a与使用单位主体责任已分开。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "0df39bec2e8b22100ae10a6cda0dc18a785909fc89b4a01cc8d3fdc1fe55d21a",
+    "profileFileSha256": "9eddee350be12f9511537d4358575d5d3057b952a199c9a97056c3659f4213fe",
+    "officialSources": [
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53",
+      "https://www.zhanjiang.gov.cn/attachment/0/272/272839/2149213.pdf",
+      "https://www.xunwu.gov.cn/xwxxxgk/xwyjglj63/202608/b23877eca1224f19a64f175706d5b477.shtml",
+      "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+      "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=081C93E3186E0D1FE5CB034093C47A53",
+        "locator": "标准身份、现行状态、2024-11-28发布、2024-12-01实施"
+      },
+      {
+        "sourceUrl": "https://www.zhanjiang.gov.cn/attachment/0/272/272839/2149213.pdf",
+        "locator": "PDF第6页引言；第7页/印刷页1范围；第8页/印刷页2之4.3/4.5/4.10a；第9页4.10余项"
+      },
+      {
+        "sourceUrl": "https://www.xunwu.gov.cn/xwxxxgk/xwyjglj63/202608/b23877eca1224f19a64f175706d5b477.shtml",
+        "locator": "范围及4.3、4.5、4.10"
+      },
+      {
+        "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_ad5e293574484b48b45047ee0ede6099.html",
+        "locator": "2013-06-29通过，第2、40、49条；第101条自2014-01-01施行"
+      },
+      {
+        "sourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+        "locator": "现行有效法律目录（截至2026-08-28），社会法第22项，网页内容第542行；find短词未命中后已重新定位正文确认。"
+      }
+    ],
+    "usageConstraints": [
+      "本review只批准可复用路由及核验定义，不证明任何真实企业、设备或现场存在缺陷；observedViolation保持false。",
+      "routing_only及显式null模板不授权自动生成已观测现场结论；conditional或exclude只是用途/入口，不等同适用性已证实、实际合规或免除法定义务。",
+      "perUseFacts仅为待核事实名，不是事实值，也不是可自动按AND/OR运算的表达式；必须按原条款及实际分支核验。",
+      "evidenceRequirements为核验建议，不增设法律未要求的统一文书格式、个人名册或资料保管义务；资料缺失不能自动等同未履职或设备功能失效。",
+      "个案事实缺口只限制对应结论；已核实独立分支可以继续，不能因另一分支资料缺失而取消已证实的适用要求。",
+      "当前已经停用、有效整改或后续合格结论不自动消除历史已确证的不符合事实，也不能把旧不利结论无条件视为当前缺陷。",
+      "本决定仅覆盖本profile最终字节及完整依赖；未来修改、新增求值或改变路由须重新审核。"
+    ],
+    "counterexampleReasoningNotSiteTests": [
+      "只有不合格报告、没有其后使用事实：本分支证据不足。",
+      "报告属于另一台设备：不成立同一对象组合。",
+      "仅未经定检或缺报告：转其他适用义务，不能当成本分支。",
+      "后续有效合格结论且当前符合使用要求：不能据旧结论生成当前重大隐患；并不抹去此前已存在的违法时段。"
+    ],
+    "nonblockingAuthoringClarifications": [],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

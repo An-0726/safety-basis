@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_FCB_19_4",
+  "profileRevision": 3,
+  "decision": "verified",
+  "reviewer": "dot：独立最终隐私修订复核",
+  "reason": "本次独立核对revision2与revision3全部字段，变化仅删除私有历史路径及修订号递增；逐字阅读最终适用边界、六维语义评估和精确关联依据，核实全部依赖字节与原独立审阅一致。官方原文及现行状态核验来自所列原独立审阅证据，本次未声称重新联网逐条核法。保留原审阅的用途限制，批准此隐私修订版本；不形成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T17:10:52.261869+00:00",
+  "reviewedProfileHash": "3777d7608c76c398d33ee08b8a54ed3b155c59c81c58212e834fff4dbf21fb0e",
+  "dependencyFingerprint": "d1e434e20adaa23229b97b1188279a0735a62d199792792b98e79755b7153b62",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_5168434ab8029683af6b74d0": "K_XLSX_5168434ab8029683af6b74d0精确关联C_FCB_19；工贸企业粉尘防爆安全规定（应急管理部令第6号，2021-07-25发布，2021-09-01施行；地域CN）。第19条末句作业后清场及最高温度恢复常温后生产；第2、3条范围及第32条施行。粉尘涉爆工贸主体、危险场所设备设施/除尘系统、实际动火检修维修及结束后拟/已复产清楚；一般检修全文义务不被本稳定H的动火子集替代。 不把最高温度换成平均温度、不把清场等同温度合格、不虚构既成复产；没有声称本项覆盖19条全部检修作业措施。 原文“常温”没有固定℃，候选仅要求中性温度实测及单位/比較基准，没有自造20℃、25℃等固定阈值。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "0c3c9aa53649e8b76beeb98ceef9723b0c72a29842e314d353f9971324ae1233",
+    "officialSources": [
+      "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202107/t20210725_405574.shtml",
+      "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90371"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202107/t20210725_405574.shtml",
+        "locator": "MEM第6号令官方全文web行53—56、123、210"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_5168434ab8029683af6b74d0",
+        "clauseId": "C_FCB_19",
+        "lawVersionId": "L006",
+        "lawId": "LF_L006",
+        "officialName": "工贸企业粉尘防爆安全规定",
+        "officialNumber": "应急管理部令第6号",
+        "publishedOn": "2021-07-25",
+        "effectiveOn": "2021-09-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90371"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true,
+    "revision3ReviewScope": "仅私有路径删除与修订号更新；最终公共业务语义和全部依赖与原独立批准内容一致。官方来源核验沿用绑定的原独立审阅记录。"
+  }
+}

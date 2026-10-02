@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_48B66BAC_15_4",
+  "profileRevision": 3,
+  "decision": "verified",
+  "reviewer": "dot：独立最终隐私修订复核",
+  "reason": "本次独立核对revision2与revision3全部字段，变化仅删除私有历史路径及修订号递增；逐字阅读最终适用边界、六维语义评估和精确关联依据，核实全部依赖字节与原独立审阅一致。官方原文及现行状态核验来自所列原独立审阅证据，本次未声称重新联网逐条核法。保留原审阅的用途限制，批准此隐私修订版本；不形成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T17:10:52.261869+00:00",
+  "reviewedProfileHash": "79c521c64db97efb2e4df1c69922833bdf78c1eedf8f7c594cd340bccc1ae840",
+  "dependencyFingerprint": "33b0ca321385083c7e89f3bb864c46ec3c2e12be345aa95938847c86851199d3",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_FT_DD461077A70ADF5DAD2D90E7": "K_XLSX_FT_DD461077A70ADF5DAD2D90E7精确关联C_XLSX_FT_A1375937E6BBD3AB3B8885CE；工贸企业有限空间作业安全规定（应急管理部令第13号，2023-11-29发布，2024-01-01施行；地域CN）。第15条第二款末句；第15条其余内容为监护/处置上下文；第2、3条定义及第22条。工贸企业有限空间作业及监护职责明确；不要求已入内、完成施救或已有伤亡。被制止者未限原作业人员，与原文末句一致。 不免除一般监护和预案等其他义务，不许可无保障入内救援、不制造危险复演。 本事件分支没有数值限值，候选未引入浓度等未经核准数字。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "363700114e0d48dd46890f8052628c441cf8d642ca50d1d866c0c99e64c18d59",
+    "officialSources": [
+      "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202312/t20231208_471355.shtml",
+      "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=98683"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202312/t20231208_471355.shtml",
+        "locator": "应急管理部第13号令官方全文第2、3、15、22条；web行65—69、102—106、末条"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_FT_DD461077A70ADF5DAD2D90E7",
+        "clauseId": "C_XLSX_FT_A1375937E6BBD3AB3B8885CE",
+        "lawVersionId": "LV_META_48B66BAC1B312A800DF12324",
+        "lawId": "LF_META_0D5F9837A143A44F8CFFFC22",
+        "officialName": "工贸企业有限空间作业安全规定",
+        "officialNumber": "应急管理部令第13号",
+        "publishedOn": "2023-11-29",
+        "effectiveOn": "2024-01-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=98683"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true,
+    "revision3ReviewScope": "仅私有路径删除与修订号更新；最终公共业务语义和全部依赖与原独立批准内容一致。官方来源核验沿用绑定的原独立审阅记录。"
+  }
+}
