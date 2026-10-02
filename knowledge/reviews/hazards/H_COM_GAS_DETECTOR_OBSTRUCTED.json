@@ -2,10 +2,28 @@
   "entityType": "hazard",
   "entityId": "H_COM_GAS_DETECTOR_OBSTRUCTED",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "c513e4e8bae283a78882c3ca15bcdccebd91a771a63bc0d2b1553fe42e9389e0",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "d6bb7d020cc864b96ccbdca25b58e914fb7bfa1ab761df6139de51e210322f6e",
+  "checkedAt": "2026-10-02T16:00:00+08:00",
+  "reviewer": "dot / item-level source and applicability review",
+  "reason": "已配置且承担生产安全保护功能的探测报警设备被污染/遮挡并影响正常运转，属于现有安全设备维护正常运转义务。只有表面污迹而功能未受影响，不据此直接认定失效；不自动升级重大隐患。",
+  "evidenceRefs": [
+    "E_WORK_SAFETY_LAW_MEM_20260926"
+  ],
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_GAS_DETECTOR_OBSTRUCTED",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_GAS_DETECTOR_OBSTRUCTED",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "c513e4e8bae283a78882c3ca15bcdccebd91a771a63bc0d2b1553fe42e9389e0",
+    "checkedAt": "2026-09-21T09:25:00+08:00",
+    "reviewer": "ChatGPT / Commerce Full Ingest",
+    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_GAS_DETECTOR_OBSTRUCTED",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

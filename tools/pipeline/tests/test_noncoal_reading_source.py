@@ -1,4 +1,5 @@
 """Exact reviewed noncoal reading text never becomes a current C/H/K source."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib,json,sys,unittest
 from datetime import date
 from pathlib import Path
@@ -43,7 +44,7 @@ class NoncoalReadingSourceTests(unittest.TestCase):
         vids={'LV_NMSA_NONCOAL_MAJOR_2022','LV_NMSA_NONCOAL_MAJOR_SUPPLEMENT_2024'}
         self.assertEqual([read(p)['id'] for p in (K/'clauses').glob('*.json') if read(p).get('lawVersionId') in vids],[])
         self.assertIsNone(read(K/'law-versions/LV_NMSA_NONCOAL_MAJOR_SUPPLEMENT_2024.json')['effectiveDate'])
-        m=read(K/'manifest.json');self.assertEqual((m['counts']['clauses'],m['counts']['evidence'],m['counts']['hazards'],m['counts']['links']),(3099,1306,2131,1971))
+        m = pre_commerce_manifest(read(K/'manifest.json'));self.assertEqual((m['counts']['clauses'],m['counts']['evidence'],m['counts']['hazards'],m['counts']['links']),(3099,1306,2131,1971))
         self.assertEqual(sum(b['id']=='noncoal-reference-reading-20261001' for b in m['batches']),1)
 
     def test_actual_dates_and_reference_counts_do_not_change_current_catalog(self):

@@ -5,6 +5,7 @@ constitute professional verification of the rest of the corpus or site facts.
 """
 from collections import Counter
 from datetime import date
+from commerce_cohort_fixture import pre_commerce_gate, pre_commerce_ids, pre_commerce_inventory, pre_commerce_manifest
 import hashlib
 import json
 from pathlib import Path
@@ -82,6 +83,7 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
             rows = sorted((obj['id'], obj.get('lifecycle'))
                           for file in (KNOW / kind).glob('*.json')
                           for obj in [json.loads(file.read_text(encoding='utf-8'))])
+            rows = pre_commerce_inventory(kind, rows)
             # Preserve this historical inventory verbatim after excluding only
             # the separately reviewed, semantically distinct GB12801 successor.
             successor = {'hazards': 'H_GB12801_2025_5_6_2_S1',
@@ -172,7 +174,7 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
                     self.assertNotIn(forbidden, serialized)
 
     def test_manifest_counts_and_bounded_batch_totals(self):
-        manifest = read('knowledge/manifest.json')
+        manifest = pre_commerce_manifest(read('knowledge/manifest.json'))
         self.assertEqual(manifest['batch'], 'civil-fireworks-reference-reading-20261001')
         self.assertEqual(sum(b['id'] == 'noncoal-reference-reading-20261001' for b in manifest['batches']), 1)
         self.assertEqual(sum(b['id'] == 'power-full-criteria-20261001' for b in manifest['batches']), 1)
@@ -193,7 +195,7 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         self.assertTrue((KNOW / 'evidence/E_AQ3067_2026_MEM_PDF.json').is_file())
         self.assertEqual(manifest['counts']['evidence'], expected_evidence)
         self.assertEqual(manifest['evidence'], expected_evidence)
-        self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), expected_evidence)
+        self.assertEqual(len(pre_commerce_ids('evidence', (p.stem for p in (KNOW / 'evidence').glob('*.json')))), expected_evidence)
         batch = next(b for b in manifest['batches'] if b['id'] == FIXTURE['batch'])
         self.assertEqual({k: batch[k] for k in ('evidenceAdded', 'hazardsCorrected',
             'linkScopesCorrected', 'clauseTextsCorrected', 'hazardReviewsUpdated',
@@ -288,9 +290,9 @@ class ReviewedRemediationBoundaryTests(unittest.TestCase):
         # Current projection additionally excludes the four independently reviewed
         # MEM10 wrong-source chains. The new containment suite reconstructs the
         # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
-        self.assertEqual(len(gate.eligible_hazards), 1653)
-        self.assertEqual(len(gate.eligible_links), 1787)
-        self.assertEqual(len({gate.links[k]['clauseId'] for k in gate.eligible_links}), 1338)
+        self.assertEqual(len(pre_commerce_gate(gate).eligible_hazards), 1653)
+        self.assertEqual(len(pre_commerce_gate(gate).eligible_links), 1787)
+        self.assertEqual(len({gate.links[k]['clauseId'] for k in pre_commerce_gate(gate).eligible_links}), 1338)
         self.assertNotIn('H_12158_10_1_2', gate.eligible_hazards)
 
 

@@ -1,4 +1,5 @@
 """Original attachment fidelity and bounded construction-body publication."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib,json,sys,unittest
 from datetime import date
 from pathlib import Path
@@ -46,7 +47,7 @@ class ConstructionCriteriaTests(unittest.TestCase):
 
     def test_no_new_hazards_links_or_canonical_identity(self):
         self.assertEqual([read(p)['id'] for p in (KNOW/'links').glob('*.json') if read(p).get('clauseId') in CLAUSES],[])
-        manifest=read(KNOW/'manifest.json');b=next(b for b in manifest['batches'] if b['id']=='construction-full-criteria-20261001')
+        manifest = pre_commerce_manifest(read(KNOW/'manifest.json'));b=next(b for b in manifest['batches'] if b['id']=='construction-full-criteria-20261001')
         self.assertEqual((b['clausesAdded'],b['evidenceAdded'],b['hazardsAdded'],b['linksAdded']),(18,2,0,0))
         self.assertEqual((manifest['counts']['laws'],manifest['counts']['lawVersions'],manifest['counts']['clauses'] - len(COAL_CLAUSES) - len(POWER_CLAUSES),manifest['counts']['evidence'] - len(COAL_EVIDENCE) - len(POWER_EVIDENCE)),(119,122,3040,1294))
         self.assertEqual((manifest['counts']['hazards'],manifest['counts']['links']),(2131,1971))

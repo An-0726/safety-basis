@@ -2,10 +2,42 @@
   "entityType": "hazard",
   "entityId": "H_COM_UNATTENDED_PATROL",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "0d54d6fcc4b5dab3e9ccf49e93f7fc3c8329c164081b2f9bb6f97c3cf85292c7",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "a99d29ec88c3e4df1b0ac36b845598ce3554a94a15ba8fc9395123d2f9caab6f",
+  "checkedAt": "2026-10-02T16:23:00+08:00",
+  "reviewer": "Codex Commerce official-source direct-basis review",
+  "reason": "原候选无人值守及各类设备看护描述过宽，收窄至第5.2.1重点仓储每日防火巡查义务；完整正文、范围、现行版本均已核实，企业身份未知不妨碍建立该有条件通用定义。与既有月周防火检查H不等价。",
+  "evidenceRefs": [
+    "E_COM_XF1131_PATROL_20261002"
+  ],
+  "notes": "限本H通用条件定义及所列法源文本/适用边界，不认定原企业事实，不新增无人值守或24小时连续在岗义务。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_UNATTENDED_PATROL",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "9363ac2de5277d9c9159373e083e12dccf1d27819afa82f6bcd1155717e60851",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "消防法16要求防火检查，重点单位另有每日巡查；无人值守不自动违法。须区分单位防火检查、消防重点部位每日巡查和电气设备运行监控，不能归并H022后丢掉其“已发现火灾隐患”前提。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_UNATTENDED_PATROL",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_UNATTENDED_PATROL",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "0d54d6fcc4b5dab3e9ccf49e93f7fc3c8329c164081b2f9bb6f97c3cf85292c7",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "previousReviewFileSha256": "37d8018efd78f77b6597a72374940c07cbd90741a4874dc2668b59628e8efaeb",
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_UNATTENDED_PATROL",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_UNATTENDED_PATROL",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

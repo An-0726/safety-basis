@@ -3,9 +3,50 @@
   "entityId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
   "reviewType": "definition",
   "decision": "pending",
-  "reviewedContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "reviewedContentHash": "3aa17ffe58ab310682fc57fa811a2ab7dfbd265403ba2b02a1efe9d103025dd0",
+  "checkedAt": "2026-10-02T17:04:00+08:00",
+  "reviewer": "dot / item-level source and applicability review",
+  "reason": "独立范围复核撤回H032归并：原定义“可燃物”不等于GB/T13869第5.1.1限定的易燃、易爆或腐蚀性物品；直接放在物品上与周围堆物亦须实际核义务关系。原候选保留，待拆分物质属性、布置关系与违规接线等原子缺陷，再取得各自直接依据；不将普通纸箱自动标为易燃物。",
+  "evidenceRefs": [],
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_PLUGSTRIP_COMBUSTIBLE",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
+    "checkedAt": "2026-09-21T09:25:00+08:00",
+    "reviewer": "ChatGPT / Commerce Full Ingest",
+    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "independentLegalReviewStatus": "pending_before_publication",
+  "reviewIndependenceNote": "本记录表示作者的来源与适用性实审；完整独立法律复核尚未完成，不因hash/Gate通过推定已独立通过。",
+  "preIndependentScopeCorrectionReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "87359cebf14f6b464480e43905ed91f8d88eba7d338489cfdc8bde694c3b9f36",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "插排是用电产品；周围堆放可燃物分支与GB/T13869第5.1.1现有H032一致。私拉乱接、导线选型、负荷和串联须各自独立核，不作为此次归并已认定事实。",
+    "evidenceRefs": [
+      "E_GBT13869_SAMR_ORIGINAL_20260926"
+    ],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_PLUGSTRIP_COMBUSTIBLE",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_PLUGSTRIP_COMBUSTIBLE",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    },
+    "independentLegalReviewStatus": "pending_before_publication",
+    "reviewIndependenceNote": "本记录表示作者的来源与适用性实审；完整独立法律复核尚未完成，不因hash/Gate通过推定已独立通过。"
+  }
 }

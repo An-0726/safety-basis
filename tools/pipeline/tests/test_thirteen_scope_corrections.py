@@ -6,6 +6,7 @@ they do not invent a second Boolean classifier and call it production coverage.
 Negative gate tests copy real records into disposable directories, never renew a
 production review, and never require the private audit inputs to exist in CI.
 """
+from commerce_cohort_fixture import pre_commerce_gate, pre_commerce_ids, pre_commerce_manifest
 import copy
 from datetime import date
 import hashlib
@@ -288,12 +289,12 @@ class ThirteenScopeProvenanceTests(unittest.TestCase):
         self.assertEqual(len(FIXTURE['newEvidenceIds']), 14)
         self.assertEqual(set(FIXTURE['newEvidenceIds']),
                          {e['id'] for e in FIXTURE['evidence'] if e['newInThisBatch']})
-        manifest = read('knowledge/manifest.json')
+        manifest = pre_commerce_manifest(read('knowledge/manifest.json'))
         # Preserve the fourteen-record historical fixture; two later original-
         # PDF records belong to GB12801; the third exact ID is metadata-only AQ3067.
         later_ids = {'E_GB12801_EFFECTIVE_20261001', 'E_GB12801_SCOPE_5_6_2_20261001',
                      'E_AQ3067_2026_MEM_PDF'} | SECTOR_EVIDENCE | GAS_EVIDENCE | CONSTRUCTION_EVIDENCE | COAL_EVIDENCE | POWER_EVIDENCE
-        evidence_ids = {p.stem for p in (KNOW / 'evidence').glob('*.json')}
+        evidence_ids = pre_commerce_ids('evidence', (p.stem for p in (KNOW / 'evidence').glob('*.json')))
         self.assertTrue(later_ids <= evidence_ids)
         self.assertEqual(len(evidence_ids - later_ids), 1262)
         self.assertEqual(manifest['counts']['evidence'], 1265 + len(SECTOR_EVIDENCE) + len(GAS_EVIDENCE) + len(CONSTRUCTION_EVIDENCE) + len(COAL_EVIDENCE) + len(POWER_EVIDENCE))
@@ -327,8 +328,8 @@ class ThirteenScopeGateTests(unittest.TestCase):
         # Current projection additionally excludes the four independently reviewed
         # MEM10 wrong-source chains. The new containment suite reconstructs the
         # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
-        self.assertEqual(len(gate.eligible_hazards), 1653)
-        self.assertEqual(len(gate.eligible_links), 1787)
+        self.assertEqual(len(pre_commerce_gate(gate).eligible_hazards), 1653)
+        self.assertEqual(len(pre_commerce_gate(gate).eligible_links), 1787)
 
     def test_changed_sources_cannot_reuse_any_old_content_or_context_review(self):
         root = self.snapshot()

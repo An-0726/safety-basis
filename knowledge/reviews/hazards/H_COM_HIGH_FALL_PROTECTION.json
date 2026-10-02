@@ -2,10 +2,57 @@
   "entityType": "hazard",
   "entityId": "H_COM_HIGH_FALL_PROTECTION",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "070860ea58eb7b95c057dc45ae5ac7597a4980916ec5f445ba9a7c0a42dcaad1",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "65b04c72ec5b92c297bc34992e2affacbc7bfbd040b0d706a6492c29c49148cb",
+  "checkedAt": "2026-10-02T16:20:00+08:00",
+  "reviewer": "Codex Commerce official-source direct-basis review",
+  "reason": "逐字条文直接覆盖施工高处人员正确佩戴安全带等用品。与GB12801工作面防坠设施及江苏一般劳保管理H义务、触发条件不同，不作整条归并；本次准入为通用定义，不认定任何原企业事件。",
+  "evidenceRefs": [
+    "E_COM_GB55034_TEXT_20261002"
+  ],
+  "reviewedFields": [
+    "/id",
+    "/title",
+    "/description",
+    "/measures",
+    "/conditions",
+    "/category",
+    "/places",
+    "/aliases",
+    "/keywords",
+    "/lifecycle",
+    "/mode",
+    "/note",
+    "/mergedInto"
+  ],
+  "notes": "逐项实质核验仅限本记录及所列直接义务；内容hash绑定本次范围、原文和适用边界，不认定原企业事件，不批准现场profile或标准全文再发布。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_HIGH_FALL_PROTECTION",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "2716c77d368f9b36620405a9898ee107d17e732cc5ff190b4dd71135c9f639d1",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "个人安全带/系挂义务不能归并成集体临边防护。GB55034第3.2.1可支持建筑市政施工高处作业条件下的正确使用，但原现场高度、作业类别及已有系统仍须确认。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_HIGH_FALL_PROTECTION",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_HIGH_FALL_PROTECTION",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "070860ea58eb7b95c057dc45ae5ac7597a4980916ec5f445ba9a7c0a42dcaad1",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "previousReviewFileSha256": "e068c9e4aa63de4f216558297126ac37bb8246e61a7662818f7d1afcd162e4e0",
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_HIGH_FALL_PROTECTION",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_HIGH_FALL_PROTECTION",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

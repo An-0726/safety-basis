@@ -4,6 +4,7 @@ These assertions guard the reviewed wording, actor, scope and logical branches.
 They are not an on-site legal adjudication engine or a whole-corpus approval.
 """
 from datetime import date
+from commerce_cohort_fixture import pre_commerce_gate
 import hashlib
 import json
 from pathlib import Path
@@ -102,8 +103,8 @@ class ThreeResidualProvenanceTests(unittest.TestCase):
         # Current projection additionally excludes the four independently reviewed
         # MEM10 wrong-source chains. The new containment suite reconstructs the
         # unchanged historical 1657/1791/1340 snapshot from preserved reviews.
-        self.assertEqual(len(gate.eligible_hazards), 1653)
-        self.assertEqual(len(gate.eligible_links), 1787)
+        self.assertEqual(len(pre_commerce_gate(gate).eligible_hazards), 1653)
+        self.assertEqual(len(pre_commerce_gate(gate).eligible_links), 1787)
         self.assertNotIn('H_12158_10_1_2', gate.eligible_hazards)
 
     def test_three_templates_removed_and_short_space_title(self):

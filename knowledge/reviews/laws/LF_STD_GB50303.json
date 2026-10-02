@@ -1,13 +1,39 @@
 {
-  "decision": "verified",
-  "entityId": "LF_STD_GB50303",
   "entityType": "law",
-  "evidenceRefs": [
-    "E_GB50303_NOTICE_994"
-  ],
+  "entityId": "LF_STD_GB50303",
   "reviewType": "identity",
+  "decision": "verified",
   "reviewedContentHash": "5f0bc2536dee482ad2cd598a3ffefae027af8ca1d3712c4166baa1218856667a",
-  "checkedAt": "2026-09-11T10:30:00+08:00",
-  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "reason": "身份核验：住房城乡建设部公告第994号发布《建筑电气工程施工质量验收规范》GB 50303-2015。"
+  "checkedAt": "2026-10-02T16:47:00+08:00",
+  "reviewer": "Codex Commerce original-page electrical review",
+  "reason": "私有扫描原件封面、版权页和第994号公告与上海住建委公开题录一致：建筑电气工程施工质量验收规范、GB50303-2015、住建部批准发布。只更新本法身份审核证据，未修改LF实体、未重签其他条文。",
+  "evidenceRefs": [
+    "E_COM_GB50303_ORIGINAL_20261002",
+    "E_COM_GB50303_DATES_20261002"
+  ],
+  "reviewedFields": [
+    "/aliases",
+    "/canonicalName",
+    "/documentKind",
+    "/id",
+    "/identityKey",
+    "/issuer",
+    "/jurisdictionCode",
+    "/lifecycle"
+  ],
+  "notes": "逐条目核原件和适用范围；仅为通用条件定义及本次所列条款，不认定原企业事件，不确认既有使用期违法，不批准标准全文再发布。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "LF_STD_GB50303",
+    "entityType": "law",
+    "evidenceRefs": [
+      "E_GB50303_NOTICE_994"
+    ],
+    "reviewType": "identity",
+    "reviewedContentHash": "5f0bc2536dee482ad2cd598a3ffefae027af8ca1d3712c4166baa1218856667a",
+    "checkedAt": "2026-09-11T10:30:00+08:00",
+    "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+    "reason": "身份核验：住房城乡建设部公告第994号发布《建筑电气工程施工质量验收规范》GB 50303-2015。"
+  },
+  "previousReviewFileSha256": "64086880554c9bdd95dbf61aa8eb1210747a4ff3aa8eea64741e7255f51bdec1"
 }

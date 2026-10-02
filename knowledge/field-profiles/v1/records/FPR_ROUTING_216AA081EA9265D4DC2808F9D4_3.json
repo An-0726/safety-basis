@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "revision": 1,
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "findingTemplate": null,
+  "observedViolation": false,
+  "independentReviewRequired": true,
+  "noPerUseFactValuesRecorded": true,
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "26b6c3e98f84ce46a9b2ee82694da26b74fb9eff",
+  "sourceAsOf": "2026-10-02",
+  "sourceReview": {
+    "verifiedOn": "2026-10-02",
+    "officialStatusUrl": "https://flk.npc.gov.cn/detail?id=ff80818194a5cf29019541042f6d1cdc",
+    "officialTextUrl": "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html",
+    "officialStatusObserved": "有效",
+    "promulgatedOn": "2025-02-08",
+    "effectiveOn": "2025-05-01",
+    "scopeNote": "仅本场景关联的南京地方性法规版本和精确条款复核；不证明现场事实，不代替独立场景审核。"
+  },
+  "id": "FPR_ROUTING_216AA081EA9265D4DC2808F9D4_3",
+  "hazardId": "H_216AA081EA9265D4DC2808F9D4_3",
+  "title": "南京消防联网设施和传输网络运行核查",
+  "applicability": {
+    "requires": [
+      "仅适用于南京市行政区域内设置消防控制室的单位，核查其消防联网设施及传输网络正常使用和是否擅自拆除、停用。",
+      "直接义务限定《南京市消防条例》第五十二条第二款；接入城市消防远程监控中心监测系统并实时传输作为判断联网运行的上下文，不把本场景扩大为新设消防控制室的义务。",
+      "先确认本次核查时点适用版本、消防控制室设置情况、联网边界和实际运行状态；故障、计划维护及擅自拆停分别查清事实。"
+    ],
+    "excludes": [
+      "不扩展为南京市所有单位或未设置消防控制室的建筑一律联网。",
+      "联网正常与单位消防安全主体责任分别核查；远程采集、监测、预警不替代单位主体责任。",
+      "不以某一历史告警、短时通信波动或未提交某种材料直接推定擅自拆除、停用；不得把仅凭设计遗漏作为已发生违规或当然豁免。",
+      "本项不预设断网时长、巡检频次、强制台账格式、重大隐患或行政处罚结论。",
+      "法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定；先核个案是否存在特别规定。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "nanjingJurisdictionConfirmed",
+      "fireControlRoomConfirmed",
+      "networkBoundaryAndOperatingStateConfirmed",
+      "failureOrUnauthorizedRemovalOrShutdownFactsConfirmed"
+    ]
+  },
+  "evidenceRequirements": [
+    "核查消防控制室、联网设备及传输线路的实际位置、用途、连接关系和运行状态，区分未配置、故障、维护及拆停情况。",
+    "结合现有运行/维护资料与经许可的安全测试，核实相应消防设施状态能否传至城市消防远程监控中心监测系统；测试不影响真实报警和正常防护功能。",
+    "若拟认定擅自拆除或停用，核实具体设备/线路、时间、行为及维护审批等已有资料；材料不足时继续查明，不将断网本身等同擅自拆停。",
+    "仅记录本项必要的设备、点位、测试时间、岗位角色和核验结论；优先现场核原件及去标识化摘录，不要求姓名、身份证、个人健康资料或无关完整材料。"
+  ],
+  "correctiveDirection": "根据查实原因修复联网设施及传输网络、恢复正常使用，保证消防设施运行状态信息接入城市消防远程监控中心监测系统并实时传输；不得擅自拆除或者停用。由负责人员组织安全的功能复核并记录必要结果，保持单位消防安全主体责任；本款未规定统一测试周期或记录格式。",
+  "basisLinkIds": [
+    "K_XLSX_WEB_8BC33A18B55C60AEBFD92F9B"
+  ]
+}

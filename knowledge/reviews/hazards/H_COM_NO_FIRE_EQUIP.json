@@ -2,10 +2,40 @@
   "entityType": "hazard",
   "entityId": "H_COM_NO_FIRE_EQUIP",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "fbdc1929a14d11a9700bd7df9c702f91d3795a345922742c8c8482004aba420b",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "5f8e912b7ca73a15aef06095e558a57bb064eb30412791ad104adaa574bfaf1f",
+  "checkedAt": "2026-10-02T16:24:00+08:00",
+  "reviewer": "dot / substantive official-page and scope review",
+  "evidenceRefs": [
+    "E_COM_GB55037_8_1_1_20261002"
+  ],
+  "reason": "已目读官方原页第8.1.1完整两句及1.0.2范围，明确三项例外与第二句仅灭火器配置义务；类型级别计算不与全无配置混淆，未证明任何原企业实际违规。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_NO_FIRE_EQUIP",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "fc04627a22aeda20c41d40d4d61edaed894bd8ceee16994a1f75078f18b3b418",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "GB55037第8.1.1确有建筑内配置灭火器要求且含明示例外。原H“只有完成配置计算才可认定任何缺失”过严；通用定义可按建筑适用范围收窄，但须完整条文/版本审核链，不用“现场未见”代替全场检查。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_NO_FIRE_EQUIP",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_NO_FIRE_EQUIP",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "fbdc1929a14d11a9700bd7df9c702f91d3795a345922742c8c8482004aba420b",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_NO_FIRE_EQUIP",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_NO_FIRE_EQUIP",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

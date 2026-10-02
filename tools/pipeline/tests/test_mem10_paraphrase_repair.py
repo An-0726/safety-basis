@@ -1,4 +1,5 @@
 """A separately reviewed exact-source relocation, not a new major finding."""
+from commerce_cohort_fixture import pre_commerce_gate
 import copy
 from datetime import date
 import hashlib
@@ -128,7 +129,9 @@ class Mem10ParaphraseRepairTests(unittest.TestCase):
                 old_clauses = {before.links[k]['clauseId'] for k in before.eligible_links}
                 self.assertEqual(old_clauses - now_clauses, {OLD_C})
                 self.assertEqual(now_clauses - old_clauses, {NEW_C})
-                self.assertEqual((len(current.eligible_hazards), len(current.eligible_links), len(now_clauses)),
+                cohort = pre_commerce_gate(current)
+                cohort_clauses = {current.links[k]['clauseId'] for k in cohort.eligible_links}
+                self.assertEqual((len(cohort.eligible_hazards), len(cohort.eligible_links), len(cohort_clauses)),
                                  (1653, 1787, 1338))
 
     def test_stale_review_or_scope_edits_do_not_gain_automatic_admission(self):

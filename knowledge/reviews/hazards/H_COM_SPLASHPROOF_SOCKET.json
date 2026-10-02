@@ -2,10 +2,55 @@
   "entityType": "hazard",
   "entityId": "H_COM_SPLASHPROOF_SOCKET",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "c89217c5f262d3a621e8ea78554c6bc8a3447cc89426f80034089e111779d2f9",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "648a244021d548aad5568f8310fc9e1d91c2c5826e9a342d2c55ceaedc5847a0",
+  "checkedAt": "2026-10-02T17:04:00+08:00",
+  "reviewer": "dot / item-level source and applicability review",
+  "reason": "仅在已核制造商允许使用环境要求不满足，且未采取足以满足产品要求的附加安装防护时，才按H_BE5284032A21441CA62FFDE0B2作技术核查。GB/T13869—2017为推荐性国家标准，不单凭本条认定普遍违法；厨房身份、普通插座外观或合规防护罩均不足以判不合格。原CJ/T28炒菜灶产品条文不适用于所有墙面插座。",
+  "evidenceRefs": [
+    "E_GBT13869_SAMR_ORIGINAL_20260926"
+  ],
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SPLASHPROOF_SOCKET",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_SPLASHPROOF_SOCKET",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "c89217c5f262d3a621e8ea78554c6bc8a3447cc89426f80034089e111779d2f9",
+    "checkedAt": "2026-09-21T09:25:00+08:00",
+    "reviewer": "ChatGPT / Commerce Full Ingest",
+    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "preIndependentScopeCorrectionReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_SPLASHPROOF_SOCKET",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "529569e975ddc0ad5f4d7e8894b38224928464cacfa643df6eebc463cc644adf",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "厨房环境受水影响且产品不满足使用环境/无附加防护的分支归入既有环境安装H。原CJ/T28是燃气炒菜灶产品标准，不能不分设备对象规定全部墙面插座一律换防溅型。",
+    "evidenceRefs": [
+      "E_GBT13869_SAMR_ORIGINAL_20260926"
+    ],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SPLASHPROOF_SOCKET",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_SPLASHPROOF_SOCKET",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "c89217c5f262d3a621e8ea78554c6bc8a3447cc89426f80034089e111779d2f9",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    },
+    "independentLegalReviewStatus": "pending_before_publication",
+    "reviewIndependenceNote": "本记录表示作者的来源与适用性实审；完整独立法律复核尚未完成，不因hash/Gate通过推定已独立通过。"
+  },
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_SPLASHPROOF_SOCKET",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

@@ -2,7 +2,7 @@
 """Phase 16: V4 整合 Validator（总入口）。
 
 按顺序运行并汇总：
-1. check_manifest    - manifest / 物理库存 / 生命周期对账
+1. check_manifest / check_commerce_dispositions - 库存/生命周期及44候选处置绑定
 2. check_catalogue   - schema / 引用完整性（law-lawVersion-clause-succession）
 3. check_requirements- Requirement 层（ref / hash / review meta / lifecycle）
 4. check_field_profiles - governed profile schema / 引用；不要求全量分类或审批完成
@@ -33,6 +33,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 STEPS = [
     ("check_manifest", "check_manifest_inventory.py"),
+    ("check_commerce_dispositions", "check_commerce_candidate_dispositions.py"),
     ("check_catalogue", "check_catalogue.py"),
     ("check_requirements", "check_requirements.py"),
     ("check_field_profiles", "check_field_profiles.py"),
@@ -45,7 +46,7 @@ STEPS = [
     ("scan_quality", "scan_quality_v4.py"),
     ("version_impact", "version_impact.py"),
 ]
-BLOCKING = {"check_manifest", "check_catalogue", "check_requirements", "check_field_profiles", "check_major_criteria", "check_major_criteria_references", "check_major_criteria_directory", "check_major_criteria_reading", "check_review_binding", "scan_evidence_exact"}
+BLOCKING = {"check_manifest", "check_commerce_dispositions", "check_catalogue", "check_requirements", "check_field_profiles", "check_major_criteria", "check_major_criteria_references", "check_major_criteria_directory", "check_major_criteria_reading", "check_review_binding", "scan_evidence_exact"}
 
 
 def main():

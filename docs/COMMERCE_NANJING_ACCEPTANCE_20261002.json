@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-02",
+  "baselineMain": "26b6c3e98f84ce46a9b2ee82694da26b74fb9eff",
+  "commerceSourceCommit": "29531120557ef01d23efe1851800ca87f0048f37",
+  "commerceSourceTree": "5e86d79529fcb02ac354fdfc79fd63746b0cc0f0",
+  "branch": "review/remaining-evidence-integration-20261002",
+  "publicationState": "validated cloud integration for draft PR; not merged or deployed",
+  "nanjingPatch": {
+    "bytes": 29400,
+    "sha256": "f97c89031325096aacc08c8511099d94ab7094cc4672ffd68a9fb88d269c264b",
+    "newFiles": 5,
+    "exactBytesPreserved": true,
+    "profileBindingsMatched": 2
+  },
+  "tests": {
+    "node": {
+      "passed": 732,
+      "failed": 0,
+      "skipped": 0
+    },
+    "python": {
+      "passed": 561,
+      "failed": 0
+    },
+    "validateAll": "PASS",
+    "publicationIntegrity": "PASS",
+    "strictAudit": {
+      "asOf": "2026-10-02",
+      "blockers": 0,
+      "inventoryWarnings": 156,
+      "excluded": 607
+    },
+    "bundleVerification": "PASS",
+    "fieldProfileDataAndController": "PASS"
+  },
+  "bundle": {
+    "releaseHash": "7c6c008cbc6b9f2ae23ff804761918fa7e1d805719b9c22912a0ade9f6cabfd2",
+    "knowledgeSnapshotSha256": "72572ad296ce14c70b6e7c9a7b3d4b5c88d099990e9a9f733689132feef1a1cc",
+    "counts": {
+      "hazards": 1671,
+      "laws": 72,
+      "lawVersions": 72,
+      "clauses": 1361,
+      "links": 1816,
+      "fieldProfiles": 25,
+      "majorCriteriaStandards": 6,
+      "majorCriteriaClauses": 110,
+      "majorCriteriaHazards": 20,
+      "majorCriteriaAssociations": 20,
+      "majorCriteriaDirectoryGroups": 8,
+      "majorCriteriaDirectoryDocuments": 9,
+      "majorCriteriaReadingGroups": 3,
+      "majorCriteriaReadingDocuments": 4,
+      "majorCriteriaReadingFirstLevelItems": 109,
+      "majorCriteriaReferenceStandards": 1,
+      "majorCriteriaSearchTopics": 53
+    },
+    "profileHazardCoverage": 24,
+    "publicProposed": 0
+  },
+  "realBrowser": {
+    "browserVersion": "151.0.7922.173",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "basicChecks": {
+      "passed": 17,
+      "failed": 0
+    },
+    "commerceDetails": {
+      "passed": 36,
+      "newHazards": 18,
+      "checks": "exact title, applicability, each K quote/scope/official link, no overflow; proposed and superseded source links isolated"
+    },
+    "profiles": {
+      "passed": 50,
+      "profiles": 25,
+      "checks": "all requires/excludes/evidence/corrective text, exact selected K and original bases, routing-only absent template, original templates unfilled with labels, actual clipboard reference warning, clear selection and refresh without persistence, no overflow"
+    },
+    "profilePageErrors": 0,
+    "profileFailedRequests": 0,
+    "screenshots": "50 cloud-local viewport captures; not included in public Git",
+    "limitations": [
+      "Browser viewport emulation, not physical mobile hardware",
+      "Local bundle acceptance, not online deployment acceptance"
+    ]
+  },
+  "dateBoundary": [
+    {
+      "asOf": "2026-10-01",
+      "profiles": 23,
+      "nanjingProfiles": 0
+    },
+    {
+      "asOf": "2026-10-02",
+      "profiles": 25,
+      "nanjingProfiles": 2
+    }
+  ],
+  "privacy": {
+    "publicFilesChecked": 272,
+    "sensitiveFindings": 0,
+    "reviewedSyntheticTestTokens": 1,
+    "scope": "changed public source and new sanitized documents; no private source/history read, no raw PDF/SQLite/archive/build package/log identity or actual local path committed"
+  },
+  "inventoryScanner": {
+    "baselineErrors": 11,
+    "currentErrors": 11,
+    "newErrors": [],
+    "removedErrors": [],
+    "scope": "inventory scanner flags retained quarantined source; current dated release Gate remains authoritative"
+  },
+  "remaining": [
+    "19 commerce candidates retain precise source/scope/split/verification gaps",
+    "Historical 725 rows/899 atoms and pilot evidence remain outside this public integration",
+    "GB/T13869 exclusive end-date correction remains a separate change",
+    "GB12158 rejected chains, unknown effective dates and technical fulltext rights remain bounded",
+    "CI, merge, deployment and online verification must be checked against the PR head"
+  ]
+}

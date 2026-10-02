@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_644EEE5EC12221D39672FE26E2_4",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "dot：南京两项场景独立准入审阅者（非草案作者）",
+  "reason": "独立重读国家法规库实际有效状态及人大正式全文，逐字段核对六项语义。场所实际用途与包厢包间边界准确，声音或者视像保持选择关系；配置及火灾初期消除原音画、播送警报、引导疏散的完整功能不被单张照片或缺记录替代。批准revision1的routing_only准入，无现场事实、两种警报均强制或所有房间一律适用的推定。",
+  "reviewedOn": "2026-10-02",
+  "checkedAt": "2026-10-02T08:20:32.938401+00:00",
+  "reviewedProfileHash": "a34f5a9a8a227b3a0cfd62b5ca318c38cfe8f26a58f22e11acc3e6893a598e8a",
+  "dependencyFingerprint": "6d12eccc83f898d5fc339b47f173acfbbecdc6ad049a5394c474363a44c0157f",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_WEB_448901C05876A2F6C2DE01CD": "K_XLSX_WEB_448901C05876A2F6C2DE01CD是H_644EEE5EC12221D39672FE26E2_4指向C_XLSX_WEB_7C8DA80537E697ACA62D1DAC的direct关联，地域CN-3201；C完整保留2025《南京市消防条例》第42条。直接义务限第2款歌舞娱乐放映游艺场所包厢、包间，同步设置声音或者视像警报并保证火灾初期消除原画面音响、播送警报和引导疏散。第1款公共娱乐场所一般管理规定不扩大第2款空间对象，第3款观众厅禁烟明火不混作本场景。profile按实际用途和功能触发，没有将或者改成两者同时必备或声光同义替换；没有虚构声压、数量、周期或技术路线。第2条地域和特别规定优先保留，配置/切换/播送分别安全取证，无法证实时待核。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "60cedb1761bfd487a6be36ec7544118f018933f9cf9d7919fcaf2b79583c2d3b",
+    "profileFileSha256": "a258768592c787354bfc188f8f4ce70477621bebbda2a3130a7ceb5abf0497d2",
+    "officialStatusObservationSha256": "ee3d6397ea528444d1a8afe9f6ab381513b6bfef7706bf494db45b2926ef4576",
+    "officialSources": [
+      "https://flk.npc.gov.cn/detail?id=ff80818194a5cf29019541042f6d1cdc",
+      "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html",
+      "https://www.nanjing.gov.cn/zdgk/202505/t20250512_5559980.html"
+    ],
+    "officialStatusObservedAt": "2026-10-02T08:14:49Z",
+    "officialStatusObserved": "有效",
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html",
+        "locator": "南京人大正式公告全文第42条网页行284—296，第2条48—50，第76条469；市政府第42条309—321"
+      }
+    ],
+    "fullArticleQuoteMatchesOfficialTextIgnoringLayoutWhitespace": true,
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_WEB_448901C05876A2F6C2DE01CD",
+        "clauseId": "C_XLSX_WEB_7C8DA80537E697ACA62D1DAC",
+        "lawVersionId": "LV_NPC_ff80818194a5cf29019541042f6d1cdc",
+        "lawId": "LF_NPC_ff80818194a5cf29019541042f6d1cdc",
+        "officialName": "南京市消防条例",
+        "officialNumber": "南京市人大常委会公告第27号",
+        "publishedOn": "2025-02-08",
+        "effectiveOn": "2025-05-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://flk.npc.gov.cn/detail?id=ff80818194a5cf29019541042f6d1cdc"
+        ],
+        "reviewedArticles": "第四十二条完整三款；直接义务为第二款；并核第二条、第七十六条",
+        "jurisdictionCode": "CN-3201"
+      }
+    ],
+    "usageConstraints": [
+      "本决定仅批准可复用条件路由、适用边界、取证指引和整改方向，不证明现场缺陷、重大隐患或处罚条件。",
+      "routing_only保持findingTemplate=null与observedViolation=false；perUseFacts仅列待核事实名，不含事实值，也不是可自动执行的逻辑式。",
+      "每次使用仍须核准版本、地域、实际主体/空间/设备和缺陷事实；设计遗漏、缺材料或缺记录均不单独证明实质违规或当然豁免。",
+      "取证须经许可且安全，不影响真实报警和防护功能；记录必要点位、角色和结果，不新增个人身份或无关材料收集。",
+      "既有源H的巡检/留存表述不得解释为本两款单独新增的统一法定周期或格式；本review不重新认证源实体全部未变字段。",
+      "完整profile、关联集合及依赖均由实际哈希绑定，任何变化须重新独立审阅；本决定不授权远端合并或发布。"
+    ],
+    "sourceSnapshotEqualsReviewed": true,
+    "siteFactsVerified": false
+  }
+}

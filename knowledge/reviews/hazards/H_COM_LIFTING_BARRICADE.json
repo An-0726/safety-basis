@@ -2,10 +2,57 @@
   "entityType": "hazard",
   "entityId": "H_COM_LIFTING_BARRICADE",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "6a8d3f97835d99da2b2909f3006fe054f8f5b40a76d2242c6bd2d644366cca33",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "46510ef6cdccfe2f8ba28c4a622da7dbc901a8a6f73e4828c7c44e002d342162",
+  "checkedAt": "2026-10-02T16:20:00+08:00",
+  "reviewer": "Codex Commerce official-source direct-basis review",
+  "reason": "原候选警戒隔离与无关人员停留经精确分解后与第3.4.1直接对应；将保护区域和人员监护分别表述，避免只有一种围挡外观即可触发的误判。",
+  "evidenceRefs": [
+    "E_COM_GB55034_TEXT_20261002"
+  ],
+  "reviewedFields": [
+    "/id",
+    "/title",
+    "/description",
+    "/measures",
+    "/conditions",
+    "/category",
+    "/places",
+    "/aliases",
+    "/keywords",
+    "/lifecycle",
+    "/mode",
+    "/note",
+    "/mergedInto"
+  ],
+  "notes": "逐项实质核验仅限本记录及所列直接义务；内容hash绑定本次范围、原文和适用边界，不认定原企业事件，不批准现场profile或标准全文再发布。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_LIFTING_BARRICADE",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "16fec7105767a1c208dd00388c37a46f74d3fc59fb763c30c6b47f4c98dac62d",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "吊装安全保护区域条款与安全生产法43专门现场安全管理义务分开；GB55034第3.4.1可用于建筑市政施工吊装，普通工厂其他吊装须核适用规范。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_LIFTING_BARRICADE",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_LIFTING_BARRICADE",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "6a8d3f97835d99da2b2909f3006fe054f8f5b40a76d2242c6bd2d644366cca33",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "previousReviewFileSha256": "98fc76fa34529a23bbb038f373df5d16d8c8a6b0595bb2e3f84101ea5ed12abd",
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_LIFTING_BARRICADE",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_LIFTING_BARRICADE",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

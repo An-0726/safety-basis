@@ -1,11 +1,29 @@
 {
-  "entityId": "H_COM_SOP_MISSING",
   "entityType": "hazard",
+  "entityId": "H_COM_SOP_MISSING",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "5e186f55709ba0548ab4a7330a138015b3eb91164ae88deb63d208a547efebb2",
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "reviewer": "ChatGPT",
-  "evidenceRefs": [],
-  "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  "decision": "verified",
+  "reviewedContentHash": "cc1af8f52c80e066d7b36d1f0be3bd7d07e1f23a6132df9a41f3bd5674d82f76",
+  "checkedAt": "2026-10-02T16:00:00+08:00",
+  "reviewer": "dot / item-level source and applicability review",
+  "reason": "定义层面缺少适用规程并未组织实施，归入H020。来源中仅未上墙、名称不同、单份纸质版缺少或暂不可辨认，不单独证明主要负责人未履责；该分支保留为资料核验。",
+  "evidenceRefs": [
+    "E_WORK_SAFETY_LAW_MEM_20260926"
+  ],
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SOP_MISSING",
+  "previousReview": {
+    "entityId": "H_COM_SOP_MISSING",
+    "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "5e186f55709ba0548ab4a7330a138015b3eb91164ae88deb63d208a547efebb2",
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "reviewer": "ChatGPT",
+    "evidenceRefs": [],
+    "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  },
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_SOP_MISSING",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

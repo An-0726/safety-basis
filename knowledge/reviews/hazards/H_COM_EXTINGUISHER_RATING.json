@@ -2,10 +2,40 @@
   "entityType": "hazard",
   "entityId": "H_COM_EXTINGUISHER_RATING",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "175c3edde498649907b876ef25030abc9ae64e57a901e3d21cb42e0f5eaaa501",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "1a5fc00134ee358c0d19f45874f27aa44491655cd7dbea7b90507f0a21ab033a",
+  "checkedAt": "2026-10-02T08:15:00Z",
+  "reviewer": "Commerce direct-basis substantive review 20261002",
+  "evidenceRefs": [
+    "E_GB55036_SH_ORIGINAL_20260926"
+  ],
+  "reason": "复用已逐字审核的GB 55036—2022第10.0.1、10.0.2、10.0.3条；通用选型/计算义务已确定，原充电区具体核算是应用时事实校验，不是条目准入障碍。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_EXTINGUISHER_RATING",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "d92ce3efa48d5337255dc2afd8cdc5ef5e306fbd73035e8b0c04ed19283acd56",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "类型与灭火级别须分开核：GB55036第10.0.1可审类型适配，第10.0.3涉及级别与配置条件。不能把电池外观或“充电区”三个字当作计算结果。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EXTINGUISHER_RATING",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_EXTINGUISHER_RATING",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "175c3edde498649907b876ef25030abc9ae64e57a901e3d21cb42e0f5eaaa501",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EXTINGUISHER_RATING",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_EXTINGUISHER_RATING",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

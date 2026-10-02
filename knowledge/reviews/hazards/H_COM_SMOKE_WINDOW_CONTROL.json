@@ -2,10 +2,40 @@
   "entityType": "hazard",
   "entityId": "H_COM_SMOKE_WINDOW_CONTROL",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "61a102957a682b2d7170853b419f52d03f2d7bcdd2ca6395102de92858ac1052",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "687577d5e79be2b648e0140f6a052f3449a20b3c6ad56bb0fd8daba16454e32c",
+  "checkedAt": "2026-10-02T16:27:00+08:00",
+  "reviewer": "dot / substantive source review with separate scope check",
+  "reason": "确认属于设计消防排烟设施、遮挡已影响手动开启功能的缺陷归并H025完好有效维护义务。普通通风窗、仅暂未见功能测试、安装高度或统一标识说法不由本次归并自动认定。",
+  "evidenceRefs": [
+    "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"
+  ],
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_SMOKE_WINDOW_CONTROL",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "011b84159e8ab4b629e30902334702cfba9256cccea0506af8e8bf217b3de743",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "原GB51251第4.3.6涉及手动开启设施设置/位置，不单独推出统一标识形式；已设计排烟设施不能正常操作的分支可用消防法16(2)核维护责任，不能未经设计核实把普通窗当消防设施。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SMOKE_WINDOW_CONTROL",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_SMOKE_WINDOW_CONTROL",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "61a102957a682b2d7170853b419f52d03f2d7bcdd2ca6395102de92858ac1052",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SMOKE_WINDOW_CONTROL",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_SMOKE_WINDOW_CONTROL",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }
