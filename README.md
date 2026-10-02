@@ -4,216 +4,112 @@
 
 在线站点：<https://an-0726.github.io/safety-basis/>
 
-> **AI / Codex / 新窗口接手：先读根目录 [`AGENTS.md`](AGENTS.md)。** `AGENTS.md` 维护长期工作边界；[PROJECT_STATE](docs/PROJECT_STATE.md) 维护阶段进度与暂停状态；本 README 负责长期架构、数据口径和维护硬规则。当前只认 `main` 一条主线、`knowledge/` 一套正式结构化知识源、`source/library/` 一套本地私有证据库。历史“final/latest/日期版”不留在当前目录树，需要追溯时看 Git。
+**当前上线版本、已核数量、剩余工作和完整8步计划统一见 [PROJECT_STATE](docs/PROJECT_STATE.md)。** 本页说明怎么使用与长期数据边界，不另维护第二份“当前状态”。接手维护先读 [AGENTS](AGENTS.md) 和 [HANDOFF](docs/HANDOFF.md)。
 
-## 一、当前唯一架构
+## 一、怎么使用
+
+1. **隐患速查**：输入设备、现场问题或法规名称；多个关键词用空格分开。先看专业分类、地区，必要时再用“更多筛选”中的场所、依据类型和适用方式。没有结果时先清除过窄条件，不把“未检索到”理解为不存在义务
+2. **隐患详情**：先核对对象、场所和适用条件，再读具体条款、逐条关联范围与官方来源。描述和整改建议是核查参考，不是对任何现场事实的自动确认
+3. **核查用途与场景**：当前源码在“更多筛选”中提供可选核查用途，详情可展开“条件 / 场景适用性”；上线进度见PROJECT_STATE。默认仍包含全部正式条目，未归类不等于不适用。选择场景只显示对应条件、误判边界、最小取证和整改方向；资料核查、法规义务不能被当成现场可直接认定的隐患。无模板场景不提供描述模板，有模板的也保持未填占位。详见[交互契约](docs/FIELD_PROFILE_UI_CONTRACT.md)
+4. **法规库**：按实际被正式条款引用的版本查阅；同名或不同来源不一定是不同法规。使用前核对标准号/文号、版次、实施与终止日期
+5. **重大隐患判定**：独立查看受控规范条文、直接关联隐患、行业题录和官方原文查阅。条数、列项数、文件数和隐患数分别计数；不能把一条关键词命中、一个入口或未核日期的阅读文件当作重大隐患结论
+6. **法规全文**：区分获准公开的全文与仅提供官方入口的资料。只有题录/官方链接，不表示本站已核全文、允许复制全文或认可其当前适用性
+
+页面中的复制与分享便于追溯，不代替核实现场条件。场景选择不保存到URL或浏览器持久存储，不接收企业事实或上传资料。多次使用同一配置仍需重新收集本次现场证据。
+
+## 二、数据边界
+
+- **正式站**只发布指定 `asOf` 日期下通过完整审核链Gate的记录。`lifecycle=active` 只是源状态，单独不能证明可发布；`proposed` 候选不进入正式公共包
+- **日期快照**不是实时法律状态。未来版本、历史版本、未知施行日期和已过期记录须按各自规则处理；发布后法律变化不会自动成为本包的新结论
+- **场景审核**确认通用用途、条件和取证边界，不证明企业事实成立。`routing_only` 不生成隐患描述模板，排除默认现场用途不等于删除原条目或否定法规义务
+- **独立原文查阅**与当前判定依据分开。非煤补充、民爆和烟花文件的明确施行日未核准时，即使正文可读，也不进入本站当前隐患依据体系
+- **公开权利**与官方来源分开。消防GB/AQ全文再发布权利尚未核准，仅提供各自已获准的题录、短主题或官方入口；不能由其他行政正文的公开依据推定技术标准可全文复制
+- **未完资料**包括历史行级底稿缺口、商贸候选建议、被隔离的错误依据及未取得的试点验收材料。详情见PROJECT_STATE；已读取、标记hold、工程测试通过均不等于实质审核完成
+
+结果是查证辅助，不承诺全行业、全部项目原件或全部现场问题已覆盖。使用者须结合最新官方文件、实际对象与完整前提作判断。
+
+## 三、唯一正式架构
 
 ```text
-source/library/ 〔本地私有证据，Git 忽略〕      官方互联网来源
-原始 PDF / 网页快照 / OCR / SQLite            全国人大/政府网/主管部门/国家标准平台
-        │                                      │
-        └──────────────┬───────────────────────┘
-                       ▼
-                  knowledge/
-              正式结构化知识源
-       法规身份/版本/条款/隐患/关联/审核
-                       │
-                       ├──────────────► source/publication/
-                       │                公开题录/官方入口/获准全文
-                       │                不创造第二套正式法规身份
-                       ▼
-                当前日期链式 Gate
-                       ▼
-          tools/v4/build_unified_release.py
-                       ▼
-      source/releases/current/ 〔生成物，Git 忽略〕
-                       ▼
-            GitHub Pages / dist/local public
+本地私有原件 / 官方网页与PDF
+              ↓
+         knowledge/
+  身份 → 版本 → 条款 → 隐患/关联 → 审核
+              ↓
+     指定日期的完整证据链Gate
+              ↓
+  tools/v4/build_unified_release.py
+              ↓
+    source/releases/current/（生成物）
+              ↓
+      GitHub Pages / 本地静态版
 ```
-
-### 核心职责
 
 | 层级 | 位置 | 职责 |
 |---|---|---|
-| 正式知识源 | `knowledge/` | 法规身份、真实版本、条款、隐患、关联、审核 |
-| 公开来源层 | `source/publication/` | 题录、官方入口、允许公开分发的全文 |
-| 私有证据库 | `source/library/` | 原件、archive、incoming、SQLite、OCR；不进 Git |
-| 网站源码 | `web/` | 当前公开界面 |
-| 发布成品 | `source/releases/current/` | CI/本地现场生成；不提交、不手改 |
+| 正式知识源 | `knowledge/` | 法规身份、版本、条款、隐患、关联、审核及独立场景配置 |
+| 公开来源层 | `source/publication/` | 题录、官方入口和获准公开的全文，不创建第二套正式法规身份 |
+| 私有证据库 | `source/library/` | 本地原件、archive、incoming、SQLite、OCR；Git忽略 |
+| 网站源码 | `web/` | 正式搜索、详情、法规与专题界面 |
+| 生成发布包 | `source/releases/current/` | 从源与规则重建，不提交、不手改、不反向当母库 |
 
-本地工作仓库约定：
+`knowledge/` 是唯一正式结构化知识源，`main` 是唯一自动部署主线。SQLite只承担检索定位，不高于官方或原始证据。本地证据优先，但缺失时继续查权威官方来源；无须先写SQLite或把原件导入私有库才能建立合格证据链。
 
-`D:\ESH\ESH_Codex\work\safety-basis\`
+## 四、法规身份、日期和引用规则
 
-私有法规证据库：
+- 同一法规、同一真实版本、多个来源：一个canonical版本保留多来源；不同真实版本分别保留，并记录生效、替代和废止关系
+- `LF_* / LV_* / C_* / H_*` 等稳定ID不因展示或整理而重编号，不按标题相似度删除实体
+- 正式引用须同时具备法规身份、适用版本、精确条款、完整逐字原文、官方URL或可追溯原件、适用性及仍绑定当前内容的审核
+- AI、OCR、搜索摘要、Excel要点和第三方转载只能辅助定位，不能替代正式原文；指纹更新不能代替实质复核
+- 普通详情每条 `basisRefs` 保留精确关联K的适用范围与地域；多依据不能互串条件，整条规范或原H条件不能代替逐K边界。详见[法源范围契约](docs/BASIS_SCOPE_CONTRACT.md)
 
-`D:\ESH\ESH_Codex\work\safety-basis\source\library\`
+CI/正式发布以 `Asia/Shanghai` 取得中国标准时间的 `asOf` 日历日期。当前依据须满足：`validityStatus=active`、`effectiveDate <= asOf`、`endDate` 为空或 `asOf < endDate`，并通过完整审核链。`upcoming` 不能提前支撑当前正式隐患；最新发布不等于当前适用。
 
-`fulltext.sqlite3` 是检索数据库，不是法律原文最高证据。`source/library/` 是优先使用的本地证据缓存，而不是唯一证据源；本地缺失时必须继续查找权威官方互联网来源。正式引用可以来自已核验的本地原始 PDF / 网页快照，也可以直接来自全国人大、政府网、主管部门官网、国家标准平台等官方网页/PDF，只要版本、条款、完整原文、官方来源和适用性均完成核验。
+重大判定条款允许不创建H/K即可显示，但必须满足受控选择、内容pin、逐条审核和公开范围审核。目录、专题、题录、原文查阅各自有契约，不能通过添加入口来扩大正式依据：
 
-## 二、正式站与候选彻底分开
+- [规范目录与专题](docs/MAJOR_CRITERIA_CONTRACT.md)
+- [官方查阅入口](docs/MAJOR_CRITERIA_REFERENCE_CONTRACT.md)
+- [行业题录](docs/MAJOR_CRITERIA_DIRECTORY_CONTRACT.md)
+- [独立原文查阅](docs/MAJOR_CRITERIA_READING_CONTRACT.md)
+- [场景数据治理](docs/FIELD_PROFILE_CONTRACT.md)
 
-正式站只发布当前 `asOf` 日期链式 Gate 通过的 active 隐患。`lifecycle=proposed` 候选继续保存在 `knowledge/`，但**不进入正式公共包**。
+## 五、维护与验证
 
-候选退出正式包不等于删除：稳定 ID、来源行、待办和审核状态继续保存；只有完成“法规身份 → 适用版本 → 具体条款 → 原文证据 → 隐患适用性 → 审核”后才能转正。
+开始前检查工作区并保留已有修改。更改知识源需明确证据、审核范围和受影响关联；不通过删条目、放宽Gate或自动重签审核来“凑绿”。只改文档时核内容、相对链接和diff；涉及代码/数据时执行受影响测试及完整发布检查。
 
-<!-- CURRENT_STATE_BEGIN -->
-## 当前统一状态（2026-09-26，按用户要求停止扩查并收尾）
+在仓库根目录运行（Python依赖见 `tools/pipeline/requirements.txt`；CI使用Python 3.12、Node 22）：
 
-记录时间：2026-09-26T20:47:38+08:00。原725条全部完成逐行阅读与处置记录，共899个细分项；这不是全部事实或直接依据已核准。359行含实体映射，418次映射指向115个实体，其中112个为既有实体、3个为本次接续中新建实体；另366行没有确定实体映射。418行至少含一项待核，和上述映射行有交叉，不能相加。另141条补查来源、167项处置分开统计。
-
-本地知识源2130实体：1663正式、354候选、113历史归并。本次接续新建消防泵自动待命、丙类厂房生产辅助用房防火分隔、独立安全出口3个实体；已有条目复用、候选补证转正、错误依据撤回和同义归并另计。
-
-PR93已经上线并逐个核对全部隐患和条款分片，正式1661条、候选公开0条；提交250f251ea581195a37645601acb47a945418e8b5，主分支构建、部署、在线验收成功。证据docs/ONLINE_VERIFY_20260926_ELECTRICAL.json。本提交补充两个厂房辅助用房实体，发布目标1663条；完整条文与适用条件已主审及独立复核。
-
-用户因额度要求收尾，已停止全部助手及额外扩查。全盘来源补查未完成：部分新增表格与已登记来源的差异待逐项比对；两份2026专家手写意见未核清；正式签发与现场整改闭环不能凭文件名或报告自述确认。1703份Office为路径筛查，774页旧检查及22页附件为原生图像文字识别，不等于全部逐字核实。剩余工作与私有文件在本地交接记录中保留，不把待核项算成成果。
-
-企业原文、扫描件和私有审查表不提交公开仓库；仅公开通用隐患、已核法规依据及不含企业信息的进度记录。
-<!-- CURRENT_STATE_END -->
-
-## 三、法规身份、版本、来源必须分开
-
-固定模型：
-
-```text
-法规身份 → 法规版本 → 具体条款 → 原文证据 → 隐患关联 → 审核记录
-```
-
-规则：
-
-- 同一法规、同一真实版本、不同官方来源 → **一个版本，多来源**；
-- 同一法规、不同真实版本 → 分别保留，记录生效、替代和废止关系；
-- publication 题录/平台记录只是来源资料，不因来源不同生成第二张正式法规卡；
-- 原正式法规页只包含正式条款实际引用的 `knowledge/law-versions`；重大判定目录作为独立受控视图，可显示无隐患关联但已核且当前Gate通过的规范条款，见[目录/专题契约](docs/MAJOR_CRITERIA_CONTRACT.md)；
-- 原正式法规索引必须至少有一条实际引用的正式条款；重大判定目录必须至少有一条受控已核条款，不生成隐患凑数；
-- knowledge 若出现同一 `lawId + versionKey` 两个正式版本 ID，构建器拒绝发布，先人工对账；
-- 不按标题模糊删除法规或隐患；
-- `LF_* / LV_* / C_* / H_*` 是稳定关系键，不为了界面好看随意重编号。
-
-### 重大判定目录与隐患专题
-
-后续正文补齐从政府行政规范性文件逐批推进：建城规〔2023〕4号第一至十一条及建质规〔2024〕5号第一至十八条经过独立逐字、范围与公开依据审核后可完整显示，无需创建隐患；题录与正文通过精确版本互链。新的完整正文声明需独立绑定review，不能用metadata-only审核升级。详见[当前缺口与分组计划](docs/MAJOR_CRITERIA_NEXT_COVERAGE.md)；原工贸、GB 45067与AQ入口保持各自已核边界。
-
-统一构建额外输出受控 `major-criteria-catalog` 与 `major-criteria-topic`。第一版为工贸令第10号、GB 45067-2024两个明确版本的已核判定范围，保留整条/列项/直接关联隐患三种计数；不称整部全文或全行业覆盖。规范目录与专业分类正交，无H/K条款无需造隐患也可展示；专题仅收精确current direct链，关键词或泛文本提及不得自动纳入。旧source、正式发布集合和field profile隐私边界不因此放松。
-
-两文件由稳定知识快照生成，受当前日期Gate、显式源内容pin、原review和证据约束，并纳入统一manifest、checksums、releaseHash与严格重算验收。配置及完整schema见[重大判定契约](docs/MAJOR_CRITERIA_CONTRACT.md)。
-
-另有独立[官方查阅入口契约](docs/MAJOR_CRITERIA_REFERENCE_CONTRACT.md)：仅题录与极短检索主题，按元数据/主题真实审核日期发布，无H也可显示；不与正文、直接关联或现场判定计数合并。AQ 3067-2026首批只提供官方查阅入口及53个定位主题，已审公开条款为0，全文再发布未获准。
-
-另有[官方文件题录目录](docs/MAJOR_CRITERIA_DIRECTORY_CONTRACT.md)：首批8个目录主题、9份文件，全部只展示经独立审核的元数据和官方入口，0已审公开条款；保留未知实施日期和非煤主/补充关系，不扩大当前隐患依据Gate。
-
-## 四、“最新发布”不等于“当前适用”
-
-当前正式依据按发布包 `asOf` 日期判断。由于本库用于中国境内法规、标准和地方规则，CI/正式发布统一以 `Asia/Shanghai`（中国标准时间）取得 `asOf` 日历日期，不使用 UTC 日期，以避免实施日当天出现最多 8 小时的效力判断滞后。法规版本只有同时满足以下条件，才能支撑当前隐患：
-
-- `validityStatus=active`；
-- `effectiveDate <= asOf`；
-- `endDate` 为空，或 `asOf < endDate`；
-- 法规身份、版本、条款、证据和关联审核链均通过 Gate。
-
-`upcoming` 表示已经发布但尚未实施。它可以保留在知识库、私有证据库和“法规全文/资料库”，但实施日前**不能作为当前正式隐患依据**。
-
-## 五、正式法规引用硬门禁
-
-正式依据至少必须满足：法规身份明确、版本明确、效力明确、具体条款定位明确、有逐字原文、有官方 URL 或可追溯证据快照、条款号与原文一致、条款确实适用于对应隐患、审核记录仍绑定当前内容。
-
-普通详情的每条 `basisRefs` 保留精确K及其原样applicability/jurisdictionCode，多依据不得互串条件；原H条件和整条规范不能替代逐K范围。详见[法源范围投影契约](docs/BASIS_SCOPE_CONTRACT.md)。
-
-### 证据来源路线
-
-- **先查本地，不限于本地。** 本地私有母库有可靠原件时优先复用；本地没有、版本不全或原文不完整时，必须主动联网查官方来源，不得把“本地无原件”本身当成证据缺口的终点。
-- **官方网络证据可以直接正式纳管。** 全国人大/国家法律法规数据库、中国政府网/国务院、发布机关和主管部门官网、国家标准全文公开系统/全国标准信息公共服务平台、地方政府或主管部门官网等，只要能确认现行版本、精确条款、完整原文和适用范围，就可以直接建立 evidence / lawVersion / clause / link / review。
-- **不要求先导入私有库。** 从官方网页/PDF核验成功后，可以直接形成正式证据链；是否另存私有原件、是否写入全文 SQLite 是离线保存/检索维护事项，不是法规转正前置条件。
-- 普通搜索结果、AI摘要、OCR、Excel“条款要点”、百科、培训网站、商业法规库及第三方转载只能辅助定位；不能单独替代正式法规原文。官方页面只有题录而没有可核验条文时，也不能据此编造条款。
-
-证据不足就保持候选/待核实，不编造；但必须继续按“本地原件 → 官方互联网原文”的路线主动补证，而不是因为本地库缺失直接停止。
-
-## 六、数量必须按层次报告
-
-当前数量统一取本页“当前统一状态”与 `knowledge/manifest.json`。知识库库存、通过 Gate 的公开包、原始来源记录、规范实体和历史目标集是不同统计口径，不得混用。历史 1,929 项目标集（621 项修订、1,308 项保留）与历史 16 份检查表/134项来源映射不等于本次2026全量任务已经完成。
-
-历史阶段数字仅代表明确标注的当时结果；当前 `main`、manifest、对应CI产物与实际线上核验共同确定现状。本次仍有725条原始行待逐条审核，不能以已保存台账或算法候选匹配冒充完成去重。
-
-## 七、为什么 Git 不再保存 `source/releases/current/`
-
-以前把生成包提交进仓库，会出现“knowledge 已经更新，current 还是上一次生成”的双版本问题。现在：
-
-- `source/releases/current/`、`source/releases/site-selection.json`、`*.review.json` 均为生成物并加入 `.gitignore`；
-- GitHub Actions 每次从当前 `knowledge + source/publication + web` 重新构建并严格校验后部署；
-- `tools/build_local_release.py` 每次也会先重建正式公开包，再只读组合本地 `fulltext.sqlite3`；
-- 发布包不再反向成为数据源。
-
-因此仓库只保存**权威源 + 构建规则**，不会再留一套容易过期的“current 快照”。
-
-## 八、本地 agent 安全边界
-
-本轮仓库整理不修改：
-
-- `source/library/fulltext.sqlite3`；
-- 私有 PDF、archive、incoming；
-- OCR 和私有全文索引；
-- 既有稳定 ID。
-
-本地最终版运行：
-
-```powershell
-py -3 tools/build_local_release.py
-```
-
-它会先执行 knowledge 校验、严格 Gate、重建和验证正式公开包，然后只读使用私有 SQLite 生成 `dist/local/`。
-
-## 九、当前主线文档
-
-只维护以下当前文档：
-
-- `AGENTS.md`：长期工作边界；`docs/PROJECT_STATE.md`：唯一阶段状态与恢复计划；
-- `README.md`：项目入口和维护硬规则；
-- `docs/ARCHITECTURE.md`：架构；
-- `docs/MAINTENANCE.md`：日常维护；
-- `docs/LEGAL_STATUS_POLICY.md`：效力/版本规则；
-- `docs/CANDIDATE_REVIEW.md`：候选处理；
-- `docs/HANDOFF.md`：人类当前交接摘要；
-- `source/README.md`、`source/releases/README.md`：source 和生成发布目录说明。
-
-当前树不再保留多个日期版 handoff、final、latest、history 或旧发布包。历史从 Git 恢复。
-
-## 十、验证与部署
-
-`main` 是唯一自动部署分支。核心检查：
-
-```text
+```sh
 node --test tests/*.test.mjs
-py -3 -m unittest discover -s tools/pipeline/tests -v
-py -3 tools/v4/validate_all.py
-py -3 tools/v4/strict_release_audit.py
-py -3 tools/v4/validate_publication_integrity.py
-py -3 tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
-py -3 tools/v4/verify_unified_bundle.py --bundle source/releases/current
+python -m unittest discover -s tools/pipeline/tests -v
+python tools/v4/validate_all.py
+python tools/v4/strict_release_audit.py
+python tools/v4/validate_publication_integrity.py
+python tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
+python tools/v4/verify_unified_bundle.py --bundle source/releases/current
+node tools/v4/check_field_profile_ui.mjs source/releases/current
 ```
 
-CI 在 `build` job 的数据验证和构建前执行 Node 22 前端测试与 Python pipeline 测试；本地阶段 4 的审查包不等于线上部署结果。
+把 `YYYY-MM-DD` 换为要验证的中国标准时间日期；Windows可用 `py -3` 代替 `python`。涉及版本切换还须验证边界日期。场景UI检查是数据/控制器验证，不代替真实浏览器验收。
 
-其中 `validate_publication_integrity.py` 是长期只读硬门禁：要求 publication 保持 knowledge canonical 1:1 身份投影，并检查全文 catalog、物理 `texts/`、全文搜索 index/gram shards 的确定性一致性与公开/私有边界。它同时运行在 Validate 和实际 Pages Build 路径；失败不得通过修改业务数据“凑绿”。
+`validate_publication_integrity.py` 校验canonical身份投影、全文目录、物理文本与搜索分片的确定性一致性及公开/私有边界。strict blocker或publication完整性失败必须阻断发布。
 
-严格审计存在 release blocker 或 publication integrity 失败时，CI 必须失败。未来版本、历史版本、候选和待回绑项作为库存/backlog 管理，不得偷偷进入正式投影。
+本地私有版另运行 `python tools/build_local_release.py`：先重建并验证公开包，再只读组合已存在的私有SQLite，生成 `dist/local/`；本命令不授权获取、修改或同步任何用户私有资料。
 
-## 十一、2026-09-14 架构收口阶段改了什么（历史记录）
+发布完成必须对照精确提交、CI、部署产物及线上验收；本地构建成功不能写成已上线。操作顺序见 [HANDOFF](docs/HANDOFF.md)，长期流程见 [MAINTENANCE](docs/MAINTENANCE.md)。
 
-- 删除旧日期版交接、重复报告和临时 history 文档；
-- 前台不再混排候选、零条款目录项和长技术 ID；
-- 候选从正式发布数据层彻底退出，只留 knowledge 后台；
-- 正式法规索引改由实际正式条款引用的 knowledge 版本生成；publication 退回来源/资料职责；
-- 修正 upcoming 门禁，尚未实施版本不得支撑当前正式隐患；
-- 严格审计 blocker 现在真正阻断 CI；
-- 删除 Git 中旧 `source/releases/current/` 与旧 selection 快照，改为现场确定性生成；
-- 本地构建同步改为先重建正式公开包，再只读组合私有全文；
-- 新增根 `AGENTS.md` 作为跨聊天窗口的长期接手记忆，阶段状态已迁移至 `docs/PROJECT_STATE.md`，仅实际阶段变化时更新；
-- **未修改私有法规母库、PDF、SQLite、OCR 和稳定 ID。**
+## 六、文档与历史
 
-以后任何影响架构、数据口径、法规归并、候选策略、发布范围、本地母库位置或停用工具的改动，都必须同步更新本 README；实际改变阶段状态或下一步的进展更新 `docs/PROJECT_STATE.md`。提交说明写清：**改了什么、为什么改、影响哪些数据、是否需要重新审核/重建。**
+- [PROJECT_STATE](docs/PROJECT_STATE.md)：唯一当前基线、8步计划和资料保留项
+- [HANDOFF](docs/HANDOFF.md)：继续执行所需的少数步骤
+- [ARCHITECTURE](docs/ARCHITECTURE.md)：架构；[LEGAL_STATUS_POLICY](docs/LEGAL_STATUS_POLICY.md)：效力与版本
+- [CANDIDATE_REVIEW](docs/CANDIDATE_REVIEW.md)：候选审核；[source说明](source/README.md)：来源与生成物
+- [历史阶段归档](docs/history/PROJECT_STATE_THROUGH_20261001.md)：旧阶段的原记录及明确更正；更早完整变更可在Git历史追溯
 
-## 十二、隐私与许可证
+历史日期报告中的“完成”“待审”“已部署”仅属于所记批次，不能被复制成当前全库状态。知识库存、公开投影、原始行、细分项、规范条文和场景配置分别计数。
 
-GitHub 与 GitHub Pages 是公开空间。企业报告、照片、未脱敏附件、私有法规原件、SQLite、OCR 和受版权限制的标准全文不得提交。
+## 七、隐私与许可证
 
-代码采用 [MIT License](LICENSE)。
+GitHub和GitHub Pages是公开空间。企业原件、照片、联系人、签字、私有映射、真实本机路径、SQLite、OCR、私有审计/交接材料和未获再发布权利的全文不得进入公开仓库或发布包。
+
+代码采用 [MIT License](LICENSE)；这不为第三方法规标准原件或其他资料授予额外复制权利。

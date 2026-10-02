@@ -1,7 +1,7 @@
 'use strict';
-const SHELL = 'safety-basis-shell-v9';
+const SHELL = 'safety-basis-shell-v10';
 const SHELL_FILES = ['./', './index.html', './library.html', './style.css', './library.css', './stage3.css', './app.js',
-  './js/store.js', './js/search.js', './js/search-vocabulary.js', './js/library.js', './js/fulltext-search.js', './js/verified-files.js',
+  './js/field-profiles.js', './js/store.js', './js/search.js', './js/search-vocabulary.js', './js/library.js', './js/fulltext-search.js', './js/verified-files.js',
   './manifest.webmanifest', './icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(SHELL).then(cache => cache.addAll(SHELL_FILES)).then(() => self.skipWaiting()));

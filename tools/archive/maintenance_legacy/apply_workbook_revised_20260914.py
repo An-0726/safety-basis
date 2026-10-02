@@ -18,7 +18,6 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_XLSX = Path(r"D:/Desktop/隐患库_1929条_新版口径全部整改完成_20260914.xlsx")
 KNOW = ROOT / "knowledge"
 OUT_DIR = ROOT / "source" / "proposals" / "excel-20260914"
 AS_OF = "2026-09-14"
@@ -56,7 +55,7 @@ def append_note(old: str, basis: str, explanation: str, status: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
+    ap.add_argument("--xlsx", type=Path, required=True)
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
     if not args.xlsx.is_file():

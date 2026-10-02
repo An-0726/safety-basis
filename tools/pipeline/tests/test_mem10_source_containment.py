@@ -25,6 +25,17 @@ HIDS = {h for values in FIXTURE['clauseToHazards'].values() for h in values}
 KIDS = {'K_XLSX_WEB_' + h for h in HIDS}
 
 
+# This repair protects the original six; later independently reviewed profiles may be added.
+ORIGINAL_PROFILE_IDS = {
+    'FPR_EXTINGUISHER_ACCESS_BLOCKED',
+    'FPR_EXTINGUISHER_BRACKET_OBSTRUCTION',
+    'FPR_GAS_ALARM_FUNCTION_FAILURE',
+    'FPR_ROUTING_JSXF_53_3',
+    'FPR_ROUTING_JSXF_58_1',
+    'FPR_ROUTING_JSXF_58_2',
+}
+
+
 def read(path):
     return json.loads((ROOT / path).read_text(encoding='utf-8'))
 
@@ -43,7 +54,7 @@ class Mem10SourceContainmentTests(unittest.TestCase):
 
     def evaluate(self, state, day):
         def source(_root, rel):
-            return copy.deepcopy(state[rel])
+            return copy.deepcopy(state[rel.replace('\\', '/')])
         with patch.object(gate, 'load_dir', source), patch.object(gate, 'load_reviews', source):
             return gate.evaluate_release_gate(KNOW, date.fromisoformat(day))
 
@@ -120,10 +131,12 @@ class Mem10SourceContainmentTests(unittest.TestCase):
             before.reviews[row['entityType']][row['entityId']] = row['oldReview']
         records = [json.loads(p.read_text(encoding='utf-8'))
                    for p in (KNOW / 'field-profiles/v1/records').glob('*.json')]
-        self.assertEqual(len(records), 6)
+        self.assertTrue(ORIGINAL_PROFILE_IDS <= {profile['id'] for profile in records})
         for profile in records:
             self.assertEqual(review_bindings(profile, current), review_bindings(profile, before))
-        self.assertEqual(len(public_projection(KNOW, as_of=date(2026, 10, 1))['public']['records']), 6)
+        published_ids = {profile['id'] for profile in
+                         public_projection(KNOW, as_of=date(2026, 10, 1))['public']['records']}
+        self.assertTrue(ORIGINAL_PROFILE_IDS <= published_ids)
 
     def test_paraphrase_issue_and_existing_correct_full_article_not_silently_repaired(self):
         clause = read('knowledge/clauses/C_MEM10_8_7.json')

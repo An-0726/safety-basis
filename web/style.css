@@ -10,3 +10,21 @@ nav a.nav{text-decoration:none;display:inline-flex;align-items:center;justify-co
 .candidateNotice.muted p{color:#6e7b6a}
 /* The separate criteria entry must not squeeze the shared mobile header. */
 @media(max-width:780px){header{height:auto;min-height:72px;flex-wrap:wrap;align-content:center;padding-top:10px;padding-bottom:6px}header nav{order:3;flex-basis:100%;width:100%;justify-content:flex-start;flex-wrap:wrap;height:auto;min-height:44px}header nav .nav{min-height:44px}header .private{display:none}}
+
+/* Governed scene guidance is part of the existing detail, not a new category. */
+.field-profile {border-left:3px solid var(--green, #286453);padding-left:16px}
+.field-profile label {display:block;font-size:14px;font-weight:700;margin:12px 0 6px}
+.profile-controls {display:flex;gap:8px;align-items:start}
+.profile-controls select {width:100%;min-width:0;max-width:100%;padding:12px;border:1px solid #cbd8d1;border-radius:8px;background:#fff;font:inherit}
+.profile-controls button {flex:none;min-height:44px}
+.profile-help,.field-profile #profileHelp,.profile-card-label {font-size:13px;color:#51675e}
+.profile-routing-note,.profile-route {background:#f0f5f1;border-radius:8px;padding:12px}
+.profile-guidance h4 {font-size:14px;margin:20px 0 6px}
+.profile-guidance ul {padding-left:20px;line-height:1.8}
+.profile-guidance li+li {margin-top:5px}
+.profile-basis {padding:12px;margin:8px 0;border:1px solid #d7e2dc;border-radius:8px;overflow-wrap:anywhere}
+.profile-basis span {font-size:12px;color:#51675e}
+.profile-template {background:#f7f8f5;padding:12px;border-radius:8px;margin:14px 0}
+.profile-template summary {cursor:pointer;min-height:30px;line-height:1.6}
+.profile-template p {white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:480px){.profile-controls{flex-wrap:wrap}.field-profile{padding-left:10px}.profile-guidance ul{padding-left:18px}}

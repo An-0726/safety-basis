@@ -1,9 +1,10 @@
 # Governed reusable field profiles, version 1
 
-This is a backend contract and release integration, not a deployment or automatic
-approval of content. The existing 24-case private pilot namespace remains untouched
+This is the backend governance and release contract, not automatic approval of
+content. The formal search/detail consumer is specified in
+[FIELD_PROFILE_UI_CONTRACT](FIELD_PROFILE_UI_CONTRACT.md). The existing 24-case private pilot namespace remains untouched
 and isolated. No automatic or bulk pilot migration, automatic review signing, or
-frontend interaction change is included.
+automatic frontend admission of unreviewed content is included.
 
 ## Storage and identity
 
@@ -195,9 +196,10 @@ that date as `YYYY.MM.DD.current`; no historical date default is used. It writes
 - The file's SHA-256 in `site-manifest.json.fileHashes` and `checksums.json`, and
   inclusion in the deterministic business `releaseHash`
 
-Consumers may load the advertised path through the existing `VerifiedFiles.read`
-integrity loader. This integration does not add a UI, forms, populated onsite
-facts, longform reports or automatic findings. Zero published profiles is valid;
+The formal frontend consumes the advertised path through `VerifiedFiles.read`
+and the strict UI contract linked above. It adds optional purpose/scene selection
+inside existing search and detail, with no populated onsite facts, longform
+reports or automatic findings. Zero published profiles is valid;
 the existing hazard, legal basis and search collections remain unchanged. No
 private coverage totals, inventory, excluded IDs, drafting metadata, review
 objects or evidence objects are serialized into the new payload or manifests.
@@ -220,8 +222,8 @@ records; structural private profile/review fields are rejected anywhere in JSON.
 
 ## Operational boundaries and limitations
 
-- The production builder imports this module, but existing frontend interactions
-  do not. No real record is automatically approved. An empty profile result never
+- The production builder imports this module; formal search/detail consumes only
+  its verified public projection under the separate UI contract. No real record is automatically approved. An empty profile result never
   replaces the existing public hazard bundle.
 - Direct calls to `public_projection` must use a stable read-only knowledge source.
   The unified builder and verifier provide the capture mechanism described above.

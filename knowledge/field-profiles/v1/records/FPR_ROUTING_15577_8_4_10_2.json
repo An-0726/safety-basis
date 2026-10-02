@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_15577_8_4_10_2",
+  "revision": 2,
+  "hazardId": "H_15577_8_4_10_2",
+  "title": "湿式除尘清泥与开停机通风核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的湿式除尘系统，核查沉淀泥浆清除及水槽（箱）、水质过滤池（箱）在开机和停机状态下的良好通风。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+      "确认粉尘爆炸危险场所的湿式除尘系统，定位沉淀泥浆及水槽（箱）、水质过滤池（箱）。",
+      "清泥与通风分别核查；通风核查包括除尘器开启和停止状态，不把两缺陷必须同时出现设为条件。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用GB 15577-2018；不构成粉尘爆炸危险的普通粉尘场景不适用本项。",
+      "不扩为一切水池/水槽或所有粉尘水洗作业，不给出所有粉尘一律水洗的建议。",
+      "第8.4.10条分号前的水量、流速及液位/流速连续监测报警要求不自动纳入本项已经核验的义务。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "wetDustCollectorAndObjectsConfirmed",
+      "sludgeRemovalBranchAssessed",
+      "ventilationWhileRunningAssessed",
+      "ventilationWhileStoppedAssessed",
+      "branchSpecificEvidenceIdentified"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对湿式除尘系统结构、粉尘性质、清泥安排与现场沉淀泥浆状态，记录点位与时段；清泥证据与通风证据分开。",
+    "分别取得除尘器开启和停止状态下水槽（箱）、水质过滤池（箱）的通风设计、运行或安全检验材料，未知状态单列，不以单次开机观察代替停机证据。",
+    "不得为取证人为造成可燃气体积聚、关闭必要通风或让人员进入危险容器；安全条件不足时使用有效专业记录并保留缺口。",
+    "本项为条件式检查入口，未设置现场事实值；检查入口不以缺陷已经发生为条件。现场正向缺陷判断必须另外满足适用性、触发条件及对应分支的事实证据，不把未知当作符合或违规。",
+    "仅核验本项必要的设备或设施标识、点位、时段、岗位角色及相关证据；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或无关完整材料。"
+  ],
+  "correctiveDirection": "及时清除湿式除尘系统沉淀泥浆，保证水槽（箱）及水质过滤池（箱）在除尘器开启和停止状态下均有良好通风；按已识别分支复核清理与通风效果，不将本要求解释为所有粉尘均应水洗。",
+  "basisLinkIds": [
+    "K_XLSX_980b2f519aadf71057a3a550"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "先确认湿式除尘系统，分别核清泥和水槽/过滤池通风；开启与停止状态均在通风要求内。",
+  "authoringBasisRationale": {
+    "K_XLSX_980b2f519aadf71057a3a550": "GB 15577-2018范围内粉尘爆炸危险场所湿式除尘系统的沉淀泥浆，以及水槽（箱）、水质过滤池（箱）。 先确认湿式除尘系统，分别核清泥和水槽/过滤池通风；开启与停止状态均在通风要求内。 direct仅支持下述相应义务，不外推为其他条款、技术认证或重大事故隐患结论。"
+  },
+  "authoringReviewFlags": [
+    "independentProfileReviewPending:revision2私有候选未获正式profile批准",
+    "branchEvidenceRequired:复合要求必须独立判断，不把所有分支事实合并为AND"
+  ],
+  "authoringStatus": "private_revision2_awaiting_independent_profile_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "dbdb7e6a0394232ba307d2df74be97dd016f41cf61c17ea3e3d56b5b74036258",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalAuthoringReviewFlags": [
+    "needsDefinitionSplit:清泥与通风两项要求",
+    "scopeReviewNeeded:源conditions及link泛化模板需按本项主体、对象和触发条件精确收窄",
+    "needsDefinitionSplit:清泥与开停机通风为独立证据分支"
+  ],
+  "sourceScopeRevisionAssessment": "本次已按原件及冻结源核验精确conditions、places及所选link；旧requires已实质替换。此结论不等于profile批准。",
+  "sourceTree": "f7854fd5bfe1cb73353280de52a495dbae7c3ba1",
+  "revision2SemanticChanges": [
+    "用已修源湿式除尘conditions取代泛化全粉尘环节requires。",
+    "入口明确沉淀泥浆，避免旧稿只写水槽/过滤池而遗漏清泥对象。",
+    "将旧合并runningAndStoppedVentilationConfirmed拆为开启/停止分别assessed，并明确清泥/通风OR证据分支。",
+    "保留源title/description已修复的湿式限定与OR；不扩展至液位流速报警，不伪造清泥周期/通风指标。"
+  ],
+  "semanticBoundary": "仅复用路由；无现场事实值、无新H结论、无findingTemplate、无正式review。defectObserved为将来现场判断所需事实名，不是检查入口已发生缺陷的断言。"
+}

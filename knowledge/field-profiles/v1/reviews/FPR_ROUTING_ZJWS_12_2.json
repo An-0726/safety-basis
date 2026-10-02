@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_ZJWS_12_2",
+  "profileRevision": 3,
+  "decision": "verified",
+  "reviewer": "dot：独立最终隐私修订复核",
+  "reason": "本次独立核对revision2与revision3全部字段，变化仅删除私有历史路径及修订号递增；逐字阅读最终适用边界、六维语义评估和精确关联依据，核实全部依赖字节与原独立审阅一致。官方原文及现行状态核验来自所列原独立审阅证据，本次未声称重新联网逐条核法。保留原审阅的用途限制，批准此隐私修订版本；不形成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T17:10:52.261869+00:00",
+  "reviewedProfileHash": "6d230582a4c31959ed906581fa270008403be7350c399830c2d4f2c78b58b4f8",
+  "dependencyFingerprint": "00f7d6b85e102961edd4b7a19ebfd6a0a1af4a76ca8c7352b9c49d88b1fc99a9",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_FT_1F35024B7A16662886FFAAD7": "K_XLSX_FT_1F35024B7A16662886FFAAD7精确关联C_XLSX_FT_F0512157014847162731801A；工作场所职业卫生管理规定（国家卫生健康委员会令第5号，2020-12-31发布，2021-02-01施行；地域CN）。第12条导语和（二）项，第57条工作场所定义；第2、59、60条适用/附则上下文。主语为产生职业病危害的用人单位的工作场所，不缩至单一直接产害房间，也不扩至所有无危害主体；分隔与住人两支独立。 第57条含职业活动所有地点及施工场所；未把本项当完整职业卫生或放射卫生合规认证。第59条医疗机构放射卫生专项另按规定执行，不由本布局子项覆盖。 分开和不得住人的本分支无距离或浓度限值；候选没有杜撰数值。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "72ded36dd860a52c79b828c19fde9a28d1eefcee88ba679d49bee226caa146aa",
+    "officialSources": [
+      "https://www.nhc.gov.cn/wjw/c100221/202201/edc9ae24435d4d93ace796f33c29b029.shtml",
+      "https://www.nhc.gov.cn/wjw/c100221/fg_gzk.shtml"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://www.nhc.gov.cn/wjw/c100221/202201/edc9ae24435d4d93ace796f33c29b029.shtml",
+        "locator": "国家卫生健康委现行有效规章目录第13项；由目录打开同版全文第2、12、57、59、60条"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_FT_1F35024B7A16662886FFAAD7",
+        "clauseId": "C_XLSX_FT_F0512157014847162731801A",
+        "lawVersionId": "LV_META_41623A7893D311A1A7F0A591",
+        "lawId": "LF_META_742108353FBBB16FA5331B8C",
+        "officialName": "工作场所职业卫生管理规定",
+        "officialNumber": "国家卫生健康委员会令第5号",
+        "publishedOn": "2020-12-31",
+        "effectiveOn": "2021-02-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://www.nhc.gov.cn/wjw/c100221/fg_gzk.shtml"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true,
+    "revision3ReviewScope": "仅私有路径删除与修订号更新；最终公共业务语义和全部依赖与原独立批准内容一致。官方来源核验沿用绑定的原独立审阅记录。"
+  }
+}

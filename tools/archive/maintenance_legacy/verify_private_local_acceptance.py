@@ -123,7 +123,7 @@ def main():
     report_content = f"""# 私有母库本地最终版验收报告 (Phase 13)
 
 - 验收日期：2026-09-18
-- 验收环境：Windows 本机真实运行时 (`D:\\ESH\\ESH_Codex\\work\\safety-basis\\`)
+- 验收环境：Windows 本机真实运行时（绝对工作位置不公开）
 - 验收母库：`source/library/fulltext.sqlite3`
 - 验收工具：`tools/build_local_release.py`、`tools/v4/verify_unified_bundle.py`
 

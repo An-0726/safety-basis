@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_15577_8_3_2_1",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_six_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立复核官方现行状态、必要正文与关键页范围/引言，并逐字段审核；签署前再次确认最终record原字节与全部依赖没有漂移。core_onsite_inspection / conditional / onsite_finding对应可定位除尘风管的材质/结构与需技术资料配合的强度核查；routing_only+null模板不形成自动现场结论。 仅GB 15577章1适用的粉尘爆炸危险场所除尘系统风管，普通通风及四类场所排除。钢质材料、禁干式巷道、设计强度不低于除尘器为三项并列义务，材质/结构实际缺陷无需同时强度不足。 profileKind=routing_only且findingTemplate显式null；本次只审核路由/取证要求，不准许自动生成现场缺陷或以空事实表证明违规。 系统路径、风管用途和实际材质/结构证据与强度比较资料分开；强度需同系统及可比单位/工况，缺图纸不等于不足。当前事实名列表不执行全AND判断，正文已分别取证且无模板，故designStrengthComparisonConfirmed未构成现合同阻断。 钢质材料、禁干式巷道与不低于除尘器强度与8.3.2一致；完整整改方向不等于新增当前H“强度不足”的现场缺陷。 K_XLSX_0dac466595d5a96b9c29c60f精确指C_15577_8_3_2全条，适用范围及三义务被保留。现H标题/描述聚焦非钢质或干式巷道，强度核验可作同条关联检查/整改，不得将强度单项异常自动套成这两个缺陷。 本决定仅为该可复用规则的语义签审，不构成个案违规、重大隐患或处罚结论。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:28:48.600406+00:00",
+  "reviewedProfileHash": "6a505b709f01959bbdafcdcf0771ec293a596b07e4f0662787087dd4b82a69e0",
+  "dependencyFingerprint": "64158c8d0907d47c91ea59d800cdc0e8b0a30d670139ec6af02adcdd49d32173",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_0dac466595d5a96b9c29c60f": "K_XLSX_0dac466595d5a96b9c29c60f精确指C_15577_8_3_2全条，适用范围及三义务被保留。现H标题/描述聚焦非钢质或干式巷道，强度核验可作同条关联检查/整改，不得将强度单项异常自动套成这两个缺陷。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "0df39bec2e8b22100ae10a6cda0dc18a785909fc89b4a01cc8d3fdc1fe55d21a",
+    "profileFileSha256": "e4b913ed751d8e48115624b25d20d7832a6f2a3a6481f8069b7f483e99fc6a73",
+    "officialSources": [
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+      "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+        "locator": "标准身份、现行状态、2018-11-19发布、2019-06-01实施"
+      },
+      {
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+        "locator": "PDF第3页/印刷页1范围及定义；第7页/印刷页5之8.1.5和8.1.7；第8页/印刷页6之8.3.2"
+      }
+    ],
+    "usageConstraints": [
+      "本review只批准可复用路由及核验定义，不证明任何真实企业、设备或现场存在缺陷；observedViolation保持false。",
+      "routing_only及显式null模板不授权自动生成已观测现场结论；conditional或exclude只是用途/入口，不等同适用性已证实、实际合规或免除法定义务。",
+      "perUseFacts仅为待核事实名，不是事实值，也不是可自动按AND/OR运算的表达式；必须按原条款及实际分支核验。",
+      "evidenceRequirements为核验建议，不增设法律未要求的统一文书格式、个人名册或资料保管义务；资料缺失不能自动等同未履职或设备功能失效。",
+      "个案事实缺口只限制对应结论；已核实独立分支可以继续，不能因另一分支资料缺失而取消已证实的适用要求。",
+      "当前已经停用、有效整改或后续合格结论不自动消除历史已确证的不符合事实，也不能把旧不利结论无条件视为当前缺陷。",
+      "本决定仅覆盖本profile最终字节及完整依赖；未来修改、新增求值或改变路由须重新审核。"
+    ],
+    "counterexampleReasoningNotSiteTests": [
+      "非钢质风管，强度资料未取得：不妨碍核实非钢质事实，不能附加强度不足。",
+      "钢质风管、无干式巷道，仅设计强度不足：不能自动生成现H标题的两类缺陷。",
+      "干式巷道经改善通风：仍不是8.3.2允许的例外。",
+      "普通通风系统材质非钢质：不能直接套本除尘条款。"
+    ],
+    "nonblockingAuthoringClarifications": [
+      {
+        "field": "applicability.perUseFacts / evidenceRequirements",
+        "minimumEdit": "后续若将字段用于事实录入或求值，将designStrengthComparisonConfirmed改为designStrengthComparisonConfirmedIfAssessed，并写明强度另行核验、缺其资料不阻断材质/结构分支、强度单项不得自动生成当前H两类缺陷。",
+        "severity": "nonblocking_for_current_routing_only",
+        "reason": "当前合同不执行perUseFacts布尔运算，现模板null；建议在引入求值前消除未来AND误读。"
+      }
+    ],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

@@ -58,7 +58,7 @@ MODEL = "deterministic local build"
 
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
-               "js/search-vocabulary.js",
+               "js/search-vocabulary.js", "js/field-profiles.js",
                "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
                "major-criteria.html", "major-criteria.css",
                "js/major-criteria.js", "js/major-criteria-model.js",

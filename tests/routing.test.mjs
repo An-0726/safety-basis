@@ -4,7 +4,7 @@ import {parseRoute, routeQuery} from '../web/app.js';
 
 test('share/reload retains all hazard filters, query and stable ID',()=>{
   const route={view:'hazards',query:'柜门 保护连接',selectedHazard:'H_中文_123',selectedLaw:'',
-    filters:{category:'电气安全',scene:'仓储与物流',level:'国家标准',region:'江苏',mode:'conditional'}};
+    filters:{inspectionClass:'',category:'电气安全',scene:'仓储与物流',level:'国家标准',region:'江苏',mode:'conditional'}};
   assert.deepEqual(parseRoute('?'+routeQuery(route)),route);
 });
 test('law filters and selected law survive round trip without hazard filters',()=>{
@@ -27,4 +27,10 @@ test('special characters are URL-encoded, never interpreted as extra parameters'
   const q='a&view=laws#中文<script>';
   assert.equal(parseRoute(routeQuery({view:'hazards',query:q})).query,q);
   assert.equal(parseRoute(routeQuery({view:'hazards',query:q})).view,'hazards');
+});
+
+test('optional inspection purpose survives URL and scene selection is never serialized',()=>{
+  const route=parseRoute('?id=H003&inspectionClass=document_review&profile=FPR_ONE&facts=true');
+  assert.equal(route.filters.inspectionClass,'document_review');
+  assert.equal(routeQuery(route),'id=H003&inspectionClass=document_review');
 });

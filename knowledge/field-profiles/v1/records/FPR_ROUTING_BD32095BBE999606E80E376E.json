@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_BD32095BBE999606E80E376E",
+  "revision": 1,
+  "hazardId": "H_BD32095BBE999606E80E376E",
+  "title": "压力容器不符合要求定检结论后继续使用的重大隐患专项核查",
+  "inspectionClass": "special_review",
+  "defaultFieldEntry": "exclude",
+  "contentDisposition": "special_check",
+  "applicability": {
+    "requires": [
+      "适用于GB 45067-2024第1章范围内、处于使用过程的压力容器。军事装备、核设施、航空航天器、铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备，以及按特种设备安全技术规范不需要办理使用登记的特种设备，不按本标准判定；相关其他法定义务另行核查。",
+      "限处于使用过程、属于GB 45067-2024第1章范围的压力容器，核查第4.3条a）而非其他安全附件、联锁或用途改变分支。",
+      "必须将同一设备的定期检验结论“不符合要求”与该结论下仍继续使用的事实分别核实并建立时序对应；报告与实际使用缺一不能直接成立本项重大判据。",
+      "重大事故隐患判定主体责任为特种设备使用单位；监管部门监督检查判定项目包含4.3a），检验机构或技术机构提供相应技术支持。",
+      "房屋建筑工地、市政工程工地的第1章排除项仅为起重机械和场（厂）内专用机动车辆，不因压力容器位于工地就一律排除。"
+    ],
+    "excludes": [
+      "军事装备、核设施、航空航天器使用的特种设备；铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备；按安全技术规范不需要办理使用登记的特种设备。",
+      "仅缺失报告、未经定期检验、报告无法对应设备、既往不符合要求已被后续有效结论取代、或该结论后已经停用而无仍继续使用事实，均不得按本项自动认定；其他法定义务另行核查。",
+      "不得将完成整改、检验符合要求或一般运行参数异常直接写成第4.3条a）重大事故隐患。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "equipmentAndUseScopeConfirmed",
+      "exclusionStatusConfirmed",
+      "inspectionReportAuthenticityAndDeviceMatchConfirmed",
+      "inspectionConclusionExactlyNotMeetingRequirementsConfirmed",
+      "continuedUseAfterAdverseConclusionConfirmed",
+      "latestInspectionAndRectificationTimelineConfirmed",
+      "determinationActorAndHandlingStatusConfirmed"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对压力容器类别、技术参数、用途、登记义务及特殊场景属性，将报告、运行对象和脱敏设备编号逐一对应；工地属性本身不排除压力容器。",
+    "核对完整定期检验报告、出具机构与依法适用的检验要求、检验日期和结论页，确认结论为“不符合要求”，并检查后续有效检验、修理和停用资料；不得把未提供报告或整改后符合要求误写为此结论。",
+    "通过运行/调度记录、停用记录及真实现场状态交叉核实不符合要求结论之后仍继续使用的具体时间段；单份报告或单张照片不替代这组时序事实。",
+    "核查使用单位的重大事故隐患判定与治理记录，区分未判定、已判定待治理、已完成治理；不能仅因未见某份材料断言未履行判定义务。",
+    "材料仅保留核验必需的设备、设施、对象类别、机构结论、日期和业务状态，使用脱敏编号；不要求姓名、身份证号、联系方式、人员健康信息、账户或登录凭据。可复用规格不写入任何真实单位、现场数值或已观察结论。",
+    "仅核验和记录本项必要的设备、点位、时间、岗位角色及证据结论；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或与本项无关的完整材料。"
+  ],
+  "correctiveDirection": "对确认在“不符合要求”定检结论下仍继续使用的压力容器立即停止使用，并由相应责任主体按GB 45067-2024第4.3条a）作重大事故隐患判定和治理；完成修理整改并依法检验合格、确认满足安全使用要求后方可恢复使用。保留停用、整改、检验、复核和判定处置记录；不以资料补齐代替停用或复检，不把整改后符合要求当作重大判据。",
+  "basisLinkIds": [
+    "K_GB45067_BD32095BBE99_3"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "与场车定检不合格分支采用同一证据逻辑：专项核查报告结论、同一对象、继续使用时序和判定主体，统一special_review/exclude。",
+  "authoringBasisRationale": {
+    "K_GB45067_BD32095BBE99_3": "该全国性direct链为GB 45067-2024第4.3条，其a）仅支持压力容器定期检验结论为“不符合要求”且仍继续使用的重大事故隐患判定。本规格限使用过程、完整保留第1章设备/特殊场景排除项，不错误排除所有工地压力容器，并区分使用单位主体责任、监管部门4.3a）监督检查判定与技术机构支持。未扩至未经检验、任何运行异常或4.3其他分支；特设法第40条supporting只支持停用义务背景，不选为重大判定依据。"
+  },
+  "authoringReviewFlags": [
+    "composite_definition:检验不符合要求仍用的触发事实与未履行重大隐患判定须分别举证",
+    "pairedInspectionCriterionEvidenceLogic",
+    "exactConclusionWordingNotMeetingRequirements"
+  ],
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "a3129d99198f368d537b8ee55b696477ec86f5c8",
+  "sourceAsOf": "2026-09-30",
+  "sourceHazardContentHash": "7743123c287507e12f09d3fbfc46f52f90e0514faa3453f2bdd1b003f57acb06",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false
+}

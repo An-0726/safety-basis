@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_96106D7519F84C2DA149BB5819",
+  "profileRevision": 1,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_six_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立复核官方现行状态、必要正文与关键页范围/引言，并逐字段审核；签署前再次确认最终record原字节与全部依赖没有漂移。core_onsite_inspection / conditional / onsite_finding用于可定位系统运行方式的检查路由，不等于已判重大；须确认工贸主体、涉爆属性及对应分支实际事实。 部令10第11(四)：(铝镁等金属粉尘AND正压除尘) OR (其他可燃性粉尘AND正压吹送AND未采取防范点燃源措施)。火花防护条件不得移入金属分支；其他分支要核配置和正常有效性。 profileKind=routing_only且findingTemplate显式null；本次只审核路由/取证要求，不准许自动生成现场缺陷或以空事实表证明违规。 行业/粉尘物性、系统图和实际风机/流程/运行方式互证。正文分别指定金属和其他粉尘证据，当前事实字段不作AND且模板null，故未发现两个分支必须同时成立的实质要求。“两套判断记录”应理解分别记录适用性与其分支，不强制两个缺陷。 金属改负压、其他粉尘受工艺条件限制正压时采取可靠防点燃措施，与已登记辅证部令6第15条及GB15577第8.1.7相符；不以火花装置给金属正压开例外。 K_PHASE6_D70AE69B0526086816016507直接指C_PDDB_11，仅消费第(四)项，未消费其余九项，未交换两分支条件；部令6第15条和GB15577第8.1.7仅用于核实既有整改方向，不冒充新增selected direct链。部令10第14条用于核对“有装置”须正常有效。 本决定仅为该可复用规则的语义签审，不构成个案违规、重大隐患或处罚结论。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:28:48.600406+00:00",
+  "reviewedProfileHash": "8824166f1b690d31aed721636c15bf901974bd1ce7fb21853407feede3d3bba1",
+  "dependencyFingerprint": "6254f5a82ca0ceec1a5795356902381c130b6a11375d89b160fd57ee56376eda",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_PHASE6_D70AE69B0526086816016507": "K_PHASE6_D70AE69B0526086816016507直接指C_PDDB_11，仅消费第(四)项，未消费其余九项，未交换两分支条件；部令6第15条和GB15577第8.1.7仅用于核实既有整改方向，不冒充新增selected direct链。部令10第14条用于核对“有装置”须正常有效。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "0df39bec2e8b22100ae10a6cda0dc18a785909fc89b4a01cc8d3fdc1fe55d21a",
+    "profileFileSha256": "27591c3800a30667a4b224bd5ea30167e78dbbdbb218caddc46447c9b44f1a44",
+    "officialSources": [
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+      "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+      "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202305/t20230523_451578.shtml",
+      "https://www.mem.gov.cn/fw/xzzfgs/202605/t20260506_602563.shtml",
+      "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202107/t20210725_405574.shtml"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+        "locator": "标准身份、现行状态、2018-11-19发布、2019-06-01实施"
+      },
+      {
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+        "locator": "PDF第3页/印刷页1范围及定义；第7页/印刷页5之8.1.5和8.1.7；第8页/印刷页6之8.3.2"
+      },
+      {
+        "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202305/t20230523_451578.shtml",
+        "locator": "2023-04-14部令第10号；第2条适用；第11条（四）两分支；第14条功能有效性；第15条自2023-05-15实施及2017版废止"
+      },
+      {
+        "sourceUrl": "https://www.mem.gov.cn/fw/xzzfgs/202605/t20260506_602563.shtml",
+        "locator": "四、主要行政执法依据之部门规章：工贸企业重大事故隐患判定标准、工贸企业粉尘防爆安全规定"
+      },
+      {
+        "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202107/t20210725_405574.shtml",
+        "locator": "第15条金属负压和其他粉尘受工艺限制正压时防点燃要求；第32条自2021-09-01实施"
+      }
+    ],
+    "usageConstraints": [
+      "本review只批准可复用路由及核验定义，不证明任何真实企业、设备或现场存在缺陷；observedViolation保持false。",
+      "routing_only及显式null模板不授权自动生成已观测现场结论；conditional或exclude只是用途/入口，不等同适用性已证实、实际合规或免除法定义务。",
+      "perUseFacts仅为待核事实名，不是事实值，也不是可自动按AND/OR运算的表达式；必须按原条款及实际分支核验。",
+      "evidenceRequirements为核验建议，不增设法律未要求的统一文书格式、个人名册或资料保管义务；资料缺失不能自动等同未履职或设备功能失效。",
+      "个案事实缺口只限制对应结论；已核实独立分支可以继续，不能因另一分支资料缺失而取消已证实的适用要求。",
+      "当前已经停用、有效整改或后续合格结论不自动消除历史已确证的不符合事实，也不能把旧不利结论无条件视为当前缺陷。",
+      "本决定仅覆盖本profile最终字节及完整依赖；未来修改、新增求值或改变路由须重新审核。"
+    ],
+    "counterexampleReasoningNotSiteTests": [
+      "金属粉尘正压除尘即使装有有效火花探测消除：仍满足金属分支，不得豁免。",
+      "其他可燃性粉尘正压吹送且已采取正常有效防点燃措施：不能仅因正压判本分支重大；其他法定义务另核。",
+      "其他粉尘有装置但失效：不能用名义配置当有效防护。",
+      "金属分支无其他粉尘措施资料：不能因此阻断已经查明的金属正压分支。",
+      "非工贸主体或非除尘系统：不得仅凭名称纳入。"
+    ],
+    "nonblockingAuthoringClarifications": [
+      {
+        "field": "applicability.perUseFacts / evidenceRequirements[1]",
+        "minimumEdit": "将ignitionSourceMeasuresConfirmed明确为ignitionSourceMeasuresConfirmedIfOtherCombustibleDustBranch；“保留两套判断记录”改为“按实际适用分支保留判断记录，其余注明不适用”。",
+        "severity": "nonblocking_for_current_routing_only",
+        "reason": "requires与证据正文已明确两个独立分支，事实名列表并非AND表达式；此改动用于减少未来界面和人工误读，改动后须升revision重新绑定。"
+      }
+    ],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

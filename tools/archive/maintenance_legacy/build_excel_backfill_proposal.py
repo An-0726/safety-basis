@@ -3,13 +3,20 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 from openpyxl import load_workbook
 
 
 ROOT = Path(__file__).resolve().parents[2]
-BOOK = Path(r"D:\Desktop\隐患库最终修订交付版_20260913.xlsx")
+# Explicit private input; no personal-machine fallback.
+BOOK_INPUT = os.environ.get("SAFETY_BASIS_WORKBOOK_20260913", "").strip()
+if not BOOK_INPUT:
+    raise SystemExit("Set SAFETY_BASIS_WORKBOOK_20260913 to the required workbook before running this archived tool")
+BOOK = Path(BOOK_INPUT).expanduser()
+if not BOOK.is_file():
+    raise SystemExit("SAFETY_BASIS_WORKBOOK_20260913 must name an existing workbook file")
 OUT = ROOT / "source" / "proposals" / "excel-20260913"
 HAZARD_DIR = ROOT / "knowledge" / "hazards"
 

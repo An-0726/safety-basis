@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_8300469D69145B0731074A2CC4_2",
+  "revision": 3,
+  "hazardId": "H_8300469D69145B0731074A2CC4_2",
+  "title": "非报废特种设备到设计年限后的检验评估与登记变更材料核查",
+  "inspectionClass": "document_review",
+  "defaultFieldEntry": "exclude",
+  "contentDisposition": "document_check",
+  "applicability": {
+    "requires": [
+      "仅适用于不属于特种设备安全法第四十八条第一款报废条件、未被国家明令淘汰且未已经报废，达到设计使用年限并按安全技术规范可以继续使用的特种设备及其使用单位。继续使用前须按规范通过检验或者安全评估并办理使用登记证书变更；允许继续使用后应加强检验、检测和维护保养。是否已通过检验或者安全评估、是否已办理使用登记证书变更属于本项核查内容，不作为进入核查范围的前提；未履行前述义务而继续使用的情形不得漏查。",
+      "核设备类别与使用单位、设计使用年限及起算依据；先识别是否已达年限，并由适用安全技术规范和专业资料确认是否属于可延用对象。",
+      "排除法定报废条件、国家明令淘汰和已经报废对象；仅有继续使用意愿不构成延用资格。",
+      "是否按规范通过检验或者安全评估、是否办理登记变更均为待核结果，不能要求先有通过结论或登记完成才允许进入核查。",
+      "检验或者安全评估的选择依对应安全技术规范，不一律并行也不任意任选；继续使用前的程序与允许继续使用后的加强措施分别核查。"
+    ],
+    "excludes": [
+      "达到第一款报废条件、国家明令淘汰或已经报废的设备，不进入本延长使用条件核查。",
+      "未到设计使用年限，或适用安全技术规范并不允许继续使用的对象，不能援引本款作为延用许可。",
+      "仅凭拟继续使用、一般维护记录、旧报告、未对应同一设备的评估，或未完成登记变更，不认定已经具备继续使用条件。",
+      "材料暂未提供与客观未检验/未评估须区分；不得仅凭资料空缺自动认定实际违法状态。",
+      "应报废、已报废、明令淘汰对象不可通过补检评或登记材料复活延用资格。",
+      "未达设计使用年限或技术规范禁止继续使用者不能把本款当延用许可；缺材料不等于客观未检评。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "specialEquipmentAndUseUnitConfirmed",
+      "designLifeAndCalculationBasisVerified",
+      "scrapEliminationAndPriorScrappingStatusVerified",
+      "applicableTechnicalNormAndEligibilityVerified",
+      "inspectionOrAssessmentResultScopeAndDateVerified",
+      "registrationChangeStatusAndDateVerified",
+      "continuedUseStatusAndChronologyVerified",
+      "reinforcedInspectionDetectionMaintenanceStatusVerified"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核同一设备设计/制造/投用资料、设计使用年限、起算时间和状态，不设统一年限。",
+    "核当前适用安全技术规范身份/版本及可继续使用边界，专业争议转专业核定，本路由不签发延寿结论。",
+    "分别核检验或安全评估报告的出具资格、结论、对应设备、适用期限和限制；中性记录未提供/未实施/未通过，三者不混同。",
+    "核登记变更及检评完成时间与继续使用时间线，核继续使用后加强检验、检测、维护保养措施的实际实施。",
+    "仅提取本项必要的设备/点位编号、岗位角色、时点、结论和限制条件；去标识化，不收集账号密码、身份证、个人健康资料或无关合同信息。本候选不填任何真实现场值。"
+  ],
+  "correctiveDirection": "确认不属于报废、淘汰对象且适用规范允许延用后，按规范通过检验或者安全评估并办理登记变更，方可继续使用；获准继续使用后落实加强检验、检测和维护保养。资格不明转专业核定，不能以资料承诺代替法定条件。",
+  "basisLinkIds": [
+    "K_XLSX_FT_018BCD0DF4CAB382456C13D8"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "维持document_review/exclude：主要用途为有效检验/评估、登记变更和继续使用限制的资料核查；需要专业判断的前提保留，不进入常规现场自动缺陷。",
+  "authoringBasisRationale": {
+    "K_XLSX_FT_018BCD0DF4CAB382456C13D8": "精确direct范围：第四十八条第二款；第一款及第三十二条第二款为不得延用报废/淘汰设备边界。达到设计使用年限、在第四十八条第一款报废条件以外且安全技术规范允许继续使用的特种设备及使用单位；事实按选定分支独立核查，本候选不产生现场成立结论。"
+  },
+  "authoringReviewFlags": [
+    "independentSemanticReviewRequired",
+    "branchSpecificFactsNotAutomaticallyTrue"
+  ],
+  "authoringStatus": "private_revision2_candidate_awaiting_independent_semantic_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "48dacf79727b8a9d23eeb6c44b45267535f4a306df934a9536efb5dae6aeb4cd",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalDraftReference": {
+    "sha256": "aec1f65e958c9906b4f12b44cd3fbf40a31e8fb269715b7aa280fa51ffe83548"
+  },
+  "substantiveRevisionRationale": [
+    "替换生产/经营/充装等泛化入口，保留document_review/exclude。",
+    "将Pass/登记已完成等正向事实名改为中性状态与日期核验，明确合规结果不能成为入口。"
+  ]
+}

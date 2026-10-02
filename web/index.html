@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#183e35">
   <meta name="description" content="安全隐患与法规依据速查工具：只在正式视图展示已核验隐患与实际引用法规版本。">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
   <title>隐患依据速查 · 安全技术工作台</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -55,7 +55,7 @@
     <div id="hazardFilters" class="filters">
       <label>专业分类<select id="category"></select></label>
       <label>地区<select id="region"><option value="">国家＋江苏／南京</option><option value="全国">仅国家依据</option><option value="江苏">江苏补充</option><option value="南京">南京补充</option></select></label>
-      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>场所 / 设备 / 作业<select id="scene" aria-describedby="sceneHelp"></select></label><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label><p id="sceneHelp">现场标签仅整理条目已记录的场所信息，不能代替适用条件判断；未标注不代表不适用。</p></div></details>
+      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>场所 / 设备 / 作业<select id="scene" aria-describedby="sceneHelp"></select></label><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label><label>核查用途<select id="inspectionClass" aria-describedby="inspectionHelp"><option value="">全部条目（不限定用途）</option></select></label><p id="inspectionHelp">可选，仅筛选已审场景；用途审核不代表现场事实成立，未归类条目仍保留在默认全部结果中。</p><p id="sceneHelp">现场标签仅整理条目已记录的场所信息，不能代替适用条件判断；未标注不代表不适用。</p></div></details>
       <button id="reset" class="quiet" type="button">全部重置 ↺</button>
     </div>
 

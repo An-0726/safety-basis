@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_JSXF_51_2",
+  "profileRevision": 3,
+  "decision": "verified",
+  "reviewer": "dot：独立最终隐私修订复核",
+  "reason": "本次独立核对revision2与revision3全部字段，变化仅删除私有历史路径及修订号递增；逐字阅读最终适用边界、六维语义评估和精确关联依据，核实全部依赖字节与原独立审阅一致。官方原文及现行状态核验来自所列原独立审阅证据，本次未声称重新联网逐条核法。保留原审阅的用途限制，批准此隐私修订版本；不形成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T17:10:52.261869+00:00",
+  "reviewedProfileHash": "c1a284c42bfaef862b9a72e026155f67d4972643f5c97dcce847aedc883ae4d9",
+  "dependencyFingerprint": "788c59b2be507bf166b5385d46f9cdba96f76851eb6c8f02da954766ad3a9187",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154": "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154精确关联C_XLSX_FT_ECFF3AD1E421385385A5F5A4；江苏省消防条例（江苏省人大常委会公告第102号，2023-01-12发布，2023-05-01施行；地域CN-32）。第51条第二款；第2条地域，第92条特别系统，第94条施行。江苏城市轨道交通四类禁商铺空间完整：站台层、站厅付费区、乘客疏散区、疏散通道；运营/广告设施材料分支独立、不缩在四禁店区。 不禁绝全站商业、不扩出江苏、不把普通铁路系统当城市轨道交通；第一三款其他职责不并入本项。 本款无面积、距离或具体燃烧分级数值；不得由本候选新增数值门槛。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "7baab601b4f69cc24af59f41d0ebcc242c29e3b55773507c5f21d3f774c96b50",
+    "officialSources": [
+      "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+      "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99085"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml",
+        "locator": "江苏人大官方全文第51条web行430—433，第92/94条行613、617"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_FT_AE5F62B68A7BDE0F01CB9154",
+        "clauseId": "C_XLSX_FT_ECFF3AD1E421385385A5F5A4",
+        "lawVersionId": "LV_NPC_ff808181864a5d91018653f61bbd4f61",
+        "lawId": "LF_NPC_ff808181864a5d91018653f61bbd4f61",
+        "officialName": "江苏省消防条例",
+        "officialNumber": "江苏省人大常委会公告第102号",
+        "publishedOn": "2023-01-12",
+        "effectiveOn": "2023-05-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99085"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true,
+    "revision3ReviewScope": "仅私有路径删除与修订号更新；最终公共业务语义和全部依赖与原独立批准内容一致。官方来源核验沿用绑定的原独立审阅记录。"
+  }
+}

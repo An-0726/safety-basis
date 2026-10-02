@@ -133,6 +133,22 @@ class FieldProfileReleaseTests(unittest.TestCase):
         self.assertEqual(rc, 0, report)
         self.assertEqual(report['counts']['fieldProfiles'], 1)
 
+    def test_formal_ui_module_is_shipped_and_checksum_covered(self):
+        self.build()
+        asset = 'js/field-profiles.js'
+        self.assertIn(asset, builder.SITE_ASSETS)
+        self.assertIn(asset, verifier.SITE_ASSETS)
+        self.assertEqual((self.out / asset).read_bytes(), (Path(builder.WEB) / asset).read_bytes())
+        self.assertIn(asset, self.read('checksums.json'))
+
+    def test_missing_ui_module_cannot_pass_after_resealing(self):
+        self.build()
+        (self.out / 'js/field-profiles.js').unlink()
+        self.reseal()
+        rc, report = self.verify()
+        self.assertNotEqual(rc, 0)
+        self.assertTrue(any('公开文件集合不一致' in error for error in report['errors']))
+
     def test_profile_kind_is_structural_and_builder_emits_only_authored_kind(self):
         f = self.fixture
         self.assertEqual(validator.validate_namespace(self.root)['errors'], [])

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_15577_8_4_10_2",
+  "profileRevision": 2,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_repaired_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立阅读官方原文、精确条文及必要上下文并核查现行状态，完成逐项六维语义二审；本次签署前再次核对最终记录原字节、全部源依赖和完整关联集合均与本人已审内容一致。conditional现场核湿式除尘对象和运行/停机状态合理；非所有水槽池体。 限定湿式除尘系统、沉淀泥浆以及水槽（箱）/水质过滤池（箱）；清泥和通风独立，通风须涵盖开启和停止。 profileKind为routing_only，findingTemplate显式为null。审核只覆盖用途路由、适用边界、证据和整改方向；事实字段仅为待核名称，未形成真实现场结论。 按分支及状态取得材料；一次开机观察不能证明停机通风，未知状态待核，禁止停通风、制造气体积聚或危险入容器取证。 及时清泥并保证开启/停止状态均良好通风；不对全部粉尘提出水洗建议。 未把全条前半水量、流速、液位/流速连续监测报警纳入本H已核义务；不将全部除尘方式扩大为湿式。 条文无统一清泥周期、通风量、通风速度或数值阈值；候选未造数。 本决定只批准本可复用规则，不构成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:47:00.767389+00:00",
+  "reviewedProfileHash": "8e11781ddec3cbcb1710d0f694af4989a6ce50fc8b3e3018d6fe82dec462a1d6",
+  "dependencyFingerprint": "295a36f409cb0bc800ae7647637bc5b5b36358194038c0dffbfade981c19d340",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_980b2f519aadf71057a3a550": "K_XLSX_980b2f519aadf71057a3a550精确关联C_15577_8_4_10；粉尘防爆安全规程（GB 15577-2018，2018-11-19发布，2019-06-01施行；地域CN）。第8.4.10条分号后泥浆清除、开停机均通风两义务；已读同条全文及第1章。限定湿式除尘系统、沉淀泥浆以及水槽（箱）/水质过滤池（箱）；清泥和通风独立，通风须涵盖开启和停止。 未把全条前半水量、流速、液位/流速连续监测报警纳入本H已核义务；不将全部除尘方式扩大为湿式。 条文无统一清泥周期、通风量、通风速度或数值阈值；候选未造数。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "5cbdb609a513e6654894b8e450ad33c609f78f62cdd3d739f8fc4d0b4bb88158",
+    "officialSources": [
+      "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3&refer=outter",
+      "https://std.samr.gov.cn/gb/search/gbDetailed?id=7AC3075CD345B4B1E05397BE0A0AC4DE"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+        "locator": "PDF第8页/印刷页6（8.4.10）；第3页/印刷页1"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_980b2f519aadf71057a3a550",
+        "clauseId": "C_15577_8_4_10",
+        "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+        "lawId": "LF_STD_303E8C5A7D0F2C10840FC7E9",
+        "officialName": "粉尘防爆安全规程",
+        "officialNumber": "GB 15577-2018",
+        "publishedOn": "2018-11-19",
+        "effectiveOn": "2019-06-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3&refer=outter",
+          "https://std.samr.gov.cn/gb/search/gbDetailed?id=7AC3075CD345B4B1E05397BE0A0AC4DE"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

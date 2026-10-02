@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 import openpyxl
 import sys
+import os
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
-EXCEL_PATH = Path(r"D:\Desktop\隐患库_1929条_新版口径全部整改完成_20260914.xlsx")
+# Explicit private input; no personal-machine fallback.
+EXCEL_PATH_INPUT = os.environ.get("SAFETY_BASIS_WORKBOOK_20260914", "").strip()
+if not EXCEL_PATH_INPUT:
+    raise SystemExit("Set SAFETY_BASIS_WORKBOOK_20260914 to the required workbook before running this archived tool")
+EXCEL_PATH = Path(EXCEL_PATH_INPUT).expanduser()
+if not EXCEL_PATH.is_file():
+    raise SystemExit("SAFETY_BASIS_WORKBOOK_20260914 must name an existing workbook file")
 wb = openpyxl.load_workbook(EXCEL_PATH, data_only=True)
 sheet = wb["隐患明细_修订后"]
 headers = [cell.value for cell in sheet[1]]

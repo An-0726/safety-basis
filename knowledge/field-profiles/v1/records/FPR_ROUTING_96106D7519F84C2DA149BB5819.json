@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_96106D7519F84C2DA149BB5819",
+  "revision": 1,
+  "hazardId": "H_96106D7519F84C2DA149BB5819",
+  "title": "金属粉尘正压除尘与其他可燃粉尘正压吹送核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "适用于存在粉尘爆炸危险的工贸企业除尘系统；分别核查铝镁等金属粉尘的正压除尘方式，以及其他可燃性粉尘采用正压吹送时的点燃源防范措施。",
+      "适用于存在粉尘爆炸危险的工贸企业除尘系统；铝镁等金属粉尘采用正压除尘，或者其他可燃性粉尘正压吹送未采取火花探测消除等防范点燃源措施时，分别按第十一条（四）判定。",
+      "确认存在粉尘爆炸危险的工贸企业除尘系统，分别识别金属粉尘与其他可燃性粉尘。",
+      "金属粉尘正压除尘为独立分支；其他可燃粉尘正压吹送须另核点燃源防范措施。"
+    ],
+    "excludes": [
+      "不把普通非可燃粉尘、非工贸主体或非除尘系统自动纳入。",
+      "不得用增设火花探测消除措施豁免金属粉尘负压除尘要求。",
+      "不以仅有系统图、设备名称或资料缺页直接认定重大事故隐患。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "industryAndDustExplosionScopeConfirmed",
+      "dustTypeBranchConfirmed",
+      "systemPressureModeConfirmed",
+      "ignitionSourceMeasuresConfirmed"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对工贸企业行业、粉尘性质证据及除尘系统图，按系统对应实际输送和压力方式。",
+    "金属粉尘分支核正压除尘事实；其他可燃粉尘分支核正压吹送和火花探测消除等防点燃措施的配置及有效性，保留两套判断记录。",
+    "仅核验和记录本项必要的设备、点位、时间、岗位角色及证据结论；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或与本项无关的完整材料。"
+  ],
+  "correctiveDirection": "铝镁等金属粉尘除尘系统停止采用正压除尘方式，改为符合要求的负压除尘系统；其他可燃性粉尘受工艺条件限制采用正压吹送时，采取火花探测消除等可靠的防范点燃源措施。按两类粉尘分别复核系统方案和防护有效性，不得用加装火花探测消除装置代替金属粉尘负压除尘要求。",
+  "basisLinkIds": [
+    "K_PHASE6_D70AE69B0526086816016507"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "两分支均有可定位的粉尘类型与系统配置/运行状态；重大判定仍需分支事实和适用主体联合确认。",
+  "authoringBasisRationale": {
+    "K_PHASE6_D70AE69B0526086816016507": "第11条第（四）项直接列两个独立重大隐患分支。仅选择当前direct link，不把同条其他九项或金属粉尘与其他粉尘的适用条件互换。负压整改方向由本次独立复核的源措施提供，不形成新增已批准依据链。"
+  },
+  "authoringReviewFlags": [
+    "needsDefinitionSplit:金属粉尘正压除尘与其他粉尘正压吹送无防点火措施",
+    "needsDefinitionSplit:金属粉尘与其他可燃粉尘两分支"
+  ],
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "a3129d99198f368d537b8ee55b696477ec86f5c8",
+  "sourceAsOf": "2026-09-30",
+  "sourceHazardContentHash": "6275b1ad29a336236039c1cb26cef23aaa7113a36c82f6e1626bb49b5240031f",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false
+}

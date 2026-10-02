@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_03466ADE0A589C7D890736A6",
+  "revision": 1,
+  "hazardId": "H_03466ADE0A589C7D890736A6",
+  "title": "场（厂）内专用机动车辆不合格定检结论后继续使用的重大隐患专项核查",
+  "inspectionClass": "special_review",
+  "defaultFieldEntry": "exclude",
+  "contentDisposition": "special_check",
+  "applicability": {
+    "requires": [
+      "适用于GB 45067-2024第1章范围内、处于使用过程的场（厂）内专用机动车辆。军事装备、核设施、航空航天器、铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备，房屋建筑工地、市政工程工地用场（厂）内专用机动车辆，以及按特种设备安全技术规范不需要办理使用登记的特种设备，不按本标准判定；相关其他法定义务另行核查。",
+      "限处于使用过程、属于GB 45067-2024第1章范围的场（厂）内专用机动车辆，核查第4.10条a）而非第4.10条其他设备缺陷分支。",
+      "必须将同一设备的定期检验结论“不合格”与该结论下仍继续使用的事实分别核实并建立时序对应；报告与实际使用缺一不能直接成立本项重大判据。",
+      "重大事故隐患判定主体责任为特种设备使用单位；监管部门监督检查判定项目包含4.10a），检验机构或技术机构提供相应技术支持。"
+    ],
+    "excludes": [
+      "标准第1章列明的军事装备、核设施、航空航天器使用的特种设备；铁路机车、海上设施和船舶、矿山井下使用的特种设备以及民用机场专用设备。",
+      "房屋建筑工地、市政工程工地用场（厂）内专用机动车辆，以及按安全技术规范不需要办理使用登记的特种设备。",
+      "仅缺失报告、未经定期检验、报告无法对应设备、既往不合格已被后续有效结论取代、或不合格后已经停用而无仍继续使用事实，均不得按本项自动认定；其他法定义务另行核查。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "equipmentAndUseScopeConfirmed",
+      "exclusionStatusConfirmed",
+      "inspectionReportAuthenticityAndDeviceMatchConfirmed",
+      "inspectionConclusionExactlyUnqualifiedConfirmed",
+      "continuedUseAfterAdverseConclusionConfirmed",
+      "latestInspectionAndRectificationTimelineConfirmed",
+      "determinationActorAndHandlingStatusConfirmed"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对设备类别、技术参数、用途、登记义务及工地/特殊场景属性的材料，将报告、运行对象和脱敏设备编号逐一对应。",
+    "核对完整定期检验报告、出具机构与依法适用的检验要求、检验日期和结论页，并检查后续有效检验、修理和停用资料；不得将“报告未提供”写为“检验不合格”。",
+    "通过运行/调度记录、停用记录及真实现场状态交叉核实不合格结论之后仍继续使用的具体时间段；单份报告或单张照片不替代这组时序事实。",
+    "核查使用单位的重大事故隐患判定与治理记录，区分未判定、已判定待治理、已完成治理；不能仅因未见某份材料断言未履行判定义务。",
+    "材料仅保留核验必需的设备、设施、对象类别、机构结论、日期和业务状态，使用脱敏编号；不要求姓名、身份证号、联系方式、人员健康信息、账户或登录凭据。可复用规格不写入任何真实单位、现场数值或已观察结论。",
+    "仅核验和记录本项必要的设备、点位、时间、岗位角色及证据结论；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或与本项无关的完整材料。"
+  ],
+  "correctiveDirection": "对确认在不合格定检结论下仍继续使用的设备立即停止使用，并由相应责任主体按GB 45067-2024第4.10条a）作重大事故隐患判定和治理；完成修理整改并依法检验合格、确认满足安全使用要求后方可恢复使用。保留停用、整改、检验、复核和判定处置记录；不以资料补齐代替停用或复检。",
+  "basisLinkIds": [
+    "K_GB45067_03466ADE0A58_10"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "核心用途是受主体、检验结论与继续使用时序约束的重大事故隐患专项判定核查，不能成为普通现场缺陷自动入口。",
+  "authoringBasisRationale": {
+    "K_GB45067_03466ADE0A58_10": "该全国性direct链为GB 45067-2024第4.10条，其a）仅支持场（厂）内专用机动车辆定期检验结论为“不合格”且仍继续使用的重大事故隐患判定。本规格限使用过程、完整保留第1章设备与场所排除项，并区分使用单位主体责任、监管部门4.10a）监督检查判定及技术机构支持。未扩至未经检验、任何车辆故障或房建市政工地场车；特设法第40条supporting仅作停用义务背景，不选为重大判定依据。"
+  },
+  "authoringReviewFlags": [
+    "composite_definition:检验不合格仍用的触发事实与未履行重大隐患判定须分别举证",
+    "pairedInspectionCriterionEvidenceLogic",
+    "majorHazardDeterminationRequiresUseFactsAndAuthorizedRole"
+  ],
+  "authoringStatus": "proposal_awaiting_independent_semantic_review",
+  "sourceCommit": "a3129d99198f368d537b8ee55b696477ec86f5c8",
+  "sourceAsOf": "2026-09-30",
+  "sourceHazardContentHash": "43c070729cda2faf1c9dfce9fa67a8d1def76c373c3f015edafb7366f2228f64",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false
+}

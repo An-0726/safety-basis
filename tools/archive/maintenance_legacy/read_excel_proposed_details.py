@@ -3,13 +3,20 @@
 from __future__ import annotations
 import json
 import sys
+import os
 from pathlib import Path
 import openpyxl
 
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[2]
 KNOW = ROOT / "knowledge"
-EXCEL_PATH = Path(r"D:\Desktop\隐患库_1929条_新版口径全部整改完成_20260914.xlsx")
+# Explicit private input; no personal-machine fallback.
+EXCEL_PATH_INPUT = os.environ.get("SAFETY_BASIS_WORKBOOK_20260914", "").strip()
+if not EXCEL_PATH_INPUT:
+    raise SystemExit("Set SAFETY_BASIS_WORKBOOK_20260914 to the required workbook before running this archived tool")
+EXCEL_PATH = Path(EXCEL_PATH_INPUT).expanduser()
+if not EXCEL_PATH.is_file():
+    raise SystemExit("SAFETY_BASIS_WORKBOOK_20260914 must name an existing workbook file")
 
 def main():
     proposed_ids = set(

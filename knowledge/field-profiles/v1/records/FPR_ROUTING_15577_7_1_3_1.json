@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_15577_7_1_3_1",
+  "revision": 2,
+  "hazardId": "H_15577_7_1_3_1",
+  "title": "粉尘爆炸危险工艺设备控爆配置核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于GB 15577-2018范围内存在粉尘爆炸危险的工艺设备，本项核查采用适用控爆措施且不能单独采取隔爆。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+      "确认具体工艺设备存在粉尘爆炸危险，核对其粉尘特性、运行工况及拟采用的控爆方式。",
+      "分别核未采用适用控爆措施与仅单独采用隔爆的情形；一种或多种适用方式并不等于所有方式必须同时配置。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用GB 15577-2018；不构成粉尘爆炸危险的普通粉尘场景不适用本项。",
+      "不得把第7.1.3条一律等同于干式除尘系统重大事故隐患判据。",
+      "设备外部暂未见粉尘云不自动排除设备内部危险；文件缺项也不直接证明未装控爆装置。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "processEquipmentExplosionRiskConfirmed",
+      "controlMethodCombinationIdentified",
+      "technicalSuitabilityAssessed",
+      "noControlOrIsolationOnlyBranchAssessed"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核设备及其内部/外部危险辨识、粉尘特性与工况，按设备编号对应控爆方案、装置清单和实际安装。",
+    "分别核实未采用适用控爆措施和仅单独隔爆两类情形；性能及适用性由合适专业人员结合方案、安装和试验/验收证据复核，不以外部无粉尘云排除内部危险。",
+    "本项为条件式检查入口，未设置现场事实值；检查入口不以缺陷已经发生为条件。现场正向缺陷判断必须另外满足适用性、触发条件及对应分支的事实证据，不把未知当作符合或违规。",
+    "仅核验本项必要的设备或设施标识、点位、时段、岗位角色及相关证据；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或无关完整材料。"
+  ],
+  "correctiveDirection": "存在粉尘爆炸危险的工艺设备，应按实际危险及工况采用泄爆、抑爆和隔爆、抗爆中的一种或多种适用控爆方式，但不能单独采取隔爆；对缺失措施或仅隔爆情形重新核定方案，验证措施及组合的有效性。",
+  "basisLinkIds": [
+    "K_XLSX_9d56bc6c3425d5f32e0f2ccf"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "针对具体工艺设备危险辨识、粉尘特性和工况进入核查，不要求设备外部已出现达到爆炸浓度的粉尘云。",
+  "authoringBasisRationale": {
+    "K_XLSX_9d56bc6c3425d5f32e0f2ccf": "GB 15577-2018范围内存在粉尘爆炸危险的工艺设备，包括设备内部符合危险条件的情形。 针对具体工艺设备危险辨识、粉尘特性和工况进入核查，不要求设备外部已出现达到爆炸浓度的粉尘云。 direct仅支持下述相应义务，不外推为其他条款、技术认证或重大事故隐患结论。"
+  },
+  "authoringReviewFlags": [
+    "independentProfileReviewPending:revision2私有候选未获正式profile批准",
+    "branchEvidenceRequired:复合要求必须独立判断，不把所有分支事实合并为AND"
+  ],
+  "authoringStatus": "private_revision2_awaiting_independent_profile_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "d09646196cc6c2554533843a8630a5936158cd879c6345d567bdcde4c4273003",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalAuthoringReviewFlags": [
+    "needsDefinitionSplit:无控爆措施与仅隔爆两种情形",
+    "scopeReviewNeeded:源conditions及link泛化模板需按本项主体、对象和触发条件精确收窄",
+    "needsDefinitionSplit:未设控爆与单独隔爆分开核查"
+  ],
+  "sourceScopeRevisionAssessment": "本次已按原件及冻结源核验精确conditions、places及所选link；旧requires已实质替换。此结论不等于profile批准。",
+  "sourceTree": "f7854fd5bfe1cb73353280de52a495dbae7c3ba1",
+  "revision2SemanticChanges": [
+    "替换全粉尘环节requires并明确具体工艺设备。",
+    "补回“一种或多种”防止把控爆方式列表误读为全部必须配齐。",
+    "补明设备内部危险亦可触发，外部粉尘云非必要条件。",
+    "保留无措施/仅隔爆独立证据分支及不得自动升级重大隐患的限制。"
+  ],
+  "semanticBoundary": "仅复用路由；无现场事实值、无新H结论、无findingTemplate、无正式review。defectObserved为将来现场判断所需事实名，不是检查入口已发生缺陷的断言。"
+}

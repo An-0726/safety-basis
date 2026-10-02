@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "profileKind": "routing_only",
+  "id": "FPR_ROUTING_15577_10_7_1",
+  "revision": 2,
+  "hazardId": "H_15577_10_7_1",
+  "title": "粉尘爆炸危险场所检修程序与交叉作业核查",
+  "inspectionClass": "core_onsite_inspection",
+  "defaultFieldEntry": "conditional",
+  "contentDisposition": "onsite_finding",
+  "applicability": {
+    "requires": [
+      "仅适用于GB 15577-2018范围内粉尘爆炸危险场所的设备设施检修作业及相关检修维护，本项核查按照设备检修维护规程和程序作业，以及粉尘爆炸危险场所禁止交叉作业的要求。不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所；不构成粉尘爆炸危险的普通粉尘场景不直接适用。",
+      "确认粉尘爆炸危险场所及该设备设施的检修作业或相关检修维护；保留设施及维护，不限于机器维修。",
+      "分别核查适用检修维护规程和程序的执行，以及同一危险场所相互交叉的作业活动；两分支独立取证和判断。"
+    ],
+    "excludes": [
+      "煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所不适用GB 15577-2018；不构成粉尘爆炸危险的普通粉尘场景不适用本项。",
+      "计划重叠、档案缺页、不同时间作业或任意异地并行活动，不能单独认定本条实际交叉作业。",
+      "程序执行存在缺陷不以同时存在交叉作业为前提；反之亦然，证据不足的分支单独保留待核。"
+    ],
+    "perUseFacts": [
+      "applicableRequirementConfirmed",
+      "siteTriggerConfirmed",
+      "defectObserved",
+      "maintenanceTaskAndFacilityIdentified",
+      "applicableProcedureAndActualSequenceAssessed",
+      "crossWorkBranchAssessed",
+      "branchSpecificEvidenceIdentified"
+    ]
+  },
+  "findingTemplate": null,
+  "evidenceRequirements": [
+    "核对设备设施检修维护规程、具体程序及当次任务安排；按具体步骤核对真实执行，不以资料缺项直接认定操作违规。",
+    "分别以点位、时间对应的现场观察、作业记录或其他可核实材料判断各作业的时间及空间交叉关系；无交叉证据不妨碍独立核程序分支。",
+    "本项为条件式检查入口，未设置现场事实值；检查入口不以缺陷已经发生为条件。现场正向缺陷判断必须另外满足适用性、触发条件及对应分支的事实证据，不把未知当作符合或违规。",
+    "仅核验本项必要的设备或设施标识、点位、时段、岗位角色及相关证据；优先核验原件或去标识化摘录，不要求姓名、身份证、个人健康资料或无关完整材料。"
+  ],
+  "correctiveDirection": "按适用设备设施检修维护规程和程序作业，禁止在粉尘爆炸危险场所进行交叉作业；对已证实的程序偏离与交叉作业分别纠正，并复核相应分支。",
+  "basisLinkIds": [
+    "K_XLSX_1719648a5f11c8a86f429277"
+  ],
+  "auditOnly": true,
+  "formalApproval": false,
+  "productionAdmissionReady": false,
+  "independentReviewRequired": true,
+  "observedViolation": false,
+  "authoringRationale": "设备设施检修/维护场景触发；分别核程序执行和交叉作业。不能把“已证实交叉”设为核程序执行的共同前提。",
+  "authoringBasisRationale": {
+    "K_XLSX_1719648a5f11c8a86f429277": "GB 15577-2018范围内粉尘爆炸危险场所的设备设施检修作业及相关检修维护。 设备设施检修/维护场景触发；分别核程序执行和交叉作业。不能把“已证实交叉”设为核程序执行的共同前提。 direct仅支持下述相应义务，不外推为其他条款、技术认证或重大事故隐患结论。"
+  },
+  "authoringReviewFlags": [
+    "independentProfileReviewPending:revision2私有候选未获正式profile批准",
+    "branchEvidenceRequired:复合要求必须独立判断，不把所有分支事实合并为AND"
+  ],
+  "authoringStatus": "private_revision2_awaiting_independent_profile_review",
+  "sourceCommit": "bfea6baa02c8579fe0f93035712a1c1f9bca8405",
+  "sourceAsOf": "2026-10-01",
+  "sourceHazardContentHash": "e0fdba7da88d26e47a86fc0f5018fdea3112616bd161d0b1405127f11a42595a",
+  "noPerUseFactValuesRecorded": true,
+  "pendingSourceScopePrecision": false,
+  "historicalAuthoringReviewFlags": [
+    "composite_definition:按程序作业与交叉作业限制合并",
+    "mixed_evidence_purpose:操作缺陷被套入资料履职模板",
+    "scopeReviewNeeded:源conditions及link泛化模板需按本项主体、对象和触发条件精确收窄",
+    "needsDefinitionSplit:检修程序执行与交叉作业是不同证据分支"
+  ],
+  "sourceScopeRevisionAssessment": "本次已按原件及冻结源核验精确conditions、places及所选link；旧requires已实质替换。此结论不等于profile批准。",
+  "sourceTree": "f7854fd5bfe1cb73353280de52a495dbae7c3ba1",
+  "revision2SemanticChanges": [
+    "替换源全粉尘环节requires，明确“设备设施检修作业及相关检修维护”。",
+    "把旧simultaneousWorkConfirmed改为crossWorkBranchAssessed，防止误作全项正向必备条件。",
+    "保留程序与交叉两个独立证据分支，不能用纸面履职结果代替行为事实。",
+    "整改闭环按已证实的相应分支完成，不要求所有案例都先证明并纠正交叉。"
+  ],
+  "semanticBoundary": "仅复用路由；无现场事实值、无新H结论、无findingTemplate、无正式review。defectObserved为将来现场判断所需事实名，不是检查入口已发生缺陷的断言。"
+}

@@ -19,7 +19,6 @@ from openpyxl import load_workbook
 
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_XLSX = Path(r"D:/Desktop/隐患库_1929条_新版口径全部整改完成_20260914.xlsx")
 DEFAULT_JSON = ROOT / "docs" / "hazard-reconciliation.jsonl"
 DEFAULT_MD = ROOT / "docs" / "HAZARD_RECONCILIATION.md"
 SHEET = "隐患明细_修订后"
@@ -136,7 +135,7 @@ def normalize_title(value: object) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
+    parser.add_argument("--xlsx", type=Path, required=True)
     parser.add_argument("--json-out", type=Path, default=DEFAULT_JSON)
     parser.add_argument("--md-out", type=Path, default=DEFAULT_MD)
     args = parser.parse_args()

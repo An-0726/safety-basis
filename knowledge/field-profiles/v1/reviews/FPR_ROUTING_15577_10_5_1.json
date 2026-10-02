@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "entityId": "FPR_ROUTING_15577_10_5_1",
+  "profileRevision": 2,
+  "decision": "verified",
+  "reviewer": "独立语义审阅代理 verify_repaired_scene_candidates（2026-10-01）",
+  "reason": "2026-10-01已独立阅读官方原文、精确条文及必要上下文并核查现行状态，完成逐项六维语义二审；本次签署前再次核对最终记录原字节、全部源依赖和完整关联集合均与本人已审内容一致。conditional现场核工具和任务阶段合理；准备阶段仅为中性预防检查解释，不等同已发生违规使用。 限粉尘爆炸危险场所检修任务及对应工具；四类排除完整。未以已产生火花、已发生事故或已经缺陷为入口。 profileKind为routing_only，findingTemplate显式为null。审核只覆盖用途路由、适用边界、证据和整改方向；事实字段仅为待核名称，未形成真实现场结论。 任务、点位、阶段与工具材质/性能对应；不以颜色、库存、计划或台账缺失证明已使用，禁止试打火花。 防止火花的防爆工具义务和禁用铁质检修工具分别保留；准备阶段于作业前替换，既成违规只在实际使用证据成立时处理。 准备阶段检查仅是依据第10.4/10.5上下文的预防性解释，不是第10.5明文独立义务，不能据此生成已违规使用结论。核查限定危险场所检修，不扩大到普通仓库所有铁工具。 条款未设工具材质百分数、火花阈值或尺寸；候选未杜撰数值。 本决定只批准本可复用规则，不构成个案事实认定。",
+  "reviewedOn": "2026-10-01",
+  "checkedAt": "2026-10-01T16:47:00.767389+00:00",
+  "reviewedProfileHash": "93a23b2a39b01a4dbd5b790c3aef1f07e66b09340ccf6b2a5b6927a67cbba481",
+  "dependencyFingerprint": "bb14da03c08a75b683592d8d28c4362ad7719c4246ca13ccf83f749fcb8a9ec8",
+  "semanticChecks": {
+    "routing": true,
+    "applicability": true,
+    "findingTemplate": true,
+    "evidenceRequirements": true,
+    "correctiveDirection": true,
+    "scopeContainment": true
+  },
+  "basisScopeReasons": {
+    "K_XLSX_3776bf115b97bd829f4208bf": "K_XLSX_3776bf115b97bd829f4208bf精确关联C_15577_10_5；粉尘防爆安全规程（GB 15577-2018，2018-11-19发布，2019-06-01施行；地域CN）。第10.5条全文，结合第1章、第3.1—3.3与第10.1—10.4条检修上下文。限粉尘爆炸危险场所检修任务及对应工具；四类排除完整。未以已产生火花、已发生事故或已经缺陷为入口。 准备阶段检查仅是依据第10.4/10.5上下文的预防性解释，不是第10.5明文独立义务，不能据此生成已违规使用结论。核查限定危险场所检修，不扩大到普通仓库所有铁工具。 条款未设工具材质百分数、火花阈值或尺寸；候选未杜撰数值。"
+  },
+  "reviewEvidence": {
+    "independentAssessmentReportSha256": "7a0db1e77f2dcfd576e4b53b96d1bf0897d2d6d9ed6b40ff3ada5b798c74aa4a",
+    "profileFileSha256": "0a34f7a41b1de5d9dd0357f2d09fd4c98db4c96e2045ccc80af0b2f7100bfd37",
+    "officialSources": [
+      "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+      "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3&refer=outter",
+      "https://std.samr.gov.cn/gb/search/gbDetailed?id=7AC3075CD345B4B1E05397BE0A0AC4DE"
+    ],
+    "reviewedExactLocators": [
+      {
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3417/site/attach/images/2019/03/18/90452.pdf",
+        "locator": "PDF第9页/印刷页7（10.5及10.1—10.4）；第3页/印刷页1（范围、术语）"
+      }
+    ],
+    "versionAndScopeChecks": [
+      {
+        "linkId": "K_XLSX_3776bf115b97bd829f4208bf",
+        "clauseId": "C_15577_10_5",
+        "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+        "lawId": "LF_STD_303E8C5A7D0F2C10840FC7E9",
+        "officialName": "粉尘防爆安全规程",
+        "officialNumber": "GB 15577-2018",
+        "publishedOn": "2018-11-19",
+        "effectiveOn": "2019-06-01",
+        "currentStatusAssessment": "现行有效",
+        "statusSources": [
+          "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3&refer=outter",
+          "https://std.samr.gov.cn/gb/search/gbDetailed?id=7AC3075CD345B4B1E05397BE0A0AC4DE"
+        ]
+      }
+    ],
+    "usageConstraints": [
+      "本review仅批准可复用路由和核验范围，不证明实际企业、设备或现场存在缺陷，不形成处罚或重大事故隐患结论。",
+      "findingTemplate保持显式null；routing_only和conditional或exclude均不能替代个案适用性、现场触发及缺陷证据，public observedViolation始终为false。",
+      "perUseFacts仅列待核事实名，不含事实值，也不是自动执行的AND/OR表达式；独立分支按对应原条款及真实证据分别判断。",
+      "evidenceRequirements是核验指导，不新增法律未规定的统一文书、名册或保管义务；缺材料、未提供或缺图纸不能自动证明实质不符合。",
+      "只以安全方式核验，不制造危险作业或试验来取证；实际测量和专业判断须由具备相应能力和保障的人员完成。",
+      "本次审批不覆盖全部引用标准、特种设备安全技术规范或具体项目合规认证；版本、地域、设备和工况边界须逐次核实。",
+      "本决定绑定本记录完整字节和全部源依赖；记录、关联集合或任一依赖变化须重新独立审阅。"
+    ],
+    "sourceSnapshotEqualsReviewed": true
+  }
+}

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {INSPECTION_LABELS,profileTemplateText,profileReferenceText} from '../web/js/field-profiles.js';
 
 const APP_PATH = new URL('../web/app.js', import.meta.url);
 const APP_SOURCE = fs.readFileSync(APP_PATH, 'utf8').replace(/\r\n/g, '\n');
@@ -41,6 +42,7 @@ class FakeElement {
 
   insertAdjacentHTML(_position, html) { this._innerHTML += String(html); }
   addEventListener(name, handler) { this.listeners.set(name, handler); }
+  focus() { this.focused=true; }
   select() {}
   remove() {}
 }
@@ -67,7 +69,7 @@ function loadApp({removeHazardErrorGuard = false} = {}) {
   };
 
   const context = {
-    document,
+    document, INSPECTION_LABELS,profileTemplateText,profileReferenceText,
     navigator: {clipboard: {writeText: async value => { clipboardWrites.push(String(value)); }}},
     console: {error() {}, log() {}},
     location: {href: 'http://test.invalid/index.html'},
@@ -98,6 +100,8 @@ function loadApp({removeHazardErrorGuard = false} = {}) {
   const hazardQueues = new Map();
   const lawQueues = new Map();
   const store = {
+    profileMap: new Map(),
+    getFieldProfiles(id) { return this.profileMap.get(id)||[]; },
     searchIndex: [],
     lawIndex: [],
     manifest: {dataVersion: 'vm-test-version', generatedAt: '2026-09-19T00:00:00+08:00'},
@@ -576,4 +580,39 @@ test('真实空状态和不可用状态会阻断仍在途的详情响应', async
 test('移除内存副本的一处旧失败保护时，对应回归测试会失败', async () => {
   const mutated = loadApp({removeHazardErrorGuard: true});
   await assert.rejects(runHazardOldFailureRace(mutated));
+});
+
+const uiProfile=(id,linkId,{route='core_onsite_inspection',template=true}={})=>({
+  id,title:`场景 ${id} <仅参考>`,inspectionClass:route,defaultFieldEntry:route==='core_onsite_inspection'?'conditional':'exclude',
+  ...(template?{}:{profileKind:'routing_only'}),basisLinkIds:[linkId],applicability:{requires:[`条件 ${id}`],excludes:['不凭照片断言']},
+  evidenceRequirements:['最小证据'],correctiveDirection:'按实际核查整改',findingTemplate:template?{text:'{{place}}有待核缺陷',slots:[{key:'place',label:'位置'}]}:null,
+});
+const uiBasis=(linkId,scope)=>({ref:{linkId,role:'direct',applicability:scope,jurisdictionCode:'CN'},clause:{article:'第一条',quote:'完整原文',checked:'2026-10-01'},law:{id:'L1',name:'法律',level:'法律',scope:'全国',status:'现行有效'}});
+test('场景可选、精确K不合并，重复选择/清除保留焦点且复制始终标参考',async()=>{
+  const h=loadApp(),profiles=[uiProfile('FPR_A','K_A'),uiProfile('FPR_B','K_B')],bases=[uiBasis('K_A','条件只属甲'),uiBasis('K_B','条件只属乙')];
+  h.api.state.store.profileMap.set('H1',profiles);h.selectHazard('H1');
+  const render=async()=>{const q=h.queueHazard('H1','原条目',{bases});const promise=h.api.renderHazardDetail();q.deferred.resolve();await promise;};
+  await render();assert.match(detailHtml(h),/核查场景（可选）/);assert.doesNotMatch(detailHtml(h),/profile-guidance/);
+  const choose=async id=>{const q=h.queueHazard('H1','原条目',{bases});const select=h.document.querySelector('#profileSelect');select.value=id;const pending=select.onchange();q.deferred.resolve();await pending;};
+  await choose('FPR_A');assert.equal(h.api.state.profileSelections.get('H1'),'FPR_A');
+  let guidance=detailHtml(h).split('<div class="profile-guidance"')[1].split('</section>')[0];
+  assert.match(guidance,/条件只属甲/);assert.doesNotMatch(guidance,/条件只属乙/);assert.match(guidance,/条件 FPR_A/);assert.match(detailHtml(h),/&lt;仅参考&gt;/);
+  assert.equal(h.document.querySelector('#profileSelect').focused,true);
+  const copied=await clickCopy(h,'copy');assert.match(copied,/非已核实的现场隐患/);assert.match(copied,/核查场景参考（非现场结论）/);
+  await choose('FPR_B');guidance=detailHtml(h).split('<div class="profile-guidance"')[1].split('</section>')[0];assert.match(guidance,/条件只属乙/);assert.doesNotMatch(guidance,/条件只属甲/);
+  await choose('FPR_B');assert.equal(h.api.state.profileSelections.size,1);
+  const q=h.queueHazard('H1','原条目',{bases});const pending=h.document.querySelector('#clearProfile').onclick();q.deferred.resolve();await pending;
+  assert.equal(h.api.state.profileSelections.size,0);assert.doesNotMatch(detailHtml(h),/profile-guidance/);assert.equal(h.document.querySelector('#profileSelect').focused,true);
+});
+test('routing-only exclude展示核查边界，null模板无占位描述，用户选择不是现场事实',async()=>{
+  const h=loadApp();h.api.state.store.profileMap.set('H1',[uiProfile('FPR_DOC','K_A',{route:'document_review',template:false})]);h.api.state.profileSelections.set('H1','FPR_DOC');
+  const q=h.queueHazard('H1','资料核查',{bases:[uiBasis('K_A','学校第一款')]} );h.selectHazard('H1');const pending=h.api.renderHazardDetail();q.deferred.resolve();await pending;
+  assert.match(detailHtml(h),/排除现场入口不等于本项要求不适用/);assert.match(detailHtml(h),/不提供现场隐患描述模板/);assert.doesNotMatch(detailHtml(h),/未填描述模板|profile-template/);
+  assert.match(await clickCopy(h,'copy'),/不纳入默认现场检查/);
+});
+test('旧场景详情响应不能覆盖新选择或无结果',async()=>{
+  const h=loadApp();h.api.state.store.profileMap.set('H1',[uiProfile('FPR_A','K_A')]);h.api.state.profileSelections.set('H1','FPR_A');h.selectHazard('H1');
+  const old=h.queueHazard('H1','旧场景',{bases:[uiBasis('K_A','旧条件')]});const pending=h.api.renderHazardDetail({focusProfile:true});
+  h.api.state.selectedHazard='';await h.api.renderHazardDetail();old.deferred.resolve();await pending;
+  assert.match(detailHtml(h),/选择一个隐患查看详情/);assert.doesNotMatch(detailHtml(h),/旧场景|profileSelect/);
 });
