@@ -1,4 +1,4 @@
-# Signed source and fixtures must keep their reviewed LF bytes on Windows too.
-* text=auto eol=lf
+# Preserve reviewed Git bytes, including intentional CRLF, on every platform.
+* -text
 # Reviewed package hashes refer to exact published bytes on every platform.
 source/releases/** -text
