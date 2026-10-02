@@ -34,7 +34,12 @@ class Gbt13869DateBoundaryTests(unittest.TestCase):
         for result in (before, last):
             self.assertTrue(result.law_versions[OLD]['ok'])
             self.assertTrue(result.law_versions[OLD]['supports_current'])
-            self.assertEqual(len(result.eligible_links & self.old_links), 10)
+            # Preserve PR103's exact ten pre-existing links; separately pin the newly reviewed cord atom.
+            atom = 'K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2'
+            self.assertIn(atom, self.old_links)
+            self.assertIn(atom, result.eligible_links)
+            self.assertEqual(len(result.eligible_links & (self.old_links - {atom})), 10)
+            self.assertEqual(len(result.eligible_links & self.old_links), 11)
         self.assertEqual(before.eligible_links, last.eligible_links)
         self.assertEqual(before.eligible_hazards, last.eligible_hazards)
 

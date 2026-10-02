@@ -2,22 +2,37 @@
   "entityType": "hazard",
   "entityId": "H_COM_FLASHBACK_ARRESTOR",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "413dc206f99d1fa97ad10743118aa9be49bc6da40a1b38c7642527b0b8d6a663",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "原JGJ18第4.7.4(1)属钢筋气压焊供气装置，原检查表关于瓶出口安装的引文尚未取得官方原页逐字确认。不能外推全部LPG餐饮/一般管路。通用定义可定向收窄，但仍缺JGJ18现行版本及完整4.7.4(1)，或GB9448—2025适用系统的直接防回火条文。实际工艺是应用条件，不能用其缺失掩盖法源缺口。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_FLASHBACK_ARRESTOR",
+  "decision": "rejected",
+  "reviewedContentHash": "59636d7b28698eeeb1885e03fe789ef6a666763a0adef7609acefff913b50453",
+  "checkedAt": "2026-10-02T10:38:00Z",
+  "reviewer": "Commerce remaining-gap claim and applicability integration",
+  "reason": "原通用LPG管路未装回火防止器仍不准入；定向钢筋气压焊可另收窄但须原件条文。",
+  "evidenceRefs": [
+    "E_RESEARCH_JGJ18_STATUS_20261002",
+    "E_COM_GBT34525_ORIGINAL_20261002",
+    "E_RESEARCH_TSG23_PARTIAL_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_FLASHBACK_ARRESTOR",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "86b7be04408f78256ebb2c75d9eea3c22d21176a9bb67dc7a0210b82c6318fc3",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
+    "reviewedContentHash": "413dc206f99d1fa97ad10743118aa9be49bc6da40a1b38c7642527b0b8d6a663",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "原JGJ18第4.7.4(1)属钢筋气压焊供气装置，原检查表关于瓶出口安装的引文尚未取得官方原页逐字确认。不能外推全部LPG餐饮/一般管路。通用定义可定向收窄，但仍缺JGJ18现行版本及完整4.7.4(1)，或GB9448—2025适用系统的直接防回火条文。实际工艺是应用条件，不能用其缺失掩盖法源缺口。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_FLASHBACK_ARRESTOR",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_FLASHBACK_ARRESTOR",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "86b7be04408f78256ebb2c75d9eea3c22d21176a9bb67dc7a0210b82c6318fc3",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
   }
 }

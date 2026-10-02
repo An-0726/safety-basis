@@ -260,34 +260,124 @@
       ],
       "independentReviewRef": "docs/commerce-independent-review-20261002.json",
       "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
+    },
+    {
+      "id": "commerce-remaining-gaps-20261002",
+      "baselineCommit": "9cafe88cfac0d66f10321bc83f1cc5e7029b72f2",
+      "candidatesReviewed": 19,
+      "hazardsAdmitted": 9,
+      "conditionalCanonicalMerges": 1,
+      "unsupportedGenericClaimsRejected": 9,
+      "verificationProtocolsCompleted": 1,
+      "addedEntityIds": {
+        "laws": [
+          "LF_REG_NJ_HOUSE_SAFETY",
+          "LF_STD_AQ6111",
+          "LF_STD_GB55023",
+          "LF_STD_JGJ80",
+          "LF_STD_TSG08_2026"
+        ],
+        "lawVersions": [
+          "LV_REG_NJ_HOUSE_SAFETY_2017",
+          "LV_STD_AQ6111_2023",
+          "LV_STD_GB55023_2022",
+          "LV_STD_JGJ80_2016",
+          "LV_STD_TSG08_2026"
+        ],
+        "clauses": [
+          "C_AQ6111_2023_6_2_10",
+          "C_COM_GB55009_6_2_5",
+          "C_COM_GB55023_2022_5_3_1",
+          "C_COM_GBT34525_9_2",
+          "C_COM_JGJ80_2016_8_2_1",
+          "C_COM_NJEBIKE_10",
+          "C_COM_NJHOUSE_24",
+          "C_COM_NJHOUSE_27",
+          "C_COM_NJHOUSE_29",
+          "C_COM_NJHOUSE_31",
+          "C_COM_NJHOUSE_32",
+          "C_COM_TSG08_2026_4_12_1",
+          "C_COM_TSG08_2026_4_12_2_2"
+        ],
+        "hazards": [
+          "H_COM_MOBILE_ELECTRIC_CORD_SELECTION"
+        ],
+        "links": [
+          "K_COM_20261002_EV_CHARGING_NJ10",
+          "K_COM_BREAKER_SIGN_GB2894_7_4_1",
+          "K_COM_GAP_SAFETY_NET_DEFECT_JGJ80_2016_8_2_1",
+          "K_COM_GAP_SCAFFOLD_LOAD_GB55023_2022_5_3_1",
+          "K_COM_GAS_GAP_20261002_FLAME_FAILURE_VERIFY",
+          "K_COM_GAS_GAP_20261002_LPG_NEAR_HEAT",
+          "K_COM_GAS_GAP_20261002_OXY_CUTTING_DISTANCE",
+          "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+          "K_COM_PPE_AQ6111_6_2_10"
+        ],
+        "evidence": [
+          "E_COM_AQ6111_OFFICIAL_20261002",
+          "E_COM_AQ6111_STATUS_20261002",
+          "E_COM_GB55009_6_2_5_20261002",
+          "E_COM_GB55023_5_3_1_GD_20261002",
+          "E_COM_GB55023_NOTICE_20261002",
+          "E_COM_GBT34525_ORIGINAL_20261002",
+          "E_COM_GBT34525_STATUS_20261002",
+          "E_COM_HAZCAB_LAW_SCOPE_20261002",
+          "E_COM_JGJ80_8_2_1_20261002",
+          "E_COM_JGJ80_CURRENT_USE_20261002",
+          "E_COM_JGJ80_PARTIAL_REPEAL_20261002",
+          "E_COM_NJ348_20261002",
+          "E_COM_NJ_HOUSE_SAFETY_20261002",
+          "E_COM_TSG08_2026_IMPLEMENT_20261002",
+          "E_COM_TSG08_2026_NOTICE_20261002",
+          "E_COM_TSG08_2026_TEXT_20261002",
+          "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+        ],
+        "successions": []
+      },
+      "admittedHazardIds": [
+        "H_COM_BREAKER_LABEL_OBSCURED",
+        "H_COM_EV_CHARGING_AREA",
+        "H_COM_FLAME_FAILURE_VERIFY",
+        "H_COM_INSULATING_PPE_TEST",
+        "H_COM_LPG_NEAR_HEAT",
+        "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+        "H_COM_OXY_CUTTING_DISTANCE",
+        "H_COM_SAFETY_NET_DEFECT",
+        "H_COM_SCAFFOLD_LOAD"
+      ],
+      "independentLegalReview": "passed_bounded_content_scope_currency",
+      "existingCandidatesAdmitted": 8,
+      "newAtomicHazardsAdmitted": 1,
+      "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json",
+      "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b"
     }
   ],
   "counts": {
-    "laws": 124,
-    "lawVersions": 127,
-    "clauses": 3122,
-    "hazards": 2131,
-    "links": 2000,
-    "evidence": 1326,
+    "laws": 129,
+    "lawVersions": 132,
+    "clauses": 3135,
+    "hazards": 2132,
+    "links": 2009,
+    "evidence": 1343,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
-  "laws": 124,
-  "lawVersions": 127,
-  "clauses": 3122,
-  "hazards": 2131,
-  "links": 2000,
-  "evidence": 1326,
+  "laws": 129,
+  "lawVersions": 132,
+  "clauses": 3135,
+  "hazards": 2132,
+  "links": 2009,
+  "evidence": 1343,
   "successions": 26,
-  "activeHazards": 1682,
-  "proposedHazards": 330,
-  "supersededHazards": 119,
+  "activeHazards": 1691,
+  "proposedHazards": 321,
+  "supersededHazards": 120,
   "lifecycle": {
-    "superseded": 119,
-    "proposed": 330,
-    "active": 1682
+    "superseded": 120,
+    "proposed": 321,
+    "active": 1691
   },
   "requirements": 75
 }

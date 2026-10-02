@@ -2,22 +2,40 @@
   "entityType": "hazard",
   "entityId": "H_COM_SAFETY_NET_DEFECT",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "8e1612c7f36159d7de6a2274656c0bf0fadf000000ea2441c1c9426edd2a6a22",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "安全平网张设形式、初始下垂与应有缓冲空间需按完整标准/设计核；不把“松弛”一词一律定缺陷。原JGJ80第8.2.1需确认完整对象和连接要求。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SAFETY_NET_DEFECT",
+  "decision": "verified",
+  "reviewedContentHash": "633d5cab99674efbfdde8d0860cd9b05d4b6676c5fdc776acd94a6cfc306f45f",
+  "checkedAt": "2026-10-02T10:35:00Z",
+  "reviewer": "Commerce construction and special-equipment remaining-gap source review",
+  "reason": "官方完整原件8.2.1已闭环，删去“明显松弛”外观即判缺陷的广义分支；所用8.2.1并非公告列明被废止的强制条文，不冒称本条原强条。",
+  "evidenceRefs": [
+    "E_COM_JGJ80_8_2_1_20261002",
+    "E_COM_JGJ80_PARTIAL_REPEAL_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_SAFETY_NET_DEFECT",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "594651b59bf9d133e29754a5668ac6f18f1c69310d36e972573299eb77ba5f07",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
-  }
+    "reviewedContentHash": "8e1612c7f36159d7de6a2274656c0bf0fadf000000ea2441c1c9426edd2a6a22",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "安全平网张设形式、初始下垂与应有缓冲空间需按完整标准/设计核；不把“松弛”一词一律定缺陷。原JGJ80第8.2.1需确认完整对象和连接要求。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SAFETY_NET_DEFECT",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_SAFETY_NET_DEFECT",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "594651b59bf9d133e29754a5668ac6f18f1c69310d36e972573299eb77ba5f07",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_SAFETY_NET_DEFECT",
+  "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+  "reviewIndependenceNote": "主体作者实审保留；root非作者已实际读取原页/官方原文、范围、当前技术使用证据并重新计算H/K/C/LV哈希，记录另存。本地定义准入不确认原企业事件。"
 }

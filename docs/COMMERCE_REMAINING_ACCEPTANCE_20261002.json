@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-02",
+  "baselineMain": "9cafe88cfac0d66f10321bc83f1cc5e7029b72f2",
+  "sourceCommit": "a09dad9e67db5b3c04336c82b3e1d0ddb3d11eda",
+  "sourceTree": "098d9446d15955ee3e0cc7a37ba571030f4f4ed7",
+  "branch": "review/commerce-remaining-gaps-20261002",
+  "publicationState": "cloud-validated public source for one draft PR; continuation not merged or deployed",
+  "productionBaseline": {
+    "pullRequest": 103,
+    "commit": "9cafe88cfac0d66f10321bc83f1cc5e7029b72f2",
+    "tree": "a4ba09e8d06520c4a746b96eccfd941b99a5755e",
+    "runUrl": "https://github.com/An-0726/safety-basis/actions/runs/36996587280",
+    "build": "success",
+    "deploy": "success",
+    "onlineVerify": "success",
+    "onlineBrowserPassed": 17,
+    "releaseHash": "bc3a7fe09d01fbdcb3010e44bd2567051e181b777ea8d7fd4da2753e90c47a76",
+    "counts": {
+      "hazards": 1671,
+      "links": 1816,
+      "clauses": 1361,
+      "lawVersions": 72,
+      "fieldProfiles": 25
+    }
+  },
+  "independentReview": {
+    "currentItems": 10,
+    "allBoundHashesMatch": true,
+    "reviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+    "previous24ItemsBytePreserved": true,
+    "siteFactsEstablished": false,
+    "remediationEstablished": false
+  },
+  "tests": {
+    "node": {
+      "passed": 732,
+      "failed": 0,
+      "skipped": 0
+    },
+    "python": {
+      "passed": 571,
+      "failed": 0
+    },
+    "validateAll": "PASS",
+    "publicationIntegrity": "PASS",
+    "strictAudit": {
+      "asOf": "2026-10-02",
+      "blockers": 0,
+      "inventoryWarnings": 156,
+      "excluded": 599
+    },
+    "build": "PASS",
+    "bundleVerification": "PASS",
+    "fieldProfileDataAndController": "PASS",
+    "dateBoundary": "GB/T13869 original 10 links plus separate cord link eligible January 30/31; all 11 excluded February 1; successor remains upcoming"
+  },
+  "bundle": {
+    "releaseHash": "173be7f743a8f5b992df39b6636701ba29fc30bf2ff5c33910ac41e49351282b",
+    "knowledgeSnapshotSha256": "f6ce373d590dbe80e718912ba37ff27e746d90e27d05999745f57aa775fbd6bb",
+    "counts": {
+      "hazards": 1680,
+      "laws": 75,
+      "lawVersions": 75,
+      "clauses": 1367,
+      "links": 1825,
+      "fieldProfiles": 25,
+      "majorCriteriaStandards": 6,
+      "majorCriteriaClauses": 110,
+      "majorCriteriaHazards": 20,
+      "majorCriteriaAssociations": 20,
+      "majorCriteriaDirectoryGroups": 8,
+      "majorCriteriaDirectoryDocuments": 9,
+      "majorCriteriaReadingGroups": 3,
+      "majorCriteriaReadingDocuments": 4,
+      "majorCriteriaReadingFirstLevelItems": 109,
+      "majorCriteriaReferenceStandards": 1,
+      "majorCriteriaSearchTopics": 53
+    },
+    "profileHazardCoverage": 24,
+    "publicProposed": 0
+  },
+  "publicDelta": {
+    "priorHazardsPreserved": 1671,
+    "newHazards": 9,
+    "newLinks": 9,
+    "newClauses": 6,
+    "newLawVersions": 3,
+    "exactNewHazardIds": [
+      "H_COM_BREAKER_LABEL_OBSCURED",
+      "H_COM_EV_CHARGING_AREA",
+      "H_COM_FLAME_FAILURE_VERIFY",
+      "H_COM_INSULATING_PPE_TEST",
+      "H_COM_LPG_NEAR_HEAT",
+      "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "H_COM_OXY_CUTTING_DISTANCE",
+      "H_COM_SAFETY_NET_DEFECT",
+      "H_COM_SCAFFOLD_LOAD"
+    ],
+    "all25ProfileProjectionBytesPreserved": true
+  },
+  "candidateDispositions": {
+    "originalCandidates": 44,
+    "admittedNarrowedDefinitions": 26,
+    "conditionalMerges": 7,
+    "foodOutOfScope": 1,
+    "unsupportedGenericClaimsExcluded": 9,
+    "forkliftVerificationProtocol": 1,
+    "separateNewCordAtom": 1,
+    "remainingSourceClaimsRetained": true
+  },
+  "sourceInventory": {
+    "hazards": 2132,
+    "active": 1691,
+    "proposed": 321,
+    "superseded": 120
+  },
+  "realBrowser": {
+    "browser": "Chromium",
+    "browserVersion": "151.0.7922.173",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "baseSuite": {
+      "passed": 17,
+      "failed": 0
+    },
+    "commerceDetails": {
+      "passed": 54,
+      "newDefinitions": 9,
+      "previousDefinitions": 18,
+      "coverage": "exact description/conditions/measures, each K original quote/applicability/source URL, no overflow; new nine title searches and actual clipboard preserve all scope text"
+    },
+    "isolation": {
+      "passed": 36,
+      "sourceIds": 18,
+      "coverage": "all nonpublished original candidate IDs remain outside the current published detail collection"
+    },
+    "profiles": {
+      "passed": 50,
+      "profiles": 25,
+      "coverage": "requires/excludes/evidence/corrective text, exact selected K and all original bases, unchanged template limits, actual clipboard reference warning, clear and reload do not persist selection, no overflow"
+    },
+    "pageErrors": 0,
+    "failedRequests": 0,
+    "commerceConsoleErrors": 0,
+    "totalPassed": 157,
+    "screenshots": "68 viewport captures retained only in cloud validation workspace; not included in public Git",
+    "visualSpotChecks": [
+      "Nanjing charging scope at 390px",
+      "oxygen-cylinder applicability and quote at 1440px"
+    ]
+  },
+  "acceptanceNotes": [
+    "An HTTPS-only assumption in a temporary acceptance script was corrected to allow the exact existing official NPC HTTP URL. No governed URL or product code changed. The complete commerce suite then passed.",
+    "This record describes the local cloud build. PR103 deployment evidence does not imply that the continuation is already online."
+  ],
+  "privacy": {
+    "generatedBundlesCommitted": false,
+    "rawLogsCommitted": false,
+    "localIdentityPathsCommitted": false,
+    "privateSourceFilesCommitted": false,
+    "publicSourceOnly": true
+  },
+  "remainingPublicationSteps": [
+    "review exact PR head and CI",
+    "root merge and deploy",
+    "verify this continuation online before updating production baseline"
+  ]
+}

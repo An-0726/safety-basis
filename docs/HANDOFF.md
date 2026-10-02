@@ -1,20 +1,20 @@
 # 接手说明
 
-先读根目录 [AGENTS](../AGENTS.md)，再读 [PROJECT_STATE](PROJECT_STATE.md)。后者是唯一当前状态与完整8步计划；本页只列真正需要继续做的工作。9月26日暂停和旧“全项目DONE”均为历史，不是当前指令。
+先读根目录[AGENTS](../AGENTS.md)，再读[PROJECT_STATE](PROJECT_STATE.md)。后者是唯一当前状态与完整8步计划；本页只列真正需要继续做的工作。
 
 ## 下一步
 
-商贸及南京整合PR102已合入main `3d9479ec81b900e3f50ed95468819e0504652d10`；独立日期修正工作分支为 `fix/gbt13869-exclusive-enddate-20261002`，仅修正GB/T13869—2017排他终止日及审核绑定。累计包为1671H/1816K/1361C/72LV、25场景/24H覆盖；结果与保留项统一见[PROJECT_STATE](PROJECT_STATE.md)及[累计验收](COMMERCE_NANJING_ACCEPTANCE_20261002.json)。旧“南京hold、商贸44条全部proposed”仅属历史。
+已核生产为PR103合并提交`9cafe88cfac0d66f10321bc83f1cc5e7029b72f2`，build/deploy/online_verify均成功。商贸续轮在`review/commerce-remaining-gaps-20261002`完成云端验证：1680H/1825K/1367C/75LV、25场景，原1671H与25场景保留。源提交与全部验收范围见[本轮验收](COMMERCE_REMAINING_ACCEPTANCE_20261002.json)。
 
-1. 审阅独立日期修正草稿PR的精确head、官方日期证据、5项边界回归及完整Validate和Build CI。2026版仍upcoming，未来到期须另行实审；本轮已授权推送创建PR，合并部署由主执行者负责，不由云端整合者自行合并。
-2. 合并后核对部署产物的asOf、releaseHash、正式集及场景数，用真实桌面和390px浏览器复验线上交互，再更新PROJECT_STATE的已核生产基线。本地构建和main合并均不能替代上线证明。
-3. 保留商贸19条精确缺项、历史725/899底稿与试点材料、未知施行日及全文权利边界。GB/T13869排他终止日修正已独立核证并完成1月30/31日和2月1日回归，待独立PR审阅合并。本PR不授权取得、上传或跨环境传递企业私有原件及历史底稿。
+1. 核对本批次唯一PR的精确head、10项独立审核绑定、完整Validate与Build CI。云端执行者已获授权推送创建PR，合并部署由主执行者负责。
+2. 合并后核对部署包asOf、releaseHash、1680H及25场景，使用真实桌面和390px浏览器复验线上交互，再更新PROJECT_STATE生产基线。云端本地包验收不能代替新增内容的上线证明。
+3. 原44项26准入/7条件归并/1食品跨域排除/9泛化判据不准入/1叉车核验型分别计数，新增电源线原子H另计；保留remainingSourceClaims与个案取证。GB/T13869新版到期仍须另行实审，不自动激活。
 
 ## 每次接手先核对
 
-- 源提交、tree、工作区现有修改和同一版本的 `knowledge/manifest.json`
-- 最近生产提交、Actions、线上 `release.json` / `data/manifest.json` 与 `asOf`；本地commit不同但tree相同只说明源码等价，不证明已发布
-- 场景records、reviews、依赖指纹、正式投影和计数是否相符；源内容有变就重新实审，不沿用旧hash签名
+- 源提交、tree、工作区现有修改和同一版本的`knowledge/manifest.json`
+- 最近生产Actions、线上`release.json` / `data/manifest.json`与asOf；源码等价不证明已经发布
+- 场景records、reviews、依赖指纹、正式投影和计数；源内容改变须重新实审
 - GB 12158隔离、未知施行日阅读层、GB/AQ全文权利、候选和私有资料边界仍生效
 
 历史台账、原件或试点材料未取得时，保留具体证据缺口与下一动作；不猜测审核结论，不把缺口消失写成完成。公开文档只留聚合、通用边界及公开证据，不添加企业事实或私有材料位置。

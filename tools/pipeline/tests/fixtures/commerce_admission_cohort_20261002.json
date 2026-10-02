@@ -5,24 +5,36 @@
   "provenance": {
     "inventory": "Exact knowledge file ID delta against baseline commit 26b6c3e98f84ce46a9b2ee82694da26b74fb9eff, verified with git ls-tree -rz and bounded to the author-reviewed commerce overlays. This technical receipt does not assert independent legal review; that status remains recorded by the disposition workflow. No runtime prefix discovery or Git dependency.",
     "sourceLineage": "commerce-ingest-map-20260921.jsonl source rows, independently preserved in the 44-item disposition ledger.",
-    "gate": "Unmodified release_gate_core evaluated against the baseline commit at 2026-10-02; ID sets are pinned by count and SHA-256 of compact sorted JSON."
+    "gate": "Unmodified release_gate_core evaluated against the baseline commit at 2026-10-02; ID sets are pinned by count and SHA-256 of compact sorted JSON.",
+    "continuation": "Bounded second pass against main9cafe88cfac0d66f10321bc83f1cc5e7029b72f2; atomic SC118 cord predicate is a new H, original combustible-layout H remains unadmitted. Exact entity IDs are pinned, no runtime prefix discovery; original first-pass metadata remains in originalBatchReceipt."
   },
   "addedEntityIds": {
     "laws": [
+      "LF_REG_NJ_HOUSE_SAFETY",
+      "LF_STD_AQ6111",
       "LF_STD_CJJT146",
       "LF_STD_CJJT149",
       "LF_STD_GB31654",
+      "LF_STD_GB55023",
       "LF_STD_GB55034",
-      "LF_STD_JGJT46"
+      "LF_STD_JGJ80",
+      "LF_STD_JGJT46",
+      "LF_STD_TSG08_2026"
     ],
     "lawVersions": [
+      "LV_REG_NJ_HOUSE_SAFETY_2017",
+      "LV_STD_AQ6111_2023",
       "LV_STD_CJJT146_2011",
       "LV_STD_CJJT149_2021",
       "LV_STD_GB31654_2021",
+      "LV_STD_GB55023_2022",
       "LV_STD_GB55034_2022",
-      "LV_STD_JGJT46_2024"
+      "LV_STD_JGJ80_2016",
+      "LV_STD_JGJT46_2024",
+      "LV_STD_TSG08_2026"
     ],
     "clauses": [
+      "C_AQ6111_2023_6_2_10",
       "C_CJJT146_3_3_2",
       "C_CJJT146_3_3_3",
       "C_CJJT146_3_3_5",
@@ -31,7 +43,19 @@
       "C_CJJT149_1_0_2",
       "C_CJJT149_2_0_1",
       "C_CJJT149_2_0_5",
+      "C_COM_GB55009_6_2_5",
+      "C_COM_GB55023_2022_5_3_1",
       "C_COM_GB55037_8_1_1",
+      "C_COM_GBT34525_9_2",
+      "C_COM_JGJ80_2016_8_2_1",
+      "C_COM_NJEBIKE_10",
+      "C_COM_NJHOUSE_24",
+      "C_COM_NJHOUSE_27",
+      "C_COM_NJHOUSE_29",
+      "C_COM_NJHOUSE_31",
+      "C_COM_NJHOUSE_32",
+      "C_COM_TSG08_2026_4_12_1",
+      "C_COM_TSG08_2026_4_12_2_2",
       "C_COM_XF1131_6_15",
       "C_GB31654_2021_3_3_5_2",
       "C_GB50303_2015_14_2_3",
@@ -47,8 +71,11 @@
       "C_JGJT46_2024_9_2_3",
       "C_XF1131_5_2_1"
     ],
-    "hazards": [],
+    "hazards": [
+      "H_COM_MOBILE_ELECTRIC_CORD_SELECTION"
+    ],
     "links": [
+      "K_COM_20261002_EV_CHARGING_NJ10",
       "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_1",
       "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_2",
       "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_3",
@@ -67,19 +94,29 @@
       "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_3",
       "K_COM_BOX_COVER_GB50303_14_2_3",
       "K_COM_BOX_COVER_GB50303_20_2_1",
+      "K_COM_BREAKER_SIGN_GB2894_7_4_1",
       "K_COM_EDGE_GB55034_3_2_3",
       "K_COM_FIRE_EQUIP_MARK_FIRELAW_16_2",
+      "K_COM_GAP_SAFETY_NET_DEFECT_JGJ80_2016_8_2_1",
+      "K_COM_GAP_SCAFFOLD_LOAD_GB55023_2022_5_3_1",
+      "K_COM_GAS_GAP_20261002_FLAME_FAILURE_VERIFY",
+      "K_COM_GAS_GAP_20261002_LPG_NEAR_HEAT",
+      "K_COM_GAS_GAP_20261002_OXY_CUTTING_DISTANCE",
       "K_COM_HAND_LAMP_JGJT46_9_2_3",
       "K_COM_HIGH_FALL_GB55034_3_2_1",
       "K_COM_LIFTING_GB55034_3_4_1",
       "K_COM_NO_FIRE_EQUIP_GB55037_8_1_1",
       "K_COM_PACKAGING_XF1131_6_15",
       "K_COM_PATROL_XF1131_5_2_1",
+      "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+      "K_COM_PPE_AQ6111_6_2_10",
       "K_COM_SLIPPERY_GB31654_3_3_5_2",
       "K_COM_SOCKET_GB50303_20_2_1",
       "K_COM_SOCKET_GB50303_20_2_2"
     ],
     "evidence": [
+      "E_COM_AQ6111_OFFICIAL_20261002",
+      "E_COM_AQ6111_STATUS_20261002",
       "E_COM_CJJ146_ORIGINAL_20261002",
       "E_COM_CJJ146_STATUS_20261002",
       "E_COM_CJJ149_ANNOUNCEMENT_20261002",
@@ -89,17 +126,32 @@
       "E_COM_GB31654_FLOOR_20261002",
       "E_COM_GB50303_DATES_20261002",
       "E_COM_GB50303_ORIGINAL_20261002",
+      "E_COM_GB55009_6_2_5_20261002",
+      "E_COM_GB55023_5_3_1_GD_20261002",
+      "E_COM_GB55023_NOTICE_20261002",
       "E_COM_GB55024_PARTIAL_REPEAL_20261002",
       "E_COM_GB55034_NOTICE_20261002",
       "E_COM_GB55034_TEXT_20261002",
       "E_COM_GB55037_8_1_1_20261002",
       "E_COM_GB55037_ORIGINAL_20261002",
       "E_COM_GB6514_6_2_1_2_20261002",
+      "E_COM_GBT34525_ORIGINAL_20261002",
+      "E_COM_GBT34525_STATUS_20261002",
+      "E_COM_HAZCAB_LAW_SCOPE_20261002",
+      "E_COM_JGJ80_8_2_1_20261002",
+      "E_COM_JGJ80_CURRENT_USE_20261002",
+      "E_COM_JGJ80_PARTIAL_REPEAL_20261002",
       "E_COM_JGJT46_NOTICE_20261002",
       "E_COM_JGJT46_TEXT_20261002",
+      "E_COM_NJ348_20261002",
+      "E_COM_NJ_HOUSE_SAFETY_20261002",
+      "E_COM_TSG08_2026_IMPLEMENT_20261002",
+      "E_COM_TSG08_2026_NOTICE_20261002",
+      "E_COM_TSG08_2026_TEXT_20261002",
       "E_COM_XF1131_PACKAGING_20261002",
       "E_COM_XF1131_PATROL_20261002",
-      "E_COM_XF1131_STATUS_20261002"
+      "E_COM_XF1131_STATUS_20261002",
+      "E_GBT13869_FUJIAN_ORIGINAL_20261002"
     ],
     "successions": []
   },
@@ -540,18 +592,27 @@
     }
   },
   "admittedHazardIds": [
+    "H_COM_BREAKER_LABEL_OBSCURED",
     "H_COM_COMBUSTIBLE_CLUTTER",
     "H_COM_EDGE_PROTECTION",
     "H_COM_ELECTRICAL_BOX_COVER",
+    "H_COM_EV_CHARGING_AREA",
     "H_COM_EXTINGUISHER_RATING",
     "H_COM_FIRE_EQUIP_MARK",
+    "H_COM_FLAME_FAILURE_VERIFY",
     "H_COM_GAS_DETECTOR_LOCATION",
     "H_COM_HAND_LAMP_VOLTAGE",
     "H_COM_HIGH_FALL_PROTECTION",
+    "H_COM_INSULATING_PPE_TEST",
     "H_COM_LIFTING_BARRICADE",
+    "H_COM_LPG_NEAR_HEAT",
+    "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
     "H_COM_NO_FIRE_EQUIP",
     "H_COM_OUTDOOR_AD_DAMAGE",
+    "H_COM_OXY_CUTTING_DISTANCE",
     "H_COM_PAINT_SHIFT_QUANTITY",
+    "H_COM_SAFETY_NET_DEFECT",
+    "H_COM_SCAFFOLD_LOAD",
     "H_COM_SLIPPERY_FLOOR",
     "H_COM_SOCKET_LOOSE",
     "H_COM_SPRAY_PAINT_STORAGE",
@@ -561,6 +622,7 @@
   ],
   "mergedHazardIds": [
     "H_COM_DAMP_ELECTRIC",
+    "H_COM_DANGEROUS_BUILDING_CONTROL",
     "H_COM_GAS_DETECTOR_OBSTRUCTED",
     "H_COM_HYDRANT_DOOR_BROKEN",
     "H_COM_SMOKE_WINDOW_CONTROL",
@@ -611,18 +673,18 @@
     }
   },
   "lifecycleDelta": {
-    "active": 18,
-    "proposed": -24,
-    "superseded": 6
+    "active": 27,
+    "proposed": -33,
+    "superseded": 7
   },
   "candidateDispositions": {
     "H_COM_BREAKER_LABEL_OBSCURED": {
-      "action": "basis_rebind_required",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_COLDROOM_FAN_BLOCKED": {
-      "action": "basis_text_pending",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
@@ -637,9 +699,9 @@
       "canonicalHazardId": "H_BE5284032A21441CA62FFDE0B2"
     },
     "H_COM_DANGEROUS_BUILDING_CONTROL": {
-      "action": "scope_split_required",
-      "appliedLifecycle": "proposed",
-      "canonicalHazardId": null
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H_ADB66DA5A436491FA3D95D5A42"
     },
     "H_COM_EDGE_PROTECTION": {
       "action": "admitted_narrowed_definition",
@@ -652,18 +714,18 @@
       "canonicalHazardId": null
     },
     "H_COM_ELECTRIC_CABINET_CONTAMINATION": {
-      "action": "basis_rebind_required",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
     "H_COM_EV_BATTERY_STORAGE": {
-      "action": "scope_split_required",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
     "H_COM_EV_CHARGING_AREA": {
-      "action": "basis_rebind_required",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_EXTINGUISHER_RATING": {
@@ -677,12 +739,12 @@
       "canonicalHazardId": null
     },
     "H_COM_FLAME_FAILURE_VERIFY": {
-      "action": "verification_only",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_FLASHBACK_ARRESTOR": {
-      "action": "basis_text_pending",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
@@ -692,12 +754,12 @@
       "canonicalHazardId": null
     },
     "H_COM_FORKLIFT_INFO_VERIFY": {
-      "action": "verification_only",
+      "action": "verification_protocol_complete",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
     "H_COM_GAS_CYL_ELEC_PROX": {
-      "action": "basis_text_pending",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
@@ -712,7 +774,7 @@
       "canonicalHazardId": "H_A9E3881B83F84709B23CF8EB2C"
     },
     "H_COM_GAS_HOSE_ELECTRIC": {
-      "action": "basis_rebind_required",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
@@ -722,12 +784,12 @@
       "canonicalHazardId": null
     },
     "H_COM_HAZCAB_LIST": {
-      "action": "basis_rebind_required",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
     "H_COM_HAZCAB_SURROUNDINGS": {
-      "action": "basis_rebind_required",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
@@ -742,8 +804,8 @@
       "canonicalHazardId": "H025"
     },
     "H_COM_INSULATING_PPE_TEST": {
-      "action": "basis_text_pending",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_LIFTING_BARRICADE": {
@@ -752,8 +814,8 @@
       "canonicalHazardId": null
     },
     "H_COM_LPG_NEAR_HEAT": {
-      "action": "basis_rebind_required",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_NO_FIRE_EQUIP": {
@@ -767,8 +829,8 @@
       "canonicalHazardId": null
     },
     "H_COM_OXY_CUTTING_DISTANCE": {
-      "action": "basis_rebind_required",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_PAINT_SHIFT_QUANTITY": {
@@ -777,18 +839,18 @@
       "canonicalHazardId": null
     },
     "H_COM_PLUGSTRIP_COMBUSTIBLE": {
-      "action": "scope_split_required",
+      "action": "excluded_unsupported_claim",
       "appliedLifecycle": "proposed",
       "canonicalHazardId": null
     },
     "H_COM_SAFETY_NET_DEFECT": {
-      "action": "basis_rebind_required",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_SCAFFOLD_LOAD": {
-      "action": "verification_only",
-      "appliedLifecycle": "proposed",
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
       "canonicalHazardId": null
     },
     "H_COM_SLIPPERY_FLOOR": {
@@ -836,5 +898,249 @@
       "appliedLifecycle": "active",
       "canonicalHazardId": null
     }
+  },
+  "originalBatchReceipt": {
+    "id": "commerce-candidate-dispositions-20261002",
+    "candidatesReviewed": 44,
+    "conditionalCanonicalMerges": 6,
+    "outOfScopeRejected": 1,
+    "scope": "44 item-level original-record text and direct-basis reviews; stable IDs and source lineage retained. Conditional canonical merges, cross-domain rejection and narrowly scoped definition admissions are separate from field findings and remediation. Unresolved definitions remain proposed and unpublished.",
+    "hazardsAdmitted": 18,
+    "admittedHazardIds": [
+      "H_COM_COMBUSTIBLE_CLUTTER",
+      "H_COM_EDGE_PROTECTION",
+      "H_COM_ELECTRICAL_BOX_COVER",
+      "H_COM_EXTINGUISHER_RATING",
+      "H_COM_FIRE_EQUIP_MARK",
+      "H_COM_GAS_DETECTOR_LOCATION",
+      "H_COM_HAND_LAMP_VOLTAGE",
+      "H_COM_HIGH_FALL_PROTECTION",
+      "H_COM_LIFTING_BARRICADE",
+      "H_COM_NO_FIRE_EQUIP",
+      "H_COM_OUTDOOR_AD_DAMAGE",
+      "H_COM_PAINT_SHIFT_QUANTITY",
+      "H_COM_SLIPPERY_FLOOR",
+      "H_COM_SOCKET_LOOSE",
+      "H_COM_SPRAY_PAINT_STORAGE",
+      "H_COM_UNATTENDED_PATROL",
+      "H_COM_VALVE_OBSTRUCTED",
+      "H_COM_WRONG_FIRE_DOOR"
+    ],
+    "baselineCommit": "26b6c3e98f84ce46a9b2ee82694da26b74fb9eff",
+    "addedEntityIds": {
+      "laws": [
+        "LF_STD_CJJT146",
+        "LF_STD_CJJT149",
+        "LF_STD_GB31654",
+        "LF_STD_GB55034",
+        "LF_STD_JGJT46"
+      ],
+      "lawVersions": [
+        "LV_STD_CJJT146_2011",
+        "LV_STD_CJJT149_2021",
+        "LV_STD_GB31654_2021",
+        "LV_STD_GB55034_2022",
+        "LV_STD_JGJT46_2024"
+      ],
+      "clauses": [
+        "C_CJJT146_3_3_2",
+        "C_CJJT146_3_3_3",
+        "C_CJJT146_3_3_5",
+        "C_CJJT146_4_4_5",
+        "C_CJJT149_10_2_1",
+        "C_CJJT149_1_0_2",
+        "C_CJJT149_2_0_1",
+        "C_CJJT149_2_0_5",
+        "C_COM_GB55037_8_1_1",
+        "C_COM_XF1131_6_15",
+        "C_GB31654_2021_3_3_5_2",
+        "C_GB50303_2015_14_2_3",
+        "C_GB50303_2015_20_2_1",
+        "C_GB50303_2015_20_2_2",
+        "C_GB50303_2015_5_2_10",
+        "C_GB55034_2022_3_2_1",
+        "C_GB55034_2022_3_2_3",
+        "C_GB55034_2022_3_4_1",
+        "C_GB55037_6_4_2",
+        "C_GB55037_6_4_3",
+        "C_GB6514_6_2_1_2",
+        "C_JGJT46_2024_9_2_3",
+        "C_XF1131_5_2_1"
+      ],
+      "hazards": [],
+      "links": [
+        "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_1",
+        "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_2",
+        "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_3",
+        "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_2",
+        "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_3",
+        "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_5",
+        "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_10_2_1",
+        "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_1_0_2",
+        "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_1",
+        "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_5",
+        "K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2",
+        "K_COM_20261002_SPRAY_PAINT_STORAGE_DBD6E2B5ACAB595BE7EA59D3",
+        "K_COM_20261002_SPRAY_PAINT_STORAGE_XLSX_FT_041DA9C310E071B490B6DF44",
+        "K_COM_20261002_VALVE_OBSTRUCTED_CJJT146_4_4_5",
+        "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_2",
+        "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_3",
+        "K_COM_BOX_COVER_GB50303_14_2_3",
+        "K_COM_BOX_COVER_GB50303_20_2_1",
+        "K_COM_EDGE_GB55034_3_2_3",
+        "K_COM_FIRE_EQUIP_MARK_FIRELAW_16_2",
+        "K_COM_HAND_LAMP_JGJT46_9_2_3",
+        "K_COM_HIGH_FALL_GB55034_3_2_1",
+        "K_COM_LIFTING_GB55034_3_4_1",
+        "K_COM_NO_FIRE_EQUIP_GB55037_8_1_1",
+        "K_COM_PACKAGING_XF1131_6_15",
+        "K_COM_PATROL_XF1131_5_2_1",
+        "K_COM_SLIPPERY_GB31654_3_3_5_2",
+        "K_COM_SOCKET_GB50303_20_2_1",
+        "K_COM_SOCKET_GB50303_20_2_2"
+      ],
+      "evidence": [
+        "E_COM_CJJ146_ORIGINAL_20261002",
+        "E_COM_CJJ146_STATUS_20261002",
+        "E_COM_CJJ149_ANNOUNCEMENT_20261002",
+        "E_COM_CJJ149_ORIGINAL_20261002",
+        "E_COM_CJJ149_STATUS_20261002",
+        "E_COM_CJJ149_USE_2026",
+        "E_COM_GB31654_FLOOR_20261002",
+        "E_COM_GB50303_DATES_20261002",
+        "E_COM_GB50303_ORIGINAL_20261002",
+        "E_COM_GB55024_PARTIAL_REPEAL_20261002",
+        "E_COM_GB55034_NOTICE_20261002",
+        "E_COM_GB55034_TEXT_20261002",
+        "E_COM_GB55037_8_1_1_20261002",
+        "E_COM_GB55037_ORIGINAL_20261002",
+        "E_COM_GB6514_6_2_1_2_20261002",
+        "E_COM_JGJT46_NOTICE_20261002",
+        "E_COM_JGJT46_TEXT_20261002",
+        "E_COM_XF1131_PACKAGING_20261002",
+        "E_COM_XF1131_PATROL_20261002",
+        "E_COM_XF1131_STATUS_20261002"
+      ],
+      "successions": []
+    },
+    "independentLegalReview": "passed_bounded_content_scope_currency",
+    "withdrawnMergeIds": [
+      "H_COM_PLUGSTRIP_COMBUSTIBLE"
+    ],
+    "independentReviewRef": "docs/commerce-independent-review-20261002.json",
+    "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
+  },
+  "continuationBatchReceipt": {
+    "id": "commerce-remaining-gaps-20261002",
+    "baselineCommit": "9cafe88cfac0d66f10321bc83f1cc5e7029b72f2",
+    "candidatesReviewed": 19,
+    "hazardsAdmitted": 9,
+    "conditionalCanonicalMerges": 1,
+    "unsupportedGenericClaimsRejected": 9,
+    "verificationProtocolsCompleted": 1,
+    "addedEntityIds": {
+      "laws": [
+        "LF_REG_NJ_HOUSE_SAFETY",
+        "LF_STD_AQ6111",
+        "LF_STD_GB55023",
+        "LF_STD_JGJ80",
+        "LF_STD_TSG08_2026"
+      ],
+      "lawVersions": [
+        "LV_REG_NJ_HOUSE_SAFETY_2017",
+        "LV_STD_AQ6111_2023",
+        "LV_STD_GB55023_2022",
+        "LV_STD_JGJ80_2016",
+        "LV_STD_TSG08_2026"
+      ],
+      "clauses": [
+        "C_AQ6111_2023_6_2_10",
+        "C_COM_GB55009_6_2_5",
+        "C_COM_GB55023_2022_5_3_1",
+        "C_COM_GBT34525_9_2",
+        "C_COM_JGJ80_2016_8_2_1",
+        "C_COM_NJEBIKE_10",
+        "C_COM_NJHOUSE_24",
+        "C_COM_NJHOUSE_27",
+        "C_COM_NJHOUSE_29",
+        "C_COM_NJHOUSE_31",
+        "C_COM_NJHOUSE_32",
+        "C_COM_TSG08_2026_4_12_1",
+        "C_COM_TSG08_2026_4_12_2_2"
+      ],
+      "hazards": [
+        "H_COM_MOBILE_ELECTRIC_CORD_SELECTION"
+      ],
+      "links": [
+        "K_COM_20261002_EV_CHARGING_NJ10",
+        "K_COM_BREAKER_SIGN_GB2894_7_4_1",
+        "K_COM_GAP_SAFETY_NET_DEFECT_JGJ80_2016_8_2_1",
+        "K_COM_GAP_SCAFFOLD_LOAD_GB55023_2022_5_3_1",
+        "K_COM_GAS_GAP_20261002_FLAME_FAILURE_VERIFY",
+        "K_COM_GAS_GAP_20261002_LPG_NEAR_HEAT",
+        "K_COM_GAS_GAP_20261002_OXY_CUTTING_DISTANCE",
+        "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+        "K_COM_PPE_AQ6111_6_2_10"
+      ],
+      "evidence": [
+        "E_COM_AQ6111_OFFICIAL_20261002",
+        "E_COM_AQ6111_STATUS_20261002",
+        "E_COM_GB55009_6_2_5_20261002",
+        "E_COM_GB55023_5_3_1_GD_20261002",
+        "E_COM_GB55023_NOTICE_20261002",
+        "E_COM_GBT34525_ORIGINAL_20261002",
+        "E_COM_GBT34525_STATUS_20261002",
+        "E_COM_HAZCAB_LAW_SCOPE_20261002",
+        "E_COM_JGJ80_8_2_1_20261002",
+        "E_COM_JGJ80_CURRENT_USE_20261002",
+        "E_COM_JGJ80_PARTIAL_REPEAL_20261002",
+        "E_COM_NJ348_20261002",
+        "E_COM_NJ_HOUSE_SAFETY_20261002",
+        "E_COM_TSG08_2026_IMPLEMENT_20261002",
+        "E_COM_TSG08_2026_NOTICE_20261002",
+        "E_COM_TSG08_2026_TEXT_20261002",
+        "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+      ],
+      "successions": []
+    },
+    "admittedHazardIds": [
+      "H_COM_BREAKER_LABEL_OBSCURED",
+      "H_COM_EV_CHARGING_AREA",
+      "H_COM_FLAME_FAILURE_VERIFY",
+      "H_COM_INSULATING_PPE_TEST",
+      "H_COM_LPG_NEAR_HEAT",
+      "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "H_COM_OXY_CUTTING_DISTANCE",
+      "H_COM_SAFETY_NET_DEFECT",
+      "H_COM_SCAFFOLD_LOAD"
+    ],
+    "independentLegalReview": "awaiting_root_independent_source_review",
+    "existingCandidatesAdmitted": 8,
+    "newAtomicHazardsAdmitted": 1
+  },
+  "unsupportedClaimHazardIds": [
+    "H_COM_COLDROOM_FAN_BLOCKED",
+    "H_COM_ELECTRIC_CABINET_CONTAMINATION",
+    "H_COM_EV_BATTERY_STORAGE",
+    "H_COM_FLASHBACK_ARRESTOR",
+    "H_COM_GAS_CYL_ELEC_PROX",
+    "H_COM_GAS_HOSE_ELECTRIC",
+    "H_COM_HAZCAB_LIST",
+    "H_COM_HAZCAB_SURROUNDINGS",
+    "H_COM_PLUGSTRIP_COMBUSTIBLE"
+  ],
+  "verificationProtocolIds": [
+    "H_COM_FORKLIFT_INFO_VERIFY"
+  ],
+  "newAtomicHazardIds": [
+    "H_COM_MOBILE_ELECTRIC_CORD_SELECTION"
+  ],
+  "currentExpectedCounts": {
+    "admittedOriginal": 26,
+    "atomicNew": 1,
+    "merged": 7,
+    "domainExcluded": 1,
+    "unsupportedClaimsNotAdmitted": 9,
+    "verificationProtocolComplete": 1
   }
 }

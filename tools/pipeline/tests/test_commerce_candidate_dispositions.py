@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT/'tools/v4'))
-from check_commerce_candidate_dispositions import LEDGER, INDEPENDENT_REVIEW, validate_rows, validate_independent_review
+from check_commerce_candidate_dispositions import LEDGER, INDEPENDENT_REVIEW, validate_rows, validate_independent_review, CONTINUATION_REVIEW, ATOMIC_SPLITS, validate_atomic_splits
 
 
 class CommerceDispositionTests(unittest.TestCase):
@@ -55,7 +55,7 @@ class CommerceDispositionTests(unittest.TestCase):
         self.assertTrue(any('incorrect review decision' in x for x in self.check()))
 
     def test_unresolved_record_cannot_gain_public_eligibility(self):
-        row = next(x for x in self.rows if x['action'] == 'verification_only')
+        row = next(x for x in self.rows if x['action'] == 'verification_protocol_complete')
         row['releaseEligibleByThisDisposition'] = True
         self.assertTrue(any('must not grant' in x for x in self.check()))
 
@@ -65,33 +65,63 @@ class CommerceDispositionTests(unittest.TestCase):
 
     def independent_input(self):
         independent = json.loads((ROOT/INDEPENDENT_REVIEW).read_text(encoding='utf-8'))
+        continuation = json.loads((ROOT/CONTINUATION_REVIEW).read_text(encoding='utf-8'))
+        independent['items'] += continuation['items']
+        self.atomic_rows = json.loads((ROOT/ATOMIC_SPLITS).read_text(encoding='utf-8'))['items']
         entities = {'hazards': self.hazards}
         for folder in ['links', 'clauses', 'law-versions']:
             entities[folder] = {x['id']: x for p in (ROOT/'knowledge'/folder).glob('*.json')
                                for x in [json.loads(p.read_text(encoding='utf-8'))]}
         return independent, entities
 
-    def test_independent_24_item_review_matches_exact_current_entities(self):
+    def test_two_independent_rounds_match_exact_current_entities(self):
         independent, entities = self.independent_input()
-        self.assertEqual(validate_independent_review(self.rows, independent, entities), [])
+        self.assertEqual(validate_independent_review(self.rows, independent, entities, self.atomic_rows), [])
 
     def test_independent_review_cannot_hide_a_later_version_source_change(self):
         independent, entities = self.independent_input()
         entities['law-versions']['LV_STD_GB50303_2015']['sourceUrl'] = 'https://example.invalid/wrong'
         self.assertTrue(any('independent review stale' in x for x in
-                            validate_independent_review(self.rows, independent, entities)))
+                            validate_independent_review(self.rows, independent, entities, self.atomic_rows)))
 
     def test_independent_review_cannot_silently_drop_or_add_an_admission(self):
         independent, entities = self.independent_input()
         independent['items'].pop()
-        self.assertTrue(any('exactly the 24' in x for x in
-                            validate_independent_review(self.rows, independent, entities)))
+        self.assertTrue(any('exact applied' in x for x in
+                            validate_independent_review(self.rows, independent, entities, self.atomic_rows)))
 
     def test_independent_review_cannot_assert_unseen_site_facts(self):
         independent, entities = self.independent_input()
         independent['items'][0]['siteFactEstablished'] = True
         self.assertTrue(any('scope/currency decision differs' in x for x in
-                            validate_independent_review(self.rows, independent, entities)))
+                            validate_independent_review(self.rows, independent, entities, self.atomic_rows)))
+
+    def test_atomic_split_exact_lineage_and_original_predicate_are_preserved(self):
+        _, entities = self.independent_input()
+        self.assertEqual(validate_atomic_splits(self.atomic_rows, self.rows, self.sources, entities), [])
+
+    def test_atomic_split_cannot_fake_a_fresh_original_read(self):
+        _, entities = self.independent_input()
+        self.atomic_rows[0]['sourceRead']['originalStatementMatched'] = True
+        self.assertTrue(any('original-file' in e for e in validate_atomic_splits(self.atomic_rows, self.rows, self.sources, entities)))
+
+    def test_excluded_unsupported_claim_cannot_become_verified(self):
+        row = next(x for x in self.rows if x['action'] == 'excluded_unsupported_claim')
+        self.reviews[row['hazardId']]['decision'] = 'verified'
+        self.assertTrue(any('incorrect review decision' in e for e in self.check()))
+
+    def test_atomic_source_mapping_cannot_fake_an_observed_finding(self):
+        _, entities = self.independent_input()
+        source = next(s for s in self.sources if s['candidateId'] == 'SC118')
+        mapping = next(m for m in source['mappedHazards'] if m.get('hazardId') == 'H_COM_MOBILE_ELECTRIC_CORD_SELECTION')
+        mapping['fieldViolationEstablished'] = True
+        self.assertTrue(any('field finding' in e for e in validate_atomic_splits(self.atomic_rows, self.rows, self.sources, entities)))
+
+    def test_atomic_source_mapping_cannot_switch_to_a_different_record(self):
+        _, entities = self.independent_input()
+        source = next(s for s in self.sources if s['candidateId'] == 'SC118')
+        source['sources'] = ['D01']
+        self.assertTrue(any('SC118/D15' in e for e in validate_atomic_splits(self.atomic_rows, self.rows, self.sources, entities)))
 
 
 if __name__ == '__main__':

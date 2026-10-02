@@ -1,7 +1,7 @@
 """Pin the 2026-09-30 incident containment without deleting canonical sources."""
 from collections import Counter
 from datetime import date
-from commerce_cohort_fixture import pre_commerce_gate, pre_commerce_inventory
+from commerce_cohort_fixture import pre_commerce_gate, pre_commerce_inventory, pre_commerce_ids
 import json
 from pathlib import Path
 import sys
@@ -133,7 +133,10 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
         self.assertEqual(len(successor), 1)
         self.assertEqual(successor[0]['lifecycle'], 'active')
         historical = [h for h in hazards if h['id'] != 'H_GB12801_2025_5_6_2_S1']
-        self.assertEqual(len(historical), 2130)
+        historical_ids = pre_commerce_ids('hazards', {h['id'] for h in historical})
+        self.assertEqual(len(historical_ids), 2130)
+        # Only the exact reviewed new cord atom is projected away; unknown additions still fail.
+        self.assertEqual({h['id'] for h in historical} - historical_ids, {'H_COM_MOBILE_ELECTRIC_CORD_SELECTION'})
         historical_rows = pre_commerce_inventory('hazards',
             ((h['id'], h['lifecycle']) for h in historical))
         self.assertEqual(Counter(lifecycle for _, lifecycle in historical_rows),

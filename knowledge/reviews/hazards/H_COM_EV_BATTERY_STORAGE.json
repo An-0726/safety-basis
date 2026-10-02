@@ -2,22 +2,35 @@
   "entityType": "hazard",
   "entityId": "H_COM_EV_BATTERY_STORAGE",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "ad0f68683fc5c39bfce60c3cdc9465f0375d7a8521ee3de04539e377b4c76fe8",
-  "checkedAt": "2026-10-02T16:00:00+08:00",
-  "reviewer": "dot / item-level source and applicability review",
-  "reason": "南京现行办法12(2)已有室内违规存放/充电义务，但原“集中堆放且缺少防火管理”不能等价替换为住宅、宿舍、办公楼特定室内存放。应先拆销售维修库存/使用者存放/充电/损坏报废电池等通用定义及各自直接依据，未证实堵塞通道不能并H009。",
-  "evidenceRefs": [],
-  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EV_BATTERY_STORAGE",
+  "decision": "rejected",
+  "reviewedContentHash": "6fff34b5e723761e1c6b595e43ce9856abac6633dc84457cf7336f5e0819bf5e",
+  "checkedAt": "2026-10-02T10:38:00Z",
+  "reviewer": "Commerce remaining-gap claim and applicability integration",
+  "reason": "排除大量/密集集中堆放本身即违反分类、防火分隔法定义务的原泛化定义。南京348号办法第12条第二项约束使用者违反消防规定在住宅、宿舍、办公楼等室内存放/充电，不等于销售维修库存禁止集中存放；第10条仅适用集中充电设施。",
+  "evidenceRefs": [
+    "E_COM_NJ348_20261002"
+  ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_EV_BATTERY_STORAGE",
     "reviewType": "definition",
     "decision": "pending",
-    "reviewedContentHash": "b2915376e06e7ce592744f07ed8495a4599e14059cfb46057e1e4ba967546686",
-    "checkedAt": "2026-09-21T09:25:00+08:00",
-    "reviewer": "ChatGPT / Commerce Full Ingest",
-    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-    "evidenceRefs": []
+    "reviewedContentHash": "ad0f68683fc5c39bfce60c3cdc9465f0375d7a8521ee3de04539e377b4c76fe8",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "南京现行办法12(2)已有室内违规存放/充电义务，但原“集中堆放且缺少防火管理”不能等价替换为住宅、宿舍、办公楼特定室内存放。应先拆销售维修库存/使用者存放/充电/损坏报废电池等通用定义及各自直接依据，未证实堵塞通道不能并H009。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EV_BATTERY_STORAGE",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_EV_BATTERY_STORAGE",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "b2915376e06e7ce592744f07ed8495a4599e14059cfb46057e1e4ba967546686",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
   }
 }
