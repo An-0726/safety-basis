@@ -1,0 +1,840 @@
+{
+  "schemaVersion": 1,
+  "batchId": "commerce-candidate-dispositions-20261002",
+  "baselineCommit": "26b6c3e98f84ce46a9b2ee82694da26b74fb9eff",
+  "provenance": {
+    "inventory": "Exact knowledge file ID delta against baseline commit 26b6c3e98f84ce46a9b2ee82694da26b74fb9eff, verified with git ls-tree -rz and bounded to the author-reviewed commerce overlays. This technical receipt does not assert independent legal review; that status remains recorded by the disposition workflow. No runtime prefix discovery or Git dependency.",
+    "sourceLineage": "commerce-ingest-map-20260921.jsonl source rows, independently preserved in the 44-item disposition ledger.",
+    "gate": "Unmodified release_gate_core evaluated against the baseline commit at 2026-10-02; ID sets are pinned by count and SHA-256 of compact sorted JSON."
+  },
+  "addedEntityIds": {
+    "laws": [
+      "LF_STD_CJJT146",
+      "LF_STD_CJJT149",
+      "LF_STD_GB31654",
+      "LF_STD_GB55034",
+      "LF_STD_JGJT46"
+    ],
+    "lawVersions": [
+      "LV_STD_CJJT146_2011",
+      "LV_STD_CJJT149_2021",
+      "LV_STD_GB31654_2021",
+      "LV_STD_GB55034_2022",
+      "LV_STD_JGJT46_2024"
+    ],
+    "clauses": [
+      "C_CJJT146_3_3_2",
+      "C_CJJT146_3_3_3",
+      "C_CJJT146_3_3_5",
+      "C_CJJT146_4_4_5",
+      "C_CJJT149_10_2_1",
+      "C_CJJT149_1_0_2",
+      "C_CJJT149_2_0_1",
+      "C_CJJT149_2_0_5",
+      "C_COM_GB55037_8_1_1",
+      "C_COM_XF1131_6_15",
+      "C_GB31654_2021_3_3_5_2",
+      "C_GB50303_2015_14_2_3",
+      "C_GB50303_2015_20_2_1",
+      "C_GB50303_2015_20_2_2",
+      "C_GB50303_2015_5_2_10",
+      "C_GB55034_2022_3_2_1",
+      "C_GB55034_2022_3_2_3",
+      "C_GB55034_2022_3_4_1",
+      "C_GB55037_6_4_2",
+      "C_GB55037_6_4_3",
+      "C_GB6514_6_2_1_2",
+      "C_JGJT46_2024_9_2_3",
+      "C_XF1131_5_2_1"
+    ],
+    "hazards": [],
+    "links": [
+      "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_1",
+      "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_2",
+      "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_3",
+      "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_2",
+      "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_3",
+      "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_5",
+      "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_10_2_1",
+      "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_1_0_2",
+      "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_1",
+      "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_5",
+      "K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2",
+      "K_COM_20261002_SPRAY_PAINT_STORAGE_DBD6E2B5ACAB595BE7EA59D3",
+      "K_COM_20261002_SPRAY_PAINT_STORAGE_XLSX_FT_041DA9C310E071B490B6DF44",
+      "K_COM_20261002_VALVE_OBSTRUCTED_CJJT146_4_4_5",
+      "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_2",
+      "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_3",
+      "K_COM_BOX_COVER_GB50303_14_2_3",
+      "K_COM_BOX_COVER_GB50303_20_2_1",
+      "K_COM_EDGE_GB55034_3_2_3",
+      "K_COM_FIRE_EQUIP_MARK_FIRELAW_16_2",
+      "K_COM_HAND_LAMP_JGJT46_9_2_3",
+      "K_COM_HIGH_FALL_GB55034_3_2_1",
+      "K_COM_LIFTING_GB55034_3_4_1",
+      "K_COM_NO_FIRE_EQUIP_GB55037_8_1_1",
+      "K_COM_PACKAGING_XF1131_6_15",
+      "K_COM_PATROL_XF1131_5_2_1",
+      "K_COM_SLIPPERY_GB31654_3_3_5_2",
+      "K_COM_SOCKET_GB50303_20_2_1",
+      "K_COM_SOCKET_GB50303_20_2_2"
+    ],
+    "evidence": [
+      "E_COM_CJJ146_ORIGINAL_20261002",
+      "E_COM_CJJ146_STATUS_20261002",
+      "E_COM_CJJ149_ANNOUNCEMENT_20261002",
+      "E_COM_CJJ149_ORIGINAL_20261002",
+      "E_COM_CJJ149_STATUS_20261002",
+      "E_COM_CJJ149_USE_2026",
+      "E_COM_GB31654_FLOOR_20261002",
+      "E_COM_GB50303_DATES_20261002",
+      "E_COM_GB50303_ORIGINAL_20261002",
+      "E_COM_GB55024_PARTIAL_REPEAL_20261002",
+      "E_COM_GB55034_NOTICE_20261002",
+      "E_COM_GB55034_TEXT_20261002",
+      "E_COM_GB55037_8_1_1_20261002",
+      "E_COM_GB55037_ORIGINAL_20261002",
+      "E_COM_GB6514_6_2_1_2_20261002",
+      "E_COM_JGJT46_NOTICE_20261002",
+      "E_COM_JGJT46_TEXT_20261002",
+      "E_COM_XF1131_PACKAGING_20261002",
+      "E_COM_XF1131_PATROL_20261002",
+      "E_COM_XF1131_STATUS_20261002"
+    ],
+    "successions": []
+  },
+  "candidateSources": {
+    "H_COM_BREAKER_LABEL_OBSCURED": {
+      "sourceCandidateIds": [
+        "SC075"
+      ],
+      "sourceDocumentCodes": [
+        "D09"
+      ],
+      "preReviewContentHash": "d2815998a32e5b25f7602ed8e0d95ef826b95545a2fe9408fc2c1c374c68a42e"
+    },
+    "H_COM_COLDROOM_FAN_BLOCKED": {
+      "sourceCandidateIds": [
+        "SC122"
+      ],
+      "sourceDocumentCodes": [
+        "D16"
+      ],
+      "preReviewContentHash": "1f98c215633a872049ea154ce38cd4c9fea9fe1e9c7b19dba7914e8c5e26a5ab"
+    },
+    "H_COM_COMBUSTIBLE_CLUTTER": {
+      "sourceCandidateIds": [
+        "SC016",
+        "SC046",
+        "SC055",
+        "SC059",
+        "SC085",
+        "SC086",
+        "SC125"
+      ],
+      "sourceDocumentCodes": [
+        "D02",
+        "D06",
+        "D07",
+        "D08",
+        "D10",
+        "D16"
+      ],
+      "preReviewContentHash": "64de39135d4a55b685b82e2d686e07745f80454ed01c82d2ad3eed8049164ac7"
+    },
+    "H_COM_DAMP_ELECTRIC": {
+      "sourceCandidateIds": [
+        "SC020"
+      ],
+      "sourceDocumentCodes": [
+        "D03"
+      ],
+      "preReviewContentHash": "c888248885d36e414759b787e4fda75697a3a725ef6b7c76ec685e4f3966a099"
+    },
+    "H_COM_DANGEROUS_BUILDING_CONTROL": {
+      "sourceCandidateIds": [
+        "SC084"
+      ],
+      "sourceDocumentCodes": [
+        "D10"
+      ],
+      "preReviewContentHash": "c5596401a466080112d94340e02924b713e87b1482b38de18558e8ea76c7c7e3"
+    },
+    "H_COM_EDGE_PROTECTION": {
+      "sourceCandidateIds": [
+        "SC030"
+      ],
+      "sourceDocumentCodes": [
+        "D04"
+      ],
+      "preReviewContentHash": "6a22b1a1afb7f0f3bc97436d9845a4fdc9c5ac67f316edb4a9c7b63ff634973b"
+    },
+    "H_COM_ELECTRICAL_BOX_COVER": {
+      "sourceCandidateIds": [
+        "SC101",
+        "SC117",
+        "SC127",
+        "SC133"
+      ],
+      "sourceDocumentCodes": [
+        "D12",
+        "D15",
+        "D16"
+      ],
+      "preReviewContentHash": "8ca41d514c6846bac2fbf70c46c6e65f2f9fce02ec591b1aba185e226433420b"
+    },
+    "H_COM_ELECTRIC_CABINET_CONTAMINATION": {
+      "sourceCandidateIds": [
+        "SC022",
+        "SC041"
+      ],
+      "sourceDocumentCodes": [
+        "D03",
+        "D05"
+      ],
+      "preReviewContentHash": "2e031a54b11a7943b5a317fb2e0ac1fa5a61890cf99e41d6b78b0d5fa71746ff"
+    },
+    "H_COM_EV_BATTERY_STORAGE": {
+      "sourceCandidateIds": [
+        "SC073"
+      ],
+      "sourceDocumentCodes": [
+        "D09"
+      ],
+      "preReviewContentHash": "b2915376e06e7ce592744f07ed8495a4599e14059cfb46057e1e4ba967546686"
+    },
+    "H_COM_EV_CHARGING_AREA": {
+      "sourceCandidateIds": [
+        "SC021",
+        "SC106"
+      ],
+      "sourceDocumentCodes": [
+        "D03",
+        "D13"
+      ],
+      "preReviewContentHash": "99df733ec2a94ccb0c45de1bf77386cbea5f2f7c45bacf3388867041aa44f9eb"
+    },
+    "H_COM_EXTINGUISHER_RATING": {
+      "sourceCandidateIds": [
+        "SC018"
+      ],
+      "sourceDocumentCodes": [
+        "D02"
+      ],
+      "preReviewContentHash": "175c3edde498649907b876ef25030abc9ae64e57a901e3d21cb42e0f5eaaa501"
+    },
+    "H_COM_FIRE_EQUIP_MARK": {
+      "sourceCandidateIds": [
+        "SC056"
+      ],
+      "sourceDocumentCodes": [
+        "D07"
+      ],
+      "preReviewContentHash": "277398d6a9e28462d4b7b10c6d6d6e69e3bdb851d815deca8cf2a73dbed22c62"
+    },
+    "H_COM_FLAME_FAILURE_VERIFY": {
+      "sourceCandidateIds": [
+        "SC097"
+      ],
+      "sourceDocumentCodes": [
+        "D11"
+      ],
+      "preReviewContentHash": "53f04291318ac010980099777def1843c17e527da61b56582532a872883827e1"
+    },
+    "H_COM_FLASHBACK_ARRESTOR": {
+      "sourceCandidateIds": [
+        "SC068"
+      ],
+      "sourceDocumentCodes": [
+        "D09"
+      ],
+      "preReviewContentHash": "86b7be04408f78256ebb2c75d9eea3c22d21176a9bb67dc7a0210b82c6318fc3"
+    },
+    "H_COM_FOOD_POSTING": {
+      "sourceCandidateIds": [
+        "SC091"
+      ],
+      "sourceDocumentCodes": [
+        "D11"
+      ],
+      "preReviewContentHash": "10b1419320211c1bc41f458ae9f5ca86ef4a75f6d17e02706a724ccbd591b2ac"
+    },
+    "H_COM_FORKLIFT_INFO_VERIFY": {
+      "sourceCandidateIds": [
+        "SC134"
+      ],
+      "sourceDocumentCodes": [
+        "D05"
+      ],
+      "preReviewContentHash": "49fc0edfcb9ff6f40f00fda84e11cce09feca085c2dfd90f5615a32469f8de44"
+    },
+    "H_COM_GAS_CYL_ELEC_PROX": {
+      "sourceCandidateIds": [
+        "SC008"
+      ],
+      "sourceDocumentCodes": [
+        "D01"
+      ],
+      "preReviewContentHash": "a3bc70b6da9e642583ac20302a03952d0ba44367bf56bd334d3dd445921d6a97"
+    },
+    "H_COM_GAS_DETECTOR_LOCATION": {
+      "sourceCandidateIds": [
+        "SC009",
+        "SC044",
+        "SC096"
+      ],
+      "sourceDocumentCodes": [
+        "D01",
+        "D06",
+        "D11"
+      ],
+      "preReviewContentHash": "2c17b5edba576318923fa2dfe5102428d3a686e1513c946602a7fa349f6b0202"
+    },
+    "H_COM_GAS_DETECTOR_OBSTRUCTED": {
+      "sourceCandidateIds": [
+        "SC054"
+      ],
+      "sourceDocumentCodes": [
+        "D07"
+      ],
+      "preReviewContentHash": "c513e4e8bae283a78882c3ca15bcdccebd91a771a63bc0d2b1553fe42e9389e0"
+    },
+    "H_COM_GAS_HOSE_ELECTRIC": {
+      "sourceCandidateIds": [
+        "SC069"
+      ],
+      "sourceDocumentCodes": [
+        "D09"
+      ],
+      "preReviewContentHash": "fced60163791e76b47eb66e183d6094020fbbe4857dbb9bab737b52c6c119b17"
+    },
+    "H_COM_HAND_LAMP_VOLTAGE": {
+      "sourceCandidateIds": [
+        "SC002"
+      ],
+      "sourceDocumentCodes": [
+        "D01"
+      ],
+      "preReviewContentHash": "b917c88047a741e5eb9c30a5cd2792d9bbdc4334b04a3943e484f5bbc92dda72"
+    },
+    "H_COM_HAZCAB_LIST": {
+      "sourceCandidateIds": [
+        "SC057"
+      ],
+      "sourceDocumentCodes": [
+        "D07"
+      ],
+      "preReviewContentHash": "65d0ce0d01ba51fdfcee05419b970aae343b252c3a94e72b0210169a634a2930"
+    },
+    "H_COM_HAZCAB_SURROUNDINGS": {
+      "sourceCandidateIds": [
+        "SC057"
+      ],
+      "sourceDocumentCodes": [
+        "D07"
+      ],
+      "preReviewContentHash": "43f7be52a4157e3c29ee278f7077b801c05ad653464ad085a09e64bb8b1ab352"
+    },
+    "H_COM_HIGH_FALL_PROTECTION": {
+      "sourceCandidateIds": [
+        "SC026"
+      ],
+      "sourceDocumentCodes": [
+        "D04"
+      ],
+      "preReviewContentHash": "070860ea58eb7b95c057dc45ae5ac7597a4980916ec5f445ba9a7c0a42dcaad1"
+    },
+    "H_COM_HYDRANT_DOOR_BROKEN": {
+      "sourceCandidateIds": [
+        "SC103"
+      ],
+      "sourceDocumentCodes": [
+        "D12"
+      ],
+      "preReviewContentHash": "a0506033fbadd3a1429125bd1be8cb336fac9a3f5989849179ad1c9a3bfc8b54"
+    },
+    "H_COM_INSULATING_PPE_TEST": {
+      "sourceCandidateIds": [
+        "SC019",
+        "SC107"
+      ],
+      "sourceDocumentCodes": [
+        "D02",
+        "D14"
+      ],
+      "preReviewContentHash": "5c1452034248ddadb21f10cd76f21331ee3cc6631a251fbc15871aa37b3da544"
+    },
+    "H_COM_LIFTING_BARRICADE": {
+      "sourceCandidateIds": [
+        "SC029"
+      ],
+      "sourceDocumentCodes": [
+        "D04"
+      ],
+      "preReviewContentHash": "6a8d3f97835d99da2b2909f3006fe054f8f5b40a76d2242c6bd2d644366cca33"
+    },
+    "H_COM_LPG_NEAR_HEAT": {
+      "sourceCandidateIds": [
+        "SC090"
+      ],
+      "sourceDocumentCodes": [
+        "D11"
+      ],
+      "preReviewContentHash": "87eaa2eb2527f17afafe64a0e3d849bcf00d83b02e3843738a76d30cb33a9edd"
+    },
+    "H_COM_NO_FIRE_EQUIP": {
+      "sourceCandidateIds": [
+        "SC071"
+      ],
+      "sourceDocumentCodes": [
+        "D09"
+      ],
+      "preReviewContentHash": "fbdc1929a14d11a9700bd7df9c702f91d3795a345922742c8c8482004aba420b"
+    },
+    "H_COM_OUTDOOR_AD_DAMAGE": {
+      "sourceCandidateIds": [
+        "SC104"
+      ],
+      "sourceDocumentCodes": [
+        "D12"
+      ],
+      "preReviewContentHash": "b01ed5d2d7fbd45ab2da737c652948aa566f6497855505a2e420b46a12728282"
+    },
+    "H_COM_OXY_CUTTING_DISTANCE": {
+      "sourceCandidateIds": [
+        "SC039"
+      ],
+      "sourceDocumentCodes": [
+        "D05"
+      ],
+      "preReviewContentHash": "c6f7282edc473323391b7292a2e05076c1801e834047c32e965e9cf1dfdf1213"
+    },
+    "H_COM_PAINT_SHIFT_QUANTITY": {
+      "sourceCandidateIds": [
+        "SC052"
+      ],
+      "sourceDocumentCodes": [
+        "D07"
+      ],
+      "preReviewContentHash": "19cd462abac9497f585ce9127498d3856e00aa3e12ffd454ba0dfaa43070fdea"
+    },
+    "H_COM_PLUGSTRIP_COMBUSTIBLE": {
+      "sourceCandidateIds": [
+        "SC087",
+        "SC118"
+      ],
+      "sourceDocumentCodes": [
+        "D10",
+        "D15"
+      ],
+      "preReviewContentHash": "21e30ea290a972928ad2eee1621c3b7d29923a8dec4af760632f571d43584d55"
+    },
+    "H_COM_SAFETY_NET_DEFECT": {
+      "sourceCandidateIds": [
+        "SC028"
+      ],
+      "sourceDocumentCodes": [
+        "D04"
+      ],
+      "preReviewContentHash": "594651b59bf9d133e29754a5668ac6f18f1c69310d36e972573299eb77ba5f07"
+    },
+    "H_COM_SCAFFOLD_LOAD": {
+      "sourceCandidateIds": [
+        "SC027"
+      ],
+      "sourceDocumentCodes": [
+        "D04"
+      ],
+      "preReviewContentHash": "68d6afbbc748443dfef75320bbcc1fc1d9fe7177da0688bc703621f91ea4da0c"
+    },
+    "H_COM_SLIPPERY_FLOOR": {
+      "sourceCandidateIds": [
+        "SC132"
+      ],
+      "sourceDocumentCodes": [
+        "D16"
+      ],
+      "preReviewContentHash": "bafb656142665fec3b2ce6f89832763da438783dab827bc28e12d3ff11d22524"
+    },
+    "H_COM_SMOKE_WINDOW_CONTROL": {
+      "sourceCandidateIds": [
+        "SC078"
+      ],
+      "sourceDocumentCodes": [
+        "D10"
+      ],
+      "preReviewContentHash": "61a102957a682b2d7170853b419f52d03f2d7bcdd2ca6395102de92858ac1052"
+    },
+    "H_COM_SOCKET_LOOSE": {
+      "sourceCandidateIds": [
+        "SC110",
+        "SC124"
+      ],
+      "sourceDocumentCodes": [
+        "D14",
+        "D16"
+      ],
+      "preReviewContentHash": "43c08c62dc1427516b52ccaa8735c696aeb572c323f8478bc56662ea56651bae"
+    },
+    "H_COM_SOP_MISSING": {
+      "sourceCandidateIds": [
+        "SC004",
+        "SC064",
+        "SC109"
+      ],
+      "sourceDocumentCodes": [
+        "D01",
+        "D09",
+        "D14"
+      ],
+      "preReviewContentHash": "5e186f55709ba0548ab4a7330a138015b3eb91164ae88deb63d208a547efebb2"
+    },
+    "H_COM_SPLASHPROOF_SOCKET": {
+      "sourceCandidateIds": [
+        "SC126",
+        "SC129"
+      ],
+      "sourceDocumentCodes": [
+        "D16"
+      ],
+      "preReviewContentHash": "c89217c5f262d3a621e8ea78554c6bc8a3447cc89426f80034089e111779d2f9"
+    },
+    "H_COM_SPRAY_PAINT_STORAGE": {
+      "sourceCandidateIds": [
+        "SC003",
+        "SC006"
+      ],
+      "sourceDocumentCodes": [
+        "D01"
+      ],
+      "preReviewContentHash": "15c2a8cc5d16cbef36baa9633b047049754340878ab909615080838061e7638a"
+    },
+    "H_COM_UNATTENDED_PATROL": {
+      "sourceCandidateIds": [
+        "SC113"
+      ],
+      "sourceDocumentCodes": [
+        "D15"
+      ],
+      "preReviewContentHash": "0d54d6fcc4b5dab3e9ccf49e93f7fc3c8329c164081b2f9bb6f97c3cf85292c7"
+    },
+    "H_COM_VALVE_OBSTRUCTED": {
+      "sourceCandidateIds": [
+        "SC044",
+        "SC099"
+      ],
+      "sourceDocumentCodes": [
+        "D06",
+        "D11"
+      ],
+      "preReviewContentHash": "824cc30ba78aba91b97269be4a02ecde97321b6aad41deb7039109315125318f"
+    },
+    "H_COM_WRONG_FIRE_DOOR": {
+      "sourceCandidateIds": [
+        "SC082"
+      ],
+      "sourceDocumentCodes": [
+        "D10"
+      ],
+      "preReviewContentHash": "a34b8ebcea2577b2546d62e107bf5e8be993e01a129a0330fac2cc1414659b74"
+    }
+  },
+  "admittedHazardIds": [
+    "H_COM_COMBUSTIBLE_CLUTTER",
+    "H_COM_EDGE_PROTECTION",
+    "H_COM_ELECTRICAL_BOX_COVER",
+    "H_COM_EXTINGUISHER_RATING",
+    "H_COM_FIRE_EQUIP_MARK",
+    "H_COM_GAS_DETECTOR_LOCATION",
+    "H_COM_HAND_LAMP_VOLTAGE",
+    "H_COM_HIGH_FALL_PROTECTION",
+    "H_COM_LIFTING_BARRICADE",
+    "H_COM_NO_FIRE_EQUIP",
+    "H_COM_OUTDOOR_AD_DAMAGE",
+    "H_COM_PAINT_SHIFT_QUANTITY",
+    "H_COM_SLIPPERY_FLOOR",
+    "H_COM_SOCKET_LOOSE",
+    "H_COM_SPRAY_PAINT_STORAGE",
+    "H_COM_UNATTENDED_PATROL",
+    "H_COM_VALVE_OBSTRUCTED",
+    "H_COM_WRONG_FIRE_DOOR"
+  ],
+  "mergedHazardIds": [
+    "H_COM_DAMP_ELECTRIC",
+    "H_COM_GAS_DETECTOR_OBSTRUCTED",
+    "H_COM_HYDRANT_DOOR_BROKEN",
+    "H_COM_SMOKE_WINDOW_CONTROL",
+    "H_COM_SOP_MISSING",
+    "H_COM_SPLASHPROOF_SOCKET"
+  ],
+  "outOfScopeHazardIds": [
+    "H_COM_FOOD_POSTING"
+  ],
+  "baselineInventory": {
+    "laws": {
+      "count": 119,
+      "idsSha256": "d5d7ad14df96fda2c078a2ac0678bfb797de117bb29392145ec54c5c436e25e3"
+    },
+    "lawVersions": {
+      "count": 122,
+      "idsSha256": "5279c8922e1463fe38c0d95fa6a14f70d33c137e5de3c172d993667094c8da01"
+    },
+    "clauses": {
+      "count": 3099,
+      "idsSha256": "46f9b08e62a87ec002d550cb70a93a6e76b9c62142685b53443ed760218722e3"
+    },
+    "hazards": {
+      "count": 2131,
+      "idsSha256": "305abe30721565a12c8b10391d01b450f945b9d44d0821806889ff20a2f34e01"
+    },
+    "links": {
+      "count": 1971,
+      "idsSha256": "7ed1cc230a258d102827d806ecf6306c4949d30ba9088c1bb625f77b73ee8005"
+    },
+    "evidence": {
+      "count": 1306,
+      "idsSha256": "22b2fc5e8786f2fce553c75b6cd0b645132e84219de607419936bea27cb2a1a8"
+    },
+    "successions": {
+      "count": 26,
+      "idsSha256": "25331badc2f3e0587f42640dae8314e94d60e519d99052a430032d21a6097c4b"
+    }
+  },
+  "baselineGate": {
+    "eligibleHazards": {
+      "count": 1653,
+      "idsSha256": "28a8cfce8f4037455996c83295a027604ea89c49208f3d82e0fef943b7cc56e1"
+    },
+    "eligibleLinks": {
+      "count": 1787,
+      "idsSha256": "dcf9df6b7da49f31b70564ca82d97ca9aa7e4c356588badd7cdff13d61c7709c"
+    }
+  },
+  "lifecycleDelta": {
+    "active": 18,
+    "proposed": -24,
+    "superseded": 6
+  },
+  "candidateDispositions": {
+    "H_COM_BREAKER_LABEL_OBSCURED": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_COLDROOM_FAN_BLOCKED": {
+      "action": "basis_text_pending",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_COMBUSTIBLE_CLUTTER": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_DAMP_ELECTRIC": {
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H_BE5284032A21441CA62FFDE0B2"
+    },
+    "H_COM_DANGEROUS_BUILDING_CONTROL": {
+      "action": "scope_split_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_EDGE_PROTECTION": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_ELECTRICAL_BOX_COVER": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_ELECTRIC_CABINET_CONTAMINATION": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_EV_BATTERY_STORAGE": {
+      "action": "scope_split_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_EV_CHARGING_AREA": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_EXTINGUISHER_RATING": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_FIRE_EQUIP_MARK": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_FLAME_FAILURE_VERIFY": {
+      "action": "verification_only",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_FLASHBACK_ARRESTOR": {
+      "action": "basis_text_pending",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_FOOD_POSTING": {
+      "action": "out_of_scope",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_FORKLIFT_INFO_VERIFY": {
+      "action": "verification_only",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_GAS_CYL_ELEC_PROX": {
+      "action": "basis_text_pending",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_GAS_DETECTOR_LOCATION": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_GAS_DETECTOR_OBSTRUCTED": {
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H_A9E3881B83F84709B23CF8EB2C"
+    },
+    "H_COM_GAS_HOSE_ELECTRIC": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_HAND_LAMP_VOLTAGE": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_HAZCAB_LIST": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_HAZCAB_SURROUNDINGS": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_HIGH_FALL_PROTECTION": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_HYDRANT_DOOR_BROKEN": {
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H025"
+    },
+    "H_COM_INSULATING_PPE_TEST": {
+      "action": "basis_text_pending",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_LIFTING_BARRICADE": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_LPG_NEAR_HEAT": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_NO_FIRE_EQUIP": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_OUTDOOR_AD_DAMAGE": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_OXY_CUTTING_DISTANCE": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_PAINT_SHIFT_QUANTITY": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_PLUGSTRIP_COMBUSTIBLE": {
+      "action": "scope_split_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_SAFETY_NET_DEFECT": {
+      "action": "basis_rebind_required",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_SCAFFOLD_LOAD": {
+      "action": "verification_only",
+      "appliedLifecycle": "proposed",
+      "canonicalHazardId": null
+    },
+    "H_COM_SLIPPERY_FLOOR": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_SMOKE_WINDOW_CONTROL": {
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H025"
+    },
+    "H_COM_SOCKET_LOOSE": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_SOP_MISSING": {
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H020"
+    },
+    "H_COM_SPLASHPROOF_SOCKET": {
+      "action": "merged_conditionally",
+      "appliedLifecycle": "superseded",
+      "canonicalHazardId": "H_BE5284032A21441CA62FFDE0B2"
+    },
+    "H_COM_SPRAY_PAINT_STORAGE": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_UNATTENDED_PATROL": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_VALVE_OBSTRUCTED": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    },
+    "H_COM_WRONG_FIRE_DOOR": {
+      "action": "admitted_narrowed_definition",
+      "appliedLifecycle": "active",
+      "canonicalHazardId": null
+    }
+  }
+}

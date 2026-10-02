@@ -2,6 +2,7 @@
 
 These checks do not approve normative text or determine any site hazard.
 """
+from commerce_cohort_fixture import pre_commerce_manifest
 import json
 from pathlib import Path
 import re
@@ -132,7 +133,7 @@ class AQ3067MetadataBoundaryTests(unittest.TestCase):
             self.assertFalse(list((KNOW / 'reviews' / folder).glob('*AQ3067*')))
 
     def test_manifest_records_exact_metadata_additions_only(self):
-        manifest = read('knowledge/manifest.json')
+        manifest = pre_commerce_manifest(read('knowledge/manifest.json'))
         batch = one(manifest['batches'], 'id', 'aq3067-metadata-reference-only-20261001')
         self.assertEqual({k: batch[k] for k in ('lawsAdded', 'lawVersionsAdded', 'evidenceAdded',
                                               'identityMetadataReviewsAdded', 'versionMetadataReviewsAdded')},

@@ -1,6 +1,7 @@
 """Pin the 2026-09-30 incident containment without deleting canonical sources."""
 from collections import Counter
 from datetime import date
+from commerce_cohort_fixture import pre_commerce_gate, pre_commerce_inventory
 import json
 from pathlib import Path
 import sys
@@ -75,10 +76,10 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
                              ['BLOCK_REVIEW_NOT_VERIFIED:rejected'])
         # Current projection additionally excludes four MEM10 wrong-source chains;
         # the separate containment suite verifies exact historical count recovery.
-        self.assertEqual(len(self.gate.eligible_hazards), 1653)
-        self.assertEqual(len(self.gate.eligible_links), 1787)
+        self.assertEqual(len(pre_commerce_gate(self.gate).eligible_hazards), 1653)
+        self.assertEqual(len(pre_commerce_gate(self.gate).eligible_links), 1787)
         self.assertEqual(len({self.gate.links[k]['clauseId']
-                              for k in self.gate.eligible_links}), 1338)
+                              for k in pre_commerce_gate(self.gate).eligible_links}), 1338)
 
     def test_corrupt_formula_clause_is_preserved_and_not_publishable(self):
         clause = read('clauses/C_12158_2.json')
@@ -133,9 +134,14 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
         self.assertEqual(successor[0]['lifecycle'], 'active')
         historical = [h for h in hazards if h['id'] != 'H_GB12801_2025_5_6_2_S1']
         self.assertEqual(len(historical), 2130)
-        self.assertEqual(Counter(h['lifecycle'] for h in historical),
+        historical_rows = pre_commerce_inventory('hazards',
+            ((h['id'], h['lifecycle']) for h in historical))
+        self.assertEqual(Counter(lifecycle for _, lifecycle in historical_rows),
                          {'active': 1663, 'proposed': 354, 'superseded': 113})
-        self.assertEqual(lifecycle, {'active': 1664, 'proposed': 354, 'superseded': 113})
+        historical_all = pre_commerce_inventory('hazards',
+            ((h['id'], h['lifecycle']) for h in hazards))
+        self.assertEqual(Counter(lifecycle for _, lifecycle in historical_all),
+                         {'active': 1664, 'proposed': 354, 'superseded': 113})
         self.assertEqual(m['lifecycle'], lifecycle)
 
 

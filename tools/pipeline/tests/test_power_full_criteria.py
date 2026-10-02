@@ -1,4 +1,5 @@
 """All power determination clauses with complete definitions and an explicit appendix boundary."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib,json,sys,unittest
 from datetime import date
 from pathlib import Path
@@ -56,7 +57,7 @@ class PowerCriteriaTests(unittest.TestCase):
 
     def test_no_hazard_link_or_canonical_identity_inflation(self):
         self.assertEqual([read(p)['id'] for p in (KNOW/'links').glob('*.json') if read(p).get('clauseId') in CLAUSES],[])
-        m=read(KNOW/'manifest.json');b=next(b for b in m['batches'] if b['id']=='power-full-criteria-20261001')
+        m = pre_commerce_manifest(read(KNOW/'manifest.json'));b=next(b for b in m['batches'] if b['id']=='power-full-criteria-20261001')
         self.assertEqual((b['clausesAdded'],b['evidenceAdded'],b['hazardsAdded'],b['linksAdded']),(38,4,0,0))
         self.assertEqual((m['counts']['laws'],m['counts']['lawVersions'],m['counts']['clauses'],m['counts']['evidence']),(119,122,3099,1306))
         self.assertEqual((m['counts']['hazards'],m['counts']['links']),(2131,1971))

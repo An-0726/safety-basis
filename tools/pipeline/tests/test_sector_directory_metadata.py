@@ -1,4 +1,5 @@
 """Exact approved source batch boundary; metadata is not normative coverage."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib,json,sys,unittest
 from pathlib import Path
 from datetime import date
@@ -25,7 +26,7 @@ class SectorDirectoryMetadataTests(unittest.TestCase):
 
     def test_inventory_delta_is_exactly_nine_identities_and_25_evidence(self):
         self.assertEqual((len(LAWS),len(VERSIONS),len(EVIDENCE)),(9,9,25))
-        manifest=read(KNOW/'manifest.json');batch=next(b for b in manifest['batches'] if b['id']=='sector-major-directory-metadata-20261001')
+        manifest = pre_commerce_manifest(read(KNOW/'manifest.json'));batch=next(b for b in manifest['batches'] if b['id']=='sector-major-directory-metadata-20261001')
         self.assertEqual({k:batch[k] for k in ['lawsAdded','lawVersionsAdded','evidenceAdded','identityMetadataReviewsAdded','versionMetadataReviewsAdded']},
                          {'lawsAdded':9,'lawVersionsAdded':9,'evidenceAdded':25,'identityMetadataReviewsAdded':9,'versionMetadataReviewsAdded':9})
         historical_counts = dict(manifest['counts'])

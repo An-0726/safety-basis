@@ -1,0 +1,90 @@
+{
+  "asOf": "2026-10-02",
+  "baselineCommit": "26b6c3e98f84ce46a9b2ee82694da26b74fb9eff",
+  "scope": "44 commerce candidate dispositions; publicly de-identified source metadata, source chains and exact-delta/independent-review integrity tests",
+  "results": {
+    "python": {
+      "command": "python -m unittest discover -s tools/pipeline/tests -v",
+      "tests": 561,
+      "passed": 561,
+      "failed": 0
+    },
+    "node": {
+      "command": "node --test tests/*.test.mjs",
+      "tests": 732,
+      "passed": 732,
+      "failed": 0
+    },
+    "validateAll": {
+      "blockingFailures": []
+    },
+    "strictAudit": {
+      "command": "python tools/v4/strict_release_audit.py --as-of 2026-10-02",
+      "verdict": "PASS",
+      "blockers": 0,
+      "inventoryWarnings": 156,
+      "warningBoundary": "156 inventory warnings remain; the three added supporting links are scope/definition support for CJJ/T149 and cannot independently qualify hazards. These warnings are not silently marked as resolved."
+    },
+    "publicationIntegrity": {
+      "errors": []
+    },
+    "bundle": {
+      "ok": true,
+      "releaseHash": "30a21ddc9e08fac3fea7f6acd14215645247eb064c3a582b392e071ffaf52cde",
+      "counts": {
+        "hazards": 1671,
+        "laws": 72,
+        "clauses": 1361,
+        "links": 1816,
+        "fieldProfiles": 23
+      },
+      "gate": {
+        "asOf": "2026-10-02",
+        "eligibleHazards": 1671,
+        "eligibleLinks": 1816
+      },
+      "fullText": {
+        "fullTextCount": 11,
+        "officialLinkCount": 68
+      },
+      "errors": []
+    },
+    "fieldProfiles": {
+      "status": "passed",
+      "count": 23,
+      "acceptanceType": "data_and_controller_only_not_GUI"
+    },
+    "diffCheck": "passed"
+  },
+  "exactDelta": {
+    "laws": 5,
+    "lawVersions": 5,
+    "clauses": 23,
+    "hazards": 0,
+    "links": 29,
+    "evidence": 20,
+    "successions": 0,
+    "oldEligibleHazardsPreserved": 1653,
+    "newEligibleHazards": 18,
+    "newEligibleLinks": 29,
+    "candidateDispositions": {
+      "admitted": 18,
+      "conditionalMerges": 6,
+      "excluded": 1,
+      "held": 19
+    }
+  },
+  "negativeControls": [
+    "Unknown entity additions remain visible and fail pinned inventory",
+    "Same-count wrong-ID substitutions fail inventory/eligible-set hashes",
+    "Improper FORKLIFT candidate admission fails exact eligibility",
+    "Removing a legacy eligible hazard fails",
+    "Restoring a prior rejected chain fails",
+    "Changing reviewed H/target/K/C/LV content fails independent binding",
+    "Dropping a reviewed item or asserting unseen site facts fails",
+    "Source SC/D lineage removal, stale hashes, incorrect merge target and false remediation claims fail"
+  ],
+  "policyBoundary": "release_gate_core is unchanged; historical cohort test projection is limited to the explicit reviewed ID delta and original 44 lifecycles; independent exact-current tests exercise the unmodified Gate. No private historical 918 ledger, enterprise file, raw PDF, fulltext redistribution, deploy output or credentials are added.",
+  "publicationState": "local source commit preparation; not pushed, merged or deployed; engineering final GUI/CI/merge/deploy acceptance remains separate",
+  "separateChange": "GB/T13869 exclusive end-date correction is prepared separately and is not part of this commerce commit."
+}

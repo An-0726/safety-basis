@@ -1,0 +1,790 @@
+{
+  "reviewer": "dot independent source-page and applicability review",
+  "reviewedAt": "2026-10-02T09:30:00Z",
+  "baseCommit": "26b6c3e98f84ce46a9b2ee82694da26b74fb9eff",
+  "scope": "18 narrowed generic definitions and 6 conditional merge mappings; no enterprise occurrence or remediation finding",
+  "result": "passed_for_bounded_generic_admission_and_conditional_merges",
+  "method": "Independent full-page visual comparison, complete selected clause and scope review; final changed H/K/C/version hashes recorded; source author did not act as independent reviewer. Content and scope pass does not attest unseen current-status fields.",
+  "sources": [
+    {
+      "standard": "GB55034-2022",
+      "origin": "公开官方PDF",
+      "pages": "范围PDF4/正文1；3.2.1与3.2.3 PDF6/正文3；3.4.1 PDF7/正文4",
+      "hazards": [
+        "H_COM_HIGH_FALL_PROTECTION",
+        "H_COM_EDGE_PROTECTION",
+        "H_COM_LIFTING_BARRICADE"
+      ],
+      "snapshotSha256": "f3c3f4dad8954b53c20c95a801b592adf843c28867caf596b2c9f9851c9c593e"
+    },
+    {
+      "standard": "JGJ/T46-2024",
+      "origin": "公开官方PDF",
+      "pages": "公告PDF3；范围PDF7/正文1；9.2.3/9.2.5 PDF44/正文38",
+      "hazards": [
+        "H_COM_HAND_LAMP_VOLTAGE"
+      ],
+      "snapshotSha256": "d064799cff5d331b2b88d722671202ac44481e6e82ab007cfc1042cd82a85477"
+    },
+    {
+      "standard": "CJJ/T146-2011",
+      "origin": "中国城市燃气协会公开正式原件",
+      "pages": "公告PDF3；范围PDF9；3.3.2两表PDF14；3.3.3/3.3.5 PDF15；4.4.5 PDF21/正文13",
+      "hazards": [
+        "H_COM_GAS_DETECTOR_LOCATION",
+        "H_COM_VALVE_OBSTRUCTED"
+      ],
+      "snapshotSha256": "e527f3c3b05281eb6f9e6d3448fcc24a8a1e370f70abc75e269d16955e96e695"
+    },
+    {
+      "standard": "GB55037-2022",
+      "origin": "公开官方PDF",
+      "pages": "范围PDF5；6.4.2/6.4.3 PDF30-31/正文26-27；8.1.1 PDF48/正文44",
+      "hazards": [
+        "H_COM_WRONG_FIRE_DOOR",
+        "H_COM_NO_FIRE_EQUIP"
+      ],
+      "snapshotSha256": "90b92701fe6988a1c1c7659cd96a68fef92523ae3a2b04168aed937f03c247d0"
+    },
+    {
+      "standard": "XF1131-2014",
+      "origin": "公开官方PDF",
+      "pages": "封面PDF1；前言强制范围PDF4；适用范围PDF7/正文1；5.2.1 PDF10/正文4；6.15 PDF12/正文6",
+      "hazards": [
+        "H_COM_UNATTENDED_PATROL",
+        "H_COM_COMBUSTIBLE_CLUTTER"
+      ],
+      "snapshotSha256": "835f2860b9645cc5c6cb95390bb6925570fe53e7daa82d7c10273f5d9c7de7ee"
+    },
+    {
+      "standard": "GB6514-2023",
+      "origin": "公开官方PDF",
+      "pages": "范围见全文首章；6.2.1.2 PDF12/正文6",
+      "hazards": [
+        "H_COM_PAINT_SHIFT_QUANTITY"
+      ],
+      "snapshotSha256": "2c9b3519d5ab8b195a2c2d36ee2210c3a5ba5ac75d2d383e9e7f8291d00f56ce"
+    },
+    {
+      "standard": "GB31654-2021",
+      "origin": "公开官方PDF",
+      "pages": "封面PDF1；范围和2.5 PDF2/正文1；3.3.5.2 PDF4/正文3；9.2.1/9.2.2 PDF9-10（非所选直接条文）",
+      "hazards": [
+        "H_COM_SLIPPERY_FLOOR"
+      ],
+      "snapshotSha256": "98bd6abd0db55f2f72005d82142f605d48c8279c853207c7e3accf352c44ed87"
+    },
+    {
+      "standard": "CJJ/T149-2021",
+      "origin": "公开官方PDF",
+      "pages": "范围1.0.2 PDF7/正文1；定义2.0.1/2.0.5 PDF8/正文2；10.2.1 PDF41/正文35",
+      "hazards": [
+        "H_COM_OUTDOOR_AD_DAMAGE"
+      ],
+      "snapshotSha256": "302166ece9d3f635a8435f9115655157b4b9b9ba51c7626b1e7b6d447f3a3ab5"
+    },
+    {
+      "standard": "GB50303-2015",
+      "origin": "已授权Drive保存的标准扫描原件；不是公开官网直取，不含企业事实；不转公开仓库",
+      "pages": "PDF3版权/4公告/16范围；14.2.3 PDF77/正文62；20.2.1/20.2.2 PDF99/正文84；5.2.10 PDF45-46仅用于拒绝标识遮挡推论",
+      "hazards": [
+        "H_COM_ELECTRICAL_BOX_COVER",
+        "H_COM_SOCKET_LOOSE"
+      ],
+      "snapshotSha256": "f036196e5a1508b449791920eae9f0f53efaffaba20ce683041cc4dfc21e5350"
+    },
+    {
+      "standard": "GB55036-2022",
+      "origin": "root本次从上海住建官方URL独立下载",
+      "pages": "PDF24-25/印刷21-22，10.0.1—10.0.3",
+      "hazards": [
+        "H_COM_EXTINGUISHER_RATING"
+      ],
+      "officialURL": "https://zjw.sh.gov.cn/cmsres/50/50f4e71907fb49928957dae0811a9b22/707e4bc824fa623e77e7d526d244d994.pdf",
+      "snapshotSha256": "2d54318955e35b4a81049f755505381c542a215ecc8cacd76eb2d9a91c6ff701"
+    },
+    {
+      "standard": "中华人民共和国危险化学品安全法",
+      "origin": "官方HTML",
+      "pages": "第37条、第41条第1款及施行条款",
+      "hazards": [
+        "H_COM_SPRAY_PAINT_STORAGE"
+      ],
+      "officialURL": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html"
+    },
+    {
+      "standard": "中华人民共和国消防法2021修正",
+      "origin": "官方HTML",
+      "pages": "第16条第一款第2项",
+      "hazards": [
+        "H_COM_FIRE_EQUIP_MARK"
+      ],
+      "officialURL": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_e9e34f0731c249a891ea9c925e17f237.html"
+    }
+  ],
+  "items": [
+    {
+      "hazardId": "H_COM_COMBUSTIBLE_CLUTTER",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "652f1e96c1eeda52b0071584615528af83a1c1107f86428ba348d51c71844f4c",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_PACKAGING_XF1131_6_15",
+          "linkHash": "efebc71cb19fce5c97b6e9eba7b16d04851288e7c87ba8e5747c3479247c237b",
+          "clauseId": "C_COM_XF1131_6_15",
+          "clauseHash": "b1d6c02a288a4ec7e717f82c05a537148c11545882ae646e896b7c1bf6407039",
+          "lawVersionId": "L015",
+          "lawVersionHash": "62cc3fbb5f0c5ff9c4cf6ccde4693fc301efbd425b81423381b37a87a20392f1"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_DAMP_ELECTRIC",
+      "action": "merged_conditionally",
+      "hazardHash": "8dc9bb16de344e90adb5023d0db1a6706f86eb65e431ae58a8a4cee902c3eab3",
+      "targetId": "H_BE5284032A21441CA62FFDE0B2",
+      "targetHash": "5824fde4701f5f64b4197e6fef87ac82b41b88402214cfbb108377441d8342cc",
+      "links": [],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_EDGE_PROTECTION",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "882462e48c785da0709dd98d59fc79cbc47d2fa0bc2367cedf77a84cc1fab8ac",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_EDGE_GB55034_3_2_3",
+          "linkHash": "a7576af3ba0d3278fa66a8f2fe57f6d05f7bb14e449efe44fa850d9e2d412331",
+          "clauseId": "C_GB55034_2022_3_2_3",
+          "clauseHash": "c20497b9846e48e65e1da19414eb4a074b8f069ffad7dc1aa86fce297119924f",
+          "lawVersionId": "LV_STD_GB55034_2022",
+          "lawVersionHash": "4c4750158bac5122afd1afaa4bc183db7e98ccbfd4452fff542e9506b2e1a174"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_ELECTRICAL_BOX_COVER",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "996c608ed9b4cb528570bd2f47a3ff33f8dcadae7c6e8c421c3285bb3fd3043d",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_BOX_COVER_GB50303_20_2_1",
+          "linkHash": "215158f17019bfa9213616e45405ffbb73010ac7bbf8e9b347c19121460081ac",
+          "clauseId": "C_GB50303_2015_20_2_1",
+          "clauseHash": "b7d1491354642fd64b1b050fac68ae11ee4fe7a70ae33e267cbccfde6b2dcf24",
+          "lawVersionId": "LV_STD_GB50303_2015",
+          "lawVersionHash": "3fbab9418e818208b1bec127dfd9d53c5b7cc600347dae6468fa674e6c9866bf"
+        },
+        {
+          "linkId": "K_COM_BOX_COVER_GB50303_14_2_3",
+          "linkHash": "a8b484b50be9acf02934966862dd2c999e42da1b5fd6a0397127e9a0245b3ef1",
+          "clauseId": "C_GB50303_2015_14_2_3",
+          "clauseHash": "b6de0daf39d84a57ea0a7db1e0cfdcd757809e41632ee722cc2b34d2a18fcc20",
+          "lawVersionId": "LV_STD_GB50303_2015",
+          "lawVersionHash": "3fbab9418e818208b1bec127dfd9d53c5b7cc600347dae6468fa674e6c9866bf"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_EXTINGUISHER_RATING",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "1a5fc00134ee358c0d19f45874f27aa44491655cd7dbea7b90507f0a21ab033a",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_2",
+          "linkHash": "304735f958631cf39f1d88b4f584704ceb336714726a8da5a8382302aca92d6e",
+          "clauseId": "C_GB55036_10_0_2",
+          "clauseHash": "8a0210912d13ed3120ad6d75e61c0dbfe8cc1017c872db3645224902402326dc",
+          "lawVersionId": "L007",
+          "lawVersionHash": "7b0c03157ea0408f15b91b1d23014b54098b5b903482362e95b7450909173d11"
+        },
+        {
+          "linkId": "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_1",
+          "linkHash": "4396892b783200cadab0809cdefc982831fc264af2e83b9b773ad3e5d1de73e1",
+          "clauseId": "C_GB55036_10_0_1",
+          "clauseHash": "145bf0601dd9fccfddc1e5928c9135f2678a8cc6bb1cb17abe763ed18e0debfb",
+          "lawVersionId": "L007",
+          "lawVersionHash": "7b0c03157ea0408f15b91b1d23014b54098b5b903482362e95b7450909173d11"
+        },
+        {
+          "linkId": "K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_3",
+          "linkHash": "2ffa1f7989f6b0cc666452ba95430f76606e527ce997600a76204200362ba0e7",
+          "clauseId": "C_GB55036_10_0_3",
+          "clauseHash": "d25be190d290ee54468cc0aa7b78db5991f37f52e4efbc0c8f38c3b9a5876f0d",
+          "lawVersionId": "L007",
+          "lawVersionHash": "7b0c03157ea0408f15b91b1d23014b54098b5b903482362e95b7450909173d11"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_FIRE_EQUIP_MARK",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "65852005b9d7d08c9f8bf220aeb1d6b73b3cc8cd492e9b3c4514ea3c71d44d5e",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_FIRE_EQUIP_MARK_FIRELAW_16_2",
+          "linkHash": "daa906c11f0a038a11469e0c416e1f905c54ca3d3858ba0f9069532b537066da",
+          "clauseId": "C001",
+          "clauseHash": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
+          "lawVersionId": "L001",
+          "lawVersionHash": "a7242d500deef1fa2e5e489a283bb3891f2098efddb36b829429509ad4bd399c"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_GAS_DETECTOR_LOCATION",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "0bdbc4efeb138d3d3dfcba3592890d3b904d23da9d08fdc5b64fe1ae45cce66c",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_3",
+          "linkHash": "db84b6ebd64f5982d1d99e13fa409594d6b6011909828b91d21c60ec23441851",
+          "clauseId": "C_CJJT146_3_3_3",
+          "clauseHash": "ba9dd2cda57a9cb154c63755c41497ffa0be8ccd2895659e7c3511510c6969f2",
+          "lawVersionId": "LV_STD_CJJT146_2011",
+          "lawVersionHash": "9d6d8d6bc866616fd697b036f3d0912567f2b9baeaf55a7aab36723928f22075"
+        },
+        {
+          "linkId": "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_5",
+          "linkHash": "e08931d43372ebddf8393fa4afaa40f3656ac541efa80e704149f108d7da2174",
+          "clauseId": "C_CJJT146_3_3_5",
+          "clauseHash": "38eca2f014ad51b5c26ef86de648b20875611922b9104422c03f33e789823cf4",
+          "lawVersionId": "LV_STD_CJJT146_2011",
+          "lawVersionHash": "9d6d8d6bc866616fd697b036f3d0912567f2b9baeaf55a7aab36723928f22075"
+        },
+        {
+          "linkId": "K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_2",
+          "linkHash": "cf890f35f4f2cbf50e418de80da79898fbea47901d7e13e7473fba1ce5f96a48",
+          "clauseId": "C_CJJT146_3_3_2",
+          "clauseHash": "3086c597c3c48a93df0a6a02324f417e3f4dff2d0e5088eca3a7620023c5b0f6",
+          "lawVersionId": "LV_STD_CJJT146_2011",
+          "lawVersionHash": "9d6d8d6bc866616fd697b036f3d0912567f2b9baeaf55a7aab36723928f22075"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_GAS_DETECTOR_OBSTRUCTED",
+      "action": "merged_conditionally",
+      "hazardHash": "d6bb7d020cc864b96ccbdca25b58e914fb7bfa1ab761df6139de51e210322f6e",
+      "targetId": "H_A9E3881B83F84709B23CF8EB2C",
+      "targetHash": "4c41f58edad2dfac073cbb56d45dd8cd52da78f5ea5cbedffcdb09eb1d212132",
+      "links": [],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_HAND_LAMP_VOLTAGE",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "69799191eeb26566cc6a1196b1b56be2147c13cb4aa9a4649c0fa63106fb54ef",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_HAND_LAMP_JGJT46_9_2_3",
+          "linkHash": "222ea03c80a8284f51c993321e85eb2418d148cc67aaa7b0a9e04266d8ecdd05",
+          "clauseId": "C_JGJT46_2024_9_2_3",
+          "clauseHash": "e4b458ec4239110ef9ac7b3bf46d6b9bbf3da41a361b8ea2d4b26c4ac3d4d9e3",
+          "lawVersionId": "LV_STD_JGJT46_2024",
+          "lawVersionHash": "fc126ad5ac83b547bc5bd5435827880e4d9d7a935c600ce2b44018e9aad4c6f1"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_HIGH_FALL_PROTECTION",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "65b04c72ec5b92c297bc34992e2affacbc7bfbd040b0d706a6492c29c49148cb",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_HIGH_FALL_GB55034_3_2_1",
+          "linkHash": "cc1e433a0240fd5dcb53b95e5ebc38411173f0852d3e251665a2104d8087802b",
+          "clauseId": "C_GB55034_2022_3_2_1",
+          "clauseHash": "eba234fc6bf1b8c06687bca36e187ddb493009b49f05e06a7b869d5df194e342",
+          "lawVersionId": "LV_STD_GB55034_2022",
+          "lawVersionHash": "4c4750158bac5122afd1afaa4bc183db7e98ccbfd4452fff542e9506b2e1a174"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_HYDRANT_DOOR_BROKEN",
+      "action": "merged_conditionally",
+      "hazardHash": "3ab24f90b44cbb9f9fb114eafcd2a29360fa80e553fffce5ef330f8657646f4b",
+      "targetId": "H025",
+      "targetHash": "ecd7662ffa21bd8452c032a06c4fff82c37cfab22fa37b488afca076f33da37d",
+      "links": [],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_LIFTING_BARRICADE",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "46510ef6cdccfe2f8ba28c4a622da7dbc901a8a6f73e4828c7c44e002d342162",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_LIFTING_GB55034_3_4_1",
+          "linkHash": "0a0e3ef7fdc69473c29a46460a67720a4bc0747cef83fb71c52e98d8d304ed11",
+          "clauseId": "C_GB55034_2022_3_4_1",
+          "clauseHash": "088cd7876f2ce9021317c52fcc2d66c708f68260f9f46e96fbf4313b576f804d",
+          "lawVersionId": "LV_STD_GB55034_2022",
+          "lawVersionHash": "4c4750158bac5122afd1afaa4bc183db7e98ccbfd4452fff542e9506b2e1a174"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_NO_FIRE_EQUIP",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "5f8e912b7ca73a15aef06095e558a57bb064eb30412791ad104adaa574bfaf1f",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_NO_FIRE_EQUIP_GB55037_8_1_1",
+          "linkHash": "d0c7166e505684552a6ea4be44c0bbf3e4d6bec9c8a165abdf007c8cb9e7f2ff",
+          "clauseId": "C_COM_GB55037_8_1_1",
+          "clauseHash": "abd543e982e1e5839a30fd5564f0f837659bb09d4949e2644f9fb17a3a1d08c8",
+          "lawVersionId": "L029",
+          "lawVersionHash": "23d96a091c30660cc9428979b5b1cf79080a26711d90ca147358f19d0e04f388"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_OUTDOOR_AD_DAMAGE",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "ffbefcc4cd4c3b56ed65f2159ca7dc87b178bfc8defe072528a6f8649bf1ef50",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_1_0_2",
+          "linkHash": "681391db48fa4fc24f4ea2a8e9fbea0a9e7c2ea49e67166aef8ec597bb47cbd6",
+          "clauseId": "C_CJJT149_1_0_2",
+          "clauseHash": "0801e25f7bc373236b02f412b9190aead938fc5bdbd8fdcc8e3c03a82f8fcd8d",
+          "lawVersionId": "LV_STD_CJJT149_2021",
+          "lawVersionHash": "eb2668357389a6fb323fd63f3a09255898012de29e2488c1fb3e87963666d8b5"
+        },
+        {
+          "linkId": "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_10_2_1",
+          "linkHash": "ee06a633cae93ab24f662240e3e49598717e97febe9d71ab0f51d55a6f0a0ae3",
+          "clauseId": "C_CJJT149_10_2_1",
+          "clauseHash": "c7c889c848393938eb1d24fb8c0d1f8a509ef2af1350a1381b317c440248820b",
+          "lawVersionId": "LV_STD_CJJT149_2021",
+          "lawVersionHash": "eb2668357389a6fb323fd63f3a09255898012de29e2488c1fb3e87963666d8b5"
+        },
+        {
+          "linkId": "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_5",
+          "linkHash": "7c95065f9507373131488772a6347abe5947db6e5702c852dc8c964c02bf923a",
+          "clauseId": "C_CJJT149_2_0_5",
+          "clauseHash": "5e490c011d854acc2cf51ff6412229a284ae596a4312c44ce56bb912f1dc7320",
+          "lawVersionId": "LV_STD_CJJT149_2021",
+          "lawVersionHash": "eb2668357389a6fb323fd63f3a09255898012de29e2488c1fb3e87963666d8b5"
+        },
+        {
+          "linkId": "K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_1",
+          "linkHash": "462ba32e1865199cca2600a87ebd597e0b566fed6f83df1f5aa6428b9233e21b",
+          "clauseId": "C_CJJT149_2_0_1",
+          "clauseHash": "76a102db655fe6a57acb81bee98fb4f61cd822ba8ede898dbc160c2f31876c98",
+          "lawVersionId": "LV_STD_CJJT149_2021",
+          "lawVersionHash": "eb2668357389a6fb323fd63f3a09255898012de29e2488c1fb3e87963666d8b5"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_PAINT_SHIFT_QUANTITY",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "b597c4c3e43f27ff38be9144050c1dcb6da731942f60fa2dbcae41740d20e850",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2",
+          "linkHash": "5b5cdd07a64946741fb5a65a17239841a8e65ee6f77bfc1e1652ef9ea800ba7a",
+          "clauseId": "C_GB6514_6_2_1_2",
+          "clauseHash": "738468c286f7a6ae2bad011e61f3147a2c4c2ff6162708ab7307401463fcb9a6",
+          "lawVersionId": "LV_STD_GB6514",
+          "lawVersionHash": "dbbe411a3913bcf5afbfb8d2a8d5369d4262d3f6b8dc6acdc2b24ad662e3e629"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_SLIPPERY_FLOOR",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "8909f0a6ba8292759b9df229b09bac7d049809461c137a42b3f26d240c0f6da0",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_SLIPPERY_GB31654_3_3_5_2",
+          "linkHash": "66c2a34aeb2f45bb1d58f9c0f851217f9d3b679479d2a85901e8dd4b7996251e",
+          "clauseId": "C_GB31654_2021_3_3_5_2",
+          "clauseHash": "3f64c5fb462319f00e13f2b8251ca1b2f1dbfa2c1710d181fd9d941f42e4e6ab",
+          "lawVersionId": "LV_STD_GB31654_2021",
+          "lawVersionHash": "b6694db6da29c34376107041d852f94f8db6255aa50e811f8f3833577b972967"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_SMOKE_WINDOW_CONTROL",
+      "action": "merged_conditionally",
+      "hazardHash": "687577d5e79be2b648e0140f6a052f3449a20b3c6ad56bb0fd8daba16454e32c",
+      "targetId": "H025",
+      "targetHash": "ecd7662ffa21bd8452c032a06c4fff82c37cfab22fa37b488afca076f33da37d",
+      "links": [],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_SOCKET_LOOSE",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "6d831bd2fcf1bc61d8da187b7314e7dd3d3cc54597e23667139ae3bd907ffa7f",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_SOCKET_GB50303_20_2_1",
+          "linkHash": "3b00fdcb15a26722a3264468d5f07ca6df4557d85fa4d7f3de98f38abf9a39e0",
+          "clauseId": "C_GB50303_2015_20_2_1",
+          "clauseHash": "b7d1491354642fd64b1b050fac68ae11ee4fe7a70ae33e267cbccfde6b2dcf24",
+          "lawVersionId": "LV_STD_GB50303_2015",
+          "lawVersionHash": "3fbab9418e818208b1bec127dfd9d53c5b7cc600347dae6468fa674e6c9866bf"
+        },
+        {
+          "linkId": "K_COM_SOCKET_GB50303_20_2_2",
+          "linkHash": "4525d6c784e69a73d02f5194f7802319a5cbc5319d42ec51ae8ec25ce13f924d",
+          "clauseId": "C_GB50303_2015_20_2_2",
+          "clauseHash": "6538412e9205a1228827060cde26bc893663efabfcc6c46173e5e842aeb102ff",
+          "lawVersionId": "LV_STD_GB50303_2015",
+          "lawVersionHash": "3fbab9418e818208b1bec127dfd9d53c5b7cc600347dae6468fa674e6c9866bf"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_SOP_MISSING",
+      "action": "merged_conditionally",
+      "hazardHash": "cc1af8f52c80e066d7b36d1f0be3bd7d07e1f23a6132df9a41f3bd5674d82f76",
+      "targetId": "H020",
+      "targetHash": "0374b0559266cb39de989de3927707b2c86fb36309fe494796b3a004042137e1",
+      "links": [],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_SPLASHPROOF_SOCKET",
+      "action": "merged_conditionally",
+      "hazardHash": "648a244021d548aad5568f8310fc9e1d91c2c5826e9a342d2c55ceaedc5847a0",
+      "targetId": "H_BE5284032A21441CA62FFDE0B2",
+      "targetHash": "5824fde4701f5f64b4197e6fef87ac82b41b88402214cfbb108377441d8342cc",
+      "links": [],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_SPRAY_PAINT_STORAGE",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "23b8b0a370a42082e86360a3e7dc83ed51c907baf7d5d9e8018a068103a2038e",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_SPRAY_PAINT_STORAGE_DBD6E2B5ACAB595BE7EA59D3",
+          "linkHash": "b1d32523c12b901102120a9575293c13768552d7586bb60743576fddee691cd0",
+          "clauseId": "C_DBD6E2B5ACAB595BE7EA59D3",
+          "clauseHash": "c94e3df21e87a75a90ed96450efe8d5fb2a7f79998a71cf24adbba682b2b0294",
+          "lawVersionId": "LV_HAZCHEM_LAW",
+          "lawVersionHash": "c42186cb9d733c540989186942daff835d439ecaf9b253895fc24bba38fdb043"
+        },
+        {
+          "linkId": "K_COM_20261002_SPRAY_PAINT_STORAGE_XLSX_FT_041DA9C310E071B490B6DF44",
+          "linkHash": "d1192906cef89934badfd3eca9dc5a6553a57e758881345a2cddefb9fef9b67c",
+          "clauseId": "C_XLSX_FT_041DA9C310E071B490B6DF44",
+          "clauseHash": "cf3d36f0ef2b6bb9aea8334d0a8fedfd24ce2cc994673e01af89c8cdbccfcc0a",
+          "lawVersionId": "LV_HAZCHEM_LAW",
+          "lawVersionHash": "c42186cb9d733c540989186942daff835d439ecaf9b253895fc24bba38fdb043"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_UNATTENDED_PATROL",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "a99d29ec88c3e4df1b0ac36b845598ce3554a94a15ba8fc9395123d2f9caab6f",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_PATROL_XF1131_5_2_1",
+          "linkHash": "0449247a16961573f51bc9ed0bcd491c74ea5180ade1dc805dba628695a2cfc4",
+          "clauseId": "C_XF1131_5_2_1",
+          "clauseHash": "2d0c4bc09cd3b4379faeb54b5f43e7567202bf30f4c72329dc1f765593c32b8d",
+          "lawVersionId": "L015",
+          "lawVersionHash": "62cc3fbb5f0c5ff9c4cf6ccde4693fc301efbd425b81423381b37a87a20392f1"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_VALVE_OBSTRUCTED",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "c302e7b1284b73e75933eac03b4beb2d9f20e491ebb0e31eb3349f22459244f5",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_VALVE_OBSTRUCTED_CJJT146_4_4_5",
+          "linkHash": "a8bd719c7b0912ad8a6897fa7ae520b62fedbb2bb870656ddfb966c77664bcf0",
+          "clauseId": "C_CJJT146_4_4_5",
+          "clauseHash": "f3542bbb5ed4d384c0749c86d21b8ea485553312c40cc75365ae96d8c8ef5bbd",
+          "lawVersionId": "LV_STD_CJJT146_2011",
+          "lawVersionHash": "9d6d8d6bc866616fd697b036f3d0912567f2b9baeaf55a7aab36723928f22075"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    {
+      "hazardId": "H_COM_WRONG_FIRE_DOOR",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "e73b2b4ae0434b925b290c20c67b4abf0d5cf54f16d08589a40d214251db72ce",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_2",
+          "linkHash": "a7b38a5eeeb5daba399e98f9e1ccf68af3cc782bdb6e22df19f3e01282fb6ac2",
+          "clauseId": "C_GB55037_6_4_2",
+          "clauseHash": "0aec4d3618a180e16ccd0f3a5219da34006c256516255470bef110e2087b5a09",
+          "lawVersionId": "L029",
+          "lawVersionHash": "23d96a091c30660cc9428979b5b1cf79080a26711d90ca147358f19d0e04f388"
+        },
+        {
+          "linkId": "K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_3",
+          "linkHash": "361c1fea5bddb93384e9d9ca1fa2137b25875c33e574450ef793ad634cc2ecb9",
+          "clauseId": "C_GB55037_6_4_3",
+          "clauseHash": "d1a1a4ccde0e7187ed66a9aa197c8e95efe63b4c986f7f10693e46130b8925e6",
+          "lawVersionId": "L029",
+          "lawVersionHash": "23d96a091c30660cc9428979b5b1cf79080a26711d90ca147358f19d0e04f388"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    }
+  ],
+  "correctionsRequiredAndObserved": [
+    "PLUGSTRIP merge rejected and proposed restored",
+    "SPLASHPROOF and DAMP require verified manufacturer environment and insufficient additional protection; recommended standard only",
+    "CJJ/T146 and JGJ/T46 explicit recommended technical-reference boundaries",
+    "GB50303 limited to construction acceptance general items, not whole-life universally compulsory rules"
+  ],
+  "limitations": [
+    "只核本批18个收窄通用定义及6个有条件归并；不认定原企业违法、整改完成或全部历史材料实况。",
+    "三标准族的本次当前使用判断来自正式发布/原件、专业题录及近期官方使用或部分废止关系相互印证；没有冒称取得2026国家平台实时有效字段。",
+    "推荐性技术标准不能单独形成普遍违法判断；GB50303两项限安装验收一般项目；与现行强制性规范冲突时以强制规范为准。",
+    "内容/hash改变后需重核；工程测试、公开隐私检查、合并与部署仍须独立完成。"
+  ],
+  "currencyEvidenceSupplement": {
+    "asOf": "2026-10-02",
+    "scope": "仅三标准族及本批5个H；其他条款不重签",
+    "conclusion": "根据正式发布/原件、专业出版题录及官方近期使用或部分废止关系交叉核对，支持截至2026-10-02本批所选条款的限定技术使用判断；未取得主管部门2026全国实时有效状态字段，不以未检出废止或PDF存在单独推定现行。CJJ/T推荐性标准不单独推出普遍违法，GB50303仅按施工质量验收一般项目范围使用；与全文强制性通用规范冲突时以后者为准。",
+    "sourceFamilies": {
+      "CJJ/T146-2011": [
+        {
+          "url": "https://ebook.chinabuilding.com.cn/zbooklib/book/detail/show?SiteID=1&bookID=56402",
+          "sourceType": "professional_publisher_catalogue",
+          "sourceDate": null,
+          "observedAt": "2026-10-02",
+          "locator": "书目标题现行；2011-02-11发布、2011-12-01实施、废止日期-",
+          "claim": "专业标准题录现行标识，不是国家平台2026效力字段"
+        },
+        {
+          "url": "https://www.moj.gov.cn/pub/sfbgw/gwxw/xwyw/202512/t20251215_529343.html",
+          "sourceType": "central_government_case_report",
+          "sourceDate": "2025-12-15",
+          "locator": "规范涉企行政执法专项行动第三批典型案例五",
+          "claim": "住建和执法部门现场会商对CJJ/T146-2011与GB50028适用作协调；证明近期正式使用，不创设普遍强制义务",
+          "access": "搜索返回官方完整正文，open重定向失败；下列司法局转载正文已实读"
+        },
+        {
+          "url": "https://sfj.baoji.gov.cn/ztzl/xzjc/gzdt/202602/t20260225_1248508.html",
+          "sourceType": "local_justice_official_republication",
+          "sourceDate": "2026-02-25",
+          "locator": "案例五基本案情、监督处理、典型意义",
+          "claim": "完整转载上述司法部案例，明确CJJ/T146-2011；不以转载日期充当标准发布或状态生效日期"
+        }
+      ],
+      "CJJ/T149-2021": [
+        {
+          "url": "https://ebook.chinabuilding.com.cn/zbooklib/book/detail/show?SiteID=1&bookID=149717",
+          "sourceType": "professional_publisher_catalogue",
+          "sourceDate": null,
+          "observedAt": "2026-10-02",
+          "locator": "标准本身题录，现行/2021-12-13发布/2022-03-01实施/废止日期-",
+          "claim": "专业题录，与公告书目148823区分；既有实际HTML读取及hash保留"
+        },
+        {
+          "url": "https://cgj.sz.gov.cn/attachment/1/1658/1658427/12540503.pdf",
+          "sourceType": "local_competent_department_interpretation",
+          "sourceDate": "2025-11-26",
+          "locator": "《深圳市户外招牌设施技术规范》解读，PDF第1页二（一）",
+          "claim": "明确称CJJ/T149—2021为现行行业标准；限定该正式解读的观察日期"
+        },
+        {
+          "url": "https://csglj.quanzhou.gov.cn/xxgk/zfxxgkzl/zfxxgkml/csgl/202605/t20260526_3294759.htm",
+          "sourceType": "local_competent_department_notice",
+          "sourceDate": "2026-05-11",
+          "publishedAt": "2026-05-26",
+          "locator": "泉城管〔2026〕39号，引言及一、规范定义",
+          "claim": "2026年继续引用2021版；不把泉州地方通知约束扩成全国规则"
+        }
+      ],
+      "GB50303-2015": [
+        {
+          "url": "https://ebook.chinabuilding.com.cn/zbooklib/book/detail/show?SiteID=1&bookID=61065",
+          "sourceType": "professional_publisher_catalogue",
+          "sourceDate": null,
+          "observedAt": "2026-10-02",
+          "locator": "标准题录现行；2015-12-03发布/2016-08-01实施/废止日期-",
+          "claim": "专业出版题录现行标识，不冒称国家标准平台状态"
+        },
+        {
+          "url": "https://zjw.sh.gov.cn/bzde/20181217/0011-47880.html",
+          "sourceType": "local_housing_department_implementation_catalogue",
+          "sourceDate": "2016-08-01",
+          "locator": "2016年8月开始实施的工程建设标准，国标第4项",
+          "claim": "准确标准身份、发布和实施日期；只作为sourceUrl身份入口，不作条文全文或当前效力字段"
+        },
+        {
+          "url": "https://szwb.sz.gov.cn/gwszwfw/zsk/hybz/content/post_9913357.html",
+          "sourceType": "official_general_code_partial_repeal_notice",
+          "sourceDate": "2022-06-27",
+          "locator": "建筑电气与智能化通用规范，第一项17条GB50303废止清单",
+          "claim": "GB55024-2022自2022-10-01实施，冲突以通用规范为准。本次14.2.3/20.2.1/20.2.2不在所列废止强条内；不等于全标准所有条款已独立再审"
+        }
+      ]
+    },
+    "notReliedUpon": [
+      {
+        "url": "https://www.qingdao.gov.cn/zwgk/xxgk/cxjs/gkml/gwfg/202511/P020251121604645725245.pdf",
+        "reason": "下载未取得真实PDF，搜索可见目录信息未升级为已核原页依据；不作为必要证据"
+      },
+      {
+        "description": "四川标准体系目录",
+        "reason": "仅检索命中，未完整读取，不纳入判断"
+      }
+    ],
+    "metadataCorrection": {
+      "entityId": "LV_STD_GB50303_2015",
+      "field": "sourceUrl",
+      "old": "https://www.mohurd.gov.cn/cms_files/filemanager/mohurdold/file/2021/20210527/d4cc31f4fb44e2812134acb3bef06364.pdf",
+      "new": "https://zjw.sh.gov.cn/bzde/20181217/0011-47880.html",
+      "oldContentHash": "2317c67c5f10dcb98a981024736d9831d8a675ab39d0389ff7ba8b521ffa8a89",
+      "newContentHash": "3fbab9418e818208b1bec127dfd9d53c5b7cc600347dae6468fa674e6c9866bf",
+      "unchanged": "documentNumber/effectiveDate/endDate/versionKey/validityStatus、全部C/H/K原文和适用范围",
+      "bindingImpact": "仓库K applicability contextHashes仅绑定H/C；旧LV内容hash仅在其version review出现。仅更新此LV的version review绑定，不批量重签其他C/K。受引用C/K/H完整列表见下方。",
+      "references": {
+        "clauseIds": [
+          "C_GB50303_2015_14_2_3",
+          "C_GB50303_2015_20_2_1",
+          "C_GB50303_2015_20_2_2",
+          "C_GB50303_2015_5_2_10",
+          "C_GB50303_5_1_12_1",
+          "C_GB50303_5_1_1_door",
+          "C_GB50303_5_1_1_pe"
+        ],
+        "linkIds": [
+          "K_265A5682_GB50303_5_1_1",
+          "K_3E588442_GB50303_5_1_1",
+          "K_43C6C076_GB50303_5_1_1",
+          "K_5565236C_GB50303_5_1_1",
+          "K_COM_BOX_COVER_GB50303_14_2_3",
+          "K_COM_BOX_COVER_GB50303_20_2_1",
+          "K_COM_SOCKET_GB50303_20_2_1",
+          "K_COM_SOCKET_GB50303_20_2_2",
+          "K_bb3ddc45f92d147cbae09f24"
+        ],
+        "hazardIds": [
+          "H_265A5682E86D43F0B813544099",
+          "H_37E54F5AFBE14B2EA02D93725D",
+          "H_3E588442618F422D926705893B",
+          "H_43C6C076F9FC456DB09138A19A",
+          "H_5565236C0E354D5D8428BC1DEB",
+          "H_COM_ELECTRICAL_BOX_COVER",
+          "H_COM_SOCKET_LOOSE"
+        ]
+      }
+    }
+  },
+  "bindingVerification": {
+    "matchedItems": 24,
+    "errors": [],
+    "method": "仓库canonical.content_hash对当前H/归并目标/K/C/LV逐个复算与冻结清单一致"
+  }
+}

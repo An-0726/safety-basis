@@ -1,4 +1,5 @@
 """Reviewed official text, scope and release boundaries for the bounded gas batch."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib
 import json
 from datetime import date
@@ -52,7 +53,7 @@ class CityGasCriteriaTests(unittest.TestCase):
     def test_no_hazard_or_link_is_fabricated_for_document_coverage(self):
         self.assertEqual([read(p)['id'] for p in (KNOW / 'links').glob('*.json')
                           if read(p).get('clauseId') in CLAUSES], [])
-        manifest = read(KNOW / 'manifest.json')
+        manifest = pre_commerce_manifest(read(KNOW / 'manifest.json'))
         batch = next(b for b in manifest['batches'] if b['id'] == 'city-gas-full-criteria-20261001')
         self.assertEqual((batch['clausesAdded'],batch['evidenceAdded'],batch['hazardsAdded'],batch['linksAdded']), (11,2,0,0))
         self.assertEqual((manifest['counts']['clauses'] - len(CONSTRUCTION_CLAUSES) - len(COAL_CLAUSES) - len(POWER_CLAUSES),manifest['counts']['evidence'] - len(CONSTRUCTION_EVIDENCE) - len(COAL_EVIDENCE) - len(POWER_EVIDENCE)), (3022,1292))

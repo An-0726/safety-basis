@@ -2,10 +2,22 @@
   "entityType": "hazard",
   "entityId": "H_COM_FOOD_POSTING",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "10b1419320211c1bc41f458ae9f5ca86ef4a75f6d17e02706a724ccbd591b2ac",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "rejected",
+  "reviewedContentHash": "b79ac22659965387dbafd80e77a2eb30da273346423ef06a71936c4c6d9edc47",
+  "checkedAt": "2026-10-02T16:00:00+08:00",
+  "reviewer": "dot / item-level source and applicability review",
+  "reason": "正式排除工贸安全生产库准入，保留ID及历史来源。总局令49号第39条针对监督检查结果记录表的公开/展示，不涵盖所有食品信用等级、健康证明展示义务；本轮不裁定食品违法。",
+  "evidenceRefs": [],
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_FOOD_POSTING",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_FOOD_POSTING",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "10b1419320211c1bc41f458ae9f5ca86ef4a75f6d17e02706a724ccbd591b2ac",
+    "checkedAt": "2026-09-21T09:25:00+08:00",
+    "reviewer": "ChatGPT / Commerce Full Ingest",
+    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+    "evidenceRefs": []
+  }
 }

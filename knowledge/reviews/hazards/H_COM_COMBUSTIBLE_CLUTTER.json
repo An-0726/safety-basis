@@ -2,10 +2,40 @@
   "entityType": "hazard",
   "entityId": "H_COM_COMBUSTIBLE_CLUTTER",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "64de39135d4a55b685b82e2d686e07745f80454ed01c82d2ad3eed8049164ac7",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "652f1e96c1eeda52b0071584615528af83a1c1107f86428ba348d51c71844f4c",
+  "checkedAt": "2026-10-02T16:37:00+08:00",
+  "reviewer": "dot / official page and packaging-scope review",
+  "evidenceRefs": [
+    "E_COM_XF1131_PACKAGING_20261002"
+  ],
+  "reason": "按官方PDF物理12页完整6.15及物理7页范围实核；第6章强制性见前言。仅纳入既有仓储可燃包装材料指定地点及定期处理要求，排除一般商品/商铺泛化描述。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_COMBUSTIBLE_CLUTTER",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "89d562d3242f5248933cd30c3c84c9773f16bbe137c3e5df55fe8d16b0c96c58",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "原句混合仓库可燃包装材料、商铺正常商品和废弃杂物；消防法16(5)是检查/消除义务，不能推出所有纸箱堆存违法。XF1131第6.15须限定仓储场所及相应物品。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_COMBUSTIBLE_CLUTTER",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_COMBUSTIBLE_CLUTTER",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "64de39135d4a55b685b82e2d686e07745f80454ed01c82d2ad3eed8049164ac7",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_COMBUSTIBLE_CLUTTER",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_COMBUSTIBLE_CLUTTER",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

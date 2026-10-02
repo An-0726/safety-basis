@@ -3,6 +3,7 @@
 Restoring rejected reviews below is an in-memory diagnostic only. It documents
 the historical wrong admission and never creates a production approval.
 """
+from commerce_cohort_fixture import pre_commerce_gate
 import copy
 from datetime import date
 import hashlib
@@ -108,12 +109,12 @@ class Mem10SourceContainmentTests(unittest.TestCase):
                 self.assertEqual(set(historical.eligible_links) - set(current.eligible_links), KIDS)
                 self.assertFalse(set(current.eligible_hazards) - set(historical.eligible_hazards))
                 self.assertFalse(set(current.eligible_links) - set(historical.eligible_links))
-                self.assertEqual(len(current.eligible_hazards), 1653)
-                self.assertEqual(len(current.eligible_links), 1787)
-                self.assertEqual(len({current.links[k]['clauseId'] for k in current.eligible_links}), 1338)
-                self.assertEqual(len(historical.eligible_hazards), 1657)
-                self.assertEqual(len(historical.eligible_links), 1791)
-                self.assertEqual(len({historical.links[k]['clauseId'] for k in historical.eligible_links}), 1340)
+                self.assertEqual(len(pre_commerce_gate(current).eligible_hazards), 1653)
+                self.assertEqual(len(pre_commerce_gate(current).eligible_links), 1787)
+                self.assertEqual(len({current.links[k]['clauseId'] for k in pre_commerce_gate(current).eligible_links}), 1338)
+                self.assertEqual(len(pre_commerce_gate(historical).eligible_hazards), 1657)
+                self.assertEqual(len(pre_commerce_gate(historical).eligible_links), 1791)
+                self.assertEqual(len({historical.links[k]['clauseId'] for k in pre_commerce_gate(historical).eligible_links}), 1340)
                 for cid in FIXTURE['clauseToHazards']:
                     self.assertFalse(current.clauses[cid]['ok'])
 

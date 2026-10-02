@@ -1,4 +1,5 @@
 """Reviewed administrative reading stays separate from current C/H/K eligibility."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import copy
 from datetime import date
 import hashlib
@@ -29,7 +30,7 @@ class CivilFireworksReadingSourceTests(unittest.TestCase):
             with self.subTest(path=row['path']):
                 self.assertEqual(hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest(), row['sha256'])
         self.assertEqual(fixture['currentCanonicalDelta'], dict(clauses=0, hazards=0, links=0, evidence=0))
-        manifest = reading.read(K / 'manifest.json')
+        manifest = pre_commerce_manifest(reading.read(K / 'manifest.json'))
         self.assertEqual(sum(b['id'] == fixture['batch'] for b in manifest['batches']), 1)
         self.assertEqual(manifest['batch'], fixture['batch'])
 

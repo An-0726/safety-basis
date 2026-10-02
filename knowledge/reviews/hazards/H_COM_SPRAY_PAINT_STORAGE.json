@@ -1,11 +1,42 @@
 {
-  "entityId": "H_COM_SPRAY_PAINT_STORAGE",
   "entityType": "hazard",
+  "entityId": "H_COM_SPRAY_PAINT_STORAGE",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "15c2a8cc5d16cbef36baa9633b047049754340878ab909615080838061e7638a",
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "reviewer": "ChatGPT",
-  "evidenceRefs": [],
-  "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  "decision": "verified",
+  "reviewedContentHash": "23b8b0a370a42082e86360a3e7dc83ed51c907baf7d5d9e8018a068103a2038e",
+  "checkedAt": "2026-10-02T08:15:00Z",
+  "reviewer": "Commerce direct-basis substantive review 20261002",
+  "evidenceRefs": [
+    "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d",
+    "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
+  ],
+  "reason": "危险化学品安全法2026-05-01施行；本次对照市场监管总局官方全文第37条和第41条第一款，既有C逐字一致。收窄危险化学品身份及储存行为，不把任一自喷漆、任意短暂放置直接认定违法。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_SPRAY_PAINT_STORAGE",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "7a7988717b9584ef7ef886edb2c361020732a9d6302ceef390bca8bbe938653c",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "自喷漆名称不能代替SDS危险化学品分类。仅在实际物料符合现行危化品监管对象、确属储存行为时，核专用仓库/场地/储存室及相应管理义务；专用储存不当然等于购买“防爆柜”。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SPRAY_PAINT_STORAGE",
+    "previousReview": {
+      "entityId": "H_COM_SPRAY_PAINT_STORAGE",
+      "entityType": "hazard",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "15c2a8cc5d16cbef36baa9633b047049754340878ab909615080838061e7638a",
+      "checkedAt": "2026-09-26T09:27:01+08:00",
+      "reviewer": "ChatGPT",
+      "evidenceRefs": [],
+      "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+    }
+  },
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_SPRAY_PAINT_STORAGE",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_SPRAY_PAINT_STORAGE",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

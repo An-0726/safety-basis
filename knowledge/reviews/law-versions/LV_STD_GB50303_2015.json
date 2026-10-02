@@ -1,13 +1,44 @@
 {
-  "decision": "verified",
+  "entityType": "law_version",
   "entityId": "LV_STD_GB50303_2015",
-  "entityType": "lawVersion",
-  "evidenceRefs": [
-    "E_GB50303_NOTICE_994"
-  ],
   "reviewType": "version",
-  "reviewedContentHash": "2317c67c5f10dcb98a981024736d9831d8a675ab39d0389ff7ba8b521ffa8a89",
-  "checkedAt": "2026-09-11T10:30:00+08:00",
-  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "reason": "版本核验：GB 50303-2015由住房城乡建设部公告第994号发布，自2016-08-01实施；本次仅使用未列入通用规范废止清单的第5.1.12条第1项作为技术验收依据。"
+  "decision": "verified",
+  "reviewedContentHash": "3fbab9418e818208b1bec127dfd9d53c5b7cc600347dae6468fa674e6c9866bf",
+  "checkedAt": "2026-10-02T09:27:00Z",
+  "reviewer": "Codex Commerce original-page electrical review",
+  "reason": "原件第994号公告与上海住建正式实施题录共同确认标准身份、2015-12-03发布、2016-08-01实施及替代关系。GB55024-2022部分废止清单与专业出版题录交叉核对。sourceUrl原误指通用政府信息公开目录，现改为上海住建的准确标准实施题录；仅来源元数据纠错，未修改标准日期、条文、效力区间或适用范围。本批14.2.3、20.2.1、20.2.2按安装施工质量验收一般项目使用。根据正式发布/原件、专业出版题录及官方近期使用或部分废止关系交叉核对，支持截至2026-10-02本批所选条款的限定技术使用判断；未取得主管部门2026全国实时有效状态字段，不以未检出废止或PDF存在单独推定现行。CJJ/T推荐性标准不单独推出普遍违法，GB50303仅按施工质量验收一般项目范围使用；与全文强制性通用规范冲突时以后者为准。",
+  "evidenceRefs": [
+    "E_COM_GB50303_ORIGINAL_20261002",
+    "E_COM_GB50303_DATES_20261002",
+    "E_COM_GB55024_PARTIAL_REPEAL_20261002"
+  ],
+  "reviewedFields": [
+    "/documentNumber",
+    "/effectiveDate",
+    "/endDate",
+    "/id",
+    "/lawId",
+    "/level",
+    "/officialName",
+    "/scope",
+    "/sourceUrl",
+    "/validityStatus",
+    "/versionKey"
+  ],
+  "notes": "逐条目核原件和适用范围；仅为通用条件定义及本次所列条款，不认定原企业事件，不确认既有使用期违法，不批准标准全文再发布。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "LV_STD_GB50303_2015",
+    "entityType": "lawVersion",
+    "evidenceRefs": [
+      "E_GB50303_NOTICE_994"
+    ],
+    "reviewType": "version",
+    "reviewedContentHash": "2317c67c5f10dcb98a981024736d9831d8a675ab39d0389ff7ba8b521ffa8a89",
+    "checkedAt": "2026-09-11T10:30:00+08:00",
+    "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+    "reason": "版本核验：GB 50303-2015由住房城乡建设部公告第994号发布，自2016-08-01实施；本次仅使用未列入通用规范废止清单的第5.1.12条第1项作为技术验收依据。"
+  },
+  "previousReviewFileSha256": "8cf4799b3b39a88a794ddb7c85689e7fd0fc175e6d4dddded30dc439a18b1f71",
+  "currencyEvidenceBoundary": "根据正式发布/原件、专业出版题录及官方近期使用或部分废止关系交叉核对，支持截至2026-10-02本批所选条款的限定技术使用判断；未取得主管部门2026全国实时有效状态字段，不以未检出废止或PDF存在单独推定现行。CJJ/T推荐性标准不单独推出普遍违法，GB50303仅按施工质量验收一般项目范围使用；与全文强制性通用规范冲突时以后者为准。"
 }

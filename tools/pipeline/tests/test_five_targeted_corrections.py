@@ -5,6 +5,7 @@ bindings. They are not a field adjudication engine or a whole-corpus legal audit
 """
 from collections import Counter
 from datetime import date
+from commerce_cohort_fixture import pre_commerce_ids, pre_commerce_inventory, pre_commerce_manifest
 import hashlib
 import json
 from pathlib import Path
@@ -61,6 +62,7 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
             rows = sorted((obj['id'], obj.get('lifecycle'))
                           for file in (KNOW / kind).glob('*.json')
                           for obj in [json.loads(file.read_text(encoding='utf-8'))])
+            rows = pre_commerce_inventory(kind, rows)
             # Preserve this historical inventory verbatim after excluding only
             # the separately reviewed, semantically distinct GB12801 successor.
             successor = {'hazards': 'H_GB12801_2025_5_6_2_S1',
@@ -302,7 +304,7 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
                 self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected_hash)
 
     def test_manifest_preserves_four_prior_additions_and_exact_scope_successor(self):
-        manifest = read('knowledge/manifest.json')
+        manifest = pre_commerce_manifest(read('knowledge/manifest.json'))
         scope_successor = json.loads((Path(__file__).parent / 'fixtures' /
                                       'thirteen_scope_corrections_20260930.json').read_text(encoding='utf-8'))
         self.assertEqual(len(scope_successor['evidence']), 14)
@@ -311,7 +313,7 @@ class FiveTargetedCorrectionTests(unittest.TestCase):
         self.assertTrue((KNOW / 'evidence/E_AQ3067_2026_MEM_PDF.json').is_file())
         self.assertEqual(manifest['counts']['evidence'], expected)
         self.assertEqual(manifest['evidence'], expected)
-        self.assertEqual(len(list((KNOW / 'evidence').glob('*.json'))), expected)
+        self.assertEqual(len(pre_commerce_ids('evidence', (p.stem for p in (KNOW / 'evidence').glob('*.json')))), expected)
         self.assertEqual(manifest['lifecycle'], {'active': 1664, 'proposed': 354, 'superseded': 113})
 
     def test_dated_gate_admits_all_five_hazards_and_six_exact_links(self):

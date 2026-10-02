@@ -2,10 +2,55 @@
   "entityType": "hazard",
   "entityId": "H_COM_DAMP_ELECTRIC",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "c888248885d36e414759b787e4fda75697a3a725ef6b7c76ec685e4f3966a099",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "8dc9bb16de344e90adb5023d0db1a6706f86eb65e431ae58a8a4cee902c3eab3",
+  "checkedAt": "2026-10-02T16:00:00+08:00",
+  "reviewer": "dot / item-level source and applicability review",
+  "reason": "只把已确认不符合制造商环境要求且无附加防护的用电产品安装缺陷归入现有环境安装义务；原引GB55024第8.5.1的接线口/接线盒要求不扩展为所有潮湿位置必须迁移配电箱。 GB/T13869—2017为推荐性国家标准，本归并仅作为制造商环境要求不满足且未采取足够附加安装防护时的技术核查参考；实际受水、产品允许环境和已有防护必须分别核实，不单凭潮湿场所外观或本推荐性条文认定普遍违法。",
+  "evidenceRefs": [
+    "E_GBT13869_SAMR_ORIGINAL_20260926"
+  ],
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_DAMP_ELECTRIC",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_DAMP_ELECTRIC",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "c888248885d36e414759b787e4fda75697a3a725ef6b7c76ec685e4f3966a099",
+    "checkedAt": "2026-09-21T09:25:00+08:00",
+    "reviewer": "ChatGPT / Commerce Full Ingest",
+    "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "preIndependentScopeCorrectionReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_DAMP_ELECTRIC",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "a0acba0f7e3cd421f1b9c23303da570872f82692ac37aa19b6aa833883b03b23",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "只把已确认不符合制造商环境要求且无附加防护的用电产品安装缺陷归入现有环境安装义务；原引GB55024第8.5.1的接线口/接线盒要求不扩展为所有潮湿位置必须迁移配电箱。",
+    "evidenceRefs": [
+      "E_GBT13869_SAMR_ORIGINAL_20260926"
+    ],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_DAMP_ELECTRIC",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_DAMP_ELECTRIC",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "c888248885d36e414759b787e4fda75697a3a725ef6b7c76ec685e4f3966a099",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    },
+    "independentLegalReviewStatus": "pending_before_publication",
+    "reviewIndependenceNote": "本记录表示作者的来源与适用性实审；完整独立法律复核尚未完成，不因hash/Gate通过推定已独立通过。"
+  },
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_DAMP_ELECTRIC",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

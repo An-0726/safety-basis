@@ -1,4 +1,5 @@
 """Exact official coal body, embedded tables, and separately reviewed clarifications."""
+from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib,json,sys,unittest
 from datetime import date
 from pathlib import Path
@@ -63,7 +64,7 @@ class CoalCriteriaTests(unittest.TestCase):
 
     def test_no_hazard_link_or_identity_inflation(self):
         self.assertEqual([read(p)['id'] for p in (KNOW/'links').glob('*.json') if read(p).get('clauseId') in CLAUSES],[])
-        m=read(KNOW/'manifest.json');b=next(b for b in m['batches'] if b['id']=='coal-full-criteria-20261001')
+        m = pre_commerce_manifest(read(KNOW/'manifest.json'));b=next(b for b in m['batches'] if b['id']=='coal-full-criteria-20261001')
         self.assertEqual((b['clausesAdded'],b['evidenceAdded'],b['hazardsAdded'],b['linksAdded']),(21,8,0,0))
         self.assertEqual((m['counts']['laws'],m['counts']['lawVersions'],m['counts']['clauses'] - len(POWER_CLAUSES),m['counts']['evidence'] - len(POWER_EVIDENCE)),(119,122,3061,1302))
         self.assertEqual((m['counts']['hazards'],m['counts']['links']),(2131,1971))

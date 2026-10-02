@@ -2,10 +2,57 @@
   "entityType": "hazard",
   "entityId": "H_COM_EDGE_PROTECTION",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "6a22b1a1afb7f0f3bc97436d9845a4fdc9c5ac67f316edb4a9c7b63ff634973b",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "882462e48c785da0709dd98d59fc79cbc47d2fa0bc2367cedf77a84cc1fab8ac",
+  "checkedAt": "2026-10-02T16:20:00+08:00",
+  "reviewer": "Codex Commerce official-source direct-basis review",
+  "reason": "原候选复合范围经收窄后，临边对象、围护高度触发和安全防护义务均直接对应第3.2.3；未将原GB55023脚手架作业层要求扩大到屋面，未将部分重叠H强行合并。",
+  "evidenceRefs": [
+    "E_COM_GB55034_TEXT_20261002"
+  ],
+  "reviewedFields": [
+    "/id",
+    "/title",
+    "/description",
+    "/measures",
+    "/conditions",
+    "/category",
+    "/places",
+    "/aliases",
+    "/keywords",
+    "/lifecycle",
+    "/mode",
+    "/note",
+    "/mergedInto"
+  ],
+  "notes": "逐项实质核验仅限本记录及所列直接义务；内容hash绑定本次范围、原文和适用边界，不认定原企业事件，不批准现场profile或标准全文再发布。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_EDGE_PROTECTION",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "872478a379ca9c08e7e253f443f14223d4d1ce887972cb5f15c19bcf3a0e79db",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "原描述混合屋面、脚手架、栏杆、挡脚板和安全网；不可全量并入只核第一句防坠措施的GB/T12801第5.6.2条。现行建筑施工规范须按具体临边类型收窄后重绑定。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EDGE_PROTECTION",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_EDGE_PROTECTION",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "6a22b1a1afb7f0f3bc97436d9845a4fdc9c5ac67f316edb4a9c7b63ff634973b",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "previousReviewFileSha256": "bca46a04695d46d5f64f60a3fabfe578acd24533417d5548acbbd4e882fea681",
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_EDGE_PROTECTION",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_EDGE_PROTECTION",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }

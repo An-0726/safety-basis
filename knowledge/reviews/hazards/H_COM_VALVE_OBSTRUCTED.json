@@ -2,10 +2,79 @@
   "entityType": "hazard",
   "entityId": "H_COM_VALVE_OBSTRUCTED",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "824cc30ba78aba91b97269be4a02ecde97321b6aad41deb7039109315125318f",
-  "checkedAt": "2026-09-21T09:25:00+08:00",
-  "reviewer": "ChatGPT / Commerce Full Ingest",
-  "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "c302e7b1284b73e75933eac03b4beb2d9f20e491ebb0e31eb3349f22459244f5",
+  "checkedAt": "2026-10-02T17:04:00+08:00",
+  "reviewer": "Commerce original-page substantive review 20261002",
+  "evidenceRefs": [
+    "E_COM_CJJ146_ORIGINAL_20261002"
+  ],
+  "reason": "4.4.5完整原件直接规定紧急切断阀安装按产品说明书并满足操作、维修更换要求。收窄至集中系统紧急切断阀，自动切换阀来源alias只作为历史来源，不自动判定属于本H。 本轮落实独立范围意见，明确推荐性和具体强制约束另核。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_VALVE_OBSTRUCTED",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "b3affc2c13c1ac065ba2d59bfda14057d99a914ec79cc797228242ce61037293",
+    "checkedAt": "2026-10-02T16:00:00+08:00",
+    "reviewer": "dot / item-level source and applicability review",
+    "reason": "阀门被塑料包覆不自动证明启闭或联动切断失效；原件自动切换阀、紧急切断阀、灶前阀称谓需核实，不能把不同阀型互当依据。",
+    "evidenceRefs": [],
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_VALVE_OBSTRUCTED",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_VALVE_OBSTRUCTED",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "824cc30ba78aba91b97269be4a02ecde97321b6aad41deb7039109315125318f",
+      "checkedAt": "2026-09-21T09:25:00+08:00",
+      "reviewer": "ChatGPT / Commerce Full Ingest",
+      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_VALVE_OBSTRUCTED",
+  "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+  "reviewIndependenceNote": "本review主体保留作者来源与适用性实审记录；独立复核由非作者逐原页、范围、当前技术使用证据另审，见独立记录及绑定H/K/C/LV哈希。仅通用定义/有条件归并，不认定原企业事实或整改完成。",
+  "preIndependentScopeCorrectionReview": {
+    "entityType": "hazard",
+    "entityId": "H_COM_VALVE_OBSTRUCTED",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "dc504888c4d51b2eadcbb391555fab8721eafbea2e1e318a3189a4761411e0be",
+    "checkedAt": "2026-10-02T08:27:00Z",
+    "reviewer": "Commerce original-page substantive review 20261002",
+    "evidenceRefs": [
+      "E_COM_CJJ146_ORIGINAL_20261002"
+    ],
+    "reason": "4.4.5完整原件直接规定紧急切断阀安装按产品说明书并满足操作、维修更换要求。收窄至集中系统紧急切断阀，自动切换阀来源alias只作为历史来源，不自动判定属于本H。",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_COM_VALVE_OBSTRUCTED",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "b3affc2c13c1ac065ba2d59bfda14057d99a914ec79cc797228242ce61037293",
+      "checkedAt": "2026-10-02T16:00:00+08:00",
+      "reviewer": "dot / item-level source and applicability review",
+      "reason": "阀门被塑料包覆不自动证明启闭或联动切断失效；原件自动切换阀、紧急切断阀、灶前阀称谓需核实，不能把不同阀型互当依据。",
+      "evidenceRefs": [],
+      "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_VALVE_OBSTRUCTED",
+      "previousReview": {
+        "entityType": "hazard",
+        "entityId": "H_COM_VALVE_OBSTRUCTED",
+        "reviewType": "definition",
+        "decision": "pending",
+        "reviewedContentHash": "824cc30ba78aba91b97269be4a02ecde97321b6aad41deb7039109315125318f",
+        "checkedAt": "2026-09-21T09:25:00+08:00",
+        "reviewer": "ChatGPT / Commerce Full Ingest",
+        "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+        "evidenceRefs": []
+      }
+    },
+    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_VALVE_OBSTRUCTED",
+    "independentLegalReviewStatus": "pending_before_publication",
+    "reviewIndependenceNote": "本记录表示作者的来源与适用性实审；完整独立法律复核尚未完成，不因hash/Gate通过推定已独立通过。"
+  },
+  "independentReviewRef": "docs/commerce-independent-review-20261002.json#H_COM_VALVE_OBSTRUCTED",
+  "independentReviewSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d"
 }
