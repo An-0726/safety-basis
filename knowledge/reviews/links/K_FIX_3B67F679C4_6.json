@@ -1,21 +1,40 @@
 {
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "contextHashes": {
-    "hazard": "bdcd2431edf68c5413284a130f5ecbbe31fab7614a3c024d550452c436d22d37",
-    "clause": "57289175a7fce078ca7e4775d1b14bfa482bfa23d761fee2d4c1bb6254769116"
-  },
-  "decision": "verified",
-  "entityId": "K_FIX_3B67F679C4_6",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XF1131_6_6"
-  ],
-  "reason": "XF 1131-2014第6.6条直接规定分类、分堆、限额存放及主通道要求。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
-  "reasonCodes": [
-    "DIRECT_CLAUSE_CONFIRMED"
-  ],
+  "entityId": "K_FIX_3B67F679C4_6",
   "reviewType": "applicability",
-  "reviewedContentHash": "5f4909610ceb00619827d9e46e33d260388bedf2d31fad06048238fb71e529a5",
-  "reviewer": "ChatGPT",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "c563f54100b0bbcfad10c8c487a6999ab039cc579294abe7e074bd500acc37ba",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "官方PDF11/印刷5明确该要求位于6.7；原6.6是按设计单位划定堆装区域和核定存放量储存。稳定ID虽含6_6不要求重编号。 XF1131—2014第6.7条规定库房内物品分类、分堆、限额存放，每个堆垛面积不大于150m²，库房内主通道宽度不小于2m；第6.8条五距另核。",
+  "evidenceRefs": [
+    "E_CITATION_XF1131_2014_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "ea74d01f194a9eb86b91b1edd86cc3777943daf7c3defef9ffdd8d40ff9e235c",
+    "clause": "93a0d035a0d15607fdc0ba9f171e701e0b176e63fddbea4369b3843165cc6b18"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "contextHashes": {
+      "hazard": "bdcd2431edf68c5413284a130f5ecbbe31fab7614a3c024d550452c436d22d37",
+      "clause": "57289175a7fce078ca7e4775d1b14bfa482bfa23d761fee2d4c1bb6254769116"
+    },
+    "decision": "verified",
+    "entityId": "K_FIX_3B67F679C4_6",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XF1131_6_6"
+    ],
+    "reason": "XF 1131-2014第6.6条直接规定分类、分堆、限额存放及主通道要求。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED"
+    ],
+    "reviewType": "applicability",
+    "reviewedContentHash": "5f4909610ceb00619827d9e46e33d260388bedf2d31fad06048238fb71e529a5",
+    "reviewer": "ChatGPT",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "db70acb1562dc42a317b9e51c8c8a3b98de286ed5030f54f85cf3f7848f380a3"
 }

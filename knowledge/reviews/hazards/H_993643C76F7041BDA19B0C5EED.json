@@ -1,18 +1,33 @@
 {
-  "decision": "verified",
-  "entityId": "H_993643C76F7041BDA19B0C5EED",
   "entityType": "hazard",
+  "entityId": "H_993643C76F7041BDA19B0C5EED",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "正确XF1131第6.8分支仍保留proposed状态；原消防设施标志或安全警示标志关联不支持五距义务。当前完整定义尚无全部已核准入直接依据，保留待核，不因条款改正自动准入。",
   "evidenceRefs": [
-    "EH_a06ad3a9b3cb6534d30d9df0e9fcf0b7b976b956ac0c8e8b329fd5206ac0ed73"
+    "E_CITATION_XF1131_2014_20261002"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_77616055d8602382695301dd",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_993643C76F7041BDA19B0C5EED",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_a06ad3a9b3cb6534d30d9df0e9fcf0b7b976b956ac0c8e8b329fd5206ac0ed73"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_77616055d8602382695301dd",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
+    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+    "checkedAt": "2026-09-12T02:29:02+08:00",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
-  "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-  "checkedAt": "2026-09-12T02:29:02+08:00",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "previousReviewFileSha256": "58d9cf02e9ef30d0479c9ebb49584aad6c5e20265bc1f5fef56ff79e30c8361b"
 }

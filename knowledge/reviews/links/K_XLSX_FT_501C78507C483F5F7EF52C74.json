@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "3f4d1e2b9c63120cf0dda461f0a5c765c3bbc2f42aab95fea87946e623deb820",
-    "hazard": "56186d6d8fce796d7f70f06492ad1d774057816ad699a2321c5478707a9180c6"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_501C78507C483F5F7EF52C74",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_FF49F3F1F79DD5243FE8DFF6"
-  ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "entityId": "K_XLSX_FT_501C78507C483F5F7EF52C74",
   "reviewType": "applicability",
-  "reviewedContentHash": "a1dd5f5475e046089bbb094011ea87a8001fe6de8090a608c240336257ad9e15",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "b575a77de107e2a7d33cf45f0b748b0ee86bc118c9cd01686d1cbaa0508c6f54",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "官方第69条前三款主体依次是国务院监管部门、地方政府及部门、特种设备使用单位；原C仅第一款，与H责任主体不一致。 第六十九条第三款直接规定使用单位制定专项预案和定期演练，两项义务均需核实；不将政府应急预案义务移转给企业。",
+  "evidenceRefs": [
+    "E_CITATION_TSE2013_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "1b5aa64afe4f012017ae85683e80a5a73ec7b35b0e0882f6c3241a73647f87f6",
+    "clause": "1ad42c2e516703b529d754621437d7e6e0c6991dbaad085f33fe871e8b240390"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "3f4d1e2b9c63120cf0dda461f0a5c765c3bbc2f42aab95fea87946e623deb820",
+      "hazard": "56186d6d8fce796d7f70f06492ad1d774057816ad699a2321c5478707a9180c6"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_501C78507C483F5F7EF52C74",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_FF49F3F1F79DD5243FE8DFF6"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "a1dd5f5475e046089bbb094011ea87a8001fe6de8090a608c240336257ad9e15",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "437691586a5c4912fcab3f45596d1cb8edb03c39e88c1db5b916487ebcc8be57"
 }

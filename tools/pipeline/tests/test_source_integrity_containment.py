@@ -76,10 +76,10 @@ class SourceIntegrityContainmentTests(unittest.TestCase):
                              ['BLOCK_REVIEW_NOT_VERIFIED:rejected'])
         # Current projection additionally excludes four MEM10 wrong-source chains;
         # the separate containment suite verifies exact historical count recovery.
-        self.assertEqual(len(pre_commerce_gate(self.gate).eligible_hazards), 1653)
-        self.assertEqual(len(pre_commerce_gate(self.gate).eligible_links), 1787)
-        self.assertEqual(len({self.gate.links[k]['clauseId']
-                              for k in pre_commerce_gate(self.gate).eligible_links}), 1338)
+        cohort = pre_commerce_gate(self.gate)
+        self.assertEqual(len(cohort.eligible_hazards), 1653)
+        self.assertEqual(len(cohort.eligible_links), 1787)
+        self.assertEqual(len({cohort.links[k]['clauseId'] for k in cohort.eligible_links}), 1338)
 
     def test_corrupt_formula_clause_is_preserved_and_not_publishable(self):
         clause = read('clauses/C_12158_2.json')

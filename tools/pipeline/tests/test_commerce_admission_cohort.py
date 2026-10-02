@@ -14,6 +14,8 @@ import sys
 from types import SimpleNamespace
 import unittest
 
+from citation_cohort_fixture import (pre_citation_gate, pre_citation_ids,
+                                    ADDED_IDS as CITATION_ADDED_IDS)
 from commerce_cohort_fixture import (
     ADDED_IDS, ADMITTED_IDS, CANDIDATE_IDS, FIXTURE, FOLDERS,
     pre_commerce_gate, pre_commerce_ids, pre_commerce_inventory,
@@ -75,7 +77,7 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
                 current = set(self.entities[kind])
                 added = ADDED_IDS[kind]
                 self.assertTrue(added <= current)
-                historical = current - added
+                historical = pre_citation_ids(kind, current) - added
                 expected = FIXTURE['baselineInventory'][key]
                 self.assertEqual(len(historical), expected['count'])
                 self.assertEqual(ids_sha256(historical), expected['idsSha256'])
@@ -160,8 +162,8 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
             expected = FIXTURE['baselineGate'][key]
             self.assertEqual(len(ids), expected['count'], key)
             self.assertEqual(ids_sha256(ids), expected['idsSha256'], key)
-        self.assertEqual(len(gate.eligible_hazards), 1653 + len(ADMITTED_IDS))
-        self.assertEqual(len(gate.eligible_links), 1787 + len(ADDED_IDS['links']))
+        self.assertEqual(len(pre_citation_gate(gate).eligible_hazards), 1653 + len(ADMITTED_IDS))
+        self.assertEqual(len(pre_citation_gate(gate).eligible_links), 1787 + len(ADDED_IDS['links']))
         self.assertFalse((CANDIDATE_IDS - ADMITTED_IDS) & set(gate.eligible_hazards))
 
 
@@ -195,7 +197,7 @@ class CommerceAdmissionCohortTests(unittest.TestCase):
         # Also keep the old aggregate count unchanged: the ID fingerprint,
         # rather than only the count, must reject a swapped-in rejected record.
         gate.eligible_hazards.remove('H001')
-        self.assertEqual(len(gate.eligible_hazards), 1653 + len(ADMITTED_IDS))
+        self.assertEqual(len(pre_citation_gate(gate).eligible_hazards), 1653 + len(ADMITTED_IDS))
         with self.assertRaises(AssertionError):
             self.assert_exact_release_cohort(gate)
 
@@ -231,7 +233,7 @@ class CommerceCohortHelperTests(unittest.TestCase):
         current['counts']['evidence'] += 1
         changed = pre_commerce_manifest(current)
         self.assertEqual(changed['counts']['evidence'], historical['counts']['evidence'] + 1)
-        self.assertEqual(before['counts']['evidence'] - historical['counts']['evidence'], len(ADDED_IDS['evidence']))
+        self.assertEqual(before['counts']['evidence'] - historical['counts']['evidence'], len(ADDED_IDS['evidence']) + len(CITATION_ADDED_IDS['evidence']))
         self.assertEqual(before, read(KNOW / 'manifest.json'))
 
 

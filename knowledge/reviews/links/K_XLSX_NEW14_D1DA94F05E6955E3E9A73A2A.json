@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "cfc7938e1e1c850d38a61c987fec340c85d2ec4dd44da31a653361c5c1b16c69",
-    "hazard": "93492d22fd41d6093d6b61210fefb7a8819fbda16ce389773ceb5e3e9a54de7a"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_03502D4AA0F5F6BC3A9972C2"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A",
   "reviewType": "applicability",
-  "reviewedContentHash": "adf94ae0cf682bcb12cad23a1c6ca0a1da2de20561b055348f87a17094ba4963",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "pending",
+  "reviewedContentHash": "ae94bdeb6202573f653a3d059d77c832f913b9d11f2d52efc3fcb49799c322f5",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "即使纠正原C编号到6.7，H的每个堆间搬运通道义务仍不等于主通道要求；第6.8(e)规定1m垛距也不能直接偷换成搬运通道技术宽度。  当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+  "evidenceRefs": [
+    "E_CITATION_XF1131_2014_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "93492d22fd41d6093d6b61210fefb7a8819fbda16ce389773ceb5e3e9a54de7a",
+    "clause": "e33274348c6aa4f89a9a6d4ce9174182ee7a626eb0105c55253ba4799d2de497"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "cfc7938e1e1c850d38a61c987fec340c85d2ec4dd44da31a653361c5c1b16c69",
+      "hazard": "93492d22fd41d6093d6b61210fefb7a8819fbda16ce389773ceb5e3e9a54de7a"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_03502D4AA0F5F6BC3A9972C2"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "adf94ae0cf682bcb12cad23a1c6ca0a1da2de20561b055348f87a17094ba4963",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "2f68e53102e4572a8c37e0e167125e94a921eea42517d3a5107afced1af6fc65"
 }

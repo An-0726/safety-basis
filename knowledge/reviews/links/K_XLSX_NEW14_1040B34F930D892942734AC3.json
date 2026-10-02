@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
-    "hazard": "1d4bfef64ef46792bd1451275b79e0f5b94502d401d92482a893819ed86a86fb"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_1040B34F930D892942734AC3",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_1040B34F930D892942734AC3",
   "reviewType": "applicability",
-  "reviewedContentHash": "c6243be9d7d24682813ed15174c901740e8a2fd13f3087c8612d67c8fecfb093",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "a1489448752665eb6fd483762adf6b6d4e5f684564ec8bd2062f8f4582402fe2",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "一般缺标志可用C001；现有措施附加发光/反光、特定距离与月检周期并非本条直接规定。 该K单独改连C001并收窄H措施；如保留具体发光方式、间距与频次须另补精确技术依据。",
+  "evidenceRefs": [
+    "E_CITATION_FIRELAW2021_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "567d00d8d8c5ca6cd3bd213a88a6a4c2e426143778ddf28d588953657908b8d8",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
+      "hazard": "1d4bfef64ef46792bd1451275b79e0f5b94502d401d92482a893819ed86a86fb"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_1040B34F930D892942734AC3",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "c6243be9d7d24682813ed15174c901740e8a2fd13f3087c8612d67c8fecfb093",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "3668ad17188e55988ad90f375ce4be96ddf84c24a1124a37c9f041b5c4d77e9a"
 }

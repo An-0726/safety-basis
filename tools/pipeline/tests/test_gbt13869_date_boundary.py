@@ -38,8 +38,13 @@ class Gbt13869DateBoundaryTests(unittest.TestCase):
             atom = 'K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2'
             self.assertIn(atom, self.old_links)
             self.assertIn(atom, result.eligible_links)
-            self.assertEqual(len(result.eligible_links & (self.old_links - {atom})), 10)
-            self.assertEqual(len(result.eligible_links & self.old_links), 11)
+            citation_links = {
+                'K_XLSX_NEW14_E4704777D743EC11C3C851C3',
+                'K_XLSX_NEW14_20580AF4C88BD19199EB9076',
+            }
+            self.assertTrue(citation_links <= result.eligible_links)
+            self.assertEqual(len(result.eligible_links & (self.old_links - {atom} - citation_links)), 10)
+            self.assertEqual(len(result.eligible_links & self.old_links), 13)
         self.assertEqual(before.eligible_links, last.eligible_links)
         self.assertEqual(before.eligible_hazards, last.eligible_hazards)
 

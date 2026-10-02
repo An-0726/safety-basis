@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
-    "hazard": "efc36846abb281befd9cd8d8deb21c037ca1d1decdbdd2189c31f2298c6e6622"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_NEW14_EFD92528ABBFE27B1D100D87",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "entityId": "K_XLSX_NEW14_EFD92528ABBFE27B1D100D87",
   "reviewType": "applicability",
-  "reviewedContentHash": "43709f67d062ebc06239dbaaef9ba6550d6de69594988a39641619afe514f142",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "pending",
+  "reviewedContentHash": "9eb882e1ae98a8fbc36aa56787bf8e239708222b2aa847fe36903f0f832ed80c",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "一个H合并禁火、照明及消防器材三种义务；C001仅能覆盖器材配置，不能为复合命题背书。 撤回旧direct；按经核实的场所及物品条件拆分三种义务或把本K明确限器材分支作为supporting，缺少的禁火及照明技术依据另核。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+  "evidenceRefs": [
+    "E_CITATION_FIRELAW2021_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "efc36846abb281befd9cd8d8deb21c037ca1d1decdbdd2189c31f2298c6e6622",
+    "clause": "e0302ce03ecef0403ad28bfc9ed18af4ae636cb3d06914a45b73845f8eb756b7"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "cde85dccd36f028fe4254c7f857d563589f8d0724cc44cd3c97f70557ff72c07",
+      "hazard": "efc36846abb281befd9cd8d8deb21c037ca1d1decdbdd2189c31f2298c6e6622"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_EFD92528ABBFE27B1D100D87",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "43709f67d062ebc06239dbaaef9ba6550d6de69594988a39641619afe514f142",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "84c81b5f1f441551cb2ca6f7515ae8c48e1e0fb5b463726888deef3f204f9652"
 }

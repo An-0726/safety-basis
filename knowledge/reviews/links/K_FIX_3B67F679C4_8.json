@@ -1,21 +1,40 @@
 {
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "contextHashes": {
-    "hazard": "bdcd2431edf68c5413284a130f5ecbbe31fab7614a3c024d550452c436d22d37",
-    "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f"
-  },
-  "decision": "verified",
-  "entityId": "K_FIX_3B67F679C4_8",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb"
-  ],
-  "reason": "XF 1131-2014第6.8条逐项规定库房堆垛与楼板/平屋顶、照明灯、墙、柱及相邻堆垛的最小距离，直接支持“五距”隐患。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
-  "reasonCodes": [
-    "DIRECT_CLAUSE_CONFIRMED"
-  ],
+  "entityId": "K_FIX_3B67F679C4_8",
   "reviewType": "applicability",
-  "reviewedContentHash": "9aeaf82b5844b7e3744a10e8a807dced7440deacb0cd8a2c4a1d03b074731f18",
-  "reviewer": "ChatGPT",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "verified",
+  "reviewedContentHash": "d40b8a49271a49b0fcda81ac3202afab47ccdc86d1fcd162c6cda205dbb0a74e",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "原C首句非逐字原文，后五项数值与官方原页一致；本K可继续支撑五距分支，必须重封改正C后的contextHashes。 XF1131—2014第6.8条逐项规定堆垛上部与楼板/平屋顶、灯、墙、柱和相邻堆垛的距离；本关联只支持对应距离分支。",
+  "evidenceRefs": [
+    "E_CITATION_XF1131_2014_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "ea74d01f194a9eb86b91b1edd86cc3777943daf7c3defef9ffdd8d40ff9e235c",
+    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "contextHashes": {
+      "hazard": "bdcd2431edf68c5413284a130f5ecbbe31fab7614a3c024d550452c436d22d37",
+      "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f"
+    },
+    "decision": "verified",
+    "entityId": "K_FIX_3B67F679C4_8",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb"
+    ],
+    "reason": "XF 1131-2014第6.8条逐项规定库房堆垛与楼板/平屋顶、照明灯、墙、柱及相邻堆垛的最小距离，直接支持“五距”隐患。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED"
+    ],
+    "reviewType": "applicability",
+    "reviewedContentHash": "9aeaf82b5844b7e3744a10e8a807dced7440deacb0cd8a2c4a1d03b074731f18",
+    "reviewer": "ChatGPT",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousReviewFileSha256": "34df131a82f9272dd2a20a20c5b73c21732c20a572ad88b83ee01dea6f6083b5"
 }

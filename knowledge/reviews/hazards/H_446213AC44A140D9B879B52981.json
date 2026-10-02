@@ -1,13 +1,32 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
-  "entityId": "H_446213AC44A140D9B879B52981",
   "entityType": "hazard",
+  "entityId": "H_446213AC44A140D9B879B52981",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "412efbb8a4565c40fdfdb230ee06b541b2a28dbd8d7eb936b4031cdbff9f5bb3",
+  "checkedAt": "2026-10-02T23:38:02+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "2026-10-02定义仅限第1.0.2范围内经核实的机械损伤且未达GB55036第10.0.8报废条件的及时维修义务。明确排除报废分支；措施中的报废提示只用于前置分流，不将第5.3.1包装为报废依据，不由外观直接推断耐压性能。",
   "evidenceRefs": [
-    "E_XLSX_GB50444_5_3_1"
+    "E_XLSX_GB50444_5_3_1",
+    "E_MOHURD_GB50444_2008",
+    "E_CITATION_GB50444_CURRENT_20261002",
+    "E_GB55036_SUPERSESSION_SH_20260926",
+    "E_GB55036_SH_ORIGINAL_20260926"
   ],
-  "reason": "已核对隐患描述、整改措施与GB 50444-2008原文条款的对象和义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "82b67c24b280ec67030a6204c3d978d26dc8e8609a2eb3ad8363a5307c86059c",
-  "reviewer": "Codex正式核验批次20260913"
+  "notes": "仅确认本条正文、适用范围、维修与报废边界；不认定具体现场损伤或整改完成，不批准其他旧条文。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_446213AC44A140D9B879B52981",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_GB50444_5_3_1"
+    ],
+    "reason": "已核对隐患描述、整改措施与GB 50444-2008原文条款的对象和义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "82b67c24b280ec67030a6204c3d978d26dc8e8609a2eb3ad8363a5307c86059c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "64ece38846082d99b673e4133e54167cda1fec63df0263f876f01ffa87d13720"
 }

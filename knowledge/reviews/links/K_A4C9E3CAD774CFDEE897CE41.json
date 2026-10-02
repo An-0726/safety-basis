@@ -1,16 +1,35 @@
 {
-  "checkedAt": "2026-09-12",
-  "contextHashes": {
-    "clause": "c11ab9f6ef18975f185802f9838caf15e6588f41cc029237b1f745b814775c6a",
-    "hazard": "91d78de7b9f031ab91ef74bf4138a26538083569b70171527c4cf9a042aa0ecc"
-  },
-  "decision": "verified",
-  "entityId": "K_A4C9E3CAD774CFDEE897CE41",
   "entityType": "link",
-  "evidenceRefs": [],
-  "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+  "entityId": "K_A4C9E3CAD774CFDEE897CE41",
   "reviewType": "applicability",
-  "reviewedContentHash": "d910f408078533db539e649524b5b444eac7e73bc71e25b3116562efece636dc",
-  "reviewer": "GLM-5.3-Flash (ZCode)",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "182132ab35eeff9df80f0e6eb90e9d935467c6857f31c2a05fd1843155580cac",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "拟复用C原有唯一K也误写全国；H已限江苏。但措施把机构与人员写成普遍二选一，不符30人以上该省列明重点行业的机构加专职人员并行要求。 江苏条例第十六条第一款按列明行业及人数规定专职人员和机构要求，不应以全国法一般二选一条款掩盖江苏更具体配置。",
+  "evidenceRefs": [
+    "E_CITATION_JS2023_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "5ddece7c3b642790dd8bda583d25c57eb4cbb761f098db608de44d5a04b2a845",
+    "clause": "066cc0dac6a10189ee2afd64f58499442ccd7dd00913b47c1a11a5880fe56fcc"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "contextHashes": {
+      "clause": "c11ab9f6ef18975f185802f9838caf15e6588f41cc029237b1f745b814775c6a",
+      "hazard": "91d78de7b9f031ab91ef74bf4138a26538083569b70171527c4cf9a042aa0ecc"
+    },
+    "decision": "verified",
+    "entityId": "K_A4C9E3CAD774CFDEE897CE41",
+    "entityType": "link",
+    "evidenceRefs": [],
+    "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "d910f408078533db539e649524b5b444eac7e73bc71e25b3116562efece636dc",
+    "reviewer": "GLM-5.3-Flash (ZCode)",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "6b11f95356e016a423b21f20fe6ad6dee3a4c1c87664533fd64329740a5e8038"
 }

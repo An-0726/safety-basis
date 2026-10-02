@@ -1,22 +1,41 @@
 {
-  "id": "RV_4d43ba45be1c9217",
-  "entityId": "K_d651b0312c6e6a0d36cde361",
   "entityType": "link",
+  "entityId": "K_d651b0312c6e6a0d36cde361",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T16:30:00+08:00",
-  "reason": "仓储堆垛之间安全距离不足。消防法第十六条第一款第（二）项要求配置消防设施器材，但未直接规定堆垛之间的具体间距。direct依据需补充GB 50016或仓储消防安全管理规范的具体条款。",
-  "reasonCodes": [
-    "FALLBACK_ROLE_CONFIRMED",
-    "BUILDING_CODE_REQUIRED"
-  ],
+  "decision": "rejected",
   "reviewedContentHash": "8680deeb9ed84483c9f50b2388286e8597ffd51762d3d98a8f7398537f572ebd",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "消防法第16条第一款第（二）项配置消防设施器材和标志的对象，与物品/堆垛至墙、柱、灯或其他堆垛距离及堆垛分类/面积不同。fallback也不能当该距离义务的适用依据；本轮已有XF1131精确正文。 撤回作为此H当前依据的fallback关联，保留稳定ID与历史审核；不改C001本身，也不全局影响C001其他正确消费者。若界面需要“历史曾用兜底”仅以明确历史记录展示，不能保留现行直接/补充合规背书。",
+  "evidenceRefs": [
+    "E_CITATION_FIRELAW2021_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
   "contextHashes": {
-    "hazard": "d65b13e0ca15b727d19bf939efdcb30b5cdbe35e2e435fb4b89287b23344f51d",
-    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
-    "link": "8680deeb9ed84483c9f50b2388286e8597ffd51762d3d98a8f7398537f572ebd"
+    "hazard": "a5611cbf6f59104d95046f9f5f2fbf0bd4c24b8338adbd903b483a948060f91e",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
   },
-  "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousReview": {
+    "id": "RV_4d43ba45be1c9217",
+    "entityId": "K_d651b0312c6e6a0d36cde361",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Doubao-Agent",
+    "checkedAt": "2026-09-10T16:30:00+08:00",
+    "reason": "仓储堆垛之间安全距离不足。消防法第十六条第一款第（二）项要求配置消防设施器材，但未直接规定堆垛之间的具体间距。direct依据需补充GB 50016或仓储消防安全管理规范的具体条款。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "BUILDING_CODE_REQUIRED"
+    ],
+    "reviewedContentHash": "8680deeb9ed84483c9f50b2388286e8597ffd51762d3d98a8f7398537f572ebd",
+    "contextHashes": {
+      "hazard": "d65b13e0ca15b727d19bf939efdcb30b5cdbe35e2e435fb4b89287b23344f51d",
+      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
+      "link": "8680deeb9ed84483c9f50b2388286e8597ffd51762d3d98a8f7398537f572ebd"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "6449ad91e8af188292ed04c370d4de3c1f2a54b10046061435b594a0f2240231"
 }

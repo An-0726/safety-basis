@@ -130,7 +130,7 @@ class Mem10ParaphraseRepairTests(unittest.TestCase):
                 self.assertEqual(old_clauses - now_clauses, {OLD_C})
                 self.assertEqual(now_clauses - old_clauses, {NEW_C})
                 cohort = pre_commerce_gate(current)
-                cohort_clauses = {current.links[k]['clauseId'] for k in cohort.eligible_links}
+                cohort_clauses = {cohort.links[k]['clauseId'] for k in cohort.eligible_links}
                 self.assertEqual((len(cohort.eligible_hazards), len(cohort.eligible_links), len(cohort_clauses)),
                                  (1653, 1787, 1338))
 

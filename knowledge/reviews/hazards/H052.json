@@ -1,15 +1,30 @@
 {
-  "decision": "verified",
-  "entityId": "H052",
   "entityType": "hazard",
+  "entityId": "H052",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "db5b18a02024f93658949c27e533f8f5df76f3a6606d2daeae683e9b9892b38f",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "正确XF1131第6.8分支仍保留proposed状态；原消防设施标志或安全警示标志关联不支持五距义务。当前完整定义尚无全部已核准入直接依据，保留待核，不因条款改正自动准入。",
   "evidenceRefs": [
-    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    "E_CITATION_XF1131_2014_20261002"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_82815547a8a16c1838ce6d5d8a_22",
-    "reviewedAt": "2026-09-09T12:35:47+00:00",
-    "reviewer": "doubao-work-依赖刷新"
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H052",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_82815547a8a16c1838ce6d5d8a_22",
+      "reviewedAt": "2026-09-09T12:35:47+00:00",
+      "reviewer": "doubao-work-依赖刷新"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "441a37e9cf1f2ca18b7a70f3259456ae08eaa4962ec6256e58767859c128d72d"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "441a37e9cf1f2ca18b7a70f3259456ae08eaa4962ec6256e58767859c128d72d"
+  "previousReviewFileSha256": "54c454da04c5f3ecdefe4a29e66398d66c0abac66e32b6bf27c899548550c9a7"
 }

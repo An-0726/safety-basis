@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "bd0a356c6d90ecc94d29d7e898a2e33820526833dce4f4dcf81d4e94b1c4475e",
-    "hazard": "d15b51af738722b0e9d22dbd6a9fc9de73226a2e5759c4602ef940a34801c6c4"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_9CC19568B1A268AD888D6777",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
-  ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "entityId": "K_XLSX_FT_9CC19568B1A268AD888D6777",
   "reviewType": "applicability",
-  "reviewedContentHash": "07742827266fe2656b6ae28092c45eae7d7a766381d1e09242057ee4d918037b",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "48045fe67ca800617c0dc222a1a9586bff93447c483683e92428bcad3cb67402",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "旧C标第16条却引第69条罚则，无法给出人数、行业及机构/专职/兼职条件；完整第16条可修此错链，但南京一般单位恰100人及其他分档需另按地方正文处理。 江苏省安全生产条例第十六条规定机构和人员配置条件；按行业、人数及例外分别核查，不以第六十九条处罚内容替代配置条件。",
+  "evidenceRefs": [
+    "E_CITATION_JS2023_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "513b06fb99716eb94b39e0df70c9bd85746c7c385b6ec0b7f3b6d9ebb84ff703",
+    "clause": "066cc0dac6a10189ee2afd64f58499442ccd7dd00913b47c1a11a5880fe56fcc"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "bd0a356c6d90ecc94d29d7e898a2e33820526833dce4f4dcf81d4e94b1c4475e",
+      "hazard": "d15b51af738722b0e9d22dbd6a9fc9de73226a2e5759c4602ef940a34801c6c4"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_9CC19568B1A268AD888D6777",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "07742827266fe2656b6ae28092c45eae7d7a766381d1e09242057ee4d918037b",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "58bf0003a4631d2ccd05bcd31ef7107badbc321f3d212fb629e19546c34823da"
 }

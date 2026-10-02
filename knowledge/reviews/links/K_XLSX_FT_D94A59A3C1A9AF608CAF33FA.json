@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "4ee2d86b221d6d0af93d3a1c9a3154ae68b7440e6491af885b293f700711c531",
-    "hazard": "0fe06d0ffada6e3dd6167cb1cb1d752dec7cd96ca98c6903bd7269e1793c6e4b"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_FT_D94A59A3C1A9AF608CAF33FA",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
-  ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "entityId": "K_XLSX_FT_D94A59A3C1A9AF608CAF33FA",
   "reviewType": "applicability",
-  "reviewedContentHash": "3bf3558a08624cae7ce4b9666aaaf679fd51d561ce9d5fe42ed93b0822a44a6f",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "75d33491146c2209b21a9d055802959c590b0f77eec72ab5c0507e4382f60364",
+  "checkedAt": "2026-10-02T23:35:09+08:00",
+  "reviewer": "Codex public-source content and applicability review 20261002",
+  "reason": "原C第一款只规定排查治理，既不含奖励制度也不含公开联系方式；第三款完整覆盖，但并不要求为该制度办理备案/许可/审批。 江苏省安全生产条例第二十八条第三款直接规定建立报告奖励制度、公开负责人和安全生产管理机构联系方式、受理报告并给予报告人员表扬、奖励。",
+  "evidenceRefs": [
+    "E_CITATION_JS2023_20261002"
+  ],
+  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "contextHashes": {
+    "hazard": "7acbed5ad8ea44c59c99a79b5855a78e8841b8e1c4a5ac5a697056aaf36613e7",
+    "clause": "661341986cfdbd00369f8b1c188d9a39be5ab929d7da40f4239ca4200e929656"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "4ee2d86b221d6d0af93d3a1c9a3154ae68b7440e6491af885b293f700711c531",
+      "hazard": "0fe06d0ffada6e3dd6167cb1cb1d752dec7cd96ca98c6903bd7269e1793c6e4b"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_D94A59A3C1A9AF608CAF33FA",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "3bf3558a08624cae7ce4b9666aaaf679fd51d561ce9d5fe42ed93b0822a44a6f",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "e922b7f9757d1ee1277aa3a762fd608382325a819ea537ff556a351f7f505a9b"
 }
