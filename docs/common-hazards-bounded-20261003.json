@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "common-hazard-bounded-review-v1",
+  "asOf": "2026-10-03",
+  "inputReviewAsOf": "2026-10-02",
+  "baseline": "5c02e50bd260986afde82b03782ee09a1a8b765f",
+  "inputReviewSha256": "a15afc3945162782c3633718982c205f613d245b822bee17e6c9f877be33365e",
+  "scope": "Generic applicability definitions only. No company-specific facts, no confirmation of violations or rectification, no publication or deployment by this local batch.",
+  "counts": {
+    "newHazards": 5,
+    "existingCandidateNarrowedAndAdmitted": 1,
+    "newClauses": 2,
+    "reusedDirectClauses": 3,
+    "directLinks": 6,
+    "supportingLinks": 3
+  },
+  "decisions": [
+    {
+      "candidateId": "CH-001",
+      "hazardId": "H_46768_5_8_6",
+      "hazardAction": "create",
+      "clauseId": "C_46768_5_8_6",
+      "linkId": "K_COMMON_H_46768_5_8_6",
+      "definitionHash": "ceff387fafafb8d9c1b6d37cc4d8e1bd031ea58eade58b6bef49cec541e7ae4f",
+      "clauseHash": "f172e241dca316bae1d56b50ba1fd711becd9302a05a1d5db55abe6b3c6bdd83",
+      "linkHash": "0ee868620d371f63c04dae3f4dfe02b590e599eedb599caa09e2077ec3a23704",
+      "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=C26BA1B610497F860D280ACF929D3F7D",
+      "officialPdfSha256": "8078662884afa2a7da6685074f51bddefaa4af79c8bd6abdeb4befd3e84c6b41",
+      "rationale": "检测布点的数量、距离及进入方向是独立缺陷；现有H分别约束气种、检测人员位置、记录和作业中实时监测，不能覆盖点位规则。",
+      "dedupComparedHazards": [
+        "H_46768_5_8_2",
+        "H_46768_5_8_5",
+        "H_46768_5_8_7",
+        "H_46768_6_2_3"
+      ]
+    },
+    {
+      "candidateId": "CH-002",
+      "hazardId": "H_46768_5_10_2",
+      "hazardAction": "create",
+      "clauseId": "C_46768_5_10_2",
+      "linkId": "K_COMMON_H_46768_5_10_2",
+      "definitionHash": "0787c6d727f116384f898bfdec6be1fee0de864b68f5356c423d3538f7319dbe",
+      "clauseHash": "401c52939f0b0f5425f8a36d660666086f7f5dd18e5f8c3b23ff57563c16c0c9",
+      "linkHash": "5c42bbd2d2e50038b4ffa652bdbdfbcf7941752a869e61a8d0a747125cd990a6",
+      "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=C26BA1B610497F860D280ACF929D3F7D",
+      "officialPdfSha256": "8078662884afa2a7da6685074f51bddefaa4af79c8bd6abdeb4befd3e84c6b41",
+      "rationale": "独立缺口成立，但原标题只突出配管，事实又包含送排风位置；“未开始作业”不能排除本就位于作业前的5.10要求。",
+      "dedupComparedHazards": [
+        "H_48B66BAC_15_5",
+        "H_46768_5_10_1",
+        "H_48B66BAC_14_1"
+      ]
+    },
+    {
+      "candidateId": "CH-003",
+      "hazardId": "H_46768_6_2_6",
+      "hazardAction": "create",
+      "clauseId": "C_46768_6_2_6",
+      "linkId": "K_COMMON_H_46768_6_2_6",
+      "definitionHash": "fa0c8e2c58fef58bf0b4b1cbe1143c653941d5003129db2c91d6638cb8ad7ad6",
+      "clauseHash": "f4dc32d1b14f21c27aed1e36cbeaa06040ad88cfedc37ff93e455594eae3e814",
+      "linkHash": "c4cb855b383ce9774479fc0effcb3feebc1592d5104a43417a15ab6da3349c5d",
+      "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=C26BA1B610497F860D280ACF929D3F7D",
+      "officialPdfSha256": "8078662884afa2a7da6685074f51bddefaa4af79c8bd6abdeb4befd3e84c6b41",
+      "rationale": "作业中断期间临时封闭是独立时间触发，区别于有毒有限空间的日常物理隔离和完工后的关闭；但仅缺警示已由H_48B66BAC_11_1及其C_46768_4_2_1关联覆盖，不能用“封闭缺失”标题容纳只有缺警示的事实。",
+      "dedupComparedHazards": [
+        "H_48B66BAC_12_1",
+        "H_48B66BAC_11_1",
+        "H_48B66BAC_15_6",
+        "H_46768_7_1_1"
+      ]
+    },
+    {
+      "candidateId": "CH-004",
+      "hazardId": "H_GBT13869_REMOVED_POWER_END",
+      "hazardAction": "create",
+      "clauseId": "C_GBT13869_6",
+      "linkId": "K_COMMON_H_GBT13869_REMOVED_POWER_END",
+      "definitionHash": "689ccc55ba72ce74e361362709f250f45f1f834a86fd2dbc604b179589235cac",
+      "clauseHash": "ab4c5cdde6f6c2c99a8383c8d0e5578053d5ad1e694ebfb0f0a6f2bdeac26a45",
+      "linkHash": "ea40795381bd4bd3bfeda74c4e43da598cf5cbacc6f28598e41aa0aeba0a1b01",
+      "sourceUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651130919251.pdf",
+      "officialPdfSha256": "fc612978f1112f87912668b3b01af1c554422ebcf83074eebaae64af8beb9d50",
+      "rationale": "已核2017版第6章完整四段，基线没有该版第6章C。2026版C_G26_5属于upcoming版本，不得提前代替。设备拆除遗留电源端/长期闲置重新启用分别为独立生命周期触发，与在用线路破损、安装验收盒盖、故障停电后重送电及手持工具周期检测不同。",
+      "dedupComparedHazards": [
+        "H_62AD7AADA05F468BAE0F91F5CC",
+        "H_CF_GEN_11",
+        "H_COM_ELECTRICAL_BOX_COVER"
+      ]
+    },
+    {
+      "candidateId": "CH-005",
+      "hazardId": "H_GBT13869_RESTART_AFTER_STORAGE",
+      "hazardAction": "create",
+      "clauseId": "C_GBT13869_6",
+      "linkId": "K_COMMON_H_GBT13869_RESTART_AFTER_STORAGE",
+      "definitionHash": "e9b9f8abcfcaca584ca23787628d8baa0ce6ae1cc8fa64efd4642591f888f86f",
+      "clauseHash": "ab4c5cdde6f6c2c99a8383c8d0e5578053d5ad1e694ebfb0f0a6f2bdeac26a45",
+      "linkHash": "ee18427677181d977d49813d701949be92236258e08add29c036f40b5f5c3847",
+      "sourceUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651130919251.pdf",
+      "officialPdfSha256": "fc612978f1112f87912668b3b01af1c554422ebcf83074eebaae64af8beb9d50",
+      "rationale": "已核2017版第6章完整四段，基线没有该版第6章C。2026版C_G26_5属于upcoming版本，不得提前代替。设备拆除遗留电源端/长期闲置重新启用分别为独立生命周期触发，与在用线路破损、安装验收盒盖、故障停电后重送电及手持工具周期检测不同。",
+      "dedupComparedHazards": [
+        "H_2724BCA646E74C1694B53CF8DB",
+        "H_CF_GEN_13"
+      ]
+    },
+    {
+      "candidateId": "CH-006",
+      "hazardId": "H004",
+      "hazardAction": "reuse_stable_id_and_narrow_definition",
+      "clauseId": "C_GB55037_7_1_7",
+      "linkId": "K_COMMON_H004",
+      "definitionHash": "70d429a7747d0620e42a693e801b25cf7e7fdff4ae6a6c64c45c68cbb9b84b19",
+      "clauseHash": "8c21da740a35bcd3cdda550d8afd5762d27d61c0472f361950258bc15c44def1",
+      "linkHash": "1ce2da89f562fa7ca2afa743714f8cf11a93bfe408ca9f8b1bb54c0ade3f32b3",
+      "sourceUrl": "https://zjj.sm.gov.cn/ztzl/xfzt/202401/P020240111381742158956.pdf",
+      "officialPdfSha256": "90b92701fe6988a1c1c7659cd96a68fef92523ae3a2b04168aed937f03c247d0",
+      "rationale": "7.1.7技术义务真实、现行且存在覆盖缺口；但H004已有安全出口锁闭及门禁紧急开启核查note、没有K，优先把它收窄转正，保留Stable ID，而不是再留一个高度重叠的proposed旁另建H。",
+      "dedupComparedHazards": [
+        "H004",
+        "H_8A0E0A3FDDD04AF1829ED6C16E",
+        "H_004D8F2994DD43D1A2F418386F",
+        "H_99C14C8150B1AF834ADC8E5121_3"
+      ],
+      "finalScopeRefinement": "历史H004完整定义保留于定义审核记录；公开note明确其不作为当前闸口/门禁适用条件，不要求所有闸口先证明安全出口或锁闭事实。"
+    }
+  ],
+  "supportingLinkIds": [
+    "K_COMMON_SUPPORT_C_46768_5_11_1_H_46768_5_8_6",
+    "K_COMMON_SUPPORT_C_46768_6_2_7_H_46768_5_8_6",
+    "K_COMMON_SUPPORT_C_46768_6_2_4_H_46768_5_10_2"
+  ],
+  "currency": {
+    "GB46768": "SAMR current; effective 2026-05-01",
+    "GBT13869": "2017 current; 2026 upcoming, effective and full replacement 2027-02-01. No early switch.",
+    "GB55037": "2022 notice + 2026-05-04 Jiangsu Fire technical catalogue; no later replacement located in official search. Not claimed as a SAMR standalone current-status label."
+  },
+  "deferred": {
+    "GB/T3787-2017": "完整8页本地PDF及目核图已在后续研究中取得，但下载来源/身份链尚未确认；不能仅凭文件名或原文相合升级为官方证据，本批不准入此线索。",
+    "historicalRecoveredSource83": "Separate private knowledge-classification work; not counted as six generic-check admissions."
+  }
+}

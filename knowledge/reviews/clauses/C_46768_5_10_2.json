@@ -1,13 +1,27 @@
 {
-  "checkedAt": "2026-09-17",
-  "decision": "verified",
   "entityId": "C_46768_5_10_2",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_46768_GB46768"
-  ],
-  "reason": "条文核验：GB 46768-2025 第5.10.2条引文与归档官方全文逐字一致。",
   "reviewType": "text",
+  "decision": "verified",
   "reviewedContentHash": "401c52939f0b0f5425f8a36d660666086f7f5dd18e5f8c3b23ff57563c16c0c9",
-  "reviewer": "Codex Local Agent"
+  "checkedAt": "2026-10-03",
+  "reviewer": "Codex 常见隐患独立核源结果整合复核",
+  "evidenceRefs": [
+    "E_COMMON_GB46768_YUNFU_ORIGINAL_20261002"
+  ],
+  "reason": "官方完整PDF第12页/正文第6页逐字目核，本条完整原文与既有C仅排版空格不同，C字段不改。补充真实PDF证据并保留旧审核；不以审核hash更新代替原文核对。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "decision": "verified",
+    "entityId": "C_46768_5_10_2",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_46768_GB46768"
+    ],
+    "reason": "条文核验：GB 46768-2025 第5.10.2条引文与归档官方全文逐字一致。",
+    "reviewType": "text",
+    "reviewedContentHash": "401c52939f0b0f5425f8a36d660666086f7f5dd18e5f8c3b23ff57563c16c0c9",
+    "reviewer": "Codex Local Agent"
+  },
+  "previousReviewFileSha256": "858510ce2ce2d4751027634c4cc6cc3eb3fadf6687b879788181548684029e29"
 }

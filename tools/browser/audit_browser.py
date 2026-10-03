@@ -15,12 +15,26 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
-from playwright.sync_api import sync_playwright, expect
 
+
+# Current approved common-hazard cohort; exact rendered identity and links matter.
+COMMON_HAZARDS = [{'id': 'H_46768_5_8_6', 'title': '有限空间作业气体检测未按规定设置检测点位', 'links': ['K_COMMON_H_46768_5_8_6', 'K_COMMON_SUPPORT_C_46768_5_11_1_H_46768_5_8_6', 'K_COMMON_SUPPORT_C_46768_6_2_7_H_46768_5_8_6']}, {'id': 'H_46768_5_10_2', 'title': '有限空间移动机械通风风管或送排风位置不符合要求', 'links': ['K_COMMON_H_46768_5_10_2', 'K_COMMON_SUPPORT_C_46768_6_2_4_H_46768_5_10_2']}, {'id': 'H_46768_6_2_6', 'title': '有限空间作业中断期间未落实出入口临时封闭', 'links': ['K_COMMON_H_46768_6_2_6']}, {'id': 'H_GBT13869_REMOVED_POWER_END', 'title': '用电产品拆除后可能带电的原电源端导电部分外露', 'links': ['K_COMMON_H_GBT13869_REMOVED_POWER_END']}, {'id': 'H_GBT13869_RESTART_AFTER_STORAGE', 'title': '长期停用的用电产品未经必要检修和安全性能测试即重新使用', 'links': ['K_COMMON_H_GBT13869_RESTART_AFTER_STORAGE']}, {'id': 'H004', 'title': '控制人员出入的闸口或门禁疏散出口火灾释放、内部开启或标识不符合要求', 'links': ['K_COMMON_H004']}]
 
 def require(condition, message):
     if not condition:
         raise AssertionError(message)
+
+
+def validate_release_identity(release, manifest, expected_commit=None):
+    require(release.get('releaseHash') and release['releaseHash'] == manifest.get('releaseHash'),
+            'Release metadata and data manifest hashes differ')
+    require(release.get('counts') == manifest.get('counts'), 'Release metadata and data manifest counts differ')
+    if expected_commit:
+        expected = expected_commit[:12]
+        require(manifest.get('dataVersion', '').split('.')[-1] == expected,
+                f'Deployed dataVersion does not bind {expected}: {manifest.get("dataVersion")}')
+    return {'dataVersion': manifest.get('dataVersion'), 'asOf': release.get('asOf'),
+            'releaseHash': release['releaseHash'], 'counts': release.get('counts')}
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
@@ -29,6 +43,7 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
 
 
 def main():
+    from playwright.sync_api import sync_playwright, expect
     parser = argparse.ArgumentParser(description=__doc__)
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument('--bundle', type=Path)
@@ -36,6 +51,7 @@ def main():
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--observe', action='store_true')
     parser.add_argument('--executable')
+    parser.add_argument('--expected-commit', help='Require public dataVersion to bind this exact commit prefix')
     args = parser.parse_args()
     server = None
     if args.bundle:
@@ -88,6 +104,31 @@ def main():
                 require(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), 'Desktop horizontal overflow')
                 return {'count': count, 'title': page.locator('#detail h2').inner_text()}
             run('desktop_home', home_check)
+
+            def release_identity():
+                release_response = context.request.get(base + 'release.json')
+                manifest_response = context.request.get(base + 'data/manifest.json')
+                require(release_response.ok and manifest_response.ok, 'Cannot read release metadata and data manifest')
+                report['release'] = validate_release_identity(release_response.json(), manifest_response.json(), args.expected_commit)
+                return report['release']
+            run('exact_release_identity', release_identity)
+
+            def common_hazards_check():
+                results = []
+                for item in COMMON_HAZARDS:
+                    home(); page.fill('#search', item['title'])
+                    expect(page.locator('#count')).to_have_text('1')
+                    page.locator('#list .card').first.click()
+                    expect(page.locator('#detail h2')).to_have_text(item['title'])
+                    require(parse_qs(urlparse(page.url).query).get('id') == [item['id']], 'Wrong common hazard selected')
+                    rendered = page.locator('#detail .basis').evaluate_all('(rows) => rows.map(row => row.dataset.linkId)')
+                    require(set(rendered) == set(item['links']), f'Wrong rendered basis links for {item["id"]}: {rendered}')
+                    for link in item['links']:
+                        require(page.locator(f'#detail .basis[data-link-id="{link}"] blockquote').inner_text().strip(), 'Missing full quote')
+                    page.reload(); expect(page.locator('#detail h2')).to_have_text(item['title'])
+                    results.append({'id': item['id'], 'title': item['title'], 'links': rendered, 'reload': True})
+                return results
+            run('six_common_hazards_exact_search_links_and_reload', common_hazards_check)
 
             def hydrate_all():
                 home()
@@ -179,11 +220,11 @@ def main():
             run('hazard_law_bidirectional_navigation', cross_navigation)
 
             def unavailable():
-                home('?id=H004'); expect(page.locator('#detail')).to_contain_text('H004')
+                home('?id=H052'); expect(page.locator('#detail')).to_contain_text('H052')
                 text = page.locator('#detail').inner_text()
-                require('未' in text or '候选' in text, 'Unpublished ID silently selected another hazard')
-                return {'id': 'H004', 'text': text}
-            run('unpublished_H004_deep_link', unavailable)
+                require(page.locator('#detail h2').count() == 0, 'Unpublished ID silently selected a published record')
+                return {'id': 'H052', 'text': text}
+            run('unpublished_H052_deep_link', unavailable)
 
             def unknown():
                 home('?id=H_AUDIT_UNKNOWN_ZYX987')
@@ -213,16 +254,24 @@ def main():
                 return {'title': page.locator('#libraryDetail h2').inner_text()}
             run('upcoming_not_current', upcoming)
 
-            def mobile_check():
-                mobile = browser.new_context(viewport={'width': 390, 'height': 844}, is_mobile=True, has_touch=True, service_workers='block')
-                mp = mobile.new_page(); mp.goto(base); mp.wait_for_selector('#list .card'); mp.wait_for_selector('#detail h2')
-                width = mp.evaluate('document.documentElement.scrollWidth')
-                require(width <= 391, f'Mobile horizontal overflow: {width}')
+            def mobile_check(width):
+                mobile = browser.new_context(viewport={'width': width, 'height': 844}, is_mobile=True, has_touch=True, service_workers='block')
+                mp = mobile.new_page(); mp.on('pageerror', lambda err: page_errors.append(str(err)))
+                mp.goto(base); mp.wait_for_selector('#list .card'); mp.wait_for_selector('#detail h2')
+                document_width = mp.evaluate('document.documentElement.scrollWidth')
+                require(document_width <= width + 1, f'Mobile horizontal overflow: {document_width}')
                 mp.fill('#search', '灭火器'); mp.wait_for_selector('#list .card')
                 mp.locator('#list .card').first.click(); mp.wait_for_selector('#detail h2')
-                result = {'viewport': 390, 'documentWidth': width, 'count': mp.locator('#count').inner_text()}
+                results = []
+                for item in COMMON_HAZARDS:
+                    mp.goto(base + '?id=' + quote(item['id']))
+                    expect(mp.locator('#detail h2')).to_have_text(item['title'])
+                    require(mp.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), f'Mobile common hazard overflow: {item["id"]}')
+                    results.append(item['id'])
+                result = {'viewport': width, 'documentWidth': document_width, 'commonHazards': results}
                 mobile.close(); return result
-            run('mobile_390px_search_and_detail', mobile_check)
+            for width in (375, 390):
+                run(f'mobile_{width}px_search_and_six_details', lambda width=width: mobile_check(width))
             run('no_unhandled_javascript_errors', lambda: require(not page_errors, str(page_errors)))
             context.close(); browser.close()
     finally:

@@ -53,6 +53,21 @@ jobs:
           python tools/v4/verify_unified_bundle.py --bundle source/releases/current
           mkdir -p "${{ runner.temp }}/current-site"
           cp -r source/releases/current/. "${{ runner.temp }}/current-site/"
+      - name: Real Chromium acceptance of the exact new package
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+          python tools/browser/audit_browser.py \
+            --bundle source/releases/current \
+            --expected-commit "${GITHUB_SHA}" \
+            --out "${RUNNER_TEMP}/common-hazards-browser-local.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: common-hazards-browser-local-evidence
+          path: ${{ runner.temp }}/common-hazards-browser-local.json
+          if-no-files-found: warn
+          retention-days: 7
       - uses: actions/upload-artifact@v4
         with:
           name: current-safety-site
@@ -98,6 +113,7 @@ jobs:
           for attempt in 1 2 3; do
             if python tools/browser/audit_browser.py \
               --url https://an-0726.github.io/safety-basis/ \
+              --expected-commit "${GITHUB_SHA}" \
               --out "${RUNNER_TEMP}/online-verify/browser-public.json"; then
               exit 0
             fi

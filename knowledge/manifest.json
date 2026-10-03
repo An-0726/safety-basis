@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-02",
-  "batch": "commerce-candidate-dispositions-20261002",
+  "asOf": "2026-10-03",
+  "batch": "common-hazards-bounded-20261003",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -359,15 +359,36 @@
       "lawVersionsAdded": 1,
       "clausesAdded": 3,
       "linksAdded": 2
+    },
+    {
+      "id": "common-hazards-bounded-20261003",
+      "evidenceAdded": 1,
+      "clausesAdded": 2,
+      "hazardsAdded": 5,
+      "existingCandidatesAdmitted": 1,
+      "linksAdded": 9,
+      "directLinksAdded": 6,
+      "supportingLinksAdded": 3,
+      "clauseTextReviewsUpdated": 3,
+      "scope": "Six source-reviewed generic checks: five new hazards and narrowed existing H004; no source-company findings, no automatic major classification, no full-standard republication rights expansion.",
+      "admittedHazardIds": [
+        "H_46768_5_8_6",
+        "H_46768_5_10_2",
+        "H_46768_6_2_6",
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_GBT13869_RESTART_AFTER_STORAGE",
+        "H004"
+      ],
+      "reviewRef": "docs/common-hazards-bounded-20261003.json"
     }
   ],
   "counts": {
     "laws": 130,
     "lawVersions": 133,
-    "clauses": 3138,
-    "hazards": 2132,
-    "links": 2011,
-    "evidence": 1354,
+    "clauses": 3140,
+    "hazards": 2137,
+    "links": 2020,
+    "evidence": 1355,
     "successions": 26,
     "requirements": 75
   },
@@ -375,18 +396,18 @@
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
   "laws": 130,
   "lawVersions": 133,
-  "clauses": 3138,
-  "hazards": 2132,
-  "links": 2011,
-  "evidence": 1354,
+  "clauses": 3140,
+  "hazards": 2137,
+  "links": 2020,
+  "evidence": 1355,
   "successions": 26,
-  "activeHazards": 1691,
-  "proposedHazards": 321,
+  "activeHazards": 1697,
+  "proposedHazards": 320,
   "supersededHazards": 120,
   "lifecycle": {
     "superseded": 120,
-    "proposed": 321,
-    "active": 1691
+    "proposed": 320,
+    "active": 1697
   },
   "requirements": 75
 }

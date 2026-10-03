@@ -1,0 +1,59 @@
+{
+  "verifiedAtUtc": "2026-10-02T17:50:53Z",
+  "repository": "An-0726/safety-basis",
+  "pr": {
+    "number": 105,
+    "url": "https://github.com/An-0726/safety-basis/pull/105",
+    "head": "eaf00482f14ee3a0998fb56ffeb655c6c284bc49",
+    "mergedAt": "2026-10-02T17:45:23Z"
+  },
+  "baseline": "5c02e50bd260986afde82b03782ee09a1a8b765f",
+  "mergeCommit": "b81c1af2d6d5092e30502198806f65c27523f869",
+  "verifiedMain": "b81c1af2d6d5092e30502198806f65c27523f869",
+  "sourceTree": "30a29b8b2767385647528618025a008bcc31897d",
+  "prCI": {
+    "build": {
+      "run": 37042168032,
+      "result": "success"
+    },
+    "validate": {
+      "run": 37042168093,
+      "result": "success"
+    }
+  },
+  "productionCI": {
+    "run": 37042871753,
+    "url": "https://github.com/An-0726/safety-basis/actions/runs/37042871753",
+    "build": "success",
+    "deploy": "success",
+    "online_verify": "success",
+    "validate": {
+      "run": 37042871906,
+      "result": "success"
+    }
+  },
+  "release": {
+    "asOf": "2026-10-03",
+    "dataVersion": "2026.10.03.b81c1af2d6d5",
+    "releaseHash": "c3753feab15b21da2dcc68c24e016487121e2ed4596b360bd2eadcbaa276e3f8",
+    "counts": {
+      "hazards": 1665,
+      "links": 1808,
+      "clauses": 1367,
+      "lawVersions": 77,
+      "fieldProfiles": 25
+    }
+  },
+  "schemaVersion": "verified-public-release-receipt-v1",
+  "liveManifestUrl": "https://an-0726.github.io/safety-basis/data/manifest.json",
+  "liveManifestMatches": [
+    "dataVersion",
+    "releaseHash",
+    "counts"
+  ],
+  "limits": [
+    "PR105引用修复已发布；本次common-hazards-bounded-20261003批次不在该生产包内。",
+    "生产Actions的online_verify成功不等于本次6项新增内容已完成浏览器验收。",
+    "15条原公开隐患撤出公开集，稳定源实体与历史审核仍保留。"
+  ]
+}

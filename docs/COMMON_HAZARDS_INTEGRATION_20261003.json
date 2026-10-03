@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "common-hazards-integration-acceptance-v1",
+  "asOf": "2026-10-03",
+  "status": "integrated_locally_not_published",
+  "baselineCommit": "b81c1af2d6d5092e30502198806f65c27523f869",
+  "baselineSourceTree": "30a29b8b2767385647528618025a008bcc31897d",
+  "baselineReleaseHash": "c3753feab15b21da2dcc68c24e016487121e2ed4596b360bd2eadcbaa276e3f8",
+  "reviewRecords": [
+    "common-hazards-bounded-20261003.json",
+    "common-hazards-final-field-review-20261003.json"
+  ],
+  "counts": {
+    "laws": 130,
+    "lawVersions": 133,
+    "clauses": 3140,
+    "hazards": 2137,
+    "links": 2020,
+    "evidence": 1355,
+    "successions": 26,
+    "requirements": 75
+  },
+  "hazardLifecycle": {
+    "superseded": 120,
+    "proposed": 320,
+    "active": 1697
+  },
+  "validation": {
+    "python": {
+      "passed": 601,
+      "command": "python -m unittest discover -s tools/pipeline/tests -v"
+    },
+    "node": {
+      "passed": 732,
+      "command": "node --test tests/*.test.mjs"
+    },
+    "boundedCommonHazardTests": 15,
+    "newIntegrationTests": 5,
+    "retainedCitationRegressionTests": 10,
+    "allValidators": "PASS",
+    "publicationIntegrity": "PASS",
+    "dateChecks": {
+      "2026-10-02": {
+        "strictGate": "PASS",
+        "blockers": 0,
+        "warnings": 167,
+        "excluded": 622,
+        "build": "PASS",
+        "strictBundleVerifier": true,
+        "profileDataController": "PASS",
+        "rawGateEligibleLinks": 1818,
+        "publishedLinks": 1817
+      },
+      "2026-10-03": {
+        "strictGate": "PASS",
+        "blockers": 0,
+        "warnings": 167,
+        "excluded": 622,
+        "build": "PASS",
+        "strictBundleVerifier": true,
+        "profileDataController": "PASS",
+        "rawGateEligibleLinks": 1818,
+        "publishedLinks": 1817
+      }
+    },
+    "commonHazardDataController": {
+      "status": "PASS",
+      "hazards": 6,
+      "links": 9,
+      "fullTitleQueryMatchesEach": 1,
+      "repeatedDetailLoads": "PASS"
+    },
+    "sourceKnowledgeUnchangedByValidators": true
+  },
+  "inheritance": {
+    "2026-10-02": {
+      "inheritedHazards": 1665,
+      "addedHazardIds": [
+        "H004",
+        "H_46768_5_10_2",
+        "H_46768_5_8_6",
+        "H_46768_6_2_6",
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_GBT13869_RESTART_AFTER_STORAGE"
+      ],
+      "removedHazardIds": [],
+      "inheritedSearchRowsUnchangedExceptShardPointer": true,
+      "inheritedHazardDetailsUnchangedExceptShardPointer": true,
+      "inheritedClausesIdentical": 1367,
+      "fieldProfileRecordsIdentical": true,
+      "counts": {
+        "hazards": 1671,
+        "laws": 77,
+        "lawVersions": 77,
+        "clauses": 1375,
+        "links": 1817,
+        "fieldProfiles": 25,
+        "majorCriteriaStandards": 6,
+        "majorCriteriaClauses": 110,
+        "majorCriteriaHazards": 20,
+        "majorCriteriaAssociations": 20,
+        "majorCriteriaDirectoryGroups": 8,
+        "majorCriteriaDirectoryDocuments": 9,
+        "majorCriteriaReadingGroups": 3,
+        "majorCriteriaReadingDocuments": 4,
+        "majorCriteriaReadingFirstLevelItems": 109,
+        "majorCriteriaReferenceStandards": 1,
+        "majorCriteriaSearchTopics": 53
+      },
+      "releaseHash": "2fe468ebb122b50a463ac0beb11e574658728ff326f359d24ac1dda5a5241b85"
+    },
+    "2026-10-03": {
+      "inheritedHazards": 1665,
+      "addedHazardIds": [
+        "H004",
+        "H_46768_5_10_2",
+        "H_46768_5_8_6",
+        "H_46768_6_2_6",
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_GBT13869_RESTART_AFTER_STORAGE"
+      ],
+      "removedHazardIds": [],
+      "inheritedSearchRowsUnchangedExceptShardPointer": true,
+      "inheritedHazardDetailsUnchangedExceptShardPointer": true,
+      "inheritedClausesIdentical": 1367,
+      "fieldProfileRecordsIdentical": true,
+      "counts": {
+        "hazards": 1671,
+        "laws": 77,
+        "lawVersions": 77,
+        "clauses": 1375,
+        "links": 1817,
+        "fieldProfiles": 25,
+        "majorCriteriaStandards": 6,
+        "majorCriteriaClauses": 110,
+        "majorCriteriaHazards": 20,
+        "majorCriteriaAssociations": 20,
+        "majorCriteriaDirectoryGroups": 8,
+        "majorCriteriaDirectoryDocuments": 9,
+        "majorCriteriaReadingGroups": 3,
+        "majorCriteriaReadingDocuments": 4,
+        "majorCriteriaReadingFirstLevelItems": 109,
+        "majorCriteriaReferenceStandards": 1,
+        "majorCriteriaSearchTopics": 53
+      },
+      "releaseHash": "4ab06d395dd343d6d65f093948a634253300ef1cd558de1917fe2067bc9d6b0a"
+    }
+  },
+  "dateBoundary": {
+    "lastOldVersionDays": [
+      "2027-01-30",
+      "2027-01-31"
+    ],
+    "currentGbt13869Links": 15,
+    "exclusiveEndDate": "2027-02-01",
+    "oldLinksExcludedAtEnd": true,
+    "successorRemainsUpcoming": true
+  },
+  "integrationMethod": "Append the reviewed batch receipt to the PR105 manifest and recalculate physical counts. Historical test projections subtract explicit pinned cohorts only; retain PR105 citation pins and exact source/version boundaries. No production Gate changes.",
+  "limitations": [
+    "No browser/visual acceptance for the six new entries is claimed.",
+    "No remote commit, push, PR, merge or deployment for this batch.",
+    "Generic definitions do not establish enterprise violations or completed remediation.",
+    "No full-standard republication rights expansion; historical recovered materials are outside this admission batch."
+  ]
+}
