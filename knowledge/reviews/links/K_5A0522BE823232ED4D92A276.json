@@ -1,16 +1,76 @@
 {
-  "checkedAt": "2026-09-12",
-  "contextHashes": {
-    "clause": "1908177c1bc7e50529ae97f1ae6c1df7d8e0de4794bd57d0e10e508ae72ccb7d",
-    "hazard": "dea2c2529fcf314225ee455591ef57458b97ab6174c75382631b5e009bd1a3d0"
-  },
-  "decision": "verified",
   "entityId": "K_5A0522BE823232ED4D92A276",
   "entityType": "link",
-  "evidenceRefs": [],
-  "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
   "reviewType": "applicability",
-  "reviewedContentHash": "e301e4a21db112034872f79c6e2f978d2d1f7fbc65477daaac22efca2201ba75",
-  "reviewer": "GLM-5.3-Flash (ZCode)",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "e847b451deb2db6e73a36682e0badb370c387eef3a5b4e77a766b9a35e0acda7",
+  "evidenceRefs": [
+    "E_L020"
+  ],
+  "reason": "按地方条例第二条和第三十条核对地域、主体与管理分支；与H061未改变的国家工贸重大隐患直接关联分开，保持法源间边界。",
+  "locator": "第二条；第三十条第一款第（三）、（四）项",
+  "reviewedFields": [
+    "/applicability",
+    "/jurisdictionCode",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于江苏省行政区域内生产经营单位将生产经营项目、场所、设备发包或者出租的情形；本关联仅核第三十条第一款第（三）、（四）项发包方、出租方协调解决安全生产问题、检查并如实记录、发现问题及时督促整改等义务。本条不单独设定定期检查周期；仅督促整改不到位不自动满足国家工贸重大隐患第三条第（一）项。协议、告知和承包承租方事故报告等其他分支不作为本H的新增缺陷。",
+    "/jurisdictionCode": "CN-32",
+    "/reason": "江苏省安全生产条例第三十条第一款第（三）、（四）项直接支持发包出租管理的协调、检查、记录和督促整改分支；第二条限定省内适用。不得将该地方补充关联写成全国要求或独立重大隐患判据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_L020"
+    ],
+    "/jurisdictionCode": [
+      "E_L020"
+    ],
+    "/reason": [
+      "E_L020"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "contextHashes": {
+    "hazard": "dea2c2529fcf314225ee455591ef57458b97ab6174c75382631b5e009bd1a3d0",
+    "clause": "16f6846e75cd4edc94b9122c46ff2d48bc5d3575da9b090d65daa27f39c8bcf6"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "contextHashes": {
+      "clause": "1908177c1bc7e50529ae97f1ae6c1df7d8e0de4794bd57d0e10e508ae72ccb7d",
+      "hazard": "dea2c2529fcf314225ee455591ef57458b97ab6174c75382631b5e009bd1a3d0"
+    },
+    "decision": "verified",
+    "entityId": "K_5A0522BE823232ED4D92A276",
+    "entityType": "link",
+    "evidenceRefs": [],
+    "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "e301e4a21db112034872f79c6e2f978d2d1f7fbc65477daaac22efca2201ba75",
+    "reviewer": "GLM-5.3-Flash (ZCode)",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "814996913b15a7a0ff1bb4fef60eef128e4d33bdb2286abe04bb06abf7891b3b",
+  "historySha256": "419d24f75e1d8112ce264afba2c5d6b6c928abaf1b60f33e30726190e3b7d9b7",
+  "previousEntity": {
+    "id": "K_5A0522BE823232ED4D92A276",
+    "hazardId": "H061",
+    "clauseId": "C_462D38828DEBA46C8E23C177D2",
+    "role": "direct",
+    "legacyRole": "",
+    "applicability": "承包、承租单位安全生产统一协调管理或定期检查不到位的现场状态。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "明确发包出租应签协议告知并协调管理承包方（GLM 专项依据审核，2026-09-12）"
+  },
+  "previousEntityFileSha256": "3e5d78efc115e35dbccae7031db23ed04183ff422fb08ad29b3cdec0324a0b44"
 }

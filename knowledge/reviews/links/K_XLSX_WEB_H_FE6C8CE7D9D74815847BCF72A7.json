@@ -1,18 +1,71 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_FE6C8CE7D9D74815847BCF72A7",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "76ab877a0ec923723c4e876290d9915143fb8462048de3083c2f36a2f9808d38",
-  "contextHashes": {
-    "hazard": "1846b5a62f677670592b9fb47dcefffe75400e06e7e3544a531edd11d28e511f",
-    "clause": "75f6171caeb7e52db9ab7538e15231c3ff3839c0cf0afcc9f5b3670c4eacca1e"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第10.1.7条气体放空管及防雷要求。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "2dcecfe8107443f441e9518680eed7e4b0272a3db124a93774b98011273de085",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
+    "E_JGJ91_ORIGINAL_CLAUSES_20261003"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "核对所指标准身份、精确条款与H各缺陷分支。原件印刷44页：删除不存在的防雨义务，恢复放空管和高度、防雷原句。",
+  "locator": "第10.1.7条",
+  "reviewedFields": [
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项仅核可燃、助燃气体管道的放空管、屋面以上高度及防雷；三项任一不符合即需核查，不要求同时缺失。防雨不是第10.1.7条原文义务。",
+    "/reason": "原件印刷44页：删除不存在的防雨义务，恢复放空管和高度、防雷原句。 本关联仅支撑已列明对象和对应缺陷分支。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/reason": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "contextHashes": {
+    "hazard": "1c542e37b133ed679e689bb4bb486bcce2d628d043c3e61fbbb2bf6d86700816",
+    "clause": "1239f5fe5d446e890e0733ded542818b42d71cae404c57af7ba66ae613ff6af5"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_FE6C8CE7D9D74815847BCF72A7",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "76ab877a0ec923723c4e876290d9915143fb8462048de3083c2f36a2f9808d38",
+    "contextHashes": {
+      "hazard": "1846b5a62f677670592b9fb47dcefffe75400e06e7e3544a531edd11d28e511f",
+      "clause": "75f6171caeb7e52db9ab7538e15231c3ff3839c0cf0afcc9f5b3670c4eacca1e"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第10.1.7条气体放空管及防雷要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "c2d75e03037b1a2033825995874a88906ce16fe78f32d96c33e4216a07a93f99",
+  "historySha256": "db6fcdefbcf66b8dc1c663dfa02d71d1aa7c754b8c1f7200e6a20486f8c935b3",
+  "previousEntity": {
+    "applicability": "可燃助燃气体管道未设放空管高出屋面",
+    "clauseId": "C_JGJ91_10_1_7",
+    "hazardId": "H_FE6C8CE7D9D74815847BCF72A7",
+    "id": "K_XLSX_WEB_H_FE6C8CE7D9D74815847BCF72A7",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "5bf2e441c69b90f35f6ddf62d65059d71e7aa79e338831116e48afada2090414"
 }

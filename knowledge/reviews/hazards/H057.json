@@ -1,15 +1,120 @@
 {
-  "decision": "verified",
   "entityId": "H057",
   "entityType": "hazard",
-  "evidenceRefs": [
-    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
-  ],
-  "migratedFromV3Verification": {
-    "id": "VR_82815547a8a16c1838ce6d5d8a_27",
-    "reviewedAt": "2026-09-09T12:35:47+00:00",
-    "reviewer": "doubao-work-依赖刷新"
-  },
   "reviewType": "content",
-  "reviewedContentHash": "7abf979d1f013855c89ec5378aff61b51efe0f13c690d1ea3f46679142af7030"
+  "decision": "verified",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "c1532f828a9b152669ecefa378f1fd7bc3d81cf9d4cdef1aeb95c3956f5a62af",
+  "evidenceRefs": [
+    "E_GB50054_DUST_SCOPE_20261003"
+  ],
+  "reason": "大量灰尘与布线散热是直接义务；更正分类、条件、描述和整改的粉尘防爆泛化，不自动认定任何现场违规。保留H057稳定ID与原记录。",
+  "locator": "第1.0.2条；第7.1.2条第4款",
+  "reviewedFields": [
+    "/category",
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/note",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/category": "电气安全",
+    "/conditions": "适用于新建、改建和扩建工程中交流、工频1000V及以下的低压配电设计，且配电线路敷设于有大量灰尘的场所。核查灰尘聚集在布线上对散热带来的影响，不以粉尘可燃或存在爆炸危险为前提；少量表面浮尘不自动构成本项缺陷。既有线路运行检查应另核设计适用时间、实际敷设和散热条件；涉及可燃性粉尘爆炸危险时另核相应防爆要求。",
+    "/description": "在本项设计适用范围内，有大量灰尘场所的配电线路敷设未避免灰尘聚集在布线上对散热带来的影响。",
+    "/keywords": [
+      "大量灰尘",
+      "普通粉尘",
+      "配电线路",
+      "积尘",
+      "散热",
+      "低压配电设计",
+      "1000V"
+    ],
+    "/measures": "核实线路所处灰尘环境、敷设方式和散热条件，调整敷设与防尘措施，避免积尘影响布线散热；清扫、检查安排作为维持措施，不能代替必要的设计整改。",
+    "/note": "2026-10-03：据GB 50054-2011第1.0.2条与第7.1.2条第4款纠正原可燃性粉尘专属边界；不将少量灰尘、绝缘缺陷或粉尘防爆义务并入本条判据。",
+    "/places": [
+      "大量灰尘场所的低压配电线路敷设环境"
+    ],
+    "/title": "大量灰尘场所配电线路敷设未避免积尘影响散热"
+  },
+  "fieldEvidenceRefs": {
+    "/category": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/conditions": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/description": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/keywords": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/measures": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/note": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/places": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/title": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H057",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_82815547a8a16c1838ce6d5d8a_27",
+      "reviewedAt": "2026-09-09T12:35:47+00:00",
+      "reviewer": "doubao-work-依赖刷新"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "7abf979d1f013855c89ec5378aff61b51efe0f13c690d1ea3f46679142af7030"
+  },
+  "previousReviewFileSha256": "95da028304baa7f24e50e7feb0b63e8cb7f7402016385e9f5aa2ee138ea59e6a",
+  "historySha256": "38fba3df7386c3b79610cb74398a3876dd3a9aff5e716f5459e187961c9f7c4d",
+  "previousEntity": {
+    "aliases": [
+      "粉尘环境电气线路积尘",
+      "配电线路积灰影响散热"
+    ],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "在有大量灰尘的场所，配电线路敷设未避免灰尘聚集在布线上产生的不利影响。",
+    "id": "H057",
+    "keywords": [
+      "粉尘",
+      "配电线路",
+      "积尘",
+      "散热",
+      "线路敷设"
+    ],
+    "lifecycle": "active",
+    "measures": "优化配电线路敷设和防尘措施，减少积尘对散热及绝缘的影响，并建立定期清扫和检查制度。",
+    "mergedInto": null,
+    "mode": "conditional",
+    "note": "",
+    "places": [
+      "粉尘场所",
+      "生产车间"
+    ],
+    "title": "粉尘场所配电线路敷设未防止积尘影响"
+  },
+  "previousEntityFileSha256": "5881b7785a18667d6324f24fd40cbd34084cbfba5bfc6f114a4a6a8da0f398ec"
 }

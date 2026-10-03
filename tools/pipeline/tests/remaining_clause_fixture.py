@@ -3,6 +3,7 @@
 Known files and judgments must equal the frozen reviewed successor before their
 old values are exposed. Unknown additions or changes are never filtered away.
 """
+from public_technical_citation_fixture import pre_technical_source_bytes
 import copy
 import hashlib
 import json
@@ -12,6 +13,7 @@ ENTITIES = {r['path']: r for r in F['entities']}
 REVIEWS = {r['path']: r for r in F['reviews']}
 
 def pre_remaining_source_bytes(path, raw):
+    raw = pre_technical_source_bytes(path, raw)
     row = ENTITIES.get(path) or REVIEWS.get(path)
     if row is None:
         return raw

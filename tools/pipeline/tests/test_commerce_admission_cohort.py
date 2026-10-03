@@ -5,6 +5,7 @@ approve arbitrary future additions discovered from the working tree, change
 Gate policy, or equate a published generic definition with a site finding.
 """
 from collections import Counter
+from public_technical_citation_fixture import F as TECHNICAL_CITATIONS
 import copy
 from datetime import date
 import hashlib
@@ -235,7 +236,7 @@ class CommerceCohortHelperTests(unittest.TestCase):
         current['counts']['evidence'] += 1
         changed = pre_commerce_manifest(current)
         self.assertEqual(changed['counts']['evidence'], historical['counts']['evidence'] + 1)
-        self.assertEqual(before['counts']['evidence'] - historical['counts']['evidence'], len(ADDED_IDS['evidence']) + len(CITATION_ADDED_IDS['evidence']) + len(COMMON_ADDED_IDS['evidence']))
+        self.assertEqual(before['counts']['evidence'] - historical['counts']['evidence'], len(ADDED_IDS['evidence']) + len(CITATION_ADDED_IDS['evidence']) + len(COMMON_ADDED_IDS['evidence']) + len(TECHNICAL_CITATIONS['addedIds']['evidence']))
         self.assertEqual(before, read(KNOW / 'manifest.json'))
 
 

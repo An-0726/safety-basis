@@ -33,25 +33,94 @@
     ]
   },
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "contextHashes": {
-      "clause": "030de0b08d89bdb3881001156d2dd3a8ae6f608051f1d93ea9aced078adf34f9",
-      "hazard": "c858e382b19443dc956293e9f1efad6081fd963671c91605c442d24b2b485bda"
-    },
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "K_XLSX_FT_515B4C8C1BAAA974D0737B8E",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_FT_C6C093D01542EE97F2F74F42"
+      "E_L020"
     ],
-    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reason": "江苏省发包/出租生产经营项目、场所、设备；可签专门安全生产管理协议，或者在承包、租赁合同中明确各自职责。两种法定实现方式必须保留。",
     "reviewType": "applicability",
-    "reviewedContentHash": "ae2093088a29e30d54fd2ef97dafb353fe3ed7162c82f480ac3b2f135baa07ea",
-    "reviewer": "Codex正式核验批次20260913",
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "reviewedContentHash": "54abfef6d02c1f839c89c6c71d8a8d786e7456152c7aca11f7c686bb51f60456",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第三十条第一款第（一）项",
+    "reviewedFields": [
+      "/applicability",
+      "/clauseId",
+      "/reason"
+    ],
+    "reviewedValues": {
+      "/applicability": "适用于江苏省行政区域内生产经营单位将生产经营项目、场所、设备发包或者出租的情形；第三十条第一款第（一）项允许签订专门安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责。已有有效合同明确职责的，不得仅因未另签专门协议认定违反本项。",
+      "/clauseId": "C_462D38828DEBA46C8E23C177D2",
+      "/reason": "第三十条第一款第（一）项直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+    },
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_L020"
+      ],
+      "/clauseId": [
+        "E_L020"
+      ],
+      "/reason": [
+        "E_L020"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "contextHashes": {
+        "clause": "030de0b08d89bdb3881001156d2dd3a8ae6f608051f1d93ea9aced078adf34f9",
+        "hazard": "c858e382b19443dc956293e9f1efad6081fd963671c91605c442d24b2b485bda"
+      },
+      "decision": "verified",
+      "entityId": "K_XLSX_FT_515B4C8C1BAAA974D0737B8E",
+      "entityType": "link",
+      "evidenceRefs": [
+        "E_XLSX_FT_C6C093D01542EE97F2F74F42"
+      ],
+      "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+      "reviewType": "applicability",
+      "reviewedContentHash": "ae2093088a29e30d54fd2ef97dafb353fe3ed7162c82f480ac3b2f135baa07ea",
+      "reviewer": "Codex正式核验批次20260913",
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "bc1eb0b3c66badf5472160a34ccc8a3635ab1637386f971a5b1182578a9cf4aa",
+    "historySha256": "6cb6592d4cb8a9de4d1a187d035f14ad4715d270683b590ce0f569dc5133d2b6",
+    "previousEntity": {
+      "applicability": "适用于江苏省行政区域内，且存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：江苏省行政区域内机械设备制造、安装、运行、操作和检维修相关场所",
+      "clauseId": "C_XLSX_FT_9A5F6326CD4DFDF324CED86E",
+      "hazardId": "H_462D38828DEBA46C8E23C177D2_1",
+      "id": "K_XLSX_FT_515B4C8C1BAAA974D0737B8E",
+      "jurisdictionCode": "CN-32",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+      "role": "direct"
+    },
+    "previousEntityFileSha256": "1f48d630f2e04ab1f33ec4548356adece069acf95e20a2b0f58815d3e6817398",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第三十条第一款第（一）项",
+      "completeOfficialQuote": "第三十条 生产经营单位将生产经营项目、场所、设备发包或者出租的，应当履行下列安全生产职责：\n\n（一）签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责；\n\n（二）向承包方、承租方书面告知发包项目、出租场所以及相关设备的基本情况、安全生产要求；\n\n（三）协调解决承包方、承租方提出的安全生产问题；\n\n（四）对承包方、承租方进行安全生产检查，并如实记录检查情况，发现安全生产问题的，及时督促整改；发现安全生产违法行为的，及时向负有安全生产监督管理职责的部门报告。\n承包方、承租方应当服从发包方、出租方对其安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；发生生产安全事故时，应当按照有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+      "scopeDecision": "江苏省发包/出租生产经营项目、场所、设备；可签专门安全生产管理协议，或者在承包、租赁合同中明确各自职责。两种法定实现方式必须保留。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+    "contextHashes": {
+      "hazard": "34b152bb4e7718facc93adc12d39115003b33cba50739f0bb76149306aced51c",
+      "clause": "1908177c1bc7e50529ae97f1ae6c1df7d8e0de4794bd57d0e10e508ae72ccb7d"
+    }
   },
-  "previousReviewFileSha256": "bc1eb0b3c66badf5472160a34ccc8a3635ab1637386f971a5b1182578a9cf4aa",
-  "historySha256": "6cb6592d4cb8a9de4d1a187d035f14ad4715d270683b590ce0f569dc5133d2b6",
+  "previousReviewFileSha256": "55979d1941284c93a32edb0a1868770c4e4545419c973d7f04e1afc457fedf2e",
+  "historySha256": "1288411555edc13b3762d650eb189edff8a38f9e0ac220abbc182231a9c1be59",
   "previousEntity": {
     "applicability": "适用于江苏省行政区域内，且存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：江苏省行政区域内机械设备制造、安装、运行、操作和检维修相关场所",
     "clauseId": "C_XLSX_FT_9A5F6326CD4DFDF324CED86E",
@@ -82,6 +151,20 @@
   "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
   "contextHashes": {
     "hazard": "34b152bb4e7718facc93adc12d39115003b33cba50739f0bb76149306aced51c",
-    "clause": "1908177c1bc7e50529ae97f1ae6c1df7d8e0de4794bd57d0e10e508ae72ccb7d"
+    "clause": "16f6846e75cd4edc94b9122c46ff2d48bc5d3575da9b090d65daa27f39c8bcf6"
+  },
+  "dependencyReview": {
+    "checkedAt": "2026-10-03",
+    "reviewer": "Codex条款地域依赖逐项复核20261003",
+    "changedDependency": "C_462D38828DEBA46C8E23C177D2",
+    "changedFields": [
+      "/jurisdictionCode"
+    ],
+    "before": "CN",
+    "after": "CN-32",
+    "reason": "已重新核对江苏人大第二条及第三十条相应主体和分支；本K及H原本明确江苏省，地域修正与现有适用边界一致，关联实体和实质义务不变。保留原内容审核日期与完整审核，不用全局重签。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "sourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml"
   }
 }

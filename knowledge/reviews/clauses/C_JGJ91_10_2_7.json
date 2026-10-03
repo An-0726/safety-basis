@@ -1,11 +1,63 @@
 {
-  "decision": "verified",
   "entityId": "C_JGJ91_10_2_7",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
-  ],
   "reviewType": "text",
-  "reviewedContentHash": "5c863f15ce64afac424d57061ea94633a072f8bdfbe92d46016b9ade450ea9b8",
-  "checkedAt": "2026-09-19T00:00:00+08:00"
+  "decision": "verified",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "589df33fbf676dc9aeeb4c091b7866b664565362394589f6e034a9616440bfcc",
+  "evidenceRefs": [
+    "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+  ],
+  "reason": "原件印刷47页：10.2.7为埋地气体管道五项规定，恢复真实条文并保留稳定ID；旧阻火器混合引文保留在previousEntity，不再与设备支管隐患关联。",
+  "locator": "第10.2.7条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/sourceUrl"
+  ],
+  "reviewedValues": {
+    "/articlePath": "第10.2.7条",
+    "/quote": "埋地敷设的气体管道应符合下列规定：\n1 埋地或地沟敷设的气体管道应作加强绝缘防腐处理。\n2 埋地气体管道的敷设深度不应小于当地冻土层厚度，且管顶距地面不宜小于0.70m。\n3 当埋地管道穿越道路或埋深不足、地面上荷载较大时，管道应加设防护钢套管。\n4 地下气体管道与建（构）筑物等及其地下管线之间最小净距可按现行国家标准《氧气站设计规范》GB 50030执行。\n5 气体管道地沟应采用细沙填实，并应有排水措施。",
+    "/sourceUrl": "https://ptysysglc.yangtzeu.edu.cn/__local/B/23/7C/489A0007EC53C93C354E5322D69_99824F79_150EB3A.pdf"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/quote": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/sourceUrl": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_JGJ91_10_2_7",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "reviewType": "text",
+    "reviewedContentHash": "5c863f15ce64afac424d57061ea94633a072f8bdfbe92d46016b9ade450ea9b8",
+    "checkedAt": "2026-09-19T00:00:00+08:00"
+  },
+  "previousReviewFileSha256": "4098b34adb5f919dfbd549d49db2bc04f0e1f93833a0525e1282dff91d8f49f8",
+  "historySha256": "2a8fb2bfcb67ee44c92ca35a8efde549884c355005de76b27ee53eae34e808ca",
+  "previousEntity": {
+    "articlePath": "10.2.7",
+    "id": "C_JGJ91_10_2_7",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_STD_JGJ91_2019",
+    "lifecycle": "active",
+    "quote": "可燃气体管道连接用气设备的支管上，应设置阻火器等安全控制装置。",
+    "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2019/art_17339_748261.html"
+  },
+  "previousEntityFileSha256": "164f979cc924d76f3adebb00885617cf61b4bd36d1f649212b1549df9b638eaf"
 }

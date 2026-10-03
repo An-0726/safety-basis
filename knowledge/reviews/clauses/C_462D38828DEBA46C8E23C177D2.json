@@ -1,13 +1,55 @@
 {
-  "checkedAt": "2026-09-12",
-  "decision": "verified",
   "entityId": "C_462D38828DEBA46C8E23C177D2",
   "entityType": "clause",
+  "reviewType": "text",
+  "decision": "verified",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "16f6846e75cd4edc94b9122c46ff2d48bc5d3575da9b090d65daa27f39c8bcf6",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
-  "reviewType": "text",
-  "reviewedContentHash": "1908177c1bc7e50529ae97f1ae6c1df7d8e0de4794bd57d0e10e508ae72ccb7d",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "reason": "已复核江苏人大公开第二条和第三十条：本条例限江苏省行政区域；本次仅更正地域元数据CN为CN-32。条款身份、全文、版本和第三十条各分支不变。",
+  "locator": "第二条；第三十条",
+  "reviewedFields": [
+    "/jurisdictionCode"
+  ],
+  "reviewedValues": {
+    "/jurisdictionCode": "CN-32"
+  },
+  "fieldEvidenceRefs": {
+    "/jurisdictionCode": [
+      "E_L020"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "decision": "verified",
+    "entityId": "C_462D38828DEBA46C8E23C177D2",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_L020"
+    ],
+    "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+    "reviewType": "text",
+    "reviewedContentHash": "1908177c1bc7e50529ae97f1ae6c1df7d8e0de4794bd57d0e10e508ae72ccb7d",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
+  },
+  "previousReviewFileSha256": "7aa5a753fec533b5a69e11dc2a30528d86c6252fb77a1f33d0a75d64f0004d95",
+  "historySha256": "7dc3e5090db063b8c2dd8f0d4714cbe99c403978fad74f087043b6bd3390cb92",
+  "previousEntity": {
+    "articlePath": "第三十条",
+    "id": "C_462D38828DEBA46C8E23C177D2",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第三十条生产经营单位将生产经营项目、场所、设备发包或者出租的，应当履行下列安全生产职责： （一）签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责； （二）向承包方、承租方书面告知发包项目、出租场所以及相关设备的基本情况、安全生产要求； （三）协调解决承包方、承租方提出的安全生产问题； （四）对承包方、承租方进行安全生产检查，并如实记录检查情况，发现安全生产问题的，及时督促整改；发现安全生产违法行为的，及时向负有安全生产监督管理职责的部门报告。 承包方、承租方应当服从发包方、出租方对其安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；发生生产安全事故时，应当按照有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "dcc46d1ba099f30b4be0514ddc683df64fc49b7fc7691b37b6a70328417cd5cf"
 }

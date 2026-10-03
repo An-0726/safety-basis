@@ -3,6 +3,7 @@
 Text assertions pin verified legal branches, not a fabricated site fact engine.
 Professional/source judgment is preserved separately in scoped reviews.
 """
+from public_technical_citation_fixture import pre_technical_source_bytes
 import copy
 from datetime import date
 import hashlib
@@ -21,7 +22,8 @@ from field_profiles import ProfileContext
 from release_gate_core import evaluate_release_gate
 ASOF = date(2026, 10, 3)
 sha = lambda b: hashlib.sha256(b).hexdigest()
-def read(path): return json.loads((ROOT / path).read_text())
+def source_bytes(path): return pre_technical_source_bytes(path, (ROOT / path).read_bytes())
+def read(path): return json.loads(source_bytes(path))
 def write(root, rel, obj):
     p = root / rel
     p.parent.mkdir(parents=True, exist_ok=True)
@@ -59,7 +61,7 @@ class RemainingRepairBoundaries(unittest.TestCase):
             path = row['path']; got = read(path)
             self.assertEqual(got, row['record'], path)
             self.assertEqual(got['id'], row['before']['id'])
-            self.assertEqual(sha((ROOT / path).read_bytes()), row['fileSha256'])
+            self.assertEqual(sha(source_bytes(path)), row['fileSha256'])
             self.assertEqual(sha(row['beforeFileText'].encode()), row['oldFileSha256'])
             self.assertEqual({k: got[k] for k in row['unchangedFields']}, row['unchangedFields'])
         for row in F['reviews']:
@@ -97,7 +99,7 @@ class RemainingRepairBoundaries(unittest.TestCase):
         self.assertEqual(rq['sourceQuote'], c['quote']); self.assertEqual(rq['canonicalHash'], content_hash(rq))
         self.assertEqual(len(rq['checkItems']), 3); self.assertIn('变更', rq['checkItems'][1])
     def test_training_canonical_pending_history_and_two_nondefects_untouched(self):
-        for path, h in F['preservedFiles'].items(): self.assertEqual(sha((ROOT/path).read_bytes()), h, path)
+        for path, h in F['preservedFiles'].items(): self.assertEqual(sha(source_bytes(path)), h, path)
         self.assertFalse(set(F['badClauseIds']) & set(F['excludedBoundedCorrectIds']))
         for row in F['rows']:
             self.assertIn(row['hazardId'], self.gate.eligible_hazards); self.assertIn(row['linkId'], self.gate.eligible_links)
