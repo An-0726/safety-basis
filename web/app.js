@@ -316,10 +316,15 @@ function bindDetailUtilities(id,checked,places){
   if($('#backResults'))$('#backResults').onclick=backToResults;
   if(state.pendingDetailScroll){
     state.pendingDetailScroll=false;
-    if(typeof window.matchMedia==='function'&&window.matchMedia('(max-width: 780px)').matches){
-      updateStickyHeaderHeight();
-      $('#detail h2')?.scrollIntoView?.({block:'start'});
-    }
+    updateStickyHeaderHeight();
+    const title=$('#detail h2');
+    const narrow=typeof window.matchMedia==='function'&&window.matchMedia('(max-width: 780px)').matches;
+    const titleRect=title?.getBoundingClientRect?.();
+    const headerBottom=$('header')?.getBoundingClientRect?.().bottom||0;
+    // A long desktop results list can move the outer page while a card is
+    // selected. Keep an already-visible heading still; reveal it if obscured.
+    const outsideViewport=titleRect&&(titleRect.top<headerBottom+12||titleRect.bottom>window.innerHeight);
+    if(narrow||outsideViewport)title?.scrollIntoView?.({block:'start'});
   }
 }
 

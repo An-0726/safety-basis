@@ -204,6 +204,29 @@ HYDRATE_PROJECTION = r'''async repairIds => {
 }'''
 
 
+def wait_for_repair_condition(page, predicate, *, arg, phase):
+    """Retain the failed flow phase and measured state without relaxing waits."""
+    try:
+        return page.wait_for_function(predicate, arg=arg)
+    except Exception as exc:
+        try:
+            state = page.evaluate('''() => {
+                const h = document.querySelector('header')?.getBoundingClientRect();
+                const t = document.querySelector('#detail h2')?.getBoundingClientRect();
+                const list = document.querySelector('#list');
+                return {url:location.href, title:document.querySelector('#detail h2')?.textContent,
+                    headerHeight:h?.height, headerBottom:h?.bottom, titleTop:t?.top,
+                    titleBottom:t?.bottom, viewport:innerWidth, viewportHeight:innerHeight,
+                    scrollY, listScrollTop:list?.scrollTop,
+                    cardCount:document.querySelectorAll('#list .card').length,
+                    loadMorePresent:!!document.querySelector('#loadMore'),
+                    measuredHeaderHeight:getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height')};
+            }''')
+        except Exception as diagnostic_error:
+            state = {'diagnosticError': str(diagnostic_error)}
+        raise AssertionError(f'{phase}: {exc}; state={json.dumps(state, ensure_ascii=False)}') from exc
+
+
 def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixture, expected_release_hash):
     """Use the existing approved Playwright browser/CI; never launches another."""
     validate_expectations(fixture)
@@ -211,14 +234,14 @@ def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixtu
     by_id = {r['id']: r for r in fixture['records']}
 
     def geometry(page, step, width, require_in_view=False):
-        page.wait_for_function('''inView => {
+        wait_for_repair_condition(page, '''inView => {
             const h = document.querySelector('header')?.getBoundingClientRect();
             const t = document.querySelector('#detail h2')?.getBoundingClientRect();
             if (!h || !t) return false;
             const measured = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height'));
             return t.top >= h.bottom - 1 && (!inView || t.bottom <= innerHeight)
                 && Math.abs(measured - h.height) < 1;
-        }''', arg=require_in_view)
+        }''', arg=require_in_view, phase=f'geometry:{step}:{width}px')
         value = page.evaluate('''() => {
             const h = document.querySelector('header').getBoundingClientRect();
             const t = document.querySelector('#detail h2').getBoundingClientRect();
@@ -286,7 +309,8 @@ def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixtu
                     previous = page.locator('#list .card').count()
                     require(previous < fixture['expectedHazards'], 'Load-more failed to terminate')
                     page.locator('#loadMore').click()
-                    page.wait_for_function('n => document.querySelectorAll("#list .card").length > n', arg=previous)
+                    wait_for_repair_condition(page, 'n => document.querySelectorAll("#list .card").length > n',
+                                              arg=previous, phase=f'load_more:{width}px:previous={previous}')
                 evidence = []
                 for row in representatives:
                     card = page.locator('#list .card[data-id="' + row['id'] + '"]')

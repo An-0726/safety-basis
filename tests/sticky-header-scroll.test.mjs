@@ -7,14 +7,14 @@ const source=fs.readFileSync(new URL('../web/app.js',import.meta.url),'utf8')
   .replace(/^import[^\n]*\n/gm,'').replace(/^export /gm,'')
   .replace("if(typeof document!=='undefined') boot();",'');
 
-function load({height=104,narrow=true,observer=true}={}){
+function load({height=104,narrow=true,observer=true,titleTop=700,titleBottom=750,viewportHeight=1000}={}){
   const properties=new Map(),events=new Map(),calls=[];
-  const header={getBoundingClientRect:()=>({height})};
-  const title={scrollIntoView:options=>calls.push({target:'title',options,offset:properties.get('--sticky-header-height')})};
+  const header={getBoundingClientRect:()=>({height,bottom:height})};
+  const title={getBoundingClientRect:()=>({top:titleTop,bottom:titleBottom}),scrollIntoView:options=>calls.push({target:'title',options,offset:properties.get('--sticky-header-height')})};
   const list={focus:options=>calls.push({target:'focus',options}),scrollIntoView:options=>calls.push({target:'list',options,offset:properties.get('--sticky-header-height')})};
   let resizeObserver;
   const context={document:{querySelector:selector=>({'header':header,'#detail h2':title,'#list':list}[selector]||null),documentElement:{style:{setProperty:(key,value)=>properties.set(key,value)}}},
-    addEventListener:(type,callback)=>events.set(type,callback),matchMedia:()=>({matches:narrow})};
+    innerHeight:viewportHeight,addEventListener:(type,callback)=>events.set(type,callback),matchMedia:()=>({matches:narrow})};
   context.window=context;
   if(observer)context.ResizeObserver=class{constructor(callback){this.callback=callback;resizeObserver=this;}observe(node){this.node=node;}};
   vm.createContext(context);
@@ -50,10 +50,35 @@ test('narrow selection measures synchronously before scrolling, including repeat
   app.api.bindDetailUtilities('H004');assert.equal(app.calls.length,2);
 });
 
-test('desktop selection and ordinary rerender retain existing non-scrolling behavior',()=>{
+test('visible desktop selection retains existing non-scrolling behavior',()=>{
   const app=load({narrow:false,height:86});app.api.bindStickyHeaderHeight();
   app.api.state.pendingDetailScroll=true;app.api.bindDetailUtilities('H004');
   assert.equal(app.calls.length,0);assert.equal(app.api.state.pendingDetailScroll,false);
+});
+
+for(const [name,titleTop,titleBottom] of [['behind header',40,90],['above viewport',-120,-70],['inside safety gap',90,140],['below viewport',1050,1100],['partially below viewport',970,1020]]){
+  test(`desktop selection reveals a heading ${name}, including repeated selection`,()=>{
+    const app=load({narrow:false,height:86,titleTop,titleBottom});
+    for(const height of [86,148]){
+      app.setHeight(height);app.api.state.pendingDetailScroll=true;app.api.bindDetailUtilities('H004');
+      const call=app.calls.at(-1);
+      assert.equal(call.target,'title');assert.equal(call.options.block,'start');
+      assert.equal(call.offset,`${height}px`);assert.equal(call.options.behavior,undefined);
+      assert.equal(app.api.state.pendingDetailScroll,false);
+    }
+    assert.equal(app.calls.length,2);
+  });
+}
+
+test('ordinary desktop rerender does not scroll an obscured heading without selection',()=>{
+  const app=load({narrow:false,height:86,titleTop:-120,titleBottom:-70});
+  app.api.bindDetailUtilities('H004');assert.equal(app.calls.length,0);
+});
+
+test('desktop title at the exact safe viewport boundaries remains stationary',()=>{
+  const app=load({narrow:false,height:86,titleTop:98,titleBottom:1000});
+  app.api.state.pendingDetailScroll=true;app.api.bindDetailUtilities('H004');
+  assert.equal(app.calls.length,0);
 });
 
 test('Return results keeps focus and measures current header before scrolling',()=>{
@@ -65,6 +90,7 @@ test('Return results keeps focus and measures current header before scrolling',(
 
 test('narrow scroll margin covers heading, native detail hash and results without desktop redesign',()=>{
   const css=fs.readFileSync(new URL('../web/stage3.css',import.meta.url),'utf8');
+  assert.match(css.split('@media(max-width:780px)')[0],/\.detail h2\{scroll-margin-top:calc\(var\(--sticky-header-height,0px\) \+ 12px\)\}/);
   assert.match(css,/@media\(max-width:780px\)\{[^]*?\.detail h2,#detail,#list\{scroll-margin-top:calc\(var\(--sticky-header-height,0px\) \+ 12px\)\}/);
   assert.doesNotMatch(css,/scroll-margin-top:90px|scroll-behavior:smooth/);
 });

@@ -33,6 +33,43 @@ def projection():
 
 
 class RepairedBrowserAcceptanceTests(unittest.TestCase):
+    def test_flow_wait_preserves_predicate_argument_and_return(self):
+        class Page:
+            def wait_for_function(self, predicate, *, arg):
+                self.received = (predicate, arg)
+                return 'satisfied'
+        page = Page()
+        self.assertEqual(QA.wait_for_repair_condition(page, 'unchanged predicate', arg=37,
+                                                     phase='geometry:selection:1440px'), 'satisfied')
+        self.assertEqual(page.received, ('unchanged predicate', 37))
+
+    def test_failed_flow_wait_retains_phase_measurements_and_original_error(self):
+        class Page:
+            def wait_for_function(self, predicate, *, arg):
+                raise TimeoutError('original 15000ms timeout')
+            def evaluate(self, script):
+                return {'titleTop': 40, 'headerBottom': 86, 'cardCount': 1671,
+                        'url': 'https://example.invalid/?id=H034'}
+        with self.assertRaisesRegex(AssertionError, 'geometry:selection:1440px') as caught:
+            QA.wait_for_repair_condition(Page(), 'unchanged predicate', arg=False,
+                                         phase='geometry:selection:1440px')
+        self.assertIn('original 15000ms timeout', str(caught.exception))
+        self.assertIn('"titleTop": 40', str(caught.exception))
+        self.assertIn('"cardCount": 1671', str(caught.exception))
+        self.assertIsInstance(caught.exception.__cause__, TimeoutError)
+
+    def test_diagnostic_failure_cannot_turn_original_flow_failure_into_success(self):
+        class Page:
+            def wait_for_function(self, predicate, *, arg):
+                raise TimeoutError('original timeout')
+            def evaluate(self, script):
+                raise RuntimeError('page unavailable')
+        with self.assertRaisesRegex(AssertionError, 'load_more:1440px:previous=1600') as caught:
+            QA.wait_for_repair_condition(Page(), 'unchanged predicate', arg=1600,
+                                         phase='load_more:1440px:previous=1600')
+        self.assertIn('original timeout', str(caught.exception))
+        self.assertIn('page unavailable', str(caught.exception))
+
     def test_exact_37_record_fixture_and_four_cohorts(self):
         self.assertEqual(len(QA.validate_expectations(FIXTURE)), 37)
         self.assertEqual(FIXTURE['cohortCounts'], {'flange': 3, 'training': 5, 'occupational': 3, 'remaining': 26})
