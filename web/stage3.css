@@ -49,8 +49,7 @@ summary:focus-visible{outline:3px solid #afcba9;outline-offset:2px}
   .more-filter-items label,.more-filter-items select{width:100%;max-width:none}
   .record-grid{grid-template-columns:1fr 1fr}
   .record-grid .record-places{grid-column:1/-1}
-  .detail h2{scroll-margin-top:90px}
-  #list{scroll-margin-top:90px}
+  .detail h2,#detail,#list{scroll-margin-top:calc(var(--sticky-header-height,0px) + 12px)}
   .detailactions #backResults{display:block;min-width:100%}
   .filters{align-items:start;gap:10px}
   .filters>label{display:grid;gap:6px;flex:1 1 calc(50% - 10px);min-width:0}

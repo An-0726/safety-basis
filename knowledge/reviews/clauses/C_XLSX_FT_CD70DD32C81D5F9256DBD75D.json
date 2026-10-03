@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_CD70DD32C81D5F9256DBD75D",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_C6C093D01542EE97F2F74F42"
+    "E_L020"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第七十四条，未包含第三十条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "9c9adbf83f24e61d395c0f7bec229ac89b2d002d9392aa2f4abba711c33e21c6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "ea965eb0278dd95629bb0293d83efe5ef1717ba46aad150fa9c4e4a1adab97c2",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "三十",
+    "/quote": "第七十四条 生产经营单位违反本条例第三十条第一款规定，将生产经营项目、场所、设备发包或者出租，未履行相关安全生产职责的，责令限期改正，处五千元以上五万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处一千元以上一万元以下的罚款；逾期未改正的，责令停产停业整顿。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L020"
+    ],
+    "/quote": [
+      "E_L020"
+    ],
+    "/lawVersionId": [
+      "E_L020"
+    ],
+    "/sourceUrl": [
+      "E_L020"
+    ],
+    "/lifecycle": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_CD70DD32C81D5F9256DBD75D",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_C6C093D01542EE97F2F74F42"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "9c9adbf83f24e61d395c0f7bec229ac89b2d002d9392aa2f4abba711c33e21c6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "ddbf2107063dff25e6050d33083e15c871172beeb805d318a262dac7a8dd7e0a",
+  "historySha256": "4d4d495129fbf3bc0c635584307bcdc9f25086143e25a7e9c5d8543b94665152",
+  "previousEntity": {
+    "articlePath": "三十",
+    "id": "C_XLSX_FT_CD70DD32C81D5F9256DBD75D",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第七十四条 生产经营单位违反本条例第三十条第一款规定，将生产经营项目、场所、设备发包或者出租，未履行相关安全生产职责的，责令限期改正，处五千元以上五万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处一千元以上一万元以下的罚款；逾期未改正的，责令停产停业整顿。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "2d90f743f757019ca1a53b6551043397039d368257117a08b5247ec4b64d9773",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第三十条",
+    "completeOfficialQuote": "第三十条 生产经营单位将生产经营项目、场所、设备发包或者出租的，应当履行下列安全生产职责：\n\n（一）签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责；\n\n（二）向承包方、承租方书面告知发包项目、出租场所以及相关设备的基本情况、安全生产要求；\n\n（三）协调解决承包方、承租方提出的安全生产问题；\n\n（四）对承包方、承租方进行安全生产检查，并如实记录检查情况，发现安全生产问题的，及时督促整改；发现安全生产违法行为的，及时向负有安全生产监督管理职责的部门报告。\n承包方、承租方应当服从发包方、出租方对其安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；发生生产安全事故时，应当按照有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第七十四条，未包含第三十条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_0C5387BD293BE4E2AC86F60A",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    "E_L001"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第六十七条，未包含第十八条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "8b7431233adb299a27e54a21d73c27543ed6f5fb52bf4c443b1f1950d1f379bd",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "c097c61d42f3764b4c939d6b563ed159e81c929de467d38ea4595e5d4f8f5d84",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十八条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "十八",
+    "/quote": "第六十七条 机关、团体、企业、事业等单位违反本法第十六条、第十七条、第十八条、第二十一条第二款规定的，责令限期改正；逾期不改正的，对其直接负责的主管人员和其他直接责任人员依法给予处分或者给予警告处罚。",
+    "/lawVersionId": "L001",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L001"
+    ],
+    "/quote": [
+      "E_L001"
+    ],
+    "/lawVersionId": [
+      "E_L001"
+    ],
+    "/sourceUrl": [
+      "E_L001"
+    ],
+    "/lifecycle": [
+      "E_L001"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_0C5387BD293BE4E2AC86F60A",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "8b7431233adb299a27e54a21d73c27543ed6f5fb52bf4c443b1f1950d1f379bd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "d1c495f298cc8660ba0fcd108a9468fb17f6fba855299811f3e2148aa6c7b045",
+  "historySha256": "401d90a44ba7dd49ee36e2eef88778e48c48ff2c533d30bbf99b1e60a37e6115",
+  "previousEntity": {
+    "articlePath": "十八",
+    "id": "C_XLSX_FT_0C5387BD293BE4E2AC86F60A",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L001",
+    "lifecycle": "active",
+    "quote": "第六十七条 机关、团体、企业、事业等单位违反本法第十六条、第十七条、第十八条、第二十一条第二款规定的，责令限期改正；逾期不改正的，对其直接负责的主管人员和其他直接责任人员依法给予处分或者给予警告处罚。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a"
+  },
+  "previousEntityFileSha256": "8d547d42550db9734fa0de6c5196f0b2a8431df854beb3c348e28b38602ae568",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L001",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "6f871d09f38d42e249c234698cb04255e3ea50238856ddca377129f36d435a71",
+    "operativeLocator": "第十八条",
+    "completeOfficialQuote": "第十八条  同一建筑物由两个以上单位管理或者使用的，应当明确各方的消防安全责任，并确定责任人对共用的疏散通道、安全出口、建筑消防设施和消防车通道进行统一管理。\n\n　　住宅区的物业服务企业应当对管理区域内的共用消防设施进行维护管理，提供消防安全防范服务。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第六十七条，未包含第十八条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

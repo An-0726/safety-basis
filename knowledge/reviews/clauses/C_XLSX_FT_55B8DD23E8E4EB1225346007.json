@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_55B8DD23E8E4EB1225346007",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+    "E_L014"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：当前引文仅保留条文引领句；本H需要的具体义务或适用条件位于被省略的项/后续款。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "6f1635146d37f5757960de92faf177f48de5b096b87b51ce1b3c7de122fe00cf",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "e3aa4972f1a47dd32090425ed9a1dc132cad7cb2f952594244c446df75ff91b6",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第四十九条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "四十九",
+    "/quote": "第四十九条 移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动：",
+    "/lawVersionId": "L014",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L014"
+    ],
+    "/quote": [
+      "E_L014"
+    ],
+    "/lawVersionId": [
+      "E_L014"
+    ],
+    "/sourceUrl": [
+      "E_L014"
+    ],
+    "/lifecycle": [
+      "E_L014"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_55B8DD23E8E4EB1225346007",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "6f1635146d37f5757960de92faf177f48de5b096b87b51ce1b3c7de122fe00cf",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "71824504f990a95a96dd4e263f47464a75e1c2560d74288fbe32e367f0fecf5a",
+  "historySha256": "ace6fd96cfcce2cb0406f8ecc7f9564ceb8e9bdcda108a72819ace7aa6bb6b55",
+  "previousEntity": {
+    "articlePath": "四十九",
+    "id": "C_XLSX_FT_55B8DD23E8E4EB1225346007",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L014",
+    "lifecycle": "active",
+    "quote": "第四十九条 移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动：",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+  },
+  "previousEntityFileSha256": "e31769f0c37fbd22b7fb80f21bbad230aadc78cce9c345e9886a5aee1bf987a9",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L014",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+    "operativeLocator": "第四十九条",
+    "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：当前引文仅保留条文引领句；本H需要的具体义务或适用条件位于被省略的项/后续款。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

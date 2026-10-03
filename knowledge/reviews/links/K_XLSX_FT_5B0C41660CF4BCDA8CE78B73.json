@@ -1,18 +1,87 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "ba7320512d667219453a77ed1fd5d1960b96390f2f3da5374203b56678c9f048",
-    "hazard": "c9e6289dd5aacf4b42b5d1f23613e678cd9e4f77a18c08a1e77be2bf0e4d6337"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_FT_5B0C41660CF4BCDA8CE78B73",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+    "E_L014"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "气瓶充装单位向气体使用者提供合规气瓶、使用指导，并按规范办理使用登记、申报定期检验。不得泛化为所有气体使用者义务。",
   "reviewType": "applicability",
-  "reviewedContentHash": "0c5ee7ae386cd799b373631973569d73e0cb8a5735f3e948932015ade802e9f8",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "43252cfaba8db426754a0afce890e6d93228853b37b6ae3537b48b6a329197b1",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第四十九条第三款",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于法定气瓶充装单位向气体使用者提供气瓶的活动；核查所供气瓶符合安全技术规范以及气瓶安全使用指导，不能将充装单位义务直接转成所有气体使用者的义务。",
+    "/clauseId": "C_7D2425A6472F9ED7098B49315B",
+    "/reason": "第四十九条第三款直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_L014"
+    ],
+    "/clauseId": [
+      "E_L014"
+    ],
+    "/reason": [
+      "E_L014"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "ba7320512d667219453a77ed1fd5d1960b96390f2f3da5374203b56678c9f048",
+      "hazard": "c9e6289dd5aacf4b42b5d1f23613e678cd9e4f77a18c08a1e77be2bf0e4d6337"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_5B0C41660CF4BCDA8CE78B73",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "0c5ee7ae386cd799b373631973569d73e0cb8a5735f3e948932015ade802e9f8",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ccbc4883e8acad376088b73a2c04e27f5ee6bec4d99b96ce0fb583980e60d6fa",
+  "historySha256": "22025ae395e946cac8fea9b873fb545f153152fb4f96a02a25b1587a404c797a",
+  "previousEntity": {
+    "applicability": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "clauseId": "C_XLSX_FT_61652A9B7A7491323A33CC12",
+    "hazardId": "H_7D2425A6472F9ED7098B49315B_3",
+    "id": "K_XLSX_FT_5B0C41660CF4BCDA8CE78B73",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "ef36defa85f6e64c441a4c5d13907599955f1275bd4d44a0a438d0a0e4af5625",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L014",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+    "operativeLocator": "第四十九条第三款",
+    "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+    "scopeDecision": "气瓶充装单位向气体使用者提供合规气瓶、使用指导，并按规范办理使用登记、申报定期检验。不得泛化为所有气体使用者义务。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "48458571558af5ece087e048e0443137de9755355c84041dcb2e351b54d11c63",
+    "clause": "bf3a28a0bcc1bb73f3e8982f9095518210d7c058a3e3da8103b457a648ca8870"
+  }
 }

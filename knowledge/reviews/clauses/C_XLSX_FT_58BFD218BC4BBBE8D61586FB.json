@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_58BFD218BC4BBBE8D61586FB",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_E6570EE844CE96C412FA22E6"
+    "E_L020"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第六十八条，未包含第十五条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "9200543ca9bdf35502332cde4a7941cbee05a05a1088cc5edf88aef7a905094d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "83690cc76c77f6cbe4baea41a172dd2b9721c0e2ba30d870bbfcafeca92146ba",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十五条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "十五",
+    "/quote": "第六十八条 生产经营单位的主要负责人未履行本条例第十五条第一项至第五项规定的安全生产职责的，责令限期改正，处一万元以上五万元以下的罚款；逾期未改正的，处五万元以上十万元以下的罚款，并责令生产经营单位停产停业整顿。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L020"
+    ],
+    "/quote": [
+      "E_L020"
+    ],
+    "/lawVersionId": [
+      "E_L020"
+    ],
+    "/sourceUrl": [
+      "E_L020"
+    ],
+    "/lifecycle": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_58BFD218BC4BBBE8D61586FB",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_E6570EE844CE96C412FA22E6"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "9200543ca9bdf35502332cde4a7941cbee05a05a1088cc5edf88aef7a905094d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "df2f922516ff5d2bc581f69e0fef29ee9eb610ed0978ae93654c6ec5817403c0",
+  "historySha256": "53f36dc1c553320f899c74fb0f85a3a1ebffba715de72e050655572e10e7be27",
+  "previousEntity": {
+    "articlePath": "十五",
+    "id": "C_XLSX_FT_58BFD218BC4BBBE8D61586FB",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第六十八条 生产经营单位的主要负责人未履行本条例第十五条第一项至第五项规定的安全生产职责的，责令限期改正，处一万元以上五万元以下的罚款；逾期未改正的，处五万元以上十万元以下的罚款，并责令生产经营单位停产停业整顿。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "0cd44426fb5bad7e18bdfed2e52a88c511e05d465a0c6f6a0ba2668e9e0de19a",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第十五条",
+    "completeOfficialQuote": "第十五条 生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责：\n\n（一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；\n\n（二）每年至少组织并参与一次生产安全事故应急救援演练；\n\n（三）每年至少组织一次全面的安全风险辨识，制定完善管控措施；\n（四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理；\n\n（五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第六十八条，未包含第十五条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

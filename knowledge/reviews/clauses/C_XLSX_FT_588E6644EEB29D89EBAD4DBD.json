@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_588E6644EEB29D89EBAD4DBD",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_078056097BC8829CA3E68541"
+    "E_L014"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：当前引文仅保留条文引领句；本H需要的具体义务或适用条件位于被省略的项/后续款。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "3169bb8b6a0d466f374d041a61f63241773b32ea82ab3caeb8367e189aeaf161",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "a8dd714c710abeff4e28159001ec4bff6010caacf174f3870098076945a2725e",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十八条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "十八",
+    "/quote": "第十八条 国家按照分类监督管理的原则对特种设备生产实行许可制度。特种设备生产单位应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事生产活动：",
+    "/lawVersionId": "L014",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L014"
+    ],
+    "/quote": [
+      "E_L014"
+    ],
+    "/lawVersionId": [
+      "E_L014"
+    ],
+    "/sourceUrl": [
+      "E_L014"
+    ],
+    "/lifecycle": [
+      "E_L014"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_588E6644EEB29D89EBAD4DBD",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_078056097BC8829CA3E68541"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "3169bb8b6a0d466f374d041a61f63241773b32ea82ab3caeb8367e189aeaf161",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "6661ba4b7f7265bed3fca00c867c130bbb6456504d1fd044d8e31374ddd040be",
+  "historySha256": "b6b5699d8dab74e073a0b1e19c2df336b1e0e77572908396d8b3ce957f053433",
+  "previousEntity": {
+    "articlePath": "十八",
+    "id": "C_XLSX_FT_588E6644EEB29D89EBAD4DBD",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L014",
+    "lifecycle": "active",
+    "quote": "第十八条 国家按照分类监督管理的原则对特种设备生产实行许可制度。特种设备生产单位应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事生产活动：",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+  },
+  "previousEntityFileSha256": "096b2c83ddd80189da45f4ca9490e4001fd3774da61a1a9f433613abeceb38a3",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L014",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+    "operativeLocator": "第十八条",
+    "completeOfficialQuote": "第十八条　国家按照分类监督管理的原则对特种设备生产实行许可制度。特种设备生产单位应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事生产活动:\n\n　　（一）有与生产相适应的专业技术人员；\n\n　　（二）有与生产相适应的设备、设施和工作场所；\n\n　　（三）有健全的质量保证、安全管理和岗位责任等制度。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：当前引文仅保留条文引领句；本H需要的具体义务或适用条件位于被省略的项/后续款。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

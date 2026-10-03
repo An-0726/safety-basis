@@ -1,18 +1,87 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "72078eac2a4931e7f1dc148694a8070919b8927342ada1ed94b249da915ad694",
-    "hazard": "57eed223faefa16de8e92fcafa28fcbe30f7c8411376fa42f62348713f2d728b"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_FT_49680B732D1BE71FAD9A06F0",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_15CC03557C942B76FAB85E6B"
+    "E_L014"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "特种设备使用单位安全技术档案的设计、质量证明、安装使用维护说明、监督检验证明等资料内容。",
   "reviewType": "applicability",
-  "reviewedContentHash": "fbdc22b36f862b64afc69d2f053dfcfed5f2b2df961749fdb5c909d24f117543",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "23e4aba26cc42dac9d8728c68ed838ffe32689a465b2c0d7e926f3fa5be7e275",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十五条第（一）项（连同首句）",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于法定特种设备监管范围内的使用单位；本项核查安全技术档案是否包含第三十五条第（一）项所列设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件。",
+    "/clauseId": "C_CD607239BF80F8B8DE00715233",
+    "/reason": "第三十五条第（一）项（连同首句）直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_L014"
+    ],
+    "/clauseId": [
+      "E_L014"
+    ],
+    "/reason": [
+      "E_L014"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "72078eac2a4931e7f1dc148694a8070919b8927342ada1ed94b249da915ad694",
+      "hazard": "57eed223faefa16de8e92fcafa28fcbe30f7c8411376fa42f62348713f2d728b"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_49680B732D1BE71FAD9A06F0",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_15CC03557C942B76FAB85E6B"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "fbdc22b36f862b64afc69d2f053dfcfed5f2b2df961749fdb5c909d24f117543",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "f9c2789ec1627ef2a2bfdba3adb099dfdaef882f832503fe7aaba41e7b63cff1",
+  "historySha256": "ead9b9e0cedb4bf262ea73072f645f697e89530e879360cbc8b8674b14d335bd",
+  "previousEntity": {
+    "applicability": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "clauseId": "C_XLSX_FT_90224871C689F7B4C8AF1995",
+    "hazardId": "H_CD607239BF80F8B8DE00715233_2",
+    "id": "K_XLSX_FT_49680B732D1BE71FAD9A06F0",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "73e028f752c382d2c1ed434af693c7e9202ae3501fb7e1f31720d66d9a824770",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L014",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+    "operativeLocator": "第三十五条第（一）项（连同首句）",
+    "completeOfficialQuote": "第三十五条　特种设备使用单位应当建立特种设备安全技术档案。安全技术档案应当包括以下内容:\n\n　　（一）特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件；\n\n　　（二）特种设备的定期检验和定期自行检查记录；\n\n　　（三）特种设备的日常使用状况记录；\n\n　　（四）特种设备及其附属仪器仪表的维护保养记录；\n\n　　（五）特种设备的运行故障和事故记录。",
+    "scopeDecision": "特种设备使用单位安全技术档案的设计、质量证明、安装使用维护说明、监督检验证明等资料内容。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "752203127fa0b64f768436d1c211e0847754bc04120a8ab480e4293c552ffdc4",
+    "clause": "7f9b5d8a0f2f039841856ae471ca8b13fdbb529d81faafada64ac98af713213a"
+  }
 }

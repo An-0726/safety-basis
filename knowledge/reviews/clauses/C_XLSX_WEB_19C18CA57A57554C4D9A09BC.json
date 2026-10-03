@@ -1,13 +1,95 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+    "E_NPC_ff8080816f135f46016f212ea20a17f8"
   ],
-  "reason": "已从官方政府全文页面定位并核对条款原文。",
+  "reason": "确认原articlePath标二十五但quote实为第七十五条第三项句尾及第四至八项处罚片段，拒绝本条作为第二十五条正文。完整原ID、条号、quote、sourceUrl和旧审核均保留；检查全部入链并改绑三条直接依据后将该C标为superseded，禁止正式发布。",
   "reviewType": "text",
-  "reviewedContentHash": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "7a63b76370f13006978d782c2c44d298db49b4f2d69b36a2de24859ccfc61a7b",
+  "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "二十五",
+    "/quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+    "/lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+    "/sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf",
+    "/lifecycle": "superseded"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/quote": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/lawVersionId": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/sourceUrl": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/lifecycle": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+    ],
+    "reason": "已从官方政府全文页面定位并核对条款原文。",
+    "reviewType": "text",
+    "reviewedContentHash": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "e0607acc3a9b215d33b19684a06e79939d82dd0e8ed916fed99ebb2a1fd735f1",
+  "historySha256": "ac270495119d1994793ee791cf0b9b3cf4e358b71c8ee47f0d0fa34d690e05b3",
+  "previousEntity": {
+    "articlePath": "二十五",
+    "id": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+    "lifecycle": "active",
+    "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+    "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+  },
+  "previousEntityFileSha256": "70a5b6a3b8284a0fc856378be344e140bc5cd7802414a5f27d2c314114924061",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialName": "中华人民共和国职业病防治法",
+    "issuer": "全国人民代表大会常务委员会",
+    "version": "2018年12月29日第四次修正",
+    "documentNumber": "中华人民共和国主席令第24号",
+    "publishedDate": "2018-12-29",
+    "effectiveDate": "2018-12-29",
+    "currentStatus": "现行有效",
+    "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+    "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+    "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+    "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+    "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+    "locators": [
+      "第二条",
+      "第二十五条第一至三款",
+      "第七十五条第三项句尾及第四至八项"
+    ],
+    "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+    "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+  },
+  "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
 }

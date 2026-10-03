@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-12",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "C_2D3CA5B35416177B6E24857C95",
   "entityType": "clause",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+  "reason": "完整官方原文与既有稳定ID、法版本和条款定位核对；本条对应H/K各自另审责任主体及分支。",
   "reviewType": "text",
-  "reviewedContentHash": "00ba4351c49cbec26d87039e79687324a45f1fe07d579e22210884217d995069",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "reviewedContentHash": "50ac4f7a7aa84cbaed0b886986cba4ed69e95975f505bc5999f9e5b7b07b584e",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十八条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/jurisdictionCode"
+  ],
+  "reviewedValues": {
+    "/articlePath": "第十八条",
+    "/quote": "第十八条危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/jurisdictionCode": "CN-32"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L020"
+    ],
+    "/quote": [
+      "E_L020"
+    ],
+    "/lawVersionId": [
+      "E_L020"
+    ],
+    "/sourceUrl": [
+      "E_L020"
+    ],
+    "/jurisdictionCode": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "decision": "verified",
+    "entityId": "C_2D3CA5B35416177B6E24857C95",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_L020"
+    ],
+    "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+    "reviewType": "text",
+    "reviewedContentHash": "00ba4351c49cbec26d87039e79687324a45f1fe07d579e22210884217d995069",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
+  },
+  "previousReviewFileSha256": "7822a5e1e305427b642ab25d1ffaf65b9fd7b3b914d47a081a9151e694a1ffde",
+  "historySha256": "cd51a206fce053a7bc1a452879df8de7d305a76a4cf9f93e9488ec3ea779a8cb",
+  "previousEntity": {
+    "articlePath": "第十八条",
+    "id": "C_2D3CA5B35416177B6E24857C95",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第十八条危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "83dd82b2796cc1194b548c6e414b62b94d8715c990bb47bcfc2622527471514c",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第十八条",
+    "completeOfficialQuote": "第十八条 危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
+    "scopeDecision": "完整官方原文与既有稳定ID、法版本和条款定位核对；本条对应H/K各自另审责任主体及分支。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

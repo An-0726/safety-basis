@@ -1,18 +1,97 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
-    "hazard": "2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_WEB_154BCD41EA306D23833C2424",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+    "E_NPC_ff8080816f135f46016f212ea20a17f8"
   ],
-  "reason": "隐患与官方条款直接对应。",
+  "reason": "逐项核对第二十五条第一款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
   "reviewType": "applicability",
-  "reviewedContentHash": "4d473f4c528d1b7796770f2ba2141080fed954fdef05b1aee76d64381e3bc39d",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "50dd55610e2b9ff447e9e1774bd3445463ad6305dbbf271524a1726947b33526",
+  "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+  "reviewedFields": [
+    "/clauseId",
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/clauseId": "C_A915F52BFFC99371A8A67FC150",
+    "/applicability": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+    "/reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第一款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+  },
+  "fieldEvidenceRefs": {
+    "/clauseId": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/applicability": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/reason": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
+      "hazard": "2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "4d473f4c528d1b7796770f2ba2141080fed954fdef05b1aee76d64381e3bc39d",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "453e670dc240aec84868d23bf0ead481ebdd84a14bab40698f1acacb31e3ffcb",
+  "historySha256": "3ef0c2e167c04fcefe6ce40920c08ce650dc6cb714049373c970229a6b5f151b",
+  "previousEntity": {
+    "applicability": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "clauseId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+    "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+    "id": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患对象、整改措施与官方条款逐项对应。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "0017888b0965648b5728cf9f84be655863cbd73db2bbc8baf8111a362e8fe2fd",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialName": "中华人民共和国职业病防治法",
+    "issuer": "全国人民代表大会常务委员会",
+    "version": "2018年12月29日第四次修正",
+    "documentNumber": "中华人民共和国主席令第24号",
+    "publishedDate": "2018-12-29",
+    "effectiveDate": "2018-12-29",
+    "currentStatus": "现行有效",
+    "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+    "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+    "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+    "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+    "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+    "locators": [
+      "第二条",
+      "第二十五条第一至三款",
+      "第七十五条第三项句尾及第四至八项"
+    ],
+    "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+    "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+  },
+  "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。",
+  "contextHashes": {
+    "hazard": "3ca6bf30b41d0e55c9aceab3da9cd53dffed999b7088cc51e702cc00be218312",
+    "clause": "251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb"
+  }
 }

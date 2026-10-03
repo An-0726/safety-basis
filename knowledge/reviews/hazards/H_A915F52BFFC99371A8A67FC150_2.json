@@ -1,13 +1,121 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_A915F52BFFC99371A8A67FC150_2",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+    "E_NPC_ff8080816f135f46016f212ea20a17f8"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+  "reason": "逐项核对第二十五条第二款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
   "reviewType": "content",
-  "reviewedContentHash": "6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "876d53cb1ceff16d263454085fd0f292200c096fee581358687855f14632636d",
+  "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+  "reviewedFields": [
+    "/title",
+    "/description",
+    "/conditions",
+    "/places",
+    "/measures",
+    "/category",
+    "/note"
+  ],
+  "reviewedValues": {
+    "/title": "放射工作场所或放射性同位素运输、贮存未配置防护设备或报警装置，或未保证接触放射线的工作人员佩戴个人剂量计",
+    "/description": "放射工作场所或放射性同位素运输、贮存环节未配置防护设备或报警装置，或者未保证接触放射线的工作人员佩戴个人剂量计。按实际缺失义务记录，不将正常佩戴写成隐患。",
+    "/conditions": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+    "/places": [
+      "放射工作场所",
+      "放射性同位素运输、贮存场所或环节"
+    ],
+    "/measures": "配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；复核相应防护和报警功能及个人剂量计佩戴情况。",
+    "/category": "职业卫生",
+    "/note": "直接依据为《职业病防治法》第二十五条第二款；删除无关机械危险适用性和机械设备试运行整改模板。"
+  },
+  "fieldEvidenceRefs": {
+    "/title": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/description": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/conditions": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/places": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/measures": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/category": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ],
+    "/note": [
+      "E_NPC_ff8080816f135f46016f212ea20a17f8"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A915F52BFFC99371A8A67FC150_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "ce1c5545a785bd39cb3be038c112c54e7fba56d9d9a25e732ccdb04f00c1e4cf",
+  "historySha256": "4647bccd2fce882e3e2645feae21645a5144a7841b1521d4efdada965eb6d9c9",
+  "previousEntity": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_A915F52BFFC99371A8A67FC150_2",
+    "keywords": [
+      "对放射工作场所和放射性同位素的运输",
+      "贮存",
+      "用人单位未配置防护设备和报警装置",
+      "保证接触放射线的工作人员佩戴个人剂量计"
+    ],
+    "lifecycle": "active",
+    "measures": "对放射工作场所和放射性同位素的运输、贮存，用人单位配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计"
+  },
+  "previousEntityFileSha256": "4d6dbbbc50e648a97efc1f84ecf664893175f86525518a8cca00b2982efe7123",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialName": "中华人民共和国职业病防治法",
+    "issuer": "全国人民代表大会常务委员会",
+    "version": "2018年12月29日第四次修正",
+    "documentNumber": "中华人民共和国主席令第24号",
+    "publishedDate": "2018-12-29",
+    "effectiveDate": "2018-12-29",
+    "currentStatus": "现行有效",
+    "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+    "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+    "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+    "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+    "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+    "locators": [
+      "第二条",
+      "第二十五条第一至三款",
+      "第七十五条第三项句尾及第四至八项"
+    ],
+    "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+    "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+  },
+  "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
 }

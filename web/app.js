@@ -299,13 +299,25 @@ function technicalInfoHtml({id,checked,places=[],historicalReferences=[]}){
   const placeText=places.length?places.join('；'):'未填写/不适用';
   return `<details class="record-info"><summary>条目信息</summary><div class="record-grid"><div><span>完整 ID</span><strong>${esc(id)}</strong></div><div><span>核验时间</span><strong>${esc(checked||'未填写')}</strong></div><div><span>数据版本</span><strong>${esc(state.store.manifest.dataVersion)}</strong></div><div class="record-places"><span>原始场所</span><strong>${esc(placeText)}</strong></div></div>${historicalReferenceHtml(historicalReferences)}<button id="copyRecordId" class="linkbutton">复制编号</button></details>`;
 }
-function backToResults(){const list=$('#list');if(!list)return;list.focus?.({preventScroll:true});list.scrollIntoView?.({block:'start'})}
+function updateStickyHeaderHeight(){
+  const header=$('header');
+  if(header)document.documentElement.style.setProperty('--sticky-header-height',`${header.getBoundingClientRect().height}px`);
+}
+function bindStickyHeaderHeight(){
+  const header=$('header');if(!header)return;
+  updateStickyHeaderHeight();
+  // Header rows can wrap after resizing, zooming or a font finishes loading.
+  if(typeof ResizeObserver!=='undefined')new ResizeObserver(updateStickyHeaderHeight).observe(header);
+  window.addEventListener('resize',updateStickyHeaderHeight);
+}
+function backToResults(){const list=$('#list');if(!list)return;updateStickyHeaderHeight();list.focus?.({preventScroll:true});list.scrollIntoView?.({block:'start'})}
 function bindDetailUtilities(id,checked,places){
   if($('#copyRecordId'))$('#copyRecordId').onclick=()=>copyText(id,'已复制编号');
   if($('#backResults'))$('#backResults').onclick=backToResults;
   if(state.pendingDetailScroll){
     state.pendingDetailScroll=false;
     if(typeof window.matchMedia==='function'&&window.matchMedia('(max-width: 780px)').matches){
+      updateStickyHeaderHeight();
       $('#detail h2')?.scrollIntoView?.({block:'start'});
     }
   }
@@ -469,6 +481,7 @@ function bind(){
 }
 
 async function boot(){
+  bindStickyHeaderHeight();
   const route=loadUrlState();bind();
   try{
     state.store=await new DataStore('.').init();

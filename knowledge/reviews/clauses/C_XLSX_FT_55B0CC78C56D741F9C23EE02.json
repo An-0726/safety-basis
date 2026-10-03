@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_55B0CC78C56D741F9C23EE02",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
+    "E_CITATION_JS2023_20261002"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第六十九条，未包含第十六条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "2619874533a84c3eb68aafa22237012dfa4e59af4963cb96f9a770e7bf0254d3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "da72dbb426c447f983abd3e91e2223552231dbd896d3b425ccaab47f569203d5",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十六条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "十六",
+    "/quote": "第六十九条 生产经营单位违反本条例第十六条第一款、第二款、第十八条规定，未按照规定设置安全生产管理机构或者配备安全生产管理人员、注册安全工程师的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/quote": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/lawVersionId": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/sourceUrl": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/lifecycle": [
+      "E_CITATION_JS2023_20261002"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_55B0CC78C56D741F9C23EE02",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "2619874533a84c3eb68aafa22237012dfa4e59af4963cb96f9a770e7bf0254d3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "37f0fee3b8ba01ada836a8a6ddf7b2061a6ef37e9c3fd0bafc37ce88812af9db",
+  "historySha256": "96fc6d3c5adb9245170ea0a668f2f60f30c47c809fc3398bb2b7b856c4936968",
+  "previousEntity": {
+    "articlePath": "十六",
+    "id": "C_XLSX_FT_55B0CC78C56D741F9C23EE02",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第六十九条 生产经营单位违反本条例第十六条第一款、第二款、第十八条规定，未按照规定设置安全生产管理机构或者配备安全生产管理人员、注册安全工程师的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "25e82c7a00484f232d33081f49abca2cae4949cb6a2dc8b8d67f5dbfb045b862",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第十六条",
+    "completeOfficialQuote": "第十六条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位，应当按照下列规定设置安全生产管理机构、配备专职安全生产管理人员：\n\n（一）从业人员不足三十人的，配备一名以上专职安全生产管理人员；\n\n（二）从业人员三十人以上不足一百人的，设置专门的安全生产管理机构，并配备两名以上专职安全生产管理人员；\n\n（三）从业人员一百人以上不足三百人的，设置专门的安全生产管理机构，并配备三名以上专职安全生产管理人员；\n\n（四）从业人员三百人以上的，设置专门的安全生产管理机构，并按照不低于从业人员百分之一的比例配备专职安全生产管理人员。\n前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；从业人员一百人以下的，应当配备专职或者兼职的安全生产管理人员。从业人员二十人以下且位置相邻、行业相近、业态相似的生产经营单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式开展安全生产管理工作，但是保证安全生产的责任仍由本单位负责。\n\n生产经营单位使用被派遣劳动者的，被派遣劳动者数量计入生产经营单位从业人员总数。\n\n国家对建筑施工等劳动密集型行业在设立安全生产管理机构或者配备专职安全生产管理人员方面另有规定的，按照其规定执行。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第六十九条，未包含第十六条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

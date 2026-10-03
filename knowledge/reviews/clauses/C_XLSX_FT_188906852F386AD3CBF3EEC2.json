@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_188906852F386AD3CBF3EEC2",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_E97798E77AB03A0E228B048D"
+    "E_CITATION_JS2023_20261002"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第七十一条，未包含第二十一条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "1816c408223f170b374e1f1a2ab497af011f06bc919b702b4c4757450557dca8",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "0f585c93d44fb79536f44c4aa55546277c700d9ffa7264b6c4bc051fd1510d8b",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第二十一条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "二十一",
+    "/quote": "第七十一条 生产经营单位违反本条例第二十一条第一款规定，未对有关从业人员进行安全生产教育和培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/quote": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/lawVersionId": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/sourceUrl": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/lifecycle": [
+      "E_CITATION_JS2023_20261002"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_188906852F386AD3CBF3EEC2",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_E97798E77AB03A0E228B048D"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "1816c408223f170b374e1f1a2ab497af011f06bc919b702b4c4757450557dca8",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "481cef22ddf90c32c07e4e77e5b912b8fd865bd36154eae916c1eae89d8ffc84",
+  "historySha256": "82875c09539dbfe21a796be6cd3276d6147ab91fe5aa4aed2ca319fb78c157a5",
+  "previousEntity": {
+    "articlePath": "二十一",
+    "id": "C_XLSX_FT_188906852F386AD3CBF3EEC2",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第七十一条 生产经营单位违反本条例第二十一条第一款规定，未对有关从业人员进行安全生产教育和培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "90bdba44b286523dca31bc8e1206c4467d867ba845967d984989ca35b93692f4",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第二十一条",
+    "completeOfficialQuote": "第二十一条 生产经营单位应当依法对下列人员在上岗前进行安全操作规程和安全操作技能的教育和培训，并做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业：\n\n（一）新进从业人员；\n\n（二）离岗六个月以上或者换岗的从业人员；\n\n（三）涉及采用新工艺、新技术、新材料或者使用新设备的从业人员。\n\n生产经营单位可以自主组织培训，也可以委托具备安全生产培训条件的机构进行培训。生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。\n\n从业人员应当按照要求接受安全生产教育和培训，掌握本职工作所需的安全生产知识，提高安全操作技能，增强事故预防和应急处理能力。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第七十一条，未包含第二十一条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

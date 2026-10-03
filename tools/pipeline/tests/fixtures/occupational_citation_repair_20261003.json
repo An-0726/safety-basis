@@ -1,0 +1,1528 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-03",
+  "baselineCommit": "cf7ef4de02e7df204fce5043b52c7fb70f2b60d9",
+  "baselineSourceTree": "4072eb08b9aa6c7d9262a7b72abe4776eda4a271",
+  "planSha256": "eb932e7908c361b87892fdea4215775a51bb2c101fd39a1ec0b320788ffba182",
+  "canonicalClauseId": "C_A915F52BFFC99371A8A67FC150",
+  "badClauseIds": [
+    "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+    "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963"
+  ],
+  "hazardIds": [
+    "H_A915F52BFFC99371A8A67FC150_1",
+    "H_A915F52BFFC99371A8A67FC150_2",
+    "H_A915F52BFFC99371A8A67FC150_3"
+  ],
+  "linkIds": [
+    "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+    "K_XLSX_WEB_154BCD41EA306D23833C2424",
+    "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3"
+  ],
+  "sourceReview": {
+    "checkedAt": "2026-10-03",
+    "officialName": "中华人民共和国职业病防治法",
+    "issuer": "全国人民代表大会常务委员会",
+    "version": "2018年12月29日第四次修正",
+    "documentNumber": "中华人民共和国主席令第24号",
+    "publishedDate": "2018-12-29",
+    "effectiveDate": "2018-12-29",
+    "currentStatus": "现行有效",
+    "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+    "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+    "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+    "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+    "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+    "locators": [
+      "第二条",
+      "第二十五条第一至三款",
+      "第七十五条第三项句尾及第四至八项"
+    ],
+    "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+    "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+  },
+  "completeQuote": "第二十五条对可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区。 对放射工作场所和放射性同位素的运输、贮存，用人单位必须配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。 对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+  "entities": [
+    {
+      "path": "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_1.json",
+      "paragraph": 1,
+      "before": {
+        "aliases": [],
+        "category": "职业卫生",
+        "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+        "description": "现场检查发现，对可能发生急性职业损伤的有毒、有害工作场所，用人单位未设置报警装置等，相应安全防护、识别、监测或应急保障条件缺失。",
+        "id": "H_A915F52BFFC99371A8A67FC150_1",
+        "keywords": [
+          "对可能发生急性职业损伤的有毒",
+          "有害工作场所",
+          "用人单位未设置报警装置等"
+        ],
+        "lifecycle": "active",
+        "measures": "对可能发生急性职业损伤的有毒、有害工作场所，用人单位设置报警装置等。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "存在职业病危害因素的用人单位及相关作业场所"
+        ],
+        "title": "对可能发生急性职业损伤的有毒、有害工作场所，用人单位未设置报警装置等"
+      },
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"职业卫生\",\n  \"conditions\": \"适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\\n适用场所：存在职业病危害因素的用人单位及相关作业场所\",\n  \"description\": \"现场检查发现，对可能发生急性职业损伤的有毒、有害工作场所，用人单位未设置报警装置等，相应安全防护、识别、监测或应急保障条件缺失。\",\n  \"id\": \"H_A915F52BFFC99371A8A67FC150_1\",\n  \"keywords\": [\n    \"对可能发生急性职业损伤的有毒\",\n    \"有害工作场所\",\n    \"用人单位未设置报警装置等\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"对可能发生急性职业损伤的有毒、有害工作场所，用人单位设置报警装置等。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"存在职业病危害因素的用人单位及相关作业场所\"\n  ],\n  \"title\": \"对可能发生急性职业损伤的有毒、有害工作场所，用人单位未设置报警装置等\"\n}\n",
+      "oldFileSha256": "a831615da0ce8e858615e8602c613ecdf4adfea423660b584ca23dd2af3ab358",
+      "oldContentHash": "2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a",
+      "modifiedFields": [
+        "title",
+        "description",
+        "conditions",
+        "places",
+        "measures",
+        "note"
+      ],
+      "after": {
+        "title": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置或配置现场急救、冲洗、应急撤离及必要泄险设施",
+        "description": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置，或者未配置现场急救用品、冲洗设备、应急撤离通道或必要的泄险区。应分别记录实际缺失项目，不将全部项目写成同时缺失。",
+        "conditions": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+        "places": [
+          "可能发生急性职业损伤的有毒、有害工作场所"
+        ],
+        "measures": "按实际缺项设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区，并检查其可用状态。",
+        "note": "直接依据为《职业病防治法》第二十五条第一款；不得以第七十五条处罚条款片段代替义务原文。"
+      },
+      "record": {
+        "aliases": [],
+        "category": "职业卫生",
+        "conditions": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+        "description": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置，或者未配置现场急救用品、冲洗设备、应急撤离通道或必要的泄险区。应分别记录实际缺失项目，不将全部项目写成同时缺失。",
+        "id": "H_A915F52BFFC99371A8A67FC150_1",
+        "keywords": [
+          "对可能发生急性职业损伤的有毒",
+          "有害工作场所",
+          "用人单位未设置报警装置等"
+        ],
+        "lifecycle": "active",
+        "measures": "按实际缺项设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区，并检查其可用状态。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "直接依据为《职业病防治法》第二十五条第一款；不得以第七十五条处罚条款片段代替义务原文。",
+        "places": [
+          "可能发生急性职业损伤的有毒、有害工作场所"
+        ],
+        "title": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置或配置现场急救、冲洗、应急撤离及必要泄险设施"
+      },
+      "fileSha256": "bb95a373b34287b6d2c45714ff25e7783b4a92d91ef0aa4281ee69a86b88b948",
+      "contentHash": "3ca6bf30b41d0e55c9aceab3da9cd53dffed999b7088cc51e702cc00be218312"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_154BCD41EA306D23833C2424.json",
+      "paragraph": 1,
+      "before": {
+        "applicability": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+        "clauseId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+        "id": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "reason": "隐患对象、整改措施与官方条款逐项对应。",
+        "role": "direct"
+      },
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\\n适用场所：存在职业病危害因素的用人单位及相关作业场所\",\n  \"clauseId\": \"C_XLSX_WEB_19C18CA57A57554C4D9A09BC\",\n  \"hazardId\": \"H_A915F52BFFC99371A8A67FC150_1\",\n  \"id\": \"K_XLSX_WEB_154BCD41EA306D23833C2424\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\"\n}\n",
+      "oldFileSha256": "0017888b0965648b5728cf9f84be655863cbd73db2bbc8baf8111a362e8fe2fd",
+      "oldContentHash": "4d473f4c528d1b7796770f2ba2141080fed954fdef05b1aee76d64381e3bc39d",
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C_A915F52BFFC99371A8A67FC150",
+        "applicability": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+        "reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第一款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+      },
+      "record": {
+        "applicability": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+        "clauseId": "C_A915F52BFFC99371A8A67FC150",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+        "id": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第一款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。",
+        "role": "direct"
+      },
+      "fileSha256": "97b4e995477253ef688936c1e05b6cc76a1b129c5a8fd97d4965efcfc1222e8b",
+      "contentHash": "50dd55610e2b9ff447e9e1774bd3445463ad6305dbbf271524a1726947b33526"
+    },
+    {
+      "path": "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_2.json",
+      "paragraph": 2,
+      "before": {
+        "aliases": [],
+        "category": "机械与设备安全",
+        "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+        "description": "现场检查发现，对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计，实际状态与直接依据规定的安全要求不一致。",
+        "id": "H_A915F52BFFC99371A8A67FC150_2",
+        "keywords": [
+          "对放射工作场所和放射性同位素的运输",
+          "贮存",
+          "用人单位未配置防护设备和报警装置",
+          "保证接触放射线的工作人员佩戴个人剂量计"
+        ],
+        "lifecycle": "active",
+        "measures": "对放射工作场所和放射性同位素的运输、贮存，用人单位配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "机械设备制造、安装、运行、操作和检维修相关场所"
+        ],
+        "title": "对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计"
+      },
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"机械与设备安全\",\n  \"conditions\": \"适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所\",\n  \"description\": \"现场检查发现，对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_A915F52BFFC99371A8A67FC150_2\",\n  \"keywords\": [\n    \"对放射工作场所和放射性同位素的运输\",\n    \"贮存\",\n    \"用人单位未配置防护设备和报警装置\",\n    \"保证接触放射线的工作人员佩戴个人剂量计\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"对放射工作场所和放射性同位素的运输、贮存，用人单位配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"机械设备制造、安装、运行、操作和检维修相关场所\"\n  ],\n  \"title\": \"对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计\"\n}\n",
+      "oldFileSha256": "4d6dbbbc50e648a97efc1f84ecf664893175f86525518a8cca00b2982efe7123",
+      "oldContentHash": "6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59",
+      "modifiedFields": [
+        "title",
+        "description",
+        "conditions",
+        "places",
+        "measures",
+        "category",
+        "note"
+      ],
+      "after": {
+        "title": "放射工作场所或放射性同位素运输、贮存未配置防护设备或报警装置，或未保证接触放射线的工作人员佩戴个人剂量计",
+        "description": "放射工作场所或放射性同位素运输、贮存环节未配置防护设备或报警装置，或者未保证接触放射线的工作人员佩戴个人剂量计。按实际缺失义务记录，不将正常佩戴写成隐患。",
+        "conditions": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+        "places": [
+          "放射工作场所",
+          "放射性同位素运输、贮存场所或环节"
+        ],
+        "measures": "配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；复核相应防护和报警功能及个人剂量计佩戴情况。",
+        "category": "职业卫生",
+        "note": "直接依据为《职业病防治法》第二十五条第二款；删除无关机械危险适用性和机械设备试运行整改模板。"
+      },
+      "record": {
+        "aliases": [],
+        "category": "职业卫生",
+        "conditions": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+        "description": "放射工作场所或放射性同位素运输、贮存环节未配置防护设备或报警装置，或者未保证接触放射线的工作人员佩戴个人剂量计。按实际缺失义务记录，不将正常佩戴写成隐患。",
+        "id": "H_A915F52BFFC99371A8A67FC150_2",
+        "keywords": [
+          "对放射工作场所和放射性同位素的运输",
+          "贮存",
+          "用人单位未配置防护设备和报警装置",
+          "保证接触放射线的工作人员佩戴个人剂量计"
+        ],
+        "lifecycle": "active",
+        "measures": "配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；复核相应防护和报警功能及个人剂量计佩戴情况。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "直接依据为《职业病防治法》第二十五条第二款；删除无关机械危险适用性和机械设备试运行整改模板。",
+        "places": [
+          "放射工作场所",
+          "放射性同位素运输、贮存场所或环节"
+        ],
+        "title": "放射工作场所或放射性同位素运输、贮存未配置防护设备或报警装置，或未保证接触放射线的工作人员佩戴个人剂量计"
+      },
+      "fileSha256": "5a4af52dd118337cf3020fe2c281031a362ccb9a51c96c3fc32ce3c2f12bffca",
+      "contentHash": "876d53cb1ceff16d263454085fd0f292200c096fee581358687855f14632636d"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3.json",
+      "paragraph": 2,
+      "before": {
+        "applicability": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+        "clauseId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_2",
+        "id": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "reason": "隐患对象、整改措施与官方条款逐项对应。",
+        "role": "direct"
+      },
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所\",\n  \"clauseId\": \"C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963\",\n  \"hazardId\": \"H_A915F52BFFC99371A8A67FC150_2\",\n  \"id\": \"K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\"\n}\n",
+      "oldFileSha256": "59f4087dcc36fe6609e9aa09f3f4644586913997b7a504ba1d7d5ab59b48311a",
+      "oldContentHash": "d6d5be7ccdd140c0605ca191b5e10043b0e9a00923360829354a5147c5b08d15",
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C_A915F52BFFC99371A8A67FC150",
+        "applicability": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+        "reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第二款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+      },
+      "record": {
+        "applicability": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+        "clauseId": "C_A915F52BFFC99371A8A67FC150",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_2",
+        "id": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第二款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。",
+        "role": "direct"
+      },
+      "fileSha256": "1de80d6c0e6ec2698d4994c1cf717cb7e5781db5ca1e417e461f8a64e6d6124b",
+      "contentHash": "22231a8dd081f214a58375ce7bd4c216ce27505075a699b5028bbae6ec4a9db1"
+    },
+    {
+      "path": "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_3.json",
+      "paragraph": 3,
+      "before": {
+        "id": "H_A915F52BFFC99371A8A67FC150_3",
+        "title": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果",
+        "description": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。（第二十五条）。",
+        "measures": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品进行经常性维护、检修和定期性能检测，发现失效立即修复或更换，不得擅自拆除或停用。",
+        "conditions": "适用于本隐患所述场所、设备及作业活动。",
+        "category": "设备设施",
+        "places": [
+          "通用场所"
+        ],
+        "aliases": [],
+        "keywords": [
+          "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果"
+        ],
+        "lifecycle": "active",
+        "mode": "direct",
+        "note": "依据 第二十五条 反转生成（GLM，2026-09-12）。",
+        "mergedInto": null
+      },
+      "beforeFileText": "{\n  \"id\": \"H_A915F52BFFC99371A8A67FC150_3\",\n  \"title\": \"对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果\",\n  \"description\": \"对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。（第二十五条）。\",\n  \"measures\": \"对职业病防护设备、应急救援设施和个人使用的职业病防护用品进行经常性维护、检修和定期性能检测，发现失效立即修复或更换，不得擅自拆除或停用。\",\n  \"conditions\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"category\": \"设备设施\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果\"\n  ],\n  \"lifecycle\": \"active\",\n  \"mode\": \"direct\",\n  \"note\": \"依据 第二十五条 反转生成（GLM，2026-09-12）。\",\n  \"mergedInto\": null\n}\n",
+      "oldFileSha256": "d79635c02f98366ee4afbc43c858c0da020559916bddf7d16bbb031a655cd85d",
+      "oldContentHash": "e1cf61498cabb4a55cddd06ad7e47aa618a43615a0835cd4a404f4bfbb571088",
+      "modifiedFields": [
+        "description",
+        "conditions",
+        "places",
+        "category",
+        "note"
+      ],
+      "after": {
+        "description": "用人单位未对职业病防护设备、应急救援设施或个人使用的职业病防护用品进行经常性的维护、检修，或者未定期检测其性能和效果。",
+        "conditions": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+        "places": [
+          "用人单位职业病防护设备、应急救援设施及个人使用的职业病防护用品使用、管理场所"
+        ],
+        "category": "职业卫生",
+        "note": "直接依据为《职业病防治法》第二十五条第三款；原引文误截第七十五条处罚片段，需改链至已存在的完整第二十五条。"
+      },
+      "record": {
+        "id": "H_A915F52BFFC99371A8A67FC150_3",
+        "title": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果",
+        "description": "用人单位未对职业病防护设备、应急救援设施或个人使用的职业病防护用品进行经常性的维护、检修，或者未定期检测其性能和效果。",
+        "measures": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品进行经常性维护、检修和定期性能检测，发现失效立即修复或更换，不得擅自拆除或停用。",
+        "conditions": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+        "category": "职业卫生",
+        "places": [
+          "用人单位职业病防护设备、应急救援设施及个人使用的职业病防护用品使用、管理场所"
+        ],
+        "aliases": [],
+        "keywords": [
+          "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果"
+        ],
+        "lifecycle": "active",
+        "mode": "direct",
+        "note": "直接依据为《职业病防治法》第二十五条第三款；原引文误截第七十五条处罚片段，需改链至已存在的完整第二十五条。",
+        "mergedInto": null
+      },
+      "fileSha256": "4d3056967ffda2c051fccedde8d617b9f23fa1e0556c49344d3911c49686a80d",
+      "contentHash": "6a1b75e1941bd5498307eb61c35882048353c588b980eaf39e7f62402146ca96"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_NEW14_8B328E39B6BA6BB5DF859627.json",
+      "paragraph": 3,
+      "before": {
+        "id": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_3",
+        "clauseId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于本隐患所述场所、设备及作业活动。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+      },
+      "beforeFileText": "{\n  \"id\": \"K_XLSX_NEW14_8B328E39B6BA6BB5DF859627\",\n  \"hazardId\": \"H_A915F52BFFC99371A8A67FC150_3\",\n  \"clauseId\": \"C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n",
+      "oldFileSha256": "25d007fe14c15f252cba4d75e0b29434ede63b42aa9b5638e3807e406c59433c",
+      "oldContentHash": "c9dbd3645d5710d67f7bf84a5871b8a25dd67eca1473229cbaaa728be52979ab",
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C_A915F52BFFC99371A8A67FC150",
+        "applicability": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+        "reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第三款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+      },
+      "record": {
+        "id": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_3",
+        "clauseId": "C_A915F52BFFC99371A8A67FC150",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第三款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+      },
+      "fileSha256": "f2b464351d9ab7c3b88de440e763c1cc0d1313f3954f4864133cf2d877ac0edb",
+      "contentHash": "8a9f6ba179d7495edbae4058d0db18f727e71adea36bf66261f417807365f720"
+    },
+    {
+      "path": "knowledge/clauses/C_XLSX_WEB_19C18CA57A57554C4D9A09BC.json",
+      "paragraph": 0,
+      "before": {
+        "articlePath": "二十五",
+        "id": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+        "jurisdictionCode": "CN",
+        "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+        "lifecycle": "active",
+        "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+      },
+      "beforeFileText": "{\n  \"articlePath\": \"二十五\",\n  \"id\": \"C_XLSX_WEB_19C18CA57A57554C4D9A09BC\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_NPC_ff8080816f135f46016f212ea20a17f8\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。\",\n  \"sourceUrl\": \"https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf\"\n}\n",
+      "oldFileSha256": "70a5b6a3b8284a0fc856378be344e140bc5cd7802414a5f27d2c314114924061",
+      "oldContentHash": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
+      "modifiedFields": [
+        "lifecycle"
+      ],
+      "after": {
+        "lifecycle": "superseded"
+      },
+      "record": {
+        "articlePath": "二十五",
+        "id": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+        "jurisdictionCode": "CN",
+        "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+        "lifecycle": "superseded",
+        "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+      },
+      "fileSha256": "4f1edc8903465255dda30cda460226cd0bbecd8ee9fde5dc14eb30683414f0c8",
+      "contentHash": "7a63b76370f13006978d782c2c44d298db49b4f2d69b36a2de24859ccfc61a7b"
+    },
+    {
+      "path": "knowledge/clauses/C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963.json",
+      "paragraph": 0,
+      "before": {
+        "articlePath": "二十五",
+        "id": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+        "jurisdictionCode": "CN",
+        "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+        "lifecycle": "active",
+        "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+      },
+      "beforeFileText": "{\n  \"articlePath\": \"二十五\",\n  \"id\": \"C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_NPC_ff8080816f135f46016f212ea20a17f8\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。\",\n  \"sourceUrl\": \"https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf\"\n}\n",
+      "oldFileSha256": "8c127c0a56cb2d9ae214937c56c2369737ea0a115fbbcc0900bfc70a107c1177",
+      "oldContentHash": "a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9",
+      "modifiedFields": [
+        "lifecycle"
+      ],
+      "after": {
+        "lifecycle": "superseded"
+      },
+      "record": {
+        "articlePath": "二十五",
+        "id": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+        "jurisdictionCode": "CN",
+        "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+        "lifecycle": "superseded",
+        "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+        "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+      },
+      "fileSha256": "b98853c00e78f2b337869ebc17b48e748ce000359996cd7ec0753c8126a26ec4",
+      "contentHash": "0c1b8db5790ef2cf61f438c7eb5694f395701603522fca571a481872833882b4"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "knowledge/reviews/hazards/H_A915F52BFFC99371A8A67FC150_1.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_A915F52BFFC99371A8A67FC150_1",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "逐项核对第二十五条第一款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
+        "reviewType": "content",
+        "reviewedContentHash": "3ca6bf30b41d0e55c9aceab3da9cd53dffed999b7088cc51e702cc00be218312",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/title",
+          "/description",
+          "/conditions",
+          "/places",
+          "/measures",
+          "/note"
+        ],
+        "reviewedValues": {
+          "/title": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置或配置现场急救、冲洗、应急撤离及必要泄险设施",
+          "/description": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置，或者未配置现场急救用品、冲洗设备、应急撤离通道或必要的泄险区。应分别记录实际缺失项目，不将全部项目写成同时缺失。",
+          "/conditions": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+          "/places": [
+            "可能发生急性职业损伤的有毒、有害工作场所"
+          ],
+          "/measures": "按实际缺项设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区，并检查其可用状态。",
+          "/note": "直接依据为《职业病防治法》第二十五条第一款；不得以第七十五条处罚条款片段代替义务原文。"
+        },
+        "fieldEvidenceRefs": {
+          "/title": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/description": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/conditions": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/places": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/measures": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/note": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "decision": "verified",
+          "entityId": "H_A915F52BFFC99371A8A67FC150_1",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+          "reviewType": "content",
+          "reviewedContentHash": "2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a",
+          "reviewer": "Codex正式核验批次20260913"
+        },
+        "previousReviewFileSha256": "28bee09bc35815942a304e700c9425350f73168cb683329f3974ae194486cc3f",
+        "historySha256": "6da33feab277a3908472c7c6f51897f9feda1bea100fa77ff9482aa6a0c36f16",
+        "previousEntity": {
+          "aliases": [],
+          "category": "职业卫生",
+          "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+          "description": "现场检查发现，对可能发生急性职业损伤的有毒、有害工作场所，用人单位未设置报警装置等，相应安全防护、识别、监测或应急保障条件缺失。",
+          "id": "H_A915F52BFFC99371A8A67FC150_1",
+          "keywords": [
+            "对可能发生急性职业损伤的有毒",
+            "有害工作场所",
+            "用人单位未设置报警装置等"
+          ],
+          "lifecycle": "active",
+          "measures": "对可能发生急性职业损伤的有毒、有害工作场所，用人单位设置报警装置等。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "",
+          "places": [
+            "存在职业病危害因素的用人单位及相关作业场所"
+          ],
+          "title": "对可能发生急性职业损伤的有毒、有害工作场所，用人单位未设置报警装置等"
+        },
+        "previousEntityFileSha256": "a831615da0ce8e858615e8602c613ecdf4adfea423660b584ca23dd2af3ab358",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_A915F52BFFC99371A8A67FC150_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "previousFileSha256": "28bee09bc35815942a304e700c9425350f73168cb683329f3974ae194486cc3f",
+      "fileSha256": "6b500918c0858ec22d9fe40f017a8b8d6e5a40e4e1d26358cb3013708d470efc"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_154BCD41EA306D23833C2424.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "逐项核对第二十五条第一款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "50dd55610e2b9ff447e9e1774bd3445463ad6305dbbf271524a1726947b33526",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C_A915F52BFFC99371A8A67FC150",
+          "/applicability": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+          "/reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第一款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/applicability": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/reason": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "contextHashes": {
+            "clause": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
+            "hazard": "2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "隐患与官方条款直接对应。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "4d473f4c528d1b7796770f2ba2141080fed954fdef05b1aee76d64381e3bc39d",
+          "reviewer": "Codex正式核验批次20260913",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "453e670dc240aec84868d23bf0ead481ebdd84a14bab40698f1acacb31e3ffcb",
+        "historySha256": "3ef0c2e167c04fcefe6ce40920c08ce650dc6cb714049373c970229a6b5f151b",
+        "previousEntity": {
+          "applicability": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+          "clauseId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+          "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+          "id": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+          "jurisdictionCode": "CN",
+          "legacyRole": "直接依据",
+          "lifecycle": "active",
+          "priority": 10,
+          "reason": "隐患对象、整改措施与官方条款逐项对应。",
+          "role": "direct"
+        },
+        "previousEntityFileSha256": "0017888b0965648b5728cf9f84be655863cbd73db2bbc8baf8111a362e8fe2fd",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。",
+        "contextHashes": {
+          "hazard": "3ca6bf30b41d0e55c9aceab3da9cd53dffed999b7088cc51e702cc00be218312",
+          "clause": "251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb"
+        }
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e\",\n    \"hazard\": \"2bd7682b28e2838d4744cac5057009bdcec621b9dbc26481bb1573b5c18ee02a\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_XLSX_WEB_154BCD41EA306D23833C2424\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"4d473f4c528d1b7796770f2ba2141080fed954fdef05b1aee76d64381e3bc39d\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n",
+      "previousFileSha256": "453e670dc240aec84868d23bf0ead481ebdd84a14bab40698f1acacb31e3ffcb",
+      "fileSha256": "33d76be58a3beae4820a6353640464c309cb7427b20bbbdb57a3da4fe1f60ba8"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_A915F52BFFC99371A8A67FC150_2.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_A915F52BFFC99371A8A67FC150_2",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "逐项核对第二十五条第二款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
+        "reviewType": "content",
+        "reviewedContentHash": "876d53cb1ceff16d263454085fd0f292200c096fee581358687855f14632636d",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/title",
+          "/description",
+          "/conditions",
+          "/places",
+          "/measures",
+          "/category",
+          "/note"
+        ],
+        "reviewedValues": {
+          "/title": "放射工作场所或放射性同位素运输、贮存未配置防护设备或报警装置，或未保证接触放射线的工作人员佩戴个人剂量计",
+          "/description": "放射工作场所或放射性同位素运输、贮存环节未配置防护设备或报警装置，或者未保证接触放射线的工作人员佩戴个人剂量计。按实际缺失义务记录，不将正常佩戴写成隐患。",
+          "/conditions": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+          "/places": [
+            "放射工作场所",
+            "放射性同位素运输、贮存场所或环节"
+          ],
+          "/measures": "配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；复核相应防护和报警功能及个人剂量计佩戴情况。",
+          "/category": "职业卫生",
+          "/note": "直接依据为《职业病防治法》第二十五条第二款；删除无关机械危险适用性和机械设备试运行整改模板。"
+        },
+        "fieldEvidenceRefs": {
+          "/title": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/description": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/conditions": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/places": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/measures": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/category": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/note": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "decision": "verified",
+          "entityId": "H_A915F52BFFC99371A8A67FC150_2",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+          "reviewType": "content",
+          "reviewedContentHash": "6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59",
+          "reviewer": "Codex正式核验批次20260913"
+        },
+        "previousReviewFileSha256": "ce1c5545a785bd39cb3be038c112c54e7fba56d9d9a25e732ccdb04f00c1e4cf",
+        "historySha256": "4647bccd2fce882e3e2645feae21645a5144a7841b1521d4efdada965eb6d9c9",
+        "previousEntity": {
+          "aliases": [],
+          "category": "机械与设备安全",
+          "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+          "description": "现场检查发现，对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计，实际状态与直接依据规定的安全要求不一致。",
+          "id": "H_A915F52BFFC99371A8A67FC150_2",
+          "keywords": [
+            "对放射工作场所和放射性同位素的运输",
+            "贮存",
+            "用人单位未配置防护设备和报警装置",
+            "保证接触放射线的工作人员佩戴个人剂量计"
+          ],
+          "lifecycle": "active",
+          "measures": "对放射工作场所和放射性同位素的运输、贮存，用人单位配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "",
+          "places": [
+            "机械设备制造、安装、运行、操作和检维修相关场所"
+          ],
+          "title": "对放射工作场所和放射性同位素的运输、贮存，用人单位未配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计"
+        },
+        "previousEntityFileSha256": "4d6dbbbc50e648a97efc1f84ecf664893175f86525518a8cca00b2982efe7123",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_A915F52BFFC99371A8A67FC150_2\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "previousFileSha256": "ce1c5545a785bd39cb3be038c112c54e7fba56d9d9a25e732ccdb04f00c1e4cf",
+      "fileSha256": "f10016d3359f7c4f04007248e84b30cabd7dafa8777671b04e463b5ca0253f20"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "逐项核对第二十五条第二款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "22231a8dd081f214a58375ce7bd4c216ce27505075a699b5028bbae6ec4a9db1",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C_A915F52BFFC99371A8A67FC150",
+          "/applicability": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+          "/reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第二款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/applicability": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/reason": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "contextHashes": {
+            "clause": "a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9",
+            "hazard": "6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "隐患与官方条款直接对应。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "d6d5be7ccdd140c0605ca191b5e10043b0e9a00923360829354a5147c5b08d15",
+          "reviewer": "Codex正式核验批次20260913",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "aab8c5e42108431165f40a8a150711bc8dc34bf7865536ec0433e1ebd8bdac15",
+        "historySha256": "aad8e11b7ac2a882e247742c6a24b983b9ce9a5631c6e00cb7ef1f9192bb102e",
+        "previousEntity": {
+          "applicability": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+          "clauseId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+          "hazardId": "H_A915F52BFFC99371A8A67FC150_2",
+          "id": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+          "jurisdictionCode": "CN",
+          "legacyRole": "直接依据",
+          "lifecycle": "active",
+          "priority": 10,
+          "reason": "隐患对象、整改措施与官方条款逐项对应。",
+          "role": "direct"
+        },
+        "previousEntityFileSha256": "59f4087dcc36fe6609e9aa09f3f4644586913997b7a504ba1d7d5ab59b48311a",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。",
+        "contextHashes": {
+          "hazard": "876d53cb1ceff16d263454085fd0f292200c096fee581358687855f14632636d",
+          "clause": "251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb"
+        }
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9\",\n    \"hazard\": \"6e5560ace2a918e06b856ee3dbd845b2cbe80e2d87136830bddad76d8cecae59\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"d6d5be7ccdd140c0605ca191b5e10043b0e9a00923360829354a5147c5b08d15\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n",
+      "previousFileSha256": "aab8c5e42108431165f40a8a150711bc8dc34bf7865536ec0433e1ebd8bdac15",
+      "fileSha256": "7acd8a2c4e50ce8c35d7707a02cde902d310d8db4811eb7683287839a60ae42b"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_A915F52BFFC99371A8A67FC150_3.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_A915F52BFFC99371A8A67FC150_3",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "逐项核对第二十五条第三款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
+        "reviewType": "content",
+        "reviewedContentHash": "6a1b75e1941bd5498307eb61c35882048353c588b980eaf39e7f62402146ca96",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/description",
+          "/conditions",
+          "/places",
+          "/category",
+          "/note"
+        ],
+        "reviewedValues": {
+          "/description": "用人单位未对职业病防护设备、应急救援设施或个人使用的职业病防护用品进行经常性的维护、检修，或者未定期检测其性能和效果。",
+          "/conditions": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+          "/places": [
+            "用人单位职业病防护设备、应急救援设施及个人使用的职业病防护用品使用、管理场所"
+          ],
+          "/category": "职业卫生",
+          "/note": "直接依据为《职业病防治法》第二十五条第三款；原引文误截第七十五条处罚片段，需改链至已存在的完整第二十五条。"
+        },
+        "fieldEvidenceRefs": {
+          "/description": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/conditions": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/places": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/category": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/note": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "decision": "verified",
+          "entityId": "H_A915F52BFFC99371A8A67FC150_3",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+          "reviewType": "content",
+          "reviewedContentHash": "e1cf61498cabb4a55cddd06ad7e47aa618a43615a0835cd4a404f4bfbb571088",
+          "reviewer": "Codex新版整改回绑批次20260914"
+        },
+        "previousReviewFileSha256": "718fe2de07995c8375ad4900a934138ca81ee9b467ab4c0d2eb041aaa883113a",
+        "historySha256": "394c7bfa011e2fcd074f8ff0f940d09f6fa2e6a76d8e7f968baca1a6ec4eab3d",
+        "previousEntity": {
+          "id": "H_A915F52BFFC99371A8A67FC150_3",
+          "title": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果",
+          "description": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。（第二十五条）。",
+          "measures": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品进行经常性维护、检修和定期性能检测，发现失效立即修复或更换，不得擅自拆除或停用。",
+          "conditions": "适用于本隐患所述场所、设备及作业活动。",
+          "category": "设备设施",
+          "places": [
+            "通用场所"
+          ],
+          "aliases": [],
+          "keywords": [
+            "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果"
+          ],
+          "lifecycle": "active",
+          "mode": "direct",
+          "note": "依据 第二十五条 反转生成（GLM，2026-09-12）。",
+          "mergedInto": null
+        },
+        "previousEntityFileSha256": "d79635c02f98366ee4afbc43c858c0da020559916bddf7d16bbb031a655cd85d",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-14\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_A915F52BFFC99371A8A67FC150_3\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"e1cf61498cabb4a55cddd06ad7e47aa618a43615a0835cd4a404f4bfbb571088\",\n  \"reviewer\": \"Codex新版整改回绑批次20260914\"\n}\n",
+      "previousFileSha256": "718fe2de07995c8375ad4900a934138ca81ee9b467ab4c0d2eb041aaa883113a",
+      "fileSha256": "0b59845075e1b4c694ae644ffcaef989d66937f399e83c70dee27dc393c66864"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_8B328E39B6BA6BB5DF859627.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "逐项核对第二十五条第三款的法定主体、对象、义务和适用条件；三个款次分别限定，修复处罚片段误挂及本项模板污染。未将现场缺失、企业事实或履行情况视为已核实。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "8a9f6ba179d7495edbae4058d0db18f727e71adea36bf66261f417807365f720",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C_A915F52BFFC99371A8A67FC150",
+          "/applicability": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+          "/reason": "经2026-10-03逐字核对官方第二十五条完整原文，本项对应第三款；原链接误指向第七十五条处罚片段，改为复用同版次既存完整条款。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/applicability": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/reason": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "contextHashes": {
+            "clause": "a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9",
+            "hazard": "e1cf61498cabb4a55cddd06ad7e47aa618a43615a0835cd4a404f4bfbb571088"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "c9dbd3645d5710d67f7bf84a5871b8a25dd67eca1473229cbaaa728be52979ab",
+          "reviewer": "Codex新版整改回绑批次20260914",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "34c972089169d3c22953a92c7b9e5a98143dcce5c6650c7be1412faf6eac7d74",
+        "historySha256": "9c56ed28a63ad19b53f0a25b8897055de2c6b4cf380d979d66c40e89746c1ebb",
+        "previousEntity": {
+          "id": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+          "hazardId": "H_A915F52BFFC99371A8A67FC150_3",
+          "clauseId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+          "role": "direct",
+          "legacyRole": "直接依据",
+          "applicability": "适用于本隐患所述场所、设备及作业活动。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "active",
+          "priority": 10,
+          "requirementId": "",
+          "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+        },
+        "previousEntityFileSha256": "25d007fe14c15f252cba4d75e0b29434ede63b42aa9b5638e3807e406c59433c",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。",
+        "contextHashes": {
+          "hazard": "6a1b75e1941bd5498307eb61c35882048353c588b980eaf39e7f62402146ca96",
+          "clause": "251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb"
+        }
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-14\",\n  \"contextHashes\": {\n    \"clause\": \"a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9\",\n    \"hazard\": \"e1cf61498cabb4a55cddd06ad7e47aa618a43615a0835cd4a404f4bfbb571088\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_XLSX_NEW14_8B328E39B6BA6BB5DF859627\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"新版整改字段与现有已核验条款的对象、版本和适用范围一致。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"c9dbd3645d5710d67f7bf84a5871b8a25dd67eca1473229cbaaa728be52979ab\",\n  \"reviewer\": \"Codex新版整改回绑批次20260914\",\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n",
+      "previousFileSha256": "34c972089169d3c22953a92c7b9e5a98143dcce5c6650c7be1412faf6eac7d74",
+      "fileSha256": "2464a4bd0c9ae960a5cd23ae231328c6e5e20e8410b727a6c4c5a634563632c1"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_XLSX_WEB_19C18CA57A57554C4D9A09BC.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "rejected",
+        "entityId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+        "entityType": "clause",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "确认原articlePath标二十五但quote实为第七十五条第三项句尾及第四至八项处罚片段，拒绝本条作为第二十五条正文。完整原ID、条号、quote、sourceUrl和旧审核均保留；检查全部入链并改绑三条直接依据后将该C标为superseded，禁止正式发布。",
+        "reviewType": "text",
+        "reviewedContentHash": "7a63b76370f13006978d782c2c44d298db49b4f2d69b36a2de24859ccfc61a7b",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/articlePath",
+          "/quote",
+          "/lawVersionId",
+          "/sourceUrl",
+          "/lifecycle"
+        ],
+        "reviewedValues": {
+          "/articlePath": "二十五",
+          "/quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+          "/lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "/sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf",
+          "/lifecycle": "superseded"
+        },
+        "fieldEvidenceRefs": {
+          "/articlePath": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/quote": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/lawVersionId": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/sourceUrl": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/lifecycle": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "decision": "verified",
+          "entityId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+          "entityType": "clause",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "已从官方政府全文页面定位并核对条款原文。",
+          "reviewType": "text",
+          "reviewedContentHash": "e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e",
+          "reviewer": "Codex正式核验批次20260913"
+        },
+        "previousReviewFileSha256": "e0607acc3a9b215d33b19684a06e79939d82dd0e8ed916fed99ebb2a1fd735f1",
+        "historySha256": "ac270495119d1994793ee791cf0b9b3cf4e358b71c8ee47f0d0fa34d690e05b3",
+        "previousEntity": {
+          "articlePath": "二十五",
+          "id": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+          "jurisdictionCode": "CN",
+          "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "lifecycle": "active",
+          "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+          "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+        },
+        "previousEntityFileSha256": "70a5b6a3b8284a0fc856378be344e140bc5cd7802414a5f27d2c314114924061",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_XLSX_WEB_19C18CA57A57554C4D9A09BC\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"已从官方政府全文页面定位并核对条款原文。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"e359f1e801b960f5138f1cd9704f6f15b25cf8f63f1f1cf2f3501953766e590e\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "previousFileSha256": "e0607acc3a9b215d33b19684a06e79939d82dd0e8ed916fed99ebb2a1fd735f1",
+      "fileSha256": "8fd6ce03d06d53a1e8aabe752f09acbd8b207d107efe6ddb6fcb3d5973e21fbc"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "rejected",
+        "entityId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+        "entityType": "clause",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "确认原articlePath标二十五但quote实为第七十五条第三项句尾及第四至八项处罚片段，拒绝本条作为第二十五条正文。完整原ID、条号、quote、sourceUrl和旧审核均保留；检查全部入链并改绑三条直接依据后将该C标为superseded，禁止正式发布。",
+        "reviewType": "text",
+        "reviewedContentHash": "0c1b8db5790ef2cf61f438c7eb5694f395701603522fca571a481872833882b4",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/articlePath",
+          "/quote",
+          "/lawVersionId",
+          "/sourceUrl",
+          "/lifecycle"
+        ],
+        "reviewedValues": {
+          "/articlePath": "二十五",
+          "/quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+          "/lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "/sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf",
+          "/lifecycle": "superseded"
+        },
+        "fieldEvidenceRefs": {
+          "/articlePath": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/quote": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/lawVersionId": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/sourceUrl": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/lifecycle": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "decision": "verified",
+          "entityId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+          "entityType": "clause",
+          "evidenceRefs": [
+            "E_XLSX_WEB_CA8F321C2B8604D2601A0F59"
+          ],
+          "reason": "已从官方政府全文页面定位并核对条款原文。",
+          "reviewType": "text",
+          "reviewedContentHash": "a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9",
+          "reviewer": "Codex正式核验批次20260913"
+        },
+        "previousReviewFileSha256": "1edeb4a9952abf7960949b41ad1cc10cd4ee7657350eb33c9b6d59e235a5d966",
+        "historySha256": "8e87dca16de3b2dc31db183c9778dfbb2202d3fadd10c2c5ce4b0987cbf5622c",
+        "previousEntity": {
+          "articlePath": "二十五",
+          "id": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963",
+          "jurisdictionCode": "CN",
+          "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "lifecycle": "active",
+          "quote": "第二十五条规定的； （四）使用国家明令禁止使用的可能产生职业病危害的设备或者材 料的； （五）将产生职业病危害的作业转移给没有职业病防护条件的单位 和个人，或者没有职业病防护条件的单位和个人接受产生职业病危害的 作业的； （六）擅自拆除、停止使用职业病防护设备或者应急救援设施的； （七）安排未经职业健康检查的劳动者、有职业禁忌的劳动者、未 成年工或者孕期、哺乳期女职工从事接触职业病危害的作业或者禁忌作 业的； （八）违章指挥和强令劳动者进行没有职业病防护措施的作业的。",
+          "sourceUrl": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2210/site/attach/0/7ab9ef6b7739408f9a4dbe8f65df7e22.pdf"
+        },
+        "previousEntityFileSha256": "8c127c0a56cb2d9ae214937c56c2369737ea0a115fbbcc0900bfc70a107c1177",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_CA8F321C2B8604D2601A0F59\"\n  ],\n  \"reason\": \"已从官方政府全文页面定位并核对条款原文。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"a71af0a09ac383dc60eb80d3d7e383be3ba3cab3a739c9a825c95b11409581a9\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "previousFileSha256": "1edeb4a9952abf7960949b41ad1cc10cd4ee7657350eb33c9b6d59e235a5d966",
+      "fileSha256": "0a8c6c486b8b8cd527c21d0b3f6bb39e363f9aea19fdf742ee34b9b805c12d46"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_A915F52BFFC99371A8A67FC150.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "C_A915F52BFFC99371A8A67FC150",
+        "entityType": "clause",
+        "evidenceRefs": [
+          "E_NPC_ff8080816f135f46016f212ea20a17f8"
+        ],
+        "reason": "完整第二十五条与官方现行2018修正本逐字核对一致；复用既存完整C，未新建、截短、重编号或改写原文。",
+        "reviewType": "text",
+        "reviewedContentHash": "251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb",
+        "reviewer": "Codex职业病防治法第二十五条逐项复核20261003",
+        "reviewedFields": [
+          "/articlePath",
+          "/quote",
+          "/lawVersionId",
+          "/sourceUrl"
+        ],
+        "reviewedValues": {
+          "/articlePath": "第二十五条",
+          "/quote": "第二十五条对可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区。 对放射工作场所和放射性同位素的运输、贮存，用人单位必须配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。 对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+          "/lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f212ea20a17f8"
+        },
+        "fieldEvidenceRefs": {
+          "/articlePath": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/quote": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/lawVersionId": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "/sourceUrl": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-12",
+          "decision": "verified",
+          "entityId": "C_A915F52BFFC99371A8A67FC150",
+          "entityType": "clause",
+          "evidenceRefs": [
+            "E_NPC_ff8080816f135f46016f212ea20a17f8"
+          ],
+          "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+          "reviewType": "text",
+          "reviewedContentHash": "251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb",
+          "reviewer": "GLM-5.3-Flash (ZCode)"
+        },
+        "previousReviewFileSha256": "e1bc570b488001b041ab731c682423e07723a0abc93c21292fe36f285a3c188b",
+        "historySha256": "2365c7f5abf2ce82da0cdab4fb2d7bc94cf6c73121fd3796215a175810bd766c",
+        "previousEntity": {
+          "articlePath": "第二十五条",
+          "id": "C_A915F52BFFC99371A8A67FC150",
+          "jurisdictionCode": "CN",
+          "lawVersionId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "lifecycle": "active",
+          "quote": "第二十五条对可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区。 对放射工作场所和放射性同位素的运输、贮存，用人单位必须配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。 对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f212ea20a17f8"
+        },
+        "previousEntityFileSha256": "f7b5cccf712ea28d1503c45bd31874049f13cc28a2cb6c46c490077b6746700e",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国职业病防治法",
+          "issuer": "全国人民代表大会常务委员会",
+          "version": "2018年12月29日第四次修正",
+          "documentNumber": "中华人民共和国主席令第24号",
+          "publishedDate": "2018-12-29",
+          "effectiveDate": "2018-12-29",
+          "currentStatus": "现行有效",
+          "officialSourceUrl": "https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230407_2992844.html",
+          "statusSourceUrl": "https://www.samr.gov.cn/fgs/sjdt/art/2026/art_93a4fbac2ce14ab6baab60b0cd452ef4.html",
+          "statusSourceClass": "国家市场监督管理总局官方现行有效法律目录（截至2026年8月28日），社会法第15项仍列2018年修正。",
+          "statusVerification": "本次按2026-10-03检索并读取官方现行目录，未发现后续正式修订、废止或替代；目录截止日明确保留，不把旧网页存在当作现行依据。",
+          "scope": "中华人民共和国领域内的职业病防治活动；本轮仅核第二十五条第一至三款分别限定的用人单位、场所、设备用品及劳动过程管理义务。",
+          "locators": [
+            "第二条",
+            "第二十五条第一至三款",
+            "第七十五条第三项句尾及第四至八项"
+          ],
+          "quoteComparison": "完整第二十五条与官方全文逐字核对一致，仅忽略空白；原两条C正文匹配第七十五条处罚片段。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "evidenceReuse": "既存同法同版E_NPC证据身份不变；本次实际读取的官方全文及现行目录URL和日期另存本reviewEvidence。",
+          "sourceAccessLimit": "本次国家法律法规数据库detail返回403、国家卫健委全文返回工具内部取回错误；未绕过访问限制。北京卫健委官方全文与市场监管总局官方现行目录已成功读取。"
+        },
+        "notes": "当前hash绑定完整现记录；实质审核仅限reviewedFields所列字段及完整法条、对应款次适用性。未认证其他未变字段或企业现场事实，未扩大profile准入或全库审核范围。完整旧审核与旧实体保留，不覆盖历史。"
+      },
+      "previousFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_A915F52BFFC99371A8A67FC150\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_NPC_ff8080816f135f46016f212ea20a17f8\"\n  ],\n  \"reason\": \"V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"251d78b2fda6421c44aede8e8833cad2adb048adbb656ce2ba2bc6a8443aa2bb\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "previousFileSha256": "e1bc570b488001b041ab731c682423e07723a0abc93c21292fe36f285a3c188b",
+      "fileSha256": "2ba57c0609a013b33ade7ec2fbed74389c0536feb84c0fa13a5066aa972054b7"
+    }
+  ],
+  "paragraphLinks": [
+    {
+      "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+      "linkId": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+      "paragraph": 1
+    },
+    {
+      "hazardId": "H_A915F52BFFC99371A8A67FC150_2",
+      "linkId": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+      "paragraph": 2
+    },
+    {
+      "hazardId": "H_A915F52BFFC99371A8A67FC150_3",
+      "linkId": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+      "paragraph": 3
+    }
+  ],
+  "planRefinements": [
+    {
+      "path": "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_2.json",
+      "field": "title",
+      "reason": "将缺失防护设备、报警装置的并列否定明确为或，与第二款两项独立配置义务、description的任一缺失触发一致；不要求同时缺失，不把正常佩戴写成隐患。"
+    }
+  ],
+  "baselineGate": {
+    "2026-10-02": {
+      "hazardIdsHash": "b89d4af1379320eae1df0f56f4ec2f0f11b46bba573fdc3cf09bfef3411a8c99",
+      "linkIdsHash": "956d18d9c758c423b335e6ea8415aca83bc92bf7d9deab164ada18cd1c55003f",
+      "counts": {
+        "hazards": 1671,
+        "links": 1818
+      }
+    },
+    "2026-10-03": {
+      "hazardIdsHash": "b89d4af1379320eae1df0f56f4ec2f0f11b46bba573fdc3cf09bfef3411a8c99",
+      "linkIdsHash": "956d18d9c758c423b335e6ea8415aca83bc92bf7d9deab164ada18cd1c55003f",
+      "counts": {
+        "hazards": 1671,
+        "links": 1818
+      }
+    }
+  },
+  "gateLinkTransitions": {
+    "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627": {
+      "before": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_3",
+        "clauseId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963"
+      },
+      "after": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_3",
+        "clauseId": "C_A915F52BFFC99371A8A67FC150"
+      }
+    },
+    "K_XLSX_WEB_154BCD41EA306D23833C2424": {
+      "before": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+        "clauseId": "C_XLSX_WEB_19C18CA57A57554C4D9A09BC"
+      },
+      "after": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_1",
+        "clauseId": "C_A915F52BFFC99371A8A67FC150"
+      }
+    },
+    "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3": {
+      "before": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_2",
+        "clauseId": "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963"
+      },
+      "after": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A915F52BFFC99371A8A67FC150_2",
+        "clauseId": "C_A915F52BFFC99371A8A67FC150"
+      }
+    }
+  }
+}

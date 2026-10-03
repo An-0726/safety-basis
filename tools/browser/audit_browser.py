@@ -9,11 +9,15 @@ import functools
 import http.server
 import json
 import re
+import sys
 import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repair_acceptance import load_expectations, validate_source_pins, run_repair_browser_acceptance
 
 
 
@@ -272,6 +276,80 @@ def main():
                 mobile.close(); return result
             for width in (375, 390):
                 run(f'mobile_{width}px_search_and_six_details', lambda width=width: mobile_check(width))
+
+            def sticky_header_navigation(width, reduced_motion='no-preference'):
+                narrow = width <= 780
+                device = browser.new_context(viewport={'width': width, 'height': 1000},
+                                             reduced_motion=reduced_motion, service_workers='block')
+                mp = device.new_page(); mp.on('pageerror', lambda err: page_errors.append(str(err)))
+                evidence = []
+                def geometry(step, selector='#detail h2', in_view=False):
+                    mp.wait_for_function('''({selector, inView}) => {
+                        const header = document.querySelector('header'), target = document.querySelector(selector);
+                        if (!header || !target) return false;
+                        const h = header.getBoundingClientRect(), t = target.getBoundingClientRect();
+                        return t.top >= h.bottom - 1 && (!inView || t.bottom <= innerHeight);
+                    }''', arg={'selector': selector, 'inView': in_view})
+                    value = mp.evaluate('''selector => {
+                        const h = document.querySelector('header').getBoundingClientRect();
+                        const t = document.querySelector(selector).getBoundingClientRect();
+                        return {headerHeight: h.height, headerBottom: h.bottom, targetTop: t.top,
+                                targetBottom: t.bottom, scrollY, viewportWidth: innerWidth,
+                                measuredHeight: parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height'))};
+                    }''', selector)
+                    require(abs(value['measuredHeight'] - value['headerHeight']) < 1, 'Sticky offset is stale')
+                    evidence.append({'step': step, **value})
+                try:
+                    mp.goto(base + '?id=H004&q=' + quote(COMMON_HAZARDS[-1]['title']))
+                    expect(mp.locator('#detail h2')).to_have_text(COMMON_HAZARDS[-1]['title'])
+                    card = mp.locator('#list .card[data-id="H004"]')
+                    card.click(); geometry('selection', in_view=narrow)
+                    if narrow:
+                        mp.locator('#backResults').click(); geometry('return_results', '#list')
+                        require(mp.locator('#list').evaluate('node => node === document.activeElement'), 'Return results lost focus')
+                    card.click(); geometry('repeated_selection', in_view=narrow)
+                    if narrow:
+                        mp.locator('#backResults').click()
+                    card.focus(); card.press('Enter'); geometry('keyboard_selection', in_view=narrow)
+                    mp.locator('#clear').click(); expect(mp.locator('#search')).to_have_value('')
+                    first = mp.locator('#list .card').first
+                    first_id = first.get_attribute('data-id'); first_title = first.locator('h3').inner_text()
+                    first.click(); expect(mp.locator('#detail h2')).to_have_text(first_title)
+                    other = mp.locator('#list .card').nth(1)
+                    other_id = other.get_attribute('data-id'); other_title = other.locator('h3').inner_text()
+                    other.click(); expect(mp.locator('#detail h2')).to_have_text(other_title)
+                    geometry('second_selection', in_view=narrow)
+                    mp.go_back(); expect(mp.locator('#detail h2')).to_have_text(first_title)
+                    require(parse_qs(urlparse(mp.url).query).get('id') == [first_id], 'Back selected wrong hazard')
+                    geometry('back')
+                    mp.go_forward(); expect(mp.locator('#detail h2')).to_have_text(other_title)
+                    require(parse_qs(urlparse(mp.url).query).get('id') == [other_id], 'Forward selected wrong hazard')
+                    geometry('forward')
+                    # Native hash targets use the same CSS offset; no forced test scrolling.
+                    if narrow:
+                        route = mp.url.split('#')[0]
+                        mp.goto(route + '#detail'); geometry('detail_hash', in_view=True)
+                        mp.goto(route + '#list'); geometry('results_hash', '#list')
+                        mp.go_back(); expect(mp.locator('#detail h2')).to_have_text(other_title)
+                        geometry('hash_back', in_view=True)
+                        mp.go_forward(); geometry('hash_forward', '#list')
+                        mp.locator('#list .card[data-id="' + other_id + '"]').click()
+                        geometry('selection_after_hash', in_view=True)
+                    mp.locator('#reset').click()
+                    expect(mp.locator('#search')).to_have_value('')
+                    expect(mp.locator('#count')).to_have_text(str(report['release']['counts']['hazards']))
+                    require(not parse_qs(urlparse(mp.url).query).get('q'), 'Reset retained search')
+                    return {'width': width, 'reducedMotion': reduced_motion, 'geometry': evidence, 'reset': True}
+                finally:
+                    device.close()
+            for width in (1440, 375, 390, 485):
+                run(f'sticky_header_{width}px_navigation', lambda width=width: sticky_header_navigation(width))
+            run('sticky_header_485px_reduced_motion', lambda: sticky_header_navigation(485, 'reduce'))
+            repair_fixture = load_expectations()
+            run('reviewed_repair_source_pins', lambda: validate_source_pins(
+                repair_fixture, Path(__file__).resolve().parents[2]))
+            run_repair_browser_acceptance(browser, base, run, page_errors, expect, repair_fixture,
+                                          report['release']['releaseHash'])
             run('no_unhandled_javascript_errors', lambda: require(not page_errors, str(page_errors)))
             context.close(); browser.close()
     finally:

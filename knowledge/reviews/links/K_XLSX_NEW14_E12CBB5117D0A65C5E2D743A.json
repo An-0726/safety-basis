@@ -1,18 +1,93 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "9200543ca9bdf35502332cde4a7941cbee05a05a1088cc5edf88aef7a905094d",
-    "hazard": "9357497bbf8b308fbe48faf6fbaffe81cdd0788fd70f4c839020e5b77d44d194"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_NEW14_E12CBB5117D0A65C5E2D743A",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_E6570EE844CE96C412FA22E6"
+    "E_L020"
   ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "reason": "江苏省生产经营单位主要负责人，履行本条地方附加职责；五项频次/事故触发分别核实，不借处罚额替代职责。",
   "reviewType": "applicability",
-  "reviewedContentHash": "e9b19018615b4380727b9f0a64393636e8c6c2247b8f38cf8f7d04058d444608",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "bd19f5c9e6802ac79c3689f13b884bd8a6853248e868695fd7f9d44b684de528",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十五条全条第（一）至（五）项",
+  "reviewedFields": [
+    "/clauseId",
+    "/applicability",
+    "/jurisdictionCode",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/clauseId": "C_96049FDA8623F7EF0CDA4B1F73",
+    "/applicability": "适用于江苏省行政区域内生产经营单位的主要负责人，分别核查第十五条五项地方附加职责：每季度至少组织并参与一次全面检查；每年至少组织并参与一次事故应急救援演练；每年至少组织一次全面安全风险辨识并完善管控措施；发生生产安全事故时迅速抢救、及时如实报告并做好善后和配合调查；每年向从业人员报告或通报安全生产工作及本人履职情况。",
+    "/jurisdictionCode": "CN-32",
+    "/reason": "第十五条全条第（一）至（五）项直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/clauseId": [
+      "E_L020"
+    ],
+    "/applicability": [
+      "E_L020"
+    ],
+    "/jurisdictionCode": [
+      "E_L020"
+    ],
+    "/reason": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "9200543ca9bdf35502332cde4a7941cbee05a05a1088cc5edf88aef7a905094d",
+      "hazard": "9357497bbf8b308fbe48faf6fbaffe81cdd0788fd70f4c839020e5b77d44d194"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_E12CBB5117D0A65C5E2D743A",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_E6570EE844CE96C412FA22E6"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "e9b19018615b4380727b9f0a64393636e8c6c2247b8f38cf8f7d04058d444608",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "14a4883a66c041fdb6ceb061c5ea92d5cb5ea4f4f9897446ab4be65ddb3aceeb",
+  "historySha256": "0b897a9fe0cdd222aeca7c0706e1f39a30602205a529a55cff3b791a3dfde858",
+  "previousEntity": {
+    "id": "K_XLSX_NEW14_E12CBB5117D0A65C5E2D743A",
+    "hazardId": "H_96049FDA8623F7EF0CDA4B1F73_1",
+    "clauseId": "C_XLSX_FT_58BFD218BC4BBBE8D61586FB",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所、设备及作业活动。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+  },
+  "previousEntityFileSha256": "78663b20232b4f1846d611f05afcd09a08d51f6b718b346ec23f99970d84d8ab",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第十五条全条第（一）至（五）项",
+    "completeOfficialQuote": "第十五条 生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责：\n\n（一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；\n\n（二）每年至少组织并参与一次生产安全事故应急救援演练；\n\n（三）每年至少组织一次全面的安全风险辨识，制定完善管控措施；\n（四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理；\n\n（五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+    "scopeDecision": "江苏省生产经营单位主要负责人，履行本条地方附加职责；五项频次/事故触发分别核实，不借处罚额替代职责。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "43b6548c8f4c1d1613935d76b406604d2398c755b8d3e143d8dd2232c82e6b1c",
+    "clause": "a245dec66724c30eef645bc821ad06f629b82d3dc0091ad183ed015a7944f120"
+  }
 }

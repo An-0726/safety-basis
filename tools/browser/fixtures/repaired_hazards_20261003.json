@@ -1,0 +1,1238 @@
+{
+  "schemaVersion": "reviewed-repair-browser-v1",
+  "asOf": "2026-10-03",
+  "scope": "Pinned expectations from the independently reviewed repair source records; browser assertions verify faithful display and routing, not legal correctness or site compliance.",
+  "cohortCounts": {
+    "flange": 3,
+    "training": 5,
+    "occupational": 3,
+    "remaining": 26
+  },
+  "expectedHazards": 1671,
+  "expectedPublicLinks": 1817,
+  "expectedPublicClauses": 1362,
+  "excludedClauseIds": [
+    "C_XLSX_FT_0C5387BD293BE4E2AC86F60A",
+    "C_XLSX_FT_188906852F386AD3CBF3EEC2",
+    "C_XLSX_FT_19AA1199D1A7766C31EAF1D8",
+    "C_XLSX_FT_261DD1438228E1E0CCDB1AAE",
+    "C_XLSX_FT_3795752ADA83F95645BA047B",
+    "C_XLSX_FT_37F55EBE11A36C1683B7F3FB",
+    "C_XLSX_FT_38D7F80264A65AB3E3578671",
+    "C_XLSX_FT_413C38BA20BD8583AA5698D4",
+    "C_XLSX_FT_55B0CC78C56D741F9C23EE02",
+    "C_XLSX_FT_55B8DD23E8E4EB1225346007",
+    "C_XLSX_FT_588E6644EEB29D89EBAD4DBD",
+    "C_XLSX_FT_58BFD218BC4BBBE8D61586FB",
+    "C_XLSX_FT_5BD3B5BF9CC8300CF1766FB1",
+    "C_XLSX_FT_5E6C3EC8FD8A419DAC4F95A4",
+    "C_XLSX_FT_61652A9B7A7491323A33CC12",
+    "C_XLSX_FT_6AB84D246588DED519986B1F",
+    "C_XLSX_FT_90224871C689F7B4C8AF1995",
+    "C_XLSX_FT_9A5F6326CD4DFDF324CED86E",
+    "C_XLSX_FT_A2BF6D1D7240751D3F5C46DF",
+    "C_XLSX_FT_A9E2ED0D7A52D3B15C2B861F",
+    "C_XLSX_FT_C7CBCB1E528E3A6C6855FA14",
+    "C_XLSX_FT_C9999A3918DEA7D2A91EE50A",
+    "C_XLSX_FT_CD70DD32C81D5F9256DBD75D",
+    "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+    "C_XLSX_FT_DCFCE1A3CAD588EC34DCD666",
+    "C_XLSX_WEB_19C18CA57A57554C4D9A09BC",
+    "C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963"
+  ],
+  "representativeIds": [
+    "H_12158_9_11_1",
+    "H034",
+    "H_9F790C9B0EA34E59207BCCC1AD_2",
+    "H_A915F52BFFC99371A8A67FC150_2",
+    "H_1201F11443914660BCC291055B",
+    "H_462D38828DEBA46C8E23C177D2_1",
+    "H_A7D8C5192004B9B1DB48E5CC_1",
+    "H_7D2425A6472F9ED7098B49315B_2"
+  ],
+  "sourceFiles": {
+    "knowledge/hazards/H_12158_9_11_1.json": "a0fa4caa141cb583c31e052ad49e5b21d181bdb756487a3259585f9bc8d0e3da",
+    "knowledge/links/K_XLSX_c231a40034d6dce8a2b9c8a9.json": "8a4f3854b18af5d76bab9e7188c05d97995b07485dc687d774c061645914c1d3",
+    "knowledge/clauses/C_12158_9_11.json": "5e74d9618a0505271cd2cdc834593aca37bdba6cd668b3869b8d3b00699bc7dc",
+    "knowledge/law-versions/LV_STD_A318C93D7F3213B292AD5946.json": "4205b32a524b66fea792bf428070cdcf08c56e664c286983ceed63a0e5b6be7a",
+    "knowledge/laws/LF_STD_27BF7DEDD64E4AA4464E6ABD.json": "fe9082e1d7cbb896029a2af7460319991bfa4d63e60b5ffe1aa812de408fd69f",
+    "knowledge/hazards/H_12158_9_11_2.json": "11ceab59e3a29638d13f96467a13e26872fd57cbe3ef288a60893c91044128ee",
+    "knowledge/links/K_XLSX_8d7b114927822b1c33d28104.json": "06866d807c7dc14c3526a534d862b88b968c50fb1b9ea85dfdfb148091364db3",
+    "knowledge/hazards/H_12158_9_11_3.json": "8ca2ba64b98e71a4a52bf07fdbbc2e1f44d1ad8a65ca5b1b33ad3e44b04527af",
+    "knowledge/links/K_XLSX_11d25033369ed548886a4b28.json": "cb558fc1669bb164cfe2bee9fd91515d7e08cb207baaabbf2f4c7e2f10f6e1cf",
+    "knowledge/hazards/H034.json": "0e71aedd60a04c0f395409527d83bd87ae45467c3f4e2ad106ccf803c39d2601",
+    "knowledge/links/K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F.json": "1c32a35c867bf38ad5f5656f518709dbe5b70c1eeb6fb3c2a4e37253de4d5e37",
+    "knowledge/clauses/C033.json": "b5ee1266e74978b2e907624084e6e5c91ee8e7fe9e75be698e21a58382909a5a",
+    "knowledge/law-versions/L002.json": "c6320b2dd7e1ac11a8062181a02e45a7e8ecb31e1735f7faca8f17607148e7f4",
+    "knowledge/laws/LF_L002.json": "32474ebc5c12605f57f4281e056b349d7dbd57b426eac16ae897006d39f3870f",
+    "knowledge/hazards/H_87D36F82D5F9405BA0B0B14CB7.json": "ba8611864ec87afe6c07c9ee44253938e35c48d32e71d4faf6e85dc444a3e88f",
+    "knowledge/links/K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9.json": "6e1b650a1f00d35574b0a1d61f70d2fab4fc591df6c3ee9de096dc777e6bea7f",
+    "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_1.json": "bd5c9842beac0c14f3b00c40d474d0d9c28ffc873df30c9d8396113284084a3b",
+    "knowledge/links/K_XLSX_FT_498653F95CEB7020551DDECA.json": "78e74356ff34b51d21ce67fa2a2988da5ec729b95ebb26b7950c6d5a4add974d",
+    "knowledge/clauses/C_9F790C9B0EA34E59207BCCC1AD.json": "1c6573490f39472d67d63b79aea35cdfc643a4072ace6574d42b2d8aafb7e8ac",
+    "knowledge/law-versions/L020.json": "da8b98c6674478fefcf4f6eb002f58d3e8e024a78ff937ed179e13396578a214",
+    "knowledge/laws/LF_L020.json": "02395d6b021eb0bdb9717e355627fe878010055c36ce75fe560479fbc60d137e",
+    "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_2.json": "e2d90c38dc02e1b550c685ac400e77c344d2fb19c84656853e76cdb0c1a98cc8",
+    "knowledge/links/K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361.json": "b9c52bd9f792c29855f950a741d53ca197db5ac2a4498851932eb313856cf8ea",
+    "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_3.json": "dd54fdd8f49a9cc795fcb781ac7dd6d9bb020719a963b3ac7ab1854dcc31c2ba",
+    "knowledge/links/K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E.json": "76c17de780cf23fc5459d238060e0a64c856b91425e5826aa178d9ff9574db70",
+    "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_1.json": "bb95a373b34287b6d2c45714ff25e7783b4a92d91ef0aa4281ee69a86b88b948",
+    "knowledge/links/K_XLSX_WEB_154BCD41EA306D23833C2424.json": "97b4e995477253ef688936c1e05b6cc76a1b129c5a8fd97d4965efcfc1222e8b",
+    "knowledge/clauses/C_A915F52BFFC99371A8A67FC150.json": "f7b5cccf712ea28d1503c45bd31874049f13cc28a2cb6c46c490077b6746700e",
+    "knowledge/law-versions/LV_NPC_ff8080816f135f46016f212ea20a17f8.json": "4010a2aafdb277c248e7a4e829ef4aaafe8c986b344acbe2bcd52e3e56729190",
+    "knowledge/laws/LF_NPC_ff8080816f135f46016f212ea20a17f8.json": "6fbf720db34cf00447c8fc6a288886a5432e237bde2b518977418ad8b5d71d71",
+    "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_2.json": "5a4af52dd118337cf3020fe2c281031a362ccb9a51c96c3fc32ce3c2f12bffca",
+    "knowledge/links/K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3.json": "1de80d6c0e6ec2698d4994c1cf717cb7e5781db5ca1e417e461f8a64e6d6124b",
+    "knowledge/hazards/H_A915F52BFFC99371A8A67FC150_3.json": "4d3056967ffda2c051fccedde8d617b9f23fa1e0556c49344d3911c49686a80d",
+    "knowledge/links/K_XLSX_NEW14_8B328E39B6BA6BB5DF859627.json": "f2b464351d9ab7c3b88de440e763c1cc0d1313f3954f4864133cf2d877ac0edb",
+    "knowledge/hazards/H_AAE1B191FB54FF6FC331BB7DD2_1.json": "d786ffe56d9d7c094e703c5ba5516172bfd82527374c1f01838ea4268c758e88",
+    "knowledge/links/K_XLSX_FT_440329DE431BE1CFBA739B6B.json": "8b0e246bfb7ba561bb16bc32477a8487a81cbde5dc7836681231993b688990fa",
+    "knowledge/clauses/C_AAE1B191FB54FF6FC331BB7DD2.json": "7d506499429dbab434d64162b932b0bb6d2e2dda30c2cedd8898ec4400a3fc7c",
+    "knowledge/law-versions/L001.json": "c7a60200f3b96450544b8c22278f1081ae6fbbb76506cbe720af92a7731cfec6",
+    "knowledge/laws/LF_L001.json": "25cd73787843315b7d5f270566eb51301e7fcad68eafc23a4b5dbf99b66ee45c",
+    "knowledge/hazards/H_D7F4B2B8F70D67B625BE3E5E95_3.json": "2464f33c4aca46e2a6822b5c891f4ae2cd26fe8046f72e81c175bcf04f1b9588",
+    "knowledge/links/K_XLSX_FT_4DFAA1BFDA03ED818085BC89.json": "16eb6c07b16646a8b6a3cf7d1ffc92b8eda50842638a0c539538456a6dc92ca2",
+    "knowledge/clauses/C_D7F4B2B8F70D67B625BE3E5E95.json": "08f493a0f7ddcf9b15452c637bd398395b10d79055e9614c22fc56d2545f44db",
+    "knowledge/hazards/H_D7F4B2B8F70D67B625BE3E5E95_1.json": "10bbc496140f42c7e9c96f0c30b6843829637b1f202fcb606da16423d80a6795",
+    "knowledge/links/K_XLSX_FT_1938452B434516338BA7A204.json": "301da8f8610cc0649d2d636c3435d3b974adf8b956aaf66ee577a790cb183779",
+    "knowledge/hazards/H_1201F11443914660BCC291055B.json": "bec905d7ab5a92a9986003632c241ec618c278a7e5bbfe709f7a8d7a1587a272",
+    "knowledge/links/K_XLSX_NEW14_08D430A73A95A65640FD0F8D.json": "30dfce94d62a9e2a1608015d185d67ceb5de66fba2263418519945ef63d13870",
+    "knowledge/clauses/C074.json": "291be69f8746d4952006588e9b32d0c4a5ea2aa621cffd8cbe7f48625e31af25",
+    "knowledge/hazards/H_301DCA3CAE2A494C399B323116_2.json": "5ef3083b961d05fd86dc9ed3b2ec66f889fb7eaafffd7deceeb84316d9f07881",
+    "knowledge/links/K_XLSX_CAT_DE351B7F341B2DEB25E648B3.json": "ec0e1267d64694c3ec48974aef8ccf235041e67ae6c7bde0178963f9109bab1e",
+    "knowledge/clauses/C_301DCA3CAE2A494C399B323116.json": "d0f62635f7acfcf8b315f019a62d332e809b79471a115c6d763fb3307075845d",
+    "knowledge/hazards/H_301DCA3CAE2A494C399B323116_3.json": "81c1b25332066438eb6eda8ecb2c4da3e5939ddc9396a85f06582f61f3c5c0c3",
+    "knowledge/links/K_XLSX_FT_336835C6F2669D6724FB5846.json": "5a91dff09dc6248940edfec6d75b170c5151866ad6432e66a3f047d8a8df2bfa",
+    "knowledge/hazards/H_7FCC0C85E0C313B5599EBC67_1.json": "9bfe7317764dc36f67c73c7cceb32cb870333661a06ccba39ef1cd70bd5d03b8",
+    "knowledge/links/K_XLSX_FT_E3501F2F18CD5852A51AB58A.json": "005a23590b8c103599a14e4bb5923b62b7bf7be37fe75b6a5343a89626b84367",
+    "knowledge/clauses/C_7FCC0C85E0C313B5599EBC67.json": "2b79a87401a977b0df654a2217af31c232b99cb5865741c0eed3b0eb4dcc5ea0",
+    "knowledge/law-versions/LV_HAZCHEM_LAW.json": "69c378de4670ee065f617145f778bfbf49b61a2b81ad005b0e4c08e97c2349d8",
+    "knowledge/laws/LF_HAZCHEM_LAW.json": "6cb222e850944331ae98de7203e837b934c78150edfaedd0910fade15691a57d",
+    "knowledge/hazards/H_7D2425A6472F9ED7098B49315B_1.json": "474c88ac041c0dfc7a3748c1da3dbc79938fe7a2db48c4d138f52c2c6f99a53e",
+    "knowledge/links/K_XLSX_FT_577D19250DB9975FFC2016BC.json": "58c5ee45b245d8dbf134edfd0c00465014f83c0b0a8075953926f90a3f8cdafa",
+    "knowledge/clauses/C_7D2425A6472F9ED7098B49315B.json": "0a52c09118032ee4a0b6686711109c73f914a153c9fecc6e28d03adf04a331e0",
+    "knowledge/law-versions/L014.json": "3321d54946ea87d3622247fcaa948b7a5044d4d3ad3dcef48c08744a6c1466ce",
+    "knowledge/laws/LF_L014.json": "17db9f67b741f4f4d6f412b9d9c936d3d2d90c336fe52906a6507c686b154bca",
+    "knowledge/hazards/H_2D3CA5B35416177B6E24857C95_1.json": "368d7b792dbcaf9bd4c6ab43fd8b38715d78c081a2b72e3592dcc8600cdf2cf3",
+    "knowledge/links/K_XLSX_FT_1FB4C096AED55427FF70E695.json": "819b00f4ddee2b62fdd13b6a95ee8dfb800c2f8f282ac995e06923e13e616547",
+    "knowledge/clauses/C_2D3CA5B35416177B6E24857C95.json": "16c896a7c8253bc093e80d4cb36ee74478fa80103f3e644b8d0947652293dc03",
+    "knowledge/hazards/H_2456A494C71E6807975B908C_2.json": "3dddee4585045d2a2a1db761e4d98099b19a2500948745fd6dcd2df8d4376782",
+    "knowledge/links/K_XLSX_FT_82CC95EB82B87504CAE38C4C.json": "8edb6e9e82df38ea781d5067ab854555334cb1c1368d419d1daa28cdcfa24f35",
+    "knowledge/clauses/C_2456A494C71E6807975B908C.json": "76ebbe1d1eaef3d5daf51aff59626320379171bf037088f78c9c93e34bc4210b",
+    "knowledge/hazards/H_326EBA1B38E66D1B605FA45292_2.json": "05b3b509443f600ff9a8fbe6ff3b32dc57e67f4d85f9994726ad8f9a923fb3fc",
+    "knowledge/links/K_XLSX_FT_46E5E6F9C30634676D56CFF1.json": "c9912fe0144670b412f4c16840ebd4e88f61fe1b03aa8230d00486b952a9e630",
+    "knowledge/clauses/C_326EBA1B38E66D1B605FA45292.json": "7e448d1055640a88412986ef5de839eb8afd14253d9c2cebbb33332c03290e89",
+    "knowledge/hazards/H_7D2425A6472F9ED7098B49315B_2.json": "ac8a4b433762af573c639a6c1d918f84110a03e8cabedc159550799fe15706eb",
+    "knowledge/links/K_XLSX_FT_6C903B34201A203CA0FF9A67.json": "1aaf8343c2814eea426d766f8fb78f0bc847596de1d12b5073973c2c761a7841",
+    "knowledge/hazards/H_B8B0F1300667A2468DE9DD9B0D_1.json": "1bc317d4f2fd8d89de037186062e17f7c4d2cf25f322c3fed250480029a9f41b",
+    "knowledge/links/K_XLSX_FT_BBB9DDB1ACDEEDBC26C035FE.json": "fc876ac00fd9df13f63cba6029a4caf06838eecb3752b41350540e37bab79232",
+    "knowledge/clauses/C_B8B0F1300667A2468DE9DD9B0D.json": "901120f1a23f07957fc9d003e7b30fc7cc0e3a718d309114bf0af1fdb4699441",
+    "knowledge/hazards/H_96049FDA8623F7EF0CDA4B1F73_1.json": "541cf97a339f09f686b25608805148b173f50d62725bbc0884ac08a215b1cd0d",
+    "knowledge/links/K_XLSX_NEW14_E12CBB5117D0A65C5E2D743A.json": "f6f3c493d59b6026c7359fe870bc0f3ea528282549ad863c0703710ee72e8c0b",
+    "knowledge/clauses/C_96049FDA8623F7EF0CDA4B1F73.json": "ce99d0e3632ccd39f44ec329247a26a596817811081db7c85cfd59230d690da5",
+    "knowledge/hazards/H_326EBA1B38E66D1B605FA45292_3.json": "9f052b2284ebd305b99343db09faaa12ccedcbf11da6ccb61e8b9b4f31e19cd8",
+    "knowledge/links/K_XLSX_FT_9F4B8432CCFB5BF560B7733C.json": "a24aa743019aa936e8d2436e0e581b1df7c49214e88f5611344c56c6d6094d46",
+    "knowledge/hazards/H_32B64EF4F22A7AAC5B023DFCB5_1.json": "6cabf14c1756997c662b38ce03ff4effddc347f60b0de8f88183aa46670c1735",
+    "knowledge/links/K_XLSX_NEW14_DBC30AB58F70DABC168AB03B.json": "5d3ef3907442d0d49843053291d37f8bc8b48b6150164172f1669ff73b7dddd5",
+    "knowledge/clauses/C_32B64EF4F22A7AAC5B023DFCB5.json": "d994131cb071e1a9bdf2f3503510e4d1920c4ad9e1619469d2abe67a2bb77f5b",
+    "knowledge/hazards/H_7D2425A6472F9ED7098B49315B_3.json": "382c6bf8ae80276efaa78674b888940a732831a1f13945f7c0554d568ba09bea",
+    "knowledge/links/K_XLSX_FT_5B0C41660CF4BCDA8CE78B73.json": "d6c3c65d1a050d3ac6d0c27885aef805618cd4b03e6dfa268ea9e70509dfc93e",
+    "knowledge/hazards/H_462D38828DEBA46C8E23C177D2_3.json": "98758de593d759518c38bc1160511fe83929cad4dffef7f1a18ab5132e5b0f83",
+    "knowledge/links/K_XLSX_FT_A48D9B4D27EAC4160CBAC418.json": "9786d6a262519bef58559f0f778cfaf00ca637a34cbb0f5ae8ca42d0ca4526ba",
+    "knowledge/clauses/C_462D38828DEBA46C8E23C177D2.json": "dcc46d1ba099f30b4be0514ddc683df64fc49b7fc7691b37b6a70328417cd5cf",
+    "knowledge/hazards/H_CD607239BF80F8B8DE00715233_2.json": "944f71da7d536359fa7b018293c87ca8d87208be1d06ed5236dc82ca827cc4b9",
+    "knowledge/links/K_XLSX_FT_49680B732D1BE71FAD9A06F0.json": "ff6f05e9af3d65b3188763981f934cc87600c3cc921ffa8fb496eda274d3aa89",
+    "knowledge/clauses/C_CD607239BF80F8B8DE00715233.json": "06a73cf8ad3ed39b3deae0eddbb16ecbe0ad2ca6fe0b41482832d5433ce40447",
+    "knowledge/hazards/H_462D38828DEBA46C8E23C177D2_1.json": "e8acf4e10b125430b2dfca39b36907b17a8fa4d55f93ec0bfa112a8c0b4a25d0",
+    "knowledge/links/K_XLSX_FT_515B4C8C1BAAA974D0737B8E.json": "e6dfacbf207014767df8d19808cf88f083374276bbdcce767604651b4543fcbe",
+    "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_4.json": "8d2aaeb2bb903fe47a13c084a61ab9b54bfe165a5fff8bdd9e964b458c36bf88",
+    "knowledge/links/K_XLSX_FT_6E74ADC4FC16043C0D957206.json": "dc89e6441b2c95740bd7899623807c7b76e4b43ee44f004d8a3020c4091160bd",
+    "knowledge/hazards/H_2456A494C71E6807975B908C_1.json": "c1a4bc520ac587e135e0bbc0ddab51f6ecd49b57fd965ebd8ddd3c7797e769f7",
+    "knowledge/links/K_XLSX_FT_F2C71B5AA8ECCFF43AA7DAF5.json": "a9197e1a0a332a9433ba1da8b9b2471dda548ac3a4029890b64a8e3694c7fba9",
+    "knowledge/hazards/H_421CE6E205C8069977EB63572A_2.json": "f866305be643667be37c491d624debe8b43fc4308bf763fea0280e095f195884",
+    "knowledge/links/K_XLSX_FT_B110F77FECB2904CF1D026D7.json": "9132d2a225a6886800d29391ebd472b8599189c3f570ee21a9d9a5a959b585d7",
+    "knowledge/clauses/C_421CE6E205C8069977EB63572A.json": "436fba8bc02053b1b5832ec27ac963c2bf5f112e7b496cb1a30cf9a249e19d4c",
+    "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_5.json": "ed6019c3f053ac4865c2e6025e9bb44291a1dc68357fb0aafda325c13be3b843",
+    "knowledge/links/K_XLSX_FT_39A964379558AC3A5EFFAC24.json": "ec689f2dae1ee8adc9d7e656aa5be1a79059cac105d842f5888e5992fa5222ec",
+    "knowledge/hazards/H_462D38828DEBA46C8E23C177D2_2.json": "5afd19893c126e26936eff55997db51f3fd5ac89cca03b88e2edfcc0d070d9a3",
+    "knowledge/links/K_XLSX_FT_79114EC5A4F800DD8C81F752.json": "61b87ef7b6f95746b5b3556322f793cd0a8eab08d4b99fd8a66967803157d42f",
+    "knowledge/hazards/H_A7D8C5192004B9B1DB48E5CC_1.json": "9a7e8708a36450ccbfe365d6d7f7a1854a929ef937b9020b5730f16e5e32bafc",
+    "knowledge/links/K_XLSX_FT_90588ED32254CA77502243F3.json": "e4d5be8d1f62a5de8dcdb45188e9971b0f91a929b2f3c51c330dd9c178f03cba",
+    "knowledge/clauses/C_A7D8C5192004B9B1DB48E5CC.json": "0eabef5bcb2313e538173213c59c645b50a0fe35f6bf8fdfc14f4f35c4d66ced",
+    "knowledge/clauses/C_XLSX_FT_0C5387BD293BE4E2AC86F60A.json": "be51dc493ee58661aab26a8140b0a064f5f4a06eb323f09594df2f2fe7553f95",
+    "knowledge/clauses/C_XLSX_FT_188906852F386AD3CBF3EEC2.json": "9a5c7a48e7bd55e3748e721badd67f3d0a97806e18d86f1d833a32868a0225b9",
+    "knowledge/clauses/C_XLSX_FT_19AA1199D1A7766C31EAF1D8.json": "8d1ceff225d4d33056d65786a82aa389ae67bd49f635f84e67f66707b01db463",
+    "knowledge/clauses/C_XLSX_FT_261DD1438228E1E0CCDB1AAE.json": "54114b8241190107539bbb133e3a54a2a9539defb0cb997a48d2c12985150ed9",
+    "knowledge/clauses/C_XLSX_FT_3795752ADA83F95645BA047B.json": "f797701d1c0ab4651c612a7d136f6afe3b10676cfac8e8ad8e85c54ba187fd5c",
+    "knowledge/clauses/C_XLSX_FT_37F55EBE11A36C1683B7F3FB.json": "9571115d503491672ac8e07dc81681688c9acd63b09349e30d66e74b73f8eda2",
+    "knowledge/clauses/C_XLSX_FT_38D7F80264A65AB3E3578671.json": "6c9eb7f880284020f0a7abb7b61b089ff36776ca04889a867579496ae436eddd",
+    "knowledge/clauses/C_XLSX_FT_413C38BA20BD8583AA5698D4.json": "9a9d22e4e2ec296a6e80a8d52d891e555949c835616b40afdf11c0265b554321",
+    "knowledge/clauses/C_XLSX_FT_55B0CC78C56D741F9C23EE02.json": "9427f5420c46df878d081a81ccc01279429c0f784f07cfe34bb0effac5e96fcb",
+    "knowledge/clauses/C_XLSX_FT_55B8DD23E8E4EB1225346007.json": "90c658e854d2a1c8a96df54e000a08d4ca58f9ddb8fff46cbcdbf4f19ba1ce32",
+    "knowledge/clauses/C_XLSX_FT_588E6644EEB29D89EBAD4DBD.json": "98cbbe28dcec36ef3ff3c1e38a112fbb051300f8e8a00ed68e8472db1a66c766",
+    "knowledge/clauses/C_XLSX_FT_58BFD218BC4BBBE8D61586FB.json": "da42c6f98d6e5894d087ae529f025949ff15fe30e957f0089f7a87e7b3ce67f3",
+    "knowledge/clauses/C_XLSX_FT_5BD3B5BF9CC8300CF1766FB1.json": "fbc48a6d5d2f0a7e91c001db65dc8b50e682d7dc5f94c453b57488bcc062aadf",
+    "knowledge/clauses/C_XLSX_FT_5E6C3EC8FD8A419DAC4F95A4.json": "1b3c5b4656855760121f5dee0587ccb91201b42cb318300d8fe25446c5423cc4",
+    "knowledge/clauses/C_XLSX_FT_61652A9B7A7491323A33CC12.json": "06e48058b274cd01a84079a58a1961df53ba9c0b489d9b963313cab455ae0ae6",
+    "knowledge/clauses/C_XLSX_FT_6AB84D246588DED519986B1F.json": "c5b53626853b9e6e1bd3c708709fbbb303d45416e561d41f9fdc2a81afb66ecb",
+    "knowledge/clauses/C_XLSX_FT_90224871C689F7B4C8AF1995.json": "c56bc03bd5825daf13449d6765f248ea080aa02b9ccd26734e078f4e15d69bec",
+    "knowledge/clauses/C_XLSX_FT_9A5F6326CD4DFDF324CED86E.json": "c51509aa62e4d62a100e06139313136a2c72cf0abd9c852812480cd94cd9c373",
+    "knowledge/clauses/C_XLSX_FT_A2BF6D1D7240751D3F5C46DF.json": "8e30e54fffec47d3f03184aac70fef3dbd96df7a1a461f4530aa2651520bcc71",
+    "knowledge/clauses/C_XLSX_FT_A9E2ED0D7A52D3B15C2B861F.json": "061c09dd5fd6a655775ccd46512292693d9039227a5215515bfa4e912dc33f37",
+    "knowledge/clauses/C_XLSX_FT_C7CBCB1E528E3A6C6855FA14.json": "cae044179e724b724981b4a0915c08250ea4fe8b6db363578a96c909448110df",
+    "knowledge/clauses/C_XLSX_FT_C9999A3918DEA7D2A91EE50A.json": "6704b6ca2f8a10fa5f59b87d2240b3566e6ae460521e5bd213b98cd6b1157fd4",
+    "knowledge/clauses/C_XLSX_FT_CD70DD32C81D5F9256DBD75D.json": "2730807ca1c89957c7c3c36a454f8f0ff446605427d52e3565ad09cfe37065a5",
+    "knowledge/clauses/C_XLSX_FT_D49257E7AE9D715C9C8367F6.json": "712fa852aaca56e3ef3cded85be4456e57444b382d5e03e714cf84b653ed703e",
+    "knowledge/clauses/C_XLSX_FT_DCFCE1A3CAD588EC34DCD666.json": "000ff8c0f8d044bcc046f3ed323cd968622127db864a3eb3c8c555f1409ccac9",
+    "knowledge/clauses/C_XLSX_WEB_19C18CA57A57554C4D9A09BC.json": "4f1edc8903465255dda30cda460226cd0bbecd8ee9fde5dc14eb30683414f0c8",
+    "knowledge/clauses/C_XLSX_WEB_A0E1A4A673C2D63F3E8AC963.json": "b98853c00e78f2b337869ebc17b48e748ce000359996cd7ec0753c8126a26ec4"
+  },
+  "sourceFixtureHashes": {
+    "flange": "86e50bb0f525461da0956a8eaa27a633c139b82e70d12570628cffdcd30420db",
+    "training": "178f079f599b92c775ad7e569a8c783571105a2f4e240bf423e28895a628ff99",
+    "occupational": "bd7f47821d56181cca46349321b2daccd03664504e5b6c9154d579b841fca9a0",
+    "remaining": "17fd57fa8be23076f05e252af39b9d2f1f5f6f05e7ba1b0012465407387e5ad4"
+  },
+  "records": [
+    {
+      "id": "H_12158_9_11_1",
+      "cohort": "flange",
+      "displayCategory": "电气安全",
+      "hazard": {
+        "title": "金属设备与设备之间，管道与管道之间的连接处，未采取导线跨接或金属法兰连接等措施保证导电良好",
+        "description": "现场检查发现，金属设备与设备之间，管道与管道之间的连接处，未采取导线跨接或金属法兰连接等措施保证导电良好，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。本分支核查连接处是否保证导电良好；导线跨接、金属法兰连接等均可作为实现方式，不以未另设跨接线这一外观单独判定本分支不符合。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+        "measures": "采取导线跨接或金属法兰连接等适用措施，保证连接处导电良好；检查连接可靠性和导电连续性。使用金属法兰连接且不另接跨接线时，另核对同条螺栓数量要求；每一对法兰或螺纹接头间电阻值大于0.03Ω时，应做导线跨接。",
+        "category": "电气安全",
+        "places": [
+          "静电危险场所中气态和粉态物料相关的设备、管道连接处（按第1章范围排除不适用对象）"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_c231a40034d6dce8a2b9c8a9",
+          "clauseId": "C_12158_9_11",
+          "lawId": "LV_STD_A318C93D7F3213B292AD5946",
+          "lawName": "防止静电事故通用要求 GB 12158-2024",
+          "role": "direct",
+          "applicability": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。本分支核查连接处是否保证导电良好；导线跨接、金属法兰连接等均可作为实现方式，不以未另设跨接线这一外观单独判定本分支不符合。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+          "article": "第9.11条",
+          "quote": "金属设备与设备之间,管道与管道之间的连接处,应采取导线跨接或金属法兰连接等措施保证导电良好。如使用金属法兰连接且不另接跨接线时,应有两个以上的螺栓连接。当每一对法兰或螺纹接头间电阻值大于0.03Ω时,应做导线跨接。",
+          "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+        }
+      ]
+    },
+    {
+      "id": "H_12158_9_11_2",
+      "cohort": "flange",
+      "displayCategory": "电气安全",
+      "hazard": {
+        "title": "如使用金属法兰连接且不另接跨接线时，未有两个以上的螺栓连接",
+        "description": "现场检查发现，如使用金属法兰连接且不另接跨接线时，未有两个以上的螺栓连接，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。仅在使用金属法兰连接且不另接跨接线时，本分支核查是否有两个以上的螺栓连接；不向所有法兰或所有用电场所无条件推广。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+        "measures": "对使用金属法兰连接且不另接跨接线的连接处，保证有两个以上的螺栓连接及导电良好；每一对法兰或螺纹接头间电阻值大于0.03Ω时，仍应按同条做导线跨接。",
+        "category": "电气安全",
+        "places": [
+          "静电危险场所中气态和粉态物料相关的设备、管道连接处（按第1章范围排除不适用对象）"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_8d7b114927822b1c33d28104",
+          "clauseId": "C_12158_9_11",
+          "lawId": "LV_STD_A318C93D7F3213B292AD5946",
+          "lawName": "防止静电事故通用要求 GB 12158-2024",
+          "role": "direct",
+          "applicability": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。仅在使用金属法兰连接且不另接跨接线时，本分支核查是否有两个以上的螺栓连接；不向所有法兰或所有用电场所无条件推广。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+          "article": "第9.11条",
+          "quote": "金属设备与设备之间,管道与管道之间的连接处,应采取导线跨接或金属法兰连接等措施保证导电良好。如使用金属法兰连接且不另接跨接线时,应有两个以上的螺栓连接。当每一对法兰或螺纹接头间电阻值大于0.03Ω时,应做导线跨接。",
+          "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+        }
+      ]
+    },
+    {
+      "id": "H_12158_9_11_3",
+      "cohort": "flange",
+      "displayCategory": "电气安全",
+      "hazard": {
+        "title": "当每一对法兰或螺纹接头间电阻值大于0.03Ω时，未做导线跨接",
+        "description": "现场检查发现，当每一对法兰或螺纹接头间电阻值大于0.03Ω时，未做导线跨接，现场参数、设置或状态未达到直接依据规定的要求。",
+        "conditions": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。仅当每一对法兰或螺纹接头间电阻值大于0.03Ω时，本分支要求做导线跨接；未测电阻且仅观察到未设独立跨接线，不能据此直接认定本分支不符合。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+        "measures": "对每一对法兰或螺纹接头间电阻值大于0.03Ω的连接处做导线跨接，检查跨接连接可靠性并复核导电连续性。",
+        "category": "电气安全",
+        "places": [
+          "静电危险场所中气态和粉态物料相关的设备、管道连接处（按第1章范围排除不适用对象）"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_11d25033369ed548886a4b28",
+          "clauseId": "C_12158_9_11",
+          "lawId": "LV_STD_A318C93D7F3213B292AD5946",
+          "lawName": "防止静电事故通用要求 GB 12158-2024",
+          "role": "direct",
+          "applicability": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。仅当每一对法兰或螺纹接头间电阻值大于0.03Ω时，本分支要求做导线跨接；未测电阻且仅观察到未设独立跨接线，不能据此直接认定本分支不符合。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+          "article": "第9.11条",
+          "quote": "金属设备与设备之间,管道与管道之间的连接处,应采取导线跨接或金属法兰连接等措施保证导电良好。如使用金属法兰连接且不另接跨接线时,应有两个以上的螺栓连接。当每一对法兰或螺纹接头间电阻值大于0.03Ω时,应做导线跨接。",
+          "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+        }
+      ]
+    },
+    {
+      "id": "H034",
+      "cohort": "training",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求",
+        "description": "生产经营单位主要负责人或安全生产管理人员不具备与本单位生产经营活动相应的安全生产知识和管理能力；依法应接受主管部门考核的单位，其相关人员未按规定考核合格。",
+        "conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。",
+        "measures": "结合单位行业和风险特点核实主要负责人、安全生产管理人员应具备的知识、能力及依法需要的考核要求，组织培训考核并保留相应证明材料。",
+        "category": "安全管理",
+        "places": [
+          "通用场所",
+          "工贸企业",
+          "生产经营单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+          "clauseId": "C033",
+          "lawId": "L002",
+          "lawName": "中华人民共和国安全生产法 主席令〔2021〕第88号",
+          "role": "direct",
+          "applicability": "全国一般知识和管理能力义务；对第二十七条第二款列明单位，另核主管部门考核合格。",
+          "article": "第二十七条",
+          "quote": "第二十七条　生产经营单位的主要负责人和安全生产管理人员必须具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。\n危险物品的生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。考核不得收费。\n危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位应当有注册安全工程师从事安全生产管理工作。鼓励其他生产经营单位聘用注册安全工程师从事安全生产管理工作。注册安全工程师按专业分类管理，具体办法由国务院人力资源和社会保障部门、国务院应急管理部门会同国务院有关部门制定。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+        }
+      ]
+    },
+    {
+      "id": "H_87D36F82D5F9405BA0B0B14CB7",
+      "cohort": "training",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力",
+        "description": "生产经营单位主要负责人或者安全生产管理人员不具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。",
+        "conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。",
+        "measures": "结合本单位生产经营活动核实主要负责人、安全生产管理人员的安全生产知识和管理能力，针对不足组织培训并核验改进情况；属于《安全生产法》第二十七条第二款列明单位的相关人员，还应按规定经主管部门考核合格。不得以所有行业一律取得安全培训合格证替代具体要求。",
+        "category": "安全教育",
+        "places": [
+          "通用场所"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+          "clauseId": "C033",
+          "lawId": "L002",
+          "lawName": "中华人民共和国安全生产法 主席令〔2021〕第88号",
+          "role": "direct",
+          "applicability": "仅第二十七条第一款的一般知识和管理能力要求；第二款考核义务按列明行业单位另行触发。",
+          "article": "第二十七条",
+          "quote": "第二十七条　生产经营单位的主要负责人和安全生产管理人员必须具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。\n危险物品的生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。考核不得收费。\n危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位应当有注册安全工程师从事安全生产管理工作。鼓励其他生产经营单位聘用注册安全工程师从事安全生产管理工作。注册安全工程师按专业分类管理，具体办法由国务院人力资源和社会保障部门、国务院应急管理部门会同国务院有关部门制定。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+        }
+      ]
+    },
+    {
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_1",
+      "cohort": "training",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格",
+        "description": "经资料和执行情况核查，矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，核查其是否经主管的负有安全生产监督管理职责的部门对安全生产知识和管理能力考核合格。",
+        "measures": "核实单位行业属性和相关人员任职情况，按《江苏省安全生产条例》第二十二条第一款落实主管部门安全生产知识和管理能力考核合格要求，并留存相应证明；新任职人员的期限按该条第二款另行核查。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位及其相关人员管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_498653F95CEB7020551DDECA",
+          "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "江苏省范围；第二十二条第一款列明行业单位的主管部门知识和管理能力考核。不能只以存在危险化学品为适用门槛。",
+          "article": "第二十二条",
+          "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_2",
+      "cohort": "training",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "高危行业生产经营单位新任职的主要负责人和安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核",
+        "description": "《江苏省安全生产条例》第二十二条第一款列明单位新任职的主要负责人或者安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核。",
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职的主要负责人和安全生产管理人员，核查其是否自任职之日起六个月内通过安全生产知识和管理能力考核。",
+        "measures": "核实适用行业、人员任职日期和考核记录，落实自任职之日起六个月内通过安全生产知识和管理能力考核的要求；对已发生的超期情形依法整改并保留履行记录，不以补考回溯消除历史超期事实。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职相关人员的考核管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+          "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "江苏省范围；第二十二条第一款列明单位的新任职人员；第二款规定自任职之日起六个月内通过考核。",
+          "article": "第二十二条",
+          "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_3",
+      "cohort": "training",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训",
+        "description": "《江苏省安全生产条例》第二十二条第一款列明单位的主要负责人或者安全生产管理人员，在考核合格后未按照有关规定进行安全生产知识再培训。",
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已经考核合格的主要负责人和安全生产管理人员，按有关规定核查安全生产知识再培训；本条不自行设定统一再培训周期。",
+        "measures": "核实人员适用范围及已考核合格状态，按照有关规定组织安全生产知识再培训并留存记录；具体培训周期和学时另按实际适用规定确定。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已考核合格相关人员的再培训管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+          "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "江苏省范围；第二十二条第一款列明单位已考核合格人员的第二款再培训义务；不得扩展至所有生产经营单位或自设统一周期。",
+          "article": "第二十二条",
+          "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_A915F52BFFC99371A8A67FC150_1",
+      "cohort": "occupational",
+      "displayCategory": "职业卫生",
+      "hazard": {
+        "title": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置或配置现场急救、冲洗、应急撤离及必要泄险设施",
+        "description": "可能发生急性职业损伤的有毒、有害工作场所未按要求设置报警装置，或者未配置现场急救用品、冲洗设备、应急撤离通道或必要的泄险区。应分别记录实际缺失项目，不将全部项目写成同时缺失。",
+        "conditions": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+        "measures": "按实际缺项设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区，并检查其可用状态。",
+        "category": "职业卫生",
+        "places": [
+          "可能发生急性职业损伤的有毒、有害工作场所"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_WEB_154BCD41EA306D23833C2424",
+          "clauseId": "C_A915F52BFFC99371A8A67FC150",
+          "lawId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "lawName": "中华人民共和国职业病防治法 主席令〔2018〕第24号",
+          "role": "direct",
+          "applicability": "适用于可能发生急性职业损伤的有毒、有害工作场所，用人单位承担第二十五条第一款所列报警、现场急救、冲洗、应急撤离及必要泄险区配置义务。仅有职业病危害因素不自动满足“可能发生急性职业损伤”的触发条件；泄险区保留“必要”条件。",
+          "article": "第二十五条",
+          "quote": "第二十五条对可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区。 对放射工作场所和放射性同位素的运输、贮存，用人单位必须配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。 对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f212ea20a17f8"
+        }
+      ]
+    },
+    {
+      "id": "H_A915F52BFFC99371A8A67FC150_2",
+      "cohort": "occupational",
+      "displayCategory": "职业卫生",
+      "hazard": {
+        "title": "放射工作场所或放射性同位素运输、贮存未配置防护设备或报警装置，或未保证接触放射线的工作人员佩戴个人剂量计",
+        "description": "放射工作场所或放射性同位素运输、贮存环节未配置防护设备或报警装置，或者未保证接触放射线的工作人员佩戴个人剂量计。按实际缺失义务记录，不将正常佩戴写成隐患。",
+        "conditions": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+        "measures": "配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；复核相应防护和报警功能及个人剂量计佩戴情况。",
+        "category": "职业卫生",
+        "places": [
+          "放射工作场所",
+          "放射性同位素运输、贮存场所或环节"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_WEB_5224ED8E3B840D52C4BF7CF3",
+          "clauseId": "C_A915F52BFFC99371A8A67FC150",
+          "lawId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "lawName": "中华人民共和国职业病防治法 主席令〔2018〕第24号",
+          "role": "direct",
+          "applicability": "适用于放射工作场所及放射性同位素的运输、贮存，用人单位应配置防护设备和报警装置，并保证接触放射线的工作人员佩戴个人剂量计；不以存在机械运动、夹卷、剪切等机械危险作为适用前提。",
+          "article": "第二十五条",
+          "quote": "第二十五条对可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区。 对放射工作场所和放射性同位素的运输、贮存，用人单位必须配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。 对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f212ea20a17f8"
+        }
+      ]
+    },
+    {
+      "id": "H_A915F52BFFC99371A8A67FC150_3",
+      "cohort": "occupational",
+      "displayCategory": "职业卫生",
+      "hazard": {
+        "title": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位未进行经常性的维护、检修，未定期检测其性能和效果",
+        "description": "用人单位未对职业病防护设备、应急救援设施或个人使用的职业病防护用品进行经常性的维护、检修，或者未定期检测其性能和效果。",
+        "conditions": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+        "measures": "对职业病防护设备、应急救援设施和个人使用的职业病防护用品进行经常性维护、检修和定期性能检测，发现失效立即修复或更换，不得擅自拆除或停用。",
+        "category": "职业卫生",
+        "places": [
+          "用人单位职业病防护设备、应急救援设施及个人使用的职业病防护用品使用、管理场所"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_8B328E39B6BA6BB5DF859627",
+          "clauseId": "C_A915F52BFFC99371A8A67FC150",
+          "lawId": "LV_NPC_ff8080816f135f46016f212ea20a17f8",
+          "lawName": "中华人民共和国职业病防治法 主席令〔2018〕第24号",
+          "role": "direct",
+          "applicability": "适用于用人单位的职业病防护设备、应急救援设施和个人使用的职业病防护用品的维护、检修、性能和效果检测及保持正常状态；不扩展为所有普通设备设施。",
+          "article": "第二十五条",
+          "quote": "第二十五条对可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置，配置现场急救用品、冲洗设备、应急撤离通道和必要的泄险区。 对放射工作场所和放射性同位素的运输、贮存，用人单位必须配置防护设备和报警装置，保证接触放射线的工作人员佩戴个人剂量计。 对职业病防护设备、应急救援设施和个人使用的职业病防护用品，用人单位应当进行经常性的维护、检修，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f212ea20a17f8"
+        }
+      ]
+    },
+    {
+      "id": "H_AAE1B191FB54FF6FC331BB7DD2_1",
+      "cohort": "remaining",
+      "displayCategory": "消防安全",
+      "hazard": {
+        "title": "同一建筑物由两个以上单位管理或者使用的，未明确各方的消防安全责任",
+        "description": "现场检查发现，同一建筑物由两个以上单位管理或者使用的，未明确各方的消防安全责任，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "仅适用于同一建筑物由两个以上单位管理或者使用的情形，本项核查各方消防安全责任的明确情况及共用部位统一管理；住宅区物业服务职责属于第十八条第二款的另一分支。",
+        "measures": "明确同一建筑物各管理、使用单位的消防安全责任，并确定责任人对共用的疏散通道、安全出口、建筑消防设施和消防车通道进行统一管理。",
+        "category": "消防安全",
+        "places": [
+          "两个以上单位管理或者使用的同一建筑物"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_440329DE431BE1CFBA739B6B",
+          "clauseId": "C_AAE1B191FB54FF6FC331BB7DD2",
+          "lawId": "L001",
+          "lawName": "中华人民共和国消防法 主席令〔2021〕第81号",
+          "role": "direct",
+          "applicability": "仅适用于同一建筑物由两个以上单位管理或者使用的情形，本项核查各方消防安全责任的明确情况及共用部位统一管理；住宅区物业服务职责属于第十八条第二款的另一分支。",
+          "article": "第十八条",
+          "quote": "第十八条同一建筑物由两个以上单位管理或者使用的，应当明确各方的消防安全责任，并确定责任人对共用的疏散通道、安全出口、建筑消防设施和消防车通道进行统一管理。 住宅区的物业服务企业应当对管理区域内的共用消防设施进行维护管理，提供消防安全防范服务。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a"
+        }
+      ]
+    },
+    {
+      "id": "H_D7F4B2B8F70D67B625BE3E5E95_3",
+      "cohort": "remaining",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "生产经营单位委托培训的，未对培训工作进行监督或者未保证培训质量",
+        "description": "江苏省生产经营单位委托开展安全生产培训时，存在未对培训工作进行监督或者未保证培训质量的情形；受托机构是否具备培训条件应另行核实，不影响委托方监督和质量责任。",
+        "conditions": "适用于江苏省行政区域内生产经营单位委托开展安全生产培训的情形；委托方应对培训工作进行监督并保证培训质量。另应选择具备安全生产培训条件的机构，不能因受托机构不具备培训条件而免除委托方的监督和质量责任。",
+        "measures": "委托具备安全生产培训条件的机构开展培训，对培训工作进行监督，保证培训质量；核对委托内容与实际培训实施情况。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内生产经营单位委托安全生产培训活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_4DFAA1BFDA03ED818085BC89",
+          "clauseId": "C_D7F4B2B8F70D67B625BE3E5E95",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位委托开展安全生产培训的情形；委托方应对培训工作进行监督并保证培训质量。另应选择具备安全生产培训条件的机构，不能因受托机构不具备培训条件而免除委托方的监督和质量责任。",
+          "article": "第二十一条",
+          "quote": "第二十一条生产经营单位应当依法对下列人员在上岗前进行安全操作规程和安全操作技能的教育和培训，并做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业： （一）新进从业人员； （二）离岗六个月以上或者换岗的从业人员； （三）涉及采用新工艺、新技术、新材料或者使用新设备的从业人员。 生产经营单位可以自主组织培训，也可以委托具备安全生产培训条件的机构进行培训。生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。 从业人员应当按照要求接受安全生产教育和培训，掌握本职工作所需的安全生产知识，提高安全操作技能，增强事故预防和应急处理能力。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_D7F4B2B8F70D67B625BE3E5E95_1",
+      "cohort": "remaining",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "生产经营单位未依法对相关上岗人员进行安全操作规程和安全操作技能的教育培训，未做好记录和考核",
+        "description": "经资料及履职情况核查，生产经营单位未依法对相关上岗人员进行安全操作规程和安全操作技能的教育培训，未做好记录和考核，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于江苏省行政区域内生产经营单位的新进从业人员、离岗六个月以上或者换岗的从业人员，以及涉及采用新工艺、新技术、新材料或者使用新设备的从业人员；核查其上岗前安全操作规程和安全操作技能教育培训、记录及考核。",
+        "measures": "对上述三类从业人员依法在上岗前开展安全操作规程和安全操作技能的教育培训，做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内上述三类从业人员上岗前教育培训活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_1938452B434516338BA7A204",
+          "clauseId": "C_D7F4B2B8F70D67B625BE3E5E95",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位的新进从业人员、离岗六个月以上或者换岗的从业人员，以及涉及采用新工艺、新技术、新材料或者使用新设备的从业人员；核查其上岗前安全操作规程和安全操作技能教育培训、记录及考核。",
+          "article": "第二十一条",
+          "quote": "第二十一条生产经营单位应当依法对下列人员在上岗前进行安全操作规程和安全操作技能的教育和培训，并做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业： （一）新进从业人员； （二）离岗六个月以上或者换岗的从业人员； （三）涉及采用新工艺、新技术、新材料或者使用新设备的从业人员。 生产经营单位可以自主组织培训，也可以委托具备安全生产培训条件的机构进行培训。生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。 从业人员应当按照要求接受安全生产教育和培训，掌握本职工作所需的安全生产知识，提高安全操作技能，增强事故预防和应急处理能力。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_1201F11443914660BCC291055B",
+      "cohort": "remaining",
+      "displayCategory": "消防安全",
+      "hazard": {
+        "title": "具有火灾、爆炸危险的场所违规吸烟、使用明火",
+        "description": "在具有火灾、爆炸危险的场所发现吸烟，或者明火作业不符合施工等特殊情况的事先审批、消防安全措施及作业人员遵守消防安全规定等要求。",
+        "conditions": "适用于经物质危险特性和现场条件核明确有火灾、爆炸危险的场所，不能仅凭存放任意化学品认定。因施工等特殊情况需要使用明火作业的，应核实是否按规定事先办理审批手续、采取相应消防安全措施，作业人员是否遵守消防安全规定；符合该法定分支的用火不能仅因使用明火判为违规。",
+        "measures": "制止在具有火灾、爆炸危险的场所吸烟及违规使用明火。因施工等特殊情况确需明火作业的，按规定事先办理审批手续，采取相应的消防安全措施，作业人员遵守消防安全规定。",
+        "category": "消防安全",
+        "places": [
+          "具有火灾、爆炸危险的场所"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_08D430A73A95A65640FD0F8D",
+          "clauseId": "C074",
+          "lawId": "L001",
+          "lawName": "中华人民共和国消防法 主席令〔2021〕第81号",
+          "role": "direct",
+          "applicability": "适用于经物质危险特性和现场条件核明确有火灾、爆炸危险的场所，不能仅凭存放任意化学品认定。因施工等特殊情况需要使用明火作业的，应核实是否按规定事先办理审批手续、采取相应消防安全措施，作业人员是否遵守消防安全规定；符合该法定分支的用火不能仅因使用明火判为违规。",
+          "article": "第二十一条第一款",
+          "quote": "第二十一条　禁止在具有火灾、爆炸危险的场所吸烟、使用明火。因施工等特殊情况需要使用明火作业的，应当按照规定事先办理审批手续，采取相应的消防安全措施；作业人员应当遵守消防安全规定。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a"
+        }
+      ]
+    },
+    {
+      "id": "H_301DCA3CAE2A494C399B323116_2",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "生产经营单位委托其他单位进行危险作业的，未在作业前与受托方签订安全生产管理协议并明确、落实安全生产管理责任",
+        "description": "经资料及履职情况核查，生产经营单位委托其他单位进行危险作业的，未在作业前与受托方签订安全生产管理协议并明确、落实安全生产管理责任，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于江苏省行政区域内生产经营单位委托其他单位开展《江苏省安全生产条例》第二十九条所列爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业；本项核查作业前安全生产管理协议以及该条第一款安全要求的明确、落实。",
+        "measures": "在危险作业前与受托方签订安全生产管理协议，明确并落实第二十九条第一款规定的风险评估、防范与应急措施、人员资格与防护、设施器材与现场指挥监督、危险告知签字确认、紧急停工撤人要求；对受托方统一协调、管理并加强监督检查。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内受委托危险作业管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_CAT_DE351B7F341B2DEB25E648B3",
+          "clauseId": "C_301DCA3CAE2A494C399B323116",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位委托其他单位开展《江苏省安全生产条例》第二十九条所列爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业；本项核查作业前安全生产管理协议以及该条第一款安全要求的明确、落实。",
+          "article": "第二十九条",
+          "quote": "第二十九条生产经营单位进行爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业，应当执行有关危险作业管理制度，并遵守下列规定： （一）对作业安全风险进行评估，确认现场作业条件符合安全作业要求； （二）根据安全风险明确安全防范措施和现场应急处置措施； （三）确认作业人员的上岗资格以及劳动防护用品的配备、使用符合安全作业要求； （四）配备相应的安全设施和应急救援器材，设置作业现场的安全区域，确定专人现场统一指挥和监督； （五）在危险作业前向作业人员告知危险因素、作业安全要求和现场应急处置措施，并经双方现场签字确认； （六）发现直接危及人身安全的紧急情况时，按照现场应急处置措施停止作业、撤出人员。 生产经营单位委托其他单位进行危险作业的，应当在作业前与受托方签订安全生产管理协议，明确并落实前款规定，对受托方安全生产工作统一协调、管理，并加强监督检查。生产经营单位不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_301DCA3CAE2A494C399B323116_3",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "生产经营单位将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人",
+        "description": "经资料、记录及履职情况核查，生产经营单位将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
+        "conditions": "适用于江苏省行政区域内生产经营单位委托开展第二十九条所列爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业；应按实际作业类型核实受托主体安全生产条件及相应资质，不能以一般外包关系代替危险作业触发条件。",
+        "measures": "不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人；核实相应作业所需条件和资质，改由符合要求的主体承接。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内危险作业受托主体选择及管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_336835C6F2669D6724FB5846",
+          "clauseId": "C_301DCA3CAE2A494C399B323116",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位委托开展第二十九条所列爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业；应按实际作业类型核实受托主体安全生产条件及相应资质，不能以一般外包关系代替危险作业触发条件。",
+          "article": "第二十九条",
+          "quote": "第二十九条生产经营单位进行爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业，应当执行有关危险作业管理制度，并遵守下列规定： （一）对作业安全风险进行评估，确认现场作业条件符合安全作业要求； （二）根据安全风险明确安全防范措施和现场应急处置措施； （三）确认作业人员的上岗资格以及劳动防护用品的配备、使用符合安全作业要求； （四）配备相应的安全设施和应急救援器材，设置作业现场的安全区域，确定专人现场统一指挥和监督； （五）在危险作业前向作业人员告知危险因素、作业安全要求和现场应急处置措施，并经双方现场签字确认； （六）发现直接危及人身安全的紧急情况时，按照现场应急处置措施停止作业、撤出人员。 生产经营单位委托其他单位进行危险作业的，应当在作业前与受托方签订安全生产管理协议，明确并落实前款规定，对受托方安全生产工作统一协调、管理，并加强监督检查。生产经营单位不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_7FCC0C85E0C313B5599EBC67_1",
+      "cohort": "remaining",
+      "displayCategory": "危险化学品与危险物质",
+      "hazard": {
+        "title": "生产、储存危险化学品的企业未按照国家标准或者行业标准装备自动控制系统和安全仪表系统，未建立安全风险监测预警系统",
+        "description": "生产、储存危险化学品的企业存在未按适用国家标准或者行业标准装备自动控制系统、安全仪表系统，或者未建立安全风险监测预警系统的情形；应结合适用标准和实际系统配置、功能逐项核实。",
+        "conditions": "本项限生产、储存危险化学品的企业，按适用的国家标准或者行业标准核查自动控制系统、安全仪表系统和安全风险监测预警系统及与政府有关部门互联互通要求。第五十二条对使用危险化学品从事生产的企业另有适用扩展，本项不据此覆盖任意危险化学品使用单位。",
+        "measures": "按照适用的国家标准或者行业标准装备自动控制系统和安全仪表系统，建立安全风险监测预警系统，并与政府有关部门实现互联互通；结合适用标准和系统功能核实落实情况。",
+        "category": "危险化学品与危险物质",
+        "places": [
+          "危险化学品生产、储存企业的相关工艺设施与系统"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_E3501F2F18CD5852A51AB58A",
+          "clauseId": "C_7FCC0C85E0C313B5599EBC67",
+          "lawId": "LV_HAZCHEM_LAW",
+          "lawName": "中华人民共和国危险化学品安全法 主席令第六十四号",
+          "role": "direct",
+          "applicability": "本项限生产、储存危险化学品的企业，按适用的国家标准或者行业标准核查自动控制系统、安全仪表系统和安全风险监测预警系统及与政府有关部门互联互通要求。第五十二条对使用危险化学品从事生产的企业另有适用扩展，本项不据此覆盖任意危险化学品使用单位。",
+          "article": "第三十六条",
+          "quote": "生产、储存危险化学品的企业应当按照国家标准或者行业标准装备自动控制系统和安全仪表系统，建立安全风险监测预警系统，并与政府有关部门实现互联互通。",
+          "sourceUrl": "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html"
+        }
+      ]
+    },
+    {
+      "id": "H_7D2425A6472F9ED7098B49315B_1",
+      "cohort": "remaining",
+      "displayCategory": "特种设备",
+      "hazard": {
+        "title": "移动式压力容器、气瓶充装单位不具备规定条件或者未经许可，擅自从事充装活动",
+        "description": "移动式压力容器、气瓶充装单位存在不具备第四十九条第一款规定的条件，或者未经负责特种设备安全监督管理的部门许可而从事充装活动的情形；应分别核实法定条件及许可情况。",
+        "conditions": "适用于法定特种设备监管范围内的移动式压力容器、气瓶充装单位；应具备与充装和管理相适应的人员、充装设备、检测手段、场地厂房、器具、安全设施及健全的充装管理制度、责任制度、处理措施，并取得负责特种设备安全监督管理的部门许可。",
+        "measures": "停止未满足法定条件或者未经许可的充装活动；落实第四十九条第一款三项规定的人员、设备设施场所及制度条件，经负责特种设备安全监督管理的部门许可后方可从事充装活动。",
+        "category": "特种设备",
+        "places": [
+          "移动式压力容器、气瓶充装单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_577D19250DB9975FFC2016BC",
+          "clauseId": "C_7D2425A6472F9ED7098B49315B",
+          "lawId": "L014",
+          "lawName": "中华人民共和国特种设备安全法 主席令〔2013〕第4号",
+          "role": "direct",
+          "applicability": "适用于法定特种设备监管范围内的移动式压力容器、气瓶充装单位；应具备与充装和管理相适应的人员、充装设备、检测手段、场地厂房、器具、安全设施及健全的充装管理制度、责任制度、处理措施，并取得负责特种设备安全监督管理的部门许可。",
+          "article": "第四十九条",
+          "quote": "第四十九条移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动： （一）有与充装和管理相适应的管理人员和技术人员； （二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施； （三）有健全的充装管理制度、责任制度、处理措施。 充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。 气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+        }
+      ]
+    },
+    {
+      "id": "H_2D3CA5B35416177B6E24857C95_1",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作",
+        "description": "现场检查发现，危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "仅适用于江苏省行政区域内危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位；按照国家有关规定核实相关专业注册安全工程师配置，不扩展为所有危险化学品经营、使用单位的一般义务。",
+        "measures": "按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，核实人员专业、资格和实际履职。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内危险物品生产、储存、装卸单位",
+          "江苏省行政区域内矿山、金属冶炼单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_1FB4C096AED55427FF70E695",
+          "clauseId": "C_2D3CA5B35416177B6E24857C95",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "仅适用于江苏省行政区域内危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位；按照国家有关规定核实相关专业注册安全工程师配置，不扩展为所有危险化学品经营、使用单位的一般义务。",
+          "article": "第十八条",
+          "quote": "第十八条危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_2456A494C71E6807975B908C_2",
+      "cohort": "remaining",
+      "displayCategory": "危险化学品与危险物质",
+      "hazard": {
+        "title": "生产、储存危险化学品的单位，关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备等",
+        "description": "现场检查发现，生产、储存危险化学品的单位，关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备等，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "本项限生产、储存危险化学品的单位，核查直接关系生产安全的监控、报警、防护、救生设施、设备及其相关数据、信息；第三十八条第二款禁止关闭、破坏或以其他方式影响正常使用，以及篡改、隐瞒、销毁相关数据。第五十二条对使用单位的扩展需另行对应核查，本项不覆盖任意其他危险物质活动。",
+        "measures": "停止关闭、破坏或以其他方式影响相关安全设施设备正常使用的行为，恢复正常功能；不得篡改、隐瞒、销毁其相关数据、信息，并核实设施功能与数据保存情况。",
+        "category": "危险化学品与危险物质",
+        "places": [
+          "危险化学品生产、储存单位的相关安全设施设备"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_82CC95EB82B87504CAE38C4C",
+          "clauseId": "C_2456A494C71E6807975B908C",
+          "lawId": "LV_HAZCHEM_LAW",
+          "lawName": "中华人民共和国危险化学品安全法 主席令第六十四号",
+          "role": "direct",
+          "applicability": "本项限生产、储存危险化学品的单位，核查直接关系生产安全的监控、报警、防护、救生设施、设备及其相关数据、信息；第三十八条第二款禁止关闭、破坏或以其他方式影响正常使用，以及篡改、隐瞒、销毁相关数据。第五十二条对使用单位的扩展需另行对应核查，本项不覆盖任意其他危险物质活动。",
+          "article": "第三十八条",
+          "quote": "生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
+          "sourceUrl": "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html"
+        }
+      ]
+    },
+    {
+      "id": "H_326EBA1B38E66D1B605FA45292_2",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员",
+        "description": "江苏省第十六条第一款列明行业以外、从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员；应结合行业及计入被派遣劳动者后的人数核实适用分支。",
+        "conditions": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员超过一百人，被派遣劳动者计入从业人员总数。国家对建筑施工等劳动密集型行业另有机构或专职人员规定的，从其规定。",
+        "measures": "设置安全生产管理机构或者配备专职安全生产管理人员；结合单位行业和计入被派遣劳动者后的从业人数核查法定配置，国家另有规定的按其规定执行。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内从业人员超过一百人的上述其他生产经营单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_46E5E6F9C30634676D56CFF1",
+          "clauseId": "C_326EBA1B38E66D1B605FA45292",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员超过一百人，被派遣劳动者计入从业人员总数。国家对建筑施工等劳动密集型行业另有机构或专职人员规定的，从其规定。",
+          "article": "第十六条",
+          "quote": "第十六条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位，应当按照下列规定设置安全生产管理机构、配备专职安全生产管理人员： （一）从业人员不足三十人的，配备一名以上专职安全生产管理人员； （二）从业人员三十人以上不足一百人的，设置专门的安全生产管理机构，并配备两名以上专职安全生产管理人员； （三）从业人员一百人以上不足三百人的，设置专门的安全生产管理机构，并配备三名以上专职安全生产管理人员； （四）从业人员三百人以上的，设置专门的安全生产管理机构，并按照不低于从业人员百分之一的比例配备专职安全生产管理人员。 前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；从业人员一百人以下的，应当配备专职或者兼职的安全生产管理人员。从业人员二十人以下且位置相邻、行业相近、业态相似的生产经营单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式开展安全生产管理工作，但是保证安全生产的责任仍由本单位负责。 生产经营单位使用被派遣劳动者的，被派遣劳动者数量计入生产经营单位从业人员总数。 国家对建筑施工等劳动密集型行业在设立安全生产管理机构或者配备专职安全生产管理人员方面另有规定的，按照其规定执行。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_7D2425A6472F9ED7098B49315B_2",
+      "cohort": "remaining",
+      "displayCategory": "特种设备",
+      "hazard": {
+        "title": "充装单位未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装",
+        "description": "移动式压力容器、气瓶充装单位存在未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装的情形；应明确实际缺失的制度或违规充装事实。",
+        "conditions": "适用于法定移动式压力容器、气瓶充装单位的充装活动；本项核查充装前后检查、记录制度及禁止对不符合安全技术规范要求的容器、气瓶充装。",
+        "measures": "建立并落实充装前后的检查、记录制度；禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装，核查检查结果与充装记录。",
+        "category": "特种设备",
+        "places": [
+          "移动式压力容器、气瓶充装作业及检查记录管理"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_6C903B34201A203CA0FF9A67",
+          "clauseId": "C_7D2425A6472F9ED7098B49315B",
+          "lawId": "L014",
+          "lawName": "中华人民共和国特种设备安全法 主席令〔2013〕第4号",
+          "role": "direct",
+          "applicability": "适用于法定移动式压力容器、气瓶充装单位的充装活动；本项核查充装前后检查、记录制度及禁止对不符合安全技术规范要求的容器、气瓶充装。",
+          "article": "第四十九条",
+          "quote": "第四十九条移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动： （一）有与充装和管理相适应的管理人员和技术人员； （二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施； （三）有健全的充装管理制度、责任制度、处理措施。 充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。 气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+        }
+      ]
+    },
+    {
+      "id": "H_B8B0F1300667A2468DE9DD9B0D_1",
+      "cohort": "remaining",
+      "displayCategory": "特种设备",
+      "hazard": {
+        "title": "特种设备生产单位不具备规定条件或者未经许可，擅自从事特种设备生产活动",
+        "description": "特种设备生产单位存在不具备第十八条规定的法定生产条件，或者未经负责特种设备安全监督管理的部门许可而从事相应生产活动的情形；应按分类监督管理要求分别核实条件和许可范围。",
+        "conditions": "适用于依法纳入特种设备监管范围的生产单位和相应生产活动，按分类监督管理原则确认许可范围；核查与生产相适应的专业技术人员、设备设施和工作场所，以及健全的质量保证、安全管理和岗位责任等制度。",
+        "measures": "停止不具备法定条件或者未经许可的特种设备生产活动；落实专业技术人员、设备设施场所及质量保证、安全管理、岗位责任制度等条件，经负责特种设备安全监督管理的部门许可后方可从事相应生产活动。",
+        "category": "特种设备",
+        "places": [
+          "依法实施特种设备生产许可的生产单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_BBB9DDB1ACDEEDBC26C035FE",
+          "clauseId": "C_B8B0F1300667A2468DE9DD9B0D",
+          "lawId": "L014",
+          "lawName": "中华人民共和国特种设备安全法 主席令〔2013〕第4号",
+          "role": "direct",
+          "applicability": "适用于依法纳入特种设备监管范围的生产单位和相应生产活动，按分类监督管理原则确认许可范围；核查与生产相适应的专业技术人员、设备设施和工作场所，以及健全的质量保证、安全管理和岗位责任等制度。",
+          "article": "第十八条",
+          "quote": "第十八条国家按照分类监督管理的原则对特种设备生产实行许可制度。特种设备生产单位应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事生产活动： （一）有与生产相适应的专业技术人员； （二）有与生产相适应的设备、设施和工作场所； （三）有健全的质量保证、安全管理和岗位责任等制度。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+        }
+      ]
+    },
+    {
+      "id": "H_96049FDA8623F7EF0CDA4B1F73_1",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "主要负责人未履行《江苏省安全生产条例》第15条规定的地方附加安全生产职责",
+        "description": "江苏省生产经营单位主要负责人存在未履行第十五条所列职责的情形，应逐项明确缺失职责及相应季度、年度或事故发生触发条件。",
+        "conditions": "适用于江苏省行政区域内生产经营单位的主要负责人，分别核查第十五条五项地方附加职责：每季度至少组织并参与一次全面检查；每年至少组织并参与一次事故应急救援演练；每年至少组织一次全面安全风险辨识并完善管控措施；发生生产安全事故时迅速抢救、及时如实报告并做好善后和配合调查；每年向从业人员报告或通报安全生产工作及本人履职情况。",
+        "measures": "按第十五条五项职责分别落实季度全面检查及问题研究解决、年度应急救援演练、年度全面安全风险辨识及管控措施、事故发生后的抢救报告善后与配合调查、年度履职报告或通报并接受从业人员监督；按各项频次或事故触发条件核查。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内生产经营单位主要负责人履职管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_E12CBB5117D0A65C5E2D743A",
+          "clauseId": "C_96049FDA8623F7EF0CDA4B1F73",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位的主要负责人，分别核查第十五条五项地方附加职责：每季度至少组织并参与一次全面检查；每年至少组织并参与一次事故应急救援演练；每年至少组织一次全面安全风险辨识并完善管控措施；发生生产安全事故时迅速抢救、及时如实报告并做好善后和配合调查；每年向从业人员报告或通报安全生产工作及本人履职情况。",
+          "article": "第十五条",
+          "quote": "第十五条生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责： （一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题； （二）每年至少组织并参与一次生产安全事故应急救援演练； （三）每年至少组织一次全面的安全风险辨识，制定完善管控措施； （四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理； （五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_326EBA1B38E66D1B605FA45292_3",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "从业人员一百人以下的其他生产经营单位，未按规定落实安全生产管理人员配置或者符合条件的管理方式",
+        "description": "江苏省第十六条第一款列明行业以外、从业人员一百人以下的生产经营单位，未按第二款适用分支落实专职或兼职安全生产管理人员配置，或者符合条件的联合体、委托服务等安全管理方式。",
+        "conditions": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员一百人以下，被派遣劳动者计入从业人员总数。一般应配备专职或者兼职安全生产管理人员；从业人员二十人以下且位置相邻、行业相近、业态相似的单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式，但保证安全生产的责任仍由本单位负责。国家另有机构或专职人员规定的，从其规定。",
+        "measures": "按适用分支配备专职或者兼职安全生产管理人员；对二十人以下且位置相邻、行业相近、业态相似的单位，可以依法采取互助帮扶联合体、委托相关机构提供安全生产管理服务等方式，保证安全生产的责任仍由本单位负责。核算从业人数时计入被派遣劳动者，国家另有规定的从其规定。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内从业人员一百人以下的上述其他生产经营单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_9F4B8432CCFB5BF560B7733C",
+          "clauseId": "C_326EBA1B38E66D1B605FA45292",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员一百人以下，被派遣劳动者计入从业人员总数。一般应配备专职或者兼职安全生产管理人员；从业人员二十人以下且位置相邻、行业相近、业态相似的单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式，但保证安全生产的责任仍由本单位负责。国家另有机构或专职人员规定的，从其规定。",
+          "article": "第十六条",
+          "quote": "第十六条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位，应当按照下列规定设置安全生产管理机构、配备专职安全生产管理人员： （一）从业人员不足三十人的，配备一名以上专职安全生产管理人员； （二）从业人员三十人以上不足一百人的，设置专门的安全生产管理机构，并配备两名以上专职安全生产管理人员； （三）从业人员一百人以上不足三百人的，设置专门的安全生产管理机构，并配备三名以上专职安全生产管理人员； （四）从业人员三百人以上的，设置专门的安全生产管理机构，并按照不低于从业人员百分之一的比例配备专职安全生产管理人员。 前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；从业人员一百人以下的，应当配备专职或者兼职的安全生产管理人员。从业人员二十人以下且位置相邻、行业相近、业态相似的生产经营单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式开展安全生产管理工作，但是保证安全生产的责任仍由本单位负责。 生产经营单位使用被派遣劳动者的，被派遣劳动者数量计入生产经营单位从业人员总数。 国家对建筑施工等劳动密集型行业在设立安全生产管理机构或者配备专职安全生产管理人员方面另有规定的，按照其规定执行。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_32B64EF4F22A7AAC5B023DFCB5_1",
+      "cohort": "remaining",
+      "displayCategory": "消防安全",
+      "hazard": {
+        "title": "应建立单位专职消防队的单位，未依法建立承担本单位火灾扑救工作的专职消防队",
+        "description": "属于消防法第三十九条所列五类单位之一，但未依法建立承担本单位火灾扑救工作的单位专职消防队。具体范围包括大型核设施单位、大型发电厂、民用机场、主要港口；生产、储存易燃易爆危险品的大型企业；储备可燃的重要物资的大型仓库、基地；前三类以外火灾危险性较大且距离国家综合性消防救援队较远的其他大型企业；距离国家综合性消防救援队较远且被列为全国重点文物保护单位的古建筑群管理单位。",
+        "conditions": "仅适用于消防法第三十九条五类单位：大型核设施单位、大型发电厂、民用机场、主要港口；生产、储存易燃易爆危险品的大型企业；储备可燃的重要物资的大型仓库、基地；前三类以外火灾危险性较大且距离国家综合性消防救援队较远的其他大型企业；距离国家综合性消防救援队较远且被列为全国重点文物保护单位的古建筑群管理单位。应分别核实大型、物资可燃性、火灾危险性、距离及文物保护级别等相应条件。",
+        "measures": "经核实属于第三十九条任一法定类型的单位，应建立单位专职消防队，承担本单位的火灾扑救工作。",
+        "category": "消防安全",
+        "places": [
+          "消防法第三十九条五类法定专职消防队设立单位"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_NEW14_DBC30AB58F70DABC168AB03B",
+          "clauseId": "C_32B64EF4F22A7AAC5B023DFCB5",
+          "lawId": "L001",
+          "lawName": "中华人民共和国消防法 主席令〔2021〕第81号",
+          "role": "direct",
+          "applicability": "仅适用于消防法第三十九条五类单位：大型核设施单位、大型发电厂、民用机场、主要港口；生产、储存易燃易爆危险品的大型企业；储备可燃的重要物资的大型仓库、基地；前三类以外火灾危险性较大且距离国家综合性消防救援队较远的其他大型企业；距离国家综合性消防救援队较远且被列为全国重点文物保护单位的古建筑群管理单位。应分别核实大型、物资可燃性、火灾危险性、距离及文物保护级别等相应条件。",
+          "article": "第三十九条",
+          "quote": "第三十九条下列单位应当建立单位专职消防队，承担本单位的火灾扑救工作： （一）大型核设施单位、大型发电厂、民用机场、主要港口； （二）生产、储存易燃易爆危险品的大型企业； （三）储备可燃的重要物资的大型仓库、基地； （四）第一项、第二项、第三项规定以外的火灾危险性较大、距离国家综合性消防救援队较远的其他大型企业； （五）距离国家综合性消防救援队较远、被列为全国重点文物保护单位的古建筑群的管理单位。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a"
+        }
+      ]
+    },
+    {
+      "id": "H_7D2425A6472F9ED7098B49315B_3",
+      "cohort": "remaining",
+      "displayCategory": "特种设备",
+      "hazard": {
+        "title": "气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶，未对气体使用者进行气瓶安全使用指导",
+        "description": "现场检查发现，气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶，未对气体使用者进行气瓶安全使用指导，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于法定气瓶充装单位向气体使用者提供气瓶的活动；核查所供气瓶符合安全技术规范以及气瓶安全使用指导，不能将充装单位义务直接转成所有气体使用者的义务。",
+        "measures": "向气体使用者提供符合安全技术规范要求的气瓶，并对气体使用者进行气瓶安全使用指导；按照安全技术规范要求办理气瓶使用登记，及时申报定期检验。",
+        "category": "特种设备",
+        "places": [
+          "气瓶充装单位供瓶及安全使用指导活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_5B0C41660CF4BCDA8CE78B73",
+          "clauseId": "C_7D2425A6472F9ED7098B49315B",
+          "lawId": "L014",
+          "lawName": "中华人民共和国特种设备安全法 主席令〔2013〕第4号",
+          "role": "direct",
+          "applicability": "适用于法定气瓶充装单位向气体使用者提供气瓶的活动；核查所供气瓶符合安全技术规范以及气瓶安全使用指导，不能将充装单位义务直接转成所有气体使用者的义务。",
+          "article": "第四十九条",
+          "quote": "第四十九条移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动： （一）有与充装和管理相适应的管理人员和技术人员； （二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施； （三）有健全的充装管理制度、责任制度、处理措施。 充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。 气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+        }
+      ]
+    },
+    {
+      "id": "H_462D38828DEBA46C8E23C177D2_3",
+      "cohort": "remaining",
+      "displayCategory": "应急与事故管理",
+      "hazard": {
+        "title": "承包、承租单位发生生产安全事故时，未按规定及时报告属地应急管理部门和有关部门，或者未通知发包方、出租方",
+        "description": "江苏省承包方、承租方发生生产安全事故时，存在未按有关规定及时报告属地应急管理部门和有关部门，或者未通知发包方、出租方的情形；应分别核实报告、通知对象及实际履行情况。",
+        "conditions": "适用于江苏省行政区域内承包方、承租方发生生产安全事故的情形，责任主体为事故发生的承包方、承租方；依法及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+        "measures": "发生生产安全事故时，按有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方；核实报告和通知的对象、时间及实际传达情况。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内承包方、承租方生产安全事故报告活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_A48D9B4D27EAC4160CBAC418",
+          "clauseId": "C_462D38828DEBA46C8E23C177D2",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内承包方、承租方发生生产安全事故的情形，责任主体为事故发生的承包方、承租方；依法及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+          "article": "第三十条",
+          "quote": "第三十条生产经营单位将生产经营项目、场所、设备发包或者出租的，应当履行下列安全生产职责： （一）签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责； （二）向承包方、承租方书面告知发包项目、出租场所以及相关设备的基本情况、安全生产要求； （三）协调解决承包方、承租方提出的安全生产问题； （四）对承包方、承租方进行安全生产检查，并如实记录检查情况，发现安全生产问题的，及时督促整改；发现安全生产违法行为的，及时向负有安全生产监督管理职责的部门报告。 承包方、承租方应当服从发包方、出租方对其安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；发生生产安全事故时，应当按照有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_CD607239BF80F8B8DE00715233_2",
+      "cohort": "remaining",
+      "displayCategory": "特种设备",
+      "hazard": {
+        "title": "特种设备安全技术档案未包括特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料",
+        "description": "经资料及履职情况核查，特种设备安全技术档案未包括特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于法定特种设备监管范围内的使用单位；本项核查安全技术档案是否包含第三十五条第（一）项所列设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件。",
+        "measures": "收集并纳入安全技术档案：特种设备设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件，核实与在用设备对应。",
+        "category": "特种设备",
+        "places": [
+          "特种设备使用单位安全技术档案管理"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_49680B732D1BE71FAD9A06F0",
+          "clauseId": "C_CD607239BF80F8B8DE00715233",
+          "lawId": "L014",
+          "lawName": "中华人民共和国特种设备安全法 主席令〔2013〕第4号",
+          "role": "direct",
+          "applicability": "适用于法定特种设备监管范围内的使用单位；本项核查安全技术档案是否包含第三十五条第（一）项所列设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件。",
+          "article": "第三十五条",
+          "quote": "第三十五条特种设备使用单位应当建立特种设备安全技术档案。安全技术档案应当包括以下内容： （一）特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件； （二）特种设备的定期检验和定期自行检查记录； （三）特种设备的日常使用状况记录； （四）特种设备及其附属仪器仪表的维护保养记录； （五）特种设备的运行故障和事故记录。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74ede06c7"
+        }
+      ]
+    },
+    {
+      "id": "H_462D38828DEBA46C8E23C177D2_1",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "发包或者出租生产经营项目、场所、设备时，既未签订专门安全生产管理协议，也未在承包、租赁合同中明确各自安全生产职责",
+        "description": "江苏省生产经营单位发包或者出租生产经营项目、场所、设备时，既无专门安全生产管理协议，也未在承包、租赁合同中明确各自安全生产职责。",
+        "conditions": "适用于江苏省行政区域内生产经营单位将生产经营项目、场所、设备发包或者出租的情形；第三十条第一款第（一）项允许签订专门安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责。已有有效合同明确职责的，不得仅因未另签专门协议认定违反本项。",
+        "measures": "签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责；核实约定内容与发包、出租及承包、承租主体相对应。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内生产经营项目、场所、设备发包或者出租管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_515B4C8C1BAAA974D0737B8E",
+          "clauseId": "C_462D38828DEBA46C8E23C177D2",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位将生产经营项目、场所、设备发包或者出租的情形；第三十条第一款第（一）项允许签订专门安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责。已有有效合同明确职责的，不得仅因未另签专门协议认定违反本项。",
+          "article": "第三十条",
+          "quote": "第三十条生产经营单位将生产经营项目、场所、设备发包或者出租的，应当履行下列安全生产职责： （一）签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责； （二）向承包方、承租方书面告知发包项目、出租场所以及相关设备的基本情况、安全生产要求； （三）协调解决承包方、承租方提出的安全生产问题； （四）对承包方、承租方进行安全生产检查，并如实记录检查情况，发现安全生产问题的，及时督促整改；发现安全生产违法行为的，及时向负有安全生产监督管理职责的部门报告。 承包方、承租方应当服从发包方、出租方对其安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；发生生产安全事故时，应当按照有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_4",
+      "cohort": "remaining",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "江苏省法定列明单位发生生产安全事故造成人员死亡后，主要负责人和安全生产管理人员未重新培训并考核合格",
+        "description": "江苏省第二十二条第一款列明单位发生生产安全事故造成人员死亡后，其主要负责人和安全生产管理人员未重新参加安全生产知识培训并考核合格。",
+        "conditions": "仅适用于江苏省行政区域内第二十二条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，且本单位发生生产安全事故造成人员死亡；核查重新参加安全生产知识培训并考核合格，不自行增设周期、学时、证书或停岗要求。",
+        "measures": "发生生产安全事故造成人员死亡后，由第二十二条第一款列明单位的主要负责人和安全生产管理人员重新参加安全生产知识培训并考核合格，核实对应人员及培训考核结果。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内上述列明单位死亡事故后负责人和安全管理人员重新培训考核活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_6E74ADC4FC16043C0D957206",
+          "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "仅适用于江苏省行政区域内第二十二条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，且本单位发生生产安全事故造成人员死亡；核查重新参加安全生产知识培训并考核合格，不自行增设周期、学时、证书或停岗要求。",
+          "article": "第二十二条",
+          "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_2456A494C71E6807975B908C_1",
+      "cohort": "remaining",
+      "displayCategory": "危险化学品与危险物质",
+      "hazard": {
+        "title": "生产、储存危险化学品的单位未在作业场所设置通信、报警装置，或者未保证装置处于适用状态",
+        "description": "生产、储存危险化学品的单位存在作业场所未设置通信、报警装置，或者已设置的装置未保持适用状态的情形；应具体核实缺失装置或功能失效情况。",
+        "conditions": "本项限生产、储存危险化学品的单位的作业场所，核查通信、报警装置设置及处于适用状态；第五十二条对使用单位的适用扩展需另行对应核查，不能直接扩展为全部危险物质、运输或处置活动。",
+        "measures": "在危险化学品生产、储存单位作业场所设置通信、报警装置，并保证处于适用状态；核查装置设置和功能。",
+        "category": "危险化学品与危险物质",
+        "places": [
+          "危险化学品生产、储存单位的作业场所"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_F2C71B5AA8ECCFF43AA7DAF5",
+          "clauseId": "C_2456A494C71E6807975B908C",
+          "lawId": "LV_HAZCHEM_LAW",
+          "lawName": "中华人民共和国危险化学品安全法 主席令第六十四号",
+          "role": "direct",
+          "applicability": "本项限生产、储存危险化学品的单位的作业场所，核查通信、报警装置设置及处于适用状态；第五十二条对使用单位的适用扩展需另行对应核查，不能直接扩展为全部危险物质、运输或处置活动。",
+          "article": "第三十八条",
+          "quote": "生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
+          "sourceUrl": "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html"
+        }
+      ]
+    },
+    {
+      "id": "H_421CE6E205C8069977EB63572A_2",
+      "cohort": "remaining",
+      "displayCategory": "消防安全",
+      "hazard": {
+        "title": "单位未每年至少对建筑消防设施进行一次全面检测并确保完好有效，检测记录未完整准确、未存档备查",
+        "description": "经资料及履职情况核查，单位未每年至少对建筑消防设施进行一次全面检测并确保完好有效，检测记录未完整准确、未存档备查，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于机关、团体、企业、事业等单位的建筑消防设施；依第十六条第一款第（三）项核查每年至少一次全面检测、完好有效以及检测记录完整准确并存档备查。",
+        "measures": "每年至少对建筑消防设施进行一次全面检测，确保完好有效；检测记录应当完整准确，存档备查。",
+        "category": "消防安全",
+        "places": [
+          "机关、团体、企业、事业等单位的建筑消防设施"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_B110F77FECB2904CF1D026D7",
+          "clauseId": "C_421CE6E205C8069977EB63572A",
+          "lawId": "L001",
+          "lawName": "中华人民共和国消防法 主席令〔2021〕第81号",
+          "role": "direct",
+          "applicability": "适用于机关、团体、企业、事业等单位的建筑消防设施；依第十六条第一款第（三）项核查每年至少一次全面检测、完好有效以及检测记录完整准确并存档备查。",
+          "article": "第十六条",
+          "quote": "第十六条机关、团体、企业、事业等单位应当履行下列消防安全职责： （一）落实消防安全责任制，制定本单位的消防安全制度、消防安全操作规程，制定灭火和应急疏散预案； （二）按照国家标准、行业标准配置消防设施、器材，设置消防安全标志，并定期组织检验、维修，确保完好有效； （三）对建筑消防设施每年至少进行一次全面检测，确保完好有效，检测记录应当完整准确，存档备查； （四）保障疏散通道、安全出口、消防车通道畅通，保证防火防烟分区、防火间距符合消防技术标准； （五）组织防火检查，及时消除火灾隐患； （六）组织进行有针对性的消防演练； （七）法律、法规规定的其他消防安全职责。 单位的主要负责人是本单位的消防安全责任人。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a"
+        }
+      ]
+    },
+    {
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_5",
+      "cohort": "remaining",
+      "displayCategory": "安全教育培训",
+      "hazard": {
+        "title": "生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业",
+        "description": "经资料和执行情况核查，生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于江苏省行政区域内生产经营单位的特种作业人员，应按国家有关规定确认作业类别及相应资格；第二十二条第三款不受第一款所列高危行业负责人和安全管理人员的行业范围限制。",
+        "measures": "按国家有关规定接受专门的安全作业培训，经考核合格取得相应资格后方可上岗作业；核对作业类别、培训考核及资格与实际岗位对应情况。",
+        "category": "安全教育培训",
+        "places": [
+          "江苏省行政区域内生产经营单位特种作业人员培训、考核、资格和上岗管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_39A964379558AC3A5EFFAC24",
+          "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营单位的特种作业人员，应按国家有关规定确认作业类别及相应资格；第二十二条第三款不受第一款所列高危行业负责人和安全管理人员的行业范围限制。",
+          "article": "第二十二条",
+          "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_462D38828DEBA46C8E23C177D2_2",
+      "cohort": "remaining",
+      "displayCategory": "安全管理",
+      "hazard": {
+        "title": "承包方、承租方未服从发包方、出租方对其安全生产工作的统一协调、管理",
+        "description": "现场检查发现，承包方、承租方未服从发包方、出租方对其安全生产工作的统一协调、管理，实际状态与直接依据规定的安全要求不一致。",
+        "conditions": "适用于江苏省行政区域内生产经营项目、场所、设备的承包方、承租方；本项核查服从发包方、出租方统一协调管理，并依法负责本单位安全生产工作。事故报告属于事故发生时另行触发的分支。",
+        "measures": "服从发包方、出租方对安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；核实实际协调管理及责任履行情况。",
+        "category": "安全管理",
+        "places": [
+          "江苏省行政区域内承包方、承租方安全生产协调管理活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_79114EC5A4F800DD8C81F752",
+          "clauseId": "C_462D38828DEBA46C8E23C177D2",
+          "lawId": "L020",
+          "lawName": "江苏省安全生产条例",
+          "role": "direct",
+          "applicability": "适用于江苏省行政区域内生产经营项目、场所、设备的承包方、承租方；本项核查服从发包方、出租方统一协调管理，并依法负责本单位安全生产工作。事故报告属于事故发生时另行触发的分支。",
+          "article": "第三十条",
+          "quote": "第三十条生产经营单位将生产经营项目、场所、设备发包或者出租的，应当履行下列安全生产职责： （一）签订专门的安全生产管理协议，或者在承包、租赁合同中明确各自安全生产职责； （二）向承包方、承租方书面告知发包项目、出租场所以及相关设备的基本情况、安全生产要求； （三）协调解决承包方、承租方提出的安全生产问题； （四）对承包方、承租方进行安全生产检查，并如实记录检查情况，发现安全生产问题的，及时督促整改；发现安全生产违法行为的，及时向负有安全生产监督管理职责的部门报告。 承包方、承租方应当服从发包方、出租方对其安全生产工作的统一协调、管理，并依法负责本单位安全生产工作；发生生产安全事故时，应当按照有关规定及时报告属地应急管理部门和有关部门，并通知发包方、出租方。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        }
+      ]
+    },
+    {
+      "id": "H_A7D8C5192004B9B1DB48E5CC_1",
+      "cohort": "remaining",
+      "displayCategory": "危险化学品与危险物质",
+      "hazard": {
+        "title": "生产、储存危险化学品的企业未建立安全风险分级管控制度，或者未开展风险辨识评估，或者未按风险分级采取管控措施",
+        "description": "生产、储存危险化学品的企业存在以下一项或多项问题：未建立安全风险分级管控制度、未开展安全风险辨识评估、未按照安全风险分级采取相应管控措施；应分别核实实际缺失的环节。",
+        "conditions": "本项限生产、储存危险化学品的企业，核查第三十四条第一款的安全风险分级管控制度、风险辨识评估和分级管控措施。第五十二条对使用危险化学品从事生产的企业另有适用扩展，本项不据此涵盖任意使用单位。",
+        "measures": "建立安全风险分级管控制度，开展安全风险辨识评估，并按照安全风险分级采取相应的管控措施；核查制度、辨识评估及措施之间的对应关系。",
+        "category": "危险化学品与危险物质",
+        "places": [
+          "危险化学品生产、储存企业安全风险分级管控活动"
+        ]
+      },
+      "bases": [
+        {
+          "linkId": "K_XLSX_FT_90588ED32254CA77502243F3",
+          "clauseId": "C_A7D8C5192004B9B1DB48E5CC",
+          "lawId": "LV_HAZCHEM_LAW",
+          "lawName": "中华人民共和国危险化学品安全法 主席令第六十四号",
+          "role": "direct",
+          "applicability": "本项限生产、储存危险化学品的企业，核查第三十四条第一款的安全风险分级管控制度、风险辨识评估和分级管控措施。第五十二条对使用危险化学品从事生产的企业另有适用扩展，本项不据此涵盖任意使用单位。",
+          "article": "第三十四条",
+          "quote": "第三十四条　生产、储存危险化学品的企业应当建立安全风险分级管控制度，开展安全风险辨识评估，按照安全风险分级采取相应的管控措施。\n\n生产、储存危险化学品的企业的工艺、设施、设备、原料等发生变更时应当重新进行安全风险辨识评估。\n\n生产、储存危险化学品的企业不得使用国家明令淘汰或者禁止使用的危及生产安全的工艺、技术、设施、设备，具体目录由国务院应急管理部门会同有关部门制定并公布。",
+          "sourceUrl": "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html"
+        }
+      ]
+    }
+  ]
+}

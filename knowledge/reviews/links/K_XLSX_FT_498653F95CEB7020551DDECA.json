@@ -1,18 +1,94 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
-    "hazard": "99b5d711cded1694ef56d481db340b190dd09748e8c9effa7eaa6d10d55d4488"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_FT_498653F95CEB7020551DDECA",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    "E_L020"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
   "reviewType": "applicability",
-  "reviewedContentHash": "deaf75d29117501d995c865d2f6fe5a4a5ec111d69c77de9bf2b107f8178b143",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "7dc3bcf9f857612b1dc9887a5d193d078957344176c2e8342e5dd138441de18d",
+  "reviewer": "Codex培训考核条款逐项复核20261003",
+  "reviewedFields": [
+    "/clauseId",
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+    "/applicability": "江苏省范围；第二十二条第一款列明行业单位的主管部门知识和管理能力考核。不能只以存在危险化学品为适用门槛。",
+    "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+  },
+  "fieldEvidenceRefs": {
+    "/clauseId": [
+      "E_L020"
+    ],
+    "/applicability": [
+      "E_L020"
+    ],
+    "/reason": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+      "hazard": "99b5d711cded1694ef56d481db340b190dd09748e8c9effa7eaa6d10d55d4488"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_498653F95CEB7020551DDECA",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "deaf75d29117501d995c865d2f6fe5a4a5ec111d69c77de9bf2b107f8178b143",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ef34e0ced5f6659fbbcdbe640881fd58e555654600d6a65d2172ab011f459a37",
+  "historySha256": "6d108a34a880e0fc3780ae242641abd3b1c0317fc0ae2ec53f83aa82cfafbdf1",
+  "previousEntity": {
+    "applicability": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+    "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+    "id": "K_XLSX_FT_498653F95CEB7020551DDECA",
+    "jurisdictionCode": "CN-32",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "90433f767c1f993436c418a141e64f2717438f519d6295fa5fd123c51a16de9c",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialName": "江苏省安全生产条例",
+    "version": "2023年3月30日修订",
+    "effectiveDate": "2023-07-01",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+    "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+    "officialStatus": "现行有效",
+    "locators": [
+      "第二条完整范围",
+      "第二十二条完整三款",
+      "第七十二条完整处罚文本",
+      "第七十七条施行日期"
+    ],
+    "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+    "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+    "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+  },
+  "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+  "contextHashes": {
+    "hazard": "edb98ff3cebf3c4df564445bf47de4f376ed7e0b9b88be5d339eff15b89132d6",
+    "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376"
+  }
 }

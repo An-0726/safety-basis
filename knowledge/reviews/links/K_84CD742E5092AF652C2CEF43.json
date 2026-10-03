@@ -1,7 +1,7 @@
 {
   "checkedAt": "2026-09-14",
   "contextHashes": {
-    "clause": "83a4ae8e4e7e5da1e9e8c03d83220c930db8205053db91d5176674915b2bca79",
+    "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376",
     "hazard": "82048d75749f0bf847ac45169a24eee5477b30bef5cf718b28941c5313df3d6a"
   },
   "decision": "pending",
@@ -14,5 +14,35 @@
   "reviewer": "GLM-5.3-Flash (ZCode)",
   "phase5ReconciledAt": "2026-09-14",
   "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
+  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "83a4ae8e4e7e5da1e9e8c03d83220c930db8205053db91d5176674915b2bca79",
+      "hazard": "82048d75749f0bf847ac45169a24eee5477b30bef5cf718b28941c5313df3d6a"
+    },
+    "decision": "pending",
+    "entityId": "K_84CD742E5092AF652C2CEF43",
+    "entityType": "link",
+    "evidenceRefs": [],
+    "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "1d44745792d12384d75d2ab0e552ed267a9c46b02ee65d297f5a1877a0dd4d39",
+    "reviewer": "GLM-5.3-Flash (ZCode)",
+    "phase5ReconciledAt": "2026-09-14",
+    "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
+  },
+  "historySha256": "5948ac3954b84aa92c14b28565c5cc8bc63d23a83cbc0091a1d3196d553d498a",
+  "previousReviewFileSha256": "1d1419b409192d9483be295234f6c3b88fd3c2a92c785300185a8ca5968182dd",
+  "bindingMaintenance": {
+    "updatedAt": "2026-10-03",
+    "reviewer": "Codex培训考核条款逐项复核20261003",
+    "changedFields": [
+      "/contextHashes/clause"
+    ],
+    "reason": "仅同步既有条款jurisdictionCode从CN收窄为CN-32后的context hash。原适用性未复审，pending决定、原checkedAt、空evidenceRefs以及proposed关联均保持；不授予发布资格。",
+    "substantiveApplicabilityReviewed": false,
+    "statusPromoted": false
+  }
 }
