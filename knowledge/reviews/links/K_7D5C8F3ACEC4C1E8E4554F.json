@@ -3,22 +3,76 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H057 为有大量灰尘的场所配电线路敷设未避免灰尘聚集在布线上产生的不利影响；GB 50054-2011 第7.1.2条第4款对该情形作出逐字对应规定，确认为 direct 依据。",
-  "reasonCodes": [
-    "DIRECT_CLAUSE_CONFIRMED",
-    "MANDATORY_CLAUSE",
-    "DUSTY_AREA_WIRING"
-  ],
-  "reviewedContentHash": "d5c4db64f18e853cabef32dd32e6807fe626a48263f514eb7ffa779e72b9bc0d",
-  "contextHashes": {
-    "hazard": "7abf979d1f013855c89ec5378aff61b51efe0f13c690d1ea3f46679142af7030",
-    "clause": "46ce8c56f3103f70fd4f113dd0cd8abd2c022271bf50374cff8196cd73a794ae",
-    "link": "d5c4db64f18e853cabef32dd32e6807fe626a48263f514eb7ffa779e72b9bc0d"
-  },
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "4ee88d4db425de16e74e1babb59e10de92a0c852f2ba2bf5b8d29f9f714ec736",
   "evidenceRefs": [
-    "EH_e542f90ce947e0ff7a4991eb723c1659e843e129b156d160264ba7e45a9be872"
+    "E_GB50054_DUST_SCOPE_20261003"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "直接关联已按设计范围和大量灰尘散热条件逐项核对；纠正旧MANDATORY_CLAUSE及粉尘爆炸前提。",
+  "locator": "第7.1.2条第4款",
+  "reviewedFields": [
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于新建、改建和扩建工程中交流、工频1000V及以下的低压配电设计，且配电线路敷设于有大量灰尘的场所。核查灰尘聚集在布线上对散热带来的影响，不以粉尘可燃或存在爆炸危险为前提；少量表面浮尘不自动构成本项缺陷。既有线路运行检查应另核设计适用时间、实际敷设和散热条件；涉及可燃性粉尘爆炸危险时另核相应防爆要求。",
+    "/reason": "在GB50054-2011第1.0.2条设计范围内，第7.1.2条第4款直接要求避免大量灰尘积聚对布线散热的影响；不要求粉尘可燃，不将本项标为原公告所列强制性条文。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ],
+    "/reason": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "contextHashes": {
+    "hazard": "c1532f828a9b152669ecefa378f1fd7bc3d81cf9d4cdef1aeb95c3956f5a62af",
+    "clause": "f6d225921b7b29acc94f05da8d41717c79c22b9e25c84479ca995db29c808ad3"
+  },
+  "previousReview": {
+    "entityId": "K_7D5C8F3ACEC4C1E8E4554F",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "H057 为有大量灰尘的场所配电线路敷设未避免灰尘聚集在布线上产生的不利影响；GB 50054-2011 第7.1.2条第4款对该情形作出逐字对应规定，确认为 direct 依据。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "MANDATORY_CLAUSE",
+      "DUSTY_AREA_WIRING"
+    ],
+    "reviewedContentHash": "d5c4db64f18e853cabef32dd32e6807fe626a48263f514eb7ffa779e72b9bc0d",
+    "contextHashes": {
+      "hazard": "7abf979d1f013855c89ec5378aff61b51efe0f13c690d1ea3f46679142af7030",
+      "clause": "46ce8c56f3103f70fd4f113dd0cd8abd2c022271bf50374cff8196cd73a794ae",
+      "link": "d5c4db64f18e853cabef32dd32e6807fe626a48263f514eb7ffa779e72b9bc0d"
+    },
+    "evidenceRefs": [
+      "EH_e542f90ce947e0ff7a4991eb723c1659e843e129b156d160264ba7e45a9be872"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "f4959717290e80e457e8a852efab4846b2bdabfc0a35bb03104e093f6784e5bb",
+  "historySha256": "8e1f853199db7323e12b5c5e56119a3b8a2bd2ebf1a59ed0e5a62bb19dd450a3",
+  "previousEntity": {
+    "id": "K_7D5C8F3ACEC4C1E8E4554F",
+    "entityType": "link",
+    "hazardId": "H057",
+    "clauseId": "C_GB50054_7_1_2_4",
+    "role": "direct",
+    "applicability": "全国通用；适用于大量灰尘场所配电线路敷设环境",
+    "jurisdictionCode": "CN",
+    "reason": "H057 为有大量灰尘的场所配电线路敷设未避免灰尘聚集在布线上产生的不利影响；GB 50054-2011 第7.1.2条第4款对该情形作出逐字对应规定，确认为 direct 依据。",
+    "createdAt": "2026-09-10",
+    "lifecycle": "active"
+  },
+  "previousEntityFileSha256": "3ce84aab7d1889f770ea1738672bf35612bd4d9f3f08e27523314f5365468eb4"
 }

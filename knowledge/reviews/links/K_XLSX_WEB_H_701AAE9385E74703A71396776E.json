@@ -1,18 +1,76 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_701AAE9385E74703A71396776E",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "2517067f9484de51cd70046a07546a37f9d82c72a7513bee7632b71297eec691",
-  "contextHashes": {
-    "hazard": "30abf31c52ef1df44930533f3aad39141a6bbe4c3ce61580282836d32c023f37",
-    "clause": "5c863f15ce64afac424d57061ea94633a072f8bdfbe92d46016b9ade450ea9b8"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第10.2.7条支管阻火器控制要求。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "586cc804383baa39d600892f8986b12360b0dadca35ba645458d031b08ec1d88",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
+    "E_JGJ91_ORIGINAL_CLAUSES_20261003"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "核对所指标准身份、精确条款与H各缺陷分支。原件印刷48页：新增准确支管阻火器条款实体以替代旧10.2.7误引；不把10.4.1(1)的放空管及等安全控制装置混入本条。",
+  "locator": "第10.4.3条",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项仅核第10.4.3条可燃气体管道连接用气设备的支管阻火器；第10.4.1(1)另含每台（组）用可燃气体设备支管和放空管的安全控制装置，不与本条混写。第10.2.7条为埋地敷设要求，不是本项依据。",
+    "/clauseId": "C_JGJ91_10_4_3",
+    "/reason": "原件印刷48页：新增准确支管阻火器条款实体以替代旧10.2.7误引；不把10.4.1(1)的放空管及等安全控制装置混入本条。 本关联仅支撑已列明对象和对应缺陷分支。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/clauseId": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/reason": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "contextHashes": {
+    "hazard": "b6cf79f7fe9009188ae6585992f11cb23f96dbd2484bb12a6b50da2a633be9e9",
+    "clause": "379935a1ead3c3790da0866b27db8c5184d72ff224a8e64004ed638bec61ac75"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_701AAE9385E74703A71396776E",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "2517067f9484de51cd70046a07546a37f9d82c72a7513bee7632b71297eec691",
+    "contextHashes": {
+      "hazard": "30abf31c52ef1df44930533f3aad39141a6bbe4c3ce61580282836d32c023f37",
+      "clause": "5c863f15ce64afac424d57061ea94633a072f8bdfbe92d46016b9ade450ea9b8"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第10.2.7条支管阻火器控制要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "8e1b02e12d41eed9265d099ea0f6931aca3372f55955b7b0d2499c2c463a995c",
+  "historySha256": "91c4a9a82087c84566f28d9799157ef5919d2aa482c08325a8399dc596ac6df3",
+  "previousEntity": {
+    "applicability": "可燃气体管道连接用气设备支管未设阻火器",
+    "clauseId": "C_JGJ91_10_2_7",
+    "hazardId": "H_701AAE9385E74703A71396776E",
+    "id": "K_XLSX_WEB_H_701AAE9385E74703A71396776E",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "89afdb1a77a1e4e37ad796eb88fe6f3706805e0e1e8a8535d48f954c18013d49"
 }

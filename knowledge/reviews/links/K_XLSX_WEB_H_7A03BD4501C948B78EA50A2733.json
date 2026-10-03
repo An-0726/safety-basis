@@ -1,18 +1,71 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_7A03BD4501C948B78EA50A2733",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "da4f901462db4b534e1909aa7cf6902f36a5b3f7a9c26f81c4f6ef6a62ddd823",
-  "contextHashes": {
-    "hazard": "af7e4299803e64230e2ba44c7a5fcbe1cef7fb718089817f6e20ca09d8b3d97c",
-    "clause": "aa70700350ec7cc38e9e6eb45cd28366356020a8af858ba1e3e0ae051e0015ff"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第10.2.6条气体管道标识规范。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "a844b52c0c4285d83ecd5b69661f58b9c1cc29f4666ba85d5bdeb0553f92c56b",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
+    "E_JGJ91_ORIGINAL_CLAUSES_20261003"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "核对所指标准身份、精确条款与H各缺陷分支。原件印刷47页：恢复标识对象、耐久清晰易识别、四种标识方法和施工中宜采用粘着性标志；删除原文不存在的介质名称及流向添加。",
+  "locator": "第10.2.6条",
+  "reviewedFields": [
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项不添加介质名称或流向等原条文未明列要求；施工中采用粘着性标志属于宜采用，不能仅因选用其余法定标识方法判为违规。",
+    "/reason": "原件印刷47页：恢复标识对象、耐久清晰易识别、四种标识方法和施工中宜采用粘着性标志；删除原文不存在的介质名称及流向添加。 本关联仅支撑已列明对象和对应缺陷分支。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/reason": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "contextHashes": {
+    "hazard": "062494f5ac80cfae04f1e87d1533c13155ed06559e4a6df3e03b37fc52a66109",
+    "clause": "a938816e94b13afefef2ec46db808520c77af4f6fc37dc98f47912b55ed27803"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_7A03BD4501C948B78EA50A2733",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "da4f901462db4b534e1909aa7cf6902f36a5b3f7a9c26f81c4f6ef6a62ddd823",
+    "contextHashes": {
+      "hazard": "af7e4299803e64230e2ba44c7a5fcbe1cef7fb718089817f6e20ca09d8b3d97c",
+      "clause": "aa70700350ec7cc38e9e6eb45cd28366356020a8af858ba1e3e0ae051e0015ff"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第10.2.6条气体管道标识规范。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "aeafab59b28948b5d09f868da595d0813dce301cdf8af771d8154899b61d5731",
+  "historySha256": "fe9521a9e19dc1240ec290a7b3bb45df49010285aed81fd287eaab7eba0b55bb",
+  "previousEntity": {
+    "applicability": "气体管道阀门终端组件未设清晰标识",
+    "clauseId": "C_JGJ91_10_2_6",
+    "hazardId": "H_7A03BD4501C948B78EA50A2733",
+    "id": "K_XLSX_WEB_H_7A03BD4501C948B78EA50A2733",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "a34674e656696aa0eb2e03744fa6c609bfe34d2f33a799c7b3b52b7640bf2168"
 }

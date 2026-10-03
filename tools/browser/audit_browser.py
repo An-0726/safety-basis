@@ -18,6 +18,8 @@ from urllib.parse import parse_qs, quote, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from repair_acceptance import load_expectations, validate_source_pins, run_repair_browser_acceptance
+from technical_citation_acceptance import (load_expectations as load_technical_expectations,
+    validate_source_pins as validate_technical_source_pins, run_technical_browser_acceptance)
 
 
 
@@ -350,6 +352,11 @@ def main():
                 repair_fixture, Path(__file__).resolve().parents[2]))
             run_repair_browser_acceptance(browser, base, run, page_errors, expect, repair_fixture,
                                           report['release']['releaseHash'])
+            technical_fixture = load_technical_expectations()
+            run('technical_citation_source_pins', lambda: validate_technical_source_pins(
+                technical_fixture, Path(__file__).resolve().parents[2]))
+            run_technical_browser_acceptance(browser, base, run, page_errors, expect, technical_fixture,
+                                             report['release']['releaseHash'])
             run('no_unhandled_javascript_errors', lambda: require(not page_errors, str(page_errors)))
             context.close(); browser.close()
     finally:

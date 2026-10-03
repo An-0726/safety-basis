@@ -1,13 +1,109 @@
 {
-  "entityType": "hazard",
   "entityId": "H_701AAE9385E74703A71396776E",
-  "reviewType": "definition",
+  "entityType": "hazard",
+  "reviewType": "content",
   "decision": "verified",
-  "reviewedContentHash": "30abf31c52ef1df44930533f3aad39141a6bbe4c3ce61580282836d32c023f37",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "b6cf79f7fe9009188ae6585992f11cb23f96dbd2484bb12a6b50da2a633be9e9",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
-  ]
+    "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+  ],
+  "reason": "逐页核实原文并核对全部现场表述字段；限定科研建筑设计、气体和对象范围，纠正复合分支及负向表述。不能据此认定实际企业已违规或已整改。",
+  "locator": "第10.4.3条",
+  "reviewedFields": [
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/mode",
+    "/note",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项仅核第10.4.3条可燃气体管道连接用气设备的支管阻火器；第10.4.1(1)另含每台（组）用可燃气体设备支管和放空管的安全控制装置，不与本条混写。第10.2.7条为埋地敷设要求，不是本项依据。",
+    "/description": "在本项设计适用范围内，可燃气体管道连接用气设备的支管未设置阻火器。",
+    "/keywords": [
+      "科研建筑",
+      "可燃气体管道",
+      "用气设备支管",
+      "阻火器"
+    ],
+    "/measures": "在可燃气体管道连接用气设备的支管上设置阻火器，并核查设计与安装位置。",
+    "/mode": "conditional",
+    "/note": "2026-10-03：对照公开出版原件纠正条文和科研建筑设计适用范围；保留稳定ID及历史审核。",
+    "/places": [
+      "科研建筑室内可燃气体用气设备连接支管"
+    ],
+    "/title": "科研建筑可燃气体管道连接用气设备支管未设置阻火器"
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/description": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/keywords": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/measures": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/mode": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/note": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/places": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "/title": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_701AAE9385E74703A71396776E",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "30abf31c52ef1df44930533f3aad39141a6bbe4c3ce61580282836d32c023f37",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ]
+  },
+  "previousReviewFileSha256": "f2d86bd2d5191693be0b3b3ae4feafa939d82480f006cffee54549fd1aea2aaa",
+  "historySha256": "a5de5831c504b0b6bc996510879cd7dd6a08d113ef34c690bb00237ae7c1f908",
+  "previousEntity": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "可燃气体管道连接用气设备的支管未设置阻火器。",
+    "id": "H_701AAE9385E74703A71396776E",
+    "keywords": [
+      "可燃气体管道连接用气设备支管",
+      "未设置阻火器"
+    ],
+    "lifecycle": "active",
+    "measures": "在用可燃气体设备的支管和放空管上设置阻火器等安全控制装置。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "燃气使用、储存及燃气设施相关场所",
+      "通用场所"
+    ],
+    "title": "可燃气体管道连接用气设备支管,未设置阻火器"
+  },
+  "previousEntityFileSha256": "eca5111455c873f0a4e5d736fd41383632cc6fcdd9c6bd4ede8088a0174a7246"
 }

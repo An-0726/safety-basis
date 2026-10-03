@@ -1,13 +1,55 @@
 {
-  "decision": "verified",
   "entityId": "C_GB50054_7_1_2_4",
   "entityType": "clause",
-  "evidenceRefs": [
-    "EH_e542f90ce947e0ff7a4991eb723c1659e843e129b156d160264ba7e45a9be872"
-  ],
   "reviewType": "text",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "条文核验：GB 50054-2011 第7.1.2条第4款；正文取自本地私有全文库归档原件/官方公开文本，与隐患描述逐字对应。",
-  "reviewedContentHash": "46ce8c56f3103f70fd4f113dd0cd8abd2c022271bf50374cff8196cd73a794ae"
+  "decision": "verified",
+  "reviewer": "Codex逐页原件与适用范围复核20261003",
+  "checkedAt": "2026-10-03",
+  "reviewedContentHash": "f6d225921b7b29acc94f05da8d41717c79c22b9e25c84479ca995db29c808ad3",
+  "evidenceRefs": [
+    "E_GB50054_DUST_SCOPE_20261003"
+  ],
+  "reason": "已目视核对官方索引所载原件PDF第44页（印刷34页）：原条款引文保持不变，仅更新失效来源链接。第4款针对大量灰尘积聚对布线散热的影响，不以可燃性粉尘或爆炸危险为前提。",
+  "locator": "第7.1.2条第4款",
+  "reviewedFields": [
+    "/sourceUrl"
+  ],
+  "reviewedValues": {
+    "/sourceUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651119858336.pdf"
+  },
+  "fieldEvidenceRefs": {
+    "/sourceUrl": [
+      "E_GB50054_DUST_SCOPE_20261003"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+  },
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_GB50054_7_1_2_4",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "EH_e542f90ce947e0ff7a4991eb723c1659e843e129b156d160264ba7e45a9be872"
+    ],
+    "reviewType": "text",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "条文核验：GB 50054-2011 第7.1.2条第4款；正文取自本地私有全文库归档原件/官方公开文本，与隐患描述逐字对应。",
+    "reviewedContentHash": "46ce8c56f3103f70fd4f113dd0cd8abd2c022271bf50374cff8196cd73a794ae"
+  },
+  "previousReviewFileSha256": "5c23322c47d59669e088d8f1632c2e1c0c6e0a86f06de75f9a77adb64ffedb0d",
+  "historySha256": "cc1be958eda6e57c48dd8f0406c90cab3c46fa26ef8b7f9f3cecc7b913390abd",
+  "previousEntity": {
+    "articlePath": "第7.1.2条第4款",
+    "id": "C_GB50054_7_1_2_4",
+    "lawVersionId": "LV_STD_GB50054_2011",
+    "lifecycle": "active",
+    "quote": "7.1.2 配电线路的敷设环境，应符合下列规定：\n4 在有大量灰尘的场所，应避免由于灰尘聚集在布线上对散热带来的影响；",
+    "sourceUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260424407170672345.pdf",
+    "jurisdictionCode": "CN"
+  },
+  "previousEntityFileSha256": "20bb3594482cb84ede0acf567b8e5b9c13d2969d37277d86f1162506640e5fab"
 }

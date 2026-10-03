@@ -9,6 +9,7 @@ import sys
 import unittest
 
 from common_hazards_fixture import ADMITTED_IDS, ADDED_IDS, pre_common_gate
+from public_technical_citation_fixture import pre_technical_source_bytes
 from flange_scope_fixture import pre_flange_source_bytes
 from occupational_citation_fixture import pre_occupational_source_bytes
 from training_citation_fixture import pre_training_source_hashes
