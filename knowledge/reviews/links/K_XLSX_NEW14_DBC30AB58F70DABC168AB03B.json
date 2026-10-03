@@ -1,18 +1,88 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "ef749fd7f27f28c4f911ddf8f13f3081c7b5662015299f8fe74a17e5aae79bfc",
-    "hazard": "1f435da8bfec969b86765488e4f5c2c8d579b2ecfa5c5ceca92dcda06d5d836e"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_NEW14_DBC30AB58F70DABC168AB03B",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_A6612A2448D9B43B7CD8AD71"
+    "E_L001"
   ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "reason": "仅第三十九条五类单位；大型、火灾危险性、与国家综合性消防救援队距离、全国重点文物保护单位等相应限定须保留。",
   "reviewType": "applicability",
-  "reviewedContentHash": "37e4ecd04d945207e2f296abddf7babb1345a83306140c38d2772e37d11c6422",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "a32c2dcc01350bc6a90e8ceef396064fd0901614152628689ee9570aed0e6417",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十九条全条第（一）至（五）项",
+  "reviewedFields": [
+    "/clauseId",
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/clauseId": "C_32B64EF4F22A7AAC5B023DFCB5",
+    "/applicability": "仅适用于消防法第三十九条五类单位：大型核设施单位、大型发电厂、民用机场、主要港口；生产、储存易燃易爆危险品的大型企业；储备可燃的重要物资的大型仓库、基地；前三类以外火灾危险性较大且距离国家综合性消防救援队较远的其他大型企业；距离国家综合性消防救援队较远且被列为全国重点文物保护单位的古建筑群管理单位。应分别核实大型、物资可燃性、火灾危险性、距离及文物保护级别等相应条件。",
+    "/reason": "第三十九条全条第（一）至（五）项直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/clauseId": [
+      "E_L001"
+    ],
+    "/applicability": [
+      "E_L001"
+    ],
+    "/reason": [
+      "E_L001"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "ef749fd7f27f28c4f911ddf8f13f3081c7b5662015299f8fe74a17e5aae79bfc",
+      "hazard": "1f435da8bfec969b86765488e4f5c2c8d579b2ecfa5c5ceca92dcda06d5d836e"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_DBC30AB58F70DABC168AB03B",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A6612A2448D9B43B7CD8AD71"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "37e4ecd04d945207e2f296abddf7babb1345a83306140c38d2772e37d11c6422",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ee12bb6c2fdcf65d4748d95f8ce77280eb23f82028284d4bfb59ea2d6e3e71cd",
+  "historySha256": "0c52d6c80a75c08ce820fbdb9d6c8e2209c25f842183441c58c8ed6bb7f4ad83",
+  "previousEntity": {
+    "id": "K_XLSX_NEW14_DBC30AB58F70DABC168AB03B",
+    "hazardId": "H_32B64EF4F22A7AAC5B023DFCB5_1",
+    "clauseId": "C_XLSX_FT_5E6C3EC8FD8A419DAC4F95A4",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所、设备及作业活动。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+  },
+  "previousEntityFileSha256": "e203e6debcefadaeafac25fc44d92154b955b60010600e407e55577c30eb0553",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L001",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "6f871d09f38d42e249c234698cb04255e3ea50238856ddca377129f36d435a71",
+    "operativeLocator": "第三十九条全条第（一）至（五）项",
+    "completeOfficialQuote": "第三十九条  下列单位应当建立单位专职消防队，承担本单位的火灾扑救工作：\n\n　　（一）大型核设施单位、大型发电厂、民用机场、主要港口；\n\n　　（二）生产、储存易燃易爆危险品的大型企业；\n\n　　（三）储备可燃的重要物资的大型仓库、基地；\n　　（四）第一项、第二项、第三项规定以外的火灾危险性较大、距离国家综合性消防救援队较远的其他大型企业；\n\n　　（五）距离国家综合性消防救援队较远、被列为全国重点文物保护单位的古建筑群的管理单位。",
+    "scopeDecision": "仅第三十九条五类单位；大型、火灾危险性、与国家综合性消防救援队距离、全国重点文物保护单位等相应限定须保留。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "afd34930b4c7084e4f3fb2298d5a59d246f6faa00910cb74397943fe33270edc",
+    "clause": "b44676306bbbfbbb65c26fc7efc643355a874f8dac1ddd4357428f200867c278"
+  }
 }

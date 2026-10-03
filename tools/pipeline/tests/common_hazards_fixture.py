@@ -6,6 +6,9 @@ import copy
 import json
 from pathlib import Path
 from types import SimpleNamespace
+from training_citation_fixture import pre_training_gate, pre_training_inventory
+from remaining_clause_fixture import pre_remaining_gate, pre_remaining_inventory
+from occupational_citation_fixture import pre_occupational_gate, pre_occupational_inventory
 
 FIXTURE = json.loads((Path(__file__).parent/'fixtures/common_hazards_cohort_20261003.json').read_text())
 FOLDERS = {'laws':'laws','lawVersions':'law-versions','clauses':'clauses','hazards':'hazards',
@@ -18,7 +21,7 @@ def pre_common_ids(kind, ids):
 
 def pre_common_inventory(kind, rows):
     return sorted((ident,'proposed' if kind=='hazards' and ident=='H004' else state)
-                  for ident,state in rows if ident not in ADDED_IDS.get(kind,frozenset()))
+                  for ident,state in pre_training_inventory(kind, pre_occupational_inventory(kind, pre_remaining_inventory(kind, rows))) if ident not in ADDED_IDS.get(kind,frozenset()))
 
 def pre_common_manifest(manifest):
     old=copy.deepcopy(manifest)
@@ -33,6 +36,7 @@ def pre_common_manifest(manifest):
 
 def pre_common_gate(gate):
     # Keep the date and diagnostic rows for the preceding citation projection.
+    gate = pre_training_gate(pre_occupational_gate(pre_remaining_gate(gate)))
     prior = copy.deepcopy(gate)
     prior.eligible_hazards = set(gate.eligible_hazards) - ADMITTED_IDS
     prior.eligible_links = set(gate.eligible_links) - ADDED_IDS['links']

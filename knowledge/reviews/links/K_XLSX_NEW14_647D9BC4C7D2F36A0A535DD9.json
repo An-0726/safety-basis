@@ -1,18 +1,93 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
-    "hazard": "8a6ae8403d12fa4a5978198a41be8d6dc49ea977ba5b80e3f2832f89c8174795"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "reason": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
   "reviewType": "applicability",
-  "reviewedContentHash": "02cf1dd10797ebaa52ccded196f2d87198a46eb4c1c773a0f4f69f1849d1805f",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "47ae631e8dd2bbaea81e6d689ba13f0abbe9efd831acc3fcc25a400770ed1ace",
+  "reviewer": "Codex培训考核条款逐项复核20261003",
+  "reviewedFields": [
+    "/clauseId",
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/clauseId": "C033",
+    "/applicability": "仅第二十七条第一款的一般知识和管理能力要求；第二款考核义务按列明行业单位另行触发。",
+    "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+  },
+  "fieldEvidenceRefs": {
+    "/clauseId": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "/applicability": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "/reason": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+      "hazard": "8a6ae8403d12fa4a5978198a41be8d6dc49ea977ba5b80e3f2832f89c8174795"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "02cf1dd10797ebaa52ccded196f2d87198a46eb4c1c773a0f4f69f1849d1805f",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "170e059f11716f4ce5065840a6b2929915ec22b0743fa3fb894f8edf52a8d995",
+  "historySha256": "2048669dccd9a01125f64eb750bd75045629202eb2a43d96947eacb3b7d34ca8",
+  "previousEntity": {
+    "id": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+    "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+    "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所与设备的相关管理。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+  },
+  "previousEntityFileSha256": "1922d46d4b8327f8a2afdb38b24bd4059404489d7c8bf8c67dc87d65cdfbfd39",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialName": "中华人民共和国安全生产法",
+    "version": "2021年6月10日第三次修正",
+    "effectiveDate": "2021-09-01",
+    "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+    "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+    "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+    "officialStatus": "现行有效",
+    "locators": [
+      "第二条完整范围",
+      "第二十七条完整三款"
+    ],
+    "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+    "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+    "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+  },
+  "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+  "contextHashes": {
+    "hazard": "03e54b69304831a72312617bc3951252f369ce5366a6e386c74d59df3bd49adf",
+    "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
+  }
 }

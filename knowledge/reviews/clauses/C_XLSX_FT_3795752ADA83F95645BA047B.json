@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_3795752ADA83F95645BA047B",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第五十二条，未包含第三十六条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "9faa2c8ecf3e096b639fc9d21c6bdcc094363ab3ef723af5b307057778642923",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "fa7e2e96f9dddf57feeb6fdfbaba938c953cc841807e994a1ae59820f52e4d93",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十六条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "三十六",
+    "/quote": "第五十二条 本法第三十七条、第三十八条、第四十条第一款、第四十五条关于生产、储存危险化学品的单位的规定，适用于使用危险化学品的单位；第三十四条、第三十五条、第三十六条、第三十九条关于生产、储存危险化学品的企业的规定，适用于使用危险化学品从事生产的企业。",
+    "/lawVersionId": "LV_HAZCHEM_LAW",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=2933e1a00644487bbd43d0960cb01931",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/quote": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/lawVersionId": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/sourceUrl": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/lifecycle": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_3795752ADA83F95645BA047B",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "9faa2c8ecf3e096b639fc9d21c6bdcc094363ab3ef723af5b307057778642923",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "8fa5b6dded1d9f56c2daa351fbcb43387c1c577d637d78fdd9e98484187d36cc",
+  "historySha256": "cbc3013d22e5e5c5bf4091c568781abc713cb03f91a537411475dcda3dcf7cb0",
+  "previousEntity": {
+    "articlePath": "三十六",
+    "id": "C_XLSX_FT_3795752ADA83F95645BA047B",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "lifecycle": "active",
+    "quote": "第五十二条 本法第三十七条、第三十八条、第四十条第一款、第四十五条关于生产、储存危险化学品的单位的规定，适用于使用危险化学品的单位；第三十四条、第三十五条、第三十六条、第三十九条关于生产、储存危险化学品的企业的规定，适用于使用危险化学品从事生产的企业。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=2933e1a00644487bbd43d0960cb01931"
+  },
+  "previousEntityFileSha256": "47733da9dd8989cb3e61632aa87d7467faf4c45136995b1ba28f43629cc7ae13",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+    "operativeLocator": "第三十六条",
+    "completeOfficialQuote": "第三十六条　生产、储存危险化学品的企业应当按照国家标准或者行业标准装备自动控制系统和安全仪表系统，建立安全风险监测预警系统，并与政府有关部门实现互联互通。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第五十二条，未包含第三十六条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

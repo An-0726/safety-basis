@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-12",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "C_96049FDA8623F7EF0CDA4B1F73",
   "entityType": "clause",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+  "reason": "完整官方原文与既有稳定ID、法版本和条款定位核对；本条对应H/K各自另审责任主体及分支。",
   "reviewType": "text",
-  "reviewedContentHash": "76dd8d92d6c996b6eac98659d87944d45ac01a0158476170305a6d72f2f78a47",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "reviewedContentHash": "a245dec66724c30eef645bc821ad06f629b82d3dc0091ad183ed015a7944f120",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十五条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/jurisdictionCode"
+  ],
+  "reviewedValues": {
+    "/articlePath": "第十五条",
+    "/quote": "第十五条生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责： （一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题； （二）每年至少组织并参与一次生产安全事故应急救援演练； （三）每年至少组织一次全面的安全风险辨识，制定完善管控措施； （四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理； （五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/jurisdictionCode": "CN-32"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L020"
+    ],
+    "/quote": [
+      "E_L020"
+    ],
+    "/lawVersionId": [
+      "E_L020"
+    ],
+    "/sourceUrl": [
+      "E_L020"
+    ],
+    "/jurisdictionCode": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "decision": "verified",
+    "entityId": "C_96049FDA8623F7EF0CDA4B1F73",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_L020"
+    ],
+    "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+    "reviewType": "text",
+    "reviewedContentHash": "76dd8d92d6c996b6eac98659d87944d45ac01a0158476170305a6d72f2f78a47",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
+  },
+  "previousReviewFileSha256": "1cf596837e5670e0aac1c66b1b23423c23b9c969d0729125db84c0c7b0fd9035",
+  "historySha256": "d3ff7cd81394e334cd4688aab61e4e452ddc2576db86fbcf4395f0d3fcb85967",
+  "previousEntity": {
+    "articlePath": "第十五条",
+    "id": "C_96049FDA8623F7EF0CDA4B1F73",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第十五条生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责： （一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题； （二）每年至少组织并参与一次生产安全事故应急救援演练； （三）每年至少组织一次全面的安全风险辨识，制定完善管控措施； （四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理； （五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "e9bcefb58af066cb7e3dd533b9bf6c7cb84559b0a4753ed77d157115a18233f0",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第十五条",
+    "completeOfficialQuote": "第十五条 生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责：\n\n（一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；\n\n（二）每年至少组织并参与一次生产安全事故应急救援演练；\n\n（三）每年至少组织一次全面的安全风险辨识，制定完善管控措施；\n（四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理；\n\n（五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+    "scopeDecision": "完整官方原文与既有稳定ID、法版本和条款定位核对；本条对应H/K各自另审责任主体及分支。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

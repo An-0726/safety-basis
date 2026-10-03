@@ -1,18 +1,87 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "43eaa1d9f1c7f97d82fb1fd4d5c75464e0813cab7ad20904aae4422a2f7e60a7",
-    "hazard": "6947aba9e635b7b49baedd3f50136f4db7b5dc6c5da96b1e6c1b8b762c676ace"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_FT_90588ED32254CA77502243F3",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "危险化学品生产、储存企业的风险分级管控制度、辨识评估、分级措施；第五十二条扩展仅使用危险化学品从事生产的企业，不是任意使用单位。",
   "reviewType": "applicability",
-  "reviewedContentHash": "efc983ffedd47d058cc7dce7350baaed2c7ef7e9ee291afb351b05202abb4e6c",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "05f9fd5e95773bcc14bf64d33046f5563de36bf547184b4fcfb3b6eac686559e",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十四条第一款",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "本项限生产、储存危险化学品的企业，核查第三十四条第一款的安全风险分级管控制度、风险辨识评估和分级管控措施。第五十二条对使用危险化学品从事生产的企业另有适用扩展，本项不据此涵盖任意使用单位。",
+    "/clauseId": "C_A7D8C5192004B9B1DB48E5CC",
+    "/reason": "第三十四条第一款直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/clauseId": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/reason": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "43eaa1d9f1c7f97d82fb1fd4d5c75464e0813cab7ad20904aae4422a2f7e60a7",
+      "hazard": "6947aba9e635b7b49baedd3f50136f4db7b5dc6c5da96b1e6c1b8b762c676ace"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_90588ED32254CA77502243F3",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "efc983ffedd47d058cc7dce7350baaed2c7ef7e9ee291afb351b05202abb4e6c",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ffe42c553fb164207c30136195584580456eab7d8b1fbd56338af6ac53f2d06f",
+  "historySha256": "6d39dca44b527e86fa419b073945afc3e4cf37628038cdbfc9e2eca0577e407b",
+  "previousEntity": {
+    "applicability": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "clauseId": "C_XLSX_FT_DCFCE1A3CAD588EC34DCD666",
+    "hazardId": "H_A7D8C5192004B9B1DB48E5CC_1",
+    "id": "K_XLSX_FT_90588ED32254CA77502243F3",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "892f6a9bc4c9288510ed49869195a8ed7c1c3f9074f75d220f3222f0b2cd29ea",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+    "operativeLocator": "第三十四条第一款",
+    "completeOfficialQuote": "第三十四条　生产、储存危险化学品的企业应当建立安全风险分级管控制度，开展安全风险辨识评估，按照安全风险分级采取相应的管控措施。\n\n生产、储存危险化学品的企业的工艺、设施、设备、原料等发生变更时应当重新进行安全风险辨识评估。\n\n生产、储存危险化学品的企业不得使用国家明令淘汰或者禁止使用的危及生产安全的工艺、技术、设施、设备，具体目录由国务院应急管理部门会同有关部门制定并公布。",
+    "scopeDecision": "危险化学品生产、储存企业的风险分级管控制度、辨识评估、分级措施；第五十二条扩展仅使用危险化学品从事生产的企业，不是任意使用单位。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "ac48ca47b2acb95e9c4f48b9c339de431ef80a402334fa74f1f3fed51dd16492",
+    "clause": "6e80242fa067179786b5772a1a3246d4993c952f547eb3159ee86304a83ae861"
+  }
 }

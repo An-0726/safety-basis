@@ -1,13 +1,92 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    "E_L020"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配：定位二十二但正文为第七十二条处罚规定。完整旧原文、ID、条号及历史审阅均保留；五条原关联已逐项改绑真实实体义务，不将处罚条款改号后继续充当直接义务。",
   "reviewType": "text",
-  "reviewedContentHash": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "6f0b495e65db898802f7caed7f741550500c3ad58c0e6b13235e620e61dea74b",
+  "reviewer": "Codex培训考核条款逐项复核20261003",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "二十二",
+    "/quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L020"
+    ],
+    "/quote": [
+      "E_L020"
+    ],
+    "/lawVersionId": [
+      "E_L020"
+    ],
+    "/sourceUrl": [
+      "E_L020"
+    ],
+    "/lifecycle": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "309934ff5ebc7fdda885b91efdc556ad0438a389b8b0e67a3ab54e63af92fc30",
+  "historySha256": "6bea39d8e8f96b2598f951616ebfba1208a0c42f4b1197f8073a877eca417636",
+  "previousEntity": {
+    "articlePath": "二十二",
+    "id": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "2e880d41be04c945fee30511752ce85100f5ed602d0904401da38ffaa2c4daad",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialName": "江苏省安全生产条例",
+    "version": "2023年3月30日修订",
+    "effectiveDate": "2023-07-01",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+    "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+    "officialStatus": "现行有效",
+    "locators": [
+      "第二条完整范围",
+      "第二十二条完整三款",
+      "第七十二条完整处罚文本",
+      "第七十七条施行日期"
+    ],
+    "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+    "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+    "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+  },
+  "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
 }

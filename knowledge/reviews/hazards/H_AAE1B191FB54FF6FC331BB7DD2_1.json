@@ -1,13 +1,88 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_AAE1B191FB54FF6FC331BB7DD2_1",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    "E_L001"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+  "reason": "仅同一建筑物由两个以上单位管理或者使用；明确各方消防责任，并统一管理共用疏散/消防设施。",
   "reviewType": "content",
-  "reviewedContentHash": "7670aaec5749d415a2edb0ef5b92db8514df7ccc149b437660833e0a7e26b1dd",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "9df22f2179b8099f3a92e30a468b297f75de80461dc62c71bfcfe1fefb30590b",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十八条第一款",
+  "reviewedFields": [
+    "/conditions",
+    "/measures",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于同一建筑物由两个以上单位管理或者使用的情形，本项核查各方消防安全责任的明确情况及共用部位统一管理；住宅区物业服务职责属于第十八条第二款的另一分支。",
+    "/measures": "明确同一建筑物各管理、使用单位的消防安全责任，并确定责任人对共用的疏散通道、安全出口、建筑消防设施和消防车通道进行统一管理。",
+    "/places": [
+      "两个以上单位管理或者使用的同一建筑物"
+    ]
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_L001"
+    ],
+    "/measures": [
+      "E_L001"
+    ],
+    "/places": [
+      "E_L001"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AAE1B191FB54FF6FC331BB7DD2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "7670aaec5749d415a2edb0ef5b92db8514df7ccc149b437660833e0a7e26b1dd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "c1a414181192a9e58640e431dbece0035f0dd4d8728e5dd2643a5c5c8bc0fd67",
+  "historySha256": "878355a0c4128ccc20e41b7c66b805f5ada3de9fb96419e557173a1d5013da7d",
+  "previousEntity": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，同一建筑物由两个以上单位管理或者使用的，未明确各方的消防安全责任，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AAE1B191FB54FF6FC331BB7DD2_1",
+    "keywords": [
+      "同一建筑物由两个以上单位管理或者使用的",
+      "未明确各方的消防安全责任"
+    ],
+    "lifecycle": "active",
+    "measures": "同一建筑物由两个以上单位管理或者使用的，明确各方的消防安全责任；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "同一建筑物由两个以上单位管理或者使用的，未明确各方的消防安全责任"
+  },
+  "previousEntityFileSha256": "8de7c631c409d8d8c734c6f6db263b0115f32c47dbef55b7940cb7d1f01c59b6",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L001",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "6f871d09f38d42e249c234698cb04255e3ea50238856ddca377129f36d435a71",
+    "operativeLocator": "第十八条第一款",
+    "completeOfficialQuote": "第十八条  同一建筑物由两个以上单位管理或者使用的，应当明确各方的消防安全责任，并确定责任人对共用的疏散通道、安全出口、建筑消防设施和消防车通道进行统一管理。\n\n　　住宅区的物业服务企业应当对管理区域内的共用消防设施进行维护管理，提供消防安全防范服务。",
+    "scopeDecision": "仅同一建筑物由两个以上单位管理或者使用；明确各方消防责任，并统一管理共用疏散/消防设施。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

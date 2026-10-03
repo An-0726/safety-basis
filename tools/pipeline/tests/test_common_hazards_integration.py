@@ -1,3 +1,4 @@
+from remaining_clause_fixture import pre_remaining_source_bytes
 """Exact post-PR105 integration contract; no new Gate or cohort authorizations."""
 import copy
 from datetime import date
@@ -8,6 +9,9 @@ import sys
 import unittest
 
 from common_hazards_fixture import ADMITTED_IDS, ADDED_IDS, pre_common_gate
+from flange_scope_fixture import pre_flange_source_bytes
+from occupational_citation_fixture import pre_occupational_source_bytes
+from training_citation_fixture import pre_training_source_hashes
 ROOT = Path(__file__).resolve().parents[3]
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
@@ -50,8 +54,12 @@ class CommonHazardsIntegrationTests(unittest.TestCase):
     def test_every_inherited_public_hazard_source_file_is_byte_identical(self):
         inherited = pre_common_gate(self.results['2026-10-03']).eligible_hazards
         paths = [f'knowledge/hazards/{hid}.json' for hid in sorted(inherited)]
-        hashes = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in paths}
-        self.assertEqual(digest(hashes), BASELINE['inheritedHazardSourceFilesSha256'])
+        # Compose the disjoint exact inverses of the reviewed flange, training,
+        # and occupational repairs. Preserve the original historical digest;
+        # each adapter rejects unexpected bytes and leaves unknown edits visible.
+        hashes = {p: hashlib.sha256(pre_flange_source_bytes(
+            p, pre_occupational_source_bytes(p, pre_remaining_source_bytes(p, (ROOT / p).read_bytes())))).hexdigest() for p in paths}
+        self.assertEqual(digest(pre_training_source_hashes(hashes)), BASELINE['inheritedHazardSourceFilesSha256'])
 
     def test_final_independent_reviewed_field_hashes_remain_exact(self):
         reviewed = json.loads((ROOT / 'docs/common-hazards-final-field-review-20261003.json').read_text())

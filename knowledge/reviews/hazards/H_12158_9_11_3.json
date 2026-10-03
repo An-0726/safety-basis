@@ -1,13 +1,81 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_12158_9_11_3",
   "entityType": "hazard",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+  "reason": "第9.11条第三句要求在每一对法兰或螺纹接头间电阻值大于0.03Ω时做导线跨接；不得删去该电阻触发条件，也不得改成大于或等于0.03Ω。已目读第1章完整范围和第9章上下文；删除机械夹卷或一般送电模板，保留第1章排除、气态和粉态物料场景、精确对象及第9.5条独立核查边界。",
   "reviewType": "content",
-  "reviewedContentHash": "285fbcff25294bf5e32314537b6c3da478685f9b9cadb4383983f6b6132f7dc0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "3c59d63d1e722cbd892e654061d7d01c8b09aade8edeebb8549f6174af7613f7",
+  "reviewer": "Codex法兰静电范围逐项复核20261003",
+  "reviewedFields": [
+    "/conditions",
+    "/places",
+    "/measures"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。仅当每一对法兰或螺纹接头间电阻值大于0.03Ω时，本分支要求做导线跨接；未测电阻且仅观察到未设独立跨接线，不能据此直接认定本分支不符合。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+    "/places": [
+      "静电危险场所中气态和粉态物料相关的设备、管道连接处（按第1章范围排除不适用对象）"
+    ],
+    "/measures": "对每一对法兰或螺纹接头间电阻值大于0.03Ω的连接处做导线跨接，检查跨接连接可靠性并复核导电连续性。"
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_12158_GB 12158"
+    ],
+    "/places": [
+      "E_12158_GB 12158"
+    ],
+    "/measures": [
+      "E_12158_GB 12158"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_9_11_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "285fbcff25294bf5e32314537b6c3da478685f9b9cadb4383983f6b6132f7dc0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "9f9b8a7bff886124257f2108310b39f0f06994abda2b2ce630a31c8e98f2bb39",
+  "historySha256": "12e6ee2df86dd46aa69e7464eb28928a7a515237a2b790882211969c80168570",
+  "reviewEvidence": {
+    "statusCheckedAt": "2026-10-03",
+    "standard": "GB 12158-2024",
+    "officialStatus": "现行",
+    "publicationDate": "2024-12-31",
+    "effectiveDate": "2026-01-01",
+    "officialIdentityUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D",
+    "originalPdfUrl": "https://www.hipc.org.cn/upload/files/20250408/1744076000682708.pdf",
+    "originalPdfSha256": "d0444f1a030b8531482649b7b5bd7283eb1a0ae52dc3d7dacbc9b0028f7fac65",
+    "originalPdfProvenanceUrl": "https://www.hipc.org.cn/post/index/115",
+    "sourceClass": "黑龙江省科学院石油化学研究院公开完整标准原版，非标准发布机关原发页；效力身份由SAMR官方记录独立核验。",
+    "locators": [
+      "PDF第7页/正文第1页：第1章完整范围",
+      "PDF第18页/正文第12页：第9章标题、第9.5、9.8、9.11条"
+    ],
+    "reviewMethod": "逐页目读完整范围及第9章相关上下文；不以搜索摘要或OCR替代。",
+    "scopeQuote": "本文件规定了为防止静电放电引发燃烧和爆炸所应采取的静电防护通用要求，静电管理措施，静电危险场所要求，固态、液态、气态和粉态物料的静电防护措施，人体静电防护措施及静电事故的分析和确定。\n本文件适用于静电危险场所的设计和管理。\n注：其他静电危害（如静电电击）的防护可参考使用。\n本文件不适用于火炸药、电火工品、烟花爆竹的静电危害防范。",
+    "chapterHeading": "9 气态和粉态物料的静电防护措施",
+    "section9_5": "除尘系统的导电部件应进行等电位连接，并可靠接地，静电接地电阻应小于100Ω，管道连接法兰应进行防静电跨接。",
+    "section9_8": "应采用金属导体制作管道或部件，当采用静电非导体时，应具体测量评估其起电程度，必要时采取相应措施，测量和评估过程及所采取的措施应形成文件纳入静电防护管理体系文件。",
+    "technicalDecisions": [
+      "保留第9.11条精确对象，未将管道无条件缩写为金属管道。",
+      "两个以上保留原技术用词；未擅改为三颗及以上。",
+      "大于0.03Ω不含等于0.03Ω；本分支未触发不等于免除其他条款。",
+      "第9.5条除尘系统管道法兰的独立跨接义务不能被第9.11条分支推翻。"
+    ],
+    "siteFactsVerified": false,
+    "profileAdmission": false
+  },
+  "notes": "本次审核限reviewedFields列明的最终字段及所涉第9.11条分支；全实体hash仅作内容绑定，不认证未变字段、全库、现场事实或profile准入。previousReview完整保留。效力身份采用SAMR官方记录，技术范围逐页核对公开完整标准原版；原件为研究机构转载，非发布机关原发页。"
 }

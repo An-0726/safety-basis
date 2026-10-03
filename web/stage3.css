@@ -24,6 +24,7 @@
 .note h3{color:var(--ink)}
 .note p{color:#51614c;font-size:12px}
 .detailactions #backResults{display:none}
+.detail h2{scroll-margin-top:calc(var(--sticky-header-height,0px) + 12px)}
 #list:focus{outline:2px solid #afcba9;outline-offset:-2px}
 .search-help{font-size:12px;line-height:1.6;color:#66746c;margin:8px 0 0}
 .filters{padding:14px 0;gap:12px}
@@ -49,8 +50,7 @@ summary:focus-visible{outline:3px solid #afcba9;outline-offset:2px}
   .more-filter-items label,.more-filter-items select{width:100%;max-width:none}
   .record-grid{grid-template-columns:1fr 1fr}
   .record-grid .record-places{grid-column:1/-1}
-  .detail h2{scroll-margin-top:90px}
-  #list{scroll-margin-top:90px}
+  .detail h2,#detail,#list{scroll-margin-top:calc(var(--sticky-header-height,0px) + 12px)}
   .detailactions #backResults{display:block;min-width:100%}
   .filters{align-items:start;gap:10px}
   .filters>label{display:grid;gap:6px;flex:1 1 calc(50% - 10px);min-width:0}

@@ -1,0 +1,2805 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-03",
+  "baselineCommit": "cf7ef4de02e7df204fce5043b52c7fb70f2b60d9",
+  "baselineSourceTree": "4072eb08b9aa6c7d9262a7b72abe4776eda4a271",
+  "repairPlanSha256": "59550c1c12262a67f049a480566c66cce5c381e63bb43aa4623098a543ebb228",
+  "badClauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+  "nationalClauseId": "C033",
+  "jiangsuClauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+  "scope": "Five existing H/K citation repairs, canonical Jiangsu jurisdiction narrowing, corrupt clause quarantine, source-specific reviews, and pending dependency binding only. No company facts or profile admission.",
+  "fiveLinks": [
+    {
+      "hazardId": "H034",
+      "linkId": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+      "clauseId": "C033"
+    },
+    {
+      "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+      "linkId": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+      "clauseId": "C033"
+    },
+    {
+      "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+      "linkId": "K_XLSX_FT_498653F95CEB7020551DDECA",
+      "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+    },
+    {
+      "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+      "linkId": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+      "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+    },
+    {
+      "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+      "linkId": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+      "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+    }
+  ],
+  "entities": [
+    {
+      "path": "knowledge/hazards/H034.json",
+      "id": "H034",
+      "beforeFileText": "{\n  \"aliases\": [\n    \"主要负责人安全能力不足\",\n    \"安全管理人员能力不符合\",\n    \"主要负责人未考核合格\",\n    \"安全管理人员能力不足\",\n    \"负责人和安全员未考核\",\n    \"安全生产知识和管理能力不符合要求\"\n  ],\n  \"category\": \"安全管理\",\n  \"conditions\": \"适用于生产经营单位主要负责人和安全生产管理人员；特定行业另按第二十七条法定考核条件适用。\",\n  \"description\": \"生产经营单位主要负责人或安全生产管理人员不具备与本单位生产经营活动相应的安全生产知识和管理能力；依法应接受主管部门考核的单位，其相关人员未按规定考核合格。\",\n  \"id\": \"H034\",\n  \"keywords\": [\n    \"主要负责人\",\n    \"安全管理人员\",\n    \"安全生产知识\",\n    \"管理能力\",\n    \"培训考核\",\n    \"安全管理\",\n    \"主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"结合单位行业和风险特点核实主要负责人、安全生产管理人员应具备的知识、能力及依法需要的考核要求，组织培训考核并保留相应证明材料。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"《安全生产法》并未要求所有行业主要负责人和安全生产管理人员一律“培训取证”。一般单位适用知识和管理能力要求；危险物品生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位还应依法考核合格。2026-09-10专业终审：《中华人民共和国安全生产法》第二十七条对主要负责人和安全生产管理人员应具备与本单位生产经营活动相应的安全生产知识和管理能力作出直接要求；危险物品的生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位的相关人员还应依法考核合格。该条现行有效。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。\\n\\n《江苏省安全生产条例》第二十二条（仅适用于该条所列行业单位时）。\",\n  \"places\": [\n    \"通用场所\",\n    \"工贸企业\",\n    \"生产经营单位\"\n  ],\n  \"title\": \"主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求\"\n}\n",
+      "oldFileSha256": "ba3c7805be18d518dadb21b935b43a1851bd7816fd1232d34d8037a93b5aba0b",
+      "oldContentHash": "a6048ca4538a63af22d9306eba0b5b28145b39877880273a6e6706aa105ccab5",
+      "before": {
+        "aliases": [
+          "主要负责人安全能力不足",
+          "安全管理人员能力不符合",
+          "主要负责人未考核合格",
+          "安全管理人员能力不足",
+          "负责人和安全员未考核",
+          "安全生产知识和管理能力不符合要求"
+        ],
+        "category": "安全管理",
+        "conditions": "适用于生产经营单位主要负责人和安全生产管理人员；特定行业另按第二十七条法定考核条件适用。",
+        "description": "生产经营单位主要负责人或安全生产管理人员不具备与本单位生产经营活动相应的安全生产知识和管理能力；依法应接受主管部门考核的单位，其相关人员未按规定考核合格。",
+        "id": "H034",
+        "keywords": [
+          "主要负责人",
+          "安全管理人员",
+          "安全生产知识",
+          "管理能力",
+          "培训考核",
+          "安全管理",
+          "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+        ],
+        "lifecycle": "active",
+        "measures": "结合单位行业和风险特点核实主要负责人、安全生产管理人员应具备的知识、能力及依法需要的考核要求，组织培训考核并保留相应证明材料。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "《安全生产法》并未要求所有行业主要负责人和安全生产管理人员一律“培训取证”。一般单位适用知识和管理能力要求；危险物品生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位还应依法考核合格。2026-09-10专业终审：《中华人民共和国安全生产法》第二十七条对主要负责人和安全生产管理人员应具备与本单位生产经营活动相应的安全生产知识和管理能力作出直接要求；危险物品的生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位的相关人员还应依法考核合格。该条现行有效。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。\n\n《江苏省安全生产条例》第二十二条（仅适用于该条所列行业单位时）。",
+        "places": [
+          "通用场所",
+          "工贸企业",
+          "生产经营单位"
+        ],
+        "title": "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+      },
+      "modifiedFields": [
+        "conditions"
+      ],
+      "after": {
+        "conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。"
+      },
+      "unchangedFields": {
+        "aliases": [
+          "主要负责人安全能力不足",
+          "安全管理人员能力不符合",
+          "主要负责人未考核合格",
+          "安全管理人员能力不足",
+          "负责人和安全员未考核",
+          "安全生产知识和管理能力不符合要求"
+        ],
+        "category": "安全管理",
+        "description": "生产经营单位主要负责人或安全生产管理人员不具备与本单位生产经营活动相应的安全生产知识和管理能力；依法应接受主管部门考核的单位，其相关人员未按规定考核合格。",
+        "id": "H034",
+        "keywords": [
+          "主要负责人",
+          "安全管理人员",
+          "安全生产知识",
+          "管理能力",
+          "培训考核",
+          "安全管理",
+          "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+        ],
+        "lifecycle": "active",
+        "measures": "结合单位行业和风险特点核实主要负责人、安全生产管理人员应具备的知识、能力及依法需要的考核要求，组织培训考核并保留相应证明材料。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "《安全生产法》并未要求所有行业主要负责人和安全生产管理人员一律“培训取证”。一般单位适用知识和管理能力要求；危险物品生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位还应依法考核合格。2026-09-10专业终审：《中华人民共和国安全生产法》第二十七条对主要负责人和安全生产管理人员应具备与本单位生产经营活动相应的安全生产知识和管理能力作出直接要求；危险物品的生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位的相关人员还应依法考核合格。该条现行有效。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。\n\n《江苏省安全生产条例》第二十二条（仅适用于该条所列行业单位时）。",
+        "places": [
+          "通用场所",
+          "工贸企业",
+          "生产经营单位"
+        ],
+        "title": "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+      },
+      "record": {
+        "aliases": [
+          "主要负责人安全能力不足",
+          "安全管理人员能力不符合",
+          "主要负责人未考核合格",
+          "安全管理人员能力不足",
+          "负责人和安全员未考核",
+          "安全生产知识和管理能力不符合要求"
+        ],
+        "category": "安全管理",
+        "conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。",
+        "description": "生产经营单位主要负责人或安全生产管理人员不具备与本单位生产经营活动相应的安全生产知识和管理能力；依法应接受主管部门考核的单位，其相关人员未按规定考核合格。",
+        "id": "H034",
+        "keywords": [
+          "主要负责人",
+          "安全管理人员",
+          "安全生产知识",
+          "管理能力",
+          "培训考核",
+          "安全管理",
+          "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+        ],
+        "lifecycle": "active",
+        "measures": "结合单位行业和风险特点核实主要负责人、安全生产管理人员应具备的知识、能力及依法需要的考核要求，组织培训考核并保留相应证明材料。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "《安全生产法》并未要求所有行业主要负责人和安全生产管理人员一律“培训取证”。一般单位适用知识和管理能力要求；危险物品生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位还应依法考核合格。2026-09-10专业终审：《中华人民共和国安全生产法》第二十七条对主要负责人和安全生产管理人员应具备与本单位生产经营活动相应的安全生产知识和管理能力作出直接要求；危险物品的生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位的相关人员还应依法考核合格。该条现行有效。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。\n\n《江苏省安全生产条例》第二十二条（仅适用于该条所列行业单位时）。",
+        "places": [
+          "通用场所",
+          "工贸企业",
+          "生产经营单位"
+        ],
+        "title": "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+      },
+      "fileSha256": "0e71aedd60a04c0f395409527d83bd87ae45467c3f4e2ad106ccf803c39d2601",
+      "contentHash": "ef97e5d0a2b832f740fcb711cc38ac091af7c230233dd988bc67ad9f8e39ff6a"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F.json",
+      "id": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+      "beforeFileText": "{\n  \"id\": \"K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F\",\n  \"hazardId\": \"H034\",\n  \"clauseId\": \"C_XLSX_FT_D49257E7AE9D715C9C8367F6\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于生产经营单位主要负责人和安全生产管理人员；特定行业另按第二十七条法定考核条件适用。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n",
+      "oldFileSha256": "5ec3218f2af2f4528a8229a6278326ae3858ae940ddfbe20b83f7f3bd5da0c5f",
+      "oldContentHash": "307ad1094d02f9d725ff581edb0b130d2370a8876995efe5e9ec6685d3d0a1d7",
+      "before": {
+        "id": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+        "hazardId": "H034",
+        "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于生产经营单位主要负责人和安全生产管理人员；特定行业另按第二十七条法定考核条件适用。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+      },
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C033",
+        "applicability": "全国一般知识和管理能力义务；对第二十七条第二款列明单位，另核主管部门考核合格。",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "unchangedFields": {
+        "id": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+        "hazardId": "H034",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": ""
+      },
+      "record": {
+        "id": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+        "hazardId": "H034",
+        "clauseId": "C033",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "全国一般知识和管理能力义务；对第二十七条第二款列明单位，另核主管部门考核合格。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "fileSha256": "1c32a35c867bf38ad5f5656f518709dbe5b70c1eeb6fb3c2a4e37253de4d5e37",
+      "contentHash": "fc82b64825858d9685bbc58be79b5d3af02a851bec0d2927fa3c52714e5174da"
+    },
+    {
+      "path": "knowledge/hazards/H_87D36F82D5F9405BA0B0B14CB7.json",
+      "id": "H_87D36F82D5F9405BA0B0B14CB7",
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"安全教育\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"适用于本隐患所述场所与设备的相关管理。 经现场核查存在以下不符合：主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力。\",\n  \"id\": \"H_87D36F82D5F9405BA0B0B14CB7\",\n  \"keywords\": [\n    \"主要负责人\",\n    \"安全生产管理人员\",\n    \"未经安监部门考核合格\",\n    \"主\",\n    \"要\",\n    \"负\",\n    \"责\",\n    \"人\",\n    \",\",\n    \"安\",\n    \"全\",\n    \"生\",\n    \"产\",\n    \"管\",\n    \"理\",\n    \"员\",\n    \"未\",\n    \"经\",\n    \"监\",\n    \"部\",\n    \"门\",\n    \"考\",\n    \"核\",\n    \"合\",\n    \"格\",\n    \"并\",\n    \"取\",\n    \"得\",\n    \"培\",\n    \"训\",\n    \"证\",\n    \"书\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"主要负责人、安全生产管理人员已取得安全培训合格证书。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"[Phase22] title泛化：原'未经安监部门考核合格并取得安全培训合格证书'仅适用于安法27条第2款特定行业；泛化为'不具备相应知识和管理能力'后，安法27条第1款适用于所有单位，direct依据成立。原 conditions 字段记录的引用依据为：依据：《安全生产法》《江苏省安全生产条例》\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力\"\n}\n",
+      "oldFileSha256": "5c6706a33240a9d53d695c19e8985fb91e65396e52409f6a2c671fcbfb31eb3f",
+      "oldContentHash": "8a6ae8403d12fa4a5978198a41be8d6dc49ea977ba5b80e3f2832f89c8174795",
+      "before": {
+        "aliases": [],
+        "category": "安全教育",
+        "conditions": "适用于本隐患所述场所与设备的相关管理。",
+        "description": "适用于本隐患所述场所与设备的相关管理。 经现场核查存在以下不符合：主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力。",
+        "id": "H_87D36F82D5F9405BA0B0B14CB7",
+        "keywords": [
+          "主要负责人",
+          "安全生产管理人员",
+          "未经安监部门考核合格",
+          "主",
+          "要",
+          "负",
+          "责",
+          "人",
+          ",",
+          "安",
+          "全",
+          "生",
+          "产",
+          "管",
+          "理",
+          "员",
+          "未",
+          "经",
+          "监",
+          "部",
+          "门",
+          "考",
+          "核",
+          "合",
+          "格",
+          "并",
+          "取",
+          "得",
+          "培",
+          "训",
+          "证",
+          "书"
+        ],
+        "lifecycle": "active",
+        "measures": "主要负责人、安全生产管理人员已取得安全培训合格证书。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "[Phase22] title泛化：原'未经安监部门考核合格并取得安全培训合格证书'仅适用于安法27条第2款特定行业；泛化为'不具备相应知识和管理能力'后，安法27条第1款适用于所有单位，direct依据成立。原 conditions 字段记录的引用依据为：依据：《安全生产法》《江苏省安全生产条例》",
+        "places": [
+          "通用场所"
+        ],
+        "title": "主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力"
+      },
+      "modifiedFields": [
+        "conditions",
+        "description",
+        "measures"
+      ],
+      "after": {
+        "conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。",
+        "description": "生产经营单位主要负责人或者安全生产管理人员不具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。",
+        "measures": "结合本单位生产经营活动核实主要负责人、安全生产管理人员的安全生产知识和管理能力，针对不足组织培训并核验改进情况；属于《安全生产法》第二十七条第二款列明单位的相关人员，还应按规定经主管部门考核合格。不得以所有行业一律取得安全培训合格证替代具体要求。"
+      },
+      "unchangedFields": {
+        "aliases": [],
+        "category": "安全教育",
+        "id": "H_87D36F82D5F9405BA0B0B14CB7",
+        "keywords": [
+          "主要负责人",
+          "安全生产管理人员",
+          "未经安监部门考核合格",
+          "主",
+          "要",
+          "负",
+          "责",
+          "人",
+          ",",
+          "安",
+          "全",
+          "生",
+          "产",
+          "管",
+          "理",
+          "员",
+          "未",
+          "经",
+          "监",
+          "部",
+          "门",
+          "考",
+          "核",
+          "合",
+          "格",
+          "并",
+          "取",
+          "得",
+          "培",
+          "训",
+          "证",
+          "书"
+        ],
+        "lifecycle": "active",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "[Phase22] title泛化：原'未经安监部门考核合格并取得安全培训合格证书'仅适用于安法27条第2款特定行业；泛化为'不具备相应知识和管理能力'后，安法27条第1款适用于所有单位，direct依据成立。原 conditions 字段记录的引用依据为：依据：《安全生产法》《江苏省安全生产条例》",
+        "places": [
+          "通用场所"
+        ],
+        "title": "主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力"
+      },
+      "record": {
+        "aliases": [],
+        "category": "安全教育",
+        "conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。",
+        "description": "生产经营单位主要负责人或者安全生产管理人员不具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。",
+        "id": "H_87D36F82D5F9405BA0B0B14CB7",
+        "keywords": [
+          "主要负责人",
+          "安全生产管理人员",
+          "未经安监部门考核合格",
+          "主",
+          "要",
+          "负",
+          "责",
+          "人",
+          ",",
+          "安",
+          "全",
+          "生",
+          "产",
+          "管",
+          "理",
+          "员",
+          "未",
+          "经",
+          "监",
+          "部",
+          "门",
+          "考",
+          "核",
+          "合",
+          "格",
+          "并",
+          "取",
+          "得",
+          "培",
+          "训",
+          "证",
+          "书"
+        ],
+        "lifecycle": "active",
+        "measures": "结合本单位生产经营活动核实主要负责人、安全生产管理人员的安全生产知识和管理能力，针对不足组织培训并核验改进情况；属于《安全生产法》第二十七条第二款列明单位的相关人员，还应按规定经主管部门考核合格。不得以所有行业一律取得安全培训合格证替代具体要求。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "[Phase22] title泛化：原'未经安监部门考核合格并取得安全培训合格证书'仅适用于安法27条第2款特定行业；泛化为'不具备相应知识和管理能力'后，安法27条第1款适用于所有单位，direct依据成立。原 conditions 字段记录的引用依据为：依据：《安全生产法》《江苏省安全生产条例》",
+        "places": [
+          "通用场所"
+        ],
+        "title": "主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力"
+      },
+      "fileSha256": "ba8611864ec87afe6c07c9ee44253938e35c48d32e71d4faf6e85dc444a3e88f",
+      "contentHash": "03e54b69304831a72312617bc3951252f369ce5366a6e386c74d59df3bd49adf"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9.json",
+      "id": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+      "beforeFileText": "{\n  \"id\": \"K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9\",\n  \"hazardId\": \"H_87D36F82D5F9405BA0B0B14CB7\",\n  \"clauseId\": \"C_XLSX_FT_D49257E7AE9D715C9C8367F6\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n",
+      "oldFileSha256": "1922d46d4b8327f8a2afdb38b24bd4059404489d7c8bf8c67dc87d65cdfbfd39",
+      "oldContentHash": "02cf1dd10797ebaa52ccded196f2d87198a46eb4c1c773a0f4f69f1849d1805f",
+      "before": {
+        "id": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+        "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+        "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于本隐患所述场所与设备的相关管理。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+      },
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C033",
+        "applicability": "仅第二十七条第一款的一般知识和管理能力要求；第二款考核义务按列明行业单位另行触发。",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "unchangedFields": {
+        "id": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+        "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": ""
+      },
+      "record": {
+        "id": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+        "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+        "clauseId": "C033",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "仅第二十七条第一款的一般知识和管理能力要求；第二款考核义务按列明行业单位另行触发。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "fileSha256": "6e1b650a1f00d35574b0a1d61f70d2fab4fc591df6c3ee9de096dc777e6bea7f",
+      "contentHash": "47ae631e8dd2bbaea81e6d689ba13f0abbe9efd831acc3fcc25a400770ed1ace"
+    },
+    {
+      "path": "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_1.json",
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_1",
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"危险化学品与危险物质\",\n  \"conditions\": \"适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所\",\n  \"description\": \"经资料和执行情况核查，矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_9F790C9B0EA34E59207BCCC1AD_1\",\n  \"keywords\": [\n    \"矿山\",\n    \"金属冶炼\",\n    \"建筑施工\",\n    \"运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员经安全生产知识和管理能力考核合格。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所\"\n  ],\n  \"title\": \"矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格\"\n}\n",
+      "oldFileSha256": "fd5e5f24c1799c93f6343cf42bcb4c09b7437a6b2dd1fe438015072cedf9015d",
+      "oldContentHash": "99b5d711cded1694ef56d481db340b190dd09748e8c9effa7eaa6d10d55d4488",
+      "before": {
+        "aliases": [],
+        "category": "危险化学品与危险物质",
+        "conditions": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+        "description": "经资料和执行情况核查，矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格，实际状态与直接依据规定的安全要求不一致。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "keywords": [
+          "矿山",
+          "金属冶炼",
+          "建筑施工",
+          "运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+        ],
+        "lifecycle": "active",
+        "measures": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员经安全生产知识和管理能力考核合格。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所"
+        ],
+        "title": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+      },
+      "modifiedFields": [
+        "conditions",
+        "places",
+        "category",
+        "measures"
+      ],
+      "after": {
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，核查其是否经主管的负有安全生产监督管理职责的部门对安全生产知识和管理能力考核合格。",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位及其相关人员管理活动"
+        ],
+        "category": "安全教育培训",
+        "measures": "核实单位行业属性和相关人员任职情况，按《江苏省安全生产条例》第二十二条第一款落实主管部门安全生产知识和管理能力考核合格要求，并留存相应证明；新任职人员的期限按该条第二款另行核查。"
+      },
+      "unchangedFields": {
+        "aliases": [],
+        "description": "经资料和执行情况核查，矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格，实际状态与直接依据规定的安全要求不一致。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "keywords": [
+          "矿山",
+          "金属冶炼",
+          "建筑施工",
+          "运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+        ],
+        "lifecycle": "active",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "title": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+      },
+      "record": {
+        "aliases": [],
+        "category": "安全教育培训",
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，核查其是否经主管的负有安全生产监督管理职责的部门对安全生产知识和管理能力考核合格。",
+        "description": "经资料和执行情况核查，矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格，实际状态与直接依据规定的安全要求不一致。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "keywords": [
+          "矿山",
+          "金属冶炼",
+          "建筑施工",
+          "运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+        ],
+        "lifecycle": "active",
+        "measures": "核实单位行业属性和相关人员任职情况，按《江苏省安全生产条例》第二十二条第一款落实主管部门安全生产知识和管理能力考核合格要求，并留存相应证明；新任职人员的期限按该条第二款另行核查。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位及其相关人员管理活动"
+        ],
+        "title": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+      },
+      "fileSha256": "bd5c9842beac0c14f3b00c40d474d0d9c28ffc873df30c9d8396113284084a3b",
+      "contentHash": "edb98ff3cebf3c4df564445bf47de4f376ed7e0b9b88be5d339eff15b89132d6"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_FT_498653F95CEB7020551DDECA.json",
+      "id": "K_XLSX_FT_498653F95CEB7020551DDECA",
+      "beforeFileText": "{\n  \"applicability\": \"适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所\",\n  \"clauseId\": \"C_XLSX_FT_D49257E7AE9D715C9C8367F6\",\n  \"hazardId\": \"H_9F790C9B0EA34E59207BCCC1AD_1\",\n  \"id\": \"K_XLSX_FT_498653F95CEB7020551DDECA\",\n  \"jurisdictionCode\": \"CN-32\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"reason\": \"隐患描述、全文条款和整改措施逐项对应，作为直接依据。\",\n  \"role\": \"direct\"\n}\n",
+      "oldFileSha256": "90433f767c1f993436c418a141e64f2717438f519d6295fa5fd123c51a16de9c",
+      "oldContentHash": "deaf75d29117501d995c865d2f6fe5a4a5ec111d69c77de9bf2b107f8178b143",
+      "before": {
+        "applicability": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+        "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "id": "K_XLSX_FT_498653F95CEB7020551DDECA",
+        "jurisdictionCode": "CN-32",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+        "role": "direct"
+      },
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "applicability": "江苏省范围；第二十二条第一款列明行业单位的主管部门知识和管理能力考核。不能只以存在危险化学品为适用门槛。",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "unchangedFields": {
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "id": "K_XLSX_FT_498653F95CEB7020551DDECA",
+        "jurisdictionCode": "CN-32",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "role": "direct"
+      },
+      "record": {
+        "applicability": "江苏省范围；第二十二条第一款列明行业单位的主管部门知识和管理能力考核。不能只以存在危险化学品为适用门槛。",
+        "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "id": "K_XLSX_FT_498653F95CEB7020551DDECA",
+        "jurisdictionCode": "CN-32",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。",
+        "role": "direct"
+      },
+      "fileSha256": "78e74356ff34b51d21ce67fa2a2988da5ec729b95ebb26b7950c6d5a4add974d",
+      "contentHash": "7dc3bcf9f857612b1dc9887a5d193d078957344176c2e8342e5dd138441de18d"
+    },
+    {
+      "path": "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_2.json",
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_2",
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"设备设施\",\n  \"conditions\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"description\": \"前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；（第二十二条）。\",\n  \"id\": \"H_9F790C9B0EA34E59207BCCC1AD_2\",\n  \"keywords\": [\n    \"高危行业生产经营单位新任职的主要负责人和安全生产管理人员\",\n    \"未自任职之日起六个月内通过安全生产知识和管理能力考核\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；（依据 第二十二条 整改。）。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"江苏省行政区域内生产经营单位及相关安全管理活动\",\n    \"通用场所\"\n  ],\n  \"title\": \"高危行业生产经营单位新任职的主要负责人和安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核\"\n}\n",
+      "oldFileSha256": "7c362bf189cbbbae9e8bdc84da2aa10b4032195f1d88bc278251cfac76d4271c",
+      "oldContentHash": "6e7a33a2692724250519c4c95bf72b0f5f1ce1cbc93e66fb473e4e93981c0669",
+      "before": {
+        "aliases": [],
+        "category": "设备设施",
+        "conditions": "适用于本隐患所述场所、设备及作业活动。",
+        "description": "前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；（第二十二条）。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "keywords": [
+          "高危行业生产经营单位新任职的主要负责人和安全生产管理人员",
+          "未自任职之日起六个月内通过安全生产知识和管理能力考核"
+        ],
+        "lifecycle": "active",
+        "measures": "前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；（依据 第二十二条 整改。）。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "江苏省行政区域内生产经营单位及相关安全管理活动",
+          "通用场所"
+        ],
+        "title": "高危行业生产经营单位新任职的主要负责人和安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核"
+      },
+      "modifiedFields": [
+        "conditions",
+        "places",
+        "category",
+        "description",
+        "measures"
+      ],
+      "after": {
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职的主要负责人和安全生产管理人员，核查其是否自任职之日起六个月内通过安全生产知识和管理能力考核。",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职相关人员的考核管理活动"
+        ],
+        "category": "安全教育培训",
+        "description": "《江苏省安全生产条例》第二十二条第一款列明单位新任职的主要负责人或者安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核。",
+        "measures": "核实适用行业、人员任职日期和考核记录，落实自任职之日起六个月内通过安全生产知识和管理能力考核的要求；对已发生的超期情形依法整改并保留履行记录，不以补考回溯消除历史超期事实。"
+      },
+      "unchangedFields": {
+        "aliases": [],
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "keywords": [
+          "高危行业生产经营单位新任职的主要负责人和安全生产管理人员",
+          "未自任职之日起六个月内通过安全生产知识和管理能力考核"
+        ],
+        "lifecycle": "active",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "title": "高危行业生产经营单位新任职的主要负责人和安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核"
+      },
+      "record": {
+        "aliases": [],
+        "category": "安全教育培训",
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职的主要负责人和安全生产管理人员，核查其是否自任职之日起六个月内通过安全生产知识和管理能力考核。",
+        "description": "《江苏省安全生产条例》第二十二条第一款列明单位新任职的主要负责人或者安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "keywords": [
+          "高危行业生产经营单位新任职的主要负责人和安全生产管理人员",
+          "未自任职之日起六个月内通过安全生产知识和管理能力考核"
+        ],
+        "lifecycle": "active",
+        "measures": "核实适用行业、人员任职日期和考核记录，落实自任职之日起六个月内通过安全生产知识和管理能力考核的要求；对已发生的超期情形依法整改并保留履行记录，不以补考回溯消除历史超期事实。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职相关人员的考核管理活动"
+        ],
+        "title": "高危行业生产经营单位新任职的主要负责人和安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核"
+      },
+      "fileSha256": "e2d90c38dc02e1b550c685ac400e77c344d2fb19c84656853e76cdb0c1a98cc8",
+      "contentHash": "35b06d16ef440b70d9a79e0d964cea962b20f320bc48774e4f0fe0cea52b8707"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361.json",
+      "id": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+      "beforeFileText": "{\n  \"id\": \"K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361\",\n  \"hazardId\": \"H_9F790C9B0EA34E59207BCCC1AD_2\",\n  \"clauseId\": \"C_XLSX_FT_D49257E7AE9D715C9C8367F6\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n",
+      "oldFileSha256": "bd143583b8521a58790136090363c7947f239dcd4616c929e32a7e22fa85cf73",
+      "oldContentHash": "a60643397fbcfce7bc592cf9cb8e79584c86f85fc639db3a684aba8d904deee2",
+      "before": {
+        "id": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于本隐患所述场所、设备及作业活动。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+      },
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "jurisdictionCode",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "applicability": "江苏省范围；第二十二条第一款列明单位的新任职人员；第二款规定自任职之日起六个月内通过考核。",
+        "jurisdictionCode": "CN-32",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "unchangedFields": {
+        "id": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": ""
+      },
+      "record": {
+        "id": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "江苏省范围；第二十二条第一款列明单位的新任职人员；第二款规定自任职之日起六个月内通过考核。",
+        "jurisdictionCode": "CN-32",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "fileSha256": "b9c52bd9f792c29855f950a741d53ca197db5ac2a4498851932eb313856cf8ea",
+      "contentHash": "60476eb1b15299e3b93b72deed3b03b0d13e2957ba52a020d4eb2a93e431131c"
+    },
+    {
+      "path": "knowledge/hazards/H_9F790C9B0EA34E59207BCCC1AD_3.json",
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_3",
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"设备设施\",\n  \"conditions\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"description\": \"已经考核合格的，应当按照有关规定进行安全生产知识再培训；（第二十二条）。\",\n  \"id\": \"H_9F790C9B0EA34E59207BCCC1AD_3\",\n  \"keywords\": [\n    \"生产经营单位主要负责人和安全生产管理人员考核合格后\",\n    \"未按照有关规定进行安全生产知识再培训\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"消除“生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训”隐患；经考核合格的，应当按照有关规定进行安全生产知识再培训；（依据 第二十二条 整改。）；完成后进行现场验证并留存记录。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动\",\n    \"通用场所\"\n  ],\n  \"title\": \"生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训\"\n}\n",
+      "oldFileSha256": "3d827c84882148bc9dc15198ece9631955bccbad80ba248c3a636d53400585d6",
+      "oldContentHash": "744ec930a99402e625dd556c49a6e1ed63c0a43e0ce210698893983c6b5e5631",
+      "before": {
+        "aliases": [],
+        "category": "设备设施",
+        "conditions": "适用于本隐患所述场所、设备及作业活动。",
+        "description": "已经考核合格的，应当按照有关规定进行安全生产知识再培训；（第二十二条）。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "keywords": [
+          "生产经营单位主要负责人和安全生产管理人员考核合格后",
+          "未按照有关规定进行安全生产知识再培训"
+        ],
+        "lifecycle": "active",
+        "measures": "消除“生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训”隐患；经考核合格的，应当按照有关规定进行安全生产知识再培训；（依据 第二十二条 整改。）；完成后进行现场验证并留存记录。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+          "通用场所"
+        ],
+        "title": "生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训"
+      },
+      "modifiedFields": [
+        "conditions",
+        "places",
+        "category",
+        "description",
+        "measures"
+      ],
+      "after": {
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已经考核合格的主要负责人和安全生产管理人员，按有关规定核查安全生产知识再培训；本条不自行设定统一再培训周期。",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已考核合格相关人员的再培训管理活动"
+        ],
+        "category": "安全教育培训",
+        "description": "《江苏省安全生产条例》第二十二条第一款列明单位的主要负责人或者安全生产管理人员，在考核合格后未按照有关规定进行安全生产知识再培训。",
+        "measures": "核实人员适用范围及已考核合格状态，按照有关规定组织安全生产知识再培训并留存记录；具体培训周期和学时另按实际适用规定确定。"
+      },
+      "unchangedFields": {
+        "aliases": [],
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "keywords": [
+          "生产经营单位主要负责人和安全生产管理人员考核合格后",
+          "未按照有关规定进行安全生产知识再培训"
+        ],
+        "lifecycle": "active",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "title": "生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训"
+      },
+      "record": {
+        "aliases": [],
+        "category": "安全教育培训",
+        "conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已经考核合格的主要负责人和安全生产管理人员，按有关规定核查安全生产知识再培训；本条不自行设定统一再培训周期。",
+        "description": "《江苏省安全生产条例》第二十二条第一款列明单位的主要负责人或者安全生产管理人员，在考核合格后未按照有关规定进行安全生产知识再培训。",
+        "id": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "keywords": [
+          "生产经营单位主要负责人和安全生产管理人员考核合格后",
+          "未按照有关规定进行安全生产知识再培训"
+        ],
+        "lifecycle": "active",
+        "measures": "核实人员适用范围及已考核合格状态，按照有关规定组织安全生产知识再培训并留存记录；具体培训周期和学时另按实际适用规定确定。",
+        "mergedInto": null,
+        "mode": "direct",
+        "note": "",
+        "places": [
+          "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已考核合格相关人员的再培训管理活动"
+        ],
+        "title": "生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训"
+      },
+      "fileSha256": "dd54fdd8f49a9cc795fcb781ac7dd6d9bb020719a963b3ac7ab1854dcc31c2ba",
+      "contentHash": "9bee7cbb554629616c6c35327c9e6d8180808bbe009d03cbb8ef0459943add7b"
+    },
+    {
+      "path": "knowledge/links/K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E.json",
+      "id": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+      "beforeFileText": "{\n  \"id\": \"K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E\",\n  \"hazardId\": \"H_9F790C9B0EA34E59207BCCC1AD_3\",\n  \"clauseId\": \"C_XLSX_FT_D49257E7AE9D715C9C8367F6\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n",
+      "oldFileSha256": "5e715f7395285d56356c5b820963104fd80893f079079429c4802ad9d170158b",
+      "oldContentHash": "628fc0358d72390b5764500a93be8176e32161fddbf1b749a0a8627eb61624d2",
+      "before": {
+        "id": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于本隐患所述场所、设备及作业活动。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+      },
+      "modifiedFields": [
+        "clauseId",
+        "applicability",
+        "jurisdictionCode",
+        "reason"
+      ],
+      "after": {
+        "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "applicability": "江苏省范围；第二十二条第一款列明单位已考核合格人员的第二款再培训义务；不得扩展至所有生产经营单位或自设统一周期。",
+        "jurisdictionCode": "CN-32",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "unchangedFields": {
+        "id": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": ""
+      },
+      "record": {
+        "id": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+        "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "江苏省范围；第二十二条第一款列明单位已考核合格人员的第二款再培训义务；不得扩展至所有生产经营单位或自设统一周期。",
+        "jurisdictionCode": "CN-32",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+      },
+      "fileSha256": "76c17de780cf23fc5459d238060e0a64c856b91425e5826aa178d9ff9574db70",
+      "contentHash": "d7a23a6f5d8492f5c3ead27717d50aa912b5754d9ea95e3e64e15cc27be9438c"
+    },
+    {
+      "path": "knowledge/clauses/C_9F790C9B0EA34E59207BCCC1AD.json",
+      "id": "C_9F790C9B0EA34E59207BCCC1AD",
+      "beforeFileText": "{\n  \"articlePath\": \"第二十二条\",\n  \"id\": \"C_9F790C9B0EA34E59207BCCC1AD\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"L020\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。\",\n  \"sourceUrl\": \"https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8\"\n}\n",
+      "oldFileSha256": "ed0ac0509ff03fc0798229dbad71714a48492584248b3ee26036b08cacfaf7e3",
+      "oldContentHash": "83a4ae8e4e7e5da1e9e8c03d83220c930db8205053db91d5176674915b2bca79",
+      "before": {
+        "articlePath": "第二十二条",
+        "id": "C_9F790C9B0EA34E59207BCCC1AD",
+        "jurisdictionCode": "CN",
+        "lawVersionId": "L020",
+        "lifecycle": "active",
+        "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+        "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+      },
+      "modifiedFields": [
+        "jurisdictionCode"
+      ],
+      "after": {
+        "jurisdictionCode": "CN-32"
+      },
+      "unchangedFields": {
+        "articlePath": "第二十二条",
+        "id": "C_9F790C9B0EA34E59207BCCC1AD",
+        "lawVersionId": "L020",
+        "lifecycle": "active",
+        "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+        "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+      },
+      "record": {
+        "articlePath": "第二十二条",
+        "id": "C_9F790C9B0EA34E59207BCCC1AD",
+        "jurisdictionCode": "CN-32",
+        "lawVersionId": "L020",
+        "lifecycle": "active",
+        "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+        "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+      },
+      "fileSha256": "1c6573490f39472d67d63b79aea35cdfc643a4072ace6574d42b2d8aafb7e8ac",
+      "contentHash": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376"
+    },
+    {
+      "path": "knowledge/clauses/C_XLSX_FT_D49257E7AE9D715C9C8367F6.json",
+      "id": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+      "beforeFileText": "{\n  \"articlePath\": \"二十二\",\n  \"id\": \"C_XLSX_FT_D49257E7AE9D715C9C8367F6\",\n  \"jurisdictionCode\": \"CN-32\",\n  \"lawVersionId\": \"L020\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。\",\n  \"sourceUrl\": \"https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8\"\n}\n",
+      "oldFileSha256": "2e880d41be04c945fee30511752ce85100f5ed602d0904401da38ffaa2c4daad",
+      "oldContentHash": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+      "before": {
+        "articlePath": "二十二",
+        "id": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "jurisdictionCode": "CN-32",
+        "lawVersionId": "L020",
+        "lifecycle": "active",
+        "quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+        "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+      },
+      "modifiedFields": [
+        "lifecycle"
+      ],
+      "after": {
+        "lifecycle": "proposed"
+      },
+      "unchangedFields": {
+        "articlePath": "二十二",
+        "id": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "jurisdictionCode": "CN-32",
+        "lawVersionId": "L020",
+        "quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+        "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+      },
+      "record": {
+        "articlePath": "二十二",
+        "id": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "jurisdictionCode": "CN-32",
+        "lawVersionId": "L020",
+        "lifecycle": "proposed",
+        "quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+        "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+      },
+      "fileSha256": "712fa852aaca56e3ef3cded85be4456e57444b382d5e03e714cf84b653ed703e",
+      "contentHash": "6f0b495e65db898802f7caed7f741550500c3ad58c0e6b13235e620e61dea74b"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "knowledge/reviews/hazards/H034.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H034",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+        ],
+        "reason": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+        "reviewType": "content",
+        "reviewedContentHash": "ef97e5d0a2b832f740fcb711cc38ac091af7c230233dd988bc67ad9f8e39ff6a",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/conditions"
+        ],
+        "reviewedValues": {
+          "/conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。"
+        },
+        "fieldEvidenceRefs": {
+          "/conditions": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "decision": "verified",
+          "entityId": "H034",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+          "reviewType": "content",
+          "reviewedContentHash": "a6048ca4538a63af22d9306eba0b5b28145b39877880273a6e6706aa105ccab5",
+          "reviewer": "Codex新版整改回绑批次20260914"
+        },
+        "previousReviewFileSha256": "6a923c1c0f6f6ca0e1d59df5e9ed333ea9353b9892e74df7b75a98318fa0c7be",
+        "historySha256": "0e2fa3e5b60ec10250ded9161f0178e8f4818dd1f664eeaa36a518ef1aae9fc2",
+        "previousEntity": {
+          "aliases": [
+            "主要负责人安全能力不足",
+            "安全管理人员能力不符合",
+            "主要负责人未考核合格",
+            "安全管理人员能力不足",
+            "负责人和安全员未考核",
+            "安全生产知识和管理能力不符合要求"
+          ],
+          "category": "安全管理",
+          "conditions": "适用于生产经营单位主要负责人和安全生产管理人员；特定行业另按第二十七条法定考核条件适用。",
+          "description": "生产经营单位主要负责人或安全生产管理人员不具备与本单位生产经营活动相应的安全生产知识和管理能力；依法应接受主管部门考核的单位，其相关人员未按规定考核合格。",
+          "id": "H034",
+          "keywords": [
+            "主要负责人",
+            "安全管理人员",
+            "安全生产知识",
+            "管理能力",
+            "培训考核",
+            "安全管理",
+            "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+          ],
+          "lifecycle": "active",
+          "measures": "结合单位行业和风险特点核实主要负责人、安全生产管理人员应具备的知识、能力及依法需要的考核要求，组织培训考核并保留相应证明材料。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "《安全生产法》并未要求所有行业主要负责人和安全生产管理人员一律“培训取证”。一般单位适用知识和管理能力要求；危险物品生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位还应依法考核合格。2026-09-10专业终审：《中华人民共和国安全生产法》第二十七条对主要负责人和安全生产管理人员应具备与本单位生产经营活动相应的安全生产知识和管理能力作出直接要求；危险物品的生产、经营、储存、装卸以及矿山、金属冶炼、建筑施工、运输单位的相关人员还应依法考核合格。该条现行有效。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。\n\n《江苏省安全生产条例》第二十二条（仅适用于该条所列行业单位时）。",
+          "places": [
+            "通用场所",
+            "工贸企业",
+            "生产经营单位"
+          ],
+          "title": "主要负责人和安全生产管理人员安全生产知识和管理能力不符合要求"
+        },
+        "previousEntityFileSha256": "ba3c7805be18d518dadb21b935b43a1851bd7816fd1232d34d8037a93b5aba0b",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国安全生产法",
+          "version": "2021年6月10日第三次修正",
+          "effectiveDate": "2021-09-01",
+          "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十七条完整三款"
+          ],
+          "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+          "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "6a923c1c0f6f6ca0e1d59df5e9ed333ea9353b9892e74df7b75a98318fa0c7be",
+      "fileSha256": "e27955e35d03a887e803dbe998d0a1a56033061bd052e05e7b7d0528185bfabd",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+        ],
+        "reason": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "fc82b64825858d9685bbc58be79b5d3af02a851bec0d2927fa3c52714e5174da",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C033",
+          "/applicability": "全国一般知识和管理能力义务；对第二十七条第二款列明单位，另核主管部门考核合格。",
+          "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/applicability": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/reason": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "contextHashes": {
+            "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+            "hazard": "a6048ca4538a63af22d9306eba0b5b28145b39877880273a6e6706aa105ccab5"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "307ad1094d02f9d725ff581edb0b130d2370a8876995efe5e9ec6685d3d0a1d7",
+          "reviewer": "Codex新版整改回绑批次20260914",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "d9a18b3526c5822247bdf89b2eed14d11a9f6270991b35c26661ee715d4ce09c",
+        "historySha256": "fd9b1b0a1bf8a4f109308fb37f55331c71a92f3fbd72645ab91cac2739b5c883",
+        "previousEntity": {
+          "id": "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F",
+          "hazardId": "H034",
+          "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "role": "direct",
+          "legacyRole": "直接依据",
+          "applicability": "适用于生产经营单位主要负责人和安全生产管理人员；特定行业另按第二十七条法定考核条件适用。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "active",
+          "priority": 10,
+          "requirementId": "",
+          "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+        },
+        "previousEntityFileSha256": "5ec3218f2af2f4528a8229a6278326ae3858ae940ddfbe20b83f7f3bd5da0c5f",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国安全生产法",
+          "version": "2021年6月10日第三次修正",
+          "effectiveDate": "2021-09-01",
+          "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十七条完整三款"
+          ],
+          "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+          "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+        "contextHashes": {
+          "hazard": "ef97e5d0a2b832f740fcb711cc38ac091af7c230233dd988bc67ad9f8e39ff6a",
+          "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
+        }
+      },
+      "previousFileSha256": "d9a18b3526c5822247bdf89b2eed14d11a9f6270991b35c26661ee715d4ce09c",
+      "fileSha256": "b3d6aab5ab77b8b6204fa877e0fd9167f5d5691c46c1517fcd7236c8707c1a8d",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_87D36F82D5F9405BA0B0B14CB7.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_87D36F82D5F9405BA0B0B14CB7",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+        ],
+        "reason": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+        "reviewType": "content",
+        "reviewedContentHash": "03e54b69304831a72312617bc3951252f369ce5366a6e386c74d59df3bd49adf",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/conditions",
+          "/description",
+          "/measures"
+        ],
+        "reviewedValues": {
+          "/conditions": "适用于《安全生产法》第二条范围内生产经营单位的主要负责人和安全生产管理人员。第二十七条第一款为与本单位生产经营活动相应的安全生产知识和管理能力要求；仅该条第二款列明的危险物品生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位相关人员，适用主管部门考核合格要求。不得将考核要求扩展为所有行业一律取得安全培训合格证。",
+          "/description": "生产经营单位主要负责人或者安全生产管理人员不具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。",
+          "/measures": "结合本单位生产经营活动核实主要负责人、安全生产管理人员的安全生产知识和管理能力，针对不足组织培训并核验改进情况；属于《安全生产法》第二十七条第二款列明单位的相关人员，还应按规定经主管部门考核合格。不得以所有行业一律取得安全培训合格证替代具体要求。"
+        },
+        "fieldEvidenceRefs": {
+          "/conditions": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/description": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/measures": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "decision": "verified",
+          "entityId": "H_87D36F82D5F9405BA0B0B14CB7",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+          "reviewType": "content",
+          "reviewedContentHash": "8a6ae8403d12fa4a5978198a41be8d6dc49ea977ba5b80e3f2832f89c8174795",
+          "reviewer": "Codex新版整改回绑批次20260914"
+        },
+        "previousReviewFileSha256": "1b6159e590cfdaaacebee2a4285bbad40c94c601e27dcce35212f35c9bd52a54",
+        "historySha256": "20e9f6ac1e4d1d792d909fca814c0a75234ef3b5e3b3d47192a55d64d9d64b48",
+        "previousEntity": {
+          "aliases": [],
+          "category": "安全教育",
+          "conditions": "适用于本隐患所述场所与设备的相关管理。",
+          "description": "适用于本隐患所述场所与设备的相关管理。 经现场核查存在以下不符合：主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力。",
+          "id": "H_87D36F82D5F9405BA0B0B14CB7",
+          "keywords": [
+            "主要负责人",
+            "安全生产管理人员",
+            "未经安监部门考核合格",
+            "主",
+            "要",
+            "负",
+            "责",
+            "人",
+            ",",
+            "安",
+            "全",
+            "生",
+            "产",
+            "管",
+            "理",
+            "员",
+            "未",
+            "经",
+            "监",
+            "部",
+            "门",
+            "考",
+            "核",
+            "合",
+            "格",
+            "并",
+            "取",
+            "得",
+            "培",
+            "训",
+            "证",
+            "书"
+          ],
+          "lifecycle": "active",
+          "measures": "主要负责人、安全生产管理人员已取得安全培训合格证书。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "[Phase22] title泛化：原'未经安监部门考核合格并取得安全培训合格证书'仅适用于安法27条第2款特定行业；泛化为'不具备相应知识和管理能力'后，安法27条第1款适用于所有单位，direct依据成立。原 conditions 字段记录的引用依据为：依据：《安全生产法》《江苏省安全生产条例》",
+          "places": [
+            "通用场所"
+          ],
+          "title": "主要负责人、安全生产管理人员不具备相应安全生产知识和管理能力"
+        },
+        "previousEntityFileSha256": "5c6706a33240a9d53d695c19e8985fb91e65396e52409f6a2c671fcbfb31eb3f",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国安全生产法",
+          "version": "2021年6月10日第三次修正",
+          "effectiveDate": "2021-09-01",
+          "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十七条完整三款"
+          ],
+          "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+          "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "1b6159e590cfdaaacebee2a4285bbad40c94c601e27dcce35212f35c9bd52a54",
+      "fileSha256": "8c8b7c5b68951cc6d6c749c66a6efc78d6b6e24c848ffd96ef09592fa5fbaff9",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+        ],
+        "reason": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "47ae631e8dd2bbaea81e6d689ba13f0abbe9efd831acc3fcc25a400770ed1ace",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C033",
+          "/applicability": "仅第二十七条第一款的一般知识和管理能力要求；第二款考核义务按列明行业单位另行触发。",
+          "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/applicability": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/reason": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "contextHashes": {
+            "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+            "hazard": "8a6ae8403d12fa4a5978198a41be8d6dc49ea977ba5b80e3f2832f89c8174795"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "02cf1dd10797ebaa52ccded196f2d87198a46eb4c1c773a0f4f69f1849d1805f",
+          "reviewer": "Codex新版整改回绑批次20260914",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "170e059f11716f4ce5065840a6b2929915ec22b0743fa3fb894f8edf52a8d995",
+        "historySha256": "2048669dccd9a01125f64eb750bd75045629202eb2a43d96947eacb3b7d34ca8",
+        "previousEntity": {
+          "id": "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9",
+          "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+          "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "role": "direct",
+          "legacyRole": "直接依据",
+          "applicability": "适用于本隐患所述场所与设备的相关管理。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "active",
+          "priority": 10,
+          "requirementId": "",
+          "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+        },
+        "previousEntityFileSha256": "1922d46d4b8327f8a2afdb38b24bd4059404489d7c8bf8c67dc87d65cdfbfd39",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国安全生产法",
+          "version": "2021年6月10日第三次修正",
+          "effectiveDate": "2021-09-01",
+          "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十七条完整三款"
+          ],
+          "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+          "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+        "contextHashes": {
+          "hazard": "03e54b69304831a72312617bc3951252f369ce5366a6e386c74d59df3bd49adf",
+          "clause": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
+        }
+      },
+      "previousFileSha256": "170e059f11716f4ce5065840a6b2929915ec22b0743fa3fb894f8edf52a8d995",
+      "fileSha256": "3e2477e66db78ccc9f597676222ca03fbb781a33166dc1a6a67689d475d9e6ee",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_9F790C9B0EA34E59207BCCC1AD_1.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+        "reviewType": "content",
+        "reviewedContentHash": "edb98ff3cebf3c4df564445bf47de4f376ed7e0b9b88be5d339eff15b89132d6",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/conditions",
+          "/places",
+          "/category",
+          "/measures"
+        ],
+        "reviewedValues": {
+          "/conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，核查其是否经主管的负有安全生产监督管理职责的部门对安全生产知识和管理能力考核合格。",
+          "/places": [
+            "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位及其相关人员管理活动"
+          ],
+          "/category": "安全教育培训",
+          "/measures": "核实单位行业属性和相关人员任职情况，按《江苏省安全生产条例》第二十二条第一款落实主管部门安全生产知识和管理能力考核合格要求，并留存相应证明；新任职人员的期限按该条第二款另行核查。"
+        },
+        "fieldEvidenceRefs": {
+          "/conditions": [
+            "E_L020"
+          ],
+          "/places": [
+            "E_L020"
+          ],
+          "/category": [
+            "E_L020"
+          ],
+          "/measures": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "decision": "verified",
+          "entityId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+          "reviewType": "content",
+          "reviewedContentHash": "99b5d711cded1694ef56d481db340b190dd09748e8c9effa7eaa6d10d55d4488",
+          "reviewer": "Codex正式核验批次20260913"
+        },
+        "previousReviewFileSha256": "012546743a661067eac5bf5f9fdc412959b85a109be8e750437513550efe9a4b",
+        "historySha256": "c73dbb20a925ac277c8c809009f9e7699726c15f12ec355419cdc6a39a8ba413",
+        "previousEntity": {
+          "aliases": [],
+          "category": "危险化学品与危险物质",
+          "conditions": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+          "description": "经资料和执行情况核查，矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格，实际状态与直接依据规定的安全要求不一致。",
+          "id": "H_9F790C9B0EA34E59207BCCC1AD_1",
+          "keywords": [
+            "矿山",
+            "金属冶炼",
+            "建筑施工",
+            "运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+          ],
+          "lifecycle": "active",
+          "measures": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员经安全生产知识和管理能力考核合格。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "",
+          "places": [
+            "江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所"
+          ],
+          "title": "矿山、金属冶炼、建筑施工、运输和危险物品等生产经营单位的主要负责人和安全生产管理人员未经安全生产知识和管理能力考核合格"
+        },
+        "previousEntityFileSha256": "fd5e5f24c1799c93f6343cf42bcb4c09b7437a6b2dd1fe438015072cedf9015d",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "012546743a661067eac5bf5f9fdc412959b85a109be8e750437513550efe9a4b",
+      "fileSha256": "74eb5667569121a0406e097d3edcf8153ec536dbdf6461266c23768ffda5508b",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_FT_498653F95CEB7020551DDECA.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_FT_498653F95CEB7020551DDECA",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "7dc3bcf9f857612b1dc9887a5d193d078957344176c2e8342e5dd138441de18d",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "/applicability": "江苏省范围；第二十二条第一款列明行业单位的主管部门知识和管理能力考核。不能只以存在危险化学品为适用门槛。",
+          "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_L020"
+          ],
+          "/applicability": [
+            "E_L020"
+          ],
+          "/reason": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "contextHashes": {
+            "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+            "hazard": "99b5d711cded1694ef56d481db340b190dd09748e8c9effa7eaa6d10d55d4488"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_FT_498653F95CEB7020551DDECA",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "deaf75d29117501d995c865d2f6fe5a4a5ec111d69c77de9bf2b107f8178b143",
+          "reviewer": "Codex正式核验批次20260913",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "ef34e0ced5f6659fbbcdbe640881fd58e555654600d6a65d2172ab011f459a37",
+        "historySha256": "6d108a34a880e0fc3780ae242641abd3b1c0317fc0ae2ec53f83aa82cfafbdf1",
+        "previousEntity": {
+          "applicability": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+          "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+          "id": "K_XLSX_FT_498653F95CEB7020551DDECA",
+          "jurisdictionCode": "CN-32",
+          "legacyRole": "直接依据",
+          "lifecycle": "active",
+          "priority": 10,
+          "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+          "role": "direct"
+        },
+        "previousEntityFileSha256": "90433f767c1f993436c418a141e64f2717438f519d6295fa5fd123c51a16de9c",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+        "contextHashes": {
+          "hazard": "edb98ff3cebf3c4df564445bf47de4f376ed7e0b9b88be5d339eff15b89132d6",
+          "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376"
+        }
+      },
+      "previousFileSha256": "ef34e0ced5f6659fbbcdbe640881fd58e555654600d6a65d2172ab011f459a37",
+      "fileSha256": "cddcfefc59cfae98f2dc52b625c685d9b37e461caf5595c04737315ef5524caf",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_9F790C9B0EA34E59207BCCC1AD_2.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+        "reviewType": "content",
+        "reviewedContentHash": "35b06d16ef440b70d9a79e0d964cea962b20f320bc48774e4f0fe0cea52b8707",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/conditions",
+          "/places",
+          "/category",
+          "/description",
+          "/measures"
+        ],
+        "reviewedValues": {
+          "/conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职的主要负责人和安全生产管理人员，核查其是否自任职之日起六个月内通过安全生产知识和管理能力考核。",
+          "/places": [
+            "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位新任职相关人员的考核管理活动"
+          ],
+          "/category": "安全教育培训",
+          "/description": "《江苏省安全生产条例》第二十二条第一款列明单位新任职的主要负责人或者安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核。",
+          "/measures": "核实适用行业、人员任职日期和考核记录，落实自任职之日起六个月内通过安全生产知识和管理能力考核的要求；对已发生的超期情形依法整改并保留履行记录，不以补考回溯消除历史超期事实。"
+        },
+        "fieldEvidenceRefs": {
+          "/conditions": [
+            "E_L020"
+          ],
+          "/places": [
+            "E_L020"
+          ],
+          "/category": [
+            "E_L020"
+          ],
+          "/description": [
+            "E_L020"
+          ],
+          "/measures": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "decision": "verified",
+          "entityId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+          "reviewType": "content",
+          "reviewedContentHash": "6e7a33a2692724250519c4c95bf72b0f5f1ce1cbc93e66fb473e4e93981c0669",
+          "reviewer": "Codex新版整改回绑批次20260914"
+        },
+        "previousReviewFileSha256": "dab7ae3c5310a707fcba20281bc6f2bb0a8768993f58774ad33b0007649d8f75",
+        "historySha256": "ee4f4fb8a2e7ed626d3ad144659fdad047419044430c4bd5d3772c90e38c7f3b",
+        "previousEntity": {
+          "aliases": [],
+          "category": "设备设施",
+          "conditions": "适用于本隐患所述场所、设备及作业活动。",
+          "description": "前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；（第二十二条）。",
+          "id": "H_9F790C9B0EA34E59207BCCC1AD_2",
+          "keywords": [
+            "高危行业生产经营单位新任职的主要负责人和安全生产管理人员",
+            "未自任职之日起六个月内通过安全生产知识和管理能力考核"
+          ],
+          "lifecycle": "active",
+          "measures": "前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；（依据 第二十二条 整改。）。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "",
+          "places": [
+            "江苏省行政区域内生产经营单位及相关安全管理活动",
+            "通用场所"
+          ],
+          "title": "高危行业生产经营单位新任职的主要负责人和安全生产管理人员，未自任职之日起六个月内通过安全生产知识和管理能力考核"
+        },
+        "previousEntityFileSha256": "7c362bf189cbbbae9e8bdc84da2aa10b4032195f1d88bc278251cfac76d4271c",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "dab7ae3c5310a707fcba20281bc6f2bb0a8768993f58774ad33b0007649d8f75",
+      "fileSha256": "0440f4b5282c0cd78aa6282cae8428e37ab0e32ea294080edd829aba9c0c58b9",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "60476eb1b15299e3b93b72deed3b03b0d13e2957ba52a020d4eb2a93e431131c",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/jurisdictionCode",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "/applicability": "江苏省范围；第二十二条第一款列明单位的新任职人员；第二款规定自任职之日起六个月内通过考核。",
+          "/jurisdictionCode": "CN-32",
+          "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_L020"
+          ],
+          "/applicability": [
+            "E_L020"
+          ],
+          "/jurisdictionCode": [
+            "E_L020"
+          ],
+          "/reason": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "contextHashes": {
+            "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+            "hazard": "6e7a33a2692724250519c4c95bf72b0f5f1ce1cbc93e66fb473e4e93981c0669"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "a60643397fbcfce7bc592cf9cb8e79584c86f85fc639db3a684aba8d904deee2",
+          "reviewer": "Codex新版整改回绑批次20260914",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "5bcf0e78e3c7f1d767f7511c4ba9c068f89b9c0b9809d093a3be3258c4d6982f",
+        "historySha256": "d6d3f84f95319e51ef85377c2c2403c6345bca804ef7645779e08a926570ca3a",
+        "previousEntity": {
+          "id": "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361",
+          "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+          "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "role": "direct",
+          "legacyRole": "直接依据",
+          "applicability": "适用于本隐患所述场所、设备及作业活动。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "active",
+          "priority": 10,
+          "requirementId": "",
+          "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+        },
+        "previousEntityFileSha256": "bd143583b8521a58790136090363c7947f239dcd4616c929e32a7e22fa85cf73",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+        "contextHashes": {
+          "hazard": "35b06d16ef440b70d9a79e0d964cea962b20f320bc48774e4f0fe0cea52b8707",
+          "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376"
+        }
+      },
+      "previousFileSha256": "5bcf0e78e3c7f1d767f7511c4ba9c068f89b9c0b9809d093a3be3258c4d6982f",
+      "fileSha256": "6fdf570ad753952a47e2137825e6473a1f2f1b8bfbe5873a319da948f5465aa1",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_9F790C9B0EA34E59207BCCC1AD_3.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+        "entityType": "hazard",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+        "reviewType": "content",
+        "reviewedContentHash": "9bee7cbb554629616c6c35327c9e6d8180808bbe009d03cbb8ef0459943add7b",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/conditions",
+          "/places",
+          "/category",
+          "/description",
+          "/measures"
+        ],
+        "reviewedValues": {
+          "/conditions": "适用于江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已经考核合格的主要负责人和安全生产管理人员，按有关规定核查安全生产知识再培训；本条不自行设定统一再培训周期。",
+          "/places": [
+            "江苏省行政区域内的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位已考核合格相关人员的再培训管理活动"
+          ],
+          "/category": "安全教育培训",
+          "/description": "《江苏省安全生产条例》第二十二条第一款列明单位的主要负责人或者安全生产管理人员，在考核合格后未按照有关规定进行安全生产知识再培训。",
+          "/measures": "核实人员适用范围及已考核合格状态，按照有关规定组织安全生产知识再培训并留存记录；具体培训周期和学时另按实际适用规定确定。"
+        },
+        "fieldEvidenceRefs": {
+          "/conditions": [
+            "E_L020"
+          ],
+          "/places": [
+            "E_L020"
+          ],
+          "/category": [
+            "E_L020"
+          ],
+          "/description": [
+            "E_L020"
+          ],
+          "/measures": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "decision": "verified",
+          "entityId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+          "reviewType": "content",
+          "reviewedContentHash": "744ec930a99402e625dd556c49a6e1ed63c0a43e0ce210698893983c6b5e5631",
+          "reviewer": "Codex新版整改回绑批次20260914"
+        },
+        "previousReviewFileSha256": "ad814b2c00b80e6ad37d2bed8601334a5cd5a7951253de0af6402ef75d709ba7",
+        "historySha256": "399431ff094aa6b0f9342279a86012b97ebaccfcd22bf30214fff4abcf566646",
+        "previousEntity": {
+          "aliases": [],
+          "category": "设备设施",
+          "conditions": "适用于本隐患所述场所、设备及作业活动。",
+          "description": "已经考核合格的，应当按照有关规定进行安全生产知识再培训；（第二十二条）。",
+          "id": "H_9F790C9B0EA34E59207BCCC1AD_3",
+          "keywords": [
+            "生产经营单位主要负责人和安全生产管理人员考核合格后",
+            "未按照有关规定进行安全生产知识再培训"
+          ],
+          "lifecycle": "active",
+          "measures": "消除“生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训”隐患；经考核合格的，应当按照有关规定进行安全生产知识再培训；（依据 第二十二条 整改。）；完成后进行现场验证并留存记录。",
+          "mergedInto": null,
+          "mode": "direct",
+          "note": "",
+          "places": [
+            "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+            "通用场所"
+          ],
+          "title": "生产经营单位主要负责人和安全生产管理人员考核合格后，未按照有关规定进行安全生产知识再培训"
+        },
+        "previousEntityFileSha256": "3d827c84882148bc9dc15198ece9631955bccbad80ba248c3a636d53400585d6",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "ad814b2c00b80e6ad37d2bed8601334a5cd5a7951253de0af6402ef75d709ba7",
+      "fileSha256": "4656ad3dd1f86f05ea79531ef2620ee7e1d89bbae9e84a461e3c251e8bc24e1d",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "d7a23a6f5d8492f5c3ead27717d50aa912b5754d9ea95e3e64e15cc27be9438c",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/clauseId",
+          "/applicability",
+          "/jurisdictionCode",
+          "/reason"
+        ],
+        "reviewedValues": {
+          "/clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "/applicability": "江苏省范围；第二十二条第一款列明单位已考核合格人员的第二款再培训义务；不得扩展至所有生产经营单位或自设统一周期。",
+          "/jurisdictionCode": "CN-32",
+          "/reason": "按本轮官方完整原文逐项核准对象、义务、地区和款次；旧关联误把江苏省条例第七十二条处罚文本标为第二十二条。"
+        },
+        "fieldEvidenceRefs": {
+          "/clauseId": [
+            "E_L020"
+          ],
+          "/applicability": [
+            "E_L020"
+          ],
+          "/jurisdictionCode": [
+            "E_L020"
+          ],
+          "/reason": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "contextHashes": {
+            "clause": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+            "hazard": "744ec930a99402e625dd556c49a6e1ed63c0a43e0ce210698893983c6b5e5631"
+          },
+          "decision": "verified",
+          "entityId": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "628fc0358d72390b5764500a93be8176e32161fddbf1b749a0a8627eb61624d2",
+          "reviewer": "Codex新版整改回绑批次20260914",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "b752d9cced9329e7f4770874f4a59fb2a493061907c2bd7cb63df96bb4f9c37a",
+        "historySha256": "0678336cf656580fbb8ebb5b414966b2e7f5f645cf626b206c0a8cd439c61e25",
+        "previousEntity": {
+          "id": "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E",
+          "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+          "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "role": "direct",
+          "legacyRole": "直接依据",
+          "applicability": "适用于本隐患所述场所、设备及作业活动。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "active",
+          "priority": 10,
+          "requirementId": "",
+          "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+        },
+        "previousEntityFileSha256": "5e715f7395285d56356c5b820963104fd80893f079079429c4802ad9d170158b",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。",
+        "contextHashes": {
+          "hazard": "9bee7cbb554629616c6c35327c9e6d8180808bbe009d03cbb8ef0459943add7b",
+          "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376"
+        }
+      },
+      "previousFileSha256": "b752d9cced9329e7f4770874f4a59fb2a493061907c2bd7cb63df96bb4f9c37a",
+      "fileSha256": "312d13859b6bf4f92c243e84178eda8674562f7e279edf8690e78398a3768a0b",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_9F790C9B0EA34E59207BCCC1AD.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "verified",
+        "entityId": "C_9F790C9B0EA34E59207BCCC1AD",
+        "entityType": "clause",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。原jurisdictionCode CN收窄为CN-32，完整原文及稳定ID不变。",
+        "reviewType": "text",
+        "reviewedContentHash": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/articlePath",
+          "/quote",
+          "/lawVersionId",
+          "/sourceUrl",
+          "/jurisdictionCode"
+        ],
+        "reviewedValues": {
+          "/articlePath": "第二十二条",
+          "/quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "/lawVersionId": "L020",
+          "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+          "/jurisdictionCode": "CN-32"
+        },
+        "fieldEvidenceRefs": {
+          "/articlePath": [
+            "E_L020"
+          ],
+          "/quote": [
+            "E_L020"
+          ],
+          "/lawVersionId": [
+            "E_L020"
+          ],
+          "/sourceUrl": [
+            "E_L020"
+          ],
+          "/jurisdictionCode": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-12",
+          "decision": "verified",
+          "entityId": "C_9F790C9B0EA34E59207BCCC1AD",
+          "entityType": "clause",
+          "evidenceRefs": [
+            "E_L020"
+          ],
+          "reason": "V2 迁移核验（GLM）：老工程条款经筛选迁移，引文去空白后与归档官方全文逐字比对一致；lawVersion 已映射为 V4 现行版本。",
+          "reviewType": "text",
+          "reviewedContentHash": "83a4ae8e4e7e5da1e9e8c03d83220c930db8205053db91d5176674915b2bca79",
+          "reviewer": "GLM-5.3-Flash (ZCode)"
+        },
+        "previousReviewFileSha256": "751ee87fcd28040d2d06dba15ecd49b5bf457a8cdb2798160a04cab66fb639b5",
+        "historySha256": "01c4ec62d418a8293e2d3379a8e6a66d2a5728183a7f0adcf3c55ddbe12f2bd4",
+        "previousEntity": {
+          "articlePath": "第二十二条",
+          "id": "C_9F790C9B0EA34E59207BCCC1AD",
+          "jurisdictionCode": "CN",
+          "lawVersionId": "L020",
+          "lifecycle": "active",
+          "quote": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        },
+        "previousEntityFileSha256": "ed0ac0509ff03fc0798229dbad71714a48492584248b3ee26036b08cacfaf7e3",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "751ee87fcd28040d2d06dba15ecd49b5bf457a8cdb2798160a04cab66fb639b5",
+      "fileSha256": "42be3d0506d6668427ff3612bbeecb36f7f9f25eb6265197c7051487013a0466",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_XLSX_FT_D49257E7AE9D715C9C8367F6.json",
+      "record": {
+        "checkedAt": "2026-10-03",
+        "decision": "rejected",
+        "entityId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+        "entityType": "clause",
+        "evidenceRefs": [
+          "E_L020"
+        ],
+        "reason": "隔离已确认错配：定位二十二但正文为第七十二条处罚规定。完整旧原文、ID、条号及历史审阅均保留；五条原关联已逐项改绑真实实体义务，不将处罚条款改号后继续充当直接义务。",
+        "reviewType": "text",
+        "reviewedContentHash": "6f0b495e65db898802f7caed7f741550500c3ad58c0e6b13235e620e61dea74b",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reviewedFields": [
+          "/articlePath",
+          "/quote",
+          "/lawVersionId",
+          "/sourceUrl",
+          "/lifecycle"
+        ],
+        "reviewedValues": {
+          "/articlePath": "二十二",
+          "/quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+          "/lawVersionId": "L020",
+          "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+          "/lifecycle": "proposed"
+        },
+        "fieldEvidenceRefs": {
+          "/articlePath": [
+            "E_L020"
+          ],
+          "/quote": [
+            "E_L020"
+          ],
+          "/lawVersionId": [
+            "E_L020"
+          ],
+          "/sourceUrl": [
+            "E_L020"
+          ],
+          "/lifecycle": [
+            "E_L020"
+          ]
+        },
+        "previousReview": {
+          "checkedAt": "2026-09-13",
+          "decision": "verified",
+          "entityId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "entityType": "clause",
+          "evidenceRefs": [
+            "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+          ],
+          "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+          "reviewType": "text",
+          "reviewedContentHash": "2d5245033fb6048312023399e262a9a90ae6822c30efcae510180f69c4415ad5",
+          "reviewer": "Codex正式核验批次20260913"
+        },
+        "previousReviewFileSha256": "309934ff5ebc7fdda885b91efdc556ad0438a389b8b0e67a3ab54e63af92fc30",
+        "historySha256": "6bea39d8e8f96b2598f951616ebfba1208a0c42f4b1197f8073a877eca417636",
+        "previousEntity": {
+          "articlePath": "二十二",
+          "id": "C_XLSX_FT_D49257E7AE9D715C9C8367F6",
+          "jurisdictionCode": "CN-32",
+          "lawVersionId": "L020",
+          "lifecycle": "active",
+          "quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+        },
+        "previousEntityFileSha256": "2e880d41be04c945fee30511752ce85100f5ed602d0904401da38ffaa2c4daad",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "江苏省安全生产条例",
+          "version": "2023年3月30日修订",
+          "effectiveDate": "2023-07-01",
+          "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十二条完整三款",
+            "第七十二条完整处罚文本",
+            "第七十七条施行日期"
+          ],
+          "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+          "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "309934ff5ebc7fdda885b91efdc556ad0438a389b8b0e67a3ab54e63af92fc30",
+      "fileSha256": "bc801df849b4f846ac71b311ffa42f0082ef06baa0398bfec0c32f23ae6353ed",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C033.json",
+      "record": {
+        "decision": "verified",
+        "entityId": "C033",
+        "entityType": "clause",
+        "evidenceRefs": [
+          "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+        ],
+        "migratedFromV3Verification": {
+          "id": "VR_193b0d28194660f9d660b0bb14_41",
+          "reviewedAt": "2026-09-09T12:14:06+00:00",
+          "reviewer": "doubao-work-续接集成"
+        },
+        "reviewType": "text",
+        "reviewedContentHash": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a",
+        "checkedAt": "2026-10-03",
+        "reviewer": "Codex培训考核条款逐项复核20261003",
+        "reason": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+        "reviewedFields": [
+          "/articlePath",
+          "/quote",
+          "/lawVersionId",
+          "/sourceUrl"
+        ],
+        "reviewedValues": {
+          "/articlePath": "第二十七条",
+          "/quote": "第二十七条　生产经营单位的主要负责人和安全生产管理人员必须具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。\n危险物品的生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。考核不得收费。\n危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位应当有注册安全工程师从事安全生产管理工作。鼓励其他生产经营单位聘用注册安全工程师从事安全生产管理工作。注册安全工程师按专业分类管理，具体办法由国务院人力资源和社会保障部门、国务院应急管理部门会同国务院有关部门制定。",
+          "/lawVersionId": "L002",
+          "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+        },
+        "fieldEvidenceRefs": {
+          "/articlePath": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/quote": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/lawVersionId": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "/sourceUrl": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ]
+        },
+        "previousReview": {
+          "decision": "verified",
+          "entityId": "C033",
+          "entityType": "clause",
+          "evidenceRefs": [
+            "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+          ],
+          "migratedFromV3Verification": {
+            "id": "VR_193b0d28194660f9d660b0bb14_41",
+            "reviewedAt": "2026-09-09T12:14:06+00:00",
+            "reviewer": "doubao-work-续接集成"
+          },
+          "reviewType": "text",
+          "reviewedContentHash": "0de299019c4b8a17cd07aa1022e180ce27ff91966f62f3e885a7614c1b6fa39a"
+        },
+        "previousReviewFileSha256": "98ee4b1ffeb4160be5d557e2d3832846734243b87988bb7a57e0e430caa36b18",
+        "historySha256": "9c21ba7de01f5f407aee56864ecef88017c3994763df1a161ac04f79920c7d32",
+        "previousEntity": {
+          "articlePath": "第二十七条",
+          "id": "C033",
+          "lawVersionId": "L002",
+          "lifecycle": "active",
+          "quote": "第二十七条　生产经营单位的主要负责人和安全生产管理人员必须具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。\n危险物品的生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。考核不得收费。\n危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位应当有注册安全工程师从事安全生产管理工作。鼓励其他生产经营单位聘用注册安全工程师从事安全生产管理工作。注册安全工程师按专业分类管理，具体办法由国务院人力资源和社会保障部门、国务院应急管理部门会同国务院有关部门制定。",
+          "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817a66b816017a7956b7db0ad4"
+        },
+        "previousEntityFileSha256": "b5ee1266e74978b2e907624084e6e5c91ee8e7fe9e75be698e21a58382909a5a",
+        "reviewEvidence": {
+          "checkedAt": "2026-10-03",
+          "officialName": "中华人民共和国安全生产法",
+          "version": "2021年6月10日第三次修正",
+          "effectiveDate": "2021-09-01",
+          "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+          "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+          "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+          "officialStatus": "现行有效",
+          "locators": [
+            "第二条完整范围",
+            "第二十七条完整三款"
+          ],
+          "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+          "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+          "siteFactsVerified": false,
+          "profileAdmission": false,
+          "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+          "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+        },
+        "notes": "本次实体内容hash仅绑定当前记录；实质审核限reviewedFields列明字段及所关联完整条款和适用分支。未认证其他未变字段、企业现场事实、全库或profile准入；完整previousReview和previousEntity保留。"
+      },
+      "previousFileSha256": "98ee4b1ffeb4160be5d557e2d3832846734243b87988bb7a57e0e430caa36b18",
+      "fileSha256": "738d1f26043b837d2c5783147c991a5d3aa4129a7c864b91aa155f0ba94b8520",
+      "kind": "substantive"
+    },
+    {
+      "path": "knowledge/reviews/links/K_84CD742E5092AF652C2CEF43.json",
+      "record": {
+        "checkedAt": "2026-09-14",
+        "contextHashes": {
+          "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376",
+          "hazard": "82048d75749f0bf847ac45169a24eee5477b30bef5cf718b28941c5313df3d6a"
+        },
+        "decision": "pending",
+        "entityId": "K_84CD742E5092AF652C2CEF43",
+        "entityType": "link",
+        "evidenceRefs": [],
+        "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "1d44745792d12384d75d2ab0e552ed267a9c46b02ee65d297f5a1877a0dd4d39",
+        "reviewer": "GLM-5.3-Flash (ZCode)",
+        "phase5ReconciledAt": "2026-09-14",
+        "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+        "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]",
+        "previousReview": {
+          "checkedAt": "2026-09-14",
+          "contextHashes": {
+            "clause": "83a4ae8e4e7e5da1e9e8c03d83220c930db8205053db91d5176674915b2bca79",
+            "hazard": "82048d75749f0bf847ac45169a24eee5477b30bef5cf718b28941c5313df3d6a"
+          },
+          "decision": "pending",
+          "entityId": "K_84CD742E5092AF652C2CEF43",
+          "entityType": "link",
+          "evidenceRefs": [],
+          "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "1d44745792d12384d75d2ab0e552ed267a9c46b02ee65d297f5a1877a0dd4d39",
+          "reviewer": "GLM-5.3-Flash (ZCode)",
+          "phase5ReconciledAt": "2026-09-14",
+          "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
+        },
+        "historySha256": "5948ac3954b84aa92c14b28565c5cc8bc63d23a83cbc0091a1d3196d553d498a",
+        "previousReviewFileSha256": "1d1419b409192d9483be295234f6c3b88fd3c2a92c785300185a8ca5968182dd",
+        "bindingMaintenance": {
+          "updatedAt": "2026-10-03",
+          "reviewer": "Codex培训考核条款逐项复核20261003",
+          "changedFields": [
+            "/contextHashes/clause"
+          ],
+          "reason": "仅同步既有条款jurisdictionCode从CN收窄为CN-32后的context hash。原适用性未复审，pending决定、原checkedAt、空evidenceRefs以及proposed关联均保持；不授予发布资格。",
+          "substantiveApplicabilityReviewed": false,
+          "statusPromoted": false
+        }
+      },
+      "previousFileSha256": "1d1419b409192d9483be295234f6c3b88fd3c2a92c785300185a8ca5968182dd",
+      "fileSha256": "79fe90cbbe2033e6cc1bf78dc8cbf3a09e748afee5de755db5a94511c9a8f9cd",
+      "kind": "pending_binding_only"
+    }
+  ],
+  "sourceReview": {
+    "C033": {
+      "checkedAt": "2026-10-03",
+      "officialName": "中华人民共和国安全生产法",
+      "version": "2021年6月10日第三次修正",
+      "effectiveDate": "2021-09-01",
+      "officialSourceUrl": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+      "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=90353",
+      "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源中国人大网",
+      "officialStatus": "现行有效",
+      "locators": [
+        "第二条完整范围",
+        "第二十七条完整三款"
+      ],
+      "quoteComparison": "完整三款逐字核对，仅忽略空白。",
+      "scopeDecision": "一般知识和管理能力义务与第二款列明单位的主管部门考核义务区分，不将考核取证要求推广至全部单位。",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+      "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+    },
+    "C_9F790C9B0EA34E59207BCCC1AD": {
+      "checkedAt": "2026-10-03",
+      "officialName": "江苏省安全生产条例",
+      "version": "2023年3月30日修订",
+      "effectiveDate": "2023-07-01",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "statusSourceUrl": "https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=99081",
+      "statusSourceClass": "商务部中国商务法规官方公开条目，信息来源江苏省人大常委会网站",
+      "officialStatus": "现行有效",
+      "locators": [
+        "第二条完整范围",
+        "第二十二条完整三款",
+        "第七十二条完整处罚文本",
+        "第七十七条施行日期"
+      ],
+      "quoteComparison": "第二十二条完整三款逐字核对，仅忽略空白；原共享错误C实际为第七十二条处罚规定。",
+      "scopeDecision": "限江苏省及第一款列明单位；第二款分别对应新任职六个月、已考核合格再培训、死亡事故重新培训考核。本轮三项仅适用前两种对应分支，不自行增加培训周期。",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "sourceAccessLimit": "国家法律法规数据库原detail链接本轮网页工具返回内部取回错误；使用上述可读取的官方全文及明确时效条目交叉核验，未绕过访问限制。",
+      "evidenceReuse": "既有国家法律法规数据库evidence实体和身份不改；本次实际阅读页及日期在本reviewEvidence留存。"
+    }
+  },
+  "canonicalQuotes": {
+    "C_XLSX_FT_D49257E7AE9D715C9C8367F6": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "C_9F790C9B0EA34E59207BCCC1AD": "第二十二条矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。 前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。 生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+    "C033": "第二十七条　生产经营单位的主要负责人和安全生产管理人员必须具备与本单位所从事的生产经营活动相应的安全生产知识和管理能力。\n危险物品的生产、经营、储存、装卸单位以及矿山、金属冶炼、建筑施工、运输单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。考核不得收费。\n危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位应当有注册安全工程师从事安全生产管理工作。鼓励其他生产经营单位聘用注册安全工程师从事安全生产管理工作。注册安全工程师按专业分类管理，具体办法由国务院人力资源和社会保障部门、国务院应急管理部门会同国务院有关部门制定。"
+  },
+  "gateSnapshots": {
+    "2026-09-30": {
+      "changedLinks": {
+        "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_FT_498653F95CEB7020551DDECA": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        }
+      }
+    },
+    "2026-10-01": {
+      "changedLinks": {
+        "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_FT_498653F95CEB7020551DDECA": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        }
+      }
+    },
+    "2026-10-02": {
+      "changedLinks": {
+        "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_FT_498653F95CEB7020551DDECA": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        }
+      }
+    },
+    "2026-10-03": {
+      "changedLinks": {
+        "K_XLSX_NEW14_D202AD9A4C7E4F085F52F20F": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H034",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_NEW14_647D9BC4C7D2F36A0A535DD9": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_87D36F82D5F9405BA0B0B14CB7",
+            "clauseId": "C033"
+          }
+        },
+        "K_XLSX_FT_498653F95CEB7020551DDECA": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_1",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_61A33F461F0BBCEF6F1B6361": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_2",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        },
+        "K_XLSX_NEW14_C20CF5A0A43195922FB2DE6E": {
+          "before": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_XLSX_FT_D49257E7AE9D715C9C8367F6"
+          },
+          "after": {
+            "ok": true,
+            "reasons": [],
+            "role": "direct",
+            "qualifying": true,
+            "decision": "verified",
+            "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_3",
+            "clauseId": "C_9F790C9B0EA34E59207BCCC1AD"
+          }
+        }
+      }
+    }
+  }
+}

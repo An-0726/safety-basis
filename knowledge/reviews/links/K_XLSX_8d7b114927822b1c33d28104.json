@@ -1,18 +1,83 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "cd39c05fe594dee37ea8acb9db57c3699905eec895a609b30c9f8fa02136979c",
-    "hazard": "21bcad6172c733e59f49fb4f6526f7c7b1f275e179137bee1fd42a254aaf1a30"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_8d7b114927822b1c33d28104",
   "entityType": "link",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "reason": "第9.11条第二句的螺栓数量要求以使用金属法兰连接且不另接跨接线为前提；两个以上的螺栓连接不能免除第一句导电良好及第三句电阻触发的跨接要求。已目读第1章完整范围和第9章上下文；删除机械夹卷或一般送电模板，保留第1章排除、气态和粉态物料场景、精确对象及第9.5条独立核查边界。",
   "reviewType": "applicability",
-  "reviewedContentHash": "50633720d7180a044ab8f8103b508513f02b559796cb0547d4330ac6a0e51864",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "8465be809762fec3edcb36b0b6983fff250a5d89676b0159f3a571306fdb0733",
+  "reviewer": "Codex法兰静电范围逐项复核20261003",
+  "reviewedFields": [
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于GB 12158-2024第1章所规定、为防止静电放电引发燃烧和爆炸的静电危险场所设计和管理，并限定为第9章气态和粉态物料静电防护涉及的金属设备与设备之间、管道与管道之间的连接处。不适用于火炸药、电火工品、烟花爆竹的静电危害防范；其他静电危害（如静电电击）的防护仅可参考使用，不据此直接定性。仅在使用金属法兰连接且不另接跨接线时，本分支核查是否有两个以上的螺栓连接；不向所有法兰或所有用电场所无条件推广。除尘系统管道连接法兰还应独立核对第9.5条的防静电跨接要求，不能据本分支免除。",
+    "/reason": "第9.11条第二句的螺栓数量要求以使用金属法兰连接且不另接跨接线为前提；两个以上的螺栓连接不能免除第一句导电良好及第三句电阻触发的跨接要求。适用范围受第1章和第9章共同约束；除尘系统管道连接法兰应另核对第9.5条。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_12158_GB 12158"
+    ],
+    "/reason": [
+      "E_12158_GB 12158"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "cd39c05fe594dee37ea8acb9db57c3699905eec895a609b30c9f8fa02136979c",
+      "hazard": "21bcad6172c733e59f49fb4f6526f7c7b1f275e179137bee1fd42a254aaf1a30"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_8d7b114927822b1c33d28104",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "50633720d7180a044ab8f8103b508513f02b559796cb0547d4330ac6a0e51864",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "20d48b4d5acd5c23432ad2bb7c3860f13ae1146c3d4133d8ecd135b22268f243",
+  "historySha256": "f377f95c35a5c6e7bde08ae60c39b6603e9f73b0cd170cfea26feb6527f78db2",
+  "reviewEvidence": {
+    "statusCheckedAt": "2026-10-03",
+    "standard": "GB 12158-2024",
+    "officialStatus": "现行",
+    "publicationDate": "2024-12-31",
+    "effectiveDate": "2026-01-01",
+    "officialIdentityUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D",
+    "originalPdfUrl": "https://www.hipc.org.cn/upload/files/20250408/1744076000682708.pdf",
+    "originalPdfSha256": "d0444f1a030b8531482649b7b5bd7283eb1a0ae52dc3d7dacbc9b0028f7fac65",
+    "originalPdfProvenanceUrl": "https://www.hipc.org.cn/post/index/115",
+    "sourceClass": "黑龙江省科学院石油化学研究院公开完整标准原版，非标准发布机关原发页；效力身份由SAMR官方记录独立核验。",
+    "locators": [
+      "PDF第7页/正文第1页：第1章完整范围",
+      "PDF第18页/正文第12页：第9章标题、第9.5、9.8、9.11条"
+    ],
+    "reviewMethod": "逐页目读完整范围及第9章相关上下文；不以搜索摘要或OCR替代。",
+    "scopeQuote": "本文件规定了为防止静电放电引发燃烧和爆炸所应采取的静电防护通用要求，静电管理措施，静电危险场所要求，固态、液态、气态和粉态物料的静电防护措施，人体静电防护措施及静电事故的分析和确定。\n本文件适用于静电危险场所的设计和管理。\n注：其他静电危害（如静电电击）的防护可参考使用。\n本文件不适用于火炸药、电火工品、烟花爆竹的静电危害防范。",
+    "chapterHeading": "9 气态和粉态物料的静电防护措施",
+    "section9_5": "除尘系统的导电部件应进行等电位连接，并可靠接地，静电接地电阻应小于100Ω，管道连接法兰应进行防静电跨接。",
+    "section9_8": "应采用金属导体制作管道或部件，当采用静电非导体时，应具体测量评估其起电程度，必要时采取相应措施，测量和评估过程及所采取的措施应形成文件纳入静电防护管理体系文件。",
+    "technicalDecisions": [
+      "保留第9.11条精确对象，未将管道无条件缩写为金属管道。",
+      "两个以上保留原技术用词；未擅改为三颗及以上。",
+      "大于0.03Ω不含等于0.03Ω；本分支未触发不等于免除其他条款。",
+      "第9.5条除尘系统管道法兰的独立跨接义务不能被第9.11条分支推翻。"
+    ],
+    "siteFactsVerified": false,
+    "profileAdmission": false
+  },
+  "notes": "本次审核限reviewedFields列明的最终字段及所涉第9.11条分支；全实体hash仅作内容绑定，不认证未变字段、全库、现场事实或profile准入。previousReview完整保留。效力身份采用SAMR官方记录，技术范围逐页核对公开完整标准原版；原件为研究机构转载，非发布机关原发页。",
+  "contextHashes": {
+    "hazard": "b3bfd7194cb595a410a365ff484ad2db39c1a2b756325c9ec4e761c46703e298",
+    "clause": "cd39c05fe594dee37ea8acb9db57c3699905eec895a609b30c9f8fa02136979c"
+  }
 }

@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_C9999A3918DEA7D2A91EE50A",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    "E_L020"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第七十二条，未包含第二十二条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "36694caad5908dba0e335c1f5f6d7f939cd123adcfc866b05aba3242a78f25b6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "6df927552839f76bdb3288c8efd5521bb7d0ec8edcf054833f0abc8475083a85",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第二十二条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "二十二",
+    "/quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "/lawVersionId": "L020",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L020"
+    ],
+    "/quote": [
+      "E_L020"
+    ],
+    "/lawVersionId": [
+      "E_L020"
+    ],
+    "/sourceUrl": [
+      "E_L020"
+    ],
+    "/lifecycle": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_C9999A3918DEA7D2A91EE50A",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "36694caad5908dba0e335c1f5f6d7f939cd123adcfc866b05aba3242a78f25b6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "a6809daff64766395fcfb6147ed5bc9261adcf49d94a0cc13c4041a785c68f94",
+  "historySha256": "344f4749c8b7c000d14aa411cc8e5a3c79b6b347d1b7f0452105a9f2382e4ccf",
+  "previousEntity": {
+    "articlePath": "二十二",
+    "id": "C_XLSX_FT_C9999A3918DEA7D2A91EE50A",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第七十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位违反本条例第二十二条第一款、第二款规定，主要负责人或者安全生产管理人员未按照规定经考核合格或者未按照规定参加安全生产知识再培训的，责令限期改正，处一万元以上十万元以下的罚款；逾期未改正的，责令停产停业整顿，并处十万元以上二十万元以下的罚款，对其直接负责的主管人员和其他直接责任人员处二万元以上五万元以下的罚款。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "82e85b81679d3d2fe4dbf312df72d88d60605f73a656b53eef6e626d4a8d376a",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第二十二条",
+    "completeOfficialQuote": "第二十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。\n前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。\n\n生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第七十二条，未包含第二十二条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

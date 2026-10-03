@@ -1,18 +1,87 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "2593d5316e8119e8282f7f3aa49cb6af67e11a897f1834a1779fb1b154a108c8",
-    "hazard": "35e6753af98e26386d99102004a8cb580fc1327f12f5f6f1f3fda1718cd2ecb8"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_FT_6E74ADC4FC16043C0D957206",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    "E_L020"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "仅江苏省第一款列明单位的主要负责人和安全生产管理人员，发生生产安全事故造成人员死亡后重新培训并考核合格；不是所有单位负责人普遍死亡事故重考。",
   "reviewType": "applicability",
-  "reviewedContentHash": "d1a444debee9ac2519b9fa883169e9b0a0a524a0c7ec025bdb697b15688ab40f",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "3c24572bda10debdbff1b93530ded2b9ea323bf135dea89836a5d61baaac538f",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第二十二条第二款末分支（结合第一款）",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于江苏省行政区域内第二十二条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，且本单位发生生产安全事故造成人员死亡；核查重新参加安全生产知识培训并考核合格，不自行增设周期、学时、证书或停岗要求。",
+    "/clauseId": "C_9F790C9B0EA34E59207BCCC1AD",
+    "/reason": "第二十二条第二款末分支（结合第一款）直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_L020"
+    ],
+    "/clauseId": [
+      "E_L020"
+    ],
+    "/reason": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "2593d5316e8119e8282f7f3aa49cb6af67e11a897f1834a1779fb1b154a108c8",
+      "hazard": "35e6753af98e26386d99102004a8cb580fc1327f12f5f6f1f3fda1718cd2ecb8"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_6E74ADC4FC16043C0D957206",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "d1a444debee9ac2519b9fa883169e9b0a0a524a0c7ec025bdb697b15688ab40f",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "dc9c84b5ef13df3f908f25e98568d9492068e544250b6069d9c19ce2b5564d33",
+  "historySha256": "86cad90779c400ea441386439fe79b16ffbee077345986e1ef4025fbccf53a55",
+  "previousEntity": {
+    "applicability": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+    "clauseId": "C_XLSX_FT_A2BF6D1D7240751D3F5C46DF",
+    "hazardId": "H_9F790C9B0EA34E59207BCCC1AD_4",
+    "id": "K_XLSX_FT_6E74ADC4FC16043C0D957206",
+    "jurisdictionCode": "CN-32",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "4b7c529d36831fe08ba0d87f17f348c2931c661e36e6ad9fe175afec164b0c4f",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第二十二条第二款末分支（结合第一款）",
+    "completeOfficialQuote": "第二十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。\n前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。\n\n生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+    "scopeDecision": "仅江苏省第一款列明单位的主要负责人和安全生产管理人员，发生生产安全事故造成人员死亡后重新培训并考核合格；不是所有单位负责人普遍死亡事故重考。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "02e5183b42a469589fe633dc0635265a496fe18e2e478a6eb6e6e2dbe8081305",
+    "clause": "121e305590842c66e77e65497089e9d702410f900a374826d90bec43cfd49376"
+  }
 }

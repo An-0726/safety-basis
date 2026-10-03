@@ -1,18 +1,88 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "79efd74682ea3dd3334e76dcd90104e9e79623934cea0dfaf070290ba7e52da5",
-    "hazard": "645de35b05de6eccdb0ff57b18ad70bc8f2200194edaf550bfe4455e3fbeb558"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_NEW14_08D430A73A95A65640FD0F8D",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_F156A66F87973920B30EFBB7"
+    "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"
   ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "reason": "具有火灾、爆炸危险的场所；不能因存放任意化学品便认定禁烟禁火。施工等特殊情况明火作业须依法审批并采取相应消防措施。",
   "reviewType": "applicability",
-  "reviewedContentHash": "6ca7c913378866d432a2041fcf6caf78a3ae62df6c84eedb25b5838ec578c7bf",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "8adf33a1ee95f3c447ffd71937e708948a5edd18c17db8fb2c28284141707efe",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "《中华人民共和国消防法》（2021修正）第二十一条第一款",
+  "reviewedFields": [
+    "/clauseId",
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/clauseId": "C074",
+    "/applicability": "适用于经物质危险特性和现场条件核明确有火灾、爆炸危险的场所，不能仅凭存放任意化学品认定。因施工等特殊情况需要使用明火作业的，应核实是否按规定事先办理审批手续、采取相应消防安全措施，作业人员是否遵守消防安全规定；符合该法定分支的用火不能仅因使用明火判为违规。",
+    "/reason": "《中华人民共和国消防法》（2021修正）第二十一条第一款直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/clauseId": [
+      "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"
+    ],
+    "/applicability": [
+      "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"
+    ],
+    "/reason": [
+      "E_a42d27605433eb93c421a238258c8d82aaca997a34c0a6fc583462b635d0fe7e"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "79efd74682ea3dd3334e76dcd90104e9e79623934cea0dfaf070290ba7e52da5",
+      "hazard": "645de35b05de6eccdb0ff57b18ad70bc8f2200194edaf550bfe4455e3fbeb558"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_08D430A73A95A65640FD0F8D",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_F156A66F87973920B30EFBB7"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "6ca7c913378866d432a2041fcf6caf78a3ae62df6c84eedb25b5838ec578c7bf",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "2e4d277f6f7f0267a4cf76b240aa50e4b43c8d70678cb684ca0d7534ec6123d5",
+  "historySha256": "d99790189cbc9966594d673e5fcd18438355b5e186a52683df6aaf2a5efca036",
+  "previousEntity": {
+    "id": "K_XLSX_NEW14_08D430A73A95A65640FD0F8D",
+    "hazardId": "H_1201F11443914660BCC291055B",
+    "clauseId": "C_XLSX_FT_261DD1438228E1E0CCDB1AAE",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所与设备的相关管理。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+  },
+  "previousEntityFileSha256": "5dc1adf33a5d1e30c9fd2a980c08a603899d532e391a263af9cd9e355f745bd9",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L001",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "6f871d09f38d42e249c234698cb04255e3ea50238856ddca377129f36d435a71",
+    "operativeLocator": "《中华人民共和国消防法》（2021修正）第二十一条第一款",
+    "completeOfficialQuote": "第二十一条  禁止在具有火灾、爆炸危险的场所吸烟、使用明火。因施工等特殊情况需要使用明火作业的，应当按照规定事先办理审批手续，采取相应的消防安全措施；作业人员应当遵守消防安全规定。\n\n　　进行电焊、气焊等具有火灾危险作业的人员和自动消防系统的操作人员，必须持证上岗，并遵守消防安全操作规程。",
+    "scopeDecision": "具有火灾、爆炸危险的场所；不能因存放任意化学品便认定禁烟禁火。施工等特殊情况明火作业须依法审批并采取相应消防措施。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "7aa63c30330a9ecd030660928c9852dcc5178fc7522f01c44229fa6844027a10",
+    "clause": "d95e70c5d365ee84b97bbf725b990bbc7d66898427df1aed4e8fad12530cd999"
+  }
 }

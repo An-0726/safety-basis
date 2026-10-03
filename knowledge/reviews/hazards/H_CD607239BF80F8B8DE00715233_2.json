@@ -1,13 +1,90 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_CD607239BF80F8B8DE00715233_2",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_FT_15CC03557C942B76FAB85E6B"
+    "E_L014"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+  "reason": "特种设备使用单位安全技术档案的设计、质量证明、安装使用维护说明、监督检验证明等资料内容。",
   "reviewType": "content",
-  "reviewedContentHash": "57eed223faefa16de8e92fcafa28fcbe30f7c8411376fa42f62348713f2d728b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "752203127fa0b64f768436d1c211e0847754bc04120a8ab480e4293c552ffdc4",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十五条第（一）项（连同首句）",
+  "reviewedFields": [
+    "/conditions",
+    "/measures",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于法定特种设备监管范围内的使用单位；本项核查安全技术档案是否包含第三十五条第（一）项所列设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件。",
+    "/measures": "收集并纳入安全技术档案：特种设备设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件，核实与在用设备对应。",
+    "/places": [
+      "特种设备使用单位安全技术档案管理"
+    ]
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_L014"
+    ],
+    "/measures": [
+      "E_L014"
+    ],
+    "/places": [
+      "E_L014"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_CD607239BF80F8B8DE00715233_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_15CC03557C942B76FAB85E6B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "57eed223faefa16de8e92fcafa28fcbe30f7c8411376fa42f62348713f2d728b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "e7ace6cbcd5d0210cb15950fbc85027dd796c1bdd43c698d94f5e2d76f00c943",
+  "historySha256": "2e38f85ecdfc3759dc56e7378d7947e20b800b91e8b670d87b874ee5101af9f4",
+  "previousEntity": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，特种设备安全技术档案未包括特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_CD607239BF80F8B8DE00715233_2",
+    "keywords": [
+      "特种设备安全技术档案未包括特种设备的设计文件",
+      "产品质量合格证明",
+      "安装及使用维护保养说明",
+      "监督检验证明等相关技术资料"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备安全技术档案包括特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备安全技术档案未包括特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料"
+  },
+  "previousEntityFileSha256": "c2d790e6290831bcd24436b8257d24b511f0bc6acc61d8914f5856c5cdfd4e5f",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L014",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+    "operativeLocator": "第三十五条第（一）项（连同首句）",
+    "completeOfficialQuote": "第三十五条　特种设备使用单位应当建立特种设备安全技术档案。安全技术档案应当包括以下内容:\n\n　　（一）特种设备的设计文件、产品质量合格证明、安装及使用维护保养说明、监督检验证明等相关技术资料和文件；\n\n　　（二）特种设备的定期检验和定期自行检查记录；\n\n　　（三）特种设备的日常使用状况记录；\n\n　　（四）特种设备及其附属仪器仪表的维护保养记录；\n\n　　（五）特种设备的运行故障和事故记录。",
+    "scopeDecision": "特种设备使用单位安全技术档案的设计、质量证明、安装使用维护说明、监督检验证明等资料内容。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

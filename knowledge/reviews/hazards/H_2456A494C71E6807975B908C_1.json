@@ -1,13 +1,112 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_2456A494C71E6807975B908C_1",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+  "reason": "危险化学品生产、储存单位作业场所通信、报警装置及适用状态；第五十二条可扩展至危险化学品使用单位。",
   "reviewType": "content",
-  "reviewedContentHash": "4a7f6d44d2a460c77dd8ae82e049068c54aa28307d8ac9a19d6421f597602ffb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "43261f877f1a3781ab68a413dd5b0d3a83e197d6859eae32685ad5a1cf40f114",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十八条第一款",
+  "reviewedFields": [
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/conditions": "本项限生产、储存危险化学品的单位的作业场所，核查通信、报警装置设置及处于适用状态；第五十二条对使用单位的适用扩展需另行对应核查，不能直接扩展为全部危险物质、运输或处置活动。",
+    "/description": "生产、储存危险化学品的单位存在作业场所未设置通信、报警装置，或者已设置的装置未保持适用状态的情形；应具体核实缺失装置或功能失效情况。",
+    "/keywords": [
+      "危险化学品生产储存单位",
+      "通信装置",
+      "报警装置",
+      "未设置",
+      "未保持适用状态"
+    ],
+    "/measures": "在危险化学品生产、储存单位作业场所设置通信、报警装置，并保证处于适用状态；核查装置设置和功能。",
+    "/places": [
+      "危险化学品生产、储存单位的作业场所"
+    ],
+    "/title": "生产、储存危险化学品的单位未在作业场所设置通信、报警装置，或者未保证装置处于适用状态"
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/description": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/keywords": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/measures": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/places": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/title": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2456A494C71E6807975B908C_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "4a7f6d44d2a460c77dd8ae82e049068c54aa28307d8ac9a19d6421f597602ffb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "c381a5878681112f9c3be9846beadc8caf3777fb2d9db468c510ea7fd5dcf729",
+  "historySha256": "f89901794c84d1c9091d49d0be2857311f8515705401127e511f2d7d6a153de9",
+  "previousEntity": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，生产、储存危险化学品的单位，未在其作业场所设置通信、报警装置，并保证处于适用状态，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_2456A494C71E6807975B908C_1",
+    "keywords": [
+      "生产",
+      "储存危险化学品的单位",
+      "未在其作业场所设置通信",
+      "报警装置",
+      "并保证处于适用状态"
+    ],
+    "lifecycle": "active",
+    "measures": "生产、储存危险化学品的单位，在其作业场所设置通信、报警装置，并保证处于适用状态。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "生产、储存危险化学品的单位，未在其作业场所设置通信、报警装置，并保证处于适用状态"
+  },
+  "previousEntityFileSha256": "ee88fa8dfcc1e2844ca9062b260cf998a4cf54d914a593cb4de87e918fac2da0",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+    "operativeLocator": "第三十八条第一款",
+    "completeOfficialQuote": "第三十八条　生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。\n\n生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
+    "scopeDecision": "危险化学品生产、储存单位作业场所通信、报警装置及适用状态；第五十二条可扩展至危险化学品使用单位。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

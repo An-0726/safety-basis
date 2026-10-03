@@ -1,18 +1,87 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "6f1635146d37f5757960de92faf177f48de5b096b87b51ce1b3c7de122fe00cf",
-    "hazard": "0c2800e3cb4c82e73d01949473e7bdcc7849cc292e38bf492255f9f355b31561"
-  },
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "K_XLSX_FT_6C903B34201A203CA0FF9A67",
   "entityType": "link",
   "evidenceRefs": [
-    "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+    "E_L014"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "移动式压力容器、气瓶充装单位；充装前后检查记录，禁止充装不符合安全技术规范的容器/气瓶。",
   "reviewType": "applicability",
-  "reviewedContentHash": "c97dfbf900575f89a383c34991137ef87f49e07e8031954fd900412a1a6431a7",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "8cbd43bd0c265a96ae38624ada7a06e7876d59fa38f50709770ff33dfd0947e9",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第四十九条第二款",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于法定移动式压力容器、气瓶充装单位的充装活动；本项核查充装前后检查、记录制度及禁止对不符合安全技术规范要求的容器、气瓶充装。",
+    "/clauseId": "C_7D2425A6472F9ED7098B49315B",
+    "/reason": "第四十九条第二款直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_L014"
+    ],
+    "/clauseId": [
+      "E_L014"
+    ],
+    "/reason": [
+      "E_L014"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "6f1635146d37f5757960de92faf177f48de5b096b87b51ce1b3c7de122fe00cf",
+      "hazard": "0c2800e3cb4c82e73d01949473e7bdcc7849cc292e38bf492255f9f355b31561"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_6C903B34201A203CA0FF9A67",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "c97dfbf900575f89a383c34991137ef87f49e07e8031954fd900412a1a6431a7",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "8070b38704a18dafaf317b5a7a063cebf27cefbab0d1cf08aecd9d3bcfdfa8e2",
+  "historySha256": "0c208ef89c79ca4932534112d7760171f69a9ea77a26d28cb914937b5706de58",
+  "previousEntity": {
+    "applicability": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：压力容器使用、运行、维护检修或相关管理场景",
+    "clauseId": "C_XLSX_FT_55B8DD23E8E4EB1225346007",
+    "hazardId": "H_7D2425A6472F9ED7098B49315B_2",
+    "id": "K_XLSX_FT_6C903B34201A203CA0FF9A67",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "a3dccef1b5e5eb42fd0ae186ed6a44813bde08ee9e8d5d420c87e5114c8a99e4",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L014",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+    "operativeLocator": "第四十九条第二款",
+    "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+    "scopeDecision": "移动式压力容器、气瓶充装单位；充装前后检查记录，禁止充装不符合安全技术规范的容器/气瓶。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "contextHashes": {
+    "hazard": "816474c745380d571d16e2078b41fac487000d94502b7db420dc6103c5e3c43b",
+    "clause": "bf3a28a0bcc1bb73f3e8982f9095518210d7c058a3e3da8103b457a648ca8870"
+  }
 }

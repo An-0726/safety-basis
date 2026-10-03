@@ -1,13 +1,88 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_D7F4B2B8F70D67B625BE3E5E95_1",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_FT_E97798E77AB03A0E228B048D"
+    "E_CITATION_JS2023_20261002"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+  "reason": "江苏省新进、离岗六个月以上或换岗、采用新工艺/新技术/新材料/新设备涉及的从业人员，上岗前教育培训、记录考核。",
   "reviewType": "content",
-  "reviewedContentHash": "073e97f775ee1d1a4f84def49d3883be5c946a8213997c17500750fc95798499",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "ed8797b7f4a8537893af10c079fe2bed7c120afc9135b9e4df9e8e6bc6509653",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第二十一条第一款及第（一）至（三）项",
+  "reviewedFields": [
+    "/conditions",
+    "/measures",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于江苏省行政区域内生产经营单位的新进从业人员、离岗六个月以上或者换岗的从业人员，以及涉及采用新工艺、新技术、新材料或者使用新设备的从业人员；核查其上岗前安全操作规程和安全操作技能教育培训、记录及考核。",
+    "/measures": "对上述三类从业人员依法在上岗前开展安全操作规程和安全操作技能的教育培训，做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业。",
+    "/places": [
+      "江苏省行政区域内上述三类从业人员上岗前教育培训活动"
+    ]
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/measures": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "/places": [
+      "E_CITATION_JS2023_20261002"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D7F4B2B8F70D67B625BE3E5E95_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E97798E77AB03A0E228B048D"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "073e97f775ee1d1a4f84def49d3883be5c946a8213997c17500750fc95798499",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "812b0bbeb24f97c58fec2bae76356238814fdfb1d5c43c2474093a8be7fcdfe2",
+  "historySha256": "db3bfd15eba221d42aae7a2f18d7f24512a122431a6b7f5bd4f176c52d55d765",
+  "previousEntity": {
+    "aliases": [],
+    "category": "安全教育培训",
+    "conditions": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未依法对相关上岗人员进行安全操作规程和安全操作技能的教育培训，未做好记录和考核，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D7F4B2B8F70D67B625BE3E5E95_1",
+    "keywords": [
+      "生产经营单位未依法对相关上岗人员进行安全操作规程和安全操作技能的教育培训",
+      "未做好记录和考核"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位依法对相关上岗人员进行安全操作规程和安全操作技能的教育培训，做好记录和考核。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动"
+    ],
+    "title": "生产经营单位未依法对相关上岗人员进行安全操作规程和安全操作技能的教育培训，未做好记录和考核"
+  },
+  "previousEntityFileSha256": "7272a7c071fe71411085efb1db8bfab31ce14bd5568ad40b8a9d570e89d80a9f",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第二十一条第一款及第（一）至（三）项",
+    "completeOfficialQuote": "第二十一条 生产经营单位应当依法对下列人员在上岗前进行安全操作规程和安全操作技能的教育和培训，并做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业：\n\n（一）新进从业人员；\n\n（二）离岗六个月以上或者换岗的从业人员；\n\n（三）涉及采用新工艺、新技术、新材料或者使用新设备的从业人员。\n\n生产经营单位可以自主组织培训，也可以委托具备安全生产培训条件的机构进行培训。生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。\n\n从业人员应当按照要求接受安全生产教育和培训，掌握本职工作所需的安全生产知识，提高安全操作技能，增强事故预防和应急处理能力。",
+    "scopeDecision": "江苏省新进、离岗六个月以上或换岗、采用新工艺/新技术/新材料/新设备涉及的从业人员，上岗前教育培训、记录考核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

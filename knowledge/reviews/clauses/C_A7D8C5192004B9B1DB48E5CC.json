@@ -3,12 +3,78 @@
   "entityId": "C_A7D8C5192004B9B1DB48E5CC",
   "reviewType": "text",
   "decision": "verified",
-  "reviewedContentHash": "4e64c7429da8c8fc9fe957cedcd618d1156d2b943d74f5b387bf00c583579510",
-  "checkedAt": "2026-09-10T12:35:24+08:00",
-  "reviewer": "ChatGPT",
+  "reviewedContentHash": "6e80242fa067179786b5772a1a3246d4993c952f547eb3159ee86304a83ae861",
+  "checkedAt": "2026-10-03",
+  "reviewer": "Codex条款结构逐项复核20261003",
   "evidenceRefs": [
     "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
   "locator": "第三十四条",
-  "reason": "条文核验：articlePath=第三十四条 与 quote 节选与官源原文对应一致，locator 指向原文页。"
+  "reason": "完整官方原文与既有稳定ID、法版本和条款定位核对；本条对应H/K各自另审责任主体及分支。恢复第三十四条完整三款，包括变更时重新评估和目录制定公布尾句。",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl"
+  ],
+  "reviewedValues": {
+    "/articlePath": "第三十四条",
+    "/quote": "第三十四条　生产、储存危险化学品的企业应当建立安全风险分级管控制度，开展安全风险辨识评估，按照安全风险分级采取相应的管控措施。\n\n生产、储存危险化学品的企业的工艺、设施、设备、原料等发生变更时应当重新进行安全风险辨识评估。\n\n生产、储存危险化学品的企业不得使用国家明令淘汰或者禁止使用的危及生产安全的工艺、技术、设施、设备，具体目录由国务院应急管理部门会同有关部门制定并公布。",
+    "/lawVersionId": "LV_HAZCHEM_LAW",
+    "/sourceUrl": "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/quote": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/lawVersionId": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/sourceUrl": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ]
+  },
+  "previousReview": {
+    "entityType": "clause",
+    "entityId": "C_A7D8C5192004B9B1DB48E5CC",
+    "reviewType": "text",
+    "decision": "verified",
+    "reviewedContentHash": "4e64c7429da8c8fc9fe957cedcd618d1156d2b943d74f5b387bf00c583579510",
+    "checkedAt": "2026-09-10T12:35:24+08:00",
+    "reviewer": "ChatGPT",
+    "evidenceRefs": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "locator": "第三十四条",
+    "reason": "条文核验：articlePath=第三十四条 与 quote 节选与官源原文对应一致，locator 指向原文页。"
+  },
+  "previousReviewFileSha256": "11e57d42870837253f518ebae482d641c2deb1d3088118df929fac4520e53098",
+  "historySha256": "8f6eb0f527f440bf7e8b77bc0933c9225017ac32b1e2728c2d68d933ba8bb8d2",
+  "previousEntity": {
+    "articlePath": "第三十四条",
+    "id": "C_A7D8C5192004B9B1DB48E5CC",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "lifecycle": "active",
+    "quote": "生产、储存危险化学品的企业应当建立安全风险分级管控制度，开展安全风险辨识评估，按照安全风险分级采取相应的管控措施；不得使用国家明令淘汰或者禁止使用的危及生产安全的工艺、技术、设施、设备。",
+    "sourceUrl": "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html"
+  },
+  "previousEntityFileSha256": "90470074691a88143f253e25b3da3f092fc11985fbf3c335f4a73f6f486bb077",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+    "operativeLocator": "第三十四条",
+    "completeOfficialQuote": "第三十四条　生产、储存危险化学品的企业应当建立安全风险分级管控制度，开展安全风险辨识评估，按照安全风险分级采取相应的管控措施。\n\n生产、储存危险化学品的企业的工艺、设施、设备、原料等发生变更时应当重新进行安全风险辨识评估。\n\n生产、储存危险化学品的企业不得使用国家明令淘汰或者禁止使用的危及生产安全的工艺、技术、设施、设备，具体目录由国务院应急管理部门会同有关部门制定并公布。",
+    "scopeDecision": "完整官方原文与既有稳定ID、法版本和条款定位核对；本条对应H/K各自另审责任主体及分支。恢复第三十四条完整三款，包括变更时重新评估和目录制定公布尾句。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

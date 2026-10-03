@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_C7CBCB1E528E3A6C6855FA14",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    "E_L001"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第六十七条，未包含第十六条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "aff4fc74798e82d40ec8df416b0a986a0df8c3a33f866df9d3db0d0d4cb90c6b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "be4bf8f4232eaca4c74ba791cdbd9f5262e9d8846c5eeb3e85c5868165aa2891",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第十六条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "十六",
+    "/quote": "第六十七条 机关、团体、企业、事业等单位违反本法第十六条、第十七条、第十八条、第二十一条第二款规定的，责令限期改正；逾期不改正的，对其直接负责的主管人员和其他直接责任人员依法给予处分或者给予警告处罚。",
+    "/lawVersionId": "L001",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_L001"
+    ],
+    "/quote": [
+      "E_L001"
+    ],
+    "/lawVersionId": [
+      "E_L001"
+    ],
+    "/sourceUrl": [
+      "E_L001"
+    ],
+    "/lifecycle": [
+      "E_L001"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_C7CBCB1E528E3A6C6855FA14",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "aff4fc74798e82d40ec8df416b0a986a0df8c3a33f866df9d3db0d0d4cb90c6b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "26b97f163bf82472ba1f67831a432cf6560f83c594b46f7834eff70159c8f0e2",
+  "historySha256": "a3714a30d4d8f66c6ffb433080db72d573f1c280ba20eaccd9073414a421f570",
+  "previousEntity": {
+    "articlePath": "十六",
+    "id": "C_XLSX_FT_C7CBCB1E528E3A6C6855FA14",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "L001",
+    "lifecycle": "active",
+    "quote": "第六十七条 机关、团体、企业、事业等单位违反本法第十六条、第十七条、第十八条、第二十一条第二款规定的，责令限期改正；逾期不改正的，对其直接负责的主管人员和其他直接责任人员依法给予处分或者给予警告处罚。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff8081817ab22e0c017abd909312060a"
+  },
+  "previousEntityFileSha256": "2c16e814284abd263937400241d305e2468be958842f77f0d8bd7610ed4545e1",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "L001",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "6f871d09f38d42e249c234698cb04255e3ea50238856ddca377129f36d435a71",
+    "operativeLocator": "第十六条",
+    "completeOfficialQuote": "第十六条  机关、团体、企业、事业等单位应当履行下列消防安全职责：\n\n　　（一）落实消防安全责任制，制定本单位的消防安全制度、消防安全操作规程，制定灭火和应急疏散预案；\n\n　　（二）按照国家标准、行业标准配置消防设施、器材，设置消防安全标志，并定期组织检验、维修，确保完好有效；\n\n　　（三）对建筑消防设施每年至少进行一次全面检测，确保完好有效，检测记录应当完整准确，存档备查；\n\n　　（四）保障疏散通道、安全出口、消防车通道畅通，保证防火防烟分区、防火间距符合消防技术标准；\n\n　　（五）组织防火检查，及时消除火灾隐患；\n\n　　（六）组织进行有针对性的消防演练；\n\n　　（七）法律、法规规定的其他消防安全职责。\n\n　　单位的主要负责人是本单位的消防安全责任人。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第六十七条，未包含第十六条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

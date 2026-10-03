@@ -1,13 +1,85 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
+  "checkedAt": "2026-10-03",
+  "decision": "rejected",
   "entityId": "C_XLSX_FT_413C38BA20BD8583AA5698D4",
   "entityType": "clause",
   "evidenceRefs": [
-    "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+  "reason": "隔离已确认错配或实质性截断条款：引文逐字对应第五十二条，未包含第三十八条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。",
   "reviewType": "text",
-  "reviewedContentHash": "a297cee7f9dba618a39e32f5f8b513ff4d1982dea4a8d3ee44464990a583723d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "659f6896bcdc1f63297db9f5661434bd98e48f21c41c4c2bcc63258b10e1a1be",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第三十八条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/lawVersionId",
+    "/sourceUrl",
+    "/lifecycle"
+  ],
+  "reviewedValues": {
+    "/articlePath": "三十八",
+    "/quote": "第五十二条 本法第三十七条、第三十八条、第四十条第一款、第四十五条关于生产、储存危险化学品的单位的规定，适用于使用危险化学品的单位；第三十四条、第三十五条、第三十六条、第三十九条关于生产、储存危险化学品的企业的规定，适用于使用危险化学品从事生产的企业。",
+    "/lawVersionId": "LV_HAZCHEM_LAW",
+    "/sourceUrl": "https://flk.npc.gov.cn/detail?id=2933e1a00644487bbd43d0960cb01931",
+    "/lifecycle": "proposed"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/quote": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/lawVersionId": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/sourceUrl": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ],
+    "/lifecycle": [
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_413C38BA20BD8583AA5698D4",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "a297cee7f9dba618a39e32f5f8b513ff4d1982dea4a8d3ee44464990a583723d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "6d85a4f10101138413143427e051d0ffd17a2f8fea49d1c5fefdfd5f786611c1",
+  "historySha256": "3051a36bf7d9adef8bd963b65529936c79bfdce496b6d3a0ab06088e0423557a",
+  "previousEntity": {
+    "articlePath": "三十八",
+    "id": "C_XLSX_FT_413C38BA20BD8583AA5698D4",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "lifecycle": "active",
+    "quote": "第五十二条 本法第三十七条、第三十八条、第四十条第一款、第四十五条关于生产、储存危险化学品的单位的规定，适用于使用危险化学品的单位；第三十四条、第三十五条、第三十六条、第三十九条关于生产、储存危险化学品的企业的规定，适用于使用危险化学品从事生产的企业。",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=2933e1a00644487bbd43d0960cb01931"
+  },
+  "previousEntityFileSha256": "9443a5c32edfdae33314696e32942984b9182d487b9ec89d5c71c0d2acbbc708",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "currentnessEvidence": "official/national-current-laws-web-readback.json",
+    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+    "operativeLocator": "第三十八条",
+    "completeOfficialQuote": "第三十八条　生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。\n\n生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
+    "scopeDecision": "隔离已确认错配或实质性截断条款：引文逐字对应第五十二条，未包含第三十八条的实体义务；当前K将其独立作为直接依据。处罚条/转引条不是实体义务条的多条完整引用。 旧稳定ID、原条号、原文及完整旧审核保留，原关联已按各自实体义务改绑；不将处罚或桥接文本替换成其他条文并沿用审核。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }

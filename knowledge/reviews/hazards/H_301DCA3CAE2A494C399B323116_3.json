@@ -1,13 +1,87 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-03",
   "decision": "verified",
   "entityId": "H_301DCA3CAE2A494C399B323116_3",
   "entityType": "hazard",
   "evidenceRefs": [
-    "E_XLSX_FT_F156A66F87973920B30EFBB7"
+    "E_L020"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+  "reason": "江苏省条文列举的危险作业；委托危险作业须管理协议/落实管理责任及受托方安全条件资质。不能据此全国化断言任何化学品储存区禁烟禁火。",
   "reviewType": "content",
-  "reviewedContentHash": "5a533f98fc4b3045df4050e79098ee3cc59c0f2770c6ad69763d6043d608797c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reviewedContentHash": "a89f297fe67f4401b5fb1c0009b7f30e2601c9835872e51fccc1741666cd2e1d",
+  "reviewer": "Codex条款结构逐项复核20261003",
+  "locator": "第二十九条第二款",
+  "reviewedFields": [
+    "/conditions",
+    "/measures",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于江苏省行政区域内生产经营单位委托开展第二十九条所列爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业；应按实际作业类型核实受托主体安全生产条件及相应资质，不能以一般外包关系代替危险作业触发条件。",
+    "/measures": "不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人；核实相应作业所需条件和资质，改由符合要求的主体承接。",
+    "/places": [
+      "江苏省行政区域内危险作业受托主体选择及管理活动"
+    ]
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_L020"
+    ],
+    "/measures": [
+      "E_L020"
+    ],
+    "/places": [
+      "E_L020"
+    ]
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_301DCA3CAE2A494C399B323116_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_F156A66F87973920B30EFBB7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "5a533f98fc4b3045df4050e79098ee3cc59c0f2770c6ad69763d6043d608797c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "bb4d79cdd2ea24f014cd9454746f9bc9f6fd3562f14349c4eab7883f42962be3",
+  "historySha256": "1ebe9f30a9cc6e666f0a8d281558decb0b5ebc78a5d2899345df25351e0d4957",
+  "previousEntity": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料、记录及履职情况核查，生产经营单位将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
+    "id": "H_301DCA3CAE2A494C399B323116_3",
+    "keywords": [
+      "生产经营单位将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止将危险作业委托给不具备安全生产条件或相应资质的单位、个人；重新核验承包方资质和安全条件，选择符合要求的主体并明确安全管理责任。整改后通过制度文件、人员能力、履职记录和实际执行情况复核闭环效果。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人"
+  },
+  "previousEntityFileSha256": "a2c54c910dbaad5d39ecd1e9645ea267c549146cb5569fd4e63ac9733d1169de",
+  "reviewEvidence": {
+    "checkedAt": "2026-10-03",
+    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+    "lawVersionId": "L020",
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+    "operativeLocator": "第二十九条第二款",
+    "completeOfficialQuote": "第二十九条 生产经营单位进行爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业，应当执行有关危险作业管理制度，并遵守下列规定：\n\n（一）对作业安全风险进行评估，确认现场作业条件符合安全作业要求；\n\n（二）根据安全风险明确安全防范措施和现场应急处置措施；\n\n（三）确认作业人员的上岗资格以及劳动防护用品的配备、使用符合安全作业要求；\n（四）配备相应的安全设施和应急救援器材，设置作业现场的安全区域，确定专人现场统一指挥和监督；\n\n（五）在危险作业前向作业人员告知危险因素、作业安全要求和现场应急处置措施，并经双方现场签字确认；\n\n（六）发现直接危及人身安全的紧急情况时，按照现场应急处置措施停止作业、撤出人员。\n\n生产经营单位委托其他单位进行危险作业的，应当在作业前与受托方签订安全生产管理协议，明确并落实前款规定，对受托方安全生产工作统一协调、管理，并加强监督检查。生产经营单位不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
+    "scopeDecision": "江苏省条文列举的危险作业；委托危险作业须管理协议/落实管理责任及受托方安全条件资质。不能据此全国化断言任何化学品储存区禁烟禁火。"
+  },
+  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
 }
