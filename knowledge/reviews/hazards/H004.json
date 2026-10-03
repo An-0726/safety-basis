@@ -1,0 +1,30 @@
+{
+  "entityId": "H004",
+  "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "70d429a7747d0620e42a693e801b25cf7e7fdff4ae6a6c64c45c68cbb9b84b19",
+  "checkedAt": "2026-10-03",
+  "reviewer": "Codex 常见隐患独立核源结果整合复核",
+  "evidenceRefs": [
+    "E_COM_GB55037_ORIGINAL_20261002"
+  ],
+  "reason": "7.1.7技术义务真实、现行且存在覆盖缺口；但H004已有安全出口锁闭及门禁紧急开启核查note、没有K，优先把它收窄转正，保留Stable ID，而不是再留一个高度重叠的proposed旁另建H。 已采用独立审核列明的修订后字段，整合复核完整原文、范围和近邻条目；只核通用条件，不确认历史企业事实、行政违法或重大事故隐患。 最终整合复核移除旧备注当前命令式语气，原完整定义及备注只在priorHazardDefinition作历史溯源，不要求所有闸口都先证明为安全出口或锁闭事实。",
+  "priorHazardDefinition": {
+    "id": "H004",
+    "title": "安全出口无标识且上锁",
+    "description": "生产经营场所安全出口未设置明显标志，且处于锁闭状态，不能满足紧急疏散要求。",
+    "measures": "立即解除锁闭、清除障碍，确保有人使用期间能够及时开启；按适用标准补设安全出口和疏散指示标志，检查应急照明，并建立开门检查制度。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "安全生产",
+    "places": [],
+    "aliases": [],
+    "keywords": [
+      "安全出口无标识且上锁"
+    ],
+    "lifecycle": "proposed",
+    "mode": "candidate",
+    "note": "应确认该门确为安全出口，记录营业／作业期间的锁闭事实；门禁须核查紧急开启功能，不能只看有锁具就判定锁闭。\n\nGB 55037-2022《建筑防火通用规范》。",
+    "mergedInto": null
+  }
+}

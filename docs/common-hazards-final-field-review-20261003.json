@@ -1,0 +1,148 @@
+{
+  "asOf": "2026-10-03",
+  "reviewer": "独立最终字段与原页复核（主任务）",
+  "decision": "pass_bounded_semantic_fields_and_source_pages",
+  "scope": {
+    "hazards": 6,
+    "directClauses": 5,
+    "links": 9
+  },
+  "method": "主任务逐项阅读6H、9K、5个直接C，并目核GB46768 PDF第7/11/12/13页、GB/T13869 PDF第7页、GB55037原版PDF第38页。H004旧备注当前命令式语气已按主任务发现修正。",
+  "approvedBoundaries": [
+    "点位不足2m两种例外及回引",
+    "移动通风涵盖作业前、非固定系统统一配置",
+    "中断警示-only不命中临时封闭",
+    "2017用电标准推荐性及电压范围、2027-02-01界限",
+    "门禁末句及有锁不等于不合格",
+    "H004原备注仅溯源"
+  ],
+  "limits": [
+    "非重新检索标准时效证明",
+    "非全库法律实审",
+    "非企业现场/历史/整改确认",
+    "非合并树或浏览器UI验收",
+    "非发布授权或已上线证明"
+  ],
+  "records": [
+    {
+      "path": "knowledge/hazards/H_46768_5_8_6.json",
+      "entityId": "H_46768_5_8_6",
+      "canonicalContentHash": "ceff387fafafb8d9c1b6d37cc4d8e1bd031ea58eade58b6bef49cec541e7ae4f",
+      "fileSha256": "9293e8a8e49c4feba289d20fae14514c5c9ad9d804fcfbdab9a8105aee55f19e"
+    },
+    {
+      "path": "knowledge/hazards/H_46768_5_10_2.json",
+      "entityId": "H_46768_5_10_2",
+      "canonicalContentHash": "0787c6d727f116384f898bfdec6be1fee0de864b68f5356c423d3538f7319dbe",
+      "fileSha256": "3bbeb8d2a4bd23d56a712ece85263502efd88692a08fac03ad93c85a697fe809"
+    },
+    {
+      "path": "knowledge/hazards/H_46768_6_2_6.json",
+      "entityId": "H_46768_6_2_6",
+      "canonicalContentHash": "fa0c8e2c58fef58bf0b4b1cbe1143c653941d5003129db2c91d6638cb8ad7ad6",
+      "fileSha256": "f923e788780138f7f92838f1299efdcc90e58fd3c8cf6ed38b19329f66a13055"
+    },
+    {
+      "path": "knowledge/hazards/H_GBT13869_REMOVED_POWER_END.json",
+      "entityId": "H_GBT13869_REMOVED_POWER_END",
+      "canonicalContentHash": "689ccc55ba72ce74e361362709f250f45f1f834a86fd2dbc604b179589235cac",
+      "fileSha256": "ec8244e4152b88450161d4bf9b05a0a3319da1edc12e7b9c63e69bc2e3564038"
+    },
+    {
+      "path": "knowledge/hazards/H_GBT13869_RESTART_AFTER_STORAGE.json",
+      "entityId": "H_GBT13869_RESTART_AFTER_STORAGE",
+      "canonicalContentHash": "e9b9f8abcfcaca584ca23787628d8baa0ce6ae1cc8fa64efd4642591f888f86f",
+      "fileSha256": "26d82d83f3bee76ece41e09d8d7266c5dfef6014bc9fc662e40f63a2173e4b4d"
+    },
+    {
+      "path": "knowledge/hazards/H004.json",
+      "entityId": "H004",
+      "canonicalContentHash": "70d429a7747d0620e42a693e801b25cf7e7fdff4ae6a6c64c45c68cbb9b84b19",
+      "fileSha256": "343dae404e7675a2b3168571d0844937ec44c38af3a8c19f225c983a86afbc9c"
+    },
+    {
+      "path": "knowledge/clauses/C_46768_5_10_2.json",
+      "entityId": "C_46768_5_10_2",
+      "canonicalContentHash": "401c52939f0b0f5425f8a36d660666086f7f5dd18e5f8c3b23ff57563c16c0c9",
+      "fileSha256": "b1a1f2a2f4767ca64e4bd953b68ba1573e02b499b14ea54d78fb2aece96869c3"
+    },
+    {
+      "path": "knowledge/clauses/C_46768_5_8_6.json",
+      "entityId": "C_46768_5_8_6",
+      "canonicalContentHash": "f172e241dca316bae1d56b50ba1fd711becd9302a05a1d5db55abe6b3c6bdd83",
+      "fileSha256": "6cb5e7c73689abb74b1f75165131da0cfc36d46b576d175b59b6520d8244e522"
+    },
+    {
+      "path": "knowledge/clauses/C_46768_6_2_6.json",
+      "entityId": "C_46768_6_2_6",
+      "canonicalContentHash": "f4dc32d1b14f21c27aed1e36cbeaa06040ad88cfedc37ff93e455594eae3e814",
+      "fileSha256": "c0dedfb5ccca8493ac06c076b4da1ef4c1a7bfd98052bea86fcb83bf4f48904e"
+    },
+    {
+      "path": "knowledge/clauses/C_GB55037_7_1_7.json",
+      "entityId": "C_GB55037_7_1_7",
+      "canonicalContentHash": "8c21da740a35bcd3cdda550d8afd5762d27d61c0472f361950258bc15c44def1",
+      "fileSha256": "7cc3f24317cf029304d321919b3ab0526b421f785f408884a86beddea9c90c08"
+    },
+    {
+      "path": "knowledge/clauses/C_GBT13869_6.json",
+      "entityId": "C_GBT13869_6",
+      "canonicalContentHash": "ab4c5cdde6f6c2c99a8383c8d0e5578053d5ad1e694ebfb0f0a6f2bdeac26a45",
+      "fileSha256": "744928102a2cd1478e7c8ec3cff998ebcc41829555f878f503a02476db36e819"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_H_46768_5_8_6.json",
+      "entityId": "K_COMMON_H_46768_5_8_6",
+      "canonicalContentHash": "0ee868620d371f63c04dae3f4dfe02b590e599eedb599caa09e2077ec3a23704",
+      "fileSha256": "1145f3a0411b48e870e9c98a5a8843c9a7591fc37021ca094525723fa5010735"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_H_46768_5_10_2.json",
+      "entityId": "K_COMMON_H_46768_5_10_2",
+      "canonicalContentHash": "5c42bbd2d2e50038b4ffa652bdbdfbcf7941752a869e61a8d0a747125cd990a6",
+      "fileSha256": "8527615cdd0bf6af818eec47c7734688cdca1f867be60863a39462d5e539d60b"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_H_46768_6_2_6.json",
+      "entityId": "K_COMMON_H_46768_6_2_6",
+      "canonicalContentHash": "c4cb855b383ce9774479fc0effcb3feebc1592d5104a43417a15ab6da3349c5d",
+      "fileSha256": "135e8609df7ad32b4b8d7793a740047170a2861aae3366d6c219bc6fad1a69c6"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_H_GBT13869_REMOVED_POWER_END.json",
+      "entityId": "K_COMMON_H_GBT13869_REMOVED_POWER_END",
+      "canonicalContentHash": "ea40795381bd4bd3bfeda74c4e43da598cf5cbacc6f28598e41aa0aeba0a1b01",
+      "fileSha256": "0854268b7ecae7b07493d426e57b47006f82b908c397382f7cd743fa71107e9d"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_H_GBT13869_RESTART_AFTER_STORAGE.json",
+      "entityId": "K_COMMON_H_GBT13869_RESTART_AFTER_STORAGE",
+      "canonicalContentHash": "ee18427677181d977d49813d701949be92236258e08add29c036f40b5f5c3847",
+      "fileSha256": "6bb478edfa76ca1d25d89aafdafa811a12d45aadba44fe72cda7197af38605fe"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_H004.json",
+      "entityId": "K_COMMON_H004",
+      "canonicalContentHash": "1ce2da89f562fa7ca2afa743714f8cf11a93bfe408ca9f8b1bb54c0ade3f32b3",
+      "fileSha256": "98e2209ef191b669a4ec3bfc6c7e1d5b9aa8db488fbf7e0da618a01dccc86673"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_SUPPORT_C_46768_5_11_1_H_46768_5_8_6.json",
+      "entityId": "K_COMMON_SUPPORT_C_46768_5_11_1_H_46768_5_8_6",
+      "canonicalContentHash": "0921b2ec7a6d261dbf14f98caa2ea4f0251a2178b5a493b4c6d312a6f656a408",
+      "fileSha256": "6e06026ed456b5473d1b89c4f8814052f930e9e1e867df100a13d1aefefc4342"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_SUPPORT_C_46768_6_2_7_H_46768_5_8_6.json",
+      "entityId": "K_COMMON_SUPPORT_C_46768_6_2_7_H_46768_5_8_6",
+      "canonicalContentHash": "ff3c71387c12c4d9e39ad6fca6cb04e995ecaafdf93fd0b2c0b5d5fa21e8b09a",
+      "fileSha256": "3d163fc78c78e7de66cde76986c5580b3400239378ee4813a0e325fd825cc52d"
+    },
+    {
+      "path": "knowledge/links/K_COMMON_SUPPORT_C_46768_6_2_4_H_46768_5_10_2.json",
+      "entityId": "K_COMMON_SUPPORT_C_46768_6_2_4_H_46768_5_10_2",
+      "canonicalContentHash": "414afad68a71ad1672a5c7fbba018a657a8862110e21e6d3be9a9ff8bbf665bc",
+      "fileSha256": "889e5513af999aaed96e9317c7882b606a17340d508a0f514515a53adbc52fbc"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from common_hazards_fixture import pre_common_ids, ADDED_IDS as COMMON_ADDED_IDS
 
 ROOT = Path(__file__).resolve().parents[3]
 KNOW = ROOT / 'knowledge'
@@ -43,8 +44,14 @@ class Gbt13869DateBoundaryTests(unittest.TestCase):
                 'K_XLSX_NEW14_20580AF4C88BD19199EB9076',
             }
             self.assertTrue(citation_links <= result.eligible_links)
-            self.assertEqual(len(result.eligible_links & (self.old_links - {atom} - citation_links)), 10)
-            self.assertEqual(len(result.eligible_links & self.old_links), 13)
+            prior_links = pre_common_ids('links', self.old_links)
+            self.assertEqual(len(result.eligible_links & (prior_links - {atom} - citation_links)), 10)
+            self.assertEqual(len(result.eligible_links & prior_links), 13)
+            new_electrical = {'K_COMMON_H_GBT13869_REMOVED_POWER_END',
+                              'K_COMMON_H_GBT13869_RESTART_AFTER_STORAGE'}
+            self.assertEqual(self.old_links & COMMON_ADDED_IDS['links'], new_electrical)
+            self.assertTrue(new_electrical <= result.eligible_links)
+            self.assertEqual(len(result.eligible_links & self.old_links), 15)
         self.assertEqual(before.eligible_links, last.eligible_links)
         self.assertEqual(before.eligible_hazards, last.eligible_hazards)
 

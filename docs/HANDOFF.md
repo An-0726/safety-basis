@@ -4,17 +4,20 @@
 
 ## 下一步
 
-已核生产为PR103合并提交`9cafe88cfac0d66f10321bc83f1cc5e7029b72f2`，build/deploy/online_verify均成功。商贸续轮在`review/commerce-remaining-gaps-20261002`完成云端验证：1680H/1825K/1367C/75LV、25场景，原1671H与25场景保留。源提交与全部验收范围见[本轮验收](COMMERCE_REMAINING_ACCEPTANCE_20261002.json)。
+已核生产为PR105合并提交`b81c1af2d6d5092e30502198806f65c27523f869`，tree `30a29b8b2767385647528618025a008bcc31897d`，asOf=2026-10-03，1665H/1808K/1367C/77LV、25场景。build/deploy/online_verify与Validate均成功，线上清单匹配，见[精确凭据](PUBLIC_CITATION_RELEASE_20261003.json)。
 
-1. 核对本批次唯一PR的精确head、10项独立审核绑定、完整Validate与Build CI。云端执行者已获授权推送创建PR，合并部署由主执行者负责。
-2. 合并后核对部署包asOf、releaseHash、1680H及25场景，使用真实桌面和390px浏览器复验线上交互，再更新PROJECT_STATE生产基线。云端本地包验收不能代替新增内容的上线证明。
-3. 原44项26准入/7条件归并/1食品跨域排除/9泛化判据不准入/1叉车核验型分别计数，新增电源线原子H另计；保留remainingSourceClaims与个案取证。GB/T13869新版到期仍须另行实审，不自动激活。
+6项常见隐患已集成在上述基线上：5新H及收窄既有H004准入，6直接K、3支持K、2物理新增C；本地公开投影1671H/1817K/1375C/77LV、25场景，继承的1665H未丢失。原文与边界见[最终字段复核](common-hazards-final-field-review-20261003.json)，检查记录见[集成验收](COMMON_HAZARDS_INTEGRATION_20261003.json)。本轮未提交远端、未建PR、未合并、未部署。
+
+1. 先做本轮真实浏览器验收：六项精确搜索、详情/原文、每条K的适用范围、返回/前进、重复展开关闭、无结果重置及390px视口；保留明确结果，数据/控制器检查不能代替GUI。
+2. 在获得对应发布指令后，从此已验源码创建唯一草稿PR，核对精确head、完整Validate与Build CI；不混入历史恢复底稿、企业材料或生成包。保持PR105的15项隔离及本轮有限空间、电气、门禁边界。
+3. 合并部署后核对实际提交、asOf、releaseHash、1671H及25场景，复验线上数据和交互，再更新PROJECT_STATE生产基线。本地包不是上线证明。
+4. 原44商贸处置与本轮6项分开计数。GB/T13869新版到期仍须另行实审，不自动激活；历史底稿恢复不自动产生实体准入。
 
 ## 每次接手先核对
 
-- 源提交、tree、工作区现有修改和同一版本的`knowledge/manifest.json`
-- 最近生产Actions、线上`release.json` / `data/manifest.json`与asOf；源码等价不证明已经发布
+- 源提交、tree、工作区现有修改和同一版本的knowledge/manifest.json；本轮manifest是PR105上的追加合并
+- 最近生产Actions、线上release.json / data/manifest.json与asOf；源码等价不证明已经发布
 - 场景records、reviews、依赖指纹、正式投影和计数；源内容改变须重新实审
-- GB 12158隔离、未知施行日阅读层、GB/AQ全文权利、候选和私有资料边界仍生效
+- GB12158隔离、未知施行日阅读层、GB/AQ全文权利、候选和私有资料边界仍生效
 
 历史台账、原件或试点材料未取得时，保留具体证据缺口与下一动作；不猜测审核结论，不把缺口消失写成完成。公开文档只留聚合、通用边界及公开证据，不添加企业事实或私有材料位置。

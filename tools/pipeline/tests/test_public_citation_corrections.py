@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import unittest
 
+from common_hazards_fixture import pre_common_gate, pre_common_manifest
 from citation_cohort_fixture import FIXTURE, ADDED_IDS, pre_citation_gate
 ROOT = Path(__file__).resolve().parents[3]
 KNOW = ROOT / 'knowledge'
@@ -14,6 +15,8 @@ sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
 from release_gate_core import evaluate_release_gate
 from field_profiles import public_projection
+INTEGRATION_BASELINE = json.loads((Path(__file__).parent / 'fixtures' /
+                                   'common_hazards_published_baseline_20261003.json').read_text())
 PINS = json.loads((Path(__file__).parent / 'fixtures' /
                    'public_citation_source_pins_20261002.json').read_text())
 
@@ -29,7 +32,22 @@ class PublicCitationCorrectionsTests(unittest.TestCase):
 
     def test_exact_source_files_and_preserved_previous_reviews(self):
         for rel, expected in PINS['sourceFileSha256'].items():
-            self.assertEqual(hashlib.sha256((ROOT / rel).read_bytes()).hexdigest(), expected, rel)
+            data = (ROOT / rel).read_bytes()
+            if rel == 'knowledge/manifest.json':
+                # Invert only the explicit additive common-hazard receipt. All
+                # PR105 fields and every unknown addition still remain pinned.
+                manifest = json.loads(data)
+                transition = INTEGRATION_BASELINE['manifestTransition']
+                self.assertEqual({k: manifest[k] for k in transition['afterMetadata']},
+                                 transition['afterMetadata'])
+                receipt = transition['addedBatchReceipt']
+                self.assertEqual([b for b in manifest['batches'] if b['id'] == receipt['id']],
+                                 [receipt])
+                prior = pre_common_manifest(manifest)
+                prior['batches'] = [b for b in prior['batches'] if b['id'] != receipt['id']]
+                prior.update(transition['beforeMetadata'])
+                data = (json.dumps(prior, ensure_ascii=False, indent=2) + '\n').encode()
+            self.assertEqual(hashlib.sha256(data).hexdigest(), expected, rel)
         for rel, expected in PINS['previousReviews'].items():
             review = json.loads((ROOT / rel).read_text())
             self.assertEqual(review['previousReviewFileSha256'], expected['fileSha256'], rel)
@@ -65,7 +83,8 @@ class PublicCitationCorrectionsTests(unittest.TestCase):
             self.assertTrue(read('reviews/hazards', hid)['reason'])
         historical = pre_citation_gate(self.gate)
         self.assertEqual(historical.eligible_hazards - self.gate.eligible_hazards, expected)
-        self.assertEqual((len(self.gate.eligible_hazards), len(self.gate.eligible_links)), (1665, 1809))
+        citation_cohort = pre_common_gate(self.gate)
+        self.assertEqual((len(citation_cohort.eligible_hazards), len(citation_cohort.eligible_links)), (1665, 1809))
 
     def test_proposed_and_superseded_distance_links_are_never_auto_admitted(self):
         for kid in ('K_7EEF661BF4C8008AC0C070', 'K_1ED9FF46BEDB3CED1FA394',
