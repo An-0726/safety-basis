@@ -15,7 +15,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
-from playwright.sync_api import sync_playwright, expect
 
 
 # Current approved common-hazard cohort; exact rendered identity and links matter.
@@ -26,12 +25,25 @@ def require(condition, message):
         raise AssertionError(message)
 
 
+def validate_release_identity(release, manifest, expected_commit=None):
+    require(release.get('releaseHash') and release['releaseHash'] == manifest.get('releaseHash'),
+            'Release metadata and data manifest hashes differ')
+    require(release.get('counts') == manifest.get('counts'), 'Release metadata and data manifest counts differ')
+    if expected_commit:
+        expected = expected_commit[:12]
+        require(manifest.get('dataVersion', '').split('.')[-1] == expected,
+                f'Deployed dataVersion does not bind {expected}: {manifest.get("dataVersion")}')
+    return {'dataVersion': manifest.get('dataVersion'), 'asOf': release.get('asOf'),
+            'releaseHash': release['releaseHash'], 'counts': release.get('counts')}
+
+
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
 
 
 def main():
+    from playwright.sync_api import sync_playwright, expect
     parser = argparse.ArgumentParser(description=__doc__)
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument('--bundle', type=Path)
@@ -94,14 +106,10 @@ def main():
             run('desktop_home', home_check)
 
             def release_identity():
-                response = context.request.get(base + 'release.json')
-                require(response.ok, 'Cannot read release manifest')
-                manifest = response.json()
-                if args.expected_commit:
-                    expected = args.expected_commit[:12]
-                    require(manifest.get('dataVersion', '').split('.')[-1] == expected,
-                            f'Deployed dataVersion does not bind {expected}: {manifest.get("dataVersion")}')
-                report['release'] = {k: manifest.get(k) for k in ('dataVersion', 'asOf', 'releaseHash', 'counts')}
+                release_response = context.request.get(base + 'release.json')
+                manifest_response = context.request.get(base + 'data/manifest.json')
+                require(release_response.ok and manifest_response.ok, 'Cannot read release metadata and data manifest')
+                report['release'] = validate_release_identity(release_response.json(), manifest_response.json(), args.expected_commit)
                 return report['release']
             run('exact_release_identity', release_identity)
 
