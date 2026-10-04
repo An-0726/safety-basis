@@ -10,6 +10,7 @@ import unittest
 
 from common_hazards_fixture import ADMITTED_IDS, ADDED_IDS, pre_common_gate
 from public_technical_citation_fixture import pre_technical_source_bytes
+from recovery_cohort_fixture import pre_recovery_gate
 from flange_scope_fixture import pre_flange_source_bytes
 from occupational_citation_fixture import pre_occupational_source_bytes
 from training_citation_fixture import pre_training_source_hashes
@@ -29,7 +30,7 @@ def digest(value):
 class CommonHazardsIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.results = {day: evaluate_release_gate(KNOW, date.fromisoformat(day))
+        cls.results = {day: pre_recovery_gate(evaluate_release_gate(KNOW, date.fromisoformat(day)))
                        for day in ('2026-10-02', '2026-10-03')}
 
     def assert_exact_delta(self, gate):

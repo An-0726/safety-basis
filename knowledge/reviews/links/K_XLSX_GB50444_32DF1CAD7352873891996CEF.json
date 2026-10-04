@@ -1,18 +1,82 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "b159d0001c8992d7c4090df916c033d31e5ea998d2472cdda295d5987d0de8fe",
-    "hazard": "e92ae287930ee97a39845b40e9aaba9b75db35758bc5fb691caf5f2c96e7d0b5"
-  },
-  "decision": "verified",
   "entityId": "K_XLSX_GB50444_32DF1CAD7352873891996CEF",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_GB50444_3_1_5"
-  ],
-  "reason": "隐患与条款原文直接对应，关联角色为直接依据。",
   "reviewType": "applicability",
-  "reviewedContentHash": "0cd0640e406921e7111b3728c50aff89d3ee0250ba8490453b55e13b8e545a33",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "b3cc744a69ac270c819b2314e5a202c069203d48514862dd1371769b0e2dde37",
+  "evidenceRefs": [
+    "E_PUBLIC_GB55036_ORIGINAL_20261004",
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
+  ],
+  "reason": "官方原件第25页第10.0.5条逐字核对且与本H两分支一致；同时核GB50444第3.1.5废止和旧引文的说明性质，不单凭哈希重签恢复。",
+  "locator": "GB55036第1.0.2、10.0.5条；GB55036局部废止公告",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于建设工程中灭火器的设置及使用维护。须核灭火器产品标示使用温度范围、设置场所可预期环境条件及实际防护措施；可能超出使用温度范围或缺少与环境相适应的防护措施分别核查。不能以某一时刻温度正常、器材外观正常或笼统声称已防晒证明全年适用。不得据本条自行增设全国统一温度阈值、固定检查周期或特定防护产品要求。",
+    "/clauseId": "C_GB55036_10_0_5",
+    "/reason": "GB55036第10.0.5条完整正文直接规定可能超温场所禁止设置及环境防护，两义务分别核查；旧GB50444第3.1.5条及其说明不再承担本H当前直接依据。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_GB55036_ORIGINAL_20261004",
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/clauseId": [
+      "E_PUBLIC_GB55036_ORIGINAL_20261004",
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_GB55036_ORIGINAL_20261004",
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "579576a84ca25b69b12ba2e3b8cfdf5fa3a499d1f95dc3045485c8e4eae28a34",
+    "clause": "f5ebfa8e4ded334d7259cfd20ffe2fb92a8f57a619378e3a33e65a82785b370c"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "b159d0001c8992d7c4090df916c033d31e5ea998d2472cdda295d5987d0de8fe",
+      "hazard": "e92ae287930ee97a39845b40e9aaba9b75db35758bc5fb691caf5f2c96e7d0b5"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_GB50444_32DF1CAD7352873891996CEF",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_GB50444_3_1_5"
+    ],
+    "reason": "隐患与条款原文直接对应，关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "0cd0640e406921e7111b3728c50aff89d3ee0250ba8490453b55e13b8e545a33",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "a1a31b01995751b58e4d2a15221895d89f3a04776f61d6754f769abc8fbdea0b",
+  "historySha256": "996025f94e46c50958e344fb8d10c8d1f541ca0b013602dff98f4e0103173ff7",
+  "previousEntity": {
+    "applicability": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "clauseId": "C_XLSX_GB50444_3_1_5",
+    "hazardId": "H027",
+    "id": "K_XLSX_GB50444_32DF1CAD7352873891996CEF",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患对象与GB 50444-2008条款规定的维修或环境条件直接对应。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "d4d4fc0e0cab207134016ee0d40705841e9e3c8c1e0e2aab2b9cae53448ad0fb"
 }

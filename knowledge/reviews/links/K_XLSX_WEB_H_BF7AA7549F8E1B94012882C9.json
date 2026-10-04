@@ -2,17 +2,39 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "270419ea8338d56181c69b78ae8769985c57cf92026882f6dba160c5be510996",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "撤回此前verified适用性审核。原主张粉尘废屑优先机械压实、干式储存桶装加盖/袋装封口。苏安办〔2020〕13号可定位官方转发但完整原文及地域适用待核；国家第6号令第18条的含水镁合金废屑优先压块不能替代对所有粉尘废屑的完整主张。",
+  "evidenceRefs": [
+    "E_CONTAIN_GB15577_ORIGINAL_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
   "contextHashes": {
     "hazard": "38bc2e9c5604de9bd21ff17a8dc197ff1aa7af2a27317f79e1acea14fd5a42f7",
     "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
-  "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+  "reviewedFields": [
+    "applicability"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "270419ea8338d56181c69b78ae8769985c57cf92026882f6dba160c5be510996",
+    "contextHashes": {
+      "hazard": "38bc2e9c5604de9bd21ff17a8dc197ff1aa7af2a27317f79e1acea14fd5a42f7",
+      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "b8e374ab7613ab21e0545a599ace4b21e73d0ac650d32ee7a18798d60823d5fe"
 }

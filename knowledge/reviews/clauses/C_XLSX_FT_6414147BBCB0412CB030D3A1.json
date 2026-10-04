@@ -1,13 +1,66 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "C_XLSX_FT_6414147BBCB0412CB030D3A1",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_XLSX_FT_FA890270495ABDF13472C047"
-  ],
-  "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
   "reviewType": "text",
-  "reviewedContentHash": "7c2c00193e1328382051752895c34812e6ca7bf3c55fcf982b284c2c6e7c41fd",
-  "reviewer": "Codex正式核验批次20260913"
+  "decision": "verified",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "8c3b1295e3c763bac04ee1a66b298c490a3caf15cd6dd36ff963adc5f78cb18f",
+  "evidenceRefs": [
+    "E_PUBLIC_JS24_20261004"
+  ],
+  "reason": "2026-10-04对照江苏人大完整第二十四条，补全冒号后三项，核对岗位检查阶段、实际履职及江苏地域。",
+  "locator": "第二十四条完整条文；第二条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/sourceUrl"
+  ],
+  "reviewedValues": {
+    "/articlePath": "第二十四条",
+    "/quote": "第二十四条 生产经营单位的从业人员每天工作前，应当进行本岗位安全生产检查，确认安全后方可进行操作。岗位安全生产检查主要包括下列事项：\n（一）设施设备、工具和原材料的安全状态良好，安全防护装置有效；\n（二）作业场地以及物品堆放符合安全规范；\n（三）劳动防护用品、用具齐全完好，并正确佩戴、使用。",
+    "/sourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/quote": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/sourceUrl": [
+      "E_PUBLIC_JS24_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_FT_6414147BBCB0412CB030D3A1",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_FT_FA890270495ABDF13472C047"
+    ],
+    "reason": "已从本地归档全文定位条款号并逐字核对原文；法规版本通过当前性核验。",
+    "reviewType": "text",
+    "reviewedContentHash": "7c2c00193e1328382051752895c34812e6ca7bf3c55fcf982b284c2c6e7c41fd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "029a2df0bce07818e2614a88bd7233db3a9f839898d66874ebb0aa16cfb5e08f",
+  "historySha256": "e8e48b7e16c23a5909d9b6c5b0d1141a2a761b2124dd1bc634279986a003c1d4",
+  "previousEntity": {
+    "articlePath": "二十四",
+    "id": "C_XLSX_FT_6414147BBCB0412CB030D3A1",
+    "jurisdictionCode": "CN-32",
+    "lawVersionId": "L020",
+    "lifecycle": "active",
+    "quote": "第二十四条 生产经营单位的从业人员每天工作前，应当进行本岗位安全生产检查，确认安全后方可进行操作。岗位安全生产检查主要包括下列事项：",
+    "sourceUrl": "https://flk.npc.gov.cn/detail?id=ff80818187aa33300187bb03311b48a8"
+  },
+  "previousEntityFileSha256": "c20f274718f6cf9ce44167230e4ee78ceacac195253a4d0d16d2aa88e6e3e359"
 }

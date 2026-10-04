@@ -8,10 +8,13 @@ import re
 import sys
 import unittest
 ROOT=Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+ROOT=pre_recovery_repo_root(ROOT)
 KNOW=ROOT/'knowledge'
 sys.path.insert(0,str(ROOT/'tools/v4'))
 from canonical import content_hash
-from release_gate_core import evaluate_release_gate,gate_clause,gate_link
+from release_gate_core import gate_clause,gate_link
+from recovery_cohort_fixture import evaluate_historical_snapshot as evaluate_release_gate
 F=json.loads((Path(__file__).parent/'fixtures/occupational_citation_repair_20261003.json').read_text())
 CAN=F['canonicalClauseId'];BAD=F['badClauseIds']
 def read(kind,ident):return json.loads((KNOW/kind/(ident+'.json')).read_text())

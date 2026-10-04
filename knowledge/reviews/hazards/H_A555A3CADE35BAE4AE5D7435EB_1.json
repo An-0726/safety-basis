@@ -1,13 +1,100 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_A555A3CADE35BAE4AE5D7435EB_1",
   "entityType": "hazard",
-  "evidenceRefs": [
-    "E_XLSX_FT_FA890270495ABDF13472C047"
-  ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
   "reviewType": "content",
-  "reviewedContentHash": "e4452492716eb5f45b5682c7d5f31a9c353c191ca004839022afc202d7b12ddb",
-  "reviewer": "Codex正式核验批次20260913"
+  "decision": "verified",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "224b2c71d94ea698418c1961c266a265b3536b5b6613b04dc6b336f835c78299",
+  "evidenceRefs": [
+    "E_PUBLIC_JS24_20261004"
+  ],
+  "reason": "2026-10-04对照江苏人大完整第二十四条，补全冒号后三项，核对岗位检查阶段、实际履职及江苏地域。",
+  "locator": "第二十四条完整条文；第二条",
+  "reviewedFields": [
+    "/conditions",
+    "/description",
+    "/measures",
+    "/mode",
+    "/note",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/conditions": "仅适用于江苏省行政区域内生产经营单位的从业人员每天工作前的本岗位检查。检查事项包括设施设备、工具和原材料及防护装置，作业场地及物品堆放，以及劳动防护用品、用具和正确佩戴使用；确认安全后方可操作。应核实际检查、岗位条件及履职证据，不得仅凭没有纸质检查表即认定未检查；不扩展为全国义务或仅作业过程中的一般劳动防护违规。",
+    "/description": "在江苏省生产经营单位，从业人员每天工作前未进行本岗位安全生产检查，或者未经确认安全即进行操作。",
+    "/measures": "在每天工作前按岗位检查设施设备和原材料、防护装置、作业场地及堆放、劳动防护用品和佩戴使用情况；处理发现的问题，确认安全后再操作，保留足以核实实际检查的证据。",
+    "/mode": "conditional",
+    "/note": "2026-10-04：恢复第二十四条三项完整原文，保持江苏地域、每天工作前及确认安全后操作的边界；原长标题和泛化说明保留在历史审核。",
+    "/places": [
+      "江苏省生产经营单位岗位作业场所"
+    ],
+    "/title": "江苏从业人员每天工作前未进行岗位安全检查或未确认安全即操作"
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/description": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/measures": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/mode": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/note": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/places": [
+      "E_PUBLIC_JS24_20261004"
+    ],
+    "/title": [
+      "E_PUBLIC_JS24_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A555A3CADE35BAE4AE5D7435EB_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_FA890270495ABDF13472C047"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e4452492716eb5f45b5682c7d5f31a9c353c191ca004839022afc202d7b12ddb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "b560bded14ff446d0aee5be23b3032a7995359979f41ca8783cdebc1de10075b",
+  "historySha256": "bcb75d23c52c4892b123fbb0ac5ba0180852dafafe4b7ff2b40b98fbbceb2871",
+  "previousEntity": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，生产经营单位的从业人员每天工作前，未进行本岗位安全生产检查，确认安全后方可进行操作，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_A555A3CADE35BAE4AE5D7435EB_1",
+    "keywords": [
+      "生产经营单位的从业人员每天工作前",
+      "未进行本岗位安全生产检查",
+      "确认安全后方可进行操作"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位的从业人员每天工作前，进行本岗位安全生产检查，确认安全后方可进行操作。整改后由符合相应要求的人员或机构实施必要的检查、检测、检验、评价或验收，对发现的问题闭环整改，并保存结果和复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位的从业人员每天工作前，未进行本岗位安全生产检查，确认安全后方可进行操作"
+  },
+  "previousEntityFileSha256": "ee42d0965fd99ddcfde0274671c2befdff4a2a35f29af1ec3730d9d11954d97d"
 }

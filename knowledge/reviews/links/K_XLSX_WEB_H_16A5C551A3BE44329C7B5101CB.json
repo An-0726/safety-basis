@@ -1,18 +1,77 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_16A5C551A3BE44329C7B5101CB",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "7992b9bc0a2b3bd174e6797e61ec8547dfb491e14528dd05b33d51214871db63",
-  "contextHashes": {
-    "hazard": "4bd0eeecc0699de2e0fc35b8995ba5f068e08f81028a67e97f9c5360b53887ac",
-    "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条灭火器箱不得上锁要求。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "c79cb97a78d149e5dfda48dd4de7ef690e3c8b565004c82c1140571c16cd3ac6",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "逐页核对正文和表C第14行的列标题及原句；仅核保险装置完整性，不把历史废止条款重新签为现行。",
+  "locator": "第5.2.1条及附录C第14项；第5.2.2条",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。本项核铅封、销闩等保险装置损坏或遗失的客观缺陷。附录C第14项经第5.2.1条引入检查，不能将其误写为箱体上锁；适用第5.2.2条加严场所时按每半月检查，不以月检降低要求。检查频次与保险装置是否完好分别核查，不能因有检查记录就认定器材完好。",
+    "/clauseId": "C_GB50444_APP_C_14",
+    "/reason": "附录C第14项明确检查铅封、销闩等保险装置是否未损坏或遗失，5.2.1给出检查义务；对应本H保险装置对象，排除原K箱体上锁错配。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/clauseId": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "6ef5857b3b455cd60088feb43b1ca7901de11cc636898dbefcf98ff0e85eb60f",
+    "clause": "67c6eb6918faa09681dd4f7af77503a5eaf281538243516ae60a9e34982f4440"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_16A5C551A3BE44329C7B5101CB",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "7992b9bc0a2b3bd174e6797e61ec8547dfb491e14528dd05b33d51214871db63",
+    "contextHashes": {
+      "hazard": "4bd0eeecc0699de2e0fc35b8995ba5f068e08f81028a67e97f9c5360b53887ac",
+      "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条灭火器箱不得上锁要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "48c582106fc3e044654e7da53c558cc479073a1c807be82f5892b9c5c0c4576c",
+  "historySha256": "dca1b3005a42a15cf4a1d0c80f3dc2f66c76f947332f927d343f7453d99428fd",
+  "previousEntity": {
+    "applicability": "灭火器箱上锁或包装箱未开启导致紧急情况无法取用",
+    "clauseId": "C_GB50444_5_1_3",
+    "hazardId": "H_16A5C551A3BE44329C7B5101CB",
+    "id": "K_XLSX_WEB_H_16A5C551A3BE44329C7B5101CB",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "83b39f8fce699b17ed8025cc6f589040394162abdde90462ca74444f0689986f"
 }

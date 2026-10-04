@@ -1,13 +1,88 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "C_XLSX_GB50444_3_1_5",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_XLSX_GB50444_3_1_5"
-  ],
-  "reason": "已目视核对GB 50444-2008原PDF对应页，条款号和原文逐字录入。",
   "reviewType": "text",
+  "decision": "rejected",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
   "reviewedContentHash": "b159d0001c8992d7c4090df916c033d31e5ea998d2472cdda295d5987d0de8fe",
-  "reviewer": "Codex正式核验批次20260913"
+  "evidenceRefs": [
+    "E_PUBLIC_GB50444_ORIGINAL_20261004",
+    "E_PUBLIC_GB55036_ORIGINAL_20261004"
+  ],
+  "reason": "旧quote是第3.1.5条条文说明的理由文字而非规范正文，且第3.1.5条已自2023-03-01废止；撤回旧verified资格，保留稳定实体和完整审核历史。H027另据GB55036第10.0.5条实质改绑，不靠重签恢复本C。",
+  "locator": "原第3.1.5条及条文说明；GB55036局部废止公告",
+  "reviewedFields": [
+    "/articlePath",
+    "/jurisdictionCode",
+    "/lawVersionId",
+    "/lifecycle",
+    "/quote",
+    "/sourceUrl"
+  ],
+  "reviewedValues": {
+    "/articlePath": "3.1.5",
+    "/jurisdictionCode": "CN",
+    "/lawVersionId": "LV_STD_GB50444_2008",
+    "/lifecycle": "active",
+    "/quote": "本条要求灭火器设置点的环境温度要与灭火器的使用温度范围相适应，是为了防止在超出使用温度范围上限时，灭火器驱动气体压力过高而可能导致灭火器爆裂，也防止在低于使用温度范围下限时，灭火器驱动气体压力偏低，影响灭火器的灭火效果。",
+    "/sourceUrl": "https://sc.119.gov.cn/scxfjyzd/uploadfiles/2022103116002028319.pdf"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/jurisdictionCode": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/lawVersionId": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/lifecycle": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/quote": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/sourceUrl": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "C_XLSX_GB50444_3_1_5",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_XLSX_GB50444_3_1_5"
+    ],
+    "reason": "已目视核对GB 50444-2008原PDF对应页，条款号和原文逐字录入。",
+    "reviewType": "text",
+    "reviewedContentHash": "b159d0001c8992d7c4090df916c033d31e5ea998d2472cdda295d5987d0de8fe",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "86a5995cb8b9bc6f2a12196bb04849c61c8386673f4844ef99e9a7e242500d37",
+  "historySha256": "7e015c7c9b966bde7af202dace9851b38bf2366076cd70d0abdb7ae971343139",
+  "previousEntity": {
+    "articlePath": "3.1.5",
+    "id": "C_XLSX_GB50444_3_1_5",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_STD_GB50444_2008",
+    "lifecycle": "active",
+    "quote": "本条要求灭火器设置点的环境温度要与灭火器的使用温度范围相适应，是为了防止在超出使用温度范围上限时，灭火器驱动气体压力过高而可能导致灭火器爆裂，也防止在低于使用温度范围下限时，灭火器驱动气体压力偏低，影响灭火器的灭火效果。",
+    "sourceUrl": "https://sc.119.gov.cn/scxfjyzd/uploadfiles/2022103116002028319.pdf"
+  },
+  "previousEntityFileSha256": "1e34260b9ce3a227805bf274cb46286e0331f1496081c127ef4eef58040e639b"
 }

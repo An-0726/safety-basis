@@ -1,11 +1,64 @@
 {
-  "decision": "verified",
   "entityId": "C_GB50444_5_2_3",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
-  ],
   "reviewType": "text",
-  "reviewedContentHash": "1c835f5576bdb93d94623bc5976a87fc40f443c315813ec6083e251104cfb0f2",
-  "checkedAt": "2026-09-19T00:00:00+08:00"
+  "decision": "verified",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "02af7b228fa87d000b2b52f1cd999428e2c94fb64d74f0debadf21ce7aa67401",
+  "evidenceRefs": [
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
+  ],
+  "reason": "按官方原件恢复本稳定ID自身条号的准确正文；旧错配引文和审核完整保存，原消费者分别改绑正确依据。",
+  "locator": "第5.2.3条",
+  "reviewedFields": [
+    "/articlePath",
+    "/quote",
+    "/sourceUrl"
+  ],
+  "reviewedValues": {
+    "/articlePath": "第5.2.3条",
+    "/quote": "日常巡检发现灭火器被挪动，缺少零部件，或灭火器配置场所的使用性质发生变化等情况时，应及时处置。",
+    "/sourceUrl": "https://js.119.gov.cn/group1/M00/00/2B/ZYS-ZGGB6oOAEfdqAEAK60AmDRM740.pdf"
+  },
+  "fieldEvidenceRefs": {
+    "/articlePath": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/quote": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/sourceUrl": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_GB50444_5_2_3",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ],
+    "reviewType": "text",
+    "reviewedContentHash": "1c835f5576bdb93d94623bc5976a87fc40f443c315813ec6083e251104cfb0f2",
+    "checkedAt": "2026-09-19T00:00:00+08:00"
+  },
+  "previousReviewFileSha256": "79445254fbd7a1a21ef0c662d73238e72b07744a77d6e38d76c06ed1978941f1",
+  "historySha256": "c90d89a0c5d3fb9076a775b97ff8874c1fdbd9a8e56aa142b613ecb6c9e10e8e",
+  "previousEntity": {
+    "articlePath": "5.2.3",
+    "id": "C_GB50444_5_2_3",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_STD_GB50444_2008",
+    "lifecycle": "active",
+    "quote": "灭火器的检查记录应包括设置点位置、灭火器数量、型号规格、检查日期、检查人员签字等内容。灭火器检查记录应妥善保存。",
+    "sourceUrl": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=9E4C5632E3036F526F74D9084C931215"
+  },
+  "previousEntityFileSha256": "4bca61be59868952822d6c920a6f21203a318eaa4002f1b853c6274846bad676"
 }

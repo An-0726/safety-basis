@@ -14,6 +14,9 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+# This dated cohort is tested against its SHA-guarded predecessor, not new admissions.
+ROOT = pre_recovery_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
@@ -57,7 +60,7 @@ class Mem10SourceContainmentTests(unittest.TestCase):
         def source(_root, rel):
             return copy.deepcopy(state[rel.replace('\\', '/')])
         with patch.object(gate, 'load_dir', source), patch.object(gate, 'load_reviews', source):
-            return gate.evaluate_release_gate(KNOW, date.fromisoformat(day))
+            return evaluate_historical_snapshot(KNOW, date.fromisoformat(day))
 
     def historical(self, kinds=('clauses', 'links')):
         state = copy.deepcopy(self.current)

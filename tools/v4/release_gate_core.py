@@ -25,6 +25,7 @@ from datetime import date
 from types import SimpleNamespace
 
 from canonical import content_hash
+from normative_content import validate_ordinary_clause_content
 
 # ---- 常量 -----------------------------------------------------------------
 
@@ -248,6 +249,10 @@ def gate_clause(clause, review, lv_supports_current, lv_struct_ok, lv=None, lv_r
         reasons.append("BLOCK_CLAUSE_LOCATOR:articlePath_missing")
     if not clause.get("quote"):
         reasons.append("BLOCK_CLAUSE_TEXT:quote_missing")
+    try:
+        validate_ordinary_clause_content(clause, review)
+    except (ValueError, TypeError, KeyError) as exc:
+        reasons.append("BLOCK_CLAUSE_RICH_BODY:" + str(exc))
     _ok, r = _review_binding(clause, review, need_evidence=True)
     reasons += r
     if (clause.get("lifecycle") or "active") != "active":

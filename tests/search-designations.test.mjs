@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {searchHazardsDetailed,searchLawsDetailed} from '../web/js/search.js';
+import {normalize,searchHazardsDetailed,searchLawsDetailed} from '../web/js/search.js';
 
 const law=(id,number,name='特种设备重大事故隐患判定准则')=>({id,name:`${name} ${number}`,documentNumber:number,aliases:[],searchText:`${name} ${number}`.toLowerCase(),scope:'全国',level:'国家标准',displayLevel:'国家标准',status:'现行有效'});
 const hazard=(id,number,extra={})=>({id,title:'压力容器重大事故隐患判定条件',aliases:[],keywords:[],lawNames:['特种设备重大事故隐患判定准则'],stdNumbers:[number],places:[],scopes:['全国'],levels:['国家标准'],displayLevels:['国家标准'],status:'已核验',mode:'direct',category:'特种设备',displayCategory:'特种设备',searchText:`压力容器 重大事故隐患 判定条件 ${number}`.toLowerCase(),...extra});
@@ -59,4 +59,37 @@ test('abbreviation and designation constraints can be combined without using all
   const rows=[law('EQUIPMENT','GB 45067-2024'),law('UNRELATED','GB 12345-2024')];
   const result=searchLawsDetailed(rows,'重大隐患 GB45067');
   assert.deepEqual(ids(result),['EQUIPMENT']);assert.ok(result.queryNotice);
+});
+
+// Real public titles from the GB 12158-2024 recovery cohort. The standards
+// mentioned inside their wording are not the rows' dedicated basis identity.
+const embeddedStandardTitles=[
+  ['H_12158_10_2_1','GB/T22845','如需使用手套,手套的防静电性能未符合GB/T22845的规定'],
+  ['H_12158_10_2_2','GB8965.1','存在甲、乙类易燃易爆物质且有燃烧爆炸风险的作业场所，所使用的防护服未符合GB8965.1的规定'],
+  ['H_12158_6_1_1','GB50058','各区域的划分未依据GB50058进行'],
+  ['H_12158_9_18_1','GB/T50493','输送可燃气体的管道或容器等，未依据GB/T50493安装要求装设气体泄漏自动检测报警器'],
+];
+
+for(const [id,mentionedStandard,title] of embeddedStandardTitles){
+  test(`full title retrieves ${id} without treating its embedded standard as a basis`,()=>{
+    const row=hazard(id,'GB 12158-2024',{title,searchText:normalize(`${title} GB 12158-2024`)});
+    const direct=hazard('DIRECT',mentionedStandard);
+    const rows=[direct,row];
+    const before=structuredClone(rows);
+    const query=new URLSearchParams(`q=${encodeURIComponent(title)}`).get('q');
+    assert.deepEqual(ids(searchHazardsDetailed(rows,query)),[id]);
+    assert.deepEqual(ids(searchHazardsDetailed(rows,mentionedStandard)),['DIRECT']);
+    assert.deepEqual(ids(searchHazardsDetailed(rows,'GB 12158-2024')),[id]);
+    assert.equal(searchHazardsDetailed(rows,`${query} GB12345`).rows.length,0);
+    assert.equal(searchHazardsDetailed(rows,query,{category:'消防安全'}).rows.length,0);
+    assert.equal(searchHazardsDetailed(rows,query,{region:'江苏'}).rows.length,0);
+    assert.equal(searchHazardsDetailed([{...row,status:'已失效'}],query).rows.length,0);
+    assert.deepEqual(rows,before);
+  });
+}
+
+test('a designation-only title still requires the dedicated standard identity',()=>{
+  const title='GB/T22845';
+  const row=hazard('OTHER','GB 12158-2024',{title,searchText:normalize(title)});
+  assert.equal(searchHazardsDetailed([row],title).rows.length,0);
 });

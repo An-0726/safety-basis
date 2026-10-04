@@ -1,18 +1,81 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_AA8D8CAF77964A0DBC39CDB146",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "6efcdf9ffb431a378afbcf9226aaaecdb60449a28d3b35f2f109a91a79d489a0",
-  "contextHashes": {
-    "hazard": "bc21117b87931e0658f5264f4597f2fd8564e5b1046293be44beb7a20e0575d9",
-    "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条底部离地高度要求。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "7a36eb9c875d833307435ecd55c39458f580dc46526635b5a474a7b713d63f99",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
+    "E_PUBLIC_GB50140_ORIGINAL_20261004",
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "官方原件的标准身份、设置范围和用词强度均逐项核对；上锁与高度不是必须同时出现的复合缺陷。",
+  "locator": "GB50140第1.0.2、5.1.3条；GB50444第3.2.1、3.2.7条",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于生产、使用或储存可燃物的新建、改建、扩建工业与民用建筑工程的灭火器配置设计；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。既有建筑检查须核配置设计及其适用时点，不能无条件追溯套用。本项分别核灭火器箱上锁，以及手提式灭火器底部设置高度。第5.1.3条底部不宜小于0.08m属于不宜，须结合具体设置方式、设计和允许选择的条件判断，不得仅凭落地或低于0.08m自动认定违规；环境干燥、洁净场所直接落地的设置方式还须与GB50444第3.2.1条核对。嵌墙式箱、挂钩、托架的安装验收另核第3.2.7条，不混为所有落地器材的统一强制限值。",
+    "/clauseId": "C_GB50140_5_1_3",
+    "/reason": "本K仅消费GB50140第5.1.3条箱体不得上锁及底部不宜低于0.08m的有条件分支；不把应与宜混同。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004",
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/clauseId": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004",
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004",
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "26fbba7bc7a3483d2c8c9ae3ac52570567c1aaa2917e86fcfea8515ebd31c7a6",
+    "clause": "68869370a1da4101efd5243b3d06653e35d8e2d643c4a5064093b70badc649da"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_AA8D8CAF77964A0DBC39CDB146",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "6efcdf9ffb431a378afbcf9226aaaecdb60449a28d3b35f2f109a91a79d489a0",
+    "contextHashes": {
+      "hazard": "bc21117b87931e0658f5264f4597f2fd8564e5b1046293be44beb7a20e0575d9",
+      "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条底部离地高度要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "d59f9624cb031fc6808e08c4f2ee89504fb7ba6e40e9c609bbae94e8001ac040",
+  "historySha256": "f2eef28435c1d4a53aba7f5f63e22a4c887c0fc2f98eeee635ab889a1e6f6044",
+  "previousEntity": {
+    "applicability": "灭火器底部离地面高度小于0.08m容易受潮锈蚀",
+    "clauseId": "C_GB50444_5_1_3",
+    "hazardId": "H_AA8D8CAF77964A0DBC39CDB146",
+    "id": "K_XLSX_WEB_H_AA8D8CAF77964A0DBC39CDB146",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "a8d37f87bc5d623b8b66dbed392b9dc16f46568fb7b2666d96dcdfb48bba2597"
 }

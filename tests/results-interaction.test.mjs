@@ -1,3 +1,4 @@
+import {renderNormativeContent} from '../web/js/normative-content.js';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
@@ -98,7 +99,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     createElement(tag) { return new FakeElement(tag); },
   };
   const context = {
-    document,
+    document, renderNormativeContent,
     searchHazardsDetailed, INSPECTION_LABELS,
     searchLawsDetailed,
     DataStore: class {},

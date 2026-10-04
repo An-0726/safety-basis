@@ -2,29 +2,51 @@
   "entityType": "link",
   "entityId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "3314e6b71a0d3400355f130667c8680d07b4f172555cef79dc75b5217301c3d3",
-  "checkedAt": "2026-10-02T10:33:00+00:00",
-  "reviewer": "Codex 电气候选收窄核验",
-  "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。",
+  "decision": "rejected",
+  "reviewedContentHash": "a722293f601f6c63b096dbddc2b9b3253abc4bc711ed172cc1541b349502588b",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "该同义K随来源H归并，退出当前直接关联准入；同一移动电源线义务由canonical H/K承接。仅撤销重复当前发布，不否定此前经审核的技术依据；原H/C指向、原verified审核与全部历史保留。",
   "evidenceRefs": [
-    "E_GBT13869_SAMR_ORIGINAL_20260926",
-    "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+    "E_RECOVERY_GBT13869_2017_20261004"
   ],
-  "reviewedFields": [
-    "/id",
-    "/hazardId",
-    "/clauseId",
-    "/role",
-    "/applicability",
-    "/jurisdictionCode",
-    "/lifecycle",
-    "/priority",
-    "/reason"
-  ],
-  "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "3314e6b71a0d3400355f130667c8680d07b4f172555cef79dc75b5217301c3d3",
+    "checkedAt": "2026-10-02T10:33:00+00:00",
+    "reviewer": "Codex 电气候选收窄核验",
+    "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。",
+    "evidenceRefs": [
+      "E_GBT13869_SAMR_ORIGINAL_20260926",
+      "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+    ],
+    "reviewedFields": [
+      "/id",
+      "/hazardId",
+      "/clauseId",
+      "/role",
+      "/applicability",
+      "/jurisdictionCode",
+      "/lifecycle",
+      "/priority",
+      "/reason"
+    ],
+    "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
+    "contextHashes": {
+      "hazard": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+      "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+    }
+  },
+  "previousReviewFileSha256": "76b0bbd4df6a02be2e79cef151d45c8f65c9a63b863dc216e91b42cb5f529463",
   "contextHashes": {
-    "hazard": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+    "hazard": "0e5020f1e107795ab8970e7a4ff8670ed83ede3b7bd6cf6ecc334b312e6a7d0f",
     "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
-  }
+  },
+  "reasonCodes": [
+    "SUPERSEDED_DUPLICATE_CURRENT_PUBLICATION_WITHDRAWN"
+  ]
 }

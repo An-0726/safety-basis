@@ -126,15 +126,19 @@ def validate_rendered_detail(expected, actual):
             'links': sorted(actual_by_id), 'fullQuotesExact': True, 'scopeAndFieldsExact': True}
 
 
-def validate_public_projection(fixture, projection):
-    require(projection['hazards'] == fixture['expectedHazards'], 'Public hazard membership count changed')
-    require(projection['links'] == fixture['expectedPublicLinks'], 'Public link membership count changed')
+def validate_public_projection(fixture, projection, *, public_inventory=None):
+    # Historical fixture defaults remain immutable. Only the separate, pinned
+    # recovery fixture may supply the complete current public inventory.
+    inventory = public_inventory or {'hazards': fixture['expectedHazards'],
+        'links': fixture['expectedPublicLinks'], 'clauses': fixture['expectedPublicClauses']}
+    require(projection['hazards'] == inventory['hazards'], 'Public hazard membership count changed')
+    require(projection['links'] == inventory['links'], 'Public link membership count changed')
     excluded = set(fixture['excludedClauseIds'])
     require(not excluded & set(projection['hazardClauseIds']), 'Quarantined clause still occurs in public hazard basis')
     require(not excluded & set(projection['lawClauseIds']), 'Quarantined clause still occurs in public law catalogue')
     hazard_clauses = set(projection['hazardClauseIds'])
     law_clauses = set(projection['lawClauseIds'])
-    require(len(hazard_clauses) == len(law_clauses) == fixture['expectedPublicClauses'],
+    require(len(hazard_clauses) == len(law_clauses) == inventory['clauses'],
             'Public clause membership count changed')
     require(hazard_clauses == law_clauses, 'Hazard and law clause catalogues disagree')
     actual = projection['repairDetails']
@@ -152,12 +156,51 @@ def validate_public_projection(fixture, projection):
 
 # Read text from the DOM that the app rendered. No DataStore values enter this
 # snapshot; the separate hydration audit below checks C IDs and catalogue joins.
-DOM_SNAPSHOT = r'''() => {
+# Reconstruct ordered official content from rendered DOM cells, including spans.
+# UI source-page/scroll instructions are annotations, never normative quote text.
+DOM_CONTENT_HELPERS = r'''const officialText = node => {
+    const clone = node.cloneNode(true);
+    for (const sup of clone.querySelectorAll('sup')) sup.replaceWith('^(' + sup.textContent + ')');
+    return clone.textContent;
+};
+const tableRows = section => [...section.rows].map(row => [...row.cells].map(cell =>
+    ({text:officialText(cell), colSpan:cell.colSpan, rowSpan:cell.rowSpan})));
+const gridText = rows => {
+    const used = rows.map(() => []), text = rows.map(() => []);
+    let columns = 0;
+    rows.forEach((row, r) => {let c = 0; for (const cell of row) {
+        while (used[r][c]) c++;
+        for(let rr=r;rr<r+cell.rowSpan;rr++) for(let cc=c;cc<c+cell.colSpan;cc++) {
+            if(!used[rr] || used[rr][cc]) throw Error('Invalid rendered cell span');
+            used[rr][cc]=true;
+        }
+        text[r][c]=cell.text;c+=cell.colSpan;columns=Math.max(columns,c);
+    }});
+    return text.map(row => Array.from({length:columns}, (_, c) => row[c] || '').join('\t')).join('\n');
+};
+const normative = basis => {
+    const content = basis.querySelector(':scope > .normative-content');
+    if (!content) return {quote:basis.querySelector(':scope > blockquote').innerText, tables:[]};
+    const lines = [], tables = [];
+    for (const part of content.children) {
+        if (part.matches('blockquote')) lines.push(part.innerText);
+        else if (part.matches('.normative-table-source')) continue;
+        else if (part.matches('.normative-table-region')) {
+            const table=part.querySelector('table');
+            const value={caption:table.caption.innerText, headerRows:tableRows(table.tHead), bodyRows:tableRows(table.tBodies[0])};
+            tables.push(value);lines.push(value.caption+'\n'+gridText(value.headerRows)+'\n'+gridText(value.bodyRows));
+        } else throw Error('Unexpected normative content element');
+    }
+    return {quote:lines.join('\n'), tables};
+};'''
+
+DOM_SNAPSHOT = '() => {' + DOM_CONTENT_HELPERS + r'''
     const detail = document.querySelector('#detail');
     const sections = [...detail.querySelectorAll('.detailbody > section.block')];
     const paragraph = label => {
         const section = sections.find(s => s.querySelector(':scope > h3')?.textContent.includes(label));
         const p = section?.querySelector(':scope > p');
+        if (!p && label === '适用条件') return '';
         if (!p) throw Error('Missing rendered section: ' + label);
         return p.innerText;
     };
@@ -170,7 +213,7 @@ DOM_SNAPSHOT = r'''() => {
         measures: paragraph('整改措施'), category: detail.querySelector('.detailtop .eyebrow').innerText,
         places: subtitle.firstChild.textContent,
         bases: [...detail.querySelectorAll('.basis[data-link-id]')].map(b => ({
-            linkId: b.dataset.linkId, quote: b.querySelector('blockquote').innerText,
+            linkId: b.dataset.linkId, ...normative(b),
             applicability: b.querySelector('.basis-applicability p')?.innerText || '',
             article: b.querySelector(':scope > span.article').innerText.split(' · 条款核验：')[0],
             lawName: b.querySelector('h4').innerText,
@@ -227,11 +270,12 @@ def wait_for_repair_condition(page, predicate, *, arg, phase):
         raise AssertionError(f'{phase}: {exc}; state={json.dumps(state, ensure_ascii=False)}') from exc
 
 
-def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixture, expected_release_hash):
+def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixture, expected_release_hash, *, public_inventory=None):
     """Use the existing approved Playwright browser/CI; never launches another."""
     validate_expectations(fixture)
     validate_release_match(expected_release_hash, expected_release_hash)
     by_id = {r['id']: r for r in fixture['records']}
+    expected_hazards = (public_inventory or {}).get('hazards', fixture['expectedHazards'])
 
     def geometry(page, step, width, require_in_view=False):
         wait_for_repair_condition(page, '''inView => {
@@ -266,10 +310,10 @@ def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixtu
             page = device.new_page()
             page.on('pageerror', lambda error: page_errors.append(str(error)))
             page.goto(base, wait_until='domcontentloaded')
-            expect(page.locator('#count')).to_have_text(str(fixture['expectedHazards']))
+            expect(page.locator('#count')).to_have_text(str(expected_hazards))
             actual = page.evaluate(HYDRATE_PROJECTION, list(by_id))
             validate_release_match(actual.get('releaseHash'), expected_release_hash)
-            return validate_public_projection(fixture, actual)
+            return validate_public_projection(fixture, actual, public_inventory=public_inventory)
         finally:
             device.close()
     run('37_repairs_exact_public_projection_and_27_excluded_clauses', public_check)
@@ -301,13 +345,13 @@ def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixtu
                 representatives = [by_id[hid] for hid in fixture['representativeIds']]
                 first, second = representatives[:2]
                 page.goto(base + '?id=' + quote(first['id']), wait_until='domcontentloaded')
-                expect(page.locator('#count')).to_have_text(str(fixture['expectedHazards']))
+                expect(page.locator('#count')).to_have_text(str(expected_hazards))
                 detail(page, first)
                 # Real list controls expose all targets. Do not inject routing,
                 # edit app state, or force scroll to manufacture geometry passes.
                 while page.locator('#loadMore').count():
                     previous = page.locator('#list .card').count()
-                    require(previous < fixture['expectedHazards'], 'Load-more failed to terminate')
+                    require(previous < expected_hazards, 'Load-more failed to terminate')
                     page.locator('#loadMore').click()
                     wait_for_repair_condition(page, 'n => document.querySelectorAll("#list .card").length > n',
                                               arg=previous, phase=f'load_more:{width}px:previous={previous}')
@@ -333,7 +377,7 @@ def run_repair_browser_acceptance(browser, base, run, page_errors, expect, fixtu
                 page.fill('#search', '不存在的修复验收词REPAIR_ZYX_98765')
                 expect(page.locator('#count')).to_have_text('0')
                 page.locator('#reset').click()
-                expect(page.locator('#count')).to_have_text(str(fixture['expectedHazards']))
+                expect(page.locator('#count')).to_have_text(str(expected_hazards))
                 expect(page.locator('#search')).to_have_value('')
                 require(not parse_qs(urlparse(page.url).query).get('q'), 'Reset retained query')
                 for row in (first, representatives[-1]):

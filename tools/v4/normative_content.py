@@ -82,3 +82,24 @@ def validate_clause_content(clause, required_table_ids):
     _require(table_ids and table_ids == required_table_ids, 'CONTROLLED_TABLE_MEMBERSHIP')
     _require(clause.get('quote') == plain, 'QUOTE_FALLBACK_MISMATCH')
     return table_ids
+
+
+def validate_ordinary_clause_content(clause, review=None):
+    """Strict rich-body validation for the ordinary H/K publication path.
+
+    A new text review can pin the exact source tables independently of the
+    body's shape. Legacy major-catalog bodies retain their existing controlled
+    table selection in that catalog; this check still validates their grid.
+    Entity review hashes bind the complete body and prevent silent edits.
+    """
+    declared = (review or {}).get('reviewedTableIds')
+    if declared is not None:
+        _require(isinstance(declared, list) and all(isinstance(x, str) and IDENT.fullmatch(x)
+                 for x in declared) and len(declared) == len(set(declared)), 'REVIEWED_TABLE_IDS')
+    if 'contentParts' not in clause:
+        return validate_clause_content(clause, declared or [])
+    parts = clause['contentParts']
+    # Validate before attempting to inspect the parts, including explicit null.
+    content_text(parts)
+    actual = [p['id'] for p in parts if p['type'] == 'table']
+    return validate_clause_content(clause, actual if declared is None else declared)

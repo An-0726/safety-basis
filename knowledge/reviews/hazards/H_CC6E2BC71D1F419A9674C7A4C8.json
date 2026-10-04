@@ -3,11 +3,32 @@
   "entityId": "H_CC6E2BC71D1F419A9674C7A4C8",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "62715420ef1220384b432e7ddf80dac0dabc39efa74bd6e106d3315197dc4728",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "dcd3c71a3ec3808362b943739074dac34f041d13dd3efd09a4c6e1173b48c1e5",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "按完整第8.4.8条恢复并保留条件分支及末句，不把旧GB/T15605-2008列为现行；具体泄爆参数未在本批计算认证。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
-  ]
+    "E_CONTAIN_GB15577_ORIGINAL_20261004",
+    "E_CONTAIN_GB15577_REFERENCE_SUCCESSIONS_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "reviewedFields": [
+    "conditions",
+    "description",
+    "measures"
+  ],
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_CC6E2BC71D1F419A9674C7A4C8",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "62715420ef1220384b432e7ddf80dac0dabc39efa74bd6e106d3315197dc4728",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ]
+  },
+  "previousReviewFileSha256": "807d5f3fd43a603dad641a986ce4c891c62ab7c8a563ac84b2fd38bc28f26df7"
 }

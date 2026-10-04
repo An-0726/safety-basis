@@ -1,13 +1,120 @@
 {
-  "entityType": "hazard",
   "entityId": "H_9FDD968713424B6CB3EC721C3D",
-  "reviewType": "definition",
+  "entityType": "hazard",
+  "reviewType": "content",
   "decision": "verified",
-  "reviewedContentHash": "e80780e79f7f7a5687f3c5ba4884d6ed21fa512aa1c0fb112db8df54824de5bd",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "ec05bd438189289cfa3f94f124425c93fba8ed1123c2912542b36c86a6988dec",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
-  ]
+    "E_PUBLIC_GB50444_ORIGINAL_20261004",
+    "E_PUBLIC_GB55036_ORIGINAL_20261004"
+  ],
+  "reason": "逐页核对GB55036第10.0.7条与GB50444检查周期；不把任意替代、外观老旧或两缺陷并存作为错误判据。",
+  "locator": "GB55036第10.0.7条；GB50444第5.2.1、5.2.2条",
+  "reviewedFields": [
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/mode",
+    "/note",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。普通场所按第5.2.1条每月检查；第5.2.2条所列候车（机、船）室、歌舞娱乐放映游艺等人员密集公共场所，以及堆场、罐区、石油化工装置区、加油站、锅炉房、地下室等按每半月检查。报废后未按等效替代原则更换与未按适用周期检查分别核查，不要求同时存在。报废判定须有适用条件证据，不能仅凭外观老旧认定；更换数量和灭火能力应等效，不能以任意另一型号当然替代。",
+    "/description": "在本项适用范围内，已确认报废的灭火器未按等效替代原则更换，或者灭火器未按场所适用周期检查。",
+    "/keywords": [
+      "灭火器",
+      "报废",
+      "等效替代",
+      "更换",
+      "月度检查",
+      "半月检查"
+    ],
+    "/measures": "对依法确认报废的灭火器按等效替代原则更换，核实替代器材的适用类型和灭火能力；按普通月度或加严半月周期实际检查，处理异常并留存真实记录。",
+    "/mode": "conditional",
+    "/note": "2026-10-04：报废更换与检查为独立分支，纠正且关系；不恢复GB50444第5.3.2条原强制维修周期。",
+    "/places": [
+      "工业与民用建筑灭火器配置场所"
+    ],
+    "/title": "报废灭火器未按等效替代更换或未按适用周期检查"
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/description": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/keywords": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/measures": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/mode": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/note": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/places": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ],
+    "/title": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004",
+      "E_PUBLIC_GB55036_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_9FDD968713424B6CB3EC721C3D",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "e80780e79f7f7a5687f3c5ba4884d6ed21fa512aa1c0fb112db8df54824de5bd",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ]
+  },
+  "previousReviewFileSha256": "93361b3e5d9db1e0e0ad95ee9336e0b3aaa0d6e9ca0d68be5f2c0d44fb4db558",
+  "historySha256": "2a96b48b656790a676a896e93883b41696de752a01eac236d2a5db71d02db7f6",
+  "previousEntity": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于灭火器的报废更换与定期检查。",
+    "description": "现场灭火器已报废未及时更换，且未定期检查。",
+    "id": "H_9FDD968713424B6CB3EC721C3D",
+    "keywords": [
+      "报废灭火器未及时更换且未定期检查"
+    ],
+    "lifecycle": "active",
+    "measures": "将已报废灭火器撤出现场并按规定处置，补充有效灭火器；按规定周期开展检查并记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "报废灭火器未及时更换且未定期检查"
+  },
+  "previousEntityFileSha256": "d71259155ce81c6e269b58b1565a9381bf450242db073e21f1b2132212191174"
 }

@@ -8,31 +8,53 @@
   "reviewer": "Commerce remaining-gap claim and applicability integration",
   "reason": "排除“任意气瓶—任意电箱过近”独立判据；11.5.5针对受电击危险，未给电箱净距，警示标志应另分支。",
   "evidenceRefs": [
-    "E_RESEARCH_GB9448_STATUS_20261002",
-    "E_RESEARCH_GB9448_SH_GUIDANCE_20261002",
     "E_COM_GBT34525_ORIGINAL_20261002"
   ],
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_COM_GAS_CYL_ELEC_PROX",
     "reviewType": "definition",
-    "decision": "pending",
-    "reviewedContentHash": "22213a591edc73ad3eb432cf6101b61732fd4e301d345d3747cc325f5b9232ab",
-    "checkedAt": "2026-10-02T16:00:00+08:00",
-    "reviewer": "dot / item-level source and applicability review",
-    "reason": "GB9448—2025现行及11.5.5主管部门指引摘录已核，支持适用焊割气瓶避免受电击及受火花热渣影响，不支持气瓶与任意电箱的统一最小间距。直接准入仍缺第11章范围与11.5.5完整标准原页；不得用企业距离未取得代替这一法源缺口。",
-    "evidenceRefs": [],
-    "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_GAS_CYL_ELEC_PROX",
+    "decision": "rejected",
+    "reviewedContentHash": "26332017e440a465bdfefba273edb4f0d5e6b4c7419120797f0d36ea2ef83638",
+    "checkedAt": "2026-10-02T10:38:00Z",
+    "reviewer": "Commerce remaining-gap claim and applicability integration",
+    "reason": "排除“任意气瓶—任意电箱过近”独立判据；11.5.5针对受电击危险，未给电箱净距，警示标志应另分支。",
+    "evidenceRefs": [
+      "E_RESEARCH_GB9448_STATUS_20261002",
+      "E_RESEARCH_GB9448_SH_GUIDANCE_20261002",
+      "E_COM_GBT34525_ORIGINAL_20261002"
+    ],
     "previousReview": {
       "entityType": "hazard",
       "entityId": "H_COM_GAS_CYL_ELEC_PROX",
       "reviewType": "definition",
       "decision": "pending",
-      "reviewedContentHash": "a3bc70b6da9e642583ac20302a03952d0ba44367bf56bd334d3dd445921d6a97",
-      "checkedAt": "2026-09-21T09:25:00+08:00",
-      "reviewer": "ChatGPT / Commerce Full Ingest",
-      "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
-      "evidenceRefs": []
+      "reviewedContentHash": "22213a591edc73ad3eb432cf6101b61732fd4e301d345d3747cc325f5b9232ab",
+      "checkedAt": "2026-10-02T16:00:00+08:00",
+      "reviewer": "dot / item-level source and applicability review",
+      "reason": "GB9448—2025现行及11.5.5主管部门指引摘录已核，支持适用焊割气瓶避免受电击及受火花热渣影响，不支持气瓶与任意电箱的统一最小间距。直接准入仍缺第11章范围与11.5.5完整标准原页；不得用企业距离未取得代替这一法源缺口。",
+      "evidenceRefs": [],
+      "dispositionRef": "docs/commerce-candidate-dispositions-20261002.jsonl#H_COM_GAS_CYL_ELEC_PROX",
+      "previousReview": {
+        "entityType": "hazard",
+        "entityId": "H_COM_GAS_CYL_ELEC_PROX",
+        "reviewType": "definition",
+        "decision": "pending",
+        "reviewedContentHash": "a3bc70b6da9e642583ac20302a03952d0ba44367bf56bd334d3dd445921d6a97",
+        "checkedAt": "2026-09-21T09:25:00+08:00",
+        "reviewer": "ChatGPT / Commerce Full Ingest",
+        "reason": "来自近期商贸检查的通用化候选；现场事实可复用，但直接技术依据、版本或适用条件尚未全部闭环，因此暂不进入正式发布。",
+        "evidenceRefs": []
+      }
     }
+  },
+  "provenanceRecovery": {
+    "checkedAt": "2026-10-04",
+    "status": "unrecovered_prior_evidence_ids",
+    "unrecoveredEvidenceIds": [
+      "E_RESEARCH_GB9448_STATUS_20261002",
+      "E_RESEARCH_GB9448_SH_GUIDANCE_20261002"
+    ],
+    "scope": "仅修正当前证据引用完整性；缺失ID及原审核完整保留在previousReview。未恢复原证据，不新增实质法律准入结论；rejected及proposed保持不变。"
   }
 }

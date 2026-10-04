@@ -2,13 +2,28 @@
   "entityType": "hazard",
   "entityId": "H_12158_6_3_2_2",
   "reviewType": "definition",
-  "decision": "rejected",
-  "reviewedContentHash": "8679cb03a293b1da93d352288ba249c743f68dfa82d1e5476c4126e7a3abb6ce",
-  "checkedAt": "2026-09-30T12:25:50Z",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "reason": "撤回原verified审核。隐患所述爆炸性气体环境中外露静电非导体部件最大宽度、表面积及超限评价，与实际关联C_12158_4_2_2_3的接地/静电泄漏电阻要求对象和指标不同。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+  "decision": "verified",
+  "reviewedContentHash": "de3264a0c3d20c60b8fd39b0f4982fe303b470471791fe520fc5ee91653355b0",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_12158_6_3_2_2",
+    "reviewType": "definition",
+    "decision": "rejected",
+    "reviewedContentHash": "8679cb03a293b1da93d352288ba249c743f68dfa82d1e5476c4126e7a3abb6ce",
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "reason": "撤回原verified审核。隐患所述爆炸性气体环境中外露静电非导体部件最大宽度、表面积及超限评价，与实际关联C_12158_4_2_2_3的接地/静电泄漏电阻要求对象和指标不同。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  },
+  "previousReviewFileSha256": "481d6a7019a8edf1ab968d2a313b696725ed4bdb8531117084dce8d424b05532"
 }

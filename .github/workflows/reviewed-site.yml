@@ -16,6 +16,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -53,19 +54,44 @@ jobs:
           python tools/v4/verify_unified_bundle.py --bundle source/releases/current
           mkdir -p "${{ runner.temp }}/current-site"
           cp -r source/releases/current/. "${{ runner.temp }}/current-site/"
+      - name: Preserve dated inventory diagnostics (strict Gate remains the publication blocker)
+        shell: bash
+        run: |
+          mkdir -p "${RUNNER_TEMP}/inventory-diagnostics"
+          SNAPSHOT_DATE="$(python -c "import json; print(json.load(open('source/releases/current/release.json'))['asOf'])")"
+          python tools/v4/comprehensive_scanner.py \
+            --as-of "${SNAPSHOT_DATE}" \
+            --output "${RUNNER_TEMP}/inventory-diagnostics/scan-findings.jsonl" \
+            | tee "${RUNNER_TEMP}/inventory-diagnostics/scan-summary.txt"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dated-inventory-diagnostics
+          path: ${{ runner.temp }}/inventory-diagnostics
+          if-no-files-found: warn
+          retention-days: 7
       - name: Real Chromium acceptance of the exact new package
+        timeout-minutes: 30
         run: |
           python -m pip install playwright
           python -m playwright install --with-deps chromium
+          mkdir -p "${RUNNER_TEMP}/browser-local"
           python tools/browser/audit_browser.py \
             --bundle source/releases/current \
             --expected-commit "${GITHUB_SHA}" \
-            --out "${RUNNER_TEMP}/common-hazards-browser-local.json"
+            --out "${RUNNER_TEMP}/browser-local/browser.json"
+      - name: Real Chromium ordinary tables in the exact new package
+        if: success() || failure()
+        run: |
+          python tools/browser/audit_ordinary_tables.py \
+            --bundle source/releases/current \
+            --expected-commit "${GITHUB_SHA}" \
+            --out "${RUNNER_TEMP}/browser-local/ordinary-tables.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: common-hazards-browser-local-evidence
-          path: ${{ runner.temp }}/common-hazards-browser-local.json
+          path: ${{ runner.temp }}/browser-local
           if-no-files-found: warn
           retention-days: 7
       - uses: actions/upload-artifact@v4
@@ -94,10 +120,10 @@ jobs:
         uses: actions/deploy-pages@v4
 
   online_verify:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -108,6 +134,7 @@ jobs:
           python -m pip install playwright
           python -m playwright install --with-deps chromium
       - name: Verify deployed GitHub Pages with real Chromium
+        timeout-minutes: 75
         run: |
           mkdir -p "${RUNNER_TEMP}/online-verify"
           for attempt in 1 2 3; do
@@ -122,6 +149,13 @@ jobs:
             fi
           done
           exit 1
+      - name: Verify deployed ordinary tables with real Chromium
+        if: success() || failure()
+        run: |
+          python tools/browser/audit_ordinary_tables.py \
+            --url https://an-0726.github.io/safety-basis/ \
+            --expected-commit "${GITHUB_SHA}" \
+            --out "${RUNNER_TEMP}/online-verify/ordinary-tables.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

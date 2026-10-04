@@ -3,16 +3,62 @@
   "entityId": "K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "30a83dadbec034fa9f1179c8cc2f8453ccf7ef9eb6ffe1b91b60765bcbd6e124",
-  "contextHashes": {
-    "hazard": "f6769b0ee29a4106de85520057ee0b9ba35349fb48145741bf42321147893b69",
-    "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "322c307bf1b8d7bc66f50be6075cd80406419fce3a06df5b38eab61a4e485286",
+  "checkedAt": "2026-10-04T05:42:30Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "采纳独立非作者审阅指出的定义遗漏，再次目视核MEM官方AQ4273-2016原PDF第9页第8.1条。description明确材料必须同时满足导电和运行时不产生火花，覆盖已导电但运行产火花的缺陷情形；既有条款、链接及第1章范围保持。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+    "E_CONTAIN_AQ4273_8_1_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。 本次完整嵌入上一冻结作者审核；更早完整审核继续保留在嵌套previousReview中。独立非作者复审仍待最终哈希确认。",
+  "contextHashes": {
+    "hazard": "b61f23d2f1f4aefb34eac16c453745af396e6c09ec1734e972ad07d43ca94304",
+    "clause": "bd45844fc871ff896406067ef107a3d29cf6abd6b29d8986ceddda56040767bd"
+  },
+  "reviewedFields": [
+    "clauseId",
+    "applicability"
+  ],
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "322c307bf1b8d7bc66f50be6075cd80406419fce3a06df5b38eab61a4e485286",
+    "checkedAt": "2026-10-04T05:07:24Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "MEM正式PDF第8.1条原文直接匹配风机叶片材料义务，按第1章保留完整排除范围。",
+    "evidenceRefs": [
+      "E_CONTAIN_AQ4273_8_1_20261004"
+    ],
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "contextHashes": {
+      "hazard": "6d567ecb9d25c03811119a76aee712df9269335cd8ac65ee0cac6e4c18f7c936",
+      "clause": "bd45844fc871ff896406067ef107a3d29cf6abd6b29d8986ceddda56040767bd"
+    },
+    "reviewedFields": [
+      "clauseId",
+      "applicability"
+    ],
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewedContentHash": "30a83dadbec034fa9f1179c8cc2f8453ccf7ef9eb6ffe1b91b60765bcbd6e124",
+      "contextHashes": {
+        "hazard": "f6769b0ee29a4106de85520057ee0b9ba35349fb48145741bf42321147893b69",
+        "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+      },
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "c4b8bf3ff541a580516609c14ab63af11956b2d52e3008f0240c571fb75a90dd"
+  },
+  "previousReviewFileSha256": "782dcb5346a71efb4777325bd84f4ab2480b23a0c5d64ca22dfaaedf93ec7a9d"
 }

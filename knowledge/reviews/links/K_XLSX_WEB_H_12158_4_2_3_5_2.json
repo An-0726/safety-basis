@@ -2,17 +2,36 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_4_2_3_5_2",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "831fff7db5b47c739f5c2ccca88562d506f24b175a92369c80cd61819a2f86ea",
-  "contextHashes": {
-    "hazard": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
-    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
-  },
-  "checkedAt": "2026-09-30T12:25:50Z",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+  "decision": "verified",
+  "reviewedContentHash": "244b7c96b18e3c6f18b047d13f7e4eb6f7100c16459e0d9e5987bc24c235a76f",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "逐原页核对H的责任对象、事实触发、可替代满足路径及例外与精确C相符；仅当前所述原子义务直接关联，保留旧审核供追溯。",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_12158_4_2_3_5_2",
+    "reviewType": "applicability",
+    "decision": "rejected",
+    "reviewedContentHash": "831fff7db5b47c739f5c2ccca88562d506f24b175a92369c80cd61819a2f86ea",
+    "contextHashes": {
+      "hazard": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
+      "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+    },
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  },
+  "previousReviewFileSha256": "d42c7d0cb11ced9607db3e47b8ae351b4a1ecfa2b0b36f1d4cf9669d8305ea82",
+  "contextHashes": {
+    "hazard": "a9c5a0009196c776ffa7f40201d0b744e1a8566615015817666871617ba2f07b",
+    "clause": "232d3ee4ff387eaaba1823260f04754f6d5e5c1c350a8f4391fd3f672d950ec3"
+  }
 }

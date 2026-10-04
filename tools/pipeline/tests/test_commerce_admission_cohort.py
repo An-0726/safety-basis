@@ -26,10 +26,14 @@ from commerce_cohort_fixture import (
 )
 
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+# This dated cohort is tested against its SHA-guarded predecessor, not new admissions.
+ROOT = pre_recovery_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
 from release_gate_core import evaluate_release_gate
+from recovery_cohort_fixture import evaluate_historical_snapshot as evaluate_release_gate
 
 
 def read(path):

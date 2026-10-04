@@ -2,6 +2,7 @@
 import {DataStore} from './js/store.js';
 import {searchHazardsDetailed,searchLawsDetailed} from './js/search.js';
 import {INSPECTION_LABELS,profileTemplateText,profileReferenceText} from './js/field-profiles.js';
+import {renderNormativeContent} from './js/normative-content.js';
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -391,7 +392,7 @@ function profileSectionHtml(hazard,profiles,selected,bases){
 }
 
 function basisApplicability(ref){return typeof ref?.applicability==='string'&&ref.applicability.trim()?ref.applicability:''}
-function basisHtml({ref,clause,law,sourceUrl}){const chkDate=clause.checked?dateOnly(clause.checked):'已核验',scope=basisApplicability(ref);return `<div class="basis" data-link-id="${esc(ref.linkId||'')}"><div class="basismeta"><span>${pill(roleLabel(ref.role))}</span><span class="article">${esc(law.displayLevel||law.level)} · ${esc(law.scope)} · ${esc(law.status)}</span></div><h4>${esc(law.name)}</h4><span class="article">${esc(clause.article)} · 条款核验：${esc(chkDate)}</span>${scope?`<div class="basis-applicability"><strong>本条依据适用范围</strong><p>${esc(scope)}</p></div>`:''}<blockquote>${esc(clause.quote||'尚未录入原文，请核验后补充。')}</blockquote><div class="basislinks">${sourceUrl?`<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}<button class="linkbutton lawjump" data-law="${esc(law.id)}">在法规库查看</button></div></div>`}
+function basisHtml({ref,clause,law,sourceUrl}){const chkDate=clause.checked?dateOnly(clause.checked):'已核验',scope=basisApplicability(ref);return `<div class="basis" data-link-id="${esc(ref.linkId||'')}"><div class="basismeta"><span>${pill(roleLabel(ref.role))}</span><span class="article">${esc(law.displayLevel||law.level)} · ${esc(law.scope)} · ${esc(law.status)}</span></div><h4>${esc(law.name)}</h4><span class="article">${esc(clause.article)} · 条款核验：${esc(chkDate)}</span>${scope?`<div class="basis-applicability"><strong>本条依据适用范围</strong><p>${esc(scope)}</p></div>`:''}${renderNormativeContent(clause)}<div class="basislinks">${sourceUrl?`<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">查看来源原文 ↗</a>`:'<span class="article">来源待补充</span>'}<button class="linkbutton lawjump" data-law="${esc(law.id)}">在法规库查看</button></div></div>`}
 function hazardText(h,bases){const conditions=h.conditions||'';return `${h.title}\n\n隐患专业描述：\n${h.description}${conditions?`\n\n适用条件：\n${conditions}`:''}\n\n法规依据：\n${bases.map(x=>`《${x.law.name}》${x.clause.article}${basisApplicability(x.ref)?`\n本条依据适用范围：${basisApplicability(x.ref)}`:''}\n${x.clause.quote}`).join('\n\n')}\n\n整改措施：\n${h.measures}`}
 function hazardFullText(h,bases){const note=publicNoteParts(h);const sections=[hazardText(h,bases)];if(note.businessNote)sections.push(`补充说明：\n${note.businessNote}`);if(note.historicalReferences.length)sections.push(`历史引用（不替代当前依据）：\n${note.historicalReferences.join('\n\n')}`);sections.push(`核验状态：${h.status}；核验日期：${h.checked||'未填写'}；数据库版本：${state.store.manifest.dataVersion}。`);return sections.join('\n\n')}
 
@@ -418,7 +419,7 @@ async function renderLawDetail(){
     $$('.hazardjump').forEach(b=>b.onclick=()=>switchView('hazards',{targetId:b.dataset.id}));
   }catch(err){if(detailRequests.isCurrent(request)) showError(err)}
 }
-function lawClauseHtml(ref,c){return `<div class="basis"><div class="basismeta"><strong class="articletitle">${esc(c.article)}</strong>${pill(c.status)}</div><blockquote>${esc(c.quote||'原文待核验')}</blockquote><div class="article">核验日期：${esc(dateOnly(c.checked))} · 关联 ${ref.hazardIds.length} 条隐患</div></div>`}
+function lawClauseHtml(ref,c){return `<div class="basis"><div class="basismeta"><strong class="articletitle">${esc(c.article)}</strong>${pill(c.status)}</div>${renderNormativeContent(c)}<div class="article">核验日期：${esc(dateOnly(c.checked))} · 关联 ${ref.hazardIds.length} 条隐患</div></div>`}
 function lawText({law,clauses}){return `${law.name}\n效力状态：${lawStatusLabel(law.status)}\n实施日期：${dateOnly(law.effectiveDate)}\n适用范围：${law.scope}\n来源：${law.sourceUrl||'待补'}\n\n${clauses.map(x=>`${x.clause.article}\n${x.clause.quote}`).join('\n\n')}`}
 
 function renderDataView(){

@@ -3,16 +3,39 @@
   "entityId": "K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "2daece64bbeeaf5ee0f146ab3ce32de385448eea152c1f3965b66a31f345dcce",
-  "contextHashes": {
-    "hazard": "3444284f0b1afdacd5a403d3c10ea263daeca47b09483fdde13f6bfd140b0313",
-    "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "e64553a3cf1ba1b9b23ec44e3a3e0b6a2d7e1e6a09894fb72755f5e3c7ef4eee",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "独立读取SAMR正式原版完整6.7.1和第1章，纠正旧句的机械化遗漏/旧版措辞；不推导特定浓度数值或所有设备一律自动化。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+    "E_CONTAIN_GB5083_6_7_1_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "contextHashes": {
+    "hazard": "d9e57be5b80bb52206048f913be657b8c116e5ceca3e10135af7f7ec1dca2d77",
+    "clause": "a779c225d7ed5ed73aebfa57ea624d9eb5d95c477a01f333b50efe897297b616"
+  },
+  "reviewedFields": [
+    "clauseId",
+    "applicability"
+  ],
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "2daece64bbeeaf5ee0f146ab3ce32de385448eea152c1f3965b66a31f345dcce",
+    "contextHashes": {
+      "hazard": "3444284f0b1afdacd5a403d3c10ea263daeca47b09483fdde13f6bfd140b0313",
+      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ce571cebd29d2dbc0a650780ddddd158e91d29c268f3f574cc564552307507d6"
 }

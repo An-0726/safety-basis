@@ -1,6 +1,7 @@
 'use strict';
 import {VerifiedFiles} from './verified-files.js';
 import {profileEnvelope, validateProfileJoin, profileSummary} from './field-profiles.js';
+import {validateNormativeClause} from './normative-content.js';
 
 const joinUrl = (base, path) => `${base.replace(/\/$/,'')}/${path.replace(/^\//,'')}`;
 
@@ -137,6 +138,8 @@ export class DataStore {
     const url=this.clauseShardUrls.get(id);
     if(!url) throw new Error(`找不到法规条款分片：${id}`);
     const payload=await this.fetchJson(url);
+    // Do not cache or display a rich body with an incomplete plain-text copy.
+    for(const clause of payload.records) validateNormativeClause(clause);
     const map=new Map(payload.records.map(x=>[x.id,x]));
     this.clauseCache.set(id,map);
     return map;

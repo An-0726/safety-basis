@@ -48,7 +48,8 @@ def validate_rendered(expected,actual):
     result['sourceLinksAndLawRegionsExact']=True
     return result
 
-def validate_projection(f,actual):
+def validate_projection(f,actual,*,public_inventory=None):
+    inventory=public_inventory or {'majorHazards':f['expectedMajorHazardCount'],'profiles':f['expectedProfiles']}
     require(len(actual['details'])==10 and len({r['id'] for r in actual['details']})==10,'Missing/duplicate hydrated technical detail')
     got={r['id']:r for r in actual['details']}
     require(set(got)==EXPECTED_IDS,'Hydrated technical identities differ')
@@ -57,8 +58,8 @@ def validate_projection(f,actual):
         require(sorted(got[row['id']]['bases'],key=lambda b:b['linkId'])==sorted(row['bases'],key=lambda b:b['linkId']),'Hydrated exact basis or geography differs: '+row['id'])
     require(f['excludedPublicClauseId'] not in actual['jgjLawClauseIds'],'Buried clause still used in current research-building catalogue')
     require(actual['majorAssociations']==[f['expectedMajorAssociation']],'H061 national major association changed')
-    require(actual['majorHazardCount']==f['expectedMajorHazardCount'],'Major hazard membership changed')
-    require(actual['profileCount']==f['expectedProfiles'],'Profile count changed')
+    require(actual['majorHazardCount']==inventory['majorHazards'],'Major hazard membership changed')
+    require(actual['profileCount']==inventory['profiles'],'Profile count changed')
     return {'hazards':10,'basisLinks':13,'sharedJS30Region':'CN-32 / 江苏','H061MajorRegion':'CN','correctedQuoteAndSourceIdentity':True}
 
 HYDRATE=r'''async ids => {
@@ -79,7 +80,7 @@ HYDRATE=r'''async ids => {
 }'''
 
 
-def run_technical_browser_acceptance(browser,base,run,page_errors,expect,fixture,release_hash):
+def run_technical_browser_acceptance(browser,base,run,page_errors,expect,fixture,release_hash,*,public_inventory=None):
     """Use the existing CI browser; preserve every previous acceptance check."""
     rows=validate_expectations(fixture)
     def public_check():
@@ -88,7 +89,7 @@ def run_technical_browser_acceptance(browser,base,run,page_errors,expect,fixture
             page=context.new_page();page.on('pageerror',lambda err:page_errors.append(str(err)))
             page.goto(base,wait_until='domcontentloaded');page.wait_for_selector('#detail h2')
             actual=page.evaluate(HYDRATE,[r['id'] for r in rows]);validate_release_match(actual['releaseHash'],release_hash)
-            return validate_projection(fixture,actual)
+            return validate_projection(fixture,actual,public_inventory=public_inventory)
         finally:context.close()
     run('technical_citations_exact_source_projection_and_JS30_regions',public_check)
     for width in (1440,375,390,485):

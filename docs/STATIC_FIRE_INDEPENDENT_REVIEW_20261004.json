@@ -1,0 +1,1012 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-04",
+  "reviewedAt": "2026-10-04T04:33:00Z",
+  "verdict": "APPROVE",
+  "approvalScope": "Bounded substantive source/applicability review and static engineering review of the exact 92-file v3 candidate. This is not a publication, GUI, full-suite, field-fact, administrative-liability, or remediation-completion certification.",
+  "baseCommit": "ffdfee5d79717c9fefe736830174e177cec4703c",
+  "candidateManifestSha256": "56d650581c275c615aab277a2ff2b4f5b0a502f63404b904c4cdb4d991d95246",
+  "candidateFileCount": 92,
+  "fileSha256": {
+    "docs/COMMERCE_REMAINING_GAPS_20261002.md": "5d4d25bc18af92c5019d3752ca44c5f8d4f6abc07f364aac4e0d5b93f1e7a6a4",
+    "docs/STATIC_FIRE_RECOVERY_HISTORY_20261004.json": "32ebc93291d35b23f8d3ff3ed76cf8992424061e9df70cf384e57ee232fef7a6",
+    "docs/STATIC_FIRE_RECOVERY_REVIEW_20261004.json": "bcc14396e24593f3f6a6724153650af38ea3e9cc07944515c930ee156a918e47",
+    "docs/commerce-candidate-dispositions-20261002.jsonl": "1219994ab67ad2dd4d070d98d9d1a78768983e8696cabcdcdef3fba82e074282",
+    "docs/commerce-remaining-gaps-resolutions-20261002.json": "5fc5a95384d355c32009654e72b334a42c97961d8b98735ad2a1c256e32a928c",
+    "knowledge/clauses/C_12158_4_2_3_4.json": "2c0d43aaf20a89698f17133ab107976d1b35c1cbb147835e33f530574e2cc6ce",
+    "knowledge/clauses/C_12158_6_3_2.json": "22451dbdbe026c58b65b893d36649d1587077ac6f6979931af52c4b75425fc87",
+    "knowledge/evidence/E_RECOVERY_GB12158_2024_20261004.json": "cafe49c6323ccee28ab1fba1ba0cb610d09aed514168940173bdc156af6f5ac2",
+    "knowledge/evidence/E_RECOVERY_GB12158_STATUS_20261004.json": "2c39d03006fec648002fff75a261940fc9d4a0eed81291a0d83e24ccd7b925a3",
+    "knowledge/evidence/E_RECOVERY_GBT13869_2017_20261004.json": "d350a336e5dcfcb1edc8fc0ff182843311112cfbc7e1fdcdaed32ed0e47d351d",
+    "knowledge/evidence/E_RECOVERY_XF1131_2014_20261004.json": "891c68b039153fda24b3161af0b1a0c537501a64bee41b2bd4d9179bd2ee9654",
+    "knowledge/hazards/H052.json": "bc51336b560f4d122d0267f66da5ad42a34032104fd8e697312c340c25f9aed3",
+    "knowledge/hazards/H_12158_10_2_1.json": "6837ecb03c98907457b287d33ea45c99582170288d6e6d8fd3aab4384a2c8a03",
+    "knowledge/hazards/H_12158_4_2_3_4_1.json": "5aad6f6fbc424c9a2bfb60177ff00bea2a0357be3c1c2acfe8f0a684dc79bf0c",
+    "knowledge/hazards/H_12158_4_2_3_4_2.json": "724a07893924615e61669bc54eb96732e75d53246afdaf326c1387062bc7566f",
+    "knowledge/hazards/H_12158_4_2_3_5_1.json": "c249ca94181892373d54f6d3e8db65575a1528a58b1520d717f23eb35aa30c04",
+    "knowledge/hazards/H_12158_4_2_3_5_2.json": "63daa4c4a8a0e3f92e2bdbed579ba93013ee223702a8dfc749dbe88d67df90b2",
+    "knowledge/hazards/H_12158_6_3_1_1.json": "8de7c11ba2fcc14a8dada205991c7792fc356047b5e9998878b3dae574abc539",
+    "knowledge/hazards/H_12158_6_3_2_1.json": "19118c7094326046a4dbcb329f1efd892179c42d3232f44c2504b97b11b77882",
+    "knowledge/hazards/H_12158_6_3_2_2.json": "4fe1b6dc39eb1007b8c90d5b774b64447fdac2e7261c4ea1e5a58bd72f7193ae",
+    "knowledge/hazards/H_12158_7_6_1.json": "0d205325df32770981e0ce5abd4ca534556ceca4fd507bfa85106072e1008846",
+    "knowledge/hazards/H_12158_8_8_5_1.json": "791d0ec3c83df9df2ed21e724ae0353fa2acb4720d6eef6a396bb4ab85833ec5",
+    "knowledge/hazards/H_12158_8_8_5_2.json": "9b5b7149227b65c0213a63834293225fb115f1eb3bc4779f95cc9a6dbb1a2132",
+    "knowledge/hazards/H_12158_8_8_5_3.json": "dc5220bd3dabe3f930ee959e79fd55e1a25acf61f3592b75f33d404e035e9ce9",
+    "knowledge/hazards/H_8ECAE760F5A5413D8013602429.json": "731070a1bfb727a3e5ffbfc6cff928dc279f04fff2cc0bb057f88b234dee207e",
+    "knowledge/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json": "a0d8c86bed295cdbbe2c80504ede185d5f61c40bc0d228f78eee94b5160459e5",
+    "knowledge/laws/LF_STD_GBT13869.json": "effebd01e3d0cce004e48db3555c778d13bb0b40eb6ef756a214a988a29a9011",
+    "knowledge/links/K_7EEF661BF4C8008AC0C070.json": "5de06ff64a9a7e0c09e4ceff55f368acfeb103e7815a34381c31f4a30357999b",
+    "knowledge/links/K_8ECAE760_GBT13869_5_2_2.json": "b3482c3dddbe8dedc0ae297c3497d22a9f6fb0ae0e48b4fd683943e1502107f8",
+    "knowledge/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json": "04f2b0986bbbb0102b6bb471f5af6c2aeb05b222e7fafb082c2eb823eaab1160",
+    "knowledge/links/K_XLSX_13ab022fc55780a0f957761d.json": "6d5d0cafaab05275ae18d61d60a335df96f664679efae038147570a1111fe058",
+    "knowledge/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json": "578154f9b98f030ff1ad48e2836016b4f2a701985a6626bfc7dc3f005cbc74e1",
+    "knowledge/links/K_XLSX_67c594506fd6ec5e982a908e.json": "772d101c0ed3ca2a83b90fb195403f6839d251f1b8a14db030c65d29f822b764",
+    "knowledge/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json": "7707c5b6aa65f017ab9cee7af6ca04299ae9d3dad74beb3037415e96f773ec76",
+    "knowledge/links/K_XLSX_WEB_H_12158_6_3_1_1.json": "45f6cd017072107f845145b1a1921bf49c322a8d582d483073064feb86113e72",
+    "knowledge/links/K_XLSX_WEB_H_12158_6_3_2_2.json": "a529c7b88b5e59731ac8dc654a65355fa10a507141e2a51aba009dfb697d7d95",
+    "knowledge/links/K_XLSX_WEB_H_12158_7_6_1.json": "ce3d95965780f7537d2a46961868a81d0b467db91397d7d48daf0a8b507ea2c7",
+    "knowledge/links/K_XLSX_WEB_H_12158_8_8_5_3.json": "5ca250bf3f2dfaf1bf2a7ab354a2c92c2779ff7c55cb9970919d17330abf2186",
+    "knowledge/links/K_XLSX_a052d29a58687f308bef322a.json": "db6c92ec03904577430b107468ac028f1502a0ae681f16bce3435b9f0278b78c",
+    "knowledge/links/K_XLSX_a5bcf36a6d6084de67d76489.json": "dbe9a91f455e8ea3f9258326c8d7ee3c1223a5bc1e7f069f212c99624544a987",
+    "knowledge/links/K_XLSX_e507c7fc564f94625c2af60c.json": "71fe5f16ad54763abb0c2058d0760be8ebcc259faadcf1202bda18f8499735ec",
+    "knowledge/reviews/clauses/C_12158_4_2_3_4.json": "88d9965ff394526d2c73173777b47f31351fa424ad9a32fa390ffd8918d59c79",
+    "knowledge/reviews/clauses/C_12158_4_2_3_5.json": "91cc9467f1dba90e33e8c1aa14a9be9ef0b5cc25e9631ab439eeb3ce9dbcb8f0",
+    "knowledge/reviews/clauses/C_12158_6_3_1.json": "16c1d52aedae0edb5f9a8860ecef696ee39b2ad8a9e14a82945f57b327802461",
+    "knowledge/reviews/clauses/C_12158_6_3_2.json": "2a29911664a5cf48fef9aff9079e68c620ad95f299af72338bc17ac3b36b14d9",
+    "knowledge/reviews/clauses/C_12158_7_6.json": "a4107a4530b3ae0db48529e3874224708382176cf034155bce5e3c43eb88c84d",
+    "knowledge/reviews/clauses/C_12158_8_8_5.json": "1e9bb8c74a8a37dbd254e2d5af1491c98d3dd9a1a4cb8c4a224157acbf1e66ee",
+    "knowledge/reviews/hazards/H052.json": "07b35374853e33ccf47bc1cc3f16e1c97e0abb8eeace8ba6c1a4fbd3340663a0",
+    "knowledge/reviews/hazards/H_12158_10_2_1.json": "c361312032d9db69af31ec3036366724788cc72fa0b2bafbe08803a8c6524de2",
+    "knowledge/reviews/hazards/H_12158_4_2_3_4_1.json": "75a3aff72340e3134dd349b19fded15ca98c63e63056d26b5c9a81194c22ecf6",
+    "knowledge/reviews/hazards/H_12158_4_2_3_4_2.json": "ada0e786fb6fbd56d5f809a067bc57fa18bfad85a625f6287ac239cd53ef344e",
+    "knowledge/reviews/hazards/H_12158_4_2_3_5_1.json": "533867bc36146cc0a7b0ffff2f8dabe2fc64d0987455fbded4f81fcd09aa7169",
+    "knowledge/reviews/hazards/H_12158_4_2_3_5_2.json": "198f10339422415afc57480903be12d2dc9dc179068b062eed99f8d18058d0ff",
+    "knowledge/reviews/hazards/H_12158_6_3_1_1.json": "b540b20c56b320cdbc22b50337557c0364ffceada87f02cdc544be65a38f4b3d",
+    "knowledge/reviews/hazards/H_12158_6_3_2_1.json": "aaea4e6c2ec37ef7ac46fe1afd4cddf0f188738f08a721efd383635d14603f92",
+    "knowledge/reviews/hazards/H_12158_6_3_2_2.json": "04c2bfee11dc8b032194f3e5aad08afd1f9de68e588ea8b3f14523afae48344d",
+    "knowledge/reviews/hazards/H_12158_7_6_1.json": "e7703348f2f5ffbcd35dcd89df94b6555aa0fcd224d1c645af56cc62b0c1c776",
+    "knowledge/reviews/hazards/H_12158_8_8_5_1.json": "5c2d5e663186b76bf6d9a92713406fed935bce9d25c376812efb49bb9db718fb",
+    "knowledge/reviews/hazards/H_12158_8_8_5_2.json": "b86a1277c543b5ff4934988ebcb41d025c5f69085d50e2ceb301c070b27e8412",
+    "knowledge/reviews/hazards/H_12158_8_8_5_3.json": "5d8f8d349a9339e7d68aa2d3a56da2ff801a7f2a55f47fe01ac9863c410ad07e",
+    "knowledge/reviews/hazards/H_8ECAE760F5A5413D8013602429.json": "430f00a2b4cc25911ef91cd397829ca477a9fcaa109120da822d711d522385bf",
+    "knowledge/reviews/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json": "2c70a0f847f2308b5d73c07ee5029c2eb39d4239688dfd419074de88a32974c0",
+    "knowledge/reviews/law-versions/LV_STD_A318C93D7F3213B292AD5946.json": "aa78adaf42306105c878c38367bb2b601d34598328372f4ca6ea6381b2eba1d8",
+    "knowledge/reviews/laws/LF_STD_GBT13869.json": "acf37a0c03d27d6b75591a974ab1450b1b5ab6aa5d536b9e7e83e3eef5603a7f",
+    "knowledge/reviews/links/K_7EEF661BF4C8008AC0C070.json": "8e8f5d259a327cd74e1fd437157ef5547afb715b179f46a1e15c3a60df10949e",
+    "knowledge/reviews/links/K_8ECAE760_GBT13869_5_2_2.json": "840db6e79f7858039777b45f0d6cc2d75a9521b2dde4781dd6c6ef6da6a2bb30",
+    "knowledge/reviews/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json": "ccc71a32936e890f767311111a5bc589863987911f4af447f2057fec81355352",
+    "knowledge/reviews/links/K_PHASE6_0BFFBEFB652BB2DF5B13E5D4.json": "f228291a594f30b0f3e59e4ca514c37d1419d669a85df0b8062861151fb4ce96",
+    "knowledge/reviews/links/K_XLSX_13ab022fc55780a0f957761d.json": "dee8b8ab672289efd6a2dfc4e3efa936131375c46cdd7b7b9270ce8c2e64ba82",
+    "knowledge/reviews/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json": "cbd123d0d8cd29dd4b027077c4a2adf7e0f78d591f3974e11b521b5767f0e8b0",
+    "knowledge/reviews/links/K_XLSX_67c594506fd6ec5e982a908e.json": "6fa5f30ea15e80de6f6c00b2f722b62c66eceff8121926a61ebeb01eeee0702a",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json": "a572654466f6d80d1e50eadcf4785946303076d0945b7beca17406ea8919c6ed",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_6_3_1_1.json": "6f0b3f604f98363c90eeb4227de221128758b25fe625305c658dc6d2ccb8bb83",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_6_3_2_2.json": "ce5797690d290c44843d0c51148570bf424616cb504192238aa487216cc6fac2",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_7_6_1.json": "ebd0a5af680c700f3b7e8ca19800e625946b85b79950a9ddffbd776eaa892bb2",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_8_8_5_3.json": "bcb44abdd60a5d79b1e827a789528cfc563df56bd0505ffe26f921a97db529ad",
+    "knowledge/reviews/links/K_XLSX_a052d29a58687f308bef322a.json": "8a7c49cce69ba698ec3332f538329bce821096d6b73b78e91583efec51c4299b",
+    "knowledge/reviews/links/K_XLSX_a5bcf36a6d6084de67d76489.json": "62ec01c4cf37046d51a6fe30809885f4c1a78b9ff53be1a69788724894dceb6c",
+    "knowledge/reviews/links/K_XLSX_e507c7fc564f94625c2af60c.json": "f3dc1a04fd3187b2a2a2c97e5b7d4cfbd11c2de4f9088f292ffd486eedaf33e6",
+    "knowledge/reviews/links/K_be5a0deab9619bd1579c758f.json": "5731fbcc99bb7f074007571d70e91b6b4da25075adb754db10bdab1a220afe1e",
+    "tests/detail-rendering.test.mjs": "9828ec2e888842219dbab460310ad0d2fd07b92b800fc21ad4879f34e1c71ae5",
+    "tests/ordinary-clause-tables.test.mjs": "43847049afe0e94bfbcc2701844fe288432260df2fad7cea7db8344c698b47fe",
+    "tests/results-interaction.test.mjs": "6c3639308bda301547e2cab1b8e6ad281be9e375fd949e779a926592e5f31373",
+    "tools/browser/audit_ordinary_tables.py": "f55cfc966740a3f4e68fe70a1a764167b5e69295647652ed9e86c2fb83d9290b",
+    "tools/pipeline/tests/test_ordinary_clause_tables.py": "7f2929227452b8dc03a2c60ac42766b40becdeef9fb8e428b9153a2777db4664",
+    "tools/v4/build_unified_release.py": "1b3df7c5d38bb7fc2f223a5562621c6932ae018cd624d304613afdd71b1bb464",
+    "tools/v4/normative_content.py": "cf6b7343e4719f50d2dbcf3eeb2307c12fb1c21e352ee3f8e78f3b8a2db6aecc",
+    "tools/v4/release_gate_core.py": "393ef143e8b8acc727183059ef4460a019c34fb288978cf18943d19f11c3d59e",
+    "tools/v4/verify_unified_bundle.py": "36e7ca31f41383ce3c8d1e076ea12bb0ffb236dc93942abc1c8d3503d4efa8aa",
+    "web/app.js": "1904f89445b963aa06db2aa3ab6811bcae07d8ddaa19e2959d8761609513fb14",
+    "web/js/store.js": "3247475dfd568f144b26d88e06bab6020a2ed2fd5afc833e5c7027f6b471e688",
+    "web/style.css": "794b5da37e96a378399944619541ac604a44da0f99563c2d6b6035f4d993146a"
+  },
+  "reviewIndependence": {
+    "role": "independent_non_author_reviewer",
+    "candidateFilesEditedByReviewer": false,
+    "method": "Independent official-source retrieval, original-page visual inspection, current-version checks, H/K/C/LV/LF/review/hash/history inspection and local automated tests. Three findings were corrected by the author/integrator and the final v3 bytes were reread; the family publisher/evidence finding required withdrawal of the earlier v2 stage approval."
+  },
+  "resolvedFindings": [
+    {
+      "id": "SF-001",
+      "severity": "required_correction",
+      "finding": "H_12158_4_2_3_4_2 retained three now-restored, non-synonymous stable IDs as aliases.",
+      "resolution": "Removed H_12158_4_2_3_5_2, H_12158_6_3_2_2 and H_12158_8_8_5_3 from aliases; definition review and linked hazard context rebound; pre-change history preserved.",
+      "status": "verified_resolved"
+    },
+    {
+      "id": "SF-002",
+      "severity": "required_correction",
+      "finding": "The superseded duplicate mobile K still had a current verified applicability decision, producing a strict-release blocker.",
+      "resolution": "Current duplicate K review is rejected solely to withdraw duplicate current publication; previous verified review and exact original objects remain preserved. Canonical H/K retain the bounded technical obligation.",
+      "status": "verified_resolved"
+    },
+    {
+      "id": "SF-003",
+      "severity": "required_correction",
+      "finding": "Shared LF_STD_GBT13869 incorrectly tied the family identity key to 2017 and SAMR; its current identity review cited only secondary and expressly disavowed historical evidence.",
+      "resolution": "Kept the same LF and both LV IDs. Identity key is version-neutral; publisher text distinguishes the actual 2017 AQSIQ/SAC issuer from the 2026 SAMR/SAC issuer. The current LF review uses the verified official 2017 PDF and correct SAMR metadata/original evidence, while the previous law, previous review and their exact hashes remain preserved. The recovery evidence locator now includes physical PDF page 1. No H/K/C or LV dates/status were changed by this correction.",
+      "status": "verified_resolved"
+    }
+  ],
+  "officialSources": [
+    {
+      "standard": "GB 12158-2024",
+      "originalUrl": "https://xcoss.henan.gov.cn/typtfile/20250319/61d853d052fb454f9e30672216e65672.pdf",
+      "pdfSha256": "d0444f1a030b8531482649b7b5bd7283eb1a0ae52dc3d7dacbc9b0028f7fac65",
+      "independentHttpStatus": 200,
+      "visuallyReviewedPdfPages": [
+        7,
+        10,
+        11,
+        13,
+        14,
+        18,
+        19
+      ],
+      "currentStatus": "现行",
+      "publishedDate": "2024-12-31",
+      "effectiveDate": "2026-01-01",
+      "replaces": [
+        "GB 12158-2006",
+        "GB 13348-2009"
+      ],
+      "currencyUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+    },
+    {
+      "standard": "XF 1131-2014",
+      "originalUrl": "https://js.119.gov.cn/group1/M00/00/2A/ZYS-ZGGB6A-AT5TaANQHgHPKgLU664.pdf",
+      "pdfSha256": "835f2860b9645cc5c6cb95390bb6925570fe53e7daa82d7c10273f5d9c7de7ee",
+      "independentHttpStatus": 200,
+      "visuallyReviewedPdfPages": [
+        1,
+        4,
+        7,
+        11
+      ],
+      "currentStatus": "现行",
+      "publishedDate": "2014-01-27",
+      "effectiveDate": "2014-03-01",
+      "currencyUrl": "https://std.samr.gov.cn/search/stdPage?q=XF+1131-2024",
+      "metadataConflictHandling": "SAMR search result supports current status only; its conflicting dates/classification/replacement metadata are not adopted. Original PDF supplies dates, scope, mandatory chapter 6, and 2020 GA-to-XF content-unchanged transition."
+    },
+    {
+      "standard": "GB/T 13869-2017",
+      "originalUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651130919251.pdf",
+      "pdfSha256": "fc612978f1112f87912668b3b01af1c554422ebcf83074eebaae64af8beb9d50",
+      "independentHttpStatus": 200,
+      "visuallyReviewedPdfPages": [
+        1,
+        4,
+        6
+      ],
+      "currentStatus": "现行",
+      "publishedDate": "2017-12-29",
+      "effectiveDate": "2018-07-01",
+      "currencyUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=1C5996A8BAD63FF484CCFE024D98849C",
+      "upcomingReplacement": {
+        "standard": "GB/T 13869-2026",
+        "publishedDate": "2026-07-02",
+        "effectiveDate": "2027-02-01",
+        "status": "即将实施",
+        "replacement": "全部代替2017版",
+        "url": "https://std.samr.gov.cn/gb/search/gbDetailed?id=55B3892F95A2336AE06397BE0A0A4BF9",
+        "publisher": "国家市场监督管理总局、国家标准化管理委员会",
+        "publisherMetadataUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BE454A97C36FCB5C7DB8EE345EC9A6FF"
+      },
+      "originalPublisher": "中华人民共和国国家质量监督检验检疫总局、中国国家标准化管理委员会"
+    }
+  ],
+  "clauseTextBindings": [
+    {
+      "id": "C_12158_4_2_3_4",
+      "path": "knowledge/clauses/C_12158_4_2_3_4.json",
+      "fileSha256": "2c0d43aaf20a89698f17133ab107976d1b35c1cbb147835e33f530574e2cc6ce",
+      "contentHash": "2e43690eec5580cd3e4bd77409b9d8270ecaa250d06f5da2114e244f1ba8f586",
+      "quoteSha256": "f762019ef416bc0449969c6c9a62213943af1e2ccffb7a55892fb2afa63f19e8",
+      "reviewPath": "knowledge/reviews/clauses/C_12158_4_2_3_4.json",
+      "reviewFileSha256": "88d9965ff394526d2c73173777b47f31351fa424ad9a32fa390ffd8918d59c79",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_12158_4_2_3_5",
+      "path": "knowledge/clauses/C_12158_4_2_3_5.json",
+      "fileSha256": "83797afe37cbd308ee07a522619974d2a03fb6a36ba99c37498a0184ee9ec0c2",
+      "contentHash": "232d3ee4ff387eaaba1823260f04754f6d5e5c1c350a8f4391fd3f672d950ec3",
+      "quoteSha256": "a4991f7268d8b922c563f5820c223c17b90562ef9cf9249c91f852ff965341dd",
+      "reviewPath": "knowledge/reviews/clauses/C_12158_4_2_3_5.json",
+      "reviewFileSha256": "91cc9467f1dba90e33e8c1aa14a9be9ef0b5cc25e9631ab439eeb3ce9dbcb8f0",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_12158_6_3_1",
+      "path": "knowledge/clauses/C_12158_6_3_1.json",
+      "fileSha256": "cd4e1cd4e7d0abfbce73e46409f679c7abf9371bfb7ba3b3365408c5dea0ada8",
+      "contentHash": "6c2e974cffa1a3f1d32179a639fc8510276c14700ee86f7ad701e9e33fbaf0fb",
+      "quoteSha256": "363fc43b440612894108d63d6ac3473014678ed1f9105df5ae1585836aca4b03",
+      "reviewPath": "knowledge/reviews/clauses/C_12158_6_3_1.json",
+      "reviewFileSha256": "16c1d52aedae0edb5f9a8860ecef696ee39b2ad8a9e14a82945f57b327802461",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_12158_6_3_2",
+      "path": "knowledge/clauses/C_12158_6_3_2.json",
+      "fileSha256": "22451dbdbe026c58b65b893d36649d1587077ac6f6979931af52c4b75425fc87",
+      "contentHash": "6e6717b4e809aff86a74a79210fb6df446992151777ca1abbfca847689409fb1",
+      "quoteSha256": "e8323564d46c279f236354e15dca0d91eab5f70b6eca110f3176d1847542b241",
+      "reviewPath": "knowledge/reviews/clauses/C_12158_6_3_2.json",
+      "reviewFileSha256": "2a29911664a5cf48fef9aff9079e68c620ad95f299af72338bc17ac3b36b14d9",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_12158_7_6",
+      "path": "knowledge/clauses/C_12158_7_6.json",
+      "fileSha256": "6b924acd70fd7c8c2306c8f2504a57931e6862856c2a65a05170be4b8c235163",
+      "contentHash": "54b3be1d1eb80b2186603a6e2bbede78c35d75d0ae15cf9e5079fc9b4e7bdf39",
+      "quoteSha256": "cf10f3f6167ba6a9a7b0b0633cea21116e4a553aee3302c61b0a09fc8ed6a02c",
+      "reviewPath": "knowledge/reviews/clauses/C_12158_7_6.json",
+      "reviewFileSha256": "a4107a4530b3ae0db48529e3874224708382176cf034155bce5e3c43eb88c84d",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_12158_8_8_5",
+      "path": "knowledge/clauses/C_12158_8_8_5.json",
+      "fileSha256": "836ffc5fbefeffd01477855789834b637e6f2b432ff2e7cd3c39b8770154b977",
+      "contentHash": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b",
+      "quoteSha256": "db8314cf9aaae35ef2148a81a45c38deeb7792174f73504fbc7cd2882593e8e1",
+      "reviewPath": "knowledge/reviews/clauses/C_12158_8_8_5.json",
+      "reviewFileSha256": "1e9bb8c74a8a37dbd254e2d5af1491c98d3dd9a1a4cb8c4a224157acbf1e66ee",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_XF1131_6_8",
+      "path": "knowledge/clauses/C_XF1131_6_8.json",
+      "fileSha256": "cc84609bff3edcc00f71ad6ec37492613b92f5034b61952c034792351b31782d",
+      "contentHash": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6",
+      "quoteSha256": "86ba91c1df4563725cb057bc02cae70aee0988e146a79b2cc72f0277a088a114",
+      "reviewPath": "knowledge/reviews/clauses/C_XF1131_6_8.json",
+      "reviewFileSha256": "9bca5ba04b899f4216f22700b66266e4b2190d634583ae44125f791ebd317603",
+      "completeNormativeTextVisuallyChecked": true
+    },
+    {
+      "id": "C_GBT13869_5_2_2_mobile",
+      "path": "knowledge/clauses/C_GBT13869_5_2_2_mobile.json",
+      "fileSha256": "dc71b20f191e61e5b71ad7dde4a2b774a2845bad8fe32b4879ef3db7dc7d12ad",
+      "contentHash": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f",
+      "quoteSha256": "f4781567c3b5c63a04e0f3cc7612a65e642082411b6644e17965774479603e25",
+      "reviewPath": "knowledge/reviews/clauses/C_GBT13869_5_2_2_mobile.json",
+      "reviewFileSha256": "856f8229a77eb9afe18eab81de726db35d04dbc6503b36610d1078e6f23f8939",
+      "completeNormativeTextVisuallyChecked": true
+    }
+  ],
+  "semanticFindings": {
+    "gb12158RestoredHazards": [
+      "H_12158_4_2_3_5_2",
+      "H_12158_6_3_1_1",
+      "H_12158_6_3_2_2",
+      "H_12158_7_6_1",
+      "H_12158_8_8_5_3"
+    ],
+    "gb12158ExistingScopeCorrections": [
+      "H_12158_4_2_3_4_1",
+      "H_12158_4_2_3_4_2",
+      "H_12158_4_2_3_5_1",
+      "H_12158_6_3_2_1",
+      "H_12158_8_8_5_1",
+      "H_12158_8_8_5_2"
+    ],
+    "generalBoundary": "静电危险场所设计和管理；排除火炸药、电火工品、烟花爆竹；其他静电危害仅可参考。",
+    "table2": {
+      "columns": [
+        "区域",
+        "类别",
+        "最大宽度/cm",
+        "最大表面积/cm²"
+      ],
+      "rows": [
+        [
+          "0区",
+          "Ⅰ类",
+          "3.0",
+          "100"
+        ],
+        [
+          "0区",
+          "ⅡA类",
+          "0.3",
+          "50"
+        ],
+        [
+          "0区",
+          "ⅡB类",
+          "0.3",
+          "25"
+        ],
+        [
+          "0区",
+          "ⅡC类",
+          "0.1",
+          "4"
+        ],
+        [
+          "1区",
+          "Ⅰ类",
+          "3.0",
+          "100"
+        ],
+        [
+          "1区",
+          "ⅡA类",
+          "3.0",
+          "100"
+        ],
+        [
+          "1区",
+          "ⅡB类",
+          "3.0",
+          "100"
+        ],
+        [
+          "1区",
+          "ⅡC类",
+          "2.0",
+          "20"
+        ],
+        [
+          "2区",
+          "Ⅰ类",
+          "3.0",
+          "100"
+        ]
+      ],
+      "printedBodyRows": 9,
+      "noInventedZone2ClassII": true,
+      "notePreserved": "爆炸性气体类别见GB/T 3836.11"
+    },
+    "exceptions": "4.2.3.4和6.3.2保留工艺需要尺寸超限；4.2.3.5保留工艺需要使用非导体。均需评价、必要时措施、文件纳管，不把必要时改无条件。",
+    "clause631": "爆炸危险场所非金属液体贮存罐和输送管道：表面电阻率<1×10¹⁰Ω，或体电阻率<1×10⁸Ω·m，或其他静电防护措施；非接地电阻。",
+    "clause76": "耗散性传送带符合任一适用路径：a按GB/T3684，两面均<3×10⁸Ω；b按GB/T3836.26—2019第3.21电极布局，两面均<7.5×10⁷Ω；c仅多层不同材料，两相对外表面间<1×10⁹Ω、23℃±2℃、RH50%±5%。第7.5条选型/转速另核。",
+    "clause885": "限液态物料管路或部件，非导体存在评价、必要措施和文件管理路径，不扩所有工艺。",
+    "H052": "仅既有仓储场所库房堆物至照明灯实测<0.5m；排除炸药、花炮仓库；不能仅凭灯下有物品认定不足；不扩喷淋头或全部房间。",
+    "falseAliasIsolation": "H_12158_10_2_1不再含H_12158_10_1_2错误别名；后者H/K继续隔离且其文件与base逐字节相同。本项只审批身份别名修复，不扩展未修改的手套定义。",
+    "H052Fallback": "K_be5a0deab9619bd1579c758f的消防法fallback仍rejected，不以一般法律替代0.5m直接标准。",
+    "SC134": "三处仅SC134/D16→SC134/D05文字纠错；与docs/commerce-ingest-map-20260921.jsonl第134条sources=[D05]相符；未见信息仍不能认定逾期未检。",
+    "emergencyPlug": "没有准入GB51309第4.5.5新插头条目。完整原件与范围/版本证明缺口继续保留，不借官方检查表摘要或泛化应急供电定义补位。",
+    "mobileFamilyIdentity": "GB/T13869标准家族保留稳定LF和2017/2026两个LV；逐版发布机关已纠正，现行2017和待实施2026边界未改变。"
+  },
+  "reviewBindings": [
+    {
+      "path": "knowledge/reviews/clauses/C_12158_4_2_3_4.json",
+      "entityPath": "knowledge/clauses/C_12158_4_2_3_4.json",
+      "entityId": "C_12158_4_2_3_4",
+      "decision": "verified",
+      "reviewedContentHash": "2e43690eec5580cd3e4bd77409b9d8270ecaa250d06f5da2114e244f1ba8f586",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_12158_4_2_3_5.json",
+      "entityPath": "knowledge/clauses/C_12158_4_2_3_5.json",
+      "entityId": "C_12158_4_2_3_5",
+      "decision": "verified",
+      "reviewedContentHash": "232d3ee4ff387eaaba1823260f04754f6d5e5c1c350a8f4391fd3f672d950ec3",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_12158_6_3_1.json",
+      "entityPath": "knowledge/clauses/C_12158_6_3_1.json",
+      "entityId": "C_12158_6_3_1",
+      "decision": "verified",
+      "reviewedContentHash": "6c2e974cffa1a3f1d32179a639fc8510276c14700ee86f7ad701e9e33fbaf0fb",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_12158_6_3_2.json",
+      "entityPath": "knowledge/clauses/C_12158_6_3_2.json",
+      "entityId": "C_12158_6_3_2",
+      "decision": "verified",
+      "reviewedContentHash": "6e6717b4e809aff86a74a79210fb6df446992151777ca1abbfca847689409fb1",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_12158_7_6.json",
+      "entityPath": "knowledge/clauses/C_12158_7_6.json",
+      "entityId": "C_12158_7_6",
+      "decision": "verified",
+      "reviewedContentHash": "54b3be1d1eb80b2186603a6e2bbede78c35d75d0ae15cf9e5079fc9b4e7bdf39",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_12158_8_8_5.json",
+      "entityPath": "knowledge/clauses/C_12158_8_8_5.json",
+      "entityId": "C_12158_8_8_5",
+      "decision": "verified",
+      "reviewedContentHash": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H052.json",
+      "entityPath": "knowledge/hazards/H052.json",
+      "entityId": "H052",
+      "decision": "verified",
+      "reviewedContentHash": "1c2f7dcc87276e6083dd750fb32927cc23e44660b2d77226a9031471c4228ae5",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_10_2_1.json",
+      "entityPath": "knowledge/hazards/H_12158_10_2_1.json",
+      "entityId": "H_12158_10_2_1",
+      "decision": "verified",
+      "reviewedContentHash": "cc52219e4af33813b9717cc990f9af457c14430644c57c0eeeababe4acdbb4d6",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_4_2_3_4_1.json",
+      "entityPath": "knowledge/hazards/H_12158_4_2_3_4_1.json",
+      "entityId": "H_12158_4_2_3_4_1",
+      "decision": "verified",
+      "reviewedContentHash": "3b6da8eb10939aaee83cd86361de61861d72616b6d68d9fcfe9668e2ef9973de",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_4_2_3_4_2.json",
+      "entityPath": "knowledge/hazards/H_12158_4_2_3_4_2.json",
+      "entityId": "H_12158_4_2_3_4_2",
+      "decision": "verified",
+      "reviewedContentHash": "f68a7c2ea808d881a836e1d3399d7e3517873c970f43c9d7a0a505c4b5ec2013",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_4_2_3_5_1.json",
+      "entityPath": "knowledge/hazards/H_12158_4_2_3_5_1.json",
+      "entityId": "H_12158_4_2_3_5_1",
+      "decision": "verified",
+      "reviewedContentHash": "ad90251a51f0e904d55e5c53b4a26b9ffa1c23c97371fe6916c2a63f3a0bf598",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_4_2_3_5_2.json",
+      "entityPath": "knowledge/hazards/H_12158_4_2_3_5_2.json",
+      "entityId": "H_12158_4_2_3_5_2",
+      "decision": "verified",
+      "reviewedContentHash": "a9c5a0009196c776ffa7f40201d0b744e1a8566615015817666871617ba2f07b",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_6_3_1_1.json",
+      "entityPath": "knowledge/hazards/H_12158_6_3_1_1.json",
+      "entityId": "H_12158_6_3_1_1",
+      "decision": "verified",
+      "reviewedContentHash": "ab8ea4f9639441e8cf32d53bc64d2cdbe22f629ad26323ad610ca809b5001431",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_6_3_2_1.json",
+      "entityPath": "knowledge/hazards/H_12158_6_3_2_1.json",
+      "entityId": "H_12158_6_3_2_1",
+      "decision": "verified",
+      "reviewedContentHash": "6d467d03303a134b3ade932396f584ca817638b155a0b4ed9231647ce90350b3",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_6_3_2_2.json",
+      "entityPath": "knowledge/hazards/H_12158_6_3_2_2.json",
+      "entityId": "H_12158_6_3_2_2",
+      "decision": "verified",
+      "reviewedContentHash": "de3264a0c3d20c60b8fd39b0f4982fe303b470471791fe520fc5ee91653355b0",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_7_6_1.json",
+      "entityPath": "knowledge/hazards/H_12158_7_6_1.json",
+      "entityId": "H_12158_7_6_1",
+      "decision": "verified",
+      "reviewedContentHash": "e5dde5507513a05a6bd0552bfca1bf154bd8bb9f0145e7fd6d374209d83d62b1",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_8_8_5_1.json",
+      "entityPath": "knowledge/hazards/H_12158_8_8_5_1.json",
+      "entityId": "H_12158_8_8_5_1",
+      "decision": "verified",
+      "reviewedContentHash": "06eafa1f518b79576d9f343e3348cb03d862e0f62cea31ec647da337ef0a7d99",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_8_8_5_2.json",
+      "entityPath": "knowledge/hazards/H_12158_8_8_5_2.json",
+      "entityId": "H_12158_8_8_5_2",
+      "decision": "verified",
+      "reviewedContentHash": "8e43bc206971fc440a5d5d1c0d14b7b8a0b4163621599468178939d15a480c44",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_12158_8_8_5_3.json",
+      "entityPath": "knowledge/hazards/H_12158_8_8_5_3.json",
+      "entityId": "H_12158_8_8_5_3",
+      "decision": "verified",
+      "reviewedContentHash": "a7dde4064191bcaf0871f9230e36ff6dbb47a83f8ce91bb2a434307cf1d80284",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_8ECAE760F5A5413D8013602429.json",
+      "entityPath": "knowledge/hazards/H_8ECAE760F5A5413D8013602429.json",
+      "entityId": "H_8ECAE760F5A5413D8013602429",
+      "decision": "verified",
+      "reviewedContentHash": "f66ac5a65aae9b022d44054e46a8d444529f424c7eb135174de35697c952ef8b",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+      "entityPath": "knowledge/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+      "entityId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "decision": "verified",
+      "reviewedContentHash": "0e5020f1e107795ab8970e7a4ff8670ed83ede3b7bd6cf6ecc334b312e6a7d0f",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_A318C93D7F3213B292AD5946.json",
+      "entityPath": "knowledge/law-versions/LV_STD_A318C93D7F3213B292AD5946.json",
+      "entityId": "LV_STD_A318C93D7F3213B292AD5946",
+      "decision": "verified",
+      "reviewedContentHash": "bc9829ff4f7a67dc22712fe48a3387b3b31ecce3c7163b33218fbd7b3057d3f4",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GBT13869.json",
+      "entityPath": "knowledge/laws/LF_STD_GBT13869.json",
+      "entityId": "LF_STD_GBT13869",
+      "decision": "verified",
+      "reviewedContentHash": "f9bdf413798591b71c70f0a377d79a206ce824f632e4ee28d985db151e478ef4",
+      "contextHashes": {},
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_7EEF661BF4C8008AC0C070.json",
+      "entityPath": "knowledge/links/K_7EEF661BF4C8008AC0C070.json",
+      "entityId": "K_7EEF661BF4C8008AC0C070",
+      "decision": "verified",
+      "reviewedContentHash": "0df0ec8cbbbb38eeca1234892b978022cfc254bc85e7a92d90c173f62814499a",
+      "contextHashes": {
+        "hazard": "1c2f7dcc87276e6083dd750fb32927cc23e44660b2d77226a9031471c4228ae5",
+        "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_8ECAE760_GBT13869_5_2_2.json",
+      "entityPath": "knowledge/links/K_8ECAE760_GBT13869_5_2_2.json",
+      "entityId": "K_8ECAE760_GBT13869_5_2_2",
+      "decision": "verified",
+      "reviewedContentHash": "5b73ac6d24789c600b3b00f0166bb221e9746bf1ad63fd4e5bb33191d69f677d",
+      "contextHashes": {
+        "hazard": "f66ac5a65aae9b022d44054e46a8d444529f424c7eb135174de35697c952ef8b",
+        "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+      "entityPath": "knowledge/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+      "entityId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+      "decision": "rejected",
+      "reviewedContentHash": "a722293f601f6c63b096dbddc2b9b3253abc4bc711ed172cc1541b349502588b",
+      "contextHashes": {
+        "hazard": "0e5020f1e107795ab8970e7a4ff8670ed83ede3b7bd6cf6ecc334b312e6a7d0f",
+        "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_PHASE6_0BFFBEFB652BB2DF5B13E5D4.json",
+      "entityPath": "knowledge/links/K_PHASE6_0BFFBEFB652BB2DF5B13E5D4.json",
+      "entityId": "K_PHASE6_0BFFBEFB652BB2DF5B13E5D4",
+      "decision": "verified",
+      "reviewedContentHash": "94658374e51da50cd69883e94fe95c21a701ea869fe01c3575b0ed3fe50e377f",
+      "contextHashes": {
+        "hazard": "cc52219e4af33813b9717cc990f9af457c14430644c57c0eeeababe4acdbb4d6",
+        "clause": "08e839f9500525ad6832460ef64eb481670a93aac70d5c96715f6691e38aedc6"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_13ab022fc55780a0f957761d.json",
+      "entityPath": "knowledge/links/K_XLSX_13ab022fc55780a0f957761d.json",
+      "entityId": "K_XLSX_13ab022fc55780a0f957761d",
+      "decision": "verified",
+      "reviewedContentHash": "ee9ab4260c78e5e3a8348a94cfdaa4243ac36320903c6f2f1f975e024c13eee1",
+      "contextHashes": {
+        "hazard": "6d467d03303a134b3ade932396f584ca817638b155a0b4ed9231647ce90350b3",
+        "clause": "6e6717b4e809aff86a74a79210fb6df446992151777ca1abbfca847689409fb1"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json",
+      "entityPath": "knowledge/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json",
+      "entityId": "K_XLSX_64d1cdd95fd3297f2b3805e8",
+      "decision": "verified",
+      "reviewedContentHash": "bcdd48eabfe1f1102d94d71e42dd9ada7304fcdd723ecd128c828fe245cbe958",
+      "contextHashes": {
+        "hazard": "3b6da8eb10939aaee83cd86361de61861d72616b6d68d9fcfe9668e2ef9973de",
+        "clause": "2e43690eec5580cd3e4bd77409b9d8270ecaa250d06f5da2114e244f1ba8f586"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_67c594506fd6ec5e982a908e.json",
+      "entityPath": "knowledge/links/K_XLSX_67c594506fd6ec5e982a908e.json",
+      "entityId": "K_XLSX_67c594506fd6ec5e982a908e",
+      "decision": "verified",
+      "reviewedContentHash": "4059adf7146376d0e493af0298eadda75354d5236bbdb8777de86b50e4e14959",
+      "contextHashes": {
+        "hazard": "06eafa1f518b79576d9f343e3348cb03d862e0f62cea31ec647da337ef0a7d99",
+        "clause": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json",
+      "entityPath": "knowledge/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json",
+      "entityId": "K_XLSX_WEB_H_12158_4_2_3_5_2",
+      "decision": "verified",
+      "reviewedContentHash": "244b7c96b18e3c6f18b047d13f7e4eb6f7100c16459e0d9e5987bc24c235a76f",
+      "contextHashes": {
+        "hazard": "a9c5a0009196c776ffa7f40201d0b744e1a8566615015817666871617ba2f07b",
+        "clause": "232d3ee4ff387eaaba1823260f04754f6d5e5c1c350a8f4391fd3f672d950ec3"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_12158_6_3_1_1.json",
+      "entityPath": "knowledge/links/K_XLSX_WEB_H_12158_6_3_1_1.json",
+      "entityId": "K_XLSX_WEB_H_12158_6_3_1_1",
+      "decision": "verified",
+      "reviewedContentHash": "f6e2da2897855d229e716a07b970aebd39f49b540f54658108d94675304d8efe",
+      "contextHashes": {
+        "hazard": "ab8ea4f9639441e8cf32d53bc64d2cdbe22f629ad26323ad610ca809b5001431",
+        "clause": "6c2e974cffa1a3f1d32179a639fc8510276c14700ee86f7ad701e9e33fbaf0fb"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_12158_6_3_2_2.json",
+      "entityPath": "knowledge/links/K_XLSX_WEB_H_12158_6_3_2_2.json",
+      "entityId": "K_XLSX_WEB_H_12158_6_3_2_2",
+      "decision": "verified",
+      "reviewedContentHash": "df45c9ce8055e17749916df8aa9899a8d68c6a3375e4696cfba0a4a09efe03b0",
+      "contextHashes": {
+        "hazard": "de3264a0c3d20c60b8fd39b0f4982fe303b470471791fe520fc5ee91653355b0",
+        "clause": "6e6717b4e809aff86a74a79210fb6df446992151777ca1abbfca847689409fb1"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_12158_7_6_1.json",
+      "entityPath": "knowledge/links/K_XLSX_WEB_H_12158_7_6_1.json",
+      "entityId": "K_XLSX_WEB_H_12158_7_6_1",
+      "decision": "verified",
+      "reviewedContentHash": "a970803aeb3a089e5e75321544b0f6d49a8657f41d4798308b683382c9175628",
+      "contextHashes": {
+        "hazard": "e5dde5507513a05a6bd0552bfca1bf154bd8bb9f0145e7fd6d374209d83d62b1",
+        "clause": "54b3be1d1eb80b2186603a6e2bbede78c35d75d0ae15cf9e5079fc9b4e7bdf39"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_12158_8_8_5_3.json",
+      "entityPath": "knowledge/links/K_XLSX_WEB_H_12158_8_8_5_3.json",
+      "entityId": "K_XLSX_WEB_H_12158_8_8_5_3",
+      "decision": "verified",
+      "reviewedContentHash": "7bc8aec405040c6a649bd9552be269430b0a97966ac40ce87fadf86602f8fccb",
+      "contextHashes": {
+        "hazard": "a7dde4064191bcaf0871f9230e36ff6dbb47a83f8ce91bb2a434307cf1d80284",
+        "clause": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_a052d29a58687f308bef322a.json",
+      "entityPath": "knowledge/links/K_XLSX_a052d29a58687f308bef322a.json",
+      "entityId": "K_XLSX_a052d29a58687f308bef322a",
+      "decision": "verified",
+      "reviewedContentHash": "d6298905d9abd3b77846cd3fbf25eda2b949a64d54b064e3186d6139aee092f7",
+      "contextHashes": {
+        "hazard": "ad90251a51f0e904d55e5c53b4a26b9ffa1c23c97371fe6916c2a63f3a0bf598",
+        "clause": "232d3ee4ff387eaaba1823260f04754f6d5e5c1c350a8f4391fd3f672d950ec3"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_a5bcf36a6d6084de67d76489.json",
+      "entityPath": "knowledge/links/K_XLSX_a5bcf36a6d6084de67d76489.json",
+      "entityId": "K_XLSX_a5bcf36a6d6084de67d76489",
+      "decision": "verified",
+      "reviewedContentHash": "a324fa41b83959cd19b3525ae30f99412bb11ef8bde6538cb2e704f4914688fe",
+      "contextHashes": {
+        "hazard": "f68a7c2ea808d881a836e1d3399d7e3517873c970f43c9d7a0a505c4b5ec2013",
+        "clause": "2e43690eec5580cd3e4bd77409b9d8270ecaa250d06f5da2114e244f1ba8f586"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_e507c7fc564f94625c2af60c.json",
+      "entityPath": "knowledge/links/K_XLSX_e507c7fc564f94625c2af60c.json",
+      "entityId": "K_XLSX_e507c7fc564f94625c2af60c",
+      "decision": "verified",
+      "reviewedContentHash": "8f2d4d98da93c27888ddc7bda54bc58afa6e78d90c2321f5c9a48b5517932104",
+      "contextHashes": {
+        "hazard": "8e43bc206971fc440a5d5d1c0d14b7b8a0b4163621599468178939d15a480c44",
+        "clause": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b"
+      },
+      "bindingVerified": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_be5a0deab9619bd1579c758f.json",
+      "entityPath": "knowledge/links/K_be5a0deab9619bd1579c758f.json",
+      "entityId": "K_be5a0deab9619bd1579c758f",
+      "decision": "rejected",
+      "reviewedContentHash": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942",
+      "contextHashes": {
+        "hazard": "1c2f7dcc87276e6083dd750fb32927cc23e44660b2d77226a9031471c4228ae5",
+        "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+      },
+      "bindingVerified": true
+    }
+  ],
+  "mobileMerge": {
+    "result": "APPROVE_same_obligation_bounded_merge",
+    "canonicalHazardId": "H_8ECAE760F5A5413D8013602429",
+    "canonicalLinkId": "K_8ECAE760_GBT13869_5_2_2",
+    "supersededHazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+    "supersededLinkId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+    "finding": "移动插排电源线选型是移动用电产品同一技术义务子例；原canonical已经包括选型和移动防损。此次保留较早稳定ID并收窄适用条件，不并入可燃物布置义务，不确认SC118现场。",
+    "scopeConditions": [
+      "移动使用的用电产品电源线",
+      "额定电压AC≤1000V、DC≤1500V",
+      "完整铜芯橡皮套软电缆或护套软线任选",
+      "移动时防止拉断或损坏",
+      "不覆盖固定配线，不将绞线结构本身判不合格",
+      "推荐性标准安全技术检查；强制适用触发另核，不自动行政违法",
+      "2017版截至本核验日现行；2026版不得在2027-02-01前提前替代"
+    ],
+    "objects": [
+      {
+        "path": "knowledge/hazards/H_8ECAE760F5A5413D8013602429.json",
+        "previousFileSha256": "7241a581ac5ad4da5beb043b1a98aaeabbd4ab74721815f02da5fc922e7a72e4",
+        "currentFileSha256": "731070a1bfb727a3e5ffbfc6cff928dc279f04fff2cc0bb057f88b234dee207e",
+        "previousContentHash": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
+        "currentContentHash": "f66ac5a65aae9b022d44054e46a8d444529f424c7eb135174de35697c952ef8b",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_8ECAE760F5A5413D8013602429.json",
+        "previousFileSha256": "59f26c38d8c2a87c89b6776f38126f758b62fc8036c68425edf957a9003d671e",
+        "currentFileSha256": "430f00a2b4cc25911ef91cd397829ca477a9fcaa109120da822d711d522385bf",
+        "previousContentHash": "b0417bf2de96b1b19298e1eb33bd7d9bc098d2022fd87a0028707608e7bd80fa",
+        "currentContentHash": "94a32f7ace2b4d74ff2329be40d9c282a88d73ccadfeba5eb513ce9605b30b24",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+        "previousFileSha256": "b6957678168e7aa676ac2ba25797d00f72773e0a5bf9801c4edcf831e3244b95",
+        "currentFileSha256": "a0d8c86bed295cdbbe2c80504ede185d5f61c40bc0d228f78eee94b5160459e5",
+        "previousContentHash": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+        "currentContentHash": "0e5020f1e107795ab8970e7a4ff8670ed83ede3b7bd6cf6ecc334b312e6a7d0f",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+        "previousFileSha256": "68ad624c95162b50ba08c9d5552349e225277502eaf4ccc6ce404b4a3812dfbf",
+        "currentFileSha256": "2c70a0f847f2308b5d73c07ee5029c2eb39d4239688dfd419074de88a32974c0",
+        "previousContentHash": "d43929306d99b4932499e0d5e220269b0b08b23e5dc191ed19f39f6b777d4234",
+        "currentContentHash": "af71c07d64b47f19afcca61f38980e859ca3ec38c2e9cad90046562e8d96b84d",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/links/K_8ECAE760_GBT13869_5_2_2.json",
+        "previousFileSha256": "99e805a5cc8ce49c8a935a958abfb920a5541aff7d82ab8404fecad4ab46f469",
+        "currentFileSha256": "b3482c3dddbe8dedc0ae297c3497d22a9f6fb0ae0e48b4fd683943e1502107f8",
+        "previousContentHash": "c204501d4063a42b52dd6760dd319344a73cfd527355c3d1e60ba0b07b09c2a6",
+        "currentContentHash": "5b73ac6d24789c600b3b00f0166bb221e9746bf1ad63fd4e5bb33191d69f677d",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_8ECAE760_GBT13869_5_2_2.json",
+        "previousFileSha256": "67a5f984e67707990abfd8ae9e82dc9ba42ab27457c2043eb0c695b1cf3fbea8",
+        "currentFileSha256": "840db6e79f7858039777b45f0d6cc2d75a9521b2dde4781dd6c6ef6da6a2bb30",
+        "previousContentHash": "438139831b715ebc519763fc3421e62b4317ee95df15c48e6912acf6d4caa118",
+        "currentContentHash": "ca6fcab2ef3e73e799e78d00d211703a8264ac5e1b44f7c4550959f5fc0b808f",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+        "previousFileSha256": "528de60ca5f1b24b844ac03ac18f20209291eb118dc3bfd155e08ced6b6e0337",
+        "currentFileSha256": "04f2b0986bbbb0102b6bb471f5af6c2aeb05b222e7fafb082c2eb823eaab1160",
+        "previousContentHash": "3314e6b71a0d3400355f130667c8680d07b4f172555cef79dc75b5217301c3d3",
+        "currentContentHash": "a722293f601f6c63b096dbddc2b9b3253abc4bc711ed172cc1541b349502588b",
+        "exactHistoryVerified": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+        "previousFileSha256": "76b0bbd4df6a02be2e79cef151d45c8f65c9a63b863dc216e91b42cb5f529463",
+        "currentFileSha256": "ccc71a32936e890f767311111a5bc589863987911f4af447f2057fec81355352",
+        "previousContentHash": "07a33ab0f63493e8c236a02585bf3ccad251cc2b037aa8adb03b2eeb0f40f43a",
+        "currentContentHash": "3c431cfc85d67e9087f0ce6b64fb57cfdee22dfc7d58bba37d51ab6e877a3219",
+        "exactHistoryVerified": true
+      }
+    ],
+    "sourceBindings": {
+      "knowledge/clauses/C_GBT13869_5_2_2_mobile.json": "dc71b20f191e61e5b71ad7dde4a2b774a2845bad8fe32b4879ef3db7dc7d12ad",
+      "knowledge/reviews/clauses/C_GBT13869_5_2_2_mobile.json": "856f8229a77eb9afe18eab81de726db35d04dbc6503b36610d1078e6f23f8939",
+      "knowledge/law-versions/LV_STD_GBT13869_2017.json": "4553f7d72eb50633508f5097341fd656fcdf6bb6a6c93acdce205b74dccf0cf6",
+      "knowledge/reviews/law-versions/LV_STD_GBT13869_2017.json": "af216cda3668d7cbbf3317c18564b1c2a451dbbd97022b14766fafe4ee6e6f7e",
+      "knowledge/law-versions/LV_STD_GBT13869_2026.json": "3a32dcbad827d26a7935ea2dc48fe738381d4b75f0d7dae8c34a3eff360bc4cb",
+      "knowledge/reviews/law-versions/LV_STD_GBT13869_2026.json": "c18347a74336fba9eefdb7c20b3b8a9c77aead5841eb47af83cfc6821eba7ecc",
+      "knowledge/laws/LF_STD_GBT13869.json": "effebd01e3d0cce004e48db3555c778d13bb0b40eb6ef756a214a988a29a9011",
+      "knowledge/reviews/laws/LF_STD_GBT13869.json": "acf37a0c03d27d6b75591a974ab1450b1b5ab6aa5d536b9e7e83e3eef5603a7f",
+      "knowledge/evidence/E_GBT13869_SAMR_ORIGINAL_20260926.json": "e237a7e011078c7d382aa0e6acc401dcab73d1d8222a4a4ac4c04bce98a98e17",
+      "knowledge/evidence/E_G26_2026.json": "92ae7e0a0b878ed2241b15760b7d0467764e0c11c3038c83cf756f982f6c7b08",
+      "knowledge/evidence/E_RECOVERY_GBT13869_2017_20261004.json": "d350a336e5dcfcb1edc8fc0ff182843311112cfbc7e1fdcdaed32ed0e47d351d"
+    },
+    "sourceBindingScope": "Exact current C, both shared LV versions, LF, their reviews, and current cited evidence prevent reuse after dependency changes. Secondary EH_02f… and disavowed E_PRIV are preserved in old history only and are not current identity proof. The independently viewed 2017 original cover and both SAMR publisher records support the corrected shared family identity.",
+    "historicalIndependentReviewsUnchanged": {
+      "docs/commerce-independent-review-20261002.json": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d",
+      "docs/commerce-remaining-gaps-independent-review-20261002.json": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b"
+    },
+    "carryForwardBoundary": "A new narrow carry-forward may consume this exact approval and hashes. Do not re-sign or alter the two historical independent receipts or infer approval for unrelated commerce branches.",
+    "familyIdentityReview": {
+      "result": "APPROVE_shared_family_version_qualified_publishers",
+      "lawId": "LF_STD_GBT13869",
+      "identityKey": "GB/T 13869|cn|推荐性国家标准",
+      "versionSpecificPublishers": {
+        "2017": "中华人民共和国国家质量监督检验检疫总局、中国国家标准化管理委员会",
+        "2026": "国家市场监督管理总局、国家标准化管理委员会"
+      },
+      "objects": [
+        {
+          "path": "knowledge/laws/LF_STD_GBT13869.json",
+          "previousFileSha256": "34574681436ae660b5ecd66a85d7e7f95f36560b5c39a58e1515b3902ae4e60c",
+          "currentFileSha256": "effebd01e3d0cce004e48db3555c778d13bb0b40eb6ef756a214a988a29a9011",
+          "previousContentHash": "48839f791f5e04143e40804680d71d35da1facc4411d0ed6596a99d2e5dc6516",
+          "currentContentHash": "f9bdf413798591b71c70f0a377d79a206ce824f632e4ee28d985db151e478ef4",
+          "exactPreviousObjectPreserved": true
+        },
+        {
+          "path": "knowledge/reviews/laws/LF_STD_GBT13869.json",
+          "previousFileSha256": "9ca867d36c8fa0e55dbec78d1820b35a3e5f4efe9eca179db37abbf6cb4f0654",
+          "currentFileSha256": "acf37a0c03d27d6b75591a974ab1450b1b5ab6aa5d536b9e7e83e3eef5603a7f",
+          "previousContentHash": "3b26eb671a08b9fc38e04a3f99db78901968614c828687334bb81d55479b27cd",
+          "currentContentHash": "0f7745b94818e9543f4e73d544807c356a710a1015b1f37afd2b6376bc0ae889",
+          "exactPreviousObjectPreserved": true
+        }
+      ],
+      "preservedVersionIds": [
+        "LV_STD_GBT13869_2017",
+        "LV_STD_GBT13869_2026"
+      ],
+      "asOfGateResult": {
+        "2017": {
+          "structurallyValid": true,
+          "supportsCurrent": true
+        },
+        "2026": {
+          "structurallyValid": true,
+          "supportsCurrent": false
+        }
+      },
+      "versionBytesUnchangedFromBase": true,
+      "codeImpact": "No new entity IDs, schema, parser or frontend change. Issuer is a version-qualified family string consumed by search; stable LV foreign keys and version dates/status remain unchanged."
+    }
+  },
+  "validation": {
+    "allNodeTests": {
+      "status": "passed",
+      "passed": 749,
+      "failed": 0,
+      "command": "node --test tests/*.test.mjs"
+    },
+    "ordinaryTablePython": {
+      "status": "passed",
+      "passed": 6,
+      "failed": 0,
+      "command": "python -m unittest tools.pipeline.tests.test_ordinary_clause_tables"
+    },
+    "normativeContentPython": {
+      "status": "passed",
+      "passed": 14,
+      "failed": 0,
+      "command": "python -m unittest discover -s tools/pipeline/tests -p test_normative_content.py"
+    },
+    "allLinkReviewBindings": {
+      "status": "passed",
+      "reviews": 2020,
+      "staleLink": 0,
+      "staleHazardContext": 0,
+      "staleClauseContext": 0
+    },
+    "changedReviewBindings": {
+      "status": "passed",
+      "count": 39
+    },
+    "independentBuild": {
+      "status": "passed",
+      "releaseHash": "bce71ed1bbf38436c09263d9cd75f2c896d73bc825ef7a8c65d84eb16645219c",
+      "counts": {
+        "hazards": 1676,
+        "laws": 77,
+        "clauses": 1364,
+        "links": 1822
+      },
+      "strictBlockers": 0
+    },
+    "bundleVerifier": {
+      "status": "content_checks_passed_required_location_check_failed",
+      "soleError": "发布包必须位于 source/releases 下",
+      "explanation": "Read-only candidate review generated the test bundle outside the repository. No content, hash, table or quote errors were reported; production layout verification remains an integration requirement."
+    },
+    "gui": {
+      "status": "NOT_PASSED",
+      "independentAttempt": "Playwright Chromium executable unavailable; zero UI checks executed.",
+      "authorReportedOtherLimits": [
+        "direct Chromium AF_UNIX EPERM",
+        "cloud localhost preview ERR_BLOCKED_BY_CLIENT"
+      ],
+      "requirement": "Run tools/browser/audit_ordinary_tables.py against the exact integrated bundle before claiming browser acceptance."
+    },
+    "fullPythonSuite": {
+      "status": "not_rerun_by_independent_reviewer",
+      "authorReportedTests": 752,
+      "authorReportedFailures": 38,
+      "limitation": "Historic cohort/inventory and integration dependencies are not silently rewritten or counted as a pass."
+    },
+    "commerceValidator": {
+      "status": "expected_carry_forward_dependency_pending",
+      "errors": 4,
+      "limitation": "The old atomic and independent-review assertions still require a new exact, approved merge carry-forward. Historical receipts remain unchanged."
+    },
+    "familyIdentityFollowup": {
+      "status": "passed",
+      "sharedVersionCount": 2,
+      "currentVersion2017": true,
+      "upcomingVersion2026NotCurrent": true,
+      "oldLawAndReviewObjectsAndHashesPreserved": true,
+      "currentIdentityEvidenceNoSecondaryOrDisavowedRefs": true
+    }
+  },
+  "engineeringFinding": "Rich-table structure and plain-text equality are checked at Gate, builder, bundle verifier and DataStore before cache; ordinary hazard/law displays use escaped validated rendering; full quote remains copy source. Span bounds, holes, unknown fields, malformed bodies and injected markup are rejected or escaped. CSS constrains horizontal scroll region and exposes keyboard focus; actual viewport/keyboard behavior has not passed GUI acceptance.",
+  "integrationRequirements": [
+    "Preserve this receipt bytes and bind any new carry-forward to exact approved current/previous/target hashes and sourceBindings.",
+    "Reconcile manifest/cohort dependencies using new review provenance, without rewriting historical approvals.",
+    "Run full integrated gate, production-location bundle verification, semantic regression and real-browser UI checks before claiming final publication acceptance."
+  ],
+  "fieldFactsEstablished": false,
+  "administrativeViolationEstablished": false,
+  "remediationEstablished": false,
+  "priorStageApproval": {
+    "sha256": "ed9ec23e977c7f4cfc546e077b6d54ec4dc00af738067cd7f0b5e9b7a12f028b",
+    "status": "superseded_stage_history_not_final_publication_approval",
+    "reason": "The earlier review bound inherited LF bytes but did not fully adjudicate its version-specific publisher and current authoritative identity evidence. This v3 review corrects that omission and replaces its approval."
+  }
+}

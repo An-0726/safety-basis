@@ -3,16 +3,62 @@
   "entityId": "K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "7207eca6f166567f2d6d66885b6e8d4028c0ed39da884f799aec75b0997ff4f7",
-  "contextHashes": {
-    "hazard": "e2bdf3e797feffd25d5babc049feeaf21e15dc89e8d770688701f3947a1f9691",
-    "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "bb1e7f10edb0315acb0398a3be1f2e1f765ccc3107d031d3d34624023fe33b18",
+  "checkedAt": "2026-10-04T05:42:30Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "采纳独立非作者审阅指出的字段不一致，再次目视核GB12801-2025官方原PDF第10页第5.1.2条为“可燃性气体或粉尘”。将title、description及其同文搜索关键词中的“和”同步为“或”，保留既有企业生产过程范围；不能误要求两类危险同时存在。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+    "E_CONTAIN_GB12801_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。 本次完整嵌入上一冻结作者审核；更早完整审核继续保留在嵌套previousReview中。独立非作者复审仍待最终哈希确认。",
+  "contextHashes": {
+    "hazard": "4d9b5ca99ac26b53e992236ca2dcd264056cff8e953ef587b85d38483e86dfc0",
+    "clause": "2292da8089d7b9c9445318ea05a86b4259a84ae8a60fb0a2a793fc4057711a4d"
+  },
+  "reviewedFields": [
+    "clauseId",
+    "applicability"
+  ],
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "bb1e7f10edb0315acb0398a3be1f2e1f765ccc3107d031d3d34624023fe33b18",
+    "checkedAt": "2026-10-04T05:07:24Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "独立核当前GB12801-2025第5.1.2原文及范围；替代旧notes GB/T12801-2008引用，不使用GB15577第6.1假引文。",
+    "evidenceRefs": [
+      "E_CONTAIN_GB12801_ORIGINAL_20261004"
+    ],
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "contextHashes": {
+      "hazard": "6bd58aad5e6172b23337d710dae1624a348d08518028989a691b5058b5512f76",
+      "clause": "2292da8089d7b9c9445318ea05a86b4259a84ae8a60fb0a2a793fc4057711a4d"
+    },
+    "reviewedFields": [
+      "clauseId",
+      "applicability"
+    ],
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewedContentHash": "7207eca6f166567f2d6d66885b6e8d4028c0ed39da884f799aec75b0997ff4f7",
+      "contextHashes": {
+        "hazard": "e2bdf3e797feffd25d5babc049feeaf21e15dc89e8d770688701f3947a1f9691",
+        "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+      },
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "617e6be054534160d3d7079d27bb30b6d1a9ad45e4e62011e6f2030eb9cec988"
+  },
+  "previousReviewFileSha256": "ff40ad164429014bfd197cc94a0bd17e1c01aedff9791c54df7e46c092c0bc25"
 }

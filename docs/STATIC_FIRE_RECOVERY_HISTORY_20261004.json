@@ -1,0 +1,1109 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-04",
+  "baseCommit": "ffdfee5d79717c9fefe736830174e177cec4703c",
+  "reviewStatus": "author_rebuilt_pending_independent_cross_review",
+  "scope": "GB12158 five repaired rejects, six existing scope repairs, erroneous alias removal, bounded H052, mobile-cord same-obligation merge and SC134 source-code typo.",
+  "previousEntities": {
+    "knowledge/clauses/C_12158_4_2_3_4.json": {
+      "articlePath": "第4.2.3.4条",
+      "id": "C_12158_4_2_3_4",
+      "jurisdictionCode": "CN",
+      "lawVersionId": "LV_STD_A318C93D7F3213B292AD5946",
+      "lifecycle": "active",
+      "quote": "应限制静电非导体材料制品的暴露面积及暴露面的宽度(见表2)。如工艺需要静电非导体材料制品的暴露面积及暴露面宽度超出表2的要求,应具体评价其起电程度,必要时应采取相应措施。评价过程和所采取的措施应形成文件并纳入静电防护管理体系文件。表2爆炸危险场所外露静电非导体最大宽度及表面积环境条件最大宽度/cm最大表面积/cm",
+      "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+    },
+    "knowledge/clauses/C_12158_6_3_2.json": {
+      "articlePath": "第6.3.2条",
+      "id": "C_12158_6_3_2",
+      "jurisdictionCode": "CN",
+      "lawVersionId": "LV_STD_A318C93D7F3213B292AD5946",
+      "lifecycle": "active",
+      "quote": "在爆炸性气体环境外露静电非导体部件的最大宽度及表面积应符合表2的规定。如工艺需要静电非导体材料制品的暴露面积及暴露面宽度超出表2的要求,应具体评价其起电程度,必要时应采取相应措施。评价过程和所采取的措施应形成文件并纳入静电防护管理体系文件。",
+      "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+    },
+    "knowledge/hazards/H_12158_4_2_3_5_2.json": {
+      "id": "H_12158_4_2_3_5_2",
+      "title": "可滑移、分离的分层或套叠结构使用静电非导体材料未评价起电程度并纳入管理体系",
+      "description": "在遇到可滑移、分离的分层或套叠结构时使用静电非导体材料，未评价起电程度，未采取相应防静电措施，或评价过程和措施未形成文件纳入静电防护管理体系文件。（依据 第4.2.3.5条）。",
+      "measures": "尽量避免在滑移、分离结构使用静电非导体；确需使用的，必须评价起电程度，采取有效防静电措施，并将评价与措施形成文件纳入体系。",
+      "conditions": "适用于在生产工艺中遇到可滑移、分离的分层或套叠结构的相关场所与工艺装备。",
+      "category": "安全防护",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "评价过程和所采取的措施未形成文件并纳入静电防护管理体系文件"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "依据 第4.2.3.5条 反转生成（GLM，2026-09-12）。\n\n【2026-09-18 治理收口】与实体 H_12158_4_2_3_4_2 标题与内容实质完全重复，合并至 H_12158_4_2_3_4_2。",
+      "mergedInto": null
+    },
+    "knowledge/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json": {
+      "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+      "clauseId": "C_12158_4_2_2_1",
+      "hazardId": "H_12158_4_2_3_5_2",
+      "id": "K_XLSX_WEB_H_12158_4_2_3_5_2",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_6_3_1_1.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于本隐患所述场所、设备及作业活动。",
+      "description": "非金属材料的液体贮存罐、输送管道用于爆炸危险场所时,所用材料应满足表面电阻率小于1×Ω或体电阻率小于1×10Ω·m,或采取其他静电防护措施。（第6.3.1条）。",
+      "id": "H_12158_6_3_1_1",
+      "keywords": [
+        "非金属材料的液体贮存罐",
+        "输送管道用于爆炸危险场所时",
+        "所用材料的表面电阻率或体电阻率不符合规定"
+      ],
+      "lifecycle": "active",
+      "measures": "非金属材料的液体贮存罐、输送管道用于爆炸危险场所时,所用材料应满足表面电阻率小于1×Ω或体电阻率小于1×10Ω·m,或采取其他静电防护措施。（依据 第6.3.1条 整改。）。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所",
+        "通用场所"
+      ],
+      "title": "非金属材料的液体贮存罐、输送管道用于爆炸危险场所时，所用材料的表面电阻率或体电阻率不符合规定"
+    },
+    "knowledge/links/K_XLSX_WEB_H_12158_6_3_1_1.json": {
+      "applicability": "非金属储罐与管道表面电阻率指标",
+      "clauseId": "C_12158_4_2_2_3",
+      "hazardId": "H_12158_6_3_1_1",
+      "id": "K_XLSX_WEB_H_12158_6_3_1_1",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_6_3_2_2.json": {
+      "id": "H_12158_6_3_2_2",
+      "title": "爆炸危险场所外露静电非导体部件最大宽度及表面积超标未评价并纳入管理体系",
+      "description": "在爆炸性气体环境中，外露静电非导体部件的最大宽度或表面积超出GB 12158表2要求，未具体评价其起电程度，未采取相应防护措施，或未形成文件纳入静电防护管理体系。（依据 第6.3.2条）。",
+      "measures": "控制外露非导体部件尺寸在GB 12158表2限值内；超出要求的必须具体评价起电程度，采取防护措施并形成文件纳入体系。",
+      "conditions": "适用于存在爆炸性气体环境的液体贮存、输送及相关工艺场所。",
+      "category": "安全防护",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "评价过程和所采取的措施未形成文件并纳入静电防护管理体系文件"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "依据 第6.3.2条 反转生成（GLM，2026-09-12）。\n\n【2026-09-18 治理收口】与实体 H_12158_4_2_3_4_2 标题与内容实质完全重复，合并至 H_12158_4_2_3_4_2。",
+      "mergedInto": null
+    },
+    "knowledge/links/K_XLSX_WEB_H_12158_6_3_2_2.json": {
+      "applicability": "非金属储罐与管道表面电阻率指标",
+      "clauseId": "C_12158_4_2_2_3",
+      "hazardId": "H_12158_6_3_2_2",
+      "id": "K_XLSX_WEB_H_12158_6_3_2_2",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_7_6_1.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于本隐患所述场所、设备及作业活动。",
+      "description": "耗散性传送带应符合如下要求之一:a)按照GB/T3684规定的方法测试,传送带两面的表面电阻均小于3×10Ω;b)按照GB/T3836.26—2019中3.21规定的电极布局测量传送带两面的表面电阻,均小于7.5×Ω;c)多层不同材料制成的传送带,两相对外表面之间的电阻(在温度23℃±2℃,相对湿度50%±（第7.6条）。",
+      "id": "H_12158_7_6_1",
+      "keywords": [
+        "耗散性传送带未符合GB",
+        "T3684等相关标准规定的要求"
+      ],
+      "lifecycle": "active",
+      "measures": "耗散性传送带应符合如下要求之一:a)按照GB/T3684规定的方法测试,传送带两面的表面电阻均小于3×10Ω;b)按照GB/T3836.26—2019中3.21规定的电极布局测量传送带两面的表面电阻,均小于7.5×Ω;c)多层不同材料制成的传送带,两相对外表面之间的电阻(在温度23℃±2℃,相对湿度50%±（依据 第7.6条 整改。）。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所",
+        "通用场所"
+      ],
+      "title": "耗散性传送带未符合GB/T3684等相关标准规定的要求"
+    },
+    "knowledge/links/K_XLSX_WEB_H_12158_7_6_1.json": {
+      "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+      "clauseId": "C_12158_4_2_2_1",
+      "hazardId": "H_12158_7_6_1",
+      "id": "K_XLSX_WEB_H_12158_7_6_1",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_8_8_5_3.json": {
+      "id": "H_12158_8_8_5_3",
+      "title": "特定工艺过程防静电操作措施未形成文件纳入静电安全系统文件",
+      "description": "工艺过程采取的防静电措施未形成文件纳入静电安全系统文件。（依据 第8.8.5条）。",
+      "measures": "梳理生产工艺全流程静电风险，将所采取的防静电措施系统形成文件，并纳入单位静电安全管理系统。",
+      "conditions": "适用于涉及易产生静电的特定生产操作与工艺流程。",
+      "category": "安全防护",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "评价过程和所采取的措施未形成文件并纳入静电防护管理体系文件"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "依据 第8.8.5条 反转生成（GLM，2026-09-12）。\n\n【2026-09-18 治理收口】与实体 H_12158_4_2_3_4_2 标题与内容实质完全重复，合并至 H_12158_4_2_3_4_2。",
+      "mergedInto": null
+    },
+    "knowledge/links/K_XLSX_WEB_H_12158_8_8_5_3.json": {
+      "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+      "clauseId": "C_12158_4_2_2_1",
+      "hazardId": "H_12158_8_8_5_3",
+      "id": "K_XLSX_WEB_H_12158_8_8_5_3",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_4_2_3_4_1.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现，未限制静电非导体材料制品的暴露面积及暴露面的宽度，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_12158_4_2_3_4_1",
+      "keywords": [
+        "未限制静电非导体材料制品的暴露面积及暴露面的宽度"
+      ],
+      "lifecycle": "active",
+      "measures": "限制静电非导体材料制品的暴露面积及暴露面的宽度。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "未限制静电非导体材料制品的暴露面积及暴露面的宽度"
+    },
+    "knowledge/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json": {
+      "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "clauseId": "C_12158_4_2_3_4",
+      "hazardId": "H_12158_4_2_3_4_1",
+      "id": "K_XLSX_64d1cdd95fd3297f2b3805e8",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_4_2_3_4_2.json": {
+      "aliases": [
+        "H_12158_4_2_3_5_2",
+        "H_12158_6_3_2_2",
+        "H_12158_8_8_5_3"
+      ],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现：评价过程和所采取的措施未形成文件并纳入静电防护管理体系文件。",
+      "id": "H_12158_4_2_3_4_2",
+      "keywords": [
+        "评价过程和所采取的措施未形成文件并纳入静电防护管理体系文件"
+      ],
+      "lifecycle": "active",
+      "measures": "补充形成完整的静电防护评价文件，将评价过程、评价结论以及已采取的静电防护措施纳入静电防护管理体系文件统一受控管理；核对文件与现场措施的一致性，落实版本、审批、更新和归档要求。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "评价过程和所采取的措施未形成文件并纳入静电防护管理体系文件"
+    },
+    "knowledge/links/K_XLSX_a5bcf36a6d6084de67d76489.json": {
+      "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "clauseId": "C_12158_4_2_3_4",
+      "hazardId": "H_12158_4_2_3_4_2",
+      "id": "K_XLSX_a5bcf36a6d6084de67d76489",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_4_2_3_5_1.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现，在可滑移、分离的分层或套叠结构部位违规使用静电非导体材料，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_12158_4_2_3_5_1",
+      "keywords": [
+        "在可滑移",
+        "分离的分层或套叠结构部位违规使用静电非导体材料"
+      ],
+      "lifecycle": "active",
+      "measures": "在可滑移、分离的分层或套叠结构部位停止使用不必要的静电非导体材料；工艺确需使用时，评价起电程度并采取相应静电控制措施，将评价和措施纳入静电防护管理文件。整改后检查相关线路、电气设备、接地/防静电或保护功能，必要时检测确认并留存记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "在可滑移、分离的分层或套叠结构部位违规使用静电非导体材料"
+    },
+    "knowledge/links/K_XLSX_a052d29a58687f308bef322a.json": {
+      "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "clauseId": "C_12158_4_2_3_5",
+      "hazardId": "H_12158_4_2_3_5_1",
+      "id": "K_XLSX_a052d29a58687f308bef322a",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_6_3_2_1.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现，在爆炸性气体环境外露静电非导体部件的最大宽度及表面积未符合表2的规定，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_12158_6_3_2_1",
+      "keywords": [
+        "在爆炸性气体环境外露静电非导体部件的最大宽度及表面积未符合表2的规定"
+      ],
+      "lifecycle": "active",
+      "measures": "在爆炸性气体环境外露静电非导体部件的最大宽度及表面积符合表2的规定。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "在爆炸性气体环境外露静电非导体部件的最大宽度及表面积未符合表2的规定"
+    },
+    "knowledge/links/K_XLSX_13ab022fc55780a0f957761d.json": {
+      "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "clauseId": "C_12158_6_3_2",
+      "hazardId": "H_12158_6_3_2_1",
+      "id": "K_XLSX_13ab022fc55780a0f957761d",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_8_8_5_1.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现，未采用静电导体制作管道或部件，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_12158_8_8_5_1",
+      "keywords": [
+        "未采用静电导体制作管道或部件"
+      ],
+      "lifecycle": "active",
+      "measures": "采用静电导体制作管道或部件。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "未采用静电导体制作管道或部件"
+    },
+    "knowledge/links/K_XLSX_67c594506fd6ec5e982a908e.json": {
+      "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "clauseId": "C_12158_8_8_5",
+      "hazardId": "H_12158_8_8_5_1",
+      "id": "K_XLSX_67c594506fd6ec5e982a908e",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_8_8_5_2.json": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现，采用静电非导体制作管道或部件时，未具体评价其起电程度，必要时未采取相应措施，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_12158_8_8_5_2",
+      "keywords": [
+        "采用静电非导体制作管道或部件时",
+        "未具体评价其起电程度",
+        "必要时未采取相应措施"
+      ],
+      "lifecycle": "active",
+      "measures": "采用静电非导体制作管道或部件时，具体评价其起电程度，必要时采取相应措施。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "采用静电非导体制作管道或部件时，未具体评价其起电程度，必要时未采取相应措施"
+    },
+    "knowledge/links/K_XLSX_e507c7fc564f94625c2af60c.json": {
+      "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "clauseId": "C_12158_8_8_5",
+      "hazardId": "H_12158_8_8_5_2",
+      "id": "K_XLSX_e507c7fc564f94625c2af60c",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+      "role": "direct"
+    },
+    "knowledge/hazards/H_12158_10_2_1.json": {
+      "id": "H_12158_10_2_1",
+      "title": "如需使用手套,手套的防静电性能未符合GB/T22845的规定",
+      "description": "如需使用手套,手套的防静电性能应符合GB/T22845的规定。（第10.2条）。",
+      "measures": "如需使用手套,手套的防静电性能应符合GB/T22845的规定。（依据 第10.2条 整改。）。",
+      "conditions": "",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [
+        "H_12158_10_1_2"
+      ],
+      "keywords": [
+        "如需使用手套,手套的防静电性能未符合GB/T22845的规定"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "依据 第10.2条 反转生成（GLM，2026-09-12）。\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+      "mergedInto": null
+    },
+    "knowledge/hazards/H052.json": {
+      "aliases": [
+        "货物距灯具不足0.5m",
+        "仓库灯具下方堆物"
+      ],
+      "category": "消防安全",
+      "conditions": "仅适用于XF1131—2014第1章规定的既有仓储场所库房内储存管理；不适用于炸药仓库、花炮仓库。具体距离分支逐项核明。",
+      "description": "现场检查发现，仓储物品与照明灯之间安全距离不足，现场参数、设置或状态未达到直接依据规定的要求。",
+      "id": "H052",
+      "keywords": [
+        "仓储",
+        "照明灯",
+        "堆垛",
+        "间距",
+        "0.5m"
+      ],
+      "lifecycle": "active",
+      "measures": "调整货物堆放位置，按适用仓储消防要求保持物品与照明灯具的安全距离，并在库区通过划线、限高等方式固化堆放边界。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "仓储场所",
+        "仓库"
+      ],
+      "title": "仓储物品与照明灯之间安全距离不足"
+    },
+    "knowledge/links/K_7EEF661BF4C8008AC0C070.json": {
+      "id": "K_7EEF661BF4C8008AC0C070",
+      "entityType": "link",
+      "hazardId": "H052",
+      "clauseId": "C_XF1131_6_8",
+      "role": "direct",
+      "applicability": "仅适用于XF1131—2014第1章规定的既有仓储场所库房内储存管理；不适用于炸药仓库、花炮仓库。具体距离分支逐项核明。仅消费第6.8条b项：物品与照明灯之间不小于0.5m。",
+      "jurisdictionCode": "CN",
+      "reason": "XF1131—2014第6.8条b项直接规定物品与照明灯之间不小于0.5m；适用范围及责任对象按第1章和相关管理职责核明。",
+      "createdAt": "2026-09-10",
+      "lifecycle": "proposed",
+      "status": "needs_review"
+    },
+    "knowledge/hazards/H_8ECAE760F5A5413D8013602429.json": {
+      "id": "H_8ECAE760F5A5413D8013602429",
+      "title": "移动使用电气设备未采用完整铜芯橡皮套软电缆作电源线",
+      "description": "移动使用的电子产品,未采用完整的铜芯橡皮套软电缆或护套软线作为电源线,移动时,未防止电源线拉断或损坏",
+      "measures": "移动使用的电气设备采用完整的铜芯橡皮套软电缆或护套软线作电源线。",
+      "conditions": "适用于电气设备的相关安全管理。",
+      "category": "电气安全",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "移动使用电气设备未采用完整铜芯橡皮套软电缆作电源线"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；2026-09-11 同步将整改措施改写为可执行动作。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.2.2条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+      "mergedInto": null
+    },
+    "knowledge/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json": {
+      "id": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "title": "移动插排电源线未按用电安全技术要求选型",
+      "description": "移动使用的插排等用电产品，其电源线未采用完整的铜芯橡皮套软电缆或护套软线，例如经核实使用单层绝缘绞合导线作电源线。 本项属于推荐性用电安全技术要求检查。",
+      "measures": "停止使用不符合要求的电源线，改用规格匹配的完整铜芯橡皮套软电缆或护套软线，并防止移动时拉断或损坏。",
+      "conditions": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+      "category": "电气安全",
+      "places": [
+        "商铺",
+        "宿舍",
+        "经营场所"
+      ],
+      "aliases": [
+        "移动用电产品的电源线采用单层绝缘绞线或双股绞合单芯导线"
+      ],
+      "keywords": [
+        "移动用电产品",
+        "移动插排",
+        "电源线",
+        "护套软线",
+        "铜芯橡皮套软电缆"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "2026-10-02从商贸插排复合来源拆出的独立电源线选型原子定义；新ID不覆盖原可燃物布置H。GB/T13869为推荐性技术导则，本项用于安全技术检查，不单独声称直接法定处罚依据；原SC118只映射文本已核，原文件和现场未重新证实，个案成立仍另核。",
+      "mergedInto": null,
+      "proposalStatus": "admitted_narrowed_definition"
+    },
+    "knowledge/links/K_8ECAE760_GBT13869_5_2_2.json": {
+      "id": "K_8ECAE760_GBT13869_5_2_2",
+      "entityType": "link",
+      "hazardId": "H_8ECAE760F5A5413D8013602429",
+      "clauseId": "C_GBT13869_5_2_2_mobile",
+      "role": "direct",
+      "applicability": "全国通用；适用于移动式电气设备、手持电动工具及临时移动用电电源线管理。",
+      "jurisdictionCode": "CN",
+      "reason": "隐患对象为移动使用电气设备未采用完整铜芯橡皮套软电缆；GB/T 13869-2017 第5.2.2条对移动使用的用电产品电源线选型作出直接规定，为直接依据。",
+      "createdAt": "2026-09-17",
+      "lifecycle": "active"
+    },
+    "knowledge/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json": {
+      "id": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+      "hazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+      "clauseId": "C_GBT13869_5_2_2_mobile",
+      "role": "direct",
+      "applicability": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+      "jurisdictionCode": "CN",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。"
+    },
+    "knowledge/laws/LF_STD_GBT13869.json": {
+      "aliases": [
+        "GB/T 13869-2017",
+        "GB/T13869"
+      ],
+      "canonicalName": "用电安全导则",
+      "documentKind": "推荐性国家标准",
+      "id": "LF_STD_GBT13869",
+      "identityKey": "GB/T 13869-2017|国家市场监督管理总局|cn|推荐性国家标准",
+      "issuer": "国家市场监督管理总局、国家标准化管理委员会",
+      "jurisdictionCode": "CN",
+      "lifecycle": "active"
+    },
+    "knowledge/reviews/laws/LF_STD_GBT13869.json": {
+      "entityType": "law",
+      "entityId": "LF_STD_GBT13869",
+      "reviewType": "identity",
+      "decision": "verified",
+      "reviewedContentHash": "48839f791f5e04143e40804680d71d35da1facc4411d0ed6596a99d2e5dc6516",
+      "checkedAt": "2026-09-10T13:20:00+08:00",
+      "reviewer": "agent2-backfill",
+      "evidenceRefs": [
+        "EH_02f843463c22911e41bea90f961ec5db07a71dd2862a464b6b6f6eee9308dda3",
+        "E_PRIV_GBT13869_2017"
+      ],
+      "locator": "用电安全导则",
+      "reason": "身份核验：用电安全导则（推荐性国家标准，国家市场监督管理总局、国家标准化管理委员会）名称、发布机关、标准类别与官方题录一致。"
+    }
+  },
+  "changedKnowledgePaths": [
+    "knowledge/clauses/C_12158_4_2_3_4.json",
+    "knowledge/clauses/C_12158_6_3_2.json",
+    "knowledge/evidence/E_RECOVERY_GB12158_2024_20261004.json",
+    "knowledge/evidence/E_RECOVERY_GB12158_STATUS_20261004.json",
+    "knowledge/evidence/E_RECOVERY_GBT13869_2017_20261004.json",
+    "knowledge/evidence/E_RECOVERY_XF1131_2014_20261004.json",
+    "knowledge/hazards/H052.json",
+    "knowledge/hazards/H_12158_10_2_1.json",
+    "knowledge/hazards/H_12158_4_2_3_4_1.json",
+    "knowledge/hazards/H_12158_4_2_3_4_2.json",
+    "knowledge/hazards/H_12158_4_2_3_5_1.json",
+    "knowledge/hazards/H_12158_4_2_3_5_2.json",
+    "knowledge/hazards/H_12158_6_3_1_1.json",
+    "knowledge/hazards/H_12158_6_3_2_1.json",
+    "knowledge/hazards/H_12158_6_3_2_2.json",
+    "knowledge/hazards/H_12158_7_6_1.json",
+    "knowledge/hazards/H_12158_8_8_5_1.json",
+    "knowledge/hazards/H_12158_8_8_5_2.json",
+    "knowledge/hazards/H_12158_8_8_5_3.json",
+    "knowledge/hazards/H_8ECAE760F5A5413D8013602429.json",
+    "knowledge/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+    "knowledge/links/K_7EEF661BF4C8008AC0C070.json",
+    "knowledge/links/K_8ECAE760_GBT13869_5_2_2.json",
+    "knowledge/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+    "knowledge/links/K_XLSX_13ab022fc55780a0f957761d.json",
+    "knowledge/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json",
+    "knowledge/links/K_XLSX_67c594506fd6ec5e982a908e.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_6_3_1_1.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_6_3_2_2.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_7_6_1.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_8_8_5_3.json",
+    "knowledge/links/K_XLSX_a052d29a58687f308bef322a.json",
+    "knowledge/links/K_XLSX_a5bcf36a6d6084de67d76489.json",
+    "knowledge/links/K_XLSX_e507c7fc564f94625c2af60c.json",
+    "knowledge/reviews/clauses/C_12158_4_2_3_4.json",
+    "knowledge/reviews/clauses/C_12158_4_2_3_5.json",
+    "knowledge/reviews/clauses/C_12158_6_3_1.json",
+    "knowledge/reviews/clauses/C_12158_6_3_2.json",
+    "knowledge/reviews/clauses/C_12158_7_6.json",
+    "knowledge/reviews/clauses/C_12158_8_8_5.json",
+    "knowledge/reviews/hazards/H052.json",
+    "knowledge/reviews/hazards/H_12158_10_2_1.json",
+    "knowledge/reviews/hazards/H_12158_4_2_3_4_1.json",
+    "knowledge/reviews/hazards/H_12158_4_2_3_4_2.json",
+    "knowledge/reviews/hazards/H_12158_4_2_3_5_1.json",
+    "knowledge/reviews/hazards/H_12158_4_2_3_5_2.json",
+    "knowledge/reviews/hazards/H_12158_6_3_1_1.json",
+    "knowledge/reviews/hazards/H_12158_6_3_2_1.json",
+    "knowledge/reviews/hazards/H_12158_6_3_2_2.json",
+    "knowledge/reviews/hazards/H_12158_7_6_1.json",
+    "knowledge/reviews/hazards/H_12158_8_8_5_1.json",
+    "knowledge/reviews/hazards/H_12158_8_8_5_2.json",
+    "knowledge/reviews/hazards/H_12158_8_8_5_3.json",
+    "knowledge/reviews/hazards/H_8ECAE760F5A5413D8013602429.json",
+    "knowledge/reviews/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+    "knowledge/reviews/law-versions/LV_STD_A318C93D7F3213B292AD5946.json",
+    "knowledge/reviews/links/K_7EEF661BF4C8008AC0C070.json",
+    "knowledge/reviews/links/K_8ECAE760_GBT13869_5_2_2.json",
+    "knowledge/reviews/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+    "knowledge/reviews/links/K_PHASE6_0BFFBEFB652BB2DF5B13E5D4.json",
+    "knowledge/reviews/links/K_XLSX_13ab022fc55780a0f957761d.json",
+    "knowledge/reviews/links/K_XLSX_64d1cdd95fd3297f2b3805e8.json",
+    "knowledge/reviews/links/K_XLSX_67c594506fd6ec5e982a908e.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_4_2_3_5_2.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_6_3_1_1.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_6_3_2_2.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_7_6_1.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_8_8_5_3.json",
+    "knowledge/reviews/links/K_XLSX_a052d29a58687f308bef322a.json",
+    "knowledge/reviews/links/K_XLSX_a5bcf36a6d6084de67d76489.json",
+    "knowledge/reviews/links/K_XLSX_e507c7fc564f94625c2af60c.json",
+    "knowledge/reviews/links/K_be5a0deab9619bd1579c758f.json"
+  ],
+  "table2Rows": 9,
+  "emergencyLightStatus": "Not admitted: original GB51309 source and current-use applicability still under retrieval; government inspection-table excerpts are corroboration only.",
+  "mobileMerge": {
+    "canonicalHazardId": "H_8ECAE760F5A5413D8013602429",
+    "canonicalLinkId": "K_8ECAE760_GBT13869_5_2_2",
+    "supersededHazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+    "supersededLinkId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+    "objects": [
+      {
+        "path": "knowledge/hazards/H_8ECAE760F5A5413D8013602429.json",
+        "beforeSha256": "7241a581ac5ad4da5beb043b1a98aaeabbd4ab74721815f02da5fc922e7a72e4",
+        "beforeObject": {
+          "id": "H_8ECAE760F5A5413D8013602429",
+          "title": "移动使用电气设备未采用完整铜芯橡皮套软电缆作电源线",
+          "description": "移动使用的电子产品,未采用完整的铜芯橡皮套软电缆或护套软线作为电源线,移动时,未防止电源线拉断或损坏",
+          "measures": "移动使用的电气设备采用完整的铜芯橡皮套软电缆或护套软线作电源线。",
+          "conditions": "适用于电气设备的相关安全管理。",
+          "category": "电气安全",
+          "places": [
+            "通用场所"
+          ],
+          "aliases": [],
+          "keywords": [
+            "移动使用电气设备未采用完整铜芯橡皮套软电缆作电源线"
+          ],
+          "lifecycle": "active",
+          "mode": "direct",
+          "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；2026-09-11 同步将整改措施改写为可执行动作。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.2.2条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+          "mergedInto": null
+        },
+        "afterSha256": "731070a1bfb727a3e5ffbfc6cff928dc279f04fff2cc0bb057f88b234dee207e",
+        "afterObject": {
+          "id": "H_8ECAE760F5A5413D8013602429",
+          "title": "移动用电产品电源线选型或移动防护不符合技术要求",
+          "description": "移动使用的用电产品，其电源线未采用完整的铜芯橡皮套软电缆或护套软线，或者移动时未防止电源线拉断、损坏。",
+          "measures": "核实用电产品移动使用属性、线缆导体与护套、完整性和移动时防护；采用规格匹配的完整铜芯橡皮套软电缆或护套软线，防止移动时拉断或损坏电源线。",
+          "conditions": "仅适用于GB/T 13869—2017第1章范围内额定电压交流1000V及以下、直流1500V及以下移动使用的用电产品电源线。完整铜芯橡皮套软电缆或护套软线均为允许选项，不将绞线结构本身等同不合格，不覆盖固定配线。GB/T 13869—2017为推荐性国家标准，本项属于安全技术检查；是否因法律、设计、合同或单位制度必须执行须另行判定，不单凭本条认定行政违法。",
+          "category": "电气安全",
+          "places": [
+            "商铺",
+            "宿舍",
+            "经营场所",
+            "通用场所"
+          ],
+          "aliases": [
+            "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+            "移动插排电源线未按用电安全技术要求选型",
+            "移动用电产品的电源线采用单层绝缘绞线或双股绞合单芯导线"
+          ],
+          "keywords": [
+            "护套软线",
+            "拉断",
+            "损坏",
+            "电源线",
+            "移动插排",
+            "移动用电产品",
+            "移动防护",
+            "铜芯橡皮套软电缆"
+          ],
+          "lifecycle": "active",
+          "mode": "direct",
+          "note": "2026-10-04同义归并：移动插排为移动用电产品子例，H_COM_MOBILE_ELECTRIC_CORD_SELECTION归并至本稳定ID；原来源和审核保留，SC118个案事实未重新确认。GB/T13869—2026于2027-02-01实施前不作为当前依据。",
+          "mergedInto": null
+        }
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_8ECAE760F5A5413D8013602429.json",
+        "beforeSha256": "59f26c38d8c2a87c89b6776f38126f758b62fc8036c68425edf957a9003d671e",
+        "beforeObject": {
+          "checkedAt": "2026-09-17",
+          "decision": "verified",
+          "entityId": "H_8ECAE760F5A5413D8013602429",
+          "entityType": "hazard",
+          "evidenceRefs": [
+            "E_GBT13869_2017"
+          ],
+          "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+          "reviewType": "content",
+          "reviewedContentHash": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
+          "reviewer": "Codex"
+        },
+        "afterSha256": "430f00a2b4cc25911ef91cd397829ca477a9fcaa109120da822d711d522385bf",
+        "afterObject": {
+          "entityType": "hazard",
+          "entityId": "H_8ECAE760F5A5413D8013602429",
+          "reviewType": "definition",
+          "decision": "verified",
+          "reviewedContentHash": "f66ac5a65aae9b022d44054e46a8d444529f424c7eb135174de35697c952ef8b",
+          "checkedAt": "2026-10-04T03:40:00Z",
+          "reviewer": "Codex static/fire recovery author source review 20261004",
+          "reason": "原PDF第1章电压范围和第5.2.2条逐字核验；保留两种合格线型及移动防损义务，收窄技术性性质；并入移动插排的同义子例，不并入可燃物布置主张。",
+          "evidenceRefs": [
+            "E_RECOVERY_GBT13869_2017_20261004"
+          ],
+          "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+          "previousReview": {
+            "checkedAt": "2026-09-17",
+            "decision": "verified",
+            "entityId": "H_8ECAE760F5A5413D8013602429",
+            "entityType": "hazard",
+            "evidenceRefs": [
+              "E_GBT13869_2017"
+            ],
+            "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+            "reviewType": "content",
+            "reviewedContentHash": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
+            "reviewer": "Codex"
+          },
+          "previousReviewFileSha256": "59f26c38d8c2a87c89b6776f38126f758b62fc8036c68425edf957a9003d671e"
+        }
+      },
+      {
+        "path": "knowledge/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+        "beforeSha256": "b6957678168e7aa676ac2ba25797d00f72773e0a5bf9801c4edcf831e3244b95",
+        "beforeObject": {
+          "id": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "title": "移动插排电源线未按用电安全技术要求选型",
+          "description": "移动使用的插排等用电产品，其电源线未采用完整的铜芯橡皮套软电缆或护套软线，例如经核实使用单层绝缘绞合导线作电源线。 本项属于推荐性用电安全技术要求检查。",
+          "measures": "停止使用不符合要求的电源线，改用规格匹配的完整铜芯橡皮套软电缆或护套软线，并防止移动时拉断或损坏。",
+          "conditions": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+          "category": "电气安全",
+          "places": [
+            "商铺",
+            "宿舍",
+            "经营场所"
+          ],
+          "aliases": [
+            "移动用电产品的电源线采用单层绝缘绞线或双股绞合单芯导线"
+          ],
+          "keywords": [
+            "移动用电产品",
+            "移动插排",
+            "电源线",
+            "护套软线",
+            "铜芯橡皮套软电缆"
+          ],
+          "lifecycle": "active",
+          "mode": "direct",
+          "note": "2026-10-02从商贸插排复合来源拆出的独立电源线选型原子定义；新ID不覆盖原可燃物布置H。GB/T13869为推荐性技术导则，本项用于安全技术检查，不单独声称直接法定处罚依据；原SC118只映射文本已核，原文件和现场未重新证实，个案成立仍另核。",
+          "mergedInto": null,
+          "proposalStatus": "admitted_narrowed_definition"
+        },
+        "afterSha256": "a0d8c86bed295cdbbe2c80504ede185d5f61c40bc0d228f78eee94b5160459e5",
+        "afterObject": {
+          "id": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "title": "移动插排电源线未按用电安全技术要求选型",
+          "description": "移动使用的插排等用电产品，其电源线未采用完整的铜芯橡皮套软电缆或护套软线，例如经核实使用单层绝缘绞合导线作电源线。 本项属于推荐性用电安全技术要求检查。",
+          "measures": "停止使用不符合要求的电源线，改用规格匹配的完整铜芯橡皮套软电缆或护套软线，并防止移动时拉断或损坏。",
+          "conditions": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+          "category": "电气安全",
+          "places": [
+            "商铺",
+            "宿舍",
+            "经营场所"
+          ],
+          "aliases": [
+            "移动用电产品的电源线采用单层绝缘绞线或双股绞合单芯导线"
+          ],
+          "keywords": [
+            "移动用电产品",
+            "移动插排",
+            "电源线",
+            "护套软线",
+            "铜芯橡皮套软电缆"
+          ],
+          "lifecycle": "superseded",
+          "mode": "candidate",
+          "note": "2026-10-02从商贸插排复合来源拆出的独立电源线选型原子定义；新ID不覆盖原可燃物布置H。GB/T13869为推荐性技术导则，本项用于安全技术检查，不单独声称直接法定处罚依据；原SC118只映射文本已核，原文件和现场未重新证实，个案成立仍另核。\n2026-10-04同义归并至H_8ECAE760F5A5413D8013602429；原稳定ID、来源与审核历史保留，不再单独发布。",
+          "mergedInto": "H_8ECAE760F5A5413D8013602429",
+          "proposalStatus": "admitted_narrowed_definition"
+        }
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_COM_MOBILE_ELECTRIC_CORD_SELECTION.json",
+        "beforeSha256": "68ad624c95162b50ba08c9d5552349e225277502eaf4ccc6ce404b4a3812dfbf",
+        "beforeObject": {
+          "entityType": "hazard",
+          "entityId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "reviewType": "definition",
+          "decision": "verified",
+          "reviewedContentHash": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+          "checkedAt": "2026-10-02T10:33:00+00:00",
+          "reviewer": "Codex 电气候选收窄核验",
+          "reason": "电源线选型为独立原子，按父任务独立审查意见新建H；只核推荐技术对象，不覆盖旧可燃物判据，不确认SC118原文件或现场。",
+          "evidenceRefs": [
+            "E_GBT13869_SAMR_ORIGINAL_20260926",
+            "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+          ],
+          "reviewedFields": [
+            "/id",
+            "/title",
+            "/description",
+            "/measures",
+            "/conditions",
+            "/category",
+            "/places",
+            "/aliases",
+            "/keywords",
+            "/lifecycle",
+            "/mode",
+            "/note",
+            "/mergedInto",
+            "/proposalStatus"
+          ],
+          "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
+          "previousReviewFileSha256": "5d33e7508bcab6462525c9778745dc118876bfa5c7c78cbe0965deb0e3a393cc",
+          "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+          "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+          "reviewIndependenceNote": "主体作者实审保留；root非作者已实际读取原页/官方原文、范围、当前技术使用证据并重新计算H/K/C/LV哈希，记录另存。本地定义准入不确认原企业事件。"
+        },
+        "afterSha256": "2c70a0f847f2308b5d73c07ee5029c2eb39d4239688dfd419074de88a32974c0",
+        "afterObject": {
+          "entityType": "hazard",
+          "entityId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "reviewType": "definition",
+          "decision": "verified",
+          "reviewedContentHash": "0e5020f1e107795ab8970e7a4ff8670ed83ede3b7bd6cf6ecc334b312e6a7d0f",
+          "checkedAt": "2026-10-04T03:40:00Z",
+          "reviewer": "Codex static/fire recovery author source review 20261004",
+          "reason": "经逐条范围核对，移动插排电源线选型是现有移动用电产品义务子例；按稳定ID归并保留历史，superseded实体不单独发布。",
+          "evidenceRefs": [
+            "E_RECOVERY_GBT13869_2017_20261004"
+          ],
+          "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+          "previousReview": {
+            "entityType": "hazard",
+            "entityId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+            "reviewType": "definition",
+            "decision": "verified",
+            "reviewedContentHash": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+            "checkedAt": "2026-10-02T10:33:00+00:00",
+            "reviewer": "Codex 电气候选收窄核验",
+            "reason": "电源线选型为独立原子，按父任务独立审查意见新建H；只核推荐技术对象，不覆盖旧可燃物判据，不确认SC118原文件或现场。",
+            "evidenceRefs": [
+              "E_GBT13869_SAMR_ORIGINAL_20260926",
+              "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+            ],
+            "reviewedFields": [
+              "/id",
+              "/title",
+              "/description",
+              "/measures",
+              "/conditions",
+              "/category",
+              "/places",
+              "/aliases",
+              "/keywords",
+              "/lifecycle",
+              "/mode",
+              "/note",
+              "/mergedInto",
+              "/proposalStatus"
+            ],
+            "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
+            "previousReviewFileSha256": "5d33e7508bcab6462525c9778745dc118876bfa5c7c78cbe0965deb0e3a393cc",
+            "independentLegalReviewStatus": "passed_bounded_content_scope_currency",
+            "independentReviewRef": "docs/commerce-remaining-gaps-independent-review-20261002.json#H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+            "independentReviewSha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+            "reviewIndependenceNote": "主体作者实审保留；root非作者已实际读取原页/官方原文、范围、当前技术使用证据并重新计算H/K/C/LV哈希，记录另存。本地定义准入不确认原企业事件。"
+          },
+          "previousReviewFileSha256": "68ad624c95162b50ba08c9d5552349e225277502eaf4ccc6ce404b4a3812dfbf"
+        }
+      },
+      {
+        "path": "knowledge/links/K_8ECAE760_GBT13869_5_2_2.json",
+        "beforeSha256": "99e805a5cc8ce49c8a935a958abfb920a5541aff7d82ab8404fecad4ab46f469",
+        "beforeObject": {
+          "id": "K_8ECAE760_GBT13869_5_2_2",
+          "entityType": "link",
+          "hazardId": "H_8ECAE760F5A5413D8013602429",
+          "clauseId": "C_GBT13869_5_2_2_mobile",
+          "role": "direct",
+          "applicability": "全国通用；适用于移动式电气设备、手持电动工具及临时移动用电电源线管理。",
+          "jurisdictionCode": "CN",
+          "reason": "隐患对象为移动使用电气设备未采用完整铜芯橡皮套软电缆；GB/T 13869-2017 第5.2.2条对移动使用的用电产品电源线选型作出直接规定，为直接依据。",
+          "createdAt": "2026-09-17",
+          "lifecycle": "active"
+        },
+        "afterSha256": "b3482c3dddbe8dedc0ae297c3497d22a9f6fb0ae0e48b4fd683943e1502107f8",
+        "afterObject": {
+          "id": "K_8ECAE760_GBT13869_5_2_2",
+          "entityType": "link",
+          "hazardId": "H_8ECAE760F5A5413D8013602429",
+          "clauseId": "C_GBT13869_5_2_2_mobile",
+          "role": "direct",
+          "applicability": "仅适用于GB/T 13869—2017第1章范围内额定电压交流1000V及以下、直流1500V及以下移动使用的用电产品电源线。完整铜芯橡皮套软电缆或护套软线均为允许选项，不将绞线结构本身等同不合格，不覆盖固定配线。GB/T 13869—2017为推荐性国家标准，本项属于安全技术检查；是否因法律、设计、合同或单位制度必须执行须另行判定，不单凭本条认定行政违法。",
+          "jurisdictionCode": "CN",
+          "reason": "GB/T13869—2017第5.2.2条首段直接规定移动使用的用电产品电源线选型及移动防损，移动插排同义子例沿用本K；仅技术检查，非普遍处罚依据。",
+          "createdAt": "2026-09-17",
+          "lifecycle": "active"
+        }
+      },
+      {
+        "path": "knowledge/reviews/links/K_8ECAE760_GBT13869_5_2_2.json",
+        "beforeSha256": "67a5f984e67707990abfd8ae9e82dc9ba42ab27457c2043eb0c695b1cf3fbea8",
+        "beforeObject": {
+          "checkedAt": "2026-09-26T20:14:09+08:00",
+          "contextHashes": {
+            "hazard": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
+            "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+          },
+          "decision": "verified",
+          "entityId": "K_8ECAE760_GBT13869_5_2_2",
+          "entityType": "link",
+          "evidenceRefs": [
+            "E_GBT13869_SAMR_ORIGINAL_20260926"
+          ],
+          "reason": "真实官方原文复核，保留原审核决定；仅完整条文补齐不扩展现场已确认事实。",
+          "reviewType": "applicability",
+          "reviewedContentHash": "c204501d4063a42b52dd6760dd319344a73cfd527355c3d1e60ba0b07b09c2a6",
+          "reviewer": "Codex 原文及适用性审计 20260926"
+        },
+        "afterSha256": "840db6e79f7858039777b45f0d6cc2d75a9521b2dde4781dd6c6ef6da6a2bb30",
+        "afterObject": {
+          "entityType": "link",
+          "entityId": "K_8ECAE760_GBT13869_5_2_2",
+          "reviewType": "applicability",
+          "decision": "verified",
+          "reviewedContentHash": "5b73ac6d24789c600b3b00f0166bb221e9746bf1ad63fd4e5bb33191d69f677d",
+          "checkedAt": "2026-10-04T03:40:00Z",
+          "reviewer": "Codex static/fire recovery author source review 20261004",
+          "reason": "逐原页核明移动使用对象、电压范围、允许两类线型及移动防损要求，推荐性标准属性和当前版本均不扩大。",
+          "evidenceRefs": [
+            "E_RECOVERY_GBT13869_2017_20261004"
+          ],
+          "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+          "previousReview": {
+            "checkedAt": "2026-09-26T20:14:09+08:00",
+            "contextHashes": {
+              "hazard": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
+              "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+            },
+            "decision": "verified",
+            "entityId": "K_8ECAE760_GBT13869_5_2_2",
+            "entityType": "link",
+            "evidenceRefs": [
+              "E_GBT13869_SAMR_ORIGINAL_20260926"
+            ],
+            "reason": "真实官方原文复核，保留原审核决定；仅完整条文补齐不扩展现场已确认事实。",
+            "reviewType": "applicability",
+            "reviewedContentHash": "c204501d4063a42b52dd6760dd319344a73cfd527355c3d1e60ba0b07b09c2a6",
+            "reviewer": "Codex 原文及适用性审计 20260926"
+          },
+          "previousReviewFileSha256": "67a5f984e67707990abfd8ae9e82dc9ba42ab27457c2043eb0c695b1cf3fbea8",
+          "contextHashes": {
+            "hazard": "f66ac5a65aae9b022d44054e46a8d444529f424c7eb135174de35697c952ef8b",
+            "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+          }
+        }
+      },
+      {
+        "path": "knowledge/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+        "beforeSha256": "528de60ca5f1b24b844ac03ac18f20209291eb118dc3bfd155e08ced6b6e0337",
+        "beforeObject": {
+          "id": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+          "hazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "clauseId": "C_GBT13869_5_2_2_mobile",
+          "role": "direct",
+          "applicability": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "active",
+          "priority": 10,
+          "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。"
+        },
+        "afterSha256": "04f2b0986bbbb0102b6bb471f5af6c2aeb05b222e7fafb082c2eb823eaab1160",
+        "afterObject": {
+          "id": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+          "hazardId": "H_COM_MOBILE_ELECTRIC_CORD_SELECTION",
+          "clauseId": "C_GBT13869_5_2_2_mobile",
+          "role": "direct",
+          "applicability": "仅移动使用的用电产品电源线；须核实是否完整铜芯橡皮套软电缆或护套软线，不将绞线结构本身等同不合格，不覆盖固定安装配线。 GB/T13869—2017为推荐性国家标准，本项为安全技术检查定义；其技术要求是否因法律、设计、合同或单位制度而必须执行须单独判定，不单凭本推荐条文自动认定行政违法。",
+          "jurisdictionCode": "CN",
+          "lifecycle": "superseded",
+          "priority": 10,
+          "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。 2026-10-04随重复H归并，当前直接依据统一由K_8ECAE760_GBT13869_5_2_2承担，本K仅保留历史。"
+        }
+      },
+      {
+        "path": "knowledge/reviews/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+        "beforeSha256": "76b0bbd4df6a02be2e79cef151d45c8f65c9a63b863dc216e91b42cb5f529463",
+        "beforeObject": {
+          "entityType": "link",
+          "entityId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+          "reviewType": "applicability",
+          "decision": "verified",
+          "reviewedContentHash": "3314e6b71a0d3400355f130667c8680d07b4f172555cef79dc75b5217301c3d3",
+          "checkedAt": "2026-10-02T10:33:00+00:00",
+          "reviewer": "Codex 电气候选收窄核验",
+          "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。",
+          "evidenceRefs": [
+            "E_GBT13869_SAMR_ORIGINAL_20260926",
+            "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+          ],
+          "reviewedFields": [
+            "/id",
+            "/hazardId",
+            "/clauseId",
+            "/role",
+            "/applicability",
+            "/jurisdictionCode",
+            "/lifecycle",
+            "/priority",
+            "/reason"
+          ],
+          "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
+          "contextHashes": {
+            "hazard": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+            "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+          }
+        },
+        "afterSha256": "ccc71a32936e890f767311111a5bc589863987911f4af447f2057fec81355352",
+        "afterObject": {
+          "entityType": "link",
+          "entityId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+          "reviewType": "applicability",
+          "decision": "rejected",
+          "reviewedContentHash": "a722293f601f6c63b096dbddc2b9b3253abc4bc711ed172cc1541b349502588b",
+          "checkedAt": "2026-10-04T03:40:00Z",
+          "reviewer": "Codex static/fire recovery author source review 20261004",
+          "reason": "该同义K随来源H归并，退出当前直接关联准入；同一移动电源线义务由canonical H/K承接。仅撤销重复当前发布，不否定此前经审核的技术依据；原H/C指向、原verified审核与全部历史保留。",
+          "evidenceRefs": [
+            "E_RECOVERY_GBT13869_2017_20261004"
+          ],
+          "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+          "previousReview": {
+            "entityType": "link",
+            "entityId": "K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2",
+            "reviewType": "applicability",
+            "decision": "verified",
+            "reviewedContentHash": "3314e6b71a0d3400355f130667c8680d07b4f172555cef79dc75b5217301c3d3",
+            "checkedAt": "2026-10-02T10:33:00+00:00",
+            "reviewer": "Codex 电气候选收窄核验",
+            "reason": "SC118映射表明确移动插排使用单层绝缘绞线，另本轮原源reads中D01明确插排电源线采用双股绞合单芯导线；收窄出电源线选型这一原子缺陷，依据现行GB/T13869第5.2.2。可燃物布置分支单独保留未准入，不归并H032。",
+            "evidenceRefs": [
+              "E_GBT13869_SAMR_ORIGINAL_20260926",
+              "E_GBT13869_FUJIAN_ORIGINAL_20261002"
+            ],
+            "reviewedFields": [
+              "/id",
+              "/hazardId",
+              "/clauseId",
+              "/role",
+              "/applicability",
+              "/jurisdictionCode",
+              "/lifecycle",
+              "/priority",
+              "/reason"
+            ],
+            "notes": "本轮单人原文/定义审核；不是独立审核结论。仅通用条件定义，不确认原现场、违法、试验或整改。",
+            "contextHashes": {
+              "hazard": "d14931fba081b63fc2390e1fc66792c46ed9b60607e5301866e4ff29935c55cc",
+              "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+            }
+          },
+          "previousReviewFileSha256": "76b0bbd4df6a02be2e79cef151d45c8f65c9a63b863dc216e91b42cb5f529463",
+          "contextHashes": {
+            "hazard": "0e5020f1e107795ab8970e7a4ff8670ed83ede3b7bd6cf6ecc334b312e6a7d0f",
+            "clause": "1bec86a8e3a7157e8835120ccd7dbe5b8175924713a10568c4fd347e556c796f"
+          },
+          "reasonCodes": [
+            "SUPERSEDED_DUPLICATE_CURRENT_PUBLICATION_WITHDRAWN"
+          ]
+        }
+      }
+    ],
+    "independentReviewStatus": "pending_new_non_author_review",
+    "priorIndependentReview": {
+      "path": "docs/commerce-remaining-gaps-independent-review-20261002.json",
+      "sha256": "5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b",
+      "baseCommit": "ffdfee5d79717c9fefe736830174e177cec4703c"
+    },
+    "sourceClaimBoundary": "移动插排电源线子例归并，不重新确认SC118/历史现场，不改变H_COM_PLUGSTRIP_COMBUSTIBLE保留未准入。"
+  },
+  "independentReviewCorrections": [
+    {
+      "scope": "H_12158_4_2_3_4_2.aliases",
+      "removedNonSynonymousRestoredIds": [
+        "H_12158_4_2_3_5_2",
+        "H_12158_6_3_2_2",
+        "H_12158_8_8_5_3"
+      ],
+      "priorObjectsPreserved": true
+    },
+    {
+      "scope": "knowledge/reviews/links/K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2.json",
+      "currentDecision": "rejected",
+      "reason": "Withdraw duplicate current publication only; preserve prior verified review and canonical same-obligation coverage."
+    }
+  ],
+  "familyIdentityRecovery": {
+    "lawId": "LF_STD_GBT13869",
+    "sameStableVersions": [
+      "LV_STD_GBT13869_2017",
+      "LV_STD_GBT13869_2026"
+    ],
+    "scope": "Correct version-neutral family key and qualify the two different original publishers; replace disavowed current proof with actual official original/metadata evidence; no version promotion or clause change.",
+    "previousLawFileSha256": "34574681436ae660b5ecd66a85d7e7f95f36560b5c39a58e1515b3902ae4e60c",
+    "previousReviewFileSha256": "9ca867d36c8fa0e55dbec78d1820b35a3e5f4efe9eca179db37abbf6cb4f0654"
+  }
+}

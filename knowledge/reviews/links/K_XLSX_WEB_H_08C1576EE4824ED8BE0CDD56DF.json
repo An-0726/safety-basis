@@ -1,18 +1,77 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_08C1576EE4824ED8BE0CDD56DF",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "76df3229add126979b7117e8336ee17f3e99c7871d03c67a41fdb9817dcdeed9",
-  "contextHashes": {
-    "hazard": "ed5e4c0c8c5df8f44db75e22c1a25141c04a1f63ee9a2ef3e6695cfb0776576b",
-    "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条摆放稳固与铭牌朝外要求。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "08b9b26a788c1af6442f7d3f0e12a93e9099798065fe7f5e8636233ef9013086",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
+    "E_PUBLIC_GB50140_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "对照规范原文与工程适用范围，纠正标准错引并保留两独立缺陷分支，不把其他安装方式混入。",
+  "locator": "GB50140第1.0.2、5.1.3条",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于生产、使用或储存可燃物的新建、改建、扩建工业与民用建筑工程的灭火器配置设计；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。既有建筑检查须核配置设计及其适用时点，不能无条件追溯套用。本项只核灭火器摆放稳固和铭牌朝外两项，任一不符合即可核查；不把手提式灭火器宜放箱/挂钩/托架改为全部灭火器必须装箱。",
+    "/clauseId": "C_GB50140_5_1_3",
+    "/reason": "GB50140第5.1.3条首句直接规定稳固与铭牌朝外，两分支独立核对；GB50444第5.1.3条实际上为维修检查后原位摆放。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/clauseId": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "20834184dc634c322bc5eb5b7af87bdbedd8380fe95f675ff8cacb59a70eeb4c",
+    "clause": "68869370a1da4101efd5243b3d06653e35d8e2d643c4a5064093b70badc649da"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_08C1576EE4824ED8BE0CDD56DF",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "76df3229add126979b7117e8336ee17f3e99c7871d03c67a41fdb9817dcdeed9",
+    "contextHashes": {
+      "hazard": "ed5e4c0c8c5df8f44db75e22c1a25141c04a1f63ee9a2ef3e6695cfb0776576b",
+      "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条摆放稳固与铭牌朝外要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ce3b650ebe23784ad6d73b2a37816a70093118ee3a2363a1f444baf52cb04d6e",
+  "historySha256": "ba03db7585ce4d66fc4e8682294fae6f797047e10eea91fc3e5159e0aa5b388a",
+  "previousEntity": {
+    "applicability": "灭火器摆放不稳固或铭牌未朝外",
+    "clauseId": "C_GB50444_5_1_3",
+    "hazardId": "H_08C1576EE4824ED8BE0CDD56DF",
+    "id": "K_XLSX_WEB_H_08C1576EE4824ED8BE0CDD56DF",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "ff65a740d4f5bc1bf51dde35e694677f57c9ec7b0c703ec6e7e3a8c4cd0622ec"
 }

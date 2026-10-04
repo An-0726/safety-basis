@@ -10,10 +10,14 @@ import unittest
 from common_hazards_fixture import pre_common_gate, pre_common_manifest
 from citation_cohort_fixture import FIXTURE, ADDED_IDS, pre_citation_gate
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+# This dated cohort is tested against its SHA-guarded predecessor, not new admissions.
+ROOT = pre_recovery_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
 from release_gate_core import evaluate_release_gate
+from recovery_cohort_fixture import evaluate_historical_snapshot as evaluate_release_gate
 from field_profiles import public_projection
 INTEGRATION_BASELINE = json.loads((Path(__file__).parent / 'fixtures' /
                                    'common_hazards_published_baseline_20261003.json').read_text())

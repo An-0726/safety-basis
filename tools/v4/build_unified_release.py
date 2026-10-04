@@ -14,6 +14,7 @@
 所有生成文件由脚本确定性写出，禁止手工编辑。
 """
 import argparse
+import copy
 import glob
 import hashlib
 import io
@@ -47,6 +48,14 @@ from major_criteria_directory import (public_projection as directory_projection,
                                      project_publication as project_directory_publication, DIRECTORY_FILE)  # noqa: E402
 from major_criteria_reading import (public_projection as reading_projection, READING_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
+from normative_content import validate_ordinary_clause_content  # noqa: E402
+from check_review_binding import missing_review_evidence_refs  # noqa: E402
+
+
+def project_clause_content(clause):
+    """Lossless, validated ordinary-clause rich body; no evidence/private data."""
+    validate_ordinary_clause_content(clause)
+    return {'contentParts': copy.deepcopy(clause['contentParts'])} if 'contentParts' in clause else {}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
@@ -141,6 +150,11 @@ def build(args, knowledge, source_hash, as_of_date):
     KNOW = str(knowledge)
     AS_OF = as_of_date.isoformat()
     DATA_VERSION = args.data_version or AS_OF.replace('-', '.') + '.current'
+    # Direct builder calls must retain the same structural Evidence-ID floor as
+    # validate_all. Check the immutable input before touching any output path.
+    missing_evidence = missing_review_evidence_refs(knowledge)
+    if missing_evidence:
+        raise ValueError('Unresolved current review Evidence IDs: ' + repr(missing_evidence))
     out = os.path.abspath(args.out)
     if args.field_profiles_pilot and (Path(out).is_relative_to(Path(DEFAULT_OUT).resolve()) or
                                      Path(out).is_relative_to(Path(ROOT, 'dist').resolve())):
@@ -282,6 +296,7 @@ def build(args, knowledge, source_hash, as_of_date):
                 "id": cid,
                 "article": c.get("articlePath") or c.get("clauseNumber") or "",
                 "quote": c.get("quote", ""),
+                **project_clause_content(c),
                 "lawId": c.get("lawVersionId", ""),
                 "sourceUrl": c.get("sourceUrl") or lv.get("sourceUrl") or "",
                 "checked": clause_checked.get(cid, ""),

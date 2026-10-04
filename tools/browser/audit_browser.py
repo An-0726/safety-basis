@@ -1,4 +1,4 @@
-"""Real Chromium acceptance tests; no screenshots or document conversion.
+"""Real Chromium acceptance tests with source-pinned recovery screenshots.
 
 Requires Playwright and its Chromium. --observe records baseline defects without
 turning an intentionally unfixed baseline into a failed acquisition workflow.
@@ -21,7 +21,11 @@ from repair_acceptance import load_expectations, validate_source_pins, run_repai
 from technical_citation_acceptance import (load_expectations as load_technical_expectations,
     validate_source_pins as validate_technical_source_pins, run_technical_browser_acceptance)
 
-
+from electrical_candidate_acceptance import (load_expectations as load_electrical_expectations,
+    validate_source_pins as validate_electrical_source_pins, run_electrical_browser_acceptance)
+from recovery_release_acceptance import (load_expectations as load_recovery_expectations,
+    validate_source_pins as validate_recovery_source_pins, validate_release_source, fixture_for_release_date,
+    run_recovery_release_acceptance)
 
 # Current approved common-hazard cohort; exact rendered identity and links matter.
 COMMON_HAZARDS = [{'id': 'H_46768_5_8_6', 'title': '有限空间作业气体检测未按规定设置检测点位', 'links': ['K_COMMON_H_46768_5_8_6', 'K_COMMON_SUPPORT_C_46768_5_11_1_H_46768_5_8_6', 'K_COMMON_SUPPORT_C_46768_6_2_7_H_46768_5_8_6']}, {'id': 'H_46768_5_10_2', 'title': '有限空间移动机械通风风管或送排风位置不符合要求', 'links': ['K_COMMON_H_46768_5_10_2', 'K_COMMON_SUPPORT_C_46768_6_2_4_H_46768_5_10_2']}, {'id': 'H_46768_6_2_6', 'title': '有限空间作业中断期间未落实出入口临时封闭', 'links': ['K_COMMON_H_46768_6_2_6']}, {'id': 'H_GBT13869_REMOVED_POWER_END', 'title': '用电产品拆除后可能带电的原电源端导电部分外露', 'links': ['K_COMMON_H_GBT13869_REMOVED_POWER_END']}, {'id': 'H_GBT13869_RESTART_AFTER_STORAGE', 'title': '长期停用的用电产品未经必要检修和安全性能测试即重新使用', 'links': ['K_COMMON_H_GBT13869_RESTART_AFTER_STORAGE']}, {'id': 'H004', 'title': '控制人员出入的闸口或门禁疏散出口火灾释放、内部开启或标识不符合要求', 'links': ['K_COMMON_H004']}]
@@ -43,6 +47,26 @@ def validate_release_identity(release, manifest, expected_commit=None):
             'releaseHash': release['releaseHash'], 'counts': release.get('counts')}
 
 
+def bind_observed_release(report, frozen_fixture, release, manifest, root, expected_commit=None):
+    """Record an observation before validation; never bless an invalid identity."""
+    report['observedRelease'] = {'asOf': release.get('asOf'), 'releaseHash': release.get('releaseHash'),
+        'dataVersion': manifest.get('dataVersion'), 'counts': release.get('counts')}
+    identity = validate_release_identity(release, manifest, expected_commit)
+    fixture = fixture_for_release_date(frozen_fixture, release.get('asOf'), root)
+    validate_release_source(fixture, release, identity['releaseHash'])
+    if report.get('release'):
+        require(identity == report['release'], 'Release identity changed during browser acceptance')
+    report['release'] = identity
+    report['sourceDateCompatibility'] = {'frozenAsOf': frozen_fixture['asOf'], 'releaseAsOf': fixture['asOf'],
+        'unchangedReviewedProjection': True}
+    return fixture
+
+
+def require_verified_release(report):
+    require(bool(report.get('release')), 'Source-pinned browser flows blocked: no verified release identity')
+    return report['release']
+
+
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
@@ -59,6 +83,9 @@ def main():
     parser.add_argument('--executable')
     parser.add_argument('--expected-commit', help='Require public dataVersion to bind this exact commit prefix')
     args = parser.parse_args()
+    frozen_recovery_fixture = load_recovery_expectations()
+    recovery_fixture = frozen_recovery_fixture
+    public_inventory = {key: len(ids) for key, ids in recovery_fixture['expectedIds'].items()}
     server = None
     if args.bundle:
         bundle = args.bundle.resolve(strict=True)
@@ -94,6 +121,13 @@ def main():
                 result['seconds'] = round(time.monotonic() - before, 3)
                 report['checks'].append(result)
                 print(json.dumps(result, ensure_ascii=False), flush=True)
+                # Persist completed checks throughout long CI runs, including
+                # failures preceding an action timeout or browser disconnect.
+                report['passed'] = sum(item['pass'] for item in report['checks'])
+                report['failed'] = sum(not item['pass'] for item in report['checks'])
+                report['seconds'] = round(time.monotonic() - started, 3)
+                args.out.parent.mkdir(parents=True, exist_ok=True)
+                args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
             def home(suffix=''):
                 page.goto(base + suffix, wait_until='domcontentloaded')
@@ -112,10 +146,12 @@ def main():
             run('desktop_home', home_check)
 
             def release_identity():
+                nonlocal recovery_fixture
                 release_response = context.request.get(base + 'release.json')
                 manifest_response = context.request.get(base + 'data/manifest.json')
                 require(release_response.ok and manifest_response.ok, 'Cannot read release metadata and data manifest')
-                report['release'] = validate_release_identity(release_response.json(), manifest_response.json(), args.expected_commit)
+                recovery_fixture = bind_observed_release(report, frozen_recovery_fixture,
+                    release_response.json(), manifest_response.json(), Path(__file__).resolve().parents[2], args.expected_commit)
                 return report['release']
             run('exact_release_identity', release_identity)
 
@@ -226,11 +262,11 @@ def main():
             run('hazard_law_bidirectional_navigation', cross_navigation)
 
             def unavailable():
-                home('?id=H052'); expect(page.locator('#detail')).to_contain_text('H052')
+                home('?id=' + recovery_fixture['unpublishedProbeId']); expect(page.locator('#detail')).to_contain_text(recovery_fixture['unpublishedProbeId'])
                 text = page.locator('#detail').inner_text()
                 require(page.locator('#detail h2').count() == 0, 'Unpublished ID silently selected a published record')
-                return {'id': 'H052', 'text': text}
-            run('unpublished_H052_deep_link', unavailable)
+                return {'id': recovery_fixture['unpublishedProbeId'], 'text': text}
+            run('unpublished_H_12158_10_1_2_deep_link', unavailable)
 
             def unknown():
                 home('?id=H_AUDIT_UNKNOWN_ZYX987')
@@ -339,7 +375,7 @@ def main():
                         geometry('selection_after_hash', in_view=True)
                     mp.locator('#reset').click()
                     expect(mp.locator('#search')).to_have_value('')
-                    expect(mp.locator('#count')).to_have_text(str(report['release']['counts']['hazards']))
+                    expect(mp.locator('#count')).to_have_text(str(public_inventory['hazards']))
                     require(not parse_qs(urlparse(mp.url).query).get('q'), 'Reset retained search')
                     return {'width': width, 'reducedMotion': reduced_motion, 'geometry': evidence, 'reset': True}
                 finally:
@@ -347,16 +383,31 @@ def main():
             for width in (1440, 375, 390, 485):
                 run(f'sticky_header_{width}px_navigation', lambda width=width: sticky_header_navigation(width))
             run('sticky_header_485px_reduced_motion', lambda: sticky_header_navigation(485, 'reduce'))
-            repair_fixture = load_expectations()
-            run('reviewed_repair_source_pins', lambda: validate_source_pins(
-                repair_fixture, Path(__file__).resolve().parents[2]))
-            run_repair_browser_acceptance(browser, base, run, page_errors, expect, repair_fixture,
-                                          report['release']['releaseHash'])
-            technical_fixture = load_technical_expectations()
-            run('technical_citation_source_pins', lambda: validate_technical_source_pins(
-                technical_fixture, Path(__file__).resolve().parents[2]))
-            run_technical_browser_acceptance(browser, base, run, page_errors, expect, technical_fixture,
-                                             report['release']['releaseHash'])
+            run('recovery_full_source_snapshot_pins', lambda: validate_recovery_source_pins(
+                recovery_fixture, Path(__file__).resolve().parents[2]))
+            if report.get('release'):
+                repair_fixture = load_expectations()
+                run('reviewed_repair_source_pins', lambda: validate_source_pins(
+                    repair_fixture, Path(__file__).resolve().parents[2]))
+                run_repair_browser_acceptance(browser, base, run, page_errors, expect, repair_fixture,
+                                              report['release']['releaseHash'], public_inventory=public_inventory)
+                technical_fixture = load_technical_expectations()
+                run('technical_citation_source_pins', lambda: validate_technical_source_pins(
+                    technical_fixture, Path(__file__).resolve().parents[2]))
+                run_technical_browser_acceptance(browser, base, run, page_errors, expect, technical_fixture,
+                                                 report['release']['releaseHash'], public_inventory=public_inventory)
+                electrical_fixture = load_electrical_expectations()
+                run('electrical_rebuild_source_pins', lambda: validate_electrical_source_pins(
+                    electrical_fixture, Path(__file__).resolve().parents[2]))
+                run_electrical_browser_acceptance(browser, base, run, page_errors, expect, electrical_fixture,
+                                                  report['release']['releaseHash'])
+                run_recovery_release_acceptance(browser, base, run, page_errors, expect, recovery_fixture,
+                                                report['release']['releaseHash'], artifact_dir=args.out.parent / 'recovery-screenshots', data_version=report['release']['dataVersion'])
+            else:
+                run('source_pinned_flows_require_validated_release', lambda: require_verified_release(report))
+            run('exact_release_identity_after_all_flows', release_identity)
+            run('recovery_source_snapshot_after_all_flows', lambda: validate_recovery_source_pins(
+                frozen_recovery_fixture, Path(__file__).resolve().parents[2]))
             run('no_unhandled_javascript_errors', lambda: require(not page_errors, str(page_errors)))
             context.close(); browser.close()
     finally:

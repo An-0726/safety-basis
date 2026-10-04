@@ -1,13 +1,110 @@
 {
-  "entityType": "hazard",
   "entityId": "H_GB50140_5_1_3_1",
-  "reviewType": "definition",
+  "entityType": "hazard",
+  "reviewType": "content",
   "decision": "verified",
-  "reviewedContentHash": "538c81ede0e842374aa6c145c5d054706607365f77466fe8873793f810e3a649",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "1c78949af2fdee26c316ceb368672744786c2c365631cf9aab9694c2ed1fad51",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
-  ]
+    "E_PUBLIC_GB50140_ORIGINAL_20261004"
+  ],
+  "reason": "核实GB50140第5.1.3条原文；保留严格顶部限值，撤除无依据的AND条件，不泛化到推车式灭火器。",
+  "locator": "GB50140第1.0.2、5.1.3条",
+  "reviewedFields": [
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/mode",
+    "/note",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于生产、使用或储存可燃物的新建、改建、扩建工业与民用建筑工程的灭火器配置设计；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。既有建筑检查须核配置设计及其适用时点，不能无条件追溯套用。本项只核手提式灭火器顶部离地面高度大于1.50m；是否使用箱、挂钩或托架的宜采用分支不作为本项必备触发条件，也不因未装箱而自动命中本项。底部高度另核，不与顶部上限混用。",
+    "/description": "在本项适用范围内，手提式灭火器顶部离地面高度大于1.50m。",
+    "/keywords": [
+      "手提式灭火器",
+      "顶部高度",
+      "1.50m"
+    ],
+    "/measures": "核实测量基准并调整手提式灭火器设置高度，使其顶部离地面高度不大于1.50m；设置稳固、便于取用，避免用是否装箱替代实际高度核查。",
+    "/mode": "conditional",
+    "/note": "2026-10-04：保留稳定H，收窄至不应超过1.50m的顶部高度缺陷；移除未装箱与超高必须同时出现的AND条件。",
+    "/places": [
+      "适用工程的手提式灭火器设置点"
+    ],
+    "/title": "手提式灭火器顶部离地面高度大于1.50m"
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/description": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/keywords": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/measures": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/mode": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/note": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/places": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/title": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_GB50140_5_1_3_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "538c81ede0e842374aa6c145c5d054706607365f77466fe8873793f810e3a649",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ]
+  },
+  "previousReviewFileSha256": "17cceed750d74d28c28665e4b05582c6fb3de8cbfa2f7a9632dde21caf6a112f",
+  "historySha256": "a9d81629778ccbda966eccc7d84cc5143d087ac7f347794a445e90437dbd0592",
+  "previousEntity": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "手提式灭火器宜设置在灭火器箱内或挂钩、托架上，其顶部离地面高度不应大于1.50m；（5.1.3）。",
+    "id": "H_GB50140_5_1_3_1",
+    "keywords": [
+      "手提式灭火器未设置在灭火器箱内或挂钩",
+      "托架上",
+      "且其顶部离地面高度大于1.50m"
+    ],
+    "lifecycle": "active",
+    "measures": "手提式灭火器宜设置在灭火器箱内或挂钩、托架上，其顶部离地面高度不应大于1.50m；（依据 5.1.3 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "手提式灭火器未设置在灭火器箱内或挂钩、托架上，且其顶部离地面高度大于1.50m"
+  },
+  "previousEntityFileSha256": "2c3daa98bd5d3d2d3ea6d7daa7c9ad2ec20a41de5a7564cd25cf07448de0c914"
 }

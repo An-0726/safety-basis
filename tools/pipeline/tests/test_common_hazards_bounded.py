@@ -15,10 +15,14 @@ from common_hazards_fixture import (FIXTURE, ADDED_IDS, ADMITTED_IDS,
                                     pre_common_manifest, pre_common_gate)
 
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+# This dated cohort is tested against its SHA-guarded predecessor, not new admissions.
+ROOT = pre_recovery_repo_root(ROOT)
 K = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
 from release_gate_core import evaluate_release_gate, gate_hazard_content, gate_link
+from recovery_cohort_fixture import evaluate_historical_snapshot as evaluate_release_gate
 
 def load(kind, ident):
     return json.loads((K / kind / (ident + '.json')).read_text())

@@ -15,17 +15,18 @@
 - RULE_CROSS_REF_WITHOUT_DETAILS: 条款仅为表号/附录转致但被标为直接依据
 """
 from __future__ import annotations
+import argparse
 import json
 import os
 import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+from datetime import date
 
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[2]
 KNOW = ROOT / "knowledge"
-AS_OF = "2026-09-18"
 
 sys.path.insert(0, str(ROOT / "tools" / "v4"))
 from canonical import content_hash
@@ -42,7 +43,11 @@ def load_dir(rel: str) -> dict[str, dict]:
 def norm_text(s: str) -> str:
     return re.sub(r"[^\w\u4e00-\u9fff]", "", str(s)).lower()
 
-def run_scan():
+def run_scan(as_of: date):
+    """Scan one explicit legal-date snapshot; never infer it from an old batch."""
+    if type(as_of) is not date:
+        raise TypeError("as_of must be an explicit datetime.date")
+    as_of_text = as_of.isoformat()
     hazards = load_dir("hazards")
     clauses = load_dir("clauses")
     links = load_dir("links")
@@ -185,7 +190,7 @@ def run_scan():
             eff = lv.get("effectiveDate") or ""
             end = lv.get("endDate") or ""
 
-            if val == "upcoming" or (eff and eff > AS_OF):
+            if val == "upcoming" or (eff and eff > as_of_text):
                 findings.append({
                     "rule_id": "RULE_UPCOMING_VERSION_ACTIVE_LINK",
                     "entity_id": lid,
@@ -197,7 +202,7 @@ def run_scan():
                     "resolved": False
                 })
 
-            if val == "repealed" or (end and end <= AS_OF):
+            if val == "repealed" or (end and end <= as_of_text):
                 findings.append({
                     "rule_id": "RULE_REPEALED_VERSION_ACTIVE_LINK",
                     "entity_id": lid,
@@ -300,11 +305,18 @@ def run_scan():
                     "resolved": False
                 })
 
+    for finding in findings:
+        finding["asOf"] = as_of_text
     return findings
 
 def main():
-    findings = run_scan()
-    print(f"Scan complete. Total findings: {len(findings)}")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--as-of", required=True, type=date.fromisoformat,
+                        help="Explicit legal-date snapshot (YYYY-MM-DD)")
+    parser.add_argument("--output", type=Path, default=ROOT / "docs" / "scan_findings.jsonl")
+    args = parser.parse_args()
+    findings = run_scan(args.as_of)
+    print(f"Scan complete. asOf={args.as_of.isoformat()}. Total findings: {len(findings)}")
 
     errors = [f for f in findings if f["severity"] == "ERROR"]
     warnings = [f for f in findings if f["severity"] == "WARNING"]
@@ -323,7 +335,7 @@ def main():
         print(f"  {r}: {c}")
 
     # 保存机器可复核结果
-    report_file = ROOT / "docs" / "scan_findings.jsonl"
+    report_file = args.output
     with open(report_file, "w", encoding="utf-8") as f:
         for fnd in findings:
             f.write(json.dumps(fnd, ensure_ascii=False) + "\n")

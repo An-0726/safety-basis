@@ -1,13 +1,28 @@
 {
-  "checkedAt": "2026-09-17",
-  "decision": "verified",
-  "entityId": "H_8ECAE760F5A5413D8013602429",
   "entityType": "hazard",
+  "entityId": "H_8ECAE760F5A5413D8013602429",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f66ac5a65aae9b022d44054e46a8d444529f424c7eb135174de35697c952ef8b",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "原PDF第1章电压范围和第5.2.2条逐字核验；保留两种合格线型及移动防损义务，收窄技术性性质；并入移动插排的同义子例，不并入可燃物布置主张。",
   "evidenceRefs": [
-    "E_GBT13869_2017"
+    "E_RECOVERY_GBT13869_2017_20261004"
   ],
-  "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
-  "reviewType": "content",
-  "reviewedContentHash": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
-  "reviewer": "Codex"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "decision": "verified",
+    "entityId": "H_8ECAE760F5A5413D8013602429",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT13869_2017"
+    ],
+    "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+    "reviewType": "content",
+    "reviewedContentHash": "e977f1760504405f9075ff366669d671609be1a2f0bd946deab22c585fd300ab",
+    "reviewer": "Codex"
+  },
+  "previousReviewFileSha256": "59f26c38d8c2a87c89b6776f38126f758b62fc8036c68425edf957a9003d671e"
 }

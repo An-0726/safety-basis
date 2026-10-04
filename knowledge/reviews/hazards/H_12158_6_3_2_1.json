@@ -1,13 +1,28 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
-  "entityId": "H_12158_6_3_2_1",
   "entityType": "hazard",
+  "entityId": "H_12158_6_3_2_1",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "6d467d03303a134b3ade932396f584ca817638b155a0b4ed9231647ce90350b3",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
   "evidenceRefs": [
-    "E_12158_GB 12158"
+    "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "d786d0a993e8484691ae7ab2c4a95ad5f1aeca605ff7d1e4b69e99a06cc43f3a",
-  "reviewer": "Codex正式核验批次20260913"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_6_3_2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "d786d0a993e8484691ae7ab2c4a95ad5f1aeca605ff7d1e4b69e99a06cc43f3a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "7cf5a3ac23418605a11482f1e52f52fbbfe8ad46144f1b81ec60a954ef9360e9"
 }

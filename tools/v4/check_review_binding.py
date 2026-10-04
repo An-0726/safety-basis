@@ -12,6 +12,7 @@ before writing new ones.
 import json
 import os
 import sys
+from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "v4"))
 from canonical import content_hash  # noqa: E402
@@ -37,11 +38,41 @@ def load_dir(sub, by_entity_id=False):
     return out
 
 
+def missing_review_evidence_refs(knowledge_root):
+    """Reject unresolved explicit E_* / EH_* refs in current reviews of every kind.
+
+    Legacy descriptive references are not fabricated Evidence IDs. Nested
+    previousReview records remain immutable history, not current approval.
+    Presence is a structural check only, never proof of legal applicability.
+    """
+    root = Path(knowledge_root)
+    evidence_ids = set()
+    for path in sorted((root / "evidence").glob("*.json")):
+        row = json.loads(path.read_text(encoding="utf-8"))
+        ident = row.get("id")
+        if ident in evidence_ids:
+            raise ValueError("duplicate evidence id: " + str(ident))
+        evidence_ids.add(ident)
+    missing = []
+    for path in sorted((root / "reviews").glob("*/*.json")):
+        review = json.loads(path.read_text(encoding="utf-8"))
+        for field in ("evidenceRefs", "comparisonEvidenceRefs"):
+            refs = review.get(field, [])
+            if not isinstance(refs, list) or any(not isinstance(ref, str) for ref in refs):
+                raise ValueError("current review " + field + " must be a list of strings: " +
+                                 str(path.relative_to(root)))
+            for ref in refs:
+                if ref.startswith(("E_", "EH_")) and ref not in evidence_ids:
+                    missing.append((str(path.relative_to(root)), review.get("entityId"), ref))
+    return missing
+
+
 def main():
     links = load_dir("links")
     hazards = load_dir("hazards")
     clauses = load_dir("clauses")
     reviews = load_dir(os.path.join("reviews", "links"), by_entity_id=True)
+    missing_evidence = missing_review_evidence_refs(KNOW)
 
     stale_link, stale_hazard, stale_clause, unbound = [], [], [], []
     missing_link, missing_hazard, missing_clause, id_mismatch = [], [], [], []
@@ -96,10 +127,14 @@ def main():
     print(f"missing hazard refs: {len(missing_hazard)} {missing_hazard[:10]}")
     print(f"missing clause refs: {len(missing_clause)} {missing_clause[:10]}")
     print(f"link id mismatches: {len(id_mismatch)} {id_mismatch[:10]}")
+    print(f"missing review evidence refs: {len(missing_evidence)}")
+    for row in missing_evidence:
+        print("MISSING REVIEW EVIDENCE:", *row)
     bad = (len(stale_link) + len(stale_hazard) + len(stale_clause) + len(unbound)
-           + len(missing_link) + len(missing_hazard) + len(missing_clause) + len(id_mismatch))
+           + len(missing_link) + len(missing_hazard) + len(missing_clause) + len(id_mismatch)
+           + len(missing_evidence))
     if bad:
-        print(f"BINDING FAILURES: {bad}（可使用 tools/v4/rebind.py --fix 批量刷新）")
+        print(f"BINDING FAILURES: {bad}（先核验缺失原件与内容变更；不得仅重签hash代替实质复核）")
     return 1 if bad else 0
 
 

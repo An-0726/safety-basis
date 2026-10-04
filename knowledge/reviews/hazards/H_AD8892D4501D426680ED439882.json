@@ -1,13 +1,152 @@
 {
-  "entityType": "hazard",
   "entityId": "H_AD8892D4501D426680ED439882",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "ba9632a89c3edb3b492785ae53960dc878a611e92f80d17913d243b87c78d60e",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "checkedAt": "2026-10-04",
+  "reviewer": "Recovery integration duplicate-merge author",
+  "reviewedContentHash": "383501fe43ff14b830e2210f2a89dbf3e8ba90bea5327fe1893a3009a93ff135",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
-  ]
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
+  ],
+  "reason": "逐字段和三条精确C/K核对同义义务；只撤重复发布，canonical完整承接原限定范围，不否定原技术义务。",
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "independentApproval": false,
+    "profileAdmission": false
+  },
+  "previousReview": {
+    "entityId": "H_AD8892D4501D426680ED439882",
+    "entityType": "hazard",
+    "reviewType": "content",
+    "decision": "verified",
+    "reviewer": "Codex公开引文重建作者逐项核验20261004",
+    "checkedAt": "2026-10-04",
+    "reviewedContentHash": "3eab48163c7fcf934b28539b792fc8ca3a60ea3bad89b67e1ddf40f4b00aa66f",
+    "evidenceRefs": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "reason": "完整原件核对适用范围、月度/半月差异和记录保留义务；纠正AND复合缺陷，排除仅无纸质卡即认定未检查。",
+    "locator": "第1.0.2、5.2.1、5.2.2、5.2.4条",
+    "reviewedFields": [
+      "/conditions",
+      "/description",
+      "/keywords",
+      "/measures",
+      "/mode",
+      "/note",
+      "/places",
+      "/title"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。普通场所按第5.2.1条每月检查；第5.2.2条所列候车（机、船）室、歌舞娱乐放映游艺等人员密集公共场所，以及堆场、罐区、石油化工装置区、加油站、锅炉房、地下室等按每半月检查。未按适用周期实际检查或检查记录未保留是分别核查的缺陷，不要求同时存在。没有悬挂纸质点检卡不当然证明未检查或未保留记录，应核真实纸质或电子记录；第5.2.4条未规定统一保存年限和特定记录字段。",
+      "/description": "在本项适用范围内，灭火器配置、外观等未按场所适用的月度或半月周期检查，或者未保留检查记录。",
+      "/keywords": [
+        "灭火器",
+        "每月检查",
+        "每半月检查",
+        "检查记录",
+        "附录C"
+      ],
+      "/measures": "按适用周期和附录C项目实际检查灭火器配置、外观等，处理发现的问题并保留真实检查记录；不得以事后补填表单代替已经遗漏的实际检查。",
+      "/mode": "conditional",
+      "/note": "2026-10-04：检查和记录两分支按5.2.1/5.2.2与5.2.4分别核对；5.2.3是日常巡检异常及时处置，不是保存记录字段要求。",
+      "/places": [
+        "工业与民用建筑灭火器配置场所"
+      ],
+      "/title": "灭火器未按适用周期检查或未保留检查记录"
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/description": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/keywords": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/measures": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/mode": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/note": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/places": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/title": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ]
+    },
+    "reviewEvidence": {
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "independentApproval": false,
+      "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+    },
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_AD8892D4501D426680ED439882",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "ba9632a89c3edb3b492785ae53960dc878a611e92f80d17913d243b87c78d60e",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_SAMR_GB50444_2008"
+      ]
+    },
+    "previousReviewFileSha256": "8dcad3a4f4e28bd7049c91ed017ecf53d5a8c6a8c290458edaa43f537d553c3e",
+    "historySha256": "9e30d30fc8ee40c4a30aa4a90ccc5da0a7ebad06e0b944d12ce296db3e8f9f69",
+    "previousEntity": {
+      "id": "H_AD8892D4501D426680ED439882",
+      "title": "灭火器的配置、外观等,未按附录C的要求每月进行一次检查。灭火器的检查记录,未予保留",
+      "description": "灭火器的配置、外观等未按附录 C 的要求每月进行一次检查，检查记录也未保留，灭火器失效、缺失等问题无法被及时发现。",
+      "measures": "按附录 C 要求每月对灭火器配置和外观进行检查，并保留检查记录。",
+      "conditions": "适用于本隐患所述场所与设备的相关管理。",
+      "category": "总图与建筑",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "灭火器的配置、外观等,未按附录C的要求每月进行一次检查。灭火器的检查记录,未予保留"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《建筑灭火器配置验收及检查规范》GB50444-2008第5.2.1、5.2.4条",
+      "mergedInto": null
+    },
+    "previousEntityFileSha256": "93d8d4c8ed0b40348838dc2bddc70822f29946f27673a95578b105bfb5460c1d"
+  },
+  "previousReviewFileSha256": "74cebe14491f3c31e2eb234fa97a3c963c1592f63e5a8330f26e944b19a070e3",
+  "previousEntity": {
+    "id": "H_AD8892D4501D426680ED439882",
+    "title": "灭火器未按适用周期检查或未保留检查记录",
+    "description": "在本项适用范围内，灭火器配置、外观等未按场所适用的月度或半月周期检查，或者未保留检查记录。",
+    "measures": "按适用周期和附录C项目实际检查灭火器配置、外观等，处理发现的问题并保留真实检查记录；不得以事后补填表单代替已经遗漏的实际检查。",
+    "conditions": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。普通场所按第5.2.1条每月检查；第5.2.2条所列候车（机、船）室、歌舞娱乐放映游艺等人员密集公共场所，以及堆场、罐区、石油化工装置区、加油站、锅炉房、地下室等按每半月检查。未按适用周期实际检查或检查记录未保留是分别核查的缺陷，不要求同时存在。没有悬挂纸质点检卡不当然证明未检查或未保留记录，应核真实纸质或电子记录；第5.2.4条未规定统一保存年限和特定记录字段。",
+    "category": "总图与建筑",
+    "places": [
+      "工业与民用建筑灭火器配置场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "灭火器",
+      "每月检查",
+      "每半月检查",
+      "检查记录",
+      "附录C"
+    ],
+    "lifecycle": "active",
+    "mode": "conditional",
+    "note": "2026-10-04：检查和记录两分支按5.2.1/5.2.2与5.2.4分别核对；5.2.3是日常巡检异常及时处置，不是保存记录字段要求。",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "98d1511ea2e34593bd224209d60685c4a0917d2cc9f52753728f7cf39dcc70cd"
 }

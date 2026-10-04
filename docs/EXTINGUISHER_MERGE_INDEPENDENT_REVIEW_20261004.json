@@ -1,0 +1,145 @@
+{
+  "schema": "independent-extinguisher-merge-review-v1",
+  "decision": "APPROVE",
+  "reviewedAt": "2026-10-04T05:55:16.983985+00:00",
+  "reviewer": "audit_shared_source_repair (non-author)",
+  "scope": "exact 8-file same-obligation merge only; distinct from earlier public-citation approval",
+  "authorManifest": {
+    "path": "repo/docs/EXTINGUISHER_DUPLICATE_MERGE_20261004.json",
+    "sha256": "060ce9a07def7ee32a219c5a7bf9e4275c4a6c49325557c3e14389d06da724b7"
+  },
+  "sourceHazardId": "H_AD8892D4501D426680ED439882",
+  "targetHazardId": "H_365F2FD05EA345A8A4E71BC9B9",
+  "changedFiles": [
+    {
+      "path": "knowledge/hazards/H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "98d1511ea2e34593bd224209d60685c4a0917d2cc9f52753728f7cf39dcc70cd",
+      "afterSha256": "b54341e58818079360f2c4653e1d20655bc37923011e736792dfd14fe5092979",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "74cebe14491f3c31e2eb234fa97a3c963c1592f63e5a8330f26e944b19a070e3",
+      "afterSha256": "5ecf46fa4b239174b01bccdf0a483d26103571206aa1374688b329113673ac62",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/links/K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "11c6c3344ab7feb88d652cadc2897a4d304cae33aa117f63e5c7c91db25dd854",
+      "afterSha256": "b801a22a1f38f35a8ffad9a49121714e99c1b4e1df4936bbb11d0f142990bad9",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "04f05e84ae53469f6616f41c2f20659e1288280dacb4fee9f1fa4453955144ad",
+      "afterSha256": "f62e141cb71c8128916e2421b1e29b924004dbcd46c54de88f1dd3525b5e8def",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/links/K_PUBLIC_HALFMONTH_H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "2fe0d260735ca7059da4e0c8897b0c532303f1c700a8865fe7876f9579612e19",
+      "afterSha256": "4fa8159c63c2fe4eec9e5b540cc44827d201b2c7675fc0a9c964eb12e56c9cbb",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_PUBLIC_HALFMONTH_H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "262a88c52a23902e84421f34d279b5417a48b7ed4a21cdbe91d86f742c54d719",
+      "afterSha256": "58a625d5fe16571cb83fb83c1cb85eff47cc2d396e6c64696bad9b8b6c2f15f6",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "1eb397e8020ed5b33978fb90d142d201350b4640c8a6517273ba007a41d737f1",
+      "afterSha256": "fecc7918d8494ee5e39ec9f0bf010cbcb733e25825a2d3c45ffc06d0555cfd2a",
+      "historyPreserved": true
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_AD8892D4501D426680ED439882.json",
+      "beforeSha256": "e933c3f7f8beab59e589513672b3bef69aac56bb5015b7261424a98011b10e52",
+      "afterSha256": "edcf3d403550650d8866a64eb8f6ba4eff5ef6961384449c0866a46c1ea9c44c",
+      "historyPreserved": true
+    }
+  ],
+  "canonicalDependencyBindings": {
+    "knowledge/hazards/H_365F2FD05EA345A8A4E71BC9B9.json": "aa9411c15232038a08d9972618c894565c8163de133ed6dde079675550f0d5b5",
+    "knowledge/reviews/hazards/H_365F2FD05EA345A8A4E71BC9B9.json": "07df50268e3591dd547e4cfc203ce0840edd1c123004990d7ba4cbbe5e5ad512",
+    "knowledge/links/K_XLSX_WEB_H_365F2FD05EA345A8A4E71BC9B9.json": "b28632460695226c774dc7edf2f68085467a20b74d066e5875a5c939ec73de0b",
+    "knowledge/reviews/links/K_XLSX_WEB_H_365F2FD05EA345A8A4E71BC9B9.json": "8e865c569d6aee4ac9ea6b6ae322861b75f1de0548f2161f8a5ae0405ffe2f30",
+    "knowledge/links/K_PUBLIC_HALFMONTH_H_365F2FD05EA345A8A4E71BC9B9.json": "8b2fd4196c8ada873bb36842485a508093ead479cc03e93d65cd093fc4511685",
+    "knowledge/reviews/links/K_PUBLIC_HALFMONTH_H_365F2FD05EA345A8A4E71BC9B9.json": "6574292eec02f0df138bacb605de89e90c5857d378a44d98f73231eb36c465af",
+    "knowledge/links/K_XLSX_WEB_H_1C36D47B4E9F44E2B4905BC042.json": "4a19ab42bb0aa04359a1d12f33594ae6e92ea291dfe5f6b8ca77a4448f51ca47",
+    "knowledge/reviews/links/K_XLSX_WEB_H_1C36D47B4E9F44E2B4905BC042.json": "a4fbd0721044b0a11da71ee742f0598a635c38f6c0215ff9aa5456d695036d8f",
+    "knowledge/clauses/C_GB50444_5_2_1.json": "4687e2499c6e7897b1d4ea6731ca760d38498e3141ee26262c676015e6aeddbb",
+    "knowledge/reviews/clauses/C_GB50444_5_2_1.json": "d78875c15e8c0ecb0f855d464640333fbb26dd6fc816f4f23aa003516cd5fd2b",
+    "knowledge/clauses/C_GB50444_5_2_2.json": "1f6c4a124aafcf6eed473bf7b35947b6c8e52ddf3c5fbe7346aabc2cf550e4fe",
+    "knowledge/reviews/clauses/C_GB50444_5_2_2.json": "19a82cb93fb2b41db78d740345265331f76160bf38babd2288890496cec4ddfe",
+    "knowledge/clauses/C_GB50444_5_2_4.json": "b012065e8724b2d6cc98054f651c870e26f9fccdbf7baa6f75958588d068840f",
+    "knowledge/reviews/clauses/C_GB50444_5_2_4.json": "275c067a18f43daa943644bcd3eb92d927a6e344753fc794705fba4ed22459c9",
+    "knowledge/evidence/E_PUBLIC_GB50444_ORIGINAL_20261004.json": "4703f66db93f1177eef595c476c306b64ccb7c448a5f557d80dbd7744ec4af58",
+    "knowledge/law-versions/LV_STD_GB50444_2008.json": "8cdc3ebf2348a141d54e67c40a9c6f41f347a190808a5caeb774108a196690d6",
+    "knowledge/reviews/law-versions/LV_STD_GB50444_2008.json": "638ab1272493601a6651bee7f4d08dfd435e565e2a778f04dcfc7228251fef35",
+    "knowledge/laws/LF_STD_GB50444.json": "90b3154841b0cec848e9447e86351009ac6b3b2dd4373ab2f65bc192b3f1bd96",
+    "knowledge/reviews/laws/LF_STD_GB50444.json": "c02e026aebdac487d4eded1a83d079e56c422f48f454a6f7b3266d762991a409"
+  },
+  "additionalActualDependencyNote": "Independent review found the author manifest initially pinned unrelated L008. The author corrected its receipt to the three clauses actual LV_STD_GB50444_2008 and LF_STD_GB50444 plus their reviews, without changing the eight source files. Correct actual dependencies are verified and pinned here.",
+  "semanticFindings": [
+    "Eight substantive hazard fields are byte-equivalent before merge; source aliases empty, target aliases retained. Notes are history, not additional obligations.",
+    "All three old/new K pairs have identical clause, applicability, role, jurisdiction and priority; month, half-month and records branches remain separate.",
+    "Original GB50444 PDF page8 scope and page17 5.2.1/2/4, plus appendix C page25 read visually. Checks and record-retention are alternative defects; absence of paper tag alone is insufficient.",
+    "GB55036 repeal list and Jiangsu Fire technical-standard page checked; 5.2.1-5.2.4 not repealed. No reapproval of repealed clauses.",
+    "H and 3K are superseded rather than erased; complete former entity/review nesting retained; canonical entity/source files unchanged."
+  ],
+  "sourceRead": {
+    "originalPdf": "public-citation-sources/gb50444-js.pdf",
+    "sha256": "b1d1810e872f78ce3ca4333626f6e95ff5f8efed42bce7da39208c72e51662b9",
+    "pagesOneBased": [
+      8,
+      17,
+      25
+    ],
+    "url": "https://js.119.gov.cn/group1/M00/00/2B/ZYS-ZGGB6oOAEfdqAEAK60AmDRM740.pdf",
+    "currentnessUrl": "https://js.119.gov.cn/202111/206aebe848d24575894f22639ff3e721_c_3b4857e24c0c4bab8ca4.html"
+  },
+  "gateExactDelta": {
+    "beforeHazards": 1678,
+    "afterHazards": 1677,
+    "beforeLinks": 1832,
+    "afterLinks": 1829,
+    "removedHazards": [
+      "H_AD8892D4501D426680ED439882"
+    ],
+    "removedLinks": [
+      "K_PUBLIC_HALFMONTH_H_AD8892D4501D426680ED439882",
+      "K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882",
+      "K_XLSX_WEB_H_AD8892D4501D426680ED439882"
+    ],
+    "newHazards": [],
+    "newLinks": [],
+    "canonicalPreserved": true
+  },
+  "privateDependencyCheck": {
+    "dependencyMapSha256": "91fd3ec9125ff2e70bb254853f17d9c50a8d6f006f66510c2f127b012b32c3bf",
+    "atomsChecked": 420,
+    "selectedReferenceConsideredAndFileHashHits": [],
+    "pilotRecordsChecked": 24,
+    "pilotHits": [],
+    "backgroundSnapshot": {
+      "sha256": "3d067b82e078a3fe476ad71193a45b21889acb25d39afbd716327302dfc90844",
+      "containsSupersededHazard": true,
+      "classification": "historical_stale_background_not_current_rule_or_atom_mapping",
+      "mustNotRefreshByPretendingOldReviewStillCurrent": true,
+      "description": "Previously retrieved private background snapshot; not selected or linked to any reviewed atom."
+    }
+  },
+  "errors": [],
+  "limits": [
+    "No source entities authored by reviewer.",
+    "The stale background snapshot is explicitly classified here; package-level refreshed labeling and final integrated QA remain the integration owner responsibility.",
+    "No private candidate, field profile or onsite finding is promoted; not a whole-dataset publication approval."
+  ],
+  "publicCopyRedaction": {
+    "originalIndependentReceiptSha256": "78cfd8acf5dc7558e952dbae1b94749107ea148b28355826f7bff2dad5aa1283",
+    "redactedField": "/privateDependencyCheck/backgroundSnapshot/path",
+    "scope": "Only a private storage locator was removed. Evidence digest, exact approved source hashes, findings and decision are unchanged. The complete original receipt remains privately preserved."
+  }
+}
