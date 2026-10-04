@@ -1,0 +1,1582 @@
+{
+  "schema": "independent-shared-source-review-v1",
+  "asOf": "2026-10-04",
+  "reviewedAt": "2026-10-04T05:49:14.444284+00:00",
+  "reviewer": "audit_shared_source_repair (independent non-author)",
+  "decision": "APPROVE",
+  "approvalScope": "Only the frozen 125-file repair for 27 H and necessary C/K/review/evidence/version dependencies. 21 precise rebindings plus 6 current false-direct-review withdrawals. Not a publication or whole-corpus approval.",
+  "sourceFreeze": {
+    "public-containment.patch": "985397468c203a5cd0191a73f787c6a77847be8acb8fb134040b3b5c632f363d",
+    "exact-overlay-inventory.json": "7ba1f53130c3e46584c39737ac648be2d142297d2e822f2d64a17335004f72a0",
+    "public-disposition-receipt.json": "ad585d826c75b5acc70265bb82aba9278ecd827637da1a1e8f7fde9311dec8f5"
+  },
+  "exactChangedFiles": [
+    {
+      "path": "knowledge/clauses/C_AQ4273_2016_8_1.json",
+      "beforeSha256": null,
+      "afterSha256": "0103065b2497e0f936c74767e5347cc6ca58d281924b832467197a8e48f4f61d",
+      "beforeBytes": 0,
+      "afterBytes": 363
+    },
+    {
+      "path": "knowledge/clauses/C_GB50029_2_0_1.json",
+      "beforeSha256": null,
+      "afterSha256": "f17e84370ce35a5011777937f9dca7c38d01e8f042e3371289d2f3c57d211624",
+      "beforeBytes": 0,
+      "afterBytes": 735
+    },
+    {
+      "path": "knowledge/clauses/C_GB50187_4_4_5.json",
+      "beforeSha256": null,
+      "afterSha256": "e211486364b323c0b70b2e0ab50f067ac732739f9cc9160b874f669e59a9fa36",
+      "beforeBytes": 0,
+      "afterBytes": 1077
+    },
+    {
+      "path": "knowledge/clauses/C_GB5083_6_7_1.json",
+      "beforeSha256": null,
+      "afterSha256": "7b66838a0880816ee9d0fb75f68ec09a284672bde1e1c8baaf53604add6b48b3",
+      "beforeBytes": 0,
+      "afterBytes": 633
+    },
+    {
+      "path": "knowledge/clauses/C_GBZ1_6_1_1_2.json",
+      "beforeSha256": null,
+      "afterSha256": "5b727941123aec810a7ffe967c60e88f7828019d67e1955dbc4aac60ee0ab27b",
+      "beforeBytes": 0,
+      "afterBytes": 801
+    },
+    {
+      "path": "knowledge/clauses/C_GBZ1_6_1_1_3.json",
+      "beforeSha256": "4637b3df878afc9f298ca630853e0b804708e63912cb2ccba2b2af56934ec719",
+      "afterSha256": "b9d94c7f4effabfd68e8d7f83047fc62df0db7c4f2a57af45a0743b92e60ab48",
+      "beforeBytes": 376,
+      "afterBytes": 573
+    },
+    {
+      "path": "knowledge/clauses/C_JGJ91_10_4_1.json",
+      "beforeSha256": null,
+      "afterSha256": "e38d6a97f2adca9df2e9c3386a93a18dbb4d44a826ca23f6a9e07b528c38667e",
+      "beforeBytes": 0,
+      "afterBytes": 859
+    },
+    {
+      "path": "knowledge/clauses/C_JGJ91_5_3_1.json",
+      "beforeSha256": null,
+      "afterSha256": "0a269b7740d0a090b647eb042e69ab6518a55dfd363da41d929c0c03a91571e8",
+      "beforeBytes": 0,
+      "afterBytes": 422
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_AQ4273_8_1_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "b1ee6459fe4529e140678c6ed1cc85943124e3034f39faf78787dead5a1ae206",
+      "beforeBytes": 0,
+      "afterBytes": 664
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_GB12801_ORIGINAL_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "c11bca8c2a6c3009589ec012083c0d9289f8c967ce760fa29046fc7cce4ef4a7",
+      "beforeBytes": 0,
+      "afterBytes": 711
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_GB15577_ORIGINAL_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "b7ab3bdd9bd764754837a91bbaedea187a364fa8e1605188b80ea445bb154bcf",
+      "beforeBytes": 0,
+      "afterBytes": 903
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_GB15577_REFERENCE_SUCCESSIONS_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "9e5aa48886bf95f2ff36823d7e6d8d06c9644d506b7c3bf636a9dc0421778170",
+      "beforeBytes": 0,
+      "afterBytes": 755
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_GB5083_6_7_1_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "dbac29b57378a4be0aabad69562e31fbc5a0b0b9d532ff74cd6de8d6fcfd30c5",
+      "beforeBytes": 0,
+      "afterBytes": 595
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_GBZ1_EXACT_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "5feb2f56a4daf8db852ec299c77ab04ddb8daaddcef9aa07e373f5c21b577e58",
+      "beforeBytes": 0,
+      "afterBytes": 894
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_HJ2026_EXACT_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "a88cb4b4c8abe4999e28e6ea61d428dec6b0d7994205323b0761e30162efdf9c",
+      "beforeBytes": 0,
+      "afterBytes": 816
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_JGJ91_5_3_1_10_4_1_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "f01188db96f60aa43f8814a0f0718f82a528fbc0509341014aa40a866165e67a",
+      "beforeBytes": 0,
+      "afterBytes": 1259
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_LAYOUT_GB50029_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "4e10372409471040f66baf699e05336a2987575022b9d4e0d8cfe8bb26a540b1",
+      "beforeBytes": 0,
+      "afterBytes": 1351
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_LAYOUT_GB50187_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "7f8950eaf72c23368ab90900a9ed9662b8eeb9ef31406a77eab05745e53ae794",
+      "beforeBytes": 0,
+      "afterBytes": 1670
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_MEM10_11_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "8c04cdbfcda7b2aecdf39f972873ac62dbb76e0bc8e22ed6e60869bd911d9199",
+      "beforeBytes": 0,
+      "afterBytes": 632
+    },
+    {
+      "path": "knowledge/evidence/E_CONTAIN_WORK_SAFETY_LAW_36_20261004.json",
+      "beforeSha256": null,
+      "afterSha256": "3c554fb2804ed35e8c9acbeb01601b63868b6b8cdd12805e00ea02c9bc938ad3",
+      "beforeBytes": 0,
+      "afterBytes": 606
+    },
+    {
+      "path": "knowledge/evidence/E_MOHURD_GB50187_2012.json",
+      "beforeSha256": "c64e39ede08192d97677aa0857dd0980178a415c9f7ee5d4315d5429ea80c30e",
+      "afterSha256": "418e4f400f49a7a3153dbbdd8b0d9298b3d71687ce51be62d8ff3ccabf2024ba",
+      "beforeBytes": 322,
+      "afterBytes": 1236
+    },
+    {
+      "path": "knowledge/hazards/H_0F065B25BAC84C329610C8FBF8.json",
+      "beforeSha256": "d96b4c2ba4e9bf262d7728d89999e68229dfd2f91dd1ab97271e761d40cded29",
+      "afterSha256": "459114d0520e71e60e71d2dc400f87f5f840de24ba4b27ea5fbea408078f78d0",
+      "beforeBytes": 1275,
+      "afterBytes": 1492
+    },
+    {
+      "path": "knowledge/hazards/H_15577_11_1_1.json",
+      "beforeSha256": "6c33224ab0f8922caaba8333fbdc95b622563c37a37a9fabced8412a6276b7a8",
+      "afterSha256": "5e37f8b458d4f0d2305dc5078dccaff72aceb47a7b6882ea7fd52cc3ce15c4be",
+      "beforeBytes": 916,
+      "afterBytes": 1019
+    },
+    {
+      "path": "knowledge/hazards/H_1B2F6A143A9E492DBA2A246473.json",
+      "beforeSha256": "6140e35905813415bf3686b7466d0e8877a6787b35a3287df4f886db98644a1d",
+      "afterSha256": "53b780b200e11047dc56983f12d95fc70bbb3302251f16a7c031eddbd84a27c7",
+      "beforeBytes": 1214,
+      "afterBytes": 1572
+    },
+    {
+      "path": "knowledge/hazards/H_2870FFD9678642F4993A3CE571.json",
+      "beforeSha256": "7e3875492d62f4d7f34356359dcded6eca0b277dfd3833072c54812c9d4a271c",
+      "afterSha256": "7baf649d9ec4c2d7566e07a3ab76a59f3e1115dfa6ddb48641be953f1bbdbf26",
+      "beforeBytes": 860,
+      "afterBytes": 1288
+    },
+    {
+      "path": "knowledge/hazards/H_417B030F12A14923A978E4DAB2.json",
+      "beforeSha256": "39324668eb42b443073e532776950c587fe1317337f1d46bf717d093d7468ee2",
+      "afterSha256": "5f60609d5b85ca782b624a72c1a38bddec0f8e17e82da63684875b6837811832",
+      "beforeBytes": 1072,
+      "afterBytes": 1515
+    },
+    {
+      "path": "knowledge/hazards/H_610647B0A6A54C52A0D8663FBB.json",
+      "beforeSha256": "7e86c8efe4a8be64bd9b3ec9da17711d7672a7dde9db2c938d1c4341f473f718",
+      "afterSha256": "c4755e0b944ad505baa9575e8bb6f6899dcb5b20a380ff0139b4c29d3b1b13e3",
+      "beforeBytes": 1125,
+      "afterBytes": 1284
+    },
+    {
+      "path": "knowledge/hazards/H_6298B2AB1EF44DCD8736C6F498.json",
+      "beforeSha256": "f29ea680243aad3391480868cb3999f9211673925390ecb6491817383f38ea9b",
+      "afterSha256": "69285f21ad4c7678e186326964e26e8f2fef0777feb6419c117a3f40ffe6ba9a",
+      "beforeBytes": 1841,
+      "afterBytes": 1864
+    },
+    {
+      "path": "knowledge/hazards/H_6459FF72A542499FBB3E0F70FC.json",
+      "beforeSha256": "69941ed885aabe8c9bde0b03f684ee87c8742dddce06d348a6e31bfc8ed19d24",
+      "afterSha256": "8f29a7dcc5f69a83acf0171781a5156cfa485be52d847c6864e56056de245b2e",
+      "beforeBytes": 1002,
+      "afterBytes": 1425
+    },
+    {
+      "path": "knowledge/hazards/H_65F26C6ABA374DAC96AB6ADEA5.json",
+      "beforeSha256": "1542595666596677ed26b342ff531380a6040cf95a0932f92041073a4e6ae5a3",
+      "afterSha256": "81580cde12e3b25ad666b413e4a207e0c799d0a1347e26d3adc3119983374ce3",
+      "beforeBytes": 1072,
+      "afterBytes": 1327
+    },
+    {
+      "path": "knowledge/hazards/H_A1DD3641D23C4DCB92FFE32354.json",
+      "beforeSha256": "72e7e30ad33b61ccb0f09117786e7fc878d28d965602ce7c9cfaa303796fd404",
+      "afterSha256": "f38cf9aa4e45b8af42b7ae4e6c3d57646563869e826e4b72b50902230dbc31f8",
+      "beforeBytes": 1185,
+      "afterBytes": 1258
+    },
+    {
+      "path": "knowledge/hazards/H_AA7C48BCF0E6458484759F407B.json",
+      "beforeSha256": "98e8724c542e946a02277068252c48417e2ac89b3fae7564f5bea4ed95c1c587",
+      "afterSha256": "3e4c0a59258b9cf4cebdbe4d9bb3f2484624c68532f35e1a6aeb91d38f77b41b",
+      "beforeBytes": 1171,
+      "afterBytes": 1865
+    },
+    {
+      "path": "knowledge/hazards/H_AB765CAD382645D0B1024E8CD8.json",
+      "beforeSha256": "7478a3f87b3c9e8c7b4f93241297985518e81fb6b3f7084e6367df7870076e0f",
+      "afterSha256": "e2a0c5b650a1ed2209ba5925d2736195528bed3900162540c7b427920f66bf6b",
+      "beforeBytes": 971,
+      "afterBytes": 1156
+    },
+    {
+      "path": "knowledge/hazards/H_AFA0624C3BBD4FA2B7E99BC2D4.json",
+      "beforeSha256": "57e70dd7c1f9ae7da6c58feec7fcc8707566c9de5a99687d725d9e4c2dc1f142",
+      "afterSha256": "8e6e1c6c8625dc9dfcef5ec5fd337be092be7d8a5a3710505799987eb13ceb05",
+      "beforeBytes": 965,
+      "afterBytes": 1123
+    },
+    {
+      "path": "knowledge/hazards/H_B405711EED23418BAC72F90645.json",
+      "beforeSha256": "c841d49a702bca57127b6a18ff62161ed0d526370387bb637dbf532e51a597d1",
+      "afterSha256": "a668bd05efff5657bb3a04eb816ed7d6fae3f1d651e247d993cb4a98ac663662",
+      "beforeBytes": 1252,
+      "afterBytes": 1819
+    },
+    {
+      "path": "knowledge/hazards/H_B72EA2115B5D41FF84695D5471.json",
+      "beforeSha256": "78fdd4d2e03c4c613f317fe233be408477aa8ff84416a19a87dccfbf0dc1f1cf",
+      "afterSha256": "ecff4775baabd22fbc27bed9c6a7831dc54eeae0ad47b255fd3c059bb5eac518",
+      "beforeBytes": 997,
+      "afterBytes": 1018
+    },
+    {
+      "path": "knowledge/hazards/H_BFA0B7A7E308410DB3CC9358AB.json",
+      "beforeSha256": "959a76c880b3d69b5644c82734f6091ee62883e6cefe541c9850a7966c971fc6",
+      "afterSha256": "faa485685b04ca2e75e647e5844026f1f04b0b8e7feffbd30488e0cbc3c97596",
+      "beforeBytes": 825,
+      "afterBytes": 1335
+    },
+    {
+      "path": "knowledge/hazards/H_C3B24EEDD61145A691A38B0414.json",
+      "beforeSha256": "2e8f809ca24f61828e9f9a78afc4c0cedc4083c13cf0035c859ef8a6c8f6cb0a",
+      "afterSha256": "69de1a32c2c5a53dbc30f48be809bd47bd862608de2b914aae98c5bec23b02c7",
+      "beforeBytes": 1417,
+      "afterBytes": 2410
+    },
+    {
+      "path": "knowledge/hazards/H_C9900E360F7848F6AD6025FE89.json",
+      "beforeSha256": "ae9176c87d693c1f611e5cff6e79eef3c3b64fc42e4d76ae444a2f1210c3ccb9",
+      "afterSha256": "b7bdeeee7eb2b53852a2f343fe16623768889e7ef6a7a0a53ea68efa551f635a",
+      "beforeBytes": 1041,
+      "afterBytes": 1117
+    },
+    {
+      "path": "knowledge/hazards/H_CC6E2BC71D1F419A9674C7A4C8.json",
+      "beforeSha256": "8188aa5e47a045d3549b41d73a40a96442c35cf0405b42dcdfd3f49c154ba1ac",
+      "afterSha256": "bdf556ed99d6d7e308489d267dcf44efc64be67fe6ee9b5d02000a3faf3ba43e",
+      "beforeBytes": 1120,
+      "afterBytes": 1535
+    },
+    {
+      "path": "knowledge/hazards/H_CD6D8392BC7E40A787BD44D82A.json",
+      "beforeSha256": "1655fea0f79d01403152a03936c2b9a5ace8610168ddc1376e84c8b17da6eb55",
+      "afterSha256": "704426799dc28f95280ebd964227e8b2f3dd6ce998567de9d7767b97edcb87ad",
+      "beforeBytes": 1037,
+      "afterBytes": 1237
+    },
+    {
+      "path": "knowledge/hazards/H_D0AD6FE92A48431894E9756C00.json",
+      "beforeSha256": "0e6292ce06638e5708d3a2a115060d9679ed80109d382e8ee0db40ab500a54d7",
+      "afterSha256": "c74e24ec67b65b1be2e6a0be40647a72d9b4a7f727fb94acf6a80a2fe887089e",
+      "beforeBytes": 1144,
+      "afterBytes": 1337
+    },
+    {
+      "path": "knowledge/law-versions/LV_STD_GB50029_2014.json",
+      "beforeSha256": null,
+      "afterSha256": "208c25da9753c8d5c2faa20e53a0266dcb50c9ba9e245f6c8c57a1ab9a5fc72a",
+      "beforeBytes": 0,
+      "afterBytes": 359
+    },
+    {
+      "path": "knowledge/laws/LF_STD_GB50029.json",
+      "beforeSha256": null,
+      "afterSha256": "6d3e08fe016f224abda725a1ab4bb99b53497561d39d8f90d6e1ce640a3a5670",
+      "beforeBytes": 0,
+      "afterBytes": 394
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8.json",
+      "beforeSha256": "5ef3dcceabcc64e444a6a4258886999a063f2f4fa03fed7fe9ae1c60371e0c69",
+      "afterSha256": "f7e709ff829151c9c9270d0245b95aa846772e3170596dbc290d890cd630416e",
+      "beforeBytes": 336,
+      "afterBytes": 417
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_15577_11_1_1.json",
+      "beforeSha256": "cda18ca9ccea3aad1ab5d6c87f4f517c2a88bf54c416a05cefd1d453489a3554",
+      "afterSha256": "83e41053877524f73a9d4e7834492466caf658f3faf138e31e13fd3806702994",
+      "beforeBytes": 308,
+      "afterBytes": 474
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473.json",
+      "beforeSha256": "786ba9806784a739a990c7e2aa35570ebd61cf23f9c19d9f321b2c9386d4ffee",
+      "afterSha256": "2a6a71ad717e46e1d3b949973c2a2765b8c646de359c214a440b5d2443271ffa",
+      "beforeBytes": 336,
+      "afterBytes": 644
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_2870FFD9678642F4993A3CE571.json",
+      "beforeSha256": "494c53d0f10cb55682a92318beaa5e6d306441f8bf2dba50e88a6ec9f22f274b",
+      "afterSha256": "25c1ae4e9ed3a061b34f8915cc3d6b5fc5937e6fd18186a16f188625fa8e4ddd",
+      "beforeBytes": 336,
+      "afterBytes": 737
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_417B030F12A14923A978E4DAB2.json",
+      "beforeSha256": "56bdb1321f066724ef3db9c2dc46ba8070139483759c6f7dea173ce146be2b6b",
+      "afterSha256": "17b933e391fab125a6f1b82e79e069bc2f94fa88aa5ebacd661415681239655f",
+      "beforeBytes": 336,
+      "afterBytes": 753
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB.json",
+      "beforeSha256": "f91023d28df8f78d9c9b852f1cfe431d4772c714e61ca2d93892a18d87522da1",
+      "afterSha256": "723fa54557d0597b088516fc1b4765c1f7df88b49857996d13d5ca1dbeba3c34",
+      "beforeBytes": 336,
+      "afterBytes": 408
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498.json",
+      "beforeSha256": "5363cd10721713a70420eb40a71749ecf59a2ee1a2946711d89d9765a099de71",
+      "afterSha256": "978168e839055f9375a603c787140660cd7975508df455c182de6ccac8fb79cc",
+      "beforeBytes": 336,
+      "afterBytes": 393
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC.json",
+      "beforeSha256": "ba9899c6645bbb926f47913702f0a98080d1a482e378e0d5930e575b09ef1ab4",
+      "afterSha256": "b7c387c07ee4c7ada35b23dc9a4c0f34bbad5dd1c20cdab46d38121744b0f82c",
+      "beforeBytes": 336,
+      "afterBytes": 783
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5.json",
+      "beforeSha256": "72e7a0379d24e7ab23ebc08ef8805826f065693edfef8dcc5c165f4196d4bfbc",
+      "afterSha256": "05bef3b63b0d0acd59cb2b206bd1a32f746c8a082735efa17ee3e42256f22853",
+      "beforeBytes": 336,
+      "afterBytes": 493
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354.json",
+      "beforeSha256": "0bc2d397787d41185add15ba0cbcabe51d934da0e3ede8458a6e46cb7a21df5e",
+      "afterSha256": "1f9ee227e5c6df57a13e5922adec4a64d8138b0cb86ce54d9d8d92ce25c0be23",
+      "beforeBytes": 336,
+      "afterBytes": 489
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B.json",
+      "beforeSha256": "6595af784fdf4f035dd6ffeaf12be5ba040a9bbcd0c54cb1144642c0d0ee54fb",
+      "afterSha256": "196a9e658d01e6ed388af11faa0b6011c2896398602a01469670d0993862a721",
+      "beforeBytes": 336,
+      "afterBytes": 586
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json",
+      "beforeSha256": "011c20791a8bc87db1ad11511c385fcd44893c1a53448c8d9d89b9542653cdd6",
+      "afterSha256": "574053f93a09c5a1b5f450682634ba51a403a2bc04d7a1689a1b08bd554317e6",
+      "beforeBytes": 336,
+      "afterBytes": 404
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4.json",
+      "beforeSha256": "4a44a3e25a316691186f395e92a1deb5f2e3d905fb84f22f5fc15e5126f4a6ba",
+      "afterSha256": "6a30725bd3f11c50c8a4831483b20fbbab55de8c9b2b121502b702aa3a184d65",
+      "beforeBytes": 336,
+      "afterBytes": 469
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_B405711EED23418BAC72F90645.json",
+      "beforeSha256": "010ee9528e4dcb2b174d8c16611048fa8abddd53f608deaaf380214b2cfbd327",
+      "afterSha256": "dc71d992fd8fedb0c80d41484eddaf76593668e15f026d3ffe635a3582e8f191",
+      "beforeBytes": 336,
+      "afterBytes": 788
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471.json",
+      "beforeSha256": "286d11761571821c0f268eb46e3dba8c7c4b239b966ae0421d9a3577fceda218",
+      "afterSha256": "d081754e8b967ad5d7cc8795c9c385fb424600fe8cd435e0eebd97b944adf16f",
+      "beforeBytes": 338,
+      "afterBytes": 542
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB.json",
+      "beforeSha256": "eccd6c30c2858b06336dc86ef147ee29b9cd0ea065b083a45c0e2191f8006b59",
+      "afterSha256": "3f886718dc1980b7d18f5ae47cc312b34057b9471f738396013ad73f4dc372d6",
+      "beforeBytes": 331,
+      "afterBytes": 737
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414.json",
+      "beforeSha256": "79e144981eaab30bcc77e33ccdf054fd5947db955312f7b95ad7fd32064de7cf",
+      "afterSha256": "f767f4b44d6530e00794e13ead0b9250a5b72a7cdb7af0bf52f21db1e78e0b5b",
+      "beforeBytes": 336,
+      "afterBytes": 836
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json",
+      "beforeSha256": "84c64fe670521c2c45dd3956686e6bbc21820c39d6d6e9d5e629ced132faade7",
+      "afterSha256": "d26353c5aadbc0e6ef7ec85fb5ad0a0cc47cdaddaa8955fe2532e53949f2be4e",
+      "beforeBytes": 336,
+      "afterBytes": 387
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8.json",
+      "beforeSha256": "6b781c799c5ccc53529691332eab1fe3485a704fe9b1707f9a66fa18cd7f89aa",
+      "afterSha256": "5e83096391ecbf86b55c55941c445c5bec636d94dbf9cf2698f16fafbdbfefd8",
+      "beforeBytes": 336,
+      "afterBytes": 487
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A.json",
+      "beforeSha256": "8a02ddd2350fa270ceee2ae5fe2bf937f9897b166e5a4f8b0c63d74878851355",
+      "afterSha256": "8525536ba28609940a7492db89c6c4b87265c434383b83a27e0d272bcb9dece8",
+      "beforeBytes": 336,
+      "afterBytes": 521
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00.json",
+      "beforeSha256": "abee9f2001a1a81aef3d7a48b9d3a9ab1ce3235e27c657223a1d58f7cb83846b",
+      "afterSha256": "aea7ed91ea3e80680a930dc14ebeae73071bfc0693098b9d498399842d5402f1",
+      "beforeBytes": 336,
+      "afterBytes": 499
+    },
+    {
+      "path": "knowledge/manifest.json",
+      "beforeSha256": "64d197528eb090b3a17348ff3c0b2ab6c52ef0707925b6771e8ed0e85e4334ce",
+      "afterSha256": "867aaf13336d035e6c66fd5b560c970e8b5751750a84c3f0383d4899e8ffd80a",
+      "beforeBytes": 18612,
+      "afterBytes": 19566
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_AQ4273_2016_8_1.json",
+      "beforeSha256": null,
+      "afterSha256": "cc635e8cbad1280c44bd587ae8aeaad8dfc9fc986f1c3f5002537d2d50475a9c",
+      "beforeBytes": 0,
+      "afterBytes": 708
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB15577_6_1.json",
+      "beforeSha256": "059bb85aa860995351c2061941541681a3baf4cb79889854b06e7a2d692fdfd7",
+      "afterSha256": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17",
+      "beforeBytes": 298,
+      "afterBytes": 1328
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB50029_2_0_1.json",
+      "beforeSha256": null,
+      "afterSha256": "a41295c8649a085844ae6f96a4076dad2b6806047fabdbfc87d70c7354d15db6",
+      "beforeBytes": 0,
+      "afterBytes": 779
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB50187_4_4_5.json",
+      "beforeSha256": null,
+      "afterSha256": "8a9438b87155ff14a0e099f909c91be0124aed2ca60f93a61bcd06a0392a11fa",
+      "beforeBytes": 0,
+      "afterBytes": 779
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB5083_6_7_1.json",
+      "beforeSha256": null,
+      "afterSha256": "8b17c92370a59d37c7b17cd1d6ccb3faf8aef76362dcf1f24282487a65aa1e3c",
+      "beforeBytes": 0,
+      "afterBytes": 687
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBZ1_6_1_1_2.json",
+      "beforeSha256": null,
+      "afterSha256": "3d564dc1b759a13e6de1aa09c0a55bd0fdca5b3c9de40245642ac9b16450ed34",
+      "beforeBytes": 0,
+      "afterBytes": 786
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBZ1_6_1_1_3.json",
+      "beforeSha256": "c4430812dde77793b615992df087124d96b8c00f254eef00d8595786048a2e40",
+      "afterSha256": "3f2daa042d641191b68d6fb8b5803673ed73aa872005797fc83996ad12e5cc28",
+      "beforeBytes": 295,
+      "afterBytes": 1220
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JGJ91_10_4_1.json",
+      "beforeSha256": null,
+      "afterSha256": "fad0bbd7a34072e63e0529fa99c07b301b56cf22e2da57366eb640a8a485eee7",
+      "beforeBytes": 0,
+      "afterBytes": 728
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JGJ91_5_3_1.json",
+      "beforeSha256": null,
+      "afterSha256": "a0a1913c8fad7fd20c70d6304b433723630158bf3e862c1e566c0afab768117d",
+      "beforeBytes": 0,
+      "afterBytes": 760
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_0F065B25BAC84C329610C8FBF8.json",
+      "beforeSha256": "b6c6321f432c46a7c3f27d888cdf79c9e2a49e49c05872ca15ddd3d979f7a385",
+      "afterSha256": "7af50d5d615cf89a5c3eac2c674686af39faaf612ea181c504b4b30bd2c28b5e",
+      "beforeBytes": 460,
+      "afterBytes": 1464
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_15577_11_1_1.json",
+      "beforeSha256": "4fb654acf6e8e68ae3f0d95642e6c0e3af75eaea9f5629145a193497b629b975",
+      "afterSha256": "7195187467c449e2472a9d16a1492bd8504d91eff69f61cb975253862b9ef4c3",
+      "beforeBytes": 446,
+      "afterBytes": 1552
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_1B2F6A143A9E492DBA2A246473.json",
+      "beforeSha256": "32eefe0aa5d7a872b0b87da3cf4ae5e8a1f5b9004bd4570259024a50de9e83c4",
+      "afterSha256": "c0242fc185f7a3ee2c52f2a7c84f09beadde1a1bb7e1d281172aa209471be3de",
+      "beforeBytes": 460,
+      "afterBytes": 1562
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_2870FFD9678642F4993A3CE571.json",
+      "beforeSha256": "1800971b4a112b411b3c09ffa14f3fb24bba7a83be4d8554e8ca8bcdb7bbf240",
+      "afterSha256": "2c9b50dae36c81854d00957d43e08b600356e1562bd64cba5bea6bfcbcaa111f",
+      "beforeBytes": 460,
+      "afterBytes": 1562
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_417B030F12A14923A978E4DAB2.json",
+      "beforeSha256": "a747a96c99cc0075926cb260952af973a80a8fe36936a5d381463da5a8327154",
+      "afterSha256": "b944b0095beb620c8eab6674f7aec50d099f8f68efdf53611d232e447c87301e",
+      "beforeBytes": 460,
+      "afterBytes": 1562
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_610647B0A6A54C52A0D8663FBB.json",
+      "beforeSha256": "1517da472c8d87070e722d2442c7da3b29674235a6f24668e885f76afd127a4d",
+      "afterSha256": "31bedcade1fdc5f1c7021f34bc6995456d97e200840279d3094d4dc6c5765736",
+      "beforeBytes": 460,
+      "afterBytes": 1535
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_6298B2AB1EF44DCD8736C6F498.json",
+      "beforeSha256": "9eecaa54823523f42e33223c2be85ffa59b4c5e2128f3242899edfe605196c9b",
+      "afterSha256": "baac90a953cf24e53eee95f5f4a0e7f714cbb32e268f522b9fb8b65a691f147f",
+      "beforeBytes": 460,
+      "afterBytes": 1477
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_6459FF72A542499FBB3E0F70FC.json",
+      "beforeSha256": "6931f08de3edad3683d0ae4e61f9d9482ac5c0cfa394fa5abda749be2d11ebea",
+      "afterSha256": "8ab5134fba424a9a89d4fe7fe6bea7d207217e87d7f2c84e1a600d72bf0abb90",
+      "beforeBytes": 460,
+      "afterBytes": 1562
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_65F26C6ABA374DAC96AB6ADEA5.json",
+      "beforeSha256": "69333ebcfb9c59d9c3d42f8bf0808bfb1d28a7e10f48e73177d4e46be04b8918",
+      "afterSha256": "db26b55d9bc92e2ad52a24a5b152979c5a376bc502a4bfcd616043d5f134f089",
+      "beforeBytes": 460,
+      "afterBytes": 1414
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_A1DD3641D23C4DCB92FFE32354.json",
+      "beforeSha256": "12a562e1a6fd6c02df3e2ef561170aa0b6e700fd9f77a4145387bdf41f96dffb",
+      "afterSha256": "9b52d88f81610c81a09726d565ffe1c5e4eeba504ab98edfa1984a62764f7873",
+      "beforeBytes": 460,
+      "afterBytes": 1442
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_AA7C48BCF0E6458484759F407B.json",
+      "beforeSha256": "d7f5960ebfdf48643fd8b6858fc6b1542457def79cafdef6abced1f16bd9366c",
+      "afterSha256": "2485b6acb56d73da2556e78aa3ff3da637ab87fcf32dd2a7fe1ec8e091583f2e",
+      "beforeBytes": 460,
+      "afterBytes": 1645
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_AB765CAD382645D0B1024E8CD8.json",
+      "beforeSha256": "c4bc970bc7ff6f1855080875458ff89b76446b9557ac65cb7dc824c9ec5caee3",
+      "afterSha256": "b246be52424efeda0e7f7ebe75ea8365438b1e5afc9f5a42b1cac43381a05f96",
+      "beforeBytes": 460,
+      "afterBytes": 2673
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_AFA0624C3BBD4FA2B7E99BC2D4.json",
+      "beforeSha256": "c33a3320cd335aacbfc7444efae8d2f0eb4cd4aed7b8695b34c2e2b018fb1de1",
+      "afterSha256": "ca17f98e637a2a747869d10321ce59d4750a434c9901ec30c91032fca79c7053",
+      "beforeBytes": 460,
+      "afterBytes": 1417
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_B405711EED23418BAC72F90645.json",
+      "beforeSha256": "66a50122242e9b3ff318a5a37cad1c5a38937361d2d751e2fa5a5b281a6bcfd0",
+      "afterSha256": "05c01e28a05c9b602975eba14e276868a75ce23d39208b330cc758bf6cf6dc2c",
+      "beforeBytes": 460,
+      "afterBytes": 1562
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_B72EA2115B5D41FF84695D5471.json",
+      "beforeSha256": "875acf96e027c31d4bdb44da6cd6d12f2246d348fae44971faf3f61b969f644e",
+      "afterSha256": "592e207bd9a3c3f73bfebca9eeff9c98aa763a63576f0b9d15a3d1958f621620",
+      "beforeBytes": 467,
+      "afterBytes": 1557
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_BFA0B7A7E308410DB3CC9358AB.json",
+      "beforeSha256": "67880279e5383056f9eceac419c71da0d22d8ed9f49097a56ccd9ad069930d8e",
+      "afterSha256": "5e91146e7521ad1a1676ed06f6fdc9ee1af42799c59a462c1736839a94d8a76a",
+      "beforeBytes": 456,
+      "afterBytes": 1688
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_C3B24EEDD61145A691A38B0414.json",
+      "beforeSha256": "c2d79273de809bea34431f671103919b29aadac2b16916de29110f3ad188ee8a",
+      "afterSha256": "e914e91aa5d4a53a57f058eb5bdd6c13a5444b7f891f940c635d1e5a14726fae",
+      "beforeBytes": 460,
+      "afterBytes": 1645
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_C9900E360F7848F6AD6025FE89.json",
+      "beforeSha256": "ef8e2cc2344a37883aa250c5871770cb225556549c588574144c69c3d796f5bc",
+      "afterSha256": "63ebc511482ba35ba762bd5b83426a8d35eae5319ea0570aa0e870b42d9d29df",
+      "beforeBytes": 460,
+      "afterBytes": 2765
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_CC6E2BC71D1F419A9674C7A4C8.json",
+      "beforeSha256": "807d5f3fd43a603dad641a986ce4c891c62ab7c8a563ac84b2fd38bc28f26df7",
+      "afterSha256": "a15bcdf81ee2a20f9622e8ba930325d7e057c9c77856b2069ac2edc35449a5be",
+      "beforeBytes": 460,
+      "afterBytes": 1508
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_CD6D8392BC7E40A787BD44D82A.json",
+      "beforeSha256": "c2fe925db9dc02b976b03c2901595c2e3fcb2722d2e062071645bacc294a9f66",
+      "afterSha256": "642d71e84eeea30a69d091522c86dc61c3e22ab4af2491de6be30162b49e2444",
+      "beforeBytes": 460,
+      "afterBytes": 1454
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_D0AD6FE92A48431894E9756C00.json",
+      "beforeSha256": "a014da5a1ef6eccc7af47d4f8da6105d910e7534d8270577051877c9d142e4f4",
+      "afterSha256": "2e0816530ad12de06530a7d9b6c548c0ef9ad97df9a621d3a8def4cd63cd2744",
+      "beforeBytes": 460,
+      "afterBytes": 1459
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GB50029_2014.json",
+      "beforeSha256": null,
+      "afterSha256": "6edb6df053995654b329dc027a3fc032e1a9bcd0201a504d25b791b004cebd2c",
+      "beforeBytes": 0,
+      "afterBytes": 650
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GB50029.json",
+      "beforeSha256": null,
+      "afterSha256": "84f9370eec4f948b5a9157a1859794315d90b0d3cd1872f07777725c53d486dc",
+      "beforeBytes": 0,
+      "afterBytes": 639
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json",
+      "beforeSha256": "3548edd72ca68887eeab8ce98691473da428147c070e50505ac68f149f6196cd",
+      "afterSha256": "6c50dcf5b516a747aa4eef2e423e05e955267922aa68a7d9a40cae067c4ebeae",
+      "beforeBytes": 698,
+      "afterBytes": 2096
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8.json",
+      "beforeSha256": "ce571cebd29d2dbc0a650780ddddd158e91d29c268f3f574cc564552307507d6",
+      "afterSha256": "19aad04f38332af7d7c1738ee1e0591bbccfda460176fbda0ccf77c11b288c62",
+      "beforeBytes": 813,
+      "afterBytes": 2011
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_15577_11_1_1.json",
+      "beforeSha256": "ebdbc9c8018ba8f0b95cf12fcbd4a770a3d9b8c8b4ca663785749145ecd9021d",
+      "afterSha256": "1d17caba6aeed4e5ea542259bc494f2b774e61f25ce8a4fa388ff2caaf9bc078",
+      "beforeBytes": 799,
+      "afterBytes": 2070
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473.json",
+      "beforeSha256": "db16396e64151cba6b1f4560fd1a169ce768c1e18593a42d8f9be8ea5d063f87",
+      "afterSha256": "61e115d0001c294b8f40d9f767971ae17bf6c9c2b7023cd52633a1e225c8449b",
+      "beforeBytes": 813,
+      "afterBytes": 2066
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json",
+      "beforeSha256": "1512a2185264236b06de3833ac963baa8932d34fb1a5a47bb06358e0ee6e4a84",
+      "afterSha256": "903738cc95d1a3cd408ecb80b318da48c40f03e9bd022fa355389b75678a6d69",
+      "beforeBytes": 811,
+      "afterBytes": 2161
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_2870FFD9678642F4993A3CE571.json",
+      "beforeSha256": "63db06a9d372f2caf4153d340a657bb5fdea0f92267212058aca4527da88d3e9",
+      "afterSha256": "1d4b0da673da6d320dc21671105fbc0a8350d3519f7b02eaba2bf9a7ab35933f",
+      "beforeBytes": 813,
+      "afterBytes": 2066
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_417B030F12A14923A978E4DAB2.json",
+      "beforeSha256": "cea957472b300090e9fa139cea7f29425286a0705aaeccaa2198787866b5ad22",
+      "afterSha256": "4f25995d0f3697ad81ba1fdedb8ecfaf56f4037795e57b24a0b82af5ce7b2430",
+      "beforeBytes": 813,
+      "afterBytes": 2066
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json",
+      "beforeSha256": "d776f03c4493715b988ed38769ff72b31dc40f25f4dd0bbea66e2038f372b54e",
+      "afterSha256": "7263aad8ef78e1cdf499b4c3bfc5fb68092c3f2a6368515ba46c9546180b3918",
+      "beforeBytes": 813,
+      "afterBytes": 2105
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB.json",
+      "beforeSha256": "8ecc14361008e9adee4959999e8b546367929685ac9c83e211f550890b2d93fd",
+      "afterSha256": "404d33640f3a767a07bc157863171bd12b86432784da4f4691e891e7026f4ed8",
+      "beforeBytes": 813,
+      "afterBytes": 2069
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498.json",
+      "beforeSha256": "6b219adbfb532d893080cdfc5e20fd37b3b53fa206390506337f09fd7b3c1b26",
+      "afterSha256": "3d7f5502c978ee50ea56d6e2a733895c3c2368541a78cae5fe923f7457261632",
+      "beforeBytes": 813,
+      "afterBytes": 2043
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC.json",
+      "beforeSha256": "f22efcb2c0eea6b560032c6b397c475da60605b56480133c213cf2f8164790d2",
+      "afterSha256": "2e98b90faccfb40e41888a1fa56914a25baadb8967ebe76b1631d0ddb64a31b2",
+      "beforeBytes": 813,
+      "afterBytes": 2066
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5.json",
+      "beforeSha256": "69760eeea8b808c8817e0ba22a919dbae44916101f1013f8787a687a9440e46a",
+      "afterSha256": "c65945c156aeaa1737a52df712336980d25e1b201b5d8693182776679a90b5db",
+      "beforeBytes": 813,
+      "afterBytes": 1980
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json",
+      "beforeSha256": "087ba954ce9dc1de2f629f484f5954e5ff7d51a80df1bd045401123155f66c5a",
+      "afterSha256": "fc41dde7dbbc4986c4de06f1fe46cddb2d36c34e156271cd7fd16ac425a3fcfa",
+      "beforeBytes": 813,
+      "afterBytes": 2161
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354.json",
+      "beforeSha256": "fb11b9cd41756b577ad1d385a93fa13edee8ebedb8af9824b5bb260f91cc04a5",
+      "afterSha256": "cc386045a87165a8285296a478b96775234bf38dbd199b4900bd598aa99348b1",
+      "beforeBytes": 813,
+      "afterBytes": 2008
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B.json",
+      "beforeSha256": "13d6ff471b841ecaf29acfd8c23da7b6e28a0c4fcf1d5cfc1b82f5072719eda6",
+      "afterSha256": "04f6a5203000595f33880434ec2b397010b634cc518bb7e0faba1630b72f2146",
+      "beforeBytes": 813,
+      "afterBytes": 2121
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json",
+      "beforeSha256": "c4b8bf3ff541a580516609c14ab63af11956b2d52e3008f0240c571fb75a90dd",
+      "afterSha256": "58fe065a79a8cea78e4173a39997daf6c436b72d446a7fb4f23340294893bbb3",
+      "beforeBytes": 813,
+      "afterBytes": 3476
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4.json",
+      "beforeSha256": "5c1457b1990b9e87daf5f5edce5d9de1d90050f02a13191d944c42f856345ea1",
+      "afterSha256": "3ca919bf10f0378da8dbed9705470fa63d24ff9dcc9e3f1f058c4c8f962c9545",
+      "beforeBytes": 813,
+      "afterBytes": 1967
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_B405711EED23418BAC72F90645.json",
+      "beforeSha256": "9bd1c99946ec64d58a27cb7461204b85a0ac63965c463930ac11b1335c2d075c",
+      "afterSha256": "1373ddef674d9668eaf10ba1833f6793eae81ec1d477678d18513df4f70f5f52",
+      "beforeBytes": 813,
+      "afterBytes": 2066
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471.json",
+      "beforeSha256": "540075b4bc5d8f2d8a3840edfc89265b3fa3b75b5ba140526f9e9df26f98d3af",
+      "afterSha256": "6c7d6eb71d0ea26ee4e92e379387e53be1788d105df7bae43e2794eebce02d0b",
+      "beforeBytes": 834,
+      "afterBytes": 2105
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json",
+      "beforeSha256": "b8e374ab7613ab21e0545a599ace4b21e73d0ac650d32ee7a18798d60823d5fe",
+      "afterSha256": "194c67f66020fd0bf7a1795bac60bcfdf5d30476d67c348436960d17425466ad",
+      "beforeBytes": 811,
+      "afterBytes": 2152
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB.json",
+      "beforeSha256": "85563a994202cbc16cde2a70e14d5c4dc038829f6ed863519ef7625cd243234c",
+      "afterSha256": "507b70e7f283e19485fad5929b020ce6313fd658cc4335c340dbe04237d10244",
+      "beforeBytes": 816,
+      "afterBytes": 2199
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json",
+      "beforeSha256": "f164dfbd1e1bd0e9250957aa2b918405949de5632cb6b1b6e894bdfc1a8f1953",
+      "afterSha256": "116d996f090180c835a50a9a632167891daa56dd217ad6d3e9cedd5a2c8c1bc9",
+      "beforeBytes": 811,
+      "afterBytes": 2174
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414.json",
+      "beforeSha256": "5b8f27ccd11114442a677642ef77a7c9042e40adbea9f17d81cc013604d6c5ad",
+      "afterSha256": "a7947dba37c8a201a014402bec32678dc3c1e1ab4e2fe8ed27b8d504d12e12cc",
+      "beforeBytes": 813,
+      "afterBytes": 2121
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json",
+      "beforeSha256": "617e6be054534160d3d7079d27bb30b6d1a9ad45e4e62011e6f2030eb9cec988",
+      "afterSha256": "9cf4b6968e248a2c0d684bcd63c12b0ea8d57578df7f178e909cc52fe26e2f79",
+      "beforeBytes": 813,
+      "afterBytes": 3539
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8.json",
+      "beforeSha256": "2e5752c9afe03b9b65ea8892ec4e5131c58d18e143f4a195ed4b2f5fe30e413d",
+      "afterSha256": "ac7a1d25f0b8697e7ffd5ea623fe2c19ecee5cfffce2ef871eaa80f261681cac",
+      "beforeBytes": 813,
+      "afterBytes": 2055
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A.json",
+      "beforeSha256": "36ae8a6132b898123bc7b9506e8f316447ede49141948a2aeb088549738b81cf",
+      "afterSha256": "f4135b838cf8521cd1482643a3553db6cbf7d174ebc81f07398551620e8d7f5f",
+      "beforeBytes": 813,
+      "afterBytes": 1972
+    },
+    {
+      "path": "knowledge/reviews/links/K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00.json",
+      "beforeSha256": "8bb6009ea7cb3720da9228ec74af8f4e9ae2a2bd8d44988c211b2aef5d3d8803",
+      "afterSha256": "4b52cbcf158a891bd4d458a86cec4ea7d380cf360ad6d3827d6c28d5735273b3",
+      "beforeBytes": 813,
+      "afterBytes": 1993
+    }
+  ],
+  "perHazardDecisions": [
+    {
+      "hazardId": "H_15577_11_1_1",
+      "linkId": "K_XLSX_WEB_H_15577_11_1_1",
+      "clauseId": "C_15577_11_1",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_15577_11_1_1.json": "5e37f8b458d4f0d2305dc5078dccaff72aceb47a7b6882ea7fd52cc3ce15c4be",
+        "knowledge/links/K_XLSX_WEB_H_15577_11_1_1.json": "83e41053877524f73a9d4e7834492466caf658f3faf138e31e13fd3806702994",
+        "knowledge/clauses/C_15577_11_1.json": "36b5078f67eb53416640522bee8c21193c03a9c731bdeb8811ff76091a823156",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_15577_11_1_1.json": "7195187467c449e2472a9d16a1492bd8504d91eff69f61cb975253862b9ef4c3",
+        "knowledge/reviews/links/K_XLSX_WEB_H_15577_11_1_1.json": "1d17caba6aeed4e5ea542259bc494f2b774e61f25ce8a4fa388ff2caaf9bc078",
+        "knowledge/reviews/clauses/C_15577_11_1.json": "69fe23c550ebc5a9d1792180f1f855a399e854db058461cea4d72a8edfbc58e9",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB15577",
+      "independentFinding": "第11.1条直接要求按有关规定使用PPE，H只保留粉尘爆炸危险场所使用义务。原标准不注日期引用的GB/T11651已被GB39800.1-2020全部代替，使用与选型版本被清楚区分；未虚构型号或等级。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_A1DD3641D23C4DCB92FFE32354",
+      "linkId": "K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354",
+      "clauseId": "C_15577_8_1_6",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_A1DD3641D23C4DCB92FFE32354.json": "f38cf9aa4e45b8af42b7ae4e6c3d57646563869e826e4b72b50902230dbc31f8",
+        "knowledge/links/K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354.json": "1f9ee227e5c6df57a13e5922adec4a64d8138b0cb86ce54d9d8d92ce25c0be23",
+        "knowledge/clauses/C_15577_8_1_6.json": "00e3efdcdf0fd5222eae5c3ba43f4edfd60d60486eb081d209a70044613d2e82",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_A1DD3641D23C4DCB92FFE32354.json": "9b52d88f81610c81a09726d565ffe1c5e4eeba504ab98edfa1984a62764f7873",
+        "knowledge/reviews/links/K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354.json": "cc386045a87165a8285296a478b96775234bf38dbd199b4900bd598aa99348b1",
+        "knowledge/reviews/clauses/C_15577_8_1_6.json": "bed60728d8332f158d315eb0b883cf7dfedf6bffb0ddadccce282f5ad29d5adc",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB15577",
+      "independentFinding": "第8.1.6完整句包含先启、生产停机后至少延时10min、停机后箱体和灰斗彻底清灰三部分；H的描述/措施与三部分相符，未新增挂牌或必装联锁要求。原notes中的8.4.6只是明示历史记录，不再是当前K。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_65F26C6ABA374DAC96AB6ADEA5",
+      "linkId": "K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5",
+      "clauseId": "C_15577_8_4_3",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_65F26C6ABA374DAC96AB6ADEA5.json": "81580cde12e3b25ad666b413e4a207e0c799d0a1347e26d3adc3119983374ce3",
+        "knowledge/links/K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5.json": "05bef3b63b0d0acd59cb2b206bd1a32f746c8a082735efa17ee3e42256f22853",
+        "knowledge/clauses/C_15577_8_4_3.json": "fee3e957dc39b11f52cf26f783fa77e97e388f9a18e83047a4630f2e8c6c079c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_65F26C6ABA374DAC96AB6ADEA5.json": "db26b55d9bc92e2ad52a24a5b152979c5a376bc502a4bfcd616043d5f134f089",
+        "knowledge/reviews/links/K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5.json": "c65945c156aeaa1737a52df712336980d25e1b201b5d8693182776679a90b5db",
+        "knowledge/reviews/clauses/C_15577_8_4_3.json": "6236925c80f58f694c7e29800622a99f7aa87d62371a0222f8a5a316174dd218",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB15577",
+      "independentFinding": "第8.4.3完整条款先推荐室外，室内安装则有外墙处单独房间、3h隔墙、泄爆口等要求。H明确室内干式除尘器触发，不将室外“宜”改为一律禁止室内；建筑防火交叉引用未冒充本批参数计算结论。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_AFA0624C3BBD4FA2B7E99BC2D4",
+      "linkId": "K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4",
+      "clauseId": "C_15577_8_4_6",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_AFA0624C3BBD4FA2B7E99BC2D4.json": "8e6e1c6c8625dc9dfcef5ec5fd337be092be7d8a5a3710505799987eb13ceb05",
+        "knowledge/links/K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4.json": "6a30725bd3f11c50c8a4831483b20fbbab55de8c9b2b121502b702aa3a184d65",
+        "knowledge/clauses/C_15577_8_4_6.json": "05f97a92a14bb3a3d1c6f277de2902d8adc126daf75465abeb00fe80d7d8925c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_AFA0624C3BBD4FA2B7E99BC2D4.json": "ca17f98e637a2a747869d10321ce59d4750a434c9901ec30c91032fca79c7053",
+        "knowledge/reviews/links/K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4.json": "3ca919bf10f0378da8dbed9705470fa63d24ff9dcc9e3f1f058c4c8f962c9545",
+        "knowledge/reviews/clauses/C_15577_8_4_6.json": "a3aa73e9550c7e120360214c1c818671afc44588ce7df8ce927c2a285053388b",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB15577",
+      "independentFinding": "第8.4.6完整一句对干式除尘器要求锁气卸灰和及时清灰；H用“或”描述任一不满足情形，条件保留粉尘爆炸危险场所和范围排除。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_CC6E2BC71D1F419A9674C7A4C8",
+      "linkId": "K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8",
+      "clauseId": "C_15577_8_4_8",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_CC6E2BC71D1F419A9674C7A4C8.json": "bdf556ed99d6d7e308489d267dcf44efc64be67fe6ee9b5d02000a3faf3ba43e",
+        "knowledge/links/K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8.json": "5e83096391ecbf86b55c55941c445c5bec636d94dbf9cf2698f16fafbdbfefd8",
+        "knowledge/clauses/C_15577_8_4_8.json": "fa1c930d82a92a2cc847031515e3d9dcee89fcef41e9477c2b4c12da774c0e3f",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_CC6E2BC71D1F419A9674C7A4C8.json": "a15bcdf81ee2a20f9622e8ba930325d7e057c9c77856b2069ac2edc35449a5be",
+        "knowledge/reviews/links/K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8.json": "ac7a1d25f0b8697e7ffd5ea623fe2c19ecee5cfffce2ef871eaa80f261681cac",
+        "knowledge/reviews/clauses/C_15577_8_4_8.json": "11ea59a02b04d69564708a984be4ab903252fd1f90ee2593bedc7e3256c2d273",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB15577",
+      "independentFinding": "第8.4.8完整条款与7.1.3一起核读：控爆方式有多种，不是必须泄爆；实际采用泄爆时才触发安全朝向、面积、参数要求，方向不满足需无焰泄爆的末句保留。H与K保留该条件，未用废止GB/T15605-2008作现行参数标准；2024替代题录核实。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_CD6D8392BC7E40A787BD44D82A",
+      "linkId": "K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A",
+      "clauseId": "C_15577_8_4_9",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_CD6D8392BC7E40A787BD44D82A.json": "704426799dc28f95280ebd964227e8b2f3dd6ce998567de9d7767b97edcb87ad",
+        "knowledge/links/K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A.json": "8525536ba28609940a7492db89c6c4b87265c434383b83a27e0d272bcb9dece8",
+        "knowledge/clauses/C_15577_8_4_9.json": "4491c1ad09df04cf4e0771d01d02e6094cc715a73815239f8b733de4c68e26e8",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_CD6D8392BC7E40A787BD44D82A.json": "642d71e84eeea30a69d091522c86dc61c3e22ab4af2491de6be30162b49e2444",
+        "knowledge/reviews/links/K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A.json": "f4135b838cf8521cd1482643a3553db6cbf7d174ebc81f07398551620e8d7f5f",
+        "knowledge/reviews/clauses/C_15577_8_4_9.json": "931646ca368362007809929da5f72e1b0fa69786d96fb5ed68304c3536df3137",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB15577",
+      "independentFinding": "第8.4.9前半句“宜设置隔爆阀”，后半句安装应阻隔向室内传播。最终H仅适用于室外干式除尘器已采用该阀而安装无效，消除“未设置即违反该条”的原扩张；其他控爆设计不由本条自动否定。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_610647B0A6A54C52A0D8663FBB",
+      "linkId": "K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB",
+      "clauseId": "C_12801_4_6_3",
+      "lawVersionId": "LV_STD_GB12801",
+      "finalContentBindings": {
+        "knowledge/hazards/H_610647B0A6A54C52A0D8663FBB.json": "c4755e0b944ad505baa9575e8bb6f6899dcb5b20a380ff0139b4c29d3b1b13e3",
+        "knowledge/links/K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB.json": "723fa54557d0597b088516fc1b4765c1f7df88b49857996d13d5ca1dbeba3c34",
+        "knowledge/clauses/C_12801_4_6_3.json": "25c695d76cd81056b4f43b573d8225b22d4a2280a083256d7e374a6feaaeab93",
+        "knowledge/law-versions/LV_STD_GB12801.json": "078570d02e8f33d092637e67d3c3326e10f8ac4775f6cbbebc31499137be5af2",
+        "knowledge/reviews/hazards/H_610647B0A6A54C52A0D8663FBB.json": "31bedcade1fdc5f1c7021f34bc6995456d97e200840279d3094d4dc6c5765736",
+        "knowledge/reviews/links/K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB.json": "404d33640f3a767a07bc157863171bd12b86432784da4f4691e891e7026f4ed8",
+        "knowledge/reviews/clauses/C_12801_4_6_3.json": "d04ce94f8873e13d0b928369ad75c7d8a7110ae13ca8cd0ef3e820afa9dbc158",
+        "knowledge/reviews/law-versions/LV_STD_GB12801.json": "2f77b192fbdcb378f465cc4577b8256b1b2805fd243eb33ff2347b848d302d45"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB12801",
+      "independentFinding": "GB12801-2025第4.6.3原页明确电气设备选择、安装、线路设计依GB50058，配套仪器仪表满足防爆性能。适用企业生产过程及爆炸危险区域，不再泛称一切电气防爆管理。SAMR实施日2026-10-01，审计日已实施。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_C9900E360F7848F6AD6025FE89",
+      "linkId": "K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89",
+      "clauseId": "C_12801_5_1_2",
+      "lawVersionId": "LV_STD_GB12801",
+      "finalContentBindings": {
+        "knowledge/hazards/H_C9900E360F7848F6AD6025FE89.json": "b7bdeeee7eb2b53852a2f343fe16623768889e7ef6a7a0a53ea68efa551f635a",
+        "knowledge/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json": "d26353c5aadbc0e6ef7ec85fb5ad0a0cc47cdaddaa8955fe2532e53949f2be4e",
+        "knowledge/clauses/C_12801_5_1_2.json": "7053d48c3281a735543e1919371b9b569bf2bc9d86c08a871f417aad0b9274ec",
+        "knowledge/law-versions/LV_STD_GB12801.json": "078570d02e8f33d092637e67d3c3326e10f8ac4775f6cbbebc31499137be5af2",
+        "knowledge/reviews/hazards/H_C9900E360F7848F6AD6025FE89.json": "63ebc511482ba35ba762bd5b83426a8d35eae5319ea0570aa0e870b42d9d29df",
+        "knowledge/reviews/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json": "9cf4b6968e248a2c0d684bcd63c12b0ea8d57578df7f178e909cc52fe26e2f79",
+        "knowledge/reviews/clauses/C_12801_5_1_2.json": "101434318f52b4b6c19ce093373b0faa753450ace3b4cf1d306c32d940a4048e",
+        "knowledge/reviews/law-versions/LV_STD_GB12801.json": "2f77b192fbdcb378f465cc4577b8256b1b2805fd243eb33ff2347b848d302d45"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB12801",
+      "independentFinding": "第5.1.2原页为可燃性气体“或”粉尘作业场所。独立审提出H标题/描述的“和”与C/K不一致，作者已修正为“或”，以单独存在任一种即触发；不引入可燃气体与粉尘必须共同存在的条件。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_AB765CAD382645D0B1024E8CD8",
+      "linkId": "K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8",
+      "clauseId": "C_AQ4273_2016_8_1",
+      "lawVersionId": "LV_STD_7E0C7C218E837C8E2A8EE80A",
+      "finalContentBindings": {
+        "knowledge/hazards/H_AB765CAD382645D0B1024E8CD8.json": "e2a0c5b650a1ed2209ba5925d2736195528bed3900162540c7b427920f66bf6b",
+        "knowledge/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json": "574053f93a09c5a1b5f450682634ba51a403a2bc04d7a1689a1b08bd554317e6",
+        "knowledge/clauses/C_AQ4273_2016_8_1.json": "0103065b2497e0f936c74767e5347cc6ca58d281924b832467197a8e48f4f61d",
+        "knowledge/law-versions/LV_STD_7E0C7C218E837C8E2A8EE80A.json": "88616438c73f8f0e87d13f03f6f2ee404f22a6865c3fbe067726833d14a2ec55",
+        "knowledge/reviews/hazards/H_AB765CAD382645D0B1024E8CD8.json": "b246be52424efeda0e7f7ebe75ea8365438b1e5afc9f5a42b1cac43381a05f96",
+        "knowledge/reviews/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json": "58fe065a79a8cea78e4173a39997daf6c436b72d446a7fb4f23340294893bbb3",
+        "knowledge/reviews/clauses/C_AQ4273_2016_8_1.json": "cc635e8cbad1280c44bd587ae8aeaad8dfc9fc986f1c3f5002537d2d50475a9c",
+        "knowledge/reviews/law-versions/LV_STD_7E0C7C218E837C8E2A8EE80A.json": "ac342a9be7bd5392c5078720fa022c8e63d8b4c6395e06d862cd8d27157221f7"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "AQ4273",
+      "independentFinding": "第8.1原页为风机叶片材料同时导电且运行不产生火花。独立审提出原description遗漏已导电但产火花分支，作者已补齐。第1章范围排除化工、采矿、隧道、烟花爆竹及民爆器材场所；本H不是所有风机通用规定。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_6298B2AB1EF44DCD8736C6F498",
+      "linkId": "K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498",
+      "clauseId": "C_PDDB_11",
+      "lawVersionId": "L019",
+      "finalContentBindings": {
+        "knowledge/hazards/H_6298B2AB1EF44DCD8736C6F498.json": "69285f21ad4c7678e186326964e26e8f2fef0777feb6419c117a3f40ffe6ba9a",
+        "knowledge/links/K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498.json": "978168e839055f9375a603c787140660cd7975508df455c182de6ccac8fb79cc",
+        "knowledge/clauses/C_PDDB_11.json": "51fb342921de95e5b505500abee5635d73daa44f256aee2832a7f6787a16f136",
+        "knowledge/law-versions/L019.json": "ef26fd4ef5e7d1ce3594c4fb24c0da9662d09ea1561c8667a1ff7d1ed4f6ed85",
+        "knowledge/reviews/hazards/H_6298B2AB1EF44DCD8736C6F498.json": "baac90a953cf24e53eee95f5f4a0e7f714cbb32e268f522b9fb8b65a691f147f",
+        "knowledge/reviews/links/K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498.json": "3d7f5502c978ee50ea56d6e2a733895c3c2368541a78cae5fe923f7457261632",
+        "knowledge/reviews/clauses/C_PDDB_11.json": "a18c130fc7eb83d54543ca75425ce5993d3acf79eb1b899bd54a344e32a50a0b",
+        "knowledge/reviews/law-versions/L019.json": "30998be480137334b1406cf704d3479469ac1bdf526be241880f52d7bbf00dd4"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "MEM10",
+      "independentFinding": "MEM第十一条完整十项及第二条核读。H只消费第（一）项的“非框架结构多层建构筑物”或“危险场所内人员聚集”两情形，限存在粉尘爆炸危险的工贸企业，未新增重大目录项或自动作现场重大判定。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_0F065B25BAC84C329610C8FBF8",
+      "linkId": "K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8",
+      "clauseId": "C_GB5083_6_7_1",
+      "lawVersionId": "LV_STD_2A28FD3FD52E33E6E59E481B",
+      "finalContentBindings": {
+        "knowledge/hazards/H_0F065B25BAC84C329610C8FBF8.json": "459114d0520e71e60e71d2dc400f87f5f840de24ba4b27ea5fbea408078f78d0",
+        "knowledge/links/K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8.json": "f7e709ff829151c9c9270d0245b95aa846772e3170596dbc290d890cd630416e",
+        "knowledge/clauses/C_GB5083_6_7_1.json": "7b66838a0880816ee9d0fb75f68ec09a284672bde1e1c8baaf53604add6b48b3",
+        "knowledge/law-versions/LV_STD_2A28FD3FD52E33E6E59E481B.json": "096bba09db8df44c6b75aecbc42c7f2575c4810cf676bf8294b1ca6caf6f607f",
+        "knowledge/reviews/hazards/H_0F065B25BAC84C329610C8FBF8.json": "7af50d5d615cf89a5c3eac2c674686af39faaf612ea181c504b4b30bd2c28b5e",
+        "knowledge/reviews/links/K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8.json": "19aad04f38332af7d7c1738ee1e0591bbccfda460176fbda0ccf77c11b288c62",
+        "knowledge/reviews/clauses/C_GB5083_6_7_1.json": "8b17c92370a59d37c7b17cd1d6ccb3faf8aef76362dcf1f24282487a65aa1e3c",
+        "knowledge/reviews/law-versions/LV_STD_2A28FD3FD52E33E6E59E481B.json": "b2ed8e494b0e951d9e06ebd9de50eb3cb2772d59443a62c3f79515dfd55ceafd"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB5083",
+      "independentFinding": "SAMR原页6.7.1的机械化、自动化、密闭装置属于优先采用；吸收/净化/排放装置或接口为并列选项。完整条文与H描述/措施对应，条件限定产尘或有毒有害生产设备设计及第1章排除对象，未扩大为所有设备必须自动化。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_D0AD6FE92A48431894E9756C00",
+      "linkId": "K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00",
+      "clauseId": "C_JGJ91_5_3_1",
+      "lawVersionId": "LV_STD_JGJ91_2019",
+      "finalContentBindings": {
+        "knowledge/hazards/H_D0AD6FE92A48431894E9756C00.json": "c74e24ec67b65b1be2e6a0be40647a72d9b4a7f727fb94acf6a80a2fe887089e",
+        "knowledge/links/K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00.json": "aea7ed91ea3e80680a930dc14ebeae73071bfc0693098b9d498399842d5402f1",
+        "knowledge/clauses/C_JGJ91_5_3_1.json": "0a269b7740d0a090b647eb042e69ab6518a55dfd363da41d929c0c03a91571e8",
+        "knowledge/law-versions/LV_STD_JGJ91_2019.json": "5225ac230afcdf3ca5d138712ab73d34f5300d41002e7054d586f4ef8711eac7",
+        "knowledge/reviews/hazards/H_D0AD6FE92A48431894E9756C00.json": "2e0816530ad12de06530a7d9b6c548c0ef9ad97df9a621d3a8def4cd63cd2744",
+        "knowledge/reviews/links/K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00.json": "4b52cbcf158a891bd4d458a86cec4ea7d380cf360ad6d3827d6c28d5735273b3",
+        "knowledge/reviews/clauses/C_JGJ91_5_3_1.json": "a0a1913c8fad7fd20c70d6304b433723630158bf3e862c1e566c0afab768117d",
+        "knowledge/reviews/law-versions/LV_STD_JGJ91_2019.json": "68d50f411a39640c00924ec732dca3caf8c6e4f9a64b0480fa5d6cee8de93184"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "JGJ91",
+      "independentFinding": "第5.3.1完整句要求污染物实验室设置通风柜“或”其他局部排风设备；H保留替代关系。第1.0.2范围限科学研究机构、工业企业、大专院校等新/扩/改建科研建筑设计，不作一切既有实验室追溯性强制要求。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_B72EA2115B5D41FF84695D5471",
+      "linkId": "K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471",
+      "clauseId": "C_JGJ91_10_4_1",
+      "lawVersionId": "LV_STD_JGJ91_2019",
+      "finalContentBindings": {
+        "knowledge/hazards/H_B72EA2115B5D41FF84695D5471.json": "ecff4775baabd22fbc27bed9c6a7831dc54eeae0ad47b255fd3c059bb5eac518",
+        "knowledge/links/K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471.json": "d081754e8b967ad5d7cc8795c9c385fb424600fe8cd435e0eebd97b944adf16f",
+        "knowledge/clauses/C_JGJ91_10_4_1.json": "e38d6a97f2adca9df2e9c3386a93a18dbb4d44a826ca23f6a9e07b528c38667e",
+        "knowledge/law-versions/LV_STD_JGJ91_2019.json": "5225ac230afcdf3ca5d138712ab73d34f5300d41002e7054d586f4ef8711eac7",
+        "knowledge/reviews/hazards/H_B72EA2115B5D41FF84695D5471.json": "592e207bd9a3c3f73bfebca9eeff9c98aa763a63576f0b9d15a3d1958f621620",
+        "knowledge/reviews/links/K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471.json": "6c7d6eb71d0ea26ee4e92e379387e53be1788d105df7bae43e2794eebce02d0b",
+        "knowledge/reviews/clauses/C_JGJ91_10_4_1.json": "fad0bbd7a34072e63e0529fa99c07b301b56cf22e2da57366eb640a8a485eee7",
+        "knowledge/reviews/law-versions/LV_STD_JGJ91_2019.json": "68d50f411a39640c00924ec732dca3caf8c6e4f9a64b0480fa5d6cee8de93184"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "JGJ91",
+      "independentFinding": "第10.4.1完整5项跨PDF57-58核读，目标为第1项每台（组）用可燃气体设备支管和放空管上的阻火器等安全控制装置。安法36维护保养不能创设该具体设置义务；H仅科研建筑气体管道设计，未把阻火器变为唯一可用控制装置。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_1B474A2ABA0E23143E2FE451",
+      "linkId": "K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451",
+      "clauseId": "C_GB15577_6_1",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_1B474A2ABA0E23143E2FE451.json": "d9cfb0c58b45d66a945bd1e26b31a63f04b489bac19d034da5bbf8a8fbaf647b",
+        "knowledge/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json": "a46b32bf616d832a8896a37f12e8056dabb75939a27198af70ffaa18d618b139",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_1B474A2ABA0E23143E2FE451.json": "3dfe7dc0bde8ec5ba7733b4040b9a2a2a61c4686ae3fb0b4c770fadb0bef56fd",
+        "knowledge/reviews/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json": "903738cc95d1a3cd408ecb80b318da48c40f03e9bd022fa355389b75678a6d69",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": false,
+      "eligibleLink": false,
+      "decision": "APPROVE_WITHDRAWAL_PENDING_EVIDENCE",
+      "sourceReadingId": "JIANGSU_PENDING",
+      "independentFinding": "单层、袋间留隙及禁止堆垛是复合地方主张。张家港官方有效转发可定位，但没有本次核准的省文完整原件与地域条款；GB15577真实6.1不能覆盖。只撤当前错误K审核、H/K实体保留；不把有关要求判定为不存在。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_8C14C2BD0D4A4EF1B42FDC8C2E",
+      "linkId": "K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E",
+      "clauseId": "C_GB15577_6_1",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "e11b2c380cee06da554a1cb9498ea3aea6577cb375830d7434d9ed720ec78036",
+        "knowledge/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "8e3f0213a1b31f2b6a776c3374012256a4b2fd1bce6674d1d2ff20ee3c4492f9",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "b9cf7db02431b315d221cc94c591957d5a4d99427e1fbc3347dca405c1489425",
+        "knowledge/reviews/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "fc41dde7dbbc4986c4de06f1fe46cddb2d36c34e156271cd7fd16ac425a3fcfa",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": false,
+      "eligibleLink": false,
+      "decision": "APPROVE_WITHDRAWAL_PENDING_EVIDENCE",
+      "sourceReadingId": "JIANGSU_PENDING",
+      "independentFinding": "托盘、防爆工具、每班/2天频次、分类、乳化液pH等复合要素不能由粉料自燃条款推导。仍缺省文准确全文与适用边界。只隔离当前无证直接依据，不重写成国家通用义务。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_BF7AA7549F8E1B94012882C9",
+      "linkId": "K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9",
+      "clauseId": "C_GB15577_6_1",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_BF7AA7549F8E1B94012882C9.json": "5a95531b3d3c16e56e40f6b7accbbf35c23b8a86871457cf7870b9fbb11fbcb2",
+        "knowledge/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json": "ee52f81857b4458de7d1ff6c5fa73b855bdd0bb29cc66420cfa38cc998205acf",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_BF7AA7549F8E1B94012882C9.json": "7fd9a557fc04a4d7e5daa752f92d3c3aed447ce07c536c067933034d2ebc7215",
+        "knowledge/reviews/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json": "194c67f66020fd0bf7a1795bac60bcfdf5d30476d67c348436960d17425466ad",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": false,
+      "eligibleLink": false,
+      "decision": "APPROVE_WITHDRAWAL_PENDING_EVIDENCE",
+      "sourceReadingId": "JIANGSU_PENDING",
+      "independentFinding": "优先压实及干式桶装加盖/袋装封口复合义务不能用GB15577 6.1或国家含水镁合金废屑单一规定代替。地方原文及地域待核，保留H/K和历史审核而撤当前批准，处置有界。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_C1CE3A649721387F1FC0F7BE",
+      "linkId": "K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE",
+      "clauseId": "C_GB15577_6_1",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_C1CE3A649721387F1FC0F7BE.json": "ffb366c710d446821153be32c76e8e1001f49c453942052612dbcbe8dee14f2c",
+        "knowledge/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json": "fb2fc6f8d5a767ad7fc96393adbbe26b2f8968c5b833e18909b877530e968caa",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_C1CE3A649721387F1FC0F7BE.json": "20abb2eab83f5d82867bbc5e4a1cf5f6b2dffd6518d6e3cfa5a694878f0c8f60",
+        "knowledge/reviews/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json": "116d996f090180c835a50a9a632167891daa56dd217ad6d3e9cedd5a2c8c1bc9",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": false,
+      "eligibleLink": false,
+      "decision": "APPROVE_WITHDRAWAL_PENDING_EVIDENCE",
+      "sourceReadingId": "JIANGSU_PENDING",
+      "independentFinding": "常温入库、不同种类不得混装、与多类禁忌物不得同场所储存须完整源支持；GB15577 6.1.1只涉及有自燃性热粉料冷却，不能代替其他分支。待证隔离正确，未删除正常自燃原条或其其他H。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_4E5F4BB13B82457DA5377CABDF",
+      "linkId": "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF",
+      "clauseId": "C_GB15577_6_1",
+      "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+      "finalContentBindings": {
+        "knowledge/hazards/H_4E5F4BB13B82457DA5377CABDF.json": "419affe884fa2855a9160738e55b25d414c49a8dbf6ad38ef57188ae5eba5e30",
+        "knowledge/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json": "4c960eda34b1988039c09e489d8c1d312c33c88126c4869443436e805e6f62c1",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "048dc7db6376ed5185bb04ea84954b1c7f138dfb41553cd02498df0153f382e0",
+        "knowledge/reviews/hazards/H_4E5F4BB13B82457DA5377CABDF.json": "aea5c6c566b9b818aa6fd56005876daa2212d7b265cecbee94f975cc51061317",
+        "knowledge/reviews/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json": "7263aad8ef78e1cdf499b4c3bfc5fb68092c3f2a6368515ba46c9546180b3918",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17",
+        "knowledge/reviews/law-versions/LV_STD_A307C34C912F164D6A1D19E9.json": "0e5db8b69543f171c43a4cfa8a6d21e486e698e98c9467137be0b51e48014be2"
+      },
+      "eligibleHazard": false,
+      "eligibleLink": false,
+      "decision": "APPROVE_WITHDRAWAL_PENDING_EVIDENCE",
+      "sourceReadingId": "AQ7005_PENDING",
+      "independentFinding": "MEM下载12页PDF封面实际标送审稿，文件元数据亦带稿本线索；即使AQ7005标准题录现行，也不足把该文件冒充已发布最终原文。木工单机吸尘或集中系统的原H保留，但错误GB15577 K审核撤回，等待最终原件。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_200F007CE0EF47DFB8BE2B8618",
+      "linkId": "K_XLSX_NEW14_AB3FE309DCCF562480F0E982",
+      "clauseId": "C_XLSX_FT_B41759D19554DB96C582F795",
+      "lawVersionId": "L002",
+      "finalContentBindings": {
+        "knowledge/hazards/H_200F007CE0EF47DFB8BE2B8618.json": "9391313dac23b8359c5bca194d0638a5a1dc9b6cfc85c19a0e769a2ff1aff5bc",
+        "knowledge/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json": "8249749cd3cd95e9247228668f0616e4bb57f94580cffbc171f7533639b61705",
+        "knowledge/clauses/C_XLSX_FT_B41759D19554DB96C582F795.json": "97b289313565ffe3daa4da1ae9df9f0ef11106db7b97de8735617c589d44e91e",
+        "knowledge/law-versions/L002.json": "c6320b2dd7e1ac11a8062181a02e45a7e8ecb31e1735f7faca8f17607148e7f4",
+        "knowledge/reviews/hazards/H_200F007CE0EF47DFB8BE2B8618.json": "982250f15af4615be848bb3a00fbe8a4a07c62a6dcd84be024ce15c3c10eda5e",
+        "knowledge/reviews/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json": "6c50dcf5b516a747aa4eef2e423e05e955267922aa68a7d9a40cae067c4ebeae",
+        "knowledge/reviews/clauses/C_XLSX_FT_B41759D19554DB96C582F795.json": "6292992d110fcfa462c7f0cbbe50a9c899fabee7febb03ba3d79dbc2c99b0cdc",
+        "knowledge/reviews/law-versions/L002.json": "79ff8961cde3a2a44a1e8bc23827f079d6cd74db0769fbf2fc4a74ead4840a14"
+      },
+      "eligibleHazard": false,
+      "eligibleLink": false,
+      "decision": "APPROVE_WITHDRAWAL_PENDING_EVIDENCE",
+      "sourceReadingId": "SAFETY_LAW",
+      "independentFinding": "安法36四款完整核读，只含一般转致标准、维护保养检测、禁止破坏安全设备及餐饮燃气报警等；没有色标、钢印、换装气体、使用前确认、明火10m复合具体要求。仅撤该错误当前K，C_安全生产法36及正常依赖不被误撤。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_1B2F6A143A9E492DBA2A246473",
+      "linkId": "K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473",
+      "clauseId": "C_FE008E27914530CC228593C8E4",
+      "lawVersionId": "LV_STD_HJ2026_2013",
+      "finalContentBindings": {
+        "knowledge/hazards/H_1B2F6A143A9E492DBA2A246473.json": "53b780b200e11047dc56983f12d95fc70bbb3302251f16a7c031eddbd84a27c7",
+        "knowledge/links/K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473.json": "2a6a71ad717e46e1d3b949973c2a2765b8c646de359c214a440b5d2443271ffa",
+        "knowledge/clauses/C_FE008E27914530CC228593C8E4.json": "a88ddfcdf57672bbd4c2f843aa83724fc97ad28cd45e2342da4443aa51f2e4b6",
+        "knowledge/law-versions/LV_STD_HJ2026_2013.json": "af4b101c97926999db8c37f764db0bb6b4384257820b577d011758fccf1412e2",
+        "knowledge/reviews/hazards/H_1B2F6A143A9E492DBA2A246473.json": "c0242fc185f7a3ee2c52f2a7c84f09beadde1a1bb7e1d281172aa209471be3de",
+        "knowledge/reviews/links/K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473.json": "61e115d0001c294b8f40d9f767971ae17bf6c9c2b7023cd52633a1e225c8449b",
+        "knowledge/reviews/clauses/C_FE008E27914530CC228593C8E4.json": "e58f2f35e5fad182840809d54f1b9d76ad5660af263eb14e74211cf5ea5c2d52",
+        "knowledge/reviews/law-versions/LV_STD_HJ2026_2013.json": "29327e0a7355ffe0c803e8c83e7dfc6045722a22af2466102b588110e82ebf69"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "HJ2026",
+      "independentFinding": "第6.3.1.2三句全部保留：尽可能利用主体集气、罩与工艺协调、不影响操作，在保证收集能力下简单易装易维护。H限工业有机废气常压吸附治理，明示指导性技术核查，不创设所有废气工程普遍法定义务。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_417B030F12A14923A978E4DAB2",
+      "linkId": "K_XLSX_WEB_H_417B030F12A14923A978E4DAB2",
+      "clauseId": "C_5FA33B2DFCAD974A3DA96FCF64",
+      "lawVersionId": "LV_STD_HJ2026_2013",
+      "finalContentBindings": {
+        "knowledge/hazards/H_417B030F12A14923A978E4DAB2.json": "5f60609d5b85ca782b624a72c1a38bddec0f8e17e82da63684875b6837811832",
+        "knowledge/links/K_XLSX_WEB_H_417B030F12A14923A978E4DAB2.json": "17b933e391fab125a6f1b82e79e069bc2f94fa88aa5ebacd661415681239655f",
+        "knowledge/clauses/C_5FA33B2DFCAD974A3DA96FCF64.json": "ab52d58c40725eb030ee664a07b6dd0aef7f656282f85cdb74bc5d4b3c906ae4",
+        "knowledge/law-versions/LV_STD_HJ2026_2013.json": "af4b101c97926999db8c37f764db0bb6b4384257820b577d011758fccf1412e2",
+        "knowledge/reviews/hazards/H_417B030F12A14923A978E4DAB2.json": "b944b0095beb620c8eab6674f7aec50d099f8f68efdf53611d232e447c87301e",
+        "knowledge/reviews/links/K_XLSX_WEB_H_417B030F12A14923A978E4DAB2.json": "4f25995d0f3697ad81ba1fdedb8ecfaf56f4037795e57b24a0b82af5ce7b2430",
+        "knowledge/reviews/clauses/C_5FA33B2DFCAD974A3DA96FCF64.json": "cab0dfdd39c331793647c170692134e62077d4f9a614a7e523d19b5518d3b21d",
+        "knowledge/reviews/law-versions/LV_STD_HJ2026_2013.json": "29327e0a7355ffe0c803e8c83e7dfc6045722a22af2466102b588110e82ebf69"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "HJ2026",
+      "independentFinding": "第6.3.1.5须废气产生点较多且相距较远，才适当分设多套收集系统。H保留两个共同条件与“适当”，不造数量或距离阈值；常压吸附及指导性文件边界完整。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_6459FF72A542499FBB3E0F70FC",
+      "linkId": "K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC",
+      "clauseId": "C_790C122739CBD44232D6FCBA41",
+      "lawVersionId": "LV_STD_HJ2026_2013",
+      "finalContentBindings": {
+        "knowledge/hazards/H_6459FF72A542499FBB3E0F70FC.json": "8f29a7dcc5f69a83acf0171781a5156cfa485be52d847c6864e56056de245b2e",
+        "knowledge/links/K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC.json": "b7c387c07ee4c7ada35b23dc9a4c0f34bbad5dd1c20cdab46d38121744b0f82c",
+        "knowledge/clauses/C_790C122739CBD44232D6FCBA41.json": "af6ac77cac6307d65588f47822c85ae2063da1c4f265641e5c4534ef926b7848",
+        "knowledge/law-versions/LV_STD_HJ2026_2013.json": "af4b101c97926999db8c37f764db0bb6b4384257820b577d011758fccf1412e2",
+        "knowledge/reviews/hazards/H_6459FF72A542499FBB3E0F70FC.json": "8ab5134fba424a9a89d4fe7fe6bea7d207217e87d7f2c84e1a600d72bf0abb90",
+        "knowledge/reviews/links/K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC.json": "2e98b90faccfb40e41888a1fa56914a25baadb8967ebe76b1631d0ddb64a31b2",
+        "knowledge/reviews/clauses/C_790C122739CBD44232D6FCBA41.json": "f7f9058e1bb1da6c5e4ba5da5bfa70f6da34930e979d75a7030fe37079612ede",
+        "knowledge/reviews/law-versions/LV_STD_HJ2026_2013.json": "29327e0a7355ffe0c803e8c83e7dfc6045722a22af2466102b588110e82ebf69"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "HJ2026",
+      "independentFinding": "第8.1.3完整一句为定期检测过滤装置两端压差。H不添加固定周期、报警或自动联锁，限定实际设过滤装置的工业有机废气常压吸附治理工程。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_2870FFD9678642F4993A3CE571",
+      "linkId": "K_XLSX_WEB_H_2870FFD9678642F4993A3CE571",
+      "clauseId": "C_GBZ1_6_1_1_3",
+      "lawVersionId": "LV_STD_1B4FB6D210EFAE3C4CBD4CBA",
+      "finalContentBindings": {
+        "knowledge/hazards/H_2870FFD9678642F4993A3CE571.json": "7baf649d9ec4c2d7566e07a3ab76a59f3e1115dfa6ddb48641be953f1bbdbf26",
+        "knowledge/links/K_XLSX_WEB_H_2870FFD9678642F4993A3CE571.json": "25c1ae4e9ed3a061b34f8915cc3d6b5fc5937e6fd18186a16f188625fa8e4ddd",
+        "knowledge/clauses/C_GBZ1_6_1_1_3.json": "b9d94c7f4effabfd68e8d7f83047fc62df0db7c4f2a57af45a0743b92e60ab48",
+        "knowledge/law-versions/LV_STD_1B4FB6D210EFAE3C4CBD4CBA.json": "68f3e5ebfafc63418fc06f53ef61ece5dd34fab998dddda5d9f1b05079003f7b",
+        "knowledge/reviews/hazards/H_2870FFD9678642F4993A3CE571.json": "2c9b50dae36c81854d00957d43e08b600356e1562bd64cba5bea6bfcbcaa111f",
+        "knowledge/reviews/links/K_XLSX_WEB_H_2870FFD9678642F4993A3CE571.json": "1d4b0da673da6d320dc21671105fbc0a8350d3519f7b02eaba2bf9a7ab35933f",
+        "knowledge/reviews/clauses/C_GBZ1_6_1_1_3.json": "3f2daa042d641191b68d6fb8b5803673ed73aa872005797fc83996ad12e5cc28",
+        "knowledge/reviews/law-versions/LV_STD_1B4FB6D210EFAE3C4CBD4CBA.json": "f1c6775eeb72dff856b98f3096cef530d57ea08b990d4c8ec0325437431ad291"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GBZ1",
+      "independentFinding": "第6.1.1.3完整四分支核读后，H仅消费产尘设备密闭要求，不用设置吸风罩替代密闭，也不让湿法条件抹去该独立子义务。对象限定建设项目卫生设计/职业病危害评价。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_B405711EED23418BAC72F90645",
+      "linkId": "K_XLSX_WEB_H_B405711EED23418BAC72F90645",
+      "clauseId": "C_GBZ1_6_1_1_2",
+      "lawVersionId": "LV_STD_1B4FB6D210EFAE3C4CBD4CBA",
+      "finalContentBindings": {
+        "knowledge/hazards/H_B405711EED23418BAC72F90645.json": "a668bd05efff5657bb3a04eb816ed7d6fae3f1d651e247d993cb4a98ac663662",
+        "knowledge/links/K_XLSX_WEB_H_B405711EED23418BAC72F90645.json": "dc71d992fd8fedb0c80d41484eddaf76593668e15f026d3ffe635a3582e8f191",
+        "knowledge/clauses/C_GBZ1_6_1_1_2.json": "5b727941123aec810a7ffe967c60e88f7828019d67e1955dbc4aac60ee0ab27b",
+        "knowledge/law-versions/LV_STD_1B4FB6D210EFAE3C4CBD4CBA.json": "68f3e5ebfafc63418fc06f53ef61ece5dd34fab998dddda5d9f1b05079003f7b",
+        "knowledge/reviews/hazards/H_B405711EED23418BAC72F90645.json": "05c01e28a05c9b602975eba14e276868a75ce23d39208b330cc758bf6cf6dc2c",
+        "knowledge/reviews/links/K_XLSX_WEB_H_B405711EED23418BAC72F90645.json": "1373ddef674d9668eaf10ba1833f6793eae81ec1d477678d18513df4f70f5f52",
+        "knowledge/reviews/clauses/C_GBZ1_6_1_1_2.json": "3d564dc1b759a13e6de1aa09c0a55bd0fdca5b3c9de40245642ac9b16450ed34",
+        "knowledge/reviews/law-versions/LV_STD_1B4FB6D210EFAE3C4CBD4CBA.json": "f1c6775eeb72dff856b98f3096cef530d57ea08b990d4c8ec0325437431ad291"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GBZ1",
+      "independentFinding": "第6.1.1.2完整原文含前两句机械化/自动化、密闭、通风净化及移动作业尾句。H消费前两句，完整C保留移动扬尘与排毒设备末句，优先采用未被强化成所有工艺一律自动化；建设项目范围正确。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_BFA0B7A7E308410DB3CC9358AB",
+      "linkId": "K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB",
+      "clauseId": "C_GBZ1_6_1_1_3",
+      "lawVersionId": "LV_STD_1B4FB6D210EFAE3C4CBD4CBA",
+      "finalContentBindings": {
+        "knowledge/hazards/H_BFA0B7A7E308410DB3CC9358AB.json": "faa485685b04ca2e75e647e5844026f1f04b0b8e7feffbd30488e0cbc3c97596",
+        "knowledge/links/K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB.json": "3f886718dc1980b7d18f5ae47cc312b34057b9471f738396013ad73f4dc372d6",
+        "knowledge/clauses/C_GBZ1_6_1_1_3.json": "b9d94c7f4effabfd68e8d7f83047fc62df0db7c4f2a57af45a0743b92e60ab48",
+        "knowledge/law-versions/LV_STD_1B4FB6D210EFAE3C4CBD4CBA.json": "68f3e5ebfafc63418fc06f53ef61ece5dd34fab998dddda5d9f1b05079003f7b",
+        "knowledge/reviews/hazards/H_BFA0B7A7E308410DB3CC9358AB.json": "5e91146e7521ad1a1676ed06f6fdc9ee1af42799c59a462c1736839a94d8a76a",
+        "knowledge/reviews/links/K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB.json": "507b70e7f283e19485fad5929b020ce6313fd658cc4335c340dbe04237d10244",
+        "knowledge/reviews/clauses/C_GBZ1_6_1_1_3.json": "3f2daa042d641191b68d6fb8b5803673ed73aa872005797fc83996ad12e5cc28",
+        "knowledge/reviews/law-versions/LV_STD_1B4FB6D210EFAE3C4CBD4CBA.json": "f1c6775eeb72dff856b98f3096cef530d57ea08b990d4c8ec0325437431ad291"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GBZ1",
+      "independentFinding": "旧C_6.1.1.3摘要的既有局部排风H纳入必要依赖复核。原页明确设置适宜局部排风设施，属于正常子义务，H在修复完整C后保持准入；没有因摘要错误而误撤正常规则，也未把可湿式条件变成所有粉尘必须加水。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_AA7C48BCF0E6458484759F407B",
+      "linkId": "K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B",
+      "clauseId": "C_GB50187_4_4_5",
+      "lawVersionId": "LV_STD_GB50187_2012",
+      "finalContentBindings": {
+        "knowledge/hazards/H_AA7C48BCF0E6458484759F407B.json": "3e4c0a59258b9cf4cebdbe4d9bb3f2484624c68532f35e1a6aeb91d38f77b41b",
+        "knowledge/links/K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B.json": "196a9e658d01e6ed388af11faa0b6011c2896398602a01469670d0993862a721",
+        "knowledge/clauses/C_GB50187_4_4_5.json": "e211486364b323c0b70b2e0ab50f067ac732739f9cc9160b874f669e59a9fa36",
+        "knowledge/law-versions/LV_STD_GB50187_2012.json": "b4a24197026dddbebb45dae1492ea3cd284d15701a312b5e58bf472c144dfc47",
+        "knowledge/reviews/hazards/H_AA7C48BCF0E6458484759F407B.json": "2485b6acb56d73da2556e78aa3ff3da637ab87fcf32dd2a7fe1ec8e091583f2e",
+        "knowledge/reviews/links/K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B.json": "04f6a5203000595f33880434ec2b397010b634cc518bb7e0faba1630b72f2146",
+        "knowledge/reviews/clauses/C_GB50187_4_4_5.json": "8a9438b87155ff14a0e099f909c91be0124aed2ca60f93a61bcd06a0392a11fa",
+        "knowledge/reviews/law-versions/LV_STD_GB50187_2012.json": "d37d0e7cbfc084ac8a113536e25b5cbd48eecdd40d9a4c02f74abd79259325d7"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB50187",
+      "independentFinding": "第4.4.5完整五项、1.0.2和公告核读。只消费第2项总变电站污染防护：粉尘/腐蚀性气体源全年最小频率风向下风侧，水雾场所冬季盛行风向上风侧，两种条件未互换。H对象已从泛化作业场所收窄总变电站设计，不宣称该一般条为重大判定。",
+      "boundaryAndOptionsChecked": true
+    },
+    {
+      "hazardId": "H_C3B24EEDD61145A691A38B0414",
+      "linkId": "K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414",
+      "clauseId": "C_GB50029_2_0_1",
+      "lawVersionId": "LV_STD_GB50029_2014",
+      "finalContentBindings": {
+        "knowledge/hazards/H_C3B24EEDD61145A691A38B0414.json": "69de1a32c2c5a53dbc30f48be809bd47bd862608de2b914aae98c5bec23b02c7",
+        "knowledge/links/K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414.json": "f767f4b44d6530e00794e13ead0b9250a5b72a7cdb7af0bf52f21db1e78e0b5b",
+        "knowledge/clauses/C_GB50029_2_0_1.json": "f17e84370ce35a5011777937f9dca7c38d01e8f042e3371289d2f3c57d211624",
+        "knowledge/law-versions/LV_STD_GB50029_2014.json": "208c25da9753c8d5c2faa20e53a0266dcb50c9ba9e245f6c8c57a1ab9a5fc72a",
+        "knowledge/reviews/hazards/H_C3B24EEDD61145A691A38B0414.json": "e914e91aa5d4a53a57f058eb5bdd6c13a5444b7f891f940c635d1e5a14726fae",
+        "knowledge/reviews/links/K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414.json": "a7947dba37c8a201a014402bec32678dc3c1e1ab4e2fe8ed27b8d504d12e12cc",
+        "knowledge/reviews/clauses/C_GB50029_2_0_1.json": "a41295c8649a085844ae6f96a4076dad2b6806047fabdbfc87d70c7354d15db6",
+        "knowledge/reviews/law-versions/LV_STD_GB50029_2014.json": "6edb6df053995654b329dc027a3fc032e1a9bcd0201a504d25b791b004cebd2c"
+      },
+      "eligibleHazard": true,
+      "eligibleLink": true,
+      "decision": "APPROVE_REBIND",
+      "sourceReadingId": "GB50029",
+      "independentFinding": "第2.0.1完整五项及1.0.2、公告核读。核心为考虑五因素进行技术经济方案比较；风向原文是“并宜位于…全年最小频率风向的下风侧”，旧题写反已纠正且宜不升级。电驱动≤42MPa四类压缩机、新/改/扩设计及井下洞内排除范围明确。",
+      "boundaryAndOptionsChecked": true
+    }
+  ],
+  "summary": {
+    "hazardsReviewed": 27,
+    "approvedRebindings": 21,
+    "approvedWithdrawals": 6,
+    "newHazards": 0,
+    "newLinks": 0,
+    "deletedStableEntities": 0,
+    "independentIssuesFoundAndFixed": 2
+  },
+  "sourceReadingRecord": {
+    "path": "source-reading-record.json",
+    "sha256": "4d20f9fa378682e7bfb233b4b618be0bf3d1942afac806249542065310c167fb"
+  },
+  "invariants": {
+    "path": "independent-invariants.json",
+    "sha256": "5dd79556e0423c4851aae3d180777e072683ca62ca0f62f5feb1ed93484aa8e1"
+  },
+  "necessaryDependencies": {
+    "C_GB15577_6_1": "False quote not original 6.1; text approval withdrawn, original entity and review history retained, zero eligible links.",
+    "C_GBZ1_6_1_1_3": "Complete exact paragraph replaces paraphrase; H_2870 and existing H_BFA separately approved under bounded design applicability.",
+    "H_BFA0B7A7E308410DB3CC9358AB": "Necessary adjacent dependency retained; normal local exhaust requirement not accidentally withdrawn.",
+    "E_MOHURD_GB50187_2012": "Only original locator field changes 1338→1356; full previousMetadata and hash preserve history. Old URL/retrievedAt retained as historical, no false claim of successful current retrieval."
+  },
+  "qa": {
+    "independentStructuralValidation": "PASS",
+    "independentStrictGate": "PASS / zero blockers",
+    "independentBundleBuild": "PASS",
+    "independentBundleVerification": "PASS in audit-owned valid release layout with verbatim copied verifier; knowledge/web/publication read from frozen candidate",
+    "exactGate": {
+      "hazards": 1678,
+      "links": 1832
+    },
+    "shippedProjection": {
+      "hazards": 1678,
+      "laws": 82,
+      "lawVersions": 82,
+      "clauses": 1386,
+      "links": 1831,
+      "fieldProfiles": 25,
+      "majorCriteriaStandards": 6,
+      "majorCriteriaClauses": 110,
+      "majorCriteriaHazards": 21,
+      "majorCriteriaAssociations": 21,
+      "majorCriteriaDirectoryGroups": 8,
+      "majorCriteriaDirectoryDocuments": 9,
+      "majorCriteriaReadingGroups": 3,
+      "majorCriteriaReadingDocuments": 4,
+      "majorCriteriaReadingFirstLevelItems": 109,
+      "majorCriteriaReferenceStandards": 1,
+      "majorCriteriaSearchTopics": 53
+    },
+    "governedProjectionPreservation": [
+      {
+        "file": "field-profiles.json",
+        "sha256": "fd9067c2130fcdb42dd5997a92666d4f389f98d752089e5ba38753e5edf6d376",
+        "byteEqual": true
+      },
+      {
+        "file": "major-criteria-catalog.json",
+        "sha256": "da0a135744bb8ab727a97c29d6f10abbb075127cb8ccd3414019fd88820e89d6",
+        "byteEqual": true
+      },
+      {
+        "file": "major-criteria-directory.json",
+        "sha256": "4bc58e62644bceb61f44cb79404323f8e4fc6b4f951b03920825e222b8abfe54",
+        "byteEqual": true
+      },
+      {
+        "file": "major-criteria-reading.json",
+        "sha256": "45518672de60513c4c972d4192fdf40c382675959d3ff36d5cd281403afc458e",
+        "byteEqual": true
+      },
+      {
+        "file": "major-criteria-references.json",
+        "sha256": "6301c04a714b55627a0c452fb410cd4c801eef34c111e6ce7f4ce6f2dd382148",
+        "byteEqual": true
+      },
+      {
+        "file": "major-criteria-topic.json",
+        "sha256": "530ae8ff4e440647acf8c99ad7aff43a2b52b604a23247a2b4b354b5aec179e1",
+        "byteEqual": true
+      }
+    ],
+    "pythonFullSuite": "Not certified green; author reports 557 tests, 21 failures and 15 errors, with cohort/fixture integration pending. This approval does not waive that separate integration obligation.",
+    "initialAuditHarnessCorrections": [
+      "Independent check script initially assumed gate link records embed id; corrected to dictionary keys.",
+      "Standalone bundle verifier initially lacked required site-selection/release layout; rerun in audit-owned correct layout, not by weakening verifier."
+    ]
+  },
+  "limits": [
+    "Generic public definitions only; no concrete enterprise/site facts or violations certified.",
+    "Six source gaps are pending evidence, not falsehood or repeal findings.",
+    "Original-hosted mirror identity is disclosed; JGJ91 university hosting and standard-institute catalog are not MOHURD issuing-site retrieval.",
+    "Technical design compatibility, PPE selection and vent calculations require case-specific review.",
+    "No local computer, Codex session history, publication, Git push/merge or third-party write performed."
+  ]
+}

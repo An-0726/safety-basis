@@ -3,11 +3,50 @@
   "entityId": "H_C9900E360F7848F6AD6025FE89",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "e2bdf3e797feffd25d5babc049feeaf21e15dc89e8d770688701f3947a1f9691",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "4d9b5ca99ac26b53e992236ca2dcd264056cff8e953ef587b85d38483e86dfc0",
+  "checkedAt": "2026-10-04T05:42:30Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "采纳独立非作者审阅指出的字段不一致，再次目视核GB12801-2025官方原PDF第10页第5.1.2条为“可燃性气体或粉尘”。将title、description及其同文搜索关键词中的“和”同步为“或”，保留既有企业生产过程范围；不能误要求两类危险同时存在。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
-  ]
+    "E_CONTAIN_GB12801_ORIGINAL_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。 本次完整嵌入上一冻结作者审核；更早完整审核继续保留在嵌套previousReview中。独立非作者复审仍待最终哈希确认。",
+  "reviewedFields": [
+    "conditions",
+    "description",
+    "keywords",
+    "title"
+  ],
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_C9900E360F7848F6AD6025FE89",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "6bd58aad5e6172b23337d710dae1624a348d08518028989a691b5058b5512f76",
+    "checkedAt": "2026-10-04T05:07:24Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "独立核当前GB12801-2025第5.1.2原文及范围；替代旧notes GB/T12801-2008引用，不使用GB15577第6.1假引文。",
+    "evidenceRefs": [
+      "E_CONTAIN_GB12801_ORIGINAL_20261004"
+    ],
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "reviewedFields": [
+      "conditions"
+    ],
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_C9900E360F7848F6AD6025FE89",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "e2bdf3e797feffd25d5babc049feeaf21e15dc89e8d770688701f3947a1f9691",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ]
+    },
+    "previousReviewFileSha256": "ef8e2cc2344a37883aa250c5871770cb225556549c588574144c69c3d796f5bc"
+  },
+  "previousReviewFileSha256": "a1d3df0c0f474692da021f66fcb1ad75ceca1d950eb96f1a1342045bcbce024c"
 }

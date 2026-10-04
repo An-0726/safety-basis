@@ -1,13 +1,115 @@
 {
-  "entityType": "hazard",
   "entityId": "H_366610E8AA084C77844EFFBAAD",
-  "reviewType": "definition",
+  "entityType": "hazard",
+  "reviewType": "content",
   "decision": "verified",
-  "reviewedContentHash": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "670a140a2cc076991307b66ba173ed524351423ec98c51d5db2991b11f38f7eb",
   "evidenceRefs": [
-    "E_MEM_ORDER_10_2023"
-  ]
+    "E_PUBLIC_MEM10_PAINT_20261004"
+  ],
+  "reason": "机械企业、非水性漆、两类房间及报警/通风任一缺失逐项对照；删除现场已安装陈述，纠正AND判断与择一整改。",
+  "locator": "第七条第（七）项；第二条、第十四条",
+  "reviewedFields": [
+    "/category",
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/mode",
+    "/note",
+    "/places",
+    "/title"
+  ],
+  "reviewedValues": {
+    "/category": "危险化学品与危险物质",
+    "/conditions": "仅适用于机械企业使用非水性漆的调漆间、喷漆室；须核实企业行业、涂料性质及实际作业房间。固定式可燃气体浓度监测报警装置、通风设施任一未设置即触发第七条第（七）项，不要求两项同时缺失，也不能在整改时二选一。设施已设置时另核第十四条正常运行要求，但本项不以未经核验的故障或风量认定替代设置事实。仅使用水性漆、并非调漆间/喷漆室或非机械企业，不由本条自动判定；轻工企业须另核第八条第（六）项。",
+    "/description": "在本项适用范围内，使用非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置，或者未设置通风设施。",
+    "/keywords": [
+      "机械企业",
+      "非水性漆",
+      "调漆间",
+      "喷漆室",
+      "固定式可燃气体浓度监测报警",
+      "通风设施"
+    ],
+    "/measures": "分别核查并补齐固定式可燃气体浓度监测报警装置和通风设施，保证两类设施均满足对应设置及正常运行要求；保留设计、安装及功能核查记录。不能以已安装其中一项替代另一项，也不能据此宣称现场已完成整改。",
+    "/mode": "conditional",
+    "/note": "2026-10-04：从被拒绝的有限空间第十三条错引改为第七条第（七）项；原复合判断和现场完成性评论仅在历史审核中保留。",
+    "/places": [
+      "机械企业使用非水性漆的调漆间、喷漆室"
+    ],
+    "/title": "机械企业非水性漆调漆间或喷漆室缺少可燃气体报警装置或通风设施"
+  },
+  "fieldEvidenceRefs": {
+    "/category": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/conditions": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/description": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/keywords": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/measures": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/mode": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/note": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/places": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/title": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_366610E8AA084C77844EFFBAAD",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MEM_ORDER_10_2023"
+    ]
+  },
+  "previousReviewFileSha256": "305731dad3b6216ac82bbcce8ad0718e6e79f73d4a43db660e40c0ed30e0e6f4",
+  "historySha256": "a0627b62cc1b61d8842d792df96c2416d6aed46c7ba86c0b1be2e3cd9d88b21a",
+  "previousEntity": {
+    "id": "H_366610E8AA084C77844EFFBAAD",
+    "title": "非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施的",
+    "description": "非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置，也未设置通风设施，可燃气体（蒸气）积聚存在火灾爆炸风险。",
+    "measures": "非水性漆的调漆间、喷漆室设置固定式可燃气体浓度监测报警装置或者通风设施的；无调漆室,喷漆室已安装可燃气体浓度报警器；完成后进行现场验证并留存记录。",
+    "conditions": "适用于喷漆室的相关安全管理。",
+    "category": "燃气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "非水性漆的调漆间、喷漆室未设置固定式可燃气体浓度监测报警装置或者通风设施的"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》(应急管理部令第10号)第七条",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "49a0e4aacd55da6bb5b20a56a6faad9bc56297fdc71ae6c72cdceca6f84818f6"
 }

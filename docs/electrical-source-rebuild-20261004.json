@@ -1,0 +1,236 @@
+{
+  "asOf": "2026-10-04",
+  "baseline": "ffdfee5d79717c9fefe736830174e177cec4703c",
+  "mode": "fresh_source_grounded_reconstruction_not_recovered_final_payload",
+  "reviewStage": "author_verified_independent_review_pending",
+  "oldCountsNotTargets": true,
+  "decisions": [
+    {
+      "hazardId": "H_CF_GEN_13",
+      "action": "narrow_existing_stable_id",
+      "directClauseIds": [
+        "C_GBT3787_2017_6_3"
+      ],
+      "supportingClauseIds": [
+        "C_GBT3787_2017_6_2"
+      ],
+      "linkIds": [
+        "K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_3",
+        "K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_2"
+      ],
+      "positiveCase": "某手电钻明确超过一年未定期检查，或查实未测绝缘电阻。",
+      "negativeCase": "机身标签脱落但定期检查和试验已按适用周期完成，不能据标签缺失命中本项。",
+      "boundary": "现有稳定ID仅保留周期检查/检测分支；合格标志独立在H_GBT3787_PERIODIC_CHECK_MARK，不再使用“无标签立即断言未检测”的旧措施。",
+      "independentReview": "pending"
+    },
+    {
+      "hazardId": "H_GBT3787_PERIODIC_CHECK_MARK",
+      "action": "new_source_grounded_definition",
+      "directClauseIds": [
+        "C_GBT3787_2017_6_3"
+      ],
+      "supportingClauseIds": [],
+      "linkIds": [
+        "K_REBUILD_H_GBT3787_PERIODIC_CHECK_MARK_C_GBT3787_2017_6_3"
+      ],
+      "positiveCase": "检查合格的工具标志未列工具编号或有效日期。",
+      "negativeCase": "不属于手持工具的固定设备，或仅新购尚未到定检环节，不能仅用本定检后标志义务直接断言不合格。",
+      "boundary": "直接范围仅第6.3 f）项；完整6.3原文含周期与表1不代表本H同时判定其他检测缺陷。",
+      "independentReview": "pending"
+    },
+    {
+      "hazardId": "H_JGJT46_2024_BOX_PE",
+      "action": "new_source_grounded_definition",
+      "directClauseIds": [
+        "C_JGJT46_2024_4_1_12"
+      ],
+      "supportingClauseIds": [],
+      "linkIds": [
+        "K_REBUILD_H_JGJT46_2024_BOX_PE_C_JGJT46_2024_4_1_12"
+      ],
+      "positiveCase": "符合1.0.2范围的施工开关箱，金属门无电器但未设规定颜色软绝缘导线连接。",
+      "negativeCase": "普通工厂固定柜门未装电器，仅缺跨接线，不能套此施工限定条款。",
+      "boundary": "本条箱门义务不要求门上装电器；不得混同GB50303-2015第5.1.1的4mm²条件，4.1.12自身未写该数值。既有H_43C6C076F9FC456DB09138A19A及其归并历史保留。",
+      "independentReview": "pending"
+    },
+    {
+      "hazardId": "H_GB51251_MANUAL_SMOKE_WINDOW",
+      "action": "new_source_grounded_definition",
+      "directClauseIds": [
+        "C_GB51251_2017_4_3_6"
+      ],
+      "supportingClauseIds": [],
+      "linkIds": [
+        "K_REBUILD_H_GB51251_MANUAL_SMOKE_WINDOW_C_GB51251_2017_4_3_6"
+      ],
+      "positiveCase": "设计自然排烟窗位于高处不可直接开启，手动操作装置距地面2m。",
+      "negativeCase": "普通采光通风窗、或可直接开启的低位自然排烟窗，不因没有1.3m～1.5m远程操作装置命中。",
+      "boundary": "本H仅覆盖4.3.6前两项设置义务；集中手动和自动开启末句完整保留为上下文。已有遮挡导致失效维护缺陷仍按H_COM_SMOKE_WINDOW_CONTROL归并H025；不发明统一标志义务。",
+      "independentReview": "pending"
+    },
+    {
+      "hazardId": "H_GBT34525_CYLINDER_REGISTER",
+      "action": "new_source_grounded_definition",
+      "directClauseIds": [
+        "C_GBT34525_2017_8_2_12"
+      ],
+      "supportingClauseIds": [
+        "C_GBT34525_2017_8_2_11"
+      ],
+      "linkIds": [
+        "K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_12",
+        "K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_11"
+      ],
+      "positiveCase": "瓶库发生出库但登记未记录气瓶编号和使用单位。",
+      "negativeCase": "单只在用气瓶无柜外清单，未核瓶库流转记录，不直接命中。",
+      "boundary": "独立于气瓶使用登记、柜外物料清单和现场暂存标志；完整8.2.11仅作制度上下文，不从未见柜门清单推定缺出入库台账。",
+      "independentReview": "pending"
+    },
+    {
+      "hazardId": "H_GBT34525_CYLINDER_STORE_ALARM",
+      "action": "new_source_grounded_definition",
+      "directClauseIds": [
+        "C_GBT34525_2017_8_2_8"
+      ],
+      "supportingClauseIds": [],
+      "linkIds": [
+        "K_REBUILD_H_GBT34525_CYLINDER_STORE_ALARM_C_GBT34525_2017_8_2_8"
+      ],
+      "positiveCase": "标准范围内氮气瓶库没有相应缺氧危险浓度报警装置。",
+      "negativeCase": "普通使用点没有独立UPS，不能据8.2.8命中瓶库报警缺失，也不能用可燃探头替代对实际气种危险的核查。",
+      "boundary": "8.2.8不规定统一报警阈值、UPS、自动切断或通风联锁。AQ3067-2026第5.4.1另限第1章范围内企业的BPCS/GDS/SIS，不能附加给每个探测器；本H不作重大事故隐患认定。",
+      "independentReview": "pending"
+    },
+    {
+      "hazardId": "H_89016FC0F3E849C2B8B8755C35",
+      "action": "narrow_existing_stable_id",
+      "directClauseIds": [
+        "C_CMA44_2025_13"
+      ],
+      "supportingClauseIds": [
+        "C_CMA44_2025_17"
+      ],
+      "linkIds": [
+        "K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_13",
+        "K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_17"
+      ],
+      "positiveCase": "爆炸和火灾危险环境场所投入使用的防雷装置超过半年未检测。",
+      "negativeCase": "仅未随身出示报告而实际按期检测，或普通环境不足一年，不直接命中；也不得把所有工艺装置接地当作防雷装置。",
+      "boundary": "保留现有稳定ID并仅准入定期检测分支；原防护范围/未经检测合格复合描述仅留历史，未据GB/T13869-2026提前准入。第17条委托资质仅辅助。此项是普通检测义务，不提前应用2026-11-01生效的新重大隐患判定规定。",
+      "independentReview": "pending"
+    }
+  ],
+  "previousDefinitions": {
+    "H_CF_GEN_13": {
+      "aliases": [],
+      "category": "用电安全",
+      "conditions": "适用于本隐患所述场所、设备及作业活动。",
+      "description": "现场作业使用的手持角磨机、手电钻、冲击钻等手持电动工具，未按规范周期进行绝缘电阻测试，机身无定期检验合格标识，存在电机受潮漏电触电隐患。",
+      "id": "H_CF_GEN_13",
+      "keywords": [
+        "手持电动工具",
+        "绝缘电阻",
+        "检测标识",
+        "防触电",
+        "工具检测"
+      ],
+      "lifecycle": "proposed",
+      "measures": "立即停止使用无检验标工具；使用兆欧表对工具定子绕组与机壳进行绝缘电阻测试，合格后张贴有效期标识牌；建立手持电动工具领用点检与周期绝缘检测台账。",
+      "mergedInto": null,
+      "mode": "candidate",
+      "note": "2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。\n\n2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。",
+      "places": [
+        "车间装配维修工段、五金打磨区、移动施工维护现场"
+      ],
+      "title": "手持电动工具未进行定期绝缘电阻检测或未粘贴合格标识"
+    },
+    "H_89016FC0F3E849C2B8B8755C35": {
+      "id": "H_89016FC0F3E849C2B8B8755C35",
+      "title": "厂区建筑物、构筑物及工艺装置未处于防雷设施保护范围内，或防雷接地未经检测合格",
+      "description": "厂区建筑物、构筑物、工艺装置等未处于防雷设施保护范围之内，或防雷接地未经具有相应资质的单位检测并合格。",
+      "measures": "使厂区建筑物、构筑物及工艺装置处于防雷设施保护范围内，并定期检测防雷接地。",
+      "conditions": "适用于厂区防雷设施的保护范围与接地检测。",
+      "category": "总图与建筑",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "厂区建筑物、构筑物及工艺装置未处于防雷设施保护范围内，或防雷接地未经检测合格"
+      ],
+      "lifecycle": "proposed",
+      "mode": "candidate",
+      "note": "2026-09-11 修订：原标题为条款原文片段或存在文字损坏，语义不通且无法作为现场隐患表述；此处依其原描述与现有依据改写为可判定的现场事实，未改变依据本身。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\nGB/T 13869-2026《用电安全导则》。",
+      "mergedInto": null
+    },
+    "K_CF_GEN_13_C_0C94FB24040EB78218141DD12F review": {
+      "entityType": "link",
+      "entityId": "K_CF_GEN_13_C_0C94FB24040EB78218141DD12F",
+      "reviewType": "applicability",
+      "decision": "rejected",
+      "reviewedContentHash": "e350c1531956014050e9ab766776ccc8a8a2c42ed797af91d476c7bd1c4b8e2f",
+      "contextHashes": {
+        "hazard": "ad8bd56b119df10cc3e62e254b4786c160d9333a252506100f7c822a34e9a079",
+        "clause": "a1fc1d0c10dd01266fb5d1a666361fc83c5673e9478c895e16ce600e9bd53cc8"
+      },
+      "checkedAt": "2026-09-26T19:42:30+08:00",
+      "reviewer": "Codex 原文及适用性审计 20260926",
+      "reason": "PR #70批量关联未证明该条款可直接支持本隐患全部构成要件；关联拒绝并标记superseded，仅保留历史。后续如有合格直接依据应新建/重新审核。 本次仅随原文补全刷新历史上下文，保留原待核、否决或归并决定；不恢复正式关联。",
+      "evidenceRefs": []
+    },
+    "H_CF_GEN_13 review": {
+      "entityType": "hazard",
+      "entityId": "H_CF_GEN_13",
+      "reviewType": "definition",
+      "decision": "pending",
+      "reviewedContentHash": "ad8bd56b119df10cc3e62e254b4786c160d9333a252506100f7c822a34e9a079",
+      "checkedAt": "2026-09-21T00:55:00+08:00",
+      "reviewer": "ChatGPT / Engineering Audit",
+      "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
+      "evidenceRefs": []
+    }
+  },
+  "deferred": [
+    {
+      "topic": "室内消火栓箱水带安装放置",
+      "reason": "江苏消防托管GB50974-2014文件封面明确报批稿；完整正式原文/当前适用证据待补，不以URL官方或旧计数准入。"
+    },
+    {
+      "topic": "未保存的旧五项手持工具定义",
+      "reason": "没有旧标题/条号/ID；只拆当前真实复合候选，不另造三项以凑旧数量。"
+    },
+    {
+      "topic": "绝缘PPE半年统一周期",
+      "reason": "现有AQ6111第6.2.10有界H不变；缺完整具体工器具试验表，不扩大到所有鞋/低压场景。"
+    },
+    {
+      "topic": "2026-11-01防雷重大判定新规",
+      "reason": "中国气象局官方消息及独立审查已确认2026-11-01施行；本组不提前创建当前重大判定关联，未来精确判定全文另审。"
+    }
+  ],
+  "integrationRequired": [
+    "knowledge manifest inventory/counts by main integrator",
+    "full release gates and cohort reconciliation without weakening old invariants",
+    "independent per-file source and scope review"
+  ],
+  "nonClaims": [
+    "No historical enterprise fact validation",
+    "No complete lost-package recovery",
+    "No publication authorization",
+    "No original PDFs uploaded"
+  ],
+  "authorCorrections": [
+    {
+      "finding": "C_GBT34525_2017_1首段遗漏技术",
+      "action": "按官方PDF3/印刷1改为基本安全技术要求，更新C审核hash；此独立范围C无K上下文引用。"
+    },
+    {
+      "finding": "历史K审核浅拷贝共享contextHashes",
+      "action": "用基线HEAD完整审核记录替换历史快照，并保存被替换的H_CF_GEN_13原审核；历史记录不随当前上下文刷新。"
+    },
+    {
+      "finding": "规章库已提前显示2026防雷办法修订版",
+      "action": "官方2026-09-18消息核实修订11/1施行；保留2025版当前，增加11/1排他endDate与upcoming修订元数据，13/17条原文不变，不误用第47号作修改决定令号。"
+    }
+  ]
+}

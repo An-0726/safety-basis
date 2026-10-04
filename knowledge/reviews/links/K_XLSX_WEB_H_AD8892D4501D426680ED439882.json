@@ -1,18 +1,116 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_AD8892D4501D426680ED439882",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "ad992795951c875a898a4346ff413f57450544983f60acf1d98bcb13571f9629",
-  "contextHashes": {
-    "hazard": "ba9632a89c3edb3b492785ae53960dc878a611e92f80d17913d243b87c78d60e",
-    "clause": "1c835f5576bdb93d94623bc5976a87fc40f443c315813ec6083e251104cfb0f2"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.2.3条检查记录保存要求。条款逐字原文与隐患适用性吻合。",
+  "decision": "rejected",
+  "checkedAt": "2026-10-04",
+  "reviewer": "Recovery integration duplicate-merge author",
+  "reviewedContentHash": "3cf0f572f8ceeb8d05375c2222f2bb61cfa0579192dacb006ca42e3f15059120",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "逐字段和三条精确C/K核对同义义务；只撤重复发布，canonical完整承接原限定范围，不否定原技术义务。",
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "independentApproval": false,
+    "profileAdmission": false
+  },
+  "previousReview": {
+    "entityId": "K_XLSX_WEB_H_AD8892D4501D426680ED439882",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Codex公开引文重建作者逐项核验20261004",
+    "checkedAt": "2026-10-04",
+    "reviewedContentHash": "99576cec1a4e84591d000f53767e5801611ecfa7dea8439232ebc049d0a1e642",
+    "evidenceRefs": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "reason": "逐项核对记录保留对象、场所和义务；使用完整准确条文，无缺失分支的替代推定。",
+    "locator": "第5.2.4条",
+    "reviewedFields": [
+      "/applicability",
+      "/clauseId",
+      "/reason"
+    ],
+    "reviewedValues": {
+      "/applicability": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。本关联仅核检查记录应予保留；不规定必须悬挂纸质卡、统一保存年限或额外字段。",
+      "/clauseId": "C_GB50444_5_2_4",
+      "/reason": "本H的记录保留分支由该条准确支持；与其他检查或记录关联分开，不用同一条包办不同义务。"
+    },
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/clauseId": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/reason": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ]
+    },
+    "reviewEvidence": {
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "independentApproval": false,
+      "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+    },
+    "contextHashes": {
+      "hazard": "3eab48163c7fcf934b28539b792fc8ca3a60ea3bad89b67e1ddf40f4b00aa66f",
+      "clause": "840abc5086f677c97801a8a8e8f97f15d26ef82c1d5f5a8196f9fa3757e1f160"
+    },
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_XLSX_WEB_H_AD8892D4501D426680ED439882",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewedContentHash": "ad992795951c875a898a4346ff413f57450544983f60acf1d98bcb13571f9629",
+      "contextHashes": {
+        "hazard": "ba9632a89c3edb3b492785ae53960dc878a611e92f80d17913d243b87c78d60e",
+        "clause": "1c835f5576bdb93d94623bc5976a87fc40f443c315813ec6083e251104cfb0f2"
+      },
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.2.3条检查记录保存要求。条款逐字原文与隐患适用性吻合。",
+      "evidenceRefs": [
+        "E_SAMR_GB50444_2008"
+      ],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "427cb43eaef274788371dac82418f108ea6ecb204e4a12a5f5cb35d383f06197",
+    "historySha256": "ab6bfdb331a8e3c8bacf9f9297abb2978f6f70519c2d293a2a53b8c4252651e3",
+    "previousEntity": {
+      "applicability": "灭火器月度检查记录未妥善归档保存",
+      "clauseId": "C_GB50444_5_2_3",
+      "hazardId": "H_AD8892D4501D426680ED439882",
+      "id": "K_XLSX_WEB_H_AD8892D4501D426680ED439882",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "previousEntityFileSha256": "d255f7014897d70ec0d616acce2c8f51e6bc6c0887a1626bd04c6a17b0931665"
+  },
+  "previousReviewFileSha256": "e933c3f7f8beab59e589513672b3bef69aac56bb5015b7261424a98011b10e52",
+  "previousEntity": {
+    "applicability": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。本关联仅核检查记录应予保留；不规定必须悬挂纸质卡、统一保存年限或额外字段。",
+    "clauseId": "C_GB50444_5_2_4",
+    "hazardId": "H_AD8892D4501D426680ED439882",
+    "id": "K_XLSX_WEB_H_AD8892D4501D426680ED439882",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct",
+    "reason": "本H的记录保留分支由该条准确支持；与其他检查或记录关联分开，不用同一条包办不同义务。"
+  },
+  "previousEntityFileSha256": "1eb397e8020ed5b33978fb90d142d201350b4640c8a6517273ba007a41d737f1",
+  "contextHashes": {
+    "hazard": "383501fe43ff14b830e2210f2a89dbf3e8ba90bea5327fe1893a3009a93ff135",
+    "clause": "840abc5086f677c97801a8a8e8f97f15d26ef82c1d5f5a8196f9fa3757e1f160"
+  },
+  "reasonCodes": [
+    "SUPERSEDED_DUPLICATE_CURRENT_PUBLICATION_WITHDRAWN"
+  ]
 }

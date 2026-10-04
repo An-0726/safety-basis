@@ -2,17 +2,39 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "84fbb7e74ebfa5dbd177b322729e7358d519d31fbf1b12bbcad684cda1cc35c6",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "撤回此前verified适用性审核。原主张镁废屑袋装单层、袋间留隙、禁止堆垛。可定位苏安办〔2020〕13号及官方有效转发，但未取得完整官方原文并确认该组措辞/地域适用；国家第6号令第18条只能覆盖不得多层堆垛的部分，不能代替整条复合主张。",
+  "evidenceRefs": [
+    "E_CONTAIN_GB15577_ORIGINAL_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
   "contextHashes": {
     "hazard": "5c285b6e7fac5c0fb61ebabb143cefe0d43aa44443f13163ed5e9ca6c8d5d487",
     "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
-  "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+  "reviewedFields": [
+    "applicability"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "84fbb7e74ebfa5dbd177b322729e7358d519d31fbf1b12bbcad684cda1cc35c6",
+    "contextHashes": {
+      "hazard": "5c285b6e7fac5c0fb61ebabb143cefe0d43aa44443f13163ed5e9ca6c8d5d487",
+      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "1512a2185264236b06de3833ac963baa8932d34fb1a5a47bb06358e0ee6e4a84"
 }

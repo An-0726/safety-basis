@@ -1,13 +1,125 @@
 {
-  "entityType": "hazard",
   "entityId": "H_08C1576EE4824ED8BE0CDD56DF",
-  "reviewType": "definition",
+  "entityType": "hazard",
+  "reviewType": "content",
   "decision": "verified",
-  "reviewedContentHash": "ed5e4c0c8c5df8f44db75e22c1a25141c04a1f63ee9a2ef3e6695cfb0776576b",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "20834184dc634c322bc5eb5b7af87bdbedd8380fe95f675ff8cacb59a70eeb4c",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
-  ]
+    "E_PUBLIC_GB50140_ORIGINAL_20261004"
+  ],
+  "reason": "对照规范原文与工程适用范围，纠正标准错引并保留两独立缺陷分支，不把其他安装方式混入。",
+  "locator": "GB50140第1.0.2、5.1.3条",
+  "reviewedFields": [
+    "/conditions",
+    "/description",
+    "/keywords",
+    "/measures",
+    "/mode",
+    "/note",
+    "/places"
+  ],
+  "reviewedValues": {
+    "/conditions": "适用于生产、使用或储存可燃物的新建、改建、扩建工业与民用建筑工程的灭火器配置设计；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。既有建筑检查须核配置设计及其适用时点，不能无条件追溯套用。本项只核灭火器摆放稳固和铭牌朝外两项，任一不符合即可核查；不把手提式灭火器宜放箱/挂钩/托架改为全部灭火器必须装箱。",
+    "/description": "在本项适用范围内，灭火器摆放不稳固，或者铭牌未朝外。",
+    "/keywords": [
+      "灭火器",
+      "摆放稳固",
+      "铭牌朝外"
+    ],
+    "/measures": "调整设置位置和支承方式，使灭火器摆放稳固并将铭牌朝外；不以重新粘贴标识代替原铭牌要求。",
+    "/mode": "conditional",
+    "/note": "2026-10-04：使用GB50140第5.1.3条准确原文；旧GB50444第5.1.3条错配、历史待核说明均保留在审核历史。",
+    "/places": [
+      "适用工程的灭火器设置点"
+    ]
+  },
+  "fieldEvidenceRefs": {
+    "/conditions": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/description": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/keywords": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/measures": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/mode": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/note": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/places": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_08C1576EE4824ED8BE0CDD56DF",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "ed5e4c0c8c5df8f44db75e22c1a25141c04a1f63ee9a2ef3e6695cfb0776576b",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ]
+  },
+  "previousReviewFileSha256": "e4d857551f953defd8bf3cb6e595817e89617aa2bfeb9b3b4b3693475982d3fa",
+  "historySha256": "443ce822aea9c658b0cb96d862b43c6b03e77ad9b618cc2ddc120aa56a9d3992",
+  "previousEntity": {
+    "aliases": [
+      "灭火器铭牌未朝外",
+      "灭火器摆放不稳"
+    ],
+    "category": "消防安全",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "灭火器摆放不稳固，或灭火器铭牌未朝外。",
+    "id": "H_08C1576EE4824ED8BE0CDD56DF",
+    "keywords": [
+      "灭火器",
+      "摆放稳固",
+      "铭牌朝外",
+      "灭",
+      "火",
+      "器",
+      "的",
+      "摆",
+      "放",
+      ",",
+      "未",
+      "稳",
+      "固",
+      "其",
+      "铭",
+      "牌",
+      "朝",
+      "外",
+      "灭火器的摆放",
+      "未稳固",
+      "其铭牌"
+    ],
+    "lifecycle": "active",
+    "measures": "将灭火器稳固设置并确保铭牌朝外；手提式灭火器按规范设置于灭火器箱内或挂钩、托架上，保持明显、便于取用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "已纠正原错误兜底依据：GB 50140-2005 第6.1.1条规定的是配置数量，与摆放稳固和铭牌朝向无关；本条改按第5.1.3条。原 conditions 字段记录的引用依据为：依据：《建筑灭火器配置设计规范》GB 50140-2005 第5.1.3条\n【最终质检】依据支持关系按更保守口径转为待核验，避免技术性隐患仅依赖过于宽泛或不对应的条款直接发布。\n\nGB 55036-2022。",
+    "places": [
+      "消防器材设置点"
+    ],
+    "title": "灭火器摆放不稳固或铭牌未朝外"
+  },
+  "previousEntityFileSha256": "f164107720a6bcb6de07a257ba39e449f1484c6798715ebd4cef08d4fcf01f7f"
 }

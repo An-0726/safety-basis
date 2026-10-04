@@ -1,0 +1,113 @@
+{
+  "entityId": "K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882",
+  "entityType": "link",
+  "reviewType": "applicability",
+  "decision": "rejected",
+  "checkedAt": "2026-10-04",
+  "reviewer": "Recovery integration duplicate-merge author",
+  "reviewedContentHash": "d092aa9f8428b68ac62680a8829756f57363d5b9363316c3f160acb7061a7396",
+  "evidenceRefs": [
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
+  ],
+  "reason": "逐字段和三条精确C/K核对同义义务；只撤重复发布，canonical完整承接原限定范围，不否定原技术义务。",
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "independentApproval": false,
+    "profileAdmission": false
+  },
+  "previousReview": {
+    "entityId": "K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Codex公开引文重建作者逐项核验20261004",
+    "checkedAt": "2026-10-04",
+    "reviewedContentHash": "7eefeef63917018696a8d0ec03197a2a42f0b007538e8a0de0ecb87071be8128",
+    "evidenceRefs": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "reason": "逐项核对月度检查对象、场所和义务；使用完整准确条文，无缺失分支的替代推定。",
+    "locator": "5.2.1",
+    "reviewedFields": [
+      "/applicability",
+      "/clauseId",
+      "/hazardId",
+      "/id",
+      "/jurisdictionCode",
+      "/lifecycle",
+      "/priority",
+      "/reason",
+      "/role"
+    ],
+    "reviewedValues": {
+      "/applicability": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。本关联仅核普通场所配置、外观等每月按附录C检查；第5.2.2条所列加严场所由同H半月检查关联承载，不以月检判其合格。",
+      "/clauseId": "C_GB50444_5_2_1",
+      "/hazardId": "H_AD8892D4501D426680ED439882",
+      "/id": "K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882",
+      "/jurisdictionCode": "CN",
+      "/lifecycle": "active",
+      "/priority": 10,
+      "/reason": "本H的月度检查分支由该条准确支持；与其他检查或记录关联分开，不用同一条包办不同义务。",
+      "/role": "direct"
+    },
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/clauseId": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/hazardId": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/id": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/jurisdictionCode": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/lifecycle": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/priority": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/reason": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ],
+      "/role": [
+        "E_PUBLIC_GB50444_ORIGINAL_20261004"
+      ]
+    },
+    "reviewEvidence": {
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "independentApproval": false,
+      "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+    },
+    "contextHashes": {
+      "hazard": "3eab48163c7fcf934b28539b792fc8ca3a60ea3bad89b67e1ddf40f4b00aa66f",
+      "clause": "bcdff82e2038b260874132adda7e268e9c0b30ad591af135c69258979e7f7916"
+    }
+  },
+  "previousReviewFileSha256": "04f05e84ae53469f6616f41c2f20659e1288280dacb4fee9f1fa4453955144ad",
+  "previousEntity": {
+    "id": "K_PUBLIC_MONTHLY_H_AD8892D4501D426680ED439882",
+    "hazardId": "H_AD8892D4501D426680ED439882",
+    "role": "direct",
+    "lifecycle": "active",
+    "jurisdictionCode": "CN",
+    "priority": 10,
+    "clauseId": "C_GB50444_5_2_1",
+    "applicability": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。本关联仅核普通场所配置、外观等每月按附录C检查；第5.2.2条所列加严场所由同H半月检查关联承载，不以月检判其合格。",
+    "reason": "本H的月度检查分支由该条准确支持；与其他检查或记录关联分开，不用同一条包办不同义务。"
+  },
+  "previousEntityFileSha256": "11c6c3344ab7feb88d652cadc2897a4d304cae33aa117f63e5c7c91db25dd854",
+  "contextHashes": {
+    "hazard": "383501fe43ff14b830e2210f2a89dbf3e8ba90bea5327fe1893a3009a93ff135",
+    "clause": "bcdff82e2038b260874132adda7e268e9c0b30ad591af135c69258979e7f7916"
+  },
+  "reasonCodes": [
+    "SUPERSEDED_DUPLICATE_CURRENT_PUBLICATION_WITHDRAWN"
+  ]
+}

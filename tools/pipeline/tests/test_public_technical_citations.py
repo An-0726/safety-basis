@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import unittest
 from public_technical_citation_fixture import F, pre_technical_source_bytes, pre_technical_gate, pre_technical_manifest
+from recovery_cohort_fixture import pre_recovery_source_bytes, pre_recovery_gate
 ROOT = Path(__file__).resolve().parents[3]
 KNOW = ROOT/'knowledge'
 sys.path.insert(0, str(ROOT/'tools/v4'))
@@ -15,18 +16,19 @@ from release_gate_core import evaluate_release_gate
 from field_profiles import public_projection
 sha = lambda b: hashlib.sha256(b).hexdigest()
 def read(kind, ident):
-    return json.loads((KNOW/kind/(ident+'.json')).read_text())
+    path = KNOW/kind/(ident+'.json')
+    return json.loads(pre_recovery_source_bytes(path.relative_to(ROOT).as_posix(), path.read_bytes()))
 HIDS = ['H057','H056','H_FE6C8CE7D9D74815847BCF72A7','H_B57B762BDB8149F4BACB629CFF','H_7A03BD4501C948B78EA50A2733','H_701AAE9385E74703A71396776E']
 
 class PublicTechnicalCitationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.gate = evaluate_release_gate(KNOW,date(2026,10,3))
+        cls.gate = pre_recovery_gate(evaluate_release_gate(KNOW,date(2026,10,3)))
 
     def test_every_changed_source_is_exact_and_old_bytes_are_recoverable(self):
         self.assertEqual(len(F['records']),50)
         for path,row in F['records'].items():
-            raw=(ROOT/path).read_bytes()
+            raw=pre_recovery_source_bytes(path,(ROOT/path).read_bytes())
             self.assertEqual(sha(raw),row['afterSha256'],path)
             self.assertEqual(raw.decode(),row['afterFileText'],path)
             expected=None if row['beforeFileText'] is None else row['beforeFileText'].encode()
@@ -34,8 +36,13 @@ class PublicTechnicalCitationTests(unittest.TestCase):
             with self.assertRaises(AssertionError):pre_technical_source_bytes(path,raw+b' ')
 
     def test_no_unrelated_knowledge_was_modified_or_removed(self):
-        rows={p.relative_to(ROOT).as_posix():sha(p.read_bytes()) for p in KNOW.rglob('*')
-              if p.is_file() and p.relative_to(ROOT).as_posix() not in F['records']}
+        rows={}
+        for p in KNOW.rglob('*'):
+            if not p.is_file():continue
+            path=p.relative_to(ROOT).as_posix()
+            if path in F['records']:continue
+            raw=pre_recovery_source_bytes(path,p.read_bytes())
+            if raw is not None:rows[path]=sha(raw)
         self.assertEqual(len(rows),F['unchangedKnowledge']['count'])
         self.assertEqual(sha(json.dumps(rows,sort_keys=True,separators=(',',':')).encode()),F['unchangedKnowledge']['sha256'])
 
@@ -125,7 +132,7 @@ class PublicTechnicalCitationTests(unittest.TestCase):
 
     def test_four_date_gate_has_no_unrelated_membership_change(self):
         for day,delta in F['gateSnapshots'].items():
-            g=evaluate_release_gate(KNOW,date.fromisoformat(day))
+            g=pre_recovery_gate(evaluate_release_gate(KNOW,date.fromisoformat(day)))
             self.assertEqual(len(g.eligible_hazards),delta['counts']['hazards'])
             self.assertEqual(len(g.eligible_links),delta['counts']['links'])
             for name in ['hazardsAdded','hazardsRemoved','linksAdded','linksRemoved']:self.assertEqual(delta[name],[])
@@ -166,7 +173,7 @@ class PublicTechnicalCitationTests(unittest.TestCase):
     def test_h061_major_recheck_changes_only_the_unselected_dependency_binding(self):
         from field_profiles import ProfileContext
         path='knowledge/major-criteria/v1/catalog.json'
-        old=json.loads(F['records'][path]['beforeFileText']);new=json.loads((ROOT/path).read_text())
+        old=json.loads(F['records'][path]['beforeFileText']);new=json.loads(pre_recovery_source_bytes(path,(ROOT/path).read_bytes()))
         selected=next(a for d in new['standards'] for a in d['topicLinks'] if a['hazardId']=='H061')
         before=next(a for d in old['standards'] for a in d['topicLinks'] if a['hazardId']=='H061')
         self.assertEqual(selected['linkId'],'K_7634A863A8C4CBA1D77F3A30')

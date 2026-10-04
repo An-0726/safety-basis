@@ -5,6 +5,9 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+# This dated cohort is tested against its SHA-guarded predecessor, not new admissions.
+ROOT = pre_recovery_repo_root(ROOT)
 sys.path.insert(0, str(ROOT/'tools/v4'))
 from check_commerce_candidate_dispositions import LEDGER, INDEPENDENT_REVIEW, validate_rows, validate_independent_review, CONTINUATION_REVIEW, ATOMIC_SPLITS, validate_atomic_splits
 

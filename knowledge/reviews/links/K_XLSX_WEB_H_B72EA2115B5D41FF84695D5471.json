@@ -3,16 +3,40 @@
   "entityId": "K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "747260e7d6867857eb23d80724b916b3ab9d5070077155d19be266e6a048d2f7",
-  "contextHashes": {
-    "hazard": "480ca09c41f63f8987d718efd55388671a3235cf91a7b0b2d05864917f3e9fab",
-    "clause": "09ad3ed87badb694d49852edb75bbb7cf58e0db019adb6d076683abb547e1568"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第三十六条安全泄放装置。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "b9a3b58ad101f82013004e3a68e029646804016315ae2724b6b154159f651116",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "安法36(2)维护保养不能创设该设置/位置要求；改由出版原件JGJ91-2019 10.4.1(1)精确支持，并删除原H中非隐患整改的特定实验室已整改叙述。",
   "evidenceRefs": [
-    "E_NPC_WORK_SAFETY_LAW_2021"
+    "E_CONTAIN_JGJ91_5_3_1_10_4_1_20261004",
+    "E_CONTAIN_WORK_SAFETY_LAW_36_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "contextHashes": {
+    "hazard": "3aaa431d8a3faa0017db2480fa05503a50cef68956eaea72c1f4208851972757",
+    "clause": "8f6a27560892613536ff83452ad3bd277f39e61b4f8189792c112811efdd8110"
+  },
+  "reviewedFields": [
+    "clauseId",
+    "applicability"
+  ],
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "747260e7d6867857eb23d80724b916b3ab9d5070077155d19be266e6a048d2f7",
+    "contextHashes": {
+      "hazard": "480ca09c41f63f8987d718efd55388671a3235cf91a7b0b2d05864917f3e9fab",
+      "clause": "09ad3ed87badb694d49852edb75bbb7cf58e0db019adb6d076683abb547e1568"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第三十六条安全泄放装置。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "540075b4bc5d8f2d8a3840edfc89265b3fa3b75b5ba140526f9e9df26f98d3af"
 }

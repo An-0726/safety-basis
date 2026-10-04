@@ -2,13 +2,28 @@
   "entityType": "hazard",
   "entityId": "H_12158_4_2_3_5_2",
   "reviewType": "definition",
-  "decision": "rejected",
-  "reviewedContentHash": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
-  "checkedAt": "2026-09-30T12:25:50Z",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+  "decision": "verified",
+  "reviewedContentHash": "a9c5a0009196c776ffa7f40201d0b744e1a8566615015817666871617ba2f07b",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_12158_4_2_3_5_2",
+    "reviewType": "definition",
+    "decision": "rejected",
+    "reviewedContentHash": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  },
+  "previousReviewFileSha256": "38e059ea34cf9a1853b58ca8230c7602a1df9a7844a214757f9dfa369e5aaa35"
 }

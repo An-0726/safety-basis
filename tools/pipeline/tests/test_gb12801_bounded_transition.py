@@ -13,6 +13,8 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root
+ROOT = pre_recovery_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools' / 'v4'))
 from canonical import content_hash

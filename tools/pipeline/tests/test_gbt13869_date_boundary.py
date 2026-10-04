@@ -9,6 +9,9 @@ import unittest
 from common_hazards_fixture import pre_common_ids, ADDED_IDS as COMMON_ADDED_IDS
 
 ROOT = Path(__file__).resolve().parents[3]
+from recovery_cohort_fixture import pre_recovery_repo_root, evaluate_historical_snapshot
+# This dated cohort is tested against its SHA-guarded predecessor, not new admissions.
+ROOT = pre_recovery_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
@@ -23,7 +26,7 @@ class Gbt13869DateBoundaryTests(unittest.TestCase):
     def setUpClass(cls):
         cls.version = json.loads((KNOW / 'law-versions' / (OLD + '.json')).read_text())
         cls.review = json.loads((KNOW / 'reviews/law-versions' / (OLD + '.json')).read_text())
-        cls.results = {day: gate.evaluate_release_gate(KNOW, date.fromisoformat(day))
+        cls.results = {day: evaluate_historical_snapshot(KNOW, date.fromisoformat(day))
                        for day in ('2027-01-30', '2027-01-31', '2027-02-01')}
         clauses = {cid for cid, row in gate.load_dir(KNOW, 'clauses').items()
                    if row['lawVersionId'] == OLD}

@@ -1,3 +1,4 @@
+import {renderNormativeContent} from '../web/js/normative-content.js';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
@@ -69,7 +70,7 @@ function loadApp({removeHazardErrorGuard = false} = {}) {
   };
 
   const context = {
-    document, INSPECTION_LABELS,profileTemplateText,profileReferenceText,
+    document, renderNormativeContent, INSPECTION_LABELS,profileTemplateText,profileReferenceText,
     navigator: {clipboard: {writeText: async value => { clipboardWrites.push(String(value)); }}},
     console: {error() {}, log() {}},
     location: {href: 'http://test.invalid/index.html'},

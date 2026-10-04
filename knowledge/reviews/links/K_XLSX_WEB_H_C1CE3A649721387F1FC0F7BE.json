@@ -2,17 +2,39 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "213e3c350a3f8c733b05a82fa9f4bc1921ec4e633801a179932c4e5ff5418eb5",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "撤回此前verified适用性审核。原主张常温入库、不得混装及与氧化物/过氧化物/酸/爆炸品/易燃物同场所储存禁令。苏安办〔2020〕13号官方转发可定位，完整原文及本组适用对象/地域仍未核齐。GB15577第6.1.1只覆盖有自燃性热粉料冷却，不足替代此复合义务。",
+  "evidenceRefs": [
+    "E_CONTAIN_GB15577_ORIGINAL_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
   "contextHashes": {
     "hazard": "17b90fee341a31f9ba2aa493c7c085eeb83d11f9c66c5d53738388cab934d46b",
     "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
-  "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+  "reviewedFields": [
+    "applicability"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "213e3c350a3f8c733b05a82fa9f4bc1921ec4e633801a179932c4e5ff5418eb5",
+    "contextHashes": {
+      "hazard": "17b90fee341a31f9ba2aa493c7c085eeb83d11f9c66c5d53738388cab934d46b",
+      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "f164dfbd1e1bd0e9250957aa2b918405949de5632cb6b1b6e894bdfc1a8f1953"
 }

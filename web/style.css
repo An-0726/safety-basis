@@ -28,3 +28,13 @@ nav a.nav{text-decoration:none;display:inline-flex;align-items:center;justify-co
 .profile-template summary {cursor:pointer;min-height:30px;line-height:1.6}
 .profile-template p {white-space:pre-wrap;overflow-wrap:anywhere}
 @media(max-width:480px){.profile-controls{flex-wrap:wrap}.field-profile{padding-left:10px}.profile-guidance ul{padding-left:18px}}
+
+/* Complete ordinary-clause tables: scroll locally, keep every source cell. */
+.basis .normative-content{min-width:0;max-width:100%}
+.basis .normative-table-region{overflow-x:auto;max-width:100%;margin:12px 0 4px;border:1px solid var(--line);border-radius:5px;background:#fff}
+.basis .normative-table-region:focus{outline:2px solid var(--green);outline-offset:2px}
+.basis .normative-table{border-collapse:collapse;min-width:540px;width:100%;font-size:13px;line-height:1.6}
+.basis .normative-table caption{text-align:left;font-weight:700;padding:12px;background:#f6f8f2}
+.basis .normative-table th,.basis .normative-table td{border:1px solid var(--line);padding:10px 12px;text-align:center;vertical-align:middle;white-space:pre-wrap}
+.basis .normative-table th{background:#f7faf4}
+.basis .normative-table-source{font-size:11px;color:var(--muted);margin:4px 0 14px}

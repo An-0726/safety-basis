@@ -1,18 +1,73 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "f5e99563ae8da8e54ae46fcedaa265d0f052399cf6e085566a90add67649d8d8",
-    "hazard": "c1a3cec7ba89ba714ce91e5bb7f448101cf8e237e4828915875c8467136ab6c0"
-  },
-  "decision": "verified",
   "entityId": "K_XLSX_FT_2E711C4F7156CD3D468F6FC9",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_15CC03557C942B76FAB85E6B"
-  ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
   "reviewType": "applicability",
-  "reviewedContentHash": "c702a59dc1da0891586e6f99dd03bbcbba8528f706c3c942ee302d06bb605a7c",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "dca2e57f57d43b1474479178f037a42f2c2eec826bad2c656c949dc90f194546",
+  "evidenceRefs": [
+    "E_PUBLIC_TSE35_20261004"
+  ],
+  "reason": "2026-10-04对照主管机关完整第三十五条，补全冒号后五项并限定特种设备使用单位和未建档分支。",
+  "locator": "第三十五条完整条文；第二条",
+  "reviewedFields": [
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于设备属于特种设备安全法第二条及法定目录监管范围的特种设备使用单位。本项只核未建立安全技术档案这一首句义务；已有档案但某项材料缺失，应按第三十五条对应项另核，不直接等同于完全未建立档案。不扩展到生产、经营、充装或检验检测机构的一般档案义务。",
+    "/reason": "第三十五条首句直接支持特种设备使用单位建立安全技术档案义务；完整五项作为原文边界保留，不能把有档案但缺一项与完全未建档混同。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_TSE35_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_TSE35_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "77435ccb0cc232a66bd6859dfed7f2147f54c4098e6cd1a7eced6410b44a8215",
+    "clause": "42cd89e698e1c04501e5bd5d5688340f63b8755ab1d23caab15aab2f135b406f"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "f5e99563ae8da8e54ae46fcedaa265d0f052399cf6e085566a90add67649d8d8",
+      "hazard": "c1a3cec7ba89ba714ce91e5bb7f448101cf8e237e4828915875c8467136ab6c0"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_2E711C4F7156CD3D468F6FC9",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_15CC03557C942B76FAB85E6B"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "c702a59dc1da0891586e6f99dd03bbcbba8528f706c3c942ee302d06bb605a7c",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "a78b9f0f4e27931fba0329aa75052d78c6422d99ce645f3d203e47c0d262659d",
+  "historySha256": "fa5d589d5a2d18da922b9792696af8347250a16b3c8d42020bd075cd380a5eb2",
+  "previousEntity": {
+    "applicability": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "clauseId": "C_XLSX_FT_1728309ECD70DC916104FFD7",
+    "hazardId": "H_CD607239BF80F8B8DE00715233_1",
+    "id": "K_XLSX_FT_2E711C4F7156CD3D468F6FC9",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "2a7489af873b2887bb55664be708cbcb3f40befe39bf3ffbee7e9e4ad3edfdb9"
 }

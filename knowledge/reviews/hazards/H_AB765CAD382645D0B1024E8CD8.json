@@ -3,11 +3,48 @@
   "entityId": "H_AB765CAD382645D0B1024E8CD8",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "f6769b0ee29a4106de85520057ee0b9ba35349fb48145741bf42321147893b69",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "b61f23d2f1f4aefb34eac16c453745af396e6c09ec1734e972ad07d43ca94304",
+  "checkedAt": "2026-10-04T05:42:30Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "采纳独立非作者审阅指出的定义遗漏，再次目视核MEM官方AQ4273-2016原PDF第9页第8.1条。description明确材料必须同时满足导电和运行时不产生火花，覆盖已导电但运行产火花的缺陷情形；既有条款、链接及第1章范围保持。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
-  ]
+    "E_CONTAIN_AQ4273_8_1_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。 本次完整嵌入上一冻结作者审核；更早完整审核继续保留在嵌套previousReview中。独立非作者复审仍待最终哈希确认。",
+  "reviewedFields": [
+    "conditions",
+    "description"
+  ],
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_AB765CAD382645D0B1024E8CD8",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "6d567ecb9d25c03811119a76aee712df9269335cd8ac65ee0cac6e4c18f7c936",
+    "checkedAt": "2026-10-04T05:07:24Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "MEM正式PDF第8.1条原文直接匹配风机叶片材料义务，按第1章保留完整排除范围。",
+    "evidenceRefs": [
+      "E_CONTAIN_AQ4273_8_1_20261004"
+    ],
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "reviewedFields": [
+      "conditions"
+    ],
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_AB765CAD382645D0B1024E8CD8",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "f6769b0ee29a4106de85520057ee0b9ba35349fb48145741bf42321147893b69",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ]
+    },
+    "previousReviewFileSha256": "c4bc970bc7ff6f1855080875458ff89b76446b9557ac65cb7dc824c9ec5caee3"
+  },
+  "previousReviewFileSha256": "51077db62e0d23fff678572c49466ca4c4029d9493ab002e54b408f2f83a1270"
 }

@@ -1,18 +1,37 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b",
-    "hazard": "fdbe9bff228833ea7e23c9a086a76394ed1f793fb546488fb7314573d62dcf8f"
-  },
-  "decision": "verified",
-  "entityId": "K_XLSX_e507c7fc564f94625c2af60c",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_12158_GB 12158"
-  ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "entityId": "K_XLSX_e507c7fc564f94625c2af60c",
   "reviewType": "applicability",
-  "reviewedContentHash": "b05f68a1f3a07bd822dbcd54b62e7e86ab1b9b6dcb5aafdd3054d29e84428a1c",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "8f2d4d98da93c27888ddc7bda54bc58afa6e78d90c2321f5c9a48b5517932104",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "逐原页核对H的责任对象、事实触发、可替代满足路径及例外与精确C相符；仅当前所述原子义务直接关联，保留旧审核供追溯。",
+  "evidenceRefs": [
+    "E_RECOVERY_GB12158_2024_20261004"
+  ],
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b",
+      "hazard": "fdbe9bff228833ea7e23c9a086a76394ed1f793fb546488fb7314573d62dcf8f"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_e507c7fc564f94625c2af60c",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "b05f68a1f3a07bd822dbcd54b62e7e86ab1b9b6dcb5aafdd3054d29e84428a1c",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "790582316ba28077fa4af21b735d76bcfcd0bf22867346bd679f2592b471a534",
+  "contextHashes": {
+    "hazard": "8e43bc206971fc440a5d5d1c0d14b7b8a0b4163621599468178939d15a480c44",
+    "clause": "6313bc30a606d298a87c4f98921dba05537c3e56328030e8185a5c4ef4a07d3b"
+  }
 }

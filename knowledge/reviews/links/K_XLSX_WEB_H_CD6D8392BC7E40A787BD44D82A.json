@@ -3,16 +3,39 @@
   "entityId": "K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "5b1ccf28165b401a3bada88e843a63859dd2283cc31f07027bc94910663de947",
-  "contextHashes": {
-    "hazard": "b8420482f8f162770df5fa871b2b8723e9c4fac732e2abd39029efaaa2b518fe",
-    "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "0d90dde0ae0f5fc8d61e602f1491ea23f319650da9d9212ac6b0a19ca6b50b73",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "撤除旧H将“宜设置”写成未装即违规的扩张，保留已装阀安装应有效隔爆的准确义务。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+    "E_CONTAIN_GB15577_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "contextHashes": {
+    "hazard": "c78cc44f94f1bf54a7b180b9ae5a332f65cb05fc2e2003272f01382bb625c950",
+    "clause": "08466ea1bb017c1af3a2594615dceefe848a80796604a1736be9f808afc49c51"
+  },
+  "reviewedFields": [
+    "clauseId",
+    "applicability"
+  ],
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "5b1ccf28165b401a3bada88e843a63859dd2283cc31f07027bc94910663de947",
+    "contextHashes": {
+      "hazard": "b8420482f8f162770df5fa871b2b8723e9c4fac732e2abd39029efaaa2b518fe",
+      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "36ae8a6132b898123bc7b9506e8f316447ede49141948a2aeb088549738b81cf"
 }

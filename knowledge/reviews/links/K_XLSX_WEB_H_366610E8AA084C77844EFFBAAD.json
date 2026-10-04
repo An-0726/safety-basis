@@ -1,37 +1,96 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_366610E8AA084C77844EFFBAAD",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "865a745525dd1ac9453236cfb7aa7f15decde8a0a8b211143c4b9582c670e4b6",
-  "contextHashes": {
-    "hazard": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
-    "clause": "c0caa086f87485dda2312f56dec7042e7e01635c4e25c101ed8fc6b838e4783b"
-  },
-  "checkedAt": "2026-10-01T16:17:30+08:00",
-  "reviewer": "Codex MEM10 source-integrity containment 20261001",
-  "reason": "撤回原verified适用性审核。该关联引用的C_MEM10_13不具备其声明的准确原文与定位资格，不能继续作为该隐患已核直接判据。官方第十三条针对具有硫化氢、一氧化碳等中毒风险的工贸企业有限空间作业，仅列辨识/台账且警示标志，以及审批、先通风再检测后作业、现场监护两项情形；当前quote为检测报警仪器/应急救援装备句，不是该条逐字原文。 本次只隔离失实审核资格；未更改quote、关联目标、稳定ID或lifecycle，未批准替代依据。须重新核对精确现行条款、对象、范围及适用性后实质审阅，不得自动重签。",
+  "decision": "verified",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "c57364d938bf7aab6926d7409c1a0b2a004b52eb9c18ddda68cd5bbdca723fd5",
   "evidenceRefs": [
-    "E_PDDB_L019"
+    "E_PUBLIC_MEM10_PAINT_20261004"
   ],
-  "notes": "2026-10-01重新读取应急管理部官方第10号令完整HTML，并经独立语义核对确认两项错配。E_PDDB_L019复用既有正确官方全文证据卡；未伪造新网页/PDF下载哈希。完整旧审核保存在previousReview，保留原reviewedContentHash及contextHashes只为追溯被撤回内容；不等于原审核继续有效。",
+  "reason": "原第十三条错引已逐项实质纠正；使用既有完整第七条，保持稳定K，不修改仍被拒绝的有限空间C。",
+  "locator": "第七条第（七）项",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "仅适用于机械企业使用非水性漆的调漆间、喷漆室；须核实企业行业、涂料性质及实际作业房间。固定式可燃气体浓度监测报警装置、通风设施任一未设置即触发第七条第（七）项，不要求两项同时缺失，也不能在整改时二选一。设施已设置时另核第十四条正常运行要求，但本项不以未经核验的故障或风量认定替代设置事实。仅使用水性漆、并非调漆间/喷漆室或非机械企业，不由本条自动判定；轻工企业须另核第八条第（六）项。",
+    "/clauseId": "C_PDDB_7",
+    "/reason": "完整第七条已含机械企业引领句和第（七）项；本关联只消费第（七）项报警或通风任一缺失的分支，不消费其他熔融金属或燃气分支。不得使用已拒绝C_MEM10_13。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/clauseId": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_MEM10_PAINT_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "670a140a2cc076991307b66ba173ed524351423ec98c51d5db2991b11f38f7eb",
+    "clause": "cd26cdeb11a4980700eff0f8fd034edcf3dd8cbaf891cae9a2e75eacc2ddf25c"
+  },
   "previousReview": {
     "entityType": "link",
     "entityId": "K_XLSX_WEB_H_366610E8AA084C77844EFFBAAD",
     "reviewType": "applicability",
-    "decision": "verified",
+    "decision": "rejected",
     "reviewedContentHash": "865a745525dd1ac9453236cfb7aa7f15decde8a0a8b211143c4b9582c670e4b6",
     "contextHashes": {
       "hazard": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
       "clause": "c0caa086f87485dda2312f56dec7042e7e01635c4e25c101ed8fc6b838e4783b"
     },
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "依据PR #62官方网络证据核验证实，应急管理部令第10号第十三条有限空间气体报警重大隐患。条款逐字原文与隐患适用性吻合。",
+    "checkedAt": "2026-10-01T16:17:30+08:00",
+    "reviewer": "Codex MEM10 source-integrity containment 20261001",
+    "reason": "撤回原verified适用性审核。该关联引用的C_MEM10_13不具备其声明的准确原文与定位资格，不能继续作为该隐患已核直接判据。官方第十三条针对具有硫化氢、一氧化碳等中毒风险的工贸企业有限空间作业，仅列辨识/台账且警示标志，以及审批、先通风再检测后作业、现场监护两项情形；当前quote为检测报警仪器/应急救援装备句，不是该条逐字原文。 本次只隔离失实审核资格；未更改quote、关联目标、稳定ID或lifecycle，未批准替代依据。须重新核对精确现行条款、对象、范围及适用性后实质审阅，不得自动重签。",
     "evidenceRefs": [
-      "E_MEM_ORDER_10_2023"
+      "E_PDDB_L019"
     ],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "notes": "2026-10-01重新读取应急管理部官方第10号令完整HTML，并经独立语义核对确认两项错配。E_PDDB_L019复用既有正确官方全文证据卡；未伪造新网页/PDF下载哈希。完整旧审核保存在previousReview，保留原reviewedContentHash及contextHashes只为追溯被撤回内容；不等于原审核继续有效。",
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_XLSX_WEB_H_366610E8AA084C77844EFFBAAD",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewedContentHash": "865a745525dd1ac9453236cfb7aa7f15decde8a0a8b211143c4b9582c670e4b6",
+      "contextHashes": {
+        "hazard": "129860bb0f95353fbf97dc63f228ea3eb73268e99efdddd4615183681c24c0b8",
+        "clause": "c0caa086f87485dda2312f56dec7042e7e01635c4e25c101ed8fc6b838e4783b"
+      },
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "依据PR #62官方网络证据核验证实，应急管理部令第10号第十三条有限空间气体报警重大隐患。条款逐字原文与隐患适用性吻合。",
+      "evidenceRefs": [
+        "E_MEM_ORDER_10_2023"
+      ],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "a8966eb250c2fe6ecf66d12f27f36c7d8b9540e553cfc66f151c9ab1ee19aa68"
   },
-  "previousReviewFileSha256": "a8966eb250c2fe6ecf66d12f27f36c7d8b9540e553cfc66f151c9ab1ee19aa68"
+  "previousReviewFileSha256": "1c274521cd8d8b70c22036e82fbf2eb2b4acbe15af964eef67050011cb03fe1b",
+  "historySha256": "cd863095a5779a232001da234f60dce4b00ffed4bb8bfc1aebdfff2763ce8bab",
+  "previousEntity": {
+    "applicability": "可能产生有害气体的有限空间作业场所未配备气体检测报警仪",
+    "clauseId": "C_MEM10_13",
+    "hazardId": "H_366610E8AA084C77844EFFBAAD",
+    "id": "K_XLSX_WEB_H_366610E8AA084C77844EFFBAAD",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "f9c848b7d34812415d74cc838607be665a33d64a0d08e87c1cae34f15362b028"
 }

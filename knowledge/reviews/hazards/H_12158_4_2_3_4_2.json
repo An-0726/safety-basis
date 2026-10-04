@@ -1,13 +1,28 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
-  "entityId": "H_12158_4_2_3_4_2",
   "entityType": "hazard",
+  "entityId": "H_12158_4_2_3_4_2",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f68a7c2ea808d881a836e1d3399d7e3517873c970f43c9d7a0a505c4b5ec2013",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。 独立复核确认三条已恢复稳定ID具有各自具体适用分支，撤销其作为本H同义词的历史误关联。",
   "evidenceRefs": [
-    "E_12158_GB 12158"
+    "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "4894ea54dc2e7a2fa8dd7b88c69a874d5281ed46d369245c961994a950f28828",
-  "reviewer": "Codex正式核验批次20260913"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_4_2_3_4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "4894ea54dc2e7a2fa8dd7b88c69a874d5281ed46d369245c961994a950f28828",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "9a59f9ec96dff6a88eb9407fcdb3b2d503caec865dcf3a3679345a2c9a51ce41"
 }

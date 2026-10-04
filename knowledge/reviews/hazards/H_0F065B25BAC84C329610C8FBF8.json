@@ -3,11 +3,31 @@
   "entityId": "H_0F065B25BAC84C329610C8FBF8",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "3444284f0b1afdacd5a403d3c10ea263daeca47b09483fdde13f6bfd140b0313",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "d9e57be5b80bb52206048f913be657b8c116e5ceca3e10135af7f7ec1dca2d77",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "独立读取SAMR正式原版完整6.7.1和第1章，纠正旧句的机械化遗漏/旧版措辞；不推导特定浓度数值或所有设备一律自动化。",
   "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
-  ]
+    "E_CONTAIN_GB5083_6_7_1_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "reviewedFields": [
+    "conditions",
+    "description",
+    "measures"
+  ],
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_0F065B25BAC84C329610C8FBF8",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "3444284f0b1afdacd5a403d3c10ea263daeca47b09483fdde13f6bfd140b0313",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ]
+  },
+  "previousReviewFileSha256": "b6c6321f432c46a7c3f27d888cdf79c9e2a49e49c05872ca15ddd3d979f7a385"
 }

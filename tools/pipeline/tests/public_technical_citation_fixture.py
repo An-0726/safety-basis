@@ -6,15 +6,19 @@ import copy
 import hashlib
 import json
 from pathlib import Path
+from recovery_cohort_fixture import (pre_recovery_ids, pre_recovery_inventory,
+    pre_recovery_source_bytes, pre_recovery_manifest, pre_recovery_gate)
 F = json.loads((Path(__file__).parent/'fixtures/public_technical_citations_20261003.json').read_text())
 
 def pre_technical_ids(kind, ids):
-    return set(ids) - set(F['addedIds'].get(kind, []))
+    return pre_recovery_ids(kind, ids) - set(F['addedIds'].get(kind, []))
 
 def pre_technical_inventory(kind, rows):
-    return [(ident, state) for ident, state in rows if ident not in F['addedIds'].get(kind, [])]
+    return [(ident, state) for ident, state in pre_recovery_inventory(kind, rows)
+            if ident not in F['addedIds'].get(kind, [])]
 
 def pre_technical_source_bytes(path, raw):
+    raw = pre_recovery_source_bytes(path, raw)
     row = F['records'].get(path)
     if row is None:
         return raw
@@ -28,7 +32,7 @@ def pre_technical_source_bytes(path, raw):
     return before
 
 def pre_technical_manifest(manifest):
-    old = copy.deepcopy(manifest)
+    old = pre_recovery_manifest(manifest)
     receipt = F['manifestReceipt']
     rows = [r for r in old.get('batches', []) if r.get('id') == receipt['id']]
     if not rows:
@@ -43,6 +47,7 @@ def pre_technical_manifest(manifest):
     return old
 
 def pre_technical_gate(gate):
+    gate = pre_recovery_gate(gate)
     prior = copy.deepcopy(gate)
     delta = F['gateSnapshots'].get(str(getattr(gate, 'as_of', '')))
     if delta is None or not set(delta['changedLinks']) & set(gate.links):

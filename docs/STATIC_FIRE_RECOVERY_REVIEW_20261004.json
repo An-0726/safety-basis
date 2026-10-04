@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-04",
+  "baseCommit": "ffdfee5d79717c9fefe736830174e177cec4703c",
+  "status": "author_rebuilt_pending_independent_cross_review",
+  "sources": [
+    {
+      "standard": "GB 12158-2024",
+      "officialUrl": "https://xcoss.henan.gov.cn/typtfile/20250319/61d853d052fb454f9e30672216e65672.pdf",
+      "sha256": "d0444f1a030b8531482649b7b5bd7283eb1a0ae52dc3d7dacbc9b0028f7fac65",
+      "visuallyCheckedPdfPages": [
+        7,
+        10,
+        11,
+        13,
+        14,
+        18,
+        19
+      ],
+      "currencyUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D",
+      "currency": "现行；2026-01-01实施；2006版及GB13348-2009全部代替"
+    },
+    {
+      "standard": "XF 1131-2014",
+      "officialUrl": "https://js.119.gov.cn/group1/M00/00/2A/ZYS-ZGGB6A-AT5TaANQHgHPKgLU664.pdf",
+      "sha256": "835f2860b9645cc5c6cb95390bb6925570fe53e7daa82d7c10273f5d9c7de7ee",
+      "visuallyCheckedPdfPages": [
+        1,
+        4,
+        7,
+        11
+      ],
+      "currencyUrl": "https://std.samr.gov.cn/search/stdPage?q=XF+1131-2024",
+      "currency": "同日平台标现行；平台日期/范围串项不照抄，原PDF2014-03-01实施，2020改编号内容不变"
+    },
+    {
+      "standard": "GB/T 13869-2017",
+      "officialUrl": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651130919251.pdf",
+      "sha256": "fc612978f1112f87912668b3b01af1c554422ebcf83074eebaae64af8beb9d50",
+      "visuallyCheckedPdfPages": [
+        6
+      ],
+      "scopeCheckedPdfPage": 4,
+      "currencyUrl": "https://std.samr.gov.cn/gb/search/gbDetailed?id=N1sPm%2FYzMfc%3D&mode=p",
+      "currency": "2017现行；2026版2027-02-01实施，不能提前引用"
+    }
+  ],
+  "semanticBoundaries": [
+    "GB12158第1章静电危险场所设计管理及火炸药/电火工品/烟花爆竹排除",
+    "表2完整9行，不能补造2区Ⅱ类数据",
+    "尺寸超限和非导体材料存在工艺需要例外；必要时措施不改无条件",
+    "6.3.1两类电阻率或其他静电防护为可替代路径，不混同接地电阻",
+    "7.6测试路径之一；两面均合格，c项多层不同材料及温湿度完整",
+    "8.8.5仅液态物料管路非导体，不扩所有工艺",
+    "错误H_12158_10_1_2及K仍保持rejected",
+    "H052仅既有仓库库房物品至照明灯实测<0.5m，消防法fallback仍rejected",
+    "移动电源重复H/K保留稳定ID及审核历史，旧canonical接收等价子例",
+    "SC134三处来源误写D16改D05，未改变无法确认检验状态的现场边界"
+  ],
+  "validation": {
+    "allNodeTests": {
+      "passed": 749,
+      "failed": 0
+    },
+    "normativePythonTests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "ordinaryPythonTests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "reviewBinding": {
+      "staleLink": 0,
+      "staleHazardContext": 0,
+      "staleClauseContext": 0
+    },
+    "strictBundleVerify": "passed",
+    "gui": {
+      "status": "blocked_not_passed",
+      "directChromium": "AF_UNIX socket EPERM prevents launch",
+      "cloudBrowser": "127.0.0.1 preview blocked with ERR_BLOCKED_BY_CLIENT",
+      "requiredExactHeadCommand": "python tools/browser/audit_ordinary_tables.py --bundle source/releases/current --out REPORT_PATH"
+    },
+    "fullPythonSuite": {
+      "tests": 752,
+      "failures": 38,
+      "status": "failed_historical_cohort_and_manifest_dependencies_not_rewritten",
+      "detailsFile": "static-fire-test-summary.json"
+    }
+  },
+  "integrationDependencies": [
+    "knowledge/manifest.json deliberately left unchanged; integration must reconcile inventory",
+    "Old commerce atomic-split independent cohort now yields four stale failures on intentionally superseded H/K; require new independently reviewed carry-forward, do not re-sign old independent review",
+    "No PROJECT_STATE or old cohort fixtures modified"
+  ],
+  "emergencyLight": {
+    "status": "unadmitted_source_gap",
+    "baselinePlugSpecificHazardId": null,
+    "targetClause": "GB51309-2018 4.5.5",
+    "knownBoundaries": [
+      "非集中控制型系统",
+      "自带电源型灯具",
+      "采用插头连接时",
+      "采用专用工具方可拆卸",
+      "GB55036/55037通用规范优先；不使用被废强条作现行直接依据"
+    ],
+    "corroboratingOfficialExcerpt": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3516/site/attach/0/2970936b3fee494d9cb2a32f03d4b0ea.pdf",
+    "precedenceOfficialNotice": "https://zjw.sh.gov.cn/wjhb/20230428/baf0b1f88d354d60a56fc27576e54610.html",
+    "reason": "已找到官方检查表完整一句4.5.5及通用规范优先公告，但仍未取得GB51309标准原件及完整适用范围/版本核准证据；本恢复包不借政府表格摘要制造全国通用H/C/K。"
+  }
+}

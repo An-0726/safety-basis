@@ -3,16 +3,39 @@
   "entityId": "K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "969dc59967a36a6cc032b7a3a9ece838fe867669e25fb7cf624713cc316ee318",
-  "contextHashes": {
-    "hazard": "7c869420f2d6a3b900e878965898166b5eb5b957c91aa9fe3145f4f6bb9b1c5e",
-    "clause": "3f245f3dd2e98c70438d5887a9efff42492090670ceacceb46f8db54909950a9"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GBZ 1-2010第6.1.1.3条局部排风除尘要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "d888245ddfe8baa14a82cb1dee9ffea748e2e8a61218727320498223780fadbc",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "回到NHC官方完整原文，准确恢复建设项目卫生设计及职业病危害评价中的具体防尘/防毒要求；按第1章范围重审，不将其当作所有在用企业通用粉尘防爆违法判据。本项是本轮发现的共享摘要C唯一原有公开依赖；局部排风子义务正常成立，予以保留，避免误撤。",
   "evidenceRefs": [
-    "E_NHC_GBZ1_2010"
+    "E_CONTAIN_GBZ1_EXACT_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "contextHashes": {
+    "hazard": "76a589fa6de3c91ae806b1eee021d1fbf7c0c627177f04b55cfb447e61a7822c",
+    "clause": "02829c9a42f8391b66da197f53bee0793398d2f3e293ad49e788512b73aca8b8"
+  },
+  "reviewedFields": [
+    "clauseId",
+    "applicability"
+  ],
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "969dc59967a36a6cc032b7a3a9ece838fe867669e25fb7cf624713cc316ee318",
+    "contextHashes": {
+      "hazard": "7c869420f2d6a3b900e878965898166b5eb5b957c91aa9fe3145f4f6bb9b1c5e",
+      "clause": "3f245f3dd2e98c70438d5887a9efff42492090670ceacceb46f8db54909950a9"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GBZ 1-2010第6.1.1.3条局部排风除尘要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NHC_GBZ1_2010"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "85563a994202cbc16cde2a70e14d5c4dc038829f6ed863519ef7625cd243234c"
 }

@@ -1,18 +1,77 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_GB50140_5_1_3_1",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "62515590d21c3ffebad545edd3e04b582eb72b5ed7a7c421f714ce320a7730dc",
-  "contextHashes": {
-    "hazard": "538c81ede0e842374aa6c145c5d054706607365f77466fe8873793f810e3a649",
-    "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条手提式灭火器顶部高度限值。条款逐字原文与隐患适用性吻合。",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "56f5bd6e0f469b8b5c2168c516510c81d4d6450d6f45d127d764836adad12c24",
   "evidenceRefs": [
-    "E_SAMR_GB50444_2008"
+    "E_PUBLIC_GB50140_ORIGINAL_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "核实GB50140第5.1.3条原文；保留严格顶部限值，撤除无依据的AND条件，不泛化到推车式灭火器。",
+  "locator": "GB50140第1.0.2、5.1.3条",
+  "reviewedFields": [
+    "/applicability",
+    "/clauseId",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于生产、使用或储存可燃物的新建、改建、扩建工业与民用建筑工程的灭火器配置设计；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。既有建筑检查须核配置设计及其适用时点，不能无条件追溯套用。本项只核手提式灭火器顶部离地面高度大于1.50m；是否使用箱、挂钩或托架的宜采用分支不作为本项必备触发条件，也不因未装箱而自动命中本项。底部高度另核，不与顶部上限混用。",
+    "/clauseId": "C_GB50140_5_1_3",
+    "/reason": "第5.1.3条手提式灭火器顶部离地高度不应大于1.50m直接支持本项，装箱/挂钩/托架的宜采用不是超高触发前提。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/clauseId": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_GB50140_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
+  "contextHashes": {
+    "hazard": "1c78949af2fdee26c316ceb368672744786c2c365631cf9aab9694c2ed1fad51",
+    "clause": "68869370a1da4101efd5243b3d06653e35d8e2d643c4a5064093b70badc649da"
+  },
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_GB50140_5_1_3_1",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "62515590d21c3ffebad545edd3e04b582eb72b5ed7a7c421f714ce320a7730dc",
+    "contextHashes": {
+      "hazard": "538c81ede0e842374aa6c145c5d054706607365f77466fe8873793f810e3a649",
+      "clause": "10bcfbab45de91d2730ca60e6c908e491ae8426ede97cac7aa3470fa6d469a81"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50444-2008 第5.1.3条手提式灭火器顶部高度限值。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB50444_2008"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "fc4091b5866a1f6baa6d1978d297957906cc9670f75a4e68fa4d760e73582d9b",
+  "historySha256": "8f53b8630b492a7a90a1dace8f2bb7e06e3b4d9441973d2fb0b602cd834ec2a0",
+  "previousEntity": {
+    "applicability": "手提式灭火器顶部离地面高度大于1.50m",
+    "clauseId": "C_GB50444_5_1_3",
+    "hazardId": "H_GB50140_5_1_3_1",
+    "id": "K_XLSX_WEB_H_GB50140_5_1_3_1",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "aa8217edc4cba4d71a4deebaf4f844fc4d35480f0a2a61609c9e7a738b3cdbd8"
 }

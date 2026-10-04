@@ -2,17 +2,36 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_6_3_1_1",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "7034dea0c986d3d798dea0fee0ee3a6d91a7b2c7cc4f358d6cdd67e72e4d7590",
-  "contextHashes": {
-    "hazard": "71ac75c08efdc5807b2f7e073efd598346a2676fc19065666c498b90398ca64b",
-    "clause": "35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf"
-  },
-  "checkedAt": "2026-09-30T12:25:50Z",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "reason": "撤回原verified审核。隐患所述非金属液体储罐、输送管道材料电阻率与实际关联C_12158_4_2_2_3的接地/静电泄漏电阻不是同一指标；description和measures含“1×Ω”“1×10Ω·m”等缺失数值或指数的片段。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+  "decision": "verified",
+  "reviewedContentHash": "f6e2da2897855d229e716a07b970aebd39f49b540f54658108d94675304d8efe",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "逐原页核对H的责任对象、事实触发、可替代满足路径及例外与精确C相符；仅当前所述原子义务直接关联，保留旧审核供追溯。",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_12158_6_3_1_1",
+    "reviewType": "applicability",
+    "decision": "rejected",
+    "reviewedContentHash": "7034dea0c986d3d798dea0fee0ee3a6d91a7b2c7cc4f358d6cdd67e72e4d7590",
+    "contextHashes": {
+      "hazard": "71ac75c08efdc5807b2f7e073efd598346a2676fc19065666c498b90398ca64b",
+      "clause": "35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf"
+    },
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "reason": "撤回原verified审核。隐患所述非金属液体储罐、输送管道材料电阻率与实际关联C_12158_4_2_2_3的接地/静电泄漏电阻不是同一指标；description和measures含“1×Ω”“1×10Ω·m”等缺失数值或指数的片段。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  },
+  "previousReviewFileSha256": "f07d44a79ef2cd03f81db772d04253b2e01582e80018ae0c5c881b88f6866945",
+  "contextHashes": {
+    "hazard": "ab8ea4f9639441e8cf32d53bc64d2cdbe22f629ad26323ad610ca809b5001431",
+    "clause": "6c2e974cffa1a3f1d32179a639fc8510276c14700ee86f7ad701e9e33fbaf0fb"
+  }
 }

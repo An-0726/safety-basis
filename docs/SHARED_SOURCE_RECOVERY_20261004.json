@@ -1,0 +1,982 @@
+{
+  "schema": "bounded-public-citation-disposition-v1",
+  "asOf": "2026-10-04",
+  "status": "author_candidate_requires_independent_review_before_integration",
+  "baselineCommit": "ffdfee5d79717c9fefe736830174e177cec4703c",
+  "initialProblemPacketSha256": "1c93a4cde905e191712f46b065cabae832963e3fcdd1666b4d8c91f3e975e2a3",
+  "scope": {
+    "initialHazards": [
+      "H_B72EA2115B5D41FF84695D5471",
+      "H_610647B0A6A54C52A0D8663FBB",
+      "H_200F007CE0EF47DFB8BE2B8618"
+    ],
+    "sharedFalseClause": "C_GB15577_6_1",
+    "sharedFalseClauseOriginalDependencies": 24,
+    "additionalSharedParaphraseClause": "C_GBZ1_6_1_1_3",
+    "additionalExistingDependency": "H_BFA0B7A7E308410DB3CC9358AB",
+    "totalHazards": 27,
+    "scopeExpansionReason": "Actual source reading established the same GB15577 clause was not the cited original and supported 24 current public rules. Rebinding work then revealed one GBZ1 paraphrase with one existing public dependency. All are individually addressed; this is not a whole-corpus review."
+  },
+  "summary": {
+    "exactRebindings": 21,
+    "currentDirectReviewsWithdrawn": 6,
+    "hazardsAdded": 0,
+    "linksAdded": 0,
+    "stableEntitiesDeleted": 0,
+    "profileAdmissions": 0,
+    "majorCatalogueEdits": 0,
+    "evidenceMetadataCorrections": 1,
+    "changedFiles": 125
+  },
+  "preservation": {
+    "stableIdsAndLifecyclesPreserved": true,
+    "completePreviousReviewsPreserved": true,
+    "unchangedClauseReviewsPreservedByteForByte": true,
+    "beforeAndAfterFileHashes": "exact-overlay-inventory.json",
+    "noPrivateSourceRowsOrOriginalDocumentsInOverlay": true,
+    "rawOriginalPdfsExcludedFromOverlay": true,
+    "knownMissingDirectSourcesRemainExplicit": true
+  },
+  "authorInvariants": {
+    "asOf": "2026-10-04",
+    "hazardsReviewed": 27,
+    "rebound": 21,
+    "withdrawn": 6,
+    "beforeEligibleHazards": 1684,
+    "afterEligibleHazards": 1678,
+    "beforeEligibleLinks": 1838,
+    "afterEligibleLinks": 1832,
+    "removedHazards": [
+      "H_1B474A2ABA0E23143E2FE451",
+      "H_200F007CE0EF47DFB8BE2B8618",
+      "H_4E5F4BB13B82457DA5377CABDF",
+      "H_8C14C2BD0D4A4EF1B42FDC8C2E",
+      "H_BF7AA7549F8E1B94012882C9",
+      "H_C1CE3A649721387F1FC0F7BE"
+    ],
+    "addedHazards": [],
+    "badClauseEligibleLinkCount": 0,
+    "changedPaths": 125,
+    "errors": [],
+    "pass": true
+  },
+  "scopeNegativeChecks": {
+    "status": "PASS",
+    "caseCount": 16,
+    "cases": [
+      {
+        "case": "layout_substation_only",
+        "hazardId": "H_AA7C48BCF0E6458484759F407B",
+        "syntheticNegativeScenario": "普通产尘车间，并非总变电站。",
+        "expectedSemanticBoundary": "不得套用总变电站专属风向判据。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "layout_two_wind_relations",
+        "hazardId": "H_AA7C48BCF0E6458484759F407B",
+        "syntheticNegativeScenario": "以粉尘/腐蚀性污染源的冬季上风侧要求替换全年最小频率下风侧，或把水雾上风侧写成下风侧。",
+        "expectedSemanticBoundary": "两类污染源及不同风向条件不得互换。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "compressed_air_special_scope",
+        "hazardId": "H_C3B24EEDD61145A691A38B0414",
+        "syntheticNegativeScenario": "井下/洞内站或非所列电力驱动压缩机设计。",
+        "expectedSemanticBoundary": "不直接纳入本条限定设计范围。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "compressed_air_recommendation",
+        "hazardId": "H_C3B24EEDD61145A691A38B0414",
+        "syntheticNegativeScenario": "仅未采用年最小频率风向下风侧，未核技术经济方案和设计条件。",
+        "expectedSemanticBoundary": "不得单凭未采用推荐位置宣布违反强制性条文。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gbz_design_scope_H_2870FFD9678642F4993A3CE571",
+        "hazardId": "H_2870FFD9678642F4993A3CE571",
+        "syntheticNegativeScenario": "任意既有企业在用场所，没有建设项目卫生设计/职业病危害评价触发。",
+        "expectedSemanticBoundary": "不得泛化为所有既有企业无条件粉尘防爆判据。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gbz_design_scope_H_B405711EED23418BAC72F90645",
+        "hazardId": "H_B405711EED23418BAC72F90645",
+        "syntheticNegativeScenario": "任意既有企业在用场所，没有建设项目卫生设计/职业病危害评价触发。",
+        "expectedSemanticBoundary": "不得泛化为所有既有企业无条件粉尘防爆判据。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gbz_design_scope_H_BFA0B7A7E308410DB3CC9358AB",
+        "hazardId": "H_BFA0B7A7E308410DB3CC9358AB",
+        "syntheticNegativeScenario": "任意既有企业在用场所，没有建设项目卫生设计/职业病危害评价触发。",
+        "expectedSemanticBoundary": "不得泛化为所有既有企业无条件粉尘防爆判据。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gbz_enclosure_not_hood_substitution",
+        "hazardId": "H_2870FFD9678642F4993A3CE571",
+        "syntheticNegativeScenario": "仅称设有吸风罩，但产尘设备仍未密闭。",
+        "expectedSemanticBoundary": "罩不能替代本项明确密闭义务。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gbz_wet_condition",
+        "hazardId": "H_BFA0B7A7E308410DB3CC9358AB",
+        "syntheticNegativeScenario": "粉尘性质/工艺不适合湿式作业。",
+        "expectedSemanticBoundary": "不能把原条改写成所有粉尘一律加水；也不能用湿法条件删除局排要求。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gbz_complete_mobile_tail",
+        "hazardId": "H_B405711EED23418BAC72F90645",
+        "syntheticNegativeScenario": "删掉完整条文的移动扬尘/排毒设备最后一句。",
+        "expectedSemanticBoundary": "完整C应保留后句，H仅消费前两句并不允许截断C。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "hj_adsorption_guidance_H_1B2F6A143A9E492DBA2A246473",
+        "hazardId": "H_1B2F6A143A9E492DBA2A246473",
+        "syntheticNegativeScenario": "非工业有机废气常压吸附治理工程，或把指导性技术项直接当普遍法定违法。",
+        "expectedSemanticBoundary": "不得跨工程范围、不得把指导性文件泛化为普遍法定义务。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "hj_adsorption_guidance_H_417B030F12A14923A978E4DAB2",
+        "hazardId": "H_417B030F12A14923A978E4DAB2",
+        "syntheticNegativeScenario": "非工业有机废气常压吸附治理工程，或把指导性技术项直接当普遍法定违法。",
+        "expectedSemanticBoundary": "不得跨工程范围、不得把指导性文件泛化为普遍法定义务。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "hj_adsorption_guidance_H_6459FF72A542499FBB3E0F70FC",
+        "hazardId": "H_6459FF72A542499FBB3E0F70FC",
+        "syntheticNegativeScenario": "非工业有机废气常压吸附治理工程，或把指导性技术项直接当普遍法定违法。",
+        "expectedSemanticBoundary": "不得跨工程范围、不得把指导性文件泛化为普遍法定义务。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "valve_recommendation",
+        "hazardId": "H_CD6D8392BC7E40A787BD44D82A",
+        "syntheticNegativeScenario": "室外干式除尘器未采用进风管隔爆阀，但尚未核其他控爆设计。",
+        "expectedSemanticBoundary": "不以推荐装阀文字推出未装即违规；本H仅保留已用阀安装有效性。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "gas_or_dust_not_conjunction",
+        "hazardId": "H_C9900E360F7848F6AD6025FE89",
+        "syntheticNegativeScenario": "生产过程作业场所仅存在可燃性气体，或仅存在粉尘，而不是二者同时存在。",
+        "expectedSemanticBoundary": "任一类条件成立即可触发本条防火花要求，不能误改为二者同时存在。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      },
+      {
+        "case": "fan_material_both_requirements",
+        "hazardId": "H_AB765CAD382645D0B1024E8CD8",
+        "syntheticNegativeScenario": "风机叶片材料已导电，但运行时产生火花。",
+        "expectedSemanticBoundary": "不能仅凭已导电排除本条缺陷；两项材料性能均须满足。",
+        "checkKind": "source-field contract assertion plus separately stated human semantic boundary; not an automatic site-fact adjudicator",
+        "pass": true
+      }
+    ],
+    "limitations": "程序只验证精确条款与范围限制仍在最终实体；语义边界来自原文逐项审阅，不声明运行了现场事实规则引擎。"
+  },
+  "knowledgeBefore": {
+    "laws": 133,
+    "lawVersions": 136,
+    "clauses": 3157,
+    "hazards": 2142,
+    "links": 2034,
+    "evidence": 1375,
+    "successions": 26,
+    "requirements": 75
+  },
+  "knowledgeAfter": {
+    "laws": 134,
+    "lawVersions": 137,
+    "clauses": 3164,
+    "hazards": 2142,
+    "links": 2034,
+    "evidence": 1387,
+    "successions": 26,
+    "requirements": 75
+  },
+  "evidenceMetadataCorrection": {
+    "id": "E_MOHURD_GB50187_2012",
+    "changedOriginalField": "locator",
+    "beforeValue": "住建部第1338号公告 GB 50187-2012 工业企业总平面设计规范",
+    "afterValue": "住建部第1356号公告 GB 50187-2012 工业企业总平面设计规范",
+    "fullPriorMetadataPreserved": true
+  },
+  "actions": [
+    {
+      "hazardId": "H_15577_11_1_1",
+      "linkId": "K_XLSX_WEB_H_15577_11_1_1",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_15577_11_1",
+      "basisScope": "限GB15577-2018第1章所述粉尘爆炸危险场所；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。对应第11.1条使用义务；不将已废止GB/T11651-2008作为现行选型版本。",
+      "reason": "准确回绑第11.1条并纠正标题/正文对废止选型标准的现行化误用。只确认使用个体防护用品的义务；具体型号及等级须按实际作业风险另核。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_15577_11_1_1.json": "5e37f8b458d4f0d2305dc5078dccaff72aceb47a7b6882ea7fd52cc3ce15c4be",
+        "knowledge/links/K_XLSX_WEB_H_15577_11_1_1.json": "83e41053877524f73a9d4e7834492466caf658f3faf138e31e13fd3806702994",
+        "knowledge/clauses/C_15577_11_1.json": "36b5078f67eb53416640522bee8c21193c03a9c731bdeb8811ff76091a823156",
+        "knowledge/reviews/hazards/H_15577_11_1_1.json": "7195187467c449e2472a9d16a1492bd8504d91eff69f61cb975253862b9ef4c3",
+        "knowledge/reviews/links/K_XLSX_WEB_H_15577_11_1_1.json": "1d17caba6aeed4e5ea542259bc494f2b774e61f25ce8a4fa388ff2caaf9bc078",
+        "knowledge/reviews/clauses/C_15577_11_1.json": "69fe23c550ebc5a9d1792180f1f855a399e854db058461cea4d72a8edfbc58e9"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_A1DD3641D23C4DCB92FFE32354",
+      "linkId": "K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_15577_8_1_6",
+      "basisScope": "限GB15577-2018第1章所述粉尘爆炸危险场所；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。对应第8.1.6条先启、至少延时10min停机及停机清灰义务。",
+      "reason": "第8.1.6条完整原文直接覆盖H三项主张；删除条文未要求的挂牌和必设联锁扩展，不以原notes误记8.4.6作为现行定位。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_A1DD3641D23C4DCB92FFE32354.json": "f38cf9aa4e45b8af42b7ae4e6c3d57646563869e826e4b72b50902230dbc31f8",
+        "knowledge/links/K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354.json": "1f9ee227e5c6df57a13e5922adec4a64d8138b0cb86ce54d9d8d92ce25c0be23",
+        "knowledge/clauses/C_15577_8_1_6.json": "00e3efdcdf0fd5222eae5c3ba43f4edfd60d60486eb081d209a70044613d2e82",
+        "knowledge/reviews/hazards/H_A1DD3641D23C4DCB92FFE32354.json": "9b52d88f81610c81a09726d565ffe1c5e4eeba504ab98edfa1984a62764f7873",
+        "knowledge/reviews/links/K_XLSX_WEB_H_A1DD3641D23C4DCB92FFE32354.json": "cc386045a87165a8285296a478b96775234bf38dbd199b4900bd598aa99348b1",
+        "knowledge/reviews/clauses/C_15577_8_1_6.json": "bed60728d8332f158d315eb0b883cf7dfedf6bffb0ddadccce282f5ad29d5adc"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_65F26C6ABA374DAC96AB6ADEA5",
+      "linkId": "K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_15577_8_4_3",
+      "basisScope": "限GB15577-2018第1章所述粉尘爆炸危险场所；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。第8.4.3条室内干式除尘器单独房间、防火隔墙和泄爆要求。",
+      "reason": "完整第8.4.3条直接覆盖H，保留外置“宜”与内置“应”的区别；不扩大为一律禁止室内安装。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_65F26C6ABA374DAC96AB6ADEA5.json": "81580cde12e3b25ad666b413e4a207e0c799d0a1347e26d3adc3119983374ce3",
+        "knowledge/links/K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5.json": "05bef3b63b0d0acd59cb2b206bd1a32f746c8a082735efa17ee3e42256f22853",
+        "knowledge/clauses/C_15577_8_4_3.json": "fee3e957dc39b11f52cf26f783fa77e97e388f9a18e83047a4630f2e8c6c079c",
+        "knowledge/reviews/hazards/H_65F26C6ABA374DAC96AB6ADEA5.json": "db26b55d9bc92e2ad52a24a5b152979c5a376bc502a4bfcd616043d5f134f089",
+        "knowledge/reviews/links/K_XLSX_WEB_H_65F26C6ABA374DAC96AB6ADEA5.json": "c65945c156aeaa1737a52df712336980d25e1b201b5d8693182776679a90b5db",
+        "knowledge/reviews/clauses/C_15577_8_4_3.json": "6236925c80f58f694c7e29800622a99f7aa87d62371a0222f8a5a316174dd218"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_AFA0624C3BBD4FA2B7E99BC2D4",
+      "linkId": "K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_15577_8_4_6",
+      "basisScope": "限GB15577-2018第1章所述粉尘爆炸危险场所；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。对应8.4.6条干式除尘器锁气卸灰及清灰。",
+      "reason": "第8.4.6完整句直接覆盖装置和及时清灰两项；收窄到粉尘爆炸危险场所干式除尘器。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_AFA0624C3BBD4FA2B7E99BC2D4.json": "8e6e1c6c8625dc9dfcef5ec5fd337be092be7d8a5a3710505799987eb13ceb05",
+        "knowledge/links/K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4.json": "6a30725bd3f11c50c8a4831483b20fbbab55de8c9b2b121502b702aa3a184d65",
+        "knowledge/clauses/C_15577_8_4_6.json": "05f97a92a14bb3a3d1c6f277de2902d8adc126daf75465abeb00fe80d7d8925c",
+        "knowledge/reviews/hazards/H_AFA0624C3BBD4FA2B7E99BC2D4.json": "ca17f98e637a2a747869d10321ce59d4750a434c9901ec30c91032fca79c7053",
+        "knowledge/reviews/links/K_XLSX_WEB_H_AFA0624C3BBD4FA2B7E99BC2D4.json": "3ca919bf10f0378da8dbed9705470fa63d24ff9dcc9e3f1f058c4c8f962c9545",
+        "knowledge/reviews/clauses/C_15577_8_4_6.json": "a3aa73e9550c7e120360214c1c818671afc44588ce7df8ce927c2a285053388b"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_CC6E2BC71D1F419A9674C7A4C8",
+      "linkId": "K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_15577_8_4_8",
+      "basisScope": "限GB15577-2018第1章所述粉尘爆炸危险场所；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。第8.4.8完整条款；只在采用泄爆时适用对应泄爆义务。",
+      "reason": "按完整第8.4.8条恢复并保留条件分支及末句，不把旧GB/T15605-2008列为现行；具体泄爆参数未在本批计算认证。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_CC6E2BC71D1F419A9674C7A4C8.json": "bdf556ed99d6d7e308489d267dcf44efc64be67fe6ee9b5d02000a3faf3ba43e",
+        "knowledge/links/K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8.json": "5e83096391ecbf86b55c55941c445c5bec636d94dbf9cf2698f16fafbdbfefd8",
+        "knowledge/clauses/C_15577_8_4_8.json": "fa1c930d82a92a2cc847031515e3d9dcee89fcef41e9477c2b4c12da774c0e3f",
+        "knowledge/reviews/hazards/H_CC6E2BC71D1F419A9674C7A4C8.json": "a15bcdf81ee2a20f9622e8ba930325d7e057c9c77856b2069ac2edc35449a5be",
+        "knowledge/reviews/links/K_XLSX_WEB_H_CC6E2BC71D1F419A9674C7A4C8.json": "ac7a1d25f0b8697e7ffd5ea623fe2c19ecee5cfffce2ef871eaa80f261681cac",
+        "knowledge/reviews/clauses/C_15577_8_4_8.json": "11ea59a02b04d69564708a984be4ab903252fd1f90ee2593bedc7e3256c2d273"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_CD6D8392BC7E40A787BD44D82A",
+      "linkId": "K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_15577_8_4_9",
+      "basisScope": "限GB15577-2018第1章所述粉尘爆炸危险场所；不适用于煤矿井下、烟花爆竹、火炸药和强氧化剂的粉尘场所。8.4.9前半句为“宜设置”，本H只消费后半句“其安装应能阻隔”的有效性要求。",
+      "reason": "撤除旧H将“宜设置”写成未装即违规的扩张，保留已装阀安装应有效隔爆的准确义务。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_CD6D8392BC7E40A787BD44D82A.json": "704426799dc28f95280ebd964227e8b2f3dd6ce998567de9d7767b97edcb87ad",
+        "knowledge/links/K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A.json": "8525536ba28609940a7492db89c6c4b87265c434383b83a27e0d272bcb9dece8",
+        "knowledge/clauses/C_15577_8_4_9.json": "4491c1ad09df04cf4e0771d01d02e6094cc715a73815239f8b733de4c68e26e8",
+        "knowledge/reviews/hazards/H_CD6D8392BC7E40A787BD44D82A.json": "642d71e84eeea30a69d091522c86dc61c3e22ab4af2491de6be30162b49e2444",
+        "knowledge/reviews/links/K_XLSX_WEB_H_CD6D8392BC7E40A787BD44D82A.json": "f4135b838cf8521cd1482643a3553db6cbf7d174ebc81f07398551620e8d7f5f",
+        "knowledge/reviews/clauses/C_15577_8_4_9.json": "931646ca368362007809929da5f72e1b0fa69786d96fb5ed68304c3536df3137"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_610647B0A6A54C52A0D8663FBB",
+      "linkId": "K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_12801_4_6_3",
+      "basisScope": "企业生产过程爆炸危险区域；精确对应GB12801-2025第4.6.3条，不再引用粉料自燃或粉尘设备密闭条款。",
+      "reason": "2026-10-01实施的GB12801-2025第4.6.3条完整原文直接支持具体电气设备/线路及配套仪器仪表防爆义务；将旧H泛称“电气防爆安全技术与管理”收窄到原文对象与行为。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_610647B0A6A54C52A0D8663FBB.json": "c4755e0b944ad505baa9575e8bb6f6899dcb5b20a380ff0139b4c29d3b1b13e3",
+        "knowledge/links/K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB.json": "723fa54557d0597b088516fc1b4765c1f7df88b49857996d13d5ca1dbeba3c34",
+        "knowledge/clauses/C_12801_4_6_3.json": "25c695d76cd81056b4f43b573d8225b22d4a2280a083256d7e374a6feaaeab93",
+        "knowledge/reviews/hazards/H_610647B0A6A54C52A0D8663FBB.json": "31bedcade1fdc5f1c7021f34bc6995456d97e200840279d3094d4dc6c5765736",
+        "knowledge/reviews/links/K_XLSX_WEB_H_610647B0A6A54C52A0D8663FBB.json": "404d33640f3a767a07bc157863171bd12b86432784da4f4691e891e7026f4ed8",
+        "knowledge/reviews/clauses/C_12801_4_6_3.json": "d04ce94f8873e13d0b928369ad75c7d8a7110ae13ca8cd0ef3e820afa9dbc158"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_C9900E360F7848F6AD6025FE89",
+      "linkId": "K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_12801_5_1_2",
+      "basisScope": "企业生产过程中存在可燃性气体或粉尘的作业场所；第5.1.2条避免产生火花的措施。",
+      "reason": "独立核当前GB12801-2025第5.1.2原文及范围；替代旧notes GB/T12801-2008引用，不使用GB15577第6.1假引文。",
+      "reviewCorrection": {
+        "checkedAt": "2026-10-04T05:42:30Z",
+        "changedHazardFields": [
+          "title",
+          "description",
+          "keywords"
+        ],
+        "reason": "采纳独立非作者审阅指出的字段不一致，再次目视核GB12801-2025官方原PDF第10页第5.1.2条为“可燃性气体或粉尘”。将title、description及其同文搜索关键词中的“和”同步为“或”，保留既有企业生产过程范围；不能误要求两类危险同时存在。",
+        "linkAndClauseEntityBytesUnchanged": true,
+        "priorFrozenReviewsPreserved": true
+      },
+      "finalContentBindings": {
+        "knowledge/hazards/H_C9900E360F7848F6AD6025FE89.json": "b7bdeeee7eb2b53852a2f343fe16623768889e7ef6a7a0a53ea68efa551f635a",
+        "knowledge/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json": "d26353c5aadbc0e6ef7ec85fb5ad0a0cc47cdaddaa8955fe2532e53949f2be4e",
+        "knowledge/clauses/C_12801_5_1_2.json": "7053d48c3281a735543e1919371b9b569bf2bc9d86c08a871f417aad0b9274ec",
+        "knowledge/reviews/hazards/H_C9900E360F7848F6AD6025FE89.json": "63ebc511482ba35ba762bd5b83426a8d35eae5319ea0570aa0e870b42d9d29df",
+        "knowledge/reviews/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json": "9cf4b6968e248a2c0d684bcd63c12b0ea8d57578df7f178e909cc52fe26e2f79",
+        "knowledge/reviews/clauses/C_12801_5_1_2.json": "101434318f52b4b6c19ce093373b0faa753450ace3b4cf1d306c32d940a4048e"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_AB765CAD382645D0B1024E8CD8",
+      "linkId": "K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_AQ4273_2016_8_1",
+      "basisScope": "AQ4273-2016第1章范围内除尘系统风机叶片，必须同时满足导电、运行时不产生火花的材料要求。",
+      "reason": "MEM正式PDF第8.1条原文直接匹配风机叶片材料义务，按第1章保留完整排除范围。",
+      "reviewCorrection": {
+        "checkedAt": "2026-10-04T05:42:30Z",
+        "changedHazardFields": [
+          "description"
+        ],
+        "reason": "采纳独立非作者审阅指出的定义遗漏，再次目视核MEM官方AQ4273-2016原PDF第9页第8.1条。description明确材料必须同时满足导电和运行时不产生火花，覆盖已导电但运行产火花的缺陷情形；既有条款、链接及第1章范围保持。",
+        "linkAndClauseEntityBytesUnchanged": true,
+        "priorFrozenReviewsPreserved": true
+      },
+      "finalContentBindings": {
+        "knowledge/hazards/H_AB765CAD382645D0B1024E8CD8.json": "e2a0c5b650a1ed2209ba5925d2736195528bed3900162540c7b427920f66bf6b",
+        "knowledge/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json": "574053f93a09c5a1b5f450682634ba51a403a2bc04d7a1689a1b08bd554317e6",
+        "knowledge/clauses/C_AQ4273_2016_8_1.json": "0103065b2497e0f936c74767e5347cc6ca58d281924b832467197a8e48f4f61d",
+        "knowledge/reviews/hazards/H_AB765CAD382645D0B1024E8CD8.json": "b246be52424efeda0e7f7ebe75ea8365438b1e5afc9f5a42b1cac43381a05f96",
+        "knowledge/reviews/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json": "58fe065a79a8cea78e4173a39997daf6c436b72d446a7fb4f23340294893bbb3",
+        "knowledge/reviews/clauses/C_AQ4273_2016_8_1.json": "cc635e8cbad1280c44bd587ae8aeaad8dfc9fc986f1c3f5002537d2d50475a9c"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_6298B2AB1EF44DCD8736C6F498",
+      "linkId": "K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_PDDB_11",
+      "basisScope": "应急管理部令第10号第2条所述工贸企业且存在粉尘爆炸危险；只对应第十一条第（一）项。",
+      "reason": "MEM第十一条完整原文核准，H精确对应第（一）项；收窄工贸企业/粉尘爆炸危险边界。本批不新增重大隐患目录项，不对现场作重大事故隐患判定。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_6298B2AB1EF44DCD8736C6F498.json": "69285f21ad4c7678e186326964e26e8f2fef0777feb6419c117a3f40ffe6ba9a",
+        "knowledge/links/K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498.json": "978168e839055f9375a603c787140660cd7975508df455c182de6ccac8fb79cc",
+        "knowledge/clauses/C_PDDB_11.json": "51fb342921de95e5b505500abee5635d73daa44f256aee2832a7f6787a16f136",
+        "knowledge/reviews/hazards/H_6298B2AB1EF44DCD8736C6F498.json": "baac90a953cf24e53eee95f5f4a0e7f714cbb32e268f522b9fb8b65a691f147f",
+        "knowledge/reviews/links/K_XLSX_WEB_H_6298B2AB1EF44DCD8736C6F498.json": "3d7f5502c978ee50ea56d6e2a733895c3c2368541a78cae5fe923f7457261632",
+        "knowledge/reviews/clauses/C_PDDB_11.json": "a18c130fc7eb83d54543ca75425ce5993d3acf79eb1b899bd54a344e32a50a0b"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_0F065B25BAC84C329610C8FBF8",
+      "linkId": "K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_GB5083_6_7_1",
+      "basisScope": "GB5083-2023第6.7.1条能产生粉尘或其他有毒、有害物质的生产设备设计，保留“优先采用”要求及排除范围。",
+      "reason": "独立读取SAMR正式原版完整6.7.1和第1章，纠正旧句的机械化遗漏/旧版措辞；不推导特定浓度数值或所有设备一律自动化。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_0F065B25BAC84C329610C8FBF8.json": "459114d0520e71e60e71d2dc400f87f5f840de24ba4b27ea5fbea408078f78d0",
+        "knowledge/links/K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8.json": "f7e709ff829151c9c9270d0245b95aa846772e3170596dbc290d890cd630416e",
+        "knowledge/clauses/C_GB5083_6_7_1.json": "7b66838a0880816ee9d0fb75f68ec09a284672bde1e1c8baaf53604add6b48b3",
+        "knowledge/reviews/hazards/H_0F065B25BAC84C329610C8FBF8.json": "7af50d5d615cf89a5c3eac2c674686af39faaf612ea181c504b4b30bd2c28b5e",
+        "knowledge/reviews/links/K_XLSX_WEB_H_0F065B25BAC84C329610C8FBF8.json": "19aad04f38332af7d7c1738ee1e0591bbccfda460176fbda0ccf77c11b288c62",
+        "knowledge/reviews/clauses/C_GB5083_6_7_1.json": "8b17c92370a59d37c7b17cd1d6ccb3faf8aef76362dcf1f24282487a65aa1e3c"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_D0AD6FE92A48431894E9756C00",
+      "linkId": "K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_JGJ91_5_3_1",
+      "basisScope": "限科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计；不泛化为所有工业用气场所或所有既有实验室的追溯性强制要求。仅消费JGJ91-2019第5.3.1条。",
+      "reason": "出版原件5.3.1直接匹配污染实验室通风柜或其他局排义务；保留替代关系“或”及科研建筑设计边界。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_D0AD6FE92A48431894E9756C00.json": "c74e24ec67b65b1be2e6a0be40647a72d9b4a7f727fb94acf6a80a2fe887089e",
+        "knowledge/links/K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00.json": "aea7ed91ea3e80680a930dc14ebeae73071bfc0693098b9d498399842d5402f1",
+        "knowledge/clauses/C_JGJ91_5_3_1.json": "0a269b7740d0a090b647eb042e69ab6518a55dfd363da41d929c0c03a91571e8",
+        "knowledge/reviews/hazards/H_D0AD6FE92A48431894E9756C00.json": "2e0816530ad12de06530a7d9b6c548c0ef9ad97df9a621d3a8def4cd63cd2744",
+        "knowledge/reviews/links/K_XLSX_WEB_H_D0AD6FE92A48431894E9756C00.json": "4b52cbcf158a891bd4d458a86cec4ea7d380cf360ad6d3827d6c28d5735273b3",
+        "knowledge/reviews/clauses/C_JGJ91_5_3_1.json": "a0a1913c8fad7fd20c70d6304b433723630158bf3e862c1e566c0afab768117d"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_B72EA2115B5D41FF84695D5471",
+      "linkId": "K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_SAFE_LAW_36_2",
+      "clauseId": "C_JGJ91_10_4_1",
+      "basisScope": "限科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计；不泛化为所有工业用气场所或所有既有实验室的追溯性强制要求。仅对应JGJ91-2019第10.4.1条第1项；完整条文仍保留其他4项。",
+      "reason": "安法36(2)维护保养不能创设该设置/位置要求；改由出版原件JGJ91-2019 10.4.1(1)精确支持，并删除原H中非隐患整改的特定实验室已整改叙述。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_B72EA2115B5D41FF84695D5471.json": "ecff4775baabd22fbc27bed9c6a7831dc54eeae0ad47b255fd3c059bb5eac518",
+        "knowledge/links/K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471.json": "d081754e8b967ad5d7cc8795c9c385fb424600fe8cd435e0eebd97b944adf16f",
+        "knowledge/clauses/C_JGJ91_10_4_1.json": "e38d6a97f2adca9df2e9c3386a93a18dbb4d44a826ca23f6a9e07b528c38667e",
+        "knowledge/reviews/hazards/H_B72EA2115B5D41FF84695D5471.json": "592e207bd9a3c3f73bfebca9eeff9c98aa763a63576f0b9d15a3d1958f621620",
+        "knowledge/reviews/links/K_XLSX_WEB_H_B72EA2115B5D41FF84695D5471.json": "6c7d6eb71d0ea26ee4e92e379387e53be1788d105df7bae43e2794eebce02d0b",
+        "knowledge/reviews/clauses/C_JGJ91_10_4_1.json": "fad0bbd7a34072e63e0529fa99c07b301b56cf22e2da57366eb640a8a485eee7"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_1B474A2ABA0E23143E2FE451",
+      "linkId": "K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451",
+      "disposition": "withdraw_current_direct_review",
+      "clauseId": "C_GB15577_6_1",
+      "remainingDirectSourceGap": "原主张镁废屑袋装单层、袋间留隙、禁止堆垛。可定位苏安办〔2020〕13号及官方有效转发，但未取得完整官方原文并确认该组措辞/地域适用；国家第6号令第18条只能覆盖不得多层堆垛的部分，不能代替整条复合主张。",
+      "sourceEntitiesPreserved": true,
+      "finalContentBindings": {
+        "knowledge/hazards/H_1B474A2ABA0E23143E2FE451.json": "d9cfb0c58b45d66a945bd1e26b31a63f04b489bac19d034da5bbf8a8fbaf647b",
+        "knowledge/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json": "a46b32bf616d832a8896a37f12e8056dabb75939a27198af70ffaa18d618b139",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/reviews/hazards/H_1B474A2ABA0E23143E2FE451.json": "3dfe7dc0bde8ec5ba7733b4040b9a2a2a61c4686ae3fb0b4c770fadb0bef56fd",
+        "knowledge/reviews/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json": "903738cc95d1a3cd408ecb80b318da48c40f03e9bd022fa355389b75678a6d69",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_8C14C2BD0D4A4EF1B42FDC8C2E",
+      "linkId": "K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E",
+      "disposition": "withdraw_current_direct_review",
+      "clauseId": "C_GB15577_6_1",
+      "remainingDirectSourceGap": "原主张乳化液机加工废屑托盘、防爆工具、每班/不超过2天、分类及乳化液pH等复合要求。可定位苏安办〔2020〕13号官方转发，仍缺完整原文及该组阈值/对象/现行地域适用确认；不得从一般粉尘规则推导这些频次。",
+      "sourceEntitiesPreserved": true,
+      "finalContentBindings": {
+        "knowledge/hazards/H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "e11b2c380cee06da554a1cb9498ea3aea6577cb375830d7434d9ed720ec78036",
+        "knowledge/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "8e3f0213a1b31f2b6a776c3374012256a4b2fd1bce6674d1d2ff20ee3c4492f9",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/reviews/hazards/H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "b9cf7db02431b315d221cc94c591957d5a4d99427e1fbc3347dca405c1489425",
+        "knowledge/reviews/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "fc41dde7dbbc4986c4de06f1fe46cddb2d36c34e156271cd7fd16ac425a3fcfa",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_BF7AA7549F8E1B94012882C9",
+      "linkId": "K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9",
+      "disposition": "withdraw_current_direct_review",
+      "clauseId": "C_GB15577_6_1",
+      "remainingDirectSourceGap": "原主张粉尘废屑优先机械压实、干式储存桶装加盖/袋装封口。苏安办〔2020〕13号可定位官方转发但完整原文及地域适用待核；国家第6号令第18条的含水镁合金废屑优先压块不能替代对所有粉尘废屑的完整主张。",
+      "sourceEntitiesPreserved": true,
+      "finalContentBindings": {
+        "knowledge/hazards/H_BF7AA7549F8E1B94012882C9.json": "5a95531b3d3c16e56e40f6b7accbbf35c23b8a86871457cf7870b9fbb11fbcb2",
+        "knowledge/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json": "ee52f81857b4458de7d1ff6c5fa73b855bdd0bb29cc66420cfa38cc998205acf",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/reviews/hazards/H_BF7AA7549F8E1B94012882C9.json": "7fd9a557fc04a4d7e5daa752f92d3c3aed447ce07c536c067933034d2ebc7215",
+        "knowledge/reviews/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json": "194c67f66020fd0bf7a1795bac60bcfdf5d30476d67c348436960d17425466ad",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_C1CE3A649721387F1FC0F7BE",
+      "linkId": "K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE",
+      "disposition": "withdraw_current_direct_review",
+      "clauseId": "C_GB15577_6_1",
+      "remainingDirectSourceGap": "原主张常温入库、不得混装及与氧化物/过氧化物/酸/爆炸品/易燃物同场所储存禁令。苏安办〔2020〕13号官方转发可定位，完整原文及本组适用对象/地域仍未核齐。GB15577第6.1.1只覆盖有自燃性热粉料冷却，不足替代此复合义务。",
+      "sourceEntitiesPreserved": true,
+      "finalContentBindings": {
+        "knowledge/hazards/H_C1CE3A649721387F1FC0F7BE.json": "ffb366c710d446821153be32c76e8e1001f49c453942052612dbcbe8dee14f2c",
+        "knowledge/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json": "fb2fc6f8d5a767ad7fc96393adbbe26b2f8968c5b833e18909b877530e968caa",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/reviews/hazards/H_C1CE3A649721387F1FC0F7BE.json": "20abb2eab83f5d82867bbc5e4a1cf5f6b2dffd6518d6e3cfa5a694878f0c8f60",
+        "knowledge/reviews/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json": "116d996f090180c835a50a9a632167891daa56dd217ad6d3e9cedd5a2c8c1bc9",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_4E5F4BB13B82457DA5377CABDF",
+      "linkId": "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF",
+      "disposition": "withdraw_current_direct_review",
+      "clauseId": "C_GB15577_6_1",
+      "remainingDirectSourceGap": "AQ7005-2008 SAMR题录显示现行；MEM可下载PDF封面却明确标注“送审稿”。仍缺已发布最终原件4.6.1准确全文及范围核准，不能把该稿本当正式原文，不能据GB15577伪6.1重新准入。",
+      "sourceEntitiesPreserved": true,
+      "finalContentBindings": {
+        "knowledge/hazards/H_4E5F4BB13B82457DA5377CABDF.json": "419affe884fa2855a9160738e55b25d414c49a8dbf6ad38ef57188ae5eba5e30",
+        "knowledge/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json": "4c960eda34b1988039c09e489d8c1d312c33c88126c4869443436e805e6f62c1",
+        "knowledge/clauses/C_GB15577_6_1.json": "b77c57526eca5b622704fd1b3c306857c6df2fdd54d35c07c57bb15684f4a03c",
+        "knowledge/reviews/hazards/H_4E5F4BB13B82457DA5377CABDF.json": "aea5c6c566b9b818aa6fd56005876daa2212d7b265cecbee94f975cc51061317",
+        "knowledge/reviews/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json": "7263aad8ef78e1cdf499b4c3bfc5fb68092c3f2a6368515ba46c9546180b3918",
+        "knowledge/reviews/clauses/C_GB15577_6_1.json": "78220bcdaa7c9dbf83d12257364a55887b9309666253dffdc7b143e7897a3d17"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_200F007CE0EF47DFB8BE2B8618",
+      "linkId": "K_XLSX_NEW14_AB3FE309DCCF562480F0E982",
+      "disposition": "withdraw_current_direct_review",
+      "clauseId": "C_XLSX_FT_B41759D19554DB96C582F795",
+      "remainingDirectSourceGap": "安全生产法36全文虽包含一般转致标准、安全设备维护及餐饮燃气报警，但无GB7144色标、钢印/改装、使用前确认气体、明火10m等完整具体要求。仍缺分别涵盖这些复合要素的精确现行标准/安全技术规范及适用性审核；不能用一般转致条款替代具体标准。",
+      "sourceEntitiesPreserved": true,
+      "finalContentBindings": {
+        "knowledge/hazards/H_200F007CE0EF47DFB8BE2B8618.json": "9391313dac23b8359c5bca194d0638a5a1dc9b6cfc85c19a0e769a2ff1aff5bc",
+        "knowledge/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json": "8249749cd3cd95e9247228668f0616e4bb57f94580cffbc171f7533639b61705",
+        "knowledge/clauses/C_XLSX_FT_B41759D19554DB96C582F795.json": "97b289313565ffe3daa4da1ae9df9f0ef11106db7b97de8735617c589d44e91e",
+        "knowledge/reviews/hazards/H_200F007CE0EF47DFB8BE2B8618.json": "982250f15af4615be848bb3a00fbe8a4a07c62a6dcd84be024ce15c3c10eda5e",
+        "knowledge/reviews/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json": "6c50dcf5b516a747aa4eef2e423e05e955267922aa68a7d9a40cae067c4ebeae",
+        "knowledge/reviews/clauses/C_XLSX_FT_B41759D19554DB96C582F795.json": "6292992d110fcfa462c7f0cbbe50a9c899fabee7febb03ba3d79dbc2c99b0cdc"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_1B2F6A143A9E492DBA2A246473",
+      "linkId": "K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_FE008E27914530CC228593C8E4",
+      "basisScope": "仅适用于工业有机废气常压吸附治理工程中的相应系统，作为该工程设计、施工、验收及建成后运行管理的技术核查依据。HJ 2026—2013为指导性文件，不能据此将本项泛化为所有废气系统的普遍法定违法判据。 本关联仅支持该H所述具体缺陷，不以本条扩大其他义务。",
+      "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_1B2F6A143A9E492DBA2A246473.json": "53b780b200e11047dc56983f12d95fc70bbb3302251f16a7c031eddbd84a27c7",
+        "knowledge/links/K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473.json": "2a6a71ad717e46e1d3b949973c2a2765b8c646de359c214a440b5d2443271ffa",
+        "knowledge/clauses/C_FE008E27914530CC228593C8E4.json": "a88ddfcdf57672bbd4c2f843aa83724fc97ad28cd45e2342da4443aa51f2e4b6",
+        "knowledge/reviews/hazards/H_1B2F6A143A9E492DBA2A246473.json": "c0242fc185f7a3ee2c52f2a7c84f09beadde1a1bb7e1d281172aa209471be3de",
+        "knowledge/reviews/links/K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473.json": "61e115d0001c294b8f40d9f767971ae17bf6c9c2b7023cd52633a1e225c8449b",
+        "knowledge/reviews/clauses/C_FE008E27914530CC228593C8E4.json": "e58f2f35e5fad182840809d54f1b9d76ad5660af263eb14e74211cf5ea5c2d52"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_417B030F12A14923A978E4DAB2",
+      "linkId": "K_XLSX_WEB_H_417B030F12A14923A978E4DAB2",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_5FA33B2DFCAD974A3DA96FCF64",
+      "basisScope": "仅适用于工业有机废气常压吸附治理工程中的相应系统，作为该工程设计、施工、验收及建成后运行管理的技术核查依据。HJ 2026—2013为指导性文件，不能据此将本项泛化为所有废气系统的普遍法定违法判据。 本项须同时存在废气产生点较多、彼此距离较远的条件，不另编数量或距离阈值。 本关联仅支持该H所述具体缺陷，不以本条扩大其他义务。",
+      "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_417B030F12A14923A978E4DAB2.json": "5f60609d5b85ca782b624a72c1a38bddec0f8e17e82da63684875b6837811832",
+        "knowledge/links/K_XLSX_WEB_H_417B030F12A14923A978E4DAB2.json": "17b933e391fab125a6f1b82e79e069bc2f94fa88aa5ebacd661415681239655f",
+        "knowledge/clauses/C_5FA33B2DFCAD974A3DA96FCF64.json": "ab52d58c40725eb030ee664a07b6dd0aef7f656282f85cdb74bc5d4b3c906ae4",
+        "knowledge/reviews/hazards/H_417B030F12A14923A978E4DAB2.json": "b944b0095beb620c8eab6674f7aec50d099f8f68efdf53611d232e447c87301e",
+        "knowledge/reviews/links/K_XLSX_WEB_H_417B030F12A14923A978E4DAB2.json": "4f25995d0f3697ad81ba1fdedb8ecfaf56f4037795e57b24a0b82af5ce7b2430",
+        "knowledge/reviews/clauses/C_5FA33B2DFCAD974A3DA96FCF64.json": "cab0dfdd39c331793647c170692134e62077d4f9a614a7e523d19b5518d3b21d"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_6459FF72A542499FBB3E0F70FC",
+      "linkId": "K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_790C122739CBD44232D6FCBA41",
+      "basisScope": "仅适用于工业有机废气常压吸附治理工程中的相应系统，作为该工程设计、施工、验收及建成后运行管理的技术核查依据。HJ 2026—2013为指导性文件，不能据此将本项泛化为所有废气系统的普遍法定违法判据。 本项以该治理工程实际设有过滤装置为前提，检测周期应结合工程要求确定，条文本身未给定固定周期。 本关联仅支持该H所述具体缺陷，不以本条扩大其他义务。",
+      "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_6459FF72A542499FBB3E0F70FC.json": "8f29a7dcc5f69a83acf0171781a5156cfa485be52d847c6864e56056de245b2e",
+        "knowledge/links/K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC.json": "b7c387c07ee4c7ada35b23dc9a4c0f34bbad5dd1c20cdab46d38121744b0f82c",
+        "knowledge/clauses/C_790C122739CBD44232D6FCBA41.json": "af6ac77cac6307d65588f47822c85ae2063da1c4f265641e5c4534ef926b7848",
+        "knowledge/reviews/hazards/H_6459FF72A542499FBB3E0F70FC.json": "8ab5134fba424a9a89d4fe7fe6bea7d207217e87d7f2c84e1a600d72bf0abb90",
+        "knowledge/reviews/links/K_XLSX_WEB_H_6459FF72A542499FBB3E0F70FC.json": "2e98b90faccfb40e41888a1fa56914a25baadb8967ebe76b1631d0ddb64a31b2",
+        "knowledge/reviews/clauses/C_790C122739CBD44232D6FCBA41.json": "f7f9058e1bb1da6c5e4ba5da5bfa70f6da34930e979d75a7030fe37079612ede"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_2870FFD9678642F4993A3CE571",
+      "linkId": "K_XLSX_WEB_H_2870FFD9678642F4993A3CE571",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_GBZ1_6_1_1_3",
+      "basisScope": "适用于工业企业新建、改建、扩建和技术改造、技术引进建设项目的卫生设计及职业病危害评价，且存在本项所述产生粉尘的生产过程。其他经济组织或临时性工业企业等仅在标准第1章规定的参照适用情形内使用；不得将建设项目卫生设计条款泛化为所有既有企业的无条件粉尘防爆义务。 本关联仅支持该H所述具体缺陷，不以本条扩大其他义务。",
+      "reason": "回到NHC官方完整原文，准确恢复建设项目卫生设计及职业病危害评价中的具体防尘/防毒要求；按第1章范围重审，不将其当作所有在用企业通用粉尘防爆违法判据。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_2870FFD9678642F4993A3CE571.json": "7baf649d9ec4c2d7566e07a3ab76a59f3e1115dfa6ddb48641be953f1bbdbf26",
+        "knowledge/links/K_XLSX_WEB_H_2870FFD9678642F4993A3CE571.json": "25c1ae4e9ed3a061b34f8915cc3d6b5fc5937e6fd18186a16f188625fa8e4ddd",
+        "knowledge/clauses/C_GBZ1_6_1_1_3.json": "b9d94c7f4effabfd68e8d7f83047fc62df0db7c4f2a57af45a0743b92e60ab48",
+        "knowledge/reviews/hazards/H_2870FFD9678642F4993A3CE571.json": "2c9b50dae36c81854d00957d43e08b600356e1562bd64cba5bea6bfcbcaa111f",
+        "knowledge/reviews/links/K_XLSX_WEB_H_2870FFD9678642F4993A3CE571.json": "1d4b0da673da6d320dc21671105fbc0a8350d3519f7b02eaba2bf9a7ab35933f",
+        "knowledge/reviews/clauses/C_GBZ1_6_1_1_3.json": "3f2daa042d641191b68d6fb8b5803673ed73aa872005797fc83996ad12e5cc28"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_B405711EED23418BAC72F90645",
+      "linkId": "K_XLSX_WEB_H_B405711EED23418BAC72F90645",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_GBZ1_6_1_1_2",
+      "basisScope": "适用于工业企业新建、改建、扩建和技术改造、技术引进建设项目的卫生设计及职业病危害评价，且存在本项所述产生粉尘、毒物的生产过程和设备（含露天作业工艺设备）。其他经济组织或临时性工业企业等仅在标准第1章规定的参照适用情形内使用；不得将建设项目卫生设计条款泛化为所有既有企业的无条件粉尘防爆义务。 本关联仅支持该H所述具体缺陷，不以本条扩大其他义务。",
+      "reason": "回到NHC官方完整原文，准确恢复建设项目卫生设计及职业病危害评价中的具体防尘/防毒要求；按第1章范围重审，不将其当作所有在用企业通用粉尘防爆违法判据。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_B405711EED23418BAC72F90645.json": "a668bd05efff5657bb3a04eb816ed7d6fae3f1d651e247d993cb4a98ac663662",
+        "knowledge/links/K_XLSX_WEB_H_B405711EED23418BAC72F90645.json": "dc71d992fd8fedb0c80d41484eddaf76593668e15f026d3ffe635a3582e8f191",
+        "knowledge/clauses/C_GBZ1_6_1_1_2.json": "5b727941123aec810a7ffe967c60e88f7828019d67e1955dbc4aac60ee0ab27b",
+        "knowledge/reviews/hazards/H_B405711EED23418BAC72F90645.json": "05c01e28a05c9b602975eba14e276868a75ce23d39208b330cc758bf6cf6dc2c",
+        "knowledge/reviews/links/K_XLSX_WEB_H_B405711EED23418BAC72F90645.json": "1373ddef674d9668eaf10ba1833f6793eae81ec1d477678d18513df4f70f5f52",
+        "knowledge/reviews/clauses/C_GBZ1_6_1_1_2.json": "3d564dc1b759a13e6de1aa09c0a55bd0fdca5b3c9de40245642ac9b16450ed34"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_BFA0B7A7E308410DB3CC9358AB",
+      "linkId": "K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GBZ1_6_1_1_3",
+      "clauseId": "C_GBZ1_6_1_1_3",
+      "basisScope": "适用于工业企业新建、改建、扩建和技术改造、技术引进建设项目的卫生设计及职业病危害评价，且存在本项所述产生粉尘的生产过程。其他经济组织或临时性工业企业等仅在标准第1章规定的参照适用情形内使用；不得将建设项目卫生设计条款泛化为所有既有企业的无条件粉尘防爆义务。 本关联仅支持该H所述具体缺陷，不以本条扩大其他义务。",
+      "reason": "回到NHC官方完整原文，准确恢复建设项目卫生设计及职业病危害评价中的具体防尘/防毒要求；按第1章范围重审，不将其当作所有在用企业通用粉尘防爆违法判据。本项是本轮发现的共享摘要C唯一原有公开依赖；局部排风子义务正常成立，予以保留，避免误撤。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_BFA0B7A7E308410DB3CC9358AB.json": "faa485685b04ca2e75e647e5844026f1f04b0b8e7feffbd30488e0cbc3c97596",
+        "knowledge/links/K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB.json": "3f886718dc1980b7d18f5ae47cc312b34057b9471f738396013ad73f4dc372d6",
+        "knowledge/clauses/C_GBZ1_6_1_1_3.json": "b9d94c7f4effabfd68e8d7f83047fc62df0db7c4f2a57af45a0743b92e60ab48",
+        "knowledge/reviews/hazards/H_BFA0B7A7E308410DB3CC9358AB.json": "5e91146e7521ad1a1676ed06f6fdc9ee1af42799c59a462c1736839a94d8a76a",
+        "knowledge/reviews/links/K_XLSX_WEB_H_BFA0B7A7E308410DB3CC9358AB.json": "507b70e7f283e19485fad5929b020ce6313fd658cc4335c340dbe04237d10244",
+        "knowledge/reviews/clauses/C_GBZ1_6_1_1_3.json": "3f2daa042d641191b68d6fb8b5803673ed73aa872005797fc83996ad12e5cc28"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_AA7C48BCF0E6458484759F407B",
+      "linkId": "K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_GB50187_4_4_5",
+      "basisScope": "适用于新建、改建及扩建工业企业总平面设计中的总变电站位置选择。仅针对第4.4.5条第2款的污染防护与风向关系要求，不泛化为所有粉尘作业场所的选址要求。 仅针对总变电站位置选择中的第4.4.5条第2款污染防护及两类风向关系。",
+      "reason": "完整出版原件与原出版机构当前题录支持该有界通用设计义务；严格限定对象和设计阶段，纠正原H风向/义务强度或对象泛化。未知某现场是否具备该对象不等于公共法源缺口；本批不作任何现场判定。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_AA7C48BCF0E6458484759F407B.json": "3e4c0a59258b9cf4cebdbe4d9bb3f2484624c68532f35e1a6aeb91d38f77b41b",
+        "knowledge/links/K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B.json": "196a9e658d01e6ed388af11faa0b6011c2896398602a01469670d0993862a721",
+        "knowledge/clauses/C_GB50187_4_4_5.json": "e211486364b323c0b70b2e0ab50f067ac732739f9cc9160b874f669e59a9fa36",
+        "knowledge/reviews/hazards/H_AA7C48BCF0E6458484759F407B.json": "2485b6acb56d73da2556e78aa3ff3da637ab87fcf32dd2a7fe1ec8e091583f2e",
+        "knowledge/reviews/links/K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B.json": "04f6a5203000595f33880434ec2b397010b634cc518bb7e0faba1630b72f2146",
+        "knowledge/reviews/clauses/C_GB50187_4_4_5.json": "8a9438b87155ff14a0e099f909c91be0124aed2ca60f93a61bcd06a0392a11fa"
+      },
+      "otherOriginalDirectLinkCount": 0
+    },
+    {
+      "hazardId": "H_C3B24EEDD61145A691A38B0414",
+      "linkId": "K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414",
+      "disposition": "exact_source_rebind",
+      "previousClauseId": "C_GB15577_6_1",
+      "clauseId": "C_GB50029_2_0_1",
+      "basisScope": "适用于装有电力驱动、工作压力小于或等于42MPa的活塞空气压缩机、隔膜空气压缩机、螺杆空气压缩机或离心空气压缩机的新建、改建、扩建压缩空气站在厂（矿）内的布置设计；不适用于井下、洞内等特殊场所。全年最小频率风向下风侧在原文中为“宜”，不得仅凭未采用该位置自动认定违反强制性条文。 厂（矿）内压缩空气站布置设计的技术经济方案比较与五项因素；适用范围依第1.0.2条，风向宜字不升级为强制。",
+      "reason": "完整出版原件与原出版机构当前题录支持该有界通用设计义务；严格限定对象和设计阶段，纠正原H风向/义务强度或对象泛化。未知某现场是否具备该对象不等于公共法源缺口；本批不作任何现场判定。",
+      "finalContentBindings": {
+        "knowledge/hazards/H_C3B24EEDD61145A691A38B0414.json": "69de1a32c2c5a53dbc30f48be809bd47bd862608de2b914aae98c5bec23b02c7",
+        "knowledge/links/K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414.json": "f767f4b44d6530e00794e13ead0b9250a5b72a7cdb7af0bf52f21db1e78e0b5b",
+        "knowledge/clauses/C_GB50029_2_0_1.json": "f17e84370ce35a5011777937f9dca7c38d01e8f042e3371289d2f3c57d211624",
+        "knowledge/reviews/hazards/H_C3B24EEDD61145A691A38B0414.json": "e914e91aa5d4a53a57f058eb5bdd6c13a5444b7f891f940c635d1e5a14726fae",
+        "knowledge/reviews/links/K_XLSX_WEB_H_C3B24EEDD61145A691A38B0414.json": "a7947dba37c8a201a014402bec32678dc3c1e1ab4e2fe8ed27b8d504d12e12cc",
+        "knowledge/reviews/clauses/C_GB50029_2_0_1.json": "a41295c8649a085844ae6f96a4076dad2b6806047fabdbfc87d70c7354d15db6"
+      },
+      "otherOriginalDirectLinkCount": 0
+    }
+  ],
+  "sources": [
+    {
+      "id": "E_CONTAIN_AQ4273_8_1_20261004",
+      "tier": "authoritative-public",
+      "url": "https://www.mem.gov.cn/fw/flfgbz/bz/bzwb/201703/P020190327398859891392.pdf",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "MEM正式13页原PDF第4页/印刷1第1章全文，第9页/印刷6第8.1条完整句；原页视觉核对。",
+      "snapshotSha256": "b8fd4c7bd3029a56b0306a8a916f349de902b82e9e1f1470083c7ebc1030ff46",
+      "snapshotMeaning": "实际下载完整PDF字节SHA256。",
+      "currentnessUrl": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=8B1827F23747BB19E05397BE0A0AB44A",
+      "currentnessResult": "2026-10-04官方平台现行；2017-03-01实施。"
+    },
+    {
+      "id": "E_CONTAIN_GB12801_ORIGINAL_20261004",
+      "tier": "authoritative-public",
+      "url": "https://xcoss.henan.gov.cn/typtfile/20260120/84600d71bf854522bf2aff6982cd488b.pdf",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "完整15页正式标准PDF：第1章/3.1（PDF7/印刷1）；4.6.3及5.1.2（PDF10/印刷4）独立目视逐字核对。",
+      "snapshotSha256": "a289896e088b594f2941342ff37fcb73f4a657c3ad96965dffd4604e1e268f0c",
+      "snapshotMeaning": "实际下载完整PDF字节SHA256；不是OCR或摘要。",
+      "currentnessUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=460626D8FC0EFC7D30C0160D003D185F",
+      "currentnessResult": "2026-10-04官方题录现行，2026-10-01实施。"
+    },
+    {
+      "id": "E_CONTAIN_GB15577_ORIGINAL_20261004",
+      "tier": "authoritative-public",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "SAMR官方在线原版9页：第1章及第2章（PDF3/印刷1）；6.1完整各子条（PDF5/3）；8.1.6（PDF7/5）；8.4.3、8.4.6、8.4.8、8.4.9（PDF8/6）；11.1（PDF9/7）。均从渲染原页独立目视核对。",
+      "snapshotSha256": "1b0bce649cb850baeaed4e95104f332cd712f8d16a1ffbca2c048d14d6e95d69",
+      "snapshotMeaning": "经目视核对的UTF-8条款摘录JSON SHA256，不是原PDF字节hash；既有条款只在逐字复核后复用。",
+      "currentnessUrl": "https://std.samr.gov.cn/gb/search/gbDetailed?id=7AC3075CD345B4B1E05397BE0A0AC4DE",
+      "currentnessResult": "2026-10-04两SAMR平台实读：现行；2019-06-01实施，全部代替2007版。"
+    },
+    {
+      "id": "E_CONTAIN_GB15577_REFERENCE_SUCCESSIONS_20261004",
+      "tier": "authoritative-public",
+      "url": "https://std.samr.gov.cn/gb/search/gbDetailed?id=B7A9FA1FFC346818E05397BE0A0AB4AC",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "SAMR题录：GB39800.1-2020现行，自2022-01-01全部代替GB/T11651-2008；GB15605-2024现行，自2026-01-01全部代替GB/T15605-2008。只核替代与日期，不认证参数设计。",
+      "snapshotSha256": "",
+      "statusSources": [
+        "https://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D75D40D3A7E05397BE0A0AB82A",
+        "https://std.samr.gov.cn/gb/search/gbDetailed?id=2B8C8FCCA01AF91FE06397BE0A0A56EE"
+      ],
+      "snapshotMeaning": "本条未保存网页字节快照，因此不编造snapshotSha256。"
+    },
+    {
+      "id": "E_CONTAIN_GB5083_6_7_1_20261004",
+      "tier": "authoritative-public",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=EF8DFA874E9A4FB6DD9966E1DABECF3C",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "SAMR官方在线15页原版第7页/印刷1范围，第14页/印刷8第6.7.1条完整句独立目视核对。",
+      "snapshotSha256": "eb9d92257f563a75cc8d6bc4a30a41ede1526e2dea7393f8783fb08b72b8d6a6",
+      "snapshotMeaning": "经目视核对的UTF-8条款摘录SHA256，不是原PDF字节hash。",
+      "currentnessResult": "2026-10-04 SAMR现行，2025-01-01实施。"
+    },
+    {
+      "id": "E_CONTAIN_GBZ1_EXACT_20261004",
+      "tier": "authoritative-public",
+      "url": "https://www.nhc.gov.cn/wjw/pyl/201003/46131/files/1739779557861_82467.pdf",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "NHC官方扫描PDF范围（PDF5/印刷1）、6.1.1.2及6.1.1.3完整原文（PDF9/5）逐页目视核对。",
+      "snapshotSha256": "247e31b3e14687fea94102ec9a6ff7f21932aef971761b318ee2eaca319a3ef6",
+      "snapshotMeaning": "实际下载完整NHC官方PDF字节SHA256。",
+      "currentnessUrl": "https://www.ndls.org.cn/standard/index?draftman=%E5%90%B4%E7%BB%B4%E7%9A%91",
+      "currentnessResult": "2026-10-04国家数字标准馆完整官方列表明示GBZ1-2010现行；NHC原件及CDC职业卫生目录交叉核对。",
+      "statusLimits": "官方列表内容成功读取但未保存其HTML原始字节；详情访问验证未绕过；snapshotSha256仅指已下载的NHC原PDF。"
+    },
+    {
+      "id": "E_CONTAIN_HJ2026_EXACT_20261004",
+      "tier": "authoritative-public",
+      "url": "https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/other/hjbhgc/201304/W020130403524790033785.pdf",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "MEE发布PDF前言/范围（PDF4-5），6.3.1.2和6.3.1.5（PDF9/印刷5），8.1.3（PDF12/8）完整原文及常压吸附/指导性文件边界逐页核对。",
+      "snapshotSha256": "aa7f034ca4651903f30a76cde0cc28874a29007d369bc574f2a09f08b777d8bf",
+      "snapshotMeaning": "实际下载完整官方PDF字节SHA256。",
+      "currentnessUrl": "https://hbba.sacinfo.org.cn/stdDetail/fb8ced33cc88dbd625760b4350159bc79eabb7defc7b8b5bd99412139d9bfbd0",
+      "currentnessResult": "2026-10-04国家行业标准信息平台明确现行，2013-07-01实施；MEE公开页明确指导性文件。"
+    },
+    {
+      "id": "E_CONTAIN_JGJ91_5_3_1_10_4_1_20261004",
+      "tier": "original-public",
+      "url": "https://ptysysglc.yangtzeu.edu.cn/__local/B/23/7C/489A0007EC53C93C354E5322D69_99824F79_150EB3A.pdf",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "长江大学托管JGJ91-2019完整102页出版原件：发布公告PDF4、范围PDF11/印刷1、5.3.1 PDF33/23、10.4.1完整5项PDF57-58/47-48；逐页目视核对。",
+      "snapshotSha256": "307103d4eb66fd3fd216c56e0d73093f6a332b08f2527be10aab90d6b521deda",
+      "snapshotMeaning": "实际下载完整出版原件PDF字节SHA256；大学托管原件，不冒充住建部官网原件。",
+      "currentnessUrl": "https://ebook.chinabuilding.com.cn/zbooklib/book/detail/show?SiteID=1&bookID=114734&isEnterprise=Y",
+      "currentnessResult": "2026-10-04中国建筑标准设计研究院国标电子书库明示现行、2020-01-01实施、无废止日期；结合原发布公告和既有2026-08-26湖南生态环境厅使用记录。",
+      "statusLimits": "住建部直接页面访问失败；不声称取得发布机关本日实时效力认证。标准院题录不是发布机关，大学托管不是官方发布。原公告/完整原件/标准院现行题录/主管部门使用记录合并支持有限当前适用判断。"
+    },
+    {
+      "id": "E_CONTAIN_LAYOUT_GB50029_20261004",
+      "tier": "original-public",
+      "url": "https://31944584.s21i.faiusr.com/61/ABUIABA9GAAgr-ntuwYoqp7LLw.pdf",
+      "retrievedAt": "2026-10-04T05:23:30Z",
+      "locator": "2014年中国计划出版社出版原版扫描件；PDF第11页/印刷第2页第2.0.1条、PDF第10页/印刷第1页第1.0.2条。84页全本。",
+      "snapshotSha256": "18d37f772f0ab8dce6b37ba988949edefa401b68a3d757833cc01d447f717a85",
+      "snapshotMeaning": "实际下载、经出版页/公告/正文核对的完整出版原件镜像PDF字节SHA256。镜像托管站不是发布机关，未标为官方原文网站。",
+      "currentnessUrl": "https://www.gongbiaoku.com/book/4s218917c5x",
+      "currentnessResult": "原出版机构工标库当前目录：GB 50029-2014，现行；2014-01-09发布，2014-08-01实施；替代GB 50029-2003；公告第296号。",
+      "currentnessSnapshotSha256": "dd47ad05d58d83e4a2ab73830bf85277b330e6f89e7e2204a1a5477769ee1158",
+      "currentnessSnapshotMeaning": "实际下载原出版机构工标库目录HTML字节SHA256。",
+      "publisherIdentityUrl": "https://www.ndrc.gov.cn/fzggw/wzslxdw/201402/t20140213_951914.html",
+      "sourceLimits": "原出版机构工标库当前目录与完整出版原件交叉核准。未声称住建部直接链接本日成功访问，未绕过出版平台登录/会员全文限制。"
+    },
+    {
+      "id": "E_CONTAIN_LAYOUT_GB50187_20261004",
+      "tier": "original-public",
+      "url": "https://eia543.com/documents/06-%E5%B7%A5%E7%A8%8B%E4%B8%8E%E6%96%BD%E5%B7%A5%E7%AE%A1%E6%8E%A7/05-%E5%BB%BA%EF%BC%88%E6%9E%84%EF%BC%89%E7%AD%91%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A1/02-%E5%B7%A5%E4%B8%9A%E5%BB%BA%EF%BC%88%E6%9E%84%EF%BC%89%E7%AD%91/%E5%B7%A5%E4%B8%9A%E4%BC%81%E4%B8%9A%E6%80%BB%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%EF%BC%88GB%2050187-2012%EF%BC%89.pdf",
+      "retrievedAt": "2026-10-04T05:23:30Z",
+      "locator": "2012年中国计划出版社出版原版扫描件；PDF第21页/印刷第10页第4.4.5条、PDF第12页/印刷第1页第1.0.2条。203页全本。",
+      "snapshotSha256": "3a19282ce5d1c8262a218e7054252610d508f901e536cdf6d5274d33106c0fe4",
+      "snapshotMeaning": "实际下载、经出版页/公告/正文核对的完整出版原件镜像PDF字节SHA256。镜像托管站不是发布机关，未标为官方原文网站。",
+      "currentnessUrl": "https://www.gongbiaoku.com/book/pcy18133n8m",
+      "currentnessResult": "原出版机构工标库当前目录：GB 50187-2012，现行；2012-03-30发布，2012-08-01实施；替代GB 50187-93；公告第1356号。",
+      "currentnessSnapshotSha256": "2a1906b17c4772bad9d7381a4987c2d62b6af0d52ddedaecfc8566790d46d816",
+      "currentnessSnapshotMeaning": "实际下载原出版机构工标库目录HTML字节SHA256。",
+      "publisherIdentityUrl": "https://www.ndrc.gov.cn/fzggw/wzslxdw/201402/t20140213_951914.html",
+      "sourceLimits": "原出版机构工标库当前目录与完整出版原件交叉核准。未声称住建部直接链接本日成功访问，未绕过出版平台登录/会员全文限制。"
+    },
+    {
+      "id": "E_CONTAIN_MEM10_11_20261004",
+      "tier": "authoritative-public",
+      "url": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202305/t20230523_451578.shtml",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "第2条、第11条完整十项、第15条；MEM现行规章目录仍列本规章。",
+      "snapshotSha256": "f261a903a12270c02aaaf08c8ecdd03d7edc3dafb88433bdb6e16c0ecbc221db",
+      "snapshotMeaning": "实际下载MEM官方HTML字节SHA256。",
+      "currentnessUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/",
+      "currentnessResult": "2026-10-04读取MEM规章目录，无废止标记，2023-05-15实施。"
+    },
+    {
+      "id": "E_CONTAIN_WORK_SAFETY_LAW_36_20261004",
+      "tier": "authoritative-public",
+      "url": "https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml",
+      "retrievedAt": "2026-10-04T05:07:24Z",
+      "locator": "2021修正安全生产法第三十六条完整四款。",
+      "snapshotSha256": "39d5e85bf9e6c73f388cdef11533a121e960e8029ead2d61c52e5143891317ad",
+      "snapshotMeaning": "实际下载MEM官方HTML字节SHA256。",
+      "currentnessResult": "核对2021修正官方全文，NPC法规库搜索仍列2021修正；本批仅撤回不含具体气瓶阈值的关联，不新签法规版本效力。"
+    },
+    {
+      "id": "E_MOHURD_GB50187_2012",
+      "locator": "住建部第1356号公告 GB 50187-2012 工业企业总平面设计规范",
+      "page": null,
+      "retrievedAt": "2026-09-19T01:00:00+08:00",
+      "snapshotSha256": "",
+      "tier": "authoritative",
+      "url": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2012/art_17339_721564.html",
+      "previousMetadata": {
+        "id": "E_MOHURD_GB50187_2012",
+        "locator": "住建部第1338号公告 GB 50187-2012 工业企业总平面设计规范",
+        "page": null,
+        "retrievedAt": "2026-09-19T01:00:00+08:00",
+        "snapshotSha256": "",
+        "tier": "authoritative",
+        "url": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2012/art_17339_721564.html"
+      },
+      "previousMetadataFileSha256": "c64e39ede08192d97677aa0857dd0980178a415c9f7ee5d4315d5429ea80c30e",
+      "metadataCorrection": {
+        "checkedAt": "2026-10-04T05:28:40Z",
+        "changedOriginalFields": [
+          "locator"
+        ],
+        "reason": "出版原件公告及原出版机构当前目录均为第1356号；只更正旁存证据卡的公告号。原URL、历史retrievedAt与其他原字段保留供追溯，不声称该URL本日已读取，不重签任何不相关实体链。",
+        "evidenceRefs": [
+          "E_CONTAIN_LAYOUT_GB50187_20261004"
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "This receipt proves bounded generic source applicability, not the presence of any condition at a particular enterprise or site.",
+    "Unavailable original documents or versions are source gaps; unknown site facts are not used to reject accurately scoped public definitions.",
+    "Previous verified reviews are preserved history, not renewed approval.",
+    "Whole-corpus legal accuracy, full-standard technical compatibility and site violation findings are not certified.",
+    "Independent non-author review and final integrated validation remain required."
+  ],
+  "patchSha256": "985397468c203a5cd0191a73f787c6a77847be8acb8fb134040b3b5c632f363d",
+  "fileInventorySha256": "7ba1f53130c3e46584c39737ac648be2d142297d2e822f2d64a17335004f72a0",
+  "postReviewCorrections": {
+    "schema": "bounded-review-correction-v1",
+    "checkedAt": "2026-10-04T05:42:30Z",
+    "supersedesPatchSha256": "c3c468b07bceede12085cb5101be2f91686b118475fda439061623f9c6d607fa",
+    "supersedesInventorySha256": "ee447beb8a8da86102c1c9685b709c89142b2a29a54f8c99dab5864a77e024b8",
+    "archive": "freeze-1-before-review-corrections",
+    "changedFiles": [
+      {
+        "path": "knowledge/hazards/H_C9900E360F7848F6AD6025FE89.json",
+        "beforeSha256": "c044013ec0f2a58ba7654fdf232944fdbd0c945e01d9d3797ae40bbca7c68b9c",
+        "afterSha256": "b7bdeeee7eb2b53852a2f343fe16623768889e7ef6a7a0a53ea68efa551f635a"
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_C9900E360F7848F6AD6025FE89.json",
+        "beforeSha256": "a1d3df0c0f474692da021f66fcb1ad75ceca1d950eb96f1a1342045bcbce024c",
+        "afterSha256": "63ebc511482ba35ba762bd5b83426a8d35eae5319ea0570aa0e870b42d9d29df"
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89.json",
+        "beforeSha256": "ff40ad164429014bfd197cc94a0bd17e1c01aedff9791c54df7e46c092c0bc25",
+        "afterSha256": "9cf4b6968e248a2c0d684bcd63c12b0ea8d57578df7f178e909cc52fe26e2f79"
+      },
+      {
+        "path": "knowledge/hazards/H_AB765CAD382645D0B1024E8CD8.json",
+        "beforeSha256": "593cac2a9d79ea4b6cef40e72a2d337b9f7beb8e3fcc4002377e8f664972582c",
+        "afterSha256": "e2a0c5b650a1ed2209ba5925d2736195528bed3900162540c7b427920f66bf6b"
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_AB765CAD382645D0B1024E8CD8.json",
+        "beforeSha256": "51077db62e0d23fff678572c49466ca4c4029d9493ab002e54b408f2f83a1270",
+        "afterSha256": "b246be52424efeda0e7f7ebe75ea8365438b1e5afc9f5a42b1cac43381a05f96"
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8.json",
+        "beforeSha256": "782dcb5346a71efb4777325bd84f4ab2480b23a0c5d64ca22dfaaedf93ec7a9d",
+        "afterSha256": "58fe065a79a8cea78e4173a39997daf6c436b72d446a7fb4f23340294893bbb3"
+      }
+    ],
+    "corrections": [
+      {
+        "checkedAt": "2026-10-04T05:42:30Z",
+        "changedHazardFields": [
+          "title",
+          "description",
+          "keywords"
+        ],
+        "reason": "采纳独立非作者审阅指出的字段不一致，再次目视核GB12801-2025官方原PDF第10页第5.1.2条为“可燃性气体或粉尘”。将title、description及其同文搜索关键词中的“和”同步为“或”，保留既有企业生产过程范围；不能误要求两类危险同时存在。",
+        "linkAndClauseEntityBytesUnchanged": true,
+        "priorFrozenReviewsPreserved": true,
+        "hazardId": "H_C9900E360F7848F6AD6025FE89",
+        "linkId": "K_XLSX_WEB_H_C9900E360F7848F6AD6025FE89"
+      },
+      {
+        "checkedAt": "2026-10-04T05:42:30Z",
+        "changedHazardFields": [
+          "description"
+        ],
+        "reason": "采纳独立非作者审阅指出的定义遗漏，再次目视核MEM官方AQ4273-2016原PDF第9页第8.1条。description明确材料必须同时满足导电和运行时不产生火花，覆盖已导电但运行产火花的缺陷情形；既有条款、链接及第1章范围保持。",
+        "linkAndClauseEntityBytesUnchanged": true,
+        "priorFrozenReviewsPreserved": true,
+        "hazardId": "H_AB765CAD382645D0B1024E8CD8",
+        "linkId": "K_XLSX_WEB_H_AB765CAD382645D0B1024E8CD8"
+      }
+    ],
+    "unchangedKnowledgeOutsideSixFiles": true,
+    "completeFirstFreezePreserved": true,
+    "sourcePdfSha256": {
+      "gb12801-official.pdf": "a289896e088b594f2941342ff37fcb73f4a657c3ad96965dffd4604e1e268f0c",
+      "aq4273-official.pdf": "b8fd4c7bd3029a56b0306a8a916f349de902b82e9e1f1470083c7ebc1030ff46"
+    }
+  },
+  "frozenAt": "2026-10-04T05:44:57.407158+00:00",
+  "baselineSource": "Fixed initial candidate knowledge reconstructed from unchanged isolated copy and original 125-file before-byte archive; concurrent main-repo edits excluded."
+}

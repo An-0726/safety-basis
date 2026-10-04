@@ -36,6 +36,18 @@ from major_criteria_directory import (public_projection as directory_projection,
                                      project_publication as project_directory_publication, DIRECTORY_FILE)  # noqa: E402
 from major_criteria_reading import (public_projection as reading_projection, READING_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
+from normative_content import validate_ordinary_clause_content  # noqa: E402
+
+
+def check_clause_content(bad, cid, row, source):
+    bad.check(('contentParts' in row) == ('contentParts' in source),
+              '条款表格存在性被改动：' + cid)
+    bad.check(row.get('contentParts') == source.get('contentParts'),
+              '条款表格结构或内容被改动：' + cid)
+    try:
+        validate_ordinary_clause_content(row)
+    except (ValueError, TypeError, KeyError) as exc:
+        bad.check(False, '条款表格或完整文本校验失败：' + cid + ':' + str(exc))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 KNOW = os.path.join(ROOT, "knowledge")
@@ -469,6 +481,7 @@ def verify(args, KNOW, source_hash):
         bad.check(vid in know_lvs, "正式条款引用不存在的 knowledge 法规版本：" + cid)
         bad.check(row["lawId"] == vid, "条款法规键被改动：" + cid)
         bad.check(row["quote"] == src.get("quote", ""), "条款原文被改动：" + cid)
+        check_clause_content(bad, cid, row, src)
         bad.check(row["article"] == (src.get("articlePath") or src.get("clauseNumber") or ""),
                   "条款条号被改动：" + cid)
 

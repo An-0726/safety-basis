@@ -4,38 +4,69 @@
   "reviewType": "applicability",
   "decision": "rejected",
   "reviewedContentHash": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "消防法第16条第一款第（二）项配置消防设施器材和标志的对象，与物品/堆垛至墙、柱、灯或其他堆垛距离及堆垛分类/面积不同。fallback也不能当该距离义务的适用依据；本轮已有XF1131精确正文。 撤回作为此H当前依据的fallback关联，保留稳定ID与历史审核；不改C001本身，也不全局影响C001其他正确消费者。若界面需要“历史曾用兜底”仅以明确历史记录展示，不能保留现行直接/补充合规背书。",
+  "checkedAt": "2026-10-04T03:40:00Z",
+  "reviewer": "Codex static/fire recovery author source review 20261004",
+  "reason": "仍拒绝：消防法第16条第（二）项消防设施、器材和标志配置义务不支持物品至照明灯距离。新XF1131直接依据不使旧fallback重新合格。",
   "evidenceRefs": [
     "E_CITATION_FIRELAW2021_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_be5a0deab9619bd1579c758f",
+    "reviewType": "applicability",
+    "decision": "rejected",
+    "reviewedContentHash": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "消防法第16条第一款第（二）项配置消防设施器材和标志的对象，与物品/堆垛至墙、柱、灯或其他堆垛距离及堆垛分类/面积不同。fallback也不能当该距离义务的适用依据；本轮已有XF1131精确正文。 撤回作为此H当前依据的fallback关联，保留稳定ID与历史审核；不改C001本身，也不全局影响C001其他正确消费者。若界面需要“历史曾用兜底”仅以明确历史记录展示，不能保留现行直接/补充合规背书。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "contextHashes": {
+      "hazard": "db5b18a02024f93658949c27e533f8f5df76f3a6606d2daeae683e9b9892b38f",
+      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+    },
+    "previousReview": {
+      "id": "RV_b93231062b29dfda",
+      "entityId": "K_be5a0deab9619bd1579c758f",
+      "entityType": "link",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewer": "Doubao-Agent",
+      "checkedAt": "2026-09-10T16:30:00+08:00",
+      "reason": "仓储物品与照明灯之间安全距离不足。消防法第十六条第一款第（二）项要求按照国家标准配置消防设施器材，但未直接规定仓储物品与照明灯的具体安全距离。direct依据需补充GB 50016建筑设计防火规范或仓储场所消防安全管理规范的具体条款。",
+      "reasonCodes": [
+        "FALLBACK_ROLE_CONFIRMED",
+        "BUILDING_CODE_REQUIRED"
+      ],
+      "reviewedContentHash": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942",
+      "contextHashes": {
+        "hazard": "441a37e9cf1f2ca18b7a70f3259456ae08eaa4962ec6256e58767859c128d72d",
+        "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
+        "link": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942"
+      },
+      "evidenceRefs": [],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "69945f4a4ce284c97c7f480e29cfcf20f146d3757ed33627dccdbc5831a52614"
+  },
+  "previousReviewFileSha256": "6e574b4e661025a18534ff3da0b9ae61188487509ed4f572056a4eed18ef1c78",
   "contextHashes": {
-    "hazard": "db5b18a02024f93658949c27e533f8f5df76f3a6606d2daeae683e9b9892b38f",
+    "hazard": "1c2f7dcc87276e6083dd750fb32927cc23e44660b2d77226a9031471c4228ae5",
     "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
   },
-  "previousReview": {
-    "id": "RV_b93231062b29dfda",
-    "entityId": "K_be5a0deab9619bd1579c758f",
-    "entityType": "link",
-    "reviewType": "applicability",
-    "decision": "verified",
-    "reviewer": "Doubao-Agent",
-    "checkedAt": "2026-09-10T16:30:00+08:00",
-    "reason": "仓储物品与照明灯之间安全距离不足。消防法第十六条第一款第（二）项要求按照国家标准配置消防设施器材，但未直接规定仓储物品与照明灯的具体安全距离。direct依据需补充GB 50016建筑设计防火规范或仓储场所消防安全管理规范的具体条款。",
-    "reasonCodes": [
-      "FALLBACK_ROLE_CONFIRMED",
-      "BUILDING_CODE_REQUIRED"
+  "comparisonEvidenceRefs": [
+    "E_RECOVERY_XF1131_2014_20261004"
+  ],
+  "evidenceRoleClarification": {
+    "asOf": "2026-10-04",
+    "priorReviewFileSha256": "5731fbcc99bb7f074007571d70e91b6b4da25075adb754db10bdab1a220afe1e",
+    "priorEvidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002",
+      "E_RECOVERY_XF1131_2014_20261004"
     ],
-    "reviewedContentHash": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942",
-    "contextHashes": {
-      "hazard": "441a37e9cf1f2ca18b7a70f3259456ae08eaa4962ec6256e58767859c128d72d",
-      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
-      "link": "b030bae780a06c2c1b7ca4a3da5ba66681e59810cd6aad151c2605ad73d21942"
-    },
-    "evidenceRefs": [],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
-  },
-  "previousReviewFileSha256": "69945f4a4ce284c97c7f480e29cfcf20f146d3757ed33627dccdbc5831a52614"
+    "scope": "仅区分本K消防法原文证据与用于说明另有XF专门规则的比较材料；rejected、H/K/C内容及完整前审不变。XF原件不充当消防法条文来源。"
+  }
 }

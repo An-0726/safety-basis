@@ -2,17 +2,39 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF",
   "reviewType": "applicability",
-  "decision": "verified",
+  "decision": "rejected",
   "reviewedContentHash": "6d87c1e875729b6c74d34a6de9815e97c33706b210fa7fbeaadd669d6eecf789",
+  "checkedAt": "2026-10-04T05:07:24Z",
+  "reviewer": "Source-specific containment author 20261004",
+  "reason": "撤回此前verified适用性审核。AQ7005-2008 SAMR题录显示现行；MEM可下载PDF封面却明确标注“送审稿”。仍缺已发布最终原件4.6.1准确全文及范围核准，不能把该稿本当正式原文，不能据GB15577伪6.1重新准入。",
+  "evidenceRefs": [
+    "E_CONTAIN_GB15577_ORIGINAL_20261004"
+  ],
+  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
   "contextHashes": {
     "hazard": "5f55d07f1f869663e460b28135534de19d7a47453e42670cac6d8d45f583c8d2",
     "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
-  "evidenceRefs": [
-    "E_SAMR_GB15577_2018"
+  "reviewedFields": [
+    "applicability"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "6d87c1e875729b6c74d34a6de9815e97c33706b210fa7fbeaadd669d6eecf789",
+    "contextHashes": {
+      "hazard": "5f55d07f1f869663e460b28135534de19d7a47453e42670cac6d8d45f583c8d2",
+      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "d776f03c4493715b988ed38769ff72b31dc40f25f4dd0bbea66e2038f372b54e"
 }

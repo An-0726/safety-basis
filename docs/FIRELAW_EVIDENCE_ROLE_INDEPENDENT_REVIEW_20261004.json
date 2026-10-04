@@ -1,0 +1,36 @@
+{
+  "schema": "independent-evidence-role-clarification-v1",
+  "decision": "APPROVE",
+  "reviewedAt": "2026-10-04T05:55:16.987533+00:00",
+  "reviewer": "audit_shared_source_repair (non-author)",
+  "scope": "one review file; not a renewal of the static/fire group receipt",
+  "path": "knowledge/reviews/links/K_be5a0deab9619bd1579c758f.json",
+  "beforeSha256": "5731fbcc99bb7f074007571d70e91b6b4da25075adb754db10bdab1a220afe1e",
+  "afterSha256": "f47506a50e7cd9eab899b7010920c9ff8de054107cff4b2337ca18d197fd1a4d",
+  "changedFields": [
+    "comparisonEvidenceRefs",
+    "evidenceRefs",
+    "evidenceRoleClarification"
+  ],
+  "unchangedDependencyBindings": {
+    "knowledge/links/K_be5a0deab9619bd1579c758f.json": "5f7bca019d8c89a3e69fca25e10b478226c08fff1acb3d84a65cf296ebd856d2",
+    "knowledge/hazards/H052.json": "bc51336b560f4d122d0267f66da5ad42a34032104fd8e697312c340c25f9aed3",
+    "knowledge/clauses/C001.json": "550a92ec2a8c55d8308fd6004f88c389cff9e8b96f16648c3939474f3a52fb29",
+    "knowledge/evidence/E_CITATION_FIRELAW2021_20261002.json": "fcf9985f75ee9c4f449040126176fd9c5b80367cf8054e27b8601ee25930583c",
+    "knowledge/evidence/E_RECOVERY_XF1131_2014_20261004.json": "891c68b039153fda24b3161af0b1a0c537501a64bee41b2bd4d9179bd2ee9654"
+  },
+  "semanticFinding": "C001 is Fire Law 16(1)(2), a duty concerning fire facilities/equipment/signage and inspection/repair. It does not state the goods-to-light separation threshold. XF1131 original PDF 6.8(b) supplies that separate technical matter, so it is comparison evidence only for rejecting this old Fire Law fallback. Moving its reference out of normative evidenceRefs is accurate; rejected state and full existing review history are unchanged.",
+  "sourceReading": {
+    "fireLawOriginal": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_e9e34f0731c249a891ea9c925e17f237.html",
+    "fireLawLocator": "2021修正消防法第16条完整七项和第二款，重点第(二)项",
+    "xfOriginal": "static-fire-sources/XF1131-2014.pdf",
+    "xfSha256": "835f2860b9645cc5c6cb95390bb6925570fe53e7daa82d7c10273f5d9c7de7ee",
+    "xfLocator": "PDF11/印刷5，第6.8条五项完整原页，b项物品与照明灯0.5m",
+    "limits": "北京证据卡URL本次web打开超时；另读SAMR官方2021修正全文交叉核相同条文。没有声称北京页面此次成功实时打开。"
+  },
+  "errors": [],
+  "limits": [
+    "No H/K/C semantic or lifecycle mutation authorized by this clarification.",
+    "No previously rejected fallback is readmitted and no unrelated C001 consumer is changed."
+  ]
+}

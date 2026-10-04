@@ -1,0 +1,957 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Independent regulatory source, current-version, field applicability and exact-file review",
+  "asOf": "2026-10-04",
+  "decision": "APPROVE",
+  "baseline": "ffdfee5d79717c9fefe736830174e177cec4703c",
+  "reviewedSnapshot": {
+    "manifestName": "electrical-author-freeze-v3-20261004.json",
+    "manifestSha256": "9a06f866f2134827898ed162055fdf08367c6c32e79df45fe71bf73562ec06c5",
+    "fileCount": 85
+  },
+  "scope": "Fresh source-grounded reconstruction of seven bounded generic hazard definitions: five new, two narrowed stable IDs. This does not certify any lost prior package as recovered or reviewed.",
+  "resolvedFindings": [
+    {
+      "finding": "GB/T34525 scope first sentence omitted 技术",
+      "resolution": "Complete original wording restored; clause review hash refreshed."
+    },
+    {
+      "finding": "Shallow-copy historical rejected-link snapshot overwrote prior hazard context hash; prior hazard review not preserved",
+      "resolution": "Exact baseline K/H review objects retained; compared independently against git baseline."
+    },
+    {
+      "finding": "Original CMA44 version record lacked discovered2026 amendment transition",
+      "resolution": "Original2025 edition remains current until2026-11-01; amended edition/major criteria not applied early; official effective-date evidence and version boundary recorded."
+    }
+  ],
+  "hazardDecisions": [
+    {
+      "hazardId": "H_CF_GEN_13",
+      "decision": "APPROVE",
+      "finding": "Annual-minimum periodic inspection, shortening for adverse conditions and pre-rainy-season inspection match6.3. Includes6.2 inspection and500V insulation test. Table1 retained by tested insulation location with2/7/2/5MΩ, never2/7/1 by tool class. Missing label/record alone is not asserted to prove no inspection."
+    },
+    {
+      "hazardId": "H_GBT3787_PERIODIC_CHECK_MARK",
+      "decision": "APPROVE",
+      "finding": "Only after qualified periodic inspection: appropriate location and conspicuous/clear/correct qualification mark with all four required fields. Complete6.3 f preserved and distinct from whether inspection happened."
+    },
+    {
+      "hazardId": "H_JGJT46_2024_BOX_PE",
+      "decision": "APPROVE",
+      "finding": "Construction temporary neutral-directly-grounded220/380V low-voltage system only. Both PE-terminal connection and yellow/green flexible insulated door-bond sentence match4.1.12. No inserted4mm², no invented door-mounted-equipment condition. Ordinary fixed-cabinet existing H stays separately bounded."
+    },
+    {
+      "hazardId": "H_GB51251_MANUAL_SMOKE_WINDOW",
+      "decision": "APPROVE",
+      "finding": "Natural-smoke exhaust facility identity is required. Height1.3–1.5m only when high and inconvenient to open directly. Complete final sentence retaining9m/2000m² thresholds and concentrated manual/automatic facilities preserved as context. No uniform label rule; old obstructed maintenance mapping stays superseded."
+    },
+    {
+      "hazardId": "H_GBT34525_CYLINDER_REGISTER",
+      "decision": "APPROVE",
+      "finding": "Technical bottle-store incoming/outgoing record only, triggered by actual movement. All five prescribed data categories preserved. Scope covers stated cylinder parameters, subject scope and excluded equipment; not statutory special-equipment use registration or a list posted outside a cabinet."
+    },
+    {
+      "hazardId": "H_GBT34525_CYLINDER_STORE_ALARM",
+      "decision": "APPROVE",
+      "finding": "Only qualifying toxic/flammable/oxygen/inert-gas bottle stores and gas-corresponding hazardous-concentration detection. No made-up common threshold, UPS, automatic shutoff, or ventilation interlock. Not a general every-use-point or major-hazard determination."
+    },
+    {
+      "hazardId": "H_89016FC0F3E849C2B8B8755C35",
+      "decision": "APPROVE",
+      "finding": "Only in-service lightning-protection devices: ordinary annual versus explosive/fire-hazard premises half-year periodicity. Art17 qualified institution is supporting. Not generic protective/static grounding, initial acceptance, design-coverage, or proof from a missing report alone. 2026-11-01 amendment and major rule not applied early."
+    }
+  ],
+  "deferredAndUnchanged": [
+    "Hose-placement candidate remains unadmitted: government-hosted GB50974 file is explicitly a submission-for-approval draft; hosting alone does not prove final original.",
+    "Unpreserved former five-handtool themes were not fabricated to meet historical counts.",
+    "No universal half-year PPE testing requirement introduced; existing AQ6111 bounded definition unchanged and unsupported high-voltage-to-all-tools extrapolation rejected.",
+    "Old superseded cabinet and smoke-window mappings and rejected old CF13 link remain unreopened."
+  ],
+  "officialSources": [
+    {
+      "document": "GB/T3787-2017",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=387FBD611899512D0C690F4BC9DD145B",
+      "locator": "PDF1 cover; PDF4/printed1 scope; PDF6/printed3 §6.2, complete §6.3 a–f and table1",
+      "sha256": "5ec6b6810fe5b5d577ff2ea78594ecd73fd1bc23b6d0e3bcc762daa1f041a3bf",
+      "bytes": 540523,
+      "method": "Independent visual examination of official original page images; stored official immutable PDF bytes reused where provided",
+      "currencyFinding": "Current official SAMR status independently opened on 2026-10-04. GB/T3787-2026 is upcoming, effective 2027-02-01; successor not used early."
+    },
+    {
+      "document": "GB/T34525-2017",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=D7C9C74FA430939F709900DB6F7397B9",
+      "locator": "PDF3/printed1 full subject and cylinder scope/exclusions; PDF5/printed3 §§8.2.8,8.2.11,8.2.12",
+      "sha256": "58a4697413baf21b1c1d55aa58ecea7cfdeaa9e19f8a7ec6e36c37216be0b830",
+      "bytes": 422580,
+      "method": "Independent visual examination of official original page images; stored official immutable PDF bytes reused where provided",
+      "currencyFinding": "SAMR independently confirms current, published 2017-10-14, effective 2018-05-01."
+    },
+    {
+      "document": "JGJ/T46-2024",
+      "url": "https://www.hukou.gov.cn/zjj/fdzdgknr/fgzc/zfwj_171199/202510/P020251013005491384192.pdf",
+      "locator": "PDF7/printed1 §1.0.2; PDF21/printed15 §4.1.12",
+      "sha256": "d064799cff5d331b2b88d722671202ac44481e6e82ab007cfc1042cd82a85477",
+      "bytes": 7211727,
+      "method": "Independent visual examination of official original page images; stored official immutable PDF bytes reused where provided",
+      "currencyFinding": "Official release notice independently fetched; effective 2025-01-01, replaces JGJ46-2005. Current official 2026 use independently checked."
+    },
+    {
+      "document": "GB51251-2017",
+      "url": "https://js.119.gov.cn/group1/M00/00/2B/ZYS-ZGGB9ImATXQXAV3nqHHx3NM968.pdf",
+      "locator": "PDF3 announcement1741; PDF10/printed1 §1.0.2; PDF28/printed19 complete §4.3.6",
+      "sha256": "6eb5aeb350a97a1a51748b808e04b05e28859fc8de6b3767a125f6c45cbd9f62",
+      "bytes": 22931368,
+      "method": "Independent visual examination of official original page images; stored official immutable PDF bytes reused where provided",
+      "currencyFinding": "Announcement published2017-11-20/effective2018-08-01. Official2026 use checked. GB55036 supersession list does not name§4.3.6; general-code conflict qualification preserved."
+    },
+    {
+      "document": "CMA44-2025",
+      "url": "https://www.cma.gov.cn/gzk/202504/W020250429585736385555.pdf",
+      "locator": "PDF1 publication; PDF4§13; PDF5§17; PDF8§28",
+      "sha256": "75dcaa94c5443cb3cbd7eb6ecee0b4a5e17534f6b6e2c3f8c482a0c1b80c1749",
+      "bytes": 159647,
+      "method": "Independent visual examination of official original page images; stored official immutable PDF bytes reused where provided",
+      "currencyFinding": "2025 text is applicable as of2026-10-04. Live consolidated webpage already includes Sept11 amendment, but official Sept18 announcement specifies November1 effective date. No early switch."
+    },
+    {
+      "document": "AQ3067-2026",
+      "url": "https://www.mem.gov.cn/fw/flfgbz/bz/bzwb/202603/t20260325_598035.shtml",
+      "locator": "PDF4/printed1 subject scope; PDF6/printed3 §§5.4.1–5.4.2",
+      "sha256": "b2df271f61ac0b121e952b0fe890adaa85751df677a986de60fb7fa927016b89",
+      "bytes": 2344023,
+      "method": "Independent visual examination of official original page images; stored official immutable PDF bytes reused where provided",
+      "currencyFinding": "Read to verify exclusion only: bounded enterprise BPCS/GDS/SIS UPS provision does not impose an independent UPS on every cylinder-store probe."
+    },
+    {
+      "document": "cma-revised-2026.pdf",
+      "url": "https://www.cma.gov.cn/gzk/202504/W020260918628488027941.pdf",
+      "locator": "Consolidated upcoming amended official original; §§13/17 unchanged, §21 altered",
+      "sha256": "be60bbc3748be168cd90fc18076f350eabd9d78fd5fd240d071d09d633da2496",
+      "bytes": 162116,
+      "method": "Independently fetched/read official source"
+    },
+    {
+      "document": "cma-amendment-effective-news.html",
+      "url": "https://www.cma.gov.cn/2011xwzx/2011xqxxw/2011xqxyw/202609/t20260918_8049644.html",
+      "locator": "2026-09-18, first paragraph gives all three regulations 2026-11-01 effectivity",
+      "sha256": "222455770a72ad9fbed3e9f8dfc611dd9d3ba37e9029a76d992e0611e2510531",
+      "bytes": 24461,
+      "method": "Independently fetched/read official source"
+    },
+    {
+      "document": "cma-consolidated.html",
+      "url": "https://www.cma.gov.cn/gzk/202504/t20250429_7036385.html",
+      "locator": "Header indicates2026-09-11 amendment; §§13/17 unchanged",
+      "sha256": "522a3230c217e996817028a98697b9ec2bd21f62db3802f91490f84fbada499c",
+      "bytes": 32809,
+      "method": "Independently fetched/read official source"
+    },
+    {
+      "document": "cma47-upcoming.html",
+      "url": "https://www.cma.gov.cn/zfxxgk/zc/gz/202609/t20260920_8052708.html",
+      "locator": "Separate CMA47 major-hazard rule, header and article6 specify2026-11-01",
+      "sha256": "7d571905acdc5c06b64932611f97ba32ea0c82a33f6d51c99f6dd00da2c39962",
+      "bytes": 10445,
+      "method": "Independently fetched/read official source"
+    },
+    {
+      "document": "jgjt46-notice.html",
+      "url": "https://www.hukou.gov.cn/zjj/fdzdgknr/fgzc/zfwj_171199/202510/t20251013_7029015.html",
+      "locator": "Official MOHURD notice republished by housing authority with attached official original",
+      "sha256": "af9a54a7781a384a456e3524912a77dea6d9182da20ff1be71895ebce36f0c10",
+      "bytes": 47788,
+      "method": "Independently fetched/read official source"
+    }
+  ],
+  "additionalLiveOfficialChecks": [
+    {
+      "url": "https://std.samr.gov.cn/gb/search/gbDetailed?id=Hhwbd68%2FAjo%3D&mode=p",
+      "finding": "GB/T3787-2026 upcoming/full replacement from2027-02-01"
+    },
+    {
+      "url": "https://www.changzhou.gov.cn/gi_news/721177803704038",
+      "finding": "2026-05-06 current local housing-authority notice quotes complete§4.3.6 under HVAC item2"
+    },
+    {
+      "url": "https://www.shanwei.gov.cn/swdj/zwgk/wgk/content/post_1249390.html",
+      "finding": "2026-05-14 official construction inspection report uses JGJ/T46-2024"
+    },
+    {
+      "url": "https://www.baiyinqu.gov.cn/zz/cgzf/zcfg/art/2023/art_88c364652e6247188a364df977957977.html",
+      "finding": "Official reproduced GB55036 notice lists revoked mandatory clauses; GB51251§4.3.6 not listed; conflict rule remains"
+    }
+  ],
+  "exactFiles": [
+    {
+      "path": "docs/electrical-source-rebuild-20261004.json",
+      "sha256": "e3de0b69617b7a381dce5f883334966699ebca09cc1ec040efc192a1ca660ebc",
+      "bytes": 12556
+    },
+    {
+      "path": "knowledge/clauses/C_CMA44_2025_13.json",
+      "sha256": "26a60cda9bc3479e93d53ec45708f1a11599520a7e6aab929eb9d24631d1ef70",
+      "bytes": 504
+    },
+    {
+      "path": "knowledge/clauses/C_CMA44_2025_17.json",
+      "sha256": "1b7566cf61206862cc63c7e2f2df6b3ab80690f69834da54ecc6820cf933dd01",
+      "bytes": 504
+    },
+    {
+      "path": "knowledge/clauses/C_GB51251_2017_1_0_2.json",
+      "sha256": "b575498a7e5391f41621cfc395ead4db1711a8b55bcc1b60503cfc8f79d2be2f",
+      "bytes": 520
+    },
+    {
+      "path": "knowledge/clauses/C_GB51251_2017_4_3_6.json",
+      "sha256": "29a456288d55969218c5c5e4e321310449dd224fa56f0700579c8127d2474002",
+      "bytes": 615
+    },
+    {
+      "path": "knowledge/clauses/C_GBT34525_2017_1.json",
+      "sha256": "9e992826f2e45d9c327eb7fd2cd12c080f34750199f6e0402519ce6e058033f8",
+      "bytes": 1257
+    },
+    {
+      "path": "knowledge/clauses/C_GBT34525_2017_8_2_11.json",
+      "sha256": "de9fbcb39e90cc4c64d430e7937105d72d3f9b9200408ad4a3febeb2f2eb08d8",
+      "bytes": 421
+    },
+    {
+      "path": "knowledge/clauses/C_GBT34525_2017_8_2_12.json",
+      "sha256": "21611e5a2238296f22638e137c42e40998bb2a0e845eca1e76c5c0362ef9a302",
+      "bytes": 454
+    },
+    {
+      "path": "knowledge/clauses/C_GBT34525_2017_8_2_8.json",
+      "sha256": "2ac788d51966cc76aba9fd1fd37e4d273f3bc403903f2e21705d8b0b5c28f035",
+      "bytes": 407
+    },
+    {
+      "path": "knowledge/clauses/C_GBT3787_2017_1.json",
+      "sha256": "d644413f606767a89b719433f2dfe50e2956e7742f8aef617b0f968cf4075b62",
+      "bytes": 474
+    },
+    {
+      "path": "knowledge/clauses/C_GBT3787_2017_6_2.json",
+      "sha256": "a282ec861c56796d4f46b9169f271568afc3b29d249712fd75378709fbfa80d1",
+      "bytes": 796
+    },
+    {
+      "path": "knowledge/clauses/C_GBT3787_2017_6_3.json",
+      "sha256": "635c2b2abc82183751b6e4a6b2c448263ecf579d5dd68e179b3f2c8cab264000",
+      "bytes": 1375
+    },
+    {
+      "path": "knowledge/clauses/C_JGJT46_2024_1_0_2.json",
+      "sha256": "9e6c855b9ff86720359f204134c481b49572de619742c673b21d89e209ae79d2",
+      "bytes": 524
+    },
+    {
+      "path": "knowledge/clauses/C_JGJT46_2024_4_1_12.json",
+      "sha256": "e085e7445c117ad3570c88050fc31e0b149fbbe4259b7cc6e7ff19f047d892d7",
+      "bytes": 552
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_CMA2026_TRANSITION.json",
+      "sha256": "61d07865a30fead4c5fc6db6d12e1d22e1e0188e5aa69cbc25537829d16f66d7",
+      "bytes": 676
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_CMA44_2025_ORIGINAL.json",
+      "sha256": "88d2c53ca395cfadc200a93ef034640ad6d8574802bac4c33c07534f9eec1e7e",
+      "bytes": 580
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GB51251_2017_SMOKE.json",
+      "sha256": "7730a42eb831459de3c271c1110ce2f5f6e514caa75fde0b1dd0ab878d2adf0f",
+      "bytes": 592
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GB51251_OFFICIAL_USE_2026.json",
+      "sha256": "64c8ed6b602e6b44b0b949f496ea322cb3e286345efb6601747bc94d8be0f929",
+      "bytes": 398
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GBT34525_2017_OFFICIAL.json",
+      "sha256": "42070eefa71ee0a97db05f836b79b1795ef689135a7db303c89d64235d1488b0",
+      "bytes": 593
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GBT3787_2017_OFFICIAL.json",
+      "sha256": "54fb183cbd1f93f3d0e07d63e613322d9d8de24d04f1c70aa30407ca2d9e2ff0",
+      "bytes": 618
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GBT3787_2026_TRANSITION.json",
+      "sha256": "2e58a908ad8cb269f2fd5cbe325ce084dd76d54a35ef012883692538f74f2beb",
+      "bytes": 353
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_JGJT46_2024_BOX.json",
+      "sha256": "9ab1abc37d080a9979c40a904bfb6543852d041e48109bf9c418883808384fff",
+      "bytes": 601
+    },
+    {
+      "path": "knowledge/hazards/H_89016FC0F3E849C2B8B8755C35.json",
+      "sha256": "50b88a5a53ec1ada7942544f09a6771e34c270ff6c086177d0b52439c0d4574c",
+      "bytes": 2120
+    },
+    {
+      "path": "knowledge/hazards/H_CF_GEN_13.json",
+      "sha256": "3f674dfbbaceb633958ad5cbb54502a5b92626392ae3031f2fe6d70f58886f96",
+      "bytes": 2157
+    },
+    {
+      "path": "knowledge/hazards/H_GB51251_MANUAL_SMOKE_WINDOW.json",
+      "sha256": "186459944759698a535c0bf72439361c6f43987a7c36bdca7c5defd32be1bc3b",
+      "bytes": 1677
+    },
+    {
+      "path": "knowledge/hazards/H_GBT34525_CYLINDER_REGISTER.json",
+      "sha256": "0ecc8f561b5e3babe944809d3893b085c0896e29d834fec2410927516d225960",
+      "bytes": 2081
+    },
+    {
+      "path": "knowledge/hazards/H_GBT34525_CYLINDER_STORE_ALARM.json",
+      "sha256": "f7202799554ca4fbea5de0b16ce638f950683bf765e00640870cb66a187925cc",
+      "bytes": 2187
+    },
+    {
+      "path": "knowledge/hazards/H_GBT3787_PERIODIC_CHECK_MARK.json",
+      "sha256": "58ed1df3d5b271a9104baa067ad87c78b92b86836309bd3e95c607fde9a9ccf5",
+      "bytes": 1574
+    },
+    {
+      "path": "knowledge/hazards/H_JGJT46_2024_BOX_PE.json",
+      "sha256": "4c04bc20963b907bd299e526b544a92d8c77a008e48d9446fb2d30b1d11b1328",
+      "bytes": 1565
+    },
+    {
+      "path": "knowledge/law-versions/LV_CMA_LIGHTNING_MANAGEMENT_2025.json",
+      "sha256": "d0d970c7ebf90bd4b999cccf5d8038d63ca85045c520269b1b6f374f239c3607",
+      "bytes": 1035
+    },
+    {
+      "path": "knowledge/law-versions/LV_STD_GB51251_2017.json",
+      "sha256": "bd8da34b43601137c40fefa4c677a3cf097c8b60541f6538e910e5c883213b01",
+      "bytes": 653
+    },
+    {
+      "path": "knowledge/law-versions/LV_STD_GBT3787_2017.json",
+      "sha256": "5a35dbba72d580104cbca3ecc84497e2903e14f9b471e756203bc00a25aa85de",
+      "bytes": 716
+    },
+    {
+      "path": "knowledge/laws/LF_CMA_LIGHTNING_MANAGEMENT.json",
+      "sha256": "c7935b8b4188173ec9a8fce8a851bc9ee1e47ebb41cf2c46320e6a4459279370",
+      "bytes": 301
+    },
+    {
+      "path": "knowledge/laws/LF_STD_GB51251.json",
+      "sha256": "d65c6c8254971d8a2c795ddc9878f1ae5d8d1acdc6908ea2db3236b46b5dfb15",
+      "bytes": 516
+    },
+    {
+      "path": "knowledge/laws/LF_STD_GBT3787.json",
+      "sha256": "87f9e6164f271987c291275844cf0e208c04fc7a3c2955c3f67016fa7dd5c022",
+      "bytes": 570
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_13.json",
+      "sha256": "7889f94e4df6ad8a7a159f3bca2a5106703d3f2c21f60848080bb24a4ab61c65",
+      "bytes": 1145
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_17.json",
+      "sha256": "7ac2080fc8488fb166cc88a8964ff05598419005192126134420a62946d5fa3b",
+      "bytes": 1149
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_2.json",
+      "sha256": "d0543a34519bc4be61413f3f1f1d83ec46ada7859bbfa989e14823aa77b377c8",
+      "bytes": 984
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_3.json",
+      "sha256": "5018f53af07751eba51202568ce493ea9ad098e591bf7313886ffe919399d25f",
+      "bytes": 980
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_GB51251_MANUAL_SMOKE_WINDOW_C_GB51251_2017_4_3_6.json",
+      "sha256": "1c116f5ecde5c6232e13803b2d7a2a518790276b990242ae27ac416d586ba236",
+      "bytes": 1094
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_11.json",
+      "sha256": "0275270d385a5f6ddc5f0d33fbf36b1f068ff13720445db81d7666e82ec01a50",
+      "bytes": 1551
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_12.json",
+      "sha256": "71cb8f741e468ccd4f80eceb8d6befe0688470f5300100595e90d714f2d33759",
+      "bytes": 1547
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_GBT34525_CYLINDER_STORE_ALARM_C_GBT34525_2017_8_2_8.json",
+      "sha256": "a80437ae53c024851e87177133e4a50c6608229a79a222ffd259c97b5475b79a",
+      "bytes": 1663
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_GBT3787_PERIODIC_CHECK_MARK_C_GBT3787_2017_6_3.json",
+      "sha256": "dbdf49f153904c81a2db31d512124a6ca9d16710918c034462f5c5af94905d95",
+      "bytes": 875
+    },
+    {
+      "path": "knowledge/links/K_REBUILD_H_JGJT46_2024_BOX_PE_C_JGJT46_2024_4_1_12.json",
+      "sha256": "f8fe37edf6f195e0102caa0a12a7657eee17cfe47fa507537044a9a04a3c9f7e",
+      "bytes": 953
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_CMA44_2025_13.json",
+      "sha256": "8057ef50cb23b6fe48a53add4653bb4dbc0315f4576b023d55eae0523e22dd72",
+      "bytes": 580
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_CMA44_2025_17.json",
+      "sha256": "3597bacd19cce00d47398f42e180d7e0379a8fd2b34ba761cfab5e788a574a8d",
+      "bytes": 580
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB51251_2017_1_0_2.json",
+      "sha256": "b09fd4cca6ab74788ad6bf213ba8439b3e530c230bb560e85dc430d467e183d5",
+      "bytes": 584
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB51251_2017_4_3_6.json",
+      "sha256": "28b378888acff1704fc72242dda7a2609b675d648917329ba2deadef1baba265",
+      "bytes": 584
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_1.json",
+      "sha256": "62c4f9d975167e327ec67b38ce84a7430a87c2e970447e18880a9c8a691450f0",
+      "bytes": 691
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_8_2_11.json",
+      "sha256": "2bb675450e4f971e96bf287d8b62a1941180eeb3399a7e9b180c9395f2ae10e9",
+      "bytes": 590
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_8_2_12.json",
+      "sha256": "2b7bc0bcad1b1e9d8f333f37837c7bc1831d1b6528575308ac4bfda46877e7b5",
+      "bytes": 590
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_8_2_8.json",
+      "sha256": "177b7448546d7e0d476a5627ed5636fc41bb331173a9a33fc95708905c5e9cc7",
+      "bytes": 589
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT3787_2017_1.json",
+      "sha256": "b2374bc162c231d84950e1fb73a96a37c91ed9e5bae41ad194df05b2f583b7d8",
+      "bytes": 583
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT3787_2017_6_2.json",
+      "sha256": "452801e6e5d991f274724c205ec480781fae1f394de605265a452f2ceabb2649",
+      "bytes": 585
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT3787_2017_6_3.json",
+      "sha256": "f4e412be7902470c47802e97a47b82a1f2c7ea510e0ff2c0a83cbe7ace226fa7",
+      "bytes": 679
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JGJT46_2024_1_0_2.json",
+      "sha256": "01d9a16212d9ad31148f8006154df5cd3c87ec917dedcbb49e092d7f7b836d21",
+      "bytes": 580
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JGJT46_2024_4_1_12.json",
+      "sha256": "bdfb0af969909ae65afbfa8ff32edf726695327266739bb1a7a92f6289b67d07",
+      "bytes": 581
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_89016FC0F3E849C2B8B8755C35.json",
+      "sha256": "b724403b949d80c9fba8d3bc422a6a9ba4e3ce412f1ef95bc44f2b6f2528f459",
+      "bytes": 2091
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_CF_GEN_13.json",
+      "sha256": "343f19faeb0f5954870a6ac214f686e20a51d949f00599e3af646ea4e49ce3a0",
+      "bytes": 2159
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GB51251_MANUAL_SMOKE_WINDOW.json",
+      "sha256": "57493f5b18bf5b34fa13c15897b52a5e8fa95534b7d825dff9d40c25485cb3b4",
+      "bytes": 771
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GBT34525_CYLINDER_REGISTER.json",
+      "sha256": "fe17b2a59b5872f219863ea180516f8ec45acf3aa7e96bd9d1d63dcbe86f8ff0",
+      "bytes": 677
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GBT34525_CYLINDER_STORE_ALARM.json",
+      "sha256": "6836b1bbb6281e5a9589703fa0b2e5494c41319dfc016a53f67e4396a0df43e5",
+      "bytes": 727
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GBT3787_PERIODIC_CHECK_MARK.json",
+      "sha256": "4ba8304d62d98d0a27df90c9cc68cd6afcf159f327cea26de3c267ea652d0719",
+      "bytes": 668
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_JGJT46_2024_BOX_PE.json",
+      "sha256": "3963370bee232da1a6058c6878a7bb4921299883fd6e9c5d9ba52610b42dcd94",
+      "bytes": 688
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_CMA_LIGHTNING_MANAGEMENT_2025.json",
+      "sha256": "995568a4c60cf92316debd6d63766ddf52f95611eff041dd0289fd4f90910e7d",
+      "bytes": 854
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GB51251_2017.json",
+      "sha256": "1a7003712a8a2cad42c0776a067aa4bd83d8988e43416360895c3c4f5157470a",
+      "bytes": 694
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GBT3787_2017.json",
+      "sha256": "193bc91fb15a4c80da01c04fcee1baebdbd94572f9fd9ec94f9c066be4f7f5d7",
+      "bytes": 687
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_CMA_LIGHTNING_MANAGEMENT.json",
+      "sha256": "ec6cb2c84d4f0f12d59ff684210504b2c0235923140a0ec238dab7f8e569faa6",
+      "bytes": 560
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GB51251.json",
+      "sha256": "6c70ce3c9b307cd9fe66f057f823f7f472983b46553226293701c0ab1b651814",
+      "bytes": 589
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GBT3787.json",
+      "sha256": "8a73123424fb4e4a21715898abffc8e52e65fe0efdfc8863d657ebd2094cc1ee",
+      "bytes": 590
+    },
+    {
+      "path": "knowledge/reviews/links/K_CF_GEN_13_C_0C94FB24040EB78218141DD12F.json",
+      "sha256": "e8b3ac88cc6c202830166d15902166f4895c1492df645ba820a24df42180dd40",
+      "bytes": 945
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_13.json",
+      "sha256": "9cd1bbb190d1da27f1d46457477065bf221d4e7c4389e9c8d7ec6d080c2ba382",
+      "bytes": 1006
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_17.json",
+      "sha256": "a437e3c9fff5333b86e6cf3b4826e7081dfaf8d7efa28a5e90d7b7814dec5212",
+      "bytes": 1006
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_2.json",
+      "sha256": "e8b7dad77aa12a0edd7e6d43852285d6e66740396f0ba4781bfebb97c857ee83",
+      "bytes": 927
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_3.json",
+      "sha256": "33c575c50955d492395e12e4e7fbd8b50a32eb0df56260494c3a91b99bf43b6e",
+      "bytes": 927
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GB51251_MANUAL_SMOKE_WINDOW_C_GB51251_2017_4_3_6.json",
+      "sha256": "0e4813c7934b35c1dd98441ecbbb1f1c789b1907b3cdd2dcc2e9fcadf2108da0",
+      "bytes": 992
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_11.json",
+      "sha256": "107d79087b66cc4e3aec6060f63bde65bbc2278ee20ec7082bab44a3a8ebe6f6",
+      "bytes": 900
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_12.json",
+      "sha256": "d43f1fdea5f201518180da92601e0f36a917b2e3bcc0b61e5d352a05dc42ba2a",
+      "bytes": 900
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT34525_CYLINDER_STORE_ALARM_C_GBT34525_2017_8_2_8.json",
+      "sha256": "0e43a99c4d0bae01e765b3280fcd25a269c3dec631e4ad6d5492830812d47ec5",
+      "bytes": 949
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT3787_PERIODIC_CHECK_MARK_C_GBT3787_2017_6_3.json",
+      "sha256": "3d74607b68797b71f250d2063469c5796e2d61236c0f26d702ab293854aedebe",
+      "bytes": 887
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_JGJT46_2024_BOX_PE_C_JGJT46_2024_4_1_12.json",
+      "sha256": "2990fdb1eeafc2833e88f3535701a9680ecc6b2d439fc957d12bf7192c81dc73",
+      "bytes": 909
+    },
+    {
+      "path": "tools/browser/electrical_candidate_acceptance.py",
+      "sha256": "282b4efeaa8a2e11b85ce1336c44e39a41cb69bf69dcf4b48c88fbd5433e9d67",
+      "bytes": 7365
+    },
+    {
+      "path": "tools/browser/fixtures/electrical_candidates_20261004.json",
+      "sha256": "9d471093b0c8c58bad6c6c5c9fb762f884112cea9e11a717c3ad58483f08db05",
+      "bytes": 31074
+    },
+    {
+      "path": "tools/pipeline/tests/test_electrical_source_rebuild.py",
+      "sha256": "48fad0e89eed3056119c752d0b1ad9e0c808d6177170b260dfc1a58006587ec8",
+      "bytes": 9485
+    }
+  ],
+  "transitiveReadOnlyDependencies": [
+    {
+      "path": "knowledge/law-versions/LV_STD_GBT3787_2017.json",
+      "sha256": "5a35dbba72d580104cbca3ecc84497e2903e14f9b471e756203bc00a25aa85de",
+      "bytes": 716
+    },
+    {
+      "path": "knowledge/laws/LF_STD_GBT3787.json",
+      "sha256": "87f9e6164f271987c291275844cf0e208c04fc7a3c2955c3f67016fa7dd5c022",
+      "bytes": 570
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GBT3787_2017.json",
+      "sha256": "193bc91fb15a4c80da01c04fcee1baebdbd94572f9fd9ec94f9c066be4f7f5d7",
+      "bytes": 687
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GBT3787.json",
+      "sha256": "8a73123424fb4e4a21715898abffc8e52e65fe0efdfc8863d657ebd2094cc1ee",
+      "bytes": 590
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GBT3787_2017_OFFICIAL.json",
+      "sha256": "54fb183cbd1f93f3d0e07d63e613322d9d8de24d04f1c70aa30407ca2d9e2ff0",
+      "bytes": 618
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GBT3787_2026_TRANSITION.json",
+      "sha256": "2e58a908ad8cb269f2fd5cbe325ce084dd76d54a35ef012883692538f74f2beb",
+      "bytes": 353
+    },
+    {
+      "path": "knowledge/law-versions/LV_STD_JGJT46_2024.json",
+      "sha256": "285c9273e31f3bcaa6677a49e1accffe5d32bab360d6a90cd736da50785e1f00",
+      "bytes": 496
+    },
+    {
+      "path": "knowledge/laws/LF_STD_JGJT46.json",
+      "sha256": "d41677e969804fb80f47921b3a9152ad469f4d82f0c72e32e7b6d3a3798af726",
+      "bytes": 467
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_JGJT46_2024.json",
+      "sha256": "abad6b70b07e8453f8935f15f51bdb82941efd5214089dacd83f679dd9b6b106",
+      "bytes": 1051
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_JGJT46.json",
+      "sha256": "ecbbe829c067d0b51643e18299ebb45ba441e67734b6155c29f5cb3ade80c5e0",
+      "bytes": 938
+    },
+    {
+      "path": "knowledge/evidence/E_COM_JGJT46_NOTICE_20261002.json",
+      "sha256": "b2421103b49e88898e658168f08feb57d087c626ee6bf5ecacaa6d815fff5e8c",
+      "bytes": 623
+    },
+    {
+      "path": "knowledge/evidence/E_COM_JGJT46_TEXT_20261002.json",
+      "sha256": "6f69caf5eba09f9b598d7c6b75b9c1ca16f4c73fe03a30c8fc9526dae16041dd",
+      "bytes": 715
+    },
+    {
+      "path": "knowledge/law-versions/LV_STD_GB51251_2017.json",
+      "sha256": "bd8da34b43601137c40fefa4c677a3cf097c8b60541f6538e910e5c883213b01",
+      "bytes": 653
+    },
+    {
+      "path": "knowledge/laws/LF_STD_GB51251.json",
+      "sha256": "d65c6c8254971d8a2c795ddc9878f1ae5d8d1acdc6908ea2db3236b46b5dfb15",
+      "bytes": 516
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GB51251_2017.json",
+      "sha256": "1a7003712a8a2cad42c0776a067aa4bd83d8988e43416360895c3c4f5157470a",
+      "bytes": 694
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GB51251.json",
+      "sha256": "6c70ce3c9b307cd9fe66f057f823f7f472983b46553226293701c0ab1b651814",
+      "bytes": 589
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GB51251_2017_SMOKE.json",
+      "sha256": "7730a42eb831459de3c271c1110ce2f5f6e514caa75fde0b1dd0ab878d2adf0f",
+      "bytes": 592
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_GB51251_OFFICIAL_USE_2026.json",
+      "sha256": "64c8ed6b602e6b44b0b949f496ea322cb3e286345efb6601747bc94d8be0f929",
+      "bytes": 398
+    },
+    {
+      "path": "knowledge/law-versions/LV_STD_GBT34525_2017.json",
+      "sha256": "1ec9ea22e07348aa7cd8858ccd4e796172bee31db86fa358596ee3a69dd07286",
+      "bytes": 533
+    },
+    {
+      "path": "knowledge/laws/LF_STD_GBT34525.json",
+      "sha256": "e6fc1ae05b029e246406a13797471adeeba22ca8d88987bfd2081596d0c22dee",
+      "bytes": 523
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GBT34525_2017.json",
+      "sha256": "ac2fccbd3ccdcd2ea1a187472cdd81520667c321d48ae03fcbe4f3cddd35a4c3",
+      "bytes": 527
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GBT34525.json",
+      "sha256": "99cffa00c4f38542bf0e2f925ce54e0a1dd72aa8f167250d222905a35a8f0261",
+      "bytes": 515
+    },
+    {
+      "path": "knowledge/evidence/E_91a384b228faab592d703b47579df206c7c0013b4e3a74619353a9f0fad2d6ec.json",
+      "sha256": "6b3f70f7fcca7a0cbbff1826ce22428caf4e0f6fbe60601e7c653f2400c73a72",
+      "bytes": 507
+    },
+    {
+      "path": "knowledge/law-versions/LV_CMA_LIGHTNING_MANAGEMENT_2025.json",
+      "sha256": "d0d970c7ebf90bd4b999cccf5d8038d63ca85045c520269b1b6f374f239c3607",
+      "bytes": 1035
+    },
+    {
+      "path": "knowledge/laws/LF_CMA_LIGHTNING_MANAGEMENT.json",
+      "sha256": "c7935b8b4188173ec9a8fce8a851bc9ee1e47ebb41cf2c46320e6a4459279370",
+      "bytes": 301
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_CMA_LIGHTNING_MANAGEMENT_2025.json",
+      "sha256": "995568a4c60cf92316debd6d63766ddf52f95611eff041dd0289fd4f90910e7d",
+      "bytes": 854
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_CMA_LIGHTNING_MANAGEMENT.json",
+      "sha256": "ec6cb2c84d4f0f12d59ff684210504b2c0235923140a0ec238dab7f8e569faa6",
+      "bytes": 560
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_CMA44_2025_ORIGINAL.json",
+      "sha256": "88d2c53ca395cfadc200a93ef034640ad6d8574802bac4c33c07534f9eec1e7e",
+      "bytes": 580
+    },
+    {
+      "path": "knowledge/evidence/E_REBUILD_CMA2026_TRANSITION.json",
+      "sha256": "61d07865a30fead4c5fc6db6d12e1d22e1e0188e5aa69cbc25537829d16f66d7",
+      "bytes": 676
+    }
+  ],
+  "reviewBindingChecks": [
+    {
+      "path": "knowledge/reviews/clauses/C_CMA44_2025_13.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "d766d4a57bc55445e898f09b6a7cafdb5aaa2ac324907e96967e33bb2812016c"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_CMA44_2025_17.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "3ca4297938e7ff20a4d4dfdcaabb5b88677f686650882725d1012e355344ba50"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB51251_2017_1_0_2.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "805fe6dd2ae68fc0981df9df05c3ee5f27f61fa2a17d400bf9b915191730a436"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GB51251_2017_4_3_6.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "9d5a51611fe860ff2562027f76640f614b8bbb0d63f9318ce4d3515739e87804"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_1.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "c8f818e5a0ec5410fb444837f0dc838931cbbb47fd5d6c8bc24fc25db7423fc0"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_8_2_11.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "a7fc67c352446b9fe7362db7cdbeb39df6f96be25ae298403e7f5aa708fbbec2"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_8_2_12.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "4ec1573a2bbd1622020df06957d7ea2ca96c1ba6748997d82930f867409ede12"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT34525_2017_8_2_8.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "65c01e54f70182cc85dc055c9638d0edf27d92a4e887a6a15d81fcc077c87095"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT3787_2017_1.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "75c63c93a36f71a8cf19c976bad39bf4560e9caee753c348df510be10e7f3b9d"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT3787_2017_6_2.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "75bb7efc7c360ebc5587d2c1f5d0f8df7ebc3c333399d5e860e337b01ecf248b"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_GBT3787_2017_6_3.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "2dc48837b86fed199b7c127822504a06cf2600d84a962d024e248c86d0004c94"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JGJT46_2024_1_0_2.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "79a02a6ff35d3f2e51b1f958078a538bf7d903e14c70b2c0be70d629455d39ae"
+    },
+    {
+      "path": "knowledge/reviews/clauses/C_JGJT46_2024_4_1_12.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "610a1e42d7ffa518f1aae169db042eddea25674b9f22b7f3d86dc97480d33245"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_89016FC0F3E849C2B8B8755C35.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "9ba3f4099373f05145fc6afc74bccb19418bf40cca681cdeff118ac76797c4c0"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_CF_GEN_13.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "a894bf50a3a88e29fc8aadd6592fcd5e2d61926f0510239df7bc22b5f61eff98"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GB51251_MANUAL_SMOKE_WINDOW.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "f13507992c7afe9aa7382a969650cc4142bfff004d935ff167485cccef938e04"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GBT34525_CYLINDER_REGISTER.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "afe5bfb3be3881dd6b868c3bf745e0c836ee377086603abbe98c067d1ebf6536"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GBT34525_CYLINDER_STORE_ALARM.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "a6788295a5c3ab615f267aac456eaf3f51577617d1fa6f59959b4f9b5233ecf4"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_GBT3787_PERIODIC_CHECK_MARK.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "59c590396716b00f0d605878a03d15336d90efac4ba08aa4b7e41308052de440"
+    },
+    {
+      "path": "knowledge/reviews/hazards/H_JGJT46_2024_BOX_PE.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "2f88a903c23d594dfa9140fa99e54e7338a88fcd2b1e402a80850b106911d938"
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_CMA_LIGHTNING_MANAGEMENT_2025.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "eab6cf52648803a6951cbd71e64f5906cdc85338fca5b20ce4d4aa984dffcc0f"
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GB51251_2017.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "a4e3f916dc5477c4d2857bbd51d0a827a4d53400232a10e3652855f82aa70af2"
+    },
+    {
+      "path": "knowledge/reviews/law-versions/LV_STD_GBT3787_2017.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "abed3acfb2bbeadbc37ee296c7926fd0d4253ef0b1a5ffb29b4da144793a29f1"
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_CMA_LIGHTNING_MANAGEMENT.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "1cfebed598ace8b3495dd1726bfb1265eaa08667afc3fea4fee5ff9e1ff3438b"
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GB51251.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "6d122ed992fb49d1eea5baaf863d86af126e3b26ac6aa3a2e82a5042f242bb07"
+    },
+    {
+      "path": "knowledge/reviews/laws/LF_STD_GBT3787.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "90a84dc55dfb9dc77fd1e4f25b37884a038ba55c6b249f3d0fe745dff8c72de5"
+    },
+    {
+      "path": "knowledge/reviews/links/K_CF_GEN_13_C_0C94FB24040EB78218141DD12F.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "e350c1531956014050e9ab766776ccc8a8a2c42ed797af91d476c7bd1c4b8e2f"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_13.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "b0be6f74699cab333aeacc4c8d7c834560aa4e6f72fbea54c64e4b496ed09c1d"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_17.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "db4cef196f6ed5819349620943920b9e8a360f5f088285b6c4f5f43cb606088e"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_2.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "71a34de1d5bf822fa23a936a3f1f465ea4a7f3545eb7a334abc6c0d4fb704a6e"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_CF_GEN_13_C_GBT3787_2017_6_3.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "78afa5784f7010d9c25159e457b2c45276ef145a6e953910185faad3c715a746"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GB51251_MANUAL_SMOKE_WINDOW_C_GB51251_2017_4_3_6.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "c0df4e193f94ce312942a47fca69f5564d5bd401f30e296a5b53119e7692ffc5"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_11.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "49d569fa7aa8fe2732ae547bab228bb79dbcd8d7473ee7e8bdd243a8dabb84e1"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT34525_CYLINDER_REGISTER_C_GBT34525_2017_8_2_12.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "622aa836dd4c3c515631817fcb8aadb4cf53b425e07b3761bf41e03ba39c33fb"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT34525_CYLINDER_STORE_ALARM_C_GBT34525_2017_8_2_8.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "03a44263167bc7b5de0a445b8618be18aea95841cab18a80abe8f631882893d1"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_GBT3787_PERIODIC_CHECK_MARK_C_GBT3787_2017_6_3.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "2eb9aaea849dc35240100d556e8947f1119d5905d10a976122e8d8cb95c4b514"
+    },
+    {
+      "path": "knowledge/reviews/links/K_REBUILD_H_JGJT46_2024_BOX_PE_C_JGJT46_2024_4_1_12.json",
+      "result": "PASS",
+      "canonicalReviewedContentHash": "8e6669a18ced78820a459480156de3e29e9946a3869c03394cc9905ecbfff2e6"
+    }
+  ],
+  "historyCheck": "Prior two H definitions and changed prior H/K reviews equal exact PR108 baseline JSON objects.",
+  "limits": [
+    "Approval covers only reviewed source definitions, applicability fields and exact files as of2026-10-04.",
+    "Does not certify historical enterprise violations or completed remediation.",
+    "Does not authorize or verify deployment, GUI behavior, full integrated release gates or standard-full-text republication.",
+    "Final integration must re-run mandatory release checks and honor both November1 and February1 exclusive end-date boundaries."
+  ],
+  "independentTests": {
+    "name": "electrical source rebuild unit tests",
+    "logSha256": "21c90533a3efd1b0df6952d5e44f99476728bf18914d156851c7eb841462cbb6",
+    "result": "PASS"
+  }
+}

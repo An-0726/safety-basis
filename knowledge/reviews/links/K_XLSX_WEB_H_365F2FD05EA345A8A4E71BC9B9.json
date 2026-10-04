@@ -1,18 +1,73 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_365F2FD05EA345A8A4E71BC9B9",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "d5927bcea98e4ed58b5585d4f7be629ba9222678c8528af7cca83aea96478e0d",
+  "reviewer": "Codex公开引文重建作者逐项核验20261004",
+  "checkedAt": "2026-10-04",
+  "reviewedContentHash": "2391d43c59440793cc167950ddcd2c45b29c5697e575832bd10d432613e3b26a",
+  "evidenceRefs": [
+    "E_PUBLIC_GB50444_ORIGINAL_20261004"
+  ],
+  "reason": "逐项核对月度检查对象、场所和义务；使用完整准确条文，无缺失分支的替代推定。",
+  "locator": "5.2.1",
+  "reviewedFields": [
+    "/applicability",
+    "/reason"
+  ],
+  "reviewedValues": {
+    "/applicability": "适用于工业与民用建筑中灭火器的检查和维护；不适用于生产或储存炸药、弹药、火工品、花炮的厂房或库房。本关联仅核普通场所配置、外观等每月按附录C检查；第5.2.2条所列加严场所由同H半月检查关联承载，不以月检判其合格。",
+    "/reason": "本H的月度检查分支由该条准确支持；与其他检查或记录关联分开，不用同一条包办不同义务。"
+  },
+  "fieldEvidenceRefs": {
+    "/applicability": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ],
+    "/reason": [
+      "E_PUBLIC_GB50444_ORIGINAL_20261004"
+    ]
+  },
+  "reviewEvidence": {
+    "siteFactsVerified": false,
+    "profileAdmission": false,
+    "independentApproval": false,
+    "scope": "本记录为重建作者对明确条款、适用范围和实体的逐项核验；候选须另经独立实质审核后发布。不代表全库审核、现场违法/整改完成或标准全文再发布授权。"
+  },
   "contextHashes": {
-    "hazard": "3b77f063fcd5dad0e6805b4e26576481ab08169c0f759e7325fe227668538f1c",
+    "hazard": "188293ca67d6c5602ee449729fbe530d96b60a2fd19e463acf1dddd11a631342",
     "clause": "bcdff82e2038b260874132adda7e268e9c0b30ad591af135c69258979e7f7916"
   },
-  "checkedAt": "2026-09-26T18:57:34+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "按第5.2.1条原文纠错；报废器材更换义务另由GB55036第10.0.7条支持。",
-  "evidenceRefs": [
-    "E_EXTINGUISHER_MONTHLY_CQ_20260926",
-    "E_GB55036_SUPERSESSION_SH_20260926"
-  ]
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_365F2FD05EA345A8A4E71BC9B9",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "d5927bcea98e4ed58b5585d4f7be629ba9222678c8528af7cca83aea96478e0d",
+    "contextHashes": {
+      "hazard": "3b77f063fcd5dad0e6805b4e26576481ab08169c0f759e7325fe227668538f1c",
+      "clause": "bcdff82e2038b260874132adda7e268e9c0b30ad591af135c69258979e7f7916"
+    },
+    "checkedAt": "2026-09-26T18:57:34+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "按第5.2.1条原文纠错；报废器材更换义务另由GB55036第10.0.7条支持。",
+    "evidenceRefs": [
+      "E_EXTINGUISHER_MONTHLY_CQ_20260926",
+      "E_GB55036_SUPERSESSION_SH_20260926"
+    ]
+  },
+  "previousReviewFileSha256": "825bce74a55d9869db258f54abd06b5b845c6d75381ebc822be8ae3e0f74221e",
+  "historySha256": "2d995dfbf19e4869b55fe5ed14abc8bb377c6639c968bb66d8b27d56a499417b",
+  "previousEntity": {
+    "applicability": "灭火器配置、外观等按适用要求检查，核实际检查及记录；不能将月检条款误写为全部场所每日或每周巡查。",
+    "clauseId": "C_GB50444_5_2_1",
+    "hazardId": "H_365F2FD05EA345A8A4E71BC9B9",
+    "id": "K_XLSX_WEB_H_365F2FD05EA345A8A4E71BC9B9",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct",
+    "reason": "按第5.2.1条原文纠错；报废器材更换义务另由GB55036第10.0.7条支持。"
+  },
+  "previousEntityFileSha256": "4d79ce832e819635709159e8ed168c90f1850ce67f6390f67fd5339c72b3e9e8"
 }

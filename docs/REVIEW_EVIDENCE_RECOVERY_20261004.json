@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "review-evidence-recovery-v1",
+  "asOf": "2026-10-04",
+  "basis": "PR108 current review references compared against actual Evidence IDs and available prior recovery inputs; missing object bytes were not recovered.",
+  "items": [
+    {
+      "hazardId": "H_COM_GAS_HOSE_ELECTRIC",
+      "reviewPath": "knowledge/reviews/hazards/H_COM_GAS_HOSE_ELECTRIC.json",
+      "beforeFileSha256": "7fe68bfcf2b4264e08d1b0692d4d7d384958286441c009ecd764d6316d9db79f",
+      "afterFileSha256": "d76ae16e6c395fd12b99fc7950752e8e77c77323e20680e672e5d4e0d1dad2e2",
+      "previousReviewPreservedExactly": true,
+      "unrecoveredEvidenceIds": [
+        "E_RESEARCH_GB9448_STATUS_20261002",
+        "E_RESEARCH_GB9448_SH_GUIDANCE_20261002"
+      ],
+      "decision": "rejected",
+      "releaseEligibilityGranted": false
+    },
+    {
+      "hazardId": "H_COM_GAS_CYL_ELEC_PROX",
+      "reviewPath": "knowledge/reviews/hazards/H_COM_GAS_CYL_ELEC_PROX.json",
+      "beforeFileSha256": "2b16c22c42820ee16c0f33085e44397670aeb755a0d00ba67da4a327334a2025",
+      "afterFileSha256": "43efa9bfddeea0fc52b05d9ded23f25564bc8ec5d4d1fa97fdbdbaeaaf62ea29",
+      "previousReviewPreservedExactly": true,
+      "unrecoveredEvidenceIds": [
+        "E_RESEARCH_GB9448_STATUS_20261002",
+        "E_RESEARCH_GB9448_SH_GUIDANCE_20261002"
+      ],
+      "decision": "rejected",
+      "releaseEligibilityGranted": false
+    },
+    {
+      "hazardId": "H_COM_FLASHBACK_ARRESTOR",
+      "reviewPath": "knowledge/reviews/hazards/H_COM_FLASHBACK_ARRESTOR.json",
+      "beforeFileSha256": "cfeca9a9534cd32c93a261d645919478130a636b7dfce5cadabe7d2f2ac4d76f",
+      "afterFileSha256": "d83a6c41bc84d00fb75c70afe6e5ea2638e61a5228618291c46c92f5c31e2aa8",
+      "previousReviewPreservedExactly": true,
+      "unrecoveredEvidenceIds": [
+        "E_RESEARCH_JGJ18_STATUS_20261002",
+        "E_RESEARCH_TSG23_PARTIAL_20261002"
+      ],
+      "decision": "rejected",
+      "releaseEligibilityGranted": false
+    }
+  ],
+  "limits": [
+    "Presence checks do not establish legal validity or applicability.",
+    "The missing research IDs remain visible in immutable prior review records.",
+    "No new evidence object or earlier-source retrieval claim was fabricated."
+  ]
+}

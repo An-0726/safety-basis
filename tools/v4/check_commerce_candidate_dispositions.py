@@ -132,8 +132,11 @@ def validate_commerce_dispositions(root: Path):
             or {i.get('hazardId') for i in continuation.get('items', [])} != expected_continuation):
         errors.append('continuation independent source review must cover exact new definitions and merge')
     independent = dict(independent, items=independent.get('items', []) + continuation.get('items', []))
-    errors += validate_atomic_splits(atomic_rows, rows, source_map, entities)
-    return errors + validate_independent_review(rows, independent, entities, atomic_rows)
+    from commerce_merge_history import approved_atomic_history
+    historical_entities, carry_errors = approved_atomic_history(root, entities)
+    errors += carry_errors
+    errors += validate_atomic_splits(atomic_rows, rows, source_map, historical_entities)
+    return errors + validate_independent_review(rows, independent, historical_entities, atomic_rows)
 
 
 def validate_atomic_splits(atomic_rows, rows, source_map, entities):
