@@ -113,7 +113,7 @@ def main():
                         tabIndex:x.tabIndex})'''), width)
                     region.focus(); region.press('ArrowRight')
                     if width < 540:
-                        page.wait_for_function("document.querySelector('#detail .normative-table-region').scrollLeft > 0")
+                        page.wait_for_function("() => document.querySelector('#detail .normative-table-region').scrollLeft > 0")
                     scroll_left = region.evaluate('x=>x.scrollLeft')
                     wanted = expected_clipboard(row)
                     for button in ('#copy', '#copyfull', '#copy'):

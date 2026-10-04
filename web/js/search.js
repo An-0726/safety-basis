@@ -179,9 +179,14 @@ const hazardScore=(r,q,terms)=>{
 
 export function searchHazardsDetailed(rows, query, filters={}) {
   const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
+  const literalTitleQuery=normalize(query);
   const out=[];
   for(const r of rows){
-    if(!standardsMatch(r,prepared.standards,'hazards')) continue;
+    // A complete prose title can mention a different standard from its basis.
+    // Retrieve that literal title without promoting the mention to an identity;
+    // designation-only and other keyword queries still require dedicated bases.
+    const exactTitle=prepared.standards.length>0 && terms.length>0 && normalize(r.title)===literalTitleQuery;
+    if(!exactTitle && !standardsMatch(r,prepared.standards,'hazards')) continue;
     if(r.status==='已失效' && filters.status!=='已失效') continue;
     if(filters.inspectionClass && !(r.inspectionClasses||[]).includes(filters.inspectionClass)) continue;
     if(filters.category && displayCategoryOf(r)!==filters.category) continue;
