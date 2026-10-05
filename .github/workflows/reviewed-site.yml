@@ -94,6 +94,27 @@ jobs:
           path: ${{ runner.temp }}/browser-local
           if-no-files-found: warn
           retention-days: 7
+      - name: Upload focused reviewable browser evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: official-clause-browser-local-focused
+          path: |
+            ${{ runner.temp }}/browser-local/browser.json
+            ${{ runner.temp }}/browser-local/ordinary-tables.json
+            ${{ runner.temp }}/browser-local/ordinary-table-*.png
+            ${{ runner.temp }}/browser-local/tsg-reading-*.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_200F007CE0EF47DFB8BE2B8618.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_4E5F4BB13B82457DA5377CABDF.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB3836_EX_D_MISSING_FASTENER.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB3836_UNUSED_ENTRY.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB51309_SELF_POWERED_PLUG.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB55037_BUILDING_GAS_ALARM.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GBT34525_PREUSE_CHECK.png
+          if-no-files-found: warn
+          retention-days: 7
+          compression-level: 9
       - uses: actions/upload-artifact@v4
         with:
           name: current-safety-site
@@ -163,3 +184,24 @@ jobs:
           path: ${{ runner.temp }}/online-verify
           if-no-files-found: warn
           retention-days: 7
+      - name: Upload focused reviewable browser evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: official-clause-online-verify-focused
+          path: |
+            ${{ runner.temp }}/online-verify/browser-public.json
+            ${{ runner.temp }}/online-verify/ordinary-tables.json
+            ${{ runner.temp }}/online-verify/ordinary-table-*.png
+            ${{ runner.temp }}/online-verify/tsg-reading-*.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_200F007CE0EF47DFB8BE2B8618.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_4E5F4BB13B82457DA5377CABDF.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB3836_EX_D_MISSING_FASTENER.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB3836_UNUSED_ENTRY.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB51309_SELF_POWERED_PLUG.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB55037_BUILDING_GAS_ALARM.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GBT34525_PREUSE_CHECK.png
+          if-no-files-found: warn
+          retention-days: 7
+          compression-level: 9
