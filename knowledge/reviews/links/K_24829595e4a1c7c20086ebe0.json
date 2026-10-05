@@ -1,22 +1,55 @@
 {
-  "id": "RV_79d02a44c1b4515b",
   "entityId": "K_24829595e4a1c7c20086ebe0",
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "pending",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "《危险化学品安全管理条例》第二十条属危险作业场所安全设施配置的一般义务，保留为 fallback；本条 direct 依据已由 HJ 2000-2010 第5.4.1条 承担。",
-  "reasonCodes": [
-    "FALLBACK_ROLE_CONFIRMED",
-    "DIRECT_CLAUSE_ADDED"
+  "reviewedContentHash": "e1128649f2a5374bb350a87d95cbacf59880223371bb39d4de4d7271058c3f63",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
+  "evidenceRefs": [
+    "EH_SUB1_f39f9807d36d72c75c84a22f269bda565d5b4371fd4509a77dda32bbf2900080"
   ],
-  "reviewedContentHash": "a6fbc74098cd81c53a03ae702b12cea68321309001b3167e2cc786440dd38aee",
-  "contextHashes": {
-    "hazard": "3a22b87d6e3a1c73a07a9af12ee362b930404b68c917b9c1b122bb33b6bdacd5",
-    "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c",
-    "link": "ae61d9d44c1f8bf8b335ae96c1da256307ca9a2c48b451eec887649a3af5981b"
+  "reason": "逐项比较第二十条生产/储存危化品单位对象和一般设施列举，与污染治理工程风机介质选型无一一等价；现H收窄后旧全国通用关联仍无足够适用性，保持pending隔离。不是以新hash替代核验。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "id": "RV_79d02a44c1b4515b",
+    "entityId": "K_24829595e4a1c7c20086ebe0",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "pending",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "《危险化学品安全管理条例》第二十条属危险作业场所安全设施配置的一般义务，保留为 fallback；本条 direct 依据已由 HJ 2000-2010 第5.4.1条 承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "reviewedContentHash": "a6fbc74098cd81c53a03ae702b12cea68321309001b3167e2cc786440dd38aee",
+    "contextHashes": {
+      "hazard": "3a22b87d6e3a1c73a07a9af12ee362b930404b68c917b9c1b122bb33b6bdacd5",
+      "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c",
+      "link": "ae61d9d44c1f8bf8b335ae96c1da256307ca9a2c48b451eec887649a3af5981b"
+    },
+    "evidenceRefs": [],
+    "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
   },
-  "evidenceRefs": [],
-  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  "previousReviewFileSha256": "39073fc54ddd2643856f4c662cc8688387b13255fe1a60c6a3f6658bbe442149",
+  "previousDefinition": {
+    "id": "K_24829595e4a1c7c20086ebe0",
+    "entityType": "link",
+    "hazardId": "H038",
+    "clauseId": "C_229C416CB5F55CB0A4FE6865",
+    "role": "fallback",
+    "applicability": "全国通用",
+    "jurisdiction": "national",
+    "reason": "废气治理风机选型与处理介质不匹配，违反危险化学品安全管理条例第二十条危化品单位应当根据危险特性设置相应安全设施设备的要求。处理易燃易爆或腐蚀性废气的风机必须选用防爆型或防腐型，选型不匹配会引发安全事故。",
+    "createdAt": "2026-09-10T17:15:00+08:00",
+    "lifecycle": "proposed",
+    "status": "needs_review"
+  },
+  "previousEntityFileSha256": "ab445cb2e345ed0e9e57924fb81f21be78ec31b120b94532578f77119db40ad1",
+  "contextHashes": {
+    "hazard": "cbcb1122dfe142e94e17791a2c7bcaab5dc8b38eae0e650d89ec769f1aab286c",
+    "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c"
+  }
 }

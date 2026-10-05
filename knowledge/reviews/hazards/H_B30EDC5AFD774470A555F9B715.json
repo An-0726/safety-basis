@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_B30EDC5AFD774470A555F9B715",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1ba6303abe9e8996ae729fa766e75ab12f2b701265b9be2c7992718d536259a0",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_XLSX_FT_36E528BE2345959812615FB3"
+    "E_ALL_ELECTRICAL_SAFETY_LAW_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "08a65655e57ac133f2b7c64938acb2fd76cd9502c64a394e67ebc0f152c4e0b3",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "安全生产法35仅支持较大危险因素场所设施设备明显标志；删除无本条依据的最高等级措施，包装/运输标签分支不批准。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_B30EDC5AFD774470A555F9B715",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_36E528BE2345959812615FB3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "08a65655e57ac133f2b7c64938acb2fd76cd9502c64a394e67ebc0f152c4e0b3",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousReviewFileSha256": "fdf9981426482cd98661e3e95408000f1ea36a22d6727c98ff8e95a1b4780476",
+  "previousDefinition": {
+    "id": "H_B30EDC5AFD774470A555F9B715",
+    "title": "贮存的化学危险品,未有明显的标志",
+    "description": "贮存的化学危险品无明显标志，无法辨识其危险特性。",
+    "measures": "在贮存的化学危险品处设置明显标志；同一区域存放多种等级危险品时按最高等级标志。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全标志",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "贮存的化学危险品,未有明显的标志"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《常用化学危险品贮存通则》第4.6条",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "2a7a4b9ee8dc6d2220c5a6e2ff14f1a5d4b7ef0e0f0bbd211cc80a09bde11134"
 }

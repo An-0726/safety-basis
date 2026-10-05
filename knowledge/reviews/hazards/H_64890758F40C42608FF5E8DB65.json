@@ -1,13 +1,82 @@
 {
-  "entityType": "hazard",
   "entityId": "H_64890758F40C42608FF5E8DB65",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "73eb71557b47a01aa5a571b4fd0141237540032914ab61404d63b4b6563a8d02",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "abcc33efee20bdb3985f4845ecd7c74e0a28d096e066613953f7b993d6883043",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_GB50187_2012"
-  ]
+    "E_ALL_GB50187_3_0_12_1_PLATFORM_20261005"
+  ],
+  "reason": "仅公开强制性子项，不借镜像第2项填入GB50201防洪等级；纠正原文字损坏，不认证具体选址事实。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_64890758F40C42608FF5E8DB65",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "73eb71557b47a01aa5a571b4fd0141237540032914ab61404d63b4b6563a8d02",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50187_2012"
+    ]
+  },
+  "previousReviewFileSha256": "8bcf6ea6dec2542c8e9b12c9acd1078e23ac19cac9754f969581d977d9708575",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "厂址,未位于不受洪水、潮水或内涝威胁的地带,并未符合下列规定:当公司不可避免不受洪水、潮水、或内涝威胁的地带时,必须采取防洪、排涝措施",
+    "id": "H_64890758F40C42608FF5E8DB65",
+    "keywords": [
+      "厂址",
+      "未位于不受洪水",
+      "潮水或内涝威胁的地带",
+      "厂",
+      "址",
+      ",",
+      "未",
+      "位",
+      "于",
+      "不",
+      "受",
+      "洪",
+      "水",
+      "潮",
+      "或",
+      "内",
+      "涝",
+      "威",
+      "胁",
+      "的",
+      "地",
+      "带",
+      "并",
+      "符",
+      "合",
+      "下",
+      "列",
+      "规",
+      "定",
+      "当",
+      "公",
+      "司",
+      "可",
+      "避",
+      "免"
+    ],
+    "lifecycle": "active",
+    "measures": "厂址位于受洪水、潮水或内涝威胁地带且采取防洪排涝措施；完成整改后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。原 conditions 字段记录的引用依据为：依据：《工业企业总平面设计规范》第3.0.12条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "厂址位于受洪水、潮水或内涝威胁地带且未采取防洪排涝措施"
+  },
+  "previousEntityFileSha256": "768ec115b0a964f063fcc3bef2fcf3d56bcfca18285ff800b33a4208026d4345"
 }

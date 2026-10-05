@@ -1,18 +1,54 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "08ce677d5bd1b77269b3016ce8375f3295ed3bade74340e11a254171437f98bd",
-  "contextHashes": {
-    "hazard": "781a31b14a4cca90b73d099cf156d6599a5d9f6bf9ad99eca34efe5ee50b1e65",
-    "clause": "5546aacbb455ead2619752c1718fca79d045360c739af0300e74e6d4e4fbb4d7"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50187-2012第3.0.6条水源电源保障要求。条款逐字原文与隐患适用性吻合。",
+  "decision": "pending",
+  "reviewedContentHash": "771fd93775af2b7c7bd63188964a3d78ca96f0ca3f193188fbc9758bb214d4c9",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_GB50187_2012"
+    "E_CONTAIN_LAYOUT_GB50187_20261004"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "独立源准入审查否决仅eia543出版扫描镜像加现行题录作为本条正式原文证据；镜像可作定位线索，现行题录不证明条文。撤回本轮3.0.6逐字原文认可及H/K准入，不以原摘要或未经主源闭环的重构正文继续正式支持；保留待正式原文核验。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "08ce677d5bd1b77269b3016ce8375f3295ed3bade74340e11a254171437f98bd",
+    "contextHashes": {
+      "hazard": "781a31b14a4cca90b73d099cf156d6599a5d9f6bf9ad99eca34efe5ee50b1e65",
+      "clause": "5546aacbb455ead2619752c1718fca79d045360c739af0300e74e6d4e4fbb4d7"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50187-2012第3.0.6条水源电源保障要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50187_2012"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "5d377ea8968a2c2a27814c2cb01dd5b7f7da09b14bd77d509916952933aa285c",
+  "previousDefinition": {
+    "applicability": "厂址不具备水源和电源",
+    "clauseId": "C_GB50187_3_0_6",
+    "hazardId": "H_4DAD0BA8DA8A454897E2954776",
+    "id": "K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "f56db16f58a752a0337a278d8d068dba0cf2ea1c1e8c3381f58a9481e8d41b2e",
+  "contextHashes": {
+    "hazard": "9451e0c078bfafa5f2b76c5575e9364bcbc0b834072a32c5b65963181c88bac8",
+    "clause": "3009398e4c13a3a75a3fc63f17c15548379b77c7d8fee0c07e66fccf67138cb4"
+  },
+  "sourceAdmission": "official-full-original-required",
+  "withdrawnAuthorAttemptHashes": {
+    "entity": "8a7e0f54808d46c29c87a2fa2711b56c4b16dea6458374f0d7ffc0c3b88699a3",
+    "review": "6d37fd50b02f2d4ae297abf603589fdea1ad6b68237f357c8a83df98164e2e94"
+  }
 }

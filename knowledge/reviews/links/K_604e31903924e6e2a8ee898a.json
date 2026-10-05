@@ -1,22 +1,52 @@
 {
-  "id": "RV_a0f3b7f3d0ad51b3",
   "entityId": "K_604e31903924e6e2a8ee898a",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "原关联所引条款实为《工贸企业粉尘防爆安全规定》第十八条『粉尘清理制度』，与『喷漆室通风量』不是同一事项，属张冠李戴，予以驳回；本条 direct 依据已由 GB 14444-2025 第5.3.1条承担。",
-  "reasonCodes": [
-    "CLAUSE_SCOPE_MISMATCH",
-    "DIRECT_ROLE_REJECTED"
+  "decision": "rejected",
+  "reviewedContentHash": "5a94c6b4348b9232d7258f79fc972492deed4b34061c7cbc21eff07b89693486",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB6514_2023_20261005"
   ],
-  "reviewedContentHash": "a9bb43b65b3c01a3860f735ac034f8dff46f3b1c8c168a18c8fcdfefd07100ef",
-  "contextHashes": {
-    "hazard": "8837c738b27b7b4d5da3c6d743e70bb644ccec9b221971dd5d0102151a0e55c2",
-    "clause": "02656aa5c614314840661ce1246b5896b715b1837009f032e4a512ecc3128d49",
-    "link": "a9bb43b65b3c01a3860f735ac034f8dff46f3b1c8c168a18c8fcdfefd07100ef"
+  "reason": "6.2.2.1仅规定调配涂料在调漆室内，不支持H076喷漆通风量；保留该H真正对应GB14444-2025 5.3.1的另一条K。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "id": "RV_a0f3b7f3d0ad51b3",
+    "entityId": "K_604e31903924e6e2a8ee898a",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "原关联所引条款实为《工贸企业粉尘防爆安全规定》第十八条『粉尘清理制度』，与『喷漆室通风量』不是同一事项，属张冠李戴，予以驳回；本条 direct 依据已由 GB 14444-2025 第5.3.1条承担。",
+    "reasonCodes": [
+      "CLAUSE_SCOPE_MISMATCH",
+      "DIRECT_ROLE_REJECTED"
+    ],
+    "reviewedContentHash": "a9bb43b65b3c01a3860f735ac034f8dff46f3b1c8c168a18c8fcdfefd07100ef",
+    "contextHashes": {
+      "hazard": "8837c738b27b7b4d5da3c6d743e70bb644ccec9b221971dd5d0102151a0e55c2",
+      "clause": "02656aa5c614314840661ce1246b5896b715b1837009f032e4a512ecc3128d49",
+      "link": "a9bb43b65b3c01a3860f735ac034f8dff46f3b1c8c168a18c8fcdfefd07100ef"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
   },
-  "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousDefinition": {
+    "id": "K_604e31903924e6e2a8ee898a",
+    "entityType": "link",
+    "hazardId": "H076",
+    "clauseId": "C_e58389b89299307a0d45042d",
+    "role": "direct",
+    "applicability": "全国通用",
+    "jurisdiction": "national",
+    "reason": "喷漆室通风系统不符合安全要求，违反GB 6514-2023涂装作业安全规程中调漆室及喷漆室通风安全要求。喷漆室必须设置有效的通风系统，控制可燃气体浓度在爆炸极限以下，通风系统不符合要求直接构成火灾爆炸隐患。",
+    "createdAt": "2026-09-10T17:15:00+08:00",
+    "lifecycle": "active"
+  },
+  "contextHashes": {
+    "hazard": "5e41f21c3c857a10b49715996a81d31ef8f36af7c7ee05084ea4efa3d8b9200f",
+    "clause": "02656aa5c614314840661ce1246b5896b715b1837009f032e4a512ecc3128d49"
+  }
 }

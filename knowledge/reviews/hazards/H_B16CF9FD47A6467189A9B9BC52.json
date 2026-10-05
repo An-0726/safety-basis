@@ -1,18 +1,81 @@
 {
-  "decision": "verified",
   "entityId": "H_B16CF9FD47A6467189A9B9BC52",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f132f98e428fae1cee2873e86183ed9a0394291f1e1073028a2a6737af677ab8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "EH_34a20d0e0b40fbb90715258353b6288d08375d0730044f2172b3a1775380696d"
+    "E_REMAIN_FIRE_XF1131_20261005"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_c69c87f4e2fdca896e27287b",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "第8.6首句，保留两类可选保护管材料，限定仓储室内储存。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_B16CF9FD47A6467189A9B9BC52",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_34a20d0e0b40fbb90715258353b6288d08375d0730044f2172b3a1775380696d"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_c69c87f4e2fdca896e27287b",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "52109478843f0d87f12e0b8e34a7f05514ea577b83cff99ff9b488c85f71dcfc",
+    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+    "checkedAt": "2026-09-12T02:29:02+08:00",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "52109478843f0d87f12e0b8e34a7f05514ea577b83cff99ff9b488c85f71dcfc",
-  "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-  "checkedAt": "2026-09-12T02:29:02+08:00",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "previousReviewFileSha256": "25f348c55c71fcb4c2086471a07136cc5aed4a2d939d94195ff5c4a2437e9835",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于储存场所的相关安全管理。",
+    "description": "室内储存场所内敷设的配电线路未穿金属管或难燃硬塑料管保护，线路绝缘老化或受机械损伤后易引发电气火灾。",
+    "id": "H_B16CF9FD47A6467189A9B9BC52",
+    "keywords": [
+      "室内储存场所内敷设的配电线路",
+      "未穿金属管或难燃硬塑料管保护",
+      "室",
+      "内",
+      "储",
+      "存",
+      "场",
+      "所",
+      "敷",
+      "设",
+      "的",
+      "配",
+      "电",
+      "线",
+      "路",
+      ",",
+      "未",
+      "穿",
+      "金",
+      "属",
+      "管",
+      "或",
+      "难",
+      "燃",
+      "硬",
+      "塑",
+      "料",
+      "保",
+      "护"
+    ],
+    "lifecycle": "proposed",
+    "measures": "对室内储存场所敷设的配电线路采用金属管或难燃硬塑料管保护。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《仓储场所消防安全管理通则》第8.6条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "室内储存场所内敷设的配电线路,未穿金属管或难燃硬塑料管保护"
+  },
+  "previousEntityFileSha256": "2b3b09e1aa38c65bdaf9bb06ff24a4cf77b4a76fcfed793872cfc96703d463ef"
 }

@@ -3,11 +3,47 @@
   "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "5c08dd2884294d63a3d1585c9d89fb65b3eee8827b541ee06ea708b4cd7b84ea",
-  "checkedAt": "2026-09-23",
-  "reviewer": "Codex Local Agent",
+  "reviewedContentHash": "d9685693f96e8acfd5bcd432135f34767d1031dd24ccb1b6c904873912bad322",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_15607_2023"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "核对现行 GB 15607-2023 的完整具体条款；已有候选保留稳定编号并收紧适用范围，新增项目已对照现有隐患去重。"
+  "reason": "重新核对第5.1.3条具体义务及工艺范围，去除旧泛涂装套用、OCR串附录和错位适用性。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityId": "H_15607_5_1_3_1",
+    "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "5c08dd2884294d63a3d1585c9d89fb65b3eee8827b541ee06ea708b4cd7b84ea",
+    "checkedAt": "2026-09-23",
+    "reviewer": "Codex Local Agent",
+    "evidenceRefs": [
+      "E_15607_2023"
+    ],
+    "reason": "核对现行 GB 15607-2023 的完整具体条款；已有候选保留稳定编号并收紧适用范围，新增项目已对照现有隐患去重。"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "仅适用于采用粉末静电喷涂工艺的喷粉区；应核实喷粉室、设备和实际作业状态。 仅在相关设施存在粉尘爆炸危险时适用。",
+    "description": "存在粉尘爆炸危险的刚性粉末回收、净化、供粉装置或基本封闭喷粉室仅单独使用隔爆装置，未配置符合要求的控爆措施。",
+    "id": "H_15607_5_1_3_1",
+    "keywords": [
+      "粉末静电喷涂",
+      "存在粉尘爆炸危险的喷粉设施仅用隔爆装置作为控爆措施"
+    ],
+    "lifecycle": "active",
+    "measures": "按粉尘爆炸风险配置符合要求的控爆措施，不单独以隔爆装置作为唯一措施。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "依据 GB 15607-2023 第5.1.3条；现场判定仍需核实实际状态。",
+    "places": [
+      "粉末静电喷涂喷粉区"
+    ],
+    "title": "存在粉尘爆炸危险的喷粉设施仅用隔爆装置作为控爆措施"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

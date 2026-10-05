@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_060514A9AB6347C6A98CD93842",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "7466ee968a320530ed554d037381b085080320893b24fc9030044ce7da2c87cc",
-  "contextHashes": {
-    "hazard": "e56d57b04ded516b106a519244ec9b0b72d783bf09bf164e135b72007c7de6ec",
-    "clause": "d5cf7b0c208c75d8ec49f0ecdcace05c9c2ed125b011847e00fb3e06b0fcf1be"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.1条显著警示标识要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "b8e962ce37f302c77bdb45f2c9386de706388c31ea9edd4facecff3c9eaf12c5",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
+    "E_REMAIN_FIRE_JGJ91_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "逐K核对第二句危化品存放使用区域显著标识及被引标准，限定科研建筑设计。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_060514A9AB6347C6A98CD93842",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "7466ee968a320530ed554d037381b085080320893b24fc9030044ce7da2c87cc",
+    "contextHashes": {
+      "hazard": "e56d57b04ded516b106a519244ec9b0b72d783bf09bf164e135b72007c7de6ec",
+      "clause": "d5cf7b0c208c75d8ec49f0ecdcace05c9c2ed125b011847e00fb3e06b0fcf1be"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.1条显著警示标识要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "87913c593131eb29cadd8a37a90153961bfc530cefa8b38020a5f6ded2e06de2",
+  "previousDefinition": {
+    "applicability": "限制进入实验区或危化品存放区域未设标识",
+    "clauseId": "C_JGJ91_5_2_1",
+    "hazardId": "H_060514A9AB6347C6A98CD93842",
+    "id": "K_XLSX_WEB_H_060514A9AB6347C6A98CD93842",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "06d47b6b0e08c1567c7faa3fe85db2b0793c7dfe62ae7e453ef4407dcbee436b",
+  "contextHashes": {
+    "hazard": "ee71b6ce0c1c86926d9461a4dda2f68d9e2e052a6698ef6b466ad01621101009",
+    "clause": "e6103b2aab56f100093c3aa71a9bc09543f07ba990f42d8bdd0ac3861da54838"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_4_2_2_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "351201d5641f7232b9a72fc7ef13ef304285c1555394e07d6f3a4f5dd361b1e8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_12158_GB 12158"
+    "E_ALL_ELECTRICAL_GB12158_20261005"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "ffa3b256d71a146d2572e1d770fe47c20ced7a85c40f9950a61fccfe2ad526c7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "正确接地消费者，补完整静电危险范围；存在任一不合格导体即核查，不须所有导体都未接地。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_4_2_2_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "ffa3b256d71a146d2572e1d770fe47c20ced7a85c40f9950a61fccfe2ad526c7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，在静电危险场所，所有对地绝缘的静电导体未接地，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_4_2_2_1_1",
+    "keywords": [
+      "在静电危险场所",
+      "所有对地绝缘的静电导体未接地"
+    ],
+    "lifecycle": "active",
+    "measures": "在静电危险场所，所有对地绝缘的静电导体接地。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "在静电危险场所，所有对地绝缘的静电导体未接地"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

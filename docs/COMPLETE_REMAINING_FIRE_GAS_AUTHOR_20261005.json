@@ -1,0 +1,1578 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "475856179bfd3c6c3446d10cfc4de73e51f228f3",
+  "baselineTree": "fc62800c09421f687c0734f699b95befa8231f2f",
+  "localBaselineCommit": "a40d8d961a53b5379916a67b522801088390c974",
+  "reviewStage": "author_verified_independent_review_pending",
+  "scopeCount": 41,
+  "implementedOriginalCount": 9,
+  "additionalDependencyCount": 6,
+  "decisions": [
+    {
+      "hazardId": "H069",
+      "action": "narrow_existing_stable_id",
+      "boundary": "仅恢复第6.8(a)净距分支，保留0.3m和人字屋架从横梁起算。不是任何建筑、任何屋顶的通用限高。",
+      "positiveCase": "既有仓储库房堆垛距横梁0.2m。",
+      "negativeCase": "炸药仓库；或与柱、墙距离不足而顶部距离合格。",
+      "linkIds": [
+        "K_XLSX_WEB_03B2F837CD3D64D61AB79B20"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "一般建筑或不在XF1131范围的库房、任意屋顶限高主张。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_21A69E2CA823BC59272F464D",
+      "action": "narrow_existing_stable_id",
+      "boundary": "第8.10前半句定期检查、检测分支，与长时间超负荷运行分支独立，不添加未载明频次。",
+      "positiveCase": "仓储场所长期未对电气线路开展检查检测。",
+      "negativeCase": "其他行业场所；仅发生超负荷而非本项定期检查检测缺陷。",
+      "linkIds": [
+        "K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "未给定统一周期，不能添加每月/每年检测硬阈值。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_45A066D644BE4A0992ECC95E1B",
+      "action": "narrow_existing_stable_id",
+      "boundary": "只恢复库房划线分支；必要防火安全标志保留在完整原文，不扩成同一复合触发。",
+      "positiveCase": "既有仓储库房主要通道未划线标明。",
+      "negativeCase": "普通生产车间无库房划线；仅消防标志缺失。",
+      "linkIds": [
+        "K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "一般消防安全标志与库房划线是独立义务，不作为本H复合触发。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_524210530E054FE1BB1D918820",
+      "action": "narrow_existing_stable_id",
+      "boundary": "只采用GB55036第3.0.5(4)方便使用维护义务；不保留报批稿“大空间优先疏散门外”要求，不能仅凭未设门外判定。",
+      "positiveCase": "大空间内消火栓设置导致无法方便使用维护。",
+      "negativeCase": "室内消火栓设在门内但方便使用维护；不能仅据此认定。",
+      "linkIds": [
+        "K_XLSX_NEW14_69C24502ACF899C740842392"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "报批稿“大空间优先疏散门外”内容不准入。"
+      ],
+      "invalidClaimExcluded": [
+        "用GB50974报批稿恢复优先疏散门外。"
+      ]
+    },
+    {
+      "hazardId": "H_66611E63B2814335BFA0EF5E0D",
+      "action": "narrow_existing_stable_id",
+      "boundary": "完整第10.1.5条及表10.1.5；保留三级负荷例外，不把柴油发电机位置、30秒启动、二级负荷等既有项目模板当成通用结论。",
+      "positiveCase": "二级消防负荷备用电源容量不足以覆盖对应设计火灾延续时间。",
+      "negativeCase": "三级消防负荷仅因不设本条所述备用消防电源被认定；或凭模板认定某项目已合格。",
+      "linkIds": [
+        "K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "柴油机位置、30秒启动和项目二级负荷合格模板不能从本条推出。"
+      ],
+      "invalidClaimExcluded": [
+        "把既有项目模板视为通用要求或已整改结论。"
+      ]
+    },
+    {
+      "hazardId": "H_99B75F33D550486BBA89A77139",
+      "action": "narrow_existing_stable_id",
+      "boundary": "恢复壁挂手报按钮明显标志的设计分支；不保留“被柜子遮挡且无标志”的未经证实现场复合描述，不把宜改为应。",
+      "positiveCase": "适用新建工程设计的壁挂手报按钮未设置明显标志。",
+      "negativeCase": "非壁挂按钮仅无标志；或普通既有现场仅凭本设计条文自动认定管理违法。",
+      "linkIds": [
+        "K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "非壁挂按钮的标志分支、既有运行遮挡复合缺陷未由本设计分支支持。"
+      ],
+      "invalidClaimExcluded": [
+        "无实证柜子遮挡且缺标志的复合现场结论。"
+      ]
+    },
+    {
+      "hazardId": "H_B16CF9FD47A6467189A9B9BC52",
+      "action": "narrow_existing_stable_id",
+      "boundary": "第8.6首句，保留两类可选保护管材料，限定仓储室内储存。",
+      "positiveCase": "仓储室内配电线路裸露未采用规定管材保护。",
+      "negativeCase": "非仓储一般建筑电缆；已采用难燃硬塑料管而非金属管。",
+      "linkIds": [
+        "K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "仓储室内储存场所以外的一般建筑或电缆保护主张。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_C706DAF977FA4CC5960E97DD05",
+      "action": "narrow_existing_stable_id",
+      "boundary": "限科研建筑室内管道设计与可燃/助燃介质，完整保留第二句接地和跨接应依现行有关标准执行，未核数值不补写。",
+      "positiveCase": "改建科研建筑室内氧气管道设计缺导静电接地。",
+      "negativeCase": "普通工业燃气总管；科研建筑室外管道；未知介质仅凭气体管道名称套用。",
+      "linkIds": [
+        "K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "一般工业或室外气体管线接地不由科研建筑室内设计分支覆盖。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CF_MAJOR_06",
+      "action": "narrow_existing_stable_id",
+      "boundary": "精确机械企业+煤气（天然气）+燃烧装置总管压力监测报警/切断联锁，不扩为所有可燃气体；不合并独立火焰监测/熄火保护分支，不自动认定未知现场。",
+      "positiveCase": "机械企业天然气燃烧装置总管报警未与紧急自动切断装置联锁。",
+      "negativeCase": "有色企业须核强制送风条件；建材预混炉窑须核另一条；液化石油气非本条煤气天然气分支。",
+      "linkIds": [
+        "K_CF_MAJOR_06_C_PDDB_7"
+      ],
+      "scope": "original_41",
+      "remainingUnsupportedBranches": [
+        "非机械企业、其他燃气介质不由第7(5)此窄分支覆盖。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H077",
+      "action": "narrow_existing_stable_id",
+      "boundary": "依赖纠错：本H核心与真实5.3.3一致，限科研建筑设计及实际化学品危险，不承接错误C的通用应急物品配置。 两种设施/系统任一缺失即可，不要求两种同时缺失。",
+      "positiveCase": "符合科研建筑和化学品危险条件时，仅缺就近应急洗眼器或仅缺就近应急喷淋，分别触发。",
+      "negativeCase": "普通工业酸碱岗位；无所述化学品危险的实验室。",
+      "linkIds": [
+        "K_PHASE6_3F27AE868858FCDD47725935"
+      ],
+      "scope": "additional_source_dependency",
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_3C5449E0928B4B219D77694FDC",
+      "action": "narrow_existing_stable_id",
+      "boundary": "依赖纠错：限定科研建筑设计，仅人员限制区域的显著警示分支，删除与本分支无直接文本支撑的记录/通用管理扩张。",
+      "positiveCase": "新建科研建筑限制进入实验室未设置显著警示。",
+      "negativeCase": "不限制人员进入的普通房间。",
+      "linkIds": [
+        "K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC"
+      ],
+      "scope": "additional_source_dependency",
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_060514A9AB6347C6A98CD93842",
+      "action": "narrow_existing_stable_id",
+      "boundary": "依赖纠错：复合旧H收窄为第二句危化品区域显著标识，保留GB13690引用，不与第一句人员限制警示分支重复。",
+      "positiveCase": "改建科研建筑的危化品使用区未设置显著标识。",
+      "negativeCase": "一般生产车间；仅限制进入区域无危化品存用。",
+      "linkIds": [
+        "K_XLSX_WEB_H_060514A9AB6347C6A98CD93842"
+      ],
+      "scope": "additional_source_dependency",
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_387CD4000D844D269A439E4D45",
+      "action": "narrow_existing_stable_id",
+      "boundary": "依赖纠错：保留真实危险触发与监测报警/自动灭火系统技术义务；不扩大为所有实验室、一般消防设备或未知现场起火后果。 两种设施/系统任一缺失即可，不要求两种同时缺失。",
+      "positiveCase": "符合科研建筑和火灾/爆炸危险条件时，仅缺监测报警系统或仅缺自动灭火系统，分别触发。",
+      "negativeCase": "普通无所述危险实验室；仅缺手提灭火器不等于该自动灭火系统分支。",
+      "linkIds": [
+        "K_XLSX_WEB_H_387CD4000D844D269A439E4D45"
+      ],
+      "scope": "additional_source_dependency",
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_A4AF26421A0E404F82BF740A6D",
+      "action": "quarantine_unsupported_dependency",
+      "boundary": "完整依赖复核确认本H仅有此K；真实JGJ91第5.3.3仅规定有强酸强碱等化学品危险的实验室就近设置应急洗眼器及应急喷淋，不能支撑通用灭火器、消火栓、药箱、运行状态复合义务。旧实体保留隔离，待另有精确法源；不认定缺陷不存在。",
+      "linkIds": [
+        "K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D"
+      ],
+      "scope": "additional_source_dependency",
+      "remainingUnsupportedBranches": [
+        "通用灭火器、消火栓、药箱配置与运行状态复合义务尚无精确当前法源。"
+      ],
+      "invalidClaimExcluded": [
+        "旧C_JGJ91_5_3_3中的灭火器、急救箱及正常可用句不是该条正式原文。"
+      ]
+    },
+    {
+      "hazardId": "H038",
+      "action": "narrow_existing_stable_id",
+      "boundary": "追加源依赖纠错：将H038危化活动通用模板收窄为大气污染治理工程介质选型，完整保留5.4.1列举对象及非爆炸环境“宜”分支；不声称覆盖全部产品合格证明或所有产品标准条款。",
+      "positiveCase": "废气治理工程输送腐蚀性气体而未选防腐风机。",
+      "negativeCase": "普通通风或不属大气污染治理的危化活动；非爆炸环境风机仅因电机不防爆而被判不合格。",
+      "linkIds": [
+        "K_AC0819521C0C6C9961FDEB",
+        "K_24829595e4a1c7c20086ebe0"
+      ],
+      "scope": "additional_source_dependency",
+      "remainingUnsupportedBranches": [
+        "普通工业通风及全部产品合格证/产品标准条文的合规判定未覆盖。"
+      ],
+      "invalidClaimExcluded": [
+        "原H中全部危化生产、储存、经营、使用、装卸、运输或处置活动通用模板不适用。"
+      ]
+    }
+  ],
+  "unchangedDispositions": [
+    {
+      "hazardId": "H_0647B65088564B789D64080EF1",
+      "disposition": "已审不准入",
+      "reason": "正向义务句本身不是缺陷；消防法16(2)真实但不能把符合要求的正向句直接发布。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": [
+        "正向义务句本身不是缺陷；消防法16(2)真实但不能把符合要求的正向句直接发布。"
+      ]
+    },
+    {
+      "hazardId": "H_1B474A2ABA0E23143E2FE451",
+      "disposition": "用户跳过",
+      "reason": "江苏苏安办〔2020〕13号四项之一；本轮按授权不重查。当前K虽active但review rejected，公开集确实排除。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "按用户授权跳过，不重审江苏废屑细则；不声称已覆盖。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_25CEE684DF2F4D9D73BDB1AB",
+      "disposition": "需原文或工况",
+      "reason": "钢瓶和容器“传送”接地跨接原句检索指向重点监管化学品/LPG安全资料；尚不清传送指物料转输、充装还是搬运，不能把所有手工运瓶列为接地跨接。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保留候选；需物质、转输工艺和同一义务的完整现行正文。危化充装或静电总体条款不补造。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_286F7049C36E470F8273F18889",
+      "disposition": "条件/部分覆盖",
+      "reason": "原通用库房五距主张范围过宽。既有仓储且排除炸药、花炮仓库时，可条件映射C_XF1131_6_8及H069/H052—H055；旧K引用甲类厂房对外防火间距确定错配，原描述还截断。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "原通用库房中不符合XF1131既有仓储范围的对象未被严格覆盖；不得将五距无条件套用炸药仓库、花炮仓库或任意新建库房。"
+      ],
+      "invalidClaimExcluded": [
+        "旧3.2.1甲类厂房对外间距K不能支撑库房内部五距。"
+      ]
+    },
+    {
+      "hazardId": "H_315C5D031AFC4502B69ACB9F38",
+      "disposition": "需原文或工况",
+      "reason": "消防救援道路、建筑疏散出口和厂区错车属于不同对象。GB12801-2025第4.2.7不能直接建立原三项复合要求；本轮后续已找到GB50187正式出版扫描镜像，但非政府托管，来源强度及精确分支适用仍待审。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "原道路、疏散出口及错车复合义务未形成同一完整现行直接链；GB50187出版扫描镜像需核来源强度、原页及对象条件。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_409ABC97960D46FBBF6AA54D28",
+      "disposition": "需原文或工况",
+      "reason": "新全国微站建设标准明确指导性；第16条/67条无微站器材清单和专用记录义务。地方乡镇/社区清单要求不能直接等价全国企业。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "本轮跳过新准入；待明确地域、站型和直接管理规范，不借建筑消防设施检测档案条款。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_5F63C331858C41AB99F51F5D9E",
+      "disposition": "部分覆盖仍缺",
+      "reason": "未指明器材类型。灭火器遮挡和消火栓遮挡已有精确规则，不能将所有消防器材视为同一规范对象。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保持原候选不再新建泛规则，实际使用按器材识别后选canonical；其他设施另核。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_68196C0A0FBDDAF0354E0F71",
+      "disposition": "需原文或工况",
+      "reason": "原氨检修句可定位2011附件，但目前无完成渲染核对及本日效力审查。C_MEM10_13是工贸有限空间重大事故判定，既不规定氨仪携带，也不能覆盖所有氨检修。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保持被拒旧K及公开排除，不以有限空间防护、固定报警或一般劳动防护凑等价。后续只需核氨环境检修完整原件与现行适用。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_6F7D6D7E28DD423B9F40AF8218",
+      "disposition": "需原文或工况",
+      "reason": "原GB50028 10.6.7需强条废止及工业内部范围衔接；现有消防法27无混气阻火器位置。已获AQ7019精确6.12.1.9，但专指火法锑冶炼，不能替换原全国燃气主张。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "本轮不升格。若未来要锑冶炼窄分支，独立核范围和条文；科研建筑支管阻火器canonical也不是同一混气工况。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_76ED73E234FC40068D08F54785",
+      "disposition": "部分覆盖仍缺",
+      "reason": "10.1为真实总括配置要求，但引用GB50016/50140不是一项明确缺陷；设施种类、触发阈值及新版通规优先性须逐项确定。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保持候选，使用既有缺少特定设施或灭火器选型数量规则，不用已核10.1整体恢复一切配置。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_7F41DF4810BA4E8C876859430B",
+      "disposition": "已审不准入",
+      "reason": "消防车道距外墙<5m一概认违不成立；旧引甲类厂房间距明确错误。当前3.4.5检验实际通行作业条件，不能自动转成5m刚性阈值。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": [
+        "消防车道距外墙<5m一概认违不成立；旧引甲类厂房间距明确错误。当前3.4.5检验实际通行作业条件，不能自动转成5m刚性阈值。"
+      ]
+    },
+    {
+      "hazardId": "H_86F8A98CB78240378E607BEF8E",
+      "disposition": "部分覆盖仍缺",
+      "reason": "防爆柜不是统一法定设施类别。危险化学品仓库/暂存区域消防器材义务可覆盖相应现场，但不能保证每个柜周围均另设一套；旧GB50058电气选型C与灭火器材不对应。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "补柜用途/储物危险性及所在场所配置设计；已覆盖分支选canonical，保留原候选。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_8C14C2BD0D4A4EF1B42FDC8C2E",
+      "disposition": "用户跳过",
+      "reason": "江苏废屑四项之一；第6.1粉尘除尘不能覆盖每班/两天、PH和乳化液等细则。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "按用户授权跳过，不重审江苏废屑细则；不声称已覆盖。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_B552B08A4FD28A8770CDC2BB",
+      "disposition": "需原文或工况",
+      "reason": "当前title泛化为有毒缺氧高风险，description仍氨检抢修正压呼吸器；C_MEM10_13不支持这一装备清单。一般安法45也不证明具体装备选择。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保持公开排除；如补2011氨源必须收窄含氨环境，不能任意保持全高风险场景。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_BBDE0D64A2404FA6A458847EEE",
+      "disposition": "需原文或工况",
+      "reason": "完整列举六种标志原句找到2012 CNCA征求稿7.9.1（空号标准），非JGJ91正文。正式版本和活动类型适用性未闭合。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保留候选；各管道/危险场所标志已有部分canonical但不等价整实验室安全标志义务。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_BC2436C8E5BE198BA82BB74B82_1",
+      "disposition": "已审不准入",
+      "reason": "消防法27(1)主语为产品标准；普通使用企业不能修改标准。已在PR111实质隔离，不重做或当待完成。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": [
+        "消防法27(1)主语为产品标准；普通使用企业不能修改标准。已在PR111实质隔离，不重做或当待完成。"
+      ]
+    },
+    {
+      "hazardId": "H_BF64B742DF54473D9E276E316E",
+      "disposition": "已审不准入",
+      "reason": "空调机房必须二氧化碳灭火器的排他性主张不成立；10.0.1是按火灾类型选型，不指定所有空调机房只能CO2。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": [
+        "空调机房必须二氧化碳灭火器的排他性主张不成立；10.0.1是按火灾类型选型，不指定所有空调机房只能CO2。"
+      ]
+    },
+    {
+      "hazardId": "H_BF7AA7549F8E1B94012882C9",
+      "disposition": "用户跳过",
+      "reason": "江苏废屑四项之一，优先压块与干式封闭细则不由GB15577 6.1直接支持。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "按用户授权跳过，不重审江苏废屑细则；不声称已覆盖。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_C1CE3A649721387F1FC0F7BE",
+      "disposition": "用户跳过",
+      "reason": "江苏废屑四项之一，冷却常温、分类禁混和列举不相容物缺完整当前直接链。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "按用户授权跳过，不重审江苏废屑细则；不声称已覆盖。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CA3DEB8494734D578C20ECD124",
+      "disposition": "部分覆盖仍缺",
+      "reason": "机械企业非水性漆调漆间报警/通风由公开canonical与第7(7)严格覆盖；原H还包括所有调漆室及消防器材复合分支，不能整体复活。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "复用机械非水性漆精确canonical；其他行业/水性漆及器材分支另核GB6514，不再作重复恢复。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CD20735BC6DB47CE9C52EE24C0",
+      "disposition": "部分覆盖仍缺",
+      "reason": "疏散通道/安全出口和消防车道已有；通向任意消防设施道路、照明/标志与通行不是单一义务。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保留复合候选；删原正向照明句或按实际通道分别选择canonical，不把3.4.1消防车路当所有道路。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CE94D2ACC8C544BCA0FB0AA026",
+      "disposition": "历史保留",
+      "reason": "原GB/T12801-2008第5.7.1(c)至2026-09-30适用；LV排他endDate=2026-10-01使当前排除。旧K用于历史查询，不能为当前计数抹除。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保持历史链，既有新版高处坠落窄规则可检索；不将扶梯平台/围栏/系挂装置全套餐无条件迁新版。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CF_GEN_05",
+      "disposition": "需原文或工况",
+      "reason": "重中型工业货架所有层级最大荷载牌的全国精确标准原件未取得；天津地方标准仅定位不代表全国适用。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "需货架类型、额定荷载依据及适用WB/T或GB/T正式原件；保留候选不借一般禁止超载改成标牌义务。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CF_GEN_20",
+      "disposition": "需原文或工况",
+      "reason": "车间/仓库一律禁停、禁充及电池不准进楼的全国完整义务未闭合。XF1131 7.5和7.8针对作业车辆/机动车，不能不经范围分析移植所有电动自行车。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "核使用者停放、维修销售库存、充电、地区及建筑性质；地方集中充电/住宅进电梯规则不等价原工业全部场景。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CF_GEN_21",
+      "disposition": "需原文或工况",
+      "reason": "检索定位GB50016 3.2.17非承重外墙/房间隔墙/屋面板不燃芯材；原H还含吊顶及全厂房场景，GB55037内装条也依部位/类别不同，不能全用A级一刀切。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "取得完整GB50016正式原件及与GB55037衔接后仅恢复具体夹芯板构件分支；本轮未把政府检查指南摘引当完整标准准入。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_CF_GEN_24",
+      "disposition": "需原文或工况",
+      "reason": "全国2025工作指导不做强制性要求；原H强制全套正压呼吸器/防护服、水枪水带与每月台账没有全国一体依据。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "按所在地区/重点单位属性/站型核专门义务；一般有必要器材已公开，月度台账不凑。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_COM_EV_BATTERY_STORAGE",
+      "disposition": "已审不准入",
+      "reason": "既有commerce处置excluded_unsupported_claim有效：集中堆放本身不等于违法；南京用户住宅等室内禁放不是销售维修库存。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": [
+        "既有commerce处置excluded_unsupported_claim有效：集中堆放本身不等于违法；南京用户住宅等室内禁放不是销售维修库存。"
+      ]
+    },
+    {
+      "hazardId": "H_D98B4749D74246E2A3825D5B09",
+      "disposition": "部分覆盖仍缺",
+      "reason": "实际两K：消防法67罚则K proposed+pending；安法35 K active但pending。后者可支持有较大危险因素场所一般明显警示，不能完整支持严禁烟火/易燃易爆/禁手机/气体名/电话/周检套餐。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保持被Gate排除；一般警示已有canonical不造第三个H，具体瓶间按储存/供气/使用及GB15603或燃气标准精确原文另核。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_DBB3FBAC606D4719B52CEF1A5E",
+      "disposition": "部分覆盖仍缺",
+      "reason": "消防法16(5)真实，当前已改为负向缺陷，但原复合“未组织检查及时消除”须区分未检查与未整改；火灾隐患未消除已有H022，仓储检查频次已有H062，不能宣称所有分支严格重复。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保留候选或作各分支对照，不重复创建已覆盖未消除分支；未组织检查应按责任主体和检查规则明确。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_EXTINGUISHER_REPAIR_CERT_MISSING",
+      "disposition": "需原文或工况",
+      "reason": "现行身份已核，完整维修合格证条款官方原件未取到；确经维修是先决事实。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [
+        "保留proposed，缺官方XF95完整6.x/9.2.1证据及确经维修事实；不使用商业/协会截图顶替。"
+      ],
+      "invalidClaimExcluded": []
+    },
+    {
+      "hazardId": "H_F0D64F91542E4B0399D83D670D",
+      "disposition": "已审不准入",
+      "reason": "原“每个堆间应留有搬运通道”来自已被全部代替的GB18597-2001第7.5；新2023全文无同句/同一逐堆义务。XF1131主通道与垛距明确不是同一要求。",
+      "lifecycleChanged": false,
+      "remainingUnsupportedBranches": [],
+      "invalidClaimExcluded": [
+        "原“每个堆间应留有搬运通道”来自已被全部代替的GB18597-2001第7.5；新2023全文无同句/同一逐堆义务。XF1131主通道与垛距明确不是同一要求。"
+      ]
+    },
+    {
+      "hazardId": "H_0BE49AFFA4884C639EE50FD565",
+      "disposition": "条件映射，候选原字节保留",
+      "reason": "H038及K_AC0819521C0C6C9961FDEB→C_HJ2000_5_4_1已按同一污染治理工程、具体介质和安装环境修正，可条件映射防爆选型分支。不能声称H0BE全部产品合格证明/所有专业产品标准判据、普通工业通风和旧活性炭项目模板都已覆盖；候选不重复激活。",
+      "lifecycleChanged": false,
+      "conditionalCanonical": "H038",
+      "remainingUnsupportedBranches": [
+        "全部产品合格证明或专业产品标准细项未单独核准；大气污染治理工程以外的一般工业通风与旧项目模板未覆盖。"
+      ],
+      "invalidClaimExcluded": [
+        "不以H038已有同义防爆风机义务重复激活第二个正式H。"
+      ]
+    }
+  ],
+  "dependencyGateBefore": [
+    {
+      "link": {
+        "id": "K_PHASE6_3F27AE868858FCDD47725935",
+        "hazardId": "H077",
+        "clauseId": "C_JGJ91_5_3_3",
+        "role": "direct",
+        "legacyRole": "直接依据",
+        "applicability": "适用于使用强酸、强碱等存在化学品危险隐患的实验室。",
+        "jurisdictionCode": "CN",
+        "lifecycle": "active",
+        "priority": 10,
+        "requirementId": "",
+        "reason": "JGJ 91-2019第5.3.3条逐字要求就近设置应急洗眼器及应急喷淋，与隐患对象直接一致。"
+      },
+      "linkGate": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H077",
+        "clauseId": "C_JGJ91_5_3_3"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    },
+    {
+      "link": {
+        "applicability": "限制人员进入的实验区域未设置显著警示标识",
+        "clauseId": "C_JGJ91_5_2_1",
+        "hazardId": "H_3C5449E0928B4B219D77694FDC",
+        "id": "K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "role": "direct"
+      },
+      "linkGate": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_3C5449E0928B4B219D77694FDC",
+        "clauseId": "C_JGJ91_5_2_1"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    },
+    {
+      "link": {
+        "applicability": "实验室未配灭火器洗眼器等应急物品",
+        "clauseId": "C_JGJ91_5_3_3",
+        "hazardId": "H_A4AF26421A0E404F82BF740A6D",
+        "id": "K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "role": "direct"
+      },
+      "linkGate": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_A4AF26421A0E404F82BF740A6D",
+        "clauseId": "C_JGJ91_5_3_3"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    },
+    {
+      "link": {
+        "applicability": "限制进入实验区或危化品存放区域未设标识",
+        "clauseId": "C_JGJ91_5_2_1",
+        "hazardId": "H_060514A9AB6347C6A98CD93842",
+        "id": "K_XLSX_WEB_H_060514A9AB6347C6A98CD93842",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "role": "direct"
+      },
+      "linkGate": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_060514A9AB6347C6A98CD93842",
+        "clauseId": "C_JGJ91_5_2_1"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    },
+    {
+      "link": {
+        "applicability": "火灾爆炸风险实验室未装消防和报警设备",
+        "clauseId": "C_JGJ91_5_2_6",
+        "hazardId": "H_387CD4000D844D269A439E4D45",
+        "id": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "role": "direct"
+      },
+      "linkGate": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H_387CD4000D844D269A439E4D45",
+        "clauseId": "C_JGJ91_5_2_6"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    },
+    {
+      "link": {
+        "id": "K_AC0819521C0C6C9961FDEB",
+        "entityType": "link",
+        "hazardId": "H038",
+        "clauseId": "C_HJ2000_5_4_1",
+        "role": "direct",
+        "applicability": "适用于大气污染治理工程的风机选型",
+        "jurisdictionCode": "CN",
+        "reason": "H038 为风机选型未与所处理介质匹配（易燃易爆未选防爆型、腐蚀性未选防腐型、高温未选高温型、含尘未选排尘型）；HJ 2000-2010 第5.4.1条对四类介质对应风机选型逐一规定，确认为 direct 依据。",
+        "createdAt": "2026-09-10",
+        "lifecycle": "active"
+      },
+      "linkGate": {
+        "ok": true,
+        "reasons": [],
+        "role": "direct",
+        "qualifying": true,
+        "decision": "verified",
+        "hazardId": "H038",
+        "clauseId": "C_HJ2000_5_4_1"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    },
+    {
+      "link": {
+        "id": "K_24829595e4a1c7c20086ebe0",
+        "entityType": "link",
+        "hazardId": "H038",
+        "clauseId": "C_229C416CB5F55CB0A4FE6865",
+        "role": "fallback",
+        "applicability": "全国通用",
+        "jurisdiction": "national",
+        "reason": "废气治理风机选型与处理介质不匹配，违反危险化学品安全管理条例第二十条危化品单位应当根据危险特性设置相应安全设施设备的要求。处理易燃易爆或腐蚀性废气的风机必须选用防爆型或防腐型，选型不匹配会引发安全事故。",
+        "createdAt": "2026-09-10T17:15:00+08:00",
+        "lifecycle": "proposed",
+        "status": "needs_review"
+      },
+      "linkGate": {
+        "ok": false,
+        "reasons": [
+          "BLOCK_LINK_APPLICABILITY:link_not_active",
+          "BLOCK_REVIEW_NOT_VERIFIED:pending"
+        ],
+        "role": "fallback",
+        "qualifying": true,
+        "decision": "pending",
+        "hazardId": "H038",
+        "clauseId": "C_229C416CB5F55CB0A4FE6865"
+      },
+      "hazardGate": {
+        "content_ok": true,
+        "reasons": [],
+        "active": true,
+        "merged": false,
+        "review_decision": "verified"
+      }
+    }
+  ],
+  "canonicalComparisons": [
+    {
+      "hazardId": "H_0BE49AFFA4884C639EE50FD565",
+      "relatedCanonical": "H038",
+      "result": "H038已追加实质修复到大气污染治理工程及完整5.4.1介质选型条件，并保留非爆炸环境宜选的强度；H0BE仅在该范围内条件映射H038，原H/K/review保持基线，不重复激活。产品合格证明、所有专业产品标准细项与普通工业通风未被证明覆盖。"
+    },
+    {
+      "hazardId": "H_CF_MAJOR_06",
+      "searched": "全部当前H/K及major-criteria/v1/catalog.json",
+      "result": "无另一同义机械企业总管压力监测报警/联锁H；火焰/熄火保护是不同分支；目录已含C_PDDB_7及7判定项，无需新增或改计数。",
+      "nearbyNonEquivalentHazards": [
+        "H_COM_FLAME_FAILURE_VERIFY",
+        "H_GBT47236_4_2_11_1_1"
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "source": "XF1131",
+      "sha256": "835f2860b9645cc5c6cb95390bb6925570fe53e7daa82d7c10273f5d9c7de7ee",
+      "url": "https://js.119.gov.cn/group1/M00/00/2A/ZYS-ZGGB6A-AT5TaANQHgHPKgLU664.pdf",
+      "readPages": [
+        1,
+        4,
+        7,
+        8,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "source": "HJ2000",
+      "sha256": "87083f92a8442e00e19aef664247c10f249fb2badb33fec0aef044c10d784827",
+      "url": "https://english.mee.gov.cn/Resources/standards/others1/Specifications_Engineering/201103/W020101224599368339817.pdf",
+      "readPages": [
+        1,
+        4,
+        5,
+        13
+      ]
+    },
+    {
+      "source": "JGJ91",
+      "sha256": "307103d4eb66fd3fd216c56e0d73093f6a332b08f2527be10aab90d6b521deda",
+      "url": "https://ptysysglc.yangtzeu.edu.cn/__local/B/23/7C/489A0007EC53C93C354E5322D69_99824F79_150EB3A.pdf",
+      "readPages": [
+        1,
+        4,
+        11,
+        32,
+        33,
+        54
+      ]
+    },
+    {
+      "source": "GB55036",
+      "sha256": "2d54318955e35b4a81049f755505381c542a215ecc8cacd76eb2d9a91c6ff701",
+      "url": "https://js.119.gov.cn/group1/M00/01/DD/rBPe7WjbON2ADaG-APbbdy02AT4268.pdf",
+      "readPages": [
+        4,
+        8
+      ]
+    },
+    {
+      "source": "GB55037",
+      "sha256": "90b92701fe6988a1c1c7659cd96a68fef92523ae3a2b04168aed937f03c247d0",
+      "url": "https://wsjkw.nx.gov.cn/ztzl/aqscgz/zhgl/202510/P020251029425415306334.pdf",
+      "readPages": [
+        5,
+        58,
+        59
+      ]
+    },
+    {
+      "source": "GB50116",
+      "sha256": "54e43e7a56f05bb1164718c2abc56485474d15b58d997e1a4d4a99f4d48a2456",
+      "url": "https://js.119.gov.cn/group1/M00/00/2B/ZYS-ZGGB7eSASlysAMAv-jOQ6J4359.pdf?attname=%E3%80%8A%E7%81%AB%E7%81%BE%E8%87%AA%E5%8A%A8%E6%8A%A5%E8%AD%A6%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%E3%80%8BGB+50116-2013.pdf",
+      "readPages": [
+        1,
+        3,
+        17,
+        45
+      ]
+    },
+    {
+      "source": "MEM10",
+      "sha256": "f03e5a9070cc25588628730fd301a1081072a3732369d64ad9f9a0b1471dc9aa",
+      "url": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/202305/P020231211463449393970.docx",
+      "readPages": []
+    }
+  ],
+  "authoredFiles": [
+    "knowledge/evidence/E_REMAIN_FIRE_XF1131_20261005.json",
+    "knowledge/evidence/E_REMAIN_FIRE_HJ2000_20261005.json",
+    "knowledge/evidence/E_REMAIN_FIRE_JGJ91_20261005.json",
+    "knowledge/evidence/E_REMAIN_FIRE_GB55036_20261005.json",
+    "knowledge/evidence/E_REMAIN_FIRE_GB55037_20261005.json",
+    "knowledge/evidence/E_REMAIN_FIRE_GB50116_20261005.json",
+    "knowledge/evidence/E_REMAIN_FIRE_MEM10_20261005.json",
+    "knowledge/hazards/H069.json",
+    "knowledge/reviews/hazards/H069.json",
+    "knowledge/links/K_XLSX_WEB_03B2F837CD3D64D61AB79B20.json",
+    "knowledge/reviews/links/K_XLSX_WEB_03B2F837CD3D64D61AB79B20.json",
+    "knowledge/hazards/H_21A69E2CA823BC59272F464D.json",
+    "knowledge/reviews/hazards/H_21A69E2CA823BC59272F464D.json",
+    "knowledge/links/K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D.json",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D.json",
+    "knowledge/clauses/C_XF1131_3_4_P2.json",
+    "knowledge/reviews/clauses/C_XF1131_3_4_P2.json",
+    "knowledge/hazards/H_45A066D644BE4A0992ECC95E1B.json",
+    "knowledge/reviews/hazards/H_45A066D644BE4A0992ECC95E1B.json",
+    "knowledge/links/K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B.json",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B.json",
+    "knowledge/clauses/C_GB55036_3_0_5_4.json",
+    "knowledge/reviews/clauses/C_GB55036_3_0_5_4.json",
+    "knowledge/hazards/H_524210530E054FE1BB1D918820.json",
+    "knowledge/reviews/hazards/H_524210530E054FE1BB1D918820.json",
+    "knowledge/links/K_XLSX_NEW14_69C24502ACF899C740842392.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_69C24502ACF899C740842392.json",
+    "knowledge/clauses/C_GB55037_10_1_5.json",
+    "knowledge/reviews/clauses/C_GB55037_10_1_5.json",
+    "knowledge/hazards/H_66611E63B2814335BFA0EF5E0D.json",
+    "knowledge/reviews/hazards/H_66611E63B2814335BFA0EF5E0D.json",
+    "knowledge/links/K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D.json",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D.json",
+    "knowledge/laws/LF_STD_GB50116.json",
+    "knowledge/reviews/laws/LF_STD_GB50116.json",
+    "knowledge/law-versions/LV_STD_GB50116_2013.json",
+    "knowledge/reviews/law-versions/LV_STD_GB50116_2013.json",
+    "knowledge/clauses/C_GB50116_6_3_2.json",
+    "knowledge/reviews/clauses/C_GB50116_6_3_2.json",
+    "knowledge/hazards/H_99B75F33D550486BBA89A77139.json",
+    "knowledge/reviews/hazards/H_99B75F33D550486BBA89A77139.json",
+    "knowledge/links/K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139.json",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139.json",
+    "knowledge/clauses/C_XF1131_8_6.json",
+    "knowledge/reviews/clauses/C_XF1131_8_6.json",
+    "knowledge/hazards/H_B16CF9FD47A6467189A9B9BC52.json",
+    "knowledge/reviews/hazards/H_B16CF9FD47A6467189A9B9BC52.json",
+    "knowledge/links/K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52.json",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52.json",
+    "knowledge/clauses/C_JGJ91_10_1_8.json",
+    "knowledge/reviews/clauses/C_JGJ91_10_1_8.json",
+    "knowledge/hazards/H_C706DAF977FA4CC5960E97DD05.json",
+    "knowledge/reviews/hazards/H_C706DAF977FA4CC5960E97DD05.json",
+    "knowledge/links/K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05.json",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05.json",
+    "knowledge/hazards/H_CF_MAJOR_06.json",
+    "knowledge/reviews/hazards/H_CF_MAJOR_06.json",
+    "knowledge/links/K_CF_MAJOR_06_C_PDDB_7.json",
+    "knowledge/reviews/links/K_CF_MAJOR_06_C_PDDB_7.json",
+    "knowledge/evidence/E_MOHURD_JGJ91_2019.json",
+    "knowledge/clauses/C_JGJ91_5_2_1.json",
+    "knowledge/reviews/clauses/C_JGJ91_5_2_1.json",
+    "knowledge/clauses/C_JGJ91_5_3_3.json",
+    "knowledge/reviews/clauses/C_JGJ91_5_3_3.json",
+    "knowledge/reviews/clauses/C_JGJ91_5_2_6.json",
+    "knowledge/hazards/H077.json",
+    "knowledge/reviews/hazards/H077.json",
+    "knowledge/links/K_PHASE6_3F27AE868858FCDD47725935.json",
+    "knowledge/reviews/links/K_PHASE6_3F27AE868858FCDD47725935.json",
+    "knowledge/hazards/H_3C5449E0928B4B219D77694FDC.json",
+    "knowledge/reviews/hazards/H_3C5449E0928B4B219D77694FDC.json",
+    "knowledge/links/K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC.json",
+    "knowledge/hazards/H_060514A9AB6347C6A98CD93842.json",
+    "knowledge/reviews/hazards/H_060514A9AB6347C6A98CD93842.json",
+    "knowledge/links/K_XLSX_WEB_H_060514A9AB6347C6A98CD93842.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_060514A9AB6347C6A98CD93842.json",
+    "knowledge/hazards/H_387CD4000D844D269A439E4D45.json",
+    "knowledge/reviews/hazards/H_387CD4000D844D269A439E4D45.json",
+    "knowledge/links/K_XLSX_WEB_H_387CD4000D844D269A439E4D45.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_387CD4000D844D269A439E4D45.json",
+    "knowledge/hazards/H_A4AF26421A0E404F82BF740A6D.json",
+    "knowledge/reviews/hazards/H_A4AF26421A0E404F82BF740A6D.json",
+    "knowledge/links/K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D.json",
+    "docs/COMPLETE_REMAINING_FIRE_GAS_AUTHOR_20261005.json",
+    "tests/complete-remaining-fire-gas.test.mjs",
+    "knowledge/hazards/H038.json",
+    "knowledge/reviews/hazards/H038.json",
+    "knowledge/links/K_AC0819521C0C6C9961FDEB.json",
+    "knowledge/reviews/links/K_AC0819521C0C6C9961FDEB.json",
+    "knowledge/links/K_24829595e4a1c7c20086ebe0.json",
+    "knowledge/reviews/links/K_24829595e4a1c7c20086ebe0.json"
+  ],
+  "beforeFileHashes": {
+    "knowledge/evidence/E_REMAIN_FIRE_XF1131_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/evidence/E_REMAIN_FIRE_HJ2000_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/evidence/E_REMAIN_FIRE_JGJ91_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/evidence/E_REMAIN_FIRE_GB55036_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/evidence/E_REMAIN_FIRE_GB55037_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/evidence/E_REMAIN_FIRE_GB50116_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/evidence/E_REMAIN_FIRE_MEM10_20261005.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H069.json": {
+      "existed": true,
+      "sha256": "33da452b4978ad649bbd30bfede456bc6eb1dfb75407643a30d4a4a499059e14"
+    },
+    "knowledge/reviews/hazards/H069.json": {
+      "existed": true,
+      "sha256": "9eecff820888c679c67f08a32f1404fb49a37750ad535ae374f0e3643254e3c9"
+    },
+    "knowledge/links/K_XLSX_WEB_03B2F837CD3D64D61AB79B20.json": {
+      "existed": true,
+      "sha256": "5a8e3e7b581de364773092442832693b34c119688917635002857e08e955ef6b"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_03B2F837CD3D64D61AB79B20.json": {
+      "existed": true,
+      "sha256": "4403125807db9caa5308162bb1288d2eebb015110056e8731b3b132d5ca0d582"
+    },
+    "knowledge/hazards/H_21A69E2CA823BC59272F464D.json": {
+      "existed": true,
+      "sha256": "350cd7752c0cee03503061c87c3e5582c8db3ee5e1030fdc8c338060f79cb4f0"
+    },
+    "knowledge/reviews/hazards/H_21A69E2CA823BC59272F464D.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/links/K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/clauses/C_XF1131_3_4_P2.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/clauses/C_XF1131_3_4_P2.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_45A066D644BE4A0992ECC95E1B.json": {
+      "existed": true,
+      "sha256": "e42ea2ea885a51c3b188f9a0b2699cfbbc17f924a9f44d41d4ac513e6f062585"
+    },
+    "knowledge/reviews/hazards/H_45A066D644BE4A0992ECC95E1B.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/links/K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/clauses/C_GB55036_3_0_5_4.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/clauses/C_GB55036_3_0_5_4.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_524210530E054FE1BB1D918820.json": {
+      "existed": true,
+      "sha256": "136240e0965f9b1b37385c869894b5f4287411948d5f8ec7e9b916b99e79acba"
+    },
+    "knowledge/reviews/hazards/H_524210530E054FE1BB1D918820.json": {
+      "existed": true,
+      "sha256": "d03ba68a17b1ebdad2582a31042f030454d02373884459d6419b23045122644f"
+    },
+    "knowledge/links/K_XLSX_NEW14_69C24502ACF899C740842392.json": {
+      "existed": true,
+      "sha256": "c4186e5cff31bcb5d7fc2341888a3470f26e163c044112e07e08de912cf6b601"
+    },
+    "knowledge/reviews/links/K_XLSX_NEW14_69C24502ACF899C740842392.json": {
+      "existed": true,
+      "sha256": "b7e194c9802a2686bb0c37f628d0b3166f9e82c54bb76cc7fba785b2a8e70d8d"
+    },
+    "knowledge/clauses/C_GB55037_10_1_5.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/clauses/C_GB55037_10_1_5.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_66611E63B2814335BFA0EF5E0D.json": {
+      "existed": true,
+      "sha256": "78107a757d3479a6478135a58c916303ebd1aa627a072c24676b21b4b53b545e"
+    },
+    "knowledge/reviews/hazards/H_66611E63B2814335BFA0EF5E0D.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/links/K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/laws/LF_STD_GB50116.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/laws/LF_STD_GB50116.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/law-versions/LV_STD_GB50116_2013.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/law-versions/LV_STD_GB50116_2013.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/clauses/C_GB50116_6_3_2.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/clauses/C_GB50116_6_3_2.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_99B75F33D550486BBA89A77139.json": {
+      "existed": true,
+      "sha256": "2be7aa664aa9be4ef85b86ffb284f245934713d55bf7386a342e9f74747529ce"
+    },
+    "knowledge/reviews/hazards/H_99B75F33D550486BBA89A77139.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/links/K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/clauses/C_XF1131_8_6.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/clauses/C_XF1131_8_6.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_B16CF9FD47A6467189A9B9BC52.json": {
+      "existed": true,
+      "sha256": "2b3b09e1aa38c65bdaf9bb06ff24a4cf77b4a76fcfed793872cfc96703d463ef"
+    },
+    "knowledge/reviews/hazards/H_B16CF9FD47A6467189A9B9BC52.json": {
+      "existed": true,
+      "sha256": "25f348c55c71fcb4c2086471a07136cc5aed4a2d939d94195ff5c4a2437e9835"
+    },
+    "knowledge/links/K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/clauses/C_JGJ91_10_1_8.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/clauses/C_JGJ91_10_1_8.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_C706DAF977FA4CC5960E97DD05.json": {
+      "existed": true,
+      "sha256": "25f99f29d8b448a00f8ad3c458f450a46631951b26ae03b2d16b1f9d714b3242"
+    },
+    "knowledge/reviews/hazards/H_C706DAF977FA4CC5960E97DD05.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/links/K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05.json": {
+      "existed": false,
+      "sha256": null
+    },
+    "knowledge/hazards/H_CF_MAJOR_06.json": {
+      "existed": true,
+      "sha256": "643446fa2057819f5ee95495f0ab870103a4cc86e1af1edd438ca70876fe6369"
+    },
+    "knowledge/reviews/hazards/H_CF_MAJOR_06.json": {
+      "existed": true,
+      "sha256": "5541b9950326effb671f1b6f8bf601fda926179bbd58c9c4777c0459392f4047"
+    },
+    "knowledge/links/K_CF_MAJOR_06_C_PDDB_7.json": {
+      "existed": true,
+      "sha256": "da1748199ab27c470fe85687cb8a4c32c8ba8708d4039807c866f96a2d3900ed"
+    },
+    "knowledge/reviews/links/K_CF_MAJOR_06_C_PDDB_7.json": {
+      "existed": true,
+      "sha256": "5a1ffe81b1964212c4a25879deaaa3b6f30c2a8f99cdcd959971313485729aa9"
+    },
+    "knowledge/evidence/E_MOHURD_JGJ91_2019.json": {
+      "existed": true,
+      "sha256": "28588363b4525ee330380602ad61e43b11037c803488f62b0944023a6b51c99e"
+    },
+    "knowledge/clauses/C_JGJ91_5_2_1.json": {
+      "existed": true,
+      "sha256": "54baa550d0656a03f8d468361281ddb8b58a72026b7f425bdb888e596b8c6322"
+    },
+    "knowledge/reviews/clauses/C_JGJ91_5_2_1.json": {
+      "existed": true,
+      "sha256": "a22833ac8805827de593c62338eb2cf7bf4665412f195bc08a8a7a5900d9266c"
+    },
+    "knowledge/clauses/C_JGJ91_5_3_3.json": {
+      "existed": true,
+      "sha256": "b76dc9cf60312b6f9dec73bdb0b7b6045e7cfaf991f62aa2eec53613dbe4d006"
+    },
+    "knowledge/reviews/clauses/C_JGJ91_5_3_3.json": {
+      "existed": true,
+      "sha256": "8f31e00553f740a5a80fe8f5dab18c368005201d05e741b0e0b8e36791b066a0"
+    },
+    "knowledge/reviews/clauses/C_JGJ91_5_2_6.json": {
+      "existed": true,
+      "sha256": "643756b9b17993ad2051e0c0488b2166a8d7ed8af221ca87b18d73e30940c711"
+    },
+    "knowledge/hazards/H077.json": {
+      "existed": true,
+      "sha256": "3ab6755ef051065e42f9d231ca2ccd2a44063d3415ed676157dcad0f0ae4ac92"
+    },
+    "knowledge/reviews/hazards/H077.json": {
+      "existed": true,
+      "sha256": "42204251e33a7f9e38965be1eef4b05202a8a52cb1ffae5e89e60dc6795a194f"
+    },
+    "knowledge/links/K_PHASE6_3F27AE868858FCDD47725935.json": {
+      "existed": true,
+      "sha256": "f0d03f7a9daa9a90bc685a32d039aac80807d1766cd5cf1cf6a60c42dfbdbd30"
+    },
+    "knowledge/reviews/links/K_PHASE6_3F27AE868858FCDD47725935.json": {
+      "existed": true,
+      "sha256": "536428950d57e808e3ab666b92dff2601052152088e2cc4bdb20e79d66d67f53"
+    },
+    "knowledge/hazards/H_3C5449E0928B4B219D77694FDC.json": {
+      "existed": true,
+      "sha256": "04c37c1def8185f491d7eefff8f576bf70745391d1b37e5994b35961d2894de1"
+    },
+    "knowledge/reviews/hazards/H_3C5449E0928B4B219D77694FDC.json": {
+      "existed": true,
+      "sha256": "e44ffd54db4300ca5d262e9dfbb4a2f0c47f6869991bae25c8d268220c504fbb"
+    },
+    "knowledge/links/K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC.json": {
+      "existed": true,
+      "sha256": "13bcf6245eb50c748dc89f5d7d479133639e11923e19615f1a35346828e32f3e"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC.json": {
+      "existed": true,
+      "sha256": "ac103bc1ced260265716f3748394f99b01c33ffef8e87a6b76ecc186befda923"
+    },
+    "knowledge/hazards/H_060514A9AB6347C6A98CD93842.json": {
+      "existed": true,
+      "sha256": "467493da3e1747bcaae39d8827feecd309138afd6e1db3f5e938e3576f13d55e"
+    },
+    "knowledge/reviews/hazards/H_060514A9AB6347C6A98CD93842.json": {
+      "existed": true,
+      "sha256": "3ea22a4e3bf2459f0c892b9c9edf2383e1521c485277215d312d24c6d7ec4a76"
+    },
+    "knowledge/links/K_XLSX_WEB_H_060514A9AB6347C6A98CD93842.json": {
+      "existed": true,
+      "sha256": "06d47b6b0e08c1567c7faa3fe85db2b0793c7dfe62ae7e453ef4407dcbee436b"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_060514A9AB6347C6A98CD93842.json": {
+      "existed": true,
+      "sha256": "87913c593131eb29cadd8a37a90153961bfc530cefa8b38020a5f6ded2e06de2"
+    },
+    "knowledge/hazards/H_387CD4000D844D269A439E4D45.json": {
+      "existed": true,
+      "sha256": "086b15d3ee17a4cf268c221d57e33a83ef7a7485419ef1abc1eb330a85af0adf"
+    },
+    "knowledge/reviews/hazards/H_387CD4000D844D269A439E4D45.json": {
+      "existed": true,
+      "sha256": "ab8ec0d62dc0291ede2a90b507d11eaacd311c2d03eb22f7d3edd43f13efb142"
+    },
+    "knowledge/links/K_XLSX_WEB_H_387CD4000D844D269A439E4D45.json": {
+      "existed": true,
+      "sha256": "d1bc9a323db71f04d482ee0375887f60467e3026010225933acb0a60a1cb0fbc"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_387CD4000D844D269A439E4D45.json": {
+      "existed": true,
+      "sha256": "9377df5de30214f65b591885997713ca598a63c967d698dc661b856f58c39157"
+    },
+    "knowledge/hazards/H_A4AF26421A0E404F82BF740A6D.json": {
+      "existed": true,
+      "sha256": "b337da60762fb6ac5a9edd3a972110a198ca1b529b1c4c8b67edd86083704237"
+    },
+    "knowledge/reviews/hazards/H_A4AF26421A0E404F82BF740A6D.json": {
+      "existed": true,
+      "sha256": "b83720dd8a11b66fe260c8aca7909305abcd1f5da576c8632459418deacdd5e6"
+    },
+    "knowledge/links/K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D.json": {
+      "existed": true,
+      "sha256": "27e4c41db5875a1943b728a5579473a711d966da624e8f9e9c02d3426f393117"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D.json": {
+      "existed": true,
+      "sha256": "7418a9e16fded5ab25ce66477a801c375e6d868cfc215e39b58ab81693f8a6df"
+    },
+    "knowledge/hazards/H038.json": {
+      "existed": true,
+      "sha256": "eadf3d149743e0f68a0e5701b431f0d863789297c95a26065bf881bbb65ef657"
+    },
+    "knowledge/reviews/hazards/H038.json": {
+      "existed": true,
+      "sha256": "603eed014401a051cc587a2418593942b793be199e44649707753268d6fbe74e"
+    },
+    "knowledge/links/K_AC0819521C0C6C9961FDEB.json": {
+      "existed": true,
+      "sha256": "2f786b2280dcf2aa624fa5c54d829154ba84b4e751e683591776a6127319aad5"
+    },
+    "knowledge/reviews/links/K_AC0819521C0C6C9961FDEB.json": {
+      "existed": true,
+      "sha256": "13cc953d4be028f321971b0fea4ba55ce4df184a3f5062b6236fa5d5c9b04607"
+    },
+    "knowledge/links/K_24829595e4a1c7c20086ebe0.json": {
+      "existed": true,
+      "sha256": "ab445cb2e345ed0e9e57924fb81f21be78ec31b120b94532578f77119db40ad1"
+    },
+    "knowledge/reviews/links/K_24829595e4a1c7c20086ebe0.json": {
+      "existed": true,
+      "sha256": "39073fc54ddd2643856f4c662cc8688387b13255fe1a60c6a3f6658bbe442149"
+    }
+  },
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "publicationAttempted": false,
+  "unchangedFileSha256": {
+    "knowledge/hazards/H_0647B65088564B789D64080EF1.json": "c740cc29928b6842eab6a5e293a6856e4cb25414c632df4358389cd96360d731",
+    "knowledge/reviews/hazards/H_0647B65088564B789D64080EF1.json": "106bb042e88cef61379c99a4dcdb5d0ae9257ea4ef3dd377a86c96b9473fa84d",
+    "knowledge/links/K_26FD1CE3939D1358E4562D.json": "3d3620670d60976ddbdbb84f6afbc3870b0fa418ec9b2146a3bc56636f7aba6e",
+    "knowledge/reviews/links/K_26FD1CE3939D1358E4562D.json": "5f7a49fd23305eb6b6c00679b893736eb5b578ad44537112ee237f41371f727f",
+    "knowledge/hazards/H_1B474A2ABA0E23143E2FE451.json": "d9cfb0c58b45d66a945bd1e26b31a63f04b489bac19d034da5bbf8a8fbaf647b",
+    "knowledge/reviews/hazards/H_1B474A2ABA0E23143E2FE451.json": "3dfe7dc0bde8ec5ba7733b4040b9a2a2a61c4686ae3fb0b4c770fadb0bef56fd",
+    "knowledge/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json": "a46b32bf616d832a8896a37f12e8056dabb75939a27198af70ffaa18d618b139",
+    "knowledge/reviews/links/K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451.json": "903738cc95d1a3cd408ecb80b318da48c40f03e9bd022fa355389b75678a6d69",
+    "knowledge/hazards/H_25CEE684DF2F4D9D73BDB1AB.json": "f28b56dc012ef04b4c95990725a1521144a9622d0f05d905a86468e8ae93051b",
+    "knowledge/hazards/H_286F7049C36E470F8273F18889.json": "4f177fbddf48623ddc9b86ef8380c1ef3d9b44efa7a57feb4fcfd528e06b7a67",
+    "knowledge/reviews/hazards/H_286F7049C36E470F8273F18889.json": "534a5fc406d89ff21ff4185349989155c483cc6dcc3f1437f020c2cc8a1a1522",
+    "knowledge/links/K_XLSX_WEB_H_286F7049C36E470F8273F18889.json": "57ab3dfa1259093430173ba8e35068a65808ab02fa632026a4a7b7fb0ef79cce",
+    "knowledge/reviews/links/K_XLSX_WEB_H_286F7049C36E470F8273F18889.json": "9f8bc04b3882f9d4e931748310f16ba85649e033704df45e55f0c54d5dab5336",
+    "knowledge/hazards/H_315C5D031AFC4502B69ACB9F38.json": "bae2e0d738e1d5f25d4a7722537adfbd1fb2be3c2e5be389e26bd7e94aec75fd",
+    "knowledge/reviews/hazards/H_315C5D031AFC4502B69ACB9F38.json": "9b2a2dde744ad8734c54e516b67e0ecbbcaccb408190a320b6ca1c9ce6aaac84",
+    "knowledge/links/K_XLSX_WEB_H_315C5D031AFC4502B69ACB9F38.json": "d3cdfd5a94f87cad56ce7d7890219f042f14929926b1c3cdaea448283ebe3ab9",
+    "knowledge/reviews/links/K_XLSX_WEB_H_315C5D031AFC4502B69ACB9F38.json": "d27e7b7b897a320198a970cfbeff11932b080e604b98a2bcbc23100dac22a1dd",
+    "knowledge/hazards/H_409ABC97960D46FBBF6AA54D28.json": "324e594df54e62c1e8a5fbf6a3462aa47f3ba6252a453d62ab82f9a5fb1b4d99",
+    "knowledge/reviews/hazards/H_409ABC97960D46FBBF6AA54D28.json": "82f95f06f10432c77b9a4b425bdd30bc2a806a3cad8e93eb9aae0a37c3e173a4",
+    "knowledge/links/K_XLSX_NEW14_009EFFF6DC057F3650A66526.json": "74f89099ca9ea0713445e95a85ccc2c5554f23d545ed742cdfcabc5d7796ec1f",
+    "knowledge/reviews/links/K_XLSX_NEW14_009EFFF6DC057F3650A66526.json": "ba86432587d0270f14f7ab52e5a43f754ac100e656c3cd370f085af808fc1e52",
+    "knowledge/hazards/H_5F63C331858C41AB99F51F5D9E.json": "0599a0916f37e6557b10546ebd3e3141d87c4875c3b5cb7252dd258752098ea6",
+    "knowledge/reviews/hazards/H_5F63C331858C41AB99F51F5D9E.json": "f2670bedb1b2a8dd1f6fbd0595b5fdf6571ffbeebdb4dc24172b2132334b4e60",
+    "knowledge/links/K_XLSX_WEB_H_5F63C331858C41AB99F51F5D9E.json": "c0f3174953e630b7c2be76e66acd62877f5b986aae7535b832278760e8442f82",
+    "knowledge/reviews/links/K_XLSX_WEB_H_5F63C331858C41AB99F51F5D9E.json": "e2a0e8d2c34e746ea6a77cf6e93aadc0fa743050f358e3b5dbc63fbd8afcea94",
+    "knowledge/hazards/H_68196C0A0FBDDAF0354E0F71.json": "22cd9388fe4dc86eb2cbebf4e37a34a1c51c03ff7e4381f1d589b9b81e37c0d8",
+    "knowledge/reviews/hazards/H_68196C0A0FBDDAF0354E0F71.json": "cae0d7bd870a8add79443d3e20b4d9b1f77db5f382caad008cdfbae9c70ecfc3",
+    "knowledge/links/K_XLSX_WEB_H_68196C0A0FBDDAF0354E0F71.json": "18b9c74db921716441ffc9f6535ce4cdc731bf1ec7fb1bd50d1aaa2320b37988",
+    "knowledge/reviews/links/K_XLSX_WEB_H_68196C0A0FBDDAF0354E0F71.json": "d56989adbf13f8a725e7bddb9c1c90c86ec720aa89158e7f521f47ca238323bd",
+    "knowledge/hazards/H_6F7D6D7E28DD423B9F40AF8218.json": "c19f323eecf968da3b8322be62c7e2dfeef2192da1c5beaee9629e09814b58c7",
+    "knowledge/reviews/hazards/H_6F7D6D7E28DD423B9F40AF8218.json": "6e87101fe9e7eca144b3e50053b2b434299d867619338b88ef70b0548653cc96",
+    "knowledge/links/K_XLSX_NEW14_06AA37592680D0C494CCB965.json": "4ded63894960579da975e739199b0deecbdd42e865cb4c358c5c4791b00f7a45",
+    "knowledge/reviews/links/K_XLSX_NEW14_06AA37592680D0C494CCB965.json": "4166eb8a4d07c758ba03c6014da181251f414eb3adc182026f3fba634d959318",
+    "knowledge/hazards/H_76ED73E234FC40068D08F54785.json": "c56f28e1f998093d0a5a45ec641d0b002cec8a796b14b9c34efe1529cf09b689",
+    "knowledge/reviews/hazards/H_76ED73E234FC40068D08F54785.json": "fd69bd1e476262c3c1a0880f00f217e8bfd6a9ff3412e2adf408584297ea26df",
+    "knowledge/links/K_XLSX_WEB_H_76ED73E234FC40068D08F54785.json": "13fc3b948243c7321a171dc8a2886a774ef8fa5ec28dc8619ecd82a32ff755ac",
+    "knowledge/reviews/links/K_XLSX_WEB_H_76ED73E234FC40068D08F54785.json": "afd220b8e9e2e8eb4db6168b6d6485c2399183768ff02f1d49b424e484ed942b",
+    "knowledge/hazards/H_7F41DF4810BA4E8C876859430B.json": "0674751138cc6162a7c8b463b617e6946c1a3c77bcb2fba38ec5d826fc82f11a",
+    "knowledge/reviews/hazards/H_7F41DF4810BA4E8C876859430B.json": "f90885570dc493d1fcaa8d8076976f0089e1b0b128b695174b40eefaf96ac71f",
+    "knowledge/links/K_XLSX_WEB_H_7F41DF4810BA4E8C876859430B.json": "9da388bd9bd4b92f8be1105e68a529b36a9d2940dfa1901beef284ecc81d1d0f",
+    "knowledge/reviews/links/K_XLSX_WEB_H_7F41DF4810BA4E8C876859430B.json": "f0632cd68495ec543d3e18da073408fbf8a43e687ec2f5d4a07b49b0202f8ca6",
+    "knowledge/hazards/H_86F8A98CB78240378E607BEF8E.json": "4a1ee1aa2e1efdac35c9a9a407eb9e9e004d2f063780a6a3ba7924bf51b3e985",
+    "knowledge/reviews/hazards/H_86F8A98CB78240378E607BEF8E.json": "d253c6382f41c350363e2a6277dcc69b65543fa724f2dc767afe2bb8338c9f85",
+    "knowledge/links/K_XLSX_WEB_H_86F8A98CB78240378E607BEF8E.json": "5083f6a9f383f52300b1b03ef74fe1f64c9c7e3eaf10edfb20d856efe5be0d26",
+    "knowledge/reviews/links/K_XLSX_WEB_H_86F8A98CB78240378E607BEF8E.json": "b2f003589a47fb8c4de301a819769e42ba0a7c79847905ca8dbea2b720b97b5a",
+    "knowledge/hazards/H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "e11b2c380cee06da554a1cb9498ea3aea6577cb375830d7434d9ed720ec78036",
+    "knowledge/reviews/hazards/H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "b9cf7db02431b315d221cc94c591957d5a4d99427e1fbc3347dca405c1489425",
+    "knowledge/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "8e3f0213a1b31f2b6a776c3374012256a4b2fd1bce6674d1d2ff20ee3c4492f9",
+    "knowledge/reviews/links/K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E.json": "fc41dde7dbbc4986c4de06f1fe46cddb2d36c34e156271cd7fd16ac425a3fcfa",
+    "knowledge/hazards/H_B552B08A4FD28A8770CDC2BB.json": "afe14349ae87c076c860c5e37a67a0decba64b1854fa7788497de1130768d2d7",
+    "knowledge/reviews/hazards/H_B552B08A4FD28A8770CDC2BB.json": "12674c364d18c238904a819842f314c3b9879512955ab3d94d988297cf8c987f",
+    "knowledge/links/K_XLSX_WEB_H_B552B08A4FD28A8770CDC2BB.json": "213ca233de7fec66abbb5def05a54fc41d127ca903f99b3ebdd3662206b5bf09",
+    "knowledge/reviews/links/K_XLSX_WEB_H_B552B08A4FD28A8770CDC2BB.json": "e269465e96f80c41a635a93322c8ccdefb285597942721072b0eb72eacd31ead",
+    "knowledge/hazards/H_BBDE0D64A2404FA6A458847EEE.json": "4769f5761be1b1fdc9565efa7946197e905a369c9c0fd6764c52cd9ec7cccca7",
+    "knowledge/reviews/hazards/H_BBDE0D64A2404FA6A458847EEE.json": "2e39e2ce506e8c72607c1d66a83b7f274d0ebcd368bc0fa44b3d083cbe0c00d7",
+    "knowledge/hazards/H_BC2436C8E5BE198BA82BB74B82_1.json": "dc3d83f75a2ffd77d839208379ee5e7bef73d084df520377a93888fe9cf186fa",
+    "knowledge/reviews/hazards/H_BC2436C8E5BE198BA82BB74B82_1.json": "b3444d9390b3055dd114d53baf5b9110632b4956d961c1fd47a58388ba030ec4",
+    "knowledge/links/K_XLSX_FT_80C4D8363ED159B6CC323D7C.json": "107d26f09383ecbc5a6603fc58a870f53c330d7b3c02cf1d4babd4210aaf8895",
+    "knowledge/reviews/links/K_XLSX_FT_80C4D8363ED159B6CC323D7C.json": "732e08de9c8ece808905cb2d48ad4499f2593b6b2b6444aa728cd402bfeba439",
+    "knowledge/hazards/H_BF64B742DF54473D9E276E316E.json": "ef4a0b660599f80d7a401625eadead726c432d9f94a5dcd7c4a0d8425a00f429",
+    "knowledge/reviews/hazards/H_BF64B742DF54473D9E276E316E.json": "bded3dda852c4d82645749d956990b396b1ebb0e297960c3f5d89d70aaa1c506",
+    "knowledge/links/K_XLSX_WEB_H_BF64B742DF54473D9E276E316E.json": "3c22155b6b7d5ffc0e6eeb0c760a272b14074957e9a0c83847c5eedbac9a5c8f",
+    "knowledge/reviews/links/K_XLSX_WEB_H_BF64B742DF54473D9E276E316E.json": "c20ef6053c767ee303a3272daac6f0546c4587f69b3ef79b0fa6262199a9b26f",
+    "knowledge/hazards/H_BF7AA7549F8E1B94012882C9.json": "5a95531b3d3c16e56e40f6b7accbbf35c23b8a86871457cf7870b9fbb11fbcb2",
+    "knowledge/reviews/hazards/H_BF7AA7549F8E1B94012882C9.json": "7fd9a557fc04a4d7e5daa752f92d3c3aed447ce07c536c067933034d2ebc7215",
+    "knowledge/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json": "ee52f81857b4458de7d1ff6c5fa73b855bdd0bb29cc66420cfa38cc998205acf",
+    "knowledge/reviews/links/K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9.json": "194c67f66020fd0bf7a1795bac60bcfdf5d30476d67c348436960d17425466ad",
+    "knowledge/hazards/H_C1CE3A649721387F1FC0F7BE.json": "ffb366c710d446821153be32c76e8e1001f49c453942052612dbcbe8dee14f2c",
+    "knowledge/reviews/hazards/H_C1CE3A649721387F1FC0F7BE.json": "20abb2eab83f5d82867bbc5e4a1cf5f6b2dffd6518d6e3cfa5a694878f0c8f60",
+    "knowledge/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json": "fb2fc6f8d5a767ad7fc96393adbbe26b2f8968c5b833e18909b877530e968caa",
+    "knowledge/reviews/links/K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE.json": "116d996f090180c835a50a9a632167891daa56dd217ad6d3e9cedd5a2c8c1bc9",
+    "knowledge/hazards/H_CA3DEB8494734D578C20ECD124.json": "693420cb4dda1d1a28d45247f647af94870e92eeedfe27302cf45da918433802",
+    "knowledge/reviews/hazards/H_CA3DEB8494734D578C20ECD124.json": "15d93e2dab6b87da90a790a9e68ca04246eab29c7b8e1688dbf878c6e84af328",
+    "knowledge/links/K_XLSX_WEB_H_CA3DEB8494734D578C20ECD124.json": "573401f06bdfa431a52634858c09f4f80a6a39784c9d9bcb37447c287dc57108",
+    "knowledge/reviews/links/K_XLSX_WEB_H_CA3DEB8494734D578C20ECD124.json": "2114971e68903edc98e0577ea617ee1ff3a7ea3934caf22368da8b42a2247430",
+    "knowledge/hazards/H_CD20735BC6DB47CE9C52EE24C0.json": "263753d182c5eff5383b3c1331e6b7e4356fc5e4fd9b354cb3aab671dc5614b5",
+    "knowledge/reviews/hazards/H_CD20735BC6DB47CE9C52EE24C0.json": "c07934118fcd59547562f367956199eb4bfd303bae48a769184b93b78f44321e",
+    "knowledge/links/K_XLSX_WEB_H_CD20735BC6DB47CE9C52EE24C0.json": "fa99f515d171333151b14af27565f49344fffea7d8525785848ba70260aac610",
+    "knowledge/reviews/links/K_XLSX_WEB_H_CD20735BC6DB47CE9C52EE24C0.json": "68fe098b6350b32652852b15da458f2b32675addd48e74f081bc2160751a74ae",
+    "knowledge/hazards/H_CE94D2ACC8C544BCA0FB0AA026.json": "2928698405c85fec4a36d6b315d4ddb7d138d9d8d89b8e66adb064d144782090",
+    "knowledge/reviews/hazards/H_CE94D2ACC8C544BCA0FB0AA026.json": "8fee4fdc1a36590d44b51f4739ce34f8bd711583556b9421dd47302ebd690dbd",
+    "knowledge/links/K_XLSX_WEB_H_CE94D2ACC8C544BCA0FB0AA026.json": "c153ba91d65c6959a0e725a8e5b652c72d3e6a722700c71c4c7d734ecbe7ae13",
+    "knowledge/reviews/links/K_XLSX_WEB_H_CE94D2ACC8C544BCA0FB0AA026.json": "8e2c9372c7407eff0f0a226b1ac438586267f3b167f64f2c019c977fac1245d5",
+    "knowledge/hazards/H_CF_GEN_05.json": "8f4546d3c9fec2e39aff619d764c71277d35a7a9d98958365990abea3dc10802",
+    "knowledge/reviews/hazards/H_CF_GEN_05.json": "7e3c90d38eff016ea37dda96c56e1413b2cadbc6f530e5d255876f3afaf6f5d3",
+    "knowledge/links/K_CF_GEN_05_C_0C94FB24040EB78218141DD12F.json": "34d68c70b13ca2aace2cada27af3b2156da717714aa70ded4c147e8b1558f259",
+    "knowledge/reviews/links/K_CF_GEN_05_C_0C94FB24040EB78218141DD12F.json": "343096ac761ea62c0bf3b10d442ea5690730c4b9af91be6db1826cbc8729cf34",
+    "knowledge/hazards/H_CF_GEN_20.json": "8ecbd2549bde2048d264497a46c9213c5a38ce6a48841dc9acc30eeca589d7c4",
+    "knowledge/reviews/hazards/H_CF_GEN_20.json": "d230a37f66e89f10252fdceb998009bd324964e74efe943adc565b05d8436199",
+    "knowledge/links/K_CF_GEN_20_C002.json": "81ff0e97b998f247929192b620daacede64a7c7370d843f07a2009768b553579",
+    "knowledge/reviews/links/K_CF_GEN_20_C002.json": "bacaf06fad3d0339c79d108488ab4d51e157e287735b8806d2a079e870ac94af",
+    "knowledge/hazards/H_CF_GEN_21.json": "0a236cb22e5c2b1e080cdd8c71cd5b58560d7c8a0acbf82e3f0772c5fc0b9d36",
+    "knowledge/reviews/hazards/H_CF_GEN_21.json": "625308695a2aa94f92695a070bcae81c3eb3081ab5f834b109f822734d784df5",
+    "knowledge/links/K_CF_GEN_21_C002.json": "03121b429f4886df507d970fc31c6c533ce3079eea5daa8c2714e731b303b9df",
+    "knowledge/reviews/links/K_CF_GEN_21_C002.json": "ab24edde296577725f1aba5228c0eb727fa75910d43149df51eafc5595bfeb2b",
+    "knowledge/hazards/H_CF_GEN_24.json": "79219a72b0c067d1b358a7a9827069eb8ab3e65a9f93ed4e6a6450c1408cdb99",
+    "knowledge/reviews/hazards/H_CF_GEN_24.json": "4ba31cfbffb79a43be2f3f1b590218566e5842934f4c9b9c8e0face68cfd99fb",
+    "knowledge/links/K_CF_GEN_24_C002.json": "70cb66bc5965347e3b91fa3abd64e5b72a88ba05d8ce11a1f641fbe4236a187d",
+    "knowledge/reviews/links/K_CF_GEN_24_C002.json": "bf2c9c69f4ed870918ac48ab433489e8df5d05efae9c0a99f523f265718c6a2d",
+    "knowledge/hazards/H_COM_EV_BATTERY_STORAGE.json": "5e21fe77f9645aa1ccd330893451602fb91382c1a0a17fea5a10591cbd33956a",
+    "knowledge/reviews/hazards/H_COM_EV_BATTERY_STORAGE.json": "c4905f6d5313f63e3a52d4f85605b1fbdf789d7e184d2f5107839e194e2b4c97",
+    "knowledge/hazards/H_D98B4749D74246E2A3825D5B09.json": "671459946509cc1293e9ead7b7c3a63ad449abfd9e885c58099dabeaca8ea2a3",
+    "knowledge/reviews/hazards/H_D98B4749D74246E2A3825D5B09.json": "3dda58cb8b51b6366b50bea4d826c28044fdfdccfaf302265c60d5b3f93453b6",
+    "knowledge/links/K_XLSX_NEW14_06DA14F047F55C9102685D5D.json": "6c060c90920847c93dec5cdf630be88706a3753acc872f916cc1d1cd8bf189d3",
+    "knowledge/reviews/links/K_XLSX_NEW14_06DA14F047F55C9102685D5D.json": "32f7dc3b993d22383f4796ec6cedc75d93531c321c3a356db541582b6bdae278",
+    "knowledge/links/K_XLSX_NEW14_0A9FF087925483120EDA1C30.json": "0a0a160815ce5975d63dc9957b42fa17a750e378126af7e2164683b5d72942d8",
+    "knowledge/reviews/links/K_XLSX_NEW14_0A9FF087925483120EDA1C30.json": "ce74b50363f42aac3f011c175a673421d3b253647446f36a01c349ede4357669",
+    "knowledge/hazards/H_DBB3FBAC606D4719B52CEF1A5E.json": "c733e7defeb9f67206499a1f2d716203a6405a32e6d7a1a9ac2e0e97a4075ac1",
+    "knowledge/hazards/H_EXTINGUISHER_REPAIR_CERT_MISSING.json": "4fd3a7d1f4ff7a4458880fa4f055fbc9f53458d1d3a06bf05a43970c16d4057a",
+    "knowledge/reviews/hazards/H_EXTINGUISHER_REPAIR_CERT_MISSING.json": "d06e434b4f6dfdb96a12ad63485091dda2afa8a851b941b5b30a8a0eac682ccc",
+    "knowledge/hazards/H_F0D64F91542E4B0399D83D670D.json": "d8ddbb755d840624948a9f074759917aba496019e8e6d15714db1a6e165707fe",
+    "knowledge/reviews/hazards/H_F0D64F91542E4B0399D83D670D.json": "43b0b7766c58f898e1e649dd745016d6b519e649c602833918460971e49c850f",
+    "knowledge/links/K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A.json": "ce4db6de6236569524c9f1300d05b569c0e8927b3af9d580fc2a830dae7b86a3",
+    "knowledge/reviews/links/K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A.json": "dd5f2e1d9e24a21a1c6ac6c2049d8a9d849b512ddef4a00a6e1d6b692b44c8b6",
+    "knowledge/hazards/H_0BE49AFFA4884C639EE50FD565.json": "64a5e4cce7704b933c2f6d8b317d57c78893af6eb8a130e966a81043f4fe8b49",
+    "knowledge/reviews/hazards/H_0BE49AFFA4884C639EE50FD565.json": "0879786a7ca4ee5df58fd980671a33a34d306fa8c4080a02bb0c34ba033df194",
+    "knowledge/links/K_XLSX_WEB_H_0BE49AFFA4884C639EE50FD565.json": "74208083904f5d7128540a53de7f0dfd794f67160c4529f7708b668edc698dbb",
+    "knowledge/reviews/links/K_XLSX_WEB_H_0BE49AFFA4884C639EE50FD565.json": "824fb87f98a945a97e01319351242a8b6c2fdc723c4223eefdaa9ee5a8401a97"
+  },
+  "majorTopicChangeRecommendation": {
+    "action": "append_controlled_topic_link_after_independent_review",
+    "lawVersionId": "L019",
+    "linkId": "K_CF_MAJOR_06_C_PDDB_7",
+    "hazardId": "H_CF_MAJOR_06",
+    "clauseId": "C_PDDB_7",
+    "dependencyFingerprint": "4de6374f54d162f56e2c67b9a60a85471509a51ae461b571b127c61559108396",
+    "automaticallyProjected": false,
+    "catalogWrittenByThisAuthor": false,
+    "judgmentItemCountChange": 0,
+    "expectedAssociationCountDelta": 1,
+    "note": "专题只消费受控topicLinks；普通Gate合格不会自动新增专题关联。最终计数由中央合并所有组后计算。"
+  },
+  "validation": {
+    "reviewBinding": "Group authored H/K current hashes and context hashes passed in focused tests. Earlier full shared binding was clean; latest concurrent snapshot had 8 stale hazard contexts outside this author scope, reported for central final verification.",
+    "evidenceExact": "passed; 0 mapped mismatches; unmapped sources remain individually reviewed",
+    "focusedTests": "passed; node --test tests/complete-remaining-fire-gas.test.mjs tests/ordinary-clause-tables.test.mjs; 16/16 including single-missing laboratory facility/system cases",
+    "fullSuite": "not run by group; central responsibility",
+    "previousReviewAndDefinitionPreservation": "passed; full prior objects and actual baseline file-byte SHA256 verified for every changed existing entity/review",
+    "gitDiffCheck": "passed"
+  },
+  "authoredSha256": {
+    "knowledge/evidence/E_REMAIN_FIRE_XF1131_20261005.json": "d7c1bc6e9468eaa85c883f04d72790c254f9b0f500b9d9ec00f7a7f8d75e3440",
+    "knowledge/evidence/E_REMAIN_FIRE_HJ2000_20261005.json": "12fcde87ee187db018ad86fb376b82991e3cbd2b58112f03922a7e1c72adc527",
+    "knowledge/evidence/E_REMAIN_FIRE_JGJ91_20261005.json": "65efed54cdb737bd47e69c8ea690029f22f164aeabcaf724c6390cf77d778ec1",
+    "knowledge/evidence/E_REMAIN_FIRE_GB55036_20261005.json": "4acbdbf1619582f3962c96706c4b968c078b24dd3eafd2ce0ddc10052e957029",
+    "knowledge/evidence/E_REMAIN_FIRE_GB55037_20261005.json": "7c28613b11638d146b786ffec4883a36e2207a4f5725a1542fe5e3e7227c1e5a",
+    "knowledge/evidence/E_REMAIN_FIRE_GB50116_20261005.json": "248e62aa8ba6d0423545fdd72645196512e8d6c2c73d82d5bfa371f376b7ceb6",
+    "knowledge/evidence/E_REMAIN_FIRE_MEM10_20261005.json": "267f22da1450f1b25c9fa0e89048faf28ea9415f7b4ca0672cb9823c397e16d4",
+    "knowledge/hazards/H069.json": "c1ee6c2c13149ccd764eb317aed50081ffeb032908dd2ba9c102237113831b47",
+    "knowledge/reviews/hazards/H069.json": "f584a3ed16bacb587f788887e54f10534f4bdb99fd7d20a044e6d4b68e44756e",
+    "knowledge/links/K_XLSX_WEB_03B2F837CD3D64D61AB79B20.json": "2300682cf3639e28e1362fbbe0d2dd36ee1aa25f9f8b14151b9fb4411cef8631",
+    "knowledge/reviews/links/K_XLSX_WEB_03B2F837CD3D64D61AB79B20.json": "47a2df8e35cc2fab5d60acad5211f75522766162338ab1bf6fb5e6692115cc7d",
+    "knowledge/hazards/H_21A69E2CA823BC59272F464D.json": "bb8884703472505825f0dfb70e81fa39e8b912d4c2f5bef59bd403586c254e6f",
+    "knowledge/reviews/hazards/H_21A69E2CA823BC59272F464D.json": "26d4729c5c812824ecefa9c81364efda8048b558692f5693a9f5f7cdd29e5dca",
+    "knowledge/links/K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D.json": "2f08cfec91a48b26c5551745771db348ef4b85aad50e9367066043ac20c4504f",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_21A69E2CA823BC59272F464D.json": "2c3ab1c1218e4e3f9d0ba5dbe18d243caffe3935070d765acb25ad15445caf8e",
+    "knowledge/clauses/C_XF1131_3_4_P2.json": "92e6158539b19686bcd8711081325ab9dcf83e766c1fbca85340da02122b6f0e",
+    "knowledge/reviews/clauses/C_XF1131_3_4_P2.json": "7ac344e53c5a9e761985248824e966a3a1277e4b2c8cc8b5670768f64db91038",
+    "knowledge/hazards/H_45A066D644BE4A0992ECC95E1B.json": "e2c376487f46854effc373c2429e520cdee5501899e1c9ef075255e889476592",
+    "knowledge/reviews/hazards/H_45A066D644BE4A0992ECC95E1B.json": "a94f7b851b8012bccaede76569dbe71d76f8206940898d15efaef73a58817031",
+    "knowledge/links/K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B.json": "66aae9e8c22e6b9e69984da845c39acf17f419c98e301d5315995f6ba67ac3c6",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_45A066D644BE4A0992ECC95E1B.json": "e4165a205ec14d108b78394135fc8b98660b51fa5cbb7e7ef8269e43ec2bfc6f",
+    "knowledge/clauses/C_GB55036_3_0_5_4.json": "6e20a36df8321a44f6f4f59b7763f44a44a1735effea3f60301d9c52af85a22d",
+    "knowledge/reviews/clauses/C_GB55036_3_0_5_4.json": "3fb45645982cb294d98e1f372f0ed336e2be4f27234a590688adb50d381782f3",
+    "knowledge/hazards/H_524210530E054FE1BB1D918820.json": "bd3ed3c54ee059c4ea8393341078d6951a7fd77300a74b7ed703c1dfc2b2265e",
+    "knowledge/reviews/hazards/H_524210530E054FE1BB1D918820.json": "98d31308c9b70a2bfad49626839d897ac491bc9770b910c32c0707a4be4d29ce",
+    "knowledge/links/K_XLSX_NEW14_69C24502ACF899C740842392.json": "d1b967e80d7db84b48410c721200978d4fc1ba9dff336088c29321bae504561a",
+    "knowledge/reviews/links/K_XLSX_NEW14_69C24502ACF899C740842392.json": "fda3d8b8743fcd9c912c40fd7bd3cc578c401cc99b7cd6f389f0d39174f8b5fd",
+    "knowledge/clauses/C_GB55037_10_1_5.json": "a8877daf894a58aaecb8ae840bf0e99b21fb8a2c186d9114042a01cb85fd79bc",
+    "knowledge/reviews/clauses/C_GB55037_10_1_5.json": "6395c1fae6b41e7db5bd62b0950e1bf1dbc6ae4b5c7135a0d864b399bb72b186",
+    "knowledge/hazards/H_66611E63B2814335BFA0EF5E0D.json": "41fa04178699bbbc6d5fb66e09f4dc397fb4224735b2f7ab3413cea6c4341f16",
+    "knowledge/reviews/hazards/H_66611E63B2814335BFA0EF5E0D.json": "566c974937d19be2583eb91107291c122ed4ef727d49f0cf8ee73acfd90fec26",
+    "knowledge/links/K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D.json": "43e7a93b60df82f33bbb10bef57c7ebb9b6809d03eead6d7cf16d7cd86b5ab4a",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_66611E63B2814335BFA0EF5E0D.json": "b63f5b4a060add8d3f5df45a454d636f574ed62c22a1cbfccb552e284bec5992",
+    "knowledge/laws/LF_STD_GB50116.json": "6524058f551eeab74740bc8052f276279ace46553a1cb7043ec431cde111a032",
+    "knowledge/reviews/laws/LF_STD_GB50116.json": "e1e16db56e8f171c8988c45a4d517063800f15c24daa5c244a695c355f3670cf",
+    "knowledge/law-versions/LV_STD_GB50116_2013.json": "fbc517e4314b752963313e89e054ef91efe54fd4475999e3511a01c9295ce92e",
+    "knowledge/reviews/law-versions/LV_STD_GB50116_2013.json": "526000851cc95adba046e06fdf175c84c6bfde6114bc99a6b052213db6112ae6",
+    "knowledge/clauses/C_GB50116_6_3_2.json": "18a63da247991211b405886d19d08a6044ae8dd202a94a1e7de25cf2e7234c91",
+    "knowledge/reviews/clauses/C_GB50116_6_3_2.json": "16459eb8b322af8352ba9d38e6a029c7954a18f03230091c9ae30ddc401d6833",
+    "knowledge/hazards/H_99B75F33D550486BBA89A77139.json": "9613d47277421fbcfb61a1cfd0cfeb4a9aa3b762243bff0a936d723d825caf0e",
+    "knowledge/reviews/hazards/H_99B75F33D550486BBA89A77139.json": "3a445c6ed11384e7dc736fcce281b8e84fd7ada869efa0e6924268c2286a9915",
+    "knowledge/links/K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139.json": "d0eb5bded7cb16ba63b3da4b491e15d9cfe0252a20abdcfaea34764e7c9bf0eb",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_99B75F33D550486BBA89A77139.json": "d9cce36af0775f35c6cffcab30b76137a54a1c612c744c687ff65f952e36bc03",
+    "knowledge/clauses/C_XF1131_8_6.json": "0afe236477136a10d4ca8010abedac83b17a7d001e886b484bc57f2ed6df5851",
+    "knowledge/reviews/clauses/C_XF1131_8_6.json": "fd0bb6d87a9bbd7ea20800799ff0e7a022da800331d439b694c3632e30aeff94",
+    "knowledge/hazards/H_B16CF9FD47A6467189A9B9BC52.json": "ef0feac65f2628b69cde678abb0c88550022562fbcb19855ebe9edc66026282d",
+    "knowledge/reviews/hazards/H_B16CF9FD47A6467189A9B9BC52.json": "61487564e90f2cf17b9f21cced57607fa0af9c14c141bf30a0d71f2a0d98000a",
+    "knowledge/links/K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52.json": "a24d5c8b4c9493b92feea25da49fa41d81e9f4bf90e4890f6a24407e1f994d83",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_B16CF9FD47A6467189A9B9BC52.json": "592b6af1c27eddd252b85a0c849e1ad6d1153dc9964315701c94594086a0fd86",
+    "knowledge/clauses/C_JGJ91_10_1_8.json": "4bf72d2611abdc661f49044dbf9714f3467eccd1954ca52616677eaaa27850e9",
+    "knowledge/reviews/clauses/C_JGJ91_10_1_8.json": "9ee651d7e41e8d5c13316d59cd7262a765e5878a78cf12b8b890052904ceea6c",
+    "knowledge/hazards/H_C706DAF977FA4CC5960E97DD05.json": "f2337a1e15f5b588d30ba0da80a96fb21f0d219e272aa0f0ca1fd9f376d8e82b",
+    "knowledge/reviews/hazards/H_C706DAF977FA4CC5960E97DD05.json": "f628f1ecc6cab3fb6579251ee3d149423a422d8489d69ccb187baba019d719d5",
+    "knowledge/links/K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05.json": "84d3e69f43b5165d3c8f6508c3c42c8c780c61da6637aae7d6eb3f476ab7e0f3",
+    "knowledge/reviews/links/K_REMAIN_FIRE_H_C706DAF977FA4CC5960E97DD05.json": "dc4039d67a8eb3f21807c68b3fd2d55ff2775de83e8033aba57be79de6d2cf00",
+    "knowledge/hazards/H_CF_MAJOR_06.json": "15b664bb09fa0c962651e11d16a247373961a2055cbc29bc86d451314e3ae5dd",
+    "knowledge/reviews/hazards/H_CF_MAJOR_06.json": "eb0bb9737b13b8a43db7411726fa31865ab5681b246cd6eed7e6d59d50aa5157",
+    "knowledge/links/K_CF_MAJOR_06_C_PDDB_7.json": "cc1178dac8be8e6cfa7cc84afa122189e0edc63e365bcf57792a6e2413d1faff",
+    "knowledge/reviews/links/K_CF_MAJOR_06_C_PDDB_7.json": "39f1c9c829034979846801bcb86d811701eef4d78c396c9b2a847e21172a11e2",
+    "knowledge/evidence/E_MOHURD_JGJ91_2019.json": "1b721917124bb274296aaef47ead92e7d628cd4e1ad838e38b18b3436c9b3b2b",
+    "knowledge/clauses/C_JGJ91_5_2_1.json": "c0a19d8aeb3e831a2b53291e1a12cd76f1cd14e2c1b2ec060afda77675ab6744",
+    "knowledge/reviews/clauses/C_JGJ91_5_2_1.json": "fbf47b66a3b09e0e4a39477721d1666558c1e53e1e8e6c927cdaec65ffca2c0d",
+    "knowledge/clauses/C_JGJ91_5_3_3.json": "e9056b4d8153eeafc5f6001494241d8a07394a2ba1f7504494f86b4017c1666c",
+    "knowledge/reviews/clauses/C_JGJ91_5_3_3.json": "112e22fa838b684693f80e877bfded5f4bf97d83bc2f6940974b2c1e199b9e1b",
+    "knowledge/reviews/clauses/C_JGJ91_5_2_6.json": "398ede2386e44a133b9d6ebd51ec25f5d34570439cf9ba030cae330a7a42b209",
+    "knowledge/hazards/H077.json": "620ac07e9bdd6161d50e03d1df07aa850c8bc1411b8093fd885ed19b8c31ec5d",
+    "knowledge/reviews/hazards/H077.json": "56010402e30821e81fb087f37035f94e15b4c33cb772099658e4bde7e50f4fe4",
+    "knowledge/links/K_PHASE6_3F27AE868858FCDD47725935.json": "e4e269a8f2320c204e3f33b021a2f4f0b7659b3d0df5f5780fb4924d1248d25f",
+    "knowledge/reviews/links/K_PHASE6_3F27AE868858FCDD47725935.json": "811b4f52fbb81fb526eb077d2c4fe4bb4036e0604b28c222e4aae6f97b2b3910",
+    "knowledge/hazards/H_3C5449E0928B4B219D77694FDC.json": "90f086b783515fa0a61a7fe5e725771636f22ccb26b715fc26c2d3eb5bcc868d",
+    "knowledge/reviews/hazards/H_3C5449E0928B4B219D77694FDC.json": "088eb35a42c340dc5a9bd8b104a793954af15d4e8e3ae2b9808d149611ff9896",
+    "knowledge/links/K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC.json": "15e64e36d11e6b6118b8d46c99553280ff356319c85023f981ebae7518e65bbd",
+    "knowledge/reviews/links/K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC.json": "bbbe7c67a26d07c9fb00f5b39a73ef45d48bc90e184b281275924ddd4d67f0a3",
+    "knowledge/hazards/H_060514A9AB6347C6A98CD93842.json": "2df012968170e03899f7c12c2e9cb31f4d1c496311d1d0086c80aa3818fd5d39",
+    "knowledge/reviews/hazards/H_060514A9AB6347C6A98CD93842.json": "79ca72b737d47bfe2eee33a7860f216596bc779b61c1a9799fbe376ad9cd244a",
+    "knowledge/links/K_XLSX_WEB_H_060514A9AB6347C6A98CD93842.json": "da70568d470471b28f88875f3d42b1871823a46fd0d603e985252094e64027d9",
+    "knowledge/reviews/links/K_XLSX_WEB_H_060514A9AB6347C6A98CD93842.json": "fecedd9f223fb144eb9bea6bdefe6d62016cd700f09e8d0f36f52a1a80e15a53",
+    "knowledge/hazards/H_387CD4000D844D269A439E4D45.json": "608068b73948dcc81c09a6650d2a20de7036e52c3df7ab18e53fb634ea2d0210",
+    "knowledge/reviews/hazards/H_387CD4000D844D269A439E4D45.json": "cded8271d61be240d49afce0711d315c56a93434ee7588a4124b8db6b752e514",
+    "knowledge/links/K_XLSX_WEB_H_387CD4000D844D269A439E4D45.json": "4c3c18168c2dd3a0551a0269ea1ca787a181e81c881427eb5c3666c957047084",
+    "knowledge/reviews/links/K_XLSX_WEB_H_387CD4000D844D269A439E4D45.json": "a6c527cf0e8ced13f11ddb7a4c47f793040bb55a5b33d75acc30d0a6df845f2f",
+    "knowledge/hazards/H_A4AF26421A0E404F82BF740A6D.json": "3629bb544dfedaafb3d03772b854d4e12d6689c4e73de831ca374005b145abee",
+    "knowledge/reviews/hazards/H_A4AF26421A0E404F82BF740A6D.json": "92d6faf99f0008f18612415cb1c3a1d2fb6c193ec47967b389a381b8bc1f3b2e",
+    "knowledge/links/K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D.json": "6228adc09d77886d2b7254c690bc18299cd203cccaf1fb1997f363ee9d0ca338",
+    "knowledge/reviews/links/K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D.json": "e42c1b47ce10ac1534c92e271245b7b13fc78c534d9063c124a45d7c7dec918e",
+    "docs/COMPLETE_REMAINING_FIRE_GAS_AUTHOR_20261005.json": "9594c552d5f10ffa68b36730505638805aeacedb8836bf813a9f86b09ad3424e",
+    "tests/complete-remaining-fire-gas.test.mjs": "d2b699126de06753d64228a423d1e1737a2b803e26f6b6fedb1862985e09b904",
+    "knowledge/hazards/H038.json": "1f040e8a33ff3635436c02119a784fb1eae365969a54db14ac4102ff53b696cf",
+    "knowledge/reviews/hazards/H038.json": "0f00f65b194b8fa6ac8395d7e722a810ff9bdaddfcfccb4d3e4643971c356b30",
+    "knowledge/links/K_AC0819521C0C6C9961FDEB.json": "8d1b616a700f21375c9b244f2fe3a3b02943b33f61f6e081375ec2334a34edfa",
+    "knowledge/reviews/links/K_AC0819521C0C6C9961FDEB.json": "c076182d2a55de44d23a490250fb4656cc7a7a75c4dfd562c51297f1401e34fd",
+    "knowledge/links/K_24829595e4a1c7c20086ebe0.json": "b15de62891629fd5311df94a0d23d3537567b840ca184976bb3e603e2f3322c0",
+    "knowledge/reviews/links/K_24829595e4a1c7c20086ebe0.json": "6e26c94d36585d174877392116080ce57b17253e3da0ac09b4f0cbe894c71776"
+  },
+  "authoredPinProvenance": {
+    "addedBy": "central integration",
+    "verifiedAgainstIndependentContentReview": "fire-gas-content-review.json",
+    "previousAuthorReportSha256": "9594c552d5f10ffa68b36730505638805aeacedb8836bf813a9f86b09ad3424e",
+    "meaning": "Exact existing reviewed file bytes only; no source or legal review change."
+  }
+}

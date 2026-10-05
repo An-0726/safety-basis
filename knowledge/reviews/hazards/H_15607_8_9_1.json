@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_8_9_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c5d15016101a04dc99c50348fbd49ab7f5d02e769992b04d44eaeef289416868",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_38A01615F1805ABE819AE1DA"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "bd60356e3f5cfeb9e3040ffbaf25f60fc06833d25c8e006fefd8509a9b374a9a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "重新核对第8.9条具体义务及工艺范围，去除旧泛涂装套用、OCR串附录和错位适用性。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_8_9_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_38A01615F1805ABE819AE1DA"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "bd60356e3f5cfeb9e3040ffbaf25f60fc06833d25c8e006fefd8509a9b374a9a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，设备运行或有高压时进行设备维修，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_8_9_1",
+    "keywords": [
+      "设备运行或有高压时进行设备维修"
+    ],
+    "lifecycle": "active",
+    "measures": "停止在设备运行或存在高压、残余能量的状态下检维修；检维修前按设备特点停机并隔离相关能量，确认达到安全状态后再作业。整改后检查设备结构、防护、控制或稳定状态，必要时试运行验证，确认安全功能有效后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "设备运行或有高压时进行设备维修"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

@@ -1,18 +1,49 @@
 {
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "contextHashes": {
-    "hazard": "5b38c0baaff12632ec682b1da23baaeaa0065342e51a6cb45c3c1b04f5e805d8",
-    "clause": "865dd35af00d2fc6ad1a6de5eaa525b9bd20cb6a98eaa52ecd004324005fc88e"
-  },
-  "decision": "verified",
   "entityId": "K_PHASE6_90B585E3413BD48D6A26F37A",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_GBT47236_2026"
-  ],
-  "reason": "第4.2.2.3条直接要求相关运动部件封闭或设置其他防护装置。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
   "reviewType": "applicability",
-  "reviewedContentHash": "9b5cff3916c52ebf550d9b592aeb9af9e038ac8b1289dbbd2898bc50a0c0b22d",
-  "reviewer": "ChatGPT",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "c31504db48ed725bbb1039b2b4e187a0ed0fa2776cfed7071a8ff6469aab6abb",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GBT47236_2026_20261005"
+  ],
+  "reason": "逐条核第4.2.2.3条自身义务，补齐第1章设备范围、设计/制造/验收阶段及推荐性属性；原使用维护现场泛化不再作为当前条件。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "contextHashes": {
+      "hazard": "5b38c0baaff12632ec682b1da23baaeaa0065342e51a6cb45c3c1b04f5e805d8",
+      "clause": "865dd35af00d2fc6ad1a6de5eaa525b9bd20cb6a98eaa52ecd004324005fc88e"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE6_90B585E3413BD48D6A26F37A",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GBT47236_2026"
+    ],
+    "reason": "第4.2.2.3条直接要求相关运动部件封闭或设置其他防护装置。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "9b5cff3916c52ebf550d9b592aeb9af9e038ac8b1289dbbd2898bc50a0c0b22d",
+    "reviewer": "ChatGPT",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "id": "K_PHASE6_90B585E3413BD48D6A26F37A",
+    "hazardId": "H_F8BD176AF46643EA9E3CC56A6F",
+    "clauseId": "C_GBT47236_4_2_2_3",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于GB/T 47236-2026范围内、存在缠绕、吸入或卷入危险的运动/传动部件。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "第4.2.2.3条直接要求相关运动部件封闭或设置其他防护装置。"
+  },
+  "contextHashes": {
+    "hazard": "fe4dfb07f4002e0bc4a4fc84a119b1199c56b34f93df1564731085e7a15c81d7",
+    "clause": "13d74a7e85e9d2963211af3ed21573f894a1f9091c6d090bc7632ae168564e9b"
+  }
 }

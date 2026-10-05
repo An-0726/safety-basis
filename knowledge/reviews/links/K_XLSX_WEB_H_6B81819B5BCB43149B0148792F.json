@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_6B81819B5BCB43149B0148792F",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "9d7bd4c0326a32ccf2a86784eaf695f66b0e78c08960363bb345b77e868d4287",
-  "contextHashes": {
-    "hazard": "0c8273fc95c1a1be049daa4e5cf64098b4f19e302d0f04efac223ac152c74607",
-    "clause": "1897263d065298eeea298d71c236e9a00864bebbe8d1c0ea9b8839191d28a8cc"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第二十八条第四款培训档案管理。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "c83856f7f1d02d840076fb1de7eb665008b744f9d42297def5e00c92873cf3ad",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_NPC_WORK_SAFETY_LAW_2021"
+    "E_ALL_MANAGEMENT_safety_law_mem_official_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "完整第二十八条第一款为培训和合格上岗直接依据；不再错绑第四款档案。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_6B81819B5BCB43149B0148792F",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "9d7bd4c0326a32ccf2a86784eaf695f66b0e78c08960363bb345b77e868d4287",
+    "contextHashes": {
+      "hazard": "0c8273fc95c1a1be049daa4e5cf64098b4f19e302d0f04efac223ac152c74607",
+      "clause": "1897263d065298eeea298d71c236e9a00864bebbe8d1c0ea9b8839191d28a8cc"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第二十八条第四款培训档案管理。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "8fa6439a32f7b0bd9d94421d49a93bdaba4777b7ae4d776ac81d209919895693",
+  "previousDefinition": {
+    "applicability": "未建立安全生产教育培训档案或未如实记录培训情况",
+    "clauseId": "C_SAFE_LAW_28_4",
+    "hazardId": "H_6B81819B5BCB43149B0148792F",
+    "id": "K_XLSX_WEB_H_6B81819B5BCB43149B0148792F",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "e436881ae46cd1d379c9c45b9f3055bd44119b53f051a514091c5cc33d331447",
+  "contextHashes": {
+    "hazard": "8ae4e925c98853e212daf013df3c9772990badef5aae906f8fead6aab9d6cf62",
+    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458"
+  }
 }

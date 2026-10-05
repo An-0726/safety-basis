@@ -1,18 +1,51 @@
 {
-  "checkedAt": "2026-09-16",
-  "contextHashes": {
-    "clause": "9ba209d8b1a87009a2bfe32773489daa738849ec7c27a7537cedfaf8b3e8dcb1",
-    "hazard": "4ddc900728ee91a9b03e3394c8f2e48df883e093136b0b4b62e0646014225f67"
-  },
-  "decision": "verified",
   "entityId": "K_PHASE6_5706D1845015ED372D377D7F",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_GB50187_2012"
-  ],
-  "reason": "GB 50187-2012第5.7.4条第2项逐字覆盖主要货流方向、仓库堆场和外部运输线路连接。",
   "reviewType": "applicability",
-  "reviewedContentHash": "f4ea7834bdf267da08eea55b54ea5b879b863081f42050baa5886c9501dfc0de",
-  "reviewer": "ChatGPT PHASE6 final review 20260916",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "pending",
+  "reviewedContentHash": "ea06d3b82a8a729f8b233d83a0df9fe08642011e22a87c550a09628f2bec63e8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB50187_2012_20261005"
+  ],
+  "reason": "撤回旧摘要的完整直接证明；等待正式精确目标页。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "contextHashes": {
+      "clause": "9ba209d8b1a87009a2bfe32773489daa738849ec7c27a7537cedfaf8b3e8dcb1",
+      "hazard": "4ddc900728ee91a9b03e3394c8f2e48df883e093136b0b4b62e0646014225f67"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE6_5706D1845015ED372D377D7F",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GB50187_2012"
+    ],
+    "reason": "GB 50187-2012第5.7.4条第2项逐字覆盖主要货流方向、仓库堆场和外部运输线路连接。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "f4ea7834bdf267da08eea55b54ea5b879b863081f42050baa5886c9501dfc0de",
+    "reviewer": "ChatGPT PHASE6 final review 20260916",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "65005bccf6587fe54a931b30b6385875232c12002340b7157a35f5849639fdcf",
+  "previousDefinition": {
+    "id": "K_PHASE6_5706D1845015ED372D377D7F",
+    "hazardId": "H_3DF895C1974245A29D51728DA7",
+    "clauseId": "C_GB50187_5_7_4",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于工业企业主要货流出入口的布置。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "GB 50187-2012第5.7.4条第2项逐字覆盖主要货流方向、仓库堆场和外部运输线路连接。"
+  },
+  "previousEntityFileSha256": "8c786b66df9fbca5a2786568fc7908ae7fdf8698ee794b6cc19ed22c4592d956",
+  "contextHashes": {
+    "hazard": "42a75cda707857d7c6d734d2c4c497c1f4658ed7a7c32433395ae774ed397281",
+    "clause": "9ba209d8b1a87009a2bfe32773489daa738849ec7c27a7537cedfaf8b3e8dcb1"
+  }
 }

@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_8_5_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f00ad5a7828f74699d821214438cf40444d9bd88418b2817b656f9ff6244234d",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_FB9A7E08BC8E54310B24E353"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "8ba6fab495a8512d5783d1442cee2281fef22ddddac3971f7961f6dd48d0f417",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 8.5：可依完整条款修复现有H/C/K定义及审核；限制仅粉末静电喷涂范围。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_8_5_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_FB9A7E08BC8E54310B24E353"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "8ba6fab495a8512d5783d1442cee2281fef22ddddac3971f7961f6dd48d0f417",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，出现喷粉室开口断面风速低于最小设计风速、风机故障、回收供粉系统堵塞、漏粉跑粉等非正常状态时未停止作业，已影响正常通行、疏散、操作或应急取用条件。",
+    "id": "H_15607_8_5_1",
+    "keywords": [
+      "出现喷粉室开口断面风速低于最小设计风速",
+      "风机故障",
+      "回收供粉系统堵塞",
+      "漏粉跑粉等非正常状态时未停止作业"
+    ],
+    "lifecycle": "proposed",
+    "measures": "出现喷粉室开口断面风速低于最小设计风速、风机故障、回收供粉系统堵塞、漏粉跑粉等非正常状态时停止作业。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "出现喷粉室开口断面风速低于最小设计风速、风机故障、回收供粉系统堵塞、漏粉跑粉等非正常状态时未停止作业"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

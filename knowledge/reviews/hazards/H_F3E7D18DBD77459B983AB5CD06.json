@@ -1,18 +1,58 @@
 {
-  "decision": "verified",
   "entityId": "H_F3E7D18DBD77459B983AB5CD06",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a6caf255fa41d0316b6702ae2c6f64bde619d107c602064d049702317f697155",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "EH_1c336a71ef3e815aceaac31db9f77fbb5c11fe08dbed6afa29c01711623098d5"
+    "E_ALL_MANAGEMENT_hazchem_law_beijing_official_20261005"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_a4bee42e579a04939a7f7cee",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "同源完整第5条支持规章制度与岗位安全责任制度，保既有canonical避免再造重复H。",
+  "notes": "同一331候选批内共享已核当前来源；不证明具体现场或个案违法。",
+  "previousDefinition": {
+    "aliases": [
+      "未见危险化学品安全管理制度"
+    ],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于《危险化学品安全管理条例》调整范围内的危险化学品单位；现场应先确认企业危险化学品活动及其法定责任范围。",
+    "description": "危险化学品单位未建立、健全安全管理规章制度，危险化学品安全管理职责和要求缺少制度化依据。",
+    "id": "H_F3E7D18DBD77459B983AB5CD06",
+    "keywords": [
+      "危险化学品",
+      "安全管理制度",
+      "规章制度",
+      "岗位安全责任制度",
+      "危化品管理制度"
+    ],
+    "lifecycle": "active",
+    "measures": "建立、健全危险化学品安全管理规章制度和岗位安全责任制度，明确危险化学品采购、储存、使用、处置等环节的管理职责与要求，并组织培训、执行检查和持续更新。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【Phase8】补充条例第四条（危险化学品单位应建立、健全安全管理规章制度和岗位安全责任制度）；第二十八条为使用单位的制度义务条款，两条并用更准确。2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《危险化学品安全管理条例》第四条、第二十八条\n\n2026-09-21工程审计：按《危险化学品安全管理条例》第四条收紧隐患对象和表述，并恢复直接依据发布资格。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "危险化学品单位未建立、健全安全管理规章制度"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "e465f60fb7d7e03ffee06a211b01a71407bcfea2b7416b76347a05b937a45f0a",
-  "reason": "《危险化学品安全管理条例》第四条直接要求危险化学品单位建立、健全安全管理规章制度和岗位安全责任制度；本次仅收紧适用对象与现场表述。",
-  "checkedAt": "2026-09-21T00:30:00+08:00",
-  "reviewer": "ChatGPT / Engineering Audit"
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_F3E7D18DBD77459B983AB5CD06",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_1c336a71ef3e815aceaac31db9f77fbb5c11fe08dbed6afa29c01711623098d5"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_a4bee42e579a04939a7f7cee",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "e465f60fb7d7e03ffee06a211b01a71407bcfea2b7416b76347a05b937a45f0a",
+    "reason": "《危险化学品安全管理条例》第四条直接要求危险化学品单位建立、健全安全管理规章制度和岗位安全责任制度；本次仅收紧适用对象与现场表述。",
+    "checkedAt": "2026-09-21T00:30:00+08:00",
+    "reviewer": "ChatGPT / Engineering Audit"
+  },
+  "remainingUnsupportedBranches": []
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_8_7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8e591f3e8a918fe888a7f0657e9ecb9aa35af602df4af60bd24ad64517b24339",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_F53D46CFE4674100B239C13E"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b11e619f40b5c058cfd0852a97e996f06f09dcd9b301cc2a0ed697c360ebd93d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "重新核对第8.7条具体义务及工艺范围，去除旧泛涂装套用、OCR串附录和错位适用性。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_8_7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F53D46CFE4674100B239C13E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b11e619f40b5c058cfd0852a97e996f06f09dcd9b301cc2a0ed697c360ebd93d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "经资料及履职情况核查，喷粉设备检查、清理未做记录，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_8_7_1",
+    "keywords": [
+      "喷粉设备检查",
+      "清理未做记录"
+    ],
+    "lifecycle": "active",
+    "measures": "喷粉设备检查、清理做记录。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉设备检查、清理未做记录"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

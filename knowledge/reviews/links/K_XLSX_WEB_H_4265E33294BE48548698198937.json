@@ -1,18 +1,47 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_4265E33294BE48548698198937",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "edb844afda9e5943487d03aa3b4faf8dd51d846732feca40b09d10974a7dc41f",
-  "contextHashes": {
-    "hazard": "014284b11f5c75e046f2a07099169b03b2895741376f8329d2662599c541d07a",
-    "clause": "bc564cd50a5d9a782b8f3327662c83b8d29072a0c15aaa09bf96e13fd0018f48"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 6514-2023防爆与防护规范。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "3991d8db18930a32e3fa6f14c06fdba684fd13c96ad7a4de919a0180a0f9d074",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB6514_2023"
+    "E_ALL_GB6514_2023_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "正式GB6514-2023第7.1.4.1条准确对应；保留第1章排除项，不借接地或错误7.4.7替代。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_4265E33294BE48548698198937",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "edb844afda9e5943487d03aa3b4faf8dd51d846732feca40b09d10974a7dc41f",
+    "contextHashes": {
+      "hazard": "014284b11f5c75e046f2a07099169b03b2895741376f8329d2662599c541d07a",
+      "clause": "bc564cd50a5d9a782b8f3327662c83b8d29072a0c15aaa09bf96e13fd0018f48"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 6514-2023防爆与防护规范。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB6514_2023"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "涂装喷漆调漆场所防爆与防静电安全要求",
+    "clauseId": "C_GB6514_7_4_7",
+    "hazardId": "H_4265E33294BE48548698198937",
+    "id": "K_XLSX_WEB_H_4265E33294BE48548698198937",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "af5eac7ae2939255d59efcfe16cc589ccfa204dc7d25424607d82ee22b6eca51",
+    "clause": "7c002308259750595bfd42e2144eac1beb90bd8a0907b5d8a150623ece47db00"
+  }
 }

@@ -1,1 +1,89 @@
-{"decision":"verified","entityId":"H_2608B93F77A149399BD6B44EA7","entityType":"hazard","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_889bbb3aa3858b17599ee18e1e_0","reviewedAt":"2026-09-09T13:34:10+00:00","reviewer":"Codex 主核验"},"reviewType":"content","reviewedContentHash":"6ee3f2ad4d6bb190fbb3e5d51268bb776cb57f3e4ea155c21cb5afdf74c3ee59"}
+{
+  "entityId": "H_2608B93F77A149399BD6B44EA7",
+  "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8e747f1562793aedb3fc24a973423dc6b6f01c8f795ada9552e687645bb2a4b4",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_ELECTRICAL_GB12801_20261005",
+    "E_ALL_ELECTRICAL_GB2894_20261005"
+  ],
+  "reason": "只归并有界同义分支，原稳定ID与原始来源完整保留；不据旧模板认证现场。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_2608B93F77A149399BD6B44EA7",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_889bbb3aa3858b17599ee18e1e_0",
+      "reviewedAt": "2026-09-09T13:34:10+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "6ee3f2ad4d6bb190fbb3e5d51268bb776cb57f3e4ea155c21cb5afdf74c3ee59"
+  },
+  "previousReviewFileSha256": "14e7736fd69ef614466c0575727be46d4b0184d3dd5d845ec5263a2d3c686dcc",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于生产作业区域的标识设置。",
+    "description": "本项目依托所在建筑设置了安全疏散通道、疏散指示标志和应急照明，但生产作业区域未设置相应的安全标识。",
+    "id": "H_2608B93F77A149399BD6B44EA7",
+    "keywords": [
+      "本项目依托所在建筑设置安全疏散通道",
+      "疏散指示标志和应急照明",
+      "生产作业区域设置相",
+      "本",
+      "项",
+      "目",
+      "依",
+      "托",
+      "所",
+      "在",
+      "建",
+      "筑",
+      "设",
+      "置",
+      "安",
+      "全",
+      "疏",
+      "散",
+      "通",
+      "道",
+      ",",
+      "指",
+      "示",
+      "标",
+      "志",
+      "和",
+      "应",
+      "急",
+      "照",
+      "明",
+      "生",
+      "产",
+      "作",
+      "业",
+      "区",
+      "域",
+      "相",
+      "未",
+      "识"
+    ],
+    "lifecycle": "proposed",
+    "measures": "仅针对缺失或不合规的安全色、安全标志进行补设、更换和位置调整，按GB 2894-2025统一图形、颜色和设置要求，不额外混入无关的应急照明、通道整改。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 修订：原标题为条款原文片段或存在文字损坏，语义不通且无法作为现场隐患表述；此处依其原描述与现有依据改写为可判定的现场事实，未改变依据本身。\n\nGB 55037-2022《建筑防火通用规范》。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "生产作业区域未设置相应的安全标识"
+  },
+  "previousEntityFileSha256": "170f44ae25184bf7b8d216db0017ea780c1e1c5d336b640530c6f5bc69fccce0"
+}

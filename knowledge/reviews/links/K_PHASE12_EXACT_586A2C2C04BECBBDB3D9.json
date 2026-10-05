@@ -1,18 +1,51 @@
 {
-  "checkedAt": "2026-09-18",
-  "contextHashes": {
-    "clause": "d7f1b3663f0ff0a1965ff3e318ba9ad146ac19db9ee9b1e65667970bb3c34094",
-    "hazard": "93f27330b0eba5470ef649a4d6d7f410b3869ef6946a99eb433dfa858743c687"
-  },
-  "decision": "verified",
   "entityId": "K_PHASE12_EXACT_586A2C2C04BECBBDB3D9",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_PHASE12_EXACT_LOCATOR"
-  ],
-  "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示较大以上安全风险信息。",
   "reviewType": "applicability",
-  "reviewedContentHash": "58da887c0d8456dceabc06a0237d0c4fabf9e39b25e3e3b650a8826a6f7cc5c4",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "74b59af3050ab2db6af26f98561f4f7bb64e934529778becd438cceff14baaa4",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_ELECTRICAL_JIANGSU_20261005"
+  ],
+  "reason": "从旧140号规定改接现行2024条例16条完整原文，CN-32地域与生产经营单位对象吻合；不篡改旧C或旧LV。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "contextHashes": {
+      "clause": "d7f1b3663f0ff0a1965ff3e318ba9ad146ac19db9ee9b1e65667970bb3c34094",
+      "hazard": "93f27330b0eba5470ef649a4d6d7f410b3869ef6946a99eb433dfa858743c687"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE12_EXACT_586A2C2C04BECBBDB3D9",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示较大以上安全风险信息。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "58da887c0d8456dceabc06a0237d0c4fabf9e39b25e3e3b650a8826a6f7cc5c4",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "698e2cafc9e3063974956c670e5881fc915f17598692715e30d83b6cd2e77e49",
+  "previousDefinition": {
+    "id": "K_PHASE12_EXACT_586A2C2C04BECBBDB3D9",
+    "hazardId": "H_317326A8B80648F4A57D50755D",
+    "clauseId": "C_JS140_十六",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "按所引现行法规/标准条款及其适用范围判断。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示较大以上安全风险信息。"
+  },
+  "previousEntityFileSha256": "f1363ee70fd4faaa68cf033489212694cc240d96dbcf95355e5732a7f3cb8001",
+  "contextHashes": {
+    "hazard": "e84492a00b0cc041cccaa1228996b56a55b6aa543a8036c0694f87c8bfd8be6a",
+    "clause": "fe8d91f504831469af47a18f8eafc00936552f6276ab725f14fd76a151f023eb"
+  }
 }

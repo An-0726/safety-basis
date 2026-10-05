@@ -1,13 +1,36 @@
 {
-  "decision": "verified",
   "entityId": "C_e58389b89299307a0d45042d",
   "entityType": "clause",
-  "evidenceRefs": [
-    "EH_ed93b74b8a1f2d44eb9db148a6a5cc51de158a71db07bde84a889c8c43128545"
-  ],
   "reviewType": "text",
+  "decision": "verified",
   "reviewedContentHash": "02656aa5c614314840661ce1246b5896b715b1837009f032e4a512ecc3128d49",
-  "checkedAt": "2026-09-10T13:20:00+08:00",
-  "reviewer": "agent2-backfill",
-  "reason": "条文核验：quote 与 articlePath 来自权威公开标准文本/政府发布页，locator=6.2.2.1。"
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB6514_2023_20261005"
+  ],
+  "reason": "逐字核对正式原件中完整条款（含条件、例外和本条内部列项）；仅规范排版，不采用OCR跨条串文。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_e58389b89299307a0d45042d",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "EH_ed93b74b8a1f2d44eb9db148a6a5cc51de158a71db07bde84a889c8c43128545"
+    ],
+    "reviewType": "text",
+    "reviewedContentHash": "02656aa5c614314840661ce1246b5896b715b1837009f032e4a512ecc3128d49",
+    "checkedAt": "2026-09-10T13:20:00+08:00",
+    "reviewer": "agent2-backfill",
+    "reason": "条文核验：quote 与 articlePath 来自权威公开标准文本/政府发布页，locator=6.2.2.1。"
+  },
+  "previousDefinition": {
+    "id": "C_e58389b89299307a0d45042d",
+    "lawVersionId": "LV_STD_GB6514",
+    "articlePath": "6.2.2.1",
+    "quote": "调配涂料应在调漆室内进行。",
+    "sourceUrl": "https://xcoss.henan.gov.cn/typtfile/20250317/cebb519d8cd04b12a91ffd200d4730bc.pdf",
+    "lifecycle": "active",
+    "jurisdictionCode": "CN"
+  }
 }

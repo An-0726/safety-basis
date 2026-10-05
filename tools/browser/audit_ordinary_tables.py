@@ -14,8 +14,8 @@ from urllib.parse import urlparse
 
 from audit_browser import validate_release_identity
 from repair_acceptance import DOM_CONTENT_HELPERS, require, require_text, validate_release_match
-from residual_clause_acceptance import load_expectations
-from recovery_release_acceptance import (validate_source_pins, validate_release_source, fixture_for_release_date,
+from complete_remaining_acceptance import load_expectations, fixture_for_release_date
+from recovery_release_acceptance import (validate_source_pins, validate_release_source,
     validate_rendered, rendered_snapshot, expected_clipboard, expected_full_clipboard, expected_tables)
 
 HAZARD_ID = 'H_12158_4_2_3_4_1'

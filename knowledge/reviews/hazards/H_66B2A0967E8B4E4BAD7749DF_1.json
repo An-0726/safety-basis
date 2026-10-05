@@ -1,13 +1,57 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_66B2A0967E8B4E4BAD7749DF_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9086c13215decc6fb6829d7a8247f81389184346918b32c578e1ab61a64ada32",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_FAE0747159252D4A30D6312F"
+    "E_ALL_MANAGEMENT_hazchem_law_beijing_official_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "27b71b81d2d4266563612528a9eae25738e54d10d18fcdaace1a096e2ddc08b5",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "亲读当前官方危化法第5条完整两款，原H安全条件支路有明确法源；先核具体要求再判缺陷。新法原文已完整，不再列待查。",
+  "notes": "同一331候选批内共享已核当前来源；不证明具体现场或个案违法。",
+  "previousDefinition": {
+    "id": "H_66B2A0967E8B4E4BAD7749DF_1",
+    "title": "危险化学品单位未具备法律、行政法规规定和国家标准、行业标准要求的安全条件，未建立健全安全管理规章制度和岗位安全责任制度",
+    "description": "危险化学品单位应当具备法律、行政法规规定和国家标准、行业标准要求的安全条件，建立、健全安全管理规章制度和岗位安全责任制度，对从业人员进行安全教育、法制教育和岗位技术培训。（第四条）。",
+    "measures": "危险化学品单位应当具备法律、行政法规规定和国家标准、行业标准要求的安全条件，建立、健全安全管理规章制度和岗位安全责任制度，对从业人员进行安全教育、法制教育和岗位技术培训。（依据 第四条 整改。）。",
+    "conditions": "",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [
+      "H_5E36D9ABBA9321D566592E49_2"
+    ],
+    "keywords": [
+      "危险化学品单位未具备法律、行政法规规定和国家标准、行业标准要求的安全条件，未建立健全安全管理规章制度和岗位安全责任制度"
+    ],
+    "lifecycle": "proposed",
+    "mode": "direct",
+    "note": "依据 第四条 反转生成（GLM，2026-09-12）。\n\n【2026-09-18 治理收口】合并吸收同名实体 H_5E36D9ABBA9321D566592E49_2。",
+    "mergedInto": null
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_66B2A0967E8B4E4BAD7749DF_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_FAE0747159252D4A30D6312F"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "27b71b81d2d4266563612528a9eae25738e54d10d18fcdaace1a096e2ddc08b5",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "remainingUnsupportedBranches": [
+    "原候选法制教育、岗位技术培训在生产经营危化单位可由安法第28条的规章、权利义务、岗位操作技能教育条款条件覆盖；对学校、科研等非生产经营危险化学品单位的具体培训内容，现有训练canonical未证全对象完整覆盖，仍需该分支精确映射。"
+  ],
+  "invalidClaimExcluded": [
+    "原H没有资格岗位独立支路，不将整条其他新增义务误计原候选缺口。"
+  ],
+  "siteVerificationConditions": [
+    "具体设备/活动适用何项安全条件，以及实际不符合证据，属于现场适用核实。"
+  ]
 }

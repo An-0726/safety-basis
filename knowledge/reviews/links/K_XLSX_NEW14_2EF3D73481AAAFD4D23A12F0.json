@@ -1,18 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "038fbd50b1086a002c04f3bffe21da3c5499b15c559a4dc8db76873c96f78b6c",
-    "hazard": "e344a8bbf26bfc005f5fca17cb05d3b23750bc3aa3edd9c23ceb0ddd6f5711cc"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_NEW14_2EF3D73481AAAFD4D23A12F0",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_F25B356597064103FBADB7B3"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
   "reviewType": "applicability",
-  "reviewedContentHash": "f93aa74ded4725d18581563ad6f8518c42ec9501f52ec5d3762822b943df9b60",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "verified",
+  "reviewedContentHash": "45ce5d8c76d50645b7ed522cdf0a5bcada584e76878500f613979777d5c47bdd",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "GB15607-2023 6.4 c：仅核6.4 c清粉、防堆积、压差报警和超设定值停机，排除旧版折叠式结构和气流减少的替代判据。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "038fbd50b1086a002c04f3bffe21da3c5499b15c559a4dc8db76873c96f78b6c",
+      "hazard": "e344a8bbf26bfc005f5fca17cb05d3b23750bc3aa3edd9c23ceb0ddd6f5711cc"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_NEW14_2EF3D73481AAAFD4D23A12F0",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "f93aa74ded4725d18581563ad6f8518c42ec9501f52ec5d3762822b943df9b60",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousDefinition": {
+    "id": "K_XLSX_NEW14_2EF3D73481AAAFD4D23A12F0",
+    "hazardId": "H_108B10FED8E24D248155616659",
+    "clauseId": "C_XLSX_WEB_7F6EB1CEABA05EE1DFE0D19A",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于粉末静电喷涂过滤式回收/净化装置。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。",
+    "status": "needs_review"
+  },
+  "contextHashes": {
+    "hazard": "1d083249135c0557a0ce77f9e7a06a4c930343957a0aae0bed833f8487c0aa60",
+    "clause": "8b6a1b88ff53cd841ec3ef39cbbca85f0637b165d7421d8122aa66f6de6d3a46"
+  }
 }

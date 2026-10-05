@@ -1,11 +1,52 @@
 {
-  "entityType": "hazard",
   "entityId": "H_CF_MAJOR_06",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "2ae6e1877beb37045796e2f3739e81144b89b8c4edcffaf3e8e8bb370ca80dec",
-  "checkedAt": "2026-09-21T00:55:00+08:00",
-  "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "6e13377d5abcac754b0b6476c76ea37f8591bed418577d334eb419f8fffa6e2f",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
+  "evidenceRefs": [
+    "E_REMAIN_FIRE_MEM10_20261005"
+  ],
+  "reason": "精确机械企业+煤气（天然气）+燃烧装置总管压力监测报警/切断联锁，不扩为所有可燃气体；不合并独立火焰监测/熄火保护分支，不自动认定未知现场。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_CF_MAJOR_06",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "2ae6e1877beb37045796e2f3739e81144b89b8c4edcffaf3e8e8bb370ca80dec",
+    "checkedAt": "2026-09-21T00:55:00+08:00",
+    "reviewer": "ChatGPT / Engineering Audit",
+    "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "previousReviewFileSha256": "5541b9950326effb671f1b6f8bf601fda926179bbd58c9c4777c0459392f4047",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气与电气安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "机械企业使用煤气、天然气等可燃气体的工业炉窑、烘干炉等燃烧装置，其燃气总管未设置管道压力监测报警装置，或报警装置未与紧急自动切断阀联锁。",
+    "id": "H_CF_MAJOR_06",
+    "keywords": [
+      "燃气总管",
+      "压力监测",
+      "紧急切断",
+      "安全联锁",
+      "燃烧装置",
+      "天然气",
+      "重大事故隐患"
+    ],
+    "lifecycle": "proposed",
+    "measures": "立即核验燃气管道及燃烧器联锁状态；在燃气总管规范加装压力监测传感器与声光报警器，并与紧急自动切断阀完成联锁调试；定期开展联锁切断功能测试并记录归档。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。\n\n2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。",
+    "places": [
+      "机械加工、热处理、喷涂烘房等使用可燃气体燃烧装置的场所"
+    ],
+    "title": "使用煤气或天然气的燃烧装置燃气总管未设压力报警及自动切断联锁"
+  },
+  "previousEntityFileSha256": "643446fa2057819f5ee95495f0ab870103a4cc86e1af1edd438ca70876fe6369"
 }

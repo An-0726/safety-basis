@@ -1,11 +1,50 @@
 {
-  "entityType": "hazard",
   "entityId": "H_CF_GEN_08",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "391f9498246a321129ebb9b8031aab4faf9a0b87bc2fd18dd59a9395667e02b1",
-  "checkedAt": "2026-09-21T00:55:00+08:00",
-  "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "bc9f388b0aa4de79863df2ffb6c94853793d0da4a0f43de47bc0b655c08ba81e",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_ELECTRICAL_GB12801_20261005"
+  ],
+  "reason": "原LOTO复合主张仅生产检修切断动力源分支落地；具体上锁挂牌步骤与其他作业仍缺专门核验。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_CF_GEN_08",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "391f9498246a321129ebb9b8031aab4faf9a0b87bc2fd18dd59a9395667e02b1",
+    "checkedAt": "2026-09-21T00:55:00+08:00",
+    "reviewer": "ChatGPT / Engineering Audit",
+    "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "previousReviewFileSha256": "4800ecd380884b509d801bce76726392d3f3bf8c036578552ca0c5f98932a95d",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "作业安全与个体防护",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "进入设备内部或转动危险区域开展清洁、换模、检修、润滑等作业时，设备动力电源未切断、气源液压源未泄压锁定，未执行“一人一锁一面牌”挂牌上锁安全要求。",
+    "id": "H_CF_GEN_08",
+    "keywords": [
+      "断电挂牌",
+      "LOTO",
+      "上锁挂签",
+      "检维修安全",
+      "意外启动"
+    ],
+    "lifecycle": "proposed",
+    "measures": "立即停止作业撤离人员；切断总动力源并泄放残留能量，在操作开关处加装专用物理安全锁并悬挂禁止合闸警示牌；严格落实检修前零能量验证，杜绝误触启动伤人。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。\n\n2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。",
+    "places": [
+      "破碎机、搅拌机、传送带、机械手、成型机等机械动力设备检修工位"
+    ],
+    "title": "设备检维修作业未执行停机断电及挂牌上锁（LOTO）程序"
+  },
+  "previousEntityFileSha256": "4c767610fe358f27ce113bb6a7dc80fa08af4d72b0694394449fb1fa3bc808fc"
 }

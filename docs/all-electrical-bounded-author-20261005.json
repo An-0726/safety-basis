@@ -1,0 +1,1311 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "475856179bfd3c6c3446d10cfc4de73e51f228f3",
+  "baselineTree": "fc62800c09421f687c0734f699b95befa8231f2f",
+  "localBaselineCommit": "a40d8d961a53b5379916a67b522801088390c974",
+  "reviewStage": "author_verified_independent_review_pending",
+  "candidateScopeCount": 64,
+  "decisions": [
+    {
+      "hazardId": "H030",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB50054"
+      ],
+      "boundary": "仅第1.0.2设计范围及第7.1.2第3款机械损害分支；不能仅凭在用线路可见或未穿管认定。",
+      "positiveCase": "新改扩建低压配电设计未防护已识别车辆挤压风险。",
+      "negativeCase": "已有在用线路无设计阶段事实；或仅未穿钢管但有等效有效防护。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_030_20261005"
+      ]
+    },
+    {
+      "hazardId": "H071",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GBT13869"
+      ],
+      "boundary": "第9章第二段作业前义务，不混同H072的PPE和特种作业资格，不单凭推荐性标准作行政违法认定。",
+      "positiveCase": "低压电气作业前未了解带电状态及环境。",
+      "negativeCase": "高于标准电压范围；或仅缺资格证而作业前防护已满足。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_071_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_12158_4_2_2_3_1",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12158"
+      ],
+      "boundary": "第4.2.2.3完整条文中的接地电阻≤100Ω分支；不与泄漏电阻或粉尘系统严格小于100Ω条件混同。",
+      "positiveCase": "适用静电接地电阻为101Ω。",
+      "negativeCase": "接地电阻恰为100Ω，或测的是泄漏电阻。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_41C4A7B81C8B478797B187AAE7",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB2894"
+      ],
+      "boundary": "第8.2.1最低组成名称和流向；不把全部管线、交通标志及识别色完整义务并入。",
+      "positiveCase": "适用工业液体管道缺少名称或流向。",
+      "negativeCase": "地下管道、非气液输送管道，或仅未标工艺参数而名称流向齐全。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_15607_6_7_1",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB15607"
+      ],
+      "boundary": "完整6.7同时要求法兰连接和静电跨接；不泛化所有含尘管道或附加绝缘、联锁、送电模板。",
+      "positiveCase": "粉末静电喷涂含粉尘排风管道法兰未静电跨接。",
+      "negativeCase": "其他行业一般排风管道，或仅属参照执行的流化床工艺。",
+      "linkIds": [
+        "K_XLSX_WEB_5F29EE673A37F0574A288633"
+      ]
+    },
+    {
+      "hazardId": "H_2F1B0A9321E844B98E16A6A3CA",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB50054"
+      ],
+      "boundary": "连读1.0.2、5.2.1及5.2.3；仅适用自动切断防护，非全部金属外壳接地；5.2.3不是公告列明强条。",
+      "positiveCase": "适用设计采用自动切断防护且外露可导电部分缺PE连接。",
+      "negativeCase": "Ⅱ类设备或电气分隔等其他合规防护方式。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_4E1F7C3FFB724997B5C4EC82C9",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12801"
+      ],
+      "boundary": "5.7.5完整义务含应急照明、安全疏散通道及疏散指示标志，本H只覆盖标志缺失，不混灯具失效。",
+      "positiveCase": "适用生产作业场所依法应有疏散指示而未设。",
+      "negativeCase": "普通非疏散出入口；或标志齐全但灯具故障。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_5E9D1E4065E7486F819AFE98A0",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB16912"
+      ],
+      "boundary": "完整4.4.2保留“必要时”防撞要求；不外推所有行业低温罐或不采用深冷制氧的单位。",
+      "positiveCase": "适用深冷制氧单位液氧储罐缺罐体色标。",
+      "negativeCase": "与深冷制氧无关的其他工业储罐；或无防撞必要时未单设围栏。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_608147EE09234EBC92B53F842A",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12801",
+        "GB2894"
+      ],
+      "boundary": "5.7.4第二句设备和管线标识义务；GB2894具体设计内容仍按对象确定，不伪造统一标识套餐。",
+      "positiveCase": "生产设备已核应设置的安全标识缺失。",
+      "negativeCase": "不适用工业管道第8章的设备，仅因没有气液管道识别色就判不合格。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_9AA6D788ABB14DBC94F1ED7240",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12801"
+      ],
+      "boundary": "第4.1.2风险管控分支；清单、责任人和固定检查频次不是本条明示义务，不保留为强制措施。",
+      "positiveCase": "生产设计已评估风险却未实施相应控制。",
+      "negativeCase": "无企业生产过程对象，或仅未采用清单形式但有效落实管控。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_9B91E8E70C2947B7B320BE7DA4",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12801",
+        "GB2894"
+      ],
+      "boundary": "第5.7.4首句与当前GB2894对应；设备风险部位复用此canonical，不重复建H，不沿用GB2893等被替代版。",
+      "positiveCase": "生产设备已识别危险部位缺少适用安全标志。",
+      "negativeCase": "不存在该风险且无相应设置要求的普通位置。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_DDED88177C594355BBC5155F98",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12801"
+      ],
+      "boundary": "4.5.2完整两层义务保留，当前H限地面范围标示；原复合候选的通道、支架分支仍未闭环，历史保留。",
+      "positiveCase": "生产物料地面存放未用醒目颜色划定范围。",
+      "negativeCase": "仅采用支架存放，或已用醒目其他颜色有效标示。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_GBT47236_4_2_2_2",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GBT47236",
+        "GB2894"
+      ],
+      "boundary": "4.2.2.2完整对象、工艺不能防护前提与端部/突出位置；不泛化全部在用设备维护，不以涂标记准许随意拆防护罩，不单独据推荐标准认定违法。",
+      "positiveCase": "适用低压铸造机验收，工艺确不能设罩的突出运动端部无黄黑标记。",
+      "negativeCase": "压铸机；在用设备普通维护；或可装防护却先拆罩后涂色。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_6706FA04BB344FA59ED6251058",
+      "action": "bounded_canonical_merge",
+      "canonicalId": "H_9B91E8E70C2947B7B320BE7DA4",
+      "wholeOriginalTextApproved": false
+    },
+    {
+      "hazardId": "H_C30C57E1211A46808D790A7D03",
+      "action": "withdraw_unsupported_compound_direct",
+      "countedIn331": false
+    },
+    {
+      "hazardId": "H_B30EDC5AFD774470A555F9B715",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "SAFETY_LAW"
+      ],
+      "boundary": "安全生产法35仅支持较大危险因素场所设施设备明显标志；删除无本条依据的最高等级措施，包装/运输标签分支不批准。",
+      "positiveCase": "较大危险因素危化品储存区域未设明显警示。",
+      "negativeCase": "仅普通容器缺包装标签；或仅未使用所谓最高危险等级标志。",
+      "linkIds": [
+        "K_XLSX_NEW14_5711629423A6B52C786E82FD"
+      ]
+    },
+    {
+      "hazardId": "H_00DB7A50FF994B5DB5470A3B03",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "JIANGSU"
+      ],
+      "boundary": "第16条不要求主要负责人审批或每月复核；删除这些无证强制附加项，四色图保持“可以”。",
+      "positiveCase": "江苏单位缺少应公示的较大风险信息。",
+      "negativeCase": "仅未按月更新或未签批，而法定公示信息已具备。",
+      "linkIds": [
+        "K_PHASE6_91E48D8B3B4CA5FC5506FD76"
+      ]
+    },
+    {
+      "hazardId": "H_317326A8B80648F4A57D50755D",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "JIANGSU"
+      ],
+      "boundary": "原H地域泛化且K误称新条例却挂旧140号规定；改接现行2024条例第16条，保留江苏及行业另有规定例外，不覆盖全国或仅工业企业。",
+      "positiveCase": "江苏单位缺少较大以上风险公示。",
+      "negativeCase": "省外单位；或以其他醒目方式完整公示而未使用公示栏。",
+      "linkIds": [
+        "K_PHASE12_EXACT_586A2C2C04BECBBDB3D9"
+      ]
+    },
+    {
+      "hazardId": "H_12158_7_1_1",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB12158"
+      ],
+      "boundary": "第7.1为紧密接触面积大于20cm²，缺陷方向为≤20cm²；改正原K误挂接地电阻4.2.2.3、H正向叙述及单位漏²；仅直接依赖不计331。",
+      "positiveCase": "适用非金属静电亚导体与金属导体紧密接触面积恰20cm²。",
+      "negativeCase": "面积20.1cm²；仅金属与金属相连；静电非导体。",
+      "linkIds": [
+        "K_XLSX_WEB_H_12158_7_1_1"
+      ]
+    },
+    {
+      "hazardId": "H_4DAD0BA8DA8A454897E2954776",
+      "action": "withdraw_source_insufficient_direct",
+      "countedIn331": false,
+      "boundary": "缺完整正式主源原文，不以镜像与题录给3.0.6/H/K准入。",
+      "linkIds": [
+        "K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776"
+      ]
+    },
+    {
+      "hazardId": "H_CFDF32963AFD42B79932BE1A61",
+      "action": "bounded_existing_stable_id",
+      "sourceKeys": [
+        "GB14444"
+      ],
+      "boundary": "现行第5.5.1可靠防静电接地义务及第1章范围已实核。原泛称所有金属制件已限定为所列对象，非静电工件不能一律；防静电接地不等于全部金属外壳的保护接地。C保存两种阈值以免截断原文，H不扩充数值事实。",
+      "positiveCase": "使用可燃液体涂料的喷漆室金属排气管可靠防静电接地连接缺失。",
+      "negativeCase": "非本标准涂料范围的场所；仅非静电喷涂工件未接地；未取得测量数据却判断接地或泄漏电阻超限。",
+      "linkIds": [
+        "K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005"
+      ]
+    }
+  ],
+  "branchMappings": [
+    {
+      "candidateId": "H005",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_62AD7AADA05F468BAE0F91F5CC",
+        "H_AC89D3C3CCF049EF991BA4E42F"
+      ],
+      "boundedBranchAndUnresolved": "保留候选；按固定/临时、施工/使用与具体缺陷拆分；不得以消防法27条直接推导所有技术判据。"
+    },
+    {
+      "candidateId": "H_05248294EEDD496B9A57C50C91",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_FCB_17_2",
+        "H_D0EAF3CFD56D4A489D92506D44",
+        "H_610647B0A6A54C52A0D8663FBB"
+      ],
+      "boundedBranchAndUnresolved": "只作有界映射：粉尘可燃性、区域分区、设备位置/EPL须核；删除无依据全区域强制更换及唯一布线方式。"
+    },
+    {
+      "candidateId": "H_05E3463E093546EF9631C3773D",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_610647B0A6A54C52A0D8663FBB"
+      ],
+      "boundedBranchAndUnresolved": "原企业现状式措施须纠正；以实际危险区及设备要求映射H610，不新建广义防爆H。"
+    },
+    {
+      "candidateId": "H_0AF2C63369124DA5BCDEFBF340",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H029"
+      ],
+      "boundedBranchAndUnresolved": "短路/过负荷分支可指向H029；接地系统、触电/火灾保护、切断或报警条件另核，不能整体归并。"
+    },
+    {
+      "candidateId": "H_168C8D063803453AA35537D3C2",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_C30C57E1211A46808D790A7D03"
+      ],
+      "boundedBranchAndUnresolved": "保留复合候选；新版5.1.6只处理爆炸敏感设备，不能将一般潜在危险换成爆炸敏感。"
+    },
+    {
+      "candidateId": "H_1764B7439DFE44C1A680A7393E",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_YJF_6_9_1",
+        "H_01A0574BE6C8417590B10DDCB7"
+      ],
+      "boundedBranchAndUnresolved": "按贮存设施/场所映射HYJF；容器包装分支映射H01A；QR具体要求须按HJ1276核，不作为所有设施必有条件。"
+    },
+    {
+      "candidateId": "H_409EF7D84AB8469C91AEC3385C",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_B30EDC5AFD774470A555F9B715"
+      ],
+      "boundedBranchAndUnresolved": "保留并拆仓库警示、危险化学品标签/包装标志；不能整体归并或仅替换标准年份。"
+    },
+    {
+      "candidateId": "H_46A4349273C34D2992F88B202F",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_62AD7AADA05F468BAE0F91F5CC",
+        "H_610647B0A6A54C52A0D8663FBB"
+      ],
+      "boundedBranchAndUnresolved": "绝缘实际损伤可单独映射H62AD；挠性连接需设备进线方式、移动/振动、材质和密封要求。"
+    },
+    {
+      "candidateId": "H_54D18AD4CE504AD2A8F3967B1F",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_610647B0A6A54C52A0D8663FBB"
+      ],
+      "boundedBranchAndUnresolved": "映射已确认爆炸危险区的实际电源线路缺陷；取消只有一种穿管方式及泛称违规。"
+    },
+    {
+      "candidateId": "H_8525D185BB224B8C84DA85BCE1",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_15577_6_3_3_2",
+        "H_GB3836_UNUSED_ENTRY"
+      ],
+      "boundedBranchAndUnresolved": "仅对可燃粉尘爆炸危险、实际电火花/热部件或防爆引入孔做有界映射；保留普通积尘/所有底孔密封未经证实分支。"
+    },
+    {
+      "candidateId": "H_CF_GEN_14",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_62AD7AADA05F468BAE0F91F5CC"
+      ],
+      "boundedBranchAndUnresolved": "分清可见实际破损和可能机械损伤；有界映射H62AD或本批H030，取消一律穿管。"
+    },
+    {
+      "candidateId": "H_F0DB5879D1424F669BACDE8BD4",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_15577_6_3_3_2"
+      ],
+      "boundedBranchAndUnresolved": "补可燃性、危险区、外壳内点燃源；有界映射H15577；普通非涉爆粉尘IP需产品标准另核。"
+    },
+    {
+      "candidateId": "H_1507C0C16EB84487BA78230E0D",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_41C4A7B81C8B478797B187AAE7"
+      ],
+      "boundedBranchAndUnresolved": "仅工业生产地面及以上气液管道名称/流向分支映射本批canonical；原识别色分支仍须逐对象核8.1，不整体归并或批准。"
+    },
+    {
+      "candidateId": "H_9306B9A1C86541D58647D2F5C9",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_D125A95637EF68ACB553168135_1",
+        "H_D0E83BBCCD26DC6649A5008544_1"
+      ],
+      "boundedBranchAndUnresolved": "较大以上风险公示按江苏第16条映射前者，重大风险警示牌按第17条映射后者，必须逐分支核地区、等级及行业例外；保留原复合候选。"
+    },
+    {
+      "candidateId": "H_DDED88177C594355BBC5155F98",
+      "candidateRetainedInHistory": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H_DDED88177C594355BBC5155F98"
+      ],
+      "boundedBranchAndUnresolved": "稳定ID仅收窄为4.5.2地面材料范围标示；旧支架与通道畅通复合分支保留历史未证，不作本轮全覆盖。"
+    },
+    {
+      "candidateId": "H_E992B4486A6E43C791FBDFE919",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [
+        "H057"
+      ],
+      "boundedBranchAndUnresolved": "仅经核满足1000V及以下交流工频新改扩建设计范围的灰尘散热分支映射H057。既有运行/非低压未由设计规范直接覆盖；排除仅因灰尘或所有线路一概判定。"
+    },
+    {
+      "candidateId": "H_A426878B99904B9F802AA6BE47",
+      "candidateRetained": true,
+      "wholeCandidateApproved": false,
+      "canonicalIds": [],
+      "boundedBranchAndUnresolved": "现行题录可核，但仅有第三方托管出版镜像，3.0.6完整正式主源原文尚缺；H4DAD原直接支持同批撤回，不能据此称已覆盖。选址/设计阶段与实际水电需求事实仍需核。"
+    }
+  ],
+  "additionalDependencyIds": [
+    "H_C30C57E1211A46808D790A7D03",
+    "H_B30EDC5AFD774470A555F9B715",
+    "H_D125A95637EF68ACB553168135_1",
+    "H_00DB7A50FF994B5DB5470A3B03",
+    "H_12158_7_1_1",
+    "H_317326A8B80648F4A57D50755D",
+    "H_4DAD0BA8DA8A454897E2954776"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "unchangedRejectedAndUnprovenCandidatesRestored": false,
+  "authoredFiles": [
+    "knowledge/clauses/C_12158_7_1.json",
+    "knowledge/clauses/C_ALL_GB16912_4_4_2.json",
+    "knowledge/clauses/C_ALL_GB2894_8_2_1.json",
+    "knowledge/clauses/C_ALL_GB50054_5_2_3.json",
+    "knowledge/clauses/C_ALL_GB50054_7_1_2_3.json",
+    "knowledge/clauses/C_GB14444_5_5_1.json",
+    "knowledge/clauses/C_GB50187_3_0_6.json",
+    "knowledge/clauses/C_XLSX_WEB_EC95C5694483BC8D1A74E491.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB12158_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB12801_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB16912_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB2894_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB50054_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GBT13869_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_JIANGSU_20261005.json",
+    "knowledge/evidence/E_ALL_ELECTRICAL_SAFETY_LAW_20261005.json",
+    "knowledge/hazards/H030.json",
+    "knowledge/hazards/H071.json",
+    "knowledge/hazards/H_00DB7A50FF994B5DB5470A3B03.json",
+    "knowledge/hazards/H_12158_4_2_2_3_1.json",
+    "knowledge/hazards/H_12158_7_1_1.json",
+    "knowledge/hazards/H_15607_6_7_1.json",
+    "knowledge/hazards/H_2F1B0A9321E844B98E16A6A3CA.json",
+    "knowledge/hazards/H_317326A8B80648F4A57D50755D.json",
+    "knowledge/hazards/H_41C4A7B81C8B478797B187AAE7.json",
+    "knowledge/hazards/H_4DAD0BA8DA8A454897E2954776.json",
+    "knowledge/hazards/H_4E1F7C3FFB724997B5C4EC82C9.json",
+    "knowledge/hazards/H_5E9D1E4065E7486F819AFE98A0.json",
+    "knowledge/hazards/H_608147EE09234EBC92B53F842A.json",
+    "knowledge/hazards/H_6706FA04BB344FA59ED6251058.json",
+    "knowledge/hazards/H_9AA6D788ABB14DBC94F1ED7240.json",
+    "knowledge/hazards/H_9B91E8E70C2947B7B320BE7DA4.json",
+    "knowledge/hazards/H_B30EDC5AFD774470A555F9B715.json",
+    "knowledge/hazards/H_C30C57E1211A46808D790A7D03.json",
+    "knowledge/hazards/H_CFDF32963AFD42B79932BE1A61.json",
+    "knowledge/hazards/H_DDED88177C594355BBC5155F98.json",
+    "knowledge/hazards/H_GBT47236_4_2_2_2.json",
+    "knowledge/links/K_ALL_ELECTRICAL_030_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_071_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005.json",
+    "knowledge/links/K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005.json",
+    "knowledge/links/K_PHASE12_EXACT_586A2C2C04BECBBDB3D9.json",
+    "knowledge/links/K_PHASE6_91E48D8B3B4CA5FC5506FD76.json",
+    "knowledge/links/K_XLSX_FT_A3883508D9D829ADA841C9B6.json",
+    "knowledge/links/K_XLSX_NEW14_5711629423A6B52C786E82FD.json",
+    "knowledge/links/K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3.json",
+    "knowledge/links/K_XLSX_WEB_5F29EE673A37F0574A288633.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_7_1_1.json",
+    "knowledge/links/K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776.json",
+    "knowledge/reviews/clauses/C_12158_4_2_2_3.json",
+    "knowledge/reviews/clauses/C_12158_7_1.json",
+    "knowledge/reviews/clauses/C_12801_4_1_2.json",
+    "knowledge/reviews/clauses/C_12801_4_5_2.json",
+    "knowledge/reviews/clauses/C_12801_5_7_4.json",
+    "knowledge/reviews/clauses/C_12801_5_7_5.json",
+    "knowledge/reviews/clauses/C_ALL_GB16912_4_4_2.json",
+    "knowledge/reviews/clauses/C_ALL_GB2894_8_2_1.json",
+    "knowledge/reviews/clauses/C_ALL_GB50054_5_2_3.json",
+    "knowledge/reviews/clauses/C_ALL_GB50054_7_1_2_3.json",
+    "knowledge/reviews/clauses/C_GB14444_5_5_1.json",
+    "knowledge/reviews/clauses/C_GB50187_3_0_6.json",
+    "knowledge/reviews/clauses/C_GBT47236_4_2_2_2.json",
+    "knowledge/reviews/clauses/C_XLSX_WEB_EC95C5694483BC8D1A74E491.json",
+    "knowledge/reviews/hazards/H030.json",
+    "knowledge/reviews/hazards/H071.json",
+    "knowledge/reviews/hazards/H_00DB7A50FF994B5DB5470A3B03.json",
+    "knowledge/reviews/hazards/H_12158_4_2_2_3_1.json",
+    "knowledge/reviews/hazards/H_12158_7_1_1.json",
+    "knowledge/reviews/hazards/H_15607_6_7_1.json",
+    "knowledge/reviews/hazards/H_2F1B0A9321E844B98E16A6A3CA.json",
+    "knowledge/reviews/hazards/H_317326A8B80648F4A57D50755D.json",
+    "knowledge/reviews/hazards/H_41C4A7B81C8B478797B187AAE7.json",
+    "knowledge/reviews/hazards/H_4DAD0BA8DA8A454897E2954776.json",
+    "knowledge/reviews/hazards/H_4E1F7C3FFB724997B5C4EC82C9.json",
+    "knowledge/reviews/hazards/H_5E9D1E4065E7486F819AFE98A0.json",
+    "knowledge/reviews/hazards/H_608147EE09234EBC92B53F842A.json",
+    "knowledge/reviews/hazards/H_6706FA04BB344FA59ED6251058.json",
+    "knowledge/reviews/hazards/H_9AA6D788ABB14DBC94F1ED7240.json",
+    "knowledge/reviews/hazards/H_9B91E8E70C2947B7B320BE7DA4.json",
+    "knowledge/reviews/hazards/H_B30EDC5AFD774470A555F9B715.json",
+    "knowledge/reviews/hazards/H_C30C57E1211A46808D790A7D03.json",
+    "knowledge/reviews/hazards/H_CFDF32963AFD42B79932BE1A61.json",
+    "knowledge/reviews/hazards/H_DDED88177C594355BBC5155F98.json",
+    "knowledge/reviews/hazards/H_GBT47236_4_2_2_2.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_030_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_071_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005.json",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005.json",
+    "knowledge/reviews/links/K_PHASE12_EXACT_586A2C2C04BECBBDB3D9.json",
+    "knowledge/reviews/links/K_PHASE6_91E48D8B3B4CA5FC5506FD76.json",
+    "knowledge/reviews/links/K_XLSX_FT_A3883508D9D829ADA841C9B6.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_5711629423A6B52C786E82FD.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3.json",
+    "knowledge/reviews/links/K_XLSX_WEB_5F29EE673A37F0574A288633.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_7_1_1.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776.json",
+    "tools/pipeline/tests/test_all_electrical_bounded_20261005.py"
+  ],
+  "authoredSha256": {
+    "knowledge/clauses/C_12158_7_1.json": "6d2721dafc6d41dabfb9deddaa55c2500b398299f8a18ae2f26bdd98a937c6bb",
+    "knowledge/clauses/C_ALL_GB16912_4_4_2.json": "34ffa20d33d12965b46726f9ba530d30e9ed7cff8a149ae29d0a5abf7a8ac059",
+    "knowledge/clauses/C_ALL_GB2894_8_2_1.json": "f3f62f77ca1b8747a84607d719a46838b73607edbd3cb785a6bec9e358d5fbce",
+    "knowledge/clauses/C_ALL_GB50054_5_2_3.json": "8a026fbddfa095c33ee2c34a6846698e849ede2de551f8c6fefdc3d38206b757",
+    "knowledge/clauses/C_ALL_GB50054_7_1_2_3.json": "821b4c3c8f0e872f5545a7af003ce73074bf348e0646cf9b1bbc1557d10e4e6b",
+    "knowledge/clauses/C_GB14444_5_5_1.json": "a9f3e1a822be0a958cc5b77aa1017bc755b9beba1c3836c199d6512a0a7d75c4",
+    "knowledge/clauses/C_GB50187_3_0_6.json": "ae492ccd8918ecae0a9df881a58966c1d375bec8fd9831c6007aa514fc2b3e9a",
+    "knowledge/clauses/C_XLSX_WEB_EC95C5694483BC8D1A74E491.json": "8d0bec4f1f4cbc5ed0e1f1b7d6aaca7b5d69341ac23ee9d81c805d249802f1be",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB12158_20261005.json": "00878024dcc6eb35b90cd62d8afc5646e9d4f28d8eb14cead5b678a876e3d200",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB12801_20261005.json": "432996d1ac0c94e0ce370065636b08e8bb326bc039ddf2051671112c042aa5f1",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB16912_20261005.json": "531ffed5d12648b0bb8b2c5d790bfc8faaf989f856e612256941bb0d5b4fca25",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB2894_20261005.json": "2e9ff32ea66b31aea16a13f2f86414fbf8c38b60ce0f0ccff6a033683934bde1",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB50054_20261005.json": "966463beb77a706f839f25b95a93ca1d191171e89c75a2ba161f3f22c69414cb",
+    "knowledge/evidence/E_ALL_ELECTRICAL_GBT13869_20261005.json": "3adfa89383845b6a99e6fa664625931a18dd339fec111ff7f73a5ac820db1afc",
+    "knowledge/evidence/E_ALL_ELECTRICAL_JIANGSU_20261005.json": "20d1338bc34226b9d141e6ad43fbc22f2f2f554737bb40c1627f2c4fd70f311f",
+    "knowledge/evidence/E_ALL_ELECTRICAL_SAFETY_LAW_20261005.json": "f8476ba38bddea1acf185d777f6a6980fcfa13a50071ddba38cfbe2ecaa51010",
+    "knowledge/hazards/H030.json": "9053799f8692bba3932f6f748f35875a3028195733f44a243723c536b3643843",
+    "knowledge/hazards/H071.json": "959a58c6a34efc8af3803e580afbbe41e75a591a6d735849763e982f71ef68e3",
+    "knowledge/hazards/H_00DB7A50FF994B5DB5470A3B03.json": "c760ad1c0c5daf0c5864324148fba60bc1f4d9873edeab6856c8f4ee07d50a75",
+    "knowledge/hazards/H_12158_4_2_2_3_1.json": "170ee712f9e0fa82de249d38970b5ccdebf24ac35e16e52ae0695eab3f6f506e",
+    "knowledge/hazards/H_12158_7_1_1.json": "7fcc25a38f89cda66eff1b5009de3f346a0068dceac7a1840f9359e05c7d0163",
+    "knowledge/hazards/H_15607_6_7_1.json": "c020f42ddbfb19f9967ff714e06b2f07d4ce12eef620b5b0b65c274d944dfe30",
+    "knowledge/hazards/H_2F1B0A9321E844B98E16A6A3CA.json": "4a8e8bd2d03a2c9ae76f6930863f147b91de276186ec2dd6ac2692ee4817624e",
+    "knowledge/hazards/H_317326A8B80648F4A57D50755D.json": "823006871b3dde4f34d8561d1525dffbfa0b2e0c1e9b950317a8666c3bafbd1a",
+    "knowledge/hazards/H_41C4A7B81C8B478797B187AAE7.json": "9aa9cd352560c649c2592a1b36b17e513cbb970220d4e1e63576f675fece7b37",
+    "knowledge/hazards/H_4DAD0BA8DA8A454897E2954776.json": "b428b96f9e2b7d05a92360fc51b2b19770bedf315389d24ca2df84e8647c910b",
+    "knowledge/hazards/H_4E1F7C3FFB724997B5C4EC82C9.json": "17acdb014c58be352a3d89d712b68e04a0874bcda577be6e111993995ccf3d86",
+    "knowledge/hazards/H_5E9D1E4065E7486F819AFE98A0.json": "f740119434d2a94ba4cd83e21d10d5293e237e1a47213265849efc7f16a85f64",
+    "knowledge/hazards/H_608147EE09234EBC92B53F842A.json": "59edaa7f0107206f94f3198d8938732fa0d4a9e168193b4de04b625426ed0a9f",
+    "knowledge/hazards/H_6706FA04BB344FA59ED6251058.json": "7cad699906bd4818c78080837168b218d3a42ae5906d91bf1356c6d057d37bf9",
+    "knowledge/hazards/H_9AA6D788ABB14DBC94F1ED7240.json": "6c11bbc924f90cc23092427c788aa791fded9b86434638dea81f4af2f1334582",
+    "knowledge/hazards/H_9B91E8E70C2947B7B320BE7DA4.json": "5616a9a7f8f522c8ad7f78397027b4d6812dc81abe51c3f98e1a8fb7a2fb041b",
+    "knowledge/hazards/H_B30EDC5AFD774470A555F9B715.json": "b88a93235f0047442d4c9dca31b6bd1b2f4fa87f1bf74e28ea8f58088cac7e73",
+    "knowledge/hazards/H_C30C57E1211A46808D790A7D03.json": "960d332ae8b05dc516e844f1f24f9997e9d7828cbe27167e177c36f5e8aa799e",
+    "knowledge/hazards/H_CFDF32963AFD42B79932BE1A61.json": "d8b022ab8fc921b2ddca95c965631ea78af4e0dacf73860e552784ca732174b2",
+    "knowledge/hazards/H_DDED88177C594355BBC5155F98.json": "0fa88a8bc734560c19637e33540c4a89778c1b7c11c598547d936beb757b06bb",
+    "knowledge/hazards/H_GBT47236_4_2_2_2.json": "fd3becd224c1f71311c65b9ae1da5c2f9d6f164ce2f3cb3aa3cca21b135312e8",
+    "knowledge/links/K_ALL_ELECTRICAL_030_20261005.json": "49446f270cf9cd082cc016996d2d10f8e19a13de496b0bae800270b1f5867e3c",
+    "knowledge/links/K_ALL_ELECTRICAL_071_20261005.json": "79526280973284d52ddd633ff7b1ff865c4cd93cf6b17e8b4461edd4c1bf3f9e",
+    "knowledge/links/K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005.json": "0e879f5a1e8af4b80962deb9d7a5164af148038e39ec8e75ccabedc6f046a530",
+    "knowledge/links/K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005.json": "4c2378d81e9b9aee470c2f5c0bfcce9187c0082f2acb334e01f7977ba4bff96e",
+    "knowledge/links/K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005.json": "5fe58aa6db2c176206a7c5827880e5288d2223404c6e15d3e3a6a55de83d052b",
+    "knowledge/links/K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005.json": "d14e0457c7d0dc27900f3e61534cff0a3e913eddd79d8deb068f79a0a04aa895",
+    "knowledge/links/K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005.json": "91f5b475e4f806d4da85f269fdb7ae7607a3f7528521a0f3e2bc818672fcb800",
+    "knowledge/links/K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005.json": "f96c060181499025dea2fea7deefbab95a75a8e3ca1ae4d55c748bbaecdf15c2",
+    "knowledge/links/K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005.json": "e2ce17e024c49531ffc4db55c97051b907486cf719dc71d5693dd544135de7ca",
+    "knowledge/links/K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005.json": "be4a63e4834ea9b063e48e82742c92f588c00db23b206d1cbd00f95ec058712d",
+    "knowledge/links/K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005.json": "67bdf0faf60ed086c86ee434956dfeacfade88ef812fead187932a3c5055e78d",
+    "knowledge/links/K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005.json": "153c64133101fc0f019920d724cf8e6db477d38e3403f6d48a523ef6088ee0ab",
+    "knowledge/links/K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005.json": "c12a87303b9932a89fefad582c8589802f2335372a1d7f53a710577edde39b53",
+    "knowledge/links/K_PHASE12_EXACT_586A2C2C04BECBBDB3D9.json": "ff2212f83be7123b6ce1fc281446ca43622224aa06e1b51be954c898c992d846",
+    "knowledge/links/K_PHASE6_91E48D8B3B4CA5FC5506FD76.json": "81b333041aa294a70e7c7248dfc36d97c71b24569042ad41fde3d1ad1315a8fd",
+    "knowledge/links/K_XLSX_FT_A3883508D9D829ADA841C9B6.json": "c44105426fccee82de20c87e1887183859b22383cdf5a485f4caa86315a3bc19",
+    "knowledge/links/K_XLSX_NEW14_5711629423A6B52C786E82FD.json": "f652c1a922527a3b2368c9c02fa702e6d49062bd2f46c4cbf338f981ea8046b6",
+    "knowledge/links/K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3.json": "7026e6220abc42b1c5724e836dd1b5d3c497f0d333bdddca22106f3c72502b53",
+    "knowledge/links/K_XLSX_WEB_5F29EE673A37F0574A288633.json": "6f9c8653d88f12d4df4cfb4f776b715b4d158fab07abbdf4a2ad9deda65dc4a2",
+    "knowledge/links/K_XLSX_WEB_H_12158_7_1_1.json": "08f819d0e8eac2576239502ac7658718f94cf00dd3dc32019c1358d320a7aa57",
+    "knowledge/links/K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776.json": "6399a935b8fa644511b3e2b7724f5bad9426bdb1172fc9b95d1ca8817b23fc12",
+    "knowledge/reviews/clauses/C_12158_4_2_2_3.json": "826f1709b792a82d9538c41ba197be880b34e5dfc67ef0728f56ab351b16ad3a",
+    "knowledge/reviews/clauses/C_12158_7_1.json": "f97123adf7fff835d709c7cc1aea99bd92d2632f0b21641d5d157c88f2020975",
+    "knowledge/reviews/clauses/C_12801_4_1_2.json": "85879aa7a16c98772a7495d34458fb6bec25d9355155efe1f59cbb08c30294af",
+    "knowledge/reviews/clauses/C_12801_4_5_2.json": "98e346520821943f03c4afc4a8a71b862af52efd076b2aabaf6e8ba7f1bcf449",
+    "knowledge/reviews/clauses/C_12801_5_7_4.json": "9a9ad825d1331fc76cbf85c65ac216bb2f5670d2cf1142b886912c25cda49fec",
+    "knowledge/reviews/clauses/C_12801_5_7_5.json": "83587749dc9e053070580750bca34eefe6969be612431443b411adc8566a041d",
+    "knowledge/reviews/clauses/C_ALL_GB16912_4_4_2.json": "37ddc78b0dad38a18240aaa91333ce985ecb476fe9e17dee4c74d033185ffb69",
+    "knowledge/reviews/clauses/C_ALL_GB2894_8_2_1.json": "b361e2f9e542efe6628ba04e7cb597af71eb81988a680174258fada3ebfbe622",
+    "knowledge/reviews/clauses/C_ALL_GB50054_5_2_3.json": "f813b1a346851514fefc7612aa3cf90a2bbd3e759895f11cd90bea4d1e8067c8",
+    "knowledge/reviews/clauses/C_ALL_GB50054_7_1_2_3.json": "bc7eeabd9c1ca23bafb299d1d005c3bd628537d77d0e1fa94d05555d97d0ff3e",
+    "knowledge/reviews/clauses/C_GB14444_5_5_1.json": "d3353a0e06503eee0e0ede833671dce959fbb10ee8ef14844b3021982aad8712",
+    "knowledge/reviews/clauses/C_GB50187_3_0_6.json": "8e3e97d7ad53101cf291fad55cdf4875d09be8c752bd86c18514da09f9cfd282",
+    "knowledge/reviews/clauses/C_GBT47236_4_2_2_2.json": "2baf5beb33639a1873c70b22cc906205e92cc0bbb3c6750ef10029f50f10faee",
+    "knowledge/reviews/clauses/C_XLSX_WEB_EC95C5694483BC8D1A74E491.json": "5df6fee2fa55881808e28684eefe176c942b67b3e1e5d9651d5dc82546c4e48c",
+    "knowledge/reviews/hazards/H030.json": "e09db14b1acb85e33d4992bab93ab1b5b7d3ee62944e7ce1b5aa7805ebfd8f2a",
+    "knowledge/reviews/hazards/H071.json": "6c4be4ad9625f6bdeff40cdce4478048743e9cd3c5d5cec3447e0d2a45b30803",
+    "knowledge/reviews/hazards/H_00DB7A50FF994B5DB5470A3B03.json": "886b92814c37b6fe0c0fd1eda15ef2b585ff71e996604693974d5d2809549e69",
+    "knowledge/reviews/hazards/H_12158_4_2_2_3_1.json": "5d9bb9f2ab7e85edf044cfa616e553987736ba7b8914df99bebb9cba1ba2e816",
+    "knowledge/reviews/hazards/H_12158_7_1_1.json": "0d30806d3b543169a54dc2c87eca564e1ab20eb189aca4729123bd7235b9d55b",
+    "knowledge/reviews/hazards/H_15607_6_7_1.json": "02de893ae9eb1463fd4cc5ad4a94c95981876ea3d67c893bb8098cf55d788ade",
+    "knowledge/reviews/hazards/H_2F1B0A9321E844B98E16A6A3CA.json": "609991ca75004fc973936689547a9f69142ebf3f5e10679e539a25581e217d55",
+    "knowledge/reviews/hazards/H_317326A8B80648F4A57D50755D.json": "9e4d51acaad4c3d6502064ce1b3be0f97eb6efa1a889f7b76c07e1723f11f4cb",
+    "knowledge/reviews/hazards/H_41C4A7B81C8B478797B187AAE7.json": "210c9c30a6c94ad48310104c4dac4aef5819d095771b721b05ee5723cf3b7cd2",
+    "knowledge/reviews/hazards/H_4DAD0BA8DA8A454897E2954776.json": "6b65ec5d7cb1e31e0a9c2bfa106d86c54b7d5849d86fe12a3873d3cf1592a193",
+    "knowledge/reviews/hazards/H_4E1F7C3FFB724997B5C4EC82C9.json": "3c9ebc65c1f8a2e8b62dccc8e8f2985f017e05db04715269630fb86c2e8b5516",
+    "knowledge/reviews/hazards/H_5E9D1E4065E7486F819AFE98A0.json": "8d663f718be3dc757f636447a39ff107eb719873ddeb6a7f095d50bb5856cd14",
+    "knowledge/reviews/hazards/H_608147EE09234EBC92B53F842A.json": "cfe3c9523fcf08cc5fc5b94c0b117c66f9dee79fcd6662fe7a92a25b25dadf37",
+    "knowledge/reviews/hazards/H_6706FA04BB344FA59ED6251058.json": "6f06cf40eeedeab927ce1b988ed7d0635c7aedf7866c8fa272f85028ff9bbf01",
+    "knowledge/reviews/hazards/H_9AA6D788ABB14DBC94F1ED7240.json": "14486df0bf9a1f7c58dedf9340b886f4c1c1a28f5614455001969230e8810176",
+    "knowledge/reviews/hazards/H_9B91E8E70C2947B7B320BE7DA4.json": "c76e4477cc8d8c016245c5dc47e908a499b213330adacf6d8410b4f8f6a075de",
+    "knowledge/reviews/hazards/H_B30EDC5AFD774470A555F9B715.json": "345e55df59255cb0b952adc061b3c466b99e8afca98362d92858cf942e4f070e",
+    "knowledge/reviews/hazards/H_C30C57E1211A46808D790A7D03.json": "4b9da990787e0cf60f3d3bff92041f335a74e8cdfa529973a4175eafd19873c0",
+    "knowledge/reviews/hazards/H_CFDF32963AFD42B79932BE1A61.json": "f8fd4ed19fd08616d51be4f355d94d3791a1293a4693faff04a0b46dd49b0dd2",
+    "knowledge/reviews/hazards/H_DDED88177C594355BBC5155F98.json": "b5eb634b0694640235136b622d000f6e5eaaafcf96d991d230cca367d69a9e55",
+    "knowledge/reviews/hazards/H_GBT47236_4_2_2_2.json": "410c0a0305b5001fb4df96212a3044353dfa376f3fbb84bfa4be910de44866e0",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_030_20261005.json": "72fa24f6bf2c4e74471ed22cbe2eca6b9c98074d9b1ae151e8a8d297051cf9e5",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_071_20261005.json": "a2bf709d09a1df40e67bedf92dac1526437de57dd3e16c8cac340e88959945ae",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005.json": "9342a950148687610c34acbeab3ed64193c2f5a70436b53127f6004bda297b42",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005.json": "b7ecb53d5a26b4f788f7579f748011e50610997af49c78304b10fcc84ebaafac",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005.json": "2e9fc519ce1e910f0713ef010cb361456d4cefe180fa9262b002434903b27a11",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005.json": "6ce5207a95d861c6ff655333e0aa6175e7e219fe9ed90fb5997a7b69bc8316e4",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005.json": "1f00efc469c084caf3175dc1ef85081374cb5b317d0ecf49e92bfd478635841b",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005.json": "fc551731760706b3bc50a1598ee12825a996129bf8032b5aaf15dec56c4518d2",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005.json": "8dcdc46d0f9d5372a76c7981c7d783022dd4ca3009323591ccc95341539ddd47",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005.json": "c19aa235724a4be308bac4c21b5f3008f41eb0d3af996bf9c1dd3dd390e999e9",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005.json": "f5878bd4257b9ac24a3b4e3fe262fc76c3fb53a2a3fe2971b4f5a10f262f7711",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005.json": "3eda8ae6107c1d93c0bcaa7fcaee0a7bddd7f560f288701870022924824122a8",
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005.json": "fe0195f724da68c3a8c5f03c0a8ce051d860b02bc292a3705d2a7faa3e22d403",
+    "knowledge/reviews/links/K_PHASE12_EXACT_586A2C2C04BECBBDB3D9.json": "4d1d0263b265ddc81205eb0e99205dd60c714189cd04c9f4dfa9dceb79695785",
+    "knowledge/reviews/links/K_PHASE6_91E48D8B3B4CA5FC5506FD76.json": "642760f45a24b15ffc21762ecbe283f2e151e3bf4f2cde1cb6e580bfc07b995e",
+    "knowledge/reviews/links/K_XLSX_FT_A3883508D9D829ADA841C9B6.json": "a5fc0332d8498a62ecbbb2426f38b8a1b5aafd27d835de43d0e242377de1df21",
+    "knowledge/reviews/links/K_XLSX_NEW14_5711629423A6B52C786E82FD.json": "7ebf8cab4475c0f52ef52e52609a905ef334a18834c91fad363259b83922c445",
+    "knowledge/reviews/links/K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3.json": "7a76f6dea55ad39c7ae008a5875b273ab288d30c22136af946e311bc02675292",
+    "knowledge/reviews/links/K_XLSX_WEB_5F29EE673A37F0574A288633.json": "52d2d29fd995f8057530e949a9ec95b86656765c489475d14eddeba8e3cae875",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_7_1_1.json": "287a4afeb240dcb8582fe84534802e9539dacb57058a8c634768f5ee07b242ac",
+    "knowledge/reviews/links/K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776.json": "d84b1a4734640c98121e3daa7936824b1ddaaaf42dd6da7136206c0dd494b2c2",
+    "tools/pipeline/tests/test_all_electrical_bounded_20261005.py": "88af837426c71c869d5b3926e34ad236631499e58cedb6e1b81906b8e82bebef"
+  },
+  "beforeFiles": {
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB12801_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB2894_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_GBT13869_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB50054_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB12158_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_GB16912_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_SAFETY_LAW_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/evidence/E_ALL_ELECTRICAL_JIANGSU_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/clauses/C_ALL_GB50054_7_1_2_3.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/clauses/C_ALL_GB50054_7_1_2_3.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/clauses/C_ALL_GB50054_5_2_3.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/clauses/C_ALL_GB50054_5_2_3.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/clauses/C_ALL_GB2894_8_2_1.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/clauses/C_ALL_GB2894_8_2_1.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/clauses/C_ALL_GB16912_4_4_2.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/clauses/C_ALL_GB16912_4_4_2.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/clauses/C_12801_4_1_2.json": {
+      "existed": true,
+      "sha256": "7097d008933c15d2ed16980d15f76993a1dabfa4f811ac181272cdabf6e903de",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_12801_4_1_2\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_12801_2025\"\n  ],\n  \"reason\": \"条文核验：GB 12801-2025 第4.1.2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"7a93b2817e6a97cac089fdb8dcb8262f55cae6d0539f01c0a3f9efdacbcad549\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_12801_4_5_2.json": {
+      "existed": true,
+      "sha256": "ddd7845e03e9a1209197a1d642715ec903dc0dad98ff481462929f164e9baaba",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_12801_4_5_2\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_12801_2025\"\n  ],\n  \"reason\": \"条文核验：GB 12801-2025 第4.5.2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"d33c32f48a4f1de1c3ac7dccbec0ed64cb3ae61418542d6b5374a915f5bc5859\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_12801_5_7_4.json": {
+      "existed": true,
+      "sha256": "6212764f99ebd4a7478307c35310ce79b1adc3ebb2fcbcb596da3fece9d72d3f",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_12801_5_7_4\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_12801_2025\"\n  ],\n  \"reason\": \"条文核验：GB 12801-2025 第5.7.4条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"2153e72ecfc596bbff807935c5a41c8a90774c4a1e97d7efe26e90156c520526\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_12801_5_7_5.json": {
+      "existed": true,
+      "sha256": "7aed24f79f4fcb6edf87e9d79b22fe4933f44d15321ced539730e225c6f960fb",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_12801_5_7_5\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_12801_2025\"\n  ],\n  \"reason\": \"条文核验：GB 12801-2025 第5.7.5条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"b345a95a77d8b500912cfffa298adb476baef363fdc98af7b027b9bfbc868d79\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_12158_4_2_2_3.json": {
+      "existed": true,
+      "sha256": "47dc9f813db8e772cd66d44684e19e370ae57ad5d2a1d6f19065d51b4df4706e",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_12158_4_2_2_3\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_12158_GB 12158\"\n  ],\n  \"reason\": \"条文核验：GB 12158-2024 第4.2.2.3条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\",\n  \"reviewedAt\": \"2026-09-19T00:00:00Z\"\n}\n"
+    },
+    "knowledge/clauses/C_XLSX_WEB_EC95C5694483BC8D1A74E491.json": {
+      "existed": true,
+      "sha256": "7df3aabf72a1a4faebe9abc448b4cd299f26914177fbd473d4ccd80b0bb3f1aa",
+      "fileTextUtf8": "{\n  \"articlePath\": \"6.7\",\n  \"id\": \"C_XLSX_WEB_EC95C5694483BC8D1A74E491\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"6.7 含粉尘的排风管道应采用法兰连接并进行静电跨接。 7.1 在喷粉区内存放的粉末涂料量应不大于当班所需的粉末涂料耗量,粉末包装应无破损.无粉末 7.2 用粉量较大的连续自动喷涂 ,粉末应贮存在较大的密闭供粉桶内 ,并应采取以下防护措施 a) 供粉桶布置在安全隔离间内,火种和热源不能进入隔离间; b) 供粉桶使用导电材料制作 ,接地符合 4.8 的规定; c) SHUBERT BF IE BI AR hie Be Bh ABs d) AEBS A SG Ey DC CEB LE RAGE BR AE 7 88 A RR 7.3 不应将粉末涂料置于烘道.取暖设备等易触及热源的场所。 7.4 ”粉末涂料不应与溶剂型涂料及稀释剂存放在一起。 7.5 “粉末输送管道.阀门应采用不易堵塞的结构,不应设置网格等妨碍输送的物体,不应积粉:应采用 防静电、难燃材料 ;接地应符合 4.8 的规定。 8 操作与维护安全管理 8.1 下列作业过程应制定安全操作规程,应急处置方案并定期修订、完善: a) 喷粉设备及其辅助设备在安装.调试,作业前,制定安全操作规程 b) 针对安装.调试作业、维修动火过程中可能发生的突发事件和紧急情况 ,按相关规定制定可靠 的防护措施和应急处置方案; c) 按安全操作规程.应急处置方案的要求对操作人员进行岗前培训,考核合格方可上岗 。 8.2 喷粉操作应在排风机启动 3 min~5S min 后,方可开启高压静电发生器和喷粉装置。在停止作业 时 ,应先停高压静电发生器和喷粉装置,5 min一10 min 后再关闭排风机。 8.3 设备器具应定期检查和清理,检查清理的内容和周期参见附录 C。 8.4 下列检查应做记录: a) 喷粉室`.风机、回收装置.净化装置的粉末浓度及清理情况; b) 喷粉室开口的断面风速; c) 风机轴承及其他运转部件是否黏附或焦结粉末 ,粉管及设备是否堵塞; d) 高压静电发生器喷枪、粉末回收系统、烘干(固化)室等是否正常接地; e) 工艺设备是否有粉尘泄漏,工艺设备的接头、检查口、挡板.泄爆口盖等是否封闭严密。 8.5 当出现喷粉室开口断面风速低于最小设计风速`.风机故障.回收供粉系统堵塞.高压系统故障、漏 粉跑粉等非正常状态时 ,应停止作业 ,待故障排除后方可继续作业 。 8.6 喷粉室日常积粉清理和清粉换色时应对操作人员呼吸系统采取防护措施,并对所用器具采取接地 等防静电措施。积粉清理时粉尘不应外逸。 8.7 ”应及时清除所有设备.管道,作业区地面沉积的粉末,应及时清理烘干(固化)室加热元件表面积 粉 ,应及时清理挂具上的涂层确保工件满足接地要求。检查 .清理应做记录。 GB 15607一2023 8.8 当自动喷粉系统处于运行状态时,除补喷工位持枪者手臂外,人体其余部分均不应进入喷粉室 。 如工艺需求操作人员需进入喷粉室时,应采取可靠的安全防护措施,并应符合 GB 6514 的相关规定。 8.9 设备运行或有高压时不应进行设备维修。设备维修、清理时应停止其他作业。维修前应清理粉 尘,维修、动火前应制定相应的应急处置方案 ,应提交动火申请并配置相关设施。 8.10 在回收装置 .净化装置的卸料口及务料过程中,供粉桶在加料时,应采取防止粉尘外逸的措施 。 8.11 作业运行中应观察 ,挂具及工件不应有卡死.摇摆、碰撞和偏位滑落现象。 8.12 ”操作人员应按劳动防护相关规定穿戴呼吸保护器具以及防静电工作服、鞋.帽,不应戴绝缘手套 及金属饰物 。 6 GB 15607一2023 Mt 录 A (资料性) 各类喷粉室的爆炸性粉尘环境危险区域划分见图 A.1一图 A.3。 自动喷枪枪模 外置手补平台 1000 mm 1000 mm Mma Wt Vin Z Wht Gt. MRI A 1000 mm 外置手补平台 自动喷枪枪模 外置手补平台 自动喷枪枪模 图例: 21区 (ZF) 221K 图A.1 自动喷粉室 1000 mm 1000 mm VY Yt 1.000 mm 1.000. mm 1.000 mm < , 2 图例， 1000 mm 21K FAHAM 221% 图A.2 全封闭喷粉室 7 GB 15607一2023 1000 mm 1000 mm >. UY Zp BE 1000 mm 7,77 1000 mm ae 1.000 mm 1.000 mm eo Y _ a a 一 输送装置开口 UU 5 1000 mm 图例: 21区 22区 图A.3 前开口喷粉室 8 GB 15607一2023 附 录 B 静电喷粉室排风量(抽风量)计算方法 静电喷粉室排风量分别用控制粉尘浓度与防止粉尘外逸两种方法计算,并取其大值。 a) 控制粉尘浓度的排风量按公式(B.1)计算， 式中: Qi一一按控制粉尘浓度要求计算的排风量,单位为立方米每小时(ms/h)， G 一一单支喷枪最大出粉量,单位为克每分(g/min)， 7 一一同时喷涂的喷枪数， K 一一粉末上粉率 ,一般为 0.4一0.8， K ;一一工件不连续进入(工件间有空隙)积粉系数,一般为 1.2一1.6; < 一一粉末爆炸下限浓度 ,单位为克每立方米(g/ms ) 。 b) 防止粉尘外逸的排风量按公式(B.2)计算 Q, =3 600(A, + A, +A;)v 0 BD) th, Q:一一按防止粉尘外逸要求计算的排风量 ,单位为立方米每小时(my/h)， Ai一一操作面开口面积,单位为平方米(m? )， A;一一工件进出口面积,单位为平方米(m ); A ;一一工艺及其他孔洞面积,单位为平方米(m ) 5 2 一一开口处断面风速,在 0.3 m/s~0.6 m/s, 9 GB 15607一2023 附 录 C (资料性) 设备器具检查和清理周期 表 C.1 给出了设备器具检查 .清理的内容和周期 。 表C.1 设备器具检查和清理周期一览表 ee ee oe ee ec 10\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_XLSX_WEB_EC95C5694483BC8D1A74E491.json": {
+      "existed": true,
+      "sha256": "756520201d0ea58e075b0b43d5fe0e4cbd83fdb261db2fc67c911b7ed1aaba6f",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_XLSX_WEB_EC95C5694483BC8D1A74E491\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_E2C9363C5525B73C67A6940C\"\n  ],\n  \"reason\": \"已从官方政府全文页面定位并核对条款原文。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"f4e35044172e3b86bf3a93a091e1778a15e15aca4ac456a1a4382310b265069b\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_GBT47236_4_2_2_2.json": {
+      "existed": true,
+      "sha256": "26a3355c9eaca157e8892e2c0650cef2bd8fef2d4f0fe82890c562124042321b",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_GBT47236_4_2_2_2\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_GBT47236_2026\"\n  ],\n  \"reason\": \"条文核验：GB/T 47236-2026 第4.2.2.2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"70c5d932d61b5fef07e4546fcde6d6621f592b7cbab4cc63b6fd22a4cab58b8d\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/hazards/H030.json": {
+      "existed": true,
+      "sha256": "7e6ee617284132e59a0687199343733a098975878f1bd34b2d5e0eb5b5552609",
+      "fileTextUtf8": "{\n  \"id\": \"H030\",\n  \"title\": \"电气线路防机械损伤措施不足\",\n  \"description\": \"配电线路敷设在可能受到碰撞、挤压、磨损等外部机械作用的位置，未采取有效防机械损伤措施。\",\n  \"measures\": \"识别线路可能遭受机械作用的区段，根据环境采用穿管、线槽、护板、隔离或调整走向等措施，并检查已受损线路绝缘和机械强度，必要时更换。\",\n  \"conditions\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"category\": \"电气安全\",\n  \"places\": [],\n  \"aliases\": [],\n  \"keywords\": [\n    \"电气线路防机械损伤措施不足\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"标准要求是防止外部机械性损害，并不意味着所有可见线路一律必须穿金属管。应根据敷设方式、环境和实际受力风险选择适宜防护措施。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H030.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_030_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_030_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H071.json": {
+      "existed": true,
+      "sha256": "63304fb821a3d9cdf6390a2737427e6e2320472f5fa36972c8941625168328ef",
+      "fileTextUtf8": "{\n  \"aliases\": [\n    \"电气作业未风险辨识\",\n    \"电工作业前未采取防护\"\n  ],\n  \"category\": \"电气安全\",\n  \"conditions\": \"适用于存在电气作业前未熟悉作业环境并采取相应防护措施相关风险的场所和作业活动。\",\n  \"description\": \"电气作业人员在作业前未熟悉作业环境，或未根据作业类型和性质采取相应防护措施。\",\n  \"id\": \"H071\",\n  \"keywords\": [\n    \"电气作业\",\n    \"作业环境\",\n    \"防护措施\",\n    \"风险辨识\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"作业前辨识带电状态、潮湿、粉尘、狭窄空间等环境风险，根据作业类型落实断电、验电、隔离和个体防护等措施。\",\n  \"mergedInto\": null,\n  \"mode\": \"candidate\",\n  \"note\": \"\",\n  \"places\": [\n    \"电气作业场所\",\n    \"生产车间\"\n  ],\n  \"title\": \"电气作业前未熟悉作业环境并采取相应防护措施\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H071.json": {
+      "existed": true,
+      "sha256": "5f1f92e4a1e17106fa0ff64b7713e2717148e34a49cc25b21a61320577aaac03",
+      "fileTextUtf8": "{\n  \"decision\": \"verified\",\n  \"entityId\": \"H071\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab\"\n  ],\n  \"migratedFromV3Verification\": {\n    \"id\": \"VR_62b0a2142bac91f58c75345a34_10\",\n    \"reviewedAt\": \"2026-09-09T13:33:45+00:00\",\n    \"reviewer\": \"Codex 主核验\"\n  },\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"a53e6cfd04c5242b56946f2ab5e3c78fdc49b0020028897bb6018c7e5111fddd\"\n}\n"
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_071_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_071_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_12158_4_2_2_3_1.json": {
+      "existed": true,
+      "sha256": "723660d1b9041ff417a252fe07658f712a621b16b61c5ff3cce70110e5b85951",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"电气安全\",\n  \"conditions\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"description\": \"接地电阻不应大于100Ω。（第4.2.2.3条）。\",\n  \"id\": \"H_12158_4_2_2_3_1\",\n  \"keywords\": [\n    \"静电危险场所的接地电阻大于100Ω\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"接地电阻不应大于100Ω。（依据 第4.2.2.3条 整改。）。\",\n  \"mergedInto\": null,\n  \"mode\": \"candidate\",\n  \"note\": \"GB/T 13869-2026《用电安全导则》。\",\n  \"places\": [\n    \"电气设备安装、运行、检维修及用电相关场所\",\n    \"通用场所\"\n  ],\n  \"title\": \"静电危险场所的接地电阻大于100Ω\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_12158_4_2_2_3_1.json": {
+      "existed": true,
+      "sha256": "bd98aac50edfe1bea6dd73f299a9e0700461c8764bba87b5895d48732a685131",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_12158_4_2_2_3_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_12158_GB 12158\"\n  ],\n  \"reason\": \"已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"829b534b0db8e99246dffd8ec8c6779ac611a8dea9090c9abcb3f6da5e424f76\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n"
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_12158_4_2_2_3_1_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_41C4A7B81C8B478797B187AAE7.json": {
+      "existed": true,
+      "sha256": "bbff5b8c77371bfb1e44b583c07012928befb5f84bce8cb039e6e7f1c98f6bd1",
+      "fileTextUtf8": "{\n  \"id\": \"H_41C4A7B81C8B478797B187AAE7\",\n  \"title\": \"工业管道识别符号标识不符合要求\",\n  \"description\": \"工业管道的识别符号由物质名称、流向和主要工艺参数等组成,其标识,未符合下列要求:5.1物质名称的标识\",\n  \"measures\": \"按GB 2894-2025对工业管道补充或纠正介质名称、流向及必要工艺参数等识别信息，统一设置位置、颜色和标识方式并现场验收。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"工业管道识别符号标识不符合要求\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\\n\\n原 conditions 字段记录的引用依据为：依据：《工业管道的基 本识别色、识别 符 号 和 安 全 标 识 》 GB 7231- 2003 第 5 条\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_41C4A7B81C8B478797B187AAE7.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_41C4A7B81C8B478797B187AAE7_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_15607_6_7_1.json": {
+      "existed": true,
+      "sha256": "1c1354440497519a39ac1b5d6f4e8a39a6fb5896d65c11f13865653bc2bc838b",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"电气安全\",\n  \"conditions\": \"适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\\n适用场所：电气设备安装、运行、检维修及用电相关场所\",\n  \"description\": \"现场检查发现，含粉尘的排风管道未采用法兰连接并进行静电跨接，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_15607_6_7_1\",\n  \"keywords\": [\n    \"含粉尘的排风管道未采用法兰连接并进行静电跨接\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"含粉尘的排风管道采用法兰连接并进行静电跨接。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"电气设备安装、运行、检维修及用电相关场所\"\n  ],\n  \"title\": \"含粉尘的排风管道未采用法兰连接并进行静电跨接\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_15607_6_7_1.json": {
+      "existed": true,
+      "sha256": "49367453cbb9199ae5569bfd7ddaa59bc211102160b882699298ec84605406fb",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_15607_6_7_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_E2C9363C5525B73C67A6940C\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"43e70520d4a2a038cb9da8f5152dffd9c9e2bf6a4c54e961aab3529860f64925\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n"
+    },
+    "knowledge/links/K_XLSX_WEB_5F29EE673A37F0574A288633.json": {
+      "existed": true,
+      "sha256": "b582ea408e8de0ae3857389a7b2baf7d1e14128e0d8377f8be0a6696532abbc2",
+      "fileTextUtf8": "{\n  \"applicability\": \"适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\\n适用场所：电气设备安装、运行、检维修及用电相关场所\",\n  \"clauseId\": \"C_XLSX_WEB_EC95C5694483BC8D1A74E491\",\n  \"hazardId\": \"H_15607_6_7_1\",\n  \"id\": \"K_XLSX_WEB_5F29EE673A37F0574A288633\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"proposed\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\",\n  \"status\": \"needs_review\"\n}\n"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_5F29EE673A37F0574A288633.json": {
+      "existed": true,
+      "sha256": "ce005983fb710bf04f6cf35925c00d3683554cf5f1573ccea4d0f2791f517133",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"f4e35044172e3b86bf3a93a091e1778a15e15aca4ac456a1a4382310b265069b\",\n    \"hazard\": \"43e70520d4a2a038cb9da8f5152dffd9c9e2bf6a4c54e961aab3529860f64925\"\n  },\n  \"decision\": \"pending\",\n  \"entityId\": \"K_XLSX_WEB_5F29EE673A37F0574A288633\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_E2C9363C5525B73C67A6940C\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"dca1041f34784ca2441cafa646838c7138f01935320096a657ba74e8d392069e\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"对应条款已因来源/OCR/原子化问题降级，不能保持Pass。\"\n}\n"
+    },
+    "knowledge/hazards/H_2F1B0A9321E844B98E16A6A3CA.json": {
+      "existed": true,
+      "sha256": "e80541cebecc8e5ac9d8a6d08afab3dedb187fa397c7a5b3de0809767f412938",
+      "fileTextUtf8": "{\n  \"id\": \"H_2F1B0A9321E844B98E16A6A3CA\",\n  \"title\": \"电气装置的外露可导电部分,未与保护导体连接\",\n  \"description\": \"电气装置的外露可导电部分未与保护导体连接。\",\n  \"measures\": \"补接或修复电气装置外露可导电部分与保护导体的连接，按适用规范测试保护导体连续性和接地可靠性，并留存测试记录。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"电气安全\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"电气装置的外露可导电部分,未与保护导体连接\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\\n\\n原 conditions 字段记录的引用依据为：依据：《低压配电设计规范》 (GB50054-2011) 第5.2.3条\\n\\nGB/T 13869-2026《用电安全导则》。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_2F1B0A9321E844B98E16A6A3CA.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_2F1B0A9321E844B98E16A6A3CA_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_4E1F7C3FFB724997B5C4EC82C9.json": {
+      "existed": true,
+      "sha256": "bdc1b93fab18556fb49117a0d5e0e214ae429824eddbecaa4d515ad67401b2da",
+      "fileTextUtf8": "{\n  \"id\": \"H_4E1F7C3FFB724997B5C4EC82C9\",\n  \"title\": \"生产场所、作业点的紧急通道和出入口未设置醒目的标志\",\n  \"description\": \"场所、作业点的紧急通道和出入口,未设置醒目的标识\",\n  \"measures\": \"在生产场所、作业点的紧急通道和出入口设置醒目的疏散指示标志。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"生产场所、作业点的紧急通道和出入口未设置醒目的标志\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\\n\\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》GB 12801-2025 6.8.3\\n\\nGB 55037-2022《建筑防火通用规范》。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_4E1F7C3FFB724997B5C4EC82C9.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_4E1F7C3FFB724997B5C4EC82C9_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_5E9D1E4065E7486F819AFE98A0.json": {
+      "existed": true,
+      "sha256": "a21e22d9616e0432aee3f0d41af0940e16c72d3accf1ca1ba246973c994da40e",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"安全标志\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"各种气体及低温液体贮罐周围,未设安全标志,必要时设单独围栏或围墙。储罐本体,未有色标。对于具有潜在危险的场所,未在醒目位置设置安全警示牌\",\n  \"id\": \"H_5E9D1E4065E7486F819AFE98A0\",\n  \"keywords\": [\n    \"各种气体及低温液体储罐周围\",\n    \"未设安全标志\",\n    \"必要时设单独围栏或围墙\",\n    \"各\",\n    \"种\",\n    \"气\",\n    \"体\",\n    \"及\",\n    \"低\",\n    \"温\",\n    \"液\",\n    \"储\",\n    \"罐\",\n    \"周\",\n    \"围\",\n    \",\",\n    \"未\",\n    \"设\",\n    \"安\",\n    \"全\",\n    \"标\",\n    \"志\",\n    \"必\",\n    \"要\",\n    \"时\",\n    \"单\",\n    \"独\",\n    \"栏\",\n    \"或\",\n    \"墙\",\n    \"本\",\n    \"有\",\n    \"色\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"在储罐周围设置安全标志，并在储罐本体设置色标。\",\n  \"mergedInto\": null,\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\\n\\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\\n\\n原 conditions 字段记录的引用依据为：依据：《深度冷冻法生产氧气及相关气体安全技术规程》第4.4.2、4.13.4条\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"气体及低温液体储罐周围未设安全标志或储罐本体无色标\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_5E9D1E4065E7486F819AFE98A0.json": {
+      "existed": true,
+      "sha256": "b0ec34e96a71826461f2dc12195088745af80b92ae368e4ef5db275316ad21e2",
+      "fileTextUtf8": "{\"decision\":\"verified\",\"entityId\":\"H_5E9D1E4065E7486F819AFE98A0\",\"entityType\":\"hazard\",\"evidenceRefs\":[\"EH_bb0d96f2fcd6eb1ad82143694d9e88cc231d62f44fd683e8c50ddd8bd1c2305b\"],\"migratedFromV3Verification\":{\"id\":\"VHF_fab025ecd282f1592562b9dd\",\"reviewedAt\":\"2026-09-09T14:38:34+00:00\",\"reviewer\":\"并发重验批次\"},\"reviewType\":\"content\",\"reviewedContentHash\":\"9192bcdfc3a82b941a3da1aa3c3a58d9d7717399337b82a98d04fb0f1f02d131\"}\n"
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_5E9D1E4065E7486F819AFE98A0_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_608147EE09234EBC92B53F842A.json": {
+      "existed": true,
+      "sha256": "f8ddc684b1876b13132931f4f088ca404a6f9986e0c06721bd440bd50d0a77df",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"安全标志\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"设备和管线未按有关标准的规定涂刷识别色、标注识别符号和安全标识，人员无法直观识别介质种类和危险属性，误操作风险增加。\",\n  \"id\": \"H_608147EE09234EBC92B53F842A\",\n  \"keywords\": [\n    \"设备和管线\",\n    \"未按有关标准的规定涂识别色\",\n    \"识别符号和安全标识\",\n    \"设\",\n    \"备\",\n    \"和\",\n    \"管\",\n    \"线\",\n    \",\",\n    \"未\",\n    \"按\",\n    \"有\",\n    \"关\",\n    \"标\",\n    \"准\",\n    \"的\",\n    \"规\",\n    \"定\",\n    \"涂\",\n    \"识\",\n    \"别\",\n    \"色\",\n    \"符\",\n    \"号\",\n    \"安\",\n    \"全\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"按标准规定对设备和管线涂识别色、标注识别符号和安全标识。\",\n  \"mergedInto\": null,\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《生产过程安全 卫生要求总则》 第6. 8. 4条\\n\\nGB 7231。\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"设备和管线,未按有关标准的规定涂识别色、识别符号和安全标识\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_608147EE09234EBC92B53F842A.json": {
+      "existed": true,
+      "sha256": "0a55bb3ac3a1939534d9e97aa87089cc5345cab5d555ca2c050fa2627cff140b",
+      "fileTextUtf8": "{\n  \"decision\": \"verified\",\n  \"entityId\": \"H_608147EE09234EBC92B53F842A\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"EH_ea5e623fd1714f090ac63085785697dc65ff0421d0d0756d33dd4cfb62647fbd\"\n  ],\n  \"migratedFromV3Verification\": {\n    \"id\": \"VHF_55a988b45076720bd24dbcab\",\n    \"reviewedAt\": \"2026-09-09T14:38:34+00:00\",\n    \"reviewer\": \"并发重验批次\"\n  },\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"80bb521f64fc70614584023a766b18a4ef9563ed048d318311941668f615f4bf\",\n  \"reason\": \"\\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。\",\n  \"checkedAt\": \"2026-09-12T02:29:02+08:00\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_608147EE09234EBC92B53F842A_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_9AA6D788ABB14DBC94F1ED7240.json": {
+      "existed": true,
+      "sha256": "5b3898279de6e9efd9c4bd4348637b749fd5a151100b99b9424219c65a43d3ac",
+      "fileTextUtf8": "{\n  \"id\": \"H_9AA6D788ABB14DBC94F1ED7240\",\n  \"title\": \"项目风险辨识后未采取相应的控制措施\",\n  \"description\": \"对项目生产过程中的火灾、爆炸、中毒和窒息、触电、机械伤害、灼烫等风险进行了辨识，但未采取相应的控制措施。\",\n  \"measures\": \"对每项已识别安全风险建立风险清单，明确管控措施、责任人、检查频次和验证方法，按计划实施并留存管控及复核记录。\",\n  \"conditions\": \"适用于项目生产过程中风险辨识后的控制措施落实。\",\n  \"category\": \"电气安全\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"项目风险辨识后未采取相应的控制措施\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 修订：原标题为条款原文片段或存在文字损坏，语义不通且无法作为现场隐患表述；此处依其原描述与现有依据改写为可判定的现场事实，未改变依据本身。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_9AA6D788ABB14DBC94F1ED7240.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_9AA6D788ABB14DBC94F1ED7240_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_9B91E8E70C2947B7B320BE7DA4.json": {
+      "existed": true,
+      "sha256": "f106fdcc4ec064c6c991c92132b3524ceded8a50b7fc89efe4e37d477b00b4d0",
+      "fileTextUtf8": "{\n  \"id\": \"H_9B91E8E70C2947B7B320BE7DA4\",\n  \"title\": \"存在风险的场所和位置未按规定使用安全色和安全标志\",\n  \"description\": \"过程中存在风险或有必要提醒人员注意安全的场所和位置,未按照GB2893、GB2894的规定使用安全色、安全标志\",\n  \"measures\": \"按 GB 2893、GB 2894 在存在风险的场所和位置使用安全色与安全标志。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"存在风险的场所和位置未按规定使用安全色和安全标志\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\\n\\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\\n\\n原 conditions 字段记录的引用依据为：依据：《生产过程安全基本要求》(GB 12801-2025)第6.12.1条\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_9B91E8E70C2947B7B320BE7DA4.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_9B91E8E70C2947B7B320BE7DA4_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_DDED88177C594355BBC5155F98.json": {
+      "existed": true,
+      "sha256": "2653c10a3da235d8939759d2980d7695c3a11ede725154bb6076826941a7f2bc",
+      "fileTextUtf8": "{\n  \"id\": \"H_DDED88177C594355BBC5155F98\",\n  \"title\": \"作业区物料产品半成品堆放未标出存放范围或未保证通道畅通\",\n  \"description\": \"作业区的生产物料、产品、半成品的堆放,未用黄色或白色标志在地面上标出存放范围,或设支架、平台存放,保证人员安全,通道畅通\",\n  \"measures\": \"用黄色或白色标志在地面标出物料存放范围，或设支架平台存放，保证通道畅通。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"作业区物料产品半成品堆放未标出存放范围或未保证通道畅通\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\\n\\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\\n\\n原 conditions 字段记录的引用依据为：依据：《生产过程安全 卫生要求总则》 第 5. 7. 5 b)条\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_DDED88177C594355BBC5155F98.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_DDED88177C594355BBC5155F98_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_GBT47236_4_2_2_2.json": {
+      "existed": true,
+      "sha256": "3f67e8c06a3593b2e1b35eba685cf899b478387cb18111e2e27e13dc7ba98df7",
+      "fileTextUtf8": "{\n  \"id\": \"H_GBT47236_4_2_2_2\",\n  \"title\": \"不能设置防护装置的运动部件,未喷涂黄黑相间条纹安全标记\",\n  \"description\": \"对于因工艺需要不能设置防护装置的运动部件，其端部或突出部位未喷涂表示危险位置的黄色和黑色相间条纹的安全标记，或安全标记不符合 GB 2894—2025 中 4.3 的规定。\",\n  \"measures\": \"按 GB 2894—2025 中 4.3 的规定，在不能加防护的运动部件端部或突出部位喷涂黄黑相间条纹安全标记。\",\n  \"conditions\": \"仅适用于低压铸造机、差压铸造机及其他金属型铸造设备；其他通用机械应按相应通用/专用机械安全标准执行。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"不能设置防护装置的运动部件,未喷涂黄黑相间条纹安全标记\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"依据 GB/T 47236-2026 4.2.2.2 条反转生成（GLM，2026-09-12）；适用对象为低压铸造机及其他金属型铸造设备的使用与维护现场。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_GBT47236_4_2_2_2.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_GBT47236_4_2_2_2_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_6706FA04BB344FA59ED6251058.json": {
+      "existed": true,
+      "sha256": "e180bbecd574fd94f9fe3ed1064f3dc65f3ec321c5c0ec0e5a032c3efb05a421",
+      "fileTextUtf8": "{\n  \"id\": \"H_6706FA04BB344FA59ED6251058\",\n  \"title\": \"生产设备易发生危险的部位未设置安全标志\",\n  \"description\": \"生产设备易发生危险的部位未有安全标志。安全标志的图形、符号、文字、颜色等均必须符 合 GB2893 、 GB2894 、 GB6527.2 、GB15052 等标准规定\",\n  \"measures\": \"在生产设备存在较大危险因素或易发生人身伤害的部位设置符合GB 2894-2025的安全标志，确保图形、颜色、文字和设置位置清晰可见，并纳入检查维护。\",\n  \"conditions\": \"适用于生产设备的相关安全管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"生产设备易发生危险的部位未设置安全标志\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\\n\\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\\n\\n原 conditions 字段记录的引用依据为：依据：《生产设备安全卫生设计 总则》(GB 5083-2023) 第 7.1 条\\n\\nGB 2894-2025《安全色和安全标志》。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_6706FA04BB344FA59ED6251058.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_C30C57E1211A46808D790A7D03.json": {
+      "existed": true,
+      "sha256": "cc73c8af390eeb60af53b206d70a0a88bec4bd44bed49ee6a2125e88440509cd",
+      "fileTextUtf8": "{\n  \"id\": \"H_C30C57E1211A46808D790A7D03\",\n  \"title\": \"布置具有潜在危险的设备时,未根据有关规定进行分散和隔离,并设置必要的提示、标志和警告信号\",\n  \"description\": \"布置具有潜在危险的设备时未根据有关规定进行分散和隔离，也未设置必要的提示、标志和警告信号，人员难以识别和回避危险区域。\",\n  \"measures\": \"布置具有潜在危险的设备时按规定分散隔离，并设置必要的提示、标志和警告信号。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"布置具有潜在危险的设备时,未根据有关规定进行分散和隔离,并设置必要的提示、标志和警告信号\"\n  ],\n  \"lifecycle\": \"active\",\n  \"mode\": \"direct\",\n  \"note\": \"2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\\n\\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求 总则》(GBT12801-2008) 第 5.7.2 条\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_C30C57E1211A46808D790A7D03.json": {
+      "existed": true,
+      "sha256": "9e248124a5eb41a9d562f8ef8baf6c9ee9d2ca185bb78cd419a32cee82832f13",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-14\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_C30C57E1211A46808D790A7D03\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_FT_36E528BE2345959812615FB3\"\n  ],\n  \"reason\": \"新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"ff345bdaba4712a59d681fc67070ff4bbeafe9aec6b10c67a8c829b26fdd4695\",\n  \"reviewer\": \"Codex新版整改回绑批次20260914\"\n}\n"
+    },
+    "knowledge/links/K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3.json": {
+      "existed": true,
+      "sha256": "dfc7c81ee05b8c5fd974e295eba925488832cef54ddf38e97a7a2b242dc750b0",
+      "fileTextUtf8": "{\n  \"id\": \"K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3\",\n  \"hazardId\": \"H_C30C57E1211A46808D790A7D03\",\n  \"clauseId\": \"C_XLSX_FT_0A0BC6D714EBEE8BE88DC97C\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n"
+    },
+    "knowledge/reviews/links/K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3.json": {
+      "existed": true,
+      "sha256": "7ae1b63f4af568b0c1d1dfbd6bc824e29116c80bc4bcd3835515fd4c32047d20",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-14\",\n  \"contextHashes\": {\n    \"clause\": \"68f68f975077c091da3582c4b596d539419fb4a290ff77b59d21a6fca11a41b4\",\n    \"hazard\": \"ff345bdaba4712a59d681fc67070ff4bbeafe9aec6b10c67a8c829b26fdd4695\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_XLSX_NEW14_CB6BD937B1E0E59EEFA594D3\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_FT_36E528BE2345959812615FB3\"\n  ],\n  \"reason\": \"新版整改字段与现有已核验条款的对象、版本和适用范围一致。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"80c4ed859f65ed6e403f732eb360cbe544fb2a32571730c3a4eb49fc715788ca\",\n  \"reviewer\": \"Codex新版整改回绑批次20260914\",\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n"
+    },
+    "knowledge/hazards/H_B30EDC5AFD774470A555F9B715.json": {
+      "existed": true,
+      "sha256": "2a7a4b9ee8dc6d2220c5a6e2ff14f1a5d4b7ef0e0f0bbd211cc80a09bde11134",
+      "fileTextUtf8": "{\n  \"id\": \"H_B30EDC5AFD774470A555F9B715\",\n  \"title\": \"贮存的化学危险品,未有明显的标志\",\n  \"description\": \"贮存的化学危险品无明显标志，无法辨识其危险特性。\",\n  \"measures\": \"在贮存的化学危险品处设置明显标志；同一区域存放多种等级危险品时按最高等级标志。\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"category\": \"安全标志\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"贮存的化学危险品,未有明显的标志\"\n  ],\n  \"lifecycle\": \"active\",\n  \"mode\": \"direct\",\n  \"note\": \"2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\\n\\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\\n\\n原 conditions 字段记录的引用依据为：依据：《常用化学危险品贮存通则》第4.6条\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_B30EDC5AFD774470A555F9B715.json": {
+      "existed": true,
+      "sha256": "fdf9981426482cd98661e3e95408000f1ea36a22d6727c98ff8e95a1b4780476",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-14\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_B30EDC5AFD774470A555F9B715\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_FT_36E528BE2345959812615FB3\"\n  ],\n  \"reason\": \"新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"08a65655e57ac133f2b7c64938acb2fd76cd9502c64a394e67ebc0f152c4e0b3\",\n  \"reviewer\": \"Codex新版整改回绑批次20260914\"\n}\n"
+    },
+    "knowledge/links/K_XLSX_NEW14_5711629423A6B52C786E82FD.json": {
+      "existed": true,
+      "sha256": "d1a4b3b3200cb4e6bd949bd30b9e715d126fdb0aa4e2371a2016925035d1db1a",
+      "fileTextUtf8": "{\n  \"id\": \"K_XLSX_NEW14_5711629423A6B52C786E82FD\",\n  \"hazardId\": \"H_B30EDC5AFD774470A555F9B715\",\n  \"clauseId\": \"C_XLSX_FT_0A0BC6D714EBEE8BE88DC97C\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"新版整改表要求与现有已核验同版次条款直接对应。\"\n}\n"
+    },
+    "knowledge/reviews/links/K_XLSX_NEW14_5711629423A6B52C786E82FD.json": {
+      "existed": true,
+      "sha256": "4d1747047fea583a84a4d72750f478ef9f863b5ba3778d74dc74258a26176cb6",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-14\",\n  \"contextHashes\": {\n    \"clause\": \"68f68f975077c091da3582c4b596d539419fb4a290ff77b59d21a6fca11a41b4\",\n    \"hazard\": \"08a65655e57ac133f2b7c64938acb2fd76cd9502c64a394e67ebc0f152c4e0b3\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_XLSX_NEW14_5711629423A6B52C786E82FD\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_FT_36E528BE2345959812615FB3\"\n  ],\n  \"reason\": \"新版整改字段与现有已核验条款的对象、版本和适用范围一致。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"840e9ad9919e7c77d10fa9df9509ff904ff9937c34b604057b12c7668c45d529\",\n  \"reviewer\": \"Codex新版整改回绑批次20260914\",\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n"
+    },
+    "knowledge/links/K_XLSX_FT_A3883508D9D829ADA841C9B6.json": {
+      "existed": true,
+      "sha256": "4f4f2660d31dfec2c0603803b76b3dbbf9be0ff69918a45b5d415386cb46442f",
+      "fileTextUtf8": "{\n  \"applicability\": \"适用于江苏省行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\\n适用场所：江苏省行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动\",\n  \"clauseId\": \"C_XLSX_FT_7793A254D65E57E8F4A6E41F\",\n  \"hazardId\": \"H_D125A95637EF68ACB553168135_1\",\n  \"id\": \"K_XLSX_FT_A3883508D9D829ADA841C9B6\",\n  \"jurisdictionCode\": \"CN-32\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"reason\": \"隐患描述、全文条款和整改措施逐项对应，作为直接依据。\",\n  \"role\": \"direct\"\n}\n"
+    },
+    "knowledge/reviews/links/K_XLSX_FT_A3883508D9D829ADA841C9B6.json": {
+      "existed": true,
+      "sha256": "963fb9dac2fcc49246bbe94ac23e1377dac424aab96ebb669bc6c1867edf4554",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-26T19:25:36+08:00\",\n  \"contextHashes\": {\n    \"hazard\": \"66f52093ce52c0d505d12f543b20e8ca352a5ec60737383334489e70ec220b6c\",\n    \"clause\": \"fe8d91f504831469af47a18f8eafc00936552f6276ab725f14fd76a151f023eb\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_XLSX_FT_A3883508D9D829ADA841C9B6\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_JS_RISK_RESPONSIBILITY_20260926\"\n  ],\n  \"reason\": \"完整义务条文与具体风险管理要求匹配；不以处罚条款替代义务，不附加消防、高处作业或事故发生前提。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"797d67622db0213d98f38bdba61f286f8ee91fc0d61aecd6544fde91f1012213\",\n  \"reviewer\": \"Codex 原文及适用性审计 20260926\"\n}\n"
+    },
+    "knowledge/hazards/H_00DB7A50FF994B5DB5470A3B03.json": {
+      "existed": true,
+      "sha256": "14abec1df06340b2653c1806f69b8d65edc45399b056b5c55365bd807693ccb7",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"安全管理\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"企业未通过公示栏等方式公示较大以上安全风险的名称、所处位置、事故类型及其后果、管控责任部门和监督举报电话等信息。\",\n  \"id\": \"H_00DB7A50FF994B5DB5470A3B03\",\n  \"keywords\": [\n    \"企业未对较大以上风险公示\",\n    \"企\",\n    \"业\",\n    \"未\",\n    \"对\",\n    \"较\",\n    \"大\",\n    \"以\",\n    \"上\",\n    \"风\",\n    \"险\",\n    \"公\",\n    \"示\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"在厂区醒目位置设置较大以上安全风险公示栏，标明风险点、风险等级、管控措施和责任部门；公示内容经主要负责人审核后张贴，每月复核更新，检查记录留存备查。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。原 conditions 字段记录的引用依据为：依据：《江苏省安全生产风险报告规定》(江苏省政府令第140号)第十六条\\n\\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"企业未对较大以上风险公示\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_00DB7A50FF994B5DB5470A3B03.json": {
+      "existed": true,
+      "sha256": "009e397540711168632a64c91bd96eb079dffef4a36fb333a90e0adf7517da18",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-16\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_00DB7A50FF994B5DB5470A3B03\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_JS_RISK_MGMT_2024\"\n  ],\n  \"reason\": \"PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"e779683823414feae8fc422803df9a34bacdf214ab86138372aaadac40a561ac\",\n  \"reviewer\": \"ChatGPT PHASE6 final review 20260916\"\n}\n"
+    },
+    "knowledge/links/K_PHASE6_91E48D8B3B4CA5FC5506FD76.json": {
+      "existed": true,
+      "sha256": "3b45cbfa438502239b9137dac8f7cea38e9cbcf61a2c28bbaceb3722cdae32c1",
+      "fileTextUtf8": "{\n  \"id\": \"K_PHASE6_91E48D8B3B4CA5FC5506FD76\",\n  \"hazardId\": \"H_00DB7A50FF994B5DB5470A3B03\",\n  \"clauseId\": \"C_D125A95637EF68ACB553168135\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"适用于江苏省行政区域内生产经营单位的较大以上安全风险公示。\",\n  \"jurisdictionCode\": \"CN-32\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"2024年《江苏省生产经营单位安全风险管理条例》第十六条直接要求在醒目位置公示较大以上安全风险信息。\"\n}\n"
+    },
+    "knowledge/reviews/links/K_PHASE6_91E48D8B3B4CA5FC5506FD76.json": {
+      "existed": true,
+      "sha256": "50db1b9a0cf56bd9936c55b854d4c7d8c763667fc3685a22546a676430adcc45",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-26T19:25:36+08:00\",\n  \"contextHashes\": {\n    \"hazard\": \"e779683823414feae8fc422803df9a34bacdf214ab86138372aaadac40a561ac\",\n    \"clause\": \"23a14c778665cb5664930862872e70147a4373b3d760ff157318dddf0062b1d9\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_PHASE6_91E48D8B3B4CA5FC5506FD76\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_JS_RISK_RESPONSIBILITY_20260926\"\n  ],\n  \"reason\": \"完整义务条文与具体风险管理要求匹配；不以处罚条款替代义务，不附加消防、高处作业或事故发生前提。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"6fff660989e083b2425c2e3c806c396e6233c4e376e0b6e250315b640b515403\",\n  \"reviewer\": \"Codex 原文及适用性审计 20260926\"\n}\n"
+    },
+    "knowledge/hazards/H_317326A8B80648F4A57D50755D.json": {
+      "existed": true,
+      "sha256": "3330f647f8b464109750802825bb2022680ec4baffa62842c7dc2cdd6374827c",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"安全管理\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"企业未通过公示栏公示较大安全风险的名称、所处位置、事故类型及其后果等信息。\",\n  \"id\": \"H_317326A8B80648F4A57D50755D\",\n  \"keywords\": [\n    \"企业未通过公示栏公示较大风险\",\n    \"企\",\n    \"业\",\n    \"未\",\n    \"通\",\n    \"过\",\n    \"公\",\n    \"示\",\n    \"栏\",\n    \"较\",\n    \"大\",\n    \"风\",\n    \"险\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"通过公示栏公示较大以上安全风险的名称、所处位置、可能导致的事故类型及其后果、管控责任部门和监督举报电话。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《江苏省工业企业安全生产风险报告规定》(江苏省人民政府令第140号) 第16条\\n\\n【PHASE 12 2026-09-18】已复核现行条款原文、隐患对象和适用范围，建立当前direct关联。\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"企业未通过公示栏公示较大风险\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_317326A8B80648F4A57D50755D.json": {
+      "existed": true,
+      "sha256": "63ed068d344b7ccd93b996b5f325602e665096727f6f66443fb69c82a4702af5",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-18\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_317326A8B80648F4A57D50755D\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_PHASE12_EXACT_LOCATOR\"\n  ],\n  \"reason\": \"江苏省生产经营单位安全风险管理条例第十六条直接要求公示较大以上安全风险信息。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"93f27330b0eba5470ef649a4d6d7f410b3869ef6946a99eb433dfa858743c687\",\n  \"reviewer\": \"Codex PHASE12 exact-locator review 20260918\"\n}\n"
+    },
+    "knowledge/links/K_PHASE12_EXACT_586A2C2C04BECBBDB3D9.json": {
+      "existed": true,
+      "sha256": "f1363ee70fd4faaa68cf033489212694cc240d96dbcf95355e5732a7f3cb8001",
+      "fileTextUtf8": "{\n  \"id\": \"K_PHASE12_EXACT_586A2C2C04BECBBDB3D9\",\n  \"hazardId\": \"H_317326A8B80648F4A57D50755D\",\n  \"clauseId\": \"C_JS140_十六\",\n  \"role\": \"direct\",\n  \"legacyRole\": \"直接依据\",\n  \"applicability\": \"按所引现行法规/标准条款及其适用范围判断。\",\n  \"jurisdictionCode\": \"CN\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"requirementId\": \"\",\n  \"reason\": \"江苏省生产经营单位安全风险管理条例第十六条直接要求公示较大以上安全风险信息。\"\n}\n"
+    },
+    "knowledge/reviews/links/K_PHASE12_EXACT_586A2C2C04BECBBDB3D9.json": {
+      "existed": true,
+      "sha256": "698e2cafc9e3063974956c670e5881fc915f17598692715e30d83b6cd2e77e49",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-18\",\n  \"contextHashes\": {\n    \"clause\": \"d7f1b3663f0ff0a1965ff3e318ba9ad146ac19db9ee9b1e65667970bb3c34094\",\n    \"hazard\": \"93f27330b0eba5470ef649a4d6d7f410b3869ef6946a99eb433dfa858743c687\"\n  },\n  \"decision\": \"verified\",\n  \"entityId\": \"K_PHASE12_EXACT_586A2C2C04BECBBDB3D9\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_PHASE12_EXACT_LOCATOR\"\n  ],\n  \"reason\": \"江苏省生产经营单位安全风险管理条例第十六条直接要求公示较大以上安全风险信息。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"58da887c0d8456dceabc06a0237d0c4fabf9e39b25e3e3b650a8826a6f7cc5c4\",\n  \"reviewer\": \"Codex PHASE12 exact-locator review 20260918\",\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n"
+    },
+    "knowledge/clauses/C_12158_7_1.json": {
+      "existed": true,
+      "sha256": "df4853badbef52e5c189bcc783494da3882ad98784d1721f83983c80726d7d91",
+      "fileTextUtf8": "{\n  \"articlePath\": \"第7.1条\",\n  \"id\": \"C_12158_7_1\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_A318C93D7F3213B292AD5946\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"非金属静电导体或静电亚导体与金属导体相互连接时,其紧密接触的面积应大于20cm\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D\"\n}\n"
+    },
+    "knowledge/reviews/clauses/C_12158_7_1.json": {
+      "existed": true,
+      "sha256": "11205d14821f234a980ae68a158b54f2228ae58da7b8f58fd3def80eedf509f7",
+      "fileTextUtf8": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_12158_7_1\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_12158_GB 12158\"\n  ],\n  \"reason\": \"条文核验：GB 12158-2024 第7.1条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"e00d8918eaa8bf44871c52779f20ada6ab58f487e346c0fb6b1706f9be32203a\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n"
+    },
+    "knowledge/hazards/H_12158_7_1_1.json": {
+      "existed": true,
+      "sha256": "e0d1106d766e5705aabbce2f4e43a0ea65b1e81aa9390c6dbe750c11bdbd9102",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"电气安全\",\n  \"conditions\": \"适用于本隐患所述场所、设备及作业活动。\",\n  \"description\": \"非金属静电导体或静电亚导体与金属导体相互连接时,其紧密接触的面积应大于20cm（第7.1条）。\",\n  \"id\": \"H_12158_7_1_1\",\n  \"keywords\": [\n    \"非金属静电导体或静电亚导体与金属导体相互连接时\",\n    \"其紧密接触的面积未大于20cm²\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"非金属静电导体或静电亚导体与金属导体相互连接时,其紧密接触的面积应大于20cm（依据 第7.1条 整改。）。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"电气设备安装、运行、检维修及用电相关场所\",\n    \"通用场所\"\n  ],\n  \"title\": \"非金属静电导体或静电亚导体与金属导体相互连接时，其紧密接触的面积未大于20cm²\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_12158_7_1_1.json": {
+      "existed": true,
+      "sha256": "56b907db0fae1a168031a1960ae9b8e41d3f5d0802fb0fa1cfd576b55164db81",
+      "fileTextUtf8": "{\n  \"entityType\": \"hazard\",\n  \"entityId\": \"H_12158_7_1_1\",\n  \"reviewType\": \"definition\",\n  \"decision\": \"verified\",\n  \"reviewedContentHash\": \"9855c7d4572393a36edeea258c11b8495029e09dd2df79abe57e74d4f3e9b19a\",\n  \"checkedAt\": \"2026-09-19T01:00:00+08:00\",\n  \"reviewer\": \"Codex / PR #62 Policy\",\n  \"reason\": \"隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。\",\n  \"evidenceRefs\": [\n    \"E_SAMR_GB12158_2024\"\n  ]\n}"
+    },
+    "knowledge/links/K_XLSX_WEB_H_12158_7_1_1.json": {
+      "existed": true,
+      "sha256": "0c979385ecdfeeb8e7d1bd80b65c4a3a42db86b1bf33048d6ccf5bc5b9b95282",
+      "fileTextUtf8": "{\n  \"applicability\": \"非金属储罐与管道表面电阻率指标\",\n  \"clauseId\": \"C_12158_4_2_2_3\",\n  \"hazardId\": \"H_12158_7_1_1\",\n  \"id\": \"K_XLSX_WEB_H_12158_7_1_1\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"role\": \"direct\"\n}"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_7_1_1.json": {
+      "existed": true,
+      "sha256": "3d4f44d367bd513a5743644b5d915446b52f3cbed86f678bf1836286fbd92ea9",
+      "fileTextUtf8": "{\n  \"entityType\": \"link\",\n  \"entityId\": \"K_XLSX_WEB_H_12158_7_1_1\",\n  \"reviewType\": \"applicability\",\n  \"decision\": \"verified\",\n  \"reviewedContentHash\": \"a0ccb09036a7c08d367d24a47034ba681b6f93abbc7a0cc067cd6e969d5a10bb\",\n  \"contextHashes\": {\n    \"hazard\": \"9855c7d4572393a36edeea258c11b8495029e09dd2df79abe57e74d4f3e9b19a\",\n    \"clause\": \"35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf\"\n  },\n  \"checkedAt\": \"2026-09-19T01:00:00+08:00\",\n  \"reviewer\": \"Codex / PR #62 Policy\",\n  \"reason\": \"依据PR #62官方网络证据核验证实，GB 12158-2024第4.2条导电及亚导体电阻率。条款逐字原文与隐患适用性吻合。\",\n  \"evidenceRefs\": [\n    \"E_SAMR_GB12158_2024\"\n  ],\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n"
+    },
+    "knowledge/clauses/C_GB50187_3_0_6.json": {
+      "existed": true,
+      "sha256": "1283e4b5b21df45a4e96f631fc5be8d3b4c7361c279ea43b64dfe05188c43af5",
+      "fileTextUtf8": "{\n  \"articlePath\": \"3.0.6\",\n  \"id\": \"C_GB50187_3_0_6\",\n  \"lawVersionId\": \"LV_STD_GB50187_2012\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"厂址应具备满足生产、生活及发展规划所必需的水源和电源条件，用水、用电量大的企业应靠近水源、电源布局。\",\n  \"sourceUrl\": \"https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2012/art_17339_721564.html\",\n  \"jurisdictionCode\": \"CN\"\n}"
+    },
+    "knowledge/reviews/clauses/C_GB50187_3_0_6.json": {
+      "existed": true,
+      "sha256": "c9e32bf22b22b3c746747ef6555b776c088e02852bed2ea287d132d66aacc808",
+      "fileTextUtf8": "{\n  \"decision\": \"verified\",\n  \"entityId\": \"C_GB50187_3_0_6\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_MOHURD_GB50187_2012\"\n  ],\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"5546aacbb455ead2619752c1718fca79d045360c739af0300e74e6d4e4fbb4d7\",\n  \"checkedAt\": \"2026-09-19T00:00:00+08:00\"\n}\n"
+    },
+    "knowledge/hazards/H_4DAD0BA8DA8A454897E2954776.json": {
+      "existed": true,
+      "sha256": "72e311317ac483b13f28a4da732d1b1d033da366e9192da00deec039efaf87ae",
+      "fileTextUtf8": "{\n  \"aliases\": [],\n  \"category\": \"电气安全\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"厂址,未具有满足生产、生活及发展规划所必须的水源和电源,且用水、用电量特别大的工业企业,宜靠近水源、电源\",\n  \"id\": \"H_4DAD0BA8DA8A454897E2954776\",\n  \"keywords\": [\n    \"厂址\",\n    \"未具有满足生产\",\n    \"生活及发展规划所必须的水源和电源\",\n    \"厂\",\n    \"址\",\n    \",\",\n    \"未\",\n    \"具\",\n    \"有\",\n    \"满\",\n    \"足\",\n    \"生\",\n    \"产\",\n    \"活\",\n    \"及\",\n    \"发\",\n    \"展\",\n    \"规\",\n    \"划\",\n    \"所\",\n    \"必\",\n    \"须\",\n    \"的\",\n    \"水\",\n    \"源\",\n    \"和\",\n    \"电\",\n    \"且\",\n    \"用\",\n    \"量\",\n    \"特\",\n    \"别\",\n    \"大\",\n    \"工\",\n    \"业\",\n    \"企\"\n  ],\n  \"lifecycle\": \"active\",\n  \"measures\": \"为厂址配套满足生产、生活及发展所必需的水源和电源。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\\n\\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\\n\\n原 conditions 字段记录的引用依据为：依据：《工业企业总平面设计规范》\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"厂址不具备满足生产生活及发展规划所必需的水源和电源\"\n}\n"
+    },
+    "knowledge/reviews/hazards/H_4DAD0BA8DA8A454897E2954776.json": {
+      "existed": true,
+      "sha256": "4f636475d7b8e57c00edb0fbe6fb6b19086ebfdedae4504b882ad4eaa299bbbe",
+      "fileTextUtf8": "{\n  \"entityType\": \"hazard\",\n  \"entityId\": \"H_4DAD0BA8DA8A454897E2954776\",\n  \"reviewType\": \"definition\",\n  \"decision\": \"verified\",\n  \"reviewedContentHash\": \"781a31b14a4cca90b73d099cf156d6599a5d9f6bf9ad99eca34efe5ee50b1e65\",\n  \"checkedAt\": \"2026-09-19T01:00:00+08:00\",\n  \"reviewer\": \"Codex / PR #62 Policy\",\n  \"reason\": \"隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。\",\n  \"evidenceRefs\": [\n    \"E_MOHURD_GB50187_2012\"\n  ]\n}"
+    },
+    "knowledge/links/K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776.json": {
+      "existed": true,
+      "sha256": "f56db16f58a752a0337a278d8d068dba0cf2ea1c1e8c3381f58a9481e8d41b2e",
+      "fileTextUtf8": "{\n  \"applicability\": \"厂址不具备水源和电源\",\n  \"clauseId\": \"C_GB50187_3_0_6\",\n  \"hazardId\": \"H_4DAD0BA8DA8A454897E2954776\",\n  \"id\": \"K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"active\",\n  \"priority\": 10,\n  \"role\": \"direct\"\n}"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776.json": {
+      "existed": true,
+      "sha256": "5d377ea8968a2c2a27814c2cb01dd5b7f7da09b14bd77d509916952933aa285c",
+      "fileTextUtf8": "{\n  \"entityType\": \"link\",\n  \"entityId\": \"K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776\",\n  \"reviewType\": \"applicability\",\n  \"decision\": \"verified\",\n  \"reviewedContentHash\": \"08ce677d5bd1b77269b3016ce8375f3295ed3bade74340e11a254171437f98bd\",\n  \"contextHashes\": {\n    \"hazard\": \"781a31b14a4cca90b73d099cf156d6599a5d9f6bf9ad99eca34efe5ee50b1e65\",\n    \"clause\": \"5546aacbb455ead2619752c1718fca79d045360c739af0300e74e6d4e4fbb4d7\"\n  },\n  \"checkedAt\": \"2026-09-19T01:00:00+08:00\",\n  \"reviewer\": \"Codex / PR #62 Policy\",\n  \"reason\": \"依据PR #62官方网络证据核验证实，GB 50187-2012第3.0.6条水源电源保障要求。条款逐字原文与隐患适用性吻合。\",\n  \"evidenceRefs\": [\n    \"E_MOHURD_GB50187_2012\"\n  ],\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n"
+    },
+    "tools/pipeline/tests/test_all_electrical_bounded_20261005.py": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/clauses/C_GB14444_5_5_1.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/clauses/C_GB14444_5_5_1.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/hazards/H_CFDF32963AFD42B79932BE1A61.json": {
+      "existed": true,
+      "sha256": "9277c583fa907d2f763e3d3d11af119280f86eee6e9685b803ed44b105162f40",
+      "fileTextUtf8": "{\n  \"id\": \"H_CFDF32963AFD42B79932BE1A61\",\n  \"title\": \"喷漆室内所有金属制件(送排风管道和输送可燃液体的管道),未具有可靠的电气接地\",\n  \"description\": \"喷漆室内所有金属制件(送排风管道),未具有可靠的电气接地\",\n  \"measures\": \"将喷漆室内送排风管道及其他需导除静电的金属制件可靠接地和等电位连接，整改后测试导通/接地连续性并留存记录。\",\n  \"conditions\": \"适用于喷漆室的相关安全管理。\",\n  \"category\": \"电气安全\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"aliases\": [],\n  \"keywords\": [\n    \"喷漆室内所有金属制件(送排风管道和输送可燃液体的管道),未具有可靠的电气接地\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\\n\\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程 喷漆室安全技术规定》(GB 14444-2025)\\n\\nGB 12158-2024《防止静电事故通用要求》。\",\n  \"mergedInto\": null\n}\n"
+    },
+    "knowledge/reviews/hazards/H_CFDF32963AFD42B79932BE1A61.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/links/K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    },
+    "knowledge/reviews/links/K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005.json": {
+      "existed": false,
+      "sha256": null,
+      "fileTextUtf8": null
+    }
+  },
+  "authorValidation": {
+    "catalogueErrors": 0,
+    "evidenceExactMismatches": 0,
+    "focusedTests": 13,
+    "focusedTestsPassed": 13,
+    "fullSuiteRunByThisWorker": false,
+    "bindingMissing": 0,
+    "bindingStale": 0,
+    "finalSourceAdmission": "GB50187 3.0.6 withdrawn; other group sources remain bounded author verified pending independent review",
+    "focusedTestPath": "tools/pipeline/tests/test_all_electrical_bounded_20261005.py",
+    "focusedTestCommand": "python -m unittest discover -s tools/pipeline/tests -p 'test_all_electrical_bounded_20261005.py' -v",
+    "ciDiscoveryCommand": "python -m unittest discover -s tools/pipeline/tests",
+    "focusedTestCheckedAt": "2026-10-05T10:40:00Z"
+  },
+  "sourceAdmissionWithdrawals": [
+    {
+      "entityId": "C_GB50187_3_0_6",
+      "group": "clauses",
+      "reason": "独立源准入审查否决仅eia543出版扫描镜像加现行题录作为本条正式原文证据；镜像可作定位线索，现行题录不证明条文。撤回本轮3.0.6逐字原文认可及H/K准入，不以原摘要或未经主源闭环的重构正文继续正式支持；保留待正式原文核验。",
+      "withdrawnAttemptSha256": {
+        "entity": "6e192f75df997be4922a2912b947b794657d09ca572eaacd3f6d989b72c23f05",
+        "review": "679ecf16333577e26a63cc1761a162bef361be24f8be004b27005b050e0a0545"
+      }
+    },
+    {
+      "entityId": "H_4DAD0BA8DA8A454897E2954776",
+      "group": "hazards",
+      "reason": "独立源准入审查否决仅eia543出版扫描镜像加现行题录作为本条正式原文证据；镜像可作定位线索，现行题录不证明条文。撤回本轮3.0.6逐字原文认可及H/K准入，不以原摘要或未经主源闭环的重构正文继续正式支持；保留待正式原文核验。",
+      "withdrawnAttemptSha256": {
+        "entity": "bf6f5d2d33356b712c779d2100cabfec80030cd677d7a48dc4a9baae704a7a3f",
+        "review": "613aeb1bc49a16e9e4e0708d9574c2335fdf66412c5428aae2f4698d2b3bd812"
+      }
+    },
+    {
+      "entityId": "K_XLSX_WEB_H_4DAD0BA8DA8A454897E2954776",
+      "group": "links",
+      "reason": "独立源准入审查否决仅eia543出版扫描镜像加现行题录作为本条正式原文证据；镜像可作定位线索，现行题录不证明条文。撤回本轮3.0.6逐字原文认可及H/K准入，不以原摘要或未经主源闭环的重构正文继续正式支持；保留待正式原文核验。",
+      "withdrawnAttemptSha256": {
+        "entity": "8a7e0f54808d46c29c87a2fa2711b56c4b16dea6458374f0d7ffc0c3b88699a3",
+        "review": "6d37fd50b02f2d4ae297abf603589fdea1ad6b68237f357c8a83df98164e2e94"
+      }
+    }
+  ],
+  "crossGroupSourceClosures": [
+    {
+      "hazardId": "H_CFDF32963AFD42B79932BE1A61",
+      "sourceEvidenceId": "E_ALL_GB14444_2025_20261005",
+      "clauseId": "C_GB14444_5_5_1",
+      "linkId": "K_ALL_ELECTRICAL_CFDF32963AFD42B79932BE1A61_20261005",
+      "sourceLocator": "官方PDF7范围、PDF11/印刷5第5.5.1",
+      "sourceGapClosed": true,
+      "scopeExclusions": [
+        "非静电喷涂工件不一律纳入工件分支",
+        "不把全部金属制件自动视为本条所列对象",
+        "不加入未经测量的数值超限结论"
+      ],
+      "siteFactsConfirmed": false
+    }
+  ]
+}

@@ -1,18 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "092a57897601024baae4b3b96cf19d7d18dbd7f5093d873ef39d190076a0bae4",
-    "hazard": "c0f1810b774ec557a6081fd81a113de8d87f97278230e6c36459e74712879366"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_NEW14_65641BD9E3EE6728F55CC132",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_3E6D478108EFAA24A30399AB"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
   "reviewType": "applicability",
-  "reviewedContentHash": "3cd45b37b7933f9418d6c74925d02053b6fcf6053e3087c3de6e97feb8d37910",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "verified",
+  "reviewedContentHash": "5db3f72d5c1ff02da8937fb86fae9bb83d4878ce4f98513f6ce4998397935a7c",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "GB15607-2023 4.3.2 a：仅核4.3.2 a，保留喷枪出口等局部区域排除和未知LEL分支；不代替b—d独立检查。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "092a57897601024baae4b3b96cf19d7d18dbd7f5093d873ef39d190076a0bae4",
+      "hazard": "c0f1810b774ec557a6081fd81a113de8d87f97278230e6c36459e74712879366"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_NEW14_65641BD9E3EE6728F55CC132",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_3E6D478108EFAA24A30399AB"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "3cd45b37b7933f9418d6c74925d02053b6fcf6053e3087c3de6e97feb8d37910",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousDefinition": {
+    "id": "K_XLSX_NEW14_65641BD9E3EE6728F55CC132",
+    "hazardId": "H_15607_4_3_2_1",
+    "clauseId": "C_XLSX_WEB_3EFC750AB2C5322B7711EC22",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所、设备及作业活动。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。",
+    "status": "needs_review"
+  },
+  "contextHashes": {
+    "hazard": "d3697574c8c55ddf00f95ccde7573206dac0970b1c23add5efd736e6ca6afec5",
+    "clause": "680b6bd7f0a4234ad22c18f52e0b9da30adc100fbae7727fc7eda64aebbf7cef"
+  }
 }

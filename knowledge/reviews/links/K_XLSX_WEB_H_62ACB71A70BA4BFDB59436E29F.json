@@ -1,18 +1,47 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_62ACB71A70BA4BFDB59436E29F",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "19d06a5c23213f5cb1446f08516cbb2958d586ffc02fe22211b2620f2d80054a",
-  "contextHashes": {
-    "hazard": "d5a2490e91af516518c084a453b99097d1233175396091d26237df00e0f0b7cb",
-    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "d5ed8e106c70d4429ecc8b12bdae9b40e2bc240a5bf58b0b89a2537d5c9b8c47",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "精确绑定6.6 c回流气体不含可燃气体。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_62ACB71A70BA4BFDB59436E29F",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "19d06a5c23213f5cb1446f08516cbb2958d586ffc02fe22211b2620f2d80054a",
+    "contextHashes": {
+      "hazard": "d5a2490e91af516518c084a453b99097d1233175396091d26237df00e0f0b7cb",
+      "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+    "clauseId": "C_12158_4_2_2_1",
+    "hazardId": "H_62ACB71A70BA4BFDB59436E29F",
+    "id": "K_XLSX_WEB_H_62ACB71A70BA4BFDB59436E29F",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "674380aa3e62559973beb5252e6d90d2663f6d9a4aafb52ad6c127176599451c",
+    "clause": "f63ceb696de2c7fb6250f7046f26d7e5acf69feb4e689cdd5dfde6ca8e7ce477"
+  }
 }

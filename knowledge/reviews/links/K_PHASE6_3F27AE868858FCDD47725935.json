@@ -1,18 +1,103 @@
 {
-  "checkedAt": "2026-09-16",
-  "contextHashes": {
-    "clause": "7c705d9b0842ecd99a7707e5c6555ef0324493cf6c4a1b0a0e7b04d21cdb13a1",
-    "hazard": "229d5ed17b25f7505133d85f0a9eac29742c47bf033ae2afcd28ce5143a6ced3"
-  },
-  "decision": "verified",
   "entityId": "K_PHASE6_3F27AE868858FCDD47725935",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_2d156295ffe9f296025937212e396b045117a28399f2451fff411c26f08c38ba"
-  ],
-  "reason": "JGJ 91-2019第5.3.3条逐字要求就近设置应急洗眼器及应急喷淋，与隐患对象直接一致。",
   "reviewType": "applicability",
-  "reviewedContentHash": "70341a18c3d1b91f1267520845edb8df81d0260e0e9859919ea1d1bc4f546d8e",
-  "reviewer": "ChatGPT PHASE6 final review 20260916",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "f2418d629f9c917b90867cc5fe1041cac0dba68e8da3da20ea1739a429368333",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
+  "evidenceRefs": [
+    "E_REMAIN_FIRE_JGJ91_20261005"
+  ],
+  "reason": "本K逐项实审保留洗眼器及喷淋的就近设置分支，限定科研建筑设计。 原文要求两者均设置，本H负向触发明确为任一缺失；仅缺一种也成立，不要求两种同时缺失。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "contextHashes": {
+      "clause": "7c705d9b0842ecd99a7707e5c6555ef0324493cf6c4a1b0a0e7b04d21cdb13a1",
+      "hazard": "229d5ed17b25f7505133d85f0a9eac29742c47bf033ae2afcd28ce5143a6ced3"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE6_3F27AE868858FCDD47725935",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_2d156295ffe9f296025937212e396b045117a28399f2451fff411c26f08c38ba"
+    ],
+    "reason": "JGJ 91-2019第5.3.3条逐字要求就近设置应急洗眼器及应急喷淋，与隐患对象直接一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "70341a18c3d1b91f1267520845edb8df81d0260e0e9859919ea1d1bc4f546d8e",
+    "reviewer": "ChatGPT PHASE6 final review 20260916",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "536428950d57e808e3ab666b92dff2601052152088e2cc4bdb20e79d66d67f53",
+  "previousDefinition": {
+    "id": "K_PHASE6_3F27AE868858FCDD47725935",
+    "hazardId": "H077",
+    "clauseId": "C_JGJ91_5_3_3",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于使用强酸、强碱等存在化学品危险隐患的实验室。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "JGJ 91-2019第5.3.3条逐字要求就近设置应急洗眼器及应急喷淋，与隐患对象直接一致。"
+  },
+  "previousEntityFileSha256": "f0d03f7a9daa9a90bc685a32d039aac80807d1766cd5cf1cf6a60c42dfbdbd30",
+  "contextHashes": {
+    "hazard": "010c667f73240814fe9d2d4af210a4b36c92121c39b1a381d2ae4136ec32b3c9",
+    "clause": "742d3a39768e7611bb573d4dcbb8affd2db70ce7d5e440878bc16c793700091f"
+  },
+  "previousAuthorReview": {
+    "entityId": "K_PHASE6_3F27AE868858FCDD47725935",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "f2418d629f9c917b90867cc5fe1041cac0dba68e8da3da20ea1739a429368333",
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex complete remaining fire-gas author review 20261005",
+    "evidenceRefs": [
+      "E_REMAIN_FIRE_JGJ91_20261005"
+    ],
+    "reason": "本K逐项实审保留洗眼器及喷淋的就近设置分支，限定科研建筑设计。",
+    "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+    "previousReview": {
+      "checkedAt": "2026-09-16",
+      "contextHashes": {
+        "clause": "7c705d9b0842ecd99a7707e5c6555ef0324493cf6c4a1b0a0e7b04d21cdb13a1",
+        "hazard": "229d5ed17b25f7505133d85f0a9eac29742c47bf033ae2afcd28ce5143a6ced3"
+      },
+      "decision": "verified",
+      "entityId": "K_PHASE6_3F27AE868858FCDD47725935",
+      "entityType": "link",
+      "evidenceRefs": [
+        "E_2d156295ffe9f296025937212e396b045117a28399f2451fff411c26f08c38ba"
+      ],
+      "reason": "JGJ 91-2019第5.3.3条逐字要求就近设置应急洗眼器及应急喷淋，与隐患对象直接一致。",
+      "reviewType": "applicability",
+      "reviewedContentHash": "70341a18c3d1b91f1267520845edb8df81d0260e0e9859919ea1d1bc4f546d8e",
+      "reviewer": "ChatGPT PHASE6 final review 20260916",
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "536428950d57e808e3ab666b92dff2601052152088e2cc4bdb20e79d66d67f53",
+    "previousDefinition": {
+      "id": "K_PHASE6_3F27AE868858FCDD47725935",
+      "hazardId": "H077",
+      "clauseId": "C_JGJ91_5_3_3",
+      "role": "direct",
+      "legacyRole": "直接依据",
+      "applicability": "适用于使用强酸、强碱等存在化学品危险隐患的实验室。",
+      "jurisdictionCode": "CN",
+      "lifecycle": "active",
+      "priority": 10,
+      "requirementId": "",
+      "reason": "JGJ 91-2019第5.3.3条逐字要求就近设置应急洗眼器及应急喷淋，与隐患对象直接一致。"
+    },
+    "previousEntityFileSha256": "f0d03f7a9daa9a90bc685a32d039aac80807d1766cd5cf1cf6a60c42dfbdbd30",
+    "contextHashes": {
+      "hazard": "688562ba3f68c847ee299c9a360cc102f4cfed5ce56b822968ba260d06bc2a62",
+      "clause": "742d3a39768e7611bb573d4dcbb8affd2db70ce7d5e440878bc16c793700091f"
+    }
+  },
+  "previousAuthorReviewFileSha256": "c7b7ac395a52fa90ee8c4fbcd43939bc5810d9db9d8dfaed832b6c97ce0d2910"
 }

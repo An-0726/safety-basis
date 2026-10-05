@@ -1,13 +1,55 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_15607_6_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "448e54bdc2aa7252e09b5aba044a943843a31c75b11bd443ee0cae8aa07702d3",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "d516345b2f466a72a541e0162b34d047eefddadd0298c18d1d13b5ebcb56c4e6",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "GB15607-2023 6.4 a：仅核6.4 a明确的风机材质、防火花和布置要求；电动机防爆等级须结合已核危险区域单独判别，b—g不并入本H。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_15607_6_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "d516345b2f466a72a541e0162b34d047eefddadd0298c18d1d13b5ebcb56c4e6",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "粉末回收装置、净化装置应符合以下规定。a)喷粉室风机不采用塑料风机,其电动机符合所在区域的防爆要求。（第6.4条）。",
+    "id": "H_15607_6_4_1",
+    "keywords": [
+      "粉末回收装置",
+      "净化装置未符合标准规定"
+    ],
+    "lifecycle": "proposed",
+    "measures": "对照适用条款逐项核查喷粉室风机、电动机、防爆和粉末回收/净化装置等实际不符合项，逐项整改并形成验收记录；不存在的问题不机械套用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所",
+      "通用场所"
+    ],
+    "title": "粉末回收装置、净化装置未符合标准规定"
+  },
+  "remainingUnsupportedBranches": [
+    "6.4 a电动机实际选型等级须经危险区域及适用防爆条件核定；不在本行声称完成所有型号判别。",
+    "原6.4总括标题中的b-g不全部并入此H：b/c由同批两个具体候选处理，d-g仍各自独立对象，不以本行可修称整6.4完成。"
+  ],
+  "invalidClaimExcluded": [
+    "原description实际只摘a项；不得为补齐标题而虚构现场发生b-g全部缺陷。"
+  ]
 }

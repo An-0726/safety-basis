@@ -16,7 +16,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -71,7 +71,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
       - name: Real Chromium acceptance of the exact new package
-        timeout-minutes: 30
+        timeout-minutes: 75
         run: |
           python -m pip install playwright
           python -m playwright install --with-deps chromium
@@ -94,28 +94,101 @@ jobs:
           path: ${{ runner.temp }}/browser-local
           if-no-files-found: warn
           retention-days: 7
-      - name: Upload focused reviewable browser evidence
-        uses: actions/upload-artifact@v4
+      - name: Partition all current-batch focused evidence into bounded volumes
+        id: focused_local
         if: always()
+        run: |
+          python tools/browser/package_focused_artifacts.py \
+            --source "${{ runner.temp }}/browser-local" \
+            --out "${{ runner.temp }}/browser-local-focused"
+      - name: Upload focused evidence volume 01
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_01 == 'true'
         with:
-          name: residual-clause-browser-local-focused
-          path: |
-            ${{ runner.temp }}/browser-local/browser.json
-            ${{ runner.temp }}/browser-local/ordinary-tables.json
-            ${{ runner.temp }}/browser-local/ordinary-table-*.png
-            ${{ runner.temp }}/browser-local/tsg-reading-*.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H053.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H054.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H055.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_993643C76F7041BDA19B0C5EED.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_D128C0FCC4844BD8BF5D8FAAF5.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_8A733CAD776643E3B34B4D4689.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_B0B7C75B5F0D423386A84AB73D.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_CFF821DDE6764083BFB914EC86.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_3141FAD634694686B722139F91.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_C7284453E8E94532A44FC5F5EF.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_974023DBBC2B471AA3F7DB6A67.png
-          if-no-files-found: warn
+          name: complete-remaining-browser-local-part-01
+          path: ${{ runner.temp }}/browser-local-focused/part-01
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 02
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_02 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-02
+          path: ${{ runner.temp }}/browser-local-focused/part-02
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 03
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_03 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-03
+          path: ${{ runner.temp }}/browser-local-focused/part-03
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 04
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_04 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-04
+          path: ${{ runner.temp }}/browser-local-focused/part-04
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 05
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_05 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-05
+          path: ${{ runner.temp }}/browser-local-focused/part-05
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 06
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_06 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-06
+          path: ${{ runner.temp }}/browser-local-focused/part-06
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 07
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_07 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-07
+          path: ${{ runner.temp }}/browser-local-focused/part-07
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 08
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_08 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-08
+          path: ${{ runner.temp }}/browser-local-focused/part-08
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 09
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_09 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-09
+          path: ${{ runner.temp }}/browser-local-focused/part-09
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 10
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_local.outputs.part_10 == 'true'
+        with:
+          name: complete-remaining-browser-local-part-10
+          path: ${{ runner.temp }}/browser-local-focused/part-10
+          if-no-files-found: error
           retention-days: 7
           compression-level: 9
       - uses: actions/upload-artifact@v4
@@ -187,27 +260,100 @@ jobs:
           path: ${{ runner.temp }}/online-verify
           if-no-files-found: warn
           retention-days: 7
-      - name: Upload focused reviewable browser evidence
-        uses: actions/upload-artifact@v4
+      - name: Partition all current-batch focused evidence into bounded volumes
+        id: focused_online
         if: always()
+        run: |
+          python tools/browser/package_focused_artifacts.py \
+            --source "${{ runner.temp }}/online-verify" \
+            --out "${{ runner.temp }}/online-verify-focused"
+      - name: Upload focused evidence volume 01
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_01 == 'true'
         with:
-          name: residual-clause-online-verify-focused
-          path: |
-            ${{ runner.temp }}/online-verify/browser-public.json
-            ${{ runner.temp }}/online-verify/ordinary-tables.json
-            ${{ runner.temp }}/online-verify/ordinary-table-*.png
-            ${{ runner.temp }}/online-verify/tsg-reading-*.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H053.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H054.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H055.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_993643C76F7041BDA19B0C5EED.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_D128C0FCC4844BD8BF5D8FAAF5.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_8A733CAD776643E3B34B4D4689.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_B0B7C75B5F0D423386A84AB73D.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_CFF821DDE6764083BFB914EC86.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_3141FAD634694686B722139F91.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_C7284453E8E94532A44FC5F5EF.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_974023DBBC2B471AA3F7DB6A67.png
-          if-no-files-found: warn
+          name: complete-remaining-online-verify-part-01
+          path: ${{ runner.temp }}/online-verify-focused/part-01
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 02
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_02 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-02
+          path: ${{ runner.temp }}/online-verify-focused/part-02
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 03
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_03 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-03
+          path: ${{ runner.temp }}/online-verify-focused/part-03
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 04
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_04 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-04
+          path: ${{ runner.temp }}/online-verify-focused/part-04
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 05
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_05 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-05
+          path: ${{ runner.temp }}/online-verify-focused/part-05
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 06
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_06 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-06
+          path: ${{ runner.temp }}/online-verify-focused/part-06
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 07
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_07 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-07
+          path: ${{ runner.temp }}/online-verify-focused/part-07
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 08
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_08 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-08
+          path: ${{ runner.temp }}/online-verify-focused/part-08
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 09
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_09 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-09
+          path: ${{ runner.temp }}/online-verify-focused/part-09
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Upload focused evidence volume 10
+        uses: actions/upload-artifact@v4
+        if: always() && steps.focused_online.outputs.part_10 == 'true'
+        with:
+          name: complete-remaining-online-verify-part-10
+          path: ${{ runner.temp }}/online-verify-focused/part-10
+          if-no-files-found: error
           retention-days: 7
           compression-level: 9

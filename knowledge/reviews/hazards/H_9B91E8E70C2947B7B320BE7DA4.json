@@ -1,0 +1,35 @@
+{
+  "entityId": "H_9B91E8E70C2947B7B320BE7DA4",
+  "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fe65b7f348af6542b4dbe7dde130612c3a927eddb2745de0e8731654d782c4d0",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_ELECTRICAL_GB12801_20261005",
+    "E_ALL_ELECTRICAL_GB2894_20261005"
+  ],
+  "reason": "第5.7.4首句与当前GB2894对应；设备风险部位复用此canonical，不重复建H，不沿用GB2893等被替代版。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousDefinition": {
+    "id": "H_9B91E8E70C2947B7B320BE7DA4",
+    "title": "存在风险的场所和位置未按规定使用安全色和安全标志",
+    "description": "过程中存在风险或有必要提醒人员注意安全的场所和位置,未按照GB2893、GB2894的规定使用安全色、安全标志",
+    "measures": "按 GB 2893、GB 2894 在存在风险的场所和位置使用安全色与安全标志。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全标志",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "存在风险的场所和位置未按规定使用安全色和安全标志"
+    ],
+    "lifecycle": "proposed",
+    "mode": "candidate",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全基本要求》(GB 12801-2025)第6.12.1条",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "f106fdcc4ec064c6c991c92132b3524ceded8a50b7fc89efe4e37d477b00b4d0"
+}

@@ -1,11 +1,41 @@
 {
-  "decision": "verified",
   "entityId": "C_GB50187_3_0_6",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_MOHURD_GB50187_2012"
-  ],
   "reviewType": "text",
-  "reviewedContentHash": "5546aacbb455ead2619752c1718fca79d045360c739af0300e74e6d4e4fbb4d7",
-  "checkedAt": "2026-09-19T00:00:00+08:00"
+  "decision": "pending",
+  "reviewedContentHash": "3009398e4c13a3a75a3fc63f17c15548379b77c7d8fee0c07e66fccf67138cb4",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
+  "evidenceRefs": [
+    "E_CONTAIN_LAYOUT_GB50187_20261004"
+  ],
+  "reason": "独立源准入审查否决仅eia543出版扫描镜像加现行题录作为本条正式原文证据；镜像可作定位线索，现行题录不证明条文。撤回本轮3.0.6逐字原文认可及H/K准入，不以原摘要或未经主源闭环的重构正文继续正式支持；保留待正式原文核验。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_GB50187_3_0_6",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_MOHURD_GB50187_2012"
+    ],
+    "reviewType": "text",
+    "reviewedContentHash": "5546aacbb455ead2619752c1718fca79d045360c739af0300e74e6d4e4fbb4d7",
+    "checkedAt": "2026-09-19T00:00:00+08:00"
+  },
+  "previousReviewFileSha256": "c9e32bf22b22b3c746747ef6555b776c088e02852bed2ea287d132d66aacc808",
+  "previousDefinition": {
+    "articlePath": "3.0.6",
+    "id": "C_GB50187_3_0_6",
+    "lawVersionId": "LV_STD_GB50187_2012",
+    "lifecycle": "active",
+    "quote": "厂址应具备满足生产、生活及发展规划所必需的水源和电源条件，用水、用电量大的企业应靠近水源、电源布局。",
+    "sourceUrl": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2012/art_17339_721564.html",
+    "jurisdictionCode": "CN"
+  },
+  "previousEntityFileSha256": "1283e4b5b21df45a4e96f631fc5be8d3b4c7361c279ea43b64dfe05188c43af5",
+  "sourceAdmission": "official-full-original-required",
+  "withdrawnAuthorAttemptHashes": {
+    "entity": "6e192f75df997be4922a2912b947b794657d09ca572eaacd3f6d989b72c23f05",
+    "review": "679ecf16333577e26a63cc1761a162bef361be24f8be004b27005b050e0a0545"
+  }
 }

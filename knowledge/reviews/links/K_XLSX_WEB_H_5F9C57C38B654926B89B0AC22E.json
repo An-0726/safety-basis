@@ -1,18 +1,48 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_5F9C57C38B654926B89B0AC22E",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "a2f3cd50768c3054ee1da3711623f3b74b8c92d25fd01eb580bc7082c5d7ad04",
-  "contextHashes": {
-    "hazard": "dd8e5510c4dd8b321aa654b2b4f18d17c60d990fc4dc0572638c2692453330a5",
-    "clause": "3929a3849690283653f78c505950bb7421d5dc046260a8507b4b52f5f7fa9848"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "cbd9f68a045984e89c8f415dd3412f5e6b10fe4b21466a86748cf5a28a1a298b",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "notes": "原错误挂GB 12158-2024第4.2.2.1条；改挂GB 15607-2023第4.5.3条。"
+  "reason": "第4.5.3条与本H所述明确缺陷对应；按粉末静电喷涂范围和具体条件适用。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_5F9C57C38B654926B89B0AC22E",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "a2f3cd50768c3054ee1da3711623f3b74b8c92d25fd01eb580bc7082c5d7ad04",
+    "contextHashes": {
+      "hazard": "dd8e5510c4dd8b321aa654b2b4f18d17c60d990fc4dc0572638c2692453330a5",
+      "clause": "3929a3849690283653f78c505950bb7421d5dc046260a8507b4b52f5f7fa9848"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "原错误挂GB 12158-2024第4.2.2.1条；改挂GB 15607-2023第4.5.3条。"
+  },
+  "previousDefinition": {
+    "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+    "clauseId": "C_15607_4_5_3",
+    "hazardId": "H_5F9C57C38B654926B89B0AC22E",
+    "id": "K_XLSX_WEB_H_5F9C57C38B654926B89B0AC22E",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct",
+    "status": "verified"
+  },
+  "contextHashes": {
+    "hazard": "8598439b37d0ddda1e6d718ca68c93b670a42e3e2fe7006aec7b6abde543a5f5",
+    "clause": "61e021f533e606e30293f48d3932a57f10132d834fda5df46f7d12f05f015145"
+  }
 }

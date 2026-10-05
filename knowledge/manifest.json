@@ -1,6 +1,6 @@
 {
   "asOf": "2026-10-05",
-  "batch": "bounded-residual-repairs-20261005",
+  "batch": "complete-remaining-inventory-20261005",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -483,34 +483,53 @@
       },
       "scope": "Eleven precisely bounded existing hazard definitions: five warehouse, one cryogenic gas training, one molten-metal lifting NDT, two lightning consumers, one buried cable protection and one electrical monitoring. Separate rejected-link retirement, bounded duplicate disposition and candidate isolation do not count as newly verified legal obligations. Previous PR110 eight rules and deferred source groups untouched. No private sources, field facts, rectification or formal enterprise approval.",
       "reviewStatus": "exact_independent_review_and_full_release_verification_required"
+    },
+    {
+      "id": "complete-remaining-inventory-20261005",
+      "baselineCommit": "475856179bfd3c6c3446d10cfc4de73e51f228f3",
+      "reviewScope": {
+        "totalExistingHazardIds": 331,
+        "proposed": 319,
+        "activeExcludedFromCurrentPublicProjection": 12,
+        "explicitlySkippedJiangsuIds": 4
+      },
+      "entityCountDelta": {
+        "laws": 5,
+        "lawVersions": 5,
+        "clauses": 35,
+        "links": 67,
+        "evidence": 36
+      },
+      "scope": "One complete itemized review of the remaining inventory, bounded supported repairs, and necessary exact-source consumer closure. Separate unsupported original obligations, explicit exclusions, and case evidence requirements. Preserve IDs and history. Do not treat narrowed rules or branch mappings as whole-original-claim or field-fact approval.",
+      "reviewStatus": "final_fixed_tree_independent_review_and_unified_release_verification_required"
     }
   ],
   "counts": {
-    "laws": 139,
-    "lawVersions": 143,
-    "clauses": 3187,
+    "laws": 144,
+    "lawVersions": 148,
+    "clauses": 3222,
     "hazards": 2148,
-    "links": 2051,
-    "evidence": 1408,
+    "links": 2118,
+    "evidence": 1444,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
-  "laws": 139,
-  "lawVersions": 143,
-  "clauses": 3187,
+  "laws": 144,
+  "lawVersions": 148,
+  "clauses": 3222,
   "hazards": 2148,
-  "links": 2051,
-  "evidence": 1408,
+  "links": 2118,
+  "evidence": 1444,
   "successions": 26,
-  "activeHazards": 1706,
-  "proposedHazards": 319,
-  "supersededHazards": 123,
+  "activeHazards": 1789,
+  "proposedHazards": 230,
+  "supersededHazards": 129,
   "lifecycle": {
-    "active": 1706,
-    "proposed": 319,
-    "superseded": 123
+    "active": 1789,
+    "proposed": 230,
+    "superseded": 129
   },
   "requirements": 75
 }

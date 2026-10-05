@@ -1,18 +1,49 @@
 {
-  "checkedAt": "2026-09-16",
-  "contextHashes": {
-    "clause": "8a284d8c9e6885ebd5c040cee59196c270e3e620c8921dab01414d55b3f52d3d",
-    "hazard": "53163e80a17b9f48627b0398f3d0c14637ebf3197772e29434ee79e728f44dc0"
-  },
-  "decision": "verified",
   "entityId": "K_PHASE6_EABECE377172AB1995F961EE",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_GBT47236_2026"
-  ],
-  "reason": "第4.2.3.2.1条逐字要求联锁装置选择和设计符合GB/T 18831。",
   "reviewType": "applicability",
-  "reviewedContentHash": "9fdcd93c6fd5af23aee3899c195cd90c71cd1533cccd0f9b944e23e77732fb6f",
-  "reviewer": "ChatGPT PHASE6 final review 20260916",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "e6c9621df7d553f0ee16d4b0dedbbcb305d488ff0fc394bb661638c811062994",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GBT47236_2026_20261005"
+  ],
+  "reason": "逐条核第4.2.3.2.1条自身义务，补齐第1章设备范围、设计/制造/验收阶段及推荐性属性；原使用维护现场泛化不再作为当前条件。本轮仅核转引真实及范围，不新增被引规范技术结论。本条为GB/T18831的规范性转引；只有另行核实该被引文件适用版本及具体条款后才能判断具体联锁选择、设计不符合，不能由转引句自行生成性能等级或距离。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "contextHashes": {
+      "clause": "8a284d8c9e6885ebd5c040cee59196c270e3e620c8921dab01414d55b3f52d3d",
+      "hazard": "53163e80a17b9f48627b0398f3d0c14637ebf3197772e29434ee79e728f44dc0"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE6_EABECE377172AB1995F961EE",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GBT47236_2026"
+    ],
+    "reason": "第4.2.3.2.1条逐字要求联锁装置选择和设计符合GB/T 18831。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "9fdcd93c6fd5af23aee3899c195cd90c71cd1533cccd0f9b944e23e77732fb6f",
+    "reviewer": "ChatGPT PHASE6 final review 20260916",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "id": "K_PHASE6_EABECE377172AB1995F961EE",
+    "hazardId": "H_GBT47236_4_2_3_2_1_1",
+    "clauseId": "C_GBT47236_4_2_3_2_1",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于GB/T 47236-2026范围内与防护装置相关的联锁装置选择和设计。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "第4.2.3.2.1条逐字要求联锁装置选择和设计符合GB/T 18831。"
+  },
+  "contextHashes": {
+    "hazard": "33bec7a9fa880b57126aaffa18f4be2995bf9b46d92e9b8113c53bd0b69b6509",
+    "clause": "8a284d8c9e6885ebd5c040cee59196c270e3e620c8921dab01414d55b3f52d3d"
+  }
 }

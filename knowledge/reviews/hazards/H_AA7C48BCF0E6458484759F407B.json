@@ -1,38 +1,79 @@
 {
-  "entityType": "hazard",
   "entityId": "H_AA7C48BCF0E6458484759F407B",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "bbe7af44d0357bdc775d175857410c66e451fc98f6b39f5d2e66b17ed41f5bf2",
-  "checkedAt": "2026-10-04T05:23:30Z",
-  "reviewer": "Source-specific containment author 20261004",
-  "reason": "完整出版原件与原出版机构当前题录支持该有界通用设计义务；严格限定对象和设计阶段，纠正原H风向/义务强度或对象泛化。未知某现场是否具备该对象不等于公共法源缺口；本批不作任何现场判定。",
+  "decision": "pending",
+  "reviewedContentHash": "cbbfb314ec3d53ea28293724bfb54f938ef1a6563d597c5725a8244096d4204d",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_CONTAIN_LAYOUT_GB50187_20261004"
+    "E_ALL_GB50187_2012_20261005"
   ],
-  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
-  "reviewedFields": [
-    "category",
-    "conditions",
-    "description",
-    "keywords",
-    "measures",
-    "note",
-    "places",
-    "title"
-  ],
+  "reason": "唯一目标全文证据不足正式准入，候选保留待正式原页。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_AA7C48BCF0E6458484759F407B",
     "reviewType": "definition",
     "decision": "verified",
-    "reviewedContentHash": "f0f7e1ac5c44d7913d19f4a48aa5d74f529df08cddc38ab84e77cd5313089b40",
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "reviewedContentHash": "bbe7af44d0357bdc775d175857410c66e451fc98f6b39f5d2e66b17ed41f5bf2",
+    "checkedAt": "2026-10-04T05:23:30Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "完整出版原件与原出版机构当前题录支持该有界通用设计义务；严格限定对象和设计阶段，纠正原H风向/义务强度或对象泛化。未知某现场是否具备该对象不等于公共法源缺口；本批不作任何现场判定。",
     "evidenceRefs": [
-      "E_SAMR_GB15577_2018"
-    ]
+      "E_CONTAIN_LAYOUT_GB50187_20261004"
+    ],
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "reviewedFields": [
+      "category",
+      "conditions",
+      "description",
+      "keywords",
+      "measures",
+      "note",
+      "places",
+      "title"
+    ],
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_AA7C48BCF0E6458484759F407B",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "f0f7e1ac5c44d7913d19f4a48aa5d74f529df08cddc38ab84e77cd5313089b40",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ]
+    },
+    "previousReviewFileSha256": "d7f5960ebfdf48643fd8b6858fc6b1542457def79cafdef6abced1f16bd9366c"
   },
-  "previousReviewFileSha256": "d7f5960ebfdf48643fd8b6858fc6b1542457def79cafdef6abced1f16bd9366c"
+  "previousReviewFileSha256": "2485b6acb56d73da2556e78aa3ff3da637ab87fcf32dd2a7fe1ec8e091583f2e",
+  "previousDefinition": {
+    "id": "H_AA7C48BCF0E6458484759F407B",
+    "title": "总变电站受污染源影响或选址风向关系不符合要求",
+    "description": "总变电站受到粉尘、水雾、腐蚀性气体等污染源的影响，或其位置未位于散发粉尘、腐蚀性气体污染源全年最小频率风向的下风侧，或未位于散发水雾场所冬季盛行风向的上风侧。",
+    "measures": "按《工业企业总平面设计规范》GB 50187-2012第4.4.5条第2款，复核总变电站与污染源的位置及相应风向关系；调整选址、布置和污染防护措施，使其不受上述污染源影响，并满足该款规定的两类风向关系；完成后核对设计资料和现场布置。",
+    "conditions": "适用于新建、改建及扩建工业企业总平面设计中的总变电站位置选择。仅针对第4.4.5条第2款的污染防护与风向关系要求，不泛化为所有粉尘作业场所的选址要求。",
+    "category": "总图与建筑",
+    "places": [
+      "总变电站"
+    ],
+    "aliases": [],
+    "keywords": [
+      "总变电站",
+      "选址",
+      "粉尘",
+      "水雾",
+      "腐蚀性气体",
+      "全年最小频率风向",
+      "冬季盛行风向"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原标题为条款原文片段或存在文字损坏，语义不通且无法作为现场隐患表述；此处依其原描述与现有依据改写为可判定的现场事实，未改变依据本身。\n\n2026-10-04公开来源核验修订：保留稳定H ID，将原泛化的作业场所定义严格限于GB 50187-2012第4.4.5条第2款的总变电站设计对象，去除GB 15577第6.1条错配。该条属于一般设计要求，不能单独作重大事故隐患判定。现场是否为总变电站需在实际使用时核实；该未知不妨碍修正本公共定义。",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "3e4c0a59258b9cf4cebdbe4d9bb3f2484624c68532f35e1a6aeb91d38f77b41b"
 }

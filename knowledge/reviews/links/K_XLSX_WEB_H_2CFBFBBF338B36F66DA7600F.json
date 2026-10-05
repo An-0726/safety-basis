@@ -1,18 +1,47 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_2CFBFBBF338B36F66DA7600F",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "13fc42773f2f4c5ae1347c28f846c0fee9aa2e377cbee0bc3ba2f63846bc2249",
-  "contextHashes": {
-    "hazard": "e86523a8241b1a9ff20152069724427a54b3ca2ce45cc67c52e854c2e40142e8",
-    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "fdac984f507a14f10b02f78cd9622b07a08ceab910d9616020146111ed7617a4",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_ALL_ELECTRICAL_GB12158_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "仅保留接地支路；原流速支路没有被4.2.2.1支持，独立保留待补，不能以接地修复称复合原项全部闭环。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_2CFBFBBF338B36F66DA7600F",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "13fc42773f2f4c5ae1347c28f846c0fee9aa2e377cbee0bc3ba2f63846bc2249",
+    "contextHashes": {
+      "hazard": "e86523a8241b1a9ff20152069724427a54b3ca2ce45cc67c52e854c2e40142e8",
+      "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+    "clauseId": "C_12158_4_2_2_1",
+    "hazardId": "H_2CFBFBBF338B36F66DA7600F",
+    "id": "K_XLSX_WEB_H_2CFBFBBF338B36F66DA7600F",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "11e500dc3d3b49cb09bf5f6f79e5188badf084d6c3584da3c83bf338d91286ef",
+    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+  }
 }

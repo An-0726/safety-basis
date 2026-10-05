@@ -1,18 +1,79 @@
 {
-  "decision": "verified",
   "entityId": "H_608147EE09234EBC92B53F842A",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "afe2bd0df36a4c85e59b5a0d72dfef4d8e7c6730dbde4bb572c4104d339f9ae9",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "EH_ea5e623fd1714f090ac63085785697dc65ff0421d0d0756d33dd4cfb62647fbd"
+    "E_ALL_ELECTRICAL_GB12801_20261005",
+    "E_ALL_ELECTRICAL_GB2894_20261005"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_55a988b45076720bd24dbcab",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "5.7.4第二句设备和管线标识义务；GB2894具体设计内容仍按对象确定，不伪造统一标识套餐。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_608147EE09234EBC92B53F842A",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_ea5e623fd1714f090ac63085785697dc65ff0421d0d0756d33dd4cfb62647fbd"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_55a988b45076720bd24dbcab",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "80bb521f64fc70614584023a766b18a4ef9563ed048d318311941668f615f4bf",
+    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+    "checkedAt": "2026-09-12T02:29:02+08:00",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "80bb521f64fc70614584023a766b18a4ef9563ed048d318311941668f615f4bf",
-  "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-  "checkedAt": "2026-09-12T02:29:02+08:00",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "previousReviewFileSha256": "0a55bb3ac3a1939534d9e97aa87089cc5345cab5d555ca2c050fa2627cff140b",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全标志",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "设备和管线未按有关标准的规定涂刷识别色、标注识别符号和安全标识，人员无法直观识别介质种类和危险属性，误操作风险增加。",
+    "id": "H_608147EE09234EBC92B53F842A",
+    "keywords": [
+      "设备和管线",
+      "未按有关标准的规定涂识别色",
+      "识别符号和安全标识",
+      "设",
+      "备",
+      "和",
+      "管",
+      "线",
+      ",",
+      "未",
+      "按",
+      "有",
+      "关",
+      "标",
+      "准",
+      "的",
+      "规",
+      "定",
+      "涂",
+      "识",
+      "别",
+      "色",
+      "符",
+      "号",
+      "安",
+      "全"
+    ],
+    "lifecycle": "proposed",
+    "measures": "按标准规定对设备和管线涂识别色、标注识别符号和安全标识。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《生产过程安全 卫生要求总则》 第6. 8. 4条\n\nGB 7231。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "设备和管线,未按有关标准的规定涂识别色、识别符号和安全标识"
+  },
+  "previousEntityFileSha256": "f8ddc684b1876b13132931f4f088ca404a6f9986e0c06721bd440bd50d0a77df"
 }

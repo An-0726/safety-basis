@@ -1,11 +1,52 @@
 {
-  "entityType": "hazard",
   "entityId": "H_CF_MAJOR_01",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "7b62d77034aeff96b73dd059d3b42d74cf77ea40a83e5bbf7e94f50b5efc6fee",
-  "checkedAt": "2026-09-21T00:55:00+08:00",
-  "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
-  "evidenceRefs": []
+  "decision": "verified",
+  "reviewedContentHash": "ba74d96b8eb5c806b11796ac4d590a6da534501e8608b4540533cee3e16a1a4b",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_EQUIPMENT_MEM10_20261005"
+  ],
+  "reason": "仅对应第11条第（三）项；删除原措施中隔爆替代的错误。原普通控爆技术义务与此重大判据分别保留，不因同义核心合并法定前提。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_CF_MAJOR_01",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "7b62d77034aeff96b73dd059d3b42d74cf77ea40a83e5bbf7e94f50b5efc6fee",
+    "checkedAt": "2026-09-21T00:55:00+08:00",
+    "reviewer": "ChatGPT / Engineering Audit",
+    "reason": "工程审计未确认当前PR #70关联可以直接支持本隐患全部构成要件；保留候选用于检索，不进入正式发布。",
+    "evidenceRefs": []
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "可燃性粉尘干式除尘系统（除尘器箱体及风管）未按规范采取泄爆、惰化、抑爆等任一种有效控爆措施，存在粉尘爆炸失控引发二次恶性爆炸风险。",
+    "id": "H_CF_MAJOR_01",
+    "keywords": [
+      "粉尘爆炸",
+      "干式除尘",
+      "泄爆",
+      "隔爆",
+      "自动抑爆",
+      "控爆措施",
+      "重大事故隐患"
+    ],
+    "lifecycle": "proposed",
+    "measures": "立即停用未设控爆措施的干式除尘系统；按粉尘爆炸特性在除尘器及管道上加装泄爆、隔爆或自动抑爆装置，确保泄压方向安全；定期检查维保，保持装置完好有效。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。\n\n2026-09-21工程审计：PR #70批量导入的direct/verified依据不足或描述含复合条件，暂降为proposed；待逐条取得直接技术条款和完整适用条件后再转正。",
+    "places": [
+      "涉及金属、木质、粮食、塑料等干式除尘系统的工贸企业车间及室外布置区"
+    ],
+    "title": "干式除尘系统未采取泄爆、惰化或抑爆等爆炸防控措施"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

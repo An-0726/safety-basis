@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C901CA419B02E1AE73270201_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "037a7703f1c73ec1d229743711bf014c0509e645322446974bfcfb6051ad7624",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_A3AF79C96C6D974EB480D436"
+    "E_ALL_MANAGEMENT_hazchem_law_beijing_official_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "54cc1cfee90670bb28b3d00a6ae51c8ee08a265a2b0787cacfd6a291dfa3db3f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "第二款一般义务；与仓储设施选择和43条标志设施不同，不能泛化所有危险物质或空缺技术限值。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C901CA419B02E1AE73270201_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_A3AF79C96C6D974EB480D436"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "54cc1cfee90670bb28b3d00a6ae51c8ee08a265a2b0787cacfd6a291dfa3db3f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "482a8b9db4547922323c991260e18bece20ffde6278abb4326725d882b8efda1",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，危险化学品的储存方式、方法以及储存数量不符合国家标准或者国家有关规定，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_C901CA419B02E1AE73270201_3",
+    "keywords": [
+      "危险化学品的储存方式",
+      "方法以及储存数量不符合国家标准或者国家有关规定"
+    ],
+    "lifecycle": "proposed",
+    "measures": "危险化学品的储存方式、方法以及储存数量调整至符合国家标准或者国家有关规定。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "危险化学品的储存方式、方法以及储存数量不符合国家标准或者国家有关规定"
+  },
+  "previousEntityFileSha256": "1d0b25191bebfceeacce5e5c94b39039f055466a54f7860cbae4b414e277d765"
 }

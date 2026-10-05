@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-05",
   "contextHashes": {
-    "clause": "adedb9febb3fec582db6eae4ed4e5f1beaa1e0f901ce722e11a3025b06e906ac",
-    "hazard": "072905852d3a8fc24658f8f58219fcc7237cba86d84f42ed8092d043a286ace9"
+    "hazard": "6990f89194367d4aa9bedee5a031c63083e006aca48afda4ed8b1b1a821ccbe4",
+    "clause": "adedb9febb3fec582db6eae4ed4e5f1beaa1e0f901ce722e11a3025b06e906ac"
   },
   "decision": "pending",
   "entityId": "K_XLSX_WEB_680885F34898DCE0164EFE7B",
@@ -10,9 +10,34 @@
   "evidenceRefs": [
     "E_XLSX_WEB_41FE15CA9E6CCE1EC5DD39B4"
   ],
-  "reason": "隐患与官方条款直接对应。",
+  "reason": "旧条例第二十二条评价报告只明确整改方案，当前原H已归并新法第三十九条canonical，其内容还明确整改完成后结论性意见。旧K不完整覆盖当前归并定义，本轮也未重做旧条例全文准入；保持pending/proposed，原方案来源和审核历史保留，不认定条例废止。",
   "reviewType": "applicability",
   "reviewedContentHash": "0946a483080ecfaf249aeb4905ba8ecfa3a264e6c424bba77eab373374f1d29f",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  "reviewer": "Codex management historical-link dependency review 20261005",
+  "notes": "本次对照收窄后的定义及旧关联实际正文重审隔离理由，仅绑定当前上下文；decision、旧K生命周期及原evidenceRefs保持，不恢复正式关联。新直接来源只用于比较，不混入此旧法规引用的证据。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "adedb9febb3fec582db6eae4ed4e5f1beaa1e0f901ce722e11a3025b06e906ac",
+      "hazard": "072905852d3a8fc24658f8f58219fcc7237cba86d84f42ed8092d043a286ace9"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_WEB_680885F34898DCE0164EFE7B",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_41FE15CA9E6CCE1EC5DD39B4"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "0946a483080ecfaf249aeb4905ba8ecfa3a264e6c424bba77eab373374f1d29f",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  },
+  "previousReviewFileSha256": "4ba19f47fbbc39cab8cd0c200d82255ebd7cc68d37f5b53374bccda0108258e7",
+  "comparisonRefs": {
+    "purpose": "compare_only_not_evidence_for_old_clause",
+    "currentHazardId": "H_BC2DB28C7DE2F697D987CCCD_2",
+    "canonicalHazardId": "H_BA111E073CFF5E4689BD5591_2",
+    "currentBoundedDefinitionReview": "knowledge/reviews/hazards/H_BC2DB28C7DE2F697D987CCCD_2.json"
+  }
 }

@@ -1,18 +1,47 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_489DF59DA4DF4E89B50C321130",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "73638199cb4f0e319909d15f6725c3f921c497b0f94f4eee6f80fc332f19e2c0",
-  "contextHashes": {
-    "hazard": "315a3a0ed2bbbd34564a5e7964bfe71397f5f78463b96bb0a721d8bac72aa415",
-    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "1e2e129583fd8853a9fadd62fff4bf3cb8d04a5b47f1b97c378eb403476ce4f8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_ALL_GB6514_2023_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "正式GB6514-2023第6.2.2.2条准确对应；保留第1章排除项，不借接地或错误7.4.7替代。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_489DF59DA4DF4E89B50C321130",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "73638199cb4f0e319909d15f6725c3f921c497b0f94f4eee6f80fc332f19e2c0",
+    "contextHashes": {
+      "hazard": "315a3a0ed2bbbd34564a5e7964bfe71397f5f78463b96bb0a721d8bac72aa415",
+      "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+    "clauseId": "C_12158_4_2_2_1",
+    "hazardId": "H_489DF59DA4DF4E89B50C321130",
+    "id": "K_XLSX_WEB_H_489DF59DA4DF4E89B50C321130",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "aad705dd0bf5eb44b23513688b5474c37577880484f755af44349b9edf8b8240",
+    "clause": "58d134f2b4bf3f858eaec9ea0dd9543ac5891bc5a4d4817fc1be6574edcb0da1"
+  }
 }

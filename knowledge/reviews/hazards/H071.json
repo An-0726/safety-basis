@@ -1,15 +1,57 @@
 {
-  "decision": "verified",
   "entityId": "H071",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "66f5203975b3eb49f54751c55fba34c6090ffc54a7ce32cd33741457b0306b9a",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    "E_ALL_ELECTRICAL_GBT13869_20261005"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_62b0a2142bac91f58c75345a34_10",
-    "reviewedAt": "2026-09-09T13:33:45+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "第9章第二段作业前义务，不混同H072的PPE和特种作业资格，不单凭推荐性标准作行政违法认定。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H071",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_62b0a2142bac91f58c75345a34_10",
+      "reviewedAt": "2026-09-09T13:33:45+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "a53e6cfd04c5242b56946f2ab5e3c78fdc49b0020028897bb6018c7e5111fddd"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "a53e6cfd04c5242b56946f2ab5e3c78fdc49b0020028897bb6018c7e5111fddd"
+  "previousReviewFileSha256": "5f1f92e4a1e17106fa0ff64b7713e2717148e34a49cc25b21a61320577aaac03",
+  "previousDefinition": {
+    "aliases": [
+      "电气作业未风险辨识",
+      "电工作业前未采取防护"
+    ],
+    "category": "电气安全",
+    "conditions": "适用于存在电气作业前未熟悉作业环境并采取相应防护措施相关风险的场所和作业活动。",
+    "description": "电气作业人员在作业前未熟悉作业环境，或未根据作业类型和性质采取相应防护措施。",
+    "id": "H071",
+    "keywords": [
+      "电气作业",
+      "作业环境",
+      "防护措施",
+      "风险辨识"
+    ],
+    "lifecycle": "proposed",
+    "measures": "作业前辨识带电状态、潮湿、粉尘、狭窄空间等环境风险，根据作业类型落实断电、验电、隔离和个体防护等措施。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "",
+    "places": [
+      "电气作业场所",
+      "生产车间"
+    ],
+    "title": "电气作业前未熟悉作业环境并采取相应防护措施"
+  },
+  "previousEntityFileSha256": "63304fb821a3d9cdf6390a2737427e6e2320472f5fa36972c8941625168328ef"
 }

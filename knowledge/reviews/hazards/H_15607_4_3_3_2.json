@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_3_3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e5c87fe4cd807920ea023d7c916e08f53220d211d968f53a4b4c00ac7b333bb5",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_813D0B7ABEB9FCBACB782B8D"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "8e745ce7c861847b5b8303dc06e7e2855f5191668a301879c631c7125545837d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 4.3.3：可依完整条款修复现有H/C/K定义及审核；限制仅粉末静电喷涂范围。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_3_3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_813D0B7ABEB9FCBACB782B8D"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "8e745ce7c861847b5b8303dc06e7e2855f5191668a301879c631c7125545837d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷粉区地面不平整光滑，存在缝隙、凹槽，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_4_3_3_2",
+    "keywords": [
+      "喷粉区地面不平整光滑",
+      "存在缝隙",
+      "凹槽"
+    ],
+    "lifecycle": "proposed",
+    "measures": "修整喷粉区地面，消除缝隙、凹槽和不平整部位，使地面便于清扫、不易积粉并满足直接依据规定的表面要求。整改后对涂装作业区的点火源、通风、防爆、静电和设备运行状态进行复核，确认符合工艺安全要求。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉区地面不平整光滑，存在缝隙、凹槽"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": [],
+  "negativeCase": "粉末静电喷涂区地面平整、光滑且无缝隙和凹槽，不触发本项地面表面缺陷。"
 }

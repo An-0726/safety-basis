@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_5_2_6_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a614da1e15a0dbf2f11a57c9b8c60d5bff3674c3b148d47bcd844fc741070e28",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_8586917BFB0AD4B4AA548204"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "9cebdbae10019dd726c72f9637c41058c55f059a9b4bd1dc95fcb93ae92d07a3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 5.2.6：可依完整条款修复现有H/C/K定义及审核；限制仅粉末静电喷涂范围。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_5_2_6_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_8586917BFB0AD4B4AA548204"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "9cebdbae10019dd726c72f9637c41058c55f059a9b4bd1dc95fcb93ae92d07a3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，风机轴承和其他运转部件未设置防止粉尘侵入的防护装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15607_5_2_6_1",
+    "keywords": [
+      "风机轴承和其他运转部件未设置防止粉尘侵入的防护装置"
+    ],
+    "lifecycle": "proposed",
+    "measures": "风机轴承和其他运转部件设置防止粉尘侵入的防护装置。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "风机轴承和其他运转部件未设置防止粉尘侵入的防护装置"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

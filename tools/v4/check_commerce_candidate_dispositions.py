@@ -135,6 +135,9 @@ def validate_commerce_dispositions(root: Path):
     from commerce_merge_history import approved_atomic_history
     historical_entities, carry_errors = approved_atomic_history(root, entities)
     errors += carry_errors
+    from commerce_source_continuation import approved_source_continuation
+    independent, source_continuation_errors = approved_source_continuation(root, independent, historical_entities)
+    errors += source_continuation_errors
     errors += validate_atomic_splits(atomic_rows, rows, source_map, historical_entities)
     return errors + validate_independent_review(rows, independent, historical_entities, atomic_rows)
 

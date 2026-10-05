@@ -1,18 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "84d287d1308b6af44a435d9d4b44733435d6849d4e644b6a26585546852717ef",
-    "hazard": "3ff9403015b80b19e629c88e4bc755efbf17d457ed13543fdb4898a2e30e4576"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_WEB_03B2F837CD3D64D61AB79B20",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_404F66AE742874D498163B3C"
-  ],
-  "reason": "隐患与官方条款直接对应。",
   "reviewType": "applicability",
-  "reviewedContentHash": "450c913936bf87fddef7bf9f00c67a1f8ced914f3b38a1ab08bbd6ebb2d274a7",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "verified",
+  "reviewedContentHash": "3fab81424d88abec26748202f737510436d7fe8a6f1d5ddbad3d1a73f57fcff8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
+  "evidenceRefs": [
+    "E_REMAIN_FIRE_XF1131_20261005"
+  ],
+  "reason": "复用已核完整五距条文，只消费第6.8(a)顶部净距分支。旧OCR长块关联不再作为当前依据。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "84d287d1308b6af44a435d9d4b44733435d6849d4e644b6a26585546852717ef",
+      "hazard": "3ff9403015b80b19e629c88e4bc755efbf17d457ed13543fdb4898a2e30e4576"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_WEB_03B2F837CD3D64D61AB79B20",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_404F66AE742874D498163B3C"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "450c913936bf87fddef7bf9f00c67a1f8ced914f3b38a1ab08bbd6ebb2d274a7",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousReviewFileSha256": "4403125807db9caa5308162bb1288d2eebb015110056e8731b3b132d5ca0d582",
+  "previousDefinition": {
+    "applicability": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "clauseId": "C_XLSX_WEB_D7A79CACBE2DD986E1A1CF3D",
+    "hazardId": "H069",
+    "id": "K_XLSX_WEB_03B2F837CD3D64D61AB79B20",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "reason": "隐患对象、整改措施与官方条款逐项对应。",
+    "role": "direct",
+    "status": "needs_review"
+  },
+  "previousEntityFileSha256": "5a8e3e7b581de364773092442832693b34c119688917635002857e08e955ef6b",
+  "contextHashes": {
+    "hazard": "8e506c5d4dd8994ed04bd82a32a49d116e230ca11cc99d5f5d56f917f66cf67c",
+    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+  }
 }

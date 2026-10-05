@@ -1,29 +1,59 @@
 {
-  "entityType": "link",
   "entityId": "K_fb03012279815a93d9c99124",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "209654eeb9bc073e2a72a41d12deab53fed7641c17d9727bafc8109c5cc5d833",
-  "contextHashes": {
-    "hazard": "e465f60fb7d7e03ffee06a211b01a71407bcfea2b7416b76347a05b937a45f0a",
-    "clause": "82f629954c131cd2d035077f63204a8718357dcc071d0b0af5b6c68923282dc9",
-    "link": "209654eeb9bc073e2a72a41d12deab53fed7641c17d9727bafc8109c5cc5d833"
-  },
-  "checkedAt": "2026-09-21T00:30:00+08:00",
-  "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "《安全生产法》第三十九条第二款作为危险物品专门安全管理制度的上位法补充；直接依据仍以《危险化学品安全管理条例》第四条为主。",
-  "reasonCodes": [
-    "DIRECT_MATCH"
-  ],
+  "reviewedContentHash": "dc87289fe017c2a4e60965134080fb67fc5afae5961190dbc666524bb7ab1867",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_11a5ad69b1b927da4cfca1434ecdc4819a5419c37a2763452dbd28e4d95362fd"
+    "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "migratedFromV3Verification": {
-    "id": "VRF_dc1d306da97e189090350df7_140",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次",
-    "v3Reason": "隐患为未见危险化学品安全管理制度。C_BDCBE6EE（安全生产法第39条）规定生产、经营、储存、使用危险物品必须执行有关法律法规和国家标准、建立专门的安全管理制度、采取可靠的安全措施，直接对应未建立危化品安全管理制度的问题。",
-    "v3Result": "passed"
+  "reason": "保留既有法规真实归属；只支持该原规范对象范围内的管理制度分支，不由新法施行推定旧条例失效。",
+  "notes": "同一331候选批内共享已核当前来源；不证明具体现场或个案违法。",
+  "previousDefinition": {
+    "applicability": "C_BDCBE6EE：生产经营单位生产、经营、运输、储存、使用危险物品或者处置废弃危险物品，必须执行有关法律、法规和国家标准或者行业标准，建立专门的安全管理制度，采取可靠的安全措施，接受有关主管部门依法实施的监督管理。",
+    "clauseId": "C_BDCBE6EE490CAEE5018F4F785A",
+    "hazardId": "H_F3E7D18DBD77459B983AB5CD06",
+    "id": "K_fb03012279815a93d9c99124",
+    "jurisdictionCode": "全国",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 20,
+    "role": "supporting",
+    "reason": "该隐患已具备专项技术条款直接依据，母法通用义务改作上位法补充（GLM，2026-09-12）。"
   },
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_fb03012279815a93d9c99124",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "209654eeb9bc073e2a72a41d12deab53fed7641c17d9727bafc8109c5cc5d833",
+    "contextHashes": {
+      "hazard": "e465f60fb7d7e03ffee06a211b01a71407bcfea2b7416b76347a05b937a45f0a",
+      "clause": "82f629954c131cd2d035077f63204a8718357dcc071d0b0af5b6c68923282dc9",
+      "link": "209654eeb9bc073e2a72a41d12deab53fed7641c17d9727bafc8109c5cc5d833"
+    },
+    "checkedAt": "2026-09-21T00:30:00+08:00",
+    "reviewer": "ChatGPT / Engineering Audit",
+    "reason": "《安全生产法》第三十九条第二款作为危险物品专门安全管理制度的上位法补充；直接依据仍以《危险化学品安全管理条例》第四条为主。",
+    "reasonCodes": [
+      "DIRECT_MATCH"
+    ],
+    "evidenceRefs": [
+      "E_11a5ad69b1b927da4cfca1434ecdc4819a5419c37a2763452dbd28e4d95362fd"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VRF_dc1d306da97e189090350df7_140",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次",
+      "v3Reason": "隐患为未见危险化学品安全管理制度。C_BDCBE6EE（安全生产法第39条）规定生产、经营、储存、使用危险物品必须执行有关法律法规和国家标准、建立专门的安全管理制度、采取可靠的安全措施，直接对应未建立危化品安全管理制度的问题。",
+      "v3Result": "passed"
+    },
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  },
+  "contextHashes": {
+    "hazard": "a6caf255fa41d0316b6702ae2c6f64bde619d107c602064d049702317f697155",
+    "clause": "82f629954c131cd2d035077f63204a8718357dcc071d0b0af5b6c68923282dc9"
+  }
 }

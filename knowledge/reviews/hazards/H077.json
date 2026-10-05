@@ -1,13 +1,113 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H077",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "010c667f73240814fe9d2d4af210a4b36c92121c39b1a381d2ae4136ec32b3c9",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_2d156295ffe9f296025937212e396b045117a28399f2451fff411c26f08c38ba"
+    "E_REMAIN_FIRE_JGJ91_20261005"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "229d5ed17b25f7505133d85f0a9eac29742c47bf033ae2afcd28ce5143a6ced3",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "依赖纠错：本H核心与真实5.3.3一致，限科研建筑设计及实际化学品危险，不承接错误C的通用应急物品配置。 原文要求两者均设置，本H负向触发明确为任一缺失；仅缺一种也成立，不要求两种同时缺失。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H077",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_2d156295ffe9f296025937212e396b045117a28399f2451fff411c26f08c38ba"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "229d5ed17b25f7505133d85f0a9eac29742c47bf033ae2afcd28ce5143a6ced3",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousReviewFileSha256": "42204251e33a7f9e38965be1eef4b05202a8a52cb1ffae5e89e60dc6795a194f",
+  "previousDefinition": {
+    "aliases": [
+      "实验室无洗眼器",
+      "酸碱实验室无应急喷淋"
+    ],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在强酸、强碱等实验室未就近设置应急洗眼器或喷淋设施相关风险的场所和作业活动。",
+    "description": "使用强酸、强碱等存在化学品危险隐患的实验室，未就近设置应急洗眼器及应急喷淋。",
+    "id": "H077",
+    "keywords": [
+      "实验室",
+      "强酸",
+      "强碱",
+      "洗眼器",
+      "应急喷淋"
+    ],
+    "lifecycle": "active",
+    "measures": "根据腐蚀性化学品暴露风险在便于快速到达的位置设置适用的应急洗眼、喷淋设施，保证供水、标识和通道正常，并定期检查试验。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "places": [
+      "实验室",
+      "科研建筑"
+    ],
+    "title": "强酸、强碱等实验室未就近设置应急洗眼器或喷淋设施"
+  },
+  "previousEntityFileSha256": "3ab6755ef051065e42f9d231ca2ccd2a44063d3415ed676157dcad0f0ae4ac92",
+  "previousAuthorReview": {
+    "entityId": "H077",
+    "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "688562ba3f68c847ee299c9a360cc102f4cfed5ce56b822968ba260d06bc2a62",
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex complete remaining fire-gas author review 20261005",
+    "evidenceRefs": [
+      "E_REMAIN_FIRE_JGJ91_20261005"
+    ],
+    "reason": "依赖纠错：本H核心与真实5.3.3一致，限科研建筑设计及实际化学品危险，不承接错误C的通用应急物品配置。",
+    "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+    "previousReview": {
+      "checkedAt": "2026-09-16",
+      "decision": "verified",
+      "entityId": "H077",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_2d156295ffe9f296025937212e396b045117a28399f2451fff411c26f08c38ba"
+      ],
+      "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "229d5ed17b25f7505133d85f0a9eac29742c47bf033ae2afcd28ce5143a6ced3",
+      "reviewer": "ChatGPT PHASE6 final review 20260916"
+    },
+    "previousReviewFileSha256": "42204251e33a7f9e38965be1eef4b05202a8a52cb1ffae5e89e60dc6795a194f",
+    "previousDefinition": {
+      "aliases": [
+        "实验室无洗眼器",
+        "酸碱实验室无应急喷淋"
+      ],
+      "category": "专项安全与EHS",
+      "conditions": "适用于存在强酸、强碱等实验室未就近设置应急洗眼器或喷淋设施相关风险的场所和作业活动。",
+      "description": "使用强酸、强碱等存在化学品危险隐患的实验室，未就近设置应急洗眼器及应急喷淋。",
+      "id": "H077",
+      "keywords": [
+        "实验室",
+        "强酸",
+        "强碱",
+        "洗眼器",
+        "应急喷淋"
+      ],
+      "lifecycle": "active",
+      "measures": "根据腐蚀性化学品暴露风险在便于快速到达的位置设置适用的应急洗眼、喷淋设施，保证供水、标识和通道正常，并定期检查试验。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+      "places": [
+        "实验室",
+        "科研建筑"
+      ],
+      "title": "强酸、强碱等实验室未就近设置应急洗眼器或喷淋设施"
+    },
+    "previousEntityFileSha256": "3ab6755ef051065e42f9d231ca2ccd2a44063d3415ed676157dcad0f0ae4ac92"
+  },
+  "previousAuthorReviewFileSha256": "be44dfb634b05a24a8e2c2fc5b1a5d95ba0d5fdd706ea8eb6fee43fa8f91ab20"
 }

@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_7_1_1",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "a0ccb09036a7c08d367d24a47034ba681b6f93abbc7a0cc067cd6e969d5a10bb",
-  "contextHashes": {
-    "hazard": "9855c7d4572393a36edeea258c11b8495029e09dd2df79abe57e74d4f3e9b19a",
-    "clause": "35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2条导电及亚导体电阻率。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "bd5618637864b5bfcd40ff417cc3bb9759b140f31c235d1e8e45e0c84d6035f0",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_ALL_ELECTRICAL_GB12158_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "经实核将误接4.2.2.3改接7.1，材料对象、面积单位、严格大于及缺陷方向逐一对应，保留范围排除。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_12158_7_1_1",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "a0ccb09036a7c08d367d24a47034ba681b6f93abbc7a0cc067cd6e969d5a10bb",
+    "contextHashes": {
+      "hazard": "9855c7d4572393a36edeea258c11b8495029e09dd2df79abe57e74d4f3e9b19a",
+      "clause": "35ccbdc21b656e4c441cba4e0c8b6e56bc954667353864f20d3bcbc2100d8abf"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2条导电及亚导体电阻率。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "3d4f44d367bd513a5743644b5d915446b52f3cbed86f678bf1836286fbd92ea9",
+  "previousDefinition": {
+    "applicability": "非金属储罐与管道表面电阻率指标",
+    "clauseId": "C_12158_4_2_2_3",
+    "hazardId": "H_12158_7_1_1",
+    "id": "K_XLSX_WEB_H_12158_7_1_1",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "0c979385ecdfeeb8e7d1bd80b65c4a3a42db86b1bf33048d6ccf5bc5b9b95282",
+  "contextHashes": {
+    "hazard": "5ec8ca48a46604d92e3280e2b47d0b4cc2f75582c8a73855e0e9129ee343e668",
+    "clause": "8f41a2d38b41c1f16a03d977e9a03240f44c7a002c075015821c38e324f12d5a"
+  }
 }

@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_5_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9f60b10383adab8a61464da23120c694afb932d2740bf49e13f52aec5f174767",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_CDEA7AD62B2DDE3E39C95428"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "f8311b2a96339d246e12cbe51985316f7928a38115e53050e0d1076886c3424f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 4.5.1：可依完整条款修复现有H/C/K定义及审核；限制仅粉末静电喷涂范围。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_5_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_CDEA7AD62B2DDE3E39C95428"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "f8311b2a96339d246e12cbe51985316f7928a38115e53050e0d1076886c3424f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷粉室内接触粉末的工件、器具、装置，其表面温度未比所用粉末引燃温度低28℃，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_4_5_1_1",
+    "keywords": [
+      "喷粉室内接触粉末的工件",
+      "器具",
+      "装置",
+      "其表面温度未比所用粉末引燃温度低28℃"
+    ],
+    "lifecycle": "proposed",
+    "measures": "喷粉室内接触粉末的工件、器具、装置，其表面温度比所用粉末引燃温度低28℃。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉室内接触粉末的工件、器具、装置，其表面温度未比所用粉末引燃温度低28℃"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

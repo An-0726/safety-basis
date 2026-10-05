@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_64890758F40C42608FF5E8DB65",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "2face4dc7f5ebacafbaa4751765fe9eca2bfecd8ceea4a39d0a84b829d99adfe",
-  "contextHashes": {
-    "hazard": "73eb71557b47a01aa5a571b4fd0141237540032914ab61404d63b4b6563a8d02",
-    "clause": "58feeea81dd42b743c5d943489ede5fa807d0b6e0930785a9c7e6954ed5c7911"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50187-2012第3.0.12条防洪排涝标准。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "87da164860074ea79e18d04340df39cbcd41a3fc11022332236f689f854eb5bb",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_GB50187_2012"
+    "E_ALL_GB50187_3_0_12_1_PLATFORM_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "仅正式平台公开引导句及第1项；不再绑定旧全条摘要。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_64890758F40C42608FF5E8DB65",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "2face4dc7f5ebacafbaa4751765fe9eca2bfecd8ceea4a39d0a84b829d99adfe",
+    "contextHashes": {
+      "hazard": "73eb71557b47a01aa5a571b4fd0141237540032914ab61404d63b4b6563a8d02",
+      "clause": "58feeea81dd42b743c5d943489ede5fa807d0b6e0930785a9c7e6954ed5c7911"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50187-2012第3.0.12条防洪排涝标准。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50187_2012"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "c2a12109032cd3901b5c0a1a9c44c9ac1cfd20adb34772855a74635759c1ec95",
+  "previousDefinition": {
+    "applicability": "厂址位于受洪水潮水内涝威胁地带且未采取措施",
+    "clauseId": "C_GB50187_3_0_12",
+    "hazardId": "H_64890758F40C42608FF5E8DB65",
+    "id": "K_XLSX_WEB_H_64890758F40C42608FF5E8DB65",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "8b295957137dc75644435d10364a765037ae1c1b13b91922565f7e746484e790",
+  "contextHashes": {
+    "hazard": "abcc33efee20bdb3985f4845ecd7c74e0a28d096e066613953f7b993d6883043",
+    "clause": "6a24909e896e8262d79794f0289510d7ee40be04b138abe3004ec1eb051244a8"
+  }
 }
