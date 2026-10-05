@@ -18,3 +18,12 @@ export function matchingParagraphs(paragraphs, query) {
   const needle = normalizeText(query);
   return needle ? paragraphs.filter(row => normalizeText(row.text).includes(needle)) : [];
 }
+
+// Preserve explicitly reviewed legacy reading links without shadowing a real ID.
+export function resolveDocument(documents, versionId) {
+  if (!versionId || !Array.isArray(documents)) return null;
+  const exact = documents.filter(doc => doc.versionId === versionId);
+  if (exact.length) return exact.length === 1 ? exact[0] : null;
+  const aliases = documents.filter(doc => Array.isArray(doc.versionAliases) && doc.versionAliases.includes(versionId));
+  return aliases.length === 1 ? aliases[0] : null;
+}

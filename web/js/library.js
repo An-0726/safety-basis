@@ -1,4 +1,4 @@
-import {normalizeText, queryGrams, intersectDocuments, matchingParagraphs} from './fulltext-search.js';
+import {normalizeText, queryGrams, intersectDocuments, matchingParagraphs, resolveDocument} from './fulltext-search.js';
 import {VerifiedFiles} from './verified-files.js';
 
 const $ = selector => document.querySelector(selector);
@@ -170,7 +170,7 @@ async function boot() {
     $('#coverage').addEventListener('change', search); $('#documentFilter').addEventListener('change', search); $('#validityFilter').addEventListener('change', search);
     $('#clearTextQuery').addEventListener('click', () => { $('#textQuery').value = ''; search(); });
     await search();
-    const doc = catalog.documents.find(doc => doc.versionId === params.get('document'));
+    const doc = resolveDocument(catalog.documents, params.get('document'));
     if (doc) showDocument(doc);
   } catch (error) {
     $('#libraryDate').textContent = '全文包未就绪';

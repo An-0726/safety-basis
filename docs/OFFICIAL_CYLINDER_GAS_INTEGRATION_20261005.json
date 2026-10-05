@@ -1,0 +1,89 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
+  "baselineTree": "3867f248ac7cc7e7e660db404bb0dc2c6bd1d62a",
+  "reviewStage": "author_verified_independent_review_pending",
+  "decisions": [
+    {
+      "hazardId": "H_200F007CE0EF47DFB8BE2B8618",
+      "action": "narrow_existing_stable_id",
+      "boundary": "保留原H/K稳定ID，将原错误复合定义收窄到9.1b。原颜色/使用检查/热源组合及安法36错误关联完整存历史，原GB16912深冷对象不外推。",
+      "positiveCase": "使用单位查实擅自改色并改装盛装另一种气体。",
+      "negativeCase": "标志自然褪色但无证据擅自更改，不能按本项推定擅改。",
+      "linkIds": [
+        "K_XLSX_NEW14_AB3FE309DCCF562480F0E982"
+      ]
+    },
+    {
+      "hazardId": "H_GBT34525_PREUSE_CHECK",
+      "action": "new_bounded_rule",
+      "boundary": "使用前检查独立成H，不用笼统安全生产法36替代精确技术依据。",
+      "positiveCase": "使用前未检查实际气体与瓶体制造钢印不一致仍使用。",
+      "negativeCase": "现场暂未出示纸质检查记录，实际检查事实未核，不能直接命中。",
+      "linkIds": [
+        "K_GBT34525_PREUSE_9_1_a",
+        "K_GBT34525_PREUSE_8_1_1_c_d_f"
+      ]
+    },
+    {
+      "hazardId": "H_GB55037_BUILDING_GAS_ALARM",
+      "action": "new_bounded_rule",
+      "boundary": "新核GB55037第8.3.3仅关闭P01建筑内窄分支；GB/T50493总体设计范围、布点和P02/P05仍独立待核。",
+      "positiveCase": "非住宅建筑内存在可燃蒸气释放可能的场所未设探测报警。",
+      "negativeCase": "住宅厨房燃气部位或仅室外释放源，不按本条直接命中。",
+      "linkIds": [
+        "K_GB55037_BUILDING_GAS_ALARM_8_3_3",
+        "K_GB55037_BUILDING_GAS_ALARM_SCOPE"
+      ]
+    }
+  ],
+  "authoredFiles": [
+    "knowledge/clauses/C_GB55037_2022_1_0_2.json",
+    "knowledge/clauses/C_GB55037_2022_8_3_3.json",
+    "knowledge/clauses/C_GBT34525_2017_8_1_1_c_d_f.json",
+    "knowledge/clauses/C_GBT34525_2017_9_1_a.json",
+    "knowledge/clauses/C_GBT34525_2017_9_1_b.json",
+    "knowledge/clauses/C_TSG23_2021_1_7.json",
+    "knowledge/clauses/C_TSG23_2021_AM1_1_8_1_3.json",
+    "knowledge/evidence/E_OFFICIAL_CYLINDER_TSG_20261005.json",
+    "knowledge/evidence/E_OFFICIAL_CYLINDER_USAGE_20261005.json",
+    "knowledge/evidence/E_OFFICIAL_GB55037_8_3_3_20261005.json",
+    "knowledge/evidence/E_OFFICIAL_TSG23_AMENDMENT1_20261005.json",
+    "knowledge/hazards/H_200F007CE0EF47DFB8BE2B8618.json",
+    "knowledge/hazards/H_GB55037_BUILDING_GAS_ALARM.json",
+    "knowledge/hazards/H_GBT34525_PREUSE_CHECK.json",
+    "knowledge/law-versions/LV_META_9215D8555C66CC91A5A5D7A4.json",
+    "knowledge/law-versions/LV_TSG23_2021_AM1_2025.json",
+    "knowledge/links/K_GB55037_BUILDING_GAS_ALARM_8_3_3.json",
+    "knowledge/links/K_GB55037_BUILDING_GAS_ALARM_SCOPE.json",
+    "knowledge/links/K_GBT34525_PREUSE_8_1_1_c_d_f.json",
+    "knowledge/links/K_GBT34525_PREUSE_9_1_a.json",
+    "knowledge/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json",
+    "knowledge/reviews/clauses/C_COM_GBT34525_9_2.json",
+    "knowledge/reviews/clauses/C_GB55037_2022_1_0_2.json",
+    "knowledge/reviews/clauses/C_GB55037_2022_8_3_3.json",
+    "knowledge/reviews/clauses/C_GBT34525_2017_8_1_1_c_d_f.json",
+    "knowledge/reviews/clauses/C_GBT34525_2017_9_1_a.json",
+    "knowledge/reviews/clauses/C_GBT34525_2017_9_1_b.json",
+    "knowledge/reviews/clauses/C_TSG23_2021_1_7.json",
+    "knowledge/reviews/clauses/C_TSG23_2021_AM1_1_8_1_3.json",
+    "knowledge/reviews/hazards/H_200F007CE0EF47DFB8BE2B8618.json",
+    "knowledge/reviews/hazards/H_GB55037_BUILDING_GAS_ALARM.json",
+    "knowledge/reviews/hazards/H_GBT34525_PREUSE_CHECK.json",
+    "knowledge/reviews/law-versions/LV_META_9215D8555C66CC91A5A5D7A4.json",
+    "knowledge/reviews/law-versions/LV_TSG23_2021_AM1_2025.json",
+    "knowledge/reviews/links/K_GB55037_BUILDING_GAS_ALARM_8_3_3.json",
+    "knowledge/reviews/links/K_GB55037_BUILDING_GAS_ALARM_SCOPE.json",
+    "knowledge/reviews/links/K_GBT34525_PREUSE_8_1_1_c_d_f.json",
+    "knowledge/reviews/links/K_GBT34525_PREUSE_9_1_a.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json",
+    "source/publication/fulltext/catalog.json",
+    "source/publication/fulltext/search-index.json"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "temporalCorrection": "TSG第1号修改单建立2025-01-01起整合版本；原2021版本在该日排他结束，不让修改原文提前生效。",
+  "readingEntryCorrection": "唯一现行link_only资料入口改指2025-01-01起整合版本，保留原法源family及旧版本历史；明确原规程2021-06-01首施行、公告不是合并全文，不公开新增标准全文。"
+}

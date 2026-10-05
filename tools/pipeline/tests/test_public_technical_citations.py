@@ -9,6 +9,9 @@ import unittest
 from public_technical_citation_fixture import F, pre_technical_source_bytes, pre_technical_gate, pre_technical_manifest
 from recovery_cohort_fixture import pre_recovery_source_bytes, pre_recovery_gate
 ROOT = Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT)
 KNOW = ROOT/'knowledge'
 sys.path.insert(0, str(ROOT/'tools/v4'))
 from canonical import content_hash

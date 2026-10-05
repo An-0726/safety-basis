@@ -22,6 +22,9 @@ from training_citation_fixture import (
     pre_training_source_hashes, F as TRAINING,
 )
 ROOT = Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT)
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from release_gate_core import evaluate_release_gate
 

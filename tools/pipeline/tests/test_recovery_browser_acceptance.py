@@ -8,6 +8,9 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT)
 sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
 import recovery_release_acceptance as QA
 import electrical_candidate_acceptance as ELECTRICAL

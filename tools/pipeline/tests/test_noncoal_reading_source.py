@@ -3,7 +3,10 @@ from commerce_cohort_fixture import pre_commerce_manifest
 import hashlib,json,sys,unittest
 from datetime import date
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[3];K=ROOT/'knowledge';P=ROOT/'source/publication'
+ROOT=Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT);K=ROOT/'knowledge';P=ROOT/'source/publication'
 sys.path.insert(0,str(ROOT/'tools/v4'))
 from major_criteria_reading import load_records,public_projection,review_bindings,NAMESPACE
 from major_criteria import public_projection as normative_projection

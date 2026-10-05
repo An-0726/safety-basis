@@ -1,15 +1,51 @@
 {
-  "decision": "verified",
   "entityId": "LV_META_9215D8555C66CC91A5A5D7A4",
   "entityType": "lawVersion",
-  "evidenceRefs": [
-    "E_2afb8667abcda552cd0249679f07309919d72707b4c007736183a793cfe51de1"
-  ],
-  "migratedFromV3Verification": {
-    "id": "VR_29a7df5cf05befc7edfa4797e7_3",
-    "reviewedAt": "2026-09-09T05:50:45+00:00",
-    "reviewer": "Codex主审/Luna-EX-META-STD-001"
-  },
   "reviewType": "version",
-  "reviewedContentHash": "730e1d30837ca4bbe22fcdaa02c109f171b64b88fcdf6ad600ff665450133ffb"
+  "decision": "verified",
+  "reviewedContentHash": "892d0c6339ca17f99d7a651d81d9de609276e487b5f4a74a43de23145e3d5449",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex verified official clauses author review 20261005",
+  "evidenceRefs": [
+    "E_OFFICIAL_CYLINDER_TSG_20261005",
+    "E_OFFICIAL_TSG23_AMENDMENT1_20261005"
+  ],
+  "reason": "原始2021文本版本有效期在第1号修改单施行前结束；保留稳定ID，不把2025修改原文提前到2024。",
+  "notes": "作者逐项核实；独立复核另存。本记录不是现场确认、违法或重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "LV_META_9215D8555C66CC91A5A5D7A4",
+    "entityType": "lawVersion",
+    "evidenceRefs": [
+      "E_2afb8667abcda552cd0249679f07309919d72707b4c007736183a793cfe51de1"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_29a7df5cf05befc7edfa4797e7_3",
+      "reviewedAt": "2026-09-09T05:50:45+00:00",
+      "reviewer": "Codex主审/Luna-EX-META-STD-001"
+    },
+    "reviewType": "version",
+    "reviewedContentHash": "730e1d30837ca4bbe22fcdaa02c109f171b64b88fcdf6ad600ff665450133ffb"
+  },
+  "previousDefinition": {
+    "documentNumber": "TSG 23—2021",
+    "effectiveDate": "2021-06-01",
+    "endDate": "",
+    "id": "LV_META_9215D8555C66CC91A5A5D7A4",
+    "lawId": "LF_META_AA1600F4E76A30BC7E73FF5B",
+    "level": "特种设备安全技术规范",
+    "officialName": "气瓶安全技术规程（含第1号修改单）",
+    "scope": "CN",
+    "sourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2023/art_b80c6bf8b9a24b1983c37c7d236eda21.html",
+    "validityStatus": "active",
+    "versionKey": "2021-01-04",
+    "amendments": [
+      {
+        "no": 1,
+        "effectiveDate": "2025-01-01",
+        "issuer": "国家市场监督管理总局",
+        "note": "第1号修改单自 2025-01-01 施行。"
+      }
+    ]
+  }
 }

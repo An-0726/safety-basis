@@ -8,7 +8,10 @@ from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VER
 from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CONSTRUCTION_EVIDENCE
 from city_gas_fixture import CLAUSES as GAS_CLAUSES, EVIDENCE as GAS_EVIDENCE
 from sector_directory_fixture import LAWS,VERSIONS,EVIDENCE
-ROOT=Path(__file__).resolve().parents[3];KNOW=ROOT/'knowledge';PUB=ROOT/'source/publication'
+ROOT=Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT);KNOW=ROOT/'knowledge';PUB=ROOT/'source/publication'
 sys.path.insert(0,str(ROOT/'tools/v4'))
 from major_criteria_directory import public_projection,load_records,review_bindings,NAMESPACE,REVIEW_SCOPE
 from release_gate_core import evaluate_release_gate

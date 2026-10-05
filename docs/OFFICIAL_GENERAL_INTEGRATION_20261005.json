@@ -1,0 +1,79 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
+  "baselineTree": "3867f248ac7cc7e7e660db404bb0dc2c6bd1d62a",
+  "reviewStage": "author_verified_independent_review_pending",
+  "decisions": [
+    {
+      "hazardId": "H_4E5F4BB13B82457DA5377CABDF",
+      "action": "narrow_existing_stable_id",
+      "boundary": "改用AQ7005正式最终稿4.6.1；不恢复GB15577旧错误6.1，不用12页送审稿。",
+      "positiveCase": "固定家具车间锯机无单机吸尘也未接集中吸尘。",
+      "negativeCase": "房屋装修现场便携锯，仅可参照，不能按本直接规则下结论。",
+      "linkIds": [
+        "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF"
+      ],
+      "admissionStatus": "author_verified"
+    },
+    {
+      "hazardId": "H_GB51309_SELF_POWERED_PLUG",
+      "action": "new_bounded_rule",
+      "boundary": "保留法定插接例外；不提升旧GB50034复合候选，也不由GB17945导线条款推出全禁插头。",
+      "positiveCase": "已核三项前提，灯具插头徒手可拔。",
+      "negativeCase": "同型灯具插头须专用工具才能拆卸，不因使用插头本身命中。",
+      "linkIds": [
+        "K_GB51309_SELF_POWERED_PLUG_4_5_5"
+      ],
+      "admissionStatus": "author_verified"
+    },
+    {
+      "hazardId": "H_GB12801_ACCIDENT_EXHAUST_INTERLOCK",
+      "action": "new_bounded_rule",
+      "boundary": "新建有界规则，不改变未设置事故通风的旧复合H；不等待GB50019旧原本也不称其已补齐。",
+      "positiveCase": "适用建筑物事故排风经设计和测试确认未与气体报警器联锁。",
+      "negativeCase": "普通办公室空调或未提供联锁测试报告，不能单独命中。",
+      "linkIds": [
+        "K_GB12801_ACCIDENT_EXHAUST_4_3_6"
+      ],
+      "admissionStatus": "author_verified"
+    }
+  ],
+  "authoredFiles": [
+    "knowledge/evidence/E_OFFICIAL_WOOD_20261005.json",
+    "knowledge/laws/LF_STD_AQ7005.json",
+    "knowledge/reviews/laws/LF_STD_AQ7005.json",
+    "knowledge/law-versions/LV_STD_AQ7005_2008.json",
+    "knowledge/reviews/law-versions/LV_STD_AQ7005_2008.json",
+    "knowledge/clauses/C_AQ7005_2008_4_6_1.json",
+    "knowledge/reviews/clauses/C_AQ7005_2008_4_6_1.json",
+    "knowledge/hazards/H_4E5F4BB13B82457DA5377CABDF.json",
+    "knowledge/reviews/hazards/H_4E5F4BB13B82457DA5377CABDF.json",
+    "knowledge/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json",
+    "knowledge/evidence/E_OFFICIAL_EMERGENCY_LIGHT_20261005.json",
+    "knowledge/evidence/E_OFFICIAL_EMERGENCY_GENERAL_20261005.json",
+    "knowledge/law-versions/LV_STD_GB51309_2018.json",
+    "knowledge/reviews/law-versions/LV_STD_GB51309_2018.json",
+    "knowledge/clauses/C_GB51309_2018_4_5_5.json",
+    "knowledge/reviews/clauses/C_GB51309_2018_4_5_5.json",
+    "knowledge/hazards/H_GB51309_SELF_POWERED_PLUG.json",
+    "knowledge/reviews/hazards/H_GB51309_SELF_POWERED_PLUG.json",
+    "knowledge/links/K_GB51309_SELF_POWERED_PLUG_4_5_5.json",
+    "knowledge/reviews/links/K_GB51309_SELF_POWERED_PLUG_4_5_5.json",
+    "knowledge/evidence/E_OFFICIAL_SAFETY_SIGNS_20261005.json",
+    "knowledge/clauses/C_GB2894_7_4_2.json",
+    "knowledge/reviews/clauses/C_GB2894_7_4_2.json",
+    "knowledge/links/K_GB2894_SIGN_TEMPORARY_7_4_2.json",
+    "knowledge/reviews/links/K_GB2894_SIGN_TEMPORARY_7_4_2.json",
+    "knowledge/evidence/E_OFFICIAL_P03_20261005.json",
+    "knowledge/reviews/clauses/C_12801_4_3_6.json",
+    "knowledge/hazards/H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.json",
+    "knowledge/reviews/hazards/H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.json",
+    "knowledge/links/K_GB12801_ACCIDENT_EXHAUST_4_3_6.json",
+    "knowledge/reviews/links/K_GB12801_ACCIDENT_EXHAUST_4_3_6.json"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false
+}
