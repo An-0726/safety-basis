@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import shutil
 import tempfile
+from official_clause_cohort_fixture import pre_official_repo_root
 
 F = json.loads((Path(__file__).parent / 'fixtures/recovery_cohort_20261004.json').read_text())
 _SNAPSHOTS = {}
@@ -22,7 +23,7 @@ def pre_recovery_repo_root(root, *, keep_paths=()):
     in the copy and are visible to the original tests. Production source and
     Gate are never patched. Current-cohort tests separately require new bytes.
     """
-    root = Path(root).resolve()
+    root = pre_official_repo_root(root)
     keep_paths = frozenset(keep_paths)
     key = (str(root), tuple(sorted(keep_paths)))
     if key in _SNAPSHOTS:

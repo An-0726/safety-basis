@@ -12,6 +12,9 @@ from construction_fixture import CLAUSES as CONSTRUCTION_CLAUSES, EVIDENCE as CO
 from city_gas_fixture import CLAUSES, EVIDENCE, VERSION
 
 ROOT = Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from major_criteria import public_projection, load_config, scope_review_bindings

@@ -6,7 +6,10 @@ from pathlib import Path
 from power_fixture import CLAUSES as POWER_CLAUSES, EVIDENCE as POWER_EVIDENCE, VERSION as POWER_VERSION
 from coal_fixture import CLAUSES as COAL_CLAUSES, EVIDENCE as COAL_EVIDENCE, VERSION as COAL_VERSION
 from construction_fixture import CLAUSES,EVIDENCE,VERSION
-ROOT=Path(__file__).resolve().parents[3];KNOW=ROOT/'knowledge'
+ROOT=Path(__file__).resolve().parents[3]
+from official_clause_cohort_fixture import pre_official_repo_root
+# Preserve the dated cohort against its exact, fail-closed batch predecessor.
+ROOT = pre_official_repo_root(ROOT);KNOW=ROOT/'knowledge'
 sys.path.insert(0,str(ROOT/'tools/v4'))
 from major_criteria import load_config,public_projection,scope_review_bindings
 

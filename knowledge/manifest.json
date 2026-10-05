@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-04",
-  "batch": "source-reconstruction-20261004",
+  "asOf": "2026-10-05",
+  "batch": "official-clauses-20261005",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -456,32 +456,46 @@
       "canonicalHazardId": "H_365F2FD05EA345A8A4E71BC9B9",
       "historyReceipt": "docs/EXTINGUISHER_DUPLICATE_MERGE_20261004.json",
       "scope": "Exact same obligation, object, exclusions and monthly/halfmonthly/record-keeping basis; source IDs retained, no rule or clause removed."
+    },
+    {
+      "id": "official-clauses-20261005",
+      "baselineCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
+      "entityCountDelta": {
+        "laws": 3,
+        "lawVersions": 4,
+        "clauses": 18,
+        "hazards": 6,
+        "links": 13,
+        "evidence": 11
+      },
+      "scope": "Public integration is limited to eight independently reviewed bounded rules and necessary exact source/temporal checks. Existing main candidate bytes remain unchanged; newly researched pending hose and Jiangsu material is withheld outside this public tree. Stable IDs/history retained; no site facts, rectification or raw PDF publication.",
+      "reviewStatus": "independent_review_and_exact_commit_release_checks_required"
     }
   ],
   "counts": {
-    "laws": 134,
-    "lawVersions": 137,
-    "clauses": 3164,
-    "hazards": 2142,
-    "links": 2034,
-    "evidence": 1387,
+    "laws": 137,
+    "lawVersions": 141,
+    "clauses": 3182,
+    "hazards": 2148,
+    "links": 2047,
+    "evidence": 1398,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
-  "laws": 134,
-  "lawVersions": 137,
-  "clauses": 3164,
-  "hazards": 2142,
-  "links": 2034,
-  "evidence": 1387,
+  "laws": 137,
+  "lawVersions": 141,
+  "clauses": 3182,
+  "hazards": 2148,
+  "links": 2047,
+  "evidence": 1398,
   "successions": 26,
-  "activeHazards": 1702,
+  "activeHazards": 1708,
   "proposedHazards": 318,
   "supersededHazards": 122,
   "lifecycle": {
-    "active": 1702,
+    "active": 1708,
     "proposed": 318,
     "superseded": 122
   },

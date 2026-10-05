@@ -1,0 +1,488 @@
+{
+  "asOf": "2026-10-05",
+  "reviewedAt": "2026-10-05T04:03:49.334866+00:00",
+  "reviewer": "Independent source and integration reviewer 20261005",
+  "decision": "APPROVE_REDUCED_VERIFIED_CURRENT_INTEGRATION",
+  "reviewScope": "仅本次缩小提交中的8项已独立核准有界规则、必要支持条文及精确工程验收合同。对缩小后的源码重新逐项绑定，不沿用先前较大候选树的通过结论。",
+  "baseline": {
+    "localCommit": "c18d5eb5114cea165aaefc7dfc87cac83fe36cd3",
+    "remoteMainCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
+    "tree": "3867f248ac7cc7e7e660db404bb0dc2c6bd1d62a"
+  },
+  "sourceChecks": [
+    {
+      "source": "AQ7005",
+      "currentnessOrOfficialUrl": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=8B1827F14D32BB19E05397BE0A0AB44A",
+      "personallyInspected": "正式11页本封面、前言及物理4/6页；固定生产场所及4.6.1择一收尘要求；排除送审稿。"
+    },
+    {
+      "source": "GB51309",
+      "currentnessOrOfficialUrl": "https://ebook.chinabuilding.com.cn/zbooklib/book/detail/show?SiteID=1&bookID=110780",
+      "personallyInspected": "大学托管住建部水印121页本物理7/34页；4.5.5完整四条件。"
+    },
+    {
+      "source": "GB55036",
+      "currentnessOrOfficialUrl": "https://zjw.sh.gov.cn/wjhb/20230428/baf0b1f88d354d60a56fc27576e54610.html",
+      "personallyInspected": "正式公告废止清单不含4.5.5；原页12.0.17对象限火灾自动报警控制及显示设备。"
+    },
+    {
+      "source": "GB2894",
+      "currentnessOrOfficialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=26CD7C428F2BF6AE971F84D22D7B72BB",
+      "personallyInspected": "物理12/13页7.3、7.4.1、7.4.2及图8；仅新支持既有标志维护规则。"
+    },
+    {
+      "source": "GB12801",
+      "currentnessOrOfficialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=460626D8FC0EFC7D30C0160D003D185F",
+      "personallyInspected": "物理7/8页第1章范围及4.3.6；2026-10-01生效，事故排风与普通通风不混用。"
+    },
+    {
+      "source": "GBT34525",
+      "currentnessOrOfficialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=D7C9C74FA430939F709900DB6F7397B9",
+      "personallyInspected": "正式6页本物理3至6页；范围阈值与专用瓶排除、8.1.1c/d/f、9.1a/b、完整9.2；原文确为气体的钢印。"
+    },
+    {
+      "source": "TSG23_AM1",
+      "currentnessOrOfficialUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2024/art_074636c9033f4bffad802134178628a0.html",
+      "personallyInspected": "原TSG23物理6/8页与官方第42号公告16页PDF物理6至11页。完整16项修改不改1.2/1.3/1.7；1.8.1.3按修订后全文。"
+    },
+    {
+      "source": "TSG23_AM2",
+      "currentnessOrOfficialUrl": "https://www.samr.gov.cn/hd/zjdc/art/2026/art_852b99a8577f4bb0a81772ddf77f5e3c.html",
+      "personallyInspected": "2026-09-21公告为征求意见稿，截止2026-10-20，不作现行。"
+    },
+    {
+      "source": "GB55037",
+      "currentnessOrOfficialUrl": "https://ebook.chinabuilding.com.cn/zbooklib/book/detail/show?SiteID=1&bookID=154728&isEnterprise=Y",
+      "personallyInspected": "宁夏官方附件物理5/54页1.0.2/8.3.3；民爆建筑排除、住宅燃气部位例外、建筑内可燃气体或蒸气边界完整。"
+    },
+    {
+      "source": "GB3836_15",
+      "currentnessOrOfficialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7F3DF7EE1C7F76B6D80D0DB23D43E909",
+      "personallyInspected": "物理11/31/32/45/47页：范围、表9全部12行5列及合并格、a/b脚注、6.4.4、第8章及表B.1 A11 Ex d物理检查单元。"
+    },
+    {
+      "source": "GB3836_16",
+      "currentnessOrOfficialUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4CB83A7A4FFF31BCF1CB0D9CF34B72F4",
+      "personallyInspected": "物理9/17/19/21页：范围、完整5.7.1/6.1及表A.1 A11 Ex d：物理D/C、目视V，未将各列混串。"
+    }
+  ],
+  "findingsResolved": [
+    {
+      "id": "I02",
+      "issue": "TSG修改公告原标第35号，真实为2024年第42号。",
+      "resolution": "已改第42号。"
+    },
+    {
+      "id": "I03",
+      "issue": "修改后1.8.1.3原依2021生效版本而在2024-12-31错误通过Gate。",
+      "resolution": "新建2025-01-01生效整合版，原版排他endDate保全；修订条文回绑新版本，日期反例已独立复验。"
+    }
+  ],
+  "withheld": [
+    "水带及江苏新增研究材料不在本次提交；既有main记录保持原字节，未重新批准。",
+    "旧来源缺口不由本次新有界条文冒称补齐。"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "softwareReleaseSignoff": false,
+  "fullSuiteOrBrowserTestsClaimedByThisReport": false,
+  "finalContentBindings": {
+    "knowledge/clauses/C_AQ7005_2008_4_6_1.json": "b2941f6013221ef255c34f889ebee1b7d08e1bbc74d33eb71fc51548addce47b",
+    "knowledge/clauses/C_GB2894_7_4_2.json": "7623c6058966d362ffc8fd7b5850393f073a292728a483da8300a6cf9172313d",
+    "knowledge/clauses/C_GB3836_15_1.json": "b6e4c99867463fa955bebd220e799406ce08bfae5abfa061acc5d80736119671",
+    "knowledge/clauses/C_GB3836_15_6_4_4.json": "40e05790d2063d65266695e15110ce285361f522100f24331d17fabba5ced7db",
+    "knowledge/clauses/C_GB3836_15_8.json": "e620bb85a97e73a771858a97a4a96ec1543534a47dcf5cfcf6d9e57714077347",
+    "knowledge/clauses/C_GB3836_15_B_1_A11.json": "6d99acb9fda8cc61b4cc5d454b681be418c2b5a1374d4c703a58c50c8bb178e9",
+    "knowledge/clauses/C_GB3836_16_1.json": "afee9c980503ff6ad14b535ee1d35ff4c811ac58b08ec2782eef51101fff6b9a",
+    "knowledge/clauses/C_GB3836_16_5_7_1.json": "57fb64cacf9e9151e3697e0e8bdf4662dd1248fde32c2f55e87e1e1656e3cabd",
+    "knowledge/clauses/C_GB3836_16_6_1.json": "ca22e3b504d71101fba3e52c6878db6d76e433d429497d039470b2e1be316a5d",
+    "knowledge/clauses/C_GB3836_16_A_1_A11.json": "8f9baefa63f8d21d6eb8dba3902516088f18731da0f52c1522b31cc05f46f40c",
+    "knowledge/clauses/C_GB51309_2018_4_5_5.json": "cd034d453333948726449f397c56d6fc680742ffa2c16ec69f22141c9f5887c0",
+    "knowledge/clauses/C_GB55037_2022_1_0_2.json": "a1e0945c50857ac2335da8fda96c7953a43dc5326ba381b1bf6ad719a92e4b87",
+    "knowledge/clauses/C_GB55037_2022_8_3_3.json": "e209f46efac8f818dcf307fd8192609ef19cbd68902300a7b1eda7b5cd8e57ef",
+    "knowledge/clauses/C_GBT34525_2017_8_1_1_c_d_f.json": "39dd14346418ef56c4b58a9c92a2aef1911fffb9de2d50962aa835d17e36997a",
+    "knowledge/clauses/C_GBT34525_2017_9_1_a.json": "d5cd88489b593c29500a029a215567c4735f3caaf1c11e6143cf9fa56fcb6c3f",
+    "knowledge/clauses/C_GBT34525_2017_9_1_b.json": "f3648d0ac489b5d0526418fc272dc4c8c6959fd32ea20c30eb5d6285afe2f1ac",
+    "knowledge/clauses/C_TSG23_2021_1_7.json": "7b6bef0095260f702a2102d1807ffd9091aa0bd50e850bead36015417ed6e3e4",
+    "knowledge/clauses/C_TSG23_2021_AM1_1_8_1_3.json": "e08b4a1e5b95490635f64532072f5ba3a7af663ad37063011fd34724553429cb",
+    "knowledge/evidence/E_OFFICIAL_CYLINDER_TSG_20261005.json": "8b50d767146b015738ec8e4ad5bc4f7f051b3c09e5d87af1928490c7bf35a229",
+    "knowledge/evidence/E_OFFICIAL_CYLINDER_USAGE_20261005.json": "33e24ba3c19d9c669b6d62ba54015eea02986389466bd43938e197bb35dc385c",
+    "knowledge/evidence/E_OFFICIAL_EMERGENCY_GENERAL_20261005.json": "77267bb352ed47dba7130ef5084fa17c329b66143f0de12071338131764104d0",
+    "knowledge/evidence/E_OFFICIAL_EMERGENCY_LIGHT_20261005.json": "3578a58a3413f38ba60c986fd674b335fe335365414842413a87ea77fe538b85",
+    "knowledge/evidence/E_OFFICIAL_GB55037_8_3_3_20261005.json": "29b890ba8e5850cdda3b0f25ee4188f5b448d7fcd1d5e6c5051d5844d7eb56eb",
+    "knowledge/evidence/E_OFFICIAL_P03_20261005.json": "f0eac0e2facb4132d96fcad8256fff2f695103f4a9d2cd3262cdb0773b5a845f",
+    "knowledge/evidence/E_OFFICIAL_P08_P09_INSTALL_20261005.json": "1b0e95813fd103b3a4ae14305e2c832e21e64a4ae7dfa633a4bdfb192427469f",
+    "knowledge/evidence/E_OFFICIAL_P09_MAINTENANCE_20261005.json": "66bfccfdfc38baa6d76a3adab455d8a377f2c7e834b7c07a232d859cc888e77c",
+    "knowledge/evidence/E_OFFICIAL_SAFETY_SIGNS_20261005.json": "3d8be602c3d262c6db6e5d750e7134830792fded349ef9c6c9a2e6c637bfd854",
+    "knowledge/evidence/E_OFFICIAL_TSG23_AMENDMENT1_20261005.json": "ea8799ba0c24124fe95a7dd217fd90b479251ff191d8a6e15ffe45fdb22e9cba",
+    "knowledge/evidence/E_OFFICIAL_WOOD_20261005.json": "e718e65cd66338dd89e6f9875a8c37d5b7f10484efa45707d9a11340c615cdd5",
+    "knowledge/hazards/H_200F007CE0EF47DFB8BE2B8618.json": "92bd263a67e27815a9847d311d26fdb44657e3b284f0c8efa5b755c56bb93573",
+    "knowledge/hazards/H_4E5F4BB13B82457DA5377CABDF.json": "2618b6bb4828b330452cc4ed0a82ca937f79b9b6fef2a0228aefafa5800f47e9",
+    "knowledge/hazards/H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.json": "d9cff451b6e4273bb581b2005a067608ca6376f6a53cf4b849e7de4269e36643",
+    "knowledge/hazards/H_GB3836_EX_D_MISSING_FASTENER.json": "46946717df1f8d20b9a4c0450921a0f3b6345858e7580d9c2bfd3a092df288f9",
+    "knowledge/hazards/H_GB3836_UNUSED_ENTRY.json": "b854be825c8f7b9abb96319ac7f39190708e0bb743981ac9cfe96fcd8f7620ed",
+    "knowledge/hazards/H_GB51309_SELF_POWERED_PLUG.json": "f8c107ee90f931fa6ed5bc32a87dc51465361da4cf7772e609302f3048456592",
+    "knowledge/hazards/H_GB55037_BUILDING_GAS_ALARM.json": "6c8e525b0bed0035e4070da3187cbed83ccc08ead6d4772d44eb90c45cd18c5f",
+    "knowledge/hazards/H_GBT34525_PREUSE_CHECK.json": "efcafc69ed37ec217ce22e3887c03d58c1e2a003da1edbb40db4e1c5aed20ebd",
+    "knowledge/law-versions/LV_META_9215D8555C66CC91A5A5D7A4.json": "0908f120a4b75bc88e5b150a6e4d7caed35059032de1b343297e2846880e77cd",
+    "knowledge/law-versions/LV_STD_AQ7005_2008.json": "c18626bb0ff9cd341fafddfc7250f0dd5b67652c976204353f6cf1d5e96115c5",
+    "knowledge/law-versions/LV_STD_GB3836_15_2024.json": "80edcb2012abf768d94b3f6f6e8b7344dec4922dafef7a97997f791826b2ed0e",
+    "knowledge/law-versions/LV_STD_GB3836_16_2024.json": "4c176aa62adccebfbbabd59690132913859531de58463bb0be6fcaeb93cccd22",
+    "knowledge/law-versions/LV_STD_GB51309_2018.json": "3ca790d96ac91953124c9075c0af82e4e6929bb26e1f07e436ef647068e3e9d9",
+    "knowledge/law-versions/LV_TSG23_2021_AM1_2025.json": "37abb87c507b3e6bae3b7b3601c10cb36f085f43a7ea796eddf365512ffc5e06",
+    "knowledge/laws/LF_STD_AQ7005.json": "ad9b4e80e33efafece70ac1eb335c840b2350681003ba2d0806913fd6bbd34d7",
+    "knowledge/laws/LF_STD_GB3836_15.json": "e33b34140be4eebab534288acee8d6ee308c4df48b525504846e249743e664e7",
+    "knowledge/laws/LF_STD_GB3836_16.json": "b3e34b3d775efd7df0009124b8ae5c36041f830c7a359f8e06147e93139b97a0",
+    "knowledge/links/K_GB12801_ACCIDENT_EXHAUST_4_3_6.json": "aa27e591d1aa54d7af761f2e2d40676702dcd7193e9a023999160a5cf2dedb95",
+    "knowledge/links/K_GB2894_SIGN_TEMPORARY_7_4_2.json": "2fea0c2cccd9f4132e1ae2886dcf94f166f28d7ac542451efa585be16c15bcaf",
+    "knowledge/links/K_GB3836_EX_D_INITIAL_8.json": "6f85fc811be51739f2a3187e36c7e582681713792e6c7a0fec4c3c57ffe49ff1",
+    "knowledge/links/K_GB3836_EX_D_INITIAL_B_1_A11.json": "74e3d79cf1bf44d841590f41d0448268d6a16d1c954dc158472413916bf3c55a",
+    "knowledge/links/K_GB3836_EX_D_MAINT_5_7_1.json": "7926a64d46a4606ac7cfc3763a00615332c7c6910134bb0019019585ef8d0fc1",
+    "knowledge/links/K_GB3836_EX_D_MAINT_6_1.json": "2f39ac389e9964882c5631aa5a009bc7f293480439fa7a2aba74081a2b362ed7",
+    "knowledge/links/K_GB3836_EX_D_MAINT_A_1_A11.json": "f704f003c9da497413a2874adffa09ab00fb25c3354b5a7377240860bae869bd",
+    "knowledge/links/K_GB3836_UNUSED_ENTRY_6_4_4.json": "27632b55ff4d27df1c609bdcc574a2ae5d58fd66389cd3e4fbfa4a53bacf2ca0",
+    "knowledge/links/K_GB51309_SELF_POWERED_PLUG_4_5_5.json": "963d42ce08d0915808fc8d1297a5b779ef5dadaec43fefd9daf2c4dcc1b1d12b",
+    "knowledge/links/K_GB55037_BUILDING_GAS_ALARM_8_3_3.json": "61d3dfe9d7373c04586892621d1c02f17a62789ef7a01a8b4e6f92d8b1a491f7",
+    "knowledge/links/K_GB55037_BUILDING_GAS_ALARM_SCOPE.json": "041e4d921e4a6a0abee335df7346357b35de4c42d7490d3b090e6431027e680d",
+    "knowledge/links/K_GBT34525_PREUSE_8_1_1_c_d_f.json": "0e4234003fa0f7ccfed26e018f36cb032d8e8e17c5bfe120d1861eed2f50c45d",
+    "knowledge/links/K_GBT34525_PREUSE_9_1_a.json": "0362e59ff041225eb88e84538d290a40fdc598ef91ed80c485caed2ba66092c8",
+    "knowledge/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json": "3ca572676d2549e90a67a5dc6833eba206a09460a50bc9f0e012443c45e605c5",
+    "knowledge/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json": "22ee39cbbe9288a41f653700a358df0820bb79e5c795dc13e405bbecf2a48eac",
+    "knowledge/manifest.json": "19e7b196ce6e447f3128b9e53c8f89372ad994f0df83013604b4af06b78fae4a",
+    "knowledge/reviews/clauses/C_12801_4_3_6.json": "58e9baf020670b0deb5670a6193fc6438d6e031ea115414e4c4776e830284728",
+    "knowledge/reviews/clauses/C_AQ7005_2008_4_6_1.json": "7dfb0c90dcd64d3be0bf655c47fb9db65f4dc6cea3ec9d73b8cac51abd242d0b",
+    "knowledge/reviews/clauses/C_COM_GBT34525_9_2.json": "4695ebf349930de1cb6ced17c3fd5f820237e0964d13d007b0aacad28f57eccd",
+    "knowledge/reviews/clauses/C_GB2894_7_4_2.json": "c64e3d55e3b659bc92fca710f7efddfbf90b5a4c6465cc2192387c0fb8a60af9",
+    "knowledge/reviews/clauses/C_GB3836_15_1.json": "da851276463e1148bba759c497e244e1994efc74a82ef9f7a17c3ff1d5eba213",
+    "knowledge/reviews/clauses/C_GB3836_15_6_4_4.json": "d7b8aa444c4b94c49ec45f3090c9e9b4652b32ada54ecbc74ae3b6efd55e60d5",
+    "knowledge/reviews/clauses/C_GB3836_15_8.json": "d60a8508749094c96811dd78371d813e395c58d7b01ec41bb5404e288e03472a",
+    "knowledge/reviews/clauses/C_GB3836_15_B_1_A11.json": "a22c7365470b40ef30d2ffeca34a472f656ee503a863c18b3d90850b7aeee16d",
+    "knowledge/reviews/clauses/C_GB3836_16_1.json": "004f8e457edd420a7d96af78bcb0dbe5c2da34b5b97a4b1cbb1aa737d5d23fa3",
+    "knowledge/reviews/clauses/C_GB3836_16_5_7_1.json": "3d07b8d12c0b39f06e3ce39254fd0d43ef453a67c167121e4fa527f012ba197d",
+    "knowledge/reviews/clauses/C_GB3836_16_6_1.json": "636e3cad63cc0b379dc985ed86ef0e907d4b882c06fa15f566c45539acf16f1d",
+    "knowledge/reviews/clauses/C_GB3836_16_A_1_A11.json": "8d88d5966498225e589e53f2ed9256bc29a8c58ebfc21cad96b9693c5e70857e",
+    "knowledge/reviews/clauses/C_GB51309_2018_4_5_5.json": "81a99d0ac752d69a6f139eb379b907e58a0bb82ebc0ae1468906b9730e32f144",
+    "knowledge/reviews/clauses/C_GB55037_2022_1_0_2.json": "4b7e44e91b61895997321a371a1e7271c0535c277009664968677fd448978469",
+    "knowledge/reviews/clauses/C_GB55037_2022_8_3_3.json": "e2150204eaa36dcefc97704315c961e432a6de34ae218daf3476aa5ca62b68b2",
+    "knowledge/reviews/clauses/C_GBT34525_2017_8_1_1_c_d_f.json": "bd597848b0fe43ebc8ba7462fb8f5591d0456dd169dac7ecb8512e2013f85aab",
+    "knowledge/reviews/clauses/C_GBT34525_2017_9_1_a.json": "23ac22493e172a73c115b43d9392bd1824bdeb12f64e8e5d3f74b97e0d30d03e",
+    "knowledge/reviews/clauses/C_GBT34525_2017_9_1_b.json": "61038bda3c9facb8095b60199f42083ca11846b6168c7aa0c71e3e6b803429a7",
+    "knowledge/reviews/clauses/C_TSG23_2021_1_7.json": "3e5e2d8f1017399d720a31c0cdbe4c0851d0adc8ed7ffecded43c41f0dbd0346",
+    "knowledge/reviews/clauses/C_TSG23_2021_AM1_1_8_1_3.json": "d3613d8232f317200231fbf535963f2ccef8bb0708631eb9e123773e32932da6",
+    "knowledge/reviews/hazards/H_200F007CE0EF47DFB8BE2B8618.json": "ee80ad4fc7717f1303c8227d2bcf5c3e6a77b09331bb261a43275cdab09b2a32",
+    "knowledge/reviews/hazards/H_4E5F4BB13B82457DA5377CABDF.json": "0f11f8e5220ab56c690b3d70945c6df4938aeccc6a8cff046e34024c2826220d",
+    "knowledge/reviews/hazards/H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.json": "4c646ac147e992854210f141f06087f0997db584d60c39192ed6c115679882d1",
+    "knowledge/reviews/hazards/H_GB3836_EX_D_MISSING_FASTENER.json": "bde41a39a868e0035c3d2195c73e3498093d898140101f167c145c27209559b3",
+    "knowledge/reviews/hazards/H_GB3836_UNUSED_ENTRY.json": "ea40c0dfe2ce78c0b7ef6312ad31b272135d243bcf5767a5cbb6164c640ca1ca",
+    "knowledge/reviews/hazards/H_GB51309_SELF_POWERED_PLUG.json": "5d65c621f590d977321741fe801ffe0b22c0f172c93bd0ebefd9e70b272f41ae",
+    "knowledge/reviews/hazards/H_GB55037_BUILDING_GAS_ALARM.json": "73280e07e23496e7a9fc0eeefe3fa8fb563dbb95685838cbc50ce1ada365c891",
+    "knowledge/reviews/hazards/H_GBT34525_PREUSE_CHECK.json": "c9d9122c7c3bb3621cf64166452ebfbfd20657f1e5dc418089dd43d5778c6a25",
+    "knowledge/reviews/law-versions/LV_META_9215D8555C66CC91A5A5D7A4.json": "366ea2d7a401c289b13db60f405b65194c0e70cb5e8732921ec14dd63d9bc624",
+    "knowledge/reviews/law-versions/LV_STD_AQ7005_2008.json": "ee38bc33610f387c2ffdcced26ae8b2a031e8b16fbf4f0f026220824a218494f",
+    "knowledge/reviews/law-versions/LV_STD_GB3836_15_2024.json": "f5f4309575e48bc7ccdb2753fb307de10260ccc5e3578e866627cf698c3b2284",
+    "knowledge/reviews/law-versions/LV_STD_GB3836_16_2024.json": "ef89210aecb118f5893b91dbf3f14bdd1b56836397c23b2a493c15b82353484f",
+    "knowledge/reviews/law-versions/LV_STD_GB51309_2018.json": "3b517943920fa23a273096ca43ea77f140d65ba978eb964806a8da8fe360de71",
+    "knowledge/reviews/law-versions/LV_TSG23_2021_AM1_2025.json": "9813efc68b2c896da37e31b9724754935c39ddb3b6c2151189b7d9f14da5834f",
+    "knowledge/reviews/laws/LF_STD_AQ7005.json": "49ac87442b3b168f4866dfbe20567c5a40d1b46da926103996efcb70a62b37a0",
+    "knowledge/reviews/laws/LF_STD_GB3836_15.json": "64fe82c164f9606e083b2437e1c993faa76160be1b52f0b699bd8ffd9fc3d366",
+    "knowledge/reviews/laws/LF_STD_GB3836_16.json": "3cc0401545c2c4b2a1a88f2276c9c5ba7dc7bff22d5e0baf43d92117a1a82dba",
+    "knowledge/reviews/links/K_GB12801_ACCIDENT_EXHAUST_4_3_6.json": "c3618822cbf15925d6048a99f63f1bd65374e9a4387ba85bc2207e76c7d5cd25",
+    "knowledge/reviews/links/K_GB2894_SIGN_TEMPORARY_7_4_2.json": "80bf2585c97f96b54b69055d4117a2a9af0c2ede55c2e78036055756d4a6b577",
+    "knowledge/reviews/links/K_GB3836_EX_D_INITIAL_8.json": "bf5f097cbab518c15ee2b1b7bb091a5f61d631e96f89c32eb6d0a04fd3ab350a",
+    "knowledge/reviews/links/K_GB3836_EX_D_INITIAL_B_1_A11.json": "253df70e03c732ba6e36ec025bbe9f8f1efc47aab824f47f07d872b7c820329f",
+    "knowledge/reviews/links/K_GB3836_EX_D_MAINT_5_7_1.json": "b8d843ab553fa56d1aa28e5c306ebc096dc3f6da9bd31be87cb38900e0325cb2",
+    "knowledge/reviews/links/K_GB3836_EX_D_MAINT_6_1.json": "3a11bcb622fb1be70531de08ec5905fb541f9b2d733d22f9261731c69ac44e03",
+    "knowledge/reviews/links/K_GB3836_EX_D_MAINT_A_1_A11.json": "5b136b887de11eee1ccdb77ae2e335fc735bbeeb383e430cefe476700ef5c066",
+    "knowledge/reviews/links/K_GB3836_UNUSED_ENTRY_6_4_4.json": "13b30b3ceb43eab7ad188fe02d86a4f0691baaa491a35bdf77f1f4fdfca685cb",
+    "knowledge/reviews/links/K_GB51309_SELF_POWERED_PLUG_4_5_5.json": "a33a2a7091ef48b8bb375f625db3b21e1a8c8a6ea6381ebc7f355945c5c15340",
+    "knowledge/reviews/links/K_GB55037_BUILDING_GAS_ALARM_8_3_3.json": "a8d45b5f9f9c0651c3af0b58363788a2220db7098d8b96c12badf123c69fa5e1",
+    "knowledge/reviews/links/K_GB55037_BUILDING_GAS_ALARM_SCOPE.json": "2523f4c04b3e12ad20da9d09c19c5cd4d9761f75f064112478fc739dd9ca0944",
+    "knowledge/reviews/links/K_GBT34525_PREUSE_8_1_1_c_d_f.json": "16646ee6ca43716f615de805c8bd1894c250ed2060d4db7ad5df0c51eeee4f42",
+    "knowledge/reviews/links/K_GBT34525_PREUSE_9_1_a.json": "0ca58f02246f0394be8954021183ebd43162b21692da8079f81dd9f3e830f27a",
+    "knowledge/reviews/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json": "3adcafd468f0d1f6dbff199f8fe587884100342660ac5bd2d34bb0c87868ac41",
+    "knowledge/reviews/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json": "9983fc7bdb5c18b7cb9155ea9bbb1aed20b4969d9f078c8944a4b7f5319320a3"
+  },
+  "knowledgeSnapshotSha256": "f0809d4c3d453709689d3c58cdf98442b61bd5765aabfffa782bedbec6a41f94",
+  "preservedPriorReviewFiles": [
+    "knowledge/reviews/clauses/C_12801_4_3_6.json",
+    "knowledge/reviews/clauses/C_COM_GBT34525_9_2.json",
+    "knowledge/reviews/hazards/H_200F007CE0EF47DFB8BE2B8618.json",
+    "knowledge/reviews/hazards/H_4E5F4BB13B82457DA5377CABDF.json",
+    "knowledge/reviews/law-versions/LV_META_9215D8555C66CC91A5A5D7A4.json",
+    "knowledge/reviews/law-versions/LV_STD_GB51309_2018.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_AB3FE309DCCF562480F0E982.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF.json"
+  ],
+  "gateComparison": {
+    "eligible_hazards": {
+      "beforeCount": 1677,
+      "afterCount": 1685,
+      "added": [
+        "H_200F007CE0EF47DFB8BE2B8618",
+        "H_4E5F4BB13B82457DA5377CABDF",
+        "H_GB12801_ACCIDENT_EXHAUST_INTERLOCK",
+        "H_GB3836_EX_D_MISSING_FASTENER",
+        "H_GB3836_UNUSED_ENTRY",
+        "H_GB51309_SELF_POWERED_PLUG",
+        "H_GB55037_BUILDING_GAS_ALARM",
+        "H_GBT34525_PREUSE_CHECK"
+      ],
+      "removed": []
+    },
+    "eligible_links": {
+      "beforeCount": 1829,
+      "afterCount": 1844,
+      "added": [
+        "K_GB12801_ACCIDENT_EXHAUST_4_3_6",
+        "K_GB2894_SIGN_TEMPORARY_7_4_2",
+        "K_GB3836_EX_D_INITIAL_8",
+        "K_GB3836_EX_D_INITIAL_B_1_A11",
+        "K_GB3836_EX_D_MAINT_5_7_1",
+        "K_GB3836_EX_D_MAINT_6_1",
+        "K_GB3836_EX_D_MAINT_A_1_A11",
+        "K_GB3836_UNUSED_ENTRY_6_4_4",
+        "K_GB51309_SELF_POWERED_PLUG_4_5_5",
+        "K_GB55037_BUILDING_GAS_ALARM_8_3_3",
+        "K_GB55037_BUILDING_GAS_ALARM_SCOPE",
+        "K_GBT34525_PREUSE_8_1_1_c_d_f",
+        "K_GBT34525_PREUSE_9_1_a",
+        "K_XLSX_NEW14_AB3FE309DCCF562480F0E982",
+        "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF"
+      ],
+      "removed": []
+    }
+  },
+  "temporalChecks": {
+    "2024-12-31": {
+      "ok": false,
+      "reasons": [
+        "BLOCK_VERSION_NOT_EFFECTIVE:active_before_effectiveDate"
+      ],
+      "lawVersionId": "LV_TSG23_2021_AM1_2025"
+    },
+    "2025-01-01": {
+      "ok": true,
+      "reasons": [],
+      "lawVersionId": "LV_TSG23_2021_AM1_2025"
+    }
+  },
+  "siteCohortUnchanged": true,
+  "freezeBinding": {
+    "allKnowledgeJsonCount": 16855,
+    "allKnowledgeFreezeSha256": "767c02b1feafcca734a4e7882732374c83f245cdac4861f28578fdad5886e0bc",
+    "formalKnowledgeSnapshotHash": "fa7d03c9a353785ed736122c2b3fbb6fb1aa15bf4be43ffb515fec15c34f8233",
+    "exactAllFileMatch": true
+  },
+  "perHazardDecisions": [
+    {
+      "hazardId": "H_4E5F4BB13B82457DA5377CABDF",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_XLSX_WEB_H_4E5F4BB13B82457DA5377CABDF"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_GB51309_SELF_POWERED_PLUG",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_GB51309_SELF_POWERED_PLUG_4_5_5"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_GB12801_ACCIDENT_EXHAUST_INTERLOCK",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_GB12801_ACCIDENT_EXHAUST_4_3_6"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_200F007CE0EF47DFB8BE2B8618",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_XLSX_NEW14_AB3FE309DCCF562480F0E982"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_GBT34525_PREUSE_CHECK",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_GBT34525_PREUSE_9_1_a",
+        "K_GBT34525_PREUSE_8_1_1_c_d_f"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_GB55037_BUILDING_GAS_ALARM",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_GB55037_BUILDING_GAS_ALARM_8_3_3",
+        "K_GB55037_BUILDING_GAS_ALARM_SCOPE"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_GB3836_UNUSED_ENTRY",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_GB3836_UNUSED_ENTRY_6_4_4"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    },
+    {
+      "hazardId": "H_GB3836_EX_D_MISSING_FASTENER",
+      "decision": "APPROVE_BOUNDED_RULE",
+      "linkIds": [
+        "K_GB3836_EX_D_INITIAL_B_1_A11",
+        "K_GB3836_EX_D_INITIAL_8",
+        "K_GB3836_EX_D_MAINT_A_1_A11",
+        "K_GB3836_EX_D_MAINT_5_7_1",
+        "K_GB3836_EX_D_MAINT_6_1"
+      ],
+      "applicabilityChecked": true,
+      "siteFactConfirmed": false
+    }
+  ],
+  "existingSupportingRuleReview": {
+    "hazardId": "H_COM_SIGN_FADED",
+    "linkId": "K_GB2894_SIGN_TEMPORARY_7_4_2",
+    "decision": "APPROVE_SUPPORTING_TEMPORARY_SIGN_ONLY",
+    "configurationDutyCreated": false
+  },
+  "evidenceSnapshotBindings": {
+    "E_OFFICIAL_CYLINDER_TSG_20261005": {
+      "snapshotSha256": "b41a1be368642277e4d47183167cc0f7bf41588589c6f08bd9824ef590f84571",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_CYLINDER_USAGE_20261005": {
+      "snapshotSha256": "58a4697413baf21b1c1d55aa58ecea7cfdeaa9e19f8a7ec6e36c37216be0b830",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_EMERGENCY_GENERAL_20261005": {
+      "snapshotSha256": "e497e54583206186a0e608eb38c2b56db4d2c5dc74192ecf2ea8d835aa10a706",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_EMERGENCY_LIGHT_20261005": {
+      "snapshotSha256": "1610f90f92876f3cc0b6b18be62b14f8271e5b1788c884c4cd145a08a9131ab1",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_GB55037_8_3_3_20261005": {
+      "snapshotSha256": "90b92701fe6988a1c1c7659cd96a68fef92523ae3a2b04168aed937f03c247d0",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_P03_20261005": {
+      "snapshotSha256": "a289896e088b594f2941342ff37fcb73f4a657c3ad96965dffd4604e1e268f0c",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_P08_P09_INSTALL_20261005": {
+      "snapshotSha256": "8b7bdb6f651151cf01d065f063181f11fb9d2de3ff9ec7d1d26e8066c3595648",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_P09_MAINTENANCE_20261005": {
+      "snapshotSha256": "ca411b16f5bec42a8edcafd7cb1008a6da32cbe0b4d8e0024c8279e7647d90a1",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_SAFETY_SIGNS_20261005": {
+      "snapshotSha256": "aa4307c0d117d938eb4146ab16a487e96e274229a29b9c24b54b5c7dfd4058fe",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    },
+    "E_OFFICIAL_TSG23_AMENDMENT1_20261005": {
+      "snapshotSha256": null,
+      "noInventedFileHash": true
+    },
+    "E_OFFICIAL_WOOD_20261005": {
+      "snapshotSha256": "2b491e426ebb4c0fe4f0fc9b7913a1d140a78dc3022dacc305c0056afda1638a",
+      "actualOriginalOrDeclaredPageBytesMatched": true
+    }
+  },
+  "engineeringFixtureReview": {
+    "currentBrowserFixture": {
+      "path": "tools/browser/fixtures/official_clauses_20261005.json",
+      "sha256": "69501787d0cd5405a5c3ea197d4e122e0c801520f55817d756697c7a06b949bd",
+      "changedDetailRecords": 199,
+      "priorChangedDetailCoverageLost": [],
+      "publicCounts": {
+        "hazards": 1685,
+        "links": 1843,
+        "clauses": 1401,
+        "lawVersions": 85,
+        "profiles": 25,
+        "majorHazards": 21
+      },
+      "outOfScopeNewContentPublished": false
+    },
+    "historicalInverse": {
+      "path": "tools/pipeline/tests/fixtures/official_clause_cohort_20261005.json",
+      "sha256": "2b2676f4300371e882065f4355d4e051d885e8aba8d05f76e4201ffea91e902a",
+      "baselineCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
+      "explicitRecords": 116,
+      "beforeBytesComparedToGitBaseline": true,
+      "afterBytesComparedToCurrentSource": true,
+      "unknownMutationVisibleAfterCache": true
+    },
+    "assessment": "缩小范围的116个明确路径构成可恢复精确前态；旧fixture未改、未知变更保持可见。199详情覆盖保留所有原详情及8项正式规则；未将排除内容夹入新公开源或期待值。真实浏览器执行另行验收。"
+  },
+  "reviewerExecutedChecks": [
+    {
+      "command": "python -m unittest discover -s tools/pipeline/tests -p 'test_official*.py' -v",
+      "result": "PASS",
+      "tests": 35,
+      "logSha256": "840901cd89556c72bc45fbd1ae1f636590e5d7c8c13d37638be45f0dac663f32"
+    },
+    {
+      "command": "python tools/v4/check_review_binding.py",
+      "result": "PASS",
+      "linkReviews": 2047,
+      "bindingOrEvidenceRefFailures": 0
+    },
+    {
+      "check": "all 16855 knowledge JSON bytes equal reduced freeze",
+      "result": "PASS"
+    },
+    {
+      "check": "116 inverse records equal original Git predecessor and reduced current source",
+      "result": "PASS"
+    },
+    {
+      "check": "scope reduction removed only new out-of-scope material; 16 existing affected H/K/review files equal baseline; no baseline record deleted",
+      "result": "PASS"
+    }
+  ],
+  "invariants": [
+    "所有旧eligible H/K保留，无当前公开规则被批量重签误撤。",
+    "完整基线审核嵌套保留；改写原H/K与TSG版本保存previousDefinition；精确原版本字节另见历史inverse。",
+    "既有错误直接链不恢复，稳定H/K只改连本次独立核准的准确原文。",
+    "未核准新增内容不在提交树。既有main记录原字节保留，不删除旧稳定ID。",
+    "原PDF、SQLite、OCR及企业材料不在本次提交；未造现场事实、整改或正式批准。",
+    "P08表9完整且可逐项核对行列脚注；P09只取已核Ex d A11单元，不自称全检查表转录。"
+  ],
+  "remainingReleaseWork": "本回执只签上列冻结源范围。完整联合测试、精确提交CI、构建/真实浏览器、部署与线上验收不得由本回执冒充。",
+  "engineeringFileBindings": {
+    "tools/pipeline/tests/freeze_official_clause_history.py": "2e597334e6b471e2a70ed0d1a77bea822aa6c5647bd8fcd83295afdb75455ca0",
+    "tools/pipeline/tests/official_clause_cohort_fixture.py": "bcd0bdb1ff2c6a436fc7c68e89546cb40a485565bb6947ae5778677378723f95",
+    "tools/pipeline/tests/test_official_clause_history.py": "10b3a50a19d1a48b6f4d0ffb562775d380939d13f0fcf41ce4e244d5357018ba",
+    "tools/pipeline/tests/test_official_clauses_20261005.py": "6e35e0f2e738a8a056df09a6825bb45587ff481a0ae763af86392285c2e68c53",
+    "tools/pipeline/tests/test_official_clause_browser.py": "500a26d7f492f67bc2a39c563cc54caabb791d1564301ca47cda79cd0b29b3df",
+    "tools/browser/freeze_official_clause_expectations.py": "db47f07b69099bc3606f290538efd6e133b9c7c5cc6a135054a06b8a59134b4e",
+    "tools/browser/official_clause_acceptance.py": "af3166fbd2902e7e2e778b44b8b26e85b9b05714f6dea9ebb16076a9d6987ac4"
+  },
+  "scopeReductionChecks": {
+    "newOutOfScopeFilesAbsent": true,
+    "existingMainRecordsDeleted": false,
+    "existingAffectedRecordFilesChecked": 16,
+    "existingAffectedRecordFilesByteExactToMain": true,
+    "approvedEightRuleBodiesUnchangedFromIndependentlyReadOriginals": true
+  }
+}
