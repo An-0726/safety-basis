@@ -1,18 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "f4e35044172e3b86bf3a93a091e1778a15e15aca4ac456a1a4382310b265069b",
-    "hazard": "43e70520d4a2a038cb9da8f5152dffd9c9e2bf6a4c54e961aab3529860f64925"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_WEB_5F29EE673A37F0574A288633",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_E2C9363C5525B73C67A6940C"
-  ],
-  "reason": "隐患与官方条款直接对应。",
   "reviewType": "applicability",
-  "reviewedContentHash": "dca1041f34784ca2441cafa646838c7138f01935320096a657ba74e8d392069e",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "verified",
+  "reviewedContentHash": "f1ac6019541ddc8c4e1de057f25f51e5c89c176b29873bb526257e4198762279",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "按范围及第6.7完整一句建立直接对应；仅粉末静电喷涂，保留参照执行边界。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "f4e35044172e3b86bf3a93a091e1778a15e15aca4ac456a1a4382310b265069b",
+      "hazard": "43e70520d4a2a038cb9da8f5152dffd9c9e2bf6a4c54e961aab3529860f64925"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_WEB_5F29EE673A37F0574A288633",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E2C9363C5525B73C67A6940C"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "dca1041f34784ca2441cafa646838c7138f01935320096a657ba74e8d392069e",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousReviewFileSha256": "ce005983fb710bf04f6cf35925c00d3683554cf5f1573ccea4d0f2791f517133",
+  "previousDefinition": {
+    "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "clauseId": "C_XLSX_WEB_EC95C5694483BC8D1A74E491",
+    "hazardId": "H_15607_6_7_1",
+    "id": "K_XLSX_WEB_5F29EE673A37F0574A288633",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "reason": "隐患对象、整改措施与官方条款逐项对应。",
+    "role": "direct",
+    "status": "needs_review"
+  },
+  "previousEntityFileSha256": "b582ea408e8de0ae3857389a7b2baf7d1e14128e0d8377f8be0a6696532abbc2",
+  "contextHashes": {
+    "hazard": "22aac6f44228b30c52b0ec50d15fe187709493528f4ad0ec9f74d9b5adf3f1cb",
+    "clause": "a6ff39140c3e6e31cf59d675f7b90e7dc678767ff349d9e9ab0f2a691c732748"
+  }
 }

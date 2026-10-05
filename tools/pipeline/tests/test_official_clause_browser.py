@@ -129,7 +129,7 @@ class OfficialClauseBrowserTests(unittest.TestCase):
     def test_production_harness_selects_new_fixture_and_keeps_all_existing_rendered_flows(self):
         for name in ('audit_browser.py', 'audit_ordinary_tables.py'):
             text = (ROOT / 'tools/browser' / name).read_text()
-            self.assertIn('from residual_clause_acceptance import load_expectations', text)
+            self.assertIn('from complete_remaining_acceptance import load_expectations', text)
         shared = (ROOT / 'tools/browser/recovery_release_acceptance.py').read_text()
         for token in ('for width in (1440, 375, 390, 485)', 'for row in rows:', 'page.go_back()',
                       'page.go_forward()', 'page.reload(', 'navigator.clipboard.readText()',

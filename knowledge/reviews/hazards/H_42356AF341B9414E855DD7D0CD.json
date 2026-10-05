@@ -1,1 +1,68 @@
-{"decision":"verified","entityId":"H_42356AF341B9414E855DD7D0CD","entityType":"hazard","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_52749440502bd658432340074f_26","reviewedAt":"2026-09-09T13:34:22+00:00","reviewer":"Codex 主核验"},"reviewType":"content","reviewedContentHash":"ec3681e88264146b1b398c8cef3868078501c0f132443a04c95ff00452271098"}
+{
+  "entityId": "H_42356AF341B9414E855DD7D0CD",
+  "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1af6f9b1f5bc34e62e73972ba1477da6e44d7248fe0d7f89a2ddff897bd857d8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_ELECTRICAL_GB12801_20261005"
+  ],
+  "reason": "原复合候选收窄为应急照明；风险标志和疏散指示分别映射既有canonical，未核具体技术参数不纳入。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_42356AF341B9414E855DD7D0CD",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_52749440502bd658432340074f_26",
+      "reviewedAt": "2026-09-09T13:34:22+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "ec3681e88264146b1b398c8cef3868078501c0f132443a04c95ff00452271098"
+  },
+  "previousReviewFileSha256": "13ac931d5a0e372fa83773b4e99485d9c27488a0f69f500f0adaaf982f557c03",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "未设置应急照明、安全标志和疏散指示标志。",
+    "id": "H_42356AF341B9414E855DD7D0CD",
+    "keywords": [
+      "未设置应急照明",
+      "安全标志和疏散指示标志",
+      "未",
+      "设",
+      "置",
+      "应",
+      "急",
+      "照",
+      "明",
+      ",",
+      "安",
+      "全",
+      "标",
+      "志",
+      "和",
+      "疏",
+      "散",
+      "指",
+      "示"
+    ],
+    "lifecycle": "proposed",
+    "measures": "按缺失部位补设符合要求的应急照明和疏散指示标志，校核供电、安装位置和可视性，完成联动或功能测试并纳入定期检查。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》(GB/T 12801-2008)》第5.4.6条\n\nGB 55037-2022《建筑防火通用规范》。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未设置应急照明、安全标志和疏散指示标志"
+  },
+  "previousEntityFileSha256": "381cb2b8e4fbe563b0fc3e1d547891655a86e83a8fa6f220ce1dd04c3fbd1d00"
+}

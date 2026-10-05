@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_AA6382B9890B42B1B70DC3EA3B",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7fbb73d9eb40edce5dd9f3a88081a7dc284c6c70d51d0a96a672cb4cbc31473c",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "EH_ed93b74b8a1f2d44eb9db148a6a5cc51de158a71db07bde84a889c8c43128545"
+    "E_ALL_EQUIPMENT_MEM10_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "6f557da66488906b7f6f49c50bc7c9a91f2e87c62ea7dc6fe931f6c54a43a663",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "从错误调漆6.2.2.1更正为MEM10第7条第（六）项，保留机械行业和清洗对象边界；旧2017版不继续充当现行依据。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_AA6382B9890B42B1B70DC3EA3B",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_ed93b74b8a1f2d44eb9db148a6a5cc51de158a71db07bde84a889c8c43128545"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "6f557da66488906b7f6f49c50bc7c9a91f2e87c62ea7dc6fe931f6c54a43a663",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_AA6382B9890B42B1B70DC3EA3B",
+    "title": "使用易燃易爆稀释剂清洗时未及时清除地沟地坑内集聚的可燃气体",
+    "description": "易燃易爆稀释剂(如天拿水)清洗设备设施,未采取有效措施及时清除集聚在地沟、地坑等有限空间内的可燃气体",
+    "measures": "防止流入地沟地坑、强制通风/检测和清除积聚气体。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "使用易燃易爆稀释剂清洗时未及时清除地沟地坑内集聚的可燃气体"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(安监总管四[2017]129号)",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

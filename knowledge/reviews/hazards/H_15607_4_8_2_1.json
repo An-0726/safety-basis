@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_8_2_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1681ecd032780d3e78e9319bef2a041ba66d63a155d906f2616b3159d855407d",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_1B133E4E0C464932D2B84087"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "03ac0d308ff74380fe90eeab3b907c5786d0305e584cc35260edea64b3176bd3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "第4.8.2工件接地阈值为1×10⁶ Ω，并保留也可采用静电消除器的替代方式；不将不同对象100 Ω阈值套入。",
+  "notes": "作者基于正式原件逐项复核；独立终审另记。不证明具体现场、整改完成或个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_8_2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1B133E4E0C464932D2B84087"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "03ac0d308ff74380fe90eeab3b907c5786d0305e584cc35260edea64b3176bd3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "挂具应确保工件接地电阻不大于1×10Ω。（第4.8.2条）。",
+    "id": "H_15607_4_8_2_1",
+    "keywords": [
+      "挂具未确保工件接地电阻符合要求"
+    ],
+    "lifecycle": "proposed",
+    "measures": "挂具应确保工件接地电阻不大于1×10Ω。（依据 第4.8.2条 整改。）。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所",
+      "通用场所"
+    ],
+    "title": "挂具未确保工件接地电阻符合要求"
+  },
+  "remainingUnsupportedBranches": []
 }

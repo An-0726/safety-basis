@@ -1,13 +1,54 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_0A9DDC2534BC46FDA9AEE80A89",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fb2451815a9d0cebbf2ad476f4da966470f2b630a11a924907ae389961ac68b6",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    "E_ALL_MANAGEMENT_HJ1259_2022_20261005"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "fab2548a56196a04ea19680b248be409d3f8c51a68bd482924739ef2da0046d7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整6.1.1—6.1.3与6.4支持建账及原则保存，永久保存和固定表格不在本规则中。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_0A9DDC2534BC46FDA9AEE80A89",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "fab2548a56196a04ea19680b248be409d3f8c51a68bd482924739ef2da0046d7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "8ea1ee33344eb54df25a363a78c504e620eef06cb98c110b2f748346f6f0d78e",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "危险废物产生单位未如实、规范地记录危险废物产生、贮存、利用、处置台账，或台账未按规定长期保存，无法满足危险废物全过程追溯和申报管理要求。",
+    "id": "H_0A9DDC2534BC46FDA9AEE80A89",
+    "keywords": [
+      "未如实",
+      "规范记录危险废物产生",
+      "贮存",
+      "利用",
+      "处置台账",
+      "并长期保存"
+    ],
+    "lifecycle": "proposed",
+    "measures": "完整记录并原则上保存5年以上。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所",
+      "通用场所"
+    ],
+    "title": "未如实、规范记录危险废物产生、贮存、利用、处置台账,并长期保存"
+  },
+  "previousEntityFileSha256": "e5f1a053b95803c2a5e42ec9978ef5b425ca9ed5c4d3135c2a5b0ee7642ce92c"
 }

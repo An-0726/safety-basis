@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_C30C57E1211A46808D790A7D03",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "8bf691df8b4e0da54d0dc80c3b433c46bc2daa269af0969fbc00c1807b36f1c0",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_XLSX_FT_36E528BE2345959812615FB3"
+    "E_ALL_ELECTRICAL_SAFETY_LAW_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "ff345bdaba4712a59d681fc67070ff4bbeafe9aec6b10c67a8c829b26fdd4695",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "一般潜在危险设备分散隔离及标志复合主张不能仅由安全生产法35整体支持，保持候选。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_C30C57E1211A46808D790A7D03",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_36E528BE2345959812615FB3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "ff345bdaba4712a59d681fc67070ff4bbeafe9aec6b10c67a8c829b26fdd4695",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousReviewFileSha256": "9e248124a5eb41a9d562f8ef8baf6c9ee9d2ca185bb78cd419a32cee82832f13",
+  "previousDefinition": {
+    "id": "H_C30C57E1211A46808D790A7D03",
+    "title": "布置具有潜在危险的设备时,未根据有关规定进行分散和隔离,并设置必要的提示、标志和警告信号",
+    "description": "布置具有潜在危险的设备时未根据有关规定进行分散和隔离，也未设置必要的提示、标志和警告信号，人员难以识别和回避危险区域。",
+    "measures": "布置具有潜在危险的设备时按规定分散隔离，并设置必要的提示、标志和警告信号。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全标志",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "布置具有潜在危险的设备时,未根据有关规定进行分散和隔离,并设置必要的提示、标志和警告信号"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求 总则》(GBT12801-2008) 第 5.7.2 条",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "cc73c8af390eeb60af53b206d70a0a88bec4bd44bed49ee6a2125e88440509cd"
 }

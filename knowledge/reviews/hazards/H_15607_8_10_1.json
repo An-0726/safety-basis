@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_8_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e8c276fc789a51741ab2699375101639623adc108ffb70236d071b1cc9918b77",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_D828F82B510091DF84405130"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "4ea3e28251f750fd8cd4f2044811cd258df973aabe4eea6f2323e22a40844c38",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "重新核对第8.10条具体义务及工艺范围，去除旧泛涂装套用、OCR串附录和错位适用性。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_8_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_D828F82B510091DF84405130"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "4ea3e28251f750fd8cd4f2044811cd258df973aabe4eea6f2323e22a40844c38",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，在回收装置、净化装置的卸料口及卸料过程中，供粉桶在加料时，未采取防止粉尘外逸的措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_8_10_1",
+    "keywords": [
+      "在回收装置",
+      "净化装置的卸料口及卸料过程中",
+      "供粉桶在加料时",
+      "未采取防止粉尘外逸的措施"
+    ],
+    "lifecycle": "active",
+    "measures": "在回收装置、净化装置的卸料口及卸料过程中，供粉桶在加料时，采取防止粉尘外逸的措施。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "在回收装置、净化装置的卸料口及卸料过程中，供粉桶在加料时，未采取防止粉尘外逸的措施"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

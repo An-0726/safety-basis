@@ -1,13 +1,50 @@
 {
-  "entityType": "hazard",
   "entityId": "H_12158_7_1_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "9855c7d4572393a36edeea258c11b8495029e09dd2df79abe57e74d4f3e9b19a",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "5ec8ca48a46604d92e3280e2b47d0b4cc2f75582c8a73855e0e9129ee343e668",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
-  ]
+    "E_ALL_ELECTRICAL_GB12158_20261005"
+  ],
+  "reason": "第7.1为紧密接触面积大于20cm²，缺陷方向为≤20cm²；改正原K误挂接地电阻4.2.2.3、H正向叙述及单位漏²；仅直接依赖不计331。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_12158_7_1_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "9855c7d4572393a36edeea258c11b8495029e09dd2df79abe57e74d4f3e9b19a",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ]
+  },
+  "previousReviewFileSha256": "56b907db0fae1a168031a1960ae9b8e41d3f5d0802fb0fa1cfd576b55164db81",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "非金属静电导体或静电亚导体与金属导体相互连接时,其紧密接触的面积应大于20cm（第7.1条）。",
+    "id": "H_12158_7_1_1",
+    "keywords": [
+      "非金属静电导体或静电亚导体与金属导体相互连接时",
+      "其紧密接触的面积未大于20cm²"
+    ],
+    "lifecycle": "active",
+    "measures": "非金属静电导体或静电亚导体与金属导体相互连接时,其紧密接触的面积应大于20cm（依据 第7.1条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所",
+      "通用场所"
+    ],
+    "title": "非金属静电导体或静电亚导体与金属导体相互连接时，其紧密接触的面积未大于20cm²"
+  },
+  "previousEntityFileSha256": "e0d1106d766e5705aabbce2f4e43a0ea65b1e81aa9390c6dbe750c11bdbd9102"
 }

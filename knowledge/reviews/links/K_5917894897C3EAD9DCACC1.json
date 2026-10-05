@@ -1,20 +1,52 @@
 {
-  "entityType": "link",
   "entityId": "K_5917894897C3EAD9DCACC1",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "3c25ba55db0bfeaac5305d8819839bf39b941617ac36856db5941744a11a97f8",
-  "contextHashes": {
-    "hazard": "1b409fc19f62e7734ccfb00c932c40e9874fb2796e7a033e059ff8d79baaaca9",
-    "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
-  },
-  "checkedAt": "2026-09-10T14:09:26+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "危化品法第41条明确剧毒化学品应在专用仓库内单独存放，并实行双人收发、双人保管制度；H_D9017B38直接违反。注：危险化学品安全法2026-05-01施行。",
-  "reasonCodes": [
-    "DIRECT_MATCH"
+  "reviewedContentHash": "5ff68c879aa934d99ecd04ba912da2f6bd15fe83cbf0cbfb27668371053c2b38",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_MANAGEMENT_hazchem_law_beijing_official_20261005"
   ],
-  "evidenceRefs": [],
-  "migratedFromV3Verification": null,
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "第一款剧毒化学品分支，合法专用储存场所选项不缩成仓库。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_5917894897C3EAD9DCACC1",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "3c25ba55db0bfeaac5305d8819839bf39b941617ac36856db5941744a11a97f8",
+    "contextHashes": {
+      "hazard": "1b409fc19f62e7734ccfb00c932c40e9874fb2796e7a033e059ff8d79baaaca9",
+      "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
+    },
+    "checkedAt": "2026-09-10T14:09:26+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "危化品法第41条明确剧毒化学品应在专用仓库内单独存放，并实行双人收发、双人保管制度；H_D9017B38直接违反。注：危险化学品安全法2026-05-01施行。",
+    "reasonCodes": [
+      "DIRECT_MATCH"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "dec7c6b62a5cf927ddfdf003737fb4cd3e25b77ed4c9d04224f3bea78b1b7577",
+  "previousDefinition": {
+    "id": "K_5917894897C3EAD9DCACC1",
+    "hazardId": "H_D9017B3895E8E59531CF8180",
+    "clauseId": "C_C5CAE02699ECA8711854BF3B",
+    "role": "direct",
+    "legacyRole": "",
+    "applicability": "剧毒化学品未在专用仓库内单独存放、未实行双人收发双人保管制度",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": ""
+  },
+  "previousEntityFileSha256": "49da1d058f585c1e4a1e3e37af101b5db515f44f5f87fd5ec5d173ab8c85595f",
+  "contextHashes": {
+    "hazard": "2a0ad3ef2dfcb0c324c8dd4f6b92c437039d5700475db3651727482e05ce6050",
+    "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
+  }
 }

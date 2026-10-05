@@ -1,18 +1,99 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "8885d279666a65389cd78a133a33f301e1501fe610ea07b62a5b36c301626b67",
+  "reviewedContentHash": "edefb673de15be0d3336f8a901cbbd2ea77dc5f150d7a6237a273dfe40ce3259",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
+  "evidenceRefs": [
+    "E_REMAIN_FIRE_JGJ91_20261005"
+  ],
+  "reason": "独立实审限定易火灾/爆炸实验室的监测报警和自动灭火系统设计分支，原正确C不改。 原文要求两者均设置，本H负向触发明确为任一缺失；仅缺一种也成立，不要求两种同时缺失。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "8885d279666a65389cd78a133a33f301e1501fe610ea07b62a5b36c301626b67",
+    "contextHashes": {
+      "hazard": "ffb1ed178cf6ee7bfe091ce69b729b8f1269012b3e3678c9e60d5bb9f5f59f57",
+      "clause": "3a27447bebc2778a12f5c2e62e58cb79c90f4949b8a7fc49ab1597bdc9fd537d"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.6条消防及报警设备要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "9377df5de30214f65b591885997713ca598a63c967d698dc661b856f58c39157",
+  "previousDefinition": {
+    "applicability": "火灾爆炸风险实验室未装消防和报警设备",
+    "clauseId": "C_JGJ91_5_2_6",
+    "hazardId": "H_387CD4000D844D269A439E4D45",
+    "id": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "d1bc9a323db71f04d482ee0375887f60467e3026010225933acb0a60a1cb0fbc",
   "contextHashes": {
-    "hazard": "ffb1ed178cf6ee7bfe091ce69b729b8f1269012b3e3678c9e60d5bb9f5f59f57",
+    "hazard": "b8974d0c23603acdee7760f9e4fc844001d2cbe93d4c06fa91058b987ef6c541",
     "clause": "3a27447bebc2778a12f5c2e62e58cb79c90f4949b8a7fc49ab1597bdc9fd537d"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.6条消防及报警设备要求。条款逐字原文与隐患适用性吻合。",
-  "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
-  ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "previousAuthorReview": {
+    "entityId": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "edefb673de15be0d3336f8a901cbbd2ea77dc5f150d7a6237a273dfe40ce3259",
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex complete remaining fire-gas author review 20261005",
+    "evidenceRefs": [
+      "E_REMAIN_FIRE_JGJ91_20261005"
+    ],
+    "reason": "独立实审限定易火灾/爆炸实验室的监测报警和自动灭火系统设计分支，原正确C不改。",
+    "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewedContentHash": "8885d279666a65389cd78a133a33f301e1501fe610ea07b62a5b36c301626b67",
+      "contextHashes": {
+        "hazard": "ffb1ed178cf6ee7bfe091ce69b729b8f1269012b3e3678c9e60d5bb9f5f59f57",
+        "clause": "3a27447bebc2778a12f5c2e62e58cb79c90f4949b8a7fc49ab1597bdc9fd537d"
+      },
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.6条消防及报警设备要求。条款逐字原文与隐患适用性吻合。",
+      "evidenceRefs": [
+        "E_MOHURD_JGJ91_2019"
+      ],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "9377df5de30214f65b591885997713ca598a63c967d698dc661b856f58c39157",
+    "previousDefinition": {
+      "applicability": "火灾爆炸风险实验室未装消防和报警设备",
+      "clauseId": "C_JGJ91_5_2_6",
+      "hazardId": "H_387CD4000D844D269A439E4D45",
+      "id": "K_XLSX_WEB_H_387CD4000D844D269A439E4D45",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "role": "direct"
+    },
+    "previousEntityFileSha256": "d1bc9a323db71f04d482ee0375887f60467e3026010225933acb0a60a1cb0fbc",
+    "contextHashes": {
+      "hazard": "f608b85c19c86532ffd34ef42a0f5cc0224594efb21b2caf9fbb51bb1c0f1b91",
+      "clause": "3a27447bebc2778a12f5c2e62e58cb79c90f4949b8a7fc49ab1597bdc9fd537d"
+    }
+  },
+  "previousAuthorReviewFileSha256": "6a9dd73e2357c636ade8d8bf3816971b2cf536911fd184ea6bbbfe948fbafc85"
 }

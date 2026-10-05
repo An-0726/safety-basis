@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-18",
-  "decision": "verified",
   "entityId": "H_GBT47236_4_1_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fb7fe548f6539ad9349b6c3e90151c45b52d5e455cfabf04ee47e84c8b12bffd",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_GBT47236_2026"
+    "E_ALL_GBT47236_2026_20261005"
   ],
-  "reason": "已按GB/T 47236-2026官方归档全文复核隐患对象、反向表述和标准适用范围；第4.1.3条直接要求机器设计时进行风险评估并采取减小风险措施，与候选对象和缺陷完整对应。",
-  "reviewType": "content",
-  "reviewedContentHash": "fd45e1590d8e93709abd317d90bb7c2d5b72f917ce39854bf500726dc15b8244",
-  "reviewer": "Codex PHASE11 GB/T 47236 review 20260918"
+  "reason": "逐条核第4.1.3条自身义务，补齐第1章设备范围、设计/制造/验收阶段及推荐性属性；原使用维护现场泛化不再作为当前条件。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "decision": "verified",
+    "entityId": "H_GBT47236_4_1_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT47236_2026"
+    ],
+    "reason": "已按GB/T 47236-2026官方归档全文复核隐患对象、反向表述和标准适用范围；第4.1.3条直接要求机器设计时进行风险评估并采取减小风险措施，与候选对象和缺陷完整对应。",
+    "reviewType": "content",
+    "reviewedContentHash": "fd45e1590d8e93709abd317d90bb7c2d5b72f917ce39854bf500726dc15b8244",
+    "reviewer": "Codex PHASE11 GB/T 47236 review 20260918"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "仅适用于GB/T 47236-2026范围内的低压铸造机、差压铸造机及其他金属型铸造设备；其他机械应按相应通用或专用标准判断。",
+    "description": "现场检查发现，铸造机器设计时未进行风险评估，未采取减小风险的措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_GBT47236_4_1_3",
+    "keywords": [
+      "铸造机器设计时未进行风险评估",
+      "未采取减小风险的措施"
+    ],
+    "lifecycle": "active",
+    "measures": "铸造机器设计时进行风险评估，采取减小风险的措施。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【PHASE 11 2026-09-18】已复核GB/T 47236-2026现行状态、官方逐字条款、隐患对象和设备适用范围，建立当前direct关联。",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "铸造机器设计时未进行风险评估，未采取减小风险的措施"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

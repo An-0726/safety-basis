@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import shutil
 import tempfile
+from complete_remaining_cohort_fixture import pre_complete_repo_root
 
 FIXTURE = Path(__file__).parent / 'fixtures/residual_clause_cohort_20261005.json'
 _SNAPSHOTS = {}
@@ -57,6 +58,7 @@ def pre_residual_repo_root(root):
     root = Path(root).resolve()
     if root in _PREDECESSOR_ROOTS:
         return root
+    root = pre_complete_repo_root(root)
     records = fixture()['records']
     # Validate even on cache hits. A later source edit cannot reuse a stale view.
     for relative in records:

@@ -621,7 +621,11 @@ class ProductionReadingTests(unittest.TestCase):
         self.assertEqual((public['reviewedCurrentClauseCount'], public['directHazardCount']), (0, 0))
 
     def test_real_current_criteria_remain_110_clauses_and_20_hazards(self):
-        projection = major.public_projection(self.knowledge, as_of=AS_OF)
+        # This 2026-10-01 assertion belongs to its exact pre-complete source;
+        # later evidence reviews must not be backdated into that historical view.
+        from complete_remaining_cohort_fixture import pre_complete_repo_root
+        historical_knowledge = pre_complete_repo_root(ROOT) / 'knowledge'
+        projection = major.public_projection(historical_knowledge, as_of=AS_OF)
         clauses = {c['clauseId'] for s in projection['catalog']['standards'] for c in s['clauses']}
         self.assertEqual(len(clauses), 110)
         self.assertEqual(len(projection['topic']['hazardIds']), 20)

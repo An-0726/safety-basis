@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H011",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7d4c8439001f6e35eb4860fea40c910feb1865ef513f24397e9127e6cc3bb73b",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_A032016C2D4E1B91C89C3276"
+    "E_ALL_GB6514_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "1780f184617e4199083e089873ccc656ea4dd497ff07520ca1c78ace05b905a3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "正式GB6514-2023第6.2.2.1条准确对应；保留第1章排除项，不借接地或错误7.4.7替代。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H011",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_A032016C2D4E1B91C89C3276"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "1780f184617e4199083e089873ccc656ea4dd497ff07520ca1c78ace05b905a3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场在喷漆作业区域调配涂料，未在调漆室内进行调配作业。",
+    "id": "H011",
+    "keywords": [
+      "喷漆区现场调漆"
+    ],
+    "lifecycle": "proposed",
+    "measures": "将调配作业移至符合要求的调漆室；结合涂料、溶剂闪点和工艺落实通风、防静电、防火、防爆及报警措施，控制现场存量，作业后密闭容器并清理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《危险化学品安全管理条例》国务院令第591号公布，国务院令第645号修订 第二十八条（兜底）",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷漆区现场调漆"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

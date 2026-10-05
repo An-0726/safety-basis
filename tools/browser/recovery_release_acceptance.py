@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import sys
 from urllib.parse import quote
+from capture_evidence import capture_full_page
 from repair_acceptance import (DOM_SNAPSHOT, require, require_text, validate_release_match,
                                validate_rendered_detail)
 
@@ -277,8 +278,6 @@ def run_recovery_release_acceptance(browser, base, run, page_errors, expect, fix
                                 page.wait_for_function('async want=>(await navigator.clipboard.readText())===want', arg=expected_full_clipboard(row, data_version))
                             else:
                                 page.wait_for_function('async want=>(await navigator.clipboard.readText())===want', arg=wanted)
-                        if artifact_dir and width in (1440, 390):
-                            page.screenshot(path=str(artifact_dir / f'recovery-{width}-{row["id"]}.png'), full_page=True)
                         first = row['bases'][0]
                         page.locator('#detail .lawjump').first.click()
                         expect(page.locator('#detail h2')).to_have_text(first['lawName'])
@@ -291,6 +290,13 @@ def run_recovery_release_acceptance(browser, base, run, page_errors, expect, fix
                         page.reload(wait_until='domcontentloaded'); detail(row)
                         require(page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'), 'Recovery detail overflow after reload')
                         release_check(page)
+                        # Capture the same exact H only after its existing reload
+                        # and source checks. Clipboard/history checks above remain
+                        # unchanged; this image does not claim to prove copying.
+                        if artifact_dir and width in (1440, 390):
+                            result['screenshotCapture'] = capture_full_page(
+                                page, artifact_dir / f'recovery-{width}-{row["id"]}.png')
+                            result['screenshotCapture']['flowState'] = 'after_verified_reload'
                         return {**result, 'width': width, 'reload': True, 'repeatedSelection': True,
                             'backForward': True, 'copyExact': True, 'fullCopyComplete': True}
                     except Exception:

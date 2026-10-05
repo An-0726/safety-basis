@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_9C23C18DB9EF40A58B8C98F06C",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "dc903366b1ea43e2bd0240a539d76e91eb3c94625a54eebdabe1cc014bd7ee89",
-  "contextHashes": {
-    "hazard": "97883f73f245835115226a28d8d24f12d04609b78d264d4301fb9b51ac700135",
-    "clause": "bc564cd50a5d9a782b8f3327662c83b8d29072a0c15aaa09bf96e13fd0018f48"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 6514-2023第7.4.7条人体消除装置。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "5e4828faf3ac6c318ca8eaa3dfc34fca095307594a2eaab6b38a1837a2c0ed19",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB6514_2023"
+    "E_ALL_MANAGEMENT_hazchem_law_beijing_official_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "第三十七条第一款按种类危险特性配置设施直接对应；人体静电消除特定装置不由本条一概推出。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_9C23C18DB9EF40A58B8C98F06C",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "dc903366b1ea43e2bd0240a539d76e91eb3c94625a54eebdabe1cc014bd7ee89",
+    "contextHashes": {
+      "hazard": "97883f73f245835115226a28d8d24f12d04609b78d264d4301fb9b51ac700135",
+      "clause": "bc564cd50a5d9a782b8f3327662c83b8d29072a0c15aaa09bf96e13fd0018f48"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 6514-2023第7.4.7条人体消除装置。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB6514_2023"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "81695cc11071dadd0e9dc2e9e60b2bfcdd62c9183f2ad0a03c3d84ed216f86b7",
+  "previousDefinition": {
+    "applicability": "进出危险区域未设置人体静电消除装置",
+    "clauseId": "C_GB6514_7_4_7",
+    "hazardId": "H_9C23C18DB9EF40A58B8C98F06C",
+    "id": "K_XLSX_WEB_H_9C23C18DB9EF40A58B8C98F06C",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "c924208ba8fbe9ab1b2acbd490d83337fa84ebae650632b3dc84aa9e2dcd5ce3",
+  "contextHashes": {
+    "hazard": "0c75a705a2cc4ecdfafc94398e961fba9c32e83544bf10a659211e4c7b3a2930",
+    "clause": "c94e3df21e87a75a90ed96450efe8d5fb2a7f79998a71cf24adbba682b2b0294"
+  }
 }

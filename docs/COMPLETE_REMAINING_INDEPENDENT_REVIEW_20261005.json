@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "complete-remaining-independent-review-v1",
+  "asOf": "2026-10-05",
+  "reviewRole": "independent_source_applicability_and_disposition_reviewer",
+  "decision": "approved_for_frozen_tree_validation",
+  "baselineCommit": "475856179bfd3c6c3446d10cfc4de73e51f228f3",
+  "baselineTree": "fc62800c09421f687c0734f699b95befa8231f2f",
+  "scope": "独立审核本轮全部331个原候选ID的处置及本次新增/修订正式规则、直接依赖纠错。327项进行了来源、适用性或缺口的实质处置审查；4项按用户明确要求跳过，仅签收其保留处置。缺证保留不是原文已经核实。",
+  "reviewedAuthorReports": [
+    {
+      "report": "docs/all-electrical-bounded-author-20261005.json",
+      "sha256": "d4ff91b03a33d944cec7b0d56dc6d5af29824db62839609d9db7a9205b4c6760",
+      "reviewDecision": "content_and_scope_approved",
+      "authoredPathCount": 115
+    },
+    {
+      "report": "docs/COMPLETE_REMAINING_FIRE_GAS_AUTHOR_20261005.json",
+      "sha256": "ea45de517a85e307df3f4f3b19c807862305b95654d7ff51fed6d602a99134ba",
+      "reviewDecision": "content_and_scope_approved",
+      "authoredPathCount": 93
+    },
+    {
+      "report": "docs/complete-equipment-author-20261005.json",
+      "sha256": "4375250fc9cdc4882b206b3c7b58a8b6cb0cc6154fc30b84beed697959d40ccc",
+      "reviewDecision": "content_and_scope_approved",
+      "authoredPathCount": 639
+    },
+    {
+      "report": "docs/all-management-bounded-author-20261005.json",
+      "sha256": "6760fca87588907630bff48b8e4b16213cd8b5a5592e7024e31a9ee7191d5f6d",
+      "reviewDecision": "content_and_scope_approved",
+      "authoredPathCount": 256
+    },
+    {
+      "report": "docs/COMPLETE_REMAINING_CENTRAL_INTEGRATION_20261005.json",
+      "sha256": "b8a36e88493fd9d6205474e0398ce8eee17a3acba3ac95ec9d0ab3ffa57ba01f",
+      "reviewDecision": "content_and_scope_approved",
+      "authoredPathCount": 7
+    }
+  ],
+  "dispositionIndex": {
+    "path": "docs/COMPLETE_REMAINING_DISPOSITION_INDEX_20261005.json",
+    "sha256": "a4f6d230a6a980fa5090b8c7af06e1185ab0de72e4c1abebc8c36666fa490f56",
+    "decision": "approved"
+  },
+  "withdrawalAuthorization": {
+    "path": "tools/pipeline/tests/fixtures/complete_remaining_authorization_20261005.json",
+    "sha256": "e6cdbb3b59adaca6fa21c2cce6bbe4812469c652c965f5c4437f828ae7461900",
+    "decision": "approved_for_only_the_enumerated_error_containment",
+    "hazardCount": 8,
+    "linkCount": 9,
+    "otherPublicRemovalsApproved": false
+  },
+  "counts": {
+    "existingCandidateIds": 331,
+    "substantivelyReviewedIds": 327,
+    "explicitUserSkipIds": 4,
+    "byGroup": {
+      "electrical-signs": 64,
+      "equipment-coating": 118,
+      "fire-gas": 41,
+      "management-hazchem": 108
+    },
+    "byDisposition": {
+      "bounded_existing_coverage": 7,
+      "bounded_merge": 6,
+      "bounded_rule_repaired": 74,
+      "bounded_rule_repaired_with_residual": 18,
+      "case_evidence_required": 7,
+      "conditional_mapping": 4,
+      "conditional_partial_mapping": 10,
+      "explicitly_skipped": 4,
+      "historical_preserved": 3,
+      "partial_coverage_with_residual": 41,
+      "source_or_rule_mapping_pending": 124,
+      "unsupported_claim_rejected": 33
+    },
+    "originalSourceOrRuleMappingResidualIds": 184,
+    "boundedRepairedCandidateIds": 92,
+    "currentlyPublicFromOriginalCandidateIds": 92,
+    "currentActiveButExcludedIds": 11,
+    "currentProposedIds": 222,
+    "currentSupersededIds": 6
+  },
+  "countInterpretation": [
+    "92为原有候选ID的有界修复并进入当前正式Gate，含18项仍有原复合独立义务未覆盖；不是92个新建H。",
+    "184为仍缺规范依据或原独立义务规则映射的候选ID数；现场需证和已明确范围排除另列，不与该数相加。",
+    "条件映射、现场选用和有界覆盖不等于原泛化或原全部复合义务已经准入。",
+    "额外既有正式H/C/K依赖纠错另行审核，不计入331个候选覆盖数。"
+  ],
+  "verifiedSourceBoundaries": [
+    "GB12801-2025按2026-10-01现行版本和企业生产过程范围；不沿用已替代版本条号或把概括性安全义务扩成未核技术数值。",
+    "GB15607-2023、GB14443-2025、GB14444-2025、GB6514-2023按取得的正式原文及各自工艺范围；喷粉进入例外、负向缺陷、各独立设施义务逐项保留。",
+    "GB/T47236-2026限所列金属型铸造设备设计、制造、验收并保推荐性；完整表3两个自锁限位义务及表格关系已读，其他表/外引残余明确。",
+    "GB12158-2024接地与泄漏电阻对象、阈值和静电危险场所排除项分开；GB2894-2025已承接旧GB7231等标准，未用旧号自动签当前全部参数。",
+    "AQ5202-2008、AQ5203-2008采用HBBA正式发行本；原送审稿不作正式依据。AQ5203第13.4仅准入高度不小于500mm时的栏杆和挡板设置，正式本110mm异常未改写、未当合格高度判据。",
+    "GB50187仅准入标准院官方平台实际公开的3.0.12引导及第1项、3.0.14引导及第1—8和11项；第三方出版镜像不独立授权完整原文verified，相关旧链已撤审。",
+    "现行安全生产法、危险化学品安全法及应急管理部令第10号按真实主体和独立分支；不因新法生效推定旧条例自动废止。",
+    "HJ1259产废单位台账与GB18597贮存设施一般台账义务分开；示例表格、保存期限定和主体例外保留。",
+    "XF1131限既有仓储及其排除项；消防供电完整表与三级负荷例外、壁挂手报设计标志、科研建筑范围均已核；报批稿门外优先未准入。",
+    "HJ2026指导性和GB16912相应非强制条文属性保留；GB6514错误7.4.7正文审核已拒绝，旧实体及审核前史保留。"
+  ],
+  "majorCriterionReview": {
+    "addedExactTopicLinks": 4,
+    "existingFingerprintOnlyRefresh": 1,
+    "standardCountUnchanged": 6,
+    "judgmentItemCountUnchanged": 110,
+    "priorAmmoniaPendingAssociationsUnchanged": 2,
+    "wholeCatalogRecertified": false
+  },
+  "independentDetailSha256": {
+    "electrical": "afe6bb7137763d3308f39ac15f247079330b53a03872fd9581fe3ad2e892f9d1",
+    "fire-gas": "be9b12bd82d97a6a930abb65db2eaf42938533d7b8276202789f5e105247d818",
+    "equipment": "43506eddb57781fd07006359cb785a8068b559c527fa14652c6a502040dff10d",
+    "management": "7768ebe0c8ca85c4e31ed4114a2d0cdef38658c9199887680369ad34c741740e",
+    "central": "782e6006f0d7d07990038e9c10f31d9bd7a02926fef99c047813a726dea375dd"
+  },
+  "fireGasBoundaryNormalizationSha256": "b8dc7d8d9574bda8ad3f0cd05915a6d801037a30c83e302cd98bc33cc9450dcf",
+  "dataHandling": {
+    "originalPdfsIncluded": false,
+    "privateSourcePathsIncluded": false,
+    "enterpriseEvidencePublished": false,
+    "priorDefinitionsAndReviewsPreserved": true
+  },
+  "notCertified": [
+    "企业现场事实或违法/重大事故隐患个案成立",
+    "任何企业整改完成",
+    "所有被转引标准全文与技术参数",
+    "全部331条原始复合主张准入",
+    "全知识库重新核证"
+  ],
+  "pendingStages": {
+    "fixedTreeAndSnapshotBinding": "pending_private_final_binding",
+    "fullRegressionTests": "pending",
+    "browserAcceptance": "pending",
+    "ci": "pending",
+    "mergeAndDeployment": "pending"
+  },
+  "releaseCondition": "本文件只完成实际内容、法源适用性、处置口径及精确撤回范围审核。须随后固定整树并完成全量回归、浏览器和CI验收后统一发布；技术或业务内容再变更须差分重审。",
+  "profileProvenanceClosure": {
+    "profileId": "FPR_ROUTING_96106D7519F84C2DA149BB5819",
+    "decision": "approved_provenance_only_exact_rebinding",
+    "reviewFileSha256": "17c18e26ca61b6f7eccc6dea07d93ff8469d5feb8089098e73f0cdcd56732548",
+    "reviewedProfileHash": "8824166f1b690d31aed721636c15bf901974bd1ce7fb21853407feede3d3bba1",
+    "dependencyFingerprint": "0ed052ed93fd57f27fba11914eba4f14d221a202bac6a6476d9a53fcec250cd3",
+    "changedDependencies": [
+      "evidence/E_ALL_EQUIPMENT_MEM10_20261005",
+      "reviews/clauses/C_PDDB_11"
+    ],
+    "unchanged": [
+      "profile record",
+      "H/K/C/LV/LF normative entities",
+      "routing_only",
+      "conditional entry",
+      "null findingTemplate",
+      "independent two-branch logic"
+    ],
+    "previousReviewRawBytesAndHashPreserved": true,
+    "newSiteFactsOrDutiesApproved": false
+  },
+  "commerceSourceContinuation": {
+    "proof": "docs/COMPLETE_REMAINING_COMMERCE_SOURCE_CONTINUATION_20261005.json",
+    "sha256": "519ef5f4ffb532e63cca99e5a70774a783843a7962ddec6ef969654b4fb3bc06",
+    "decision": "approved_exact_source_metadata_continuation",
+    "targetHazardId": "H_COM_PAINT_SHIFT_QUANTITY",
+    "targetLawVersionId": "LV_STD_GB6514",
+    "legacyReportSha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d",
+    "legacyReportBytesUnchanged": true,
+    "oldItemCount": 24,
+    "otherItemCountUnchanged": 23,
+    "allowedVersionFields": [
+      "scope",
+      "sourceUrl"
+    ],
+    "inMemoryMutation": "Only this item lawVersionHash after all exact proof, source, review and legacy-byte guards pass",
+    "currentHazardLinkClauseBytesUnchanged": true,
+    "newSiteFactsOrDutiesApproved": false,
+    "limitedValidationActuallyRun": {
+      "positiveAndNegativeTests": 7,
+      "result": "7/7 passed",
+      "commerceDispositionItems": 44,
+      "commerceDispositionErrors": 0,
+      "fullSuiteOrBrowserPassImplied": false
+    }
+  }
+}

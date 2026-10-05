@@ -1,13 +1,53 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_5_1_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f8336e08c92fe38324255f9c2a8957b50c886045bac0de75aa94fbe2bbf80fe0",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_9D018365B8764CD8299FFDDF"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "e8b7746099d4b950a68646af7297587cdbdea94dbf951393a65fed9b76e3482b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 5.1.4：可依完整条款修复现有H/C/K定义及审核；限制仅粉末静电喷涂范围。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_5_1_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_9D018365B8764CD8299FFDDF"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "e8b7746099d4b950a68646af7297587cdbdea94dbf951393a65fed9b76e3482b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷粉室内静电喷涂器(枪)的电极与工件、室壁、导流板、挂具以及运载装置等设施未采取防止产生火花的措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_5_1_4_1",
+    "keywords": [
+      "喷粉室内静电喷涂器",
+      "枪",
+      "的电极与工件",
+      "室壁",
+      "导流板",
+      "挂具以及运载装置等设施未采取防止产生火花的措施"
+    ],
+    "lifecycle": "proposed",
+    "measures": "喷粉室内静电喷涂器(枪)的电极与工件、室壁、导流板、挂具以及运载装置等设施采取防止产生火花的措施。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉室内静电喷涂器(枪)的电极与工件、室壁、导流板、挂具以及运载装置等设施未采取防止产生火花的措施"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

@@ -1,13 +1,101 @@
 {
-  "entityType": "hazard",
   "entityId": "H_387CD4000D844D269A439E4D45",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "ffb1ed178cf6ee7bfe091ce69b729b8f1269012b3e3678c9e60d5bb9f5f59f57",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "b8974d0c23603acdee7760f9e4fc844001d2cbe93d4c06fa91058b987ef6c541",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
-  ]
+    "E_REMAIN_FIRE_JGJ91_20261005"
+  ],
+  "reason": "依赖纠错：保留真实危险触发与监测报警/自动灭火系统技术义务；不扩大为所有实验室、一般消防设备或未知现场起火后果。 原文要求两者均设置，本H负向触发明确为任一缺失；仅缺一种也成立，不要求两种同时缺失。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_387CD4000D844D269A439E4D45",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "ffb1ed178cf6ee7bfe091ce69b729b8f1269012b3e3678c9e60d5bb9f5f59f57",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ]
+  },
+  "previousReviewFileSha256": "ab8ec0d62dc0291ede2a90b507d11eaacd311c2d03eb22f7d3edd43f13efb142",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于实验室的相关安全管理。",
+    "description": "存在可预见的火灾或爆炸风险的实验室未安装相应的消防设备和自动火灾报警设备，起火时无法及时报警和进行初期扑救。",
+    "id": "H_387CD4000D844D269A439E4D45",
+    "keywords": [
+      "如果实验室有可预见的火灾或爆炸风险",
+      "未安装消防设备和自动火灾报警设备"
+    ],
+    "lifecycle": "active",
+    "measures": "完成门开启方向、监测报警和自动灭火系统中的实际缺项的整改。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "如果实验室有可预见的火灾或爆炸风险,未安装消防设备和自动火灾报警设备"
+  },
+  "previousEntityFileSha256": "086b15d3ee17a4cf268c221d57e33a83ef7a7485419ef1abc1eb330a85af0adf",
+  "previousAuthorReview": {
+    "entityId": "H_387CD4000D844D269A439E4D45",
+    "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "f608b85c19c86532ffd34ef42a0f5cc0224594efb21b2caf9fbb51bb1c0f1b91",
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex complete remaining fire-gas author review 20261005",
+    "evidenceRefs": [
+      "E_REMAIN_FIRE_JGJ91_20261005"
+    ],
+    "reason": "依赖纠错：保留真实危险触发与监测报警/自动灭火系统技术义务；不扩大为所有实验室、一般消防设备或未知现场起火后果。",
+    "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_387CD4000D844D269A439E4D45",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "ffb1ed178cf6ee7bfe091ce69b729b8f1269012b3e3678c9e60d5bb9f5f59f57",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_MOHURD_JGJ91_2019"
+      ]
+    },
+    "previousReviewFileSha256": "ab8ec0d62dc0291ede2a90b507d11eaacd311c2d03eb22f7d3edd43f13efb142",
+    "previousDefinition": {
+      "aliases": [],
+      "category": "消防安全",
+      "conditions": "适用于实验室的相关安全管理。",
+      "description": "存在可预见的火灾或爆炸风险的实验室未安装相应的消防设备和自动火灾报警设备，起火时无法及时报警和进行初期扑救。",
+      "id": "H_387CD4000D844D269A439E4D45",
+      "keywords": [
+        "如果实验室有可预见的火灾或爆炸风险",
+        "未安装消防设备和自动火灾报警设备"
+      ],
+      "lifecycle": "active",
+      "measures": "完成门开启方向、监测报警和自动灭火系统中的实际缺项的整改。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "依法承担消防安全责任的建筑、场所或单位",
+        "通用场所"
+      ],
+      "title": "如果实验室有可预见的火灾或爆炸风险,未安装消防设备和自动火灾报警设备"
+    },
+    "previousEntityFileSha256": "086b15d3ee17a4cf268c221d57e33a83ef7a7485419ef1abc1eb330a85af0adf"
+  },
+  "previousAuthorReviewFileSha256": "a3a345df728c0ce37c1d972353eb14ecf471c007fa6f8b4653af07af32c87517"
 }

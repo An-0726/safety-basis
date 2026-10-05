@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H_GBT47236_4_2_3_2_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "33bec7a9fa880b57126aaffa18f4be2995bf9b46d92e9b8113c53bd0b69b6509",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_GBT47236_2026"
+    "E_ALL_GBT47236_2026_20261005"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "53163e80a17b9f48627b0398f3d0c14637ebf3197772e29434ee79e728f44dc0",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "逐条核第4.2.3.2.1条自身义务，补齐第1章设备范围、设计/制造/验收阶段及推荐性属性；原使用维护现场泛化不再作为当前条件。本轮仅核转引真实及范围，不新增被引规范技术结论。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H_GBT47236_4_2_3_2_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT47236_2026"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "53163e80a17b9f48627b0398f3d0c14637ebf3197772e29434ee79e728f44dc0",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousDefinition": {
+    "id": "H_GBT47236_4_2_3_2_1_1",
+    "title": "与防护装置相关的联锁装置的选择和设计不符合GB/T18831的规定",
+    "description": "与防护装置相关的联锁装置的选择和设计应符合GB/T18831的规定。（第4.2.3.2.1条）。",
+    "measures": "与防护装置相关的联锁装置的选择和设计应符合GB/T18831的规定。（依据 第4.2.3.2.1条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "与防护装置相关的联锁装置的选择和设计不符合GB/T18831的规定"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第4.2.3.2.1条 反转生成（GLM，2026-09-12）。\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": [],
+  "negativeCase": "尚未核实GB/T18831适用版本、具体要求和不符合证据的，不凭这一转引句认定具体设计不符合。"
 }

@@ -1,1 +1,66 @@
-{"decision":"verified","entityId":"H_B085FE55797E498897B61DCA10","entityType":"hazard","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_edf3363eb9a94ac136c9304e85_18","reviewedAt":"2026-09-09T13:35:19+00:00","reviewer":"Codex 主核验"},"reviewType":"content","reviewedContentHash":"90baeb2fa6346def4d04790cb854f8a5447b8c2b6d3e77ddce047ee4c7cb0e7e"}
+{
+  "entityId": "H_B085FE55797E498897B61DCA10",
+  "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8ae7c7ec9bff1fd43fed6c79a9612246ee86f55117b89f0b5e2d61ceed6a2e7e",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_ELECTRICAL_GB12801_20261005"
+  ],
+  "reason": "5.7.5安全疏散通道分支；不编统一数量宽度。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_B085FE55797E498897B61DCA10",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_edf3363eb9a94ac136c9304e85_18",
+      "reviewedAt": "2026-09-09T13:35:19+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "90baeb2fa6346def4d04790cb854f8a5447b8c2b6d3e77ddce047ee4c7cb0e7e"
+  },
+  "previousReviewFileSha256": "47d28ce5bf9acf57ea32a232bc75fd5af6c3060683784ae5b53b0083c03cb0d4",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "作业安全与个体防护",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "危险性作业场所未设置安全通道，紧急情况下人员无法安全撤离。",
+    "id": "H_B085FE55797E498897B61DCA10",
+    "keywords": [
+      "危险性作业场所",
+      "未设置安全通道",
+      "危",
+      "险",
+      "性",
+      "作",
+      "业",
+      "场",
+      "所",
+      ",",
+      "未",
+      "设",
+      "置",
+      "安",
+      "全",
+      "通",
+      "道"
+    ],
+    "lifecycle": "proposed",
+    "measures": "设置满足宽度、畅通和疏散要求的安全通道及标识，并清除占用物。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》(GB/T 12801-2008)》第5.4.6条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "危险性作业场所,未设置安全通道"
+  },
+  "previousEntityFileSha256": "41acab772b6362c15256e0ecbe7245951015913d2422d512fcec269bac5c8c6f"
+}

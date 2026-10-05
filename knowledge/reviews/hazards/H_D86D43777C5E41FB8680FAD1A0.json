@@ -1,13 +1,62 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D86D43777C5E41FB8680FAD1A0",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "a7563751ce8ffc225601e541b97acccdacc0a97c95bd14f22cd77f55d8fa9034",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "84062e799c8f90b9baadba16c4a9a258a4fab4d4da6e4ab307e49042dcf5ae3a",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB6514_2023"
+    "E_ALL_GB6514_2023_20261005"
+  ],
+  "reason": "现行GB6514-2023没有第7.4.7条，现有条号与引文归属错误；本轮未取得支持该一般化定义的直接适用来源。保留待核，不按安全标志一般条款虚假兜底。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D86D43777C5E41FB8680FAD1A0",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "a7563751ce8ffc225601e541b97acccdacc0a97c95bd14f22cd77f55d8fa9034",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB6514_2023"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于油漆房的相关安全管理。",
+    "description": "油漆房未设置较大风险告知牌，未标明风险名称、后果、管控措施及责任人。",
+    "id": "H_D86D43777C5E41FB8680FAD1A0",
+    "keywords": [
+      "油漆房未设置较大风险告知牌",
+      "油",
+      "漆",
+      "房",
+      "未",
+      "设",
+      "置",
+      "较",
+      "大",
+      "风",
+      "险",
+      "告",
+      "知",
+      "牌"
+    ],
+    "lifecycle": "active",
+    "measures": "在油漆房设置较大风险告知牌，标明风险名称、后果、管控措施与责任人。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《江苏省安全生产风险报告规定》(江苏省政府令第140号)第十六条\n【最终质检】依据支持关系按更保守口径转为待核验，避免技术性隐患仅依赖过于宽泛或不对应的条款直接发布。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "油漆房未设置较大风险告知牌"
+  },
+  "remainingUnsupportedBranches": [
+    "需取得原始规范中该具体义务及适用主体/地域的完整原文。"
   ]
 }

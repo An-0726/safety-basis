@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_6_7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "22aac6f44228b30c52b0ec50d15fe187709493528f4ad0ec9f74d9b5adf3f1cb",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_E2C9363C5525B73C67A6940C"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "43e70520d4a2a038cb9da8f5152dffd9c9e2bf6a4c54e961aab3529860f64925",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整6.7同时要求法兰连接和静电跨接；不泛化所有含尘管道或附加绝缘、联锁、送电模板。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_6_7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E2C9363C5525B73C67A6940C"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "43e70520d4a2a038cb9da8f5152dffd9c9e2bf6a4c54e961aab3529860f64925",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "49367453cbb9199ae5569bfd7ddaa59bc211102160b882699298ec84605406fb",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，含粉尘的排风管道未采用法兰连接并进行静电跨接，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_6_7_1",
+    "keywords": [
+      "含粉尘的排风管道未采用法兰连接并进行静电跨接"
+    ],
+    "lifecycle": "proposed",
+    "measures": "含粉尘的排风管道采用法兰连接并进行静电跨接。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "含粉尘的排风管道未采用法兰连接并进行静电跨接"
+  },
+  "previousEntityFileSha256": "1c1354440497519a39ac1b5d6f4e8a39a6fb5896d65c11f13865653bc2bc838b"
 }

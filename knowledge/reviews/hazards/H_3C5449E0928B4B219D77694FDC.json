@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_3C5449E0928B4B219D77694FDC",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "13eaaab3e4abaa13c13f6d757344e8a96c8825c41d0d506e6b81f561fa7941f8",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "3197379e75e0c1abe97260f277396e852e4a5a7314debe4786b722d5beb5dbf1",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
-  ]
+    "E_REMAIN_FIRE_JGJ91_20261005"
+  ],
+  "reason": "依赖纠错：限定科研建筑设计，仅人员限制区域的显著警示分支，删除与本分支无直接文本支撑的记录/通用管理扩张。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_3C5449E0928B4B219D77694FDC",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "13eaaab3e4abaa13c13f6d757344e8a96c8825c41d0d506e6b81f561fa7941f8",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ]
+  },
+  "previousReviewFileSha256": "e44ffd54db4300ca5d262e9dfbb4a2f0c47f6869991bae25c8d268220c504fbb",
+  "previousDefinition": {
+    "id": "H_3C5449E0928B4B219D77694FDC",
+    "title": "限制人员进入的实验区域未设置显著警示标识",
+    "description": "对限制人员进入的实验区或室,未设置显著的警示装置或标识。危险化学品的存放和使用区域,未有显著的标识",
+    "measures": "在实验区和危险化学品使用、暂存区域补设符合要求的名称标识和安全警示标志，按风险限制无关人员进入，并建立检查维护记录。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "限制人员进入的实验区域未设置显著警示标识"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《科研建筑设计标准》(JGJ 91-2019)第5.2.1条",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "04c37c1def8185f491d7eefff8f576bf70745391d1b37e5994b35961d2894de1"
 }

@@ -17,15 +17,16 @@ from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from capture_evidence import capture_full_page
 from repair_acceptance import load_expectations, validate_source_pins, run_repair_browser_acceptance
 from technical_citation_acceptance import (load_expectations as load_technical_expectations,
     validate_source_pins as validate_technical_source_pins, run_technical_browser_acceptance)
 
 from electrical_candidate_acceptance import (load_expectations as load_electrical_expectations,
     validate_source_pins as validate_electrical_source_pins, run_electrical_browser_acceptance)
-from residual_clause_acceptance import load_expectations as load_recovery_expectations
+from complete_remaining_acceptance import load_expectations as load_recovery_expectations, fixture_for_release_date
 from recovery_release_acceptance import (
-    validate_source_pins as validate_recovery_source_pins, validate_release_source, fixture_for_release_date,
+    validate_source_pins as validate_recovery_source_pins, validate_release_source,
     run_recovery_release_acceptance)
 
 # Current approved common-hazard cohort; exact rendered identity and links matter.
@@ -269,6 +270,27 @@ def main():
                 return {'id': recovery_fixture['unpublishedProbeId'], 'text': text}
             run('unpublished_H_12158_10_1_2_deep_link', unavailable)
 
+            # Each individually reviewed withdrawal has its own real deep-link
+            # negative, in addition to the all-public H/K exact-set checks.
+            def withdrawn_unavailable(hazard_id):
+                home('?id=' + quote(hazard_id))
+                expect(page.locator('#detail')).to_contain_text(hazard_id)
+                require(page.locator('#detail h2').count() == 0,
+                        'Withdrawn hazard silently selected a public detail: ' + hazard_id)
+                require(page.locator('#detail .basis').count() == 0,
+                        'Withdrawn hazard still renders a formal basis: ' + hazard_id)
+                page.reload(wait_until='domcontentloaded')
+                expect(page.locator('#detail')).to_contain_text(hazard_id)
+                require(page.locator('#detail h2').count() == 0,
+                        'Withdrawn hazard returned after reload: ' + hazard_id)
+                require(page.locator('#detail .basis').count() == 0,
+                        'Withdrawn formal basis returned after reload: ' + hazard_id)
+                return {'id': hazard_id, 'notPublic': True, 'reload': True,
+                    'reviewedReason': recovery_fixture['batchAudit']['withdrawals']['hazards'][hazard_id]}
+            for hazard_id in recovery_fixture['batchAudit']['withdrawals']['hazards']:
+                run('complete_withdrawn_hazard_deep_link_' + hazard_id,
+                    lambda hazard_id=hazard_id: withdrawn_unavailable(hazard_id))
+
             def unknown():
                 home('?id=H_AUDIT_UNKNOWN_ZYX987')
                 expect(page.locator('#detail')).to_contain_text('H_AUDIT_UNKNOWN_ZYX987')
@@ -309,9 +331,10 @@ def main():
                         tab.reload()
                         expect(tab.locator('#libraryDetail h2')).to_contain_text('含第1号修改单')
                     shot = args.out.parent / ('tsg-reading-' + str(width) + '.png')
-                    tab.screenshot(path=str(shot), full_page=True)
+                    capture = capture_full_page(tab, shot, content_selector='#libraryDetail')
                     return {'legacyAlias': legacy, 'canonicalVersion': current, 'width': width, 'screenshot': str(shot),
-                        'title': tab.locator('#libraryDetail h2').inner_text(), 'linkOnly': True, 'reloadPassed': True}
+                        'title': tab.locator('#libraryDetail h2').inner_text(), 'linkOnly': True, 'reloadPassed': True,
+                        'screenshotCapture': capture}
                 finally:
                     ctx.close()
             for width in (1440, 390):

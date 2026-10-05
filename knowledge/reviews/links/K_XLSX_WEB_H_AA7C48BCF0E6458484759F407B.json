@@ -1,41 +1,72 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "425630c27aec6fe182c1f26ac466bf6f3923e7a71f27a50c55ae740399b09292",
-  "checkedAt": "2026-10-04T05:23:30Z",
-  "reviewer": "Source-specific containment author 20261004",
-  "reason": "完整出版原件与原出版机构当前题录支持该有界通用设计义务；严格限定对象和设计阶段，纠正原H风向/义务强度或对象泛化。未知某现场是否具备该对象不等于公共法源缺口；本批不作任何现场判定。",
+  "decision": "pending",
+  "reviewedContentHash": "c78fd87256145e2fdcd22eeb6b1875574c92fad43d1f75b6dd1b2a5733da0335",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_CONTAIN_LAYOUT_GB50187_20261004"
+    "E_ALL_GB50187_2012_20261005"
   ],
-  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
-  "contextHashes": {
-    "hazard": "bbe7af44d0357bdc775d175857410c66e451fc98f6b39f5d2e66b17ed41f5bf2",
-    "clause": "27c5f27e6843d4913c717d7d721a55105f2fc89cc72e920c840b48f9cc68278e"
-  },
-  "reviewedFields": [
-    "clauseId",
-    "applicability"
-  ],
+  "reason": "撤回镜像单独支撑的direct认证。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
   "previousReview": {
     "entityType": "link",
     "entityId": "K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B",
     "reviewType": "applicability",
     "decision": "verified",
-    "reviewedContentHash": "3d2d2599a05af972c573b35d367955606a9a1d14de746a241943abc0cfec5b5d",
-    "contextHashes": {
-      "hazard": "f0f7e1ac5c44d7913d19f4a48aa5d74f529df08cddc38ab84e77cd5313089b40",
-      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
-    },
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "reviewedContentHash": "425630c27aec6fe182c1f26ac466bf6f3923e7a71f27a50c55ae740399b09292",
+    "checkedAt": "2026-10-04T05:23:30Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "完整出版原件与原出版机构当前题录支持该有界通用设计义务；严格限定对象和设计阶段，纠正原H风向/义务强度或对象泛化。未知某现场是否具备该对象不等于公共法源缺口；本批不作任何现场判定。",
     "evidenceRefs": [
-      "E_SAMR_GB15577_2018"
+      "E_CONTAIN_LAYOUT_GB50187_20261004"
     ],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "contextHashes": {
+      "hazard": "bbe7af44d0357bdc775d175857410c66e451fc98f6b39f5d2e66b17ed41f5bf2",
+      "clause": "27c5f27e6843d4913c717d7d721a55105f2fc89cc72e920c840b48f9cc68278e"
+    },
+    "reviewedFields": [
+      "clauseId",
+      "applicability"
+    ],
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewedContentHash": "3d2d2599a05af972c573b35d367955606a9a1d14de746a241943abc0cfec5b5d",
+      "contextHashes": {
+        "hazard": "f0f7e1ac5c44d7913d19f4a48aa5d74f529df08cddc38ab84e77cd5313089b40",
+        "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
+      },
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    },
+    "previousReviewFileSha256": "13d6ff471b841ecaf29acfd8c23da7b6e28a0c4fcf1d5cfc1b82f5072719eda6"
   },
-  "previousReviewFileSha256": "13d6ff471b841ecaf29acfd8c23da7b6e28a0c4fcf1d5cfc1b82f5072719eda6"
+  "previousReviewFileSha256": "04f6a5203000595f33880434ec2b397010b634cc518bb7e0faba1630b72f2146",
+  "previousDefinition": {
+    "applicability": "适用于新建、改建及扩建工业企业总平面设计中的总变电站位置选择。仅针对第4.4.5条第2款的污染防护与风向关系要求，不泛化为所有粉尘作业场所的选址要求。 仅针对总变电站位置选择中的第4.4.5条第2款污染防护及两类风向关系。",
+    "clauseId": "C_GB50187_4_4_5",
+    "hazardId": "H_AA7C48BCF0E6458484759F407B",
+    "id": "K_XLSX_WEB_H_AA7C48BCF0E6458484759F407B",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "196a9e658d01e6ed388af11faa0b6011c2896398602a01469670d0993862a721",
+  "contextHashes": {
+    "hazard": "cbbfb314ec3d53ea28293724bfb54f938ef1a6563d597c5725a8244096d4204d",
+    "clause": "27c5f27e6843d4913c717d7d721a55105f2fc89cc72e920c840b48f9cc68278e"
+  }
 }

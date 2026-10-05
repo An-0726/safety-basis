@@ -1,15 +1,59 @@
 {
-  "decision": "verified",
   "entityId": "H076",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5e41f21c3c857a10b49715996a81d31ef8f36af7c7ee05084ea4efa3d8b9200f",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    "E_ALL_GB14444_2025_20261005"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_62b0a2142bac91f58c75345a34_15",
-    "reviewedAt": "2026-09-09T13:33:45+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "仅核5.3.1通风量控制浓度义务；不把调漆室设置、净化型式及未核联锁混入。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H076",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_62b0a2142bac91f58c75345a34_15",
+      "reviewedAt": "2026-09-09T13:33:45+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "8837c738b27b7b4d5da3c6d743e70bb644ccec9b221971dd5d0102151a0e55c2"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "8837c738b27b7b4d5da3c6d743e70bb644ccec9b221971dd5d0102151a0e55c2"
+  "previousDefinition": {
+    "aliases": [
+      "喷漆房通风不足",
+      "喷漆区可燃气体浓度控制不符合",
+      "喷漆室通风不符合"
+    ],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷漆室通风系统不符合安全要求，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H076",
+    "keywords": [
+      "喷漆室",
+      "安全通风",
+      "漆雾",
+      "通风装置",
+      "净化"
+    ],
+    "lifecycle": "active",
+    "measures": "根据喷漆工艺规模和涂料特性设置有效的送排风及漆雾去除装置，验证通风量和运行联锁满足安全要求，并定期维护。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "原候选引用GB 14444—2006“喷漆室应设置安全通风装置和去除漆雾装置”已不再作为现行直接条文。GB 14444—2025已于2026-08-01实施并替代旧版，本条按现行5.3.1核验。",
+    "places": [
+      "喷漆室",
+      "涂装作业区"
+    ],
+    "title": "喷漆室通风系统不符合安全要求"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

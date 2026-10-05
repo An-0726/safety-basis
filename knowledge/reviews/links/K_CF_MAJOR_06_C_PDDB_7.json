@@ -1,16 +1,47 @@
 {
-  "entityType": "link",
   "entityId": "K_CF_MAJOR_06_C_PDDB_7",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "rejected",
-  "reviewedContentHash": "0f635f643878c84654e7986100e1f2660aa38c541509efb15c72318fd9aa50a4",
-  "contextHashes": {
-    "hazard": "2ae6e1877beb37045796e2f3739e81144b89b8c4edcffaf3e8e8bb370ca80dec",
-    "clause": "cd26cdeb11a4980700eff0f8fd034edcf3dd8cbaf891cae9a2e75eacc2ddf25c",
-    "link": "0f635f643878c84654e7986100e1f2660aa38c541509efb15c72318fd9aa50a4"
+  "decision": "verified",
+  "reviewedContentHash": "345abece932ef0edab83abf8f4830a7af28e8d4f365acc89c3424fee2198f47c",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
+  "evidenceRefs": [
+    "E_REMAIN_FIRE_MEM10_20261005"
+  ],
+  "reason": "复用C_PDDB_7，只消费第（五）项前两种或者情形；major目录已有整条7项，不新增目录条目或重复计数。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_CF_MAJOR_06_C_PDDB_7",
+    "reviewType": "applicability",
+    "decision": "rejected",
+    "reviewedContentHash": "0f635f643878c84654e7986100e1f2660aa38c541509efb15c72318fd9aa50a4",
+    "contextHashes": {
+      "hazard": "2ae6e1877beb37045796e2f3739e81144b89b8c4edcffaf3e8e8bb370ca80dec",
+      "clause": "cd26cdeb11a4980700eff0f8fd034edcf3dd8cbaf891cae9a2e75eacc2ddf25c",
+      "link": "0f635f643878c84654e7986100e1f2660aa38c541509efb15c72318fd9aa50a4"
+    },
+    "checkedAt": "2026-09-21T00:55:00+08:00",
+    "reviewer": "ChatGPT / Engineering Audit",
+    "reason": "PR #70批量关联未证明该条款可直接支持本隐患全部构成要件；关联拒绝并标记superseded，仅保留历史。后续如有合格直接依据应新建/重新审核。",
+    "evidenceRefs": []
   },
-  "checkedAt": "2026-09-21T00:55:00+08:00",
-  "reviewer": "ChatGPT / Engineering Audit",
-  "reason": "PR #70批量关联未证明该条款可直接支持本隐患全部构成要件；关联拒绝并标记superseded，仅保留历史。后续如有合格直接依据应新建/重新审核。",
-  "evidenceRefs": []
+  "previousReviewFileSha256": "5a1ffe81b1964212c4a25879deaaa3b6f30c2a8f99cdcd959971313485729aa9",
+  "previousDefinition": {
+    "applicability": "机械企业工业燃烧装置燃气总管压力报警及快速切断联锁核验。",
+    "clauseId": "C_PDDB_7",
+    "hazardId": "H_CF_MAJOR_06",
+    "id": "K_CF_MAJOR_06_C_PDDB_7",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "superseded",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "da1748199ab27c470fe85687cb8a4c32c8ba8708d4039807c866f96a2d3900ed",
+  "contextHashes": {
+    "hazard": "6e13377d5abcac754b0b6476c76ea37f8591bed418577d334eb419f8fffa6e2f",
+    "clause": "cd26cdeb11a4980700eff0f8fd034edcf3dd8cbaf891cae9a2e75eacc2ddf25c"
+  }
 }

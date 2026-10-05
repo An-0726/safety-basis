@@ -1,18 +1,85 @@
 {
-  "decision": "verified",
   "entityId": "H_4CE3B8DBF4054BB99D54F744B5",
   "entityType": "hazard",
-  "evidenceRefs": [
-    "EH_333c4b626a1e4b3ea2138794e9db76f4f938b01e3472979c663d0c92ffc40c1d"
-  ],
-  "migratedFromV3Verification": {
-    "id": "VHF_a2070ebab9a3ffdeb93676b4",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "e825d85869c71f6cc26dd725fd485aa3cad058fe47047cdbace7eb96580ed1aa",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [],
+  "reason": "没有企业整改报告作为来源；删除虚构现场来源，安全阀分支仅条件映射既有canonical，压力表及合格标签仍待核。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_4CE3B8DBF4054BB99D54F744B5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_333c4b626a1e4b3ea2138794e9db76f4f938b01e3472979c663d0c92ffc40c1d"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_a2070ebab9a3ffdeb93676b4",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "d937955884f10c07b5c20272a70aa412dfa7ba36163ca8977bda6e8a3a97102b",
+    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+    "checkedAt": "2026-09-12T02:28:05+08:00",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "d937955884f10c07b5c20272a70aa412dfa7ba36163ca8977bda6e8a3a97102b",
-  "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-  "checkedAt": "2026-09-12T02:28:05+08:00",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "动力间空气储罐的压力表、安全阀未定期检验，也未张贴合格标签，储罐超压时安全附件可能失效，存在物理爆炸风险。",
+    "id": "H_4CE3B8DBF4054BB99D54F744B5",
+    "keywords": [
+      "根据整改报告",
+      "动力间空气储罐压力表",
+      "安全阀未定期检验",
+      "根",
+      "据",
+      "整",
+      "改",
+      "报",
+      "告",
+      ",",
+      "动",
+      "力",
+      "间",
+      "空",
+      "气",
+      "储",
+      "罐",
+      "压",
+      "表",
+      "安",
+      "全",
+      "阀",
+      "未",
+      "定",
+      "期",
+      "检",
+      "验",
+      "且",
+      "张",
+      "贴",
+      "合",
+      "格",
+      "标",
+      "签"
+    ],
+    "lifecycle": "proposed",
+    "measures": "将空气储罐压力表、安全阀送有资质机构定期校验，张贴合格标签，并纳入设备台账跟踪有效期。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。原 conditions 字段记录的引用依据为：依据：《固定式压力容器安全技术监察规程》(TSG 21-2016/XG1-2020)第9.1.1(5)条\n【最终质检】依据支持关系按更保守口径转为待核验，避免技术性隐患仅依赖过于宽泛或不对应的条款直接发布。\n\nTSG 21-2016《固定式压力容器安全技术监察规程》（含第1号修改单）\n《中华人民共和国特种设备安全法》\nGB 45067-2024《特种设备重大事故隐患判定准则》。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "根据整改报告,动力间空气储罐压力表、安全阀未定期检验,且未张贴合格标签。"
+  },
+  "remainingUnsupportedBranches": [
+    "压力表是否强制检定及合格标签依据、空气储罐是否属于TSG21范围仍待核。"
+  ]
 }

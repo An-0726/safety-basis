@@ -1,18 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "7d15a8e4947da95bb2820f10967ae842c9059a353e78ab255bbdb4adcc162729",
-    "hazard": "0c38ed678334d2cd458245875ec766f75eaf63b311b5e2bdd15625b668b67a81"
-  },
-  "decision": "verified",
   "entityId": "K_XLSX_FT_D5BC821D89D1CC0A83482B33",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_FT_A2DC044F2925215E9FA19A6A"
-  ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
   "reviewType": "applicability",
-  "reviewedContentHash": "c43b8704e66b78aaf4cc004fb64853353077e3bbe09c4453b2a2b401bf35747b",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "166cf5fafd6d8f9c5fe093601e45bb024c98e119d3762939d6444e29dc0e846c",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
+  "evidenceRefs": [
+    "E_ALL_MANAGEMENT_hazchem_law_beijing_official_20261005"
+  ],
+  "reason": "主体和评价三年周期明确，仅第一款评价分支。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "7d15a8e4947da95bb2820f10967ae842c9059a353e78ab255bbdb4adcc162729",
+      "hazard": "0c38ed678334d2cd458245875ec766f75eaf63b311b5e2bdd15625b668b67a81"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_D5BC821D89D1CC0A83482B33",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_A2DC044F2925215E9FA19A6A"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "c43b8704e66b78aaf4cc004fb64853353077e3bbe09c4453b2a2b401bf35747b",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "f96c5915d30fad59ad31158127000a038fd2745294c9fc58afbf38b11a12ddd0",
+  "previousDefinition": {
+    "applicability": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "clauseId": "C_XLSX_FT_7CED7D8B0FE8D4E571427E9E",
+    "hazardId": "H_BA111E073CFF5E4689BD5591_1",
+    "id": "K_XLSX_FT_D5BC821D89D1CC0A83482B33",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "744bed90b969b91d45703074cf90085055f40b1f23ef3160c738381be4caa020",
+  "contextHashes": {
+    "hazard": "81ec9ce113b424deae0c405c5aad43728afa1386ff88d41d56ab06ae2d0e5400",
+    "clause": "f550de97135888b21e224eb51843bea80e34b6e9fb4a14cf48b8d21cbb9d6f7f"
+  }
 }

@@ -8,6 +8,8 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
+from complete_remaining_cohort_fixture import pre_complete_repo_root
+ROOT = pre_complete_repo_root(ROOT)
 sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
 import residual_clause_acceptance as CURRENT
 import official_clause_acceptance as OFFICIAL
@@ -152,17 +154,11 @@ class ResidualClauseBrowserTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, 'new review and freeze'):
             QA.fixture_for_release_date(self.current, '2027-02-01', ROOT)
 
-    def test_real_production_harness_loads_current_fixture_without_historical_adapter(self):
-        import audit_browser
-        import audit_ordinary_tables
-        self.assertIs(audit_browser.load_recovery_expectations, CURRENT.load_expectations)
-        self.assertIs(audit_ordinary_tables.load_expectations, CURRENT.load_expectations)
-        self.assertEqual(audit_browser.load_recovery_expectations(), self.current)
-        self.assertEqual(audit_ordinary_tables.load_expectations(), self.current)
-        for name in ('audit_browser.py', 'audit_ordinary_tables.py', 'residual_clause_acceptance.py'):
-            text = (ROOT / 'tools/browser' / name).read_text()
-            self.assertNotIn('pre_residual_repo_root', text)
-            self.assertNotIn('pre_official_repo_root', text)
+    def test_historical_loader_keeps_its_original_fixture_and_render_contract(self):
+        # Production-entry identity assertions move intact to the newer complete
+        # batch test. This cohort still requires its original residual bytes and
+        # exact source projection through the explicit inverse above.
+        self.assertEqual(CURRENT.load_expectations(), self.current)
         shared = (ROOT / 'tools/browser/recovery_release_acceptance.py').read_text()
         for token in ('for width in (1440, 375, 390, 485)', 'for row in rows:', 'page.go_back()',
                       'page.go_forward()', 'page.reload(', 'navigator.clipboard.readText()',

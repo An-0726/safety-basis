@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_108B10FED8E24D248155616659",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1d083249135c0557a0ce77f9e7a06a4c930343957a0aae0bed833f8487c0aa60",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "e344a8bbf26bfc005f5fca17cb05d3b23750bc3aa3edd9c23ceb0ddd6f5711cc",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "GB15607-2023 6.4 c：仅核6.4 c清粉、防堆积、压差报警和超设定值停机，排除旧版折叠式结构和气流减少的替代判据。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_108B10FED8E24D248155616659",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "e344a8bbf26bfc005f5fca17cb05d3b23750bc3aa3edd9c23ceb0ddd6f5711cc",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_108B10FED8E24D248155616659",
+    "title": "过滤式回收装置未采用有效的清粉装置或未自动检测系统阻力",
+    "description": "过滤式回收装置,未采用有效的清粉装置,不宜采用易积聚粉末的折叠式结构。自动喷涂时,未能自动检测系统阻力,当过滤器无气流通过或气流量减少到某设定值时,能停止作业",
+    "measures": "按GB 15607-2023第6.4条设置有效清粉装置，配置并验证压差/阻力监测报警及达到设定条件时停止作业等安全功能，形成测试记录。",
+    "conditions": "适用于粉末静电喷涂过滤式回收/净化装置。",
+    "category": "涂装安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "过滤式回收装置未采用有效的清粉装置或未自动检测系统阻力"
+    ],
+    "lifecycle": "proposed",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程粉末静电喷涂工艺安全》(GB 15607-2023) 6.4.3",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": [
+    "删除旧版6.4.3、折叠结构不宜及以无气流/流量减少代替新版压差超设定停机的主张；只纳入现行6.4 c。"
+  ]
 }

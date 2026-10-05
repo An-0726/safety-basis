@@ -1,28 +1,64 @@
 {
-  "entityType": "hazard",
   "entityId": "H_524210530E054FE1BB1D918820",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "8f4245721752315a62e569121b5780ebc3102704de83acb900ed65a5d7b7644c",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "该位置和优先顺序要求不是第16条概括配置义务；原H强制措辞需核技术条文应/宜用语。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+  "decision": "verified",
+  "reviewedContentHash": "068a86434d087d6c90e7147b733168f582de94fa447d98c70ecb95e53f6b96b5",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_CITATION_FIRELAW2021_20261002"
+    "E_REMAIN_FIRE_GB55036_20261005",
+    "E_GB55036_SUPERSESSION_SH_20260926"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "只采用GB55036第3.0.5(4)方便使用维护义务；不保留报批稿“大空间优先疏散门外”要求，不能仅凭未设门外判定。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_524210530E054FE1BB1D918820",
     "entityType": "hazard",
-    "evidenceRefs": [
-      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-    ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
+    "entityId": "H_524210530E054FE1BB1D918820",
+    "reviewType": "definition",
+    "decision": "pending",
     "reviewedContentHash": "8f4245721752315a62e569121b5780ebc3102704de83acb900ed65a5d7b7644c",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "该位置和优先顺序要求不是第16条概括配置义务；原H强制措辞需核技术条文应/宜用语。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_524210530E054FE1BB1D918820",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "8f4245721752315a62e569121b5780ebc3102704de83acb900ed65a5d7b7644c",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "b58f92cdcfcf3a60e3352d3005bbf8e8b2923a8db0964704cdc74dc43a6e338c"
   },
-  "previousReviewFileSha256": "b58f92cdcfcf3a60e3352d3005bbf8e8b2923a8db0964704cdc74dc43a6e338c"
+  "previousReviewFileSha256": "d03ba68a17b1ebdad2582a31042f030454d02373884459d6419b23045122644f",
+  "previousDefinition": {
+    "id": "H_524210530E054FE1BB1D918820",
+    "title": "大空间场所的室内消火栓未设置在便于取用和火灾扑救的位置",
+    "description": "大空间场所的室内消火栓未首先设置在疏散门外附近等便于取用和火灾扑救的位置。",
+    "measures": "将大空间场所的室内消火栓设置在疏散门外附近等便于取用和火灾扑救的位置。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "消防安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "大空间场所的室内消火栓未设置在便于取用和火灾扑救的位置"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原标题开头带法条款项序号（如“4…”“5…”）或破折号，读起来像条文而非隐患，已去掉序号并顺理为缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《消防给水及消火栓系统技术规范》GB 50974-2014 7.4.7\n\nGB 50974-2014。",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "136240e0965f9b1b37385c869894b5f4287411948d5f8ec7e9b916b99e79acba"
 }

@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "21538c84f4b69083c590921d7671a3559d073c6fc0fec4d8efe366e65c5f76db",
-  "contextHashes": {
-    "hazard": "f54f47e043450f3e4073483302dd083d67b9862726dd1a6f09f038d25aeca9ca",
-    "clause": "7c705d9b0842ecd99a7707e5c6555ef0324493cf6c4a1b0a0e7b04d21cdb13a1"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.3.3条安全应急物品配置要求。条款逐字原文与隐患适用性吻合。",
+  "decision": "pending",
+  "reviewedContentHash": "e4eac39834d25e8d2d7e90c4e5b3bafdfc436c586f25312c07a230074221c757",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
+    "E_REMAIN_FIRE_JGJ91_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "完整依赖复核确认本H仅有此K；真实JGJ91第5.3.3仅规定有强酸强碱等化学品危险的实验室就近设置应急洗眼器及应急喷淋，不能支撑通用灭火器、消火栓、药箱、运行状态复合义务。旧实体保留隔离，待另有精确法源；不认定缺陷不存在。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "21538c84f4b69083c590921d7671a3559d073c6fc0fec4d8efe366e65c5f76db",
+    "contextHashes": {
+      "hazard": "f54f47e043450f3e4073483302dd083d67b9862726dd1a6f09f038d25aeca9ca",
+      "clause": "7c705d9b0842ecd99a7707e5c6555ef0324493cf6c4a1b0a0e7b04d21cdb13a1"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.3.3条安全应急物品配置要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "7418a9e16fded5ab25ce66477a801c375e6d868cfc215e39b58ab81693f8a6df",
+  "previousDefinition": {
+    "applicability": "实验室未配灭火器洗眼器等应急物品",
+    "clauseId": "C_JGJ91_5_3_3",
+    "hazardId": "H_A4AF26421A0E404F82BF740A6D",
+    "id": "K_XLSX_WEB_H_A4AF26421A0E404F82BF740A6D",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "27e4c41db5875a1943b728a5579473a711d966da624e8f9e9c02d3426f393117",
+  "contextHashes": {
+    "hazard": "3f0d49a7350b6a65b840c5c93a010b1fcb84e5de8ebea526b89e856d25b546dd",
+    "clause": "742d3a39768e7611bb573d4dcbb8affd2db70ce7d5e440878bc16c793700091f"
+  }
 }

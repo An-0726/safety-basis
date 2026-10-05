@@ -1,9 +1,8 @@
 {
-  "checkedAt": "2026-09-14",
+  "checkedAt": "2026-10-05",
   "contextHashes": {
-    "clause": "58feeea81dd42b743c5d943489ede5fa807d0b6e0930785a9c7e6954ed5c7911",
-    "hazard": "5c2b834a9be7e3baebffb51c54d7adbdd1a26114623678577cd29d38ae17dc51",
-    "link": "99760095400d664d962d13c0ca1fa12c0b55a241a013e69ae8c6a18da08b1e18"
+    "hazard": "4008ec60fd1a10100a2a0ad7931c8a158c9186ec1acc0b5d58a3bce8ec3d053a",
+    "clause": "58feeea81dd42b743c5d943489ede5fa807d0b6e0930785a9c7e6954ed5c7911"
   },
   "decision": "pending",
   "entityId": "K_GB50187_6E7E9CD077AD4918",
@@ -11,15 +10,47 @@
   "evidenceRefs": [
     "E_GB50187_2012"
   ],
-  "reason": "该隐患为“当不可避免时,必须具有可靠的防洪、排涝措施”；GB 50187-2012 第3.0.12 条对其作出直接技术规定，监管对象（工业企业厂区）与场所一致，确认为 direct 依据。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
+  "reason": "当前H已按有界防洪排涝分支归并H_64890758F40C42608FF5E8DB65。此旧K仍指C_GB50187_3_0_12概括摘要，其逐字正文审阅已退pending；不能凭第三方镜像或旧确认恢复整条。现有canonical另接正式平台公开引导及第1项的准确子C，本旧K保持pending/proposed。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "SITE_LAYOUT_DIRECT_PROVISION"
   ],
   "reviewType": "applicability",
   "reviewedContentHash": "99760095400d664d962d13c0ca1fa12c0b55a241a013e69ae8c6a18da08b1e18",
-  "reviewer": "ZCode-DeepSeek",
+  "reviewer": "Codex management historical-link dependency review 20261005",
   "phase5ReconciledAt": "2026-09-14",
   "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
+  "notes": "本次对照收窄后的定义及旧关联实际正文重审隔离理由，仅绑定当前上下文；decision、旧K生命周期及原evidenceRefs保持，不恢复正式关联。新直接来源只用于比较，不混入此旧法规引用的证据。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "58feeea81dd42b743c5d943489ede5fa807d0b6e0930785a9c7e6954ed5c7911",
+      "hazard": "5c2b834a9be7e3baebffb51c54d7adbdd1a26114623678577cd29d38ae17dc51",
+      "link": "99760095400d664d962d13c0ca1fa12c0b55a241a013e69ae8c6a18da08b1e18"
+    },
+    "decision": "pending",
+    "entityId": "K_GB50187_6E7E9CD077AD4918",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GB50187_2012"
+    ],
+    "reason": "该隐患为“当不可避免时,必须具有可靠的防洪、排涝措施”；GB 50187-2012 第3.0.12 条对其作出直接技术规定，监管对象（工业企业厂区）与场所一致，确认为 direct 依据。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "SITE_LAYOUT_DIRECT_PROVISION"
+    ],
+    "reviewType": "applicability",
+    "reviewedContentHash": "99760095400d664d962d13c0ca1fa12c0b55a241a013e69ae8c6a18da08b1e18",
+    "reviewer": "ZCode-DeepSeek",
+    "phase5ReconciledAt": "2026-09-14",
+    "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。 [2026-09-19 审计对齐: 实体处于proposed，decision同步转为pending]"
+  },
+  "previousReviewFileSha256": "a57ffdb82052f423d8735bdaa9e216c523c36288d237920389149b78abc5c3a4",
+  "comparisonRefs": {
+    "purpose": "compare_only_not_evidence_for_old_clause",
+    "currentHazardId": "H_6E7E9CD077AD4918962EBA6EAE",
+    "canonicalHazardId": "H_64890758F40C42608FF5E8DB65",
+    "currentBoundedDefinitionReview": "knowledge/reviews/hazards/H_6E7E9CD077AD4918962EBA6EAE.json"
+  }
 }

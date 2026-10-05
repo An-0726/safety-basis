@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_F931D93BEF2E437C832C92C1BF",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "820495af9c0ae62adec7fb58a821945ec23aa6dc5fa2dcbd75f71e8180624e8d",
-  "checkedAt": "2026-09-26T17:21:38+08:00",
-  "reviewer": "Codex 本地原件逐条纠错 20260926",
-  "reason": "复合定义混有防护罩和跨越运转设备行为，6.1.1不支持完整复合义务；原深冷制氧专用条款适用性待核，不向所有机械泛化。",
+  "decision": "verified",
+  "reviewedContentHash": "91ff962b64f0e46d53bb5b6534fa0f9c413b2fad9dfa9b1512bfd9bc76e8579c",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_GB5083_2023_LOCAL_ORIGINAL_20260926"
-  ]
+    "E_ALL_MANAGEMENT_GB16912_2008_20261005"
+  ],
+  "reason": "完整5.13的防护罩和禁止跨越；严禁文字不改变该条在标准前言中的推荐属性。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_F931D93BEF2E437C832C92C1BF",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "820495af9c0ae62adec7fb58a821945ec23aa6dc5fa2dcbd75f71e8180624e8d",
+    "checkedAt": "2026-09-26T17:21:38+08:00",
+    "reviewer": "Codex 本地原件逐条纠错 20260926",
+    "reason": "复合定义混有防护罩和跨越运转设备行为，6.1.1不支持完整复合义务；原深冷制氧专用条款适用性待核，不向所有机械泛化。",
+    "evidenceRefs": [
+      "E_GB5083_2023_LOCAL_ORIGINAL_20260926"
+    ]
+  },
+  "previousReviewFileSha256": "e5e8ece0a987225d056fe0b715784a364e423baf5b57fb77e41e422c5d1bfde0",
+  "previousDefinition": {
+    "id": "H_F931D93BEF2E437C832C92C1BF",
+    "title": "设备裸露的回转部位,未设符合有关国家标准的防护罩。严禁跨越运转中的设备",
+    "description": "设备裸露的回转部位未设置符合有关国家标准的防护罩，人员存在被卷入、绞伤的风险，现场也存在跨越运转设备等违章行为。",
+    "measures": "为设备裸露的回转部位设置符合国家标准的防护罩，并严禁跨越运转中的设备。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "设备裸露的回转部位,未设符合有关国家标准的防护罩。严禁跨越运转中的设备"
+    ],
+    "lifecycle": "proposed",
+    "mode": "candidate",
+    "note": "2026-09-26原件核对退回待核：复合定义混有防护罩和跨越运转设备行为，6.1.1不支持完整复合义务；原深冷制氧专用条款适用性待核，不向所有机械泛化。",
+    "mergedInto": null
+  },
+  "previousEntityFileSha256": "4c96dca862bc2f7640954f2759c8794fe262420d55629deddcbc12fc1e079405"
 }

@@ -1,18 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "038fbd50b1086a002c04f3bffe21da3c5499b15c559a4dc8db76873c96f78b6c",
-    "hazard": "90e5b628b68ea59e29c1455d2b69fc542f658190c0da15903515a94736cc1bf6"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_NEW14_DD3685455F41DC146E886885",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_F25B356597064103FBADB7B3"
-  ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
   "reviewType": "applicability",
-  "reviewedContentHash": "5b0dc684ea4d3749a93b09c1843e5eccb7a7f84334b8a7e27a6a4e0d5ce4071e",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "verified",
+  "reviewedContentHash": "79ab88702442ca97aa5fb0d6d5cc266ebfdaa1dc464899ef54f806cc72eeadcc",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "GB15607-2023 6.4 b：只纳入6.4 b过滤材料义务；不将原“回收装置整机必须导电材料”随同恢复。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "038fbd50b1086a002c04f3bffe21da3c5499b15c559a4dc8db76873c96f78b6c",
+      "hazard": "90e5b628b68ea59e29c1455d2b69fc542f658190c0da15903515a94736cc1bf6"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_NEW14_DD3685455F41DC146E886885",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "5b0dc684ea4d3749a93b09c1843e5eccb7a7f84334b8a7e27a6a4e0d5ce4071e",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousDefinition": {
+    "id": "K_XLSX_NEW14_DD3685455F41DC146E886885",
+    "hazardId": "H_374AD1DFC5D74D438D1E71C692",
+    "clauseId": "C_XLSX_WEB_7F6EB1CEABA05EE1DFE0D19A",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于粉末静电喷涂回收/净化装置和袋式过滤装置。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。",
+    "status": "needs_review"
+  },
+  "contextHashes": {
+    "hazard": "ac2f60cc44ad422767137ef5cf831ee2fcbd27849a20615efaf721cf058e8177",
+    "clause": "8b6a1b88ff53cd841ec3ef39cbbca85f0637b165d7421d8122aa66f6de6d3a46"
+  }
 }

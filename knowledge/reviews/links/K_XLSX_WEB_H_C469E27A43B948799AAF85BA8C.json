@@ -1,18 +1,48 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_C469E27A43B948799AAF85BA8C",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "75adaa0b26b2b5fbdd8501a393f71efd0551dffbde928a4a0341ea17c603deaa",
-  "contextHashes": {
-    "hazard": "be82fef046be6f6969ec9f4ab241ab9afc6e6fdec91d30c4e35fbd67428823e8",
-    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+  "decision": "rejected",
+  "reviewedContentHash": "0ac31b97d88fb2fcedee79f49340ac5142a0574b5670239c04446c2a2ee950cd",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "reason": "本轮窄修已有独立直接依据；旧关联不支持本条具体义务，撤回其直接支持：GB15607-2023 4.4.4：按4.4.4第一句核方位和隔离；“不应布置在明火或火花区域”另有同条具体H，不重复合并。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_C469E27A43B948799AAF85BA8C",
+    "reviewType": "applicability",
+    "decision": "pending",
+    "reviewedContentHash": "75adaa0b26b2b5fbdd8501a393f71efd0551dffbde928a4a0341ea17c603deaa",
+    "contextHashes": {
+      "hazard": "be82fef046be6f6969ec9f4ab241ab9afc6e6fdec91d30c4e35fbd67428823e8",
+      "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第4.2.2.1条静电接地要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousDefinition": {
+    "applicability": "生产中易产生静电的设备管道未采取静电接地消除措施",
+    "clauseId": "C_12158_4_2_2_1",
+    "hazardId": "H_C469E27A43B948799AAF85BA8C",
+    "id": "K_XLSX_WEB_H_C469E27A43B948799AAF85BA8C",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "role": "direct",
+    "status": "needs_review"
+  },
+  "contextHashes": {
+    "hazard": "9e99333b3c0e63be4aa968edd89dd7e61f4b5e4a1075073b08bfae3072269edf",
+    "clause": "65e482f324a6d748fe0e2956cbcc7e002d021c7aa083feea79ac5395678844df"
+  }
 }

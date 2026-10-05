@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-05",
   "contextHashes": {
-    "clause": "f0e714a7fa7f7300be9e14b3a9745bbd9c4537a851b0e6b761dcfc08c38a04b3",
-    "hazard": "b3cfb7ef6306f031d3e2497bf926647265a057128381f7c950332fb7b62101e1"
+    "hazard": "d76cf3fc5a94f5d20092fd9029af8d678c2d1eb56e0113163d36e5afe5f64cf0",
+    "clause": "f0e714a7fa7f7300be9e14b3a9745bbd9c4537a851b0e6b761dcfc08c38a04b3"
   },
   "decision": "pending",
   "entityId": "K_XLSX_WEB_95BE083516C03E41BA2B224E",
@@ -10,9 +10,34 @@
   "evidenceRefs": [
     "E_XLSX_WEB_FAE0747159252D4A30D6312F"
   ],
-  "reason": "隐患与官方条款直接对应。",
+  "reason": "旧条例第四条包含资格岗位配相应资格人员内容，与当前有界资格义务具有对应部分；但该旧K尚未完成本轮旧条全文和适用性准入，不能因H新核而自动复活。当前H由已实读的现行危险化学品安全法第五条直接支持，旧K继续pending/proposed。新旧法身份分开，不判旧条例废止。",
   "reviewType": "applicability",
   "reviewedContentHash": "862f292354f8f5610cbafcf17ae0f697115818ae4bd764b6518eedc8da30b382",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  "reviewer": "Codex management historical-link dependency review 20261005",
+  "notes": "本次对照收窄后的定义及旧关联实际正文重审隔离理由，仅绑定当前上下文；decision、旧K生命周期及原evidenceRefs保持，不恢复正式关联。新直接来源只用于比较，不混入此旧法规引用的证据。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "f0e714a7fa7f7300be9e14b3a9745bbd9c4537a851b0e6b761dcfc08c38a04b3",
+      "hazard": "b3cfb7ef6306f031d3e2497bf926647265a057128381f7c950332fb7b62101e1"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_WEB_95BE083516C03E41BA2B224E",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_FAE0747159252D4A30D6312F"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "862f292354f8f5610cbafcf17ae0f697115818ae4bd764b6518eedc8da30b382",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  },
+  "previousReviewFileSha256": "64a93564a7cb58d3593451c96a46444aa5de66be16815a01cba60c13e8fd1b43",
+  "comparisonRefs": {
+    "purpose": "compare_only_not_evidence_for_old_clause",
+    "currentHazardId": "H_66B2A0967E8B4E4BAD7749DF_3",
+    "canonicalHazardId": null,
+    "currentBoundedDefinitionReview": "knowledge/reviews/hazards/H_66B2A0967E8B4E4BAD7749DF_3.json"
+  }
 }

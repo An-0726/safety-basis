@@ -12,10 +12,11 @@ from pathlib import Path
 import threading
 from urllib.parse import urlparse
 
+from capture_evidence import capture_full_page, wait_capture_ready, SCROLL_POSITION
 from audit_browser import validate_release_identity
 from repair_acceptance import DOM_CONTENT_HELPERS, require, require_text, validate_release_match
-from residual_clause_acceptance import load_expectations
-from recovery_release_acceptance import (validate_source_pins, validate_release_source, fixture_for_release_date,
+from complete_remaining_acceptance import load_expectations, fixture_for_release_date
+from recovery_release_acceptance import (validate_source_pins, validate_release_source,
     validate_rendered, rendered_snapshot, expected_clipboard, expected_full_clipboard, expected_tables)
 
 HAZARD_ID = 'H_12158_4_2_3_4_1'
@@ -124,13 +125,18 @@ def main():
                         else:
                             page.wait_for_function('async want=>(await navigator.clipboard.readText())===want', arg=wanted)
                     region.scroll_into_view_if_needed()
+                    viewport_scroll = page.evaluate(SCROLL_POSITION)
+                    table_scroll = region.evaluate('x=>x.scrollLeft')
+                    wait_capture_ready(page)
+                    require(page.evaluate(SCROLL_POSITION) == viewport_scroll, 'Viewport evidence wait moved the page')
+                    require(region.evaluate('x=>x.scrollLeft') == table_scroll, 'Viewport evidence wait moved the table')
                     page.screenshot(path=str(args.out.parent / f'ordinary-table-{width}.png'))
                     page.locator('#detail .lawjump').first.click()
                     law_result = law_check()
                     page.locator('#copylaw').click()
                     page.wait_for_function('async quotes=>{const t=await navigator.clipboard.readText();return quotes.every(q=>t.includes(q));}', arg=[b['quote'] for b in expected_law])
                     require(page.evaluate('document.documentElement.scrollWidth') <= width + 1, 'Law table page overflow')
-                    page.screenshot(path=str(args.out.parent / f'ordinary-law-table-{width}.png'), full_page=True)
+                    law_capture = capture_full_page(page, args.out.parent / f'ordinary-law-table-{width}.png')
                     page.go_back(); hazard_check()
                     page.go_forward(); law_check()
                     page.go_back(); hazard_check()
@@ -139,7 +145,7 @@ def main():
                     require(not errors, str(errors))
                     report['checks'].append({'width': width, **dims, 'keyboardScrollLeft': scroll_left,
                         'hazardCopies': 3, **law_result, 'allCellsAndSpansExact': True, 'completeLawCopy': True,
-                        'backForwardRestored': True, 'reload': True, 'pageErrors': errors})
+                        'backForwardRestored': True, 'reload': True, 'pageErrors': errors, 'lawScreenshotCapture': law_capture})
                 except Exception:
                     try:
                         page.screenshot(path=str(args.out.parent / f'FAILED-ordinary-table-{width}.png'), full_page=True)

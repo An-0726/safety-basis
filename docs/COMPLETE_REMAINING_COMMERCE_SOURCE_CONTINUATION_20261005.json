@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "complete-remaining-commerce-source-continuation-v1",
+  "asOf": "2026-10-05",
+  "reviewer": "Independent source/applicability reviewer complete-remaining batch",
+  "decision": "approved_exact_source_metadata_continuation",
+  "targetHazardId": "H_COM_PAINT_SHIFT_QUANTITY",
+  "targetLawVersionId": "LV_STD_GB6514",
+  "baselineCommit": "475856179bfd3c6c3446d10cfc4de73e51f228f3",
+  "baselineTree": "fc62800c09421f687c0734f699b95befa8231f2f",
+  "legacyReport": {
+    "path": "docs/commerce-independent-review-20261002.json",
+    "sha256": "bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d",
+    "item": {
+      "hazardId": "H_COM_PAINT_SHIFT_QUANTITY",
+      "action": "admitted_narrowed_definition",
+      "hazardHash": "b597c4c3e43f27ff38be9144050c1dcb6da731942f60fa2dbcae41740d20e850",
+      "targetId": null,
+      "targetHash": null,
+      "links": [
+        {
+          "linkId": "K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2",
+          "linkHash": "5b5cdd07a64946741fb5a65a17239841a8e65ee6f77bfc1e1652ef9ea800ba7a",
+          "clauseId": "C_GB6514_6_2_1_2",
+          "clauseHash": "738468c286f7a6ae2bad011e61f3147a2c4c2ff6162708ab7307401463fcb9a6",
+          "lawVersionId": "LV_STD_GB6514",
+          "lawVersionHash": "dbbe411a3913bcf5afbfb8d2a8d5369d4262d3f6b8dc6acdc2b24ad662e3e629"
+        }
+      ],
+      "independentContentScopeReview": "passed",
+      "independentCurrencyReview": "bounded_current_technical_use_supported",
+      "siteFactEstablished": false
+    },
+    "itemCount": 24
+  },
+  "beforeVersion": {
+    "path": "knowledge/law-versions/LV_STD_GB6514.json",
+    "fileSha256": "d608678dddef83c7550711a4f3dcf6f338372ab48fe1461b3a7ca9d4e3708995",
+    "contentHash": "dbbe411a3913bcf5afbfb8d2a8d5369d4262d3f6b8dc6acdc2b24ad662e3e629",
+    "definition": {
+      "documentNumber": "GB 6514-2023",
+      "effectiveDate": "2024-10-01",
+      "endDate": "",
+      "id": "LV_STD_GB6514",
+      "lawId": "LF_STD_GB6514",
+      "level": "强制性国家标准",
+      "officialName": "涂装作业安全规程 涂漆工艺安全及其通风",
+      "scope": "CN",
+      "sourceUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=36BD8DC28F82382EA5C25872C5DAC273",
+      "validityStatus": "active",
+      "versionKey": "2023"
+    },
+    "fileTextUtf8": "{\n \"documentNumber\": \"GB 6514-2023\",\n \"effectiveDate\": \"2024-10-01\",\n \"endDate\": \"\",\n \"id\": \"LV_STD_GB6514\",\n \"lawId\": \"LF_STD_GB6514\",\n \"level\": \"强制性国家标准\",\n \"officialName\": \"涂装作业安全规程 涂漆工艺安全及其通风\",\n \"scope\": \"CN\",\n \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=36BD8DC28F82382EA5C25872C5DAC273\",\n \"validityStatus\": \"active\",\n \"versionKey\": \"2023\"\n}"
+  },
+  "afterVersion": {
+    "path": "knowledge/law-versions/LV_STD_GB6514.json",
+    "fileSha256": "5398cd078f1c2abe62a20feffae6a8ab32c4ddda3dff3fadda3df1cb9ceceaee",
+    "contentHash": "3220e9bfd5fee61dfe4799ae33e478f53b865c3fdb5425eae8f5b2114aa7e15c",
+    "definition": {
+      "documentNumber": "GB 6514-2023",
+      "effectiveDate": "2024-10-01",
+      "endDate": "",
+      "id": "LV_STD_GB6514",
+      "lawId": "LF_STD_GB6514",
+      "level": "强制性国家标准",
+      "officialName": "涂装作业安全规程 涂漆工艺安全及其通风",
+      "scope": "仅适用于涂装作业中前处理工艺和涂覆工艺及其通风系统的设计、安装及使用；不适用于桥梁、建筑物、大型储罐、船舶等大型构件的室外涂装作业。",
+      "sourceUrl": "https://xcoss.henan.gov.cn/typtfile/20250317/cebb519d8cd04b12a91ffd200d4730bc.pdf",
+      "validityStatus": "active",
+      "versionKey": "2023"
+    },
+    "reviewPath": "knowledge/reviews/law-versions/LV_STD_GB6514.json",
+    "reviewFileSha256": "968fa279e55843093d09504accffdbb73d33fd3e79c962e7a93a62e99ae80e94"
+  },
+  "unchangedEntities": [
+    {
+      "path": "knowledge/hazards/H_COM_PAINT_SHIFT_QUANTITY.json",
+      "entityId": "H_COM_PAINT_SHIFT_QUANTITY",
+      "fileSha256": "19505f09b9326693e2849620576c8ef859635b3b6cf2d1b3d8da387ba2b7ab99",
+      "contentHash": "b597c4c3e43f27ff38be9144050c1dcb6da731942f60fa2dbcae41740d20e850"
+    },
+    {
+      "path": "knowledge/links/K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2.json",
+      "entityId": "K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2",
+      "fileSha256": "8bc2ff59d725bd91af32c8f74b95e97cddb509b7d7eb5c3bf152dbd6dbe8d88f",
+      "contentHash": "5b5cdd07a64946741fb5a65a17239841a8e65ee6f77bfc1e1652ef9ea800ba7a"
+    },
+    {
+      "path": "knowledge/clauses/C_GB6514_6_2_1_2.json",
+      "entityId": "C_GB6514_6_2_1_2",
+      "fileSha256": "ba5075bf1672bf5a77f7c8272e9058110e37e307692e7eaa940ed222fe959a30",
+      "contentHash": "738468c286f7a6ae2bad011e61f3147a2c4c2ff6162708ab7307401463fcb9a6"
+    }
+  ],
+  "allowedChangedVersionFields": [
+    "scope",
+    "sourceUrl"
+  ],
+  "sourceReview": {
+    "standard": "GB6514-2023",
+    "currentness": "本批已核SAMR现行身份，版本、实施日期及标准身份均未改变。",
+    "officialIdentityUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=36BD8DC28F82382EA5C25872C5DAC273",
+    "officialOriginalUrl": "https://xcoss.henan.gov.cn/typtfile/20250317/cebb519d8cd04b12a91ffd200d4730bc.pdf",
+    "originalReadLocators": [
+      "PDF第7页/正文第1页完整范围",
+      "PDF第12页/正文第6页第6.2.1.2完整条文"
+    ],
+    "sourceMeaning": "原SAMR链接是有效身份页，并非错误标准；当前URL改为正式原PDF直接定位。scope由CN补明实际工艺及大型构件室外作业排除。",
+    "applicability": "本H/K原本已限涂覆作业场所涂料及辅料当班用量；与厂房内中间仓库1昼夜需用量区分，不以当班阈值替代中间库要求；不直接套用前处理化学品存量或排除范围场景。H/K/C原字节保持。"
+  },
+  "continuationRules": [
+    "仅在完整旧报告字节SHA、原item、真实旧LV定义及hash、当前H/K/C和新LV及其review均精确匹配后，对内存中该item唯一lawVersionHash续签。",
+    "不得写回或改动旧报告，不改其他23个item，不放宽任何旧commerce历史断言；旧报告由既有后续审阅锁定。",
+    "不得扩大允许字段、目标H/LV或把本continuation解释成其他规则的自动法源续签。"
+  ],
+  "siteFactEstablished": false,
+  "newDutiesApproved": false,
+  "enterpriseRemediationConfirmed": false,
+  "legacyReportBytesPreserved": true,
+  "otherItemsUnchanged": 23,
+  "siteFactsConfirmed": false
+}

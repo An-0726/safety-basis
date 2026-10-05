@@ -1,13 +1,64 @@
 {
-  "entityType": "hazard",
   "entityId": "H_060514A9AB6347C6A98CD93842",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "e56d57b04ded516b106a519244ec9b0b72d783bf09bf164e135b72007c7de6ec",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "ee71b6ce0c1c86926d9461a4dda2f68d9e2e052a6698ef6b466ad01621101009",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
-  ]
+    "E_REMAIN_FIRE_JGJ91_20261005"
+  ],
+  "reason": "依赖纠错：复合旧H收窄为第二句危化品区域显著标识，保留GB13690引用，不与第一句人员限制警示分支重复。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_060514A9AB6347C6A98CD93842",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "e56d57b04ded516b106a519244ec9b0b72d783bf09bf164e135b72007c7de6ec",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ]
+  },
+  "previousReviewFileSha256": "3ea22a4e3bf2459f0c892b9c9edf2383e1521c485277215d312d24c6d7ec4a76",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "限制人员进入的实验区或危险化学品存放使用区域未设置显著标识。",
+    "id": "H_060514A9AB6347C6A98CD93842",
+    "keywords": [
+      "科研建筑设计标准",
+      "第5",
+      "1条",
+      "科",
+      "研",
+      "建",
+      "筑",
+      "设",
+      "计",
+      "标",
+      "准",
+      ",",
+      "第",
+      "5",
+      "2",
+      "1",
+      "条"
+    ],
+    "lifecycle": "active",
+    "measures": "在限制人员进入的实验区或室设置显著的警示装置或标识；在危险化学品存放和使用区域设置显著标识，并符合 GB 13690 规定。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。原 conditions 字段记录的引用依据为：依据：对限制人员进入的实验区或室应设置显著的警示装置或标识。危险化学品的存放和使用区域应有显著的标识，并符合现行国家标准《化学品分类和危险性公示 通则》GB 13690的规定。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "限制人员进入的实验区或危险化学品存放使用区域未设置显著标识"
+  },
+  "previousEntityFileSha256": "467493da3e1747bcaae39d8827feecd309138afd6e1db3f5e938e3576f13d55e"
 }

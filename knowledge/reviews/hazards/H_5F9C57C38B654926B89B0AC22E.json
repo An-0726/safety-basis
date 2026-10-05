@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_5F9C57C38B654926B89B0AC22E",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "dd8e5510c4dd8b321aa654b2b4f18d17c60d990fc4dc0572638c2692453330a5",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "8598439b37d0ddda1e6d718ca68c93b670a42e3e2fe7006aec7b6abde543a5f5",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
-  ]
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "重新核对第4.5.3条具体义务及工艺范围，去除旧泛涂装套用、OCR串附录和错位适用性。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_5F9C57C38B654926B89B0AC22E",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "dd8e5510c4dd8b321aa654b2b4f18d17c60d990fc4dc0572638c2692453330a5",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_5F9C57C38B654926B89B0AC22E",
+    "title": "自动喷粉室未配置火焰探测报警装置或未与相关设备联锁",
+    "description": "自动喷粉室内,未配置火焰探测及报警装置,并未与粉末回收、粉末净化、供粉、压缩空气、工件输送、电源、消防等装置联锁,当报警装置报警时,,未停止喷涂,自动停止粉末回收、粉末净化、供粉、压缩空气、工件输送等装置的使用,并启动消防装置",
+    "measures": "全部规定联锁并进行模拟报警功能测试。",
+    "conditions": "适用于喷粉室的相关安全管理。",
+    "category": "消防安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "自动喷粉室未配置火焰探测报警装置或未与相关设备联锁"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句（含条款列举），已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程 粉末静电喷涂工艺安全 》(GB15607-2023)第4.5.3条",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

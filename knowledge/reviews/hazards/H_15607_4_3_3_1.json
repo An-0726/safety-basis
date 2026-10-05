@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_3_3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "3a9bdcb74b078dbc98b53bcc500d196fc516584a7e87a0596c6c3fe1515a5aba",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_813D0B7ABEB9FCBACB782B8D"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "12be1a98ddf90f6c16e9fd2968bf909236e633bf23415cea4079e1b7c6c355e4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 4.3.3：可依完整条款修复现有H/C/K定义及审核；限制仅粉末静电喷涂范围。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_3_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_813D0B7ABEB9FCBACB782B8D"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "12be1a98ddf90f6c16e9fd2968bf909236e633bf23415cea4079e1b7c6c355e4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷粉区地面未采用不燃或难燃的防静电、不发火花的材料铺设，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_4_3_3_1",
+    "keywords": [
+      "喷粉区地面未采用不燃或难燃的防静电",
+      "不发火花的材料铺设"
+    ],
+    "lifecycle": "proposed",
+    "measures": "喷粉区地面采用不燃或难燃的防静电、不发火花的材料铺设。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉区地面未采用不燃或难燃的防静电、不发火花的材料铺设"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

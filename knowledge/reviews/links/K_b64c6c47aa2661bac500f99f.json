@@ -3,18 +3,46 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "pending",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "checkedAt": "2026-09-26T19:42:30+08:00",
-  "reason": "该隐患已拥有 GB 50187-2012 的直接技术依据，本条《中华人民共和国安全生产法》规定作为上位法义务补充保留。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。 本次仅随原文补全刷新历史上下文，保留原待核、否决或归并决定；不恢复正式关联。",
+  "reviewer": "Codex management historical-link dependency review 20261005",
+  "checkedAt": "2026-10-05",
+  "reason": "当前H已归并设计阶段不可避免受水患威胁的防洪排涝canonical。安全生产法第三十六条对象为安全设备，并无厂址洪潮内涝选址和防洪排涝的具体义务，不能作为当前厂址技术规则的直接支持；此旧补充K维持pending/proposed，当前有效规则另以正式平台3.0.12引导及第1项支持。",
   "reasonCodes": [
     "SUPPORTING_UPPER_LAW"
   ],
   "reviewedContentHash": "888a352fd70c838433349c2bfa5a91d925e5a12cd08392b50271e6a01a86ee93",
   "contextHashes": {
-    "hazard": "5c2b834a9be7e3baebffb51c54d7adbdd1a26114623678577cd29d38ae17dc51",
+    "hazard": "4008ec60fd1a10100a2a0ad7931c8a158c9186ec1acc0b5d58a3bce8ec3d053a",
     "clause": "a1fc1d0c10dd01266fb5d1a666361fc83c5673e9478c895e16ce600e9bd53cc8"
   },
   "evidenceRefs": [],
   "phase5ReconciledAt": "2026-09-14",
-  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914"
+  "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914",
+  "notes": "本次对照收窄后的定义及旧关联实际正文重审隔离理由，仅绑定当前上下文；decision、旧K生命周期及原evidenceRefs保持，不恢复正式关联。新直接来源只用于比较，不混入此旧法规引用的证据。",
+  "previousReview": {
+    "entityId": "K_b64c6c47aa2661bac500f99f",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "pending",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "checkedAt": "2026-09-26T19:42:30+08:00",
+    "reason": "该隐患已拥有 GB 50187-2012 的直接技术依据，本条《中华人民共和国安全生产法》规定作为上位法义务补充保留。\n\nPHASE 5 全量对账：关联所属 hazard 已降为 proposed；保留关联与证据，但关联审阅退回，待范围、表述和完整依据链复核。 本次仅随原文补全刷新历史上下文，保留原待核、否决或归并决定；不恢复正式关联。",
+    "reasonCodes": [
+      "SUPPORTING_UPPER_LAW"
+    ],
+    "reviewedContentHash": "888a352fd70c838433349c2bfa5a91d925e5a12cd08392b50271e6a01a86ee93",
+    "contextHashes": {
+      "hazard": "5c2b834a9be7e3baebffb51c54d7adbdd1a26114623678577cd29d38ae17dc51",
+      "clause": "a1fc1d0c10dd01266fb5d1a666361fc83c5673e9478c895e16ce600e9bd53cc8"
+    },
+    "evidenceRefs": [],
+    "phase5ReconciledAt": "2026-09-14",
+    "phase5ReconciledBy": "Codex PHASE 5 reconciliation 20260914"
+  },
+  "previousReviewFileSha256": "6fd1fac5b27b1cd15634636feb4fb6e129580ed170cf5ecb35f0927cd0346a3b",
+  "comparisonRefs": {
+    "purpose": "compare_only_not_evidence_for_old_clause",
+    "currentHazardId": "H_6E7E9CD077AD4918962EBA6EAE",
+    "canonicalHazardId": "H_64890758F40C42608FF5E8DB65",
+    "currentBoundedDefinitionReview": "knowledge/reviews/hazards/H_6E7E9CD077AD4918962EBA6EAE.json"
+  }
 }

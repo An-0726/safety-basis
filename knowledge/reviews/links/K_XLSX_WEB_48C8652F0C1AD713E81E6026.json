@@ -1,18 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "2fed176bebf34b2e08f56aa600d6543bdc3ce78cca1cb66c5707d4c7bb0b0f39",
-    "hazard": "4ea3e28251f750fd8cd4f2044811cd258df973aabe4eea6f2323e22a40844c38"
-  },
-  "decision": "verified",
   "entityId": "K_XLSX_WEB_48C8652F0C1AD713E81E6026",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_D828F82B510091DF84405130"
-  ],
-  "reason": "隐患与官方条款直接对应。",
   "reviewType": "applicability",
-  "reviewedContentHash": "79205ab03d93133eebd5fc08197dd9a58f43f7007286245fe1addd4ebdc05b0e",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "b71215ed86b4d14d6acde659e2c8eb7fea3e80414eb43bdceba6d881a6febdbf",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "第8.10条与本H所述明确缺陷对应；按粉末静电喷涂范围和具体条件适用。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "2fed176bebf34b2e08f56aa600d6543bdc3ce78cca1cb66c5707d4c7bb0b0f39",
+      "hazard": "4ea3e28251f750fd8cd4f2044811cd258df973aabe4eea6f2323e22a40844c38"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_WEB_48C8652F0C1AD713E81E6026",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_D828F82B510091DF84405130"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "79205ab03d93133eebd5fc08197dd9a58f43f7007286245fe1addd4ebdc05b0e",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "clauseId": "C_XLSX_WEB_7962DB4F6263CF27C92AB700",
+    "hazardId": "H_15607_8_10_1",
+    "id": "K_XLSX_WEB_48C8652F0C1AD713E81E6026",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患对象、整改措施与官方条款逐项对应。",
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "e8c276fc789a51741ab2699375101639623adc108ffb70236d071b1cc9918b77",
+    "clause": "ef5a7c9d87a237543fa84badfb8ebd7fe905d14acfc27036d5a3947b9d4fdc0f"
+  }
 }

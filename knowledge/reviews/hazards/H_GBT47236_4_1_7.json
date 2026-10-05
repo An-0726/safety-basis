@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-18",
-  "decision": "verified",
   "entityId": "H_GBT47236_4_1_7",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "54864238270c0c0c5a1e66986464e82c339371b17c5316236240190dafc2d401",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_GBT47236_2026"
+    "E_ALL_GBT47236_2026_20261005"
   ],
-  "reason": "已按GB/T 47236-2026官方归档全文复核隐患对象、反向表述和标准适用范围；第4.1.7条直接要求以使用信息通知或警告操作者无法消除的剩余风险。",
-  "reviewType": "content",
-  "reviewedContentHash": "f09e4b008706693d366d1e35e4cea52edad1fd9b6579508849557e5968a02204",
-  "reviewer": "Codex PHASE11 GB/T 47236 review 20260918"
+  "reason": "逐条核第4.1.7条自身义务，补齐第1章设备范围、设计/制造/验收阶段及推荐性属性；原使用维护现场泛化不再作为当前条件。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "decision": "verified",
+    "entityId": "H_GBT47236_4_1_7",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT47236_2026"
+    ],
+    "reason": "已按GB/T 47236-2026官方归档全文复核隐患对象、反向表述和标准适用范围；第4.1.7条直接要求以使用信息通知或警告操作者无法消除的剩余风险。",
+    "reviewType": "content",
+    "reviewedContentHash": "f09e4b008706693d366d1e35e4cea52edad1fd9b6579508849557e5968a02204",
+    "reviewer": "Codex PHASE11 GB/T 47236 review 20260918"
+  },
+  "previousDefinition": {
+    "id": "H_GBT47236_4_1_7",
+    "title": "机器存在剩余风险,未采用使用信息通知或警告操作者",
+    "description": "机器存在无法通过设计和安全防护措施避免的剩余风险，未通过使用信息（说明书、标识等）通知或警告操作者，操作者对残余危险不知情。",
+    "measures": "在 使用说明书中明确剩余风险及警示信息，并在机器相应位置设置警告标识。",
+    "conditions": "仅适用于GB/T 47236-2026范围内的低压铸造机、差压铸造机及其他金属型铸造设备；其他机械应按相应通用或专用标准判断。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "机器存在剩余风险,未采用使用信息通知或警告操作者"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 GB/T 47236-2026 4.1.7 条反转生成（GLM，2026-09-12）；适用对象为低压铸造机及其他金属型铸造设备的使用与维护现场。\n\n【PHASE 11 2026-09-18】已复核GB/T 47236-2026现行状态、官方逐字条款、隐患对象和设备适用范围，建立当前direct关联。",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

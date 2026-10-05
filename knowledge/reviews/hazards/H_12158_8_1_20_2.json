@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_12158_8_1_20_2",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "06de27663f14e0e0051cc48fa2247c40cbfa478d11940408274ee068e9dbc5d9",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "f651215b4e59bc0d0837b967e6b2646d258d73a24d67b8127acba278729d26bd",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
-  ]
+    "E_ALL_GB12158_TOOLS_20261005"
+  ],
+  "reason": "撤销4.2.2.1错误依据，恢复8.1.20第二句有条件采用防静电工具的准确对象。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_12158_8_1_20_2",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "06de27663f14e0e0051cc48fa2247c40cbfa478d11940408274ee068e9dbc5d9",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "有条件时应采用具有防静电功能的工具。（第8.1.20条）。",
+    "id": "H_12158_8_1_20_2",
+    "keywords": [
+      "有条件时未采用具有防静电功能的工具"
+    ],
+    "lifecycle": "active",
+    "measures": "有条件时应采用具有防静电功能的工具。（依据 第8.1.20条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所",
+      "通用场所"
+    ],
+    "title": "有条件时未采用具有防静电功能的工具"
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

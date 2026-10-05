@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_4_2_2_3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "82fe96373d98879c1aaa860a6b54a62f065ec8a6355ca5db2ed774ca7606fc74",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex electrical and signs bounded author review 20261005",
   "evidenceRefs": [
-    "E_12158_GB 12158"
+    "E_ALL_ELECTRICAL_GB12158_20261005"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "829b534b0db8e99246dffd8ec8c6779ac611a8dea9090c9abcb3f6da5e424f76",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "第4.2.2.3完整条文中的接地电阻≤100Ω分支；不与泄漏电阻或粉尘系统严格小于100Ω条件混同。",
+  "notes": "本审核限已核通用定义、原文和所列对象边界；不是独立复核、特定企业现场事实、行政违法、重大事故隐患、整改完成或正式批准。原实体与旧审核完整字节及SHA256见本组作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_4_2_2_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "829b534b0db8e99246dffd8ec8c6779ac611a8dea9090c9abcb3f6da5e424f76",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "bd98aac50edfe1bea6dd73f299a9e0700461c8764bba87b5895d48732a685131",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "接地电阻不应大于100Ω。（第4.2.2.3条）。",
+    "id": "H_12158_4_2_2_3_1",
+    "keywords": [
+      "静电危险场所的接地电阻大于100Ω"
+    ],
+    "lifecycle": "proposed",
+    "measures": "接地电阻不应大于100Ω。（依据 第4.2.2.3条 整改。）。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "GB/T 13869-2026《用电安全导则》。",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所",
+      "通用场所"
+    ],
+    "title": "静电危险场所的接地电阻大于100Ω"
+  },
+  "previousEntityFileSha256": "723660d1b9041ff417a252fe07658f712a621b16b61c5ff3cce70110e5b85951"
 }

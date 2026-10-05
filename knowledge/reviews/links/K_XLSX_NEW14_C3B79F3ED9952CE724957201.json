@@ -1,19 +1,52 @@
 {
-  "checkedAt": "2026-09-14",
-  "contextHashes": {
-    "clause": "8ebe4e063e74f0ea55d2cdbc0779bc284feebfe9a40a87f5207da400326bdb20",
-    "hazard": "27b71b81d2d4266563612528a9eae25738e54d10d18fcdaace1a096e2ddc08b5",
-    "link": "d906f0615f29f338382e79513b55e0d528f8289f56b19f81e0040af3ed8ba2d4"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_NEW14_C3B79F3ED9952CE724957201",
   "entityType": "link",
+  "reviewType": "applicability",
+  "decision": "pending",
+  "reviewedContentHash": "20513662ae516b26a621e83404b0cfe54b151e1d0c02f3f892712cffdbcf0e21",
+  "contextHashes": {
+    "link": "20513662ae516b26a621e83404b0cfe54b151e1d0c02f3f892712cffdbcf0e21",
+    "hazard": "9086c13215decc6fb6829d7a8247f81389184346918b32c578e1ab61a64ada32",
+    "clause": "8ebe4e063e74f0ea55d2cdbc0779bc284feebfe9a40a87f5207da400326bdb20"
+  },
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
     "E_XLSX_WEB_FAE0747159252D4A30D6312F"
   ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
-  "reviewType": "applicability",
-  "reviewedContentHash": "d906f0615f29f338382e79513b55e0d528f8289f56b19f81e0040af3ed8ba2d4",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  "reason": "历史候选关联继续隔离：当前H已收窄并取得危险化学品安全法第5条的独立正式依据；本K仍指条例第4条历史C，未完成本K按当前窄H的独立适用性核验，不随H准入恢复。",
+  "notes": "本次仅记录已确认的隔离处置及当前上下文，不核准旧C原文或旧K适用性，不推定条例失效。原实体与原review完整字节保存在同一作者报告beforeFiles；previousDefinition/previousReview保留结构化完整前态。",
+  "previousDefinition": {
+    "id": "K_XLSX_NEW14_C3B79F3ED9952CE724957201",
+    "hazardId": "H_66B2A0967E8B4E4BAD7749DF_1",
+    "clauseId": "C_XLSX_WEB_CD13F8489C6C2D427C23098E",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于对应场所、设备和作业条件。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。",
+    "status": "needs_review"
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "8ebe4e063e74f0ea55d2cdbc0779bc284feebfe9a40a87f5207da400326bdb20",
+      "hazard": "27b71b81d2d4266563612528a9eae25738e54d10d18fcdaace1a096e2ddc08b5",
+      "link": "d906f0615f29f338382e79513b55e0d528f8289f56b19f81e0040af3ed8ba2d4"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_NEW14_C3B79F3ED9952CE724957201",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_FAE0747159252D4A30D6312F"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "d906f0615f29f338382e79513b55e0d528f8289f56b19f81e0040af3ed8ba2d4",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  }
 }

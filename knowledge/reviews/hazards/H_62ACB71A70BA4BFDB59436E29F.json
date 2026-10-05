@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_62ACB71A70BA4BFDB59436E29F",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "d5a2490e91af516518c084a453b99097d1233175396091d26237df00e0f0b7cb",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "674380aa3e62559973beb5252e6d90d2663f6d9a4aafb52ad6c127176599451c",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
-  ]
+    "E_ALL_GB15607_2023_20261005"
+  ],
+  "reason": "6.6 c直接支持回流气体禁含可燃气体；接地条款不支持此义务。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_62ACB71A70BA4BFDB59436E29F",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "d5a2490e91af516518c084a453b99097d1233175396091d26237df00e0f0b7cb",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_62ACB71A70BA4BFDB59436E29F",
+    "title": "粉末喷涂回流气体中混入易燃易爆气体",
+    "description": "粉末静电喷涂工艺的回流气体中含有易燃易爆气体，未采取控制措施，存在爆炸风险。",
+    "measures": "控制粉末喷涂回流气体成分，防止易燃易爆气体积聚，必要时不循环使用。",
+    "conditions": "适用于粉末静电喷涂工艺的回流气体控制。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "粉末喷涂回流气体中混入易燃易爆气体"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原标题为条款原文片段或存在文字损坏，语义不通且无法作为现场隐患表述；此处依其原描述与现有依据改写为可判定的现场事实，未改变依据本身。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\nGB 15607-2023。",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": []
 }

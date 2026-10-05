@@ -1,13 +1,53 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_97C1C1E87B844BAD9EB2A3D580",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d17484b613cf6344e9dd075bf8c5b0d3bf34ddf72612dfc340ef4f20b09faf02",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    "E_ALL_MANAGEMENT_GB18597_2023_20261005",
+    "E_ALL_MANAGEMENT_HJ1259_2022_20261005"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "056a539b874fa72015f5ba77b724d6591f7a8aaff8bc7a878a37cbb65654cd8e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "依独审明确逻辑：盖板与栏杆可二选一；建台账和按规定保存分别属于应履行义务。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_97C1C1E87B844BAD9EB2A3D580",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "056a539b874fa72015f5ba77b724d6591f7a8aaff8bc7a878a37cbb65654cd8e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousReviewFileSha256": "93df08d10bdf0e666d3d4a0cdf4b427e3ad3d63cc1a5952a475eece3dd46525d",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "危险废物贮存单位未建立危险废物贮存台账制度，危险废物出入库交接记录内容未参照标准执行，危废流向无法追溯。",
+    "id": "H_97C1C1E87B844BAD9EB2A3D580",
+    "keywords": [
+      "危险废物贮存单位",
+      "未建立危险废物贮存的台账制度",
+      "危险废物出入库交接记录内容",
+      "未参照标准执行"
+    ],
+    "lifecycle": "proposed",
+    "measures": "建立危险废物贮存台账制度，出入库交接记录按标准附录 C 执行。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所",
+      "通用场所"
+    ],
+    "title": "危险废物贮存单位,未建立危险废物贮存的台账制度,危险废物出入库交接记录内容,未参照标准执行"
+  },
+  "previousEntityFileSha256": "8b02af651d6aaa4406aabcdadfe453f21899b95d878ade44fd06163eaeca003c"
 }

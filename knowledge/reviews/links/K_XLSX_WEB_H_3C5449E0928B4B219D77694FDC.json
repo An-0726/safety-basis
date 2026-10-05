@@ -1,18 +1,49 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "4d57736824576ce753288a4206e2335a6ca79b9b3114d9f0973d9e53d8ba4923",
-  "contextHashes": {
-    "hazard": "13eaaab3e4abaa13c13f6d757344e8a96c8825c41d0d506e6b81f561fa7941f8",
-    "clause": "d5cf7b0c208c75d8ec49f0ecdcace05c9c2ed125b011847e00fb3e06b0fcf1be"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.1条区域警示标识要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "89855335e869d882aa3123e995ffd7bcb4d605d5ac3f23ac6a51b1c6e1ec4133",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_MOHURD_JGJ91_2019"
+    "E_REMAIN_FIRE_JGJ91_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "逐K核对第一句人员限制实验区的警示装置或标识，不扩大为普遍区域。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "4d57736824576ce753288a4206e2335a6ca79b9b3114d9f0973d9e53d8ba4923",
+    "contextHashes": {
+      "hazard": "13eaaab3e4abaa13c13f6d757344e8a96c8825c41d0d506e6b81f561fa7941f8",
+      "clause": "d5cf7b0c208c75d8ec49f0ecdcace05c9c2ed125b011847e00fb3e06b0fcf1be"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，JGJ 91-2019第5.2.1条区域警示标识要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_JGJ91_2019"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "ac103bc1ced260265716f3748394f99b01c33ffef8e87a6b76ecc186befda923",
+  "previousDefinition": {
+    "applicability": "限制人员进入的实验区域未设置显著警示标识",
+    "clauseId": "C_JGJ91_5_2_1",
+    "hazardId": "H_3C5449E0928B4B219D77694FDC",
+    "id": "K_XLSX_WEB_H_3C5449E0928B4B219D77694FDC",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "previousEntityFileSha256": "13bcf6245eb50c748dc89f5d7d479133639e11923e19615f1a35346828e32f3e",
+  "contextHashes": {
+    "hazard": "3197379e75e0c1abe97260f277396e852e4a5a7314debe4786b722d5beb5dbf1",
+    "clause": "e6103b2aab56f100093c3aa71a9bc09543f07ba990f42d8bdd0ac3861da54838"
+  }
 }

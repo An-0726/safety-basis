@@ -1,13 +1,52 @@
 {
-  "entityType": "hazard",
   "entityId": "H_2CFBFBBF338B36F66DA7600F",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "e86523a8241b1a9ff20152069724427a54b3ca2ce45cc67c52e854c2e40142e8",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "11e500dc3d3b49cb09bf5f6f79e5188badf084d6c3584da3c83bf338d91286ef",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
-  ]
+    "E_ALL_ELECTRICAL_GB12158_20261005"
+  ],
+  "reason": "仅保留接地支路；原流速支路没有被4.2.2.1支持，独立保留待补，不能以接地修复称复合原项全部闭环。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_2CFBFBBF338B36F66DA7600F",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "e86523a8241b1a9ff20152069724427a54b3ca2ce45cc67c52e854c2e40142e8",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "灌装危险化学品时未控制流速、未设接地装置防止静电积聚",
+    "id": "H_2CFBFBBF338B36F66DA7600F",
+    "keywords": [
+      "灌装流速",
+      "接地",
+      "防静电"
+    ],
+    "lifecycle": "active",
+    "measures": "危险化学品灌装时控制流速，并设置接地装置防止静电积聚。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_4B099AC576B249B6A7A28AE8E0 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《首批重点监管的危险化学品安全措施和应急处置原则》",
+    "places": [
+      "通用场所"
+    ],
+    "title": "危险化学品灌装时未控制流速、未设置接地装置防止静电积聚"
+  },
+  "remainingUnsupportedBranches": [
+    "灌装流速的具体介质、设备、管径、灌装方式及相应条文仍待独立核验。"
+  ],
+  "invalidClaimExcluded": []
 }

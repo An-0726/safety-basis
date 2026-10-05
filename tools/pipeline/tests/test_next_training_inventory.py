@@ -8,6 +8,9 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
+# Preserve the PR111 catalog and review-history assertions on its exact source.
+from complete_remaining_cohort_fixture import pre_complete_repo_root
+ROOT = pre_complete_repo_root(ROOT)
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from canonical import content_hash
 from release_gate_core import evaluate_release_gate

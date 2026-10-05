@@ -1,18 +1,49 @@
 {
-  "checkedAt": "2026-09-18",
-  "contextHashes": {
-    "clause": "3caf4110ce1aaf921db68fc978ad2bdfdecdd4e6ec2e9826d648c8cf2bd25be5",
-    "hazard": "57db74a4c3e6feb96e1a94685cab5e47fe04ff1dcb80b5c2e0c0aea5c07eea5b"
-  },
-  "decision": "verified",
   "entityId": "K_PHASE11_GBT47236_S_E3D6F3C2ED10431482",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_GBT47236_2026"
-  ],
-  "reason": "第4.2.4.5条在本条内直接规定候选所述义务，候选为该义务的反向缺陷表述。适用范围已限定为GB/T 47236-2026覆盖设备。",
   "reviewType": "applicability",
-  "reviewedContentHash": "e39ad98b136446504c36a30c5317373981ae27bceeedb0971d6cc5994b3728cb",
-  "reviewer": "Codex PHASE11 GB/T 47236 standalone review 20260918",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "reviewedContentHash": "4b8ad44febeab95287e29e2b60ac99d6246f3565859c77191d1d1aedf3b47426",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
+  "evidenceRefs": [
+    "E_ALL_GBT47236_2026_20261005"
+  ],
+  "reason": "逐条核第4.2.4.5条自身义务，补齐第1章设备范围、设计/制造/验收阶段及推荐性属性；原使用维护现场泛化不再作为当前条件。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "contextHashes": {
+      "clause": "3caf4110ce1aaf921db68fc978ad2bdfdecdd4e6ec2e9826d648c8cf2bd25be5",
+      "hazard": "57db74a4c3e6feb96e1a94685cab5e47fe04ff1dcb80b5c2e0c0aea5c07eea5b"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE11_GBT47236_S_E3D6F3C2ED10431482",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GBT47236_2026"
+    ],
+    "reason": "第4.2.4.5条在本条内直接规定候选所述义务，候选为该义务的反向缺陷表述。适用范围已限定为GB/T 47236-2026覆盖设备。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "e39ad98b136446504c36a30c5317373981ae27bceeedb0971d6cc5994b3728cb",
+    "reviewer": "Codex PHASE11 GB/T 47236 standalone review 20260918",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "id": "K_PHASE11_GBT47236_S_E3D6F3C2ED10431482",
+    "hazardId": "H_GBT47236_4_2_4_5",
+    "clauseId": "C_GBT47236_4_2_4_5",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "仅适用于GB/T 47236-2026范围内的低压铸造机、差压铸造机及其他金属型铸造设备；其他机械应按相应通用或专用标准判断。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "第4.2.4.5条在本条内直接规定候选所述义务，候选为该义务的反向缺陷表述。"
+  },
+  "contextHashes": {
+    "hazard": "60cbac93c86a4376b2410c0384ea217390ac99b2948ea0f8b069f1e8635ce981",
+    "clause": "3caf4110ce1aaf921db68fc978ad2bdfdecdd4e6ec2e9826d648c8cf2bd25be5"
+  }
 }

@@ -3,22 +3,54 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H038 为风机选型未与所处理介质匹配（易燃易爆未选防爆型、腐蚀性未选防腐型、高温未选高温型、含尘未选排尘型）；HJ 2000-2010 第5.4.1条对四类介质对应风机选型逐一规定，确认为 direct 依据。",
-  "reasonCodes": [
-    "DIRECT_CLAUSE_CONFIRMED",
-    "SPECIFIC_TECHNICAL_STANDARD",
-    "FAN_SELECTION"
-  ],
-  "reviewedContentHash": "6351dbeaf0f856b2ccf910bddf24e39f2263521de5d17b2cead4b03df2a8bf0e",
-  "contextHashes": {
-    "hazard": "3a22b87d6e3a1c73a07a9af12ee362b930404b68c917b9c1b122bb33b6bdacd5",
-    "clause": "732e837336f9f6c48d0f15124272bd910aec706e20ddd679377e21dd3383bff9",
-    "link": "6351dbeaf0f856b2ccf910bddf24e39f2263521de5d17b2cead4b03df2a8bf0e"
-  },
+  "reviewedContentHash": "f542975b48f1a4f7a35b8496f97d35d39e73d2d1e1643cb37b5c66a06bdda158",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining fire-gas author review 20261005",
   "evidenceRefs": [
-    "E_ea4266c11fb5690103998734512431453b59936b5e44d60d7c47de29217a4ab7"
+    "E_REMAIN_FIRE_HJ2000_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "逐项实审HJ2000完整5.4.1，限大气污染治理工程及对应介质、安装环境；保留指导属性及非爆炸环境“宜”强度，不能据此宣称普通工业通风或全部产品合规均已覆盖。",
+  "notes": "逐项作者核验；独立复核另存。仅核通用定义与法源适用，不确认具体现场事实、违法/重大隐患认定、整改完成或正式批准。",
+  "previousReview": {
+    "entityId": "K_AC0819521C0C6C9961FDEB",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "H038 为风机选型未与所处理介质匹配（易燃易爆未选防爆型、腐蚀性未选防腐型、高温未选高温型、含尘未选排尘型）；HJ 2000-2010 第5.4.1条对四类介质对应风机选型逐一规定，确认为 direct 依据。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "SPECIFIC_TECHNICAL_STANDARD",
+      "FAN_SELECTION"
+    ],
+    "reviewedContentHash": "6351dbeaf0f856b2ccf910bddf24e39f2263521de5d17b2cead4b03df2a8bf0e",
+    "contextHashes": {
+      "hazard": "3a22b87d6e3a1c73a07a9af12ee362b930404b68c917b9c1b122bb33b6bdacd5",
+      "clause": "732e837336f9f6c48d0f15124272bd910aec706e20ddd679377e21dd3383bff9",
+      "link": "6351dbeaf0f856b2ccf910bddf24e39f2263521de5d17b2cead4b03df2a8bf0e"
+    },
+    "evidenceRefs": [
+      "E_ea4266c11fb5690103998734512431453b59936b5e44d60d7c47de29217a4ab7"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousReviewFileSha256": "13cc953d4be028f321971b0fea4ba55ce4df184a3f5062b6236fa5d5c9b04607",
+  "previousDefinition": {
+    "id": "K_AC0819521C0C6C9961FDEB",
+    "entityType": "link",
+    "hazardId": "H038",
+    "clauseId": "C_HJ2000_5_4_1",
+    "role": "direct",
+    "applicability": "适用于大气污染治理工程的风机选型",
+    "jurisdictionCode": "CN",
+    "reason": "H038 为风机选型未与所处理介质匹配（易燃易爆未选防爆型、腐蚀性未选防腐型、高温未选高温型、含尘未选排尘型）；HJ 2000-2010 第5.4.1条对四类介质对应风机选型逐一规定，确认为 direct 依据。",
+    "createdAt": "2026-09-10",
+    "lifecycle": "active"
+  },
+  "previousEntityFileSha256": "2f786b2280dcf2aa624fa5c54d829154ba84b4e751e683591776a6127319aad5",
+  "contextHashes": {
+    "hazard": "cbcb1122dfe142e94e17791a2c7bcaab5dc8b38eae0e650d89ec769f1aab286c",
+    "clause": "732e837336f9f6c48d0f15124272bd910aec706e20ddd679377e21dd3383bff9"
+  }
 }

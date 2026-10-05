@@ -1,13 +1,53 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_6_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a14a530f7c358d708327682b6a151aababd83f5d0667a0d49f0e1a8fea162f68",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_B5683C3849AF0266C98C9E2F"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b7ecc3a83d5a72e8ed9711f5c63ce02dc2886884a05666fa952a08985ec3866d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB15607-2023 4.6：只纳入4.6自身明确的照明与隔板要求；不声明已完成被引GB12367、GB50058全部具体义务。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_6_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_B5683C3849AF0266C98C9E2F"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b7ecc3a83d5a72e8ed9711f5c63ce02dc2886884a05666fa952a08985ec3866d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷粉区灯具、防尘隔板未符合标准要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_4_6_1",
+    "keywords": [
+      "喷粉区灯具",
+      "防尘隔板未符合标准要求"
+    ],
+    "lifecycle": "proposed",
+    "measures": "喷粉区灯具、防尘隔板符合标准要求。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉区灯具、防尘隔板未符合标准要求"
+  },
+  "remainingUnsupportedBranches": [
+    "灯具满足GB12367、GB50058的其他具体设计/安装要求未由本条自含内容全部核准。"
+  ],
+  "invalidClaimExcluded": [
+    "可修固定灯具、隔板密封/材料、沉积影响、明确区域防爆灯等自身明示义务；不把总括“符合相关标准”签成全标准符合性。"
+  ]
 }

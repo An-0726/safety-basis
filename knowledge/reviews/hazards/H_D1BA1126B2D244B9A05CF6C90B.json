@@ -1,13 +1,69 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D1BA1126B2D244B9A05CF6C90B",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "9b9d684d2cbc9f68a866abccd893979179bc57534c5e8ef02dc23f70757ee61d",
-  "checkedAt": "2026-09-26T18:47:04+08:00",
-  "reviewer": "Codex 消防原文及直接适用性复核 20260926",
-  "reason": "3.2.1仅规定甲类厂房与特定对象间距，不能替代工业总平面标准所有要求。",
+  "decision": "verified",
+  "reviewedContentHash": "8808decc32a28c62d1c2467890912b5eb0d27fae157aafb262a825fbc5bf7065",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex management and hazardous chemicals bounded author review 20261005",
   "evidenceRefs": [
-    "E_GB55037_JS_FIRE_FULLTEXT_20260926"
-  ]
+    "E_ALL_MANAGEMENT_GBZ1_2010_20261005"
+  ],
+  "reason": "建设项目卫生设计与评价范围，具体布局判据另核；不能一条追溯全部既有企业。",
+  "notes": "作者核验，不替代独审；只确认有界规则和证据，不确认特定企业现场、整改完成、违法或重大事故隐患认定。完整原实体及旧review文件字节、SHA256保存在本批作者报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D1BA1126B2D244B9A05CF6C90B",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "9b9d684d2cbc9f68a866abccd893979179bc57534c5e8ef02dc23f70757ee61d",
+    "checkedAt": "2026-09-26T18:47:04+08:00",
+    "reviewer": "Codex 消防原文及直接适用性复核 20260926",
+    "reason": "3.2.1仅规定甲类厂房与特定对象间距，不能替代工业总平面标准所有要求。",
+    "evidenceRefs": [
+      "E_GB55037_JS_FIRE_FULLTEXT_20260926"
+    ]
+  },
+  "previousReviewFileSha256": "138385323bc327058aa641e3603db3512f5c87b0bef2277b71892b07f6507d6a",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "总图与建筑",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "工业企业总平面布置,包括建(构)筑物现状、拟建建筑物位置、道路、卫生防护、绿化等,未符合GB50187等国家相关标准要求",
+    "id": "H_D1BA1126B2D244B9A05CF6C90B",
+    "keywords": [
+      "工业企业总平面布置",
+      "包括建",
+      "筑物现状",
+      "工",
+      "业",
+      "企",
+      "总",
+      "平",
+      "面",
+      "布",
+      "置",
+      ",",
+      "包",
+      "括",
+      "建",
+      "构",
+      "筑",
+      "物",
+      "现",
+      "状",
+      "拟",
+      "位"
+    ],
+    "lifecycle": "proposed",
+    "measures": "按 GB 50187 等国家相关标准复核并调整厂区总平面布置。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》 第5.2.1.2条\n2026-09-26原文审计撤回正式状态：3.2.1仅规定甲类厂房与特定对象间距，不能替代工业总平面标准所有要求。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "工业企业总平面布置不符合 GB 50187 等国家相关标准要求"
+  },
+  "previousEntityFileSha256": "cb4cdeae7bc5612f3b2b687ae33e1243c44aef1823a2b3a72918981f6739d443"
 }

@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_374AD1DFC5D74D438D1E71C692",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ac2f60cc44ad422767137ef5cf831ee2fcbd27849a20615efaf721cf058e8177",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex complete remaining equipment author 20261005",
   "evidenceRefs": [
-    "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "90e5b628b68ea59e29c1455d2b69fc542f658190c0da15903515a94736cc1bf6",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "GB15607-2023 6.4 b：只纳入6.4 b过滤材料义务；不将原“回收装置整机必须导电材料”随同恢复。",
+  "notes": "作者基于正式原件逐项审核；独立复核尚待最终树。不证明企业现场或整改完成，不替代个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_374AD1DFC5D74D438D1E71C692",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F25B356597064103FBADB7B3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "90e5b628b68ea59e29c1455d2b69fc542f658190c0da15903515a94736cc1bf6",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_374AD1DFC5D74D438D1E71C692",
+    "title": "回收装置,未选用导电材料制作。袋滤器,未选择防静电滤料",
+    "description": "回收装置未选用导电材料制作，袋滤器未选用防静电滤料。",
+    "measures": "按GB 15607-2023第6.4条整改回收、净化装置和过滤材料，选用满足防静电、难燃等要求的滤材，核查导静电措施并完成验收。",
+    "conditions": "适用于粉末静电喷涂回收/净化装置和袋式过滤装置。",
+    "category": "涂装安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "回收装置,未选用导电材料制作。袋滤器,未选择防静电滤料"
+    ],
+    "lifecycle": "proposed",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《涂装作业安全规程粉末静电喷涂工艺安全》(GB 15607-2023) 6.4.2",
+    "mergedInto": null
+  },
+  "remainingUnsupportedBranches": [],
+  "invalidClaimExcluded": [
+    "GB15607-2023 6.4 b只支持防静电、难燃过滤材料，不支持“回收装置整机必须导电材料”旧主张；排除该主张，不假称其已闭环。"
+  ]
 }
