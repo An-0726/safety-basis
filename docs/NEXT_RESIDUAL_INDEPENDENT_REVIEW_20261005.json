@@ -1,0 +1,1080 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Independent original-page, currency, applicability, force, preservation and exact-byte review",
+  "asOf": "2026-10-05",
+  "signedAt": "2026-10-05T07:30:10.486749+00:00",
+  "decision": "APPROVE_BOUNDED_SOURCE_AND_STATE_INTEGRATION",
+  "blockingFindings": [],
+  "baseline": {
+    "actualMainCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+    "localSnapshotCommit": "20f80edd98df5c828d538f249353d7df5c148562",
+    "tree": "84ed7015e73ba20ee505541ad94f776be48f31fd"
+  },
+  "reviewedSnapshot": {
+    "fileCount": 126,
+    "changedKnowledgeAndAuthorReportsSha256": "bc4db282c6e34e9b9bb512d77c8a536e9799ce0632893a329ead531f985cdff6",
+    "allKnowledgeFileCount": 16894,
+    "allKnowledgePathSha256MapDigest": "6f900c443f3fee63961ab62fcfebca431e6532190b75d86d2e6240a95794bbc7",
+    "hashMeaning": "File hashes are raw SHA-256 bytes. Aggregate is SHA-256 of sorted-key compact UTF-8 JSON object {relativePath:fileSha256}. Any covered-byte change requires re-review; this report does not self-hash."
+  },
+  "hazardDecisions": [
+    {
+      "hazardId": "H053",
+      "group": "warehouse",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "60277abbdfdd60c0450251af439a4a169e559cf6a27b95303d70d50eb481808a",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H054",
+      "group": "warehouse",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "eb484647a4733d0fafdf03ab0ea4899b9e902607cccc4450dcb992d49eb66fd9",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H055",
+      "group": "warehouse",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "d6daa712ee7922195460e4fcb15c2fae3ac8b40cba8fb8566e3df7c5897243b7",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_993643C76F7041BDA19B0C5EED",
+      "group": "warehouse",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_D128C0FCC4844BD8BF5D8FAAF5",
+      "group": "warehouse",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "167c69e6e815888a07230706734a8ca332f7c1f7e17c16a028814ccc010c111d",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_8A733CAD776643E3B34B4D4689",
+      "group": "training",
+      "decision": "APPROVE_BOUNDED_RECOMMENDED",
+      "contentHash": "b3fa689047ec31ab03884961e66b80195dffdec236455f6314371ca7ae8e3081",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_B0B7C75B5F0D423386A84AB73D",
+      "group": "crane",
+      "decision": "APPROVE_BOUNDED_NOT_MAJOR",
+      "contentHash": "2715111e2ac847a1c43b7be0218c9d555f3d7fa02fb15763259b94907a0ad081",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_CFF821DDE6764083BFB914EC86",
+      "group": "electrical",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "a29bf8250933b5f5d30613f17e1fb42d7255592b4ece3f72e73e5e7d32393e5f",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_3141FAD634694686B722139F91",
+      "group": "electrical",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "42df9b6b62828eef8e9ad5067ffe37b9268299a9c41b100c39715dfac990d700",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_C7284453E8E94532A44FC5F5EF",
+      "group": "electrical",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "d611f717e5718bcb6fc76ddbeb3ba1642bcd46ef40238cd43d2acdcbaf4e1d60",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_974023DBBC2B471AA3F7DB6A67",
+      "group": "electrical",
+      "decision": "APPROVE_BOUNDED",
+      "contentHash": "f2a8bb74a526077f9316fd1e12348f0e9169b91c514676ab8a2a149484d60bf5",
+      "currentLifecycle": "active"
+    },
+    {
+      "hazardId": "H_1251ED2287FB47B6BDED9292D1",
+      "group": "merge",
+      "decision": "APPROVE_BOUNDED_MERGE_UNVERIFIED_INSPECTION_EXCLUDED",
+      "contentHash": "bbabe7e3553a68505a16ed8edad396ff8a469908b3a50db8e0e5c1ff5a3fc1a8",
+      "currentLifecycle": "superseded"
+    },
+    {
+      "hazardId": "H_12158_10_1_2",
+      "group": "containment",
+      "decision": "APPROVE_REMAIN_UNADMITTED",
+      "contentHash": "5ffa4a90b672aac99843c775713b640400b59026e55b3091e1527679739ba82a",
+      "currentLifecycle": "proposed"
+    },
+    {
+      "hazardId": "H_BC2436C8E5BE198BA82BB74B82_1",
+      "group": "containment",
+      "decision": "APPROVE_REMAIN_UNADMITTED",
+      "contentHash": "ef831d8ca13d63d66ec4c83fdd949a8bb5f556965919dee7d4617219f7c52586",
+      "currentLifecycle": "proposed"
+    },
+    {
+      "hazardId": "H_F0D64F91542E4B0399D83D670D",
+      "group": "containment",
+      "decision": "APPROVE_REMAIN_UNADMITTED",
+      "contentHash": "93492d22fd41d6093d6b61210fefb7a8819fbda16ce389773ceb5e3e9a54de7a",
+      "currentLifecycle": "active"
+    }
+  ],
+  "officialSourcesAndOriginalPages": [
+    {
+      "standard": "XF1131-2014",
+      "url": "https://js.119.gov.cn/group1/M00/00/2A/ZYS-ZGGB6A-AT5TaANQHgHPKgLU664.pdf",
+      "pdfSha256": "835f2860b9645cc5c6cb95390bb6925570fe53e7daa82d7c10273f5d9c7de7ee",
+      "visuallyReadPdfPages": [
+        1,
+        4,
+        7,
+        11,
+        13
+      ],
+      "facts": "封面2014-01-27发布、2014-03-01实施；前言GA改XF内容不变；第3章、第5至14章（10.10除外）强制。范围限既有仓储场所，排除炸药仓库和花炮仓库。6.7、6.8、8.2逐原图核对。",
+      "currentnessUrl": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=BDDBA08EC6856C70E05397BE0A0A640D",
+      "currentnessFinding": "2026-10-05独立打开题录，明确现行；该题录日期、归口、范围、替代字段串项，不采为事实。原件身份/日期/范围与2026年国家粮储局实际引用交叉核查。"
+    },
+    {
+      "standard": "GB16912-2008",
+      "url": "https://oss.henan.gov.cn/typtfile/20250306/a4a1994f13514706babb1b807fe5d945.pdf",
+      "pdfSha256": "fc89841adf985e0ea426652a38f48d997f2611237524a87648ae5b0e3bdb40d4",
+      "visuallyReadPdfPages": [
+        1,
+        3,
+        4,
+        15
+      ],
+      "facts": "4.13.2完整原文核对；不在前言强制条文清单内；范围仅新建、扩建、改建采用深冷法生产氧气及相关气体的单位，不能由此推全行业全员法定特种证。",
+      "currentnessUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=E457797F4258FE41C33E7802F6EFD1EE",
+      "currentnessFinding": "独立打开SAMR题录，现行，2008-12-11发布，2009-10-01实施；封面代替1997版。"
+    },
+    {
+      "standard": "AQ7011-2018",
+      "url": "https://hbba.sacinfo.org.cn/portal/download/e3056cdf09e44e9b7008322460c0e882",
+      "pdfSha256": "38b8eba427259bba4659b21ac9eb618f77b65f0352757aab6a2fa6d9c38ae203",
+      "visuallyReadPdfPages": [
+        1,
+        4,
+        5,
+        6
+      ],
+      "facts": "正式出版封面2018-05-22发布、2018-12-01实施；前言全部技术内容强制。金属冶炼企业高温熔融金属及熔渣吊运设备设施范围；4.6完整原句和三个条件层次核实。只恢复年度吊具部件离线探伤，不认定MEM10重大。",
+      "currentnessUrl": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=8B1827F24D27BB19E05397BE0A0AB44A",
+      "currentnessFinding": "作者hbba题录URL本轮web抓取失败，独立改开此SAMR官方题录，明确强制性、现行、日期和范围与原件一致。"
+    },
+    {
+      "standard": "GB50057-2010",
+      "url": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651120484987.pdf",
+      "pdfSha256": "d330526686d5ae81bce092aceda6bbfe4e52474cdf4e34e0e858274e096155f8",
+      "visuallyReadPdfPages": [
+        3,
+        10,
+        19
+      ],
+      "facts": "原件公告为824号，2010-11-03发布、2011-10-01实施。4.1.1完整两段已核；适用新扩改建（构）筑物防雷设计。只有指定类别才触发第二段防感应义务，定期检测不是本条内容。",
+      "currentnessUrl": "https://www.gongbiaoku.com/read/spc18723twp?secId=h46814083ier",
+      "currentnessFinding": "独立打开原指定出版社工标库现行标识，与政府托管原件及GB55024公告衔接；仅认有界设计技术用途，不把出版社标识冒称住建部实时认证，不宣称全规范所有条款现行强制。"
+    },
+    {
+      "standard": "GB50054-2011",
+      "url": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651119858336.pdf",
+      "pdfSha256": "25e8a883e36ca7545f54a822842b239100997577e42240fb4516f28c0f8269fe",
+      "visuallyReadPdfPages": [
+        3,
+        11,
+        40,
+        57,
+        58
+      ],
+      "facts": "1100号发布公告；7.6.38位于IV电缆埋地敷设，完整四款及1.5倍管内径已核。目标款不在原强条清单，设计范围为新改扩、交流工频1000V及以下。只恢复埋地电缆引入试剂室穿墙/楼板无保护管窄分支。",
+      "currentnessUrl": "https://www.gongbiaoku.com/book/w1c18682fok",
+      "currentnessFinding": "独立打开原指定出版社现行题录及日期/范围；不根据政府PDF存在单独判现行，通规冲突优先及非强条力度已明示。"
+    },
+    {
+      "standard": "GB/T13869-2017",
+      "url": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/P020260916651130919251.pdf",
+      "pdfSha256": "fc612978f1112f87912668b3b01af1c554422ebcf83074eebaae64af8beb9d50",
+      "visuallyReadPdfPages": [
+        1,
+        4,
+        6
+      ],
+      "facts": "范围交流1000V及以下、直流1500V及以下；5.2.1完整六段与现C一致，第四段必要监控/监视与禁止超负荷为两个分支，未改共享C正文。",
+      "currentnessUrl": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=1C5996A8BAD63FF484CCFE024D98849C",
+      "currentnessFinding": "独立打开2017现行及2026即将实施官方题录，后者2027-02-01实施；现有2017版排他endDate保持不变，不提前切换。"
+    },
+    {
+      "standard": "GB12158-2024（只核污染清理）",
+      "url": "https://xcoss.henan.gov.cn/typtfile/20250319/61d853d052fb454f9e30672216e65672.pdf",
+      "pdfSha256": "d0444f1a030b8531482649b7b5bd7283eb1a0ae52dc3d7dacbc9b0028f7fac65",
+      "visuallyReadPdfPages": [
+        18,
+        19
+      ],
+      "facts": "9.5/9.11的设备与法兰导电连接对象不同于10.1/10.2人员服装鞋手套。H_12158_10_1_2仅清污染且仍proposed/pending，无新法源准入，不合并到手套或9.11三分支。",
+      "currentnessFinding": "本批不重新批准该标准或既有三分支；仅读原页证实对象错配与保守隔离。"
+    }
+  ],
+  "additionalIndependentSourceChecks": [
+    {
+      "url": "https://szwb.sz.gov.cn/gwszwfw/zsk/hybz/content/post_9913357.html",
+      "finding": "独立完整读取GB55024发布/优先适用说明及12项相关强条废止清单，未列GB50054或GB50057；列GB50601施工验收规范，不能混同设计规范。未把清单未列推为所有后续文件皆未调整。完整PDF抓取超时/返回非PDF，未称已读其全部正文。"
+    },
+    {
+      "url": "https://wlt.fujian.gov.cn/zwgk/zcfg/zxwj/202604/t20260424_7130967.htm",
+      "finding": "独立打开政府索引，附件50/51/54分别链接50054/50057/13869；该索引只佐证来源，不代替各自当前性审查。"
+    },
+    {
+      "url": "https://www.lswz.gov.cn/html/zmhd/jzxx/2026-07/13/content_294322.shtml",
+      "finding": "独立打开2026-07-13国家粮储局答复，仍明确引用XF1131-2014。只作在用旁证，不扩展仓储H为防雷检测规则。"
+    },
+    {
+      "url": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=5A054AA03C006058E06397BE0A0A7A9E",
+      "finding": "独立点开XF/T3026-2026题录：推荐性、即将实施，2026-07-31发布、2027-02-01实施；没有代替XF1131声明。不能提前采用，不能仅凭相近标准关系给L015新增endDate。"
+    },
+    {
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BE454A97C36FCB5C7DB8EE345EC9A6FF",
+      "finding": "独立读取GB/T13869-2026题录，2027-02-01实施，当前即将实施。"
+    }
+  ],
+  "technicalBoundaryChecks": [
+    "XF1131 6.8(c)/(d)/(e)分别0.5/0.3/1m，等于下限不判缺陷；6.7的150m²不是数量/质量限额，主通道2m不能泛化每堆搬运通道。",
+    "XF1131 8.2仅丙类固体室内储存场所；超过60W的白炽灯不等于所有超过60W灯具，镇流器条件完整；禁烟、用火、器材旧分支未整体准入。",
+    "GB16912 4.13.2明确推荐性技术力度和新扩改深冷单位边界，不能全员法定特种证；缺资料不等于未培训。",
+    "AQ7011保留完整4.6，年度吊具离线探伤与出现严重磨损/开片时更换、轴探伤及必要时金相条件分开。无MEM10重大归类。",
+    "GB50057共享C补完整第二段后，两个现有消费者都实质收窄并重绑；不把防雷类别推给所有建筑，不把定期检测并入已核设计义务。",
+    "GB50054埋地敷设章节及穿墙/楼板对象明确，保留1.5倍，不推所有试剂室电缆强制钢管或爆炸场所。",
+    "GB/T13869监控/监视与超负荷分开，不强制自动监测或持续人工盯守；既有超负荷canonical与未来版本边界不变。",
+    "法兰/手套混淆只纠错隔离，不用形式归并假冒闭环；接地故障/切断报警、绝缘/护套、阻火器、微站地域等残余未核分支仍独立保留。"
+  ],
+  "stateOnlyChecks": {
+    "retiredRejectedRelations": 9,
+    "stateChangeFields": "9K仅lifecycle，BC H仅lifecycle/mode，BC K仅lifecycle；旧C、role、ID未换；rejected/pending保持。",
+    "inventoryImmediateOldRawTextHashesVerified": true,
+    "majorCatalogueChange": "只删除AQ起重机那一条原错MEM10待审关联；未增重大条目或改变两氨待审链。"
+  },
+  "preservation": {
+    "baselineEligible": {
+      "H": 1685,
+      "K": 1844
+    },
+    "currentEligible": {
+      "H": 1694,
+      "K": 1853
+    },
+    "removedH": [],
+    "removedK": [],
+    "addedH": [
+      "H053",
+      "H054",
+      "H055",
+      "H_8A733CAD776643E3B34B4D4689",
+      "H_974023DBBC2B471AA3F7DB6A67",
+      "H_993643C76F7041BDA19B0C5EED",
+      "H_B0B7C75B5F0D423386A84AB73D",
+      "H_C7284453E8E94532A44FC5F5EF",
+      "H_D128C0FCC4844BD8BF5D8FAAF5"
+    ],
+    "addedK": [
+      "K_1ED9FF46BEDB3CED1FA394",
+      "K_A02D92087BE34DF146E21F",
+      "K_B9FF3B3BCC9404B8D71376",
+      "K_NEXT_GB16912_TRAINING_SCOPE",
+      "K_NEXT_GB50054_REAGENT_CABLE_7_6_38",
+      "K_NEXT_GBT13869_MONITOR_5_2_1",
+      "K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005",
+      "K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9",
+      "K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D"
+    ],
+    "historicalChecks": [
+      {
+        "path": "knowledge/clauses/C_GB50057_4_1_1.json",
+        "oldFileSha256": "6b7adf898653641fb3d9d7cf7f15d56e2eba26176812339324fd4e782df669ce",
+        "newFileSha256": "db7004cfd178ba74a9bb2fecd1fd9820649f18686ed575e8ef017c472994e617"
+      },
+      {
+        "path": "knowledge/hazards/H053.json",
+        "oldFileSha256": "e0f66469eddfa1dd24f01781611efb2e2e2d305d5d8b40cfa479a116c642f7cd",
+        "newFileSha256": "23ce991a82665a73d36300dba94706e3d696d77da416a0aac87296ff682611fc",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H054.json",
+        "oldFileSha256": "995f3936a93d050be3f4714ce21fd254008a4f8ae9c55f5d4a8ec082bddf4459",
+        "newFileSha256": "fe3464dfa292b915fb1bd9f5fef1fe3c008fd1ee213e00a0ad5c23bb4bcd1880",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H055.json",
+        "oldFileSha256": "47d25f67c1af5cb1088fa0e3b17ce987992a40e3e63b802209bf66466d4e6b72",
+        "newFileSha256": "88eae266992f1fa11d8f099ae5eec2089c31a753708ad407c1ca653f22658127",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_12158_10_1_2.json",
+        "oldFileSha256": "6048ec267cf7e90afc0c2f38aa1aeef541f1eeab8845ded27b77dcd293a4117a",
+        "newFileSha256": "94612ac231f749a162ae310cc843e46284f3f3f6f2536408d13c08e7cd1ce9f7",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_1251ED2287FB47B6BDED9292D1.json",
+        "oldFileSha256": "3e32d10e48ceab2e9bbb48b595552baa63954c6381b5269eabfc11d496643b22",
+        "newFileSha256": "f016ae44ac5f25ebb35a6e4afaed9278ebd2777c5a0dd797265410e39cacf3f3",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_3141FAD634694686B722139F91.json",
+        "oldFileSha256": "19ebd642cfebfad9afe6b1db08602692ee84ea6b97067b305a7a9f608916299e",
+        "newFileSha256": "559e988eead23b37b6b1952cd4b308b42988bd1ea35953dd4d32ce2feb0db941",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_8A733CAD776643E3B34B4D4689.json",
+        "oldFileSha256": "628f7ca619a20ad9bddc02f1730f7de83d2aa69af4baf120540f4d36e9c0a3e6",
+        "newFileSha256": "a8116e2b9d247af673ef2a8a0e1b3876af815fac3e74dfdd86f60b103b82b36c",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_974023DBBC2B471AA3F7DB6A67.json",
+        "oldFileSha256": "461999b0886446ef8cc4b2dd2b3fb04b31a65952fccdb4f0e59a5dc1e16c310e",
+        "newFileSha256": "db247b65d55fa4823bbd4c0257014e2482655639139a2c829f54966e7768b7ac",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_993643C76F7041BDA19B0C5EED.json",
+        "oldFileSha256": "6fbd3d8048a2272c5de1b47b6ec71790491a7421361b140784acb85d1e63d1ae",
+        "newFileSha256": "c2f2e47f3716c1b26382aa9cea9af3dcd8d6ed02454380002dbdda3a8561882d",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_B0B7C75B5F0D423386A84AB73D.json",
+        "oldFileSha256": "3d3dbc1510a022e41c92edd002aea2ba548dfe0316384b4061996486249dcb93",
+        "newFileSha256": "8652a78ce00d83f46597a4b20e66a38c4d123ee3d9f1376e32456432cc17c4ee",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_BC2436C8E5BE198BA82BB74B82_1.json",
+        "oldFileSha256": "50122ea15ba34aae46139bfbf64fa67a46fcb0e8c87206685300773135bd2b8e",
+        "newFileSha256": "dc3d83f75a2ffd77d839208379ee5e7bef73d084df520377a93888fe9cf186fa",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_C7284453E8E94532A44FC5F5EF.json",
+        "oldFileSha256": "6ab528b58fda85dcfe2a062f86a3526bed3bf92ac525820347fab98332919dc7",
+        "newFileSha256": "57468125f5c8e34f275f30c591ed9767ea58d4cc8b6328014a826fc3f1225e24",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_CFF821DDE6764083BFB914EC86.json",
+        "oldFileSha256": "96cd54166efe74849c234a53d4e66cefce4598626113645670d940b093511c8c",
+        "newFileSha256": "37787f8649c02c16a8aeb7cbc7d331db8e12b663a39dadd55e1fe65604f46fdf",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/hazards/H_D128C0FCC4844BD8BF5D8FAAF5.json",
+        "oldFileSha256": "89a97cf6d36bf2f5ec341dc23fcae54de9503098099c7aa344ed2ad73a0e2042",
+        "newFileSha256": "51a6be9623c139cb83a84943f315def0b6c53d566d5a950221bfe28152b5433d",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/law-versions/LV_STD_GB50057_2010.json",
+        "oldFileSha256": "9f735268e15f485ec47cc73b655e2e8ca318a57473c0a56dbc08d645e74db481",
+        "newFileSha256": "4a306e19208c18ccdc704f081dc3e9e8682895a2b29a3510d7abd37603374c5e"
+      },
+      {
+        "path": "knowledge/links/K_199989467c019b0789b69f66.json",
+        "oldFileSha256": "3882b3eb136862b56d4b282fc613da207aa12febf3173e982694c70ac1983431",
+        "newFileSha256": "07e8420e25eceaa77a794fb7d5e90f2e9e27246af226d696c5a9c1a8ef001b00",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_1ED9FF46BEDB3CED1FA394.json",
+        "oldFileSha256": "e20b6438cebc3e45f0c7f89bc1e5fb85d95013871b56dce4d1d03340bbe5d5e9",
+        "newFileSha256": "e9b5e0d7bd0ac6afe6c515e9de2403695e1124e4f5d86d3db2e2202ea266889f",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_6EAF76314861ABC620BB9975.json",
+        "oldFileSha256": "6c0643ffb3f11df25c3d8c492ef22132f809a19e9b29c6cca8b18d5e80d88c8e",
+        "newFileSha256": "1ff910f45f747c4831014e514613e1ebba42c4aac990677d2779df776128ff34",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_9e6ba6262766224cc3d6e224.json",
+        "oldFileSha256": "f7fd255e846b311a14867418043da2bae5bb5bae4f137a615e564483a870014f",
+        "newFileSha256": "21be70d1b738b661841cca9da3672f73c1a70324e82702fdeefe9f1d71aa36e6",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_A02D92087BE34DF146E21F.json",
+        "oldFileSha256": "28323b6206484db8f6c9870f3aa5bbe5fab846bf7c834922c87a806e8df749e1",
+        "newFileSha256": "68b5e8fa8cf1cd2c0b74eee4f61d1e30be487ce953fe57d956abe32324ae1e3a",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_B9FF3B3BCC9404B8D71376.json",
+        "oldFileSha256": "d1227bfaf164824c412c86729768f5aadf148e149c0c6143d9d8b88e048ca839",
+        "newFileSha256": "166fb29fefc72445a81991cc8c5f76939204d3613d134986a97945239c610a73",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_F46299168EA56F465C4FAD1D.json",
+        "oldFileSha256": "1f3675687433e031062410fa357332f4eb1b976c1d2d729b2f643fd8efbe1850",
+        "newFileSha256": "e7b95d56b6611e0f462f03d18b119d45a4c3c8d37bac7f4644fbd5d75c44d88a",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_FT_80C4D8363ED159B6CC323D7C.json",
+        "oldFileSha256": "17dfb21960636ec83691bc9c4268d8fe09791d33c283264b9bb7b3497cde2ab4",
+        "newFileSha256": "107d26f09383ecbc5a6603fc58a870f53c330d7b3c02cf1d4babd4210aaf8895",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json",
+        "oldFileSha256": "7478b08bca8986e8bda84ecbe9728a5ae49f302a09e9a619b81780a4bbfd68ca",
+        "newFileSha256": "f8aef8be743ad5a49a43fcd24b3a9ef9e90e62457c9e35eb6367e53fa4fbf78a",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json",
+        "oldFileSha256": "fbdffb51d71f87e950ef70637bdfae0a3b380d3b26d01128836b96e8e11b6de5",
+        "newFileSha256": "0b6cd668072f7877ba6b5bd7bc1b4c5f07b30d9e34b156e8b74466bc31e02a2b",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9.json",
+        "oldFileSha256": "03623926d45439c4593a299c51fc0ffb22db3653340dc739077440bc1fa2ff92",
+        "newFileSha256": "ff47fd7233ebbfb2e0e0e8292f7655333270987a0f29222ee33b6a331facf955",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_NEW14_EFD92528ABBFE27B1D100D87.json",
+        "oldFileSha256": "6c8b859dd53da897a46639faa73681ccfcee3876b8032c4bca53ef4dc7f5aad4",
+        "newFileSha256": "b71a084762b2a260c949d6c167abd67daa826ff6d2759e4c22f2d26629d0b1c5",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_WEB_H_12158_10_1_2.json",
+        "oldFileSha256": "b1201bb5d9241c5e394eb1b79afa4c30a91eaaa622eb3a6ff62a1fc5f90406c0",
+        "newFileSha256": "373e1e19295afa5f620abf0d7a3161549dbc3d3197f414b2fa8c7a98caee47e9",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json",
+        "oldFileSha256": "199c06e12c0823854605c60633700b4f53c36060f44883a0114a293adae4ecfc",
+        "newFileSha256": "a640678a1ac547851e0a7f195575178766090bb9643683ee943eeaa2aaacdd1b",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json",
+        "oldFileSha256": "c7e36b7ebef4bbbe1e00607ba1adfe5bf2d6f198c186a85a7ca1683038a73443",
+        "newFileSha256": "3395d11613dc21037707696e709f7e00cc31c020a220ee5ad644f4008b92863f",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json",
+        "oldFileSha256": "db538081dca6c1b26fee580c04d835ce38951ddeca377c4be8f84b173b7be2d3",
+        "newFileSha256": "827da56f32141f7cc4bc6f5bffd2ec176e3cf0d6829dcb74131f9ab0303ccead",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_a6a1923c4d86007345fd7341.json",
+        "oldFileSha256": "b9928d84acb1ba92f7b19e1839fbca00765b21a0022e3d4cbd7c38e9cfac3e75",
+        "newFileSha256": "1c96e6bdf81c242ea324de1524db4ce09d87dad8830c6353fe2c9293b1b14f99",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_b5854a5f230a891b5fe35e8c.json",
+        "oldFileSha256": "d4660f13efbf707837bfc844998ced3ee82658f0cce6599ff6b75cdb1d3c58ba",
+        "newFileSha256": "d87c9ba1f312c7e97754852a2a170b134643f1edc16a8aa7fa9ee03eba43c1b7",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_be5a0deab9619bd1579c758f.json",
+        "oldFileSha256": "5f7bca019d8c89a3e69fca25e10b478226c08fff1acb3d84a65cf296ebd856d2",
+        "newFileSha256": "c6849df894a4471af1898e6cefa0b0a44f5bcb5333bdcc1853f0a80b4fce68b3",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_d651b0312c6e6a0d36cde361.json",
+        "oldFileSha256": "6210237b8f1562213d033cbd4bafe897929f728516fb767469ac99675c39ef9a",
+        "newFileSha256": "5ee806b3ef01e87dedb498c63613f45ccbcd940593563877480993e0d07a9da4",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/links/K_d9b8087219c0a33495f14d72.json",
+        "oldFileSha256": "f6e633f55dcb8b55b8591d4ce4068752b4c234742a03e1bbd1e0e50ed00feec7",
+        "newFileSha256": "80ad6b8a7664a4614bcf15080b8fa1b85970067076f8ffe4fec88f17b937bd0d",
+        "oldFullDefinitionPreserved": true
+      },
+      {
+        "path": "knowledge/major-criteria/v1/catalog.json",
+        "oldFileSha256": "737a4eebc7fef5834f476e204e9f9d767af8c3dbddce045bb5ca3a3e47fc413d",
+        "newFileSha256": "4c2e09a5e116eb1f7381b30bb5038fd8e5806bdbb7f10c1f1f65b8deb915a8f7"
+      },
+      {
+        "path": "knowledge/manifest.json",
+        "oldFileSha256": "19e7b196ce6e447f3128b9e53c8f89372ad994f0df83013604b4af06b78fae4a",
+        "newFileSha256": "dcfb2dbd42559e1e8710179c80722c7e347f18459d81dcfe8945c43ad1459994"
+      },
+      {
+        "path": "knowledge/reviews/clauses/C_GB50057_4_1_1.json",
+        "oldFileSha256": "ddd4d199fa3814a387204f32df05900879c973a9e78bf741caf06573f90b5ffd",
+        "newFileSha256": "92388e8ed0218cdcc5a18a71d359a4cffbfda2f8eca5f26d7c1a0af79a781e6b",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/clauses/C_GBT13869_5_2_1_overload.json",
+        "oldFileSha256": "79a1f505c5f63adb8c5917b1db38f2d9683cc82b1814202194ad5d2f58efd885",
+        "newFileSha256": "452b85a5146fe0d914d7cebaca1d4451f732048aeeab7b450cae8c606db82f31",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H053.json",
+        "oldFileSha256": "6efa3cd1fdf1025d002bb52aec7ab0d3d563cccf0fae782cb9599a7e5cc738ea",
+        "newFileSha256": "b6ad96f59a46f4a57b3ed836143aece268fc4382b4943966c6824584a20b8a24",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H054.json",
+        "oldFileSha256": "8bda193913cc32753332ed9d8e491be9594b6b51472dedc7cde088cf80f46120",
+        "newFileSha256": "edcaf68f9fff9c43675ea9c1abbb6e0fadcdb61f292482ad9af8a3c44ccdb15b",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H055.json",
+        "oldFileSha256": "f0f835ff415310a6b9b309d737f1d5b2f8849494ed6bcee402931d9b80f4f482",
+        "newFileSha256": "4de2ad5ce3c1aee11cf068d9ebc94cba18eb4453f776791d76be66b3814dbe92",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_12158_10_1_2.json",
+        "oldFileSha256": "d5307bed948afa71c2a38fa8e0d63617c2347f3f6c1f37cab40748b8417c4c56",
+        "newFileSha256": "0756160fc9cb66df3b7f3933cf60e5654c997cce3aca68dced2ffdc6d5c30720",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_1251ED2287FB47B6BDED9292D1.json",
+        "oldFileSha256": "4d822da722bf02ef0dcffdeb5aab3cde4eb336000bc98ae0b8e088eca4440089",
+        "newFileSha256": "16d976fe804d4a38d9073bfba93b48f6f1202c72d26c5a09c858b906822e6cc7",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_3141FAD634694686B722139F91.json",
+        "oldFileSha256": "a468e2b80b4fc8cc54f0e93510f42c2b2172449a8218773a9c9571c8bb0c14f7",
+        "newFileSha256": "7f7561f2778f234b8008e9fdd13797ef5380d181e3acaf246f8237a259a82e13",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_8A733CAD776643E3B34B4D4689.json",
+        "oldFileSha256": "194b0683409968da7d47b1ebb1dce70b06aa4fce8e40250da1e0fba3000ceb11",
+        "newFileSha256": "24b04a45d524a0e3f7dae87359bc7340773bfe33e1168d6ef2f91f0f47f1cb02",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_993643C76F7041BDA19B0C5EED.json",
+        "oldFileSha256": "9ea9147e280b57bbc983d37a64a55d1f21ce6ff19726c2616649130a9dcc8565",
+        "newFileSha256": "4c45c1d8cd829db6cc6b412acd4450991dc3146fd00e5b6d3583188ce30f6ee9",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_B0B7C75B5F0D423386A84AB73D.json",
+        "oldFileSha256": "da706a38f6ca4eda330f0da62bf5f303a1824077a06ccf49fd085b01acae5cd1",
+        "newFileSha256": "18fbefdbcd676b391dbcdd26c952939386cd75912ba07946efeac70fe4ca4cfe",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_BC2436C8E5BE198BA82BB74B82_1.json",
+        "oldFileSha256": "e58c5e149f40d4aaebbc71903d938b5a96ece74b7a46e38275c674c822b94383",
+        "newFileSha256": "b3444d9390b3055dd114d53baf5b9110632b4956d961c1fd47a58388ba030ec4",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_C7284453E8E94532A44FC5F5EF.json",
+        "oldFileSha256": "50666636094b136a9bb56c93478486f74b3e5a4f2666fb84b052b33ab2b26a79",
+        "newFileSha256": "ee9588d54106a6957786227efa2e4c12501032da456f7a92ad482241530d0910",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_CFF821DDE6764083BFB914EC86.json",
+        "oldFileSha256": "fef4e1379078b32fe3dcfe681e186fff631e79ef887667e711c3dd62b6703a20",
+        "newFileSha256": "a8a2a1b5e8bc164d37cc20e86a8e8aa85ec6a45a84dcbc5b0376772d55fd226f",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_D128C0FCC4844BD8BF5D8FAAF5.json",
+        "oldFileSha256": "e1252964e500ac6a844fc8a218e4584475bcb39dd5bd63c357632f9550f7c149",
+        "newFileSha256": "1a78454d043f483eb051ded8a78ef35ab12bf9e33bb65dedbe0889105a5b496b",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/hazards/H_F0D64F91542E4B0399D83D670D.json",
+        "oldFileSha256": "b7ab57bb01d8bf92675880722540602218e2d739dcdc468bef2245b4b103fc17",
+        "newFileSha256": "43b0b7766c58f898e1e649dd745016d6b519e649c602833918460971e49c850f",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/law-versions/LV_STD_GB50057_2010.json",
+        "oldFileSha256": "d70779d4bfcb2ee3285237656a7442c1af6dc5efd9d5a8e8443b4e6eff1c975f",
+        "newFileSha256": "117563aec1069cb0516892899c266cbfedeac2b8776d03143d5ce3a53d0e73c2",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/laws/LF_STD_GB50057.json",
+        "oldFileSha256": "350669e74dec2dc3dc277ebd1015aa983914b8c2eb00d6f59388f4312cfd0f06",
+        "newFileSha256": "1f5ff31e889b8437fca5d14b17e4f4e0007d71f6da9658083f3112a501fe013f",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_199989467c019b0789b69f66.json",
+        "oldFileSha256": "82caff1883aaf47da30358df336fd1b37117e7bdba6f8b5f4b4bf2ec2a1bbf7f",
+        "newFileSha256": "819025b54f54108623edcc564146c5489946c09f97a9b2dd6a31ebd5f1e929ec",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_1ED9FF46BEDB3CED1FA394.json",
+        "oldFileSha256": "8a5dc2aacf118cb927abe56565fe2179657d5e9667106d8e12c73a761e6d27d1",
+        "newFileSha256": "ba74bd6709de7d4e4b4a60ebc13786ff5fca2630af2c83685e6da1020913ab01",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_6EAF76314861ABC620BB9975.json",
+        "oldFileSha256": "7efb0ba973554f5484d1817a4b0796d921d3c503c0fb83f173ce3e7771d77300",
+        "newFileSha256": "4e91996e78093cf978ad6bacda5578ca18cd0a52bdd52f9384e02200ed27a162",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_9e6ba6262766224cc3d6e224.json",
+        "oldFileSha256": "a6e052a3ada4ba5a7a5e68667a5b0a33d076931943edec572294474aaae96cc7",
+        "newFileSha256": "e3f9acd9e7b4494b51f15bbaf0dec026476b854441acdab95fdbebf17c363bf7",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_A02D92087BE34DF146E21F.json",
+        "oldFileSha256": "30391c676e4f3754e9c70c33b4d6637cb152954ee1cedbb18df29453596e4253",
+        "newFileSha256": "23ea62e3a756bf19a830b7dacc9a3f36d76f585c44ab56e33825943ab1a0a9a1",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_B9FF3B3BCC9404B8D71376.json",
+        "oldFileSha256": "ef34e6043d2bcb044ed327e9ab59772e0eb2a5b8d72f1bd8d8cca107125910d1",
+        "newFileSha256": "a246d69210464b7b9b0352c3caae2965fdefd0e77df41a837a01befabcffe0ab",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_F46299168EA56F465C4FAD1D.json",
+        "oldFileSha256": "9d9d08444b00e47c02830a791666b6308b07aa18a9019275aeef3cea61166a90",
+        "newFileSha256": "2a0b89a3ec405d2afd38289325039c971dae2c73fe82c0f9e9f06e7a8ad6b443",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_FT_80C4D8363ED159B6CC323D7C.json",
+        "oldFileSha256": "dec3b001d0057a8b5d542d6ab5b01fa8cac4f750fd02fcee35f6f5d3fe5360f0",
+        "newFileSha256": "732e08de9c8ece808905cb2d48ad4499f2593b6b2b6444aa728cd402bfeba439",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json",
+        "oldFileSha256": "fe75a66fa5009f32aceca87f03476afb06d8c30d321f05a567910ddeda3ee290",
+        "newFileSha256": "0182b5fdeb158752ae56f240d1794b6a18760166f031aacd1dc36ae83e85439e",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json",
+        "oldFileSha256": "da1cc9c58098e3c0842d7144281281821d9d0899c1f5be6cc68bb713f9684c15",
+        "newFileSha256": "87c756d2754acc5d67e5ef305a4218386e224a582887ba7397f0ee07b533b168",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9.json",
+        "oldFileSha256": "6c30af2643c1f94d81e5c10e0771f8ef25e5d52030669da790651fcdebd41899",
+        "newFileSha256": "d25c878b3447373e6b46181b1938e74710aa2c231534b8d622491b89f1d791b9",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A.json",
+        "oldFileSha256": "7fc4b972b04228bf1f1d00e2ce9d9f51872dcc273baff92dab69321036361e16",
+        "newFileSha256": "dd5f2e1d9e24a21a1c6ac6c2049d8a9d849b512ddef4a00a6e1d6b692b44c8b6",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_NEW14_EFD92528ABBFE27B1D100D87.json",
+        "oldFileSha256": "21defd038112d66ac23392475f9e2fc59d0ad1afcfcd43607fd3cf56b77af94c",
+        "newFileSha256": "62b280b56c6b9befa9782104a374baae2fa28d6afb80b625964b1ac5bde070db",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_WEB_H_12158_10_1_2.json",
+        "oldFileSha256": "6679195126fc79fdc204e623fd0808747fdc77b823d85d7aaf9f87ef0e865365",
+        "newFileSha256": "b8548b9b330aefec05972a6781ece1cc8dddf92642c05c90aa014d3f0ed8d5d0",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json",
+        "oldFileSha256": "13051a37299d81df79c5e420f01594175ee21feb5843ae042b0eed1518b14c4c",
+        "newFileSha256": "9c9ba00afadfc937f8d8b0560b7836d7e3104408d7f69009763552524eb3b10b",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json",
+        "oldFileSha256": "a3b0c47fa8f81cc9118617599bfa54cd51f23b7896b3aa4539bbbe6ee0b3df07",
+        "newFileSha256": "12168d93fe890871b09bf5fe8133edc8a960a47941dbdb72e4ec20f831a8eb44",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json",
+        "oldFileSha256": "322cd34478dc8c18770c45c8204b461b8b6b5a403739474a4e640f7981502988",
+        "newFileSha256": "75e7d16b391e33ce54242aeb5977c36e9fafb392000dab87d64a93e43a0b7f09",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_a6a1923c4d86007345fd7341.json",
+        "oldFileSha256": "6b03a673d79f421607a02cda87d02ab565f9f5155571d426bc8db6df1bdba8cd",
+        "newFileSha256": "45ac0da2c16975d38ccc497c602dc8f0d68465d28766350bb3499f80182a1ae2",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_b5854a5f230a891b5fe35e8c.json",
+        "oldFileSha256": "ac5e08317e1f72a71718e237d6394d31d1e3fd5f67b58c44d3087fc3ecc53f55",
+        "newFileSha256": "70aba2a335a3284c103078a856c701f8242195a932c9888c8a7ccfddad9973bf",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_be5a0deab9619bd1579c758f.json",
+        "oldFileSha256": "f47506a50e7cd9eab899b7010920c9ff8de054107cff4b2337ca18d197fd1a4d",
+        "newFileSha256": "e1d3011826cfa19cb6c6ca9b8d1dca034b99020a37ab481ddc480a7cbfc48b37",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_d651b0312c6e6a0d36cde361.json",
+        "oldFileSha256": "0570d0c4067956ee474bfb69a9f2a5c4a9e36c027b0e0e2ab570a9729abdfb18",
+        "newFileSha256": "2004ada324bbe110ff61b82c65e2d1c72711ea1adc27114efb961732d959f2e8",
+        "oldFullReviewPreserved": true
+      },
+      {
+        "path": "knowledge/reviews/links/K_d9b8087219c0a33495f14d72.json",
+        "oldFileSha256": "730bee3afaa641e16b8d10eabe54c2ddb74f56c5abee740bf08e3b39858ff9a4",
+        "newFileSha256": "a4ac55e409370f87b6b2243dd30e007613feadb40b85ffc411b21453ed771269",
+        "oldFullReviewPreserved": true
+      }
+    ],
+    "baselinePublicModifiedH": [
+      "H_3141FAD634694686B722139F91",
+      "H_CFF821DDE6764083BFB914EC86"
+    ],
+    "baselinePublicModifiedK": [
+      "K_6EAF76314861ABC620BB9975",
+      "K_XLSX_WEB_H_3141FAD634694686B722139F91",
+      "K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86"
+    ],
+    "shippedProjection": {
+      "baseline": {
+        "H": 1685,
+        "K": 1843
+      },
+      "current": {
+        "H": 1694,
+        "K": 1853
+      },
+      "removedH": [],
+      "removedK": [],
+      "addedK": [
+        "K_1ED9FF46BEDB3CED1FA394",
+        "K_6EAF76314861ABC620BB9975",
+        "K_A02D92087BE34DF146E21F",
+        "K_B9FF3B3BCC9404B8D71376",
+        "K_NEXT_GB16912_TRAINING_SCOPE",
+        "K_NEXT_GB50054_REAGENT_CABLE_7_6_38",
+        "K_NEXT_GBT13869_MONITOR_5_2_1",
+        "K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005",
+        "K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9",
+        "K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D"
+      ]
+    },
+    "historyFailures": []
+  },
+  "reviewBindingChecks": {
+    "modifiedReviewCount": 54,
+    "failures": []
+  },
+  "metadataChecks": {
+    "manifestCountsEqualActualEntityCounts": true,
+    "projectStatePreviousBytesExactlyPreserved": true,
+    "publicationIdentitySourceOnly": true,
+    "publicationProjectionRebuildsClauseReferencesFromShippedLinks": true,
+    "actualScannerRemainingEqualsDispositionRows": true,
+    "inventoryBaselineErrors": 25,
+    "inventoryBaselineWarnings": 1,
+    "inventoryCurrentErrors": 11,
+    "inventoryCurrentWarnings": 1,
+    "diagnosticReductionIsNotLegalAdmission": true,
+    "pr110ProductionVerified": {
+      "prUrl": "https://github.com/An-0726/safety-basis/pull/110",
+      "mergeCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+      "workflowUrl": "https://github.com/An-0726/safety-basis/actions/runs/37266051078",
+      "exactCommitBuildDeployOnlineVerifyAll": "success",
+      "inspectionMethod": "Independent GitHub connector read of PR, exact workflow and job/step conclusions. This verifies the preceding baseline, not the uncommitted new batch."
+    }
+  },
+  "independentTests": {
+    "warehouseFocused": {
+      "passed": 10,
+      "failed": 0
+    },
+    "aq7011Focused": {
+      "passed": 6,
+      "failed": 0
+    },
+    "boundedElectricalFocused": {
+      "passed": 11,
+      "failed": 0
+    },
+    "independentFullBaselinePublicSetComparison": "0 public H loss; 0 qualifying K loss; complete prior object/review history equals baseline; no entity deletion",
+    "scopeMutationTests": "targeted tests reject widened applicability or changed thresholds without new hash-bound reviews"
+  },
+  "limits": {
+    "fullSuiteCiBuildDeployment": "Owned by integrating executor; not claimed as completed by this review.",
+    "siteFactsConfirmed": false,
+    "rectificationConfirmed": false,
+    "formalApproval": false,
+    "wholeBacklogClosed": false,
+    "originalPdfsPublished": false,
+    "futureXF1131ReplacementProved": false,
+    "skippedUserSourcesReinvestigated": false,
+    "codeReviewScope": "Legal knowledge, author reports, targeted regression semantics and preservation; not a full application-security or deployment review."
+  },
+  "exactFiles": {
+    "docs/NEXT_AQ7011_AUTHOR_REVIEW_20261005.json": "c11d5c7a74ec4eb74fb10d9ad91d99205c0230a82081b227e88bbf8ae8ecbf20",
+    "docs/NEXT_BOUNDED_ELECTRICAL_REPAIR_20261005.json": "31ed818faef45a14e45f0f6551fa8027a0c0cc23e9564f9eec9e7db47cd27a86",
+    "docs/NEXT_INVENTORY_INTEGRATION_20261005.json": "c8a9f57de6c6097df9973faacfadc6218e4418643bc0893ca01209c131eedb8d",
+    "docs/NEXT_RESIDUAL_BATCH_20261005.json": "b825694fa5ac9fdba4d9340d31fbc5aa8d96e7f3b47bda00cd62cba728a7c15f",
+    "docs/NEXT_RESIDUAL_INVENTORY_DISPOSITION_20261005.json": "da9d1c8291d533b6dd8e7be114895a0616e9f8837f3d37b1752eb66f076a0f49",
+    "docs/NEXT_TRAINING_REPAIR_20261005.json": "e4479109d360f7225b63ec4e2c4721aee680d5be808fc09c7254adc3cdc46c05",
+    "docs/PROJECT_STATE.md": "7b8f32832af3a09943745f2f16a58a184b2c4b9aef99bec61ac30248b907638b",
+    "docs/PROJECT_STATE_HISTORY_PR110_20261005.md": "0ecdb0fe19ed83508b20ca6d86379adee2bc9407c81713fe96a12791a092f10f",
+    "docs/WAREHOUSE_CANDIDATES_AUTHOR_REVIEW_20261005.json": "4dec070ffccff2f57ea2f40069e2ea868bf8d7aad4d8d659d99504701058eaa1",
+    "knowledge/clauses/C_GB16912_2008_1.json": "224c059102ee77ac35eb9a514dfde5270c806afa5ee6cc562ab5acd5c0cc10d5",
+    "knowledge/clauses/C_GB16912_2008_4_13_2.json": "703f1f655b06bc324b5cada5289fc80e1ec2aae13149abf0a508363d21efeebf",
+    "knowledge/clauses/C_GB50057_4_1_1.json": "db7004cfd178ba74a9bb2fecd1fd9820649f18686ed575e8ef017c472994e617",
+    "knowledge/clauses/C_NEXT_AQ7011_2018_4_6_20261005.json": "9dfd69deb8c0b43b33bb60212dd0520e56f98f10074e55c3fc1c9c1fd1e2570f",
+    "knowledge/clauses/C_NEXT_GB50054_7_6_38_20261005.json": "fbb79fc49d72c2caf739c8d9db5d12b4e1fabd58275bf5c2cc18f8c7dddf0638",
+    "knowledge/clauses/C_NEXT_XF1131_8_2_20261005.json": "d0d6d6d94823c8b72c5be9a3935b4b99e8523b6df03b1c1b2c63143e4071d749",
+    "knowledge/evidence/E_NEXT_AQ7011_ORIGINAL_20261005.json": "3620aea3989bea86a19118e71cf1c2dccd04df7fc097bbffbd77cc3df312b019",
+    "knowledge/evidence/E_NEXT_AQ7011_STATUS_20261005.json": "2a267045d32aff49c4d19bd4acd9886ab116f7d75fa2d5ad7cca5731bc8bd366",
+    "knowledge/evidence/E_NEXT_GB16912_TRAINING_20261005.json": "6139578d1137ece5308a5ec50d2d4e9ae0e24d777458c0bb3d5972ef1aa430aa",
+    "knowledge/evidence/E_NEXT_GB50054_EXACT_20261005.json": "3ee60b8acc67afb61996342eb5022e64a2fb188dfc113d9a504b06a34dcba03d",
+    "knowledge/evidence/E_NEXT_GB50057_EXACT_20261005.json": "6b2d8d6cc1e5a6aaac6579bc5f9304f81a055df7c189252a9a5eaa86eb37112c",
+    "knowledge/evidence/E_NEXT_GB55024_RELATION_20261005.json": "76f6b5ceade097ebde95cee71f587eb4b4ca42dc4408f73e37ba1555052dbcd8",
+    "knowledge/evidence/E_NEXT_GBT13869_MONITOR_20261005.json": "4bf7ceaab53fcb92bf89d7b6de83dd513dc09977bc51f67d0956e82b924e8d86",
+    "knowledge/evidence/E_NEXT_GBT13869_STATUS_20261005.json": "e21c519a4903558818ad93af5f4b57cc5589be5ddbe8710e1a0462bf0090e0be",
+    "knowledge/evidence/E_NEXT_WAREHOUSE_XF1131_2014_20261005.json": "d127e3814eca8fb83d15fb738accff5e68bb743af5300dde731e78a64b5ffcd6",
+    "knowledge/evidence/E_NEXT_WAREHOUSE_XF1131_STATUS_20261005.json": "318366884b7627f74473dc981d01f104f6de6d17d139b1770fbe44acd2dd3d49",
+    "knowledge/hazards/H053.json": "23ce991a82665a73d36300dba94706e3d696d77da416a0aac87296ff682611fc",
+    "knowledge/hazards/H054.json": "fe3464dfa292b915fb1bd9f5fef1fe3c008fd1ee213e00a0ad5c23bb4bcd1880",
+    "knowledge/hazards/H055.json": "88eae266992f1fa11d8f099ae5eec2089c31a753708ad407c1ca653f22658127",
+    "knowledge/hazards/H_12158_10_1_2.json": "94612ac231f749a162ae310cc843e46284f3f3f6f2536408d13c08e7cd1ce9f7",
+    "knowledge/hazards/H_1251ED2287FB47B6BDED9292D1.json": "f016ae44ac5f25ebb35a6e4afaed9278ebd2777c5a0dd797265410e39cacf3f3",
+    "knowledge/hazards/H_3141FAD634694686B722139F91.json": "559e988eead23b37b6b1952cd4b308b42988bd1ea35953dd4d32ce2feb0db941",
+    "knowledge/hazards/H_8A733CAD776643E3B34B4D4689.json": "a8116e2b9d247af673ef2a8a0e1b3876af815fac3e74dfdd86f60b103b82b36c",
+    "knowledge/hazards/H_974023DBBC2B471AA3F7DB6A67.json": "db247b65d55fa4823bbd4c0257014e2482655639139a2c829f54966e7768b7ac",
+    "knowledge/hazards/H_993643C76F7041BDA19B0C5EED.json": "c2f2e47f3716c1b26382aa9cea9af3dcd8d6ed02454380002dbdda3a8561882d",
+    "knowledge/hazards/H_B0B7C75B5F0D423386A84AB73D.json": "8652a78ce00d83f46597a4b20e66a38c4d123ee3d9f1376e32456432cc17c4ee",
+    "knowledge/hazards/H_BC2436C8E5BE198BA82BB74B82_1.json": "dc3d83f75a2ffd77d839208379ee5e7bef73d084df520377a93888fe9cf186fa",
+    "knowledge/hazards/H_C7284453E8E94532A44FC5F5EF.json": "57468125f5c8e34f275f30c591ed9767ea58d4cc8b6328014a826fc3f1225e24",
+    "knowledge/hazards/H_CFF821DDE6764083BFB914EC86.json": "37787f8649c02c16a8aeb7cbc7d331db8e12b663a39dadd55e1fe65604f46fdf",
+    "knowledge/hazards/H_D128C0FCC4844BD8BF5D8FAAF5.json": "51a6be9623c139cb83a84943f315def0b6c53d566d5a950221bfe28152b5433d",
+    "knowledge/law-versions/LV_STD_AQ7011_2018.json": "39ab29cf1875ac5f35c659671398e96254e9ee4bbdeff494c3ca47be2bdbd623",
+    "knowledge/law-versions/LV_STD_GB16912_2008.json": "8cdfee66f4d0d6c5d004cf807974e1531e2f5f5d4870d13f41d6db2efa923816",
+    "knowledge/law-versions/LV_STD_GB50057_2010.json": "4a306e19208c18ccdc704f081dc3e9e8682895a2b29a3510d7abd37603374c5e",
+    "knowledge/laws/LF_STD_AQ7011.json": "81fa9f73abfa1afeb39d2cafdee4ae37d4f56e82941d9f3a1fb9e1ec0bba38dc",
+    "knowledge/laws/LF_STD_GB16912.json": "00b4bed2d7f37cac2c85a5e6c902c62b8916a4b6df2f60415d59e6ee5ad68e21",
+    "knowledge/links/K_199989467c019b0789b69f66.json": "07e8420e25eceaa77a794fb7d5e90f2e9e27246af226d696c5a9c1a8ef001b00",
+    "knowledge/links/K_1ED9FF46BEDB3CED1FA394.json": "e9b5e0d7bd0ac6afe6c515e9de2403695e1124e4f5d86d3db2e2202ea266889f",
+    "knowledge/links/K_6EAF76314861ABC620BB9975.json": "1ff910f45f747c4831014e514613e1ebba42c4aac990677d2779df776128ff34",
+    "knowledge/links/K_9e6ba6262766224cc3d6e224.json": "21be70d1b738b661841cca9da3672f73c1a70324e82702fdeefe9f1d71aa36e6",
+    "knowledge/links/K_A02D92087BE34DF146E21F.json": "68b5e8fa8cf1cd2c0b74eee4f61d1e30be487ce953fe57d956abe32324ae1e3a",
+    "knowledge/links/K_B9FF3B3BCC9404B8D71376.json": "166fb29fefc72445a81991cc8c5f76939204d3613d134986a97945239c610a73",
+    "knowledge/links/K_F46299168EA56F465C4FAD1D.json": "e7b95d56b6611e0f462f03d18b119d45a4c3c8d37bac7f4644fbd5d75c44d88a",
+    "knowledge/links/K_NEXT_GB16912_TRAINING_SCOPE.json": "150180ff7463f4f20e6ceeb327577f3b5041293c31f4ee3dbe65809fd2a3e9a2",
+    "knowledge/links/K_NEXT_GB50054_REAGENT_CABLE_7_6_38.json": "1e3c7180fe1a064ed8d0100765bdd28f34cd59830f40109ebb8a9f4e43e6f9c5",
+    "knowledge/links/K_NEXT_GBT13869_MONITOR_5_2_1.json": "d81f1ddbf0742a6023d4d6b643eea254bad6c59fd68904c35a72696e605fea4a",
+    "knowledge/links/K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005.json": "3b9d8db2a069be4a0d2cac943d64d869a6e4f8bbc4c6c3e945d0e9f536b65f68",
+    "knowledge/links/K_XLSX_FT_80C4D8363ED159B6CC323D7C.json": "107d26f09383ecbc5a6603fc58a870f53c330d7b3c02cf1d4babd4210aaf8895",
+    "knowledge/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json": "f8aef8be743ad5a49a43fcd24b3a9ef9e90e62457c9e35eb6367e53fa4fbf78a",
+    "knowledge/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json": "0b6cd668072f7877ba6b5bd7bc1b4c5f07b30d9e34b156e8b74466bc31e02a2b",
+    "knowledge/links/K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9.json": "ff47fd7233ebbfb2e0e0e8292f7655333270987a0f29222ee33b6a331facf955",
+    "knowledge/links/K_XLSX_NEW14_EFD92528ABBFE27B1D100D87.json": "b71a084762b2a260c949d6c167abd67daa826ff6d2759e4c22f2d26629d0b1c5",
+    "knowledge/links/K_XLSX_WEB_H_12158_10_1_2.json": "373e1e19295afa5f620abf0d7a3161549dbc3d3197f414b2fa8c7a98caee47e9",
+    "knowledge/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json": "a640678a1ac547851e0a7f195575178766090bb9643683ee943eeaa2aaacdd1b",
+    "knowledge/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json": "3395d11613dc21037707696e709f7e00cc31c020a220ee5ad644f4008b92863f",
+    "knowledge/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json": "827da56f32141f7cc4bc6f5bffd2ec176e3cf0d6829dcb74131f9ab0303ccead",
+    "knowledge/links/K_a6a1923c4d86007345fd7341.json": "1c96e6bdf81c242ea324de1524db4ce09d87dad8830c6353fe2c9293b1b14f99",
+    "knowledge/links/K_b5854a5f230a891b5fe35e8c.json": "d87c9ba1f312c7e97754852a2a170b134643f1edc16a8aa7fa9ee03eba43c1b7",
+    "knowledge/links/K_be5a0deab9619bd1579c758f.json": "c6849df894a4471af1898e6cefa0b0a44f5bcb5333bdcc1853f0a80b4fce68b3",
+    "knowledge/links/K_d651b0312c6e6a0d36cde361.json": "5ee806b3ef01e87dedb498c63613f45ccbcd940593563877480993e0d07a9da4",
+    "knowledge/links/K_d9b8087219c0a33495f14d72.json": "80ad6b8a7664a4614bcf15080b8fa1b85970067076f8ffe4fec88f17b937bd0d",
+    "knowledge/major-criteria/v1/catalog.json": "4c2e09a5e116eb1f7381b30bb5038fd8e5806bdbb7f10c1f1f65b8deb915a8f7",
+    "knowledge/manifest.json": "dcfb2dbd42559e1e8710179c80722c7e347f18459d81dcfe8945c43ad1459994",
+    "knowledge/reviews/clauses/C_GB16912_2008_1.json": "83a9627cb72ddde24e5d005c9562a16d11bfd88ffd916af63d2afc86414895f6",
+    "knowledge/reviews/clauses/C_GB16912_2008_4_13_2.json": "66ef3563873b90a02c6b392f27d665f8fa4724788e71535ade69803ac22e0dff",
+    "knowledge/reviews/clauses/C_GB50057_4_1_1.json": "92388e8ed0218cdcc5a18a71d359a4cffbfda2f8eca5f26d7c1a0af79a781e6b",
+    "knowledge/reviews/clauses/C_GBT13869_5_2_1_overload.json": "452b85a5146fe0d914d7cebaca1d4451f732048aeeab7b450cae8c606db82f31",
+    "knowledge/reviews/clauses/C_NEXT_AQ7011_2018_4_6_20261005.json": "dbbaf18eb3982056d832f5a115c185d2dc22cc5bcb6d76da5704d8114b58c3dd",
+    "knowledge/reviews/clauses/C_NEXT_GB50054_7_6_38_20261005.json": "c9dac11a16583819419aaf98a18e530a09c8895bb1cf92e870a02cec02466e05",
+    "knowledge/reviews/clauses/C_NEXT_XF1131_8_2_20261005.json": "c421c28361fddaf2bd34a98fe07238b3a7a91d946864c7c9e93277d4f81c7e9c",
+    "knowledge/reviews/hazards/H053.json": "b6ad96f59a46f4a57b3ed836143aece268fc4382b4943966c6824584a20b8a24",
+    "knowledge/reviews/hazards/H054.json": "edcaf68f9fff9c43675ea9c1abbb6e0fadcdb61f292482ad9af8a3c44ccdb15b",
+    "knowledge/reviews/hazards/H055.json": "4de2ad5ce3c1aee11cf068d9ebc94cba18eb4453f776791d76be66b3814dbe92",
+    "knowledge/reviews/hazards/H_12158_10_1_2.json": "0756160fc9cb66df3b7f3933cf60e5654c997cce3aca68dced2ffdc6d5c30720",
+    "knowledge/reviews/hazards/H_1251ED2287FB47B6BDED9292D1.json": "16d976fe804d4a38d9073bfba93b48f6f1202c72d26c5a09c858b906822e6cc7",
+    "knowledge/reviews/hazards/H_3141FAD634694686B722139F91.json": "7f7561f2778f234b8008e9fdd13797ef5380d181e3acaf246f8237a259a82e13",
+    "knowledge/reviews/hazards/H_8A733CAD776643E3B34B4D4689.json": "24b04a45d524a0e3f7dae87359bc7340773bfe33e1168d6ef2f91f0f47f1cb02",
+    "knowledge/reviews/hazards/H_974023DBBC2B471AA3F7DB6A67.json": "37bd807fd92800dd72ac6adf41ece8476df44e83db071a846b954e872c40f8a1",
+    "knowledge/reviews/hazards/H_993643C76F7041BDA19B0C5EED.json": "4c45c1d8cd829db6cc6b412acd4450991dc3146fd00e5b6d3583188ce30f6ee9",
+    "knowledge/reviews/hazards/H_B0B7C75B5F0D423386A84AB73D.json": "18fbefdbcd676b391dbcdd26c952939386cd75912ba07946efeac70fe4ca4cfe",
+    "knowledge/reviews/hazards/H_BC2436C8E5BE198BA82BB74B82_1.json": "b3444d9390b3055dd114d53baf5b9110632b4956d961c1fd47a58388ba030ec4",
+    "knowledge/reviews/hazards/H_C7284453E8E94532A44FC5F5EF.json": "ee9588d54106a6957786227efa2e4c12501032da456f7a92ad482241530d0910",
+    "knowledge/reviews/hazards/H_CFF821DDE6764083BFB914EC86.json": "a8a2a1b5e8bc164d37cc20e86a8e8aa85ec6a45a84dcbc5b0376772d55fd226f",
+    "knowledge/reviews/hazards/H_D128C0FCC4844BD8BF5D8FAAF5.json": "1a78454d043f483eb051ded8a78ef35ab12bf9e33bb65dedbe0889105a5b496b",
+    "knowledge/reviews/hazards/H_F0D64F91542E4B0399D83D670D.json": "43b0b7766c58f898e1e649dd745016d6b519e649c602833918460971e49c850f",
+    "knowledge/reviews/law-versions/LV_STD_AQ7011_2018.json": "121be13f17d8ce6b8a4518f15fbfa09924ce8d9f0931973c220a6628e3b6ee91",
+    "knowledge/reviews/law-versions/LV_STD_GB16912_2008.json": "1590bc36f85b9e328c85b8d94d4e9c39421f85c51ff6c345a5b3e4dbed422668",
+    "knowledge/reviews/law-versions/LV_STD_GB50057_2010.json": "117563aec1069cb0516892899c266cbfedeac2b8776d03143d5ce3a53d0e73c2",
+    "knowledge/reviews/laws/LF_STD_AQ7011.json": "11059900a88c441b95d6c3e03d213b1a451952db3a28a7945b2965ad25a885bb",
+    "knowledge/reviews/laws/LF_STD_GB16912.json": "014074f3daae237d2ddaa8113d9bf08327c7963e9c428b2e4d4fddf4cf16a9eb",
+    "knowledge/reviews/laws/LF_STD_GB50057.json": "1f5ff31e889b8437fca5d14b17e4f4e0007d71f6da9658083f3112a501fe013f",
+    "knowledge/reviews/links/K_199989467c019b0789b69f66.json": "819025b54f54108623edcc564146c5489946c09f97a9b2dd6a31ebd5f1e929ec",
+    "knowledge/reviews/links/K_1ED9FF46BEDB3CED1FA394.json": "ba74bd6709de7d4e4b4a60ebc13786ff5fca2630af2c83685e6da1020913ab01",
+    "knowledge/reviews/links/K_6EAF76314861ABC620BB9975.json": "4e91996e78093cf978ad6bacda5578ca18cd0a52bdd52f9384e02200ed27a162",
+    "knowledge/reviews/links/K_9e6ba6262766224cc3d6e224.json": "e3f9acd9e7b4494b51f15bbaf0dec026476b854441acdab95fdbebf17c363bf7",
+    "knowledge/reviews/links/K_A02D92087BE34DF146E21F.json": "23ea62e3a756bf19a830b7dacc9a3f36d76f585c44ab56e33825943ab1a0a9a1",
+    "knowledge/reviews/links/K_B9FF3B3BCC9404B8D71376.json": "a246d69210464b7b9b0352c3caae2965fdefd0e77df41a837a01befabcffe0ab",
+    "knowledge/reviews/links/K_F46299168EA56F465C4FAD1D.json": "2a0b89a3ec405d2afd38289325039c971dae2c73fe82c0f9e9f06e7a8ad6b443",
+    "knowledge/reviews/links/K_NEXT_GB16912_TRAINING_SCOPE.json": "3fe4c62d4a2e0dd6e7a738fc2735cd3a2e4130416cd21e6852ac73b500ffe8b0",
+    "knowledge/reviews/links/K_NEXT_GB50054_REAGENT_CABLE_7_6_38.json": "3177078e18633db4abdf25a54c5e2c9d9ef41a19ea35fcc1a22a0cbc948c147a",
+    "knowledge/reviews/links/K_NEXT_GBT13869_MONITOR_5_2_1.json": "321fd0a3da2ec2f8be59136d411c82c49e1142d837f89a19be40af6085d33720",
+    "knowledge/reviews/links/K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005.json": "72bee5f553122a4adac89b35926d29d9220ada4768b652609fb29428c0179b61",
+    "knowledge/reviews/links/K_XLSX_FT_80C4D8363ED159B6CC323D7C.json": "732e08de9c8ece808905cb2d48ad4499f2593b6b2b6444aa728cd402bfeba439",
+    "knowledge/reviews/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json": "0182b5fdeb158752ae56f240d1794b6a18760166f031aacd1dc36ae83e85439e",
+    "knowledge/reviews/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json": "87c756d2754acc5d67e5ef305a4218386e224a582887ba7397f0ee07b533b168",
+    "knowledge/reviews/links/K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9.json": "d25c878b3447373e6b46181b1938e74710aa2c231534b8d622491b89f1d791b9",
+    "knowledge/reviews/links/K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A.json": "dd5f2e1d9e24a21a1c6ac6c2049d8a9d849b512ddef4a00a6e1d6b692b44c8b6",
+    "knowledge/reviews/links/K_XLSX_NEW14_EFD92528ABBFE27B1D100D87.json": "62b280b56c6b9befa9782104a374baae2fa28d6afb80b625964b1ac5bde070db",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_10_1_2.json": "b8548b9b330aefec05972a6781ece1cc8dddf92642c05c90aa014d3f0ed8d5d0",
+    "knowledge/reviews/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json": "9c9ba00afadfc937f8d8b0560b7836d7e3104408d7f69009763552524eb3b10b",
+    "knowledge/reviews/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json": "12168d93fe890871b09bf5fe8133edc8a960a47941dbdb72e4ec20f831a8eb44",
+    "knowledge/reviews/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json": "75e7d16b391e33ce54242aeb5977c36e9fafb392000dab87d64a93e43a0b7f09",
+    "knowledge/reviews/links/K_a6a1923c4d86007345fd7341.json": "45ac0da2c16975d38ccc497c602dc8f0d68465d28766350bb3499f80182a1ae2",
+    "knowledge/reviews/links/K_b5854a5f230a891b5fe35e8c.json": "70aba2a335a3284c103078a856c701f8242195a932c9888c8a7ccfddad9973bf",
+    "knowledge/reviews/links/K_be5a0deab9619bd1579c758f.json": "e1d3011826cfa19cb6c6ca9b8d1dca034b99020a37ab481ddc480a7cbfc48b37",
+    "knowledge/reviews/links/K_d651b0312c6e6a0d36cde361.json": "2004ada324bbe110ff61b82c65e2d1c72711ea1adc27114efb961732d959f2e8",
+    "knowledge/reviews/links/K_d9b8087219c0a33495f14d72.json": "a4ac55e409370f87b6b2243dd30e007613feadb40b85ffc411b21453ed771269",
+    "source/publication/law-index.json": "fd63e7c4db664a183cc22bb2f1ee68c6fb7d14d63f19b46d6d1df0c64a2454fc"
+  },
+  "engineeringSupplement": {
+    "asOf": "2026-10-05T07:33:40.510675+00:00",
+    "decision": "APPROVE_TARGETED_INVERSE_AND_BROWSER_WIRING",
+    "blockingFindings": [],
+    "scope": "仅新历史inverse/current browser fixture接入、相应负例与实际生产harness导入；非全量软件或真实GUI验收。",
+    "historyInverse": {
+      "recordCount": 118,
+      "eachBeforeFileTextEqualsExactBaselineGitBytes": true,
+      "eachAfterSha256EqualsCurrentFileBytes": true,
+      "sourceTreeChecked": "84ed7015e73ba20ee505541ad94f776be48f31fd",
+      "unknownMutationHandling": "只反转作者清单及精确元数据白名单；未知新增、修改、删除继续复制可见并改变缓存身份，已列路径hash漂移或被删除立即失败。禁止路径越界，拒绝不符基线树；只对副本执行。",
+      "noAutomaticFixtureRegenerationInCi": true,
+      "oldBrowserAndHistoryFixtureBytesUnchanged": true
+    },
+    "browserContract": {
+      "currentFixture": "tools/browser/fixtures/residual_clauses_20261005.json",
+      "expectedIds": {
+        "hazards": 1694,
+        "links": 1853,
+        "clauses": 1406,
+        "majorHazards": 21,
+        "profiles": 25
+      },
+      "detailCount": 211,
+      "inheritedDetailCount": 199,
+      "allInheritedAndElevenFormalDetailsRetained": true,
+      "productionImportsUseCurrentResidualSelector": true,
+      "productionHarnessNeverCallsHistoricalAdapter": true,
+      "sourceAndObservedReleaseHashDateBindingRetained": true,
+      "realHarnessExistingFlowsRetained": [
+        "1440/375/390/485 widths",
+        "all source-pinned detail rows",
+        "clipboard plain/full",
+        "navigation back/forward/reload",
+        "exact membership after flows",
+        "ordinary structured-table narrow/desktop flows"
+      ],
+      "sameCountSwapDuplicateAndMissingIdMutationsRejected": true,
+      "everyFormalBusinessFieldAndBasisMutationsRejected": true
+    },
+    "independentTests": {
+      "command": "python -m unittest discover -s tools/pipeline/tests -p 'test_residual_clause_*.py' -v",
+      "tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "realBrowserExecutedByThisReviewer": false,
+      "fullSuiteOrExactCommitCiClaimed": false
+    },
+    "exactFiles": {
+      "tools/pipeline/tests/residual_clause_cohort_fixture.py": "c397224a280b48797ede4807fea13db9c3fc776a57da41481c36094424f2c5a2",
+      "tools/pipeline/tests/freeze_residual_clause_history.py": "2ebd24b906c6e069f80d799ec6101e740271d3f56d8680aac66e638b1700d16e",
+      "tools/pipeline/tests/fixtures/residual_clause_cohort_20261005.json": "932bf19f529d03c23ede5fb86c46ceb296972ce9bf0ab0886d758c12e16e386d",
+      "tools/pipeline/tests/test_residual_clause_history.py": "c5b338c473a676cc6966e396121fadac61cd49fe3263908e9d4ab8fa45b59428",
+      "tools/pipeline/tests/test_residual_clause_browser.py": "655ec5a3ef4bdabc5b472a42a8e0d9a9349fd1eae406d9a5add5bfbf422dd414",
+      "tools/pipeline/tests/official_clause_cohort_fixture.py": "5cb8b9c7ae0342081131359b88279d6e5bc0f6a1d58d48936a0b2f5fe58abe33",
+      "tools/pipeline/tests/test_official_clause_history.py": "fe70060fbdbe3dd5b0072989acaf285740883e62530725b9397dac5006f410c5",
+      "tools/pipeline/tests/test_official_clause_browser.py": "a372ce3dd78cf5f7364343e1882a24cd6f31f1d91f6fdd2bec52976b344ec036",
+      "tools/browser/residual_clause_acceptance.py": "7c2b421e90d71251addb5c580fe2152a9aef0364c072032487006b0ec9c124f7",
+      "tools/browser/freeze_residual_clause_expectations.py": "ecdf3c7ab41e7e28b9dfbeb9abf1175b05a32bf9668dd61591860616bea584b9",
+      "tools/browser/fixtures/residual_clauses_20261005.json": "afd9bb3f623fc677782a22c2a72b2357d3f79b39d4ad85078581d5c81830d032",
+      "tools/browser/audit_browser.py": "579cdd90c4433ea3738e0aa51788914cebc9492f0dde86c59b5776aa73e9ad97",
+      "tools/browser/audit_ordinary_tables.py": "8ec22f49fb50ca0cb27d2d73e8a23ccf1966edf9cda9db9fbc795afbe6416f9d",
+      ".github/workflows/reviewed-site.yml": "3c9132a777e704ef9137acaf0a62706c0dcc08aea2f3f119001f7e4c897cebb5",
+      "tools/pipeline/tests/test_static_fire_recovery_semantics.py": "bf976d0c20fa768c7c4b91723b370922f720967905a19ee41e4ce03765749e91"
+    },
+    "exactFileMapSha256": "806e0ec856193061000f83c2ddbeb1476ab4c914318ea066a244d384bac293d7",
+    "historicalTestFollowup": {
+      "asOf": "2026-10-05T07:39:15.156393+00:00",
+      "decision": "APPROVE_HISTORICAL_ROOT_ADAPTER",
+      "file": "tools/pipeline/tests/test_static_fire_recovery_semantics.py",
+      "fileSha256": "bf976d0c20fa768c7c4b91723b370922f720967905a19ee41e4ce03765749e91",
+      "change": "仅插入pre_residual_repo_root导入、说明注释及ROOT转换3行；删去新增3行后与Git baseline测试原字节相同。",
+      "datedSemantics": "setUpClass明确evaluate_release_gate(..., date(2026,10,4))，旧恢复批次comparisonEvidenceRefs的顶层布局需由真实前态验收；全部旧断言保留。",
+      "actualConsumerChecked": {
+        "retiredLinkId": "K_be5a0deab9619bd1579c758f",
+        "currentHazardId": "H052",
+        "baselineHazardId": "H052",
+        "currentLifecycle": "superseded",
+        "currentReviewDecision": "rejected",
+        "currentReviewHashBound": true,
+        "completePreviousReviewEqualsBaseline": true,
+        "comparisonEvidencePreservedInPreviousReview": [
+          "E_RECOVERY_XF1131_2014_20261004"
+        ],
+        "currentH052StillAdmitted": true,
+        "wrongLinkExcludedFromCurrentGateAndNewBrowserExpectedIds": true
+      },
+      "separate211thDetail": "H_DB786B8BC54E4E55B1145D00D7使用K_XLSX_WEB_H_DB786B8BC54E4E55B1145D00D7；其新详情覆盖由GB50057版本/身份/证据依赖变化触发，并非be5消费者。该H/K业务字节未变。",
+      "currentGuardsRemain": "新test_residual_clause_history对be5实体及review的精确afterSHA各自检查，并测试未知漂移失败；新test_residual_clause_browser从当前真实根校验完整K集合（不含be5）及源hash，不走历史adapter。另由本独审直接以2026-10-05当前根执行生命周期、rejected、hash、完整前态及H052保留/错K排除断言。",
+      "independentTests": {
+        "historicalStaticFireTests": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "currentRootAssertions": "passed"
+      },
+      "fullSuiteOrCiClaimed": false
+    }
+  }
+}

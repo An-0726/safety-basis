@@ -1,28 +1,64 @@
 {
-  "entityType": "hazard",
   "entityId": "H_1251ED2287FB47B6BDED9292D1",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "8736de25eeee820b12c29d6e72a1f05e68395d61abee36598b0d6ee07ebb57d2",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "建筑物外部防雷及闪电电涌侵入措施不等同电器产品、燃气用具及其线路管路活动，第27条不是该建筑专项的适当直接判据。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+  "decision": "verified",
+  "reviewedContentHash": "bbabe7e3553a68505a16ed8edad396ff8a469908b3a50db8e0e5c1ff5a3fc1a8",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
-    "E_CITATION_FIRELAW2021_20261002"
+    "E_NEXT_GB50057_EXACT_20261005",
+    "E_NEXT_GB55024_RELATION_20261005"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "仅将已证同义的外部防雷/防电涌定义归并；不复制错别字，不把附带定期检测措施算成同义或已核。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_1251ED2287FB47B6BDED9292D1",
     "entityType": "hazard",
-    "evidenceRefs": [
-      "E_XLSX_FT_3FAF12F318BC17235C2E568E"
-    ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
+    "entityId": "H_1251ED2287FB47B6BDED9292D1",
+    "reviewType": "definition",
+    "decision": "pending",
     "reviewedContentHash": "8736de25eeee820b12c29d6e72a1f05e68395d61abee36598b0d6ee07ebb57d2",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "建筑物外部防雷及闪电电涌侵入措施不等同电器产品、燃气用具及其线路管路活动，第27条不是该建筑专项的适当直接判据。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_1251ED2287FB47B6BDED9292D1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_3FAF12F318BC17235C2E568E"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "8736de25eeee820b12c29d6e72a1f05e68395d61abee36598b0d6ee07ebb57d2",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "be621e888f779035c08aa6fd73f4b6ff9552164cb3cb67e481a43c8018dd19cf"
   },
-  "previousReviewFileSha256": "be621e888f779035c08aa6fd73f4b6ff9552164cb3cb67e481a43c8018dd19cf"
+  "previousDefinition": {
+    "id": "H_1251ED2287FB47B6BDED9292D1",
+    "title": "各类防雷建构物,未设防直周雷的外部防雷装置,并未采取防雷电电涌浸入措施",
+    "description": "各类防雷建（构）筑物未按 GB 50057 的要求设置防直击雷的外部防雷装置，也未采取防闪电电涌侵入的措施，雷击时可能造成设备损坏和人员伤亡。",
+    "measures": "按 GB 50057 要求设置外部防雷装置及防雷电电涌侵入措施，并定期检测接地电阻。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "总图与建筑",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "各类防雷建构物,未设防直周雷的外部防雷装置,并未采取防雷电电涌浸入措施"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《建筑物防雷设计规范》(GB50057-2010) 第4.1.1条\n\nGB 50057-2010。",
+    "mergedInto": null
+  },
+  "mergeBoundary": "仅外部防雷及防闪电电涌侵入分支；定期检测不包含。",
+  "canonicalHazardId": "H_CFF821DDE6764083BFB914EC86"
 }

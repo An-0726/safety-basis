@@ -1,0 +1,223 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+  "baselineTree": "84ed7015e73ba20ee505541ad94f776be48f31fd",
+  "reviewStage": "author_verified_independent_review_pending",
+  "decisions": [
+    {
+      "hazardId": "H_CFF821DDE6764083BFB914EC86",
+      "action": "repair_canonical",
+      "linkIds": [
+        "K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86"
+      ],
+      "positiveCase": "适用新建设计且已定防雷类别，查实外部防雷装置缺失。",
+      "negativeCase": "未知防雷类别或仅未见检测报告。"
+    },
+    {
+      "hazardId": "H_3141FAD634694686B722139F91",
+      "action": "narrow_shared_clause_consumer",
+      "linkIds": [
+        "K_XLSX_WEB_H_3141FAD634694686B722139F91"
+      ],
+      "remainingBranch": "原定期检测义务不由4.1.1闭环。"
+    },
+    {
+      "hazardId": "H_1251ED2287FB47B6BDED9292D1",
+      "action": "bounded_synonym_merge",
+      "canonicalHazardId": "H_CFF821DDE6764083BFB914EC86",
+      "remainingBranch": "原措施中的定期检测不属于本次归并已核义务。"
+    },
+    {
+      "hazardId": "H_C7284453E8E94532A44FC5F5EF",
+      "action": "narrow_existing_id",
+      "linkIds": [
+        "K_NEXT_GB50054_REAGENT_CABLE_7_6_38"
+      ],
+      "positiveCase": "适用低压设计中的埋地电缆引入试剂室穿墙部位无保护管。",
+      "negativeCase": "试剂室普通明敷线路未穿管，不能仅凭该外观命中。",
+      "remainingBranch": "原全部试剂室电缆穿管规则不成立；其他具体布线方式另核。"
+    },
+    {
+      "hazardId": "H_12158_10_1_2",
+      "action": "correct_corruption_keep_unadmitted",
+      "remainingBranch": "物料、工况、电阻等未明；不能并手套，也不能硬并9.11三分支。"
+    },
+    {
+      "hazardId": "H_974023DBBC2B471AA3F7DB6A67",
+      "action": "split_monitoring_branch",
+      "linkIds": [
+        "K_NEXT_GBT13869_MONITOR_5_2_1"
+      ],
+      "canonicalOtherBranch": "H_1A8786209C974B6BB28C4ADFA5",
+      "positiveCase": "运行要求及实际危险已核，查实所需监视措施缺失。",
+      "negativeCase": "缺少自动监控系统但有适当人工监视，或未监视却无超负荷证据。"
+    }
+  ],
+  "remainingBranches": [
+    {
+      "hazardId": "H_0AF2C63369124DA5BCDEFBF340",
+      "action": "unchanged_partial_source_found",
+      "supportedBranch": "GB50054-2011第6.1.1短路及过负荷保护，已有H029；本轮未归并。",
+      "unresolvedBranch": "原接地故障保护及泛化切断/报警并非6.1.1全文；不以部分覆盖冒充完整同义。",
+      "evidenceRefs": [
+        "E_NEXT_GB50054_EXACT_20261005",
+        "E_NEXT_GB55024_RELATION_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_9C4FE3EBE8C149EFB882B60148",
+      "action": "unchanged_conditional_candidate",
+      "supportedBranch": "已影响足够绝缘强度的线路损伤可使用既有H_62AD7AADA05F468BAE0F91F5CC。",
+      "unresolvedBranch": "原外绝缘层破损尚需区分绝缘层与外护层，原措施的双层绝缘/全部架空穿管/审批不能由5.1.2一并认证。",
+      "evidenceRefs": [
+        "E_NEXT_GBT13869_MONITOR_20261005",
+        "E_NEXT_GBT13869_STATUS_20261005"
+      ]
+    },
+    {
+      "hazardId": "H_6F7D6D7E28DD423B9F40AF8218",
+      "action": "skip_source_gap",
+      "reason": "尚未闭合GB50028-2006（2020版）精确正式原文与GB55009强条废止衔接，不用消防法27推具体阻火器位置。"
+    },
+    {
+      "hazardId": "H_409ABC97960D46FBBF6AA54D28",
+      "action": "skip_scope_gap",
+      "reason": "已找到并实际读取沙县夏茂镇村社区专项工作台账规定，但地域及微站类型不能适用于全国企业；消防法67也非该技术管理义务。",
+      "sourceUrl": "https://www.fjsx.gov.cn/zwgk/ghjh/dwghjy/202405/t20240511_2024264.htm"
+    }
+  ],
+  "sharedClauseConsumers": {
+    "C_GB50057_4_1_1": [
+      "H_CFF821DDE6764083BFB914EC86",
+      "H_3141FAD634694686B722139F91"
+    ]
+  },
+  "authoredFiles": [
+    "docs/NEXT_BOUNDED_ELECTRICAL_REPAIR_20261005.json",
+    "knowledge/clauses/C_GB50057_4_1_1.json",
+    "knowledge/clauses/C_NEXT_GB50054_7_6_38_20261005.json",
+    "knowledge/evidence/E_NEXT_GB50054_EXACT_20261005.json",
+    "knowledge/evidence/E_NEXT_GB50057_EXACT_20261005.json",
+    "knowledge/evidence/E_NEXT_GB55024_RELATION_20261005.json",
+    "knowledge/evidence/E_NEXT_GBT13869_MONITOR_20261005.json",
+    "knowledge/evidence/E_NEXT_GBT13869_STATUS_20261005.json",
+    "knowledge/hazards/H_12158_10_1_2.json",
+    "knowledge/hazards/H_1251ED2287FB47B6BDED9292D1.json",
+    "knowledge/hazards/H_3141FAD634694686B722139F91.json",
+    "knowledge/hazards/H_974023DBBC2B471AA3F7DB6A67.json",
+    "knowledge/hazards/H_C7284453E8E94532A44FC5F5EF.json",
+    "knowledge/hazards/H_CFF821DDE6764083BFB914EC86.json",
+    "knowledge/law-versions/LV_STD_GB50057_2010.json",
+    "knowledge/links/K_NEXT_GB50054_REAGENT_CABLE_7_6_38.json",
+    "knowledge/links/K_NEXT_GBT13869_MONITOR_5_2_1.json",
+    "knowledge/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json",
+    "knowledge/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json",
+    "knowledge/links/K_XLSX_WEB_H_12158_10_1_2.json",
+    "knowledge/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json",
+    "knowledge/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json",
+    "knowledge/reviews/clauses/C_GB50057_4_1_1.json",
+    "knowledge/reviews/clauses/C_GBT13869_5_2_1_overload.json",
+    "knowledge/reviews/clauses/C_NEXT_GB50054_7_6_38_20261005.json",
+    "knowledge/reviews/hazards/H_12158_10_1_2.json",
+    "knowledge/reviews/hazards/H_1251ED2287FB47B6BDED9292D1.json",
+    "knowledge/reviews/hazards/H_3141FAD634694686B722139F91.json",
+    "knowledge/reviews/hazards/H_974023DBBC2B471AA3F7DB6A67.json",
+    "knowledge/reviews/hazards/H_C7284453E8E94532A44FC5F5EF.json",
+    "knowledge/reviews/hazards/H_CFF821DDE6764083BFB914EC86.json",
+    "knowledge/reviews/law-versions/LV_STD_GB50057_2010.json",
+    "knowledge/reviews/laws/LF_STD_GB50057.json",
+    "knowledge/reviews/links/K_NEXT_GB50054_REAGENT_CABLE_7_6_38.json",
+    "knowledge/reviews/links/K_NEXT_GBT13869_MONITOR_5_2_1.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_10_1_2.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json",
+    "tools/pipeline/tests/test_bounded_electrical_20261005.py"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "authoredFileSha256": {
+    "knowledge/clauses/C_GB50057_4_1_1.json": "db7004cfd178ba74a9bb2fecd1fd9820649f18686ed575e8ef017c472994e617",
+    "knowledge/clauses/C_NEXT_GB50054_7_6_38_20261005.json": "fbb79fc49d72c2caf739c8d9db5d12b4e1fabd58275bf5c2cc18f8c7dddf0638",
+    "knowledge/evidence/E_NEXT_GB50054_EXACT_20261005.json": "3ee60b8acc67afb61996342eb5022e64a2fb188dfc113d9a504b06a34dcba03d",
+    "knowledge/evidence/E_NEXT_GB50057_EXACT_20261005.json": "6b2d8d6cc1e5a6aaac6579bc5f9304f81a055df7c189252a9a5eaa86eb37112c",
+    "knowledge/evidence/E_NEXT_GB55024_RELATION_20261005.json": "76f6b5ceade097ebde95cee71f587eb4b4ca42dc4408f73e37ba1555052dbcd8",
+    "knowledge/evidence/E_NEXT_GBT13869_MONITOR_20261005.json": "4bf7ceaab53fcb92bf89d7b6de83dd513dc09977bc51f67d0956e82b924e8d86",
+    "knowledge/evidence/E_NEXT_GBT13869_STATUS_20261005.json": "e21c519a4903558818ad93af5f4b57cc5589be5ddbe8710e1a0462bf0090e0be",
+    "knowledge/hazards/H_12158_10_1_2.json": "94612ac231f749a162ae310cc843e46284f3f3f6f2536408d13c08e7cd1ce9f7",
+    "knowledge/hazards/H_1251ED2287FB47B6BDED9292D1.json": "f016ae44ac5f25ebb35a6e4afaed9278ebd2777c5a0dd797265410e39cacf3f3",
+    "knowledge/hazards/H_3141FAD634694686B722139F91.json": "559e988eead23b37b6b1952cd4b308b42988bd1ea35953dd4d32ce2feb0db941",
+    "knowledge/hazards/H_974023DBBC2B471AA3F7DB6A67.json": "db247b65d55fa4823bbd4c0257014e2482655639139a2c829f54966e7768b7ac",
+    "knowledge/hazards/H_C7284453E8E94532A44FC5F5EF.json": "57468125f5c8e34f275f30c591ed9767ea58d4cc8b6328014a826fc3f1225e24",
+    "knowledge/hazards/H_CFF821DDE6764083BFB914EC86.json": "37787f8649c02c16a8aeb7cbc7d331db8e12b663a39dadd55e1fe65604f46fdf",
+    "knowledge/law-versions/LV_STD_GB50057_2010.json": "4a306e19208c18ccdc704f081dc3e9e8682895a2b29a3510d7abd37603374c5e",
+    "knowledge/links/K_NEXT_GB50054_REAGENT_CABLE_7_6_38.json": "1e3c7180fe1a064ed8d0100765bdd28f34cd59830f40109ebb8a9f4e43e6f9c5",
+    "knowledge/links/K_NEXT_GBT13869_MONITOR_5_2_1.json": "d81f1ddbf0742a6023d4d6b643eea254bad6c59fd68904c35a72696e605fea4a",
+    "knowledge/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json": "f8aef8be743ad5a49a43fcd24b3a9ef9e90e62457c9e35eb6367e53fa4fbf78a",
+    "knowledge/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json": "0b6cd668072f7877ba6b5bd7bc1b4c5f07b30d9e34b156e8b74466bc31e02a2b",
+    "knowledge/links/K_XLSX_WEB_H_12158_10_1_2.json": "373e1e19295afa5f620abf0d7a3161549dbc3d3197f414b2fa8c7a98caee47e9",
+    "knowledge/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json": "a640678a1ac547851e0a7f195575178766090bb9643683ee943eeaa2aaacdd1b",
+    "knowledge/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json": "827da56f32141f7cc4bc6f5bffd2ec176e3cf0d6829dcb74131f9ab0303ccead",
+    "knowledge/reviews/clauses/C_GB50057_4_1_1.json": "92388e8ed0218cdcc5a18a71d359a4cffbfda2f8eca5f26d7c1a0af79a781e6b",
+    "knowledge/reviews/clauses/C_GBT13869_5_2_1_overload.json": "452b85a5146fe0d914d7cebaca1d4451f732048aeeab7b450cae8c606db82f31",
+    "knowledge/reviews/clauses/C_NEXT_GB50054_7_6_38_20261005.json": "c9dac11a16583819419aaf98a18e530a09c8895bb1cf92e870a02cec02466e05",
+    "knowledge/reviews/hazards/H_12158_10_1_2.json": "0756160fc9cb66df3b7f3933cf60e5654c997cce3aca68dced2ffdc6d5c30720",
+    "knowledge/reviews/hazards/H_1251ED2287FB47B6BDED9292D1.json": "16d976fe804d4a38d9073bfba93b48f6f1202c72d26c5a09c858b906822e6cc7",
+    "knowledge/reviews/hazards/H_3141FAD634694686B722139F91.json": "7f7561f2778f234b8008e9fdd13797ef5380d181e3acaf246f8237a259a82e13",
+    "knowledge/reviews/hazards/H_974023DBBC2B471AA3F7DB6A67.json": "37bd807fd92800dd72ac6adf41ece8476df44e83db071a846b954e872c40f8a1",
+    "knowledge/reviews/hazards/H_C7284453E8E94532A44FC5F5EF.json": "ee9588d54106a6957786227efa2e4c12501032da456f7a92ad482241530d0910",
+    "knowledge/reviews/hazards/H_CFF821DDE6764083BFB914EC86.json": "a8a2a1b5e8bc164d37cc20e86a8e8aa85ec6a45a84dcbc5b0376772d55fd226f",
+    "knowledge/reviews/law-versions/LV_STD_GB50057_2010.json": "117563aec1069cb0516892899c266cbfedeac2b8776d03143d5ce3a53d0e73c2",
+    "knowledge/reviews/laws/LF_STD_GB50057.json": "1f5ff31e889b8437fca5d14b17e4f4e0007d71f6da9658083f3112a501fe013f",
+    "knowledge/reviews/links/K_NEXT_GB50054_REAGENT_CABLE_7_6_38.json": "3177078e18633db4abdf25a54c5e2c9d9ef41a19ea35fcc1a22a0cbc948c147a",
+    "knowledge/reviews/links/K_NEXT_GBT13869_MONITOR_5_2_1.json": "321fd0a3da2ec2f8be59136d411c82c49e1142d837f89a19be40af6085d33720",
+    "knowledge/reviews/links/K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE.json": "0182b5fdeb158752ae56f240d1794b6a18760166f031aacd1dc36ae83e85439e",
+    "knowledge/reviews/links/K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3.json": "87c756d2754acc5d67e5ef305a4218386e224a582887ba7397f0ee07b533b168",
+    "knowledge/reviews/links/K_XLSX_WEB_H_12158_10_1_2.json": "b8548b9b330aefec05972a6781ece1cc8dddf92642c05c90aa014d3f0ed8d5d0",
+    "knowledge/reviews/links/K_XLSX_WEB_H_3141FAD634694686B722139F91.json": "9c9ba00afadfc937f8d8b0560b7836d7e3104408d7f69009763552524eb3b10b",
+    "knowledge/reviews/links/K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86.json": "75e7d16b391e33ce54242aeb5977c36e9fafb392000dab87d64a93e43a0b7f09",
+    "tools/pipeline/tests/test_bounded_electrical_20261005.py": "687d291121b6fedf2de68fe4f4650f971442ec092b734d722188a880eada7a5d"
+  },
+  "validation": {
+    "focusedPositiveNegativeTests": {
+      "testFile": "tools/pipeline/tests/test_bounded_electrical_20261005.py",
+      "tests": 11,
+      "result": "PASS"
+    },
+    "catalogue": {
+      "errors": 0
+    },
+    "reviewBinding": {
+      "unbound": 0,
+      "staleLinkHash": 0,
+      "staleHazardContext": 0,
+      "staleClauseContext": 0
+    },
+    "evidenceExact": {
+      "mismatches": 0
+    },
+    "strictReleaseAudit": {
+      "asOf": "2026-10-05",
+      "result": "PASS",
+      "blockerCount": 0,
+      "scope": "同一协作工作树快照；并非全项目内容正确性或现场认证，manifest/publication尚由父任务汇总。"
+    },
+    "affectedRegressionTests": {
+      "modules": [
+        "test_bounded_electrical_20261005",
+        "test_review_binding_loader",
+        "test_normative_content"
+      ],
+      "tests": 33,
+      "result": "PASS"
+    },
+    "historicalDateBoundaryTest": {
+      "module": "test_gbt13869_date_boundary",
+      "result": "NOT_RUN_IMPORT_BLOCKED",
+      "reason": "协作中新增历史投影helper需要fixtures/residual_clause_cohort_20261005.json，测试启动时该父任务汇总fixture尚不存在；未修改父任务fixture或绕过历史投影。"
+    }
+  }
+}

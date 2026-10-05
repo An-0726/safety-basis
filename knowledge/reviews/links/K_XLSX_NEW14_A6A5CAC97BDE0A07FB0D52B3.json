@@ -1,36 +1,67 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "rejected",
-  "reviewedContentHash": "ffcea8207093b70ed27013df4603b3237206fc112cb1dc1f1515f8e5a329279a",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "建筑物外部防雷及闪电电涌侵入措施不等同电器产品、燃气用具及其线路管路活动，第27条不是该建筑专项的适当直接判据。 撤回本K当前direct，不强行保留27 supporting。现有C_GB50057_4_1_1只能作为候选，先复核完整上下文、现行技术关系、防雷分类及适用建筑后再接；不要直接复用片段C。",
+  "reviewedContentHash": "5cad32e9fcc80f56f7eebec0d2734caf81ddc483ef236e1918a5f8f32efefb29",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
     "E_CITATION_FIRELAW2021_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
-  "contextHashes": {
-    "hazard": "8736de25eeee820b12c29d6e72a1f05e68395d61abee36598b0d6ee07ebb57d2",
-    "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
-  },
+  "reason": "消防法27条不能作为建筑专项防雷的直接技术判据；同义分支已归并精确设计canonical，保留错误K供历史追溯。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-26T19:47:46+08:00",
+    "entityType": "link",
+    "entityId": "K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3",
+    "reviewType": "applicability",
+    "decision": "rejected",
+    "reviewedContentHash": "ffcea8207093b70ed27013df4603b3237206fc112cb1dc1f1515f8e5a329279a",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "建筑物外部防雷及闪电电涌侵入措施不等同电器产品、燃气用具及其线路管路活动，第27条不是该建筑专项的适当直接判据。 撤回本K当前direct，不强行保留27 supporting。现有C_GB50057_4_1_1只能作为候选，先复核完整上下文、现行技术关系、防雷分类及适用建筑后再接；不要直接复用片段C。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
     "contextHashes": {
       "hazard": "8736de25eeee820b12c29d6e72a1f05e68395d61abee36598b0d6ee07ebb57d2",
       "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
     },
-    "decision": "verified",
-    "entityId": "K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3",
-    "entityType": "link",
-    "evidenceRefs": [
-      "E_FIRE_LAW_2021_BJ_20260926"
-    ],
-    "reason": "完整原文及适用对象纠正；候选或历史关联保持原决定。",
-    "reviewType": "applicability",
-    "reviewedContentHash": "ffcea8207093b70ed27013df4603b3237206fc112cb1dc1f1515f8e5a329279a",
-    "reviewer": "Codex 原文及适用性审计 20260926"
+    "previousReview": {
+      "checkedAt": "2026-09-26T19:47:46+08:00",
+      "contextHashes": {
+        "hazard": "8736de25eeee820b12c29d6e72a1f05e68395d61abee36598b0d6ee07ebb57d2",
+        "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
+      },
+      "decision": "verified",
+      "entityId": "K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3",
+      "entityType": "link",
+      "evidenceRefs": [
+        "E_FIRE_LAW_2021_BJ_20260926"
+      ],
+      "reason": "完整原文及适用对象纠正；候选或历史关联保持原决定。",
+      "reviewType": "applicability",
+      "reviewedContentHash": "ffcea8207093b70ed27013df4603b3237206fc112cb1dc1f1515f8e5a329279a",
+      "reviewer": "Codex 原文及适用性审计 20260926"
+    },
+    "previousReviewFileSha256": "68996f5ebee361448f37d4e9a0f79d19d849599b47a936d5ab167a906e6462f5"
   },
-  "previousReviewFileSha256": "68996f5ebee361448f37d4e9a0f79d19d849599b47a936d5ab167a906e6462f5"
+  "previousDefinition": {
+    "id": "K_XLSX_NEW14_A6A5CAC97BDE0A07FB0D52B3",
+    "hazardId": "H_1251ED2287FB47B6BDED9292D1",
+    "clauseId": "C_XLSX_FT_DEC0C23FE8B8BEC1ACCCE6AC",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所与设备的相关管理。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+  },
+  "contextHashes": {
+    "hazard": "bbabe7e3553a68505a16ed8edad396ff8a469908b3a50db8e0e5c1ff5a3fc1a8",
+    "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
+  }
 }

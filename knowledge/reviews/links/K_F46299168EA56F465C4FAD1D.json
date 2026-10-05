@@ -1,35 +1,92 @@
 {
-  "entityType": "link",
   "entityId": "K_F46299168EA56F465C4FAD1D",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "f93ce759c208329185771d7b3d2676b67ab328a5542619294b5149f2b4e7436a",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "H含多种不同义务，6.8不能包办分类、堆垛面积和主通道。已有另K连接错标6.6的C，其编号及文字必须一并校正到真实6.7。 第6.8条仅直接支持本隐患的五距分支，其他管理和主通道要求以第6.7条独立关联说明。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+  "decision": "rejected",
+  "reviewedContentHash": "a210772a593fa8655f9a3ad522d58aed8f71bfe945bd8000d48f0cc4d8997ab0",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex residual source repair author review 20261005",
   "evidenceRefs": [
     "E_CITATION_XF1131_2014_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
-  "contextHashes": {
-    "hazard": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
-    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
-  },
+  "reason": "第6.8五距本身已核，但H已收窄为第6.7分类、分堆、限额、面积及主通道；旧五距关联不再适用当前H，不激活proposed，也不靠该复合H重复发布H053/H054/H055。 2026-10-05状态一致性处理：旧错误或与已收窄现定义不一致的关联停用，lifecycle改为superseded；不是宣称新法源替代，不删除稳定ID、原关系或审核历史，也不使原未核分支成立。",
+  "notes": "作者逐项核实；独立复核另存。本记录不是现场确认、违法或重大隐患认定、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-12",
-    "contextHashes": {
-      "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
-      "hazard": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8"
-    },
-    "decision": "pending",
     "entityId": "K_F46299168EA56F465C4FAD1D",
     "entityType": "link",
-    "evidenceRefs": [],
-    "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
     "reviewType": "applicability",
-    "reviewedContentHash": "2a8cf6c14fe28a002c46c5a0af2951bd78baaea9c57bbfb9fb9f641b787a27b3",
-    "reviewer": "GLM-5.3-Flash (ZCode)",
-    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+    "decision": "rejected",
+    "reviewedContentHash": "f93ce759c208329185771d7b3d2676b67ab328a5542619294b5149f2b4e7436a",
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex warehouse scoped author review 20261005",
+    "evidenceRefs": [
+      "E_CITATION_XF1131_2014_20261002"
+    ],
+    "reason": "第6.8五距本身已核，但H已收窄为第6.7分类、分堆、限额、面积及主通道；旧五距关联不再适用当前H，不激活proposed，也不靠该复合H重复发布H053/H054/H055。",
+    "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_F46299168EA56F465C4FAD1D",
+      "reviewType": "applicability",
+      "decision": "pending",
+      "reviewedContentHash": "f93ce759c208329185771d7b3d2676b67ab328a5542619294b5149f2b4e7436a",
+      "checkedAt": "2026-10-02T23:35:09+08:00",
+      "reviewer": "Codex public-source content and applicability review 20261002",
+      "reason": "H含多种不同义务，6.8不能包办分类、堆垛面积和主通道。已有另K连接错标6.6的C，其编号及文字必须一并校正到真实6.7。 第6.8条仅直接支持本隐患的五距分支，其他管理和主通道要求以第6.7条独立关联说明。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+      "evidenceRefs": [
+        "E_CITATION_XF1131_2014_20261002"
+      ],
+      "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+      "contextHashes": {
+        "hazard": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
+        "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+      },
+      "previousReview": {
+        "checkedAt": "2026-09-12",
+        "contextHashes": {
+          "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
+          "hazard": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8"
+        },
+        "decision": "pending",
+        "entityId": "K_F46299168EA56F465C4FAD1D",
+        "entityType": "link",
+        "evidenceRefs": [],
+        "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "2a8cf6c14fe28a002c46c5a0af2951bd78baaea9c57bbfb9fb9f641b787a27b3",
+        "reviewer": "GLM-5.3-Flash (ZCode)",
+        "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+      },
+      "previousReviewFileSha256": "0154f96a052953c9e81bab5ef30e213e82b4d2866713fe620de965e58384a0ed"
+    },
+    "previousReviewFileSha256": "9d9d08444b00e47c02830a791666b6308b07aa18a9019275aeef3cea61166a90",
+    "contextHashes": {
+      "hazard": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+      "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+    },
+    "comparisonEvidenceRefs": [
+      "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+      "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005"
+    ]
   },
-  "previousReviewFileSha256": "0154f96a052953c9e81bab5ef30e213e82b4d2866713fe620de965e58384a0ed"
+  "contextHashes": {
+    "hazard": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+  },
+  "previousDefinition": {
+    "id": "K_F46299168EA56F465C4FAD1D",
+    "hazardId": "H_993643C76F7041BDA19B0C5EED",
+    "clauseId": "C_XF1131_6_8",
+    "role": "direct",
+    "legacyRole": "",
+    "applicability": "仅适用于XF1131—2014第1章规定的既有仓储场所库房内储存管理；不适用于炸药仓库、花炮仓库。具体距离分支逐项核明。本K只支持第6.8条实际涉及的物品/堆垛距离；分类、分堆、限额、每垛面积与主通道宽度另由第6.7条对应K支撑。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "第6.8条仅直接支持本隐患的五距分支，其他管理和主通道要求以第6.7条独立关联说明。",
+    "status": "needs_review"
+  },
+  "previousEntityFileSha256": "1f3675687433e031062410fa357332f4eb1b976c1d2d729b2f643fd8efbe1850",
+  "previousReviewFileSha256": "9922930f6028d2fcf18f923bece32b8f4d328d1ed2f873eb4001e94fdbaea513"
 }

@@ -1,33 +1,89 @@
 {
-  "entityType": "hazard",
   "entityId": "H_993643C76F7041BDA19B0C5EED",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "正确XF1131第6.8分支仍保留proposed状态；原消防设施标志或安全警示标志关联不支持五距义务。当前完整定义尚无全部已核准入直接依据，保留待核，不因条款改正自动准入。",
+  "decision": "verified",
+  "reviewedContentHash": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex warehouse scoped author review 20261005",
   "evidenceRefs": [
-    "E_CITATION_XF1131_2014_20261002"
+    "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+    "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005",
+    "E_RECOVERY_XF1131_2014_20261004"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "收窄至第6.7条；删除当前定义中笼统“间距”分支，避免和五距细分H重复。保留稳定C_XF1131_6_6，其实际条号是6.7，不为ID整洁重编号。",
+  "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "decision": "verified",
-    "entityId": "H_993643C76F7041BDA19B0C5EED",
     "entityType": "hazard",
+    "entityId": "H_993643C76F7041BDA19B0C5EED",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "正确XF1131第6.8分支仍保留proposed状态；原消防设施标志或安全警示标志关联不支持五距义务。当前完整定义尚无全部已核准入直接依据，保留待核，不因条款改正自动准入。",
     "evidenceRefs": [
-      "EH_a06ad3a9b3cb6534d30d9df0e9fcf0b7b976b956ac0c8e8b329fd5206ac0ed73"
+      "E_CITATION_XF1131_2014_20261002"
     ],
-    "migratedFromV3Verification": {
-      "id": "VHF_77616055d8602382695301dd",
-      "reviewedAt": "2026-09-09T14:38:34+00:00",
-      "reviewer": "并发重验批次"
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "decision": "verified",
+      "entityId": "H_993643C76F7041BDA19B0C5EED",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "EH_a06ad3a9b3cb6534d30d9df0e9fcf0b7b976b956ac0c8e8b329fd5206ac0ed73"
+      ],
+      "migratedFromV3Verification": {
+        "id": "VHF_77616055d8602382695301dd",
+        "reviewedAt": "2026-09-09T14:38:34+00:00",
+        "reviewer": "并发重验批次"
+      },
+      "reviewType": "content",
+      "reviewedContentHash": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
+      "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+      "checkedAt": "2026-09-12T02:29:02+08:00",
+      "reviewer": "GLM-5.3-Flash (ZCode)"
     },
-    "reviewType": "content",
-    "reviewedContentHash": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
-    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-    "checkedAt": "2026-09-12T02:29:02+08:00",
-    "reviewer": "GLM-5.3-Flash (ZCode)"
+    "previousReviewFileSha256": "58d9cf02e9ef30d0479c9ebb49584aad6c5e20265bc1f5fef56ff79e30c8361b"
   },
-  "previousReviewFileSha256": "58d9cf02e9ef30d0479c9ebb49584aad6c5e20265bc1f5fef56ff79e30c8361b"
+  "previousReviewFileSha256": "9ea9147e280b57bbc983d37a64a55d1f21ce6ff19726c2616649130a9dcc8565",
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "仅适用于XF1131—2014第1章规定的既有仓储场所库房内储存管理；不适用于炸药仓库、花炮仓库。具体距离分支逐项核明。",
+    "description": "现场检查发现，物品分类、分垛储存，其占地、间距、及主要通道，未符合规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_993643C76F7041BDA19B0C5EED",
+    "keywords": [
+      "物品分类",
+      "分垛储存",
+      "其占地",
+      "物",
+      "品",
+      "分",
+      "类",
+      ",",
+      "垛",
+      "储",
+      "存",
+      "其",
+      "占",
+      "地",
+      "间",
+      "距",
+      "及",
+      "主",
+      "要",
+      "通",
+      "道"
+    ],
+    "lifecycle": "active",
+    "measures": "按第6.7条分类、分堆、限额存放物品，使每个堆垛面积不大于150m²、库房内主通道宽度不小于2m；五距要求另按第6.8条逐项核查。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。原 conditions 字段记录的引用依据为：依据：公安部6号令《仓库防火安全管理规则》第十八条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "物品分类、分垛储存，其占地、间距、及主要通道，未符合规定"
+  }
 }

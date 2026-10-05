@@ -1,40 +1,95 @@
 {
-  "entityType": "link",
   "entityId": "K_b5854a5f230a891b5fe35e8c",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "rejected",
-  "reviewedContentHash": "d9dd9082a9f5d72d161a4e772ee35e23241e050cca6889bb4b448a62f2979cd0",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "消防法第16条第一款第（二）项配置消防设施器材和标志的对象，与物品/堆垛至墙、柱、灯或其他堆垛距离及堆垛分类/面积不同。fallback也不能当该距离义务的适用依据；本轮已有XF1131精确正文。 撤回作为此H当前依据的fallback关联，保留稳定ID与历史审核；不改C001本身，也不全局影响C001其他正确消费者。若界面需要“历史曾用兜底”仅以明确历史记录展示，不能保留现行直接/补充合规背书。",
+  "reviewedContentHash": "5dc029f2903fbe1cfd683a383290b7f559bd38316d1f5ece2562022ce39ff1a4",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex residual source repair author review 20261005",
   "evidenceRefs": [
     "E_CITATION_FIRELAW2021_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
-  "contextHashes": {
-    "hazard": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
-    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
-  },
+  "reason": "消防法第十六条第一款第（二）项的设施器材及安全标志配置维护义务，不直接支持本H分类、限额、每垛面积或主通道宽度；不能作为fallback。 2026-10-05状态一致性处理：旧错误或与已收窄现定义不一致的关联停用，lifecycle改为superseded；不是宣称新法源替代，不删除稳定ID、原关系或审核历史，也不使原未核分支成立。",
+  "notes": "作者逐项核实；独立复核另存。本记录不是现场确认、违法或重大隐患认定、整改完成或正式批准。",
   "previousReview": {
     "entityId": "K_b5854a5f230a891b5fe35e8c",
     "entityType": "link",
     "reviewType": "applicability",
-    "decision": "verified",
-    "reviewer": "Doubao-Agent",
-    "checkedAt": "2026-09-10T16:00:00+08:00",
-    "reason": "仓库物品分类分垛储存的占地间距及主要通道不符合规定，消防法第十六条第一款第（二）项作为上位法兜底依据。direct依据需仓库防火安全管理规则专项条款。",
-    "reasonCodes": [
-      "FALLBACK_ROLE_CONFIRMED",
-      "WAREHOUSE_STORAGE"
-    ],
+    "decision": "rejected",
     "reviewedContentHash": "d9dd9082a9f5d72d161a4e772ee35e23241e050cca6889bb4b448a62f2979cd0",
-    "contextHashes": {
-      "hazard": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
-      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
-      "link": "d9dd9082a9f5d72d161a4e772ee35e23241e050cca6889bb4b448a62f2979cd0"
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex warehouse scoped author review 20261005",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "reason": "消防法第十六条第一款第（二）项的设施器材及安全标志配置维护义务，不直接支持本H分类、限额、每垛面积或主通道宽度；不能作为fallback。",
+    "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_b5854a5f230a891b5fe35e8c",
+      "reviewType": "applicability",
+      "decision": "rejected",
+      "reviewedContentHash": "d9dd9082a9f5d72d161a4e772ee35e23241e050cca6889bb4b448a62f2979cd0",
+      "checkedAt": "2026-10-02T23:35:09+08:00",
+      "reviewer": "Codex public-source content and applicability review 20261002",
+      "reason": "消防法第16条第一款第（二）项配置消防设施器材和标志的对象，与物品/堆垛至墙、柱、灯或其他堆垛距离及堆垛分类/面积不同。fallback也不能当该距离义务的适用依据；本轮已有XF1131精确正文。 撤回作为此H当前依据的fallback关联，保留稳定ID与历史审核；不改C001本身，也不全局影响C001其他正确消费者。若界面需要“历史曾用兜底”仅以明确历史记录展示，不能保留现行直接/补充合规背书。",
+      "evidenceRefs": [
+        "E_CITATION_FIRELAW2021_20261002"
+      ],
+      "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+      "contextHashes": {
+        "hazard": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
+        "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+      },
+      "previousReview": {
+        "entityId": "K_b5854a5f230a891b5fe35e8c",
+        "entityType": "link",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewer": "Doubao-Agent",
+        "checkedAt": "2026-09-10T16:00:00+08:00",
+        "reason": "仓库物品分类分垛储存的占地间距及主要通道不符合规定，消防法第十六条第一款第（二）项作为上位法兜底依据。direct依据需仓库防火安全管理规则专项条款。",
+        "reasonCodes": [
+          "FALLBACK_ROLE_CONFIRMED",
+          "WAREHOUSE_STORAGE"
+        ],
+        "reviewedContentHash": "d9dd9082a9f5d72d161a4e772ee35e23241e050cca6889bb4b448a62f2979cd0",
+        "contextHashes": {
+          "hazard": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
+          "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
+          "link": "d9dd9082a9f5d72d161a4e772ee35e23241e050cca6889bb4b448a62f2979cd0"
+        },
+        "evidenceRefs": [],
+        "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+      },
+      "previousReviewFileSha256": "9ca59dea4e6ac620a1f5d86ff5fb08321b923eaf584a19b3d1372b98403d58d9"
     },
-    "evidenceRefs": [],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "previousReviewFileSha256": "ac5e08317e1f72a71718e237d6394d31d1e3fd5f67b58c44d3087fc3ecc53f55",
+    "contextHashes": {
+      "hazard": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+    },
+    "comparisonEvidenceRefs": [
+      "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+      "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005"
+    ]
   },
-  "previousReviewFileSha256": "9ca59dea4e6ac620a1f5d86ff5fb08321b923eaf584a19b3d1372b98403d58d9"
+  "contextHashes": {
+    "hazard": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+  },
+  "previousDefinition": {
+    "id": "K_b5854a5f230a891b5fe35e8c",
+    "hazardId": "H_993643C76F7041BDA19B0C5EED",
+    "clauseId": "C001",
+    "role": "fallback",
+    "applicability": "全国通用",
+    "jurisdiction": "national",
+    "reason": "仓库物品分类分垛储存的占地间距及主要通道不符合规定，消防法第十六条第一款第（二）项作为上位法兜底依据。direct依据需仓库防火安全管理规则专项条款。",
+    "lifecycle": "active",
+    "createdAt": "2026-09-10T16:00:00+08:00",
+    "createdBy": "Doubao-Agent"
+  },
+  "previousEntityFileSha256": "d4660f13efbf707837bfc844998ced3ee82658f0cce6599ff6b75cdb1d3c58ba",
+  "previousReviewFileSha256": "e4613b69196d7a7d37b889caf56a71c40e4fb1481dcccfd8beec427307ad82c3"
 }

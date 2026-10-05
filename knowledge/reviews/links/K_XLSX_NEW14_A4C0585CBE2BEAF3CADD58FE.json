@@ -1,36 +1,67 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "8d907d0f5d6af693eaf3bf8ea96a20e0296dafcaa3bec257c678851a524a35f3",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "消防法27没有规定所有某类房间的电缆都必须穿管。保护方式取决于敷设方式、受损风险、火灾/爆炸危险区及电缆型式。 C27降为适当supporting，暂停当前唯一direct；核GB50054等实际对应条文和当前有效性，不凭房间名称选择标准。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+  "decision": "rejected",
+  "reviewedContentHash": "12915cc7ea119004f4c7e939c7787bb9aa35b2496e903f575e2640c57ec39e57",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
     "E_CITATION_FIRELAW2021_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
-  "contextHashes": {
-    "hazard": "d2bed5da39eba9da238b50768a1f30e1084d591376ebe4a01b7ef56867006245",
-    "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
-  },
+  "reason": "消防法27条没有规定所有试剂室电缆均穿管；封存原宽泛direct，不用上位转引替代现已精确核得的技术条款。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-26T19:47:46+08:00",
+    "entityType": "link",
+    "entityId": "K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE",
+    "reviewType": "applicability",
+    "decision": "pending",
+    "reviewedContentHash": "8d907d0f5d6af693eaf3bf8ea96a20e0296dafcaa3bec257c678851a524a35f3",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "消防法27没有规定所有某类房间的电缆都必须穿管。保护方式取决于敷设方式、受损风险、火灾/爆炸危险区及电缆型式。 C27降为适当supporting，暂停当前唯一direct；核GB50054等实际对应条文和当前有效性，不凭房间名称选择标准。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
     "contextHashes": {
       "hazard": "d2bed5da39eba9da238b50768a1f30e1084d591376ebe4a01b7ef56867006245",
       "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
     },
-    "decision": "verified",
-    "entityId": "K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE",
-    "entityType": "link",
-    "evidenceRefs": [
-      "E_FIRE_LAW_2021_BJ_20260926"
-    ],
-    "reason": "完整原文及适用对象纠正；候选或历史关联保持原决定。",
-    "reviewType": "applicability",
-    "reviewedContentHash": "1abb95fb6d8f4de41f7c236caadb99c82c077bc1962e90f93064201685c81cc0",
-    "reviewer": "Codex 原文及适用性审计 20260926"
+    "previousReview": {
+      "checkedAt": "2026-09-26T19:47:46+08:00",
+      "contextHashes": {
+        "hazard": "d2bed5da39eba9da238b50768a1f30e1084d591376ebe4a01b7ef56867006245",
+        "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
+      },
+      "decision": "verified",
+      "entityId": "K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE",
+      "entityType": "link",
+      "evidenceRefs": [
+        "E_FIRE_LAW_2021_BJ_20260926"
+      ],
+      "reason": "完整原文及适用对象纠正；候选或历史关联保持原决定。",
+      "reviewType": "applicability",
+      "reviewedContentHash": "1abb95fb6d8f4de41f7c236caadb99c82c077bc1962e90f93064201685c81cc0",
+      "reviewer": "Codex 原文及适用性审计 20260926"
+    },
+    "previousReviewFileSha256": "48676e0d1f33620b04dd3628668dc1c265201c28e61d32b2bf571d72a38b0afe"
   },
-  "previousReviewFileSha256": "48676e0d1f33620b04dd3628668dc1c265201c28e61d32b2bf571d72a38b0afe"
+  "previousDefinition": {
+    "id": "K_XLSX_NEW14_A4C0585CBE2BEAF3CADD58FE",
+    "hazardId": "H_C7284453E8E94532A44FC5F5EF",
+    "clauseId": "C_XLSX_FT_DEC0C23FE8B8BEC1ACCCE6AC",
+    "role": "direct",
+    "legacyRole": "直接依据",
+    "applicability": "适用于本隐患所述场所与设备的相关管理。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "新版整改表要求与现有已核验同版次条款直接对应。"
+  },
+  "contextHashes": {
+    "hazard": "d611f717e5718bcb6fc76ddbeb3ba1642bcd46ef40238cd43d2acdcbaf4e1d60",
+    "clause": "20dc3151e93fc3864c231e93881ae47890189ca4f0163c543aea5850a5eeaf2e"
+  }
 }

@@ -1,18 +1,48 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_10_1_2",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "rejected",
-  "reviewedContentHash": "6fe472607b6127e80672c791336c78a9786345111e838617dbebb684511a08bf",
-  "contextHashes": {
-    "hazard": "0e8a0d83530361b03f09dec30dee440b595adb54017b2e913d52d26fef6f3cc3",
-    "clause": "14bf1b4978144ef732c681e9b90176b33fa5acb41a2c0ac987cf806ffaa225c4"
-  },
-  "checkedAt": "2026-09-30T12:25:50Z",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "reason": "撤回原verified审核。隐患把GB/T 22845写为法兰、阀门、接头的防静电跨接依据；实际所关联C_12158_10_1（第10.1条）的对象是人员防护服、安全鞋及手套，其中GB/T 22845明确对应手套。对象及义务不符。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+  "reviewedContentHash": "e979b2d5a84164495c2c93f222a869184706811f234ae9efbfc5116ed6421685",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
-    "E_SAMR_GB12158_2024"
+    "E_RECOVERY_GB12158_2024_20261004",
+    "E_RECOVERY_GB12158_STATUS_20261004"
   ],
-  "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  "reason": "第10.1条对应人体防护和手套，明确不支持法兰跨接；封存错误K，不移绑其他不同工况条款，不修改既有9.11三分支。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_12158_10_1_2",
+    "reviewType": "applicability",
+    "decision": "rejected",
+    "reviewedContentHash": "6fe472607b6127e80672c791336c78a9786345111e838617dbebb684511a08bf",
+    "contextHashes": {
+      "hazard": "0e8a0d83530361b03f09dec30dee440b595adb54017b2e913d52d26fef6f3cc3",
+      "clause": "14bf1b4978144ef732c681e9b90176b33fa5acb41a2c0ac987cf806ffaa225c4"
+    },
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "reason": "撤回原verified审核。隐患把GB/T 22845写为法兰、阀门、接头的防静电跨接依据；实际所关联C_12158_10_1（第10.1条）的对象是人员防护服、安全鞋及手套，其中GB/T 22845明确对应手套。对象及义务不符。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+  },
+  "previousDefinition": {
+    "applicability": "法兰阀门管道防静电跨接",
+    "clauseId": "C_12158_10_1",
+    "hazardId": "H_12158_10_1_2",
+    "id": "K_XLSX_WEB_H_12158_10_1_2",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "5ffa4a90b672aac99843c775713b640400b59026e55b3091e1527679739ba82a",
+    "clause": "14bf1b4978144ef732c681e9b90176b33fa5acb41a2c0ac987cf806ffaa225c4"
+  }
 }

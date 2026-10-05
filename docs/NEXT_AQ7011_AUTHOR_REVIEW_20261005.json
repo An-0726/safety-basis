@@ -1,0 +1,151 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+  "localBaselineCommit": "20f80edd98df5c828d538f249353d7df5c148562",
+  "reviewStage": "author_verified_independent_review_pending",
+  "scope": "仅修复现有1项起重机吊具探伤定义和错绑依据；不改共享MEM10条文。",
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "sources": [
+    {
+      "evidenceId": "E_NEXT_AQ7011_ORIGINAL_20261005",
+      "url": "https://hbba.sacinfo.org.cn/portal/download/e3056cdf09e44e9b7008322460c0e882",
+      "pagesRead": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "evidenceId": "E_NEXT_AQ7011_STATUS_20261005",
+      "url": "https://hbba.sacinfo.org.cn/portal/online/e3056cdf09e44e9b7008322460c0e882"
+    }
+  ],
+  "decisions": [
+    {
+      "hazardId": "H_B0B7C75B5F0D423386A84AB73D",
+      "linkIds": [
+        "K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D"
+      ],
+      "clauseId": "C_NEXT_AQ7011_2018_4_6_20261005",
+      "action": "narrow_existing_stable_id",
+      "boundary": "适用于金属冶炼企业高温熔融金属及熔渣吊运设备设施的设计、运行、维护和安全管理。本记录仅核准第4.6条“吊具部件每年至少一次离线探伤检查”分支；须核实企业行业、实际吊运物料、起重机及吊具部件对象和实际年度检查情况。仅未出示记录不能直接证明未检查；普通非熔融物料吊运、无相应吊具部件，或年度要求已经满足时，不据本项判定。不据此证明起重机全部技术要求合格，也不自动判定为重大事故隐患。",
+      "positiveCase": "已核实为金属冶炼企业的高温熔融金属吊运起重机，具体横梁吊具部件在应完成的年度内未进行离线探伤，有检查记录及相关事实证实。",
+      "negativeCase": "仅未提供报告、普通非熔融物料吊运，或相应年度已完成离线探伤，不由本项直接认定；任何一项均不自动导出重大事故隐患。"
+    }
+  ],
+  "previousRecords": {
+    "knowledge/hazards/H_B0B7C75B5F0D423386A84AB73D.json": {
+      "fileSha256": "3d3dbc1510a022e41c92edd002aea2ba548dfe0316384b4061996486249dcb93",
+      "value": {
+        "id": "H_B0B7C75B5F0D423386A84AB73D",
+        "title": "吊运熔融金属起重机不符合要求或横梁焊缝销轴未定期探伤",
+        "description": "吊运铁水等熔融金属的起重机不符合吊运熔融金属起重机的相关要求。吊运浇注包的横梁焊缝和销轴未按要求定期进行探伤检测",
+        "measures": "使吊运熔融金属起重机符合专门要求，横梁焊缝和销轴按要求定期探伤检测。",
+        "conditions": "适用于本隐患所述场所与设备的相关管理。",
+        "category": "设备设施",
+        "places": [
+          "通用场所"
+        ],
+        "aliases": [],
+        "keywords": [
+          "吊运熔融金属起重机不符合要求或横梁焊缝销轴未定期探伤"
+        ],
+        "lifecycle": "active",
+        "mode": "direct",
+        "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准(2021版)》(四)机械行业 第2条\n\n《中华人民共和国特种设备安全法》。",
+        "mergedInto": null
+      }
+    },
+    "knowledge/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json": {
+      "fileSha256": "c7e36b7ebef4bbbe1e00607ba1adfe5bf2d6f198c186a85a7ca1683038a73443",
+      "value": {
+        "applicability": "吊运熔融金属起重机不符合要求或探伤不足",
+        "clauseId": "C_MEM10_4_2",
+        "hazardId": "H_B0B7C75B5F0D423386A84AB73D",
+        "id": "K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D",
+        "jurisdictionCode": "CN",
+        "legacyRole": "直接依据",
+        "lifecycle": "active",
+        "priority": 10,
+        "role": "direct"
+      }
+    },
+    "knowledge/reviews/hazards/H_B0B7C75B5F0D423386A84AB73D.json": {
+      "fileSha256": "da706a38f6ca4eda330f0da62bf5f303a1824077a06ccf49fd085b01acae5cd1",
+      "value": {
+        "entityType": "hazard",
+        "entityId": "H_B0B7C75B5F0D423386A84AB73D",
+        "reviewType": "definition",
+        "decision": "verified",
+        "reviewedContentHash": "016e980824accee60651f90490e6a6b9d4879fa6453b2fb0f129e74804b0445f",
+        "checkedAt": "2026-09-19T01:00:00+08:00",
+        "reviewer": "Codex / PR #62 Policy",
+        "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+        "evidenceRefs": [
+          "E_MEM_ORDER_10"
+        ]
+      }
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json": {
+      "fileSha256": "a3b0c47fa8f81cc9118617599bfa54cd51f23b7896b3aa4539bbbe6ee0b3df07",
+      "value": {
+        "entityType": "link",
+        "entityId": "K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D",
+        "reviewType": "applicability",
+        "decision": "rejected",
+        "reviewedContentHash": "55dbe624b6e863e522f65527edf06909e0a5df254e2b65a486c3dfdaf6dca401",
+        "contextHashes": {
+          "hazard": "016e980824accee60651f90490e6a6b9d4879fa6453b2fb0f129e74804b0445f",
+          "clause": "eb44b2293a3229f21ad2c90f8cfe33c5d205df00ca0ae994b7c34c3afcc0c11e"
+        },
+        "checkedAt": "2026-10-01T16:17:30+08:00",
+        "reviewer": "Codex MEM10 source-integrity containment 20261001",
+        "reason": "撤回原verified适用性审核。该关联引用的C_MEM10_4_2不具备其声明的准确原文与定位资格，不能继续作为该隐患已核直接判据。官方第四条第（二）项针对冶金企业生产期间六类区域存在积水；当前quote为机械行业吊运熔融金属起重机及横梁焊缝销轴探伤，行业、条号、义务均错配。 本次只隔离失实审核资格；未更改quote、关联目标、稳定ID或lifecycle，未批准替代依据。须重新核对精确现行条款、对象、范围及适用性后实质审阅，不得自动重签。",
+        "evidenceRefs": [
+          "E_PDDB_L019"
+        ],
+        "notes": "2026-10-01重新读取应急管理部官方第10号令完整HTML，并经独立语义核对确认两项错配。E_PDDB_L019复用既有正确官方全文证据卡；未伪造新网页/PDF下载哈希。完整旧审核保存在previousReview，保留原reviewedContentHash及contextHashes只为追溯被撤回内容；不等于原审核继续有效。",
+        "previousReview": {
+          "entityType": "link",
+          "entityId": "K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D",
+          "reviewType": "applicability",
+          "decision": "verified",
+          "reviewedContentHash": "55dbe624b6e863e522f65527edf06909e0a5df254e2b65a486c3dfdaf6dca401",
+          "contextHashes": {
+            "hazard": "016e980824accee60651f90490e6a6b9d4879fa6453b2fb0f129e74804b0445f",
+            "clause": "eb44b2293a3229f21ad2c90f8cfe33c5d205df00ca0ae994b7c34c3afcc0c11e"
+          },
+          "checkedAt": "2026-09-19T01:00:00+08:00",
+          "reviewer": "Codex / PR #62 Policy",
+          "reason": "依据PR #62官方网络证据核验证实，应急部令第10号第四条第(二)项机械行业重大隐患。条款逐字原文与隐患适用性吻合。",
+          "evidenceRefs": [
+            "E_MEM_ORDER_10"
+          ],
+          "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+        },
+        "previousReviewFileSha256": "d470725f5adb450cfcfe18df576858cdb1c180f8b7e2ae89e1a4e31c3573bebe"
+      }
+    }
+  },
+  "ownedPaths": [
+    "knowledge/evidence/E_NEXT_AQ7011_ORIGINAL_20261005.json",
+    "knowledge/evidence/E_NEXT_AQ7011_STATUS_20261005.json",
+    "knowledge/laws/LF_STD_AQ7011.json",
+    "knowledge/law-versions/LV_STD_AQ7011_2018.json",
+    "knowledge/clauses/C_NEXT_AQ7011_2018_4_6_20261005.json",
+    "knowledge/hazards/H_B0B7C75B5F0D423386A84AB73D.json",
+    "knowledge/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json",
+    "knowledge/reviews/laws/LF_STD_AQ7011.json",
+    "knowledge/reviews/law-versions/LV_STD_AQ7011_2018.json",
+    "knowledge/reviews/clauses/C_NEXT_AQ7011_2018_4_6_20261005.json",
+    "knowledge/reviews/hazards/H_B0B7C75B5F0D423386A84AB73D.json",
+    "knowledge/reviews/links/K_XLSX_WEB_H_B0B7C75B5F0D423386A84AB73D.json"
+  ]
+}

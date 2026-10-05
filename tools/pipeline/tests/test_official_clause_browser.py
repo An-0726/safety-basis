@@ -7,6 +7,8 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
+from residual_clause_cohort_fixture import pre_residual_repo_root
+ROOT = pre_residual_repo_root(ROOT)
 sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
 import official_clause_acceptance as CURRENT
 import recovery_release_acceptance as QA
@@ -127,7 +129,7 @@ class OfficialClauseBrowserTests(unittest.TestCase):
     def test_production_harness_selects_new_fixture_and_keeps_all_existing_rendered_flows(self):
         for name in ('audit_browser.py', 'audit_ordinary_tables.py'):
             text = (ROOT / 'tools/browser' / name).read_text()
-            self.assertIn('from official_clause_acceptance import load_expectations', text)
+            self.assertIn('from residual_clause_acceptance import load_expectations', text)
         shared = (ROOT / 'tools/browser/recovery_release_acceptance.py').read_text()
         for token in ('for width in (1440, 375, 390, 485)', 'for row in rows:', 'page.go_back()',
                       'page.go_forward()', 'page.reload(', 'navigator.clipboard.readText()',

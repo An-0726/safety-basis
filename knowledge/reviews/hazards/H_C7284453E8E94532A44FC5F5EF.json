@@ -1,28 +1,62 @@
 {
-  "entityType": "hazard",
   "entityId": "H_C7284453E8E94532A44FC5F5EF",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "d2bed5da39eba9da238b50768a1f30e1084d591376ebe4a01b7ef56867006245",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "消防法27没有规定所有某类房间的电缆都必须穿管。保护方式取决于敷设方式、受损风险、火灾/爆炸危险区及电缆型式。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+  "decision": "verified",
+  "reviewedContentHash": "d611f717e5718bcb6fc76ddbeb3ba1642bcd46ef40238cd43d2acdcbaf4e1d60",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
-    "E_CITATION_FIRELAW2021_20261002"
+    "E_NEXT_GB50054_EXACT_20261005",
+    "E_NEXT_GB55024_RELATION_20261005"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "只恢复已核第1款穿墙/楼板分支；原试剂室所有电缆穿管的泛化定义不被认证，完整原定义保留。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_C7284453E8E94532A44FC5F5EF",
     "entityType": "hazard",
-    "evidenceRefs": [
-      "E_XLSX_FT_3FAF12F318BC17235C2E568E"
-    ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
+    "entityId": "H_C7284453E8E94532A44FC5F5EF",
+    "reviewType": "definition",
+    "decision": "pending",
     "reviewedContentHash": "d2bed5da39eba9da238b50768a1f30e1084d591376ebe4a01b7ef56867006245",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "消防法27没有规定所有某类房间的电缆都必须穿管。保护方式取决于敷设方式、受损风险、火灾/爆炸危险区及电缆型式。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_C7284453E8E94532A44FC5F5EF",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_3FAF12F318BC17235C2E568E"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "d2bed5da39eba9da238b50768a1f30e1084d591376ebe4a01b7ef56867006245",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "665634cafa3a6cebce718aba736cd52ee33ee4e3b9db5cf182399dfe89094a74"
   },
-  "previousReviewFileSha256": "665634cafa3a6cebce718aba736cd52ee33ee4e3b9db5cf182399dfe89094a74"
+  "previousDefinition": {
+    "id": "H_C7284453E8E94532A44FC5F5EF",
+    "title": "试剂室内的电缆未按照规范设置穿管保护",
+    "description": "试剂室内电缆未按规范设置穿管保护。",
+    "measures": "对试剂室内电缆按规范设置穿管保护。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "试剂室内的电缆未按照规范设置穿管保护"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《低压配电设计规范》GB 50054-2011 7.6.38\n\nGB 50054-2011\nGB 50058\nGB 50058-2014《爆炸危险环境电力装置设计规范》\nGB 50257-2014《电气装置安装工程 爆炸和火灾危险环境电气装置施工及验收规范》。",
+    "mergedInto": null
+  }
 }

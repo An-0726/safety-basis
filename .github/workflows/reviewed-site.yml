@@ -98,20 +98,23 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: official-clause-browser-local-focused
+          name: residual-clause-browser-local-focused
           path: |
             ${{ runner.temp }}/browser-local/browser.json
             ${{ runner.temp }}/browser-local/ordinary-tables.json
             ${{ runner.temp }}/browser-local/ordinary-table-*.png
             ${{ runner.temp }}/browser-local/tsg-reading-*.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_200F007CE0EF47DFB8BE2B8618.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_4E5F4BB13B82457DA5377CABDF.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB3836_EX_D_MISSING_FASTENER.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB3836_UNUSED_ENTRY.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB51309_SELF_POWERED_PLUG.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GB55037_BUILDING_GAS_ALARM.png
-            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_GBT34525_PREUSE_CHECK.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H053.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H054.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H055.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_993643C76F7041BDA19B0C5EED.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_D128C0FCC4844BD8BF5D8FAAF5.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_8A733CAD776643E3B34B4D4689.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_B0B7C75B5F0D423386A84AB73D.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_CFF821DDE6764083BFB914EC86.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_3141FAD634694686B722139F91.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_C7284453E8E94532A44FC5F5EF.png
+            ${{ runner.temp }}/browser-local/recovery-screenshots/recovery-*-H_974023DBBC2B471AA3F7DB6A67.png
           if-no-files-found: warn
           retention-days: 7
           compression-level: 9
@@ -188,20 +191,23 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: official-clause-online-verify-focused
+          name: residual-clause-online-verify-focused
           path: |
             ${{ runner.temp }}/online-verify/browser-public.json
             ${{ runner.temp }}/online-verify/ordinary-tables.json
             ${{ runner.temp }}/online-verify/ordinary-table-*.png
             ${{ runner.temp }}/online-verify/tsg-reading-*.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_200F007CE0EF47DFB8BE2B8618.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_4E5F4BB13B82457DA5377CABDF.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB12801_ACCIDENT_EXHAUST_INTERLOCK.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB3836_EX_D_MISSING_FASTENER.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB3836_UNUSED_ENTRY.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB51309_SELF_POWERED_PLUG.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GB55037_BUILDING_GAS_ALARM.png
-            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_GBT34525_PREUSE_CHECK.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H053.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H054.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H055.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_993643C76F7041BDA19B0C5EED.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_D128C0FCC4844BD8BF5D8FAAF5.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_8A733CAD776643E3B34B4D4689.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_B0B7C75B5F0D423386A84AB73D.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_CFF821DDE6764083BFB914EC86.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_3141FAD634694686B722139F91.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_C7284453E8E94532A44FC5F5EF.png
+            ${{ runner.temp }}/online-verify/recovery-screenshots/recovery-*-H_974023DBBC2B471AA3F7DB6A67.png
           if-no-files-found: warn
           retention-days: 7
           compression-level: 9
