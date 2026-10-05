@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from capture_evidence import capture_full_page
 from repair_acceptance import load_expectations, validate_source_pins, run_repair_browser_acceptance
 from technical_citation_acceptance import (load_expectations as load_technical_expectations,
     validate_source_pins as validate_technical_source_pins, run_technical_browser_acceptance)
@@ -330,9 +331,10 @@ def main():
                         tab.reload()
                         expect(tab.locator('#libraryDetail h2')).to_contain_text('含第1号修改单')
                     shot = args.out.parent / ('tsg-reading-' + str(width) + '.png')
-                    tab.screenshot(path=str(shot), full_page=True)
+                    capture = capture_full_page(tab, shot, content_selector='#libraryDetail')
                     return {'legacyAlias': legacy, 'canonicalVersion': current, 'width': width, 'screenshot': str(shot),
-                        'title': tab.locator('#libraryDetail h2').inner_text(), 'linkOnly': True, 'reloadPassed': True}
+                        'title': tab.locator('#libraryDetail h2').inner_text(), 'linkOnly': True, 'reloadPassed': True,
+                        'screenshotCapture': capture}
                 finally:
                     ctx.close()
             for width in (1440, 390):
