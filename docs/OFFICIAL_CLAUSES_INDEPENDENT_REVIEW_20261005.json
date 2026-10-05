@@ -1,9 +1,9 @@
 {
   "asOf": "2026-10-05",
-  "reviewedAt": "2026-10-05T04:03:49.334866+00:00",
+  "reviewedAt": "2026-10-05T04:26:41.915254+00:00",
   "reviewer": "Independent source and integration reviewer 20261005",
   "decision": "APPROVE_REDUCED_VERIFIED_CURRENT_INTEGRATION",
-  "reviewScope": "仅本次缩小提交中的8项已独立核准有界规则、必要支持条文及精确工程验收合同。对缩小后的源码重新逐项绑定，不沿用先前较大候选树的通过结论。",
+  "reviewScope": "仅本次缩小提交中的8项已独立核准有界规则、必要支持条文及精确工程验收合同；另含TSG现行资料入口与明确旧书签别名的最小元数据兼容修复。源码逐项重新绑定，不沿用较大候选树的结论。",
   "baseline": {
     "localCommit": "c18d5eb5114cea165aaefc7dfc87cac83fe36cd3",
     "remoteMainCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
@@ -76,6 +76,11 @@
       "id": "I03",
       "issue": "修改后1.8.1.3原依2021生效版本而在2024-12-31错误通过Gate。",
       "resolution": "新建2025-01-01生效整合版，原版排他endDate保全；修订条文回绑新版本，日期反例已独立复验。"
+    },
+    {
+      "id": "I04",
+      "issue": "现行资料目录仍指向已结束的TSG原版本且标现行有效，和版本日期门禁冲突。",
+      "resolution": "唯一current link_only记录改指2025-01-01起组合版；旧目录地址仅作显式显示入口alias，原knowledge版本历史不合并。目录与检索索引同步。"
     }
   ],
   "withheld": [
@@ -425,21 +430,22 @@
     },
     "historicalInverse": {
       "path": "tools/pipeline/tests/fixtures/official_clause_cohort_20261005.json",
-      "sha256": "2b2676f4300371e882065f4355d4e051d885e8aba8d05f76e4201ffea91e902a",
+      "sha256": "b6e14b4651a0758844072a0a080cbc047d5724fb58366d1b79f4b3d76b296800",
       "baselineCommit": "792d0c9c0ee553e8e0a0312a9a190d82baccf4d1",
-      "explicitRecords": 116,
+      "explicitRecords": 118,
       "beforeBytesComparedToGitBaseline": true,
       "afterBytesComparedToCurrentSource": true,
       "unknownMutationVisibleAfterCache": true
     },
-    "assessment": "缩小范围的116个明确路径构成可恢复精确前态；旧fixture未改、未知变更保持可见。199详情覆盖保留所有原详情及8项正式规则；未将排除内容夹入新公开源或期待值。真实浏览器执行另行验收。"
+    "assessment": "缩小范围的118个明确路径构成可恢复精确前态，含两个TSG资料入口元数据文件；全部前字节对Git、后字节对当前源码独立核实。旧fixture未改、未知变更可见。199详情仍覆盖旧集及8项正式规则。真实浏览器执行另行验收。"
   },
   "reviewerExecutedChecks": [
     {
       "command": "python -m unittest discover -s tools/pipeline/tests -p 'test_official*.py' -v",
       "result": "PASS",
       "tests": 35,
-      "logSha256": "840901cd89556c72bc45fbd1ae1f636590e5d7c8c13d37638be45f0dac663f32"
+      "logSha256": "840901cd89556c72bc45fbd1ae1f636590e5d7c8c13d37638be45f0dac663f32",
+      "appliesTo": "缩小knowledge冻结；此次元数据补丁未改变该知识源，补丁测试另列。"
     },
     {
       "command": "python tools/v4/check_review_binding.py",
@@ -452,11 +458,30 @@
       "result": "PASS"
     },
     {
-      "check": "116 inverse records equal original Git predecessor and reduced current source",
+      "check": "118 inverse records equal original Git predecessor and current source, including TSG publication metadata",
       "result": "PASS"
     },
     {
       "check": "scope reduction removed only new out-of-scope material; 16 existing affected H/K/review files equal baseline; no baseline record deleted",
+      "result": "PASS"
+    },
+    {
+      "command": "node --test tests/fulltext-search.test.mjs",
+      "result": "PASS",
+      "tests": 3
+    },
+    {
+      "command": "python -m unittest discover -s tools/pipeline/tests -p test_official_clauses_20261005.py -v",
+      "result": "PASS",
+      "tests": 14
+    },
+    {
+      "command": "python -m unittest discover -s tools/pipeline/tests -p test_official_clause_history.py -v",
+      "result": "PASS",
+      "tests": 4
+    },
+    {
+      "check": "actual 633a8439 bundle TSG catalog/search row and alias-aware assets match approved source",
       "result": "PASS"
     }
   ],
@@ -473,10 +498,14 @@
     "tools/pipeline/tests/freeze_official_clause_history.py": "2e597334e6b471e2a70ed0d1a77bea822aa6c5647bd8fcd83295afdb75455ca0",
     "tools/pipeline/tests/official_clause_cohort_fixture.py": "bcd0bdb1ff2c6a436fc7c68e89546cb40a485565bb6947ae5778677378723f95",
     "tools/pipeline/tests/test_official_clause_history.py": "10b3a50a19d1a48b6f4d0ffb562775d380939d13f0fcf41ce4e244d5357018ba",
-    "tools/pipeline/tests/test_official_clauses_20261005.py": "6e35e0f2e738a8a056df09a6825bb45587ff481a0ae763af86392285c2e68c53",
+    "tools/pipeline/tests/test_official_clauses_20261005.py": "481aeed4c2efaf99454bea78e5793f69f040e95b1e8df7697b63c0d696a983a4",
     "tools/pipeline/tests/test_official_clause_browser.py": "500a26d7f492f67bc2a39c563cc54caabb791d1564301ca47cda79cd0b29b3df",
     "tools/browser/freeze_official_clause_expectations.py": "db47f07b69099bc3606f290538efd6e133b9c7c5cc6a135054a06b8a59134b4e",
-    "tools/browser/official_clause_acceptance.py": "af3166fbd2902e7e2e778b44b8b26e85b9b05714f6dea9ebb16076a9d6987ac4"
+    "tools/browser/official_clause_acceptance.py": "af3166fbd2902e7e2e778b44b8b26e85b9b05714f6dea9ebb16076a9d6987ac4",
+    "web/js/fulltext-search.js": "b54d8052fd3ed02c4ccc7f1e7a7594ff8798edf541184297209a335fae2046e5",
+    "web/js/library.js": "77b27c57028e7a22345adeba6fb7c0e555da79f7cd2ac776bb970f7c95cc9b3d",
+    "tests/fulltext-search.test.mjs": "dc852e596d4639e37589b06a6f0a86aa7124c7324ed4c4b0b18001a2be4d7634",
+    "tools/browser/audit_browser.py": "e84d7a41376b4fdf7aa557fd33fb54784365a22d53af905fe0302c149974b562"
   },
   "scopeReductionChecks": {
     "newOutOfScopeFilesAbsent": true,
@@ -484,5 +513,47 @@
     "existingAffectedRecordFilesChecked": 16,
     "existingAffectedRecordFilesByteExactToMain": true,
     "approvedEightRuleBodiesUnchangedFromIndependentlyReadOriginals": true
+  },
+  "publicationSourceBindings": {
+    "source/publication/fulltext/catalog.json": "df91c1db398c7aeba5c96ddc6ecd9fc771b3a2a65b0ef4a988548f7986ccde01",
+    "source/publication/fulltext/search-index.json": "d7814cdfae24672a3f50fcf6537d8746039b001b75a212ffee5919d147f994d0"
+  },
+  "readingEntrySupplement": {
+    "decision": "APPROVE_METADATA_AND_EXPLICIT_LEGACY_LINK_COMPATIBILITY",
+    "canonicalVersionId": "LV_TSG23_2021_AM1_2025",
+    "versionAliases": [
+      "LV_META_9215D8555C66CC91A5A5D7A4"
+    ],
+    "catalogDocumentCount": 79,
+    "existingKnowledgeHistoryMerged": false,
+    "newFullTextPublished": false,
+    "identityAndDates": "现行标题、versionKey、生效日和公告URL与已审新LV一致；正文说明同时保留原规程2021-06-01首施行、修改单2025-01-01施行及公告并非合并全文。",
+    "aliasCodeReview": "canonical精确ID优先；重复canonical、重复alias匹配、未知或空ID返回null；只采用显式数组alias，不用family或近似文字猜配。showDocument把旧书签规范化为新ID。该alias仅是资料入口兼容，不表示原版和修改后版本相同。",
+    "publicationProjectionReview": "实际633a8439包中的catalog/search-index目标行与源逐字段相同，versionAliases保留；构建library.js/fulltext-search.js与已审源码字节相同。",
+    "bundleReleaseHash": "633a8439a487458cda3ba652262ca5e85ea13feb69f8c074c79fa2c249f3b648",
+    "guiAcceptanceCodeReview": {
+      "viewports": [
+        1440,
+        390
+      ],
+      "entryCases": [
+        "legacyAlias",
+        "canonicalVersion"
+      ],
+      "assertions": [
+        "新组合版标题",
+        "URL规范化",
+        "两个不同施行日",
+        "并非合并全文",
+        "link_only提示",
+        "精确官方公告URL",
+        "无横向溢出",
+        "reload后标题仍准确"
+      ],
+      "screenshotsImplemented": true,
+      "reviewerRanRealGui": false,
+      "guiPassClaimed": false,
+      "status": "CODE_REVIEW_PASSED_EXECUTION_PENDING"
+    }
   }
 }

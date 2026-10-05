@@ -288,6 +288,35 @@ def main():
                 return {'catalog': count, 'paragraphs': paragraphs, 'search': page.locator('#libraryResultCount').inner_text()}
             run('fulltext_catalog_read_and_search', fulltext)
 
+            def tsg_reading_entry(width):
+                current = 'LV_TSG23_2021_AM1_2025'
+                legacy = 'LV_META_9215D8555C66CC91A5A5D7A4'
+                ctx = browser.new_context(viewport={'width': width, 'height': 1000}, service_workers='block')
+                try:
+                    tab = ctx.new_page()
+                    tab.on('pageerror', lambda err: page_errors.append(str(err)))
+                    for ident in (legacy, current):
+                        tab.goto(base + 'library.html?document=' + ident)
+                        expect(tab.locator('#libraryDetail h2')).to_contain_text('含第1号修改单')
+                        expect(tab).to_have_url(re.compile(r'document=' + current))
+                        content = tab.locator('#libraryDetail').inner_text()
+                        for text in ('2021-06-01', '2025-01-01', '并非合并全文', '本库尚未公开此文件的全文'):
+                            require(text in content, 'TSG reading note missing: ' + text)
+                        require(tab.locator('#libraryDetail .sourcecta').first.get_attribute('href') ==
+                            'https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/tzsbs/art/2024/art_074636c9033f4bffad802134178628a0.html',
+                            'TSG official amendment URL drift')
+                        require(tab.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), 'TSG reading overflow')
+                        tab.reload()
+                        expect(tab.locator('#libraryDetail h2')).to_contain_text('含第1号修改单')
+                    shot = args.out.parent / ('tsg-reading-' + str(width) + '.png')
+                    tab.screenshot(path=str(shot), full_page=True)
+                    return {'legacyAlias': legacy, 'canonicalVersion': current, 'width': width, 'screenshot': str(shot),
+                        'title': tab.locator('#libraryDetail h2').inner_text(), 'linkOnly': True, 'reloadPassed': True}
+                finally:
+                    ctx.close()
+            for width in (1440, 390):
+                run(f'tsg_current_reading_and_legacy_link_{width}px', lambda width=width: tsg_reading_entry(width))
+
             def upcoming():
                 page.goto(base + 'library.html'); page.wait_for_selector('.library-hit')
                 page.select_option('#validityFilter', '即将生效'); page.wait_for_selector('.library-hit')

@@ -56,6 +56,17 @@ class OfficialClausesTests(unittest.TestCase):
   self.assertFalse(evaluate_release_gate(ROOT/'knowledge',date(2024,12,31)).clauses[c]['ok'])
   self.assertTrue(evaluate_release_gate(ROOT/'knowledge',date(2025,1,1)).clauses[c]['ok'])
   self.assertEqual(read('law-versions','LV_META_9215D8555C66CC91A5A5D7A4')['endDate'],'2025-01-01')
+ def test_current_tsg_reading_entry_matches_the_effective_amended_version(self):
+  v=read('law-versions','LV_TSG23_2021_AM1_2025')
+  c=json.loads((ROOT/'source/publication/fulltext/catalog.json').read_text())
+  s=json.loads((ROOT/'source/publication/fulltext/search-index.json').read_text())
+  rows=[x for x in c['documents'] if x['lawId']==v['lawId']]
+  self.assertEqual(len(rows),1);row=rows[0]
+  self.assertEqual(row['versionId'],v['id']);self.assertEqual(row['version'],v['versionKey'])
+  self.assertEqual(row['effectiveDate'],'2025-01-01');self.assertEqual(row['officialUrl'],v['sourceUrl'])
+  self.assertEqual(row['versionAliases'],['LV_META_9215D8555C66CC91A5A5D7A4']);self.assertEqual(row['textMode'],'link_only');self.assertEqual(row['publicationPermission'],'metadata_only');self.assertFalse(row['fullTextReviewed'])
+  self.assertIn('2021-06-01',row['validityNote']);self.assertIn('并非合并全文',row['validityNote'])
+  sr=[x for x in s['documents'] if x['lawId']==v['lawId']];self.assertEqual(len(sr),1);self.assertEqual(sr[0]['versionId'],v['id']);self.assertEqual(sr[0]['title'],row['title'])
  def test_p01_building_only_not_p02_p05_admission(self):
   h=read('hazards','H_GB55037_BUILDING_GAS_ALARM')
   for word in ['排除住宅建筑','仅建筑内','室外释放源','仅有毒且不燃','民用爆炸物品']:self.assertIn(word,h['conditions'])
