@@ -1,0 +1,187 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+  "localBaselineCommit": "20f80edd98df5c828d538f249353d7df5c148562",
+  "reviewStage": "author_verified_independent_review_pending",
+  "sources": [
+    {
+      "evidenceId": "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+      "url": "https://js.119.gov.cn/group1/M00/00/2A/ZYS-ZGGB6A-AT5TaANQHgHPKgLU664.pdf",
+      "readPages": [
+        1,
+        4,
+        7,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "evidenceId": "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005",
+      "url": "https://std.samr.gov.cn/hb/search/stdHBDetailedCNF?id=BDDBA08EC6856C70E05397BE0A0A640D",
+      "currentness": "2026-10-05现行状态已复核；排除题录串项日期、范围和替代标准"
+    }
+  ],
+  "decisions": [
+    {
+      "hazardId": "H053",
+      "action": "narrow_existing_stable_id",
+      "boundary": "仅第6.8条c项：物品与墙之间不小于0.5m。其他对象、室外堆场和其他五距分支另核。",
+      "positiveCase": "确认既有仓储库房，实测物品与墙之间距离小于0.5m。",
+      "negativeCase": "实测等于0.5m、非本项测量对象、室外堆场或炸药/花炮仓库，不由本项认定。",
+      "linkIds": [
+        "K_1ED9FF46BEDB3CED1FA394"
+      ]
+    },
+    {
+      "hazardId": "H054",
+      "action": "narrow_existing_stable_id",
+      "boundary": "仅第6.8条d项：物品堆垛与柱之间不小于0.3m。其他对象、室外堆场和其他五距分支另核。",
+      "positiveCase": "确认既有仓储库房，实测物品堆垛与柱之间距离小于0.3m。",
+      "negativeCase": "实测等于0.3m、非本项测量对象、室外堆场或炸药/花炮仓库，不由本项认定。",
+      "linkIds": [
+        "K_B9FF3B3BCC9404B8D71376"
+      ]
+    },
+    {
+      "hazardId": "H055",
+      "action": "narrow_existing_stable_id",
+      "boundary": "仅第6.8条e项：物品堆垛与堆垛之间不小于1m。其他对象、室外堆场和其他五距分支另核。",
+      "positiveCase": "确认既有仓储库房，实测物品堆垛与堆垛之间距离小于1m。",
+      "negativeCase": "实测等于1m、非本项测量对象、室外堆场或炸药/花炮仓库，不由本项认定。",
+      "linkIds": [
+        "K_A02D92087BE34DF146E21F"
+      ]
+    },
+    {
+      "hazardId": "H_993643C76F7041BDA19B0C5EED",
+      "action": "narrow_existing_stable_id",
+      "boundary": "收窄至第6.7条；删除当前定义中笼统“间距”分支，避免和五距细分H重复。保留稳定C_XF1131_6_6，其实际条号是6.7，不为ID整洁重编号。",
+      "positiveCase": "确认既有仓储库房，主通道实测1.8m，或单垛实测160m²，或有证据证明未分类/分堆/依适用限额存放。",
+      "negativeCase": "仅堆间搬运通道不足、仅墙距/柱距/垛距不足，或单垛150m²且主通道2m而无其他缺陷，不套用本定义。",
+      "linkIds": [
+        "K_6EAF76314861ABC620BB9975"
+      ]
+    },
+    {
+      "hazardId": "H_F0D64F91542E4B0399D83D670D",
+      "action": "retain_pending_gap",
+      "boundary": "不把主通道或垛距替换成每个堆间搬运通道",
+      "gap": "缺少适用“每个堆间搬运通道”的正式条文、对象和尺寸/运输条件；现有XF1131第6.7/6.8不能覆盖。",
+      "linkIds": [
+        "K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A"
+      ]
+    },
+    {
+      "hazardId": "H_D128C0FCC4844BD8BF5D8FAAF5",
+      "action": "narrow_existing_stable_id",
+      "boundary": "从原禁烟/用火/照明/器材复合项，仅恢复第8.2已核实的丙类固体室内储存照明分支；不增加H，不把未核分支借灯具依据整体准入。",
+      "positiveCase": "已确认丙类固体物品室内储存场所使用100W白炽灯，或低温灯具镇流器无必要隔热散热等保护。",
+      "negativeCase": "普通办公场所、室外堆场、仅超过60W的非白炽低温灯具、未核火灾类别，或只有吸烟/器材缺失，不以本项认定。",
+      "linkIds": [
+        "K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005"
+      ]
+    }
+  ],
+  "duplicates": [
+    {
+      "ids": [
+        "H_D3DD215E0D1E4D4A99E6D2D6A9",
+        "H_323DCD216820476B95E8153AE1"
+      ],
+      "canonical": "H055",
+      "action": "既有superseded/mergedInto链保持原样，不重新发布或重编号"
+    },
+    {
+      "ids": [
+        "H_286F7049C36E470F8273F18889"
+      ],
+      "canonical": "H052/H053/H054/H055/H069分支各按适用范围核查",
+      "action": "复合五距候选仍proposed，不凑新增量、不修改其他作者范围"
+    },
+    {
+      "ids": [
+        "H_476086B89F7F49CE80ADD7D3B8",
+        "H073",
+        "H_1201F11443914660BCC291055B",
+        "H_3B72743967A94A1DA7242C44AF"
+      ],
+      "action": "只检查重叠；D128不重复恢复其禁烟、用火或宽泛复合分支，不修改这些H"
+    }
+  ],
+  "preservedSharedEntities": [
+    "H052",
+    "C_XF1131_6_6",
+    "C_XF1131_6_8",
+    "L015",
+    "LF_L015",
+    "E_RECOVERY_XF1131_2014_20261004"
+  ],
+  "authoredFiles": [
+    "knowledge/evidence/E_NEXT_WAREHOUSE_XF1131_2014_20261005.json",
+    "knowledge/evidence/E_NEXT_WAREHOUSE_XF1131_STATUS_20261005.json",
+    "knowledge/hazards/H053.json",
+    "knowledge/reviews/hazards/H053.json",
+    "knowledge/links/K_1ED9FF46BEDB3CED1FA394.json",
+    "knowledge/reviews/links/K_1ED9FF46BEDB3CED1FA394.json",
+    "knowledge/hazards/H054.json",
+    "knowledge/reviews/hazards/H054.json",
+    "knowledge/links/K_B9FF3B3BCC9404B8D71376.json",
+    "knowledge/reviews/links/K_B9FF3B3BCC9404B8D71376.json",
+    "knowledge/hazards/H055.json",
+    "knowledge/reviews/hazards/H055.json",
+    "knowledge/links/K_A02D92087BE34DF146E21F.json",
+    "knowledge/reviews/links/K_A02D92087BE34DF146E21F.json",
+    "knowledge/reviews/links/K_9e6ba6262766224cc3d6e224.json",
+    "knowledge/reviews/links/K_d9b8087219c0a33495f14d72.json",
+    "knowledge/reviews/links/K_d651b0312c6e6a0d36cde361.json",
+    "knowledge/reviews/links/K_199989467c019b0789b69f66.json",
+    "knowledge/hazards/H_993643C76F7041BDA19B0C5EED.json",
+    "knowledge/reviews/hazards/H_993643C76F7041BDA19B0C5EED.json",
+    "knowledge/links/K_6EAF76314861ABC620BB9975.json",
+    "knowledge/reviews/links/K_6EAF76314861ABC620BB9975.json",
+    "knowledge/reviews/links/K_b5854a5f230a891b5fe35e8c.json",
+    "knowledge/reviews/links/K_a6a1923c4d86007345fd7341.json",
+    "knowledge/reviews/links/K_F46299168EA56F465C4FAD1D.json",
+    "knowledge/reviews/hazards/H_F0D64F91542E4B0399D83D670D.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A.json",
+    "knowledge/clauses/C_NEXT_XF1131_8_2_20261005.json",
+    "knowledge/reviews/clauses/C_NEXT_XF1131_8_2_20261005.json",
+    "knowledge/hazards/H_D128C0FCC4844BD8BF5D8FAAF5.json",
+    "knowledge/reviews/hazards/H_D128C0FCC4844BD8BF5D8FAAF5.json",
+    "knowledge/links/K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005.json",
+    "knowledge/reviews/links/K_NEXT_WAREHOUSE_D128_XF1131_8_2_20261005.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_EFD92528ABBFE27B1D100D87.json",
+    "docs/WAREHOUSE_CANDIDATES_AUTHOR_REVIEW_20261005.json",
+    "docs/WAREHOUSE_CANDIDATES_AUTHOR_REVIEW_20261005.md",
+    "tools/pipeline/tests/test_warehouse_candidates_20261005.py"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false,
+  "testing": "见专项test_warehouse_candidates_20261005.py；最终测试结果另由执行记录报告",
+  "tests": {
+    "warehouseFocused": {
+      "passed": 10,
+      "failed": 0
+    },
+    "staticFireRegression": {
+      "passed": 5,
+      "failed": 0
+    },
+    "reviewBinding": "no stale/missing evidence or entities",
+    "evidenceExactMismatches": 0,
+    "catalogueErrors": 0,
+    "strictReleaseBlockers": 0,
+    "gitDiffCheck": "passed",
+    "remainingIntegration": [
+      "shared manifest/publication registration",
+      "full historical tests",
+      "complete bundle build",
+      "independent review",
+      "deployment acceptance"
+    ]
+  }
+}

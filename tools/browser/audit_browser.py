@@ -23,7 +23,7 @@ from technical_citation_acceptance import (load_expectations as load_technical_e
 
 from electrical_candidate_acceptance import (load_expectations as load_electrical_expectations,
     validate_source_pins as validate_electrical_source_pins, run_electrical_browser_acceptance)
-from official_clause_acceptance import load_expectations as load_recovery_expectations
+from residual_clause_acceptance import load_expectations as load_recovery_expectations
 from recovery_release_acceptance import (
     validate_source_pins as validate_recovery_source_pins, validate_release_source, fixture_for_release_date,
     run_recovery_release_acceptance)

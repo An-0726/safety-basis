@@ -1,0 +1,103 @@
+{
+  "asOf": "2026-10-05",
+  "completedAt": "2026-10-05T07:43:38Z",
+  "baselineCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+  "baselineTree": "84ed7015e73ba20ee505541ad94f776be48f31fd",
+  "equivalentLocalReadRef": "20f80edd98df5c828d538f249353d7df5c148562",
+  "checks": [
+    {
+      "command": "node --test tests/*.test.mjs",
+      "tests": 757,
+      "passed": 757,
+      "failures": 0,
+      "skipped": 0,
+      "exitCode": 0
+    },
+    {
+      "command": "python -m unittest discover -s tools/pipeline/tests -v",
+      "tests": 919,
+      "passed": 919,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "testRuntimeSeconds": 329.427,
+      "exitCode": 0
+    },
+    {
+      "command": "PYTHONPATH=tools/pipeline/tests python -m unittest test_residual_clause_history test_residual_clause_browser test_next_training_inventory -v",
+      "tests": 24,
+      "passed": 24,
+      "exitCode": 0
+    },
+    {
+      "command": "PYTHONPATH=tools/pipeline/tests python -m unittest test_static_fire_recovery_semantics -v",
+      "tests": 5,
+      "passed": 5,
+      "exitCode": 0
+    }
+  ],
+  "expectedNegativeDiagnostic": "The unittest log ends with BINDING FAILURES: 1 for the synthetic E_MISSING review-binding negative case. The final unittest result is OK and exit code 0.",
+  "resolvedHistoricalTest": "The existing static-fire recovery test now reads the exact residual predecessor. Its comparisonEvidenceRefs assertion and all other original fields and numeric expectations remain unchanged. The final full 919-test run includes this change.",
+  "historyFixture": {
+    "path": "tools/pipeline/tests/fixtures/residual_clause_cohort_20261005.json",
+    "sha256": "932bf19f529d03c23ede5fb86c46ceb296972ce9bf0ab0886d758c12e16e386d",
+    "records": 118,
+    "addedPaths": 37,
+    "authorizedReports": [
+      "docs/WAREHOUSE_CANDIDATES_AUTHOR_REVIEW_20261005.json",
+      "docs/NEXT_TRAINING_REPAIR_20261005.json",
+      "docs/NEXT_AQ7011_AUTHOR_REVIEW_20261005.json",
+      "docs/NEXT_BOUNDED_ELECTRICAL_REPAIR_20261005.json",
+      "docs/NEXT_INVENTORY_INTEGRATION_20261005.json"
+    ],
+    "metadataPaths": [
+      "knowledge/manifest.json",
+      "source/publication/law-index.json",
+      "docs/PROJECT_STATE.md"
+    ]
+  },
+  "browserFixture": {
+    "path": "tools/browser/fixtures/residual_clauses_20261005.json",
+    "sha256": "afd9bb3f623fc677782a22c2a72b2357d3f79b39d4ad85078581d5c81830d032",
+    "knowledgeSnapshotHash": "dfdc6bdd3781124c84ef855c683e5be6a461519e1f2d2e211a68239a33c6e130",
+    "counts": {
+      "hazards": 1694,
+      "links": 1853,
+      "clauses": 1406,
+      "majorHazards": 21,
+      "profiles": 25
+    },
+    "changedDetails": 211,
+    "inheritedOfficialDetails": 199,
+    "extraCoverage": "199 prior details + 11 current formal hazards + H_DB786B8BC54E4E55B1145D00D7. The latter is included by its GB50057 law-version, identity-review and evidence dependencies. K_be5a0deab9619bd1579c758f belongs to H052, which was already among the inherited details."
+  },
+  "preservation": [
+    "Original official history and browser fixtures remain byte-identical.",
+    "Residual -> official -> recovery restores exact prior source digests.",
+    "Unknown additions, removals and mutations remain visible; known-path drift, corrupt before-bytes and wrong predecessor trees fail closed.",
+    "Previous eight official hazards and all 113 prior official knowledge records remain byte-identical.",
+    "Training scope/recommended force/unspecified certificate type, nine still-rejected retired links, BC candidate state, exact major-catalog deletion and CE94 date boundaries are tested."
+  ],
+  "guiAcceptance": {
+    "status": "not_run_here",
+    "reason": "Real Chromium acceptance is delegated to required GitHub Actions; unit tests and source freezes are not GUI evidence."
+  },
+  "productionGateModified": false,
+  "knowledgeModifiedByThisTestWork": false,
+  "codeScopeFrozen": true,
+  "codeFileSha256": {
+    "tools/browser/audit_browser.py": "579cdd90c4433ea3738e0aa51788914cebc9492f0dde86c59b5776aa73e9ad97",
+    "tools/browser/audit_ordinary_tables.py": "8ec22f49fb50ca0cb27d2d73e8a23ccf1966edf9cda9db9fbc795afbe6416f9d",
+    "tools/browser/residual_clause_acceptance.py": "7c2b421e90d71251addb5c580fe2152a9aef0364c072032487006b0ec9c124f7",
+    "tools/browser/freeze_residual_clause_expectations.py": "ecdf3c7ab41e7e28b9dfbeb9abf1175b05a32bf9668dd61591860616bea584b9",
+    "tools/pipeline/tests/residual_clause_cohort_fixture.py": "c397224a280b48797ede4807fea13db9c3fc776a57da41481c36094424f2c5a2",
+    "tools/pipeline/tests/freeze_residual_clause_history.py": "2ebd24b906c6e069f80d799ec6101e740271d3f56d8680aac66e638b1700d16e",
+    "tools/pipeline/tests/test_residual_clause_history.py": "c5b338c473a676cc6966e396121fadac61cd49fe3263908e9d4ab8fa45b59428",
+    "tools/pipeline/tests/test_residual_clause_browser.py": "655ec5a3ef4bdabc5b472a42a8e0d9a9349fd1eae406d9a5add5bfbf422dd414",
+    "tools/pipeline/tests/test_next_training_inventory.py": "de9bc2a8dfe8e0a207826edc28c7ba8a9818064c4632bf52d1a34581e10b5c6d",
+    "tools/pipeline/tests/official_clause_cohort_fixture.py": "5cb8b9c7ae0342081131359b88279d6e5bc0f6a1d58d48936a0b2f5fe58abe33",
+    "tools/pipeline/tests/test_official_clause_history.py": "fe70060fbdbe3dd5b0072989acaf285740883e62530725b9397dac5006f410c5",
+    "tools/pipeline/tests/test_official_clause_browser.py": "a372ce3dd78cf5f7364343e1882a24cd6f31f1d91f6fdd2bec52976b344ec036",
+    "tools/pipeline/tests/test_static_fire_recovery_semantics.py": "bf976d0c20fa768c7c4b91723b370922f720967905a19ee41e4ce03765749e91"
+  }
+}

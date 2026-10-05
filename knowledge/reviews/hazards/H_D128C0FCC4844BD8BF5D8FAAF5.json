@@ -1,28 +1,64 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D128C0FCC4844BD8BF5D8FAAF5",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "efc36846abb281befd9cd8d8deb21c037ca1d1decdbdd2189c31f2298c6e6622",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "一个H合并禁火、照明及消防器材三种义务；C001仅能覆盖器材配置，不能为复合命题背书。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+  "decision": "verified",
+  "reviewedContentHash": "167c69e6e815888a07230706734a8ca332f7c1f7e17c16a028814ccc010c111d",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex warehouse scoped author review 20261005",
   "evidenceRefs": [
-    "E_CITATION_FIRELAW2021_20261002"
+    "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+    "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005",
+    "E_RECOVERY_XF1131_2014_20261004"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "从原禁烟/用火/照明/器材复合项，仅恢复第8.2已核实的丙类固体室内储存照明分支；不增加H，不把未核分支借灯具依据整体准入。",
+  "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_D128C0FCC4844BD8BF5D8FAAF5",
     "entityType": "hazard",
-    "evidenceRefs": [
-      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
-    ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
+    "entityId": "H_D128C0FCC4844BD8BF5D8FAAF5",
+    "reviewType": "definition",
+    "decision": "pending",
     "reviewedContentHash": "efc36846abb281befd9cd8d8deb21c037ca1d1decdbdd2189c31f2298c6e6622",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "一个H合并禁火、照明及消防器材三种义务；C001仅能覆盖器材配置，不能为复合命题背书。 缺少支持本完整定义的已核直接依据；保留定义及来源历史，暂不进入正式公开结果。",
+    "evidenceRefs": [
+      "E_CITATION_FIRELAW2021_20261002"
+    ],
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_D128C0FCC4844BD8BF5D8FAAF5",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "efc36846abb281befd9cd8d8deb21c037ca1d1decdbdd2189c31f2298c6e6622",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "275040ae7c62420f48c0f2f36a0a95d26826449038410fe6b066991c25cfd50e"
   },
-  "previousReviewFileSha256": "275040ae7c62420f48c0f2f36a0a95d26826449038410fe6b066991c25cfd50e"
+  "previousReviewFileSha256": "e1252964e500ac6a844fc8a218e4584475bcb39dd5bd63c357632f9550f7c149",
+  "previousDefinition": {
+    "id": "H_D128C0FCC4844BD8BF5D8FAAF5",
+    "title": "物品的地点,仓库,场院,未严禁烟火,并配置符合规定的照明和消防器材",
+    "description": "物品存放的地点、仓库、场院未严禁烟火，也未配置符合规定的照明和消防器材，储存区域存在火灾风险且缺少初期处置条件。",
+    "measures": "在物品存放的仓库、场院严禁烟火，并配置符合规定的照明和消防器材。",
+    "conditions": "适用于仓库的相关安全管理。",
+    "category": "消防安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "物品的地点,仓库,场院,未严禁烟火,并配置符合规定的照明和消防器材"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》GB 12801-2025第5.8.1.2条C\n\n《中华人民共和国消防法》主席令〔2021〕第81号 第十六条第一款第（二）项。",
+    "mergedInto": null
+  }
 }

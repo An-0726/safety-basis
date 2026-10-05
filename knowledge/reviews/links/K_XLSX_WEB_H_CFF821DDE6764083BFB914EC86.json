@@ -1,18 +1,48 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "ea55d46613cda8bb6c8879bfabd78954b4afda412710458f073a2965933cf646",
-  "contextHashes": {
-    "hazard": "571956a14fe2c371ed0e9745c229bc8d8af4c5b7320c5b6a2f9e747eec8b8425",
-    "clause": "9e7d2ee4dc96818f17339030b5b8f4f102e24f91e100b505f9967aa087b781a5"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50057-2010第4.1.1条直击雷防护要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "b1e49aebc56f574ea2d6ddfd56c13ddc81349434a2082ceaa30926c26c043da2",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
-    "E_MOHURD_GB50057_2010"
+    "E_NEXT_GB50057_EXACT_20261005",
+    "E_NEXT_GB55024_RELATION_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "完整4.1.1已目核；本H仅消费第一段，保留第二段类别限制，不认证现场或定期检测义务。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "ea55d46613cda8bb6c8879bfabd78954b4afda412710458f073a2965933cf646",
+    "contextHashes": {
+      "hazard": "571956a14fe2c371ed0e9745c229bc8d8af4c5b7320c5b6a2f9e747eec8b8425",
+      "clause": "9e7d2ee4dc96818f17339030b5b8f4f102e24f91e100b505f9967aa087b781a5"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50057-2010第4.1.1条直击雷防护要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50057_2010"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "防雷建筑物未设防直击雷外部防雷装置及防电涌",
+    "clauseId": "C_GB50057_4_1_1",
+    "hazardId": "H_CFF821DDE6764083BFB914EC86",
+    "id": "K_XLSX_WEB_H_CFF821DDE6764083BFB914EC86",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "a29bf8250933b5f5d30613f17e1fb42d7255592b4ece3f72e73e5e7d32393e5f",
+    "clause": "db3198bca6d4159b5faa6a2f3fcf5a8a255ad28ebc24f37ca2fcd2ec8146c7c7"
+  }
 }

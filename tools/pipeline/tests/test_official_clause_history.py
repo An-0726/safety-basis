@@ -14,6 +14,8 @@ from official_clause_cohort_fixture import (
 )
 
 ROOT = Path(__file__).resolve().parents[3]
+from residual_clause_cohort_fixture import pre_residual_repo_root
+ROOT = pre_residual_repo_root(ROOT)
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from release_snapshot import source_hashes, snapshot_digest
 
@@ -67,7 +69,7 @@ class OfficialClauseHistoryTests(unittest.TestCase):
     def test_materialization_preserves_unknown_changes_even_after_cache(self):
         path = 'knowledge/hazards/H_TEST.json'
         rows = {path: record(b'old', b'new')}
-        with tempfile.TemporaryDirectory() as tmp, patch('official_clause_cohort_fixture.fixture', return_value={'records': rows}):
+        with tempfile.TemporaryDirectory() as tmp, patch('official_clause_cohort_fixture.fixture', return_value={'records': rows}), patch('official_clause_cohort_fixture.pre_residual_repo_root', side_effect=lambda root: root):
             root = Path(tmp)
             (root / path).parent.mkdir(parents=True)
             (root / path).write_bytes(b'new')

@@ -6,6 +6,9 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
+from residual_clause_cohort_fixture import pre_residual_repo_root
+# Retain this dated recovery cohort's exact source and all original assertions.
+ROOT = pre_residual_repo_root(ROOT)
 KNOW = ROOT / 'knowledge'
 sys.path.insert(0, str(ROOT / 'tools/v4'))
 from release_gate_core import evaluate_release_gate

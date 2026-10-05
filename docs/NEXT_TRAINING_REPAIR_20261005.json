@@ -1,0 +1,41 @@
+{
+  "asOf": "2026-10-05",
+  "baselineCommit": "23d0e0d415762ccb00341e9e0584c1694f15881d",
+  "baselineTree": "84ed7015e73ba20ee505541ad94f776be48f31fd",
+  "reviewStage": "author_verified_independent_review_pending",
+  "decisions": [
+    {
+      "hazardId": "H_8A733CAD776643E3B34B4D4689",
+      "action": "narrow_existing_stable_id",
+      "boundary": "将既有稳定ID收窄回其真实原始技术来源GB16912第4.13.2，删除对全行业员工统一法定持证的外推；原JS罚则关联和原复合字段完整保留在前态记录。",
+      "positiveCase": "适用深冷制氧单位已查实员工未经规定培训和考试合格即上岗。",
+      "negativeCase": "普通焊接车间仅购买瓶装氧气，不能按本行业标准认定所有员工必须持证。",
+      "linkIds": [
+        "K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9",
+        "K_NEXT_GB16912_TRAINING_SCOPE"
+      ]
+    }
+  ],
+  "authoredFiles": [
+    "knowledge/evidence/E_NEXT_GB16912_TRAINING_20261005.json",
+    "knowledge/laws/LF_STD_GB16912.json",
+    "knowledge/reviews/laws/LF_STD_GB16912.json",
+    "knowledge/law-versions/LV_STD_GB16912_2008.json",
+    "knowledge/reviews/law-versions/LV_STD_GB16912_2008.json",
+    "knowledge/clauses/C_GB16912_2008_4_13_2.json",
+    "knowledge/reviews/clauses/C_GB16912_2008_4_13_2.json",
+    "knowledge/clauses/C_GB16912_2008_1.json",
+    "knowledge/reviews/clauses/C_GB16912_2008_1.json",
+    "knowledge/hazards/H_8A733CAD776643E3B34B4D4689.json",
+    "knowledge/reviews/hazards/H_8A733CAD776643E3B34B4D4689.json",
+    "knowledge/hazards/H_8A733CAD776643E3B34B4D4689.json",
+    "knowledge/links/K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9.json",
+    "knowledge/reviews/links/K_XLSX_NEW14_C8F99F5EA9DADDEDA007FCF9.json",
+    "knowledge/links/K_NEXT_GB16912_TRAINING_SCOPE.json",
+    "knowledge/reviews/links/K_NEXT_GB16912_TRAINING_SCOPE.json"
+  ],
+  "siteFactsConfirmed": false,
+  "rectificationConfirmed": false,
+  "formalApproval": false,
+  "originalPdfsPublished": false
+}

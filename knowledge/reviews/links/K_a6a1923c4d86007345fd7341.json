@@ -1,40 +1,96 @@
 {
-  "entityType": "link",
   "entityId": "K_a6a1923c4d86007345fd7341",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "rejected",
-  "reviewedContentHash": "08f3b49534455d5104f87b5fe9ca0149712e49a859101a7fc320ca8af80c0772",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "安全生产法35是存在较大危险因素场所/设施的警示标志义务，不是物品分类分垛、面积、间距或主通道宽度义务；本H无已核缺失法定安全警示标志分支。 撤回当前supporting背书并保留历史ID；如果另有较大危险因素及警示标志缺失，另建对应H或分支独立核验。",
+  "reviewedContentHash": "7e6fc6d90915e21e5e2a055ecf00552777bd81e20e81b94b919afaf5f3edb2ca",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex residual source repair author review 20261005",
   "evidenceRefs": [
-    "E_CITATION_SAFE2021_20261002"
+    "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
-  "contextHashes": {
-    "hazard": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
-    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
-  },
+  "reason": "安全生产法第三十五条的安全警示标志义务与本H分类、限额、堆垛面积和主通道宽度无直接对应，不能通过supporting混入此定义。 2026-10-05状态一致性处理：旧错误或与已收窄现定义不一致的关联停用，lifecycle改为superseded；不是宣称新法源替代，不删除稳定ID、原关系或审核历史，也不使原未核分支成立。",
+  "notes": "作者逐项核实；独立复核另存。本记录不是现场确认、违法或重大隐患认定、整改完成或正式批准。",
   "previousReview": {
     "entityId": "K_a6a1923c4d86007345fd7341",
     "entityType": "link",
     "reviewType": "applicability",
-    "decision": "verified",
-    "reviewer": "Doubao-Agent",
-    "checkedAt": "2026-09-10T22:45:00+08:00",
-    "reason": "物品分类、分垛储存，其占地、间距及主要通道未符合规定，违反安全生产法第三十五条设置明显安全警示标志的要求，以及仓储场所安全管理规定。物品必须分类分垛储存，占地间距及主要通道必须符合规定。（链接降级 supporting 后哈希同步更新，2026-09-12）",
-    "reasonCodes": [
-      "DIRECT_ROLE_CONFIRMED",
-      "STORAGE_CLASSIFICATION_STACKING_AISLE"
-    ],
+    "decision": "rejected",
     "reviewedContentHash": "08f3b49534455d5104f87b5fe9ca0149712e49a859101a7fc320ca8af80c0772",
-    "contextHashes": {
-      "hazard": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
-      "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
-      "link": "e53c72222d1e5877fba1f4478d185960b0711cb9da3727b691dc93f331d3ea4a"
+    "checkedAt": "2026-10-05",
+    "reviewer": "Codex warehouse scoped author review 20261005",
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "reason": "安全生产法第三十五条的安全警示标志义务与本H分类、限额、堆垛面积和主通道宽度无直接对应，不能通过supporting混入此定义。",
+    "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
+    "previousReview": {
+      "entityType": "link",
+      "entityId": "K_a6a1923c4d86007345fd7341",
+      "reviewType": "applicability",
+      "decision": "rejected",
+      "reviewedContentHash": "08f3b49534455d5104f87b5fe9ca0149712e49a859101a7fc320ca8af80c0772",
+      "checkedAt": "2026-10-02T23:35:09+08:00",
+      "reviewer": "Codex public-source content and applicability review 20261002",
+      "reason": "安全生产法35是存在较大危险因素场所/设施的警示标志义务，不是物品分类分垛、面积、间距或主通道宽度义务；本H无已核缺失法定安全警示标志分支。 撤回当前supporting背书并保留历史ID；如果另有较大危险因素及警示标志缺失，另建对应H或分支独立核验。",
+      "evidenceRefs": [
+        "E_CITATION_SAFE2021_20261002"
+      ],
+      "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+      "contextHashes": {
+        "hazard": "cdd99bf44ca9d322c79242a4b0569af5698cefa87f776ef828e85c62cadd1312",
+        "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+      },
+      "previousReview": {
+        "entityId": "K_a6a1923c4d86007345fd7341",
+        "entityType": "link",
+        "reviewType": "applicability",
+        "decision": "verified",
+        "reviewer": "Doubao-Agent",
+        "checkedAt": "2026-09-10T22:45:00+08:00",
+        "reason": "物品分类、分垛储存，其占地、间距及主要通道未符合规定，违反安全生产法第三十五条设置明显安全警示标志的要求，以及仓储场所安全管理规定。物品必须分类分垛储存，占地间距及主要通道必须符合规定。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+        "reasonCodes": [
+          "DIRECT_ROLE_CONFIRMED",
+          "STORAGE_CLASSIFICATION_STACKING_AISLE"
+        ],
+        "reviewedContentHash": "08f3b49534455d5104f87b5fe9ca0149712e49a859101a7fc320ca8af80c0772",
+        "contextHashes": {
+          "hazard": "7bc579764b88ef6f4cc9274558899a5f45c34da08145b13ed595d80139b905d8",
+          "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
+          "link": "e53c72222d1e5877fba1f4478d185960b0711cb9da3727b691dc93f331d3ea4a"
+        },
+        "evidenceRefs": [],
+        "notes": "支撑依据不能单独使隐患取得发布资格。"
+      },
+      "previousReviewFileSha256": "a09857f7de3cce33bd8decaa369e14098bcdbe4a63ae5f7aa9946cec10bcc95a"
     },
-    "evidenceRefs": [],
-    "notes": "支撑依据不能单独使隐患取得发布资格。"
+    "previousReviewFileSha256": "6b03a673d79f421607a02cda87d02ab565f9f5155571d426bc8db6df1bdba8cd",
+    "contextHashes": {
+      "hazard": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+      "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+    },
+    "comparisonEvidenceRefs": [
+      "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+      "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005"
+    ]
   },
-  "previousReviewFileSha256": "a09857f7de3cce33bd8decaa369e14098bcdbe4a63ae5f7aa9946cec10bcc95a"
+  "contextHashes": {
+    "hazard": "58d54e124c8b8b6c810232c069d0beacd1b0fc3386cc972a344cec08d05ed254",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
+  },
+  "previousDefinition": {
+    "id": "K_a6a1923c4d86007345fd7341",
+    "entityType": "link",
+    "hazardId": "H_993643C76F7041BDA19B0C5EED",
+    "clauseId": "C030",
+    "role": "supporting",
+    "applicability": "全国通用",
+    "jurisdiction": "national",
+    "reason": "该隐患已具备专项技术条款直接依据，母法通用义务改作上位法补充（GLM，2026-09-12）。",
+    "createdAt": "2026-09-10T22:45:00+08:00",
+    "lifecycle": "active",
+    "priority": 20
+  },
+  "previousEntityFileSha256": "b9928d84acb1ba92f7b19e1839fbca00765b21a0022e3d4cbd7c38e9cfac3e75",
+  "previousReviewFileSha256": "9f3913b5b40d287c5bd695cc115647950961feb612f2771a4a149bcd250b0793"
 }

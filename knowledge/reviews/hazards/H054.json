@@ -1,30 +1,74 @@
 {
-  "entityType": "hazard",
   "entityId": "H054",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "pending",
-  "reviewedContentHash": "1206c89208130e1ae67a5c9143dc34659b7919870a5740dc0843d82c4046d68c",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "正确XF1131第6.8分支仍保留proposed状态；原消防设施标志或安全警示标志关联不支持五距义务。当前完整定义尚无全部已核准入直接依据，保留待核，不因条款改正自动准入。",
+  "decision": "verified",
+  "reviewedContentHash": "eb484647a4733d0fafdf03ab0ea4899b9e902607cccc4450dcb992d49eb66fd9",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex warehouse scoped author review 20261005",
   "evidenceRefs": [
-    "E_CITATION_XF1131_2014_20261002"
+    "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+    "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005",
+    "E_RECOVERY_XF1131_2014_20261004"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "仅第6.8条d项：物品堆垛与柱之间不小于0.3m。其他对象、室外堆场和其他五距分支另核。",
+  "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "decision": "verified",
-    "entityId": "H054",
     "entityType": "hazard",
+    "entityId": "H054",
+    "reviewType": "definition",
+    "decision": "pending",
+    "reviewedContentHash": "1206c89208130e1ae67a5c9143dc34659b7919870a5740dc0843d82c4046d68c",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "正确XF1131第6.8分支仍保留proposed状态；原消防设施标志或安全警示标志关联不支持五距义务。当前完整定义尚无全部已核准入直接依据，保留待核，不因条款改正自动准入。",
     "evidenceRefs": [
-      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+      "E_CITATION_XF1131_2014_20261002"
     ],
-    "migratedFromV3Verification": {
-      "id": "VR_82815547a8a16c1838ce6d5d8a_24",
-      "reviewedAt": "2026-09-09T12:35:47+00:00",
-      "reviewer": "doubao-work-依赖刷新"
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "decision": "verified",
+      "entityId": "H054",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+      ],
+      "migratedFromV3Verification": {
+        "id": "VR_82815547a8a16c1838ce6d5d8a_24",
+        "reviewedAt": "2026-09-09T12:35:47+00:00",
+        "reviewer": "doubao-work-依赖刷新"
+      },
+      "reviewType": "content",
+      "reviewedContentHash": "1218065f12875fc880fdbab58235d6abfa7f337faa5f4cda7f55919208d91b0d"
     },
-    "reviewType": "content",
-    "reviewedContentHash": "1218065f12875fc880fdbab58235d6abfa7f337faa5f4cda7f55919208d91b0d"
+    "previousReviewFileSha256": "ad25c59f37b6b75521be0fddd5ce02c9a940cccdb732b536df8303b735bf948b"
   },
-  "previousReviewFileSha256": "ad25c59f37b6b75521be0fddd5ce02c9a940cccdb732b536df8303b735bf948b"
+  "previousReviewFileSha256": "8bda193913cc32753332ed9d8e491be9594b6b51472dedc7cde088cf80f46120",
+  "previousDefinition": {
+    "aliases": [
+      "货物贴柱堆放",
+      "柱距不足0.3m"
+    ],
+    "category": "消防安全",
+    "conditions": "仅适用于XF1131—2014第1章规定的既有仓储场所库房内储存管理；不适用于炸药仓库、花炮仓库。具体距离分支逐项核明。",
+    "description": "现场检查发现，仓储堆垛与柱之间安全距离不足，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H054",
+    "keywords": [
+      "仓储",
+      "柱距",
+      "堆垛",
+      "间距",
+      "0.3m"
+    ],
+    "lifecycle": "active",
+    "measures": "重新布置堆垛，按适用仓储消防要求保持与柱之间的必要安全距离，并设置堆放边界。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "仓储场所",
+      "仓库"
+    ],
+    "title": "仓储堆垛与柱之间安全距离不足"
+  }
 }

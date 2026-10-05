@@ -1,45 +1,79 @@
 {
-  "entityType": "link",
   "entityId": "K_1ED9FF46BEDB3CED1FA394",
+  "entityType": "link",
   "reviewType": "applicability",
-  "decision": "pending",
-  "reviewedContentHash": "05e64acfd364e597e39905a8675a1deb95562decbaa69b2d94d6351eb40eb177",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "已目核官方原PDF对应项，数字和对象均明确。现K处于proposed/needs_review，不因修C自动激活，须先按本范围修H条件、完成独立审核与发布门禁。 XF1131—2014第6.8条c项直接规定物品与墙之间不小于0.5m；适用范围及责任对象按第1章和相关管理职责核明。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
+  "decision": "verified",
+  "reviewedContentHash": "28b52e73ab26d9d8fb696ea8b779e08337cb742cc3a0a505af71f29ea64b8fd3",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex warehouse scoped author review 20261005",
   "evidenceRefs": [
-    "E_CITATION_XF1131_2014_20261002"
+    "E_NEXT_WAREHOUSE_XF1131_2014_20261005",
+    "E_NEXT_WAREHOUSE_XF1131_STATUS_20261005",
+    "E_RECOVERY_XF1131_2014_20261004"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
-  "contextHashes": {
-    "hazard": "cffa77ecbf64490608b67fac6381309979891dccb6069db2975c9f6b9680120d",
-    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
-  },
+  "reason": "仅第6.8条c项：物品与墙之间不小于0.5m。其他对象、室外堆场和其他五距分支另核。",
+  "notes": "作者核验，仅核通用定义与法源适用边界；独立复核另存。不确认企业现场事实、违法或重大隐患、整改完成或正式批准。",
   "previousReview": {
-    "entityId": "K_1ED9FF46BEDB3CED1FA394",
     "entityType": "link",
+    "entityId": "K_1ED9FF46BEDB3CED1FA394",
     "reviewType": "applicability",
     "decision": "pending",
-    "reviewer": "ZCode-DeepSeek",
-    "checkedAt": "2026-09-10",
-    "reason": "本条为仓储物品与墙之间安全距离不足；XF 1131-2014 第6.8条（强制性条款）逐项规定了库房内堆垛间距，其中c）物品与墙之间的距离不小于0.5m，与本条数值要求完全对应，确认为 direct 依据。",
-    "reasonCodes": [
-      "DIRECT_CLAUSE_CONFIRMED",
-      "MANDATORY_CLAUSE",
-      "STORAGE_CLEARANCE"
-    ],
-    "reviewedContentHash": "c3d7bf11ab0b123ba3107da7048e2da2269c6d1212020d1d087ae433bf5cdb67",
-    "contextHashes": {
-      "hazard": "84a99a93cfe2471b27a65cbe626430d272fce7c6515f961298b2fd0e724ed65f",
-      "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
-      "link": "c3d7bf11ab0b123ba3107da7048e2da2269c6d1212020d1d087ae433bf5cdb67"
-    },
+    "reviewedContentHash": "05e64acfd364e597e39905a8675a1deb95562decbaa69b2d94d6351eb40eb177",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "已目核官方原PDF对应项，数字和对象均明确。现K处于proposed/needs_review，不因修C自动激活，须先按本范围修H条件、完成独立审核与发布门禁。 XF1131—2014第6.8条c项直接规定物品与墙之间不小于0.5m；适用范围及责任对象按第1章和相关管理职责核明。 当前完整定义或正式准入条件未闭合，不授予当前依据资格。",
     "evidenceRefs": [
-      "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb",
-      "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c",
-      "E_6f17cf85f91a6367a25cd532e5cf0d58b05e9e43bd728cf2427f2c5a86bc5449"
+      "E_CITATION_XF1131_2014_20261002"
     ],
-    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "contextHashes": {
+      "hazard": "cffa77ecbf64490608b67fac6381309979891dccb6069db2975c9f6b9680120d",
+      "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+    },
+    "previousReview": {
+      "entityId": "K_1ED9FF46BEDB3CED1FA394",
+      "entityType": "link",
+      "reviewType": "applicability",
+      "decision": "pending",
+      "reviewer": "ZCode-DeepSeek",
+      "checkedAt": "2026-09-10",
+      "reason": "本条为仓储物品与墙之间安全距离不足；XF 1131-2014 第6.8条（强制性条款）逐项规定了库房内堆垛间距，其中c）物品与墙之间的距离不小于0.5m，与本条数值要求完全对应，确认为 direct 依据。",
+      "reasonCodes": [
+        "DIRECT_CLAUSE_CONFIRMED",
+        "MANDATORY_CLAUSE",
+        "STORAGE_CLEARANCE"
+      ],
+      "reviewedContentHash": "c3d7bf11ab0b123ba3107da7048e2da2269c6d1212020d1d087ae433bf5cdb67",
+      "contextHashes": {
+        "hazard": "84a99a93cfe2471b27a65cbe626430d272fce7c6515f961298b2fd0e724ed65f",
+        "clause": "9006e3923b1581d26f7b76bbb20428f9b69ed29593641f6510d6d4c30bee247f",
+        "link": "c3d7bf11ab0b123ba3107da7048e2da2269c6d1212020d1d087ae433bf5cdb67"
+      },
+      "evidenceRefs": [
+        "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb",
+        "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c",
+        "E_6f17cf85f91a6367a25cd532e5cf0d58b05e9e43bd728cf2427f2c5a86bc5449"
+      ],
+      "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+    },
+    "previousReviewFileSha256": "a75ba968c00435745afd640aad1f9c7508281163c3b2276185e4a42c5da0b26c"
   },
-  "previousReviewFileSha256": "a75ba968c00435745afd640aad1f9c7508281163c3b2276185e4a42c5da0b26c"
+  "previousReviewFileSha256": "8a5dc2aacf118cb927abe56565fe2179657d5e9667106d8e12c73a761e6d27d1",
+  "contextHashes": {
+    "hazard": "60277abbdfdd60c0450251af439a4a169e559cf6a27b95303d70d50eb481808a",
+    "clause": "4cd4a1f415f1a8613a9ed4f31de8d3feb966f9ea68935a97c05a2cf121382de6"
+  },
+  "previousDefinition": {
+    "id": "K_1ED9FF46BEDB3CED1FA394",
+    "entityType": "link",
+    "hazardId": "H053",
+    "clauseId": "C_XF1131_6_8",
+    "role": "direct",
+    "applicability": "仅适用于XF1131—2014第1章规定的既有仓储场所库房内储存管理；不适用于炸药仓库、花炮仓库。具体距离分支逐项核明。仅消费第6.8条c项：物品与墙之间不小于0.5m。",
+    "jurisdictionCode": "CN",
+    "reason": "XF1131—2014第6.8条c项直接规定物品与墙之间不小于0.5m；适用范围及责任对象按第1章和相关管理职责核明。",
+    "createdAt": "2026-09-10",
+    "lifecycle": "proposed",
+    "status": "needs_review"
+  }
 }

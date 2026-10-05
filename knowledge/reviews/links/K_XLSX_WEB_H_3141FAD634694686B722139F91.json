@@ -1,18 +1,48 @@
 {
-  "entityType": "link",
   "entityId": "K_XLSX_WEB_H_3141FAD634694686B722139F91",
+  "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewedContentHash": "a92776f1a0cb5ba49bfe7e1112a256c5a6d64fb3d6a2acf980d9fef5bf9add21",
-  "contextHashes": {
-    "hazard": "36821e8a45ee6a37e1171e3e5566c267fe262cc2d28491f8219099429bed7d21",
-    "clause": "9e7d2ee4dc96818f17339030b5b8f4f102e24f91e100b505f9967aa087b781a5"
-  },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50057-2010第4.1.1条外部防雷及防电涌要求。条款逐字原文与隐患适用性吻合。",
+  "reviewedContentHash": "bfc9854f07501210facb417bece483d7ddb58bf73d656ae9f866ad60d95a5c63",
+  "checkedAt": "2026-10-05",
+  "reviewer": "Codex bounded electrical source repair author 20261005",
   "evidenceRefs": [
-    "E_MOHURD_GB50057_2010"
+    "E_NEXT_GB50057_EXACT_20261005",
+    "E_NEXT_GB55024_RELATION_20261005"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reason": "限定储存建筑、设计范围、防雷类别；本C不提供定期检测周期，不把原复合义务整体认证。",
+  "notes": "作者逐原页核查；独立复核另存。本次不证明企业现场、行政违法、重大隐患、整改完成或正式批准。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_3141FAD634694686B722139F91",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "a92776f1a0cb5ba49bfe7e1112a256c5a6d64fb3d6a2acf980d9fef5bf9add21",
+    "contextHashes": {
+      "hazard": "36821e8a45ee6a37e1171e3e5566c267fe262cc2d28491f8219099429bed7d21",
+      "clause": "9e7d2ee4dc96818f17339030b5b8f4f102e24f91e100b505f9967aa087b781a5"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50057-2010第4.1.1条外部防雷及防电涌要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50057_2010"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousDefinition": {
+    "applicability": "贮存易燃易爆危化品建筑未安装避雷设施",
+    "clauseId": "C_GB50057_4_1_1",
+    "hazardId": "H_3141FAD634694686B722139F91",
+    "id": "K_XLSX_WEB_H_3141FAD634694686B722139F91",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "role": "direct"
+  },
+  "contextHashes": {
+    "hazard": "42df9b6b62828eef8e9ad5067ffe37b9268299a9c41b100c39715dfac990d700",
+    "clause": "db3198bca6d4159b5faa6a2f3fcf5a8a255ad28ebc24f37ca2fcd2ec8146c7c7"
+  }
 }
