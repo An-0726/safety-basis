@@ -182,6 +182,11 @@ class CompleteRemainingFrozenHistoryTests(unittest.TestCase):
         for relative, expected in immutable.items():
             with self.subTest(path=relative): self.assertEqual(sha((ROOT / relative).read_bytes()), expected)
 
+    def test_management_baseline_uses_the_guarded_portable_predecessor(self):
+        import test_all_management_bounded_20261005 as management
+        self.assertEqual(management.ROOT, ROOT)
+        self.assertEqual(management.BASE, pre_complete_repo_root(ROOT))
+
     def test_final_inverse_matches_report_pins_and_exact_git_predecessor(self):
         data = fixture()
         self.assertEqual(data['baselineCommit'], FREEZE.BASELINE)

@@ -5,7 +5,9 @@ import json
 from pathlib import Path
 import sys
 import unittest
-ROOT=Path(__file__).resolve().parents[3]; K=ROOT/'knowledge'; BASE=ROOT.parent/'repo'
+ROOT=Path(__file__).resolve().parents[3]; K=ROOT/'knowledge'
+from complete_remaining_cohort_fixture import pre_complete_repo_root
+BASE=pre_complete_repo_root(ROOT)
 sys.path.insert(0,str(ROOT/'tools/v4'))
 from canonical import content_hash
 from release_gate_core import evaluate_release_gate
