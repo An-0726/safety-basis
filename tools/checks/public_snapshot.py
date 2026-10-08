@@ -63,7 +63,7 @@ def at_ref(ref):
     relative = SNAPSHOT.relative_to(ROOT).as_posix()
     result = subprocess.run(['git', '-C', str(ROOT), 'show', f'{ref}:{relative}'], capture_output=True)
     if result.returncode:
-        return {'hazards': {}}
+        return None
     return json.loads(result.stdout.decode('utf-8'))
 
 
@@ -83,7 +83,9 @@ def main():
     mode.add_argument('--changed-since', metavar='REF')
     args = parser.parse_args()
     if args.changed_since:
-        delta = difference(at_ref(args.changed_since), load())
+        before = at_ref(args.changed_since)
+        # No snapshot at that commit means there is nothing to compare with, not that every rule is new.
+        delta = difference(before, load()) if before else {'added': [], 'changed': []}
         print(','.join(delta['added'] + delta['changed']))
         return 0
     if not args.bundle:

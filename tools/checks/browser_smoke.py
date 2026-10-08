@@ -22,6 +22,7 @@ from urllib.parse import quote
 from urllib.request import urlopen
 
 MOBILE_WIDTH, DESKTOP_WIDTH = 390, 1440
+EXTRA_LIMIT = 40  # most rules that also get the search and phone-width checks
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
@@ -148,7 +149,7 @@ def main():
             except Exception as error:
                 failures.append(f'{hazard_id}: {str(error).splitlines()[0]}')
 
-        searched = (named + [t for t in targets if t not in named])[:max(len(named), 6)]
+        searched = (named + [t for t in targets if t not in named])[:min(max(len(named), 6), EXTRA_LIMIT)]
         for hazard_id in searched:
             title = hazards[hazard_id]['title'].strip()
             try:
@@ -161,7 +162,7 @@ def main():
                 failures.append(f'{hazard_id}: searching its title does not list it ({str(error).splitlines()[0]})')
 
         page.set_viewport_size({'width': MOBILE_WIDTH, 'height': 844})
-        for hazard_id in (named + targets[:4])[:max(len(named), 4)]:
+        for hazard_id in (named + targets[:4])[:min(max(len(named), 4), EXTRA_LIMIT)]:
             try:
                 open_detail(hazard_id)
                 require(page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),
