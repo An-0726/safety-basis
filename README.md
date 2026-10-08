@@ -81,14 +81,20 @@ CI/正式发布以 `Asia/Shanghai` 取得中国标准时间的 `asOf` 日历日�
 
 ```sh
 node --test tests/*.test.mjs
-python -m unittest discover -s tools/pipeline/tests -v
+python -m unittest discover -s tools/pipeline/tests
 python tools/v4/validate_all.py
 python tools/v4/strict_release_audit.py
 python tools/v4/validate_publication_integrity.py
 python tools/v4/build_unified_release.py --out source/releases/current --as-of YYYY-MM-DD
 python tools/v4/verify_unified_bundle.py --bundle source/releases/current
 node tools/v4/check_field_profile_ui.mjs source/releases/current
+python tools/checks/public_snapshot.py --bundle source/releases/current --check
+python tools/checks/browser_smoke.py --bundle source/releases/current --out browser-report.json
 ```
+
+`tools/checks/public-snapshot.json` 为每条公开隐患保存一行“内容指纹＋标题”。改动任何公开规则（含其所引条款原文）后须运行 `public_snapshot.py --write` 并一并提交；该文件的 diff 即本次改动影响的公开规则清单，CI 以 `--check` 核对构建结果与之一致。`browser_smoke.py` 用真实浏览器打开指定规则（`--ids`）和均匀抽样，核对页面显示与已发布数据一致；`--all` 打开全部公开规则。
+
+CI（`.github/workflows/site.yml`）：PR 上运行测试、Gate、构建、快照核对和抽样浏览器检查；合并到 main 后部署，并对线上站点打开全部公开规则复核。`weekly-full-check.yml` 每周对线上站点再全量检查一次。2026-10-08 起不再保留逐批冻结夹具和历史还原链，旧批次的专用测试见 Git 历史（最后包含它们的提交为 `d492dd0f2`）。
 
 把 `YYYY-MM-DD` 换为要验证的中国标准时间日期；Windows可用 `py -3` 代替 `python`。涉及版本切换还须验证边界日期。场景UI检查是数据/控制器验证，不代替真实浏览器验收。
 

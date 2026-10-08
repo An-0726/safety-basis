@@ -1,0 +1,142 @@
+name: Check and publish the site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r tools/pipeline/requirements.txt
+      - name: Frontend and pipeline tests
+        run: |
+          node --test tests/*.test.mjs
+          python -m unittest discover -s tools/pipeline/tests
+      - name: Knowledge, strict release gate and publication integrity
+        run: |
+          python tools/v4/validate_all.py
+          python tools/v4/strict_release_audit.py
+          python tools/v4/validate_publication_integrity.py
+      - name: Validators must not rewrite governed source data
+        run: git diff --exit-code -- knowledge source/publication
+
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/pipeline/requirements.txt playwright
+      - name: Build and verify the package
+        shell: bash
+        run: |
+          rm -rf source/releases/current source/releases/site-selection.json
+          BUILD_DATE="$(TZ=Asia/Shanghai date +%F)"
+          DATA_VERSION="$(TZ=Asia/Shanghai date +%Y.%m.%d).${GITHUB_SHA::12}"
+          python tools/v4/build_unified_release.py --out source/releases/current --as-of "${BUILD_DATE}" --data-version "${DATA_VERSION}"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          release=json.loads(Path('source/releases/current/release.json').read_text(encoding='utf-8'))
+          Path('source/releases/site-selection.json').write_text(
+              json.dumps({
+                  'schemaVersion':'safety-site-selection-v1',
+                  'bundle':'current',
+                  'releaseHash':release['releaseHash']
+              }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
+          python tools/v4/verify_unified_bundle.py --bundle source/releases/current
+      - name: Public rules must match the reviewed snapshot
+        run: python tools/checks/public_snapshot.py --bundle source/releases/current --check
+      - name: Open the changed rules and a sample in a real browser
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          python -m playwright install --with-deps chromium
+          CHANGED=""
+          if [ -n "${BASE_SHA}" ] && git fetch --no-tags --depth=1 origin "${BASE_SHA}"; then
+            CHANGED="$(python tools/checks/public_snapshot.py --changed-since "${BASE_SHA}")"
+          fi
+          echo "changed public rules: ${CHANGED:-none}"
+          python tools/checks/browser_smoke.py --bundle source/releases/current \
+            --expected-commit "${GITHUB_SHA}" --ids "${CHANGED}" \
+            --out "${RUNNER_TEMP}/browser/local.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-check
+          path: ${{ runner.temp }}/browser
+          if-no-files-found: warn
+          retention-days: 7
+      - uses: actions/upload-pages-artifact@v3
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+        with:
+          path: source/releases/current
+
+  deploy:
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+    needs: [validate, build]
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the verified package
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  online_verify:
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Open the deployed site in a real browser
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.before }}
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+          CHANGED=""
+          if [ -n "${BASE_SHA}" ] && git fetch --no-tags --depth=1 origin "${BASE_SHA}"; then
+            CHANGED="$(python tools/checks/public_snapshot.py --changed-since "${BASE_SHA}")"
+          fi
+          python tools/checks/browser_smoke.py --url https://an-0726.github.io/safety-basis/ \
+            --expected-commit "${GITHUB_SHA}" --wait-for-commit 300 --ids "${CHANGED}" --all \
+            --out "${RUNNER_TEMP}/browser/online.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-check-online
+          path: ${{ runner.temp }}/browser
+          if-no-files-found: warn
+          retention-days: 7
