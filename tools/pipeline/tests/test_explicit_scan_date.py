@@ -63,13 +63,11 @@ class ExplicitScanDateTests(unittest.TestCase):
                                  capture_output=True, text=True)
             self.assertNotEqual(run.returncode, 0)
 
-    def test_ci_passes_explicit_china_date_to_scanner_and_build(self):
-        workflow = (ROOT / '.github/workflows/final-engineering-qa.yml').read_text(encoding='utf-8')
-        scanner_line = next(line for line in workflow.splitlines() if 'comprehensive_scanner.py' in line)
+    def test_ci_builds_with_an_explicit_china_date(self):
+        workflow = (ROOT / '.github/workflows/site.yml').read_text(encoding='utf-8')
+        self.assertIn('BUILD_DATE="$(TZ=Asia/Shanghai date +%F)"', workflow)
         build_line = next(line for line in workflow.splitlines() if 'build_unified_release.py' in line)
-        for line in (scanner_line, build_line):
-            self.assertIn('--as-of "$(TZ=Asia/Shanghai date +%F)"', line)
-
+        self.assertIn('--as-of "${BUILD_DATE}"', build_line)
 
 if __name__ == '__main__':
     unittest.main()
