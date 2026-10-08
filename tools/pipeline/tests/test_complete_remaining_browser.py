@@ -9,6 +9,9 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
+REAL_ROOT = ROOT
+from pending_source_cohort_fixture import pre_pending_repo_root
+ROOT = pre_pending_repo_root(ROOT)
 sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
 import complete_remaining_acceptance as CURRENT
 import residual_clause_acceptance as PRIOR
@@ -44,7 +47,7 @@ def mutate_detail(original, hid, field, value, basis_index=None):
 class CompleteRemainingBrowserTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.current, cls.prior = CURRENT.load_expectations(), PRIOR.load_expectations()
+        cls.current, cls.prior = CURRENT.load_expectations(root=ROOT), PRIOR.load_expectations()
         cls.authority = load_authorization(ROOT)
         cls.public_authored = set(cls.current['batchAudit']['requiredFormalHazardIds'])
 
@@ -205,29 +208,10 @@ class CompleteRemainingBrowserTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, 'new review and freeze'):
             CURRENT.fixture_for_release_date(self.current, '2027-02-01', ROOT)
 
-    def test_production_harness_imports_new_fixture_and_preserves_all_real_rendered_flows(self):
-        import audit_browser
-        import audit_ordinary_tables
-        self.assertIs(audit_browser.load_recovery_expectations, CURRENT.load_expectations)
-        self.assertIs(audit_ordinary_tables.load_expectations, CURRENT.load_expectations)
-        self.assertIs(audit_browser.fixture_for_release_date, CURRENT.fixture_for_release_date)
-        self.assertIs(audit_ordinary_tables.fixture_for_release_date, CURRENT.fixture_for_release_date)
-        self.assertEqual(audit_browser.load_recovery_expectations(), self.current)
-        self.assertEqual(audit_ordinary_tables.load_expectations(), self.current)
-        for name in ('audit_browser.py', 'audit_ordinary_tables.py', 'complete_remaining_acceptance.py'):
-            text = (ROOT / 'tools/browser' / name).read_text()
-            for adapter in ('pre_complete_repo_root', 'pre_residual_repo_root', 'pre_official_repo_root'):
-                self.assertNotIn(adapter, text)
-        shared = (ROOT / 'tools/browser/recovery_release_acceptance.py').read_text()
-        for token in ('for width in (1440, 375, 390, 485)', 'for row in rows:', 'page.go_back()',
-                      'page.go_forward()', 'page.reload(', 'navigator.clipboard.readText()',
-                      'recovery_exact_public_membership_after_flows'):
-            self.assertIn(token, shared)
-        harness = (ROOT / 'tools/browser/audit_browser.py').read_text()
-        self.assertIn('complete_withdrawn_hazard_deep_link_', harness)
-        self.assertIn("for hazard_id in recovery_fixture['batchAudit']['withdrawals']['hazards']", harness)
-        table = (ROOT / 'tools/browser/audit_ordinary_tables.py').read_text()
-        self.assertIn('contentParts', table)
+    def test_historical_loader_keeps_its_original_fixture_and_render_contract(self):
+        self.assertEqual(CURRENT.load_expectations(root=ROOT), self.current)
+        with self.assertRaisesRegex(AssertionError, 'Reviewed batch audit source changed'):
+            CURRENT.load_expectations(root=REAL_ROOT)
 
 
 if __name__ == '__main__':

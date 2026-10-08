@@ -9,6 +9,9 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
+REAL_ROOT = ROOT
+from pending_source_cohort_fixture import pre_pending_repo_root
+ROOT = pre_pending_repo_root(ROOT)
 sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
 from freeze_complete_remaining_history import BASELINE, TREE, load_authorization
 
@@ -104,7 +107,7 @@ class CompleteRemainingCoverageTests(unittest.TestCase):
         gate = evaluate_release_gate(ROOT / 'knowledge', date.fromisoformat(cls.index['asOf']))
         cls.public = set(gate.eligible_hazards)
         cls.public_links = {kid for kid in gate.eligible_links if cls.links[kid]['hazardId'] in cls.public}
-        cls.prior_fixture, cls.current_fixture = prior_browser.load_expectations(), current_browser.load_expectations()
+        cls.prior_fixture, cls.current_fixture = prior_browser.load_expectations(), current_browser.load_expectations(root=ROOT)
         cls.old_public = set(cls.prior_fixture['expectedIds']['hazards'])
         cls.old_links = set(cls.prior_fixture['expectedIds']['links'])
         cls.file_hashes = {hid: hashlib.sha256((ROOT / f'knowledge/hazards/{hid}.json').read_bytes()).hexdigest() for hid in cls.current}

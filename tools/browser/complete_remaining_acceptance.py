@@ -71,9 +71,9 @@ def validate_batch_audit(current, root=ROOT):
     return audit
 
 
-def load_expectations(path=FIXTURE):
+def load_expectations(path=FIXTURE, root=ROOT):
     result = load_frozen_expectations(path)
-    validate_batch_audit(result)
+    validate_batch_audit(result, root)
     return result
 
 

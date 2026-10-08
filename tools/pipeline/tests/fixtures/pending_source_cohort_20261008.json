@@ -1,0 +1,350 @@
+{
+  "schemaVersion": "pending-source-history-v1",
+  "asOf": "2026-10-08",
+  "baselineCommit": "ad6a20f7c6779c24aaa2e871a370cebc9f7ddd78",
+  "baselineTree": "38a2f9d685a7f08b72f58af2a1fdbac64ae3c240",
+  "authoredReports": [
+    "docs/PENDING_SOURCE_BATCH1_AUTHOR_20261008.json"
+  ],
+  "authoredReportSha256": {
+    "docs/PENDING_SOURCE_BATCH1_AUTHOR_20261008.json": "11421e4e970d714c15da8bad2f995615fa219633faaf2678f6c3b4cd36c3156b"
+  },
+  "authorizationPath": "tools/pipeline/tests/fixtures/pending_source_authorization_20261008.json",
+  "authorizationSha256": "02c59fa18faf3a36060798a442fd72fdbe508733a7dc071bb7e7484ac3ab8ba8",
+  "metadataPaths": [
+    "docs/PROJECT_STATE.md",
+    "knowledge/manifest.json"
+  ],
+  "records": {
+    "docs/PROJECT_STATE.md": {
+      "beforeFileText": "# 项目当前状态与统一验收范围\n\n此页是本次候选提交的阶段快照。实际合并、构建和线上验收须以精确提交的Actions及发布凭据确认；不预先宣布尚未发生的发布通过。[前一阶段原文](PROJECT_STATE_HISTORY_BEFORE_COMPLETE_REMAINING_20261005.md)完整保留。\n\n## 已完成生产基线\n\n[PR111](https://github.com/An-0726/safety-basis/pull/111)已经合并、部署并完成线上独立验收。合并提交`475856179bfd3c6c3446d10cfc4de73e51f228f3`、源码tree `fc62800c09421f687c0734f699b95befa8231f2f`。\n\n[生产流水线37282843377](https://github.com/An-0726/safety-basis/actions/runs/37282843377)的build/deploy/online_verify均成功；[验证流水线37282843388](https://github.com/An-0726/safety-basis/actions/runs/37282843388)成功。Node757与Python919零跳过，线上Chromium1106项通过；生产数据版本`2026.10.05.475856179bfd`。不重复结案或重做该版本11项。\n\n## 当前一次性集中批次\n\n- 基线未公开清单331个既有H：319 proposed和12 active但未通过当前公开Gate。逐ID分组初审和独立复读已覆盖；江苏铝镁废屑4项按明确指示跳过，不冒称重新核过其效力。\n- 能形成正式原文及适用链的规则集中修改，严格区分可修候选ID、实际公开H、条件映射、原复合仍未支持分支、范围排除及需要核查的现场事实。不以分派或读入记录代替审阅，不以降低库存诊断代替补齐法规。\n- 同步修复本轮直接比较中发现的已公开错误依赖，包括错条款、摘要冒原文、设计/制造/验收或地域范围外推、应/宜强度错误；旧实体和完整审核前态保留。\n- AQ5202/5203政府网站旧送审稿未用作正式依据；已另从国家标准信息平台取得正式出版原本。AQ5203第13.4的原文数值疑义不作为防护栏杆合格高度判据。\n- GB50187仅使用正式原出版平台直接刊载的准确条/款；第三方出版扫描镜像仅辅助，不据其封面和现行题录新签其他未得正式正文的条文。\n- 标准的推荐性、参照执行、例外、对象、项目阶段和日期边界均需逐链保留；废止旧源和未实施新版不得无说明当作当前义务。\n\n完整候选去向和单独未证分支见[331项统一处置索引](COMPLETE_REMAINING_DISPOSITION_INDEX_20261005.json)。作者分组报告和中央目录变更报告保留准确文件指纹。最终固定树独立签审、统一完整测试及真实桌面/窄屏通过后，才提交一个最终PR，并统一合并部署和线上复验；不再逐小批发布。\n\n## 保留与禁止推断\n\n水带、GB50493及江苏文件效力的既有缺口本轮不循环查找；其他找不到精确依据或缺少必要适用条件的记录有逐项理由，不能凑依据或静默计为全项完成。旧版历史关联按日期保留，已归档标题提示不改写历史。\n\n本轮不确认任何具体企业违法、重大事故隐患、整改完成、现场参数或正式批准。原始标准PDF、未审研究材料、企业私有资料和本地数据库不进入公开仓库。\n",
+      "beforeSha256": "ca8bb3db6b572be37a848d15da8caf8572f755dcb4945a8355d5e34683da8a9b",
+      "afterSha256": "c71fd386bdc5a97265f0c5e4dd70c4da047f89dd922272492dad61ea56f20e1d"
+    },
+    "knowledge/clauses/C_15607_4_2_1.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第4.2.1条\",\n  \"id\": \"C_15607_4_2_1\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"喷粉区按的爆炸性粉尘环境危险区域划应按GB50058的规定划分,各类喷粉室的爆炸性粉尘环境危险区域划分参见附录A。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n",
+      "beforeSha256": "0d020365c77b931811af15402a2ecb301bbe5326e7b2909d8606cb26c3a1f284",
+      "afterSha256": "a1a944ec4f026591252252a7625e3cb9f383b8bf9321316e558f03ac81e3cfd3"
+    },
+    "knowledge/clauses/C_15607_4_4_3.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第4.4.3条\",\n  \"id\": \"C_15607_4_4_3\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"喷粉作业应在符合第5章规定的喷粉室内进行。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n",
+      "beforeSha256": "5cb1f05c9f9ab7229939cd4fa01e3c61d70df8e04d5291baf28d9e2c8f139c50",
+      "afterSha256": "ffde89ad94ebec097afbeaae66f4a4cee8923c7985b9892bdac630f87ecd650e"
+    },
+    "knowledge/clauses/C_15607_4_7_2.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第4.7.2条\",\n  \"id\": \"C_15607_4_7_2\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"21区、22区内,电气设备应采用防爆、防尘(隔尘)型电气设备,且选型应符合GB50058的规定。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n",
+      "beforeSha256": "0e87ffbd6a4de9931a2229fdbf98172eb9687307e88bf487b90404b3bb1061f6",
+      "afterSha256": "88b5551cb1c63e2db89f1c1df08b04f225568dde8f923c7dfb67a30db5aacc3f"
+    },
+    "knowledge/clauses/C_15607_4_8_1.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第4.8.1条\",\n  \"id\": \"C_15607_4_8_1\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"进入喷粉区内的电气线路应符合GB50058的规定。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n",
+      "beforeSha256": "c6f07c435dabe2e4a44e048372303e54d6dd5bfc89a8d06aacdd5d6c3b61e9d4",
+      "afterSha256": "0ace807c476f02a146bcbca0a5379f08c438d30fd577375319cef4fc07a139df"
+    },
+    "knowledge/clauses/C_15607_5_2_8.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第5.2.8条\",\n  \"id\": \"C_15607_5_2_8\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"自动喷涂机(包含往复机、机器人等)应符合4.7、4.8的规定。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n",
+      "beforeSha256": "231a19a0d5b798025fb2f8203d0a4953fd0ab5ffc05af69944fb6547e6e7c157",
+      "afterSha256": "1dcc04af10ee719470f7c81230358cefe539d37dbf335238e202747a08dbcfc4"
+    },
+    "knowledge/clauses/C_15607_6_1.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第6.1条\",\n  \"id\": \"C_15607_6_1\",\n  \"jurisdictionCode\": \"CN\",\n  \"lawVersionId\": \"LV_STD_GB15607\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"通风、回收、净化装置应符合GB6514和GB15577的有关规定。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7BBEE95CF0808B6CA15153E77F354359\"\n}\n",
+      "beforeSha256": "912577a4f82698450fde4dd39cf2e0c97393e234bcd420f72e5e0c5425315a3f",
+      "afterSha256": "781af3b1b7d496f45840ce7887c3c9217f4de6519fa2c41bc9248a0d135f7d0c"
+    },
+    "knowledge/clauses/C_GB9448_10.json": {
+      "beforeFileText": "{\n  \"articlePath\": \"第10章\",\n  \"id\": \"C_GB9448_10\",\n  \"lawVersionId\": \"LV_STD_872B68E1DA3617B1B2F28BC9\",\n  \"lifecycle\": \"active\",\n  \"quote\": \"10 警告标志\\n在可能造成危害的地方，应设置适当的警告标志使人们对这些危害有清楚的了解。焊接和切割区域应予以明确标明，并且应有必要的警告标志。\",\n  \"sourceUrl\": \"https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=A33BFE2EEC794F95457A5624320B3E41\",\n  \"jurisdictionCode\": \"CN\"\n}\n",
+      "beforeSha256": "664e1fc177e3cf988433ffef9b73907dbd31807be2b53e78a918edd39c2a0118",
+      "afterSha256": "9b558c6e4fcd5d6e2e731ccdc2c2e2be4d215ce33b94a90667a525cbdcc4594e"
+    },
+    "knowledge/clauses/C_PEND_GB15607_4_2_2_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "e6414bea9edc237766f5a1c4c671fcc6511190fb631915a6e55b88f447498d54"
+    },
+    "knowledge/clauses/C_PEND_GB6514_7_3_2_1_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "8f783463cf996121170b6e5e1af87021414908aff94961c87db83f4acbef8b75"
+    },
+    "knowledge/evidence/E_PEND_GB15607_2023_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "4b6263fb83d624ea7a8fc823d6bedc4c2c29ea197deb1adf38053a32d08dd926"
+    },
+    "knowledge/evidence/E_PEND_GB6514_2023_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "72b41f619d7dcc52058f6953e646fd4d2fd12448d67ac9eb1070135d24bb397d"
+    },
+    "knowledge/evidence/E_PEND_GB9448_2025_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "2885a587334e5ef4c7261aa339c488978922ba1aff3d46808eb7ec084ee656b5"
+    },
+    "knowledge/hazards/H_15607_4_2_1_1.json": {
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"涂装安全\",\n  \"conditions\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"description\": \"现场检查发现，喷粉区的爆炸性粉尘环境危险区域划分未按GB50058的规定划分，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_15607_4_2_1_1\",\n  \"keywords\": [\n    \"喷粉区的爆炸性粉尘环境危险区域划分未按GB50058的规定划分\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"喷粉区的爆炸性粉尘环境危险区域划分按GB50058的规定划分。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"涂装、喷漆、喷粉、调漆及相关作业场所\"\n  ],\n  \"title\": \"喷粉区的爆炸性粉尘环境危险区域划分未按GB50058的规定划分\"\n}\n",
+      "beforeSha256": "4d1ac23bff3ebea96d762bd4103f220fb0dcb9f797c4eb4e0ec2ef1f5984f6f4",
+      "afterSha256": "a604edee53bad74f6be1656f70243749486168d71dfd7d9b614ed4f1003de9b6"
+    },
+    "knowledge/hazards/H_15607_4_4_3_1.json": {
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"涂装安全\",\n  \"conditions\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"description\": \"现场检查发现，喷粉作业未在符合GB15607第5章规定的喷粉室内进行，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_15607_4_4_3_1\",\n  \"keywords\": [\n    \"喷粉作业未在符合GB15607第5章规定的喷粉室内进行\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"喷粉作业在符合GB15607第5章规定的喷粉室内进行。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"涂装、喷漆、喷粉、调漆及相关作业场所\"\n  ],\n  \"title\": \"喷粉作业未在符合GB15607第5章规定的喷粉室内进行\"\n}\n",
+      "beforeSha256": "65fcec0534bef9126e4c5dc9ab3bf0230ed7b6f219c06e7aaa6551528b56e379",
+      "afterSha256": "4e0f35fa60e83bdeec2f105c0b18df2b9b4e5bbf6d01add17940ea68c9e2fb4f"
+    },
+    "knowledge/hazards/H_15607_4_8_1_1.json": {
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"涂装安全\",\n  \"conditions\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"description\": \"现场检查发现，进入喷粉区内的电气线路未符合GB50058的规定，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_15607_4_8_1_1\",\n  \"keywords\": [\n    \"进入喷粉区内的电气线路未符合GB50058的规定\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"进入喷粉区内的电气线路符合GB50058的规定。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"涂装、喷漆、喷粉、调漆及相关作业场所\"\n  ],\n  \"title\": \"进入喷粉区内的电气线路未符合GB50058的规定\"\n}\n",
+      "beforeSha256": "87f5e442e03d80944526306d060a4cee35a43208ca5e2935927c1ca2cf323d9c",
+      "afterSha256": "f5f99edc0063c514d28a132ce42981855cf5c79b83fd94b8a1957318995c1b66"
+    },
+    "knowledge/hazards/H_15607_5_2_8_1.json": {
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"机械与设备安全\",\n  \"conditions\": \"适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所\",\n  \"description\": \"现场检查发现，自动喷涂机（包含往复机、机器人等）未符合GB15607第4.7、4.8的规定，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_15607_5_2_8_1\",\n  \"keywords\": [\n    \"自动喷涂机\",\n    \"包含往复机\",\n    \"机器人等\",\n    \"未符合GB15607第4.7\",\n    \"4.8的规定\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"自动喷涂机（包含往复机、机器人等）符合GB15607第4.7、4.8的规定。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"机械设备制造、安装、运行、操作和检维修相关场所\"\n  ],\n  \"title\": \"自动喷涂机（包含往复机、机器人等）未符合GB15607第4.7、4.8的规定\"\n}\n",
+      "beforeSha256": "48052a177da9488edc64175537208df6153c6e93dc3a72682e51a93740156c8f",
+      "afterSha256": "784ab039e76e86235b5819805bb234f81909da8dbae3bf64b42ab3f66a74361c"
+    },
+    "knowledge/hazards/H_15607_6_1_1.json": {
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"涂装安全\",\n  \"conditions\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"description\": \"现场检查发现，通风、回收、净化装置未符合GB6514和GB15577的有关规定，实际状态与直接依据规定的安全要求不一致。\",\n  \"id\": \"H_15607_6_1_1\",\n  \"keywords\": [\n    \"通风\",\n    \"回收\",\n    \"净化装置未符合GB6514和GB15577的有关规定\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"通风、回收、净化装置符合GB6514和GB15577的有关规定。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。\",\n  \"mergedInto\": null,\n  \"mode\": \"direct\",\n  \"note\": \"\",\n  \"places\": [\n    \"涂装、喷漆、喷粉、调漆及相关作业场所\"\n  ],\n  \"title\": \"通风、回收、净化装置未符合GB6514和GB15577的有关规定\"\n}\n",
+      "beforeSha256": "45383e49173c171b1234aa2b2de4adff9938f7fe882e67db62f41b564c0a072c",
+      "afterSha256": "adcd6a661881291ee7df671206d6a669e9f05eacaccb0624f883ee2ae16c109f"
+    },
+    "knowledge/hazards/H_AAD8D67536864E58BC01867E9C.json": {
+      "beforeFileText": "{\n  \"aliases\": [],\n  \"category\": \"安全标志\",\n  \"conditions\": \"适用于本隐患所述场所与设备的相关管理。\",\n  \"description\": \"在焊接及切割作业所产生的烟尘、气体、弧光、火花、电击、热、辐射及噪声可能导致危害的地方,未通过使用适当的警告标志使人们对这些危害有清楚的了解\",\n  \"id\": \"H_AAD8D67536864E58BC01867E9C\",\n  \"keywords\": [\n    \"在焊接及切割作业所产生的烟尘\",\n    \"气体\",\n    \"弧光\",\n    \"在\",\n    \"焊\",\n    \"接\",\n    \"及\",\n    \"切\",\n    \"割\",\n    \"作\",\n    \"业\",\n    \"所\",\n    \"产\",\n    \"生\",\n    \"的\",\n    \"烟\",\n    \"尘\",\n    \",\",\n    \"气\",\n    \"体\",\n    \"弧\",\n    \"光\",\n    \"火\",\n    \"花\",\n    \"电\",\n    \"击\"\n  ],\n  \"lifecycle\": \"proposed\",\n  \"measures\": \"明确划定焊接/切割区域，按弧光、火花、烟尘、电击等实际危害补设必要警告标志并保持清晰。\",\n  \"mergedInto\": null,\n  \"mode\": \"candidate\",\n  \"note\": \"2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。原 conditions 字段记录的引用依据为：依据：《焊接与切割安全》 第9条\\n\\nGBZ 1-2010《工业企业设计卫生标准》\\nGB 5083-2023《生产设备安全卫生设计总则》。\",\n  \"places\": [\n    \"通用场所\"\n  ],\n  \"title\": \"焊接切割作业危害区域未设置适当的警告标志\"\n}\n",
+      "beforeSha256": "ca9aba3db90d8370b20f6f3a6fc6610f29ed2194877bb35b3c113f4076b23f6d",
+      "afterSha256": "a6d3df8c058b8d2b538307d567cc89cec4ecf8c1275c72770eb911bd7724673a"
+    },
+    "knowledge/links/K_PEND_15607_4_2_1_1_EXCEPTION_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "f535b6feb9656b5bc70a521d6849c231bca500252672641c5db199c2eb68a62f"
+    },
+    "knowledge/links/K_PEND_15607_4_2_1_1_ZONING_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "fac993ea82ed6f718189fbb63f3bac381ccd427264dbfa10705432004e9936cb"
+    },
+    "knowledge/links/K_PEND_15607_4_4_3_1_BOOTH_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "ee76255be76467ce0591a8374c0dc532fc8a30f3329c2ac5da1c846364dbad4e"
+    },
+    "knowledge/links/K_PEND_15607_4_8_1_1_GB50058_5_4_1_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "53681da910eee23117b663c8ed122d0d6e5380a9f68fcc558c1353033e3ffcb6"
+    },
+    "knowledge/links/K_PEND_15607_4_8_1_1_REFERENCE_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "1f871c1e0e93c9991542d76f7a607888eba676bedab8aa1338d91627bef0f48b"
+    },
+    "knowledge/links/K_PEND_15607_5_2_8_1_ELECTRICAL_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "55ee482bd32b3cab115cee352ea1a994b690aff8ec3b0616876dab1e2d6a9e1d"
+    },
+    "knowledge/links/K_PEND_15607_5_2_8_1_GROUNDING_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "f9f56493afe4edb07e10504dc88af53b10e63c80c5e015da7abc94bb8505228f"
+    },
+    "knowledge/links/K_PEND_15607_5_2_8_1_REFERENCE_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "fe74ff9260bab65e61b1c3fcba34fcf01a0fae42ea9a7d7b5f35535806111839"
+    },
+    "knowledge/links/K_PEND_15607_6_1_1_GB6514_7_3_2_1_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "f216e9aac6c9e0d74b4551d9dc509588a605291b554d59e5fb8fc992f957098f"
+    },
+    "knowledge/links/K_PEND_15607_6_1_1_REFERENCE_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "b469bd0b579b64eb60a2e1e62ae509015b3bd852f1386c4bb18f9acde20bdfb3"
+    },
+    "knowledge/links/K_XLSX_WEB_8AD4488F8A0347C8DDE6FEBF.json": {
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"clauseId\": \"C_XLSX_WEB_3AA47602F552F5D082CE98DA\",\n  \"hazardId\": \"H_15607_4_4_3_1\",\n  \"id\": \"K_XLSX_WEB_8AD4488F8A0347C8DDE6FEBF\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"proposed\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\",\n  \"status\": \"needs_review\"\n}\n",
+      "beforeSha256": "87a4be050fe64d753b5f6fc8a5fe4df137a9e7d9780a863d963244feb8e4421d",
+      "afterSha256": "e9bed7c989477a6062a6a9f62fd26b846a9faf8905084d7362dce4f601e9698f"
+    },
+    "knowledge/links/K_XLSX_WEB_90DB435011EFDD0313F168F8.json": {
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所\",\n  \"clauseId\": \"C_XLSX_WEB_919FC7801045E140D8B377E6\",\n  \"hazardId\": \"H_15607_5_2_8_1\",\n  \"id\": \"K_XLSX_WEB_90DB435011EFDD0313F168F8\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"proposed\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\",\n  \"status\": \"needs_review\"\n}\n",
+      "beforeSha256": "4761d1a294e5d413a1adb933082155483b8442829fcbff44f0582dce5684ee9e",
+      "afterSha256": "20cd17df2fb5ae18cd2abaf036560ef3baea5bda08c9239ce994a10a099a1642"
+    },
+    "knowledge/links/K_XLSX_WEB_AA82724434B0AA88213D5BE2.json": {
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"clauseId\": \"C_XLSX_WEB_2292CF4FB50841ED3DE35BA4\",\n  \"hazardId\": \"H_15607_6_1_1\",\n  \"id\": \"K_XLSX_WEB_AA82724434B0AA88213D5BE2\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"proposed\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\",\n  \"status\": \"needs_review\"\n}\n",
+      "beforeSha256": "61a054f434c4275993617252bec0e168e51db808c3ad606b536c359970f1731c",
+      "afterSha256": "b3d098f63cd1fdbcd2b4f3fe759cea9655257a088b09b639dff690d4238ab0c4"
+    },
+    "knowledge/links/K_XLSX_WEB_B421EAC20EBDD91CB576FC83.json": {
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"clauseId\": \"C_XLSX_WEB_3DBC63E728DBA48012026783\",\n  \"hazardId\": \"H_15607_4_2_1_1\",\n  \"id\": \"K_XLSX_WEB_B421EAC20EBDD91CB576FC83\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"proposed\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\",\n  \"status\": \"needs_review\"\n}\n",
+      "beforeSha256": "efb1eb947fbe706fd9d00aa6baba71ecaf88ca56902158694bf09c241d5ab439",
+      "afterSha256": "65b1dbfb1f322e30f5d09150cabfdcfb4e6699c818fc02c66f5959ced4be66db"
+    },
+    "knowledge/links/K_XLSX_WEB_B7C70D8364C74AFD84AADC0C.json": {
+      "beforeFileText": "{\n  \"applicability\": \"适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所\",\n  \"clauseId\": \"C_XLSX_WEB_43A2B4ED165B4335B1A1889F\",\n  \"hazardId\": \"H_15607_4_8_1_1\",\n  \"id\": \"K_XLSX_WEB_B7C70D8364C74AFD84AADC0C\",\n  \"jurisdictionCode\": \"CN\",\n  \"legacyRole\": \"直接依据\",\n  \"lifecycle\": \"proposed\",\n  \"priority\": 10,\n  \"reason\": \"隐患对象、整改措施与官方条款逐项对应。\",\n  \"role\": \"direct\",\n  \"status\": \"needs_review\"\n}\n",
+      "beforeSha256": "680ecef43a3aa47eda5de40c6ba16f5c7ab97b13ccc25afaa2a7eb1309cf0954",
+      "afterSha256": "f751f81fe29ed7f3e91da24c51756e961b294eeead3305bc1ff928a9f4b15920"
+    },
+    "knowledge/manifest.json": {
+      "beforeFileText": "{\n  \"asOf\": \"2026-10-05\",\n  \"batch\": \"complete-remaining-inventory-20261005\",\n  \"batches\": [\n    {\n      \"id\": \"gb12801-exclusive-enddate-20260930\",\n      \"evidenceAdded\": 1,\n      \"lawVersionsCorrected\": 1,\n      \"scope\": \"Official replacement-date verification; exclusive version boundary correction only.\"\n    },\n    {\n      \"id\": \"source-integrity-containment-20260930\",\n      \"evidenceAdded\": 1,\n      \"hazardMeasuresCorrected\": 1,\n      \"hazardReviewsWithdrawn\": 6,\n      \"linkReviewsWithdrawn\": 6,\n      \"clauseTextReviewsWithdrawn\": 1,\n      \"scope\": \"Targeted review withdrawal and substantive occupational-health measures correction; canonical inventory and lifecycle preserved. Local-only recovery; publication remains paused.\"\n    },\n    {\n      \"id\": \"reviewed-remediation-20260930\",\n      \"evidenceAdded\": 9,\n      \"hazardsCorrected\": 20,\n      \"linkScopesCorrected\": 4,\n      \"clauseTextsCorrected\": 1,\n      \"hazardReviewsUpdated\": 20,\n      \"linkReviewsUpdated\": 22,\n      \"clauseReviewsUpdated\": 1,\n      \"scope\": \"Exact, substantively reviewed remediation batch only; canonical IDs and lifecycle preserved. No whole-corpus or field-state certification.\"\n    },\n    {\n      \"clauseTextsCorrected\": 0,\n      \"evidenceAdded\": 14,\n      \"hazardDescriptiveFieldsCorrected\": 2,\n      \"hazardReviewsUpdated\": 13,\n      \"hazardScopeFieldsCorrected\": 26,\n      \"hazardsCorrected\": 13,\n      \"id\": \"thirteen-source-scope-20260930\",\n      \"linkReviewsUpdated\": 13,\n      \"linkScopesCorrected\": 13,\n      \"scope\": \"Thirteen independently examined source-scope corrections: exact 26 entities and 41 fields. Existing stable IDs, lifecycle, measures, all clauses/versions and all six governed profiles preserved. New content/applicability reviews retain their complete previous review; no field-profile admission or site finding.\",\n      \"sourceFieldsCorrected\": 41\n    },\n    {\n      \"id\": \"gb12801-first-sentence-transition-20261001\",\n      \"evidenceAdded\": 2,\n      \"hazardsAdded\": 1,\n      \"linksAdded\": 1,\n      \"lawVersionsCorrected\": 1,\n      \"clauseTextReviewsUpdated\": 1,\n      \"scope\": \"One independently reviewed first-sentence platform/passage/work-surface fall-prevention requirement only. Old hazard/link/reviews retained unchanged for historical asOf; no toe-board hazard, no bulk migration, no field-profile admission.\"\n    },\n    {\n      \"id\": \"aq3067-metadata-reference-only-20261001\",\n      \"lawsAdded\": 1,\n      \"lawVersionsAdded\": 1,\n      \"evidenceAdded\": 1,\n      \"identityMetadataReviewsAdded\": 1,\n      \"versionMetadataReviewsAdded\": 1,\n      \"scope\": \"AQ 3067-2026 identity, dates, applicability scope and official links only; no clauses, hazards, links, full-text publication or 2017 succession decisions.\"\n    },\n    {\n      \"id\": \"sector-major-directory-metadata-20261001\",\n      \"lawsAdded\": 9,\n      \"lawVersionsAdded\": 9,\n      \"evidenceAdded\": 25,\n      \"identityMetadataReviewsAdded\": 9,\n      \"versionMetadataReviewsAdded\": 9,\n      \"scope\": \"Eight primary official metadata entries plus one noncoal supplement; metadata-only, no C/H/K, no full-text approval, unknown commencement dates remain null.\"\n    },\n    {\n      \"id\": \"city-gas-full-criteria-20261001\",\n      \"clausesAdded\": 11,\n      \"evidenceAdded\": 2,\n      \"clauseTextReviewsAdded\": 11,\n      \"publicationScopeReviewsAdded\": 1,\n      \"hazardsAdded\": 0,\n      \"linksAdded\": 0,\n      \"scope\": \"Complete official administrative standard body, Articles 1–11; 20 numbered subitems plus Articles 8 and 10 as whole-article criteria. Independent text and publication-scope review; no hazard associations or technical-standard republication.\"\n    },\n    {\n      \"id\": \"construction-full-criteria-20261001\",\n      \"clausesAdded\": 18,\n      \"evidenceAdded\": 2,\n      \"clauseTextReviewsAdded\": 18,\n      \"publicationScopeReviewsAdded\": 1,\n      \"hazardsAdded\": 0,\n      \"linksAdded\": 0,\n      \"scope\": \"Complete official construction administrative standard body, Articles 1–18; 51 top-level numbered subitems plus Articles 16 and 17. Four nested precursors in Article 5(4) retain their parent condition and are not added again. Independent text and publication-scope review; no hazard associations.\"\n    },\n    {\n      \"id\": \"coal-full-criteria-20261001\",\n      \"clausesAdded\": 21,\n      \"evidenceAdded\": 8,\n      \"clauseTextReviewsAdded\": 21,\n      \"publicationScopeReviewsAdded\": 1,\n      \"hazardsAdded\": 0,\n      \"linksAdded\": 0,\n      \"scope\": \"Complete official coal regulation body Articles 1–21 and seven embedded tables. Articles 4–20 contain 123 first-level subitems; Article 3 is a directory and is not counted again. Seven later authority clarifications remain separate from normative text. Independent text, table, applicability and publication-scope review; no hazard associations.\"\n    },\n    {\n      \"id\": \"power-full-criteria-20261001\",\n      \"clausesAdded\": 38,\n      \"evidenceAdded\": 4,\n      \"clauseTextReviewsAdded\": 38,\n      \"publicationScopeReviewsAdded\": 1,\n      \"hazardsAdded\": 0,\n      \"linksAdded\": 0,\n      \"scope\": \"Official power regulation Articles 1–38, including all determination rules and Articles 35–38 definitions and scope. Articles 5–13 contain 48 numbered items plus Article 14. The official report-form appendix is linked, not reproduced; whole-document completeness remains false. No hazard associations.\"\n    },\n    {\n      \"id\": \"noncoal-reference-reading-20261001\",\n      \"readingGroupsAdded\": 1,\n      \"readingDocumentsAdded\": 2,\n      \"readingFirstLevelItemsAdded\": 72,\n      \"currentClausesAdded\": 0,\n      \"hazardsAdded\": 0,\n      \"linksAdded\": 0,\n      \"evidenceAdded\": 0,\n      \"scope\": \"Independent official-text reading only; 2022 main + 2024 supplement kept together. Unknown effective date remains null; no current-basis eligibility. Two item-by-item text reviews and one separate reading scope/rights review.\"\n    },\n    {\n      \"id\": \"civil-fireworks-reference-reading-20261001\",\n      \"readingGroupsAdded\": 2,\n      \"readingDocumentsAdded\": 2,\n      \"readingFirstLevelItemsAdded\": 37,\n      \"currentClausesAdded\": 0,\n      \"hazardsAdded\": 0,\n      \"linksAdded\": 0,\n      \"evidenceAdded\": 0,\n      \"scope\": \"Civil explosives 17 items with six inline notes and fireworks-only 20 items, independently reviewed administrative source reading. Actual starting dates remain unknown; no current C/H/K eligibility. Original interpretations not copied, uncertain interpretation details explicitly pending.\"\n    },\n    {\n      \"id\": \"commerce-candidate-dispositions-20261002\",\n      \"candidatesReviewed\": 44,\n      \"conditionalCanonicalMerges\": 6,\n      \"outOfScopeRejected\": 1,\n      \"scope\": \"44 item-level original-record text and direct-basis reviews; stable IDs and source lineage retained. Conditional canonical merges, cross-domain rejection and narrowly scoped definition admissions are separate from field findings and remediation. Unresolved definitions remain proposed and unpublished.\",\n      \"hazardsAdmitted\": 18,\n      \"admittedHazardIds\": [\n        \"H_COM_COMBUSTIBLE_CLUTTER\",\n        \"H_COM_EDGE_PROTECTION\",\n        \"H_COM_ELECTRICAL_BOX_COVER\",\n        \"H_COM_EXTINGUISHER_RATING\",\n        \"H_COM_FIRE_EQUIP_MARK\",\n        \"H_COM_GAS_DETECTOR_LOCATION\",\n        \"H_COM_HAND_LAMP_VOLTAGE\",\n        \"H_COM_HIGH_FALL_PROTECTION\",\n        \"H_COM_LIFTING_BARRICADE\",\n        \"H_COM_NO_FIRE_EQUIP\",\n        \"H_COM_OUTDOOR_AD_DAMAGE\",\n        \"H_COM_PAINT_SHIFT_QUANTITY\",\n        \"H_COM_SLIPPERY_FLOOR\",\n        \"H_COM_SOCKET_LOOSE\",\n        \"H_COM_SPRAY_PAINT_STORAGE\",\n        \"H_COM_UNATTENDED_PATROL\",\n        \"H_COM_VALVE_OBSTRUCTED\",\n        \"H_COM_WRONG_FIRE_DOOR\"\n      ],\n      \"baselineCommit\": \"26b6c3e98f84ce46a9b2ee82694da26b74fb9eff\",\n      \"addedEntityIds\": {\n        \"laws\": [\n          \"LF_STD_CJJT146\",\n          \"LF_STD_CJJT149\",\n          \"LF_STD_GB31654\",\n          \"LF_STD_GB55034\",\n          \"LF_STD_JGJT46\"\n        ],\n        \"lawVersions\": [\n          \"LV_STD_CJJT146_2011\",\n          \"LV_STD_CJJT149_2021\",\n          \"LV_STD_GB31654_2021\",\n          \"LV_STD_GB55034_2022\",\n          \"LV_STD_JGJT46_2024\"\n        ],\n        \"clauses\": [\n          \"C_CJJT146_3_3_2\",\n          \"C_CJJT146_3_3_3\",\n          \"C_CJJT146_3_3_5\",\n          \"C_CJJT146_4_4_5\",\n          \"C_CJJT149_10_2_1\",\n          \"C_CJJT149_1_0_2\",\n          \"C_CJJT149_2_0_1\",\n          \"C_CJJT149_2_0_5\",\n          \"C_COM_GB55037_8_1_1\",\n          \"C_COM_XF1131_6_15\",\n          \"C_GB31654_2021_3_3_5_2\",\n          \"C_GB50303_2015_14_2_3\",\n          \"C_GB50303_2015_20_2_1\",\n          \"C_GB50303_2015_20_2_2\",\n          \"C_GB50303_2015_5_2_10\",\n          \"C_GB55034_2022_3_2_1\",\n          \"C_GB55034_2022_3_2_3\",\n          \"C_GB55034_2022_3_4_1\",\n          \"C_GB55037_6_4_2\",\n          \"C_GB55037_6_4_3\",\n          \"C_GB6514_6_2_1_2\",\n          \"C_JGJT46_2024_9_2_3\",\n          \"C_XF1131_5_2_1\"\n        ],\n        \"hazards\": [],\n        \"links\": [\n          \"K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_1\",\n          \"K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_2\",\n          \"K_COM_20261002_EXTINGUISHER_RATING_GB55036_10_0_3\",\n          \"K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_2\",\n          \"K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_3\",\n          \"K_COM_20261002_GAS_DETECTOR_LOCATION_CJJT146_3_3_5\",\n          \"K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_10_2_1\",\n          \"K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_1_0_2\",\n          \"K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_1\",\n          \"K_COM_20261002_OUTDOOR_AD_DAMAGE_CJJT149_2_0_5\",\n          \"K_COM_20261002_PAINT_SHIFT_QUANTITY_GB6514_6_2_1_2\",\n          \"K_COM_20261002_SPRAY_PAINT_STORAGE_DBD6E2B5ACAB595BE7EA59D3\",\n          \"K_COM_20261002_SPRAY_PAINT_STORAGE_XLSX_FT_041DA9C310E071B490B6DF44\",\n          \"K_COM_20261002_VALVE_OBSTRUCTED_CJJT146_4_4_5\",\n          \"K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_2\",\n          \"K_COM_20261002_WRONG_FIRE_DOOR_GB55037_6_4_3\",\n          \"K_COM_BOX_COVER_GB50303_14_2_3\",\n          \"K_COM_BOX_COVER_GB50303_20_2_1\",\n          \"K_COM_EDGE_GB55034_3_2_3\",\n          \"K_COM_FIRE_EQUIP_MARK_FIRELAW_16_2\",\n          \"K_COM_HAND_LAMP_JGJT46_9_2_3\",\n          \"K_COM_HIGH_FALL_GB55034_3_2_1\",\n          \"K_COM_LIFTING_GB55034_3_4_1\",\n          \"K_COM_NO_FIRE_EQUIP_GB55037_8_1_1\",\n          \"K_COM_PACKAGING_XF1131_6_15\",\n          \"K_COM_PATROL_XF1131_5_2_1\",\n          \"K_COM_SLIPPERY_GB31654_3_3_5_2\",\n          \"K_COM_SOCKET_GB50303_20_2_1\",\n          \"K_COM_SOCKET_GB50303_20_2_2\"\n        ],\n        \"evidence\": [\n          \"E_COM_CJJ146_ORIGINAL_20261002\",\n          \"E_COM_CJJ146_STATUS_20261002\",\n          \"E_COM_CJJ149_ANNOUNCEMENT_20261002\",\n          \"E_COM_CJJ149_ORIGINAL_20261002\",\n          \"E_COM_CJJ149_STATUS_20261002\",\n          \"E_COM_CJJ149_USE_2026\",\n          \"E_COM_GB31654_FLOOR_20261002\",\n          \"E_COM_GB50303_DATES_20261002\",\n          \"E_COM_GB50303_ORIGINAL_20261002\",\n          \"E_COM_GB55024_PARTIAL_REPEAL_20261002\",\n          \"E_COM_GB55034_NOTICE_20261002\",\n          \"E_COM_GB55034_TEXT_20261002\",\n          \"E_COM_GB55037_8_1_1_20261002\",\n          \"E_COM_GB55037_ORIGINAL_20261002\",\n          \"E_COM_GB6514_6_2_1_2_20261002\",\n          \"E_COM_JGJT46_NOTICE_20261002\",\n          \"E_COM_JGJT46_TEXT_20261002\",\n          \"E_COM_XF1131_PACKAGING_20261002\",\n          \"E_COM_XF1131_PATROL_20261002\",\n          \"E_COM_XF1131_STATUS_20261002\"\n        ],\n        \"successions\": []\n      },\n      \"independentLegalReview\": \"passed_bounded_content_scope_currency\",\n      \"withdrawnMergeIds\": [\n        \"H_COM_PLUGSTRIP_COMBUSTIBLE\"\n      ],\n      \"independentReviewRef\": \"docs/commerce-independent-review-20261002.json\",\n      \"independentReviewSha256\": \"bf693e5e2418096039e51654bfa7d2dde272cce6964729a51fd7f27b85350d1d\"\n    },\n    {\n      \"id\": \"commerce-remaining-gaps-20261002\",\n      \"baselineCommit\": \"9cafe88cfac0d66f10321bc83f1cc5e7029b72f2\",\n      \"candidatesReviewed\": 19,\n      \"hazardsAdmitted\": 9,\n      \"conditionalCanonicalMerges\": 1,\n      \"unsupportedGenericClaimsRejected\": 9,\n      \"verificationProtocolsCompleted\": 1,\n      \"addedEntityIds\": {\n        \"laws\": [\n          \"LF_REG_NJ_HOUSE_SAFETY\",\n          \"LF_STD_AQ6111\",\n          \"LF_STD_GB55023\",\n          \"LF_STD_JGJ80\",\n          \"LF_STD_TSG08_2026\"\n        ],\n        \"lawVersions\": [\n          \"LV_REG_NJ_HOUSE_SAFETY_2017\",\n          \"LV_STD_AQ6111_2023\",\n          \"LV_STD_GB55023_2022\",\n          \"LV_STD_JGJ80_2016\",\n          \"LV_STD_TSG08_2026\"\n        ],\n        \"clauses\": [\n          \"C_AQ6111_2023_6_2_10\",\n          \"C_COM_GB55009_6_2_5\",\n          \"C_COM_GB55023_2022_5_3_1\",\n          \"C_COM_GBT34525_9_2\",\n          \"C_COM_JGJ80_2016_8_2_1\",\n          \"C_COM_NJEBIKE_10\",\n          \"C_COM_NJHOUSE_24\",\n          \"C_COM_NJHOUSE_27\",\n          \"C_COM_NJHOUSE_29\",\n          \"C_COM_NJHOUSE_31\",\n          \"C_COM_NJHOUSE_32\",\n          \"C_COM_TSG08_2026_4_12_1\",\n          \"C_COM_TSG08_2026_4_12_2_2\"\n        ],\n        \"hazards\": [\n          \"H_COM_MOBILE_ELECTRIC_CORD_SELECTION\"\n        ],\n        \"links\": [\n          \"K_COM_20261002_EV_CHARGING_NJ10\",\n          \"K_COM_BREAKER_SIGN_GB2894_7_4_1\",\n          \"K_COM_GAP_SAFETY_NET_DEFECT_JGJ80_2016_8_2_1\",\n          \"K_COM_GAP_SCAFFOLD_LOAD_GB55023_2022_5_3_1\",\n          \"K_COM_GAS_GAP_20261002_FLAME_FAILURE_VERIFY\",\n          \"K_COM_GAS_GAP_20261002_LPG_NEAR_HEAT\",\n          \"K_COM_GAS_GAP_20261002_OXY_CUTTING_DISTANCE\",\n          \"K_COM_PLUGSTRIP_CORD_GBT13869_5_2_2\",\n          \"K_COM_PPE_AQ6111_6_2_10\"\n        ],\n        \"evidence\": [\n          \"E_COM_AQ6111_OFFICIAL_20261002\",\n          \"E_COM_AQ6111_STATUS_20261002\",\n          \"E_COM_GB55009_6_2_5_20261002\",\n          \"E_COM_GB55023_5_3_1_GD_20261002\",\n          \"E_COM_GB55023_NOTICE_20261002\",\n          \"E_COM_GBT34525_ORIGINAL_20261002\",\n          \"E_COM_GBT34525_STATUS_20261002\",\n          \"E_COM_HAZCAB_LAW_SCOPE_20261002\",\n          \"E_COM_JGJ80_8_2_1_20261002\",\n          \"E_COM_JGJ80_CURRENT_USE_20261002\",\n          \"E_COM_JGJ80_PARTIAL_REPEAL_20261002\",\n          \"E_COM_NJ348_20261002\",\n          \"E_COM_NJ_HOUSE_SAFETY_20261002\",\n          \"E_COM_TSG08_2026_IMPLEMENT_20261002\",\n          \"E_COM_TSG08_2026_NOTICE_20261002\",\n          \"E_COM_TSG08_2026_TEXT_20261002\",\n          \"E_GBT13869_FUJIAN_ORIGINAL_20261002\"\n        ],\n        \"successions\": []\n      },\n      \"admittedHazardIds\": [\n        \"H_COM_BREAKER_LABEL_OBSCURED\",\n        \"H_COM_EV_CHARGING_AREA\",\n        \"H_COM_FLAME_FAILURE_VERIFY\",\n        \"H_COM_INSULATING_PPE_TEST\",\n        \"H_COM_LPG_NEAR_HEAT\",\n        \"H_COM_MOBILE_ELECTRIC_CORD_SELECTION\",\n        \"H_COM_OXY_CUTTING_DISTANCE\",\n        \"H_COM_SAFETY_NET_DEFECT\",\n        \"H_COM_SCAFFOLD_LOAD\"\n      ],\n      \"independentLegalReview\": \"passed_bounded_content_scope_currency\",\n      \"existingCandidatesAdmitted\": 8,\n      \"newAtomicHazardsAdmitted\": 1,\n      \"independentReviewRef\": \"docs/commerce-remaining-gaps-independent-review-20261002.json\",\n      \"independentReviewSha256\": \"5603beda1f190ab9d1fbe6357782d2bb6a930d443c2b619e349b4ddd4d88766b\"\n    },\n    {\n      \"id\": \"public-citation-scope-corrections-20261002\",\n      \"baselineCommit\": \"5c02e50bd260986afde82b03782ee09a1a8b765f\",\n      \"scope\": \"Bounded official-source citation, provision-number and applicability corrections; unsupported associations withdrawn, unresolved technical duties retained as unadmitted. Stable IDs and prior review records preserved. No enterprise-source material or full-standard republication. Includes the bounded GB50444 5.3.1 body-text correction and repair/scrapping boundary; no repair-cycle rule admission.\",\n      \"lawsAdded\": 1,\n      \"lawVersionsAdded\": 1,\n      \"clausesAdded\": 3,\n      \"linksAdded\": 2\n    },\n    {\n      \"id\": \"common-hazards-bounded-20261003\",\n      \"evidenceAdded\": 1,\n      \"clausesAdded\": 2,\n      \"hazardsAdded\": 5,\n      \"existingCandidatesAdmitted\": 1,\n      \"linksAdded\": 9,\n      \"directLinksAdded\": 6,\n      \"supportingLinksAdded\": 3,\n      \"clauseTextReviewsUpdated\": 3,\n      \"scope\": \"Six source-reviewed generic checks: five new hazards and narrowed existing H004; no source-company findings, no automatic major classification, no full-standard republication rights expansion.\",\n      \"admittedHazardIds\": [\n        \"H_46768_5_8_6\",\n        \"H_46768_5_10_2\",\n        \"H_46768_6_2_6\",\n        \"H_GBT13869_REMOVED_POWER_END\",\n        \"H_GBT13869_RESTART_AFTER_STORAGE\",\n        \"H004\"\n      ],\n      \"reviewRef\": \"docs/common-hazards-bounded-20261003.json\"\n    },\n    {\n      \"id\": \"public-technical-citations-20261003\",\n      \"evidenceAdded\": 2,\n      \"clausesAdded\": 1,\n      \"clausesCorrected\": 6,\n      \"hazardsCorrected\": 6,\n      \"linksCorrected\": 8,\n      \"regionalDependencyReviews\": 3,\n      \"majorAssociationRechecks\": 1,\n      \"pendingLinkBindingMaintained\": 1,\n      \"scope\": \"Bounded GB50054 ordinary heavy-dust design scope and JGJ91 original-clause corrections plus shared Jiangsu Article 30 geography and one explicitly re-reviewed H061 major dependency; exact stable identities and complete prior reviews retained; no candidate admission, field-profile rewrite, or full-standard republication.\"\n    },\n    {\n      \"id\": \"source-reconstruction-20261004\",\n      \"baselineCommit\": \"ffdfee5d79717c9fefe736830174e177cec4703c\",\n      \"scope\": \"Source-grounded reconstruction of bounded public citations, electrical candidates, static/fire scope, shared false-citation repair, complete ordinary clause tables and exact same-obligation merges; stable IDs and complete prior entities/reviews retained. No enterprise facts, private ledgers or raw PDF publication. New reconstruction, not byte restoration of unavailable earlier candidate.\",\n      \"entityCountDelta\": {\n        \"laws\": 4,\n        \"lawVersions\": 4,\n        \"clauses\": 23,\n        \"hazards\": 5,\n        \"links\": 14,\n        \"evidence\": 30\n      },\n      \"independentReviewStatus\": \"bounded_source_groups_have_separate_exact_receipts; final_integrated_candidate_audit_and_exact_head_CI_are_separate_requirements\",\n      \"releaseStatus\": \"candidate_source; publication_status_requires_exact_PR_CI_deployment_and_online_receipt\",\n      \"reviewReceipts\": [\n        \"docs/PUBLIC_CITATION_INDEPENDENT_REVIEW_20261004.json\",\n        \"docs/ELECTRICAL_INDEPENDENT_REVIEW_20261004.json\",\n        \"docs/STATIC_FIRE_INDEPENDENT_REVIEW_20261004.json\",\n        \"docs/SHARED_SOURCE_INDEPENDENT_REVIEW_20261004.json\"\n      ],\n      \"integrationAmendments\": [\n        \"Rejected H052 fallback keeps only Fire Law evidence as normative; XF1131 is comparison evidence, with original refs retained.\",\n        \"Two independently reviewed extinguisher definitions proved identical across all substantive fields and three precise obligations; one duplicate H and three K are superseded with complete history. Separate independent amendment receipts and current tests are required.\"\n      ]\n    },\n    {\n      \"id\": \"bounded-public-citation-containment-20261004\",\n      \"scope\": \"One erroneous GB15577 clause and its 24 direct dependencies, two originally flagged Safety Law mismatches, plus the single existing dependency of a replacement GBZ1 clause found to contain a paraphrase. Exact original-source repair or review withdrawal only; stable IDs/lifecycles and full prior reviews retained; no private inputs, field-profile admission or major-catalog edits.\",\n      \"hazardsExamined\": 27,\n      \"preciseSourceRebindings\": 21,\n      \"directReviewsWithdrawn\": 6,\n      \"entityCountDelta\": {\n        \"laws\": 1,\n        \"lawVersions\": 1,\n        \"clauses\": 7,\n        \"hazards\": 0,\n        \"links\": 0,\n        \"evidence\": 12,\n        \"successions\": 0,\n        \"requirements\": 0\n      },\n      \"independentReviewStatus\": \"pending_exact_candidate_review\",\n      \"releaseStatus\": \"unpublished_author_candidate\",\n      \"evidenceMetadataCorrected\": 1\n    },\n    {\n      \"id\": \"shared-false-citation-disposition-20261004\",\n      \"hazardsIndividuallyReviewed\": 27,\n      \"exactRebindings\": 21,\n      \"currentDirectReviewWithdrawals\": 6,\n      \"additionalHazards\": 0,\n      \"additionalLinks\": 0,\n      \"receipt\": \"docs/SHARED_SOURCE_INDEPENDENT_REVIEW_20261004.json\",\n      \"scope\": \"Full original-source and applicability audit; false GB15577 shared source removed, scoped correct sources rebound; six unsupported generic predicates retained as unavailable. Not a whole-corpus or field-fact approval.\"\n    },\n    {\n      \"id\": \"exact-extinguisher-duplicate-merge-20261004\",\n      \"hazardsSuperseded\": 1,\n      \"linksSuperseded\": 3,\n      \"sourceHazardId\": \"H_AD8892D4501D426680ED439882\",\n      \"canonicalHazardId\": \"H_365F2FD05EA345A8A4E71BC9B9\",\n      \"historyReceipt\": \"docs/EXTINGUISHER_DUPLICATE_MERGE_20261004.json\",\n      \"scope\": \"Exact same obligation, object, exclusions and monthly/halfmonthly/record-keeping basis; source IDs retained, no rule or clause removed.\"\n    },\n    {\n      \"id\": \"official-clauses-20261005\",\n      \"baselineCommit\": \"792d0c9c0ee553e8e0a0312a9a190d82baccf4d1\",\n      \"entityCountDelta\": {\n        \"laws\": 3,\n        \"lawVersions\": 4,\n        \"clauses\": 18,\n        \"hazards\": 6,\n        \"links\": 13,\n        \"evidence\": 11\n      },\n      \"scope\": \"Public integration is limited to eight independently reviewed bounded rules and necessary exact source/temporal checks. Existing main candidate bytes remain unchanged; newly researched pending hose and Jiangsu material is withheld outside this public tree. Stable IDs/history retained; no site facts, rectification or raw PDF publication.\",\n      \"reviewStatus\": \"independent_review_and_exact_commit_release_checks_required\"\n    },\n    {\n      \"id\": \"bounded-residual-repairs-20261005\",\n      \"baselineCommit\": \"23d0e0d415762ccb00341e9e0584c1694f15881d\",\n      \"entityCountDelta\": {\n        \"laws\": 2,\n        \"lawVersions\": 2,\n        \"clauses\": 5,\n        \"links\": 4,\n        \"evidence\": 10\n      },\n      \"scope\": \"Eleven precisely bounded existing hazard definitions: five warehouse, one cryogenic gas training, one molten-metal lifting NDT, two lightning consumers, one buried cable protection and one electrical monitoring. Separate rejected-link retirement, bounded duplicate disposition and candidate isolation do not count as newly verified legal obligations. Previous PR110 eight rules and deferred source groups untouched. No private sources, field facts, rectification or formal enterprise approval.\",\n      \"reviewStatus\": \"exact_independent_review_and_full_release_verification_required\"\n    },\n    {\n      \"id\": \"complete-remaining-inventory-20261005\",\n      \"baselineCommit\": \"475856179bfd3c6c3446d10cfc4de73e51f228f3\",\n      \"reviewScope\": {\n        \"totalExistingHazardIds\": 331,\n        \"proposed\": 319,\n        \"activeExcludedFromCurrentPublicProjection\": 12,\n        \"explicitlySkippedJiangsuIds\": 4\n      },\n      \"entityCountDelta\": {\n        \"laws\": 5,\n        \"lawVersions\": 5,\n        \"clauses\": 35,\n        \"links\": 67,\n        \"evidence\": 36\n      },\n      \"scope\": \"One complete itemized review of the remaining inventory, bounded supported repairs, and necessary exact-source consumer closure. Separate unsupported original obligations, explicit exclusions, and case evidence requirements. Preserve IDs and history. Do not treat narrowed rules or branch mappings as whole-original-claim or field-fact approval.\",\n      \"reviewStatus\": \"final_fixed_tree_independent_review_and_unified_release_verification_required\"\n    }\n  ],\n  \"counts\": {\n    \"laws\": 144,\n    \"lawVersions\": 148,\n    \"clauses\": 3222,\n    \"hazards\": 2148,\n    \"links\": 2118,\n    \"evidence\": 1444,\n    \"successions\": 26,\n    \"requirements\": 75\n  },\n  \"formatVersion\": \"4.0-alpha\",\n  \"scope\": \"知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。\",\n  \"laws\": 144,\n  \"lawVersions\": 148,\n  \"clauses\": 3222,\n  \"hazards\": 2148,\n  \"links\": 2118,\n  \"evidence\": 1444,\n  \"successions\": 26,\n  \"activeHazards\": 1789,\n  \"proposedHazards\": 230,\n  \"supersededHazards\": 129,\n  \"lifecycle\": {\n    \"active\": 1789,\n    \"proposed\": 230,\n    \"superseded\": 129\n  },\n  \"requirements\": 75\n}\n",
+      "beforeSha256": "03d39469cc40305b932478f185fcd08326b69ad10b604bc74d783b391b76aa48",
+      "afterSha256": "c6b00139ff3cf707adc894161011ec7a738f1c6574f640b1b7d68bb97ec4c9d2"
+    },
+    "knowledge/reviews/clauses/C_15607_4_2_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_15607_4_2_1\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_15607_2023\"\n  ],\n  \"reason\": \"条文核验：GB 15607-2023 第4.2.1条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"9725f62fbbed16d5904b9f0024a97e5b5caa0f905db4ffea52e6722e2276bfa0\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "beforeSha256": "9da9bce9cf0831fc08e9b8a4ea033a16f63ef0f260c1f3f359653d60be8345ac",
+      "afterSha256": "e9daebc6f496415494d80a1821a8f815683ff46bb13cf52acb5dce490491fc63"
+    },
+    "knowledge/reviews/clauses/C_15607_4_4_3.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_15607_4_4_3\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_15607_2023\"\n  ],\n  \"reason\": \"条文核验：GB 15607-2023 第4.4.3条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"bf2511e77e0431667787ff61923f17ba3c96cf730048c75f1dde78f85a3f1b41\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "beforeSha256": "67e7d3e62ff40d0a96d6931d457c562729b94a86a8047b87c31740b8e7ca7ff9",
+      "afterSha256": "b3544acc8dfc05f758958b50ead8fa03716193a4000c56d0831486e39f3db093"
+    },
+    "knowledge/reviews/clauses/C_15607_4_7_2.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_15607_4_7_2\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_15607_2023\"\n  ],\n  \"reason\": \"条文核验：GB 15607-2023 第4.7.2条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"0870e371f059f4cfb7e4fdfaabb9f640d33775e9b6d21dba186791493554dd40\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "beforeSha256": "be7e828f90a717b94670d9e2ef29d6d5559322c28e5af4d69d669061beedbccc",
+      "afterSha256": "0e6fb8f9435063ea7462669da150e6c131bb8ae5d20108e09271dc58854a7a85"
+    },
+    "knowledge/reviews/clauses/C_15607_4_8_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_15607_4_8_1\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_15607_2023\"\n  ],\n  \"reason\": \"条文核验：GB 15607-2023 第4.8.1条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"0166e0b901a1b78d23ef3926bc84801d38b301bb2a8458fa39b283ea2a6e7adf\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "beforeSha256": "8f14717946ba39e3acc1cfcb3dbb08241e0831e075be4712a122fe82e14e1237",
+      "afterSha256": "1f6b8d39159989c382c569ff33a3d7c2b8993c83471972d9af9b78f3f77bdbc8"
+    },
+    "knowledge/reviews/clauses/C_15607_5_2_8.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_15607_5_2_8\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_15607_2023\"\n  ],\n  \"reason\": \"条文核验：GB 15607-2023 第5.2.8条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"b91956747ac6f11ad00ec77a69d720c2d647fa33dd6de66b8bd82aec2ed76db8\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "beforeSha256": "3a284c9c6243985d2d243fccd06c5912034baac3f26bff62a1adf48f8016e576",
+      "afterSha256": "22c5f25214e6747db585f30fb509873af5e2bb41d0a1d5a613b906d1cdf34986"
+    },
+    "knowledge/reviews/clauses/C_15607_6_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-12\",\n  \"decision\": \"verified\",\n  \"entityId\": \"C_15607_6_1\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_15607_2023\"\n  ],\n  \"reason\": \"条文核验：GB 15607-2023 第6.1条引文（剔除页眉页脚后去空白比对）与归档官方全文逐字一致。\",\n  \"reviewType\": \"text\",\n  \"reviewedContentHash\": \"6ea5bda720124dcc577e0b19b88ba83c5389668713c2d9f01c9460a1d9a1035a\",\n  \"reviewer\": \"GLM-5.3-Flash (ZCode)\"\n}\n",
+      "beforeSha256": "81e645b0936df907864e98bd16b4e2fc60ba67b3d5fd4acf004e44b08cec95f8",
+      "afterSha256": "f6b1607c9f793779699f7dc334bd275b0723dbaba12d238190e3e8524023a760"
+    },
+    "knowledge/reviews/clauses/C_GB9448_10.json": {
+      "beforeFileText": "{\n  \"decision\": \"verified\",\n  \"entityId\": \"C_GB9448_10\",\n  \"entityType\": \"clause\",\n  \"evidenceRefs\": [\n    \"E_d2ddf39931d8f80e6b093ab06826ce9c6c7701e9febb594e01240370212300b0\"\n  ],\n  \"reviewType\": \"text\",\n  \"reviewer\": \"ZCode-DeepSeek\",\n  \"checkedAt\": \"2026-09-10\",\n  \"reason\": \"条文核验：第10章；正文取自本地私有全文库归档原件（GB 9448-2025 / GB 2894-2025），为原 Phase8 待核验条款的新版对应条款。\",\n  \"reviewedContentHash\": \"a4d32280426db56e5dc7084fa50ee3e19458eb4b62b0437c05b508e48b3b767c\"\n}\n",
+      "beforeSha256": "f0f63d6a55e504375b76191ecab4925ab061d6b82c00fe25f3d23e5656a3e914",
+      "afterSha256": "696479128516be2959c6c6496cb7cdcaf86574c08dd152463d0b9126abf56c9d"
+    },
+    "knowledge/reviews/clauses/C_PEND_GB15607_4_2_2_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "64d1dcf0b5278c33b78fe89de2823d62e3d63eeac49153da41a3b3223dbc2c4f"
+    },
+    "knowledge/reviews/clauses/C_PEND_GB6514_7_3_2_1_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "34ec07ac98e2e18487a173965aa34f7ae88a36143db6a3fc5a955f9f2890b1b2"
+    },
+    "knowledge/reviews/hazards/H_15607_4_2_1_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_15607_4_2_1_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_DF4885B7397742CC1AB1C04D\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"7c19fce3a5b1e6024b0d0f7e7c9a06a8985a9b6d2bcdef4627911617037b00be\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "beforeSha256": "427e771df665fc4b59125a5c2b9e063835a1981bfad23c5e758dbe8a42eb9e86",
+      "afterSha256": "f4251529772466cde99e381aa8e7561775cf36d8062ea8f893946b0b77bf283b"
+    },
+    "knowledge/reviews/hazards/H_15607_4_4_3_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_15607_4_4_3_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_F6DB04139AE32A4BB05995EF\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"7e0f6b48ca881969595da39b65e151b561eb81bc059d7c46bbd737a6a0c10d16\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "beforeSha256": "2d44f777ac37a579d22ac1fbb01971f997c4e96178cc3d719c6eacba5818d6a6",
+      "afterSha256": "bea4c373629159e9c67224ce136077f9aae4b6da979e767792affe9e9d813caa"
+    },
+    "knowledge/reviews/hazards/H_15607_4_8_1_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_15607_4_8_1_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_34302CBDB440529AAA6874B7\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"e1138fbb40bae1404d537d60974bc5b49bd341edac617af546c0428e91ebb568\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "beforeSha256": "fa84188db3ddc17b97dc69b06dc9319a888cd5f62b047be9e2c627f69e2eea62",
+      "afterSha256": "4847e03003ec1b2aac37f66b5f35d658840b111a1c015d5ce2c48d221de5f435"
+    },
+    "knowledge/reviews/hazards/H_15607_5_2_8_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_15607_5_2_8_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_2EC05EA5707687AC26D5B59A\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"f25395a0ddce32d2579c33b4c71ebcffd8515cd73c18b26f7d7fe4a369727d9d\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "beforeSha256": "03e137e12c84defc496c37c176c48fe3b349efd5a44f2d356d13413bb3dab32f",
+      "afterSha256": "d9522efbfc91779d79f01d88994c5b24a045b152336bf24e4123393ff43aa0ca"
+    },
+    "knowledge/reviews/hazards/H_15607_6_1_1.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"decision\": \"verified\",\n  \"entityId\": \"H_15607_6_1_1\",\n  \"entityType\": \"hazard\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_D5327C2F3B1BD9F27F4D42EC\"\n  ],\n  \"reason\": \"已核对隐患描述和整改措施与官方法规条款的对象及义务。\",\n  \"reviewType\": \"content\",\n  \"reviewedContentHash\": \"b049b45662e96b333b7df3ad59ea73ad687bf8730487791bfaea3f39d45acfaf\",\n  \"reviewer\": \"Codex正式核验批次20260913\"\n}\n",
+      "beforeSha256": "435fa570982ca6706362cd4efef676b901ac8c67b334c47b17488e3dcccc2d13",
+      "afterSha256": "775a1efeef1315f6a79822e330ca1bb0ec8f283fb89c155529bf66e26acb1bcd"
+    },
+    "knowledge/reviews/hazards/H_AAD8D67536864E58BC01867E9C.json": {
+      "beforeFileText": "{\"decision\":\"verified\",\"entityId\":\"H_AAD8D67536864E58BC01867E9C\",\"entityType\":\"hazard\",\"evidenceRefs\":[\"EH_a9506bac0dbb5bc878b1d73a42a5b2a8594322588f554df3a4b2c1e85512cf3d\"],\"migratedFromV3Verification\":{\"id\":\"VHF_008dfe39ff3651fedaf0e139\",\"reviewedAt\":\"2026-09-09T14:38:34+00:00\",\"reviewer\":\"并发重验批次\"},\"reviewType\":\"content\",\"reviewedContentHash\":\"c57abb4e39c638cb8cec3de2020e032c85e932ee44fccbd3e19ada6263850260\"}\n",
+      "beforeSha256": "4d05fd06f1829446afbbc414b7589db893a6f303d3c9eb3236f52b2d149da523",
+      "afterSha256": "4f63aace50130cd7e6ed96144fd15bf3b8fa8c5fa920e3125e3457d8840f5317"
+    },
+    "knowledge/reviews/links/K_474D0188C2AC738775C8F7.json": {
+      "beforeFileText": "{\n  \"entityId\": \"K_474D0188C2AC738775C8F7\",\n  \"entityType\": \"link\",\n  \"reviewType\": \"applicability\",\n  \"decision\": \"verified\",\n  \"reviewer\": \"ZCode-DeepSeek\",\n  \"checkedAt\": \"2026-09-10\",\n  \"reason\": \"H_67303D31… 为焊接和切割区域未明确标明或未设必要警告标志；GB 9448-2025 第10章『警告标志』逐字对应（承继原 GB 9448-1999 相应条款），确认为 direct 依据。\",\n  \"reasonCodes\": [\n    \"DIRECT_CLAUSE_CONFIRMED\",\n    \"SPECIFIC_TECHNICAL_STANDARD\",\n    \"WELDING_AREA_SIGNAGE\"\n  ],\n  \"reviewedContentHash\": \"52e7df319c5a947931b3cbb6c525f5adcbc9cd37fafb860ee408a8706cae40c4\",\n  \"contextHashes\": {\n    \"hazard\": \"68f1277dac1f6ebfc20c2ddf7aa8de83cf63569bf04a20a940c8fbec46d26a57\",\n    \"clause\": \"a4d32280426db56e5dc7084fa50ee3e19458eb4b62b0437c05b508e48b3b767c\",\n    \"link\": \"52e7df319c5a947931b3cbb6c525f5adcbc9cd37fafb860ee408a8706cae40c4\"\n  },\n  \"evidenceRefs\": [\n    \"E_d2ddf39931d8f80e6b093ab06826ce9c6c7701e9febb594e01240370212300b0\"\n  ],\n  \"notes\": \"结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。\"\n}\n",
+      "beforeSha256": "0b551da344e3900fe7906c4a60fd01a992ee21f17e6dbc016824df4f236776b7",
+      "afterSha256": "786c1b0fa054e68e741d935ec9f89ab4c2d2c2c2d159423053a921a7c668587a"
+    },
+    "knowledge/reviews/links/K_PEND_15607_4_2_1_1_EXCEPTION_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "ea4b3d5ba156720248c1785ebab7bd16a937b18fc5bd17eab4badd44c01bc3db"
+    },
+    "knowledge/reviews/links/K_PEND_15607_4_2_1_1_ZONING_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "ce9f6b0db0d78e9e0cf2b9e555731f307c84d26da91c011eb4ee6e1ff0e0dfe5"
+    },
+    "knowledge/reviews/links/K_PEND_15607_4_4_3_1_BOOTH_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "202e51410b9822afd02bc5747579322c00f3fbd78b337f1627fd4c1b6e5b26ed"
+    },
+    "knowledge/reviews/links/K_PEND_15607_4_8_1_1_GB50058_5_4_1_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "48192e0540a6b71f6f88ab975927df83c3e884bcf7355826735696719d13e73a"
+    },
+    "knowledge/reviews/links/K_PEND_15607_4_8_1_1_REFERENCE_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "a5a5dbab7775718df5ecab2fa295862c64ac30c39e1d8eb5f0dba8dfadfd45ee"
+    },
+    "knowledge/reviews/links/K_PEND_15607_5_2_8_1_ELECTRICAL_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "2d0d02558791bcf91cb90340a9fc1e80a92e5b5b99b22e66f20e46d506a50304"
+    },
+    "knowledge/reviews/links/K_PEND_15607_5_2_8_1_GROUNDING_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "990dca0a1bb686427326bb99f752d8a087fdc5be75f93866c1790b08fa7c2ef7"
+    },
+    "knowledge/reviews/links/K_PEND_15607_5_2_8_1_REFERENCE_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "83478fc029f47832d5cc1a600d9cf5e87e66456a61ec676bbf090015322c6801"
+    },
+    "knowledge/reviews/links/K_PEND_15607_6_1_1_GB6514_7_3_2_1_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "20c05bf50b1f93e80c036c4ea94a0d2ea7ba7ff747c377c69c4b3893c562ada2"
+    },
+    "knowledge/reviews/links/K_PEND_15607_6_1_1_REFERENCE_20261008.json": {
+      "beforeFileText": null,
+      "beforeSha256": null,
+      "afterSha256": "abadec8996d634a2e4d4c033f57c7af3820b571ed1393945d8a37458a8404941"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_8AD4488F8A0347C8DDE6FEBF.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"8e3ae159f419dc36ac21ff9183a9b72eb25f18f9ecb72f210a7a17ef9a985e9e\",\n    \"hazard\": \"7e0f6b48ca881969595da39b65e151b561eb81bc059d7c46bbd737a6a0c10d16\"\n  },\n  \"decision\": \"pending\",\n  \"entityId\": \"K_XLSX_WEB_8AD4488F8A0347C8DDE6FEBF\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_F6DB04139AE32A4BB05995EF\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"1c1df64707404419176bd4ef6dc0fabd71eec6ee8b3c6107130014135e567312\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"对应条款已因来源/OCR/原子化问题降级，不能保持Pass。\"\n}\n",
+      "beforeSha256": "9c86ec071eb523cb76bed5528fc0767d980bbe8512478ab6d3a4bf985b7e803f",
+      "afterSha256": "533f0d102420e3724028ff4c42144a8d04bc5ee69c142b04d6e4069728d67e57"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_90DB435011EFDD0313F168F8.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"3e8c903608a819d8ccaf34cedae6f58c0562e2b8e276197786c33c65d090394f\",\n    \"hazard\": \"f25395a0ddce32d2579c33b4c71ebcffd8515cd73c18b26f7d7fe4a369727d9d\"\n  },\n  \"decision\": \"pending\",\n  \"entityId\": \"K_XLSX_WEB_90DB435011EFDD0313F168F8\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_2EC05EA5707687AC26D5B59A\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"8fa2c95a114e1a636bcabfb9da8ac35357075f3c9f6ba80c1b93253d8d8b4e7e\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"对应条款已因来源/OCR/原子化问题降级，不能保持Pass。\"\n}\n",
+      "beforeSha256": "b324025e0da12742d4f022b83f45cab62036768f78b8e3bade174c9cc2dcc52c",
+      "afterSha256": "262cb21b801ac7204fa1c1d329376b45579baa5cb05a83a0c6d77dc79b8ee468"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_AA82724434B0AA88213D5BE2.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"50a127fbd5bb5e9d72b8ebe260d8dbffea2c88cba166293f0c63977fdd30a97a\",\n    \"hazard\": \"b049b45662e96b333b7df3ad59ea73ad687bf8730487791bfaea3f39d45acfaf\"\n  },\n  \"decision\": \"pending\",\n  \"entityId\": \"K_XLSX_WEB_AA82724434B0AA88213D5BE2\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_D5327C2F3B1BD9F27F4D42EC\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"551f4ac007792032634209a325609d8202a1883c6cb592ffc1d0d98fb7f72604\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"对应条款已因来源/OCR/原子化问题降级，不能保持Pass。\"\n}\n",
+      "beforeSha256": "6354a4e13378c3160b861e2296c3716d5be977d37b8213c090e8f266021604f1",
+      "afterSha256": "ef988ddd3c92875abb6ea5d89b0515870f9b41fa96d79dce41b6c4d434c32fb9"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_B421EAC20EBDD91CB576FC83.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"96da0c6a7bbd87008f1a82d69a15a9462c6a0530841a6987ce21dbca2879d94d\",\n    \"hazard\": \"7c19fce3a5b1e6024b0d0f7e7c9a06a8985a9b6d2bcdef4627911617037b00be\"\n  },\n  \"decision\": \"pending\",\n  \"entityId\": \"K_XLSX_WEB_B421EAC20EBDD91CB576FC83\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_DF4885B7397742CC1AB1C04D\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"52bde4d7bddd3baf969bfc0d0834f0685f679273eaa144950d621a2faa468f12\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"对应条款已因来源/OCR/原子化问题降级，不能保持Pass。\"\n}\n",
+      "beforeSha256": "07e796a04dcde2abdc432eca2619fd50162fcb7131c2d236910a8e154da2119a",
+      "afterSha256": "d9b1a41f0d500d2aafb772d13ab8bdded6d3b4a2fe0894f90e0860dc21457ef4"
+    },
+    "knowledge/reviews/links/K_XLSX_WEB_B7C70D8364C74AFD84AADC0C.json": {
+      "beforeFileText": "{\n  \"checkedAt\": \"2026-09-13\",\n  \"contextHashes\": {\n    \"clause\": \"0da69f6d493bea3e1174c32cfa268542e95cf380f14ca9a69ad83c953a7b0bcd\",\n    \"hazard\": \"e1138fbb40bae1404d537d60974bc5b49bd341edac617af546c0428e91ebb568\"\n  },\n  \"decision\": \"pending\",\n  \"entityId\": \"K_XLSX_WEB_B7C70D8364C74AFD84AADC0C\",\n  \"entityType\": \"link\",\n  \"evidenceRefs\": [\n    \"E_XLSX_WEB_34302CBDB440529AAA6874B7\"\n  ],\n  \"reason\": \"隐患与官方条款直接对应。\",\n  \"reviewType\": \"applicability\",\n  \"reviewedContentHash\": \"73a4df82108e7643fcef5d05ac2942aa2e2ec3a6f93239392f300875c4f01a11\",\n  \"reviewer\": \"Codex正式核验批次20260913\",\n  \"notes\": \"对应条款已因来源/OCR/原子化问题降级，不能保持Pass。\"\n}\n",
+      "beforeSha256": "eaddbb6ebbb5492c0f9bd45f50db166c1b37768c4f1a34fe0845e9d790cec0a7",
+      "afterSha256": "61949c188180d18d30d072ce34fc7f3f4ec803e6034154aece746413993ea04b"
+    }
+  }
+}

@@ -8,6 +8,7 @@ import json
 from pathlib import Path, PurePosixPath
 import shutil
 import tempfile
+from pending_source_cohort_fixture import pre_pending_repo_root
 
 FIXTURE = Path(__file__).parent / 'fixtures/complete_remaining_cohort_20261005.json'
 _SNAPSHOTS = {}
@@ -55,6 +56,7 @@ def pre_complete_repo_root(root):
     root = Path(root).resolve()
     if root in _PREDECESSOR_ROOTS:
         return root
+    root = pre_pending_repo_root(root)
     records = fixture()['records']
     for relative in records:
         pre_complete_source_bytes(relative, (root / relative).read_bytes(), records=records)

@@ -1,0 +1,211 @@
+"""Pending-source source-pinned public cohort, exact withdrawals and all rendered flows."""
+import copy
+from datetime import date
+import hashlib
+import json
+from pathlib import Path
+import sys
+import unittest
+from unittest.mock import patch
+
+ROOT = Path(__file__).resolve().parents[3]
+sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
+import pending_source_acceptance as CURRENT
+import complete_remaining_acceptance as PRIOR
+import recovery_release_acceptance as QA
+from pending_source_cohort_fixture import fixture as history_fixture, pre_pending_repo_root
+from freeze_pending_source_history import load_authorization
+from freeze_recovery_expectations import project_expectations
+from release_gate_core import evaluate_release_gate, load_dir
+from release_snapshot import source_hashes, snapshot_digest
+
+
+def projection(frozen):
+    result = copy.deepcopy(frozen['expectedIds'])
+    result['lawClauses'] = result['clauses'][:]
+    result['details'] = [{'id': r['id'], 'hazard': {**copy.deepcopy(r['hazard']), 'displayCategory': r['displayCategory']},
+        'bases': copy.deepcopy(r['bases'])} for r in frozen['records']]
+    return result
+
+
+def mutate_detail(original, hid, field, value, basis_index=None):
+    # Validators are read-only: copy only the mutated branch, keeping negatives
+    # exhaustive without repeatedly copying every unrelated quote/table.
+    result = dict(original); result['details'] = list(original['details'])
+    index = next(i for i, r in enumerate(result['details']) if r['id'] == hid)
+    row = dict(result['details'][index]); result['details'][index] = row
+    if basis_index is None:
+        row['hazard'] = {**row['hazard'], field: value}
+    else:
+        row['bases'] = list(row['bases']); row['bases'][basis_index] = {**row['bases'][basis_index], field: value}
+    return result
+
+
+class PendingSourceBrowserTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.current, cls.prior = CURRENT.load_expectations(), PRIOR.load_expectations(root=pre_pending_repo_root(ROOT))
+        cls.authority = load_authorization(ROOT)
+        cls.public_authored = set(cls.current['batchAudit']['requiredFormalHazardIds'])
+
+    def test_all_membership_and_authored_or_dependent_formal_details_are_source_derived(self):
+        f = self.current
+        self.assertEqual(f['asOf'], '2026-10-08')  # BATCH-SPECIFIC: freeze/as-of date of this batch
+        QA.validate_source_pins(f, ROOT)
+        gate = evaluate_release_gate(ROOT / 'knowledge', date.fromisoformat(f['asOf']))
+        links = load_dir(ROOT / 'knowledge', 'links')
+        kids = {kid for kid in gate.eligible_links if links[kid]['hazardId'] in gate.eligible_hazards}
+        self.assertEqual(f['expectedIds']['hazards'], sorted(gate.eligible_hazards))
+        self.assertEqual(f['expectedIds']['links'], sorted(kids))
+        self.assertEqual(f['expectedIds']['clauses'], sorted({links[kid]['clauseId'] for kid in kids}))
+        self.assertEqual(len(self.prior['records']), 383)  # BATCH-SPECIFIC: complete-remaining prior fixture has 383 detail records
+        affected_hazards = {Path(path).stem for path in history_fixture()['records']
+            if Path(path).parts[:2] == ('knowledge', 'hazards')}
+        self.assertEqual(self.public_authored, affected_hazards & gate.eligible_hazards)
+        batch_paths = {p.removeprefix('knowledge/') for p in history_fixture()['records'] if p.startswith('knowledge/')}
+        affected_details = sorted(r['id'] for r in f['records'] if set(r['changedDependencies']) & batch_paths)
+        self.assertEqual(f['batchAudit']['currentBatchHazardIds'], affected_details)
+        self.assertTrue(self.public_authored)  # BATCH-SPECIFIC: this batch must author at least one formal hazard
+        self.assertLessEqual(self.public_authored, set(f['changedHazardIds']))
+        self.assertEqual(f['batchAudit']['withdrawals'], self.authority['withdrawals'])
+        CURRENT.validate_preservation(f, self.prior, self.authority['withdrawals'])
+
+    def test_publication_delta_keeps_every_predecessor_public_id_and_adds_only_current_batch_hazards(self):
+        audit = self.current['batchAudit']
+        # BATCH-SPECIFIC: the empty withdrawal sets are the authorization of this batch (no predecessor H/K removal).
+        self.assertEqual(self.authority['withdrawals'], {'hazards': {}, 'links': {}})
+        self.assertEqual(audit['withdrawals'], {'hazards': {}, 'links': {}})
+        for kind in ('hazards', 'links', 'clauses'):
+            self.assertLessEqual(set(self.prior['expectedIds'][kind]), set(self.current['expectedIds'][kind]),
+                                 'Predecessor public ' + kind + ' disappeared')
+        prior_hazards = set(self.prior['expectedIds']['hazards'])
+        newly_public = set(self.current['expectedIds']['hazards']) - prior_hazards
+        # BATCH-SPECIFIC: the exact newly-public set is whatever this batch authors; derived from the audit, not hard-coded.
+        self.assertEqual(newly_public, set(audit['currentBatchHazardIds']) - prior_hazards)
+
+    def test_every_approved_withdrawal_has_precise_negative_membership_and_detail_checks(self):
+        for kind, rows in self.authority['withdrawals'].items():
+            self.assertEqual(set(self.prior['expectedIds'][kind]) - set(self.current['expectedIds'][kind]), set(rows))
+            for ident, reason in rows.items():
+                with self.subTest(kind=kind, ident=ident):
+                    self.assertTrue(reason.strip())
+                    self.assertNotIn(ident, self.current['expectedIds'][kind])
+                    got = projection(self.current)
+                    got[kind] = sorted([*got[kind], ident])
+                    with self.assertRaises(AssertionError): QA.validate_projection(self.current, got)
+                    if kind == 'hazards':
+                        self.assertNotIn(ident, self.current['changedHazardIds'])
+                    else:
+                        self.assertFalse(any(b['linkId'] == ident for row in self.current['records'] for b in row['bases']))
+
+    def test_freeze_reproduces_only_from_current_source_and_exact_saved_change_hashes(self):
+        f = self.current
+        hashes = source_hashes(ROOT / 'knowledge'); baseline = dict(hashes)
+        for path, change in f['sourceChanges'].items():
+            self.assertEqual(hashes.get(path), change['afterSha256'])
+            if change['beforeSha256'] is None: baseline.pop(path, None)
+            else: baseline[path] = change['beforeSha256']
+        reproduced = project_expectations(ROOT / 'knowledge', date.fromisoformat(f['asOf']), hashes=hashes,
+            baseline_commit=f['baselineCommit'], baseline=baseline)
+        reproduced['knowledgeSnapshotHash'] = snapshot_digest(hashes)
+        source_projection = copy.deepcopy(f); source_projection.pop('batchAudit')
+        self.assertEqual(reproduced, source_projection)
+        for relative, row in history_fixture()['records'].items():
+            if not relative.startswith('knowledge/'): continue
+            path = relative.removeprefix('knowledge/')
+            # If a current edit exactly restores the original oldest baseline,
+            # it has no cumulative delta; it still needs current detail coverage.
+            if path in f['sourceChanges']:
+                self.assertEqual(f['sourceChanges'][path]['afterSha256'], row['afterSha256'])
+        for row in f['records']:
+            self.assertLessEqual(set(row['changedDependencies']), set(f['sourceChanges']))
+
+    def test_previous_fixture_cannot_authorize_current_source_or_release(self):
+        self.assertNotEqual(CURRENT.FIXTURE, PRIOR.FIXTURE)
+        QA.validate_source_pins(self.prior, pre_pending_repo_root(ROOT))
+        with self.assertRaisesRegex(AssertionError, 'source snapshot changed'): QA.validate_source_pins(self.prior, ROOT)
+        with self.assertRaisesRegex(AssertionError, 'not the source-pinned'):
+            QA.validate_release_source(self.current, {'releaseHash': 'a' * 64, 'asOf': self.current['asOf'],
+                'knowledge': {'snapshotSha256': self.prior['knowledgeSnapshotHash']}}, 'a' * 64)
+        with self.assertRaisesRegex(AssertionError, 'effective date'):
+            QA.validate_release_source(self.current, {'releaseHash': 'a' * 64, 'asOf': '2020-01-01',
+                'knowledge': {'snapshotSha256': self.current['knowledgeSnapshotHash']}}, 'a' * 64)
+
+    def test_all_authored_formal_fields_and_every_exact_basis_reject_mutation(self):
+        original = projection(self.current)
+        QA.validate_projection(self.current, original)
+        for hid in self.public_authored:
+            row = next(r for r in self.current['records'] if r['id'] == hid)
+            for field in ('title', 'description', 'conditions', 'measures', 'category', 'places', 'checked', 'status', 'displayCategory'):
+                got = mutate_detail(original, hid, field, ['wrong'] if field == 'places' else 'wrong')
+                with self.subTest(hazard=hid, field=field), self.assertRaises(AssertionError):
+                    QA.validate_projection(self.current, got)
+            for index in range(len(row['bases'])):
+                for field in ('linkId', 'clauseId', 'lawId', 'lawName', 'article', 'quote', 'role', 'applicability',
+                              'sourceUrl', 'jurisdictionCode', 'clauseRegion', 'lawRegion', 'contentParts'):
+                    got = mutate_detail(original, hid, field, ['wrong'] if field == 'contentParts' else 'wrong', index)
+                    with self.subTest(hazard=hid, basis=index, field=field), self.assertRaises(AssertionError):
+                        QA.validate_projection(self.current, got)
+
+    def test_same_count_swaps_duplicates_missing_ids_and_unknown_source_changes_fail(self):
+        for key in (*QA.PUBLIC_SETS, 'lawClauses'):
+            for mode in ('swap', 'duplicate', 'missing'):
+                got = projection(self.current)
+                if mode == 'swap': got[key][-1] += '_UNEXPECTED'
+                elif mode == 'duplicate': got[key][-1] = got[key][0]
+                else: got[key].pop()
+                with self.subTest(key=key, mode=mode), self.assertRaises(AssertionError): QA.validate_projection(self.current, got)
+        hashes = source_hashes(ROOT / 'knowledge')
+        for mode in ('unknown_addition', 'removal', 'known_mutation'):
+            changed = dict(hashes)
+            if mode == 'unknown_addition': changed['hazards/H_UNREVIEWED.json'] = '0' * 64
+            elif mode == 'removal': del changed[next(iter(changed))]
+            else: changed[next(iter(changed))] = '0' * 64
+            with self.subTest(mode=mode), patch('release_snapshot.source_hashes', return_value=changed):
+                with self.assertRaisesRegex(AssertionError, 'source snapshot changed'): QA.validate_source_pins(self.current, ROOT)
+
+    def test_copy_retains_all_quotes_applicability_and_verified_dates(self):
+        for row in self.current['records']:
+            if row['id'] not in self.public_authored: continue
+            plain = QA.expected_clipboard(row); full = QA.expected_full_clipboard(row, 'test.pending')
+            self.assertTrue(full.startswith(plain + '\n\n'))
+            self.assertTrue(full.endswith('数据库版本：test.pending。'))
+            self.assertIn(row['hazard']['checked'], full)
+            for basis in row['bases']:
+                self.assertIn(basis['quote'], plain); self.assertIn(basis['applicability'], plain)
+
+    def test_date_advance_requires_identical_pending_source_projection_and_audit(self):
+        # BATCH-SPECIFIC: date-advance day is the day after this batch's freeze date.
+        projected = CURRENT.fixture_for_release_date(self.current, '2026-10-09', ROOT)
+        expected = copy.deepcopy(self.current); expected['asOf'] = '2026-10-09'
+        self.assertEqual(projected, expected)
+        with self.assertRaisesRegex(AssertionError, 'new review and freeze'):
+            CURRENT.fixture_for_release_date(self.current, '2027-02-01', ROOT)
+
+    def test_production_harness_imports_new_fixture_and_preserves_all_real_rendered_flows(self):
+        import audit_browser
+        import audit_ordinary_tables
+        self.assertIs(audit_browser.load_recovery_expectations, CURRENT.load_expectations)
+        self.assertIs(audit_ordinary_tables.load_expectations, CURRENT.load_expectations)
+        self.assertIs(audit_browser.fixture_for_release_date, CURRENT.fixture_for_release_date)
+        self.assertIs(audit_ordinary_tables.fixture_for_release_date, CURRENT.fixture_for_release_date)
+        self.assertEqual(audit_browser.load_recovery_expectations(), self.current)
+        self.assertEqual(audit_ordinary_tables.load_expectations(), self.current)
+        for name in ('audit_browser.py', 'audit_ordinary_tables.py', 'pending_source_acceptance.py'):
+            text = (ROOT / 'tools/browser' / name).read_text()
+            for adapter in ('pre_pending_repo_root', 'pre_complete_repo_root', 'pre_residual_repo_root', 'pre_official_repo_root'):
+                self.assertNotIn(adapter, text)
+        shared = (ROOT / 'tools/browser/recovery_release_acceptance.py').read_text()
+        for token in ('for width in (1440, 375, 390, 485)', 'for row in rows:', 'page.go_back()',
+                      'page.go_forward()', 'page.reload(', 'navigator.clipboard.readText()',
+                      'recovery_exact_public_membership_after_flows'):
+            self.assertIn(token, shared)
+        harness = (ROOT / 'tools/browser/audit_browser.py').read_text()
+        self.assertIn('complete_withdrawn_hazard_deep_link_', harness)
+        self.assertIn("for hazard_id in recovery_fixture['batchAudit']['withdrawals']['hazards']", harness)
+        table = (ROOT / 'tools/browser/audit_ordinary_tables.py').read_text()
+        self.assertIn('contentParts', table)
+
+
+if __name__ == '__main__':
+    unittest.main()

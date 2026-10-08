@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_2_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bd85bbd2a72f4126c62c086d9438f75943db26abc3fd50d7060b62e482306de7",
+  "checkedAt": "2026-10-08",
+  "reviewer": "Claude pending-source batch1 author 20261008",
   "evidenceRefs": [
-    "E_XLSX_WEB_DF4885B7397742CC1AB1C04D"
+    "E_PEND_GB15607_2023_20261008"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "7c19fce3a5b1e6024b0d0f7e7c9a06a8985a9b6d2bcdef4627911617037b00be",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "第4.2.1条要求喷粉区按GB 50058划分爆炸性粉尘环境危险区域；规则限于完全未作划分且无第4.2.2条非爆炸危险区域依据的情形。",
+  "notes": "作者对照正式原件页面图像逐字核对并自查；未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_2_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_DF4885B7397742CC1AB1C04D"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "7c19fce3a5b1e6024b0d0f7e7c9a06a8985a9b6d2bcdef4627911617037b00be",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，喷粉区的爆炸性粉尘环境危险区域划分未按GB50058的规定划分，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_4_2_1_1",
+    "keywords": [
+      "喷粉区的爆炸性粉尘环境危险区域划分未按GB50058的规定划分"
+    ],
+    "lifecycle": "proposed",
+    "measures": "喷粉区的爆炸性粉尘环境危险区域划分按GB50058的规定划分。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "喷粉区的爆炸性粉尘环境危险区域划分未按GB50058的规定划分"
+  },
+  "remainingUnsupportedBranches": [
+    "已作划分但区别或范围不符合GB 50058具体规定的情形未随本项支持。",
+    "第4.2.2条c)所引GB 14773、GB 15577相关规定未逐条结构化。"
+  ]
 }

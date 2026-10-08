@@ -19,7 +19,7 @@ MAX_IMAGES = 60
 MAX_PARTS = 10
 MANIFEST_RESERVE = 128 * 1024
 ROOT = Path(__file__).resolve().parents[2]
-FIXTURE = ROOT / 'tools/browser/fixtures/complete_remaining_20261005.json'
+FIXTURE = ROOT / 'tools/browser/fixtures/pending_source_20261008.json'
 
 
 def sha(path):

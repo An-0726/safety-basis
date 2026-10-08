@@ -11,6 +11,9 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
+REAL_ROOT = ROOT
+from pending_source_cohort_fixture import pre_pending_repo_root
+ROOT = pre_pending_repo_root(ROOT)
 sys.path[:0] = [str(ROOT / 'tools/browser'), str(ROOT / 'tools/v4')]
 import freeze_complete_remaining_history as FREEZE
 from complete_remaining_cohort_fixture import (fixture, pre_complete_repo_root,
@@ -44,7 +47,7 @@ class CompleteRemainingSyntheticTests(unittest.TestCase):
     def test_unknown_additions_mutations_and_removals_survive_cache(self):
         path = 'knowledge/hazards/H_TEST.json'
         rows = {path: record(b'old', b'new')}
-        with tempfile.TemporaryDirectory() as tmp, patch('complete_remaining_cohort_fixture.fixture', return_value={'records': rows}):
+        with tempfile.TemporaryDirectory() as tmp, patch('complete_remaining_cohort_fixture.fixture', return_value={'records': rows}), patch('complete_remaining_cohort_fixture.pre_pending_repo_root', side_effect=lambda root: root):
             root = Path(tmp); p = root / path; p.parent.mkdir(parents=True); p.write_bytes(b'new')
             for name in ('docs', 'source'): (root / name).mkdir()
             unknown = root / 'knowledge/H_UNKNOWN.json'; unknown.write_bytes(b'unknown')
@@ -184,7 +187,7 @@ class CompleteRemainingFrozenHistoryTests(unittest.TestCase):
 
     def test_management_baseline_uses_the_guarded_portable_predecessor(self):
         import test_all_management_bounded_20261005 as management
-        self.assertEqual(management.ROOT, ROOT)
+        self.assertEqual(management.ROOT, REAL_ROOT)
         self.assertEqual(management.BASE, pre_complete_repo_root(ROOT))
 
     def test_final_inverse_matches_report_pins_and_exact_git_predecessor(self):

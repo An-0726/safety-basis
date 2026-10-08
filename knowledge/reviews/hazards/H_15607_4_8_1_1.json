@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_4_8_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "23111946eb6ea4dd20d05e2207a74181a586abb48bcea021f84c340325d07b9a",
+  "checkedAt": "2026-10-08",
+  "reviewer": "Claude pending-source batch1 author 20261008",
   "evidenceRefs": [
-    "E_XLSX_WEB_34302CBDB440529AAA6874B7"
+    "E_PEND_GB15607_2023_20261008",
+    "E_GB50058_ZJ_ORIGINAL_20260926"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "e1138fbb40bae1404d537d60974bc5b49bd341edac617af546c0428e91ebb568",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "第4.8.1条强制要求进入喷粉区的电气线路符合GB 50058；规则只取GB 50058—2014第5.4.1条第2项和第3项末句两项自含义务，并以已完成分区为前提。",
+  "notes": "作者对照正式原件页面图像逐字核对并自查；未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_4_8_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_34302CBDB440529AAA6874B7"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "e1138fbb40bae1404d537d60974bc5b49bd341edac617af546c0428e91ebb568",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，进入喷粉区内的电气线路未符合GB50058的规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_4_8_1_1",
+    "keywords": [
+      "进入喷粉区内的电气线路未符合GB50058的规定"
+    ],
+    "lifecycle": "proposed",
+    "measures": "进入喷粉区内的电气线路符合GB50058的规定。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "进入喷粉区内的电气线路未符合GB50058的规定"
+  },
+  "remainingUnsupportedBranches": [
+    "“电气线路不符合GB 50058的规定”的其余内容（第5.4.1条第1项、第4—7项，第5.4.2条、第5.4.3条、第5.5节）未随本项支持。",
+    "未划分危险区域的喷粉区无从判定线路要求，按H_15607_4_2_1_1处理。"
+  ]
 }

@@ -1,13 +1,57 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_5_2_8_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "69d8136ad7ba712a9793b7cc9da6a435cf6d3cf39599d4022b4b4f767945998f",
+  "checkedAt": "2026-10-08",
+  "reviewer": "Claude pending-source batch1 author 20261008",
   "evidenceRefs": [
-    "E_XLSX_WEB_2EC05EA5707687AC26D5B59A"
+    "E_PEND_GB15607_2023_20261008",
+    "E_ALL_GB15607_2023_20261005"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "f25395a0ddce32d2579c33b4c71ebcffd8515cd73c18b26f7d7fe4a369727d9d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "第5.2.8条要求自动喷涂机符合4.7、4.8；规则只取第4.8.2条“喷粉区内所有导体都应可靠接地”和第4.7.2条“21区、22区内，电气设备应采用防爆、防尘（隔尘）型电气设备”两项自含义务。",
+  "notes": "作者对照正式原件页面图像逐字核对并自查；未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_5_2_8_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_2EC05EA5707687AC26D5B59A"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "f25395a0ddce32d2579c33b4c71ebcffd8515cd73c18b26f7d7fe4a369727d9d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，自动喷涂机（包含往复机、机器人等）未符合GB15607第4.7、4.8的规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_5_2_8_1",
+    "keywords": [
+      "自动喷涂机",
+      "包含往复机",
+      "机器人等",
+      "未符合GB15607第4.7",
+      "4.8的规定"
+    ],
+    "lifecycle": "proposed",
+    "measures": "自动喷涂机（包含往复机、机器人等）符合GB15607第4.7、4.8的规定。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "自动喷涂机（包含往复机、机器人等）未符合GB15607第4.7、4.8的规定"
+  },
+  "remainingUnsupportedBranches": [
+    "第4.7.1条（满足工艺安全要求、选用符合GB 5083相关规定）未支持。",
+    "第4.7.2条后半句和第4.7.3条转引GB 50058的选型、表面温升未在本项内支持。",
+    "第4.7.3条前半句设备表面温度不高于粉末软化点温度未并入本项。",
+    "第4.8.1条电气线路见H_15607_4_8_1_1。"
+  ]
 }

@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 from capture_evidence import capture_full_page, wait_capture_ready, SCROLL_POSITION
 from audit_browser import validate_release_identity
 from repair_acceptance import DOM_CONTENT_HELPERS, require, require_text, validate_release_match
-from complete_remaining_acceptance import load_expectations, fixture_for_release_date
+from pending_source_acceptance import load_expectations, fixture_for_release_date
 from recovery_release_acceptance import (validate_source_pins, validate_release_source,
     validate_rendered, rendered_snapshot, expected_clipboard, expected_full_clipboard, expected_tables)
 

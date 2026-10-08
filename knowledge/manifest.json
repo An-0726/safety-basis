@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-05",
-  "batch": "complete-remaining-inventory-20261005",
+  "asOf": "2026-10-08",
+  "batch": "pending-source-batch1-20261008",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -502,15 +502,32 @@
       },
       "scope": "One complete itemized review of the remaining inventory, bounded supported repairs, and necessary exact-source consumer closure. Separate unsupported original obligations, explicit exclusions, and case evidence requirements. Preserve IDs and history. Do not treat narrowed rules or branch mappings as whole-original-claim or field-fact approval.",
       "reviewStatus": "final_fixed_tree_independent_review_and_unified_release_verification_required"
+    },
+    {
+      "id": "pending-source-batch1-20261008",
+      "baselineCommit": "ad6a20f7c6779c24aaa2e871a370cebc9f7ddd78",
+      "reviewScope": {
+        "candidateHazardIds": 10,
+        "publishedBounded": 5,
+        "mergedIntoExistingPublic": 1,
+        "keptProposed": 3
+      },
+      "entityCountDelta": {
+        "clauses": 2,
+        "links": 10,
+        "evidence": 3
+      },
+      "scope": "First batch of source_or_rule_mapping_pending candidates: nine GB 15607-2023 powder-coating items and one GB 9448-2025 welding-sign item. Publish only narrowed self-contained obligations read from original pages; correct the non-verbatim GB 9448 chapter 10 quote. Preserve IDs and history.",
+      "reviewStatus": "author_self_check_only_independent_review_and_release_verification_required"
     }
   ],
   "counts": {
     "laws": 144,
     "lawVersions": 148,
-    "clauses": 3222,
+    "clauses": 3224,
     "hazards": 2148,
-    "links": 2118,
-    "evidence": 1444,
+    "links": 2128,
+    "evidence": 1447,
     "successions": 26,
     "requirements": 75
   },
@@ -518,18 +535,18 @@
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
   "laws": 144,
   "lawVersions": 148,
-  "clauses": 3222,
+  "clauses": 3224,
   "hazards": 2148,
-  "links": 2118,
-  "evidence": 1444,
+  "links": 2128,
+  "evidence": 1447,
   "successions": 26,
-  "activeHazards": 1789,
-  "proposedHazards": 230,
-  "supersededHazards": 129,
+  "activeHazards": 1794,
+  "proposedHazards": 224,
+  "supersededHazards": 130,
   "lifecycle": {
-    "active": 1789,
-    "proposed": 230,
-    "superseded": 129
+    "active": 1794,
+    "proposed": 224,
+    "superseded": 130
   },
   "requirements": 75
 }
