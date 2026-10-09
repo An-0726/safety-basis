@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-08",
-  "batch": "pending-source-batch1-20261008",
+  "asOf": "2026-10-09",
+  "batch": "content-gap-batch1-20261009",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -519,32 +519,42 @@
       },
       "scope": "First batch of source_or_rule_mapping_pending candidates: nine GB 15607-2023 powder-coating items and one GB 9448-2025 welding-sign item. Publish only narrowed self-contained obligations read from original pages; correct the non-verbatim GB 9448 chapter 10 quote. Preserve IDs and history.",
       "reviewStatus": "author_self_check_only_independent_review_and_release_verification_required"
+    },
+    {
+      "id": "content-gap-batch1-20261009",
+      "evidenceAdded": 2,
+      "lawsAdded": 2,
+      "lawVersionsAdded": 2,
+      "clausesAdded": 5,
+      "hazardsAdded": 3,
+      "linksAdded": 7,
+      "scope": "Three new rules for spoken-search gaps (hard hat, inclined-ladder handrail, platform edge guardrail). Sources located by Codex, quotes compared by Claude with the official PDFs; author self-check only."
     }
   ],
   "counts": {
-    "laws": 144,
-    "lawVersions": 148,
-    "clauses": 3224,
-    "hazards": 2148,
-    "links": 2128,
-    "evidence": 1447,
+    "laws": 146,
+    "lawVersions": 150,
+    "clauses": 3229,
+    "hazards": 2151,
+    "links": 2135,
+    "evidence": 1449,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
-  "laws": 144,
-  "lawVersions": 148,
-  "clauses": 3224,
-  "hazards": 2148,
-  "links": 2128,
-  "evidence": 1447,
+  "laws": 146,
+  "lawVersions": 150,
+  "clauses": 3229,
+  "hazards": 2151,
+  "links": 2135,
+  "evidence": 1449,
   "successions": 26,
-  "activeHazards": 1794,
+  "activeHazards": 1797,
   "proposedHazards": 224,
   "supersededHazards": 130,
   "lifecycle": {
-    "active": 1794,
+    "active": 1797,
     "proposed": 224,
     "superseded": 130
   },
