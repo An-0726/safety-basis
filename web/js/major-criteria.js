@@ -124,7 +124,8 @@ function render(historyMode='replace'){
   $('#viewHelp').textContent=referenceView?[references?.notice,directoryNotice(),reading?.notice].filter(Boolean).join(' '):clauseView?'条文按已核验范围收录；没有关联隐患的条文也可查看。':'仅展示与本专题判定依据存在已核验直接关联的隐患；专业分类可交叉筛选。记录不是现场判定结论。';
   const searchExplanation=results.matchKind==='related'
     ? '当前条件下没有原词或同义词结果，以下仅为相关概念参考；请核对设备、作业对象与判定适用条件。'
-    : results.matchKind==='corrected'?`当前条件下没有原词结果，按“${results.interpretedQuery}”尝试纠错；请确认是否符合原意。`:'';
+    : results.matchKind==='corrected'?`当前条件下没有原词结果，按“${results.interpretedQuery}”尝试纠错；请确认是否符合原意。`
+    : results.matchKind==='colloquial'?`没有与原话完全一致的内容，已按“${results.interpretedQuery}”查找；请核对对象、缺陷与适用条件。`:'';
   $('#routeNotice').textContent=[routeWarning,results.queryNotice,searchExplanation].filter(Boolean).join(' ');$('#routeNotice').hidden=!$('#routeNotice').textContent;
   const total=referenceView?results.referenceStandardCount+results.directory.directoryGroupCount:clauseView?results.standards.reduce((n,s)=>n+s.clauses.length,0):results.hazards.length;
   $('#resultCount').textContent=referenceView?(directory?`短主题入口：${results.referenceStandardCount} 部 · ${results.searchTopicCount} 个短主题；文件目录：${results.directory.directoryGroupCount} 组 · ${results.directory.documentCount} 份官方文件${reading?`（题录计数，不计入现行判定条文）；其中 ${results.readingGroupCount} 组 ${results.readingDocumentCount} 份可展开原文`:"（分区计数，均非判定原文）"}`:`${results.referenceStandardCount} 部官方查阅入口 · ${results.searchTopicCount} 个短检索主题（非判定原文）`):clauseView?`${results.standards.length} 部依据 · ${total} 条已收录判定条文`:`${total} 条专题关联隐患`;
