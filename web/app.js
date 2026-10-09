@@ -446,7 +446,9 @@ function showSearchNotice(match){
     ? '当前筛选下没有原词或同义词结果，以下为相关概念参考。请核对设备、作业对象与适用条件。'
     : match.matchKind==='corrected'
       ? `当前筛选下没有原词结果，按“${match.interpretedQuery}”尝试纠错。请确认是否符合原意。`
-      : '';
+      : match.matchKind==='colloquial'
+        ? `没有与原话完全一致的条目，已按“${match.interpretedQuery}”查找。请核对对象、缺陷与适用条件。`
+        : '';
   node.textContent=[...state.routeWarnings,match.queryNotice,node.textContent,state.view==='hazards'?state.store.fieldProfileNotice:'',state.view==='hazards'&&$('#inspectionClass')?.value?'核查用途筛选仅覆盖已审场景，未归入此用途不代表不适用。':''].filter(Boolean).join(' ');
   node.hidden=!node.textContent;
 }

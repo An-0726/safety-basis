@@ -1,6 +1,6 @@
 'use strict';
 
-import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS } from './search-vocabulary.js';
+import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS } from './search-vocabulary.js';
 
 export const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase()
   .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g,' ')
@@ -136,7 +136,49 @@ const correctedTerm = term => {
   const candidates=SORTED_VOCAB.filter(word=>isTypoOf(term,word));
   return candidates.length===1 ? candidates[0] : term;
 };
-const matchingRows = (rows, terms) => {
+// 口语查询解释：只在原词、相关概念和纠错都没有结果时使用。去掉“没/了/被”等
+// 虚词，把口语缺陷词换成条文用语；识别出的每个部分仍须全部命中，不做部分匹配。
+const COLLOQUIAL = new Map(Object.entries(COLLOQUIAL_TERMS).map(([key,values])=>[normalize(key),values.map(normalize)]));
+const FILLERS = new Set(COLLOQUIAL_FILLERS.map(normalize));
+const COLLOQUIAL_LEXICON = [...new Set([...VOCAB_SET,...COLLOQUIAL.keys(),...FILLERS,...COLLOQUIAL_WORDS.map(normalize)])]
+  .sort((a,b)=>b.length-a.length);
+const interpretColloquial = query => {
+  const groups=[],labels=[];
+  let rewritten=false;
+  const add=(label,variants)=>{groups.push(variants);labels.push(label);};
+  for(const chunk of normalize(query).split(' ').filter(Boolean)){
+    let run='';
+    // 词典外的片段按原样要求命中；剩下的单个字没有检索意义，丢弃。
+    const flush=()=>{if(run.length>1)add(run,[run]);else if(run)rewritten=true;run='';};
+    for(let i=0;i<chunk.length;){
+      const word=COLLOQUIAL_LEXICON.find(w=>chunk.startsWith(w,i));
+      if(!word){run+=chunk[i++];continue;}
+      flush();i+=word.length;
+      if(FILLERS.has(word)){rewritten=true;continue;}
+      const spoken=COLLOQUIAL.get(word);
+      if(spoken)rewritten=true;
+      add(spoken?spoken[0]:word,[...new Set([...relatedVariantsOf(word),...(spoken||[])])]);
+    }
+    flush();
+  }
+  return rewritten&&groups.length ? {groups,labels} : null;
+};
+const colloquialRows = (rows, query) => {
+  const parsed=interpretColloquial(query);
+  if(!parsed) return null;
+  const nameOf=row=>String(row.title??row.name??'');
+  // 标题直接出现所说对象或首选条文用语的条目排前，其次是标题出现其他等价用语的条目。
+  const titleHits=row=>{const title=normalize(nameOf(row));return parsed.groups.reduce((sum,g,i)=>sum+(title.includes(parsed.labels[i])?3:g.some(t=>title.includes(t))?2:0),0);};
+  const hits=rows.filter(r=>termsMatch(r.searchText,parsed.groups)).map(row=>({row,score:titleHits(row)}));
+  if(!hits.length) return null;
+  hits.sort((a,b)=>b.score-a.score || nameOf(a.row).length-nameOf(b.row).length || nameOf(a.row).localeCompare(nameOf(b.row),'zh-CN'));
+  return {rows:hits.map(x=>x.row),terms:parsed.labels,matchKind:'colloquial',ranked:true};
+};
+const matchingRows = (rows, terms, query='') => {
+  const strict=strictRows(rows,terms);
+  return strict.matchKind==='none' ? (colloquialRows(rows,query)||strict) : strict;
+};
+const strictRows = (rows, terms) => {
   if(!terms.length) return {rows,terms,matchKind:'all'};
   const groups=terms.map(variantsOf);
   const exact=rows.filter(r=>termsMatch(r.searchText,groups));
@@ -201,9 +243,9 @@ export function searchHazardsDetailed(rows, query, filters={}) {
     if(filters.status && r.status!==filters.status) continue;
     out.push(r);
   }
-  const matched=matchingRows(out,terms);
+  const matched=matchingRows(out,terms,prepared.remainder);
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
-  const scored=matched.rows.map(row=>({row,score:hazardScore(row,rankingQuery,matched.terms)}));
+  const scored=matched.rows.map((row,i)=>({row,score:matched.ranked?-i:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
   return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:prepared.queryNotice};
 }
@@ -238,9 +280,9 @@ export function searchLawsDetailed(rows, query, filters={}) {
     if(filters.status && r.status!==filters.status) continue;
     out.push(r);
   }
-  const matched=matchingRows(out,terms);
+  const matched=matchingRows(out,terms,prepared.remainder);
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
-  const scored=matched.rows.map(row=>({row,score:lawScore(row,rankingQuery,matched.terms)}));
+  const scored=matched.rows.map((row,i)=>({row,score:matched.ranked?-i:lawScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.name.localeCompare(b.row.name,'zh-CN'));
   return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:prepared.queryNotice};
 }
