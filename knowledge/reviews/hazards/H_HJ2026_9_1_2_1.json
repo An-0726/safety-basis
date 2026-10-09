@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_HJ2026_9_1_2_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b26d96118130f9e09273d93ea356b6cfebea780653af371c3ce02d4d0f9a19bc",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_a90650fedd8f471fa157f21a228c7ec7a9eca503ab9253add14132cf31b7fb68"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "898a6f7a8d10bcd91c86e650b4df19292eb9dd959042db958795fd18ded00790",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补吸附法治理工程及设计阶段限定，删除运行送电测试等无关内容。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "9.1.2 电气系统设计应满足GB 50058的要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_HJ2026_9_1_2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_a90650fedd8f471fa157f21a228c7ec7a9eca503ab9253add14132cf31b7fb68"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "898a6f7a8d10bcd91c86e650b4df19292eb9dd959042db958795fd18ded00790",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，电气系统设计未满足GB 50058的要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_HJ2026_9_1_2_1",
+    "keywords": [
+      "电气系统设计未满足GB",
+      "50058的要求"
+    ],
+    "lifecycle": "active",
+    "measures": "电气系统设计满足GB 50058的要求。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "电气系统设计未满足GB 50058的要求"
+  }
 }

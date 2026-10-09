@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_8169553F2C9C43A4BA66479789",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "e58791fc842336b69f897e0c20800ab2574cbdf63661847a72e2e678be145b40",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "1fd7668eccfa518358db2f060e5474e36658efac2d4921d4f72f4d0553ab2217",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "优先核对现引法规，并检索全库有效条款中的“事故率高、危险性较大、安全装置、生产许可证厂家”，核对《中华人民共和国安全生产法》及全库生产设备条款；现维护检测要求不规定选用特定厂家的产品，未找到直接支持按危险性或事故率选用带装置及许可厂家产品的有效原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_8169553F2C9C43A4BA66479789",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "e58791fc842336b69f897e0c20800ab2574cbdf63661847a72e2e678be145b40",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_8169553F2C9C43A4BA66479789",
+    "title": "凡危险性较大或事故率高的生产设备,均,未选用带有安全装置并具有生产许可证厂家的产品",
+    "description": "危险性较大或事故率高的生产设备未选用带有安全装置、具有生产许可证厂家的产品，设备本质安全水平不足。",
+    "measures": "危险性较大的生产设 备都带有安全装置。",
+    "conditions": "适用于生产设备的相关安全管理。",
+    "category": "应急与事故管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "凡危险性较大或事故率高的生产设备,均,未选用带有安全装置并具有生产许可证厂家的产品"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《电子工业职业 安全卫生设计规 定》 2.4.7",
+    "mergedInto": null
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F607F276D8B242ADE9027C8061_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a8b02cb43781d22ff6039440b936f4e2e5b4a63401300d6d0c5f98f5f23711f5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_6A1D54BE8827C1D986CA4D43"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c46d15ae25a37d405b80499701bda51296e03a9114089d18572c48b1ea39f76e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第四十五条直接规定维保单位对电梯安全性能负责，现关联仅为维保主体资格。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电梯的维护保养单位应当对其维护保养的电梯的安全性能负责；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F607F276D8B242ADE9027C8061_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_6A1D54BE8827C1D986CA4D43"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c46d15ae25a37d405b80499701bda51296e03a9114089d18572c48b1ea39f76e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，电梯的维护保养单位未对其维护保养的电梯的安全性能负责，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_F607F276D8B242ADE9027C8061_3",
+    "keywords": [
+      "电梯的维护保养单位未对其维护保养的电梯的安全性能负责"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯的维护保养单位对其维护保养的电梯的安全性能负责。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯的维护保养单位未对其维护保养的电梯的安全性能负责"
+  }
 }

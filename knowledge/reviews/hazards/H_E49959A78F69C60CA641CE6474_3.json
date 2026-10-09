@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_E49959A78F69C60CA641CE6474_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4e6092d2a115046ee2f8e15f31e7fbc65d188c8baea371d076fa5775ee0bfed6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8FAF5D15E8E98B3C23F026A6"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "28555ef7fce67b124617d5bab76db5a09e0bd99ce2333b7fee8b5cdc92772d5b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联是进口设备安全技术规范符合性，完整第三十条另含进出口检验的法律行政法规要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特种设备的进出口检验，应当遵守有关进出口商品检验的法律、行政法规。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_E49959A78F69C60CA641CE6474_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8FAF5D15E8E98B3C23F026A6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "28555ef7fce67b124617d5bab76db5a09e0bd99ce2333b7fee8b5cdc92772d5b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备的进出口检验，未遵守有关进出口商品检验的法律、行政法规，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_E49959A78F69C60CA641CE6474_3",
+    "keywords": [
+      "特种设备的进出口检验",
+      "未遵守有关进出口商品检验的法律",
+      "行政法规"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备的进出口检验，遵守有关进出口商品检验的法律、行政法规。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备的进出口检验，未遵守有关进出口商品检验的法律、行政法规"
+  }
 }

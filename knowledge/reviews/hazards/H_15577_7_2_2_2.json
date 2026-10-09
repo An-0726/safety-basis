@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_7_2_2_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1ee237b5fe10053ef553236dd1d6259c9e3357759ad1bbbff2b51d21b32befe6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "8ba7100164076eaf26cec84f3c4a30cc89e01bc241f9310865619608e811babc",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定粉尘防爆及高低强度设备连接工况，删除一般机械功能试运转套话。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "高强度设备与低强度设备之间的连接部分，应安装隔爆装置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_7_2_2_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "8ba7100164076eaf26cec84f3c4a30cc89e01bc241f9310865619608e811babc",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，高强度设备与低强度设备之间的连接部分，未安装隔爆装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15577_7_2_2_2",
+    "keywords": [
+      "高强度设备与低强度设备之间的连接部分",
+      "未安装隔爆装置"
+    ],
+    "lifecycle": "active",
+    "measures": "高强度设备与低强度设备之间的连接部分，安装隔爆装置。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "高强度设备与低强度设备之间的连接部分，未安装隔爆装置"
+  }
 }

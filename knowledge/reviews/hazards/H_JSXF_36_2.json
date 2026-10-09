@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_36_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9f3c487cc5ab955b7f12609f8ebac87bd3808a7fa02cba9e76f03b442208f4c9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_DABC600402299B0067CD09BD"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "9d355fa83e89a7192cccd14a752d54353bb6f302683586c83f6036a6a51fb57c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "纠正整改措施仍写“擅自施工”的错误，明确建设单位和施工单位及审查前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特殊建设工程未经消防设计审查或者审查不合格的，建设单位和施工单位不得施工。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_36_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_DABC600402299B0067CD09BD"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "9d355fa83e89a7192cccd14a752d54353bb6f302683586c83f6036a6a51fb57c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，特殊建设工程未经消防设计审查或审查不合格擅自施工，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_36_2",
+    "keywords": [
+      "特殊建设工程未经消防设计审查或审查不合格擅自施工"
+    ],
+    "lifecycle": "active",
+    "measures": "特殊建设工程经消防设计审查或审查整改合格擅自施工；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "特殊建设工程未经消防设计审查或审查不合格擅自施工"
+  }
 }

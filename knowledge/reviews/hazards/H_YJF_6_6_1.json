@@ -1,13 +1,51 @@
 {
-  "entityType": "hazard",
   "entityId": "H_YJF_6_6_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "c7d45df2bcecc57ca713043233edbc42cda0ca9469aaf7df53382dc676ac8144",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "9749bb715bf870b1e753229ae0017d0e60662aaaa0c7ea278337cfeb747cb84c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_MEE_GB18597_2023"
-  ]
+  ],
+  "reason": "库内危险废物收集贮存运输技术规范第6.6条明确转引三文件，现设施建设条款不支持该标题，具体贮存判据不得自行补写。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "废弃危险化学品贮存应满足GB 15603、《危险化学品安全管理条例》、《废弃危险化学品污染环境防治办法》的要求。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_YJF_6_6_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "c7d45df2bcecc57ca713043233edbc42cda0ca9469aaf7df53382dc676ac8144",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MEE_GB18597_2023"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "废弃危险化学品贮存应满足GB 15603、《危险化学品安全管理条例》、《废弃危险化学品污染环境防治办法》的要求。（第6.6条）。",
+    "id": "H_YJF_6_6_1",
+    "keywords": [
+      "废弃危险化学品贮存未满足GB",
+      "15603",
+      "《危险化学品安全管理条例》",
+      "《废弃危险化学品污染环境防治办法》的要求"
+    ],
+    "lifecycle": "active",
+    "measures": "废弃危险化学品贮存应满足GB 15603、《危险化学品安全管理条例》、《废弃危险化学品污染环境防治办法》的要求。（依据 第6.6条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《废弃危险化学品污染环境防治办法》\n《固体废物污染环境防治法》\nGB 18597-2023。",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所",
+      "通用场所"
+    ],
+    "title": "废弃危险化学品贮存未满足GB 15603、《危险化学品安全管理条例》、《废弃危险化学品污染环境防治办法》的要求"
+  }
 }

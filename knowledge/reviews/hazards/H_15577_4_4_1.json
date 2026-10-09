@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_4_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0995c5df2fe560b1fbeb1ffb65df8215cd2689702e9b3f8929d478e2052b4c22",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "2d133e699b7174f036cd44a04339b80c14e9bfe0722773b5c5e8f2c1e25a1208",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文粉尘爆炸危险场所和相关人员为边界，删除泛指所有培训义务单位的条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "企业应开展粉尘防爆安全教育及培训，普及粉尘防爆安全知识和有关法规、标准，使员工了解本企业粉尘爆炸危险场所的危险程度和防爆措施；企业主要负责人、安全管理人员和粉尘爆炸危险岗位的作业人员及设备设施检维修人员应进行专项粉尘防爆安全技术培训，并经考试合格，方准上岗。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_4_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "2d133e699b7174f036cd44a04339b80c14e9bfe0722773b5c5e8f2c1e25a1208",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全教育培训",
+    "conditions": "适用于依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：生产经营单位从业人员培训、考核和资格管理活动",
+    "description": "经资料和执行情况核查，企业未开展粉尘防爆安全教育及培训，普及粉尘防爆安全知识和有关法规、标准，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_4_4_1",
+    "keywords": [
+      "企业未开展粉尘防爆安全教育及培训",
+      "普及粉尘防爆安全知识和有关法规",
+      "标准"
+    ],
+    "lifecycle": "active",
+    "measures": "企业开展粉尘防爆安全教育及培训，普及粉尘防爆安全知识和有关法规、标准。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位从业人员培训、考核和资格管理活动"
+    ],
+    "title": "企业未开展粉尘防爆安全教育及培训，普及粉尘防爆安全知识和有关法规、标准"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_7_6_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b214c6fc4d7974b5791f27db41fcc14191b913621e3105a495193bb1f4546db9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "a101e59cd6555af10551d6ab41caf84be39fba86058174298d8ea3bd5531b73b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "恢复危险废物运输卸载区范围，并保留设备设施与标志均须具备的要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "(2)卸载区应配备必要的消防设备和设施，并设置明显的指示标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_7_6_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "a101e59cd6555af10551d6ab41caf84be39fba86058174298d8ea3bd5531b73b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，卸载区未配备必要消防设备和设施并设置明显指示标志，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_YJF_7_6_1",
+    "keywords": [
+      "卸载区未配备必要消防设备和设施并设置明显指示标志"
+    ],
+    "lifecycle": "active",
+    "measures": "卸载区配备必要消防设备和设施并设置明显指示标志；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "卸载区未配备必要消防设备和设施并设置明显指示标志"
+  }
 }

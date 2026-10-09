@@ -1,13 +1,53 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_44A6D24A866A4B6F84E9592A18",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2c9a2d2912cee4ffb8f585451408ed080a460ce03cefb60ccb731d698d6e4a20",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_95DD1DB2757BD7C8DB6C676E"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "6eff67119c5df3bc1b965b9a69ad2c8c5c4b74678ae32e5115173b60b3fe0c76",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "原引用南京市规定要求机构与人员同时配置，不能支持全国二选一标题；改配安全生产法第二十四条并明确两项均未满足。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_44A6D24A866A4B6F84E9592A18",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_95DD1DB2757BD7C8DB6C676E"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "6eff67119c5df3bc1b965b9a69ad2c8c5c4b74678ae32e5115173b60b3fe0c76",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [
+      "从业人员超过一百人未设安全管理机构",
+      "未配备专职安全员",
+      "安全员配备不足",
+      "超过一百人无安全管理机构"
+    ],
+    "category": "安全管理",
+    "conditions": "适用于不属于第二十四条第一款列举范围且从业人员超过一百人的生产经营单位。",
+    "description": "从业人员超过一百人的生产经营单位未设置安全生产管理机构或配备专职安全生产管理人员。",
+    "id": "H_44A6D24A866A4B6F84E9592A18",
+    "keywords": [
+      "安全管理",
+      "从业人员超过一百人未设置机构或配备专职安全管理人员"
+    ],
+    "lifecycle": "active",
+    "measures": "设置安全生产管理机构或者配备专职安全生产管理人员，并保存任命、配备及履职记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。",
+    "places": [
+      "生产经营单位"
+    ],
+    "title": "从业人员超过一百人未设置机构或配备专职安全管理人员"
+  }
 }

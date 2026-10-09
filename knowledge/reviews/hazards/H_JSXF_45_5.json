@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_JSXF_45_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d332fd8760fadf436d48319761ab26dde5925ecaa48ad9b76b6f86572a8642bd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_5E3E2BF6D01B380A854B24BB"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "2b70c164691240de9e3f03423259ff3bd9b35de665b0e80e7164461bc60a072a",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "恢复排油烟设施及所列场所对象，保留隔热或散热等替代措施关系。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "与可燃物之间应当采取隔热或者散热等防火措施；",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_JSXF_45_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_5E3E2BF6D01B380A854B24BB"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "2b70c164691240de9e3f03423259ff3bd9b35de665b0e80e7164461bc60a072a",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "与可燃物之间应当采取隔热或者散热等防火措施；（第45条）。",
+    "id": "H_JSXF_45_5",
+    "keywords": [
+      "与可燃物之间未采取隔热或者散热等防火措施"
+    ],
+    "lifecycle": "active",
+    "measures": "与可燃物之间应当采取隔热或者散热等防火措施；（依据 第45条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "与可燃物之间未采取隔热或者散热等防火措施"
+  }
 }

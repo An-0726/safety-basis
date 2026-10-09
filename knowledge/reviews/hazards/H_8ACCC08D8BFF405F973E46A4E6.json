@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_8ACCC08D8BFF405F973E46A4E6",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "685af82081191a3c50f2b9bbc420658e20794a6d801ae5a61ac61bf8926ca98d",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "a2af80fd9f1ff06dd8f0da99c5ed9abfc1f4b7bee327fcc7735685d6178b9615",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
-  ]
+  ],
+  "reason": "先核职业病防治法第二十二条，再以“低温液体、充灌、皮革、棉手套、无钉皮靴”检索全部现行条款并核对《深度冷冻法生产氧气及相关气体安全技术规程》；未找到指定手套材料、无钉皮靴及裤脚穿戴方式的直接要求，通用职业病防护用品义务不能推出细节。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位必须采用有效的职业病防护设施，并为劳动者提供个人使用的职业病防护用品。用人单位为劳动者个人提供的职业病防护用品必须符合防治职业病的要求；不符合要求的，不得使用。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_8ACCC08D8BFF405F973E46A4E6",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "685af82081191a3c50f2b9bbc420658e20794a6d801ae5a61ac61bf8926ca98d",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_8ACCC08D8BFF405F973E46A4E6",
+    "title": "充灌或处理低温液体时未按规定佩戴防护用品",
+    "description": "操作人员在充灌或处理低温液体时,未戴上干净易脱的皮革、凡布或棉手套。若有产生液体喷射或飞溅可能,未戴上护目镜或面罩。处理大量低温液体或低温液体严重泄漏时,未穿上无钉皮靴,裤脚套在皮靴外面",
+    "measures": "充灌或处理低温液体时按规定佩戴手套、护目镜、面罩及无钉皮靴等防护用品。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "充灌或处理低温液体时未按规定佩戴防护用品"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《低温液体贮运设备 使用安全规则》(JB/T 6898-2015) 第4.7.1条",
+    "mergedInto": null
+  }
 }

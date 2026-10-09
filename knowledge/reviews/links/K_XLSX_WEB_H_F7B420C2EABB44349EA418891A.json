@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "edc9676c214809200e353c4f5a3d49be809f072ecbcf96c3c1f724713e7860e9",
   "contextHashes": {
-    "hazard": "77dd4a4635cd9ed8dde6f11a35aa178dd032ce3f90fb1453b21de555bf8876d1",
+    "hazard": "10bc0a636d0b52ff11eb12afb3e0aaa14ab16c1284c0eb40ecb5ef14ebcdd390",
     "clause": "09ad3ed87badb694d49852edb75bbb7cf58e0db019adb6d076683abb547e1568"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第三十六条第二款安全设备维护检测。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_F7B420C2EABB44349EA418891A",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "edc9676c214809200e353c4f5a3d49be809f072ecbcf96c3c1f724713e7860e9",
+    "contextHashes": {
+      "hazard": "77dd4a4635cd9ed8dde6f11a35aa178dd032ce3f90fb1453b21de555bf8876d1",
+      "clause": "09ad3ed87badb694d49852edb75bbb7cf58e0db019adb6d076683abb547e1568"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第三十六条第二款安全设备维护检测。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

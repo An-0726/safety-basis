@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_41_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a6b76bc0c14384b224b6aaf665c6576e35eca403d981bf59e46f4d37b4dd8364",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BBE86944AB2957AAA6ED6730"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a8df87e7a0ceca7b619f6d79f632ae24b29713c2e1fd04060ffddaad3e20de7b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定本款规定的建筑物范围，删除空泛安全保障描述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "住宅区以及其他由两个以上单位管理或者使用的建筑物的消防车通道、消防车登高操作场地应当设置标志，加强日常管理，保持畅通。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_41_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_BBE86944AB2957AAA6ED6730"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a8df87e7a0ceca7b619f6d79f632ae24b29713c2e1fd04060ffddaad3e20de7b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，消防车通道和登高操作场地未设置标志并保持畅通，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_JSXF_41_4",
+    "keywords": [
+      "消防车通道和登高操作场地未设置标志并保持畅通"
+    ],
+    "lifecycle": "active",
+    "measures": "消防车通道和登高操作场地设置标志并保持畅通；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "消防车通道和登高操作场地未设置标志并保持畅通"
+  }
 }

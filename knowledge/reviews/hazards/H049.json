@@ -1,13 +1,54 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H049",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7ca0b883ba6dbe9efa6068e80a88fed3dcbe1f4fe043d25391a55ca7330c38ff",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_C9074654CEE046293831AD8E"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "385092d05b84cf3ee374d2e48569ed96969642f673fe87db2d24c519d9c5a284",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "以原文单位送医和负责人一小时内报告的主体、动作及时限替代未由该条列明的主要负责人组织抢救表述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十三条发生生产安全事故造成人员伤害需要抢救的，生产经营单位应当及时将受伤人员送至医疗机构，并垫付医疗费用。因特殊情况不能及时垫付的，医疗机构不得拒绝救护。生产经营单位负责人应当在生产安全事故发生一小时内，向负有安全生产监督管理职责的部门如实报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H049",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_C9074654CEE046293831AD8E"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "385092d05b84cf3ee374d2e48569ed96969642f673fe87db2d24c519d9c5a284",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [
+      "事故未及时报告",
+      "主要负责人未组织事故抢救"
+    ],
+    "category": "应急与事故管理",
+    "conditions": "适用于存在生产安全事故发生后主要负责人未及时组织抢救并如实报告相关风险的场所和作业活动。",
+    "description": "生产安全事故发生后，单位负责人接到报告后未迅速采取有效措施组织抢救，或未按国家有关规定立即、如实报告当地负有安全生产监督管理职责的部门。",
+    "id": "H049",
+    "keywords": [
+      "生产安全事故",
+      "事故报告",
+      "组织抢救",
+      "如实报告"
+    ],
+    "lifecycle": "active",
+    "measures": "完善事故报告和应急处置程序；发生事故后立即组织抢救，按规定及时、如实报告，并做好现场保护、善后和调查配合。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "通用场所",
+      "工贸企业"
+    ],
+    "title": "生产安全事故发生后主要负责人未及时组织抢救并如实报告"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_8_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5b13baa98e6f75d6c9f2ff605455df0b833b334cd5f9d111734a43ef2e42955f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_7C11DC0F6E49B742F2B6DDC5"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "4a912609780ae0afb2b0647eb24fcb68680d461a8a260fbe72c0c479f770ae90",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "机构组织和专职人员不是二选一，保留设置或者指定的替代方式。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "职业病危害严重的用人单位，应当设置或者指定职业卫生管理机构或者组织，配备专职职业卫生管理人员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_8_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_7C11DC0F6E49B742F2B6DDC5"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "4a912609780ae0afb2b0647eb24fcb68680d461a8a260fbe72c0c479f770ae90",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，职业病危害严重的用人单位未设置职业卫生管理机构或配备专职管理人员，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_ZJWS_8_1",
+    "keywords": [
+      "职业病危害严重的用人单位未设置职业卫生管理机构或配备专职管理人员"
+    ],
+    "lifecycle": "active",
+    "measures": "职业病危害严重的用人单位设置职业卫生管理机构或配备专职管理人员。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业病危害严重的用人单位未设置职业卫生管理机构或配备专职管理人员"
+  }
 }

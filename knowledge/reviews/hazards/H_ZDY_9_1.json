@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZDY_9_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2a0a80f5daea9c054c44b0ac4e2ff2b7fae2ac30267169f26f316a9afed254dd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_DBF675F040B96A9AD8DBD56A"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "9617130fa1cb842b5a9682a781d08adfb6a221070bf99997b291cedfdb510724",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "定量评估并非所有重大危险源的通用要求，保留两组级别和量比门槛。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "9 第九条 重大危险源有下列情形之一的，应当委托具有相应资质的安全评价机构，按照有关标准的规定采用定量风险评价方法进行安全评估，确定个人和社会风险值：\n（一）构成一级或者二级重大危险源，且毒性气体实际存在（在线）量与其在《危险化学品重大危险源辨识》中规定的临界量比值之和大于或等于1的；\n（二）构成一级重大危险源，且爆炸品或液化易燃气体实际存在（在线）量与其在《危险化学品重大危险源辨识》中规定的临界量比值之和大于或等于1的。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZDY_9_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_DBF675F040B96A9AD8DBD56A"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "9617130fa1cb842b5a9682a781d08adfb6a221070bf99997b291cedfdb510724",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "经资料及履职情况核查，重大危险源未按规定委托资质机构采用定量风险评价方法评估，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZDY_9_1",
+    "keywords": [
+      "重大危险源未按规定委托资质机构采用定量风险评价方法评估"
+    ],
+    "lifecycle": "active",
+    "measures": "重大危险源按规定委托资质机构采用定量风险评价方法评估。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "重大危险源未按规定委托资质机构采用定量风险评价方法评估"
+  }
 }

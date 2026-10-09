@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_1810D03B12E593B41007BB5F",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "27ac6e2bf2dd271ee85ce222b7066a4c0c90d42453d7263c70348147f0fa9bf7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_42E90BA313447042552E2E88"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "96502492763d057bc33afc699ab9ea2a6073284aca0754cc7aa336053ba56d2e",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "现关联只有单位责任主体，同部法规完整第四条明确主要负责人第一责任及人员范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位的主要负责人是本单位安全生产第一责任人，对本单位的安全生产工作全面负责，其他负责人在各自职责范围内履行安全生产职责。生产经营单位的主要负责人包括法定代表人、实际控制人以及对本单位生产经营负有最高管理权、决策权的其他人员。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_1810D03B12E593B41007BB5F",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_42E90BA313447042552E2E88"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "96502492763d057bc33afc699ab9ea2a6073284aca0754cc7aa336053ba56d2e",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "主要负责人(包括法定代表人和实际控制人)是本企业安全生产第一责任人，对本企业安全生产工作全面负责，相关责任未落实",
+    "id": "H_1810D03B12E593B41007BB5F",
+    "keywords": [
+      "主要负责人未落实安全生产第一责任人责任"
+    ],
+    "lifecycle": "active",
+    "measures": "将主要负责人安全生产职责逐项书面化，明确履职频次、责任边界和记录要求，通过会议、检查、投入、隐患治理、应急等履职证据形成闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "主要负责人未落实安全生产第一责任人责任"
+  }
 }

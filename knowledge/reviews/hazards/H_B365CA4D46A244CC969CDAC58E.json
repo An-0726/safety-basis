@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_B365CA4D46A244CC969CDAC58E",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "80da05aef54eb048b16e913c40ed6bdbed4b067f588781bd2f8538c09caad403",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_89B479575B86EBF8E6431251"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "44e2c72dfa0f8a7fe5ff148d76a7d1b0b977882d364729783cf131a994b171cf",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "优先核对现引法规，并检索全库有效条款中的“铜基、铜基合金、气瓶连接、接头、减压装置”，核对《中华人民共和国安全生产法》及全库气瓶条款；安全设备通用条款不规定材质，未找到对题原文，不能将所有气瓶接头等一概要求采用铜基合金。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_B365CA4D46A244CC969CDAC58E",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_89B479575B86EBF8E6431251"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "44e2c72dfa0f8a7fe5ff148d76a7d1b0b977882d364729783cf131a994b171cf",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_B365CA4D46A244CC969CDAC58E",
+    "title": "气瓶接头管道阀门未采用铜基合金制造或未做使用前检查",
+    "description": "i)与气瓶连接的接头、管道、阀门、减压装置,未采用铜基合金制造。使用前必须严格检查,严防沾染油污、油脂和溶剂。内部不准积存锈渣、焊渣及其他机械杂质。j)气瓶后的输送系统必须连接紧密,防止泄漏",
+    "measures": "更换为铜基合金制造的接头、管道、阀门、减压装置，使用前严格检查并清除内部锈渣杂质。",
+    "conditions": "适用于气瓶的相关安全管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "气瓶接头管道阀门未采用铜基合金制造或未做使用前检查"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《气瓶安全技术监察规程》",
+    "mergedInto": null
+  }
 }

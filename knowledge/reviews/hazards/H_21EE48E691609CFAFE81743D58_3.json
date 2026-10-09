@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_21EE48E691609CFAFE81743D58_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "63c126527996c63e439cd87e2f12a79932b4845150841b20c8d228de46c80ae7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_970C1F34585D19538F854863"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "25b1e078fbb554b5f552bb420751beaae710a90436eea85bf05d6ac9d628e059",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同部法规完整第三十四条直接规定大型活动临时设施安全性检测，现关联仅截取公共场所建筑物使用段。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "大型群众性活动的举办者需要设置临时性建筑物、构筑物及设施设备的，应当对其安全性进行检测、检验，保障建筑物、构筑物及设施设备的安全。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_21EE48E691609CFAFE81743D58_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_970C1F34585D19538F854863"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "25b1e078fbb554b5f552bb420751beaae710a90436eea85bf05d6ac9d628e059",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "总图与建筑",
+    "conditions": "适用于江苏省行政区域内，且涉及工业企业选址、总平面布置、建（构）筑物、道路、间距或相关空间条件；应结合建筑/场地性质、设计条件和适用标准确认要求。\n适用场所：江苏省行政区域内大型群众性活动及其临时建筑、构筑物、设施设备设置场景",
+    "description": "现场检查发现：大型群众性活动临时建筑、构筑物及设施设备未经安全检测检验。",
+    "id": "H_21EE48E691609CFAFE81743D58_3",
+    "keywords": [
+      "大型群众性活动临时建筑",
+      "构筑物及设施设备未经安全检测检验"
+    ],
+    "lifecycle": "active",
+    "measures": "大型群众性活动设置临时建筑物、构筑物或设施设备前，应按规定对其结构和使用安全性进行检测、检验；对发现的不符合项完成整改并形成合格结论后方可投入使用，保存检测检验资料。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内大型群众性活动及其临时建筑、构筑物、设施设备设置场景"
+    ],
+    "title": "大型群众性活动临时建筑、构筑物及设施设备未经安全检测检验"
+  }
 }

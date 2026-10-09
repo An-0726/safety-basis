@@ -1,13 +1,72 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_4ECBA08BA78E4ECBB04843053F",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "610f3eeebb44d81fa5e81084606fa60b36ef74af9da5d3c18913a854011e4f5a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_36E528BE2345959812615FB3"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "f7354d06723c6a1aefb31ecbb7cdfcdd8aa52680ddc7346cbf13ee017e08c95e",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "《生产过程安全基本要求》5.7.5直接规定疏散指示标志，替换无疏散用途的普通危险警示关联。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "作业场所应按规定设置应急照明、安全疏散通道及疏散指示标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_4ECBA08BA78E4ECBB04843053F",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_36E528BE2345959812615FB3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "f7354d06723c6a1aefb31ecbb7cdfcdd8aa52680ddc7346cbf13ee017e08c95e",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全标志",
+    "conditions": "适用于厂房的相关安全管理。",
+    "description": "厂房、动力站房的安全出口及疏散通道未设置明显的标志。",
+    "id": "H_4ECBA08BA78E4ECBB04843053F",
+    "keywords": [
+      "厂房",
+      "动力站房的安全出口及疏散通道",
+      "未设置明显的标志",
+      "厂",
+      "房",
+      ",",
+      "动",
+      "力",
+      "站",
+      "的",
+      "安",
+      "全",
+      "出",
+      "口",
+      "及",
+      "疏",
+      "散",
+      "通",
+      "道",
+      "未",
+      "设",
+      "置",
+      "明",
+      "显",
+      "标",
+      "志"
+    ],
+    "lifecycle": "active",
+    "measures": "在厂房、动力站房的安全出口及疏散通道设置明显的标志。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《电子工业职业 安全卫生设计规 定》第2.9.3条\n\nGB 55037-2022\nGB 51309-2018。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "厂房、动力站房的安全出口及疏散通道,未设置明显的标志"
+  }
 }

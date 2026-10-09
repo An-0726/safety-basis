@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_7D85AC280234FC8A78C5E07364_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "42f0b8ea9b82024f09030733a9e7a7609e52a1a1ab87e8773e70b33704d5e2d1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_98B67C4F5027394733E45EA3"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "8cab0cc4ecece6f923caae4c8f4fb34d295bd5b98edc2244015cd279ece24c00",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "该审核开工限制仅对可能产生放射性职业病危害的医疗机构项目适用，不能外推所有建设项目。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "未提交预评价报告或者预评价报告未经卫生行政部门审核同意的，不得 开工建设。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_7D85AC280234FC8A78C5E07364_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_98B67C4F5027394733E45EA3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "8cab0cc4ecece6f923caae4c8f4fb34d295bd5b98edc2244015cd279ece24c00",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "未提交预评价报告或者预评价报告未经卫生行政部门审核同意的，不得开工建设。（第十七条）。",
+    "id": "H_7D85AC280234FC8A78C5E07364_4",
+    "keywords": [
+      "建设单位未提交预评价报告或者预评价报告未经卫生行政部门审核同意即开工建设"
+    ],
+    "lifecycle": "active",
+    "measures": "未提交预评价报告或者预评价报告未经卫生行政部门审核同意的，不得开工建设。（依据 第十七条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所",
+      "通用场所"
+    ],
+    "title": "建设单位未提交预评价报告或者预评价报告未经卫生行政部门审核同意即开工建设"
+  }
 }

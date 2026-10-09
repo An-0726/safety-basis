@@ -1,16 +1,73 @@
 {
-  "decision": "verified",
   "entityId": "H_EC527E40F25347948ADA08A388",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "82f18ba0aeeea214d63196db54416e57431cccb825a2ae3374d3b728527bb6ad",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "EH_b220a8fe58d3061ae245b764494e7af82eafaa9d82d9f945f0905a6640f4e91b"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_939c1d7a02775b56811a2042",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "原文规定触发情形下配置急停，原标题误把触发条件本身当缺陷，改为前提存在且未配急停。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "存在下列情况时,生产设备应配置急停装置:———发生事故或出现生产设备故障时,不能快速通过停止装置终止危险运行;———不能通过一个停止装置快速中断若干个能造成危险的单元;———由于切断某个单元会导致其他危险发生;———在操纵台处不能看到所控制的全貌。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_EC527E40F25347948ADA08A388",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_b220a8fe58d3061ae245b764494e7af82eafaa9d82d9f945f0905a6640f4e91b"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_939c1d7a02775b56811a2042",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "d00ec61a7a812ccd8ce1f534c5767bbe3d953067532fdb3421e7b9e750a583d9",
+    "reason": " [hash rebound after content/lifecycle update]"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "d00ec61a7a812ccd8ce1f534c5767bbe3d953067532fdb3421e7b9e750a583d9",
-  "reason": " [hash rebound after content/lifecycle update]"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "设备不能通过一个开关迅速中断若干个能造成危险的运动单元。",
+    "id": "H_EC527E40F25347948ADA08A388",
+    "keywords": [
+      "不能通过一个开关迅速中断若干个能造成危险的运动单元",
+      "不",
+      "能",
+      "通",
+      "过",
+      "一",
+      "个",
+      "开",
+      "关",
+      "迅",
+      "速",
+      "中",
+      "断",
+      "若",
+      "干",
+      "造",
+      "成",
+      "危",
+      "险",
+      "的",
+      "运",
+      "动",
+      "单",
+      "元"
+    ],
+    "lifecycle": "active",
+    "measures": "设置能通过一个开关迅速中断若干个危险运动单元的急停装置。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原标题开头带法条款项序号（如“4…”“5…”）或破折号，读起来像条文而非隐患，已去掉序号并顺理为缺陷表述；法律依据与整改措施未改动。2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《生产设备安全卫生设计总则》（GB 5083-2023）",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未设置可迅速中断若干个危险运动单元的开关"
+  }
 }

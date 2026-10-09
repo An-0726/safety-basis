@@ -1,13 +1,80 @@
 {
-  "entityType": "hazard",
   "entityId": "H_407B9F4BFC5A4879B9950C9D87",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "69eeb8c0a41569303b61fec4e8ae409a849958c1e3537cc9d260f54e23d68d8a",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "60669ddc3b7cd35f538155d92d7c956575c0b80c2d2629f26a3296b0a80e3526",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "优先核对现引法规，并检索全库有效条款中的“应急工作责任制、应急工作、应急责任、责任制”，核对《中华人民共和国安全生产法》及全库应急条款；编制事故预案不能等同建立应急工作责任制，库内未找到直接规定该责任制的有效原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_407B9F4BFC5A4879B9950C9D87",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "69eeb8c0a41569303b61fec4e8ae409a849958c1e3537cc9d260f54e23d68d8a",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "未加强生产安全事故应急工作,建立、健全生产安全事故应急工作责任制,其主要负责人对本单位的生产安全事故应急工作全面负责",
+    "id": "H_407B9F4BFC5A4879B9950C9D87",
+    "keywords": [
+      "未加强生产安全事故应急工作",
+      "建立",
+      "健全生产安全事故应急工作责任制",
+      "未",
+      "加",
+      "强",
+      "生",
+      "产",
+      "安",
+      "全",
+      "事",
+      "故",
+      "应",
+      "急",
+      "工",
+      "作",
+      ",",
+      "建",
+      "立",
+      "健",
+      "责",
+      "任",
+      "制",
+      "其",
+      "主",
+      "要",
+      "负",
+      "人",
+      "对",
+      "本",
+      "单",
+      "位",
+      "的",
+      "面"
+    ],
+    "lifecycle": "active",
+    "measures": "企业主要负责人丁仁亮对本单位安全生产工作全面负责,已建立安全生产责任制度。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。原 conditions 字段记录的引用依据为：依据：《生产安全事故应急条例》国务院令第708号 第四条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未建立生产安全事故应急工作责任制"
+  }
 }

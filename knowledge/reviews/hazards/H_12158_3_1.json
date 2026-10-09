@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_12158_3_1",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "7a79b080d5a1cc7bbe87180f09e58e5ae82d55cd136c64fa6eb7e57f07aedfce",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "dc256c0d3e77e42aaab146aa91d8e109848932066ff7b819954dcbb7e1053c6d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_SAMR_GB12158_2024"
-  ]
+  ],
+  "reason": "在《防止静电事故通用要求》及全库现行条款中检索“静置至少30、30 min后、30min、5000”，现关联无对象条件，8.5.5又在油舱容积条件处截断；找不到完整支持本题30min门槛的条款。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": ",应静置至少30 min后作业。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_12158_3_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "7a79b080d5a1cc7bbe87180f09e58e5ae82d55cd136c64fa6eb7e57f07aedfce",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "仅适用于油舱装油后采样、测温、检尺等作业；油舱容积大于5000m³时静置时间不少于30min。",
+    "description": ",应静置至少30 min后作业。（第3条）。",
+    "id": "H_12158_3_1",
+    "keywords": [
+      "易燃液体作业前未静置至少30",
+      "min"
+    ],
+    "lifecycle": "active",
+    "measures": "应静置至少30 min后作业。（依据 第3条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所",
+      "通用场所"
+    ],
+    "title": "易燃液体作业前未静置至少30 min"
+  }
 }

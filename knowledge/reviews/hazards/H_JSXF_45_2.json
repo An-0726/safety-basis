@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_45_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "15ac202e3ee8f36a443345c715594ca810b5430e43f02349d2d1d9323ac8c56d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_5E3E2BF6D01B380A854B24BB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "920ac3d7d8acf8fab5d3df244bd4d1c53aeb9de0e4e08355da669a39019dbf24",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定外墙外保温，明确主入口及周边位置和原文要求标识内容。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "外墙外保温系统采用可燃、易燃保温材料的建筑，管理单位应当在主入口以及周边相关显著位置设置提示性和警示性标识，标示外墙外保温材料的燃烧性能和防火要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_45_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_5E3E2BF6D01B380A854B24BB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "920ac3d7d8acf8fab5d3df244bd4d1c53aeb9de0e4e08355da669a39019dbf24",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全标志",
+    "conditions": "适用于江苏省行政区域内，且依据直接条款需要设置安全色、安全标志、警示标识或信息标识的危险场所、设施、设备或作业区域；标志种类、内容和位置应结合实际风险确认。\n适用场所：江苏省行政区域内存在安全标志、警示标识或管线识别要求的场所和设备",
+    "description": "现场检查发现，可燃保温材料建筑管理单位未在显著位置设置提示警示标识，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_45_2",
+    "keywords": [
+      "可燃保温材料建筑管理单位未在显著位置设置提示警示标识"
+    ],
+    "lifecycle": "active",
+    "measures": "可燃保温材料建筑管理单位在显著位置设置提示警示标识。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内存在安全标志、警示标识或管线识别要求的场所和设备"
+    ],
+    "title": "可燃保温材料建筑管理单位未在显著位置设置提示警示标识"
+  }
 }

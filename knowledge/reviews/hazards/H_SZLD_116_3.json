@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_SZLD_116_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "7a407f3012298357bf69c3c3d9130140b93459cb462aea9b54bb4792215bb6c3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E79887FFBB1A653F8E3A3A52"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "b96d5d439d31d1cac8e5adeaaf88558de4c583ba9ba68b38d5db3b15920f5f12",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "在《特种设备使用单位落实使用安全主体责任监督管理规定》及全库现行条款中检索“采纳、意见或者建议、无正当理由”，对应结果均为安全人员履职免责认定，未找到客运索道单位必须采纳全部意见建议的直接义务；工作条件保障等条款不支持未采纳即构成隐患。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "客运索道使用单位及其主要负责人无正当理由未采纳客运索道安全总监和客运索道安全员依照本规定第一百零四条提出的意见或者建议的，应当认为客运索道安全总监和客运索道安全员已经依法履职尽责，不予处罚。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_SZLD_116_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E79887FFBB1A653F8E3A3A52"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "b96d5d439d31d1cac8e5adeaaf88558de4c583ba9ba68b38d5db3b15920f5f12",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "客运索道使用单位及其主要负责人无正当理由未采纳客运索道安全总监和客运索道安全员依照本规定第一百零四条提出的意见或者建议的，应当认为客运索道安全总监和客运索道安全员已经依法履职尽责，不予处罚。（第116条）。",
+    "id": "H_SZLD_116_3",
+    "keywords": [
+      "客运索道使用单位无正当理由未采纳安全总监和安全员意见建议"
+    ],
+    "lifecycle": "active",
+    "measures": "客运索道使用单位及其主要负责人无正当理由未采纳客运索道安全总监和客运索道安全员依照本规定第一百零四条提出的意见或者建议的，应当认为客运索道安全总监和客运索道安全员已经依法履职尽责，不予处罚。（依据 第116条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "客运索道使用、运行、维护检修或相关管理场景",
+      "通用场所"
+    ],
+    "title": "客运索道使用单位无正当理由未采纳安全总监和安全员意见建议"
+  }
 }

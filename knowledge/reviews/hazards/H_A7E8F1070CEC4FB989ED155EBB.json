@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_A7E8F1070CEC4FB989ED155EBB",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "273def34854d5f8a4da3b2ed4995909b94c36f0e20e8fcf6ffd53987570bdf73",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "b902ce1b3bd7440b37886dfa37f4e013382006dc02a2ec81ed7ccd9289fcc4b5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_GOV_SPEC_EQ_LAW_2013"
-  ]
+  ],
+  "reason": "在《特种设备安全法》《生产过程安全基本要求》《高温熔融金属吊运安全规程》及全库现行条款中检索“吊钩、闭锁、防脱”，结果为载荷标示、探伤或其他设备机械闭锁义务，未找到起重机吊钩闭锁装置要求；安全保护装置齐全的一般条款不支持该具体缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特种设备生产、使用单位应当按照国家有关规定配备特种设备安全管理人员、检测人员和作业人员，并对其进行必要的安全教育和技能培训。特种设备的安全保护装置和附件应当齐全、完好、有效。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_A7E8F1070CEC4FB989ED155EBB",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "273def34854d5f8a4da3b2ed4995909b94c36f0e20e8fcf6ffd53987570bdf73",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_GOV_SPEC_EQ_LAW_2013"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_A7E8F1070CEC4FB989ED155EBB",
+    "title": "车间内起重机吊钩未设置闭锁装置",
+    "description": "车间内起重机吊钩未设置闭锁（防脱钩）装置，吊物存在滑脱风险。",
+    "measures": "为起重机吊钩设置闭锁（防脱钩）装置并定期检查有效性。",
+    "conditions": "适用于车间的相关安全管理。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "车间内起重机吊钩未设置闭锁装置"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《起重机械安全规程 第1部分:总则》(GB 6067.1-2010) 第4.2.2.3条\n\n《中华人民共和国特种设备安全法》。",
+    "mergedInto": null
+  }
 }

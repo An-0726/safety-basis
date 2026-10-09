@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_B1F6637B204CE085C41B429B3D_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "23f40f8bf734102e8520d3039b08b5c97c3e8e7033d42ea6ba3d63aa9054d496",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "70a0a1be8e04c47dc5c8210ae3ec66b9b9933b1642d59a45b267342b7a25b3bb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_FIRE_LAW_2021"
-  ]
+  ],
+  "reason": "消防器材配置条款不规定活动许可和预案，库内消防法第二十条直接规定承办人相应责任。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十条举办大型群众性活动，承办人应当依法向公安机关申请安全许可，制定灭火和应急疏散预案并组织演练，明确消防安全责任分工，",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_B1F6637B204CE085C41B429B3D_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "23f40f8bf734102e8520d3039b08b5c97c3e8e7033d42ea6ba3d63aa9054d496",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_FIRE_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_B1F6637B204CE085C41B429B3D_1",
+    "title": "举办大型群众性活动，承办人未依法向公安机关申请安全许可，制定灭火和应急疏散预案并组织演练，明确消防安全责任分工",
+    "description": "第二十条举办大型群众性活动，承办人应当依法向公安机关申请安全许可，制定灭火和应急疏散预案并组织演练，明确消防安全责任分工，确定消防安全管理人员，保持消防设施和消防器材配置齐全、完好有效，保证疏散通道、安全出口、疏散指示标志、应急照明和消防车通道符合消防技术标准和管理规定。（第二十条）。",
+    "measures": "第二十条举办大型群众性活动，承办人应当依法向公安机关申请安全许可，制定灭火和应急疏散预案并组织演练，明确消防安全责任分工，确定消防安全管理人员，保持消防设施和消防器材配置齐全、完好有效，保证疏散通道、安全出口、疏散指示标志、应急照明和消防车通道符合消防技术标准和管理规定。（依据 第二十条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "举办大型群众性活动，承办人未依法向公安机关申请安全许可，制定灭火和应急疏散预案并组织演练，明确消防安全责任分工"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第二十条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

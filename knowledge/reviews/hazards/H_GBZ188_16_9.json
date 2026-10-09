@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_GBZ188_16_9",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "94758644b9d2656bff132d1f3c45901d53c2307a57328dff0f440a04f24e1931",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "7522858308cbfdfe28967394602671b2205b5567fd1124599a3c5268a9653ac8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
-  ]
+  ],
+  "reason": "Codex建议改关联到C_GBZ188_16，但该条款记录是整段附录的串文，不能作为逐条依据；Claude复核改为下架，待该标准条款重新分条后再处理。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "A.10本标准中对某些职业病危害因素根据工作场所职业病危害作业分级规定了不同的健康检查周期。用人单位提供的分级结果应真实可靠。未进行工作场所职业病危害作业分级或分级结果无效的，健康检查周期按II级及以上执行。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_GBZ188_16_9",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "94758644b9d2656bff132d1f3c45901d53c2307a57328dff0f440a04f24e1931",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_GBZ188_16_9",
+    "title": "用人单位提供的职业病危害作业分级结果失实",
+    "description": "用人单位提供的分级结果应真实可靠。（第16条）。",
+    "measures": "用人单位提供的分级结果应真实可靠。（依据 第16条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "用人单位提供的职业病危害作业分级结果失实"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第16条 反转生成（GLM，2026-09-12）。\n\n《中华人民共和国职业病防治法》。",
+    "mergedInto": null
+  }
 }

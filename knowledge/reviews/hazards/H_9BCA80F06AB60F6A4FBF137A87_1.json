@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_9BCA80F06AB60F6A4FBF137A87_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2ec24788cc897948f09989b363626a87c7ccc85061b22630ea7edbcc6a93e751",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_8B075BCD00084450A0A015CF"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "87a74c291808c90dfc6e3b515d78eebc2a5088282f359ca4770bd6cd950dd5d4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "本项属于物业服务企业专门职责，补主体及物业管理区域限制。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（五）对共用消防设施、器材以及消防安全标志定期组织检查、维护保养，需要动用专项维修资金进行维修、更新的，应当及时按照规定向有关部门或者单位报告；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_9BCA80F06AB60F6A4FBF137A87_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_8B075BCD00084450A0A015CF"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "87a74c291808c90dfc6e3b515d78eebc2a5088282f359ca4770bd6cd950dd5d4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，对共用消防设施、器材以及消防安全标志未定期组织检查、维护保养，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_9BCA80F06AB60F6A4FBF137A87_1",
+    "keywords": [
+      "对共用消防设施",
+      "器材以及消防安全标志未定期组织检查",
+      "维护保养"
+    ],
+    "lifecycle": "active",
+    "measures": "对共用消防设施、器材以及消防安全标志定期组织检查、维护保养；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "对共用消防设施、器材以及消防安全标志未定期组织检查、维护保养"
+  }
 }

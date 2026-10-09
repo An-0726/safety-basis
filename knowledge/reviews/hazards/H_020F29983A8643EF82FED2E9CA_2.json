@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_020F29983A8643EF82FED2E9CA_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "38101d64157351c84817a4ad9841e99c2244bc29028e870bb703eada3d82c0de",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E3A4EB2CF9CEC736D2F2BC50"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "d2d149b2ff3296e13bb6f143a8fd2e526a73591e19d2e918e2fa8a4c4ba1c011",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "恢复大型群众性活动背景，删除未由本款规定的定期巡查要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（三）搭建临时建筑物、构筑物或者安装电气设备，应当符合消防技术标准和消防安全管理规定；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_020F29983A8643EF82FED2E9CA_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E3A4EB2CF9CEC736D2F2BC50"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "d2d149b2ff3296e13bb6f143a8fd2e526a73591e19d2e918e2fa8a4c4ba1c011",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，搭建临时建筑物、构筑物或者安装电气设备，未符合消防技术标准和消防安全管理规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_020F29983A8643EF82FED2E9CA_2",
+    "keywords": [
+      "搭建临时建筑物",
+      "构筑物或者安装电气设备",
+      "未符合消防技术标准和消防安全管理规定"
+    ],
+    "lifecycle": "active",
+    "measures": "搭建临时建筑物、构筑物或者安装电气设备，符合消防技术标准和消防安全管理规定；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "搭建临时建筑物、构筑物或者安装电气设备，未符合消防技术标准和消防安全管理规定"
+  }
 }

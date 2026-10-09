@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_87B2F0BEA865AD12A492FF008D_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "266c155d726ce59ca57275fb27a9194663e9f7b1df6e2664836ce39b880eb4dd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_1909E6BD40C4F12253EA826C"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "f04bdf27b4cdc817357182862840c514b085a57d7ac2d74e46b866c24bf8ff7c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "其他数据报送适用于生产经营单位，不仅适用于列举高风险行业，更不能限为燃气场所。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（五）其他应当报送的安全生产数据。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_87B2F0BEA865AD12A492FF008D_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1909E6BD40C4F12253EA826C"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "f04bdf27b4cdc817357182862840c514b085a57d7ac2d74e46b866c24bf8ff7c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于南京市行政区域内，且存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：南京市行政区域内燃气使用、储存及燃气设施相关场所",
+    "description": "现场检查发现，矿山、金属冶炼、建筑施工、运输、危险物品、城镇燃气等生产经营单位未按照规定报送其他安全生产数据，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_87B2F0BEA865AD12A492FF008D_3",
+    "keywords": [
+      "矿山",
+      "金属冶炼",
+      "建筑施工",
+      "运输",
+      "危险物品",
+      "城镇燃气等生产经营单位未按照规定报送其他安全生产数据"
+    ],
+    "lifecycle": "active",
+    "measures": "矿山、金属冶炼、建筑施工、运输、危险物品、城镇燃气等生产经营单位按照规定报送其他安全生产数据。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内燃气使用、储存及燃气设施相关场所"
+    ],
+    "title": "矿山、金属冶炼、建筑施工、运输、危险物品、城镇燃气等生产经营单位未按照规定报送其他安全生产数据"
+  }
 }

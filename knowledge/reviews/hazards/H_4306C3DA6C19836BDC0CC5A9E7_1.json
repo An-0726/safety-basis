@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_4306C3DA6C19836BDC0CC5A9E7_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "aa0cbc6f695a1a3ac2dfbfd7385ef37200fdf8a8273e82927408877d26ad4921",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "e52579caf6a7fbdbaec4ef4b5a27a0024e9fedefb08d7c6bdc31bd228a04bdf3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "现依据为单位间交叉作业协议，第五十九条直接规定从业人员报告，须保留报告对象二选一。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十九条从业人员发现事故隐患或者其他不安全因素，应当立即向现场安全生产管理人员或者本单位负责人报告；",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_4306C3DA6C19836BDC0CC5A9E7_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "aa0cbc6f695a1a3ac2dfbfd7385ef37200fdf8a8273e82927408877d26ad4921",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_4306C3DA6C19836BDC0CC5A9E7_1",
+    "title": "从业人员发现事故隐患或者其他不安全因素，未立即向现场安全生产管理人员或者本单位负责人报告",
+    "description": "适用于本隐患所述场所、设备及作业活动。 经现场核查存在以下不符合：从业人员发现事故隐患或者其他不安全因素，未立即向现场安全生产管理人员或者本单位负责人报告。",
+    "measures": "第五十九条从业人员发现事故隐患或者其他不安全因素，应当立即向现场安全生产管理人员或者本单位负责人报告；（依据 第五十九条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "从业人员发现事故隐患或者其他不安全因素，未立即向现场安全生产管理人员或者本单位负责人报告"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第五十九条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

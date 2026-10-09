@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DAD31AE591E467AA925F6CD57E_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fa9856019cee9c75493a183efa1c128926f86e1726c0a8cb1dca9fcad5744913",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_6758452E9ABB9F0A6F48DD24"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "37ea0c9c247e6a27c254a6b58a30e2eb3ca8975066f82cdafe9ec7649d505e73",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "修正措施中要求承租人“违反”消防要求的反向错误，补租赁对象范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "出租人应当保证用于出租的房屋符合消防安全要求，承租人不得违反消防安全要求对房屋进行装修、改造。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DAD31AE591E467AA925F6CD57E_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_6758452E9ABB9F0A6F48DD24"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "37ea0c9c247e6a27c254a6b58a30e2eb3ca8975066f82cdafe9ec7649d505e73",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，出租人未保证用于出租的房屋符合消防安全要求，承租人违反消防安全要求对房屋进行装修、改造，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DAD31AE591E467AA925F6CD57E_1",
+    "keywords": [
+      "出租人未保证用于出租的房屋符合消防安全要求",
+      "承租人违反消防安全要求对房屋进行装修",
+      "改造"
+    ],
+    "lifecycle": "active",
+    "measures": "出租人保证用于出租的房屋符合消防安全要求，承租人违反消防安全要求对房屋进行装修、改造；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "出租人未保证用于出租的房屋符合消防安全要求，承租人违反消防安全要求对房屋进行装修、改造"
+  }
 }

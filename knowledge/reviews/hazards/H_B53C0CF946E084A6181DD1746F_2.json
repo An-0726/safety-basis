@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_B53C0CF946E084A6181DD1746F_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b194d2292ce9fddee1426746c3093162f487c69457c334a83439d1233918ab85",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_11F2AC4CAF1F356C157AD5BC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f0b532719eb10b602d12fd2b7e267c1ef4aa87ead898e9c27e97a42feddb80c1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联是索道游乐设施每日检查，完整第四十三条另有三类设备说明和标志展示要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电梯、客运索道、大型游乐设施的运营使用单位应当将电梯、客运索道、大型游乐设施的安全使用说明、安全注意事项和警示标志置于易于为乘客注意的显著位置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_B53C0CF946E084A6181DD1746F_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_11F2AC4CAF1F356C157AD5BC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f0b532719eb10b602d12fd2b7e267c1ef4aa87ead898e9c27e97a42feddb80c1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，电梯、客运索道、大型游乐设施的运营使用单位未将安全使用说明、安全注意事项和警示标志置于易于注意的显著位置，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_B53C0CF946E084A6181DD1746F_2",
+    "keywords": [
+      "电梯",
+      "客运索道",
+      "大型游乐设施的运营使用单位未将安全使用说明",
+      "安全注意事项和警示标志置于易于注意的显著位置"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯、客运索道、大型游乐设施的运营使用单位将安全使用说明、安全注意事项和警示标志置于易于注意的显著位置。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯、客运索道、大型游乐设施的运营使用单位未将安全使用说明、安全注意事项和警示标志置于易于注意的显著位置"
+  }
 }

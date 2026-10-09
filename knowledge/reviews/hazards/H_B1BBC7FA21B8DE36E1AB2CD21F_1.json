@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_B1BBC7FA21B8DE36E1AB2CD21F_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ca466c3889538260a42dcff9dfc89412e1d0e05abc1fbfa07097c98c7f65e15c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_54D999546064D0CA8005F91E"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "dbedadbc5aac2f813770c27b1fad679deb9725483b881f6141462699c3a8b3e6",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补南京地域及完整人数档位，删除只记录不足30人分支的正向描述及不一致场所。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定的生产经营单位，从业人员三十人以上的，应当设置安全生产管理机构。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_B1BBC7FA21B8DE36E1AB2CD21F_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_54D999546064D0CA8005F91E"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "dbedadbc5aac2f813770c27b1fad679deb9725483b881f6141462699c3a8b3e6",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于《南京市安全生产条例》第14条所列行业单位，并按从业人员数量档位核定人员和机构配置。",
+    "description": "第十四条矿山、金属冶炼、建筑施工、运输和危险物品的生产、经营、储存、装卸以及城市轨道交通运营、船舶修造和拆解、电力等生产经营单位，应当按照下列规定配备专职安全生产管理人员： （一）从业人员不足三十人的，至少配备一名专职安全生产管理人员；（第十四条）。",
+    "id": "H_B1BBC7FA21B8DE36E1AB2CD21F_1",
+    "keywords": [
+      "矿山",
+      "金属冶炼",
+      "建筑施工",
+      "运输和危险物品等生产经营单位未依法设置安全生产管理机构或者配备安全生产管理人员"
+    ],
+    "lifecycle": "active",
+    "measures": "按从业人员数量和行业类别配置专职安全生产管理人员；达到法定人数条件时设置安全生产管理机构，并按人员规模逐档核对最低配置要求。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+      "通用场所"
+    ],
+    "title": "法定行业单位未按从业人数配置专职安全生产管理人员或未按规定设置安全生产管理机构"
+  }
 }

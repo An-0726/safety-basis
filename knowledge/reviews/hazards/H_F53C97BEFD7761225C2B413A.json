@@ -1,15 +1,52 @@
 {
-  "checkedAt": "2026-09-19T00:00:00+08:00",
-  "decision": "verified",
   "entityId": "H_F53C97BEFD7761225C2B413A",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f6dce5094133266a5d699b3a163c62e117bc15ea2af06e4ecb58c986c51251d8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "经核验GB 18597-2023官方原件，条款原文与适用范围完全支撑该隐患判定，转为正式有效隐患。贮存液态危废未设堵截设施或容积不足1/10，未设渗滤液收集设施，直接违反第6.2.2条要求。",
-  "reviewType": "content",
-  "reviewedContentHash": "98327a00ddbe81db6276c4397900699819cb444644c2d03181afc56a92b71f40",
-  "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
-  "reviewedAt": "2026-09-19T00:00:00Z",
-  "lifecycle": "active"
+  "reason": "明确二者取较大值而非任取较小值，并将设施分别对应液态废物及可能产生渗滤液废物。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在贮存库内或通过贮存分区方式贮存液态危险废物的，应具有液体泄漏堵截设施，堵截设施最小容积不应低于对应贮存区域最大液态废物容器容积或液态废物总储量 1/10（二者取较大者）；用于贮存可能产生渗滤液的危险废物的贮存库或贮存分区应设计渗滤液收集设施，收集设施容积应满足渗滤液的收集要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-19T00:00:00+08:00",
+    "decision": "verified",
+    "entityId": "H_F53C97BEFD7761225C2B413A",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "经核验GB 18597-2023官方原件，条款原文与适用范围完全支撑该隐患判定，转为正式有效隐患。贮存液态危废未设堵截设施或容积不足1/10，未设渗滤液收集设施，直接违反第6.2.2条要求。",
+    "reviewType": "content",
+    "reviewedContentHash": "98327a00ddbe81db6276c4397900699819cb444644c2d03181afc56a92b71f40",
+    "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+    "reviewedAt": "2026-09-19T00:00:00Z",
+    "lifecycle": "active"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于在贮存库内或通过贮存分区方式贮存液态危险废物，或者贮存可能产生渗滤液的危险废物的贮存库及贮存分区。",
+    "description": "在贮存库内或通过贮存分区方式贮存液态危险废物未设置液体泄漏堵截设施（或容积低于最大液态容器容积或总储量1/10），或者用于贮存可能产生渗滤液的危险废物的贮存库或分区未设计满足要求的渗滤液收集设施。",
+    "id": "H_F53C97BEFD7761225C2B413A",
+    "keywords": [
+      "危险废物贮存库未设置泄漏液体堵截",
+      "收集设施",
+      "含渗滤液收集"
+    ],
+    "lifecycle": "active",
+    "measures": "贮存液态危险废物的贮存库或分区，必须建设液体泄漏堵截设施，最小容积不低于对应区域最大液态废物容器容积或总储量1/10；贮存可能产生渗滤液废物的，必须设计并建设满足收集要求的渗滤液收集设施。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所",
+      "通用场所"
+    ],
+    "title": "液态或可能产生渗滤液的危险废物未设泄漏堵截或渗滤液收集设施"
+  }
 }

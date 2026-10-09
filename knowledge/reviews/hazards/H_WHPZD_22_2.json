@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_WHPZD_22_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9f7217c3fbe7acb994a0a658d9dd9eb07067fc50e2d28801c30431f65fb79281",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E34C9620389BB1C6A7B6FE3B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8f6a4aaf80670421d81d75324026d9b095c660ef9ca9bb9a6d3d9f1db8329346",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原关联quote实际为第二十三条备案条款且条号错配，同法规第二十二条直接列明档案资料。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十二条 危险化学品单位应当对辨识确认的重大危险源及时、逐项进行登记建档。\n重大危险源档案应当包括下列文件、资料：\n（一）辨识、分级记录；（二）重大危险源基本特征表；（三）涉及的所有化学品安全技术说明书；（四）区域位置图、平面布置图、工艺流程图和主要设备一览表；（五）重大危险源安全管理规章制度及安全操作规程；（六）安全监测监控系统、措施说明、检测、检验结果；（七）重大危险源事故应急预案、评审意见、演练计划和评估报告；（八）安全评估报告或者安全评价报告；（九）重大危险源关键装置、重点部位的责任人、责任机构名称；（十）重大危险源场所安全警示标志的设置情况；（十一）其他文件、资料。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_WHPZD_22_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E34C9620389BB1C6A7B6FE3B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8f6a4aaf80670421d81d75324026d9b095c660ef9ca9bb9a6d3d9f1db8329346",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "经资料及履职情况核查，重大危险源档案未包括辨识分级记录等文件资料，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_WHPZD_22_2",
+    "keywords": [
+      "重大危险源档案未包括辨识分级记录等文件资料"
+    ],
+    "lifecycle": "active",
+    "measures": "重大危险源档案包括辨识分级记录等文件资料。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "重大危险源档案未包括辨识分级记录等文件资料"
+  }
 }

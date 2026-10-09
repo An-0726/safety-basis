@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_21_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2595d64baeafcc37bd24d4d72e9cbb44b6a286e39ecca3d27be5decd7b173462",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2504FB956E1D419A30D8870F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "5e8e51eb276c0ac86a9d1c1e4dd6655315690a2dfc16250779801877e4dcd555",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联是工作保障及履职免责条款，同部规定对应安全员职责条款直接要求发现一般事故隐患立即处理。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "压力容器安全员发现压力容器存在一般事故隐患时，应当立即进行处理；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_21_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2504FB956E1D419A30D8870F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "5e8e51eb276c0ac86a9d1c1e4dd6655315690a2dfc16250779801877e4dcd555",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：压力容器使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，压力容器安全员发现一般事故隐患未立即处理，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_21_1",
+    "keywords": [
+      "压力容器安全员发现一般事故隐患未立即处理"
+    ],
+    "lifecycle": "active",
+    "measures": "压力容器安全员发现一般事故隐患立即处理。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "压力容器使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "压力容器安全员发现一般事故隐患未立即处理"
+  }
 }

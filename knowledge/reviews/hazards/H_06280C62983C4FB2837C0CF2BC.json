@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_06280C62983C4FB2837C0CF2BC",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "55ff468886082b886caa598c80d17a42d7390215a0d7378b98348e6cbb92d435",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_89B479575B86EBF8E6431251"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "cee3792243dcef098ba4093bd22dbdd00c4514e83c5941cf1b097243d6891f8a",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "先核安全生产法第三十六条，再以“危险零件、身体、手指、隔离、防护装置功能”检索全部现行条款并核对《生产设备安全卫生设计总则》和库内机械技术条款；未找到一般机械防护装置隔离身体手指且不影响操作的直接规定，一般符合标准和正常运转义务不能代替技术功能条款。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_06280C62983C4FB2837C0CF2BC",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_89B479575B86EBF8E6431251"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "cee3792243dcef098ba4093bd22dbdd00c4514e83c5941cf1b097243d6891f8a",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_06280C62983C4FB2837C0CF2BC",
+    "title": "机械设备安全防护装置功能不完整，未有效隔离人员与危险零件",
+    "description": "机械设备的安全防护装置,未具有的功能包括:a)将操作人员的身体、手指、手臂和服装等与危险零件隔离开,同时不影响设备的正常操作",
+    "measures": "修补或更换安全防护装置，确保有效隔离人员与危险零件，并定期检查。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "机械设备安全防护装置功能不完整，未有效隔离人员与危险零件"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《检测实验室安全 第3部分:机械因素》(GB/T 27476.3-2014) 第5.4.3.5.1条\n\nGB/T 8196\nGB/T 27476.3。",
+    "mergedInto": null
+  }
 }

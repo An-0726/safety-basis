@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "b8512d8d8c60359143acbad4536feb9e0a22799f4e4d9f27faff8c82925e8c4c",
   "contextHashes": {
-    "hazard": "ce5ca57647ea894a4550ae7dd14574e088d1c4d4b7eb20121e91f8e6b35b63d2",
+    "hazard": "e8810972ede4cfe581c66d260dfebb4b19b307aacbf4c61a59a55aa12f0a3f26",
     "clause": "996241f0e5f0463cecde297d4aaf3f873fda77fa1592e8e492591e39fb71c12b"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第三十八条淘汰设备严禁使用。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_A7D8C5192004B9B1DB48E5CC_2",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "b8512d8d8c60359143acbad4536feb9e0a22799f4e4d9f27faff8c82925e8c4c",
+    "contextHashes": {
+      "hazard": "ce5ca57647ea894a4550ae7dd14574e088d1c4d4b7eb20121e91f8e6b35b63d2",
+      "clause": "996241f0e5f0463cecde297d4aaf3f873fda77fa1592e8e492591e39fb71c12b"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第三十八条淘汰设备严禁使用。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

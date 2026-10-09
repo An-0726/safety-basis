@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_2C354AC8B335CF52A913D6FF41_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "bd30d0956dc6cff93e51d3a32cd06dcee9fbd3273246acf22fdd231b6840db13",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "8d5adcd24eb23749b5567f18669a34ef1b24a12e7c9c4edcf69e4a502f1c5710",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
-  ]
+  ],
+  "reason": "防护用品条款与禁用设备材料不同，库内职业病防治法第三十条直接禁止上述行为。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十条任何单位和个人不得生产、经营、进口和使用国家明令禁止使用的可能产生职业病危害的设备或者材料。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_2C354AC8B335CF52A913D6FF41_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "bd30d0956dc6cff93e51d3a32cd06dcee9fbd3273246acf22fdd231b6840db13",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_2C354AC8B335CF52A913D6FF41_1",
+    "title": "任何单位和个人生产、经营、进口和使用国家明令禁止使用的可能产生职业病危害的设备或者材料",
+    "description": "第三十条任何单位和个人不得生产、经营、进口和使用国家明令禁止使用的可能产生职业病危害的设备或者材料。（第三十条）。",
+    "measures": "第三十条任何单位和个人不得生产、经营、进口和使用国家明令禁止使用的可能产生职业病危害的设备或者材料。（依据 第三十条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "任何单位和个人生产、经营、进口和使用国家明令禁止使用的可能产生职业病危害的设备或者材料"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第三十条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

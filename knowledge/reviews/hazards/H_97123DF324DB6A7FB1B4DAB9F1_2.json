@@ -1,14 +1,49 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_97123DF324DB6A7FB1B4DAB9F1_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "05c1dfbff7b80b6d4609871e38a4c7eee38e9d7c5c6ddc2882701b32e911a680",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_C55CF8FD135A8E9B70CA7C2E",
     "E_XLSX_FT_77EACF5359AAE9BFC19C78F2"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "628d5851c04da74dda90e581f0a0c81f13570f790f39ff980b9647cb89b709fa",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补用安全生产法第四十四条完整的身心关注义务，替换只载教育告知或地方关怀方式的局部关联，删除自行增加的干预记录要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当关注从业人员的身体、心理状况和行为习惯，加强对从业人员的心理疏导、精神慰藉，严格落实岗位安全生产责任，防范从业人员行为异常导致事故发生。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_97123DF324DB6A7FB1B4DAB9F1_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_C55CF8FD135A8E9B70CA7C2E",
+      "E_XLSX_FT_77EACF5359AAE9BFC19C78F2"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "628d5851c04da74dda90e581f0a0c81f13570f790f39ff980b9647cb89b709fa",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_97123DF324DB6A7FB1B4DAB9F1_2",
+    "title": "生产经营单位未关注从业人员的身体、心理状况和行为习惯，加强对从业人员的心理疏导、精神慰藉，严格落实岗位安全生产责任",
+    "description": "生产经营单位应当关注从业人员的身体、心理状况和行为习惯，加强对从业人员的心理疏导、精神慰藉，严格落实岗位安全生产责任，防范从业人员行为异常导致事故发生。（第四十四条）。",
+    "measures": "关注从业人员身体、心理状况和行为习惯，开展必要心理疏导、精神慰藉并落实岗位安全生产责任，发现异常及时调整作业安排并记录干预措施。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产经营单位未关注从业人员的身体、心理状况和行为习惯，加强对从业人员的心理疏导、精神慰藉，严格落实岗位安全生产责任"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第四十四条 反转生成（GLM，2026-09-12）。\n\n《中华人民共和国安全生产法》第四十四条。",
+    "mergedInto": null
+  }
 }

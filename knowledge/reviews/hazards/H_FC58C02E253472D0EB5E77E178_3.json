@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FC58C02E253472D0EB5E77E178_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9ab59f05e8c300b3b9d4ed75c232d45fbad6ee5b4a07fa16c39f5bcdf41401c6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_276908B5E4D5252220D68D20"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c250ec1b45341256534272f34e1d3937a83ecca828844acbd4fcdd8a7383340b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同部法规完整第三十二条含特殊人员劳动保护要求；现关联漏该段，整改中“成年工”也与原文“未成年工”不符。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当依法加强对女职工、未成年工等的劳动保护。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FC58C02E253472D0EB5E77E178_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_276908B5E4D5252220D68D20"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c250ec1b45341256534272f34e1d3937a83ecca828844acbd4fcdd8a7383340b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未依法加强对女职工、未成年工等的劳动保护，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FC58C02E253472D0EB5E77E178_3",
+    "keywords": [
+      "生产经营单位未依法加强对女职工",
+      "未成年工等的劳动保护"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位依法加强对女职工、成年工等的劳动保护。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未依法加强对女职工、未成年工等的劳动保护"
+  }
 }

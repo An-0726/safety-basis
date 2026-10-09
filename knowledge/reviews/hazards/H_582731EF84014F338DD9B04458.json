@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_582731EF84014F338DD9B04458",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "5ca8a0b6b8e5a3aaa9f774e55d7b73d4f44be4d1850b0782f55946f2d57302fc",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "ad72478c9b53b8cc65d494afa3ff68ba385f6db864e0d45f8eec2948e48ea0d7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "库内判定标准第七条第（六）项直接支持，但仅适用于机械企业及周边密闭半密闭空间，替换主要负责人通用治理职责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（六）使用可燃性有机溶剂清洗设备设施、工装器具、地面时，未采取防止可燃气体在周边密闭或者半密闭空间内积聚措施的；",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_582731EF84014F338DD9B04458",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "5ca8a0b6b8e5a3aaa9f774e55d7b73d4f44be4d1850b0782f55946f2d57302fc",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_582731EF84014F338DD9B04458",
+    "title": "使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施",
+    "description": "可燃性有机溶剂清洗设备设施、工装器具、地面时,未采取防止可燃气体在周边密闭或者半密闭空间内积聚措施的",
+    "measures": "通风、隔离积聚空间、必要检测等措施。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "燃气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "使用可燃性有机溶剂清洗时未采取防止可燃气体积聚措施"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》(应急管理部令第10号)第七条",
+    "mergedInto": null
+  }
 }

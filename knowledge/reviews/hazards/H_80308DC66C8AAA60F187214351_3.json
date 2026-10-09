@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_80308DC66C8AAA60F187214351_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ebb6c53a8feee161c832ebf85c6b047c56b23f42ae559b8b1af69f3bf51aa0d6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1415834F950723391EE1CB7B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c655b682872dea53c035e10f9602e9cc0db9e686fff4ef7d96fef7d0b1e3ad0b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整消防法第四十七条直接规定优先运输，现截取首段不含该义务，原标题还扩大了消防人员范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "赶赴火灾现场或者应急救援现场的消防人员和调集的消防装备、物资，需要铁路、水路或者航空运输的，有关单位应当优先运输。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_80308DC66C8AAA60F187214351_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1415834F950723391EE1CB7B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c655b682872dea53c035e10f9602e9cc0db9e686fff4ef7d96fef7d0b1e3ad0b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现：应急救援人员、装备和物资需要铁路水路航空运输时有关单位未优先运输。",
+    "id": "H_80308DC66C8AAA60F187214351_3",
+    "keywords": [
+      "应急救援人员",
+      "装备和物资需要铁路水路航空运输时有关单位未优先运输"
+    ],
+    "lifecycle": "active",
+    "measures": "承担铁路、水路或航空运输任务的有关单位应建立应急救援人员、装备和物资优先运输保障机制；接到调运需求时按要求优先安排运力和通行，并保留调度、运输和协同记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "应急救援人员、装备和物资需要铁路水路航空运输时有关单位未优先运输"
+  }
 }

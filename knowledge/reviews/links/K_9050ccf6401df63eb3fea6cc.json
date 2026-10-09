@@ -2,20 +2,40 @@
   "entityId": "K_9050ccf6401df63eb3fea6cc",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T18:00:00+08:00",
-  "reason": "高温室缺少'当心烫伤'安全警示标志，违反安全生产法第三十五条在有较大危险因素的场所设置明显安全警示标志的要求。高温室存在烫伤危险，必须设置'当心烫伤'警示标志。",
+  "decision": "rejected",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
     "BURN_WARNING_SIGN"
   ],
-  "reviewedContentHash": "6e14f1a0ee3e1c7caea05e3a5d2f00d234e1596896c653b97847eaac0fabc2ad",
+  "reviewedContentHash": "34335b18d3b9e533372c98cbd9edd7175076972f568934ec01c919cec6626169",
   "contextHashes": {
-    "hazard": "fc87f1e71f845eb388de4ac9a4aee3c5d03c325005adc02719148444ac2891a6",
-    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
-    "link": "6e14f1a0ee3e1c7caea05e3a5d2f00d234e1596896c653b97847eaac0fabc2ad"
+    "hazard": "a32784962d6b5b33ebcf3e93e293c697e33f3a8ce454ba3ae7f3b88651668f38",
+    "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a"
   },
   "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_9050ccf6401df63eb3fea6cc",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Doubao-Agent",
+    "checkedAt": "2026-09-10T18:00:00+08:00",
+    "reason": "高温室缺少'当心烫伤'安全警示标志，违反安全生产法第三十五条在有较大危险因素的场所设置明显安全警示标志的要求。高温室存在烫伤危险，必须设置'当心烫伤'警示标志。",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "BURN_WARNING_SIGN"
+    ],
+    "reviewedContentHash": "6e14f1a0ee3e1c7caea05e3a5d2f00d234e1596896c653b97847eaac0fabc2ad",
+    "contextHashes": {
+      "hazard": "fc87f1e71f845eb388de4ac9a4aee3c5d03c325005adc02719148444ac2891a6",
+      "clause": "3f5a098943ab5bdde6c60b514cbea24924b87ba6467ca510a4d787f691a5d56a",
+      "link": "6e14f1a0ee3e1c7caea05e3a5d2f00d234e1596896c653b97847eaac0fabc2ad"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

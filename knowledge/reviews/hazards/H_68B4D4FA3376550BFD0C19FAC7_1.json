@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-18",
-  "decision": "verified",
   "entityId": "H_68B4D4FA3376550BFD0C19FAC7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "be386363fb59a4f95730781d78d7d9b192a16b3d708374712d866572813a25ac",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "消防法相关条款直接要求公共消防设施保持完好有效。",
-  "reviewType": "content",
-  "reviewedContentHash": "a3fed17e833602d8b068a45ab28af31917bb4dd9d09a9008f4573504ee479eaf",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  "reason": "明确南京地域、责任部门单位及各自职责范围，删除旧条号和正向法条描述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（二）市政、供水、供电、供气、通信等负责公共消防设施管理和维护的部门和单位，按照各自职责保持消防供水、消防通信、消防车通道等公共消防设施的完好有效；",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "decision": "verified",
+    "entityId": "H_68B4D4FA3376550BFD0C19FAC7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "消防法相关条款直接要求公共消防设施保持完好有效。",
+    "reviewType": "content",
+    "reviewedContentHash": "a3fed17e833602d8b068a45ab28af31917bb4dd9d09a9008f4573504ee479eaf",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  },
+  "previousDefinition": {
+    "id": "H_68B4D4FA3376550BFD0C19FAC7_1",
+    "title": "负责公共消防设施维护管理的单位，未保持消防供水、消防通信、消防车通道等公共消防设施的完好有效",
+    "description": "第二十九条负责公共消防设施维护管理的单位，应当保持消防供水、消防通信、消防车通道等公共消防设施的完好有效。（第二十九条）。",
+    "measures": "负责公共消防设施维护管理的部门和单位保持消防供水、消防通信、消防车通道等公共消防设施完好有效，整改材料条号统一为《南京市消防条例》第13条第（二）项。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "负责公共消防设施维护管理的单位，未保持消防供水、消防通信、消防车通道等公共消防设施的完好有效"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第二十九条 反转生成（GLM，2026-09-12）。\n\n【PHASE 12 2026-09-18】已复核现行条款原文、隐患对象和适用范围，建立当前direct关联。",
+    "mergedInto": null
+  }
 }

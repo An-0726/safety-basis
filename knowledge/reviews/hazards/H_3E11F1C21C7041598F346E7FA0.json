@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_3E11F1C21C7041598F346E7FA0",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "74c9323de798dc2c28ecefcb9a64ab8c053a4d0d2fecda5348763823ea1634db",
-  "checkedAt": "2026-09-26T18:55:20+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+  "reviewedContentHash": "989b8ef5c92e222e3805b7cc55a11fd14b7c135325251682d57bf2f2728d4b40",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_GB55036_SH_ORIGINAL_20260926"
-  ]
+  ],
+  "reason": "删除该quote未列的药剂清单及金属喇叭喷筒禁用要求，保留E类适用性及1kV带电限制。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "5 E类火灾场所应选择适用于E类火灾的灭火器。带电设备电压超过1kV且灭火时不能断电的场所不应使用灭火器带电扑救。\n7 当配置场所存在多种火灾时，应选用能同时适用扑救该场所所有种类火灾的灭火器。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_3E11F1C21C7041598F346E7FA0",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "74c9323de798dc2c28ecefcb9a64ab8c053a4d0d2fecda5348763823ea1634db",
+    "checkedAt": "2026-09-26T18:55:20+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+    "evidenceRefs": [
+      "E_GB55036_SH_ORIGINAL_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_3E11F1C21C7041598F346E7FA0",
+    "title": "E类火灾场所未选用适用的灭火器类型",
+    "description": "E类火灾场所,未选择磷酸铵盐干粉灭火器、碳酸氢钠干粉灭火器、卤代烷灭火器或二氧化碳灭火器,但不得选用装有金属喇叭喷筒的二氧化碳灭火器",
+    "measures": "按火灾类型选用适用的灭火器；E 类火灾场所不得选用装有金属喇叭喷筒的二氧化碳灭火器。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "总图与建筑",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "E类火灾场所未选用适用的灭火器类型"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《建筑灭火器配置设计规范》GB50140-2005第4.2.5条",
+    "mergedInto": null
+  }
 }

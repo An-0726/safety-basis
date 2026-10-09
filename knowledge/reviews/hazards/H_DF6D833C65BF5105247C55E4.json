@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_DF6D833C65BF5105247C55E4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "c25e7f1a89a8399f76e7b3ae4356b0d243b03cf854dd7dbf3ae5912561d998c2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "7fa30cce286bd096756a119e6a825995c04272d6178b6d4860aeba692a13f305",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "优先核对现引法规，并检索全库有效条款中的“暂存、泄漏、泄漏应急处理、应急处理设备”，核对《中华人民共和国危险化学品安全法》《危险化学品重大危险源监督管理暂行规定》；现依据为专用储存管理，重大危险源毒性气体设施的紧急处置要求不等于所有暂存区域配备泄漏应急处理设备，未找到对题原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十一条 危险化学品应当储存在专用仓库、专用场地或者专用储存室、储存专柜（以下统称专用储存场所）内，并由专人负责管理；剧毒化学品以及储存数量构成重大危险源的其他危险化学品，应当在专用储存场所内单独存放，实行双人收发、双人保管制度，收发记录的保存期限不得少于三年。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_DF6D833C65BF5105247C55E4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "7fa30cce286bd096756a119e6a825995c04272d6178b6d4860aeba692a13f305",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于危险化学品暂存区域的相关安全管理。",
+    "description": "危险化学品暂存区域未配备泄漏应急处理设备。",
+    "id": "H_DF6D833C65BF5105247C55E4",
+    "keywords": [
+      "暂存区",
+      "泄漏应急处理设备"
+    ],
+    "lifecycle": "active",
+    "measures": "在危险化学品暂存区域配备泄漏应急处理设备并保持完好。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_1DB6AE75F00A4EB682FA20136E 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《首批重点监管的危险化学品安全措施和应急处置原则》\n【最终质检】依据支持关系按更保守口径转为待核验，避免技术性隐患仅依赖过于宽泛或不对应的条款直接发布。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "危险化学品暂存区域未配备泄漏应急处理设备"
+  }
 }

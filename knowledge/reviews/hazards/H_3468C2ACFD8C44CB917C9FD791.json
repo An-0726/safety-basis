@@ -1,14 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_3468C2ACFD8C44CB917C9FD791",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "be27800d0d7d5f9417d749d4d9e728564a7a5dc68c412c435d281ca3a66aff46",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_A3667E78AE71FE782A0D4604",
     "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "a84d75c02d5ca6e0bf24f07983053f2c7aab76bab099206d46366b7d2f923b8e",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补齐科研建筑设计适用范围，并将门向、监测报警和自动灭火作为并列要求，删除措施中的反向缺陷句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "5.2.6 易发生火灾、爆炸、缺氧、极低温和其他危险化学品引发事故的实验室，其房间的门必须向疏散方向开启，并应设置监测报警及自动灭火系统。\n5.2.6 易发生火灾、爆炸、缺氧、极低温和其他危险化学品引发事故的实验室，其房间的门必须向疏散方向开启，并应设置监测报警及自动灭火系统。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_3468C2ACFD8C44CB917C9FD791",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A3667E78AE71FE782A0D4604",
+      "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "a84d75c02d5ca6e0bf24f07983053f2c7aab76bab099206d46366b7d2f923b8e",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于易发生火灾、爆炸、缺氧、极低温和其他危险化学品引发事故的实验室。",
+    "description": "易发生火灾、爆炸、缺氧、极低温和其他危险化学品引发事故的实验室，其房间门未向疏散方向开启，或未设置监测报警及自动灭火系统。",
+    "id": "H_3468C2ACFD8C44CB917C9FD791",
+    "keywords": [
+      "易发生危险化学品事故的实验室房门未向疏散方向开启或未设置监测报警及自动灭火系统"
+    ],
+    "lifecycle": "active",
+    "measures": "易发生危险化学品事故的实验室房门未向疏散方向开启或设置监测报警及自动灭火系统；易发生危化品事故的实验室门调整为向疏散方向开启,设置火灾报警及自动灭火系统；完成后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《中华人民共和国危险化学品安全法》主席令第六十四号 第四十一条（兜底）\n\nJGJ 91-2019《科研建筑设计标准》\nGB 55037-2022《建筑防火通用规范》。",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "易发生危险化学品事故的实验室房门未向疏散方向开启或未设置监测报警及自动灭火系统"
+  }
 }

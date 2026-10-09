@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_CB4F70989F71B896E4E891A875_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "272e18ac270b464fc2241f7037a1cad9e01582d670c294f067416c712dcde492",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_6E3227B57FC72D813C159D76"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "b7ef7b704f9d218d3e566d37f90a17ea5f0c6a872fa5b53961f299c73bc7220a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第四十一条规定作业人员报告义务，现关联是安全管理人员检查职责，且报告对象为“和”关系。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特种设备作业人员在作业过程中发现事故隐患或者其他不安全因素，应当立即向特种设备安全管理人员和单位有关负责人报告；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_CB4F70989F71B896E4E891A875_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_6E3227B57FC72D813C159D76"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "b7ef7b704f9d218d3e566d37f90a17ea5f0c6a872fa5b53961f299c73bc7220a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，特种设备作业人员在作业过程中发现事故隐患或者其他不安全因素，未立即向特种设备安全管理人员和单位有关负责人报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_CB4F70989F71B896E4E891A875_1",
+    "keywords": [
+      "特种设备作业人员在作业过程中发现事故隐患或者其他不安全因素",
+      "未立即向特种设备安全管理人员和单位有关负责人报告"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备作业人员在作业过程中发现事故隐患或者其他不安全因素，立即向特种设备安全管理人员和单位有关负责人报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备作业人员在作业过程中发现事故隐患或者其他不安全因素，未立即向特种设备安全管理人员和单位有关负责人报告"
+  }
 }

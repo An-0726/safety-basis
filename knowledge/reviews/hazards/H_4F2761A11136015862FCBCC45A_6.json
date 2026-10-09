@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_4F2761A11136015862FCBCC45A_6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "03572938727e23f5b9b06c5741568585015bc40be3110c90cf801d8a36238d96",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_A73C713EB5E18CD9634FE8EE"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "16c4cdbe612060ba6eaf8438b931d7709172cbaec8d2b081e45ead897bec26c6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第六条明确群团组织职责，现关联政府职责不能支持本项。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "工会、共产主义青年团、妇女联合会等团体应当结合各自工作对象的特点，组织开展消防宣传教育。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_4F2761A11136015862FCBCC45A_6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A73C713EB5E18CD9634FE8EE"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "16c4cdbe612060ba6eaf8438b931d7709172cbaec8d2b081e45ead897bec26c6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担该条款所述职责的工会、共青团、妇联等群团组织；应按其法定职责核查，不作为普通生产岗位现场缺陷直接套用。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料和执行情况核查，工会、共产主义青年团、妇女联合会等团体未结合各自工作对象的特点，组织开展消防宣传教育，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_4F2761A11136015862FCBCC45A_6",
+    "keywords": [
+      "工会",
+      "共产主义青年团",
+      "妇女联合会等团体未结合各自工作对象的特点",
+      "组织开展消防宣传教育"
+    ],
+    "lifecycle": "active",
+    "measures": "工会、共产主义青年团、妇女联合会等团体结合各自工作对象的特点，组织开展消防宣传教育。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "工会、共产主义青年团、妇女联合会等团体未结合各自工作对象的特点，组织开展消防宣传教育"
+  }
 }

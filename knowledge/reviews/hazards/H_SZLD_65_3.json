@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_SZLD_65_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "118246e03bf536221b7ec695407e00d4959037f6d887378fba2c92970f70718e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4C1549A0DF137E96DC310C50"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "4418c31a649e67b1add44779187a68069f3978567c26c0822391d3bbe1ccca31",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "在《特种设备使用单位落实使用安全主体责任监督管理规定》及全库现行条款中检索“采纳、意见或者建议、无正当理由”，对应结果为安全人员履职免责认定，未找到压力管道单位必须采纳全部意见建议的直接义务；提供工作条件、培训和岗位待遇等要求不支持未采纳即构成隐患。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "压力管道使用单位及其主要负责人无正当理由未采纳压力管道安全总监和压力管道安全员依照本规定第五十三条提出的意见或者建议的，应当认为压力管道安全总监和压力管道安全员已经依法履职尽责，不予处罚。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_SZLD_65_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4C1549A0DF137E96DC310C50"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "4418c31a649e67b1add44779187a68069f3978567c26c0822391d3bbe1ccca31",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "压力管道使用单位及其主要负责人无正当理由未采纳压力管道安全总监和压力管道安全员依照本规定第五十三条提出的意见或者建议的，应当认为压力管道安全总监和压力管道安全员已经依法履职尽责，不予处罚。（第65条）。",
+    "id": "H_SZLD_65_3",
+    "keywords": [
+      "压力管道使用单位无正当理由未采纳安全总监和安全员意见建议"
+    ],
+    "lifecycle": "active",
+    "measures": "压力管道使用单位及其主要负责人无正当理由未采纳压力管道安全总监和压力管道安全员依照本规定第五十三条提出的意见或者建议的，应当认为压力管道安全总监和压力管道安全员已经依法履职尽责，不予处罚。（依据 第65条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景",
+      "通用场所"
+    ],
+    "title": "压力管道使用单位无正当理由未采纳安全总监和安全员意见建议"
+  }
 }

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-19T00:00:00+08:00",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "98327a00ddbe81db6276c4397900699819cb444644c2d03181afc56a92b71f40",
+    "hazard": "f6dce5094133266a5d699b3a163c62e117bc15ea2af06e4ecb58c986c51251d8",
     "clause": "129726c10b735db912c53eb571ea5b86cd96b9fa0293da113cc42f17897406eb"
   },
   "decision": "verified",
@@ -10,11 +10,31 @@
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "隐患判定要点与GB 18597-2023条款原文完全对应。贮存液态危废未设堵截设施或容积不足1/10，未设渗滤液收集设施，直接违反第6.2.2条要求。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "4d299557319fa8ddb3b346f84b45d88452300fc60aa3e195b875da14af5f07f2",
-  "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "reviewedAt": "2026-09-19T00:00:00Z",
   "lifecycle": "active",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-19T00:00:00+08:00",
+    "contextHashes": {
+      "hazard": "98327a00ddbe81db6276c4397900699819cb444644c2d03181afc56a92b71f40",
+      "clause": "129726c10b735db912c53eb571ea5b86cd96b9fa0293da113cc42f17897406eb"
+    },
+    "decision": "verified",
+    "entityId": "K_H_F53C97BEFD7761_C_GB18597_6_2_2",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "隐患判定要点与GB 18597-2023条款原文完全对应。贮存液态危废未设堵截设施或容积不足1/10，未设渗滤液收集设施，直接违反第6.2.2条要求。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "4d299557319fa8ddb3b346f84b45d88452300fc60aa3e195b875da14af5f07f2",
+    "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+    "reviewedAt": "2026-09-19T00:00:00Z",
+    "lifecycle": "active",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

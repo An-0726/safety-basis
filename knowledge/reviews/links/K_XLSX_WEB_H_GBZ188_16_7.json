@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_GBZ188_16_7",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "766cd5008c9b607d49ae1d934f0e868ce3a9eddabb15f163476a48f299bb9eca",
+  "decision": "rejected",
+  "reviewedContentHash": "45a220d33cbb496a97629de6c8864c8856aebcbbfba5cd7af686bd654a208551",
   "contextHashes": {
-    "hazard": "60e371f397850dac9a94f4497613a162c85d3d6983c7988815a984902ded3d8c",
+    "hazard": "2faafd55adfb24927fdf93abcf4eba225ebd555e60dea73c161a15e641e48520",
     "clause": "83cc90d8ca4de37b33f86b813d1ac2f08123ff1a97f86171e3420179d54dfef1"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《职业病防治法》第三十五条职业健康检查项目周期。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_GBZ188_16_7",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "766cd5008c9b607d49ae1d934f0e868ce3a9eddabb15f163476a48f299bb9eca",
+    "contextHashes": {
+      "hazard": "60e371f397850dac9a94f4497613a162c85d3d6983c7988815a984902ded3d8c",
+      "clause": "83cc90d8ca4de37b33f86b813d1ac2f08123ff1a97f86171e3420179d54dfef1"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《职业病防治法》第三十五条职业健康检查项目周期。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_2A7A51C297559E41A4791B1786_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4b57cb23f431849ff5a3bccc0700e8b0dbdcfb60e0887b3c17737195f57ec62f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_294B2FB991860144890C1959"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "7409dd8b7e0e1a4458ee914ee418e95fb630c4a893fd3e3d6c5b16b4b72b2d66",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "方案审查承接第三十四条危险作业，不能推广所有现场方案。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "现场作业方案应当经本单位施工技术负责人审查同意后方可实施。生产经营单位应当对危险作业进行全过程记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2A7A51C297559E41A4791B1786_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_294B2FB991860144890C1959"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "7409dd8b7e0e1a4458ee914ee418e95fb630c4a893fd3e3d6c5b16b4b72b2d66",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，现场作业方案未经本单位施工技术负责人审查同意即实施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_2A7A51C297559E41A4791B1786_2",
+    "keywords": [
+      "现场作业方案未经本单位施工技术负责人审查同意即实施"
+    ],
+    "lifecycle": "active",
+    "measures": "现场作业方案经本单位施工技术负责人审查同意即实施。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "现场作业方案未经本单位施工技术负责人审查同意即实施"
+  }
 }

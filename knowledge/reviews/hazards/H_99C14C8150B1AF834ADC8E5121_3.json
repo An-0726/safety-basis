@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_99C14C8150B1AF834ADC8E5121_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fab59b469f4cc7a0fa06c893df538c407f838f5bbceecab7af495d6fae806589",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_0D32F81B7FF81451CD54EF87"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b6a38de1bb102ca7beb3cfa77325311f675afc2407a1982231de9c31208e040b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定本条所列场所并区分两类防火门，删除通用不一致描述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（三）疏散走道、楼梯间以及前室的疏散门应当采取可靠措施，确保常闭式防火门保持常闭，常开的防火门在发生火灾时自行关闭；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_99C14C8150B1AF834ADC8E5121_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_0D32F81B7FF81451CD54EF87"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b6a38de1bb102ca7beb3cfa77325311f675afc2407a1982231de9c31208e040b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，疏散走道、楼梯间及前室未采取措施确保常闭式防火门保持常闭、常开式防火门在发生火灾时自行关闭，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_99C14C8150B1AF834ADC8E5121_3",
+    "keywords": [
+      "疏散走道",
+      "楼梯间及前室未采取措施确保常闭式防火门保持常闭",
+      "常开式防火门在发生火灾时自行关闭"
+    ],
+    "lifecycle": "active",
+    "measures": "疏散走道、楼梯间及前室采取措施确保常闭式防火门保持常闭、常开式防火门在发生火灾时自行关闭；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "疏散走道、楼梯间及前室未采取措施确保常闭式防火门保持常闭、常开式防火门在发生火灾时自行关闭"
+  }
 }

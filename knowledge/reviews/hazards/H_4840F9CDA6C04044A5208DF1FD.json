@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_4840F9CDA6C04044A5208DF1FD",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fe23de98eefaaa004dd72f070b2026b3067068e70a79db2dfea3ebb2143cb535",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_89B479575B86EBF8E6431251"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "73522522b0a0f8d71a28290987b714864e37a54e4b13346ed027b56c2262200a",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "查得《生产过程安全基本要求》5.2.3直接规定检查维护并防止跑冒滴漏；原安全设备维护义务不覆盖一般设备管线。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对生产中难以避免的生产性粉尘、毒物应加强监测,采取相应的除尘、通风、净化和个体防护等措施:a)加强对生产设备、设施和管线的检查、维护,防止跑、冒、滴、漏;b)进入含有有毒物质的容器或通风不良的封闭区域进行作业前,应对相连管道采取盲板隔断等措施,并应按照“先通风、再检测、后作业”的程序处理,对作业过程中可能产生有毒物质的作业应持续通风和气体浓度监测,并应有监护和应急防护措施;c)对粉尘作业和有毒作业环境中的作业人员应严格执行休息、就餐、洗漱及污染衣物洗涤的管理制度。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_4840F9CDA6C04044A5208DF1FD",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_89B479575B86EBF8E6431251"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "73522522b0a0f8d71a28290987b714864e37a54e4b13346ed027b56c2262200a",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_4840F9CDA6C04044A5208DF1FD",
+    "title": "设备、管道,未保持完好,作业场所无跑、冒、漏、滴现象",
+    "description": "设备、管道未保持完好，作业场所存在跑、冒、漏、滴现象。",
+    "measures": "检修设备与管道，消除跑、冒、滴、漏，保持设备完好并纳入定期巡检。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "作业安全与个体防护",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "设备、管道,未保持完好,作业场所无跑、冒、漏、滴现象"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》",
+    "mergedInto": null
+  }
 }

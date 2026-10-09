@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_99_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5b5c58e6476aac919a3ce17cc45b0496fe8f03358cd5d85e0400291232b60f90",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_79C7CFD34377A47ED19DF7E1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "abff9099ee408db6245259edf82c3e797a08f748f841fc2a5fe191bfa96d4eb3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确考核对象和不再符合要求的共同前提，纠正整改时间逻辑。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "监督抽查考核不合格，不再符合起重机械使用要求的，使用单位应当立即采取整改措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_99_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_79C7CFD34377A47ED19DF7E1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "abff9099ee408db6245259edf82c3e797a08f748f841fc2a5fe191bfa96d4eb3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：起重机械使用、运行、维护检修或相关管理场景",
+    "description": "经资料和执行情况核查，起重机械监督抽查考核不合格后使用单位未立即采取整改措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_99_3",
+    "keywords": [
+      "起重机械监督抽查考核不合格后使用单位未立即采取整改措施"
+    ],
+    "lifecycle": "active",
+    "measures": "起重机械监督抽查考核整改合格后使用单位立即采取整改措施。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "起重机械使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "起重机械监督抽查考核不合格后使用单位未立即采取整改措施"
+  }
 }

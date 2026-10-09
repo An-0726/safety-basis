@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_A75F54FE15ED4144B391DDDECB",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a66ecbfedc2ba9f2704e02e578b22e810b20fbf2e95be8623f12730e24b663fb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "0ec1b0abbf8fbe30e7cd6a92a94c24c3a12d8c17bae2883c7f797d8e00ad416b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "区分液体泄漏堵截与渗滤液收集的不同物料前提，删除原文没有的具体设施形式和污染后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在贮存库内或通过贮存分区方式贮存液态危险废物的，应具有液体泄漏堵截设施，堵截设施最小容积不应低于对应贮存区域最大液态废物容器容积或液态废物总储量1/10（二者取较大者）；用于贮存可能产生渗滤液的危险废物的贮存库或贮存分区应设计渗滤液收集设施，收集设施容积应满足渗滤液的收集要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A75F54FE15ED4144B391DDDECB",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "0ec1b0abbf8fbe30e7cd6a92a94c24c3a12d8c17bae2883c7f797d8e00ad416b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "危险废物暂存间未设置液体泄漏收集装置，泄漏液体可能外流污染环境。",
+    "id": "H_A75F54FE15ED4144B391DDDECB",
+    "keywords": [
+      "危险废物暂存间未设置液体泄露收集装置"
+    ],
+    "lifecycle": "active",
+    "measures": "在危险废物暂存间设置液体泄漏收集装置（围堰、收集沟或托盘）并保持有效。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物暂存间未设置液体泄露收集装置"
+  }
 }

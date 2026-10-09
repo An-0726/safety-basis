@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_5A34A5738C8BAE911FA997CF74_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "26a21507b1a4ebd5cb78eae73820eb450062eaca9f173f2602827bded8432572",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BBE8D371BB5F65D71A149DAA"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "b99f5715737bae9d948f87479b434c370380f622e7d081de80b6d8dbda1de43e",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "现江苏条文是生产安全新工艺等应用义务，改用职业病防治法第二十三条直接对应职业病防治优先替代要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位应当优先采用有利于防治职业病和保护劳动者健康的新技术、新工艺、新设备、新材料，逐步替代职业病危害严重的技术、工艺、设备、材料。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_5A34A5738C8BAE911FA997CF74_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_BBE8D371BB5F65D71A149DAA"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "b99f5715737bae9d948f87479b434c370380f622e7d081de80b6d8dbda1de43e",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_5A34A5738C8BAE911FA997CF74_1",
+    "title": "用人单位未优先采用有利于防治职业病和保护劳动者健康的新技术、新工艺、新设备、新材料",
+    "description": "第二十三条用人单位应当优先采用有利于防治职业病和保护劳动者健康的新技术、新工艺、新设备、新材料，逐步替代职业病危害严重的技术、工艺、设备、材料。（第二十三条）。",
+    "measures": "第二十三条用人单位应当优先采用有利于防治职业病和保护劳动者健康的新技术、新工艺、新设备、新材料，逐步替代职业病危害严重的技术、工艺、设备、材料。（依据 第二十三条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "用人单位未优先采用有利于防治职业病和保护劳动者健康的新技术、新工艺、新设备、新材料"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第二十三条 反转生成（GLM，2026-09-12）。\n\n《职业病防治法》第23条。",
+    "mergedInto": null
+  }
 }

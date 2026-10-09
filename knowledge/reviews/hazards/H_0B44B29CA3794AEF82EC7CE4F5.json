@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_0B44B29CA3794AEF82EC7CE4F5",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "33cea7258c9480d69ba43748cc7090dfb0ea99af1d8f40856de28b5c7f8b090d",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "0c74158e3c0b656567565a4d2463525e1315b2f956db062cdcac3902f429f4d7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NHC_GBZ1_2010"
-  ]
+  ],
+  "reason": "保留不能避开时有效防护和防制的例外，删除无条文支持的病媒措施细节及后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "工业企业选址应避开自然疫源地、地方病高发区和严重环境污染区域；不能避开时，必须采取有效的防护和防制措施。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_0B44B29CA3794AEF82EC7CE4F5",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "33cea7258c9480d69ba43748cc7090dfb0ea99af1d8f40856de28b5c7f8b090d",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NHC_GBZ1_2010"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_0B44B29CA3794AEF82EC7CE4F5",
+    "title": "工业企业选址未避开自然疫源地",
+    "description": "工业企业选址未避开自然疫源地，存在传染病传播风险。",
+    "measures": "选址时避开自然疫源地；已建成的采取卫生防护与病媒生物防制措施。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "工业企业选址未避开自然疫源地"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》 第5.1.2条",
+    "mergedInto": null
+  }
 }

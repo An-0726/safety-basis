@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AA7616368C917771F617485534_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2c044048a3dd0f7ef90f8cbd5ff7b011e190bc60ad5bcec34b4c629c03c84560",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_4DF1B9819F8C2A98C7373EB3"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "a8ad9878ad8017157af71d1f745146751e03787bec5fe5562ae068b190535d73",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补明被改变用途的规划消防用地或岸线，避免泛指所有建筑用途变更。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "规划确定的消防站、消防船艇泊位、消防取水码头等的建设用地、水上岸线，不得擅自改变用途；确需改变用途的，应当征得有关部门和消防救援机构的同意。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AA7616368C917771F617485534_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_4DF1B9819F8C2A98C7373EB3"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "a8ad9878ad8017157af71d1f745146751e03787bec5fe5562ae068b190535d73",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，确需改变用途的，未征得有关部门和消防救援机构的同意，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AA7616368C917771F617485534_3",
+    "keywords": [
+      "确需改变用途的",
+      "未征得有关部门和消防救援机构的同意"
+    ],
+    "lifecycle": "active",
+    "measures": "确需改变用途的，征得有关部门和消防救援机构的同意；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "确需改变用途的，未征得有关部门和消防救援机构的同意"
+  }
 }

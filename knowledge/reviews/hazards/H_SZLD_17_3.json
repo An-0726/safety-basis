@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_SZLD_17_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "2acdcdf547b4487c072337d56724b85c35e03369a54c60b200ac12cd2cfa2536",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_71965A990050E8A031D81062"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "9509ce993538ad66c3ab3882e951eebe2323b1a3ac0d8cf6328bd493a2a313bf",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "在《特种设备使用单位落实使用安全主体责任监督管理规定》及全库现行条款中检索“采纳、意见或者建议、无正当理由”，对应结果为安全人员履职免责认定，未找到锅炉单位必须采纳全部意见建议的直接义务；提供工作条件、培训和岗位待遇等要求不支持未采纳即构成隐患。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "锅炉使用单位及其主要负责人无正当理由未采纳锅炉安全总监和锅炉安全员依照本规定第五条提出的意见或者建议的，应当认为锅炉安全总监和锅炉安全员已经依法履职尽责，不予处罚。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_SZLD_17_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_71965A990050E8A031D81062"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "9509ce993538ad66c3ab3882e951eebe2323b1a3ac0d8cf6328bd493a2a313bf",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "锅炉使用单位及其主要负责人无正当理由未采纳锅炉安全总监和锅炉安全员依照本规定第五条提出的意见或者建议的，应当认为锅炉安全总监和锅炉安全员已经依法履职尽责，不予处罚。（第17条）。",
+    "id": "H_SZLD_17_3",
+    "keywords": [
+      "锅炉使用单位无正当理由未采纳安全总监和安全员意见建议"
+    ],
+    "lifecycle": "active",
+    "measures": "锅炉使用单位及其主要负责人无正当理由未采纳锅炉安全总监和锅炉安全员依照本规定第五条提出的意见或者建议的，应当认为锅炉安全总监和锅炉安全员已经依法履职尽责，不予处罚。（依据 第17条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "锅炉使用、运行、维护检修或相关管理场景",
+      "通用场所"
+    ],
+    "title": "锅炉使用单位无正当理由未采纳安全总监和安全员意见建议"
+  }
 }

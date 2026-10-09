@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_GBZ188_16_7",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "60e371f397850dac9a94f4497613a162c85d3d6983c7988815a984902ded3d8c",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "2faafd55adfb24927fdf93abcf4eba225ebd555e60dea73c161a15e641e48520",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
-  ]
+  ],
+  "reason": "Codex建议改关联到C_GBZ188_16，但该条款记录是整段附录的串文，不能作为逐条依据；Claude复核改为下架，待该标准条款重新分条后再处理。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "A.7本标准纳入的对人体只有急性健康损害的危害因素均列出明确的职业禁忌证，职业接触该类因素的劳动者上岗前职业健康检查为强制性，在岗期间职业健康检查为推荐性。推荐性检查内容参见附录C。用人单位应根据本单位职业病危害因素的性质、工作场所有害因素的浓度或强度以及所采取的防护措施等，认真听取职业健康检查机构的说明和建议，本着以人为本的理念，决定是否开展该检查项目和如何开展。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_GBZ188_16_7",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "60e371f397850dac9a94f4497613a162c85d3d6983c7988815a984902ded3d8c",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "用人单位应根据本单位职业病危害因素的性质、工作场所有害因素的浓度或强度以及所采取的防护措施等，认真听取职业健康检查机构的说明和建议，本着以人为本的理念，决定是否开展该检查项目和如何开展。（第16条）。",
+    "id": "H_GBZ188_16_7",
+    "keywords": [
+      "用人单位未根据职业病危害因素性质",
+      "浓度和防护措施确定职业健康检查项目"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位应根据本单位职业病危害因素的性质、工作场所有害因素的浓度或强度以及所采取的防护措施等，认真听取职业健康检查机构的说明和建议，本着以人为本的理念，决定是否开展该检查项目和如何开展。（依据 第16条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《中华人民共和国职业病防治法》。",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所",
+      "通用场所"
+    ],
+    "title": "用人单位未根据职业病危害因素性质、浓度和防护措施确定职业健康检查项目"
+  }
 }

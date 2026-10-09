@@ -4,19 +4,40 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "pending",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "《危险化学品安全管理条例》第二十条属危险作业场所安全设施配置的一般义务，保留为 fallback；本条 direct 依据已由 HJ 2026-2013 第6.5.4条 承担。",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "reviewedContentHash": "65299959e520b71095bcb3b9192697ed0143a1da900224a62e9d49249bb29601",
   "contextHashes": {
-    "hazard": "89a4c29574d7fda8329c1022be592302284548d47f6fbfa3f357efd8ff9da7ba",
-    "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c",
-    "link": "8b8f03b74d5b346ece4220703bd6a403b01a235a5961afd0179a3b5ce0ae38a4"
+    "hazard": "56c51ae3d246a59f68734a503cd4e10fba9f6210fdd3c65837b135a36107383c",
+    "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c"
   },
   "evidenceRefs": [],
-  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "id": "RV_1184ec310c9fe9b4",
+    "entityId": "K_f4c27f25db71e030290b4a80",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "pending",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "《危险化学品安全管理条例》第二十条属危险作业场所安全设施配置的一般义务，保留为 fallback；本条 direct 依据已由 HJ 2026-2013 第6.5.4条 承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "reviewedContentHash": "65299959e520b71095bcb3b9192697ed0143a1da900224a62e9d49249bb29601",
+    "contextHashes": {
+      "hazard": "89a4c29574d7fda8329c1022be592302284548d47f6fbfa3f357efd8ff9da7ba",
+      "clause": "2ae307df68acfe32ac37cd2ec57e1df240fd65f2cd2d101a19fa4e4bc012fb8c",
+      "link": "8b8f03b74d5b346ece4220703bd6a403b01a235a5961afd0179a3b5ce0ae38a4"
+    },
+    "evidenceRefs": [],
+    "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  }
 }

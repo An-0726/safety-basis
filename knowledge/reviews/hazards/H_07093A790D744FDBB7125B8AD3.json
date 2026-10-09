@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_07093A790D744FDBB7125B8AD3",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "b71502f7fe90f11a9b4bd341c587408e99c346e79ad28337e1c2f317e25489c5",
-  "checkedAt": "2026-09-26T18:55:20+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+  "reviewedContentHash": "965ccc3f8bb478f6df4ab08c0171eedf394f73c3a62239c2289810d1acca5b79",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_GB55036_SH_ORIGINAL_20260926"
-  ]
+  ],
+  "reason": "条文未列铝金属、危废库或干砂，按D类火灾及特定金属适用性收敛。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "4 D类火灾场所应根据金属的种类、物态及其特性选择适用于特定金属的专用灭火器。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_07093A790D744FDBB7125B8AD3",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "b71502f7fe90f11a9b4bd341c587408e99c346e79ad28337e1c2f317e25489c5",
+    "checkedAt": "2026-09-26T18:55:20+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+    "evidenceRefs": [
+      "E_GB55036_SH_ORIGINAL_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_07093A790D744FDBB7125B8AD3",
+    "title": "车间、铝粉危废库未配备铝金属专用灭火器材",
+    "description": "车间和铝粉危废库未配备适用于铝金属火灾的专用灭火器材。",
+    "measures": "在车间和铝粉危废库配备适用于铝金属火灾的专用灭火器材（D 类灭火剂或干砂），并纳入定期检查。",
+    "conditions": "适用于车间的相关安全管理。",
+    "category": "消防安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "车间、铝粉危废库未配备铝金属专用灭火器材"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《中华人民共和国消防法》 第十六条\n\nGB 55036-2022《消防设施通用规范》。",
+    "mergedInto": null
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_7_3_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "9a4fb8f412061d65510ae0a78f9ea508e86fae095ed57f5b9834cabd86509754",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "b40eaa9413f6e74c76d81be829a6276718805b784a0c7890a97f20fdd53ed8a3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "先核《粉尘防爆安全规程》7.3.4，再以“内联管道、内部超压、0.1MPa、0.1Mpa”检索全部现行条款；仅找到当前quote的“0.1Mpa”单位大小写可疑，未找到同项无疑点原文，按不得自行纠正或据可疑字改写的要求先下架待核。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "具有内联管道的工艺设备，设计指标应能承受至少0.1Mpa的内部超压。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_7_3_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "b40eaa9413f6e74c76d81be829a6276718805b784a0c7890a97f20fdd53ed8a3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，具有内联管道的工艺设备，设计指标未能承受至少0.1MPa的内部超压，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_15577_7_3_4_1",
+    "keywords": [
+      "具有内联管道的工艺设备",
+      "设计指标未能承受至少0.1MPa的内部超压"
+    ],
+    "lifecycle": "active",
+    "measures": "具有内联管道的工艺设备，设计指标能承受至少0.1MPa的内部超压。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "具有内联管道的工艺设备，设计指标未能承受至少0.1MPa的内部超压"
+  }
 }

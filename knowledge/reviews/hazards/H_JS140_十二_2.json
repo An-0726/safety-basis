@@ -1,13 +1,55 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_JS140_十二_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7ec2af63d749c08b6a5d8fcc85f16108292aecef45a80ce67eb7abb20144efcd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B089962DF19D44EEE8904F95"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "cd9aef0db8649b1c6ebafa33547ad3f4153872c7c7ce2443f78627d8a1779fab",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "压缩清单列举标题，补遗漏的责任人及江苏工业企业范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "安全风险管控清单应当列明安全风险名称、所处位置（场所、部位、环节）、可能导致的事故类型及其后果、主要管控措施、管控责任部门和责任人。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_JS140_十二_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B089962DF19D44EEE8904F95"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "cd9aef0db8649b1c6ebafa33547ad3f4153872c7c7ce2443f78627d8a1779fab",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "安全风险管控清单应当列明安全风险名称、所处位置（场所、部位、环节）、可能导致的事故类型及其后果、主要管控措施、管控责任部门和责任人。（第十二条）。",
+    "id": "H_JS140_十二_2",
+    "keywords": [
+      "安全风险管控清单未列明安全风险名称",
+      "所处位置",
+      "场所",
+      "部位",
+      "环节",
+      "可能导致的事故类型及其后果",
+      "主要管控措施",
+      "管控责任部门"
+    ],
+    "lifecycle": "active",
+    "measures": "安全风险管控清单应当列明安全风险名称、所处位置（场所、部位、环节）、可能导致的事故类型及其后果、主要管控措施、管控责任部门和责任人。（依据 第十二条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "安全风险管控清单未列明安全风险名称、所处位置（场所、部位、环节）、可能导致的事故类型及其后果、主要管控措施、管控责任部门"
+  }
 }

@@ -1,13 +1,54 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_BC2436C8E5BE198BA82BB74B82_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e120b09ed8e02db145eeee5bb165168b77b40662e20f924fa744746399c794d5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3FAF12F318BC17235C2E568E"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "d6df15ce2df6e0c4c2aab6fbcb55614b491e13f6a94007b8fb493fbfe19d7049",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同时覆盖电器及燃气对象，删除无条文依据的报警切断等测试要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，必须符合消防技术标准和管理规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_BC2436C8E5BE198BA82BB74B82_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3FAF12F318BC17235C2E568E"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "d6df15ce2df6e0c4c2aab6fbcb55614b491e13f6a94007b8fb493fbfe19d7049",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：燃气使用、储存及燃气设施相关场所",
+    "description": "现场检查发现，电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，不符合消防技术标准和管理规定，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_BC2436C8E5BE198BA82BB74B82_2",
+    "keywords": [
+      "电器产品",
+      "燃气用具的安装",
+      "使用及其线路",
+      "管路的设计",
+      "敷设",
+      "维护保养",
+      "检测",
+      "不符合消防技术标准和管理规定"
+    ],
+    "lifecycle": "active",
+    "measures": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，调整至符合消防技术标准和管理规定。整改后对燃气设施的通风、报警、切断、防泄漏或防爆功能中与本项有关的部分进行测试确认，合格后再恢复使用并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "燃气使用、储存及燃气设施相关场所"
+    ],
+    "title": "电器产品、燃气用具的安装、使用及其线路、管路的设计、敷设、维护保养、检测，不符合消防技术标准和管理规定"
+  }
 }

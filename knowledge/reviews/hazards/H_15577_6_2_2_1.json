@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_6_2_2_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8f4b25173b0614d51ca2abbd6e00021e24935cda120811412b23af47cd962a0d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "e5d00ae6954bfd295ad8c9adcac2ad60c8e8918fa6702c3dc01a53fb0316cbc6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补涉爆粉尘和直接接触前提，保留严格低于而非等于温度的关系。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "与粉尘直接接触的设备或装置（如电机外壳、传动轴、加热源等），其表面最高允许温度应低于相应粉尘的最低着火温度；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_6_2_2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "e5d00ae6954bfd295ad8c9adcac2ad60c8e8918fa6702c3dc01a53fb0316cbc6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，与粉尘直接接触的设备或装置（如电机外壳、传动轴、加热源等），其表面最高允许温度未低于相应粉尘的最低着火温度，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_6_2_2_1",
+    "keywords": [
+      "与粉尘直接接触的设备或装置",
+      "如电机外壳",
+      "传动轴",
+      "加热源等",
+      "其表面最高允许温度未低于相应粉尘的最低着火温度"
+    ],
+    "lifecycle": "active",
+    "measures": "与粉尘直接接触的设备或装置（如电机外壳、传动轴、加热源等），其表面最高允许温度低于相应粉尘的最低着火温度。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "与粉尘直接接触的设备或装置（如电机外壳、传动轴、加热源等），其表面最高允许温度未低于相应粉尘的最低着火温度"
+  }
 }

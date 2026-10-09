@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_JS140_七_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c81426fe7c8c4514cfeaba2c21f9f4ff52757767b0e2ace157da4a715cc7098a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_90490EAE35496274A618DDEA"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "c7707a1e005c0247ea0be420516b1215161def9fa5f0129f5c7ecb48067675f3",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补江苏工业企业适用范围，将长法条标题及描述转为制度缺失或缺项。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "企业应当制定安全风险辨识管控制度，确定符合本单位安全生产实际的辨识方法和程序，明确分级管控职责分工及其责任制考核奖惩办法。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_JS140_七_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_90490EAE35496274A618DDEA"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "c7707a1e005c0247ea0be420516b1215161def9fa5f0129f5c7ecb48067675f3",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "企业应当制定安全风险辨识管控制度，确定符合本单位安全生产实际的辨识方法和程序，明确分级管控职责分工及其责任制考核奖惩办法。（第七条）。",
+    "id": "H_JS140_七_1",
+    "keywords": [
+      "企业未制定安全风险辨识管控制度",
+      "未确定符合本单位安全生产实际的辨识方法和程序",
+      "未明确分级管控职责分工及其责任制考核奖惩办法"
+    ],
+    "lifecycle": "active",
+    "measures": "企业应当制定安全风险辨识管控制度，确定符合本单位安全生产实际的辨识方法和程序，明确分级管控职责分工及其责任制考核奖惩办法。（依据 第七条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "企业未制定安全风险辨识管控制度，未确定符合本单位安全生产实际的辨识方法和程序，未明确分级管控职责分工及其责任制考核奖惩办法"
+  }
 }

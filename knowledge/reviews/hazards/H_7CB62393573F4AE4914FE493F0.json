@@ -1,13 +1,58 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_7CB62393573F4AE4914FE493F0",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "36afbef69284fa7ab866c2823d598d950115d70a5ab54b3d3ee62abcbf862e3d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "63567fc3424302a648969c4b4ccf2fb06d29719458c8573f190d187ee06c48b0",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补南京和不同主体频次分支，删除原措施中旧版条例及无意义占位文字。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（二）每年至少组织一次应急救援预案演练，每半年至少组织一次现场处置方案演练。矿山、金属冶炼、建筑施工和危险物品的生产、经营、储存、运输、装卸以及城市轨道交通运营、船舶修造和拆解、电力行业的生产经营单位，每半年至少组织一次应急救援预案演练。\n（四）人员密集场所每半年应当至少组织一次生产安全事故应急救援预案演练。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_7CB62393573F4AE4914FE493F0",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "63567fc3424302a648969c4b4ccf2fb06d29719458c8573f190d187ee06c48b0",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "企业未按预案要求组织并实施生产安全事故应急救援演练，无法检验预案的可行性。",
+    "id": "H_7CB62393573F4AE4914FE493F0",
+    "keywords": [
+      "组织并实施未急救援演练",
+      "组",
+      "织",
+      "并",
+      "实",
+      "施",
+      "未",
+      "急",
+      "救",
+      "援",
+      "演",
+      "练"
+    ],
+    "lifecycle": "active",
+    "measures": "消除“未组织并实施应急救援演练”隐患；《江苏省安全生产条例》(2016年修订版)第十四条；完成后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。原 conditions 字段记录的引用依据为：依据：生产经营单位的主要负责人除应当履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责: (一)每季度至少组织一次安全生产全面检查，研究分析安全生产存在问题; (二)每年至少组织并参与一次事故应急救援演练; (三)发生事故时迅速组织抢救，并及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理; (四)每年向职工大会或者职工代表大会、股东会或者股东大会报告安全生产工作和个人履行安全生产管理职责的情况，接受工会、从业人员、股东对安全生产工作的监督。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未组织并实施应急救援演练"
+  }
 }

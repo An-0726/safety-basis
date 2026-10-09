@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_48FD52838B1640FCA9B293F5D1",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "7a38bb345e3ea0b9da5df015ab4524bc6be54a59de6c71521e537dbc735bfd69",
+  "decision": "rejected",
+  "reviewedContentHash": "ba019bbff47e3864af8cbc7bb8f7197dc6e02024e9e1fa589347cea275351f9a",
   "contextHashes": {
-    "hazard": "f6ba03fd2a0c8387cd46e954fc3cc7b6157de4f8c6d8d96aba76e00c4b5669cb",
+    "hazard": "d6c2972924e79fb5ee7fff851aa7afb256039a8b0fd0d14154ae6145cde91578",
     "clause": "287f97f415a696f15ac98927306fc3f671adcf7d2470043a54b9341d0069a1cf"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《消防法》第二十八条不得损坏挪用消火栓。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_NPC_FIRE_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_48FD52838B1640FCA9B293F5D1",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "7a38bb345e3ea0b9da5df015ab4524bc6be54a59de6c71521e537dbc735bfd69",
+    "contextHashes": {
+      "hazard": "f6ba03fd2a0c8387cd46e954fc3cc7b6157de4f8c6d8d96aba76e00c4b5669cb",
+      "clause": "287f97f415a696f15ac98927306fc3f671adcf7d2470043a54b9341d0069a1cf"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《消防法》第二十八条不得损坏挪用消火栓。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_FIRE_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

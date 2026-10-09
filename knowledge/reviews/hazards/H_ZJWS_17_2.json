@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_17_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "42bb7b3d27b18286b8787e5b4a9b96cfb62340d79f32b341d28610be497765fa",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_243C6289D795B0BE171F832F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "eecf0d8853549dac0a9c7191f60f1bbc9548865b5fb296e996c216c157118da1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原文允许场所内或临近地点两种位置，不能把已设在场所内判为不在附近。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "现场急救用品、冲洗设备等应当设在可能发生急性职业损伤的工作场所或者临近地点，并在醒目位置设置清晰的标识。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_17_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_243C6289D795B0BE171F832F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "eecf0d8853549dac0a9c7191f60f1bbc9548865b5fb296e996c216c157118da1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全标志",
+    "conditions": "适用于依据直接条款需要设置安全色、安全标志、警示标识或信息标识的危险场所、设施、设备或作业区域；标志种类、内容和位置应结合实际风险确认。\n适用场所：存在安全标志、警示标识或管线识别要求的场所和设备",
+    "description": "现场检查发现，现场急救用品和冲洗设备未设在急性职业损伤场所附近并设醒目标识，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_17_2",
+    "keywords": [
+      "现场急救用品和冲洗设备未设在急性职业损伤场所附近并设醒目标识"
+    ],
+    "lifecycle": "active",
+    "measures": "现场急救用品和冲洗设备设在急性职业损伤场所附近并设醒目标识。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在安全标志、警示标识或管线识别要求的场所和设备"
+    ],
+    "title": "现场急救用品和冲洗设备未设在急性职业损伤场所附近并设醒目标识"
+  }
 }

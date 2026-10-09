@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D105E5E2683449C027B23E4B28_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f8f801aa77ae353f441236bdb83130c5a936bfd211396dde0dd114a002d230b0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2751DC5E8AE01B191C975E99"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "dd5a856d92380d7d44e7e0731e03e4a887a7ec3994e0a6c187a4539022c973ec",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补生产经营规模较小且指定兼职人员的法定例外。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第八十二条 危险物品的生产、经营、储存单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位应当建立应急救援组织；生产经营规模较小的，可以不建立应急救援组织，但应当指定兼职的应急救援人员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D105E5E2683449C027B23E4B28_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2751DC5E8AE01B191C975E99"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "dd5a856d92380d7d44e7e0731e03e4a887a7ec3994e0a6c187a4539022c973ec",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，危险物品的生产、经营、储存单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位未建立应急救援组织，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_D105E5E2683449C027B23E4B28_1",
+    "keywords": [
+      "危险物品的生产",
+      "经营",
+      "储存单位以及矿山",
+      "金属冶炼",
+      "城市轨道交通运营",
+      "建筑施工单位未建立应急救援组织"
+    ],
+    "lifecycle": "active",
+    "measures": "危险物品的生产、经营、储存单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位建立应急救援组织。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "危险物品的生产、经营、储存单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位未建立应急救援组织"
+  }
 }

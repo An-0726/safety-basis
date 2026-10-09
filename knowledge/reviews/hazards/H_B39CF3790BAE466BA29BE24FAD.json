@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_B39CF3790BAE466BA29BE24FAD",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "0a86c3f40d5362b1a68d67169e1d3ff0b4cbf961a374f38607790a13e36a211e",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "491a7212d81df886dda2726b5748ee1fd831d9ed6e685436f40f0f0be9f8dd3a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NHC_GBZ1_2010"
-  ]
+  ],
+  "reason": "仅保留条文列明评价因素，删除政府整体规划、总平面调整及设计变更记录等未见原文的要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "工业企业选址应依据国家法律法规和标准，结合自然环境、气象、水文、地质及生产过程职业性有害因素等进行综合评价而确定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_B39CF3790BAE466BA29BE24FAD",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "0a86c3f40d5362b1a68d67169e1d3ff0b4cbf961a374f38607790a13e36a211e",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NHC_GBZ1_2010"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "工业企业选址,未依据我国现行的卫生、安全生产和环境保护等法律法规、标准和拟建工业企业建设项目生产过程的卫生特征及其对环境的要求、职业性有害因素的危害状况,结合建设地点现状与当地政府的整体规划,以及水文、地质、气象等因素,进行综合评价而确定",
+    "id": "H_B39CF3790BAE466BA29BE24FAD",
+    "keywords": [
+      "工业企业选址未结合卫生安全环境因素综合评价确定"
+    ],
+    "lifecycle": "active",
+    "measures": "依据选址评价结果补充卫生、安全、职业危害、环境及水文地质综合评价；不满足条件时调整厂址或总平面布置，并形成论证和设计变更记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已核对GB 50187-2012原PDF对应条款并完成适用性核验。",
+    "places": [
+      "工业企业厂区、建筑物、构筑物及总平面布置相关区域",
+      "通用场所"
+    ],
+    "title": "工业企业选址未结合卫生安全环境因素综合评价确定"
+  }
 }

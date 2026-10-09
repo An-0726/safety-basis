@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_0B99DA06B696E759C7E87DCA",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ebc76eacbbeae79df17317ed3df5d7148e6da9f0d3431244bb4c9e7773b6b091",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9EA38B8D1FBEA266844DFA1B"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "552b1a3ba754ee25d53e90ac4c298039cce4ee3f66efc08b858aafb5e9419209",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "本条支持按危险特性设置设施，不支持消防器材品种数量和泄漏应急设备的具体判据。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十七条 生产、储存危险化学品的单位，应当根据其生产、储存的危险化学品的种类和危险特性，在作业场所设置相应的监测、监控、通风、防晒、调温、防火、灭火、防爆、泄压、防毒、中和、防潮、防雷、防静电、防腐、防泄漏以及防护围堤或者隔离操作等安全设施、设备，并按照国家标准、行业标准或者国家有关规定对安全设施、设备进行经常性维护、保养，保证安全设施、设备的正常使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_0B99DA06B696E759C7E87DCA",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9EA38B8D1FBEA266844DFA1B"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "552b1a3ba754ee25d53e90ac4c298039cce4ee3f66efc08b858aafb5e9419209",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于危险化学品储存区域的相关安全管理。",
+    "description": "危险化学品储存区域未按标准配备相应品种和数量的消防器材，或未配备泄漏应急处理设备，发生初起火灾或物料泄漏时无法及时处置。",
+    "id": "H_0B99DA06B696E759C7E87DCA",
+    "keywords": [
+      "危险化学品储存区域未按标准配备相应品种和数量的消防器材及泄漏应急处理设备"
+    ],
+    "lifecycle": "active",
+    "measures": "按标准配备消防器材及泄漏应急处理设备；完成后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "危险化学品储存区域未按标准配备相应品种和数量的消防器材及泄漏应急处理设备"
+  }
 }

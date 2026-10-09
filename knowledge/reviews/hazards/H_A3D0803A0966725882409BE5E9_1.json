@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_A3D0803A0966725882409BE5E9_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "86c1a147b2f6e7e4c8701288222eb998b82202a6530b2a253288897afedb8369",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_F8CAC45DD2709EE9DCDC83DC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "53f9f655b68882ae529f05baff1128891705b46bba8f1a01b5dd7a16b98e7f50",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联只规定销售设备资料要求，完整第二十七条另有检查验收和销售记录制度义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特种设备销售单位应当建立特种设备检查验收和销售记录制度。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A3D0803A0966725882409BE5E9_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_F8CAC45DD2709EE9DCDC83DC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "53f9f655b68882ae529f05baff1128891705b46bba8f1a01b5dd7a16b98e7f50",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，特种设备销售单位未建立特种设备检查验收和销售记录制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_A3D0803A0966725882409BE5E9_1",
+    "keywords": [
+      "特种设备销售单位未建立特种设备检查验收和销售记录制度"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备销售单位建立特种设备检查验收和销售记录制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备销售单位未建立特种设备检查验收和销售记录制度"
+  }
 }

@@ -1,18 +1,83 @@
 {
-  "decision": "verified",
   "entityId": "H_183385CCF77E47A7A4CC4E75D6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "081ed5cbb56d30ff603daa0ace45bdd25fb61396b9d89db0f076d91dbff386e7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_bb9c8b7e9b7a43e98ac8cde3b4_15",
-    "reviewedAt": "2026-09-09T13:34:03+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "补工程范围，删除风压差报警、定期校验等未见直接条款的细节。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "治理系统应有事故自动报警装置，并符合安全生产、事故防范的相关规定。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_183385CCF77E47A7A4CC4E75D6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_bb9c8b7e9b7a43e98ac8cde3b4_15",
+      "reviewedAt": "2026-09-09T13:34:03+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "4d8a152ea482e88c01b6a7239a4f80945c01ebbfb0bf594a053c8a411bf9ee42",
+    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+    "checkedAt": "2026-09-12T02:28:05+08:00",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "4d8a152ea482e88c01b6a7239a4f80945c01ebbfb0bf594a053c8a411bf9ee42",
-  "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同，已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-  "checkedAt": "2026-09-12T02:28:05+08:00",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，治理系统，未有事故自动报警装置，并符合安全生产、事故防范的相关规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_183385CCF77E47A7A4CC4E75D6",
+    "keywords": [
+      "治理系统",
+      "未有事故自动报警装置",
+      "并符合安全生产",
+      "治",
+      "理",
+      "系",
+      "统",
+      ",",
+      "未",
+      "有",
+      "事",
+      "故",
+      "自",
+      "动",
+      "报",
+      "警",
+      "装",
+      "置",
+      "并",
+      "符",
+      "合",
+      "安",
+      "全",
+      "生",
+      "产",
+      "防",
+      "范",
+      "的",
+      "相",
+      "关",
+      "规",
+      "定"
+    ],
+    "lifecycle": "active",
+    "measures": "在治理系统设置事故自动报警装置（如风压差报警），并定期校验确保有效。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。原 conditions 字段记录的引用依据为：依据：《吸附法工业有机废气治理工程技术规范》HJ 2026-2013 6.5.1",
+    "places": [
+      "通用场所"
+    ],
+    "title": "治理系统，未有事故自动报警装置，并符合安全生产、事故防范的相关规定"
+  }
 }

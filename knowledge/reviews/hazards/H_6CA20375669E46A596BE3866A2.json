@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_6CA20375669E46A596BE3866A2",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "eac170c7b02dd9c0f370cf9c2e49b650433b78e6fa3257aed38fd48ef87e34c1",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "844a250910a73dd51e7025c162bb8a303e685cbd6e51797a6503623e00e260da",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "库内重大事故隐患判定标准第十一条第（八）项直接规定前端杂物去除，不能用砂光机风管火花探测装置作为二选一替代。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（八）粉碎、研磨、造粒等易产生机械点燃源的工艺设备前，未设置铁、石等杂物去除装置，或者木制品加工企业与砂光机连接的风管未设置火花探测消除装置的；",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_6CA20375669E46A596BE3866A2",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "eac170c7b02dd9c0f370cf9c2e49b650433b78e6fa3257aed38fd48ef87e34c1",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_6CA20375669E46A596BE3866A2",
+    "title": "易产生机械点燃源的工艺设备前未设置铁石等杂物去除装置",
+    "description": "粉碎、研磨、造粒等易产生机械点燃源的工艺设备前,未设置铁、石等杂物去除装置,或者木制品加工企业与砂光机连接的风管未设置火花探测消除装置的",
+    "measures": "在粉碎、研磨、造粒等易产生机械点燃源的工艺设备前设置铁、石等杂物去除装置（或火花探测消除装置）。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "应急与事故管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "易产生机械点燃源的工艺设备前未设置铁石等杂物去除装置"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。\n\n原 conditions 字段记录的引用依据为：依据：《工贸企业重大事故隐患判定标准》第十一条(八)",
+    "mergedInto": null
+  }
 }

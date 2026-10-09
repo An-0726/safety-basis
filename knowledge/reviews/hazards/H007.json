@@ -1,13 +1,45 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H007",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b8f5b65ff5b9411f55a31aff8dc72673d238123c97108c42634417321f8ee563",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "EH_ff5e8a01c8d64e2a7f780cd77a3e7a975448941877a2feaa5f130b1b67af63f7"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "ac2638278e982b11ae4efd33beffe16cb7866ead5da49d9368ffaf572d43cdc1",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "原关联对象为商业燃具或用气设备，不能泛化至所有燃气场所；删除条文没有的测试周期、到期更换和江苏附加要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "商业燃具或用气设备应设置在通风良好、符合安全使用条件且便于维护操作的场所，并应设置燃气泄漏报警和切断等安全装置。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H007",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_ff5e8a01c8d64e2a7f780cd77a3e7a975448941877a2feaa5f130b1b67af63f7"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "ac2638278e982b11ae4efd33beffe16cb7866ead5da49d9368ffaf572d43cdc1",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H007",
+    "title": "燃气场所未安装报警装置",
+    "description": "使用燃气的餐饮等生产经营场所未安装可燃气体报警装置。",
+    "measures": "按气源种类、用气场所及设计要求安装适用报警装置，落实定期测试、维护和到期更换；江苏适用场所同时核查燃气泄漏安全保护装置要求。",
+    "conditions": "",
+    "category": "燃气安全",
+    "places": [],
+    "aliases": [],
+    "keywords": [
+      "燃气场所未安装报警装置"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "本描述限符合条款的生产经营场所。普通家庭不直接适用此款；探测器安装高度、位置和切断要求需另核具体标准与产品说明。",
+    "mergedInto": null
+  }
 }

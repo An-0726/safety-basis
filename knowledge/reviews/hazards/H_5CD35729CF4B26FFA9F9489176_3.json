@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_5CD35729CF4B26FFA9F9489176_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a07f23220e6187fdd2c936cf827298bd510d1be8b73b639bd9e6a4813b1c1c77",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_107654086AC3D10983F86BD7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "5389a5610b964861c5ad8e6698c92c513839f2579fc1d910494613bac8a78e2d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联缺少履职保护要求，完整第二十六条直接禁止上述因果关系下的不利处理。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位不得因安全生产管理人员依法履行职责而降低其工资、福利等待遇或者解除与其订立的劳动合同。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_5CD35729CF4B26FFA9F9489176_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_107654086AC3D10983F86BD7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "5389a5610b964861c5ad8e6698c92c513839f2579fc1d910494613bac8a78e2d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位因安全生产管理人员依法履行职责而降低其工资、福利等待遇或者解除与其订立的劳动合同，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_5CD35729CF4B26FFA9F9489176_3",
+    "keywords": [
+      "生产经营单位因安全生产管理人员依法履行职责而降低其工资",
+      "福利等待遇或者解除与其订立的劳动合同"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止因安全生产管理人员依法履职而降低待遇或解除劳动合同等不利处理，纠正已经作出的处理，保障其依法履行安全生产管理职责。整改后通过制度文件、人员能力、履职记录和实际执行情况复核闭环效果。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位因安全生产管理人员依法履行职责而降低其工资、福利等待遇或者解除与其订立的劳动合同"
+  }
 }

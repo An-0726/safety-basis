@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "checkedAt": "2026-09-11T10:30:00+08:00",
-  "reason": "将原《消防法》第十六条一般性配置义务替换为GB 9448-2025第7.4.1条专项直接依据。",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "REPLACE_CLAUSE",
     "DIRECT_MATCH",
@@ -13,10 +13,31 @@
   ],
   "reviewedContentHash": "7459098ad7f1cfbf5109b98d945234e728b43d9f98a31533b37b788a0e5d165d",
   "contextHashes": {
-    "hazard": "45033b03dc335bab68541bf1ace9d125eabfc5580f0197346f701e25196f974e",
-    "clause": "590ee6c5f3459435b8a0c5e9b139269b220be9b8249e9cadb9a2b0574f16a7ca",
-    "link": "7459098ad7f1cfbf5109b98d945234e728b43d9f98a31533b37b788a0e5d165d"
+    "hazard": "a6213f183375cb3aa712d03654cb539be1fc91abebcb08c8edf15b0fd826dad4",
+    "clause": "590ee6c5f3459435b8a0c5e9b139269b220be9b8249e9cadb9a2b0574f16a7ca"
   },
   "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_4334854f5c0b8cc5c727612e",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+    "checkedAt": "2026-09-11T10:30:00+08:00",
+    "reason": "将原《消防法》第十六条一般性配置义务替换为GB 9448-2025第7.4.1条专项直接依据。",
+    "reasonCodes": [
+      "REPLACE_CLAUSE",
+      "DIRECT_MATCH",
+      "GB9448_7_4_1"
+    ],
+    "reviewedContentHash": "7459098ad7f1cfbf5109b98d945234e728b43d9f98a31533b37b788a0e5d165d",
+    "contextHashes": {
+      "hazard": "45033b03dc335bab68541bf1ace9d125eabfc5580f0197346f701e25196f974e",
+      "clause": "590ee6c5f3459435b8a0c5e9b139269b220be9b8249e9cadb9a2b0574f16a7ca",
+      "link": "7459098ad7f1cfbf5109b98d945234e728b43d9f98a31533b37b788a0e5d165d"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

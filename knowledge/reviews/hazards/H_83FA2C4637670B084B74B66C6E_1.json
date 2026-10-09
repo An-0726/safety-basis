@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_83FA2C4637670B084B74B66C6E_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "935ed50bdda48f6f2b08ed58bd3d6b531652206769ad13903aad1279d1861fef",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_DF19A4FD6E65197CD6174850"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "0310e9ccb3f31fb462d18a9ecc70575fb4002aa93a8633f11604827d0b61fa97",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定工会职责，删除共青团、妇联等主体扩展和条文未规定的资格考核、独立作业禁令。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "工会组织应当督促并协助用人单位开展职业卫生宣传教 育和培训，",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_83FA2C4637670B084B74B66C6E_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_DF19A4FD6E65197CD6174850"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "0310e9ccb3f31fb462d18a9ecc70575fb4002aa93a8633f11604827d0b61fa97",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于依法承担该条款所述职责的工会、共青团、妇联等群团组织；应按其法定职责核查，不作为普通生产岗位现场缺陷直接套用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料和执行情况核查，工会组织未督促并协助用人单位开展职业卫生宣传教育和培训，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_83FA2C4637670B084B74B66C6E_1",
+    "keywords": [
+      "工会组织未督促并协助用人单位开展职业卫生宣传教育和培训"
+    ],
+    "lifecycle": "active",
+    "measures": "工会组织督促并协助用人单位开展职业卫生宣传教育和培训。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "工会组织未督促并协助用人单位开展职业卫生宣传教育和培训"
+  }
 }

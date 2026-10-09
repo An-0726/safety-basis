@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_C40C21D9A11C42C7AE4A81FAE9",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "85a603c1eeb6edb7c44fba79adc4a89b9cec87f64010d4e06bca2d98fda8b9fe",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "485546b61173422efe425ebe1fe40b3f445b911f3fca4c78eb296a11fee8b8cb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_MOHURD_GB50054_2011"
-  ]
+  ],
+  "reason": "现条文未限定实验室，也未规定保养前拔插头，按直接支持的安装使用维护义务收敛。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电气装置和用电设备的安装和使用应符合安全操作与维护要求，防止人员触电和电气火灾。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_C40C21D9A11C42C7AE4A81FAE9",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "85a603c1eeb6edb7c44fba79adc4a89b9cec87f64010d4e06bca2d98fda8b9fe",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50054_2011"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_C40C21D9A11C42C7AE4A81FAE9",
+    "title": "实验室电气装置和器具使用未遵守安全操作与保养要求",
+    "description": "为了确保实验室中电气装置和器具的安全使用,,未遵守以下要求:a)安全操作与保养程序,例如,例行保养前一定要拔掉电源插头",
+    "measures": "制定并执行实验室电气装置安全操作与保养程序（如实例保养前拔掉电源插头等）。",
+    "conditions": "适用于实验室的相关安全管理。",
+    "category": "电气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "实验室电气装置和器具使用未遵守安全操作与保养要求"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《检测实验室安全 第2部分:电器因素》(GB/T 27476.2-2014) 第5.4.18.1条",
+    "mergedInto": null
+  }
 }

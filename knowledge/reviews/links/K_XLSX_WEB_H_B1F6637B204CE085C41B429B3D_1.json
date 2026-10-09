@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_B1F6637B204CE085C41B429B3D_1",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "0a9d260b1708d4131a91fba29d900c7f3cdc17ce644b075a72ae6cb6b9a89e92",
+  "decision": "rejected",
+  "reviewedContentHash": "1d73893de2728c0b817194c023ea6f3aaae7010fb7d2fa408315188e0081f86e",
   "contextHashes": {
-    "hazard": "23f40f8bf734102e8520d3039b08b5c97c3e8e7033d42ea6ba3d63aa9054d496",
+    "hazard": "70a0a1be8e04c47dc5c8210ae3ec66b9b9933b1642d59a45b267342b7a25b3bb",
     "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《消防法》第十六条安全疏散预案要求。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_NPC_FIRE_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_B1F6637B204CE085C41B429B3D_1",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "0a9d260b1708d4131a91fba29d900c7f3cdc17ce644b075a72ae6cb6b9a89e92",
+    "contextHashes": {
+      "hazard": "23f40f8bf734102e8520d3039b08b5c97c3e8e7033d42ea6ba3d63aa9054d496",
+      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《消防法》第十六条安全疏散预案要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_FIRE_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

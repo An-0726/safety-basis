@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_99C14C8150B1AF834ADC8E5121_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "55318012af580d8e933c6555f23b51ae22ae06bf558c314cf2c7d66610653a05",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_0D32F81B7FF81451CD54EF87"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "357d45216803d292e4b8e56b0f68714c33e5fab763f66a6903ae0f9b69f779de",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补南京地域，把正向条文描述改为材料性能降低或使用禁止材料的具体缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（一）建筑内部装修不得降低装修材料的难燃、不燃或者阻燃性能等级，不得使用易燃以及燃烧后产生有毒气体的材料；",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_99C14C8150B1AF834ADC8E5121_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_0D32F81B7FF81451CD54EF87"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "357d45216803d292e4b8e56b0f68714c33e5fab763f66a6903ae0f9b69f779de",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于人员密集场所、高层公共建筑和地下公共建筑的内部装修。",
+    "description": "第三十九条人员密集场所、高层和地下公共建筑应当遵守有关消防安全规定，并符合下列要求： （一）建筑内部装修不得降低装修材料的难燃、不燃或者阻燃性能等级，不得使用易燃以及燃烧后产生有毒气体的材料；（第三十九条）。",
+    "id": "H_99C14C8150B1AF834ADC8E5121_1",
+    "keywords": [
+      "人员密集场所",
+      "高层和地下公共建筑未遵守有关消防安全规定"
+    ],
+    "lifecycle": "active",
+    "measures": "对人员密集场所、高层和地下公共建筑的内部装修材料进行核查，更换不符合难燃、不燃或阻燃性能要求及不应使用的易燃/产毒材料，并保存材料合格证明。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "人员密集场所、高层或地下公共建筑内部装修材料不符合消防安全要求"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_87B2F0BEA865AD12A492FF008D_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f024b366b9e167e9dd7f9221bbc23352f866126849d18031a3eaedc01ada7809",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_1909E6BD40C4F12253EA826C"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "6654e2f0d2e8e3e5d81f73f574cc3f5577e7a1038a7f7f5e9bc3212bec9a6524",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "将只有数据类别的原描述和措施改为具体报送缺陷与补报核查动作，补南京范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（五）其他应当报送的安全生产数据。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_87B2F0BEA865AD12A492FF008D_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1909E6BD40C4F12253EA826C"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "6654e2f0d2e8e3e5d81f73f574cc3f5577e7a1038a7f7f5e9bc3212bec9a6524",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "其他应当报送的安全生产数据。（第二十一条）。",
+    "id": "H_87B2F0BEA865AD12A492FF008D_2",
+    "keywords": [
+      "生产经营单位未按规定报送其他应当报送的安全生产数据"
+    ],
+    "lifecycle": "active",
+    "measures": "其他应当报送的安全生产数据。（依据 第二十一条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动",
+      "通用场所"
+    ],
+    "title": "生产经营单位未按规定报送其他应当报送的安全生产数据"
+  }
 }

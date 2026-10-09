@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_A9573ADCD57A467488607D8427",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d9c3eaa54d74e3ad297906cc17574c3f756999b7b7cfd9b9865ae82ec01a8ba2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "5ed49ba4c5dd3260e58b31ae310c1ce0113e50a733dd1a1b4bbbb3344c3326fd",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现依据只要求建造贮存设施，库内第6.1.2条直接规定必要贮存分区。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "贮存设施应根据危险废物的类别、数量、形态、物理化学性质和污染防治等要求设置必要的贮存分区，避免不相容的危险废物接触、混合。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A9573ADCD57A467488607D8427",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "5ed49ba4c5dd3260e58b31ae310c1ce0113e50a733dd1a1b4bbbb3344c3326fd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "贮存设施，未根据危险废物的类别、数量、形态、物理化学性质和污染防治等要求设置必要的贮存分区，避免不相容的危险废物接触、混合。",
+    "id": "H_A9573ADCD57A467488607D8427",
+    "keywords": [
+      "危险废物贮存设施未设置必要的贮存分区"
+    ],
+    "lifecycle": "active",
+    "measures": "按危险废物类别、数量和性质设置必要的贮存分区，避免不相容废物接触混合。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《危险废物贮存污染控制标准》GB 18597-2023 4.3\n本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物贮存设施未设置必要的贮存分区"
+  }
 }

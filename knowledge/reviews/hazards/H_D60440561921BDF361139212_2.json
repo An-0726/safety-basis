@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D60440561921BDF361139212_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bb29f1ae035c9d78070703bf7c99b389999fa619807360e3b533c800cbd32eab",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_0AAC2E5C6981D8EB3CC5C2AC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "9c537e15f7606d2cf4cda01f48e5a830520a388279158eb149f904566bf66f6f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同一法规完整第二十八条直接规定标志和定期检查检测巡护，原关联只有符合规定标准的一般义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产、储存危险化学品的单位在公共区域埋地、地面和架空的危险化学品输送管道及其附属设施的安全管理，应当符合法律、行政法规的规定和国家标准、行业标准的要求；应当对其敷设的危险化学品管道设置明显标志，并对危险化学品管道定期检查、检测、巡护。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D60440561921BDF361139212_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_0AAC2E5C6981D8EB3CC5C2AC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "9c537e15f7606d2cf4cda01f48e5a830520a388279158eb149f904566bf66f6f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，敷设危险化学品管道的单位未设置明显标志，未对危险化学品管道定期检查、检测、巡护，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_D60440561921BDF361139212_2",
+    "keywords": [
+      "敷设危险化学品管道的单位未设置明显标志",
+      "未对危险化学品管道定期检查",
+      "检测",
+      "巡护"
+    ],
+    "lifecycle": "active",
+    "measures": "敷设危险化学品管道的单位设置明显标志，对危险化学品管道定期检查、检测、巡护。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "敷设危险化学品管道的单位未设置明显标志，未对危险化学品管道定期检查、检测、巡护"
+  }
 }

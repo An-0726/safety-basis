@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_ABBEECBC007C8F7632553BA9",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "0060bb2cd4f14374d93cd9095870ce92a675185d0bc54366fe70bacf1601b4ea",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_276908B5E4D5252220D68D20"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "c9f24dcc5e26b669e0932f68b314e492a69bfa7c93fa252137e8f55fa255dae8",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "先查《江苏省安全生产条例》第三十二条，再以“内部检修、一次性、防护服、防护罩、防护手套”检索全部现行条款；《危险废物收集、贮存、运输技术规范》的防护服要求用于事故清理等其他场景，未找到设施内部检修须配指定品类和一次性用品的直接依据。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十二条 生产经营单位应当为从业人员提供符合国家标准或者行业标准的劳动防护用品，并教育、督促从业人员正确佩戴、使用。生产经营单位不得以发放货币或者其他物品替代提供劳动防护用品。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_ABBEECBC007C8F7632553BA9",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_276908B5E4D5252220D68D20"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "c9f24dcc5e26b669e0932f68b314e492a69bfa7c93fa252137e8f55fa255dae8",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_ABBEECBC007C8F7632553BA9",
+    "title": "人员进入设施内部检修时未提供防护服、防护罩、防护手套等劳动防护用品",
+    "description": "人员进入设施内部检修时未提供一次性防护服、防护罩、防护手套等劳动防护用品",
+    "measures": "人员进入设施内部检修时提供防护服、防护罩、防护手套等劳动防护用品。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "专项安全与EHS",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "人员进入设施内部检修时未提供防护服、防护罩、防护手套等劳动防护用品"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_CB180AFAA53646A7A9A5F9D350 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《污水处理设备安全技术规范》(GB/T 28742-2025) 第4.27条",
+    "mergedInto": null
+  }
 }

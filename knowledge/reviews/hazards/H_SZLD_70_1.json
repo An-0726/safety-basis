@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_70_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "be9879f4c95109a5a643f1a0538a6cf9c287b19467ef4e4a50822d8f524feb87",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_D096F50E731D07F95F0D1E6E"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "737579b3ca1b5a4103781dd8782b7415304a918770aa45c1bd7f18b658b7b9a1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联是工作保障，库内第七十条直接规定二选一处置，一种已落实时不能按本项判定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电梯安全员发现电梯存在一般事故隐患时，应当立即采取相应措施或者通知电梯维护保养单位予以消除；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_70_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_D096F50E731D07F95F0D1E6E"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "737579b3ca1b5a4103781dd8782b7415304a918770aa45c1bd7f18b658b7b9a1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，电梯安全员发现一般事故隐患未立即处理或通知维保单位消除，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_70_1",
+    "keywords": [
+      "电梯安全员发现一般事故隐患未立即处理或通知维保单位消除"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯安全员发现一般事故隐患立即处理或通知维保单位消除。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯安全员发现一般事故隐患未立即处理或通知维保单位消除"
+  }
 }

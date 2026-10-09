@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_944AAA033232AE3F0499A6FB61_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "79c59fbc85cbae14aa65edb01e5e05812a3893a3ee9b18d5f039ac94146c2f75",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "76756dc97954594f73fd0466297f20cfa62be7a44128f6da0e39ff605d3bb9a3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "现关联不含主要负责人调查期间不得擅离职守的要求，改用库内同时直接规定两项义务的条款。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位发生生产安全事故时，单位的主要负责人应当立即组织抢救，并不得在事故调查处理期间擅离职守。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_944AAA033232AE3F0499A6FB61_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "79c59fbc85cbae14aa65edb01e5e05812a3893a3ee9b18d5f039ac94146c2f75",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_944AAA033232AE3F0499A6FB61_1",
+    "title": "生产经营单位发生生产安全事故时，单位的主要负责人未立即组织抢救或者在事故调查处理期间擅离职守",
+    "description": "第五十条生产经营单位发生生产安全事故时，单位的主要负责人应当立即组织抢救，并不得在事故调查处理期间擅离职守。（第五十条）。",
+    "measures": "第五十条生产经营单位发生生产安全事故时，单位的主要负责人应当立即组织抢救，并不得在事故调查处理期间擅离职守。（依据 第五十条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产经营单位发生生产安全事故时，单位的主要负责人未立即组织抢救或者在事故调查处理期间擅离职守"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第五十条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

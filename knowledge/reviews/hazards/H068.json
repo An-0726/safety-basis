@@ -1,15 +1,57 @@
 {
-  "decision": "verified",
   "entityId": "H068",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fff2aace06c005e66ea47c2649954129c2725b8347b9cf136aea6efc62122d05",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_62b0a2142bac91f58c75345a34_7",
-    "reviewedAt": "2026-09-09T13:33:45+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "直接依据为分类贮存和避免不相容接触，删除其未规定的必须设置贮存分区、分类收集和容器标识。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "贮存危险废物应根据危险废物的类别、形态、物理化学性质和污染防治要求进行分类贮存，且应避免危险废物与不相容的物质或材料接触。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H068",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_62b0a2142bac91f58c75345a34_7",
+      "reviewedAt": "2026-09-09T13:33:45+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "b6e526698a77c43c9561eb9505318a897aaf57a12bac8061cfce31d532ee942a"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "b6e526698a77c43c9561eb9505318a897aaf57a12bac8061cfce31d532ee942a"
+  "previousDefinition": {
+    "aliases": [
+      "不相容危废混合贮存",
+      "危废相容性管理不到位",
+      "不相容危废未隔离"
+    ],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "危险废物贮存设施未设置必要的贮存分区，导致不相容危险废物存在接触、混合风险。",
+    "id": "H068",
+    "keywords": [
+      "危险废物",
+      "不相容",
+      "混装",
+      "容器"
+    ],
+    "lifecycle": "active",
+    "measures": "根据危险废物性质和相容性分类收集、分容器贮存，严禁将可能发生反应的不相容危险废物混装，并做好容器标识。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "已按GB 18597—2023现行条文替换旧版“同一容器内禁止混装”的表述；现行要求强调分类贮存并避免不相容危险废物接触、混合。",
+    "places": [
+      "危险废物贮存场所",
+      "工贸企业"
+    ],
+    "title": "不相容危险废物接触或混合贮存"
+  }
 }

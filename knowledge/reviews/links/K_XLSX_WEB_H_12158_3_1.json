@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_12158_3_1",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "2480e5fafcadc84e256b428a9cf4908efbe76d71293b599336a9fb9aa1c49b9b",
+  "decision": "rejected",
+  "reviewedContentHash": "d66978c770efd5c69a63ca01b6aea032ab763ea0663604dd417c07b6332fe4f0",
   "contextHashes": {
-    "hazard": "7a79b080d5a1cc7bbe87180f09e58e5ae82d55cd136c64fa6eb7e57f07aedfce",
+    "hazard": "dc256c0d3e77e42aaab146aa91d8e109848932066ff7b819954dcbb7e1053c6d",
     "clause": "22ceeca05e8de75a9f92bdf527946d0b23a07b9771aa4f278bf87b9d9e6ce56e"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第3条静置时间规定。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_SAMR_GB12158_2024"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_12158_3_1",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "2480e5fafcadc84e256b428a9cf4908efbe76d71293b599336a9fb9aa1c49b9b",
+    "contextHashes": {
+      "hazard": "7a79b080d5a1cc7bbe87180f09e58e5ae82d55cd136c64fa6eb7e57f07aedfce",
+      "clause": "22ceeca05e8de75a9f92bdf527946d0b23a07b9771aa4f278bf87b9d9e6ce56e"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 12158-2024第3条静置时间规定。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB12158_2024"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

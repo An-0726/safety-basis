@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_2A772B3A0EB344D3A5FE8C9DDC",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ddc14982675db1315e2029fb82070a6fd6952656806ee01c4aa654e4532913b4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "8a8d56940b7183af8dd4ecf9bd8faeb4cf1b9d8aa6a55626d65cec8cc5ed9666",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留危险废物身份前提，使用原文识别标志要求而非泛化警告标志。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "贮存设施或场所、容器和包装物应按HJ 1276要求设置危险废物贮存设施或场所标志、危险废物贮存分区标志和危险废物标签等危险废物识别标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2A772B3A0EB344D3A5FE8C9DDC",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "8a8d56940b7183af8dd4ecf9bd8faeb4cf1b9d8aa6a55626d65cec8cc5ed9666",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，实验室废弃化学品包装容器未张贴标签或贮存区域未设警告标志，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_2A772B3A0EB344D3A5FE8C9DDC",
+    "keywords": [
+      "实验室废弃化学品包装容器未张贴标签或贮存区域未设警告标志"
+    ],
+    "lifecycle": "active",
+    "measures": "在实验室废弃化学品包装容器上张贴规范标签，贮存区域设立醒目的警告标志。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "实验室废弃化学品包装容器未张贴标签或贮存区域未设警告标志"
+  }
 }

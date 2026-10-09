@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H080 为易发生火灾、爆炸、极低温等事故的实验室与其他用房相邻时未形成独立防护单元，或耐火分隔、防火门窗、独立通风、泄压等措施不符合要求；JGJ 91-2019 第5.2.5条（强制性条文）对该四项措施逐一作出直接规定，比通用建筑防火规范更专项，确认为 direct 依据。",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "MANDATORY_CLAUSE",
@@ -13,12 +13,35 @@
   ],
   "reviewedContentHash": "45daae0c93b769ed9498692c3125f40dbfd66b6ca84f6910ad676276ed995121",
   "contextHashes": {
-    "hazard": "579f4826d285e239d001bec594374b2ad3d5fc678b6cd9a95968af23ab837682",
-    "clause": "743d5517a84bdf23510ce0e88ae4566c257d7029bdb95afead6affb0f29e4de4",
-    "link": "45daae0c93b769ed9498692c3125f40dbfd66b6ca84f6910ad676276ed995121"
+    "hazard": "d37387b131280649a3d60af2a5b326cce861f7947e6fc9a91ac007fefacc69b8",
+    "clause": "743d5517a84bdf23510ce0e88ae4566c257d7029bdb95afead6affb0f29e4de4"
   },
   "evidenceRefs": [
     "E_bd502c6c87c6821db373104eebc9ce1748a483d95258e861a2f5b5482f3bf8ad"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_624CE9CB9D309BCA17C2BE",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "H080 为易发生火灾、爆炸、极低温等事故的实验室与其他用房相邻时未形成独立防护单元，或耐火分隔、防火门窗、独立通风、泄压等措施不符合要求；JGJ 91-2019 第5.2.5条（强制性条文）对该四项措施逐一作出直接规定，比通用建筑防火规范更专项，确认为 direct 依据。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "MANDATORY_CLAUSE",
+      "PROTECTIVE_UNIT_REQUIRED"
+    ],
+    "reviewedContentHash": "45daae0c93b769ed9498692c3125f40dbfd66b6ca84f6910ad676276ed995121",
+    "contextHashes": {
+      "hazard": "579f4826d285e239d001bec594374b2ad3d5fc678b6cd9a95968af23ab837682",
+      "clause": "743d5517a84bdf23510ce0e88ae4566c257d7029bdb95afead6affb0f29e4de4",
+      "link": "45daae0c93b769ed9498692c3125f40dbfd66b6ca84f6910ad676276ed995121"
+    },
+    "evidenceRefs": [
+      "E_bd502c6c87c6821db373104eebc9ce1748a483d95258e861a2f5b5482f3bf8ad"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

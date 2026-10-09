@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_YJYA_27_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "29e72bc3921f7af8e7b55b320bc6167be73dc1ee9273783eb939958b8a58b031",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "afad3e6d4324ae559d0cf6825afc51c9c5676c4833735a5b8b2c3ad63c48b724",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "库内管理办法第二十七条直接列备案材料，结合第二十一条区分评审意见提交范围，现预案编制演练条款没有材料清单。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十七条　生产经营单位申报应急预案备案，应当提交下列材料：\n（一）应急预案备案申报表；\n（二）本办法第二十一条所列单位，应当提供应急预案评审意见；\n（三）应急预案电子文档；\n（四）风险评估结果和应急资源调查清单。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_YJYA_27_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "29e72bc3921f7af8e7b55b320bc6167be73dc1ee9273783eb939958b8a58b031",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "第二十七条生产经营单位申报应急预案备案，应当提交下列材料：（一）应急预案备案申报表；（第27条）。",
+    "id": "H_YJYA_27_1",
+    "keywords": [
+      "生产经营单位申报应急预案备案未提交规定材料"
+    ],
+    "lifecycle": "active",
+    "measures": "按应急预案备案要求提交备案申报表、应急预案电子文档、风险评估结果和应急资源调查清单；属于规定单位的，另提交应急预案评审意见，并核对材料完整性。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动",
+      "通用场所"
+    ],
+    "title": "生产经营单位申报应急预案备案未提交规定材料"
+  }
 }

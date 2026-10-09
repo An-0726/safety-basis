@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_CCBA1E83E15A914C14219FE7",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "414c72a12c3b95765aefbe5291f468c03f60e38c58083bdd5e383b45f17d78c4",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "38b56a1a95d3f7eff8ea67de9d52f8a1f85239a92a389bcea6648ec2649298ff",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "库内判定准则第4.4条直接规定结论及继续使用组合，重大隐患判定应对应设备状态，不把未判定本身作为设备缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "4.4 压力管道有下列情形之一仍继续使用的，应判定为重大事故隐患。\na) 定期检验的检验结论为“不符合要求”或“不允许使用”。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_CCBA1E83E15A914C14219FE7",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "414c72a12c3b95765aefbe5291f468c03f60e38c58083bdd5e383b45f17d78c4",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_CCBA1E83E15A914C14219FE7",
+    "title": "压力管道定期检验结论为不符合要求/不允许使用仍继续使用，未判定为重大事故隐患",
+    "description": "压力管道定期检验结论为不符合要求或不允许使用仍继续使用",
+    "measures": "压力管道定期检验合格方可继续使用。",
+    "conditions": "适用于压力管道的相关安全管理。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "压力管道定期检验结论为不符合要求/不允许使用仍继续使用，未判定为重大事故隐患"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_A1696721CCC94F65AE95751A5E 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n原 conditions 字段记录的引用依据为：依据：《特种设备重大事故隐患判定准则》GB45067-2024第4.4条",
+    "mergedInto": null
+  }
 }

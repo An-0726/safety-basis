@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_CDCC41FC5CDA320D4E9EB9CA",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "1fcfb464c47af1b421befd289ed0dc524b0237d02922f6b2105b8ac2281d4add",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "50c343bab1ffb731c1cba455cf3694b4bd17f08aa74812a307ce6122a846a300",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "库内判定准则第4.10条直接规定所列车辆缺陷，须补足仍继续使用前提，并区分各装置适用车型。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "b) 电动车辆电源紧急切断装置缺失或失效。\nc) 制动(包括行车、驻车)装置缺失或失效。\nd) 观光列车的牵引连接装置及其二次保护装置缺失或失效。\ne) 非公路用旅游观光车辆超过最大行驶坡度使用。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_CDCC41FC5CDA320D4E9EB9CA",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "1fcfb464c47af1b421befd289ed0dc524b0237d02922f6b2105b8ac2281d4add",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_CDCC41FC5CDA320D4E9EB9CA",
+    "title": "场(厂)内专用机动车辆电源紧急切断、制动、牵引连接装置缺失或失效，或超过最大行驶坡度使用",
+    "description": "电动车辆电源紧急切断装置、制动(行车/驻车)装置、观光列车牵引连接及二次保护装置缺失或失效，非公路旅游观光车辆超过最大行驶坡度使用",
+    "measures": "安全装置齐全有效，未超最大行驶坡度使用。",
+    "conditions": "适用于场(厂)内专用机动车辆的相关安全管理。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "场(厂)内专用机动车辆电源紧急切断、制动、牵引连接装置缺失或失效，或超过最大行驶坡度使用"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_22D804731C0D4F90A6BF2A83CD 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n原 conditions 字段记录的引用依据为：依据：《特种设备重大事故隐患判定准则》(GB45067-2024)4.10",
+    "mergedInto": null
+  }
 }

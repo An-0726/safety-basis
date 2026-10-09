@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-16",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566",
-    "hazard": "d8dc57fac54517952af980534b4597dc0925425e3ac00575514fd64da5e4a066"
+    "hazard": "866fe79b7ec254f5f04588842de72a494fea54e789a5a3011c9a274c2c0d699a",
+    "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566"
   },
   "decision": "verified",
   "entityId": "K_PHASE6_4781EC9532331919D5701D87",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "reason": "《安全生产法》第三十条对特种作业人员专门培训并取得相应资格作出直接义务。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "14abbaf25f0aac869a6235ce5795082ce30897ccff994eb37674f250daf34e86",
-  "reviewer": "ChatGPT PHASE6 final review 20260916",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "contextHashes": {
+      "clause": "3c9aa1f929fa13354cab037278732ee5da878ef46cb4783a68166a965d752566",
+      "hazard": "d8dc57fac54517952af980534b4597dc0925425e3ac00575514fd64da5e4a066"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE6_4781EC9532331919D5701D87",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "reason": "《安全生产法》第三十条对特种作业人员专门培训并取得相应资格作出直接义务。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "14abbaf25f0aac869a6235ce5795082ce30897ccff994eb37674f250daf34e86",
+    "reviewer": "ChatGPT PHASE6 final review 20260916",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

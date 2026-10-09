@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_9490A44402EEF8A75435DBD493_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8ef482d8af4e4b3ed83fc56907fab3d952c842fae16570e33ddda02c1ec56d7d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_102016353FE4F4D4C699DD69"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3bc05edcef447758f1b1393a34c38ef72f5f860eb84e8ae064f974a9afb84c85",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现条款仅涉及建设项目安全设施监督，完整第六十条另含对工会安全问题建议及时研究答复的直接要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "发现生产经营单位违章指挥、强令冒险作业或者发现事故隐患时，有权提出解决的建议，生产经营单位应当及时研究答复；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_9490A44402EEF8A75435DBD493_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_102016353FE4F4D4C699DD69"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3bc05edcef447758f1b1393a34c38ef72f5f860eb84e8ae064f974a9afb84c85",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位对工会提出的解决违章指挥、强令冒险作业等问题的建议，未及时研究答复，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_9490A44402EEF8A75435DBD493_1",
+    "keywords": [
+      "生产经营单位对工会提出的解决违章指挥",
+      "强令冒险作业等问题的建议",
+      "未及时研究答复"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位对工会提出的解决违章指挥、强令冒险作业等问题的建议，及时研究答复。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位对工会提出的解决违章指挥、强令冒险作业等问题的建议，未及时研究答复"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FCB_16_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "51195ccd2273fb85752fae275bf58d7e918da29dce6a94ec51da1ab5c6371b27",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_FCB_L006"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "33b7ef488c428440224274470762197887b9d772d4cade181accb62369a29d06",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留粉尘涉爆企业及工艺前提，保留替代措施关系，删除无关机械防护内容。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十六条针对粉碎、研磨、造粒、砂光等易产生机械点燃源的工艺，粉尘涉爆企业应当规范采取杂物去除或者火花探测消除等防范点燃源措施，并定期清理维护，做好相关记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FCB_16_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_FCB_L006"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "33b7ef488c428440224274470762197887b9d772d4cade181accb62369a29d06",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，易产生机械点燃源的工艺未采取杂物去除或火花探测消除措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FCB_16_1",
+    "keywords": [
+      "易产生机械点燃源的工艺未采取杂物去除或火花探测消除措施"
+    ],
+    "lifecycle": "active",
+    "measures": "易产生机械点燃源的工艺采取杂物去除或火花探测消除措施。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "易产生机械点燃源的工艺未采取杂物去除或火花探测消除措施"
+  }
 }

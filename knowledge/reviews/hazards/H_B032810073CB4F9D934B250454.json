@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_B032810073CB4F9D934B250454",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "07b2e312f7756446ca8e3ff23baf7a5bf73081429f6020c42f557aab1932e681",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_89B479575B86EBF8E6431251"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "d40a00375758896bbd63b74236bc0040db34a9611d814aedb5dc1d40e6362138",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "查得生产设备安全卫生设计总则6.2.1直接规定高速旋转零部件防护罩，限定核实该前提后适用，删除手持砂轮机未由原文指名的泛称及后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "高速旋转零部件应配置满足强度、刚度、形态和尺寸要求的防护罩,并应在设计中规定此类零部件的检查周期和更换标准。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_B032810073CB4F9D934B250454",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_89B479575B86EBF8E6431251"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "d40a00375758896bbd63b74236bc0040db34a9611d814aedb5dc1d40e6362138",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_B032810073CB4F9D934B250454",
+    "title": "手持砂轮机防护罩缺失。",
+    "description": "手持砂轮机防护罩缺失，作业时飞溅物可能伤及操作人员。",
+    "measures": "为手持砂轮机补齐防护罩，作业前检查防护装置是否完好。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "手持砂轮机防护罩缺失。"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产设备安全卫生设计总则》第6.1.2条",
+    "mergedInto": null
+  }
 }

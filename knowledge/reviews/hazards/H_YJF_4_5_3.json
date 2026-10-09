@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_4_5_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0cf066207da30ffb182bf4f77b606ef633bdcb0eb718cb8f36698bebb631d63e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "1319f3286cf07eef56849f7f524a67f0a6604ceec0351343f83c30373b826a47",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限制于危废收集贮存运输意外事故污染介质清理，不泛指所有事故。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "危险废物收集、贮存、运输过程中一旦发生意外事故，收集、贮存、运输单位及相关部门应根据风险程度采取如下措施：\n(3)对事故现场受到污染的土壤和水体等环境介质应进行相应的清理和修复。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_4_5_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "1319f3286cf07eef56849f7f524a67f0a6604ceec0351343f83c30373b826a47",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，事故现场受污染土壤和水体未进行相应清理和修复，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJF_4_5_3",
+    "keywords": [
+      "事故现场受污染土壤和水体未进行相应清理和修复"
+    ],
+    "lifecycle": "active",
+    "measures": "事故现场受污染土壤和水体进行相应清理和修复。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "事故现场受污染土壤和水体未进行相应清理和修复"
+  }
 }

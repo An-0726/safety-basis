@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_FC756EA86AAF4A94BA7207A5B5",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "8febc87a68c721c3ce748356d1f61a1eeef28a55e903a5d0e7121bb1bbbf35c4",
+  "decision": "rejected",
+  "reviewedContentHash": "ab79212e5abdece98fc49ac2105a5c2129e0812ef3981df53d4f0e961524170c",
   "contextHashes": {
-    "hazard": "0c360d8ac6e60d696579540a428437ead4fe5420b22fad4b6fc7e2e155959cc6",
+    "hazard": "872646764183fe9d1d4bf3d4a25760980d252368c19df1d7104ca8a02e635ac4",
     "clause": "58d3451436ff69f3ed98542cb4f12cfa89027461284b9dda6b01a4ab54daa98f"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《职业病防治法》第二十二条工程防护与个人用品。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_FC756EA86AAF4A94BA7207A5B5",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "8febc87a68c721c3ce748356d1f61a1eeef28a55e903a5d0e7121bb1bbbf35c4",
+    "contextHashes": {
+      "hazard": "0c360d8ac6e60d696579540a428437ead4fe5420b22fad4b6fc7e2e155959cc6",
+      "clause": "58d3451436ff69f3ed98542cb4f12cfa89027461284b9dda6b01a4ab54daa98f"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《职业病防治法》第二十二条工程防护与个人用品。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

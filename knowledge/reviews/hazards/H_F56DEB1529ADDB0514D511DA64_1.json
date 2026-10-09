@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F56DEB1529ADDB0514D511DA64_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e28a7fe8fbeb6b7a7627637daa399bc7044bea15d39bd92741e2a47a8db42e64",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_STD_HJ2026_2013"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "9ea968684bbe0038c846173a4199a0dea339611de240a38c1bed20dc9c34c180",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同一直接条款仅针对吸附法工业有机废气治理系统，补工程范围并删除泛化事故模板。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "治理系统应有事故自动报警装置，并符合安全生产、事故防范的相关规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F56DEB1529ADDB0514D511DA64_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2026_2013"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "9ea968684bbe0038c846173a4199a0dea339611de240a38c1bed20dc9c34c180",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，治理系统未设置事故自动报警装置，不符合安全生产、事故防范的相关规定，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_F56DEB1529ADDB0514D511DA64_1",
+    "keywords": [
+      "治理系统未设置事故自动报警装置",
+      "不符合安全生产",
+      "事故防范的相关规定"
+    ],
+    "lifecycle": "active",
+    "measures": "治理系统设置事故自动报警装置，调整至符合安全生产、事故防范的相关规定。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "治理系统未设置事故自动报警装置，不符合安全生产、事故防范的相关规定"
+  }
 }

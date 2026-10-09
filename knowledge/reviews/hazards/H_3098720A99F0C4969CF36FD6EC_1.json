@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_3098720A99F0C4969CF36FD6EC_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "4f8f26d599faaca1095f79ba71573095652da4580de8e44b6ff0da6505f786ae",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "ec64d72385a0dd4306a6bbd1565fb5611a6d3ef4910064ed6e0b54f6ff75b3d7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "现发包出租条款不支持派遣用工职业卫生义务，库内职业病防治法第八十六条直接明确该主体义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "劳务派遣用工单位应当履行本法规定的用人单位的义务。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_3098720A99F0C4969CF36FD6EC_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "4f8f26d599faaca1095f79ba71573095652da4580de8e44b6ff0da6505f786ae",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_3098720A99F0C4969CF36FD6EC_1",
+    "title": "劳务派遣用工单位未履行本法规定的用人单位的义务",
+    "description": "劳务派遣用工单位应当履行本法规定的用人单位的义务。（第八十六条）。",
+    "measures": "劳务派遣用工单位应当履行本法规定的用人单位的义务。（依据 第八十六条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "劳务派遣用工单位未履行本法规定的用人单位的义务"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第八十六条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }
