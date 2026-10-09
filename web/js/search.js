@@ -1,6 +1,6 @@
 'use strict';
 
-import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS } from './search-vocabulary.js';
+import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS } from './search-vocabulary.js';
 
 export const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase()
   .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g,' ')
@@ -138,18 +138,21 @@ const correctedTerm = term => {
 };
 // 口语查询解释：只在原词、相关概念和纠错都没有结果时使用。去掉“没/了/被”等
 // 虚词，把口语缺陷词换成条文用语；识别出的每个部分仍须全部命中，不做部分匹配。
+// 换出来的缺陷用语必须出现在条目标题、别名或关键词里：正文里顺带提到“损坏”
+// 的“未设置”类条目不算命中。
 const COLLOQUIAL = new Map(Object.entries(COLLOQUIAL_TERMS).map(([key,values])=>[normalize(key),values.map(normalize)]));
 const FILLERS = new Set(COLLOQUIAL_FILLERS.map(normalize));
 const COLLOQUIAL_LEXICON = [...new Set([...VOCAB_SET,...COLLOQUIAL.keys(),...FILLERS,...COLLOQUIAL_WORDS.map(normalize)])]
   .sort((a,b)=>b.length-a.length);
 const interpretColloquial = query => {
-  const groups=[],labels=[];
+  const groups=[],labels=[],spokenGroups=[];
   let rewritten=false;
-  const add=(label,variants)=>{groups.push(variants);labels.push(label);};
+  const add=(label,variants,spoken=false)=>{groups.push(variants);labels.push(label);if(spoken)spokenGroups.push(variants);};
   for(const chunk of normalize(query).split(' ').filter(Boolean)){
     let run='';
-    // 词典外的片段按原样要求命中；剩下的单个字没有检索意义，丢弃。
-    const flush=()=>{if(run.length>1)add(run,[run]);else if(run)rewritten=true;run='';};
+    // 词典外的片段按原样要求命中；剩下的单个字（没水→水）须出现在标题里，
+    // 方位字和虚化动词除外。
+    const flush=()=>{if(run.length>1)add(run,[run]);else if(run){rewritten=true;if(!COLLOQUIAL_IGNORED_CHARS.includes(run))add(run,[run],true);}run='';};
     for(let i=0;i<chunk.length;){
       const word=COLLOQUIAL_LEXICON.find(w=>chunk.startsWith(w,i));
       if(!word){run+=chunk[i++];continue;}
@@ -157,11 +160,11 @@ const interpretColloquial = query => {
       if(FILLERS.has(word)){rewritten=true;continue;}
       const spoken=COLLOQUIAL.get(word);
       if(spoken)rewritten=true;
-      add(spoken?spoken[0]:word,[...new Set([...relatedVariantsOf(word),...(spoken||[])])]);
+      if(spoken)add(spoken[0],spoken,true);else add(word,relatedVariantsOf(word));
     }
     flush();
   }
-  return rewritten&&groups.length ? {groups,labels} : null;
+  return rewritten&&groups.length ? {groups,labels,spokenGroups} : null;
 };
 const colloquialRows = (rows, query) => {
   const parsed=interpretColloquial(query);
@@ -169,7 +172,8 @@ const colloquialRows = (rows, query) => {
   const nameOf=row=>String(row.title??row.name??'');
   // 标题直接出现所说对象或首选条文用语的条目排前，其次是标题出现其他等价用语的条目。
   const titleHits=row=>{const title=normalize(nameOf(row));return parsed.groups.reduce((sum,g,i)=>sum+(title.includes(parsed.labels[i])?3:g.some(t=>title.includes(t))?2:0),0);};
-  const hits=rows.filter(r=>termsMatch(r.searchText,parsed.groups)).map(row=>({row,score:titleHits(row)}));
+  const headingOf=row=>normalize([nameOf(row),...(row.aliases||[]),...(row.keywords||[])].join(' '));
+  const hits=rows.filter(r=>termsMatch(r.searchText,parsed.groups)&&termsMatch(headingOf(r),parsed.spokenGroups)).map(row=>({row,score:titleHits(row)}));
   if(!hits.length) return null;
   hits.sort((a,b)=>b.score-a.score || nameOf(a.row).length-nameOf(b.row).length || nameOf(a.row).localeCompare(nameOf(b.row),'zh-CN'));
   return {rows:hits.map(x=>x.row),terms:parsed.labels,matchKind:'colloquial',ranked:true};

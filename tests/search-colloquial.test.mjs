@@ -55,3 +55,24 @@ test('单字口语词不拆开完整的专业词',()=>{
   assert.equal(searchHazardsDetailed(guard,'平台没挡板').rows[0]?.id,'BAFFLE');
   assert.equal(searchHazardsDetailed(guard,'吊钩没闭锁').rows[0]?.id,'LOCK');
 });
+
+test('口语缺陷词须出现在标题、别名或关键词里，正文顺带提到不算',()=>{
+  const lamp=[row('NOT_SET','应设消防应急灯的场所未设置',{searchText:'应设消防应急灯的场所未设置 灯具损坏时应及时更换'})];
+  assert.equal(searchHazardsDetailed(lamp,'应急灯不亮').rows.length,0);
+  const broken=row('BROKEN','消防应急灯损坏');
+  assert.deepEqual(searchHazardsDetailed([...lamp,broken],'应急灯不亮').rows.map(r=>r.id),['BROKEN']);
+  const byKeyword=row('KW','消防应急灯不能正常点亮',{keywords:['应急灯故障']});
+  assert.equal(searchHazardsDetailed([byKeyword],'应急灯坏了').rows[0]?.id,'KW');
+});
+
+test('剩下的单个实义字须在标题命中，方位字和虚化动词忽略',()=>{
+  const hydrants=[row('SIGN2','消火栓无明显的标志'),row('WATER','室外消火栓水压不足')];
+  assert.deepEqual(searchHazardsDetailed(hydrants,'消防栓没水').rows.map(r=>r.id),['WATER']);
+  assert.equal(searchHazardsDetailed(rows,'配电箱前堆东西').rows[0]?.id,'BOX_FRONT');
+  assert.equal(searchHazardsDetailed(rows,'没做应急演练').rows[0]?.id,'DRILL');
+});
+
+test('消防通道按疏散通道的同义叫法直接命中',()=>{
+  const result=top('消防通道堵塞');
+  assert.equal(result.matchKind,'standard');assert.equal(result.rows[0]?.id,'EXIT');
+});
