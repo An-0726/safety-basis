@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_539E0915B38B64780FF185BE28_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "86a995c9bc2dee7d041c00917f90f7529173ba1efc543c14ce67695aba6f404d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_7DD8764DEF1202F7CDE4AB22"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "bb2ceebdc6ceeb55bdbfa2de90c9e4afc248f5d71d22793cf430c8d123adf25f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以监测实施、专人负责和系统运行具体化缺陷及整改，不扩大到其他健康管理环节。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十六条 用人单位应当实施由专人负责的职业病危害因素日常 监测，并确保监测系统处于正常运行状态。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_539E0915B38B64780FF185BE28_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_7DD8764DEF1202F7CDE4AB22"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "bb2ceebdc6ceeb55bdbfa2de90c9e4afc248f5d71d22793cf430c8d123adf25f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位未实施由专人负责的职业病危害因素日常监测，未确保监测系统处于正常运行状态，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_539E0915B38B64780FF185BE28_1",
+    "keywords": [
+      "用人单位未实施由专人负责的职业病危害因素日常监测",
+      "未确保监测系统处于正常运行状态"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位实施由专人负责的职业病危害因素日常监测，确保监测系统处于正常运行状态。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未实施由专人负责的职业病危害因素日常监测，未确保监测系统处于正常运行状态"
+  }
 }

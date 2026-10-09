@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_15_6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "36190a04a34e6fac0c7ddb503331174697e6a9af577992dacf4c1185a125583b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_120E9E58B16FD0CF11DDACB0"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3409b2f32448e3bb489cd2061cf07043150888cc20b73101da655068902690cb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "作业中断的，作业人员再次进入有限空间作业前，应当重新通风、气体检测合格后方可进入。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_15_6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_120E9E58B16FD0CF11DDACB0"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3409b2f32448e3bb489cd2061cf07043150888cc20b73101da655068902690cb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "现场检查发现，作业中断后再次进入有限空间前未重新通风并检测合格，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_15_6",
+    "keywords": [
+      "作业中断后再次进入有限空间前未重新通风并检测合格"
+    ],
+    "lifecycle": "active",
+    "measures": "作业中断后再次进入有限空间前重新通风并检测合格。恢复作业前重新核对审批、隔离、通风、气体检测、监护、个体防护和应急准备等与本项有关的条件，并完整保留作业记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "作业中断后再次进入有限空间前未重新通风并检测合格"
+  }
 }

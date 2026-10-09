@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_5CD35729CF4B26FFA9F9489176_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a139806a166e9a58218c37bd77e0e36b6fb804b376b369254d509debac3f2bd7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_107654086AC3D10983F86BD7"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "9de6b690890b4bfce116e30f5cd89d07f3d5742b0024fd0c28d08c430168536c",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "将正向法条改为责任主体未履职状态，不凭本条增列具体职责；分类字段不改。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十六条 生产经营单位的安全生产管理机构以及安全生产管理人员应当恪尽职守，依法履行职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_5CD35729CF4B26FFA9F9489176_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_107654086AC3D10983F86BD7"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "9de6b690890b4bfce116e30f5cd89d07f3d5742b0024fd0c28d08c430168536c",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_5CD35729CF4B26FFA9F9489176_1",
+    "title": "生产经营单位的安全生产管理机构以及安全生产管理人员未恪尽职守，依法履行职责",
+    "description": "第二十六条生产经营单位的安全生产管理机构以及安全生产管理人员应当恪尽职守，依法履行职责。（第二十六条）。",
+    "measures": "安全生产管理机构和安全生产管理人员应恪尽职守、依法履职，并按适用法规完成检查、风险辨识、责任制考核、承包承租监督和PPE监督等具体职责，形成履职记录。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产经营单位的安全生产管理机构以及安全生产管理人员未恪尽职守，依法履行职责"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第二十六条 反转生成（GLM，2026-09-12）。\n\n《江苏省安全生产条例》第十七条。",
+    "mergedInto": null
+  }
 }

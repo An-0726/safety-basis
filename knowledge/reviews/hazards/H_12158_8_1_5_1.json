@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_1_5_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c68923d9f32a51fbb541912a538f48e44708394abb571fd42563832d9055f024",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "e4ce74fecf7df70acbb09776f315df3c4d447b70429b56c89395e130e28eeec4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留两种软管类型的选择结构及相接处静电导通要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当用软管输送易燃液体时,应使用导电软管或内附金属丝、网的橡胶管,且在相接时注意静电的导通性。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_1_5_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "e4ce74fecf7df70acbb09776f315df3c4d447b70429b56c89395e130e28eeec4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，用软管输送易燃液体时，未使用导电软管或内附金属丝、网的橡胶管，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_1_5_1",
+    "keywords": [
+      "用软管输送易燃液体时",
+      "未使用导电软管或内附金属丝",
+      "网的橡胶管"
+    ],
+    "lifecycle": "active",
+    "measures": "用软管输送易燃液体时，使用导电软管或内附金属丝、网的橡胶管。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "用软管输送易燃液体时，未使用导电软管或内附金属丝、网的橡胶管"
+  }
 }

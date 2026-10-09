@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AQPX_10_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "397171be6498a527f99b6ff9e26cf2ecaec29475dfe9c3f84e3bfc6b0b56995a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_75CEBD677C75FDC09B320E7F"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b2d3f146b619253db8d92050379200f1a13d0fef3f641fc947c9815d7741d721",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "从业人员调整工作岗位或者采用新工艺、新技术、新设备、新材料的，应当对其进行专门的安全教育和培训。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AQPX_10_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_75CEBD677C75FDC09B320E7F"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b2d3f146b619253db8d92050379200f1a13d0fef3f641fc947c9815d7741d721",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全教育培训",
+    "conditions": "适用于依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：生产经营单位从业人员培训、考核和资格管理活动",
+    "description": "经资料和执行情况核查，从业人员调整工作岗位或者采用新工艺、新技术、新设备、新材料的，未对其进行专门的安全教育和培训，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AQPX_10_2",
+    "keywords": [
+      "从业人员调整工作岗位或者采用新工艺",
+      "新技术",
+      "新设备",
+      "新材料的",
+      "未对其进行专门的安全教育和培训"
+    ],
+    "lifecycle": "active",
+    "measures": "从业人员调整工作岗位或者采用新工艺、新技术、新设备、新材料的，对其进行专门的安全教育和培训。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位从业人员培训、考核和资格管理活动"
+    ],
+    "title": "从业人员调整工作岗位或者采用新工艺、新技术、新设备、新材料的，未对其进行专门的安全教育和培训"
+  }
 }

@@ -1,13 +1,77 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H_CB60731890BF4F388E3225E634",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0fe8029374ad2764c1bbdc93bc03abe809a86786e2613fea49443b93fde696fc",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB50187_2012"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "201ccb15c92889650020a1c3dda54827f7bd654fed3412e3f7ad51c6f3c454ae",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "将正向要求的机械否定改为线路和流线状态，明确工业企业总平面对象。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "总平面布置，应合理地组织货流和人流，并应符合下列要求：1 运输线路的布置，应保证物流顺畅、径路短捷、不折返；",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H_CB60731890BF4F388E3225E634",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GB50187_2012"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "201ccb15c92889650020a1c3dda54827f7bd654fed3412e3f7ad51c6f3c454ae",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "总平面布置,未合理地组织货流和人流,并未符合下列要求:1)运输线路的布置,未保证物流通畅、径路短捷、不折返",
+    "id": "H_CB60731890BF4F388E3225E634",
+    "keywords": [
+      "总平面布置",
+      "未合理地组织货流和人流",
+      "并未符合下列要求",
+      "总",
+      "平",
+      "面",
+      "布",
+      "置",
+      ",",
+      "未",
+      "合",
+      "理",
+      "地",
+      "组",
+      "织",
+      "货",
+      "流",
+      "和",
+      "人",
+      "并",
+      "符",
+      "下",
+      "列",
+      "要",
+      "求",
+      "1",
+      "运",
+      "输",
+      "线",
+      "路",
+      "的"
+    ],
+    "lifecycle": "active",
+    "measures": "根据物流、人流现状调整道路和总平面组织，实现路线短捷、人货分流并减少交叉、折返，形成交通组织图并按图落实现场标识和隔离。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。原 conditions 字段记录的引用依据为：依据：《工业企业总平面设计规范》(GB50187-2012)第5.1.8条\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "总平面布置未合理组织货流和人流，运输线路不畅或存在折返"
+  }
 }

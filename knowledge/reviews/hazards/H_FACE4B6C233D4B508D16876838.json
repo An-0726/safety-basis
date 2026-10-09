@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_FACE4B6C233D4B508D16876838",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "c2913903a799e3be3d597d7612003f7a7ccc4f13e714f62bf96b7dc0bcae9ddc",
-  "checkedAt": "2026-09-26T18:55:20+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+  "reviewedContentHash": "d019e354a3f539bf51e0e8154860a2fdbaba21671552e588f02e9c549bbf2268",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55036_SH_ORIGINAL_20260926"
-  ]
+  ],
+  "reason": "原描述含条款未载的危害后果，措施扩展到数量、位置等内容；本次仅按选型条款修订。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "灭火器的配置类型应与配置场所的火灾种类和危险等级相适应",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_FACE4B6C233D4B508D16876838",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "c2913903a799e3be3d597d7612003f7a7ccc4f13e714f62bf96b7dc0bcae9ddc",
+    "checkedAt": "2026-09-26T18:55:20+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+    "evidenceRefs": [
+      "E_GB55036_SH_ORIGINAL_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_FACE4B6C233D4B508D16876838",
+    "title": "灭火器选择,未考虑下列因素:1.灭火器配置场所的火灾的种类",
+    "description": "灭火器选型未考虑配置场所的火灾种类、危险等级等因素，配置的灭火器与火灾类型不匹配，灭火失效或产生次生危害。",
+    "measures": "重新识别场所火灾种类和危险等级，按GB 55036-2022调整灭火器类型、数量、设置位置和保护距离，整改后核查有效期、可达性并记录。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "总图与建筑",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "灭火器选择,未考虑下列因素:1.灭火器配置场所的火灾的种类"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《建筑灭火器配置设 计规范》GB 50140- 2005 第 4. 1. 1 条\n\n《中华人民共和国消防法》第十六条第一款第（二）项。",
+    "mergedInto": null
+  }
 }

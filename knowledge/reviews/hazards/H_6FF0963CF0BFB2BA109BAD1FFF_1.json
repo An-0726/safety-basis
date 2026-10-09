@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_6FF0963CF0BFB2BA109BAD1FFF_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8b93fd870bdab9d51deb8fc1f1090de9fd6e506b6a094b36993710dc20d74916",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B32167162DA5AE3649BC8C7D"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "00c8f72bb7f71c551656aa8d9197ea4039574fb51053ce606e247a6e0e8d9b93",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产、储存、装卸易燃易爆危险品的工厂、仓库和专用车站、码头的设置，应当符合消防技术标准。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_6FF0963CF0BFB2BA109BAD1FFF_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B32167162DA5AE3649BC8C7D"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "00c8f72bb7f71c551656aa8d9197ea4039574fb51053ce606e247a6e0e8d9b93",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，生产、储存、装卸易燃易爆危险品的工厂、仓库和专用车站、码头的设置，未符合消防技术标准，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_6FF0963CF0BFB2BA109BAD1FFF_1",
+    "keywords": [
+      "生产",
+      "储存",
+      "装卸易燃易爆危险品的工厂",
+      "仓库和专用车站",
+      "码头的设置",
+      "未符合消防技术标准"
+    ],
+    "lifecycle": "active",
+    "measures": "生产、储存、装卸易燃易爆危险品的工厂、仓库和专用车站、码头的设置，符合消防技术标准；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "生产、储存、装卸易燃易爆危险品的工厂、仓库和专用车站、码头的设置，未符合消防技术标准"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_26_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7e8a84a0521737682998a16e8aa99706ef8ffe86b729774c7eaf9d8bfe467dcb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_15FD1FB5335B3D1FE10CC616"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c5c92ee83ee4fc12e5b78e6d898b5893c4611979454f6b4f4bcedbdc5d448ed8",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "直接呈现转移作业与承接单位防护条件不具备的对应关系。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "任何单位和个人不得将产生职业病危害的作业转移给不具备职业病防护条件的单位和个人。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_26_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_15FD1FB5335B3D1FE10CC616"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c5c92ee83ee4fc12e5b78e6d898b5893c4611979454f6b4f4bcedbdc5d448ed8",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，将产生职业病危害的作业转移给不具备职业病防护条件的单位，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_26_1",
+    "keywords": [
+      "将产生职业病危害的作业转移给不具备职业病防护条件的单位"
+    ],
+    "lifecycle": "active",
+    "measures": "停止将产生职业病危害的作业转移给不具备职业病防护条件的单位；重新选择具备相应条件的承接单位，并核实其职业卫生防护和管理能力。整改后结合职业病危害因素和岗位接触情况复核防护、健康管理和记录完整性。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "将产生职业病危害的作业转移给不具备职业病防护条件的单位"
+  }
 }

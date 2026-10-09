@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AB1ADAB3E97ACC2E449503E8A4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c90ed6d014b1bb4f803f9595028c3cb6e3ce8fe898b1289aa77405c8eff73a86",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_85FD5C683C202A3C3B15A045"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "702581441f3d50d37352e96fcce2057ea9a7c1081451690972e4ac3b51ea5e01",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "标题聚焦未培训的缺陷，删除夹在缺陷句中的遵守法律和组织工作等正向义务及模板结尾。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十四条 用人单位的主要负责人和职业卫生管理人员应当接受 职业卫生培训",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AB1ADAB3E97ACC2E449503E8A4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_85FD5C683C202A3C3B15A045"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "702581441f3d50d37352e96fcce2057ea9a7c1081451690972e4ac3b51ea5e01",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料和执行情况核查，用人单位的主要负责人和职业卫生管理人员未接受职业卫生培训，遵守职业病防治法律、法规，依法组织本单位的职业病防治工作，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AB1ADAB3E97ACC2E449503E8A4_1",
+    "keywords": [
+      "用人单位的主要负责人和职业卫生管理人员未接受职业卫生培训",
+      "遵守职业病防治法律",
+      "法规",
+      "依法组织本单位的职业病防治工作"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位的主要负责人和职业卫生管理人员接受职业卫生培训，遵守职业病防治法律、法规，依法组织本单位的职业病防治工作。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位的主要负责人和职业卫生管理人员未接受职业卫生培训，遵守职业病防治法律、法规，依法组织本单位的职业病防治工作"
+  }
 }

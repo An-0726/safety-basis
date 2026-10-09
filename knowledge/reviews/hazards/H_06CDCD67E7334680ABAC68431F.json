@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H_06CDCD67E7334680ABAC68431F",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "45941306a0d6e1262c6fc1a466232f6f817f5e53c006640cd8eb679292cf2b9f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "8a63d5e4fd1b921f27590e525bcabcdabf04d74401e9412ba20f3c8a1182b5b5",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位生产、经营、运输、储存、使用危险物品或者处置废弃危险物品，必须执行有关法律、法规和国家标准或者行业标准，建立专门的安全管理制度，采取可靠的安全措施，接受有关主管部门依法实施的监督管理。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H_06CDCD67E7334680ABAC68431F",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "8a63d5e4fd1b921f27590e525bcabcdabf04d74401e9412ba20f3c8a1182b5b5",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于生产、经营、运输、储存、使用危险物品或者处置废弃危险物品的生产经营单位。",
+    "description": "适用于生产、经营、运输、储存、使用危险物品或者处置废弃危险物品的生产经营单位。 经现场核查存在以下不符合：危险物品生产、经营、储存、使用或废弃处置未建立专门安全管理制度或未采取可靠安全措施。",
+    "id": "H_06CDCD67E7334680ABAC68431F",
+    "keywords": [
+      "危险化学品与危险物质",
+      "危险物品生产经营储存使用或废弃处置安全管理不到位"
+    ],
+    "lifecycle": "active",
+    "measures": "执行适用法律法规和国家、行业标准，建立专门安全管理制度，采取可靠安全措施并接受依法监督管理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "places": [
+      "生产经营单位"
+    ],
+    "title": "危险物品生产、经营、运输、储存、使用或废弃处置未建立专门安全管理制度或未采取可靠安全措施"
+  }
 }

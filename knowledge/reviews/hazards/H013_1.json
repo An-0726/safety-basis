@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-26T18:55:20+08:00",
-  "decision": "verified",
   "entityId": "H013_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "90334393f17f542d66e68c3e9775ef15d62e21d058801afe3e8b4960f85db14e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55036_SH_ORIGINAL_20260926"
   ],
-  "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
-  "reviewType": "content",
-  "reviewedContentHash": "fc7e2714cef9068e0423db37494aab0c7189aa0cdbfc65db4824e73831cc35d1",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当确需设置在有视线障碍的设置点时，应设置指示灭火器位置的醒目标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T18:55:20+08:00",
+    "decision": "verified",
+    "entityId": "H013_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GB55036_SH_ORIGINAL_20260926"
+    ],
+    "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+    "reviewType": "content",
+    "reviewedContentHash": "fc7e2714cef9068e0423db37494aab0c7189aa0cdbfc65db4824e73831cc35d1",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，当确需设置在有视线障碍的设置点时，未设置指示灭火器位置的醒目标志，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H013_1",
+    "keywords": [
+      "当确需设置在有视线障碍的设置点时",
+      "未设置指示灭火器位置的醒目标志"
+    ],
+    "lifecycle": "active",
+    "measures": "当确需设置在有视线障碍的设置点时，设置指示灭火器位置的醒目标志；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "当确需设置在有视线障碍的设置点时，未设置指示灭火器位置的醒目标志"
+  }
 }

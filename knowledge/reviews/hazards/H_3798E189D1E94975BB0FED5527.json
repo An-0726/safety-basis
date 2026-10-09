@@ -1,13 +1,72 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_3798E189D1E94975BB0FED5527",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "12b64ab9d02a994c5c1cfebeb1d70080d8dfe929ad4e2f2c303963d72eb2be73",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L015"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "129e7c51931a198c95db7e9b15dd637d176b0aa2c7eb62f3a387907f6f3a8b78",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "保留月度和周度两个频次，去除条款未述的危害后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "仓储场所每月应至少组织一次防火检查，各部门（班组）每周应至少开展一次防火检查。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_3798E189D1E94975BB0FED5527",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_L015"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "129e7c51931a198c95db7e9b15dd637d176b0aa2c7eb62f3a387907f6f3a8b78",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于仓储场所的相关安全管理。",
+    "description": "仓储场所未每月至少组织一次防火检查，各部门（班组）未每周至少开展一次防火检查，火灾隐患无法被定期发现和整改。",
+    "id": "H_3798E189D1E94975BB0FED5527",
+    "keywords": [
+      "仓储场所每月",
+      "未至少组织一次防火检查",
+      "各部门",
+      "仓",
+      "储",
+      "场",
+      "所",
+      "每",
+      "月",
+      ",",
+      "未",
+      "至",
+      "少",
+      "组",
+      "织",
+      "一",
+      "次",
+      "防",
+      "火",
+      "检",
+      "查",
+      "各",
+      "部",
+      "门",
+      "班",
+      "周"
+    ],
+    "lifecycle": "active",
+    "measures": "落实防火检查最低频次：场所每月至少一次、部门和班组每周至少一次；对发现问题形成整改、复查、销号记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《仓储场所消防安全管理通则》(5.1.1)",
+    "places": [
+      "通用场所"
+    ],
+    "title": "仓储场所每月,未至少组织一次防火检查,各部门(班组)每周,未至少开展一次防火检查"
+  }
 }

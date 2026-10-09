@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "6e5852d48610e11b34feaa034062a4f26f036dca4c1d606d560ea1173fba98c6",
   "contextHashes": {
-    "hazard": "bc53635cdab5424a03083f552def6021ba3d0cac9a4c1dc8be1a3becac5ae37c",
+    "hazard": "e09c03ed9915e1cfa2fab5450f4db48c859b1bdeeff71dea4d4fcc2756151ac8",
     "clause": "989bce20ff13cd730148c7f34ebef9a4426f2e6062132c8a5ba65fe29bd76097"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 15603-2022第4.1条人员与专人管理要求。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_SAMR_GB15603_2022"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_02E90FC3EF2AC0B2A8FE6504",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "6e5852d48610e11b34feaa034062a4f26f036dca4c1d606d560ea1173fba98c6",
+    "contextHashes": {
+      "hazard": "bc53635cdab5424a03083f552def6021ba3d0cac9a4c1dc8be1a3becac5ae37c",
+      "clause": "989bce20ff13cd730148c7f34ebef9a4426f2e6062132c8a5ba65fe29bd76097"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 15603-2022第4.1条人员与专人管理要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_SAMR_GB15603_2022"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

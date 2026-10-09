@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_11_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "14dc0f679738c829471c72e507943bba21d9e1fb038027fae4fe2f2e96beed98",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_ED0C4A7052CD1A3491B034BC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "60e6ac27cb53dcc8b690edc04b88c99a2b2760195415bbad9dcc6c31294b6f9a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "落实每日巡检、检查记录和风险报告，不新增时段或周期。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "锅炉使用单位应当建立锅炉安全日管控制度。锅炉安全员要每日根据《锅炉安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对投入使用的锅炉进行巡检，形成《每日锅炉安全检查记录》，对发现的安全风险隐患，应当立即采取防范措施，及时上报锅炉安全总监或者单位主要负责人。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_11_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_ED0C4A7052CD1A3491B034BC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "60e6ac27cb53dcc8b690edc04b88c99a2b2760195415bbad9dcc6c31294b6f9a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：锅炉使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，锅炉使用单位未建立锅炉安全日管控制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_11_1",
+    "keywords": [
+      "锅炉使用单位未建立锅炉安全日管控制度"
+    ],
+    "lifecycle": "active",
+    "measures": "锅炉使用单位建立锅炉安全日管控制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "锅炉使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "锅炉使用单位未建立锅炉安全日管控制度"
+  }
 }

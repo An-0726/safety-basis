@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_1CD32DE57049A5BECF92598DAF_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "742ba28003f2f67afb1d7262be5ad42abe04f3c6886557607e1e7693fae3dbb5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_13ECBF8B8A303433C6A48E69"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "957c7d9f413c8a0aefe30690f874ed3d7a5a891160205393f79b5dc01e05491c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留费用和同步建设使用义务，明确各核查阶段；本分支不套用其他项目验收的排除条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十八条 建设项目的职业病防护设施所需费用应当纳入建设项目 工程预算，并与主体工程同时设计，同时施工，同时投入生产和使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_1CD32DE57049A5BECF92598DAF_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_13ECBF8B8A303433C6A48E69"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "957c7d9f413c8a0aefe30690f874ed3d7a5a891160205393f79b5dc01e05491c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，建设项目的职业病防护设施所需费用未纳入工程预算，防护设施未与主体工程同时设计、施工、投产使用，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_1CD32DE57049A5BECF92598DAF_1",
+    "keywords": [
+      "建设项目的职业病防护设施所需费用未纳入工程预算",
+      "防护设施未与主体工程同时设计",
+      "施工",
+      "投产使用"
+    ],
+    "lifecycle": "active",
+    "measures": "建设项目的职业病防护设施所需费用纳入工程预算，防护设施与主体工程同时设计、施工、投产使用。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "建设项目的职业病防护设施所需费用未纳入工程预算，防护设施未与主体工程同时设计、施工、投产使用"
+  }
 }

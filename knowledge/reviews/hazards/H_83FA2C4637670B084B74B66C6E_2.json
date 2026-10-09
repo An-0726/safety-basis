@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_83FA2C4637670B084B74B66C6E_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1b26f40c1eb9fb172b16491779700ffdad9db9d40e7536e3ee4a1d0e02a244c1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_DF19A4FD6E65197CD6174850"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "ddced0295c4efc222329b1907bae855e9bd3a65dcd852e84e595d2331fe899ce",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留工会发现危险并提出撤离建议的限定，整改聚焦用人单位立即处理义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "发现危及劳动者生命健康的情形时，有 权向用人单位建议组织劳动者撤离危险现场，用人单位应当立即作出处 理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_83FA2C4637670B084B74B66C6E_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_DF19A4FD6E65197CD6174850"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "ddced0295c4efc222329b1907bae855e9bd3a65dcd852e84e595d2331fe899ce",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，工会发现危及劳动者生命健康的情形并建议组织劳动者撤离危险现场时，用人单位未立即作出处理，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_83FA2C4637670B084B74B66C6E_2",
+    "keywords": [
+      "工会发现危及劳动者生命健康的情形并建议组织劳动者撤离危险现场时",
+      "用人单位未立即作出处理"
+    ],
+    "lifecycle": "active",
+    "measures": "工会发现危及劳动者生命健康的情形并建议组织劳动者撤离危险现场时，用人单位立即作出处理。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "工会发现危及劳动者生命健康的情形并建议组织劳动者撤离危险现场时，用人单位未立即作出处理"
+  }
 }

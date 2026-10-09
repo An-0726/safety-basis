@@ -5,16 +5,36 @@
   "decision": "verified",
   "reviewedContentHash": "30f2dfc77dcb8f21e5d6d6cb66a63c21bb73b6fa8c62b362582b7b21c0d393c6",
   "contextHashes": {
-    "hazard": "2f770390958a5c1744fbf2a7ca0bf104b24216c0c595d4cc54572c290e5ec7d7",
+    "hazard": "6df403bed1615a7c432f18c40cdc13d4b8a7cc1c04ea17c340182d72301e0bce",
     "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
   },
-  "checkedAt": "2026-09-10T14:09:46+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "hazard 为未建立健全并落实本单位全员安全生产责任制；安全生产法第二十一条第（一）项明确主要负责人应建立健全并落实本单位全员安全生产责任制，违法事实直接对应。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_APPLICABLE"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_A557ECDFD5C8D36E77845F",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "30f2dfc77dcb8f21e5d6d6cb66a63c21bb73b6fa8c62b362582b7b21c0d393c6",
+    "contextHashes": {
+      "hazard": "2f770390958a5c1744fbf2a7ca0bf104b24216c0c595d4cc54572c290e5ec7d7",
+      "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
+    },
+    "checkedAt": "2026-09-10T14:09:46+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "hazard 为未建立健全并落实本单位全员安全生产责任制；安全生产法第二十一条第（一）项明确主要负责人应建立健全并落实本单位全员安全生产责任制，违法事实直接对应。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_APPLICABLE"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

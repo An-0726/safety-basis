@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_ZJWS_12_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "54283873d469484180d97010138b7e96b18b148fb045cc0c3fe19a211ffbad48",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E546061F015A00C74F3AC1AC"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "0068bceaeb7bc56a6e1e6490a8c1479046239b404247cc065f269cb08bc45e51",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "将正向条款摘抄改为工作场所布局或作业分开方面的缺陷，保留原有具体适用条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（一）生产布局合理，有害作业与无害作业分开；",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_ZJWS_12_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E546061F015A00C74F3AC1AC"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "0068bceaeb7bc56a6e1e6490a8c1479046239b404247cc065f269cb08bc45e51",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于产生职业病危害的用人单位工作场所。",
+    "description": "第十二条产生职业病危害的用人单位的工作场所应当符合下列基本要求：（一）生产布局合理，有害作业与无害作业分开；（第12条）。",
+    "id": "H_ZJWS_12_1",
+    "keywords": [
+      "产生职业病危害的工作场所不符合职业卫生基本要求"
+    ],
+    "lifecycle": "active",
+    "measures": "调整生产布局，使有害作业与无害作业合理分开；通过实体分隔、独立区域或工艺调整减少交叉暴露，并完成职业卫生评价或现场确认。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所",
+      "通用场所"
+    ],
+    "title": "产生职业病危害的工作场所生产布局不合理或有害作业与无害作业未分开"
+  }
 }

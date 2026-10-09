@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F465105AA4130B0DE602E880A3_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4ded50f688278aba8c094096d93083920a1111553001b081647e0887603c32df",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_BFE9C60EA83C95DB1465FD3E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "d831425a6f0531a69a6e7e4d9c2a41659be64e735d37ed63e1084af8e162e17b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留行业及事故触发前提，启动与调派都须落实。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "发生事故时，应当立即启动应急救援预案，调派专业处置人员为消防救援提供技术支持，协助做好堵漏、关阀、输转等应急处置工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F465105AA4130B0DE602E880A3_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_BFE9C60EA83C95DB1465FD3E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "d831425a6f0531a69a6e7e4d9c2a41659be64e735d37ed63e1084af8e162e17b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，生产、经营、储存易燃易爆危险品的单位发生事故时，未立即启动应急救援预案并调派专业处置人员做好堵漏、关阀、输转等应急处置，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_F465105AA4130B0DE602E880A3_3",
+    "keywords": [
+      "生产",
+      "经营",
+      "储存易燃易爆危险品的单位发生事故时",
+      "未立即启动应急救援预案并调派专业处置人员做好堵漏",
+      "关阀",
+      "输转等应急处置"
+    ],
+    "lifecycle": "active",
+    "measures": "生产、经营、储存易燃易爆危险品的单位发生事故时，立即启动应急救援预案并调派专业处置人员做好堵漏、关阀、输转等应急处置。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "生产、经营、储存易燃易爆危险品的单位发生事故时，未立即启动应急救援预案并调派专业处置人员做好堵漏、关阀、输转等应急处置"
+  }
 }

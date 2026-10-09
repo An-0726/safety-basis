@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_7593B68A4932DCFB6A61F5F7",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "963703fdf4da670679067d423cece31b703f232cbc8acf63c2507712a57eaeea",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_271B9C4724596F844D3DF2E3"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "9e31916c1f97217518ccd809cdc4e8ad6670c432b9ec5b90d8def39161f1caf4",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "明确主要负责人及制定、实施两类缺陷，不新增条文未写明的审批程序。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（二）组织制定并实施本单位安全生产规章制度和操作规程；",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_7593B68A4932DCFB6A61F5F7",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_271B9C4724596F844D3DF2E3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "9e31916c1f97217518ccd809cdc4e8ad6670c432b9ec5b90d8def39161f1caf4",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "未组织制定并实施本单位安全生产规章制度和操作规程。",
+    "id": "H_7593B68A4932DCFB6A61F5F7",
+    "keywords": [
+      "未组织制定并实施本单位安全生产规章制度和操作规程"
+    ],
+    "lifecycle": "active",
+    "measures": "制定并实施安全生产规章制度和操作规程；完成后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "未组织制定并实施本单位安全生产规章制度和操作规程"
+  }
 }

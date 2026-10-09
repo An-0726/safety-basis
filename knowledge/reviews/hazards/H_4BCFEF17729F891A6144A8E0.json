@@ -1,18 +1,54 @@
 {
-  "decision": "verified",
   "entityId": "H_4BCFEF17729F891A6144A8E0",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "823b969de325cb078295c43d594bec569e92268024e179df4dad562a573a5e18",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "EH_6d43379695de506c1b60f971e12166efcb12848f6b7c7d6f7b92aeccdd9af319"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_21b0d0b59c01d8142f00d67b",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "明确记录、通报和保存期限是分别核查的义务，不虚构记录日期。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "重大事故隐患排查治理情况记录保存期限不得少于五年。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_4BCFEF17729F891A6144A8E0",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_6d43379695de506c1b60f971e12166efcb12848f6b7c7d6f7b92aeccdd9af319"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_21b0d0b59c01d8142f00d67b",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "11bb39fc37b92c0329934cabbc4ed55d73e3854595e840ddebd0240a89893c96",
+    "splitFrom": "H_9DCBB0D8DB5441A2A3E4811603",
+    "checkedAt": "2026-09-26T17:49:42+08:00",
+    "reason": "核南京市人大现行条例第二十条原文，纠正整改措施将不得少于五年误写为少于五年的方向性错误；隐患定义和南京适用范围不变。官方复核页https://rd.nanjing.gov.cn/lfgz_0/sjfg_1/202505/t20250506_5140620.html"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "11bb39fc37b92c0329934cabbc4ed55d73e3854595e840ddebd0240a89893c96",
-  "splitFrom": "H_9DCBB0D8DB5441A2A3E4811603",
-  "checkedAt": "2026-09-26T17:49:42+08:00",
-  "reason": "核南京市人大现行条例第二十条原文，纠正整改措施将不得少于五年误写为少于五年的方向性错误；隐患定义和南京适用范围不变。官方复核页https://rd.nanjing.gov.cn/lfgz_0/sjfg_1/202505/t20250506_5140620.html"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，未通过信息系统如实记录隐患排查治理情况并向从业人员通报，重大事故隐患记录保存少于五年，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_4BCFEF17729F891A6144A8E0",
+    "keywords": [
+      "信息系统",
+      "记录通报",
+      "重大隐患记录五年"
+    ],
+    "lifecycle": "active",
+    "measures": "通过相关信息系统如实记录事故隐患排查治理情况，并向从业人员通报；重大事故隐患排查治理情况记录保存期限不得少于五年。明确归档、保管、查询和复核责任，按真实排查、治理及复查情况留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_9DCBB0D8DB5441A2A3E4811603 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。原 conditions 字段记录的引用依据为：依据：《南京市安全生产条例》(南京市人大常委会公告第2号,2023年修订)第二十条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未通过信息系统如实记录隐患排查治理情况并向从业人员通报，重大事故隐患记录保存少于五年"
+  }
 }

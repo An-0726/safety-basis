@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_C0BEAB6834F44E5CBE05F9CBD0",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "56e42eba962ea66699ecd4fc6abf7009ff1194a43ef846c14a1af6327b4c2417",
-  "checkedAt": "2026-09-26T18:47:04+08:00",
-  "reviewer": "Codex 消防原文及直接适用性复核 20260926",
-  "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+  "reviewedContentHash": "3a53f66e9cb1e4249c987c0ca1db61d1e273e79b8e633431a9394646d83a9a1b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55037_JS_FIRE_FULLTEXT_20260926"
-  ]
+  ],
+  "reason": "按条款对象描述缺失，不把“已设有”写成整改动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "安全出口、疏散楼梯（间）、疏散楼梯间的前室或合用前室、避难走道及其前室、避难层、避难间、消防专用通道、兼作人员疏散的天桥和连廊",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_C0BEAB6834F44E5CBE05F9CBD0",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "56e42eba962ea66699ecd4fc6abf7009ff1194a43ef846c14a1af6327b4c2417",
+    "checkedAt": "2026-09-26T18:47:04+08:00",
+    "reviewer": "Codex 消防原文及直接适用性复核 20260926",
+    "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+    "evidenceRefs": [
+      "E_GB55037_JS_FIRE_FULLTEXT_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_C0BEAB6834F44E5CBE05F9CBD0",
+    "title": "应设疏散照明的建筑部位未设置疏散照明",
+    "description": "GB55037第10.1.9条规定应设置疏散照明的建筑部位未设置疏散照明。",
+    "measures": "应设疏散照明的建筑部位设置疏散照明；民用建筑和厂房相应部 位已设有应急照明；完成后进行现场验证并留存记录。",
+    "conditions": "核第10.1.9条所列建筑及具体部位，保留筒仓、散装粮食仓库和火灾发展缓慢场所等例外；缺少疏散指示标志与照明缺失分别判定。",
+    "category": "消防安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "应设疏散照明的建筑部位未设置疏散照明"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：GB50016-2014《建筑 设计防火规范(2018 版)》第 10.3.1 条\n\nGB 51309。\n2026-09-26已按现行完整原文纠正旧描述及适用范围；历史旧阈值和旧依据不再作为当前判定依据。",
+    "mergedInto": null
+  }
 }

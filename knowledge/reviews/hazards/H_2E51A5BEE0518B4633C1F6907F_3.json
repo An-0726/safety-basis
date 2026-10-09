@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_2E51A5BEE0518B4633C1F6907F_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d144c27e9466fd0a5e92ad21d46f5faad312bfe8a01d6ffa1acbc13b1a2d713d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_B06D14D784DAEE7CCF0C10A2"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "8f6ae85b47229fed60869010e2ea942bca5091bac83a510cdd1893b845210258",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留离开单位并索取本人档案这一前提，区分提供真实性、费用和签章方面的缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "劳动者离开用人单位时，有权索取本人职业健康监护档案复印件， 用人单位应当如实、无偿提供，并在所提供的复印件上签章。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2E51A5BEE0518B4633C1F6907F_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_B06D14D784DAEE7CCF0C10A2"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "8f6ae85b47229fed60869010e2ea942bca5091bac83a510cdd1893b845210258",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，劳动者离开用人单位时索取本人职业健康监护档案复印件的，用人单位未如实、无偿提供并在复印件上签章，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_2E51A5BEE0518B4633C1F6907F_3",
+    "keywords": [
+      "劳动者离开用人单位时索取本人职业健康监护档案复印件的",
+      "用人单位未如实",
+      "无偿提供并在复印件上签章"
+    ],
+    "lifecycle": "active",
+    "measures": "劳动者离开用人单位时索取本人职业健康监护档案复印件的，用人单位如实、无偿提供并在复印件上签章。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "劳动者离开用人单位时索取本人职业健康监护档案复印件的，用人单位未如实、无偿提供并在复印件上签章"
+  }
 }

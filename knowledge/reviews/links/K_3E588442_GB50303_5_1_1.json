@@ -1,9 +1,8 @@
 {
-  "checkedAt": "2026-09-17",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "0ae82f9444a8525a15d41da083d58602ed8d96369d62d3997ceb2ffa4f61e531",
-    "clause": "adea6964a691531a9a6890ef80be57fabd553c93e970c684bbd55b3ce6b935c1",
-    "link": "84cb5ac31dce55744a133667f9cd5c775b2ee864051b03057ed5a6a88f259056"
+    "hazard": "84202ce97493479ef418370d9eea4650e3f3a1994c0126e0d498aaf41d3138a0",
+    "clause": "adea6964a691531a9a6890ef80be57fabd553c93e970c684bbd55b3ce6b935c1"
   },
   "decision": "verified",
   "entityId": "K_3E588442_GB50303_5_1_1",
@@ -11,9 +10,28 @@
   "evidenceRefs": [
     "E_GB50303_2015"
   ],
-  "reason": "隐患对象为柜台箱金属框架及基础型钢未与保护导体可靠连接；GB 50303-2015 第5.1.1条主控项目明确要求必须与保护导体可靠连接，为直接依据。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "84cb5ac31dce55744a133667f9cd5c775b2ee864051b03057ed5a6a88f259056",
-  "reviewer": "Codex",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "contextHashes": {
+      "hazard": "0ae82f9444a8525a15d41da083d58602ed8d96369d62d3997ceb2ffa4f61e531",
+      "clause": "adea6964a691531a9a6890ef80be57fabd553c93e970c684bbd55b3ce6b935c1",
+      "link": "84cb5ac31dce55744a133667f9cd5c775b2ee864051b03057ed5a6a88f259056"
+    },
+    "decision": "verified",
+    "entityId": "K_3E588442_GB50303_5_1_1",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GB50303_2015"
+    ],
+    "reason": "隐患对象为柜台箱金属框架及基础型钢未与保护导体可靠连接；GB 50303-2015 第5.1.1条主控项目明确要求必须与保护导体可靠连接，为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "84cb5ac31dce55744a133667f9cd5c775b2ee864051b03057ed5a6a88f259056",
+    "reviewer": "Codex",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

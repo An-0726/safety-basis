@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_3_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d509001092575862796ec57f8b8155a2f8154152a67cd01abb3f2306e1d35854",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "fff0441547ac09fcde2fb1662aa1401d034cc1fb26b3b10775cf31abe97d82bc",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确喷洗对象及实际压力核查，数值保持不大于980kPa。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "使用液体喷洗容器时,压力不应大于980kPa。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_3_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "fff0441547ac09fcde2fb1662aa1401d034cc1fb26b3b10775cf31abe97d82bc",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，使用液体喷洗容器时，压力大于980kPa，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_12158_8_3_4_1",
+    "keywords": [
+      "使用液体喷洗容器时",
+      "压力大于980kPa"
+    ],
+    "lifecycle": "active",
+    "measures": "调整液体喷洗容器的工作压力和供压装置，使压力不超过980kPa，并检查压力表、调压和超压保护装置是否有效。整改后检查相关线路、电气设备、接地/防静电或保护功能，必要时检测确认并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "使用液体喷洗容器时，压力大于980kPa"
+  }
 }

@@ -1,14 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H069_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e0e511bb52642d70b3ef17f3ed65491f42b9f8c9bc558b1c3fb7ec4d307fd1bd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_STD_HJ2026_2013",
     "E_a90650fedd8f471fa157f21a228c7ec7a9eca503ab9253add14132cf31b7fb68"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "46fef750cba3b13b4d7a5f8b104afca001b728ba4c0328f1d066833ac4eceef7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当吸附装置内的温度超过83℃时，应能自动报警，并立即启动降温装置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H069_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2026_2013",
+      "E_a90650fedd8f471fa157f21a228c7ec7a9eca503ab9253add14132cf31b7fb68"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "46fef750cba3b13b4d7a5f8b104afca001b728ba4c0328f1d066833ac4eceef7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，当吸附装置内的温度超过83℃时，未能自动报警，并立即启动降温装置，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H069_2",
+    "keywords": [
+      "当吸附装置内的温度超过83℃时",
+      "未能自动报警",
+      "并立即启动降温装置"
+    ],
+    "lifecycle": "active",
+    "measures": "当吸附装置内的温度超过83℃时，能自动报警，并立即启动降温装置。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "当吸附装置内的温度超过83℃时，未能自动报警，并立即启动降温装置"
+  }
 }

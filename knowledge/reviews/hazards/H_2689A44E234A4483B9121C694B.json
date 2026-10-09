@@ -1,28 +1,99 @@
 {
-  "entityType": "hazard",
   "entityId": "H_2689A44E234A4483B9121C694B",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "f5fdc9d3362164a9763cb5be20636fe2bb583cb0d29ebb58c3cce73bcdb5a91d",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "2026-10-02按对象、义务和适用条件复核本次定义修订。当前泛化300m²厂房/仓库范围未保留甲乙丙类别及除外项；C001不能补回具体阈值。 不确认任何具体现场事实、违规或整改完成。",
+  "reviewedContentHash": "4899134fafb3be33c263bb3492589f667f4f39bad91f897cbd3f8a4c08b2f2ca",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_CITATION_GB55037_817_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "原描述已保留占地面积及除外情形，判定须核类别、面积和例外，仅调整模式。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "1建筑占地面积大于300m²的甲、乙、丙类厂房；2建筑占地面积大于300m²的甲、乙、丙类仓库；",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_2689A44E234A4483B9121C694B",
     "entityType": "hazard",
+    "entityId": "H_2689A44E234A4483B9121C694B",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "f5fdc9d3362164a9763cb5be20636fe2bb583cb0d29ebb58c3cce73bcdb5a91d",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "2026-10-02按对象、义务和适用条件复核本次定义修订。当前泛化300m²厂房/仓库范围未保留甲乙丙类别及除外项；C001不能补回具体阈值。 不确认任何具体现场事实、违规或整改完成。",
     "evidenceRefs": [
-      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      "E_CITATION_GB55037_817_20261002"
     ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
-    "reviewedContentHash": "9c50fd0f1498ef529c6f728b959d53f9080a1fdfaebfb25df33730b14c3ab1ed",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_2689A44E234A4483B9121C694B",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "9c50fd0f1498ef529c6f728b959d53f9080a1fdfaebfb25df33730b14c3ab1ed",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "31eb931d06878e5c21c92c8c755d047689e033feff76dc10920c8ee9e7898055"
   },
-  "previousReviewFileSha256": "31eb931d06878e5c21c92c8c755d047689e033feff76dc10920c8ee9e7898055"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "总图与建筑",
+    "conditions": "适用GB55037第1.0.2范围；本H仅消费8.1.7第1、2项。完整保留不适合用水保护或灭火、远离城镇且无人值守独立建筑、散装粮食仓库、金库除外条件。",
+    "description": "按GB55037第8.1.7应设置室内消火栓系统的甲、乙、丙类厂房或仓库，在建筑占地面积大于300m²且不属于该条除外情形时，未设置该系统。",
+    "id": "H_2689A44E234A4483B9121C694B",
+    "keywords": [
+      "下列建筑或场所",
+      "未设置室内消火栓系统",
+      "1建筑占地面积大于300m2的厂房和仓库",
+      "下",
+      "列",
+      "建",
+      "筑",
+      "或",
+      "场",
+      "所",
+      ",",
+      "未",
+      "设",
+      "置",
+      "室",
+      "内",
+      "消",
+      "火",
+      "栓",
+      "系",
+      "统",
+      "1",
+      "占",
+      "地",
+      "面",
+      "积",
+      "大",
+      "于",
+      "3",
+      "0",
+      "m",
+      "2",
+      "的",
+      "厂",
+      "房",
+      "和",
+      "仓",
+      "库"
+    ],
+    "lifecycle": "active",
+    "measures": "核清火灾危险性类别、建筑占地面积和除外条件，对依法应设者配置室内消火栓系统并保持适用性能。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本条原引依据 GB 50016-2014（2018年版）第8.2.1条，该强制性条文已由《建筑防火通用规范》GB 55037-2022 废止；现行设置义务依据为 GB 55037-2022 第8.1.7条，系统性能要求另见 GB 55036-2022 第3.0.5条。2026-09-11 修订：原整改措施为空话或模板（“符合规定”“针对上述隐患制定整改措施并落实”等），已改写为针对本隐患的可执行措施。原 conditions 字段记录的引用依据为：依据：《建筑防火通用规范》GB 55037-2022 第8.1.7条。原引《建筑设计防火规范》GB 50016-2014（2018年版）第8.2.1条强制性条文已被 GB 55037-2022（2023年6月1日实施）废止。\n\n《中华人民共和国消防法》主席令〔2021〕第81号 第十六条第一款第（二）项（兜底）。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "依法应设置室内消火栓系统的甲、乙、丙类厂房或仓库未设置"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "676f99abf8f1fada3c870a2e4d76f0dc3b579c80f44ea4949afd01fa5e8edf42",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_C4717E6DF345C24AF2524D40"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f974b6556f0933a421c3684770633425b7cf53c278d6a9ea85ead0f4bca4e896",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩标题，整改对应锅炉使用安全管理岗位职责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "锅炉安全总监和锅炉安全员应当按照岗位职责，协助单位主要负责人做好锅炉使用安全管理工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_C4717E6DF345C24AF2524D40"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f974b6556f0933a421c3684770633425b7cf53c278d6a9ea85ead0f4bca4e896",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：锅炉使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，锅炉安全总监和锅炉安全员未按照岗位职责，协助单位主要负责人做好锅炉使用安全管理工作，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_4_2",
+    "keywords": [
+      "锅炉安全总监和锅炉安全员未按照岗位职责",
+      "协助单位主要负责人做好锅炉使用安全管理工作"
+    ],
+    "lifecycle": "active",
+    "measures": "锅炉安全总监和锅炉安全员按照岗位职责，协助单位主要负责人做好锅炉使用安全管理工作。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "锅炉使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "锅炉安全总监和锅炉安全员未按照岗位职责，协助单位主要负责人做好锅炉使用安全管理工作"
+  }
 }

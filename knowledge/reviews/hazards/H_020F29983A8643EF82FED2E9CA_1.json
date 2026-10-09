@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_020F29983A8643EF82FED2E9CA_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e8ab55ec6d199df07b46c86d0a124d66354473fadb45d689e5906febdb698ab2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E3A4EB2CF9CEC736D2F2BC50"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "74b2135e80c98a87a526316cc63599b0647ac8191ff57b789c6e3bac14e0e0ca",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十六条 举办大型群众性活动，应当遵守下列消防安全管理规定： （一）制定灭火和应急疏散预案并组织演练，明确消防安全责任分工，确定消防安全管理人员； （二）消防设施和消防器材配置齐全、完好有效，疏散通道、安全出口、疏散指示标志、应急照明和消防车通道符合消防技术标准和消防安全管理规定； （三）搭建临时建筑物、构筑物或者安装电气设备，应当符合消防技术标准和消防安全管理规定； （四）法律、法规的其他规定。 大型群众性活动的主办人、承办人以及场所管理者应当以书面形式约定各方的消防安全责任。未约定或者约定不明确的，由承办人承担消防安全责任。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_020F29983A8643EF82FED2E9CA_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E3A4EB2CF9CEC736D2F2BC50"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "74b2135e80c98a87a526316cc63599b0647ac8191ff57b789c6e3bac14e0e0ca",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内大型群众性活动及其临时建筑、构筑物、设施设备设置场景",
+    "description": "现场检查发现，举办大型群众性活动未遵守消防安全管理规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_020F29983A8643EF82FED2E9CA_1",
+    "keywords": [
+      "举办大型群众性活动未遵守消防安全管理规定"
+    ],
+    "lifecycle": "active",
+    "measures": "举办大型群众性活动遵守消防安全管理规定；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内大型群众性活动及其临时建筑、构筑物、设施设备设置场景"
+    ],
+    "title": "举办大型群众性活动未遵守消防安全管理规定"
+  }
 }

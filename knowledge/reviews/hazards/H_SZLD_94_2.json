@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_94_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c957ec5a36fa4985e205edf387630e07ceb451abc109c63059bfa0ee1dddc135",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_80807387EB376CEAB9B431FC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "86c987d19545202824646221ac39a7bdd052348a58ab9ba05f3224ae3d33c542",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "区分实际巡检缺项与制度缺失，不增加具体参数。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "94 第九十四条\n起重机械使用单位应当建立起重机械安全日管控制度。起重机械安全员要每日根据《起重机械安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对投入使用的起重机械进行巡检，形成《每日起重机械安全检查记录》，对发现的安全风险隐患，应当立即采取防范措施，及时上报起重机械安全总监或者单位主要负责人。未发现问题的，也应当予以记录，实行零风险报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_94_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_80807387EB376CEAB9B431FC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "86c987d19545202824646221ac39a7bdd052348a58ab9ba05f3224ae3d33c542",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：起重机械使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，起重机械安全员未每日按安全风险管控清单开展日管控检查，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_94_2",
+    "keywords": [
+      "起重机械安全员未每日按安全风险管控清单开展日管控检查"
+    ],
+    "lifecycle": "active",
+    "measures": "起重机械安全员每日按安全风险管控清单开展日管控检查。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "起重机械使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "起重机械安全员未每日按安全风险管控清单开展日管控检查"
+  }
 }

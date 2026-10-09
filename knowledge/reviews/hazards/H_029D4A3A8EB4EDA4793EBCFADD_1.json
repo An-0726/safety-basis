@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_029D4A3A8EB4EDA4793EBCFADD_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ca25156792ea55f223d9ee7ad1e0e5332c984a261a37b795678829ac8c28a45e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_C55CF8FD135A8E9B70CA7C2E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "6d5c035399975f6e0a06bfbdb29a662fd80a2062ad3ac76d2e0b8b80d33626ea",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当关注从业人员的身体、心理状况和行为习惯；可以采取调整工作岗位、安排合理休假、心理疏导、思想教育或者开展有针对性的安全生产培训等方式，加强对从业人员的关怀，防范从业人员行为异常导致事故发生。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_029D4A3A8EB4EDA4793EBCFADD_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_C55CF8FD135A8E9B70CA7C2E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "6d5c035399975f6e0a06bfbdb29a662fd80a2062ad3ac76d2e0b8b80d33626ea",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于南京市行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：南京市行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未关注从业人员的身体、心理状况和行为习惯，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_029D4A3A8EB4EDA4793EBCFADD_1",
+    "keywords": [
+      "生产经营单位未关注从业人员的身体",
+      "心理状况和行为习惯"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位关注从业人员的身体、心理状况和行为习惯。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未关注从业人员的身体、心理状况和行为习惯"
+  }
 }

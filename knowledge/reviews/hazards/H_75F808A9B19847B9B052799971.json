@@ -1,13 +1,68 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H_75F808A9B19847B9B052799971",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d0232fc42124054225ec67c788cf914e2ddf23e26de7c5ad3c8041836a0e57a3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "f8fb49f6a72ce1821fd4cf0719a76db85ab47bfa308b88141045869c77396a87",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "纠正措施责任主体，删除无来源附件9引用，保留具体描述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十一条　生产经营单位必须依法参加工伤保险，为从业人员缴纳保险费。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H_75F808A9B19847B9B052799971",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "f8fb49f6a72ce1821fd4cf0719a76db85ab47bfa308b88141045869c77396a87",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "未依法为从业人员办理工伤保险并缴纳保险费。",
+    "id": "H_75F808A9B19847B9B052799971",
+    "keywords": [
+      "未依法参加工伤社会保险",
+      "为从业人员缴纳保险费",
+      "未",
+      "依",
+      "法",
+      "参",
+      "加",
+      "工",
+      "伤",
+      "社",
+      "会",
+      "保",
+      "险",
+      ",",
+      "为",
+      "从",
+      "业",
+      "人",
+      "员",
+      "缴",
+      "纳",
+      "费"
+    ],
+    "lifecycle": "active",
+    "measures": "消除“未依法参加工伤社会保险,为从业人员缴纳保险费”隐患；员工依法参加工伤社 会保险,清单见附件 9；完成后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《中华人民共和 国安全生产法》 第五十一条\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未依法参加工伤社会保险,为从业人员缴纳保险费"
+  }
 }

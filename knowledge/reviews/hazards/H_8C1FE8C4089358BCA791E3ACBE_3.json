@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8C1FE8C4089358BCA791E3ACBE_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "776fb367b9223369ae04c383ec2e66a039a984545b249345eed82d41707ac4d4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_C9074654CEE046293831AD8E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "69c223ff3bb94624e583302d47e597840b7c254648caa78e2e447102738e0c58",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留负责人、事故发生一小时和如实报告要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位负责人应当在生产安全事故发生一小时内，向负有安全生产监督管理职责的部门如实报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8C1FE8C4089358BCA791E3ACBE_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_C9074654CEE046293831AD8E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "69c223ff3bb94624e583302d47e597840b7c254648caa78e2e447102738e0c58",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，生产经营单位负责人未在生产安全事故发生一小时内，向负有安全生产监督管理职责的部门如实报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8C1FE8C4089358BCA791E3ACBE_3",
+    "keywords": [
+      "生产经营单位负责人未在生产安全事故发生一小时内",
+      "向负有安全生产监督管理职责的部门如实报告"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位负责人在生产安全事故发生一小时内，向负有安全生产监督管理职责的部门如实报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "生产经营单位负责人未在生产安全事故发生一小时内，向负有安全生产监督管理职责的部门如实报告"
+  }
 }

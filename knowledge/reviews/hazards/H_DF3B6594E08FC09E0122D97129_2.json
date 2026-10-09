@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DF3B6594E08FC09E0122D97129_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "76e5c4e1d1fcc91dcaf1f9b676b4c05b5b607f06e28a4f4e776ba9e6d5f7a2f3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_554219559BF63FFA62471E13"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "bc3d761ef4d584ebf31b6fc5f474634901a24d2cb197dd016a73b2847fa87f13",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "已在南京市消防条例及全部库内条款检索“确定/指定/任命…消防安全责任人”，无直接规定另行确定责任人的条款；本条法定身份不以任命为条件，不能由“未确定”推定未履责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "机关、团体、企业、事业等单位的法定代表人、主要负责人或者实际控制人是本单位、本场所的消防安全责任人，应当依法履行消防安全责任，对本单位、本场所的消防安全工作全面负责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DF3B6594E08FC09E0122D97129_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_554219559BF63FFA62471E13"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "bc3d761ef4d584ebf31b6fc5f474634901a24d2cb197dd016a73b2847fa87f13",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，机关、团体、企业、事业等单位未确定本单位、本场所的消防安全责任人，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DF3B6594E08FC09E0122D97129_2",
+    "keywords": [
+      "机关",
+      "团体",
+      "企业",
+      "事业等单位未确定本单位",
+      "本场所的消防安全责任人"
+    ],
+    "lifecycle": "active",
+    "measures": "机关、团体、企业、事业等单位确定本单位、本场所的消防安全责任人；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "机关、团体、企业、事业等单位未确定本单位、本场所的消防安全责任人"
+  }
 }

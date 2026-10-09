@@ -1,16 +1,76 @@
 {
-  "decision": "verified",
   "entityId": "H_5C632EB0FC8E4DC586BDF3567E",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ac1aafb0832d6b7e4eaa290bca86d40854afdb62ef45b7ee28773245de25cc66",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "EH_495e50a17cb06f2aac1a3875d49b089a560ddf6dd5dfbde5ae62e9459fb50cf7"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_7ab540db1a40f33593fc01e4",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "按焊接切割气瓶限定条件，保留原有可执行措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "11.5.1 所有用于焊接与切割的气瓶都应按有关标准及规程制造、管理、维护并使用。使用中的气瓶应进行定期检查，使用期满或送检未合格的气瓶不应继续使用。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_5C632EB0FC8E4DC586BDF3567E",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_495e50a17cb06f2aac1a3875d49b089a560ddf6dd5dfbde5ae62e9459fb50cf7"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_7ab540db1a40f33593fc01e4",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "8a5bded3d414d62a47502275258dbec485804847ab3845abee67749dc6c03122",
+    "reason": " [hash rebound after content/lifecycle update]"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "8a5bded3d414d62a47502275258dbec485804847ab3845abee67749dc6c03122",
-  "reason": " [hash rebound after content/lifecycle update]"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，焊接与切割用气瓶使用期满或送检不合格仍继续使用，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_5C632EB0FC8E4DC586BDF3567E",
+    "keywords": [
+      "中的气瓶必须进行定期检查",
+      "使用期满或送检未合格的气瓶禁止继续使用",
+      "中",
+      "的",
+      "气",
+      "瓶",
+      "必",
+      "须",
+      "进",
+      "行",
+      "定",
+      "期",
+      "检",
+      "查",
+      ",",
+      "使",
+      "用",
+      "满",
+      "或",
+      "送",
+      "未",
+      "合",
+      "格",
+      "禁",
+      "止",
+      "继",
+      "续"
+    ],
+    "lifecycle": "active",
+    "measures": "对使用中的气瓶定期检查；使用期满或送检不合格的气瓶停止使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-10专业终审：《焊接与切割安全》GB 9448-2025 第11.5.1条对使用中的气瓶应进行定期检查、使用期满或送检未合格的气瓶不应继续使用作出直接要求；《中华人民共和国特种设备安全法》第四十条关于定期检验的规定保留为兜底依据。现场适用时仍应结合单位行业属性、场所类别、工艺条件、危险物质特性及标准适用范围综合判断。2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "焊接与切割用气瓶使用期满或送检不合格仍继续使用"
+  }
 }

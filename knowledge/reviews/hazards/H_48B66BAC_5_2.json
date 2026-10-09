@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_5_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1247a807c8fa0b1dda7ee2b48dde4273b435b17aca2dd78f97e9fdcf13074e71",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E1510F75B1C0B6AF8FE19C37"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "b14b564422c1a341f94cca37db7976d9c317fb4b920cf624f370d32c09790c75",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "监护人员应当具备与监督有限空间作业相适应的安全知识和应急处置能力，能够正确使用气体检测、机械通风、呼吸防护、应急救援等用品、装备。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_5_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E1510F75B1C0B6AF8FE19C37"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "b14b564422c1a341f94cca37db7976d9c317fb4b920cf624f370d32c09790c75",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "现场检查发现，有限空间作业监护人员未具备相应的安全知识和应急处置能力，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_5_2",
+    "keywords": [
+      "有限空间作业监护人员未具备相应的安全知识和应急处置能力"
+    ],
+    "lifecycle": "active",
+    "measures": "有限空间作业监护人员具备相应的安全知识和应急处置能力。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "有限空间作业监护人员未具备相应的安全知识和应急处置能力"
+  }
 }

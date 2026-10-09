@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_D87990CECE7844AC90A5E6314B",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e84fd84a0e6bc234efecc2cf0780aa616d3c2bf2903628d5be6ada30d8bfb837",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_GB50187_3_0_8"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "69f4c8ea06bbe0f1222222f6e81b0165a74756bd495b8f55477b42a4c04de18c",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "明确选址前提和整改对象，同时去除原描述中条文未载明的沉降、开裂后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "厂址应具有满足建设工程需要的工程地质条件和水文地质条件。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_D87990CECE7844AC90A5E6314B",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_GB50187_3_0_8"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "69f4c8ea06bbe0f1222222f6e81b0165a74756bd495b8f55477b42a4c04de18c",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "厂址不具有满足建设工程需要的工程地质条件和水文地质条件，在不良地质地段建设可能造成建（构）筑物沉降、开裂等结构安全风险。",
+    "id": "H_D87990CECE7844AC90A5E6314B",
+    "keywords": [
+      "厂址",
+      "未具有满足建设工程需要的工程地质条件和水文地质条件"
+    ],
+    "lifecycle": "active",
+    "measures": "消除“厂址,未具有满足建设工程需要的工程地质条件和水文地质条件”隐患；完成整改后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已核对GB 50187-2012原PDF对应条款并完成适用性核验。",
+    "places": [
+      "工业企业厂区、建筑物、构筑物及总平面布置相关区域",
+      "通用场所"
+    ],
+    "title": "厂址,未具有满足建设工程需要的工程地质条件和水文地质条件"
+  }
 }

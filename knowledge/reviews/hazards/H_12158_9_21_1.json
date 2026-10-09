@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_9_21_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8e3e09b5365a56c4e8df39bfe4b797d26f5d4a4a74f904116d6872ab4a9fccd1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "9f7029cf5920d93285fa8d00009532bc69e16bd488d414693a3bff6f73a602a7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "高压可燃气体的对空排放,应选择适宜的流向和处所。对于压力高、容量大的气体如液氢排放时,应在排放口装设专用的感应式静电消除器。同时要避开可能发生雷暴等危害安全的恶劣天气。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_9_21_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "9f7029cf5920d93285fa8d00009532bc69e16bd488d414693a3bff6f73a602a7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：燃气使用、储存及燃气设施相关场所",
+    "description": "现场检查发现，高压可燃气体的对空排放，未选择适宜的流向和处所，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_9_21_1",
+    "keywords": [
+      "高压可燃气体的对空排放",
+      "未选择适宜的流向和处所"
+    ],
+    "lifecycle": "active",
+    "measures": "高压可燃气体的对空排放，选择适宜的流向和处所。整改后对燃气设施的通风、报警、切断、防泄漏或防爆功能中与本项有关的部分进行测试确认，合格后再恢复使用并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "燃气使用、储存及燃气设施相关场所"
+    ],
+    "title": "高压可燃气体的对空排放，未选择适宜的流向和处所"
+  }
 }

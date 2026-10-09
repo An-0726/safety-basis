@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-09-30",
+  "checkedAt": "2026-10-09",
   "clauseId": "C_FCB_19",
   "contextHashes": {
-    "clause": "3bfd81c57b51081658a84523e5e3f78caf7bc5c364cf5cfac1bb09c100b7a886",
-    "hazard": "f0f7b6f5982e7ce74f307b70bf2ccb7b0759835357960edff1478fa6c2b51745"
+    "hazard": "4e788ef26bb96fa21fa7bfbf963336a7e064cb8687a2da67edd12f99118e7d9f",
+    "clause": "3bfd81c57b51081658a84523e5e3f78caf7bc5c364cf5cfac1bb09c100b7a886"
   },
   "decision": "verified",
   "entityId": "K_XLSX_5168434ab8029683af6b74d0",
@@ -17,28 +17,49 @@
     ]
   },
   "historySha256": "5839d9abe36eb5897bb2c2a2d208292527e1efef973d27e30a2a3bdf74ca2e5d",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "previousReview": {
     "checkedAt": "2026-09-30",
+    "clauseId": "C_FCB_19",
     "contextHashes": {
       "clause": "3bfd81c57b51081658a84523e5e3f78caf7bc5c364cf5cfac1bb09c100b7a886",
-      "hazard": "bf97d5d5c411941559e2a24ab4a510574b0de22adc8f1c15244fad8c8c1dd759"
+      "hazard": "f0f7b6f5982e7ce74f307b70bf2ccb7b0759835357960edff1478fa6c2b51745"
     },
     "decision": "verified",
     "entityId": "K_XLSX_5168434ab8029683af6b74d0",
     "entityType": "link",
     "evidenceRefs": [
-      "E_FCB_L006",
-      "E_REMEDIATION_20260930_MEM6"
+      "E_SCOPE_20260930_MEM6_2_3_19_32"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_FCB_19_4；条款：C_FCB_19；保留direct角色。",
-    "reason": "第6号令19条要求作业点最高温度恢复常温后方可生产。新措施补足温度前提，清场本身不再构成复产许可，范围仍限对应粉尘涉爆检修动火。",
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_SCOPE_20260930_MEM6_2_3_19_32"
+      ]
+    },
+    "historySha256": "5839d9abe36eb5897bb2c2a2d208292527e1efef973d27e30a2a3bdf74ca2e5d",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReviewFileSha256": "4e2275618d164de43c7747a9eb092b981ce48aa7d1ecfea863efd4a5eee90917",
+    "reason": "C_FCB_19直接支持本动火后复产子项；第19条全文是一般检修维修条款，本次“动火”只界定这个hazard而非缩写法律整条范围，其他非动火检修维修义务仍保留。清场完成和温度恢复是复产前应履行义务，不能作为进入核查范围的合规门槛。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "applicability",
-    "reviewedContentHash": "66776574ac0c6e82063391c7dbdd6344466ab5318eafb3dcb7137cca8c62781c",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "a132334d08d8c0002c69bb63b066f9337f1695a76239c7891293b9298b24565b",
+    "reviewedFields": [
+      "/applicability"
+    ],
+    "reviewedValues": {
+      "/applicability": "仅适用于粉尘涉爆工贸企业，对粉尘爆炸危险场所设备设施或除尘系统实施动火检修维修后拟恢复或已经恢复生产的场景。作业后须妥善清理现场，作业点最高温度恢复常温后方可重新开始生产；本项不因普通粉尘或普通动火场景而直接适用。"
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930",
+    "roleRetained": "direct"
   },
   "previousReviewFileSha256": "4e2275618d164de43c7747a9eb092b981ce48aa7d1ecfea863efd4a5eee90917",
-  "reason": "C_FCB_19直接支持本动火后复产子项；第19条全文是一般检修维修条款，本次“动火”只界定这个hazard而非缩写法律整条范围，其他非动火检修维修义务仍保留。清场完成和温度恢复是复产前应履行义务，不能作为进入核查范围的合规门槛。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewEvidence": {
     "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
     "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
@@ -54,6 +75,6 @@
   "reviewedValues": {
     "/applicability": "仅适用于粉尘涉爆工贸企业，对粉尘爆炸危险场所设备设施或除尘系统实施动火检修维修后拟恢复或已经恢复生产的场景。作业后须妥善清理现场，作业点最高温度恢复常温后方可重新开始生产；本项不因普通粉尘或普通动火场景而直接适用。"
   },
-  "reviewer": "Codex十三项源范围独立复核20260930",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "roleRetained": "direct"
 }

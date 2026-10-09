@@ -5,14 +5,33 @@
   "decision": "verified",
   "reviewedContentHash": "effc048579d7fbcea59d3f48e68ad9f2dfe8d3111a53187c8a388b236e062685",
   "contextHashes": {
-    "hazard": "b0022a4697b11f7c2e32c3306d0562642ccda485695e7faf94e84a8fede3adaa",
+    "hazard": "8ba502f61ab5b8fd7bf74e15f7a281abbf49209e22bc9973afe05e8845fb49a0",
     "clause": "1d26c831c96743a7d4c22eee648f430bc139b299777cb76a64d1ea5fa04441e4"
   },
-  "checkedAt": "2026-09-26T18:57:34+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "发光标志由仍适用的GB50140第5.1.2条直接支持；新规范醒目要求不单独证明发光性能。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_EXTINGUISHER_MONTHLY_CQ_20260926",
     "E_GB55036_SUPERSESSION_SH_20260926"
-  ]
+  ],
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_B62D5B7BB22E4F398116A27DBD",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "effc048579d7fbcea59d3f48e68ad9f2dfe8d3111a53187c8a388b236e062685",
+    "contextHashes": {
+      "hazard": "b0022a4697b11f7c2e32c3306d0562642ccda485695e7faf94e84a8fede3adaa",
+      "clause": "1d26c831c96743a7d4c22eee648f430bc139b299777cb76a64d1ea5fa04441e4"
+    },
+    "checkedAt": "2026-09-26T18:57:34+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "发光标志由仍适用的GB50140第5.1.2条直接支持；新规范醒目要求不单独证明发光性能。",
+    "evidenceRefs": [
+      "E_EXTINGUISHER_MONTHLY_CQ_20260926",
+      "E_GB55036_SUPERSESSION_SH_20260926"
+    ]
+  }
 }

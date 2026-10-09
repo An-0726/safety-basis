@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_45_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "74a0d8c0538075ca087bd7633058db18848238d4e5dadcbc7bf79126dd4fd33f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_5E3E2BF6D01B380A854B24BB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "fe8ba31488be91363b649d9bf9bcf55091e9ab622f231c9f49bb0a16ef254e4c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "人员密集场所、高层和地下公共建筑的排油烟管道等排油烟设施，应当按照国家和省有关规定设置，并在与竖向排风管连接处、穿越防火分区处设置防火阀；与可燃物之间应当采取隔热或者散热等防火措施",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_45_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_5E3E2BF6D01B380A854B24BB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "fe8ba31488be91363b649d9bf9bcf55091e9ab622f231c9f49bb0a16ef254e4c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，人员密集场所、高层和地下公共建筑排油烟设施未按规定设置，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_45_4",
+    "keywords": [
+      "人员密集场所",
+      "高层和地下公共建筑排油烟设施未按规定设置"
+    ],
+    "lifecycle": "active",
+    "measures": "人员密集场所、高层和地下公共建筑排油烟设施按规定设置；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "人员密集场所、高层和地下公共建筑排油烟设施未按规定设置"
+  }
 }

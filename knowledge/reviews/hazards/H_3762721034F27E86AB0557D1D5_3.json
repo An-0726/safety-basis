@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_3762721034F27E86AB0557D1D5_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "61a276715589adef299258f19b71663aee771a255425e6e6f1b2449e8eab2a2f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "d69118f8c54752007075abe43677292fb14fa5daafd2a6725adb6b34e2698f72",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留劳动者职业禁忌与具体作业对应这一缺陷，不渲染危害后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "不得安排有职业禁忌的劳动者从事其所禁忌的作业",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_3762721034F27E86AB0557D1D5_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "d69118f8c54752007075abe43677292fb14fa5daafd2a6725adb6b34e2698f72",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，安排有职业禁忌的劳动者从事其所禁忌的作业，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_3762721034F27E86AB0557D1D5_3",
+    "keywords": [
+      "安排有职业禁忌的劳动者从事其所禁忌的作业"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止安排有职业禁忌的劳动者从事其禁忌作业，根据职业健康检查结论调整岗位，并做好调岗、告知和健康监护记录。整改后结合职业病危害因素和岗位接触情况复核防护、健康管理和记录完整性。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "安排有职业禁忌的劳动者从事其所禁忌的作业"
+  }
 }

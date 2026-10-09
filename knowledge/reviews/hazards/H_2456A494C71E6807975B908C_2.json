@@ -1,58 +1,115 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_2456A494C71E6807975B908C_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e399341283242a3f25dce71b98b6aee28f8415d17a11ddcdc3cab4cd3586ab30",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
-  "reason": "危险化学品生产、储存单位，不得关闭破坏或以其他方式影响直接关系生产安全的设施设备及篡改隐瞒销毁数据；第五十二条可扩展至使用单位。",
-  "reviewType": "content",
-  "reviewedContentHash": "bb7c53563f782dd7c37a3dcced52b664e5de3c52cc8c467ad0a67ebd2de103e8",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第三十八条第二款",
-  "reviewedFields": [
-    "/conditions",
-    "/measures",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "本项限生产、储存危险化学品的单位，核查直接关系生产安全的监控、报警、防护、救生设施、设备及其相关数据、信息；第三十八条第二款禁止关闭、破坏或以其他方式影响正常使用，以及篡改、隐瞒、销毁相关数据。第五十二条对使用单位的扩展需另行对应核查，本项不覆盖任意其他危险物质活动。",
-    "/measures": "停止关闭、破坏或以其他方式影响相关安全设施设备正常使用的行为，恢复正常功能；不得篡改、隐瞒、销毁其相关数据、信息，并核实设施功能与数据保存情况。",
-    "/places": [
-      "危险化学品生产、储存单位的相关安全设施设备"
-    ]
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
-    ],
-    "/measures": [
-      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
-    ],
-    "/places": [
-      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
-    ]
-  },
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "H_2456A494C71E6807975B908C_2",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
     ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reason": "危险化学品生产、储存单位，不得关闭破坏或以其他方式影响直接关系生产安全的设施设备及篡改隐瞒销毁数据；第五十二条可扩展至使用单位。",
     "reviewType": "content",
-    "reviewedContentHash": "f0e5873f8f16dd0bddb529baa9322339a07fc99c17db7bd2f96914526629b111",
-    "reviewer": "Codex正式核验批次20260913"
+    "reviewedContentHash": "bb7c53563f782dd7c37a3dcced52b664e5de3c52cc8c467ad0a67ebd2de103e8",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第三十八条第二款",
+    "reviewedFields": [
+      "/conditions",
+      "/measures",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "本项限生产、储存危险化学品的单位，核查直接关系生产安全的监控、报警、防护、救生设施、设备及其相关数据、信息；第三十八条第二款禁止关闭、破坏或以其他方式影响正常使用，以及篡改、隐瞒、销毁相关数据。第五十二条对使用单位的扩展需另行对应核查，本项不覆盖任意其他危险物质活动。",
+      "/measures": "停止关闭、破坏或以其他方式影响相关安全设施设备正常使用的行为，恢复正常功能；不得篡改、隐瞒、销毁其相关数据、信息，并核实设施功能与数据保存情况。",
+      "/places": [
+        "危险化学品生产、储存单位的相关安全设施设备"
+      ]
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+      ],
+      "/measures": [
+        "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+      ],
+      "/places": [
+        "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_2456A494C71E6807975B908C_2",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "f0e5873f8f16dd0bddb529baa9322339a07fc99c17db7bd2f96914526629b111",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "fe7646c63b0c4e1a1e56cada5cfd3e66368f55b908bfe9717db1d352b9fea3f6",
+    "historySha256": "b717bac4c02f8870a1f29bbcb4705ee7cbefbdfa782e12d6fc09d77adc4e8984",
+    "previousEntity": {
+      "aliases": [],
+      "category": "危险化学品与危险物质",
+      "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+      "description": "现场检查发现，生产、储存危险化学品的单位，关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备等，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_2456A494C71E6807975B908C_2",
+      "keywords": [
+        "生产",
+        "储存危险化学品的单位",
+        "关闭",
+        "破坏直接关系生产安全的监控",
+        "报警",
+        "防护",
+        "救生设施",
+        "设备等"
+      ],
+      "lifecycle": "active",
+      "measures": "立即恢复被关闭、破坏或受影响的监控、报警、防护、救生等直接关系生产安全的设施设备，恢复相关数据和信息的正常记录、保存功能，并排查人为屏蔽、篡改等问题。整改后结合物质危险特性和作业环节复核储存、使用、设备及管理状态，形成检查记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+      ],
+      "title": "生产、储存危险化学品的单位，关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备等"
+    },
+    "previousEntityFileSha256": "a1aab487ec26a51d8b1c908ae4add7905eb007fd4392667a550a9295085b05d4",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+      "currentnessEvidence": "official/national-current-laws-web-readback.json",
+      "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+      "lawVersionId": "LV_HAZCHEM_LAW",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+      "operativeLocator": "第三十八条第二款",
+      "completeOfficialQuote": "第三十八条　生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。\n\n生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
+      "scopeDecision": "危险化学品生产、储存单位，不得关闭破坏或以其他方式影响直接关系生产安全的设施设备及篡改隐瞒销毁数据；第五十二条可扩展至使用单位。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
   },
-  "previousReviewFileSha256": "fe7646c63b0c4e1a1e56cada5cfd3e66368f55b908bfe9717db1d352b9fea3f6",
-  "historySha256": "b717bac4c02f8870a1f29bbcb4705ee7cbefbdfa782e12d6fc09d77adc4e8984",
-  "previousEntity": {
+  "previousDefinition": {
     "aliases": [],
     "category": "危险化学品与危险物质",
-    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "conditions": "本项限生产、储存危险化学品的单位，核查直接关系生产安全的监控、报警、防护、救生设施、设备及其相关数据、信息；第三十八条第二款禁止关闭、破坏或以其他方式影响正常使用，以及篡改、隐瞒、销毁相关数据。第五十二条对使用单位的扩展需另行对应核查，本项不覆盖任意其他危险物质活动。",
     "description": "现场检查发现，生产、储存危险化学品的单位，关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备等，实际状态与直接依据规定的安全要求不一致。",
     "id": "H_2456A494C71E6807975B908C_2",
     "keywords": [
@@ -66,29 +123,13 @@
       "设备等"
     ],
     "lifecycle": "active",
-    "measures": "立即恢复被关闭、破坏或受影响的监控、报警、防护、救生等直接关系生产安全的设施设备，恢复相关数据和信息的正常记录、保存功能，并排查人为屏蔽、篡改等问题。整改后结合物质危险特性和作业环节复核储存、使用、设备及管理状态，形成检查记录。",
+    "measures": "停止关闭、破坏或以其他方式影响相关安全设施设备正常使用的行为，恢复正常功能；不得篡改、隐瞒、销毁其相关数据、信息，并核实设施功能与数据保存情况。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+      "危险化学品生产、储存单位的相关安全设施设备"
     ],
     "title": "生产、储存危险化学品的单位，关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备等"
-  },
-  "previousEntityFileSha256": "a1aab487ec26a51d8b1c908ae4add7905eb007fd4392667a550a9295085b05d4",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
-    "currentnessEvidence": "official/national-current-laws-web-readback.json",
-    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
-    "lawVersionId": "LV_HAZCHEM_LAW",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
-    "operativeLocator": "第三十八条第二款",
-    "completeOfficialQuote": "第三十八条　生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。\n\n生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
-    "scopeDecision": "危险化学品生产、储存单位，不得关闭破坏或以其他方式影响直接关系生产安全的设施设备及篡改隐瞒销毁数据；第五十二条可扩展至使用单位。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  }
 }

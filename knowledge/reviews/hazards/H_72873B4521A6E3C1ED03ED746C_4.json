@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_72873B4521A6E3C1ED03ED746C_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "98cf787db28f7cf843459c488f74090fcc44a06e594808376c0e99f2e73e6e74",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_F40B6A6E916BEF8B42FA9E1B"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "6930c88ffaf00336a3c8546c5fc562e3d4a37f555d56469b004de8778acf2814",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定较大以上风险与规定的信息系统报告，不增加期限参数。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当按照规定落实安全风险报告责任，通过相关信息系统报告较大以上安全风险，接受负有安全生产监督管理职责的部门的监督管理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_72873B4521A6E3C1ED03ED746C_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F40B6A6E916BEF8B42FA9E1B"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "6930c88ffaf00336a3c8546c5fc562e3d4a37f555d56469b004de8778acf2814",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未落实安全风险报告责任，未按照规定通过相关信息系统报告较大以上安全风险，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_72873B4521A6E3C1ED03ED746C_4",
+    "keywords": [
+      "生产经营单位未落实安全风险报告责任",
+      "未按照规定通过相关信息系统报告较大以上安全风险"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位落实安全风险报告责任，按照规定通过相关信息系统报告较大以上安全风险。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位未落实安全风险报告责任，未按照规定通过相关信息系统报告较大以上安全风险"
+  }
 }

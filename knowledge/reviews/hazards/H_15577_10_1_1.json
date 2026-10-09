@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_10_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7943e39a56ed46e3930fc93e75e43421e1c82449d27f94e6d125680e6cb4e33c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "ae50ef8102945c977bbd24507af98ff14d7f4341fe26d9bbad4aaad5809a3623",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "将管理模板改为两类具体文件缺失，整改针对检修制度及应急措施补齐核查。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "粉尘爆炸危险场所应制定设备设施检修安全作业制度和应急处置措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_10_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "ae50ef8102945c977bbd24507af98ff14d7f4341fe26d9bbad4aaad5809a3623",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "经资料及履职情况核查，粉尘爆炸危险场所未制定设备设施检修安全作业制度和应急处置措施，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_15577_10_1_1",
+    "keywords": [
+      "粉尘爆炸危险场所未制定设备设施检修安全作业制度和应急处置措施"
+    ],
+    "lifecycle": "active",
+    "measures": "粉尘爆炸危险场所制定设备设施检修安全作业制度和应急处置措施。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "粉尘爆炸危险场所未制定设备设施检修安全作业制度和应急处置措施"
+  }
 }

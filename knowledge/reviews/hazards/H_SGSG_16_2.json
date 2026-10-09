@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SGSG_16_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "493d79d75d0a310acce3e7f4999b12eec81a853d34339ab0439f2f98eadaad72",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1ECA87ACB8544006D9C15A2D"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f1665106e70c252de0f456ce034cd3756484489bbc6cd64f7a5544079baca8b3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确物件移动原因及三项保全动作，不能任选其一。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "因抢救人员、防止事故扩大以及疏通交通等原因，需要移动事故现场物件的，应当做出标志，绘制现场简图并做出书面记录，妥善保存现场重要痕迹、物证。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SGSG_16_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1ECA87ACB8544006D9C15A2D"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f1665106e70c252de0f456ce034cd3756484489bbc6cd64f7a5544079baca8b3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，移动事故现场物件未做出标志、绘制简图并书面记录，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SGSG_16_2",
+    "keywords": [
+      "移动事故现场物件未做出标志",
+      "绘制简图并书面记录"
+    ],
+    "lifecycle": "active",
+    "measures": "移动事故现场物件做出标志、绘制简图并书面记录。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "移动事故现场物件未做出标志、绘制简图并书面记录"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_20_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a829b63f0530fe630a8d2d52aedc4635ed522f5cbaf65f9b12f58096a3c0f674",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2245D7A3E424383EF1BC6BDC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e1f32e3b12fd4484c123aa5bbad7acd431fe0f41183d50b75bb18df997a8e79f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确结果归档与向劳动者公布的缺失，不附加通用履职结论。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "检测、评价结果应当存入本单位职业卫生档案，并向卫生健康主管部门报告和劳动者公布。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_20_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2245D7A3E424383EF1BC6BDC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e1f32e3b12fd4484c123aa5bbad7acd431fe0f41183d50b75bb18df997a8e79f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，用人单位未将职业病危害检测评价结果存入档案并向劳动者公布，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_20_3",
+    "keywords": [
+      "用人单位未将职业病危害检测评价结果存入档案并向劳动者公布"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位将职业病危害检测评价结果存入档案并向劳动者公布。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未将职业病危害检测评价结果存入档案并向劳动者公布"
+  }
 }

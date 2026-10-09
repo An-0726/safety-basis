@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_1_6_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c80553828c1f1c5978696c5c1a80e0b297e37ecb81ad65b9dae1621a864501e9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "f1b05b78b7e292035964d64a444c3a5f5160e57b72d17f23de391a079690a882",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留顶部装油前提，描述明确距离超过200 mm的缺陷边界。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "采用顶部装油时,装油鹤管口应深入到距槽罐的底部不大于200 mm。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_1_6_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "f1b05b78b7e292035964d64a444c3a5f5160e57b72d17f23de391a079690a882",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，采用顶部装油时，装油鹤管口未深入至距槽罐底部200 mm以内，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_1_6_2",
+    "keywords": [
+      "采用顶部装油时",
+      "装油鹤管口未深入至距槽罐底部200",
+      "mm以内"
+    ],
+    "lifecycle": "active",
+    "measures": "采用顶部装油时，装油鹤管口深入至距槽罐底部200 mm以内。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "采用顶部装油时，装油鹤管口未深入至距槽罐底部200 mm以内"
+  }
 }

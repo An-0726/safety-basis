@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F465105AA4130B0DE602E880A3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c60c9788e660b31dd4ccfe2bbb9b3511bd85ac4bfa87a078d974b8c000b5358e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_BFE9C60EA83C95DB1465FD3E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "0e9e6fbe9f2141236158310a0586478147086a7b75ac413c43f6fc90a18e89bd",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除标题“等”，保留人员工艺与应急能力双重要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产、经营、储存易燃易爆危险品的单位，应当指定掌握工艺流程、具备应急处置能力的有关人员兼职承担专业处置工作，设置辅助应急救援指挥决策的专用资料箱，根据需要配备专用灭火器材、储备专用灭火药剂并保持完好有效；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F465105AA4130B0DE602E880A3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_BFE9C60EA83C95DB1465FD3E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "0e9e6fbe9f2141236158310a0586478147086a7b75ac413c43f6fc90a18e89bd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料和执行情况核查，生产、经营、储存易燃易爆危险品的单位，未指定掌握工艺流程、具备应急处置能力的有关人员兼职承担专业处置工作等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_F465105AA4130B0DE602E880A3_2",
+    "keywords": [
+      "生产",
+      "经营",
+      "储存易燃易爆危险品的单位",
+      "未指定掌握工艺流程",
+      "具备应急处置能力的有关人员兼职承担专业处置工作等"
+    ],
+    "lifecycle": "active",
+    "measures": "生产、经营、储存易燃易爆危险品的单位，指定掌握工艺流程、具备应急处置能力的有关人员兼职承担专业处置工作等。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "生产、经营、储存易燃易爆危险品的单位，未指定掌握工艺流程、具备应急处置能力的有关人员兼职承担专业处置工作等"
+  }
 }

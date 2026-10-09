@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-18",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "b8adec9ccdb5ed3314222603ffb860a0935b93b33e1e84a864daf957ac405c0c",
-    "hazard": "ce92e4fb1d0b79843a647088da123e9a908c0b32382990fabc894780353025d0"
+    "hazard": "93c3cd4345e7e752eff21e14abd61f42826d616287ad63c554c371fb63e493b1",
+    "clause": "b8adec9ccdb5ed3314222603ffb860a0935b93b33e1e84a864daf957ac405c0c"
   },
   "decision": "verified",
   "entityId": "K_PHASE12_EXACT_7D41A4EF9ED24907AD5C",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "GB 50187-2012第5.1.1条直接规定总平面布置应结合场地条件经技术经济比较确定。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "46fb7144b487cb5c7cfd76df5267b518ae125685ed776a1ffbf739426b6fca66",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "contextHashes": {
+      "clause": "b8adec9ccdb5ed3314222603ffb860a0935b93b33e1e84a864daf957ac405c0c",
+      "hazard": "ce92e4fb1d0b79843a647088da123e9a908c0b32382990fabc894780353025d0"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE12_EXACT_7D41A4EF9ED24907AD5C",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "GB 50187-2012第5.1.1条直接规定总平面布置应结合场地条件经技术经济比较确定。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "46fb7144b487cb5c7cfd76df5267b518ae125685ed776a1ffbf739426b6fca66",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

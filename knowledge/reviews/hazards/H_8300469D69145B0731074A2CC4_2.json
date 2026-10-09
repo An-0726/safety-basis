@@ -1,59 +1,95 @@
 {
-  "checkedAt": "2026-09-30",
-  "decision": "verified",
   "entityId": "H_8300469D69145B0731074A2CC4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "88fd9cc0fb1c5b59c418495060fb2fa5e03d78b077f9f986c99750a43a8cc861",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_REMEDIATION_20260930_TSELAW",
     "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
   ],
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_REMEDIATION_20260930_TSELAW",
-      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
-    ],
-    "/places": [
-      "E_REMEDIATION_20260930_TSELAW",
-      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
-    ]
-  },
-  "historySha256": "c0e99adb6d52d98562527a5fba7f49359af862727ee72370805b8900650ea681",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "reason": "保留报废条件以外与超设计年限限定，检验或评估是可选路径。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定报废条件以外的特种设备，达到设计使用年限可以继续使用的，应当按照安全技术规范的要求通过检验或者安全评估，并办理使用登记证书变更，方可继续使用。允许继续使用的，应当采取加强检验、检测和维护保养等措施，确保使用安全。",
   "previousReview": {
     "checkedAt": "2026-09-30",
     "decision": "verified",
     "entityId": "H_8300469D69145B0731074A2CC4_2",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_5040D8C5C98FA2D9B8BB8ABA",
-      "E_REMEDIATION_20260930_TSELAW"
+      "E_REMEDIATION_20260930_TSELAW",
+      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
-    "reason": "48(2)原先错误引用48(1)，必须连同条款全文改正。独立修订明确可以继续使用而非仅拟继续使用，排除48(1)报废条件及32条已报废/明令淘汰设备；检验或者评估、登记变更和加强检验检测保养的要求全部保留。全库反向查找此被改条款只有该一个link。",
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_REMEDIATION_20260930_TSELAW",
+        "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
+      ],
+      "/places": [
+        "E_REMEDIATION_20260930_TSELAW",
+        "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
+      ]
+    },
+    "historySha256": "c0e99adb6d52d98562527a5fba7f49359af862727ee72370805b8900650ea681",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReview": {
+      "checkedAt": "2026-09-30",
+      "decision": "verified",
+      "entityId": "H_8300469D69145B0731074A2CC4_2",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_5040D8C5C98FA2D9B8BB8ABA",
+        "E_REMEDIATION_20260930_TSELAW"
+      ],
+      "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+      "reason": "48(2)原先错误引用48(1)，必须连同条款全文改正。独立修订明确可以继续使用而非仅拟继续使用，排除48(1)报废条件及32条已报废/明令淘汰设备；检验或者评估、登记变更和加强检验检测保养的要求全部保留。全库反向查找此被改条款只有该一个link。",
+      "reviewType": "content",
+      "reviewedContentHash": "c8937aaedf06e5edf1ac18bde51b7df5cc14f598a20f2372d640a7eaf719c4e8",
+      "reviewer": "Codex逐项内容复核20260930"
+    },
+    "previousReviewFileSha256": "0d270ad559161f578ce15e9d5506094479aa724412cb496706aa4560e650fe06",
+    "reason": "第48条两款必须合读，第二款只覆盖前款报废条件以外、达到设计年限并按安全技术规范可以继续使用的设备；第32条禁止使用淘汰和已报废设备。最终conditions明确这三层边界，保留继续使用前检验或安全评估加登记变更、允许继续使用后的加强措施，并明确核查义务结果不得当入口，防止漏掉未检评或未变更即继续使用者。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "content",
-    "reviewedContentHash": "c8937aaedf06e5edf1ac18bde51b7df5cc14f598a20f2372d640a7eaf719c4e8",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "48dacf79727b8a9d23eeb6c44b45267535f4a306df934a9536efb5dae6aeb4cd",
+    "reviewedFields": [
+      "/conditions",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "仅适用于不属于特种设备安全法第四十八条第一款报废条件、未被国家明令淘汰且未已经报废，达到设计使用年限并按安全技术规范可以继续使用的特种设备及其使用单位。继续使用前须按规范通过检验或者安全评估并办理使用登记证书变更；允许继续使用后应加强检验、检测和维护保养。是否已通过检验或者安全评估、是否已办理使用登记证书变更属于本项核查内容，不作为进入核查范围的前提；未履行前述义务而继续使用的情形不得漏查。",
+      "/places": [
+        "报废条件以外、达到设计使用年限且按安全技术规范可以继续使用的特种设备及其使用单位"
+      ]
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930"
   },
-  "previousReviewFileSha256": "0d270ad559161f578ce15e9d5506094479aa724412cb496706aa4560e650fe06",
-  "reason": "第48条两款必须合读，第二款只覆盖前款报废条件以外、达到设计年限并按安全技术规范可以继续使用的设备；第32条禁止使用淘汰和已报废设备。最终conditions明确这三层边界，保留继续使用前检验或安全评估加登记变更、允许继续使用后的加强措施，并明确核查义务结果不得当入口，防止漏掉未检评或未变更即继续使用者。",
-  "reviewEvidence": {
-    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
-    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
-    "profileAdmission": false,
-    "siteFactsVerified": false,
-    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
-  },
-  "reviewType": "content",
-  "reviewedContentHash": "48dacf79727b8a9d23eeb6c44b45267535f4a306df934a9536efb5dae6aeb4cd",
-  "reviewedFields": [
-    "/conditions",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "仅适用于不属于特种设备安全法第四十八条第一款报废条件、未被国家明令淘汰且未已经报废，达到设计使用年限并按安全技术规范可以继续使用的特种设备及其使用单位。继续使用前须按规范通过检验或者安全评估并办理使用登记证书变更；允许继续使用后应加强检验、检测和维护保养。是否已通过检验或者安全评估、是否已办理使用登记证书变更属于本项核查内容，不作为进入核查范围的前提；未履行前述义务而继续使用的情形不得漏查。",
-    "/places": [
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "仅适用于不属于特种设备安全法第四十八条第一款报废条件、未被国家明令淘汰且未已经报废，达到设计使用年限并按安全技术规范可以继续使用的特种设备及其使用单位。继续使用前须按规范通过检验或者安全评估并办理使用登记证书变更；允许继续使用后应加强检验、检测和维护保养。是否已通过检验或者安全评估、是否已办理使用登记证书变更属于本项核查内容，不作为进入核查范围的前提；未履行前述义务而继续使用的情形不得漏查。",
+    "description": "现场检查发现，报废条件以外的特种设备达到设计使用年限继续使用的，未按照安全技术规范要求通过检验或者安全评估，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8300469D69145B0731074A2CC4_2",
+    "keywords": [
+      "报废条件以外的特种设备达到设计使用年限继续使用的",
+      "未按照安全技术规范要求通过检验或者安全评估"
+    ],
+    "lifecycle": "active",
+    "measures": "先确认设备不属于《中华人民共和国特种设备安全法》第四十八条第一款规定的报废条件，且未被国家明令淘汰、未已经报废。对达到设计使用年限且按安全技术规范可以继续使用的特种设备，应当按安全技术规范要求通过检验或者安全评估，并办理使用登记证书变更，方可继续使用；允许继续使用的，应当加强检验、检测和维护保养，留存相应检验或者安全评估及登记变更资料。不得将已报废设备作为延长使用年限的对象。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
       "报废条件以外、达到设计使用年限且按安全技术规范可以继续使用的特种设备及其使用单位"
-    ]
-  },
-  "reviewer": "Codex十三项源范围独立复核20260930"
+    ],
+    "title": "报废条件以外的特种设备达到设计使用年限继续使用的，未按照安全技术规范要求通过检验或者安全评估"
+  }
 }

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-30T12:25:50Z",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "eadd974142ead919888810014c6ab467b2f2753a6b539793d8c460dd81710091",
+    "hazard": "705b1bff89f7e8db503aaf4586d7fc9900bb41ca40596000ae2e93923ed6d502",
     "clause": "a31ba257fac116fddd8c5f953b95064850f8a084d1746d31e4a402b08b7097fa"
   },
   "decision": "verified",
@@ -11,9 +11,28 @@
     "E_XLSX_FT_78BF7FCC51883F1CFDAE5240",
     "E_NHC_WORKPLACE_OH_20260930"
   ],
-  "reason": "重新实质审核该特定关联：C_XLSX_FT_45C64317A1F75D412483E774正文中的第三十三条与国家卫健委官方正文一致（存量编号前缀33仅为提取标记），明确规定两项岗位安排禁令。H_ZJWS_33_1的对象、违规行为、适用职业危害岗位及本次纠正后的停止/调整措施逐项对应，故仍可作直接依据；未将个体防护误作免除禁令的条件。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "aeff90030c84d9ef0d572fca70d38cda0ea823aeed8fd948038bcda7bb857002",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "notes": "官方现行有效规章库确认该令仍列现行有效；法规版本、clause和link实体未改动。仅在完成本次内容及适用性复核后更新hazard contextHash，link及clause hashes保持不变。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "contextHashes": {
+      "hazard": "eadd974142ead919888810014c6ab467b2f2753a6b539793d8c460dd81710091",
+      "clause": "a31ba257fac116fddd8c5f953b95064850f8a084d1746d31e4a402b08b7097fa"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_E94F0A28CBE0F9F58B3750D8",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_78BF7FCC51883F1CFDAE5240",
+      "E_NHC_WORKPLACE_OH_20260930"
+    ],
+    "reason": "重新实质审核该特定关联：C_XLSX_FT_45C64317A1F75D412483E774正文中的第三十三条与国家卫健委官方正文一致（存量编号前缀33仅为提取标记），明确规定两项岗位安排禁令。H_ZJWS_33_1的对象、违规行为、适用职业危害岗位及本次纠正后的停止/调整措施逐项对应，故仍可作直接依据；未将个体防护误作免除禁令的条件。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "aeff90030c84d9ef0d572fca70d38cda0ea823aeed8fd948038bcda7bb857002",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "notes": "官方现行有效规章库确认该令仍列现行有效；法规版本、clause和link实体未改动。仅在完成本次内容及适用性复核后更新hazard contextHash，link及clause hashes保持不变。"
+  }
 }

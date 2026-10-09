@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_E60BB9320D0C4AA4AC94566EB2",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "5413df39a182569da2f1358417a42c1a002c6f1423f43a9064c7a618fe436f13",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "9ff5f7bec56da55a1cfa3ca4b44eac01a5f1c9e68a9e47017446ac0e433d9973",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "将报告动作落实到治理情况汇总及两类接收对象核查，不增加报告格式或时限。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "重大事故隐患排查治理情况应当及时向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_E60BB9320D0C4AA4AC94566EB2",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "5413df39a182569da2f1358417a42c1a002c6f1423f43a9064c7a618fe436f13",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "仅适用于排查发现重大事故隐患的生产经营单位。",
+    "description": "重大事故隐患治理情况未按规定向负有安全生产监督管理职责的部门报告。",
+    "id": "H_E60BB9320D0C4AA4AC94566EB2",
+    "keywords": [
+      "安全管理",
+      "重大事故隐患治理情况未按要求报告"
+    ],
+    "lifecycle": "active",
+    "measures": "将重大事故隐患排查治理情况及时向负有安全生产监督管理职责的部门以及职工大会或职工代表大会报告。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。",
+    "places": [
+      "生产经营单位"
+    ],
+    "title": "重大事故隐患治理情况未按要求报告"
+  }
 }

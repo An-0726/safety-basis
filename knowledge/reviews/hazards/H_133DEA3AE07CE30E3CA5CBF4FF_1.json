@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-26T19:37:09+08:00",
-  "decision": "verified",
   "entityId": "H_133DEA3AE07CE30E3CA5CBF4FF_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d1a06e3c21b0ceabe4f35f93b1b77514777f6fa590b465cc37cc29a94244f103",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_WORK_SAFETY_LAW_MEM_20260926"
   ],
-  "reason": "全国安全生产法第七条义务，不把整改说明错误统一成江苏地方条号，不把设备设施类别套入工会参与。",
-  "reviewType": "content",
-  "reviewedContentHash": "af1a29cbb5053c1164d6c627f258524727534726988ad368ca08594c7cddb100",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reason": "仅压缩法条式标题，保留原有具体描述和整改措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位制定或者修改有关安全生产的规章制度，应当听取工会的意见。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:37:09+08:00",
+    "decision": "verified",
+    "entityId": "H_133DEA3AE07CE30E3CA5CBF4FF_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_WORK_SAFETY_LAW_MEM_20260926"
+    ],
+    "reason": "全国安全生产法第七条义务，不把整改说明错误统一成江苏地方条号，不把设备设施类别套入工会参与。",
+    "reviewType": "content",
+    "reviewedContentHash": "af1a29cbb5053c1164d6c627f258524727534726988ad368ca08594c7cddb100",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  },
+  "previousDefinition": {
+    "id": "H_133DEA3AE07CE30E3CA5CBF4FF_1",
+    "title": "生产经营单位制定或者修改有关安全生产的规章制度，未听取工会的意见",
+    "description": "生产经营单位制定或者修改安全生产规章制度时，未依法听取工会意见。",
+    "measures": "制定或修改有关安全生产规章制度时，依法听取工会意见，结合反馈完善制度并保持过程可追溯。",
+    "conditions": "适用安全生产法第七条规定的制定、修改安全生产规章制度活动；核工会参与及其他真实沟通方式，不因缺一份征求意见表直接认定未听取意见。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产经营单位制定或者修改有关安全生产的规章制度，未听取工会的意见"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第七条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

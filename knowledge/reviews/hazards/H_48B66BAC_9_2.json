@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_9_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5eea5ba75ed394d1352890e3a40493cdde3fcfa16bf7306b9f262312355a8771",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_F1F99B36A38BDC3F356309E3"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8299b4bdfc3c80fa73738ea5d5e311d2e3ef005ac12de0990ca152865d51f0ac",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "未经培训合格不得参与有限空间作业。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_9_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_F1F99B36A38BDC3F356309E3"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8299b4bdfc3c80fa73738ea5d5e311d2e3ef005ac12de0990ca152865d51f0ac",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "经资料和执行情况核查，作业人员未经培训合格参与有限空间作业，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_9_2",
+    "keywords": [
+      "作业人员未经培训合格参与有限空间作业"
+    ],
+    "lifecycle": "active",
+    "measures": "作业人员经培训合格参与有限空间作业。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "作业人员未经培训合格参与有限空间作业"
+  }
 }

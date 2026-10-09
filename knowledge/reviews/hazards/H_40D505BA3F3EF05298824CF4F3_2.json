@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_40D505BA3F3EF05298824CF4F3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "13fb777a74fe35f35fe43952a4af49695bb0d8375cf7bd75689ddd62f076a9c4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8629B2AC432398F153A54134"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "9c81969673c3e8c3bca050cc57011f0a5061ab86ecd76fb914e57bfe220fb2f3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "管控措施应当符合相关法律、法规和标准规范要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_40D505BA3F3EF05298824CF4F3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8629B2AC432398F153A54134"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "9c81969673c3e8c3bca050cc57011f0a5061ab86ecd76fb914e57bfe220fb2f3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，管控措施未符合相关法律、法规和标准规范要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_40D505BA3F3EF05298824CF4F3_2",
+    "keywords": [
+      "管控措施未符合相关法律",
+      "法规和标准规范要求"
+    ],
+    "lifecycle": "active",
+    "measures": "管控措施符合相关法律、法规和标准规范要求。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "管控措施未符合相关法律、法规和标准规范要求"
+  }
 }

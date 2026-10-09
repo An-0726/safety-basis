@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_48_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "383d9611d483d5a5817987575a02959a2582a588ba469464863267ea6aaae414",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_DD1C960F920684F3F243EDA1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "7e8bb90951887d43498369a94ac6f55d6a21940d30e58cd32e0138083973b623",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "48 第四十八条 古建筑、近代现代代表性建筑以及其他保护建筑的管理单位，应当加强用火用电用气的消防安全管理，依法履行消防安全职责，并根据建筑结构、文物性质等特点，采取针对性的消防安全措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_48_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_DD1C960F920684F3F243EDA1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "7e8bb90951887d43498369a94ac6f55d6a21940d30e58cd32e0138083973b623",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，保护建筑管理单位未加强用火用电用气消防安全管理，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_48_1",
+    "keywords": [
+      "保护建筑管理单位未加强用火用电用气消防安全管理"
+    ],
+    "lifecycle": "active",
+    "measures": "保护建筑管理单位加强用火用电用气消防安全管理；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "保护建筑管理单位未加强用火用电用气消防安全管理"
+  }
 }

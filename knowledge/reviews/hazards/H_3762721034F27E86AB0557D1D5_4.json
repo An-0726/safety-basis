@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_3762721034F27E86AB0557D1D5_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "787c3f2226379d3e1eca0dc2be3575c2677e0e0745375bcbd6b21cdf3bc7632d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "22693f1351ea75a447c67bcdab05599687d7df445e7c6ac24bee20552e76989d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩长标题，保留检查发现职业相关损害前提和调离、安置两项义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对 在职业健康检查中发现有与所从事的职业相关的健康损害的劳动者，应 当调离原工作岗位，并妥善安置",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_3762721034F27E86AB0557D1D5_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "22693f1351ea75a447c67bcdab05599687d7df445e7c6ac24bee20552e76989d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，对职业健康检查中发现有与所从事职业相关健康损害的劳动者，未调离原工作岗位并妥善安置，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_3762721034F27E86AB0557D1D5_4",
+    "keywords": [
+      "对职业健康检查中发现有与所从事职业相关健康损害的劳动者",
+      "未调离原工作岗位并妥善安置"
+    ],
+    "lifecycle": "active",
+    "measures": "对职业健康检查中发现有与所从事职业相关健康损害的劳动者，调离原工作岗位并妥善安置。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "对职业健康检查中发现有与所从事职业相关健康损害的劳动者，未调离原工作岗位并妥善安置"
+  }
 }

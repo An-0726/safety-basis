@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-19T00:00:00+08:00",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "93c1635d549a07dbd4d9d574deec5daf1205bec97cc496cf1e57bf354b0773ef",
+    "hazard": "84a826c9e0a8ca65ce1a4ce36714ab60274752f96c4ba9dcd3f1e60b0f6dd819",
     "clause": "5f947b311fba27bde84b7ed1eb7e83d5310d603b47c308a6fc1605b7a4969f85"
   },
   "decision": "verified",
@@ -10,11 +10,31 @@
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "隐患判定要点与GB 18597-2023条款原文完全对应。危废在厂区随意堆放露天堆存，贮存点未及时清运超量，违反第6.1.1条及第8.3.5条规定。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "ed2d05b3772f717efea5e9adbfd8094d417f03f2db0797027bc5e61f2760d2c3",
-  "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "reviewedAt": "2026-09-19T00:00:00Z",
   "lifecycle": "active",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-19T00:00:00+08:00",
+    "contextHashes": {
+      "hazard": "93c1635d549a07dbd4d9d574deec5daf1205bec97cc496cf1e57bf354b0773ef",
+      "clause": "5f947b311fba27bde84b7ed1eb7e83d5310d603b47c308a6fc1605b7a4969f85"
+    },
+    "decision": "verified",
+    "entityId": "K_H_14E04FE43D8A43_C_GB18597_6_1_1",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "隐患判定要点与GB 18597-2023条款原文完全对应。危废在厂区随意堆放露天堆存，贮存点未及时清运超量，违反第6.1.1条及第8.3.5条规定。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "ed2d05b3772f717efea5e9adbfd8094d417f03f2db0797027bc5e61f2760d2c3",
+    "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+    "reviewedAt": "2026-09-19T00:00:00Z",
+    "lifecycle": "active",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

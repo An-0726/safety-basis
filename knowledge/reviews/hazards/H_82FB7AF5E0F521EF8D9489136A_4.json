@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_82FB7AF5E0F521EF8D9489136A_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "60dd7c8e28ebb2f6fa6211afa83cc6c37a53a835660af9923ffe7f9bf95bcccb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_0E6F1CBB89B8DB4F990BD757"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "f51321b789a2c87fbf1974612224d5f58ce95076c9faee1a5237b48bf53896f7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "设置电动自行车集中充电场所和充电设施应当符合国家和省、市有关标准和规范，不得占用、堵塞消防车通道、安全出口和疏散通道，不得影响消防设施的正常使用",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_82FB7AF5E0F521EF8D9489136A_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_0E6F1CBB89B8DB4F990BD757"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "f51321b789a2c87fbf1974612224d5f58ce95076c9faee1a5237b48bf53896f7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，电动自行车集中充电场所和充电设施设置不符合国家和省、市有关标准规范，占用、堵塞消防车通道、安全出口和疏散通道，已影响正常通行、疏散、操作或应急取用条件。",
+    "id": "H_82FB7AF5E0F521EF8D9489136A_4",
+    "keywords": [
+      "电动自行车集中充电场所和充电设施设置不符合国家和省",
+      "市有关标准规范",
+      "占用",
+      "堵塞消防车通道",
+      "安全出口和疏散通道"
+    ],
+    "lifecycle": "active",
+    "measures": "清除占用物，恢复疏散通道、安全出口、消防车通道或防火间距的有效状态；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "电动自行车集中充电场所和充电设施设置不符合国家和省、市有关标准规范，占用、堵塞消防车通道、安全出口和疏散通道"
+  }
 }

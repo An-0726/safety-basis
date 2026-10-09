@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DB7FA5121B72C9FE0A33439033_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "74d159d0186f67823ffeba536305a88c6e41cdcdd7710c15e8f37a92745f8871",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "795c32118ef0afce5eb8c1f59fa2c59f253d0df05c1dcc7aa92a4d5601ee87c0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "突出治理期间防范要求，不用应急演练资料代替治理现场核查。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在事故隐患治理过程中，应当采取相应的安全防范措施，防止事故发生。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DB7FA5121B72C9FE0A33439033_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "795c32118ef0afce5eb8c1f59fa2c59f253d0df05c1dcc7aa92a4d5601ee87c0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于江苏省行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：江苏省行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，事故隐患治理过程中，未采取相应的安全防范措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DB7FA5121B72C9FE0A33439033_2",
+    "keywords": [
+      "事故隐患治理过程中",
+      "未采取相应的安全防范措施"
+    ],
+    "lifecycle": "active",
+    "measures": "事故隐患治理过程中，采取相应的安全防范措施。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "事故隐患治理过程中，未采取相应的安全防范措施"
+  }
 }

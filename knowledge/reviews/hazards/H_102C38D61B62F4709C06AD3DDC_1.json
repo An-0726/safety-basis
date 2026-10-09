@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_102C38D61B62F4709C06AD3DDC_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5eec8cef0f1d64f7097a1676f96c20dedc75cdb756da28c96484bea8ef5289a1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_2339BB2717583AFC4C732DFA"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "9bb16e81c7c026de62078ff1ddfd97215b137099bc2fc8c8f609d8dc213c557c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "条文支持遵守法规标准的概括义务，但未列具体技术要求；改写明确须先核定具体违反事项。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四条生产经营单位是安全生产的责任主体，应当遵守安全生产法律、法规和国家标准或者行业标准，建立健全全员安全生产责任制和安全生产规章制度，改善安全生产条件，强化保障措施，确保安全生产。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_102C38D61B62F4709C06AD3DDC_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_2339BB2717583AFC4C732DFA"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "9bb16e81c7c026de62078ff1ddfd97215b137099bc2fc8c8f609d8dc213c557c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于南京市行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：南京市行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未遵守安全生产法律、法规和国家标准或者行业标准，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_102C38D61B62F4709C06AD3DDC_1",
+    "keywords": [
+      "生产经营单位未遵守安全生产法律",
+      "法规和国家标准或者行业标准"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位遵守安全生产法律、法规和国家标准或者行业标准。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未遵守安全生产法律、法规和国家标准或者行业标准"
+  }
 }

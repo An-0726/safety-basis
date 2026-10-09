@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_5FA33B2DFCAD974A3DA96FCF64_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "68e93a990ab38b461635df98e49616a3c4f7e7354cb1eb76899df2e9949a4b08",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_STD_HJ2026_2013"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "b02e17a2a30598c292c916f01de8306055fb03cd53aabc21fd4a23c449a46487",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当废气产生点较多、彼此距离较远时，应适当分设多套收集系统。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_5FA33B2DFCAD974A3DA96FCF64_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2026_2013"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "b02e17a2a30598c292c916f01de8306055fb03cd53aabc21fd4a23c449a46487",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，当废气产生点较多、彼此距离较远时，未适当分设多套收集系统，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_5FA33B2DFCAD974A3DA96FCF64_1",
+    "keywords": [
+      "当废气产生点较多",
+      "彼此距离较远时",
+      "未适当分设多套收集系统"
+    ],
+    "lifecycle": "active",
+    "measures": "当废气产生点较多、彼此距离较远时，适当分设多套收集系统。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "当废气产生点较多、彼此距离较远时，未适当分设多套收集系统"
+  }
 }

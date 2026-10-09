@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZDY_20_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4e1baec21c2cb833ba885c5ceebf1fd1731a4e353622992aa6db8109a80e1fc6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_C8BFCDAD14B8E4878E31D6F3"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "63a77ceecc7cec4d0626857252499f6c634cd3d158c536636209669df15f9af5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定重大危险源和危险化学品单位，删除无依据的燃气功能测试。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "涉及易燃易爆气体或者易燃液体蒸气的重大危险源，还应当配备一定数量的便携式可燃气体检测设备。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZDY_20_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_C8BFCDAD14B8E4878E31D6F3"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "63a77ceecc7cec4d0626857252499f6c634cd3d158c536636209669df15f9af5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：燃气使用、储存及燃气设施相关场所",
+    "description": "现场检查发现，涉及易燃易爆气体的重大危险源未配备便携式可燃气体检测设备，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_ZDY_20_4",
+    "keywords": [
+      "涉及易燃易爆气体的重大危险源未配备便携式可燃气体检测设备"
+    ],
+    "lifecycle": "active",
+    "measures": "涉及易燃易爆气体的重大危险源配备便携式可燃气体检测设备。整改后对燃气设施的通风、报警、切断、防泄漏或防爆功能中与本项有关的部分进行测试确认，合格后再恢复使用并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "燃气使用、储存及燃气设施相关场所"
+    ],
+    "title": "涉及易燃易爆气体的重大危险源未配备便携式可燃气体检测设备"
+  }
 }

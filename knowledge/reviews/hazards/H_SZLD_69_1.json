@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_69_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2d033fced8adfba042bf0a9366047b747b2667be4cd75b85a23194d6ba523424",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2ACEDBF6D19B7CBBB42B1DE4"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "4146fe0a2ad19e9ae4f7e1e34f6ea05d950a7ee563b7e239ef33d39892a704f6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "具体区分电梯管理人员缺配和职责未明确。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电梯使用单位应当依法配备电梯安全总监和电梯安全员，明确电梯安全总监和电梯安全员的岗位职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_69_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2ACEDBF6D19B7CBBB42B1DE4"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "4146fe0a2ad19e9ae4f7e1e34f6ea05d950a7ee563b7e239ef33d39892a704f6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，电梯使用单位未配备电梯安全总监和安全员并明确岗位职责，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_SZLD_69_1",
+    "keywords": [
+      "电梯使用单位未配备电梯安全总监和安全员并明确岗位职责"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯使用单位配备电梯安全总监和安全员并明确岗位职责。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯使用单位未配备电梯安全总监和安全员并明确岗位职责"
+  }
 }

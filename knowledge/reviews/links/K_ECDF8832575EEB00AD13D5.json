@@ -5,16 +5,36 @@
   "decision": "verified",
   "reviewedContentHash": "3b07126656ae08300740da2ee2e4aad251168ab8a0015687ee757cd3d48ef1b9",
   "contextHashes": {
-    "hazard": "f8928ecc94aaf2aa31d610c4ac8c787384d3c7e4dac1a1e3362f0e7b92f10cd3",
+    "hazard": "31f7ca7619b9852f2f54f7adc4c1bcbe6326eb83032a621ca6836374a44c4609",
     "clause": "97a40563b612b68e772f5b7eeabe667f2acd1ee7405eea79428b4577f8294d8b"
   },
-  "checkedAt": "2026-09-10T14:09:46+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "hazard 为未正确穿戴劳动保护用品上岗；安全生产法第四十五条要求监督、教育从业人员按照使用规则佩戴、使用，直接适用。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_APPLICABLE"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_ECDF8832575EEB00AD13D5",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "3b07126656ae08300740da2ee2e4aad251168ab8a0015687ee757cd3d48ef1b9",
+    "contextHashes": {
+      "hazard": "f8928ecc94aaf2aa31d610c4ac8c787384d3c7e4dac1a1e3362f0e7b92f10cd3",
+      "clause": "97a40563b612b68e772f5b7eeabe667f2acd1ee7405eea79428b4577f8294d8b"
+    },
+    "checkedAt": "2026-09-10T14:09:46+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "hazard 为未正确穿戴劳动保护用品上岗；安全生产法第四十五条要求监督、教育从业人员按照使用规则佩戴、使用，直接适用。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_APPLICABLE"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

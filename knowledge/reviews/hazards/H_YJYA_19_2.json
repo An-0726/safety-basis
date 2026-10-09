@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJYA_19_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4a8d946ceeb6cb89edeb30c8395a736ea1c6889735c352770acf8773376ddf0b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_94513D846938CF777AEDC43F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c954028830935dc0a67a387a7f6c64931da0ffece61ea0a8a1db51131b54cbf7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以卡片规定内容逐项补齐替代泛化整改。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "应急处置卡应当规定重点岗位、人员的应急处置程序和措施，以及相关联络人员和联系方式，便于从业人员携带。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJYA_19_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_94513D846938CF777AEDC43F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c954028830935dc0a67a387a7f6c64931da0ffece61ea0a8a1db51131b54cbf7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，应急处置卡未规定重点岗位应急处置程序和联络方式，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJYA_19_2",
+    "keywords": [
+      "应急处置卡未规定重点岗位应急处置程序和联络方式"
+    ],
+    "lifecycle": "active",
+    "measures": "应急处置卡规定重点岗位应急处置程序和联络方式。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "应急处置卡未规定重点岗位应急处置程序和联络方式"
+  }
 }

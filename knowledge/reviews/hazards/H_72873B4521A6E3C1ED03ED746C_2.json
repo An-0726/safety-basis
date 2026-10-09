@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_72873B4521A6E3C1ED03ED746C_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "043f770d95d73ce1624ad9921b841f3db19a9e330613a48895998305f3cbc126",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_F40B6A6E916BEF8B42FA9E1B"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "ee373469fdd62ee7dba171203d4bdaf86a5d4eea843418f69e422943b3dd69b5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当在生产区域显著位置设置安全风险公告栏，公布安全生产主要风险点、风险类别、风险等级、可能导致的事故类型和后果、管控措施、管控责任人和应急措施。公告内容应当及时更新并建立档案。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_72873B4521A6E3C1ED03ED746C_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F40B6A6E916BEF8B42FA9E1B"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "ee373469fdd62ee7dba171203d4bdaf86a5d4eea843418f69e422943b3dd69b5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于南京市行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：南京市行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未在生产区域显著位置设置安全风险公告栏，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_72873B4521A6E3C1ED03ED746C_2",
+    "keywords": [
+      "生产经营单位未在生产区域显著位置设置安全风险公告栏"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位在生产区域显著位置设置安全风险公告栏。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未在生产区域显著位置设置安全风险公告栏"
+  }
 }

@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_52_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f63f48c6c9ace26aa35987fbe2a66de44ce724fa7f8d9f650bbd0d2d739e6e6c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_7EC83C4A941BAE7C1716286B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "113571d3c2fca89f7ad29be9bfcfd02f8d3766d6ec10162eb6e18a34af7a65d0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "供电企业应当对供电设施、线路定期检测，及时更换、改造老化供电设施和线路，加强用电管理，开展电气消防安全检查，对违反用电安全的行为及时予以制止，对电气火灾隐患及时督促整改。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_52_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_7EC83C4A941BAE7C1716286B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "113571d3c2fca89f7ad29be9bfcfd02f8d3766d6ec10162eb6e18a34af7a65d0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，供电企业未对供电设施、线路定期检测，及时更换、改造老化供电设施和线路，加强用电管理，开展电气消防安全检查等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_52_3",
+    "keywords": [
+      "供电企业未对供电设施",
+      "线路定期检测",
+      "及时更换",
+      "改造老化供电设施和线路",
+      "加强用电管理",
+      "开展电气消防安全检查等"
+    ],
+    "lifecycle": "active",
+    "measures": "供电企业对供电设施、线路定期检测，及时更换、改造老化供电设施和线路，加强用电管理，开展电气消防安全检查等；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "供电企业未对供电设施、线路定期检测，及时更换、改造老化供电设施和线路，加强用电管理，开展电气消防安全检查等"
+  }
 }

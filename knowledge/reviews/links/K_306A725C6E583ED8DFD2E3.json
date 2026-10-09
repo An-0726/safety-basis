@@ -5,17 +5,38 @@
   "decision": "verified",
   "reviewedContentHash": "6a5c5535153488dd0aa635af812c970813839fe04c32eb24e2b8cc963579d97a",
   "contextHashes": {
-    "hazard": "136e7571508826fc6d59c96a615f58f860eea56387b7429d2f367ecb1a20f3b5",
+    "hazard": "e17c2cffba6c828cf99cb78d651eefbbf977635ae9c93651e0d90b7aac9e79cb",
     "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
   },
-  "checkedAt": "2026-09-10",
-  "reviewer": "ZCode-DeepSeek",
-  "reason": "《安全生产法》第四十二条第一款禁止危险物品场所与员工宿舍同建筑，属上位法一般规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第6.3条承担。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_306A725C6E583ED8DFD2E3",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "6a5c5535153488dd0aa635af812c970813839fe04c32eb24e2b8cc963579d97a",
+    "contextHashes": {
+      "hazard": "136e7571508826fc6d59c96a615f58f860eea56387b7429d2f367ecb1a20f3b5",
+      "clause": "d329e4cd1d6f4efe77bd2f2bdb89f3f63e796b3796729851c82207096ab2f22e"
+    },
+    "checkedAt": "2026-09-10",
+    "reviewer": "ZCode-DeepSeek",
+    "reason": "《安全生产法》第四十二条第一款禁止危险物品场所与员工宿舍同建筑，属上位法一般规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第6.3条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

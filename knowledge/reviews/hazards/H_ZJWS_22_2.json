@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_22_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "6ff4a7fdbcee7ca04ed8a0da28e02e74fabf8e37c4f377e0f149eb4abde13be8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_091DC6321AA3CBE6A8025BFD"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f325a4aa4359432b2abfdc051001eeb5a5ff048865442a825a1380116349ea86",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留治理后仍未达标的停作业触发条件，描述直接呈现未达标而继续作业。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "仍然达不到国家职业卫生标准和卫生要求的，必须停止存在职业病危害因素的作业",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_22_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_091DC6321AA3CBE6A8025BFD"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f325a4aa4359432b2abfdc051001eeb5a5ff048865442a825a1380116349ea86",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位经治理仍达不到职业卫生标准未停止职业病危害作业，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_22_2",
+    "keywords": [
+      "用人单位经治理仍达不到职业卫生标准未停止职业病危害作业"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位经治理仍达不到职业卫生标准停止职业病危害作业。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位经治理仍达不到职业卫生标准未停止职业病危害作业"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_87B9C4E0DA4B11593CBEA900B1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a338e3cfa2f324786f366f8e389c2f287cf5185acf15a069ff4d3d0f7790a63e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "2ef8b86f2afeb9b8c0e8fbe5a0cd8b9991b5ffb735609218d8caa248ba8ea4ad",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩标题，用同条明确预案、备案及装备缺项。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（一）制定应急救援预案，依法报负有安全生产监督管理职责的部门备案，并根据应急救援预案配备必要的应急救援装备和器材。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_87B9C4E0DA4B11593CBEA900B1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "2ef8b86f2afeb9b8c0e8fbe5a0cd8b9991b5ffb735609218d8caa248ba8ea4ad",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，生产经营单位未根据本单位事故预防重点，落实制定应急救援预案等安全生产应急管理措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_87B9C4E0DA4B11593CBEA900B1_1",
+    "keywords": [
+      "生产经营单位未根据本单位事故预防重点",
+      "落实制定应急救援预案等安全生产应急管理措施"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位根据本单位事故预防重点，落实制定应急救援预案等安全生产应急管理措施。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "生产经营单位未根据本单位事故预防重点，落实制定应急救援预案等安全生产应急管理措施"
+  }
 }

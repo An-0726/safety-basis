@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_48_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fb2c44797b0bc03663979e01b3796a20015fc6de451483b8e81b39494e6c437a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_826043DD7F4D898A0B930E2A"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "2a7c6e6908c9eecf4e3dac1aa21d0b8258ffeb9062c9703c780af820413354a5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定气瓶充装单位，培训考核和记录存档均落实。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "气瓶充装单位应当对气瓶安全总监和气瓶安全员进行法律法规、标准和专业知识培训、考核，同时对培训、考核情况予以记录并存档备查。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_48_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_826043DD7F4D898A0B930E2A"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "2a7c6e6908c9eecf4e3dac1aa21d0b8258ffeb9062c9703c780af820413354a5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，气瓶充装单位未对安全总监和安全员进行培训考核并记录存档，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_48_1",
+    "keywords": [
+      "气瓶充装单位未对安全总监和安全员进行培训考核并记录存档"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶充装单位对安全总监和安全员进行培训考核并记录存档。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶充装单位未对安全总监和安全员进行培训考核并记录存档"
+  }
 }

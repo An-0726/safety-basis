@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C5D6516772FFBBB55CE07F3DB4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f23444432fba01846251186113f57a560459666ae2a012b176275037c027b2a6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_6590FF51614436C4C1A43A40"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "8d1f014e18b806d65119a1145448a20745673759fa7bd86be743844a5e67b366",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "消防安全重点单位和城乡居民社区应当按照规定建立微型消防站，配备必要的人员、消防装备和器材",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C5D6516772FFBBB55CE07F3DB4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_6590FF51614436C4C1A43A40"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "8d1f014e18b806d65119a1145448a20745673759fa7bd86be743844a5e67b366",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，消防安全重点单位和城乡居民社区未按照规定建立微型消防站，配备必要的人员、消防装备和器材，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_C5D6516772FFBBB55CE07F3DB4_1",
+    "keywords": [
+      "消防安全重点单位和城乡居民社区未按照规定建立微型消防站",
+      "配备必要的人员",
+      "消防装备和器材"
+    ],
+    "lifecycle": "active",
+    "measures": "消防安全重点单位和城乡居民社区按照规定建立微型消防站，配备必要的人员、消防装备和器材；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "消防安全重点单位和城乡居民社区未按照规定建立微型消防站，配备必要的人员、消防装备和器材"
+  }
 }

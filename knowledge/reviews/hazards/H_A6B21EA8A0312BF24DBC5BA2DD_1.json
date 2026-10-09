@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_A6B21EA8A0312BF24DBC5BA2DD_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "86c0108128e1369b85a3934c1a2a85ce0b7d15862495b4d2266809c931b2679d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_99E663E732DC84A0B5F008ED"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "cb0d0f69fec809baf53ebfc0c1a16a1ade8052acf1c1e6b88a169d158eb5f6a8",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "桥梁、隧道、综合管廊的经营者、管理者应当定期检查通风排烟设施和消防设施，保持设施完好。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A6B21EA8A0312BF24DBC5BA2DD_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_99E663E732DC84A0B5F008ED"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "cb0d0f69fec809baf53ebfc0c1a16a1ade8052acf1c1e6b88a169d158eb5f6a8",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，桥梁、隧道、综合管廊的经营者、管理者未定期检查通风排烟设施和消防设施，保持设施完好，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_A6B21EA8A0312BF24DBC5BA2DD_1",
+    "keywords": [
+      "桥梁",
+      "隧道",
+      "综合管廊的经营者",
+      "管理者未定期检查通风排烟设施和消防设施",
+      "保持设施完好"
+    ],
+    "lifecycle": "active",
+    "measures": "桥梁、隧道、综合管廊的经营者、管理者定期检查通风排烟设施和消防设施，保持设施完好；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "桥梁、隧道、综合管廊的经营者、管理者未定期检查通风排烟设施和消防设施，保持设施完好"
+  }
 }

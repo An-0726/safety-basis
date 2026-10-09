@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_92_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "559f0592c41cb878a244bebf6c2f292df305b5e5497d5b32740da771d8cd6e09",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B0F3E3F31FFD5DC61D397586"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "900fa0bb14843fa0fd5495a8b628846df02ebc58e84d74f67143584043ce2d7c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "教育对象限定作业人员并保留使用指导监督职责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "起重机械使用单位应当按照前款规定，结合本单位实际，细化制定《起重机械安全员守则》。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_92_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B0F3E3F31FFD5DC61D397586"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "900fa0bb14843fa0fd5495a8b628846df02ebc58e84d74f67143584043ce2d7c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：起重机械使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，起重机械使用单位未细化制定起重机械安全员守则，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_92_1",
+    "keywords": [
+      "起重机械使用单位未细化制定起重机械安全员守则"
+    ],
+    "lifecycle": "active",
+    "measures": "起重机械使用单位细化制定起重机械安全员守则。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "起重机械使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "起重机械使用单位未细化制定起重机械安全员守则"
+  }
 }

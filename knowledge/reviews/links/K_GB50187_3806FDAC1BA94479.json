@@ -1,9 +1,8 @@
 {
-  "checkedAt": "2026-09-11",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "97af21c0b71ff37dce58a2a205cbd9bcb6f573e3d0ac9af35d7e45f224175d1d",
-    "hazard": "8e8452850236ee6928ff4c5bd73d3a8841b8c626ce3b13bc3800807901cb8e3c",
-    "link": "b421bb1116333860c48aba4c074d1be92163d25d6790ff0fcabb29d859c0e154"
+    "hazard": "0f1a47541cba7ea4b3212bbe9e627bf002c08e2a8c1a91fd3705f1d51ace8a31",
+    "clause": "97af21c0b71ff37dce58a2a205cbd9bcb6f573e3d0ac9af35d7e45f224175d1d"
   },
   "decision": "verified",
   "entityId": "K_GB50187_3806FDAC1BA94479",
@@ -11,13 +10,36 @@
   "evidenceRefs": [
     "E_GB50187_2012"
   ],
-  "reason": "该隐患针对工业企业场地缺少完整、有效的雨水排水系统；GB 50187-2012 第7.4.1条直接要求场地设置完整、有效的雨水排水系统，事实与条文直接对应。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "DRAINAGE_DIRECT_PROVISION"
   ],
   "reviewType": "applicability",
   "reviewedContentHash": "b421bb1116333860c48aba4c074d1be92163d25d6790ff0fcabb29d859c0e154",
-  "reviewer": "ChatGPT",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-11",
+    "contextHashes": {
+      "clause": "97af21c0b71ff37dce58a2a205cbd9bcb6f573e3d0ac9af35d7e45f224175d1d",
+      "hazard": "8e8452850236ee6928ff4c5bd73d3a8841b8c626ce3b13bc3800807901cb8e3c",
+      "link": "b421bb1116333860c48aba4c074d1be92163d25d6790ff0fcabb29d859c0e154"
+    },
+    "decision": "verified",
+    "entityId": "K_GB50187_3806FDAC1BA94479",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_GB50187_2012"
+    ],
+    "reason": "该隐患针对工业企业场地缺少完整、有效的雨水排水系统；GB 50187-2012 第7.4.1条直接要求场地设置完整、有效的雨水排水系统，事实与条文直接对应。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "DRAINAGE_DIRECT_PROVISION"
+    ],
+    "reviewType": "applicability",
+    "reviewedContentHash": "b421bb1116333860c48aba4c074d1be92163d25d6790ff0fcabb29d859c0e154",
+    "reviewer": "ChatGPT",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -5,17 +5,38 @@
   "decision": "verified",
   "reviewedContentHash": "05c1bd5ab702985c06ab50940290333de4953a4a27121af20a1982ecf13761f9",
   "contextHashes": {
-    "hazard": "42468e325aba06c3975089f22a60da130e7ee5eb2ec206806bf1e03dda2758de",
+    "hazard": "643fbd332df7dcc3e013e075d1c9e8413627c54be8d27ebf5f0d5a79af8a3dae",
     "clause": "abfdef3a692d4d5aaaf9ef30db5fc8fd1011a6018a2df93e9702efe37822c383"
   },
-  "checkedAt": "2026-09-10",
-  "reviewer": "ZCode-DeepSeek",
-  "reason": "《消防法》第二十八条禁止占用、堵塞、封闭疏散通道、安全出口、消防车通道，属上位法一般禁止性规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第10.4条承担。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_C64231CB9EDEE6B0503778",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "05c1bd5ab702985c06ab50940290333de4953a4a27121af20a1982ecf13761f9",
+    "contextHashes": {
+      "hazard": "42468e325aba06c3975089f22a60da130e7ee5eb2ec206806bf1e03dda2758de",
+      "clause": "abfdef3a692d4d5aaaf9ef30db5fc8fd1011a6018a2df93e9702efe37822c383"
+    },
+    "checkedAt": "2026-09-10",
+    "reviewer": "ZCode-DeepSeek",
+    "reason": "《消防法》第二十八条禁止占用、堵塞、封闭疏散通道、安全出口、消防车通道，属上位法一般禁止性规定，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第10.4条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_9_12_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fedaeb10d8f6db52401ad3643409dc62c0fe56d9dfe48be034c61b7d305bada3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "dd17e94cd633da9ef25da710acc1fb817f840b6e385b9a1a49029db2942f8cc6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确料仓内部导体布置对象，不扩大为一般电气设备。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "大型料仓内部不应有突出的接地导体。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_9_12_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "dd17e94cd633da9ef25da710acc1fb817f840b6e385b9a1a49029db2942f8cc6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，大型料仓内部存在突出的接地导体，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_9_12_1",
+    "keywords": [
+      "大型料仓内部存在突出的接地导体"
+    ],
+    "lifecycle": "active",
+    "measures": "消除大型料仓内部突出的接地导体，使内部导体布置不形成突出部位；顶部进料时同步检查进料口并按要求与仓顶齐平。整改后检查相关线路、电气设备、接地/防静电或保护功能，必要时检测确认并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "大型料仓内部存在突出的接地导体"
+  }
 }

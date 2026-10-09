@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_1CD32DE57049A5BECF92598DAF_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "dc091d7f7ac3d8fc26a58c5fa19348716edd33176b0a2288f51d7d6a4c5a4dfb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_13ECBF8B8A303433C6A48E69"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "d2831731818edecac69386510c704dad240897e8358f8678c3e74bb3839a373e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留医疗机构、放射性及危害严重三个限定，明确设计审查同意先于施工。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "其中，医疗机构放射性职业病危害严重的建设项目的防护设施设 计，应当经卫生行政部门审查同意后，方可施工。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_1CD32DE57049A5BECF92598DAF_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_13ECBF8B8A303433C6A48E69"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "d2831731818edecac69386510c704dad240897e8358f8678c3e74bb3839a373e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，医疗机构放射性职业病危害严重的建设项目，其防护设施设计未经卫生行政部门审查同意即施工，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_1CD32DE57049A5BECF92598DAF_3",
+    "keywords": [
+      "医疗机构放射性职业病危害严重的建设项目",
+      "其防护设施设计未经卫生行政部门审查同意即施工"
+    ],
+    "lifecycle": "active",
+    "measures": "医疗机构放射性职业病危害严重的建设项目，其防护设施设计经卫生行政部门审查同意即施工。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "医疗机构放射性职业病危害严重的建设项目，其防护设施设计未经卫生行政部门审查同意即施工"
+  }
 }

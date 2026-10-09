@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_03BA3BFFA73DDEFE94C3ACED_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f679c0bd60905a4c91f3236a52c06d6155a7da318e34f9e0fc46c93c00c97486",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1D0F5CC97F237FDCC875CD4B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "36bc4e56d9662534297445beaccd64c3f80d8aeb7fe3053bf7b95dce79e09564",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补明制度对象及缺失状态，保留条件和已有可执行措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十二条 储存危险化学品的单位应当建立危险化学品出入库核查、登记制度。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_03BA3BFFA73DDEFE94C3ACED_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1D0F5CC97F237FDCC875CD4B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "36bc4e56d9662534297445beaccd64c3f80d8aeb7fe3053bf7b95dce79e09564",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "经资料、记录及履职情况核查，储存危险化学品的单位未建立危险化学品出入库核查、登记制度。",
+    "id": "H_03BA3BFFA73DDEFE94C3ACED_1",
+    "keywords": [
+      "储存危险化学品的单位未建立危险化学品出入库核查",
+      "登记制度"
+    ],
+    "lifecycle": "active",
+    "measures": "建立并执行危险化学品出入库核查、登记制度，对入库和出库的品名、规格、数量、包装/状态、时间及经办信息进行核查和记录；定期开展账物核对，发现差异及时查明并闭环处理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "储存危险化学品的单位未建立危险化学品出入库核查、登记制度"
+  }
 }

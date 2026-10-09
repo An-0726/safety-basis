@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-26T19:25:36+08:00",
-  "decision": "verified",
   "entityId": "H_5DEC9BD2A03F0399F6D378AFC2_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "99bb81a7cd03be7f1d8a99b3c84202ae5dee71a1d850240435e6d72bd07fd40a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_JS_RISK_RESPONSIBILITY_20260926"
   ],
-  "reason": "风险报告并非事故应急报告，不得混同。",
-  "reviewType": "content",
-  "reviewedContentHash": "6b0297ec2559f23db1334871896909c1c855c9ba744cb96b8d775378448f23e7",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reason": "缩短列举式标题，描述明确报告字段缺失。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "报告内容应当包括较大以上安全风险的名称、风险点、所处位置（场所、部位、环节）、等级、可能导致的事故类型、管控措施等信息。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:25:36+08:00",
+    "decision": "verified",
+    "entityId": "H_5DEC9BD2A03F0399F6D378AFC2_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_JS_RISK_RESPONSIBILITY_20260926"
+    ],
+    "reason": "风险报告并非事故应急报告，不得混同。",
+    "reviewType": "content",
+    "reviewedContentHash": "6b0297ec2559f23db1334871896909c1c855c9ba744cb96b8d775378448f23e7",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内生产经营单位安全风险管理。核直接条款的具体义务、风险等级及触发条件；国家对电力、铁路、民用航空等行业另有规定的，从其规定。",
+    "description": "经资料及履职情况核查，生产经营单位安全风险报告内容未包括较大以上安全风险的名称、风险点、所处位置、等级、可能导致的事故类型、管控措施等信息，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_5DEC9BD2A03F0399F6D378AFC2_3",
+    "keywords": [
+      "生产经营单位安全风险报告内容未包括较大以上安全风险的名称",
+      "风险点",
+      "所处位置",
+      "等级",
+      "可能导致的事故类型",
+      "管控措施等信息"
+    ],
+    "lifecycle": "active",
+    "measures": "按第十四条完整填报较大以上风险名称、风险点、位置、等级、可能事故类型和管控措施。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "\n2026-09-26：风险报告并非事故应急报告，不得混同。",
+    "places": [
+      "江苏省生产经营单位"
+    ],
+    "title": "生产经营单位安全风险报告内容未包括较大以上安全风险的名称、风险点、所处位置、等级、可能导致的事故类型、管控措施等信息"
+  }
 }

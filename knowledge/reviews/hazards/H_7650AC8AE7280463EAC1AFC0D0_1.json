@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_7650AC8AE7280463EAC1AFC0D0_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "590d691fd1f07a2bd915bdfb342dbb0a5bb0bdeb8173f848d0d2caa5e1459856",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_59546CAB0CAC58BE7B1FBA07"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3115c19f50fc6371372b4481aaafefa382bdffdd7906c9693b4fd38e931c3912",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第六条 生产经营单位的从业人员有依法获得安全生产保障的权利，并应当依法履行安全生产方面的义务。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_7650AC8AE7280463EAC1AFC0D0_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_59546CAB0CAC58BE7B1FBA07"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3115c19f50fc6371372b4481aaafefa382bdffdd7906c9693b4fd38e931c3912",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位从业人员未依法履行安全生产方面的义务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_7650AC8AE7280463EAC1AFC0D0_1",
+    "keywords": [
+      "生产经营单位从业人员未依法履行安全生产方面的义务"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位从业人员依法履行安全生产方面的义务。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位从业人员未依法履行安全生产方面的义务"
+  }
 }

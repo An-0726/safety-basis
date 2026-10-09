@@ -1,59 +1,94 @@
 {
-  "checkedAt": "2026-09-30",
-  "decision": "verified",
   "entityId": "H_A9E328C34EF033693BC2FEEF3F_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f380ed6b43ab16e5d9169df2a0f8c64abdc2db1f19c105acf11ac8e23a4797d2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_REMEDIATION_20260930_TSELAW",
     "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
   ],
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_REMEDIATION_20260930_TSELAW",
-      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
-    ],
-    "/places": [
-      "E_REMEDIATION_20260930_TSELAW",
-      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
-    ]
-  },
-  "historySha256": "a2aa1dea69886420f004d0e4d20667a77a13a9faadbffe83a6dd450c6ddab9a3",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "reason": "压缩标题，具体列明禁止出租分支，保留原有条件与可执行措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十八条 特种设备出租单位不得出租未取得许可生产的特种设备或者国家明令淘汰和已经报废的特种设备，以及未按照安全技术规范的要求进行维护保养和未经检验或者检验不合格的特种设备。",
   "previousReview": {
     "checkedAt": "2026-09-30",
     "decision": "verified",
     "entityId": "H_A9E328C34EF033693BC2FEEF3F_1",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_3FC36F6742AAFC66E7F7C26B",
-      "E_REMEDIATION_20260930_TSELAW"
+      "E_REMEDIATION_20260930_TSELAW",
+      "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
-    "reason": "28条列明禁止出租的六类条件，新措施恢复未取得许可并明确国家淘汰、已经报废等设备撤出出租；维护检验补齐不构成报废设备重新出租的例外。",
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_REMEDIATION_20260930_TSELAW",
+        "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
+      ],
+      "/places": [
+        "E_REMEDIATION_20260930_TSELAW",
+        "E_SCOPE_20260930_TSELAW_CURRENT_STATUS"
+      ]
+    },
+    "historySha256": "a2aa1dea69886420f004d0e4d20667a77a13a9faadbffe83a6dd450c6ddab9a3",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReview": {
+      "checkedAt": "2026-09-30",
+      "decision": "verified",
+      "entityId": "H_A9E328C34EF033693BC2FEEF3F_1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_3FC36F6742AAFC66E7F7C26B",
+        "E_REMEDIATION_20260930_TSELAW"
+      ],
+      "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+      "reason": "28条列明禁止出租的六类条件，新措施恢复未取得许可并明确国家淘汰、已经报废等设备撤出出租；维护检验补齐不构成报废设备重新出租的例外。",
+      "reviewType": "content",
+      "reviewedContentHash": "292209dde4ecf1810a2f69fc8b09671b813fdf48851aa003b520c33d6ec7b30e",
+      "reviewer": "Codex逐项内容复核20260930"
+    },
+    "previousReviewFileSha256": "0db8248f6d0616bc9af80bc5a54ae70573475c927d8fea2deab0ea4cbce9e5f8",
+    "reason": "第28条明确出租单位及出租行为，禁止未许可生产、明令淘汰、已报废、未按规范维护保养、未经检验或检验不合格六类对象出租。最终conditions完整列出每一独立分支，places限出租主体和活动，并准确说明维护检验资料不能消除淘汰/报废状态；没有混入一般使用、生产或充装责任。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "content",
-    "reviewedContentHash": "292209dde4ecf1810a2f69fc8b09671b813fdf48851aa003b520c33d6ec7b30e",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "92cf44565284f6ee14b98774a55b583f216f5f9e40c85d74d5724d8dce2f6b72",
+    "reviewedFields": [
+      "/conditions",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "仅适用于特种设备出租单位及其实际出租活动。不得出租未取得许可生产、国家明令淘汰、已经报废、未按安全技术规范维护保养、未经检验或者检验不合格的特种设备。应逐项核对实际涉及的禁止分支；补齐维护检验资料不能使淘汰或报废设备恢复出租资格。",
+      "/places": [
+        "特种设备出租单位及出租活动"
+      ]
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930"
   },
-  "previousReviewFileSha256": "0db8248f6d0616bc9af80bc5a54ae70573475c927d8fea2deab0ea4cbce9e5f8",
-  "reason": "第28条明确出租单位及出租行为，禁止未许可生产、明令淘汰、已报废、未按规范维护保养、未经检验或检验不合格六类对象出租。最终conditions完整列出每一独立分支，places限出租主体和活动，并准确说明维护检验资料不能消除淘汰/报废状态；没有混入一般使用、生产或充装责任。",
-  "reviewEvidence": {
-    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
-    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
-    "profileAdmission": false,
-    "siteFactsVerified": false,
-    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
-  },
-  "reviewType": "content",
-  "reviewedContentHash": "92cf44565284f6ee14b98774a55b583f216f5f9e40c85d74d5724d8dce2f6b72",
-  "reviewedFields": [
-    "/conditions",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "仅适用于特种设备出租单位及其实际出租活动。不得出租未取得许可生产、国家明令淘汰、已经报废、未按安全技术规范维护保养、未经检验或者检验不合格的特种设备。应逐项核对实际涉及的禁止分支；补齐维护检验资料不能使淘汰或报废设备恢复出租资格。",
-    "/places": [
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "仅适用于特种设备出租单位及其实际出租活动。不得出租未取得许可生产、国家明令淘汰、已经报废、未按安全技术规范维护保养、未经检验或者检验不合格的特种设备。应逐项核对实际涉及的禁止分支；补齐维护检验资料不能使淘汰或报废设备恢复出租资格。",
+    "description": "经资料及履职情况核查，特种设备出租单位出租未取得许可生产的特种设备或者国家明令淘汰和已经报废的特种设备等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_A9E328C34EF033693BC2FEEF3F_1",
+    "keywords": [
+      "特种设备出租单位出租未取得许可生产的特种设备或者国家明令淘汰和已经报废的特种设备等"
+    ],
+    "lifecycle": "active",
+    "measures": "停止出租未取得许可生产、国家明令淘汰、已经报废、未按安全技术规范维护保养、未经检验或者检验不合格的特种设备。逐台核查出租设备的生产许可、维护保养和检验资料，撤出不具备出租条件的设备，并留存核查及处置记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
       "特种设备出租单位及出租活动"
-    ]
-  },
-  "reviewer": "Codex十三项源范围独立复核20260930"
+    ],
+    "title": "特种设备出租单位出租未取得许可生产的特种设备或者国家明令淘汰和已经报废的特种设备等"
+  }
 }

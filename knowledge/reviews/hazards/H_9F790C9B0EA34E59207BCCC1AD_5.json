@@ -1,58 +1,110 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_9F790C9B0EA34E59207BCCC1AD_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2a52795cc89ae49b6ebdcb124b7cd8366460094a69a4eab4d96b7632ea21df23",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "江苏省生产经营单位特种作业人员，按国家有关规定专门培训考核取得相应资格；不能套第一、二款高危单位负责人行业限制。",
-  "reviewType": "content",
-  "reviewedContentHash": "79a88c6a44a510adee23e89ae5c080ac7be3fb11ea5bbc6b119c49450a278264",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第二十二条第三款",
-  "reviewedFields": [
-    "/conditions",
-    "/measures",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "适用于江苏省行政区域内生产经营单位的特种作业人员，应按国家有关规定确认作业类别及相应资格；第二十二条第三款不受第一款所列高危行业负责人和安全管理人员的行业范围限制。",
-    "/measures": "按国家有关规定接受专门的安全作业培训，经考核合格取得相应资格后方可上岗作业；核对作业类别、培训考核及资格与实际岗位对应情况。",
-    "/places": [
-      "江苏省行政区域内生产经营单位特种作业人员培训、考核、资格和上岗管理活动"
-    ]
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_L020"
-    ],
-    "/measures": [
-      "E_L020"
-    ],
-    "/places": [
-      "E_L020"
-    ]
-  },
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "H_9F790C9B0EA34E59207BCCC1AD_5",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+      "E_L020"
     ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reason": "江苏省生产经营单位特种作业人员，按国家有关规定专门培训考核取得相应资格；不能套第一、二款高危单位负责人行业限制。",
     "reviewType": "content",
-    "reviewedContentHash": "545ed85d849f7e7a2aa75a9e5511d0ad166a5063282b87bc3ecac155a2bc857c",
-    "reviewer": "Codex正式核验批次20260913"
+    "reviewedContentHash": "79a88c6a44a510adee23e89ae5c080ac7be3fb11ea5bbc6b119c49450a278264",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第二十二条第三款",
+    "reviewedFields": [
+      "/conditions",
+      "/measures",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于江苏省行政区域内生产经营单位的特种作业人员，应按国家有关规定确认作业类别及相应资格；第二十二条第三款不受第一款所列高危行业负责人和安全管理人员的行业范围限制。",
+      "/measures": "按国家有关规定接受专门的安全作业培训，经考核合格取得相应资格后方可上岗作业；核对作业类别、培训考核及资格与实际岗位对应情况。",
+      "/places": [
+        "江苏省行政区域内生产经营单位特种作业人员培训、考核、资格和上岗管理活动"
+      ]
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_L020"
+      ],
+      "/measures": [
+        "E_L020"
+      ],
+      "/places": [
+        "E_L020"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_9F790C9B0EA34E59207BCCC1AD_5",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_2271E33C546D1C1CC07A7A2D"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "545ed85d849f7e7a2aa75a9e5511d0ad166a5063282b87bc3ecac155a2bc857c",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "4d03f4b551156ef337dfbccd12eae342d9abcbe316a4093e1954aa1ddc5c909d",
+    "historySha256": "56cc6b97b04856edef22ab05785eb24325a30611762656995d0b127690291520",
+    "previousEntity": {
+      "aliases": [],
+      "category": "安全教育培训",
+      "conditions": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+      "description": "经资料和执行情况核查，生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_9F790C9B0EA34E59207BCCC1AD_5",
+      "keywords": [
+        "生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训",
+        "考核合格并取得相应资格",
+        "即上岗作业"
+      ],
+      "lifecycle": "active",
+      "measures": "生产经营单位的特种作业人员按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动"
+      ],
+      "title": "生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业"
+    },
+    "previousEntityFileSha256": "53ff35331299028a7df70ed905fa4cf093b9b37bfdea6676756eaacf56ae9b1b",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第二十二条第三款",
+      "completeOfficialQuote": "第二十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。\n前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。\n\n生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
+      "scopeDecision": "江苏省生产经营单位特种作业人员，按国家有关规定专门培训考核取得相应资格；不能套第一、二款高危单位负责人行业限制。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
   },
-  "previousReviewFileSha256": "4d03f4b551156ef337dfbccd12eae342d9abcbe316a4093e1954aa1ddc5c909d",
-  "historySha256": "56cc6b97b04856edef22ab05785eb24325a30611762656995d0b127690291520",
-  "previousEntity": {
+  "previousDefinition": {
     "aliases": [],
     "category": "安全教育培训",
-    "conditions": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+    "conditions": "适用于江苏省行政区域内生产经营单位的特种作业人员，应按国家有关规定确认作业类别及相应资格；第二十二条第三款不受第一款所列高危行业负责人和安全管理人员的行业范围限制。",
     "description": "经资料和执行情况核查，生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业，实际状态与直接依据规定的安全要求不一致。",
     "id": "H_9F790C9B0EA34E59207BCCC1AD_5",
     "keywords": [
@@ -61,29 +113,13 @@
       "即上岗作业"
     ],
     "lifecycle": "active",
-    "measures": "生产经营单位的特种作业人员按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "measures": "按国家有关规定接受专门的安全作业培训，经考核合格取得相应资格后方可上岗作业；核对作业类别、培训考核及资格与实际岗位对应情况。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动"
+      "江苏省行政区域内生产经营单位特种作业人员培训、考核、资格和上岗管理活动"
     ],
     "title": "生产经营单位的特种作业人员未按照国家有关规定接受专门的安全作业培训、考核合格并取得相应资格，即上岗作业"
-  },
-  "previousEntityFileSha256": "53ff35331299028a7df70ed905fa4cf093b9b37bfdea6676756eaacf56ae9b1b",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
-    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
-    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
-    "lawVersionId": "L020",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
-    "operativeLocator": "第二十二条第三款",
-    "completeOfficialQuote": "第二十二条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位的主要负责人和安全生产管理人员，应当由主管的负有安全生产监督管理职责的部门对其安全生产知识和管理能力考核合格。\n前款规定的生产经营单位的主要负责人和安全生产管理人员，新任职的应当自任职之日起六个月内通过安全生产知识和管理能力考核；已经考核合格的，应当按照有关规定进行安全生产知识再培训；发生生产安全事故造成人员死亡的，应当重新参加安全生产知识培训并考核合格。\n\n生产经营单位的特种作业人员，应当按照国家有关规定接受专门的安全作业培训，经考核合格取得相应资格，方可上岗作业。",
-    "scopeDecision": "江苏省生产经营单位特种作业人员，按国家有关规定专门培训考核取得相应资格；不能套第一、二款高危单位负责人行业限制。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_E253AB88D71B101DAFBBD0D0FF_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "3da8ae1fbcde77b6c4e40745c4ec6714104a24b3cf5afc28fa88d288a98a1f6b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_F1686BBEDC9CFC6268FCC42D"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "a8ca7cf7d3c9cf7ce05648d16efeccb4d53325b9384d1a5bb6e8aa3f46cdc2ab",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确重大隐患记录对象，避免把记录形成时间短误判为保存期限不足。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "重大事故隐患排查治理情况记录保存期限不得少于五年。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_E253AB88D71B101DAFBBD0D0FF_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_F1686BBEDC9CFC6268FCC42D"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "a8ca7cf7d3c9cf7ce05648d16efeccb4d53325b9384d1a5bb6e8aa3f46cdc2ab",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，重大事故隐患排查治理情况记录保存期限少于五年，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_E253AB88D71B101DAFBBD0D0FF_2",
+    "keywords": [
+      "重大事故隐患排查治理情况记录保存期限少于五年"
+    ],
+    "lifecycle": "active",
+    "measures": "将重大事故隐患排查治理相关记录的保存期限调整为不少于五年，补齐归档、保管和查询机制，确保隐患发现、治理、复查全过程可追溯。整改后通过制度文件、人员能力、履职记录和实际执行情况复核闭环效果。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "重大事故隐患排查治理情况记录保存期限少于五年"
+  }
 }

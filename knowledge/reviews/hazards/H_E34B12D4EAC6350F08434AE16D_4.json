@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_E34B12D4EAC6350F08434AE16D_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "290d447ea03d92e2ae5b902fac37b4a4484fcb4951870c2fd13ce73ec6a38967",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_1A51571EE6750DBEA9142647"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "5e98f925a19a797681fdbd3c8c89424fe86940b61077190fda31dd94cb55ed9f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "监理单位应当按照法律、法规、工程建设强制性标准履行建设工程消防安全管理的监理职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_E34B12D4EAC6350F08434AE16D_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1A51571EE6750DBEA9142647"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "5e98f925a19a797681fdbd3c8c89424fe86940b61077190fda31dd94cb55ed9f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，监理单位未按照法律、法规、工程建设强制性标准履行建设工程消防安全管理的监理职责，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_E34B12D4EAC6350F08434AE16D_4",
+    "keywords": [
+      "监理单位未按照法律",
+      "法规",
+      "工程建设强制性标准履行建设工程消防安全管理的监理职责"
+    ],
+    "lifecycle": "active",
+    "measures": "监理单位按照法律、法规、工程建设强制性标准履行建设工程消防安全管理的监理职责。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "监理单位未按照法律、法规、工程建设强制性标准履行建设工程消防安全管理的监理职责"
+  }
 }

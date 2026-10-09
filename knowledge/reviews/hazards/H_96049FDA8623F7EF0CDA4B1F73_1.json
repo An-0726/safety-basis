@@ -1,98 +1,132 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_96049FDA8623F7EF0CDA4B1F73_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "54634f985b7b4cd0a88b66f40b3f8dab710f03078a5e454282dbb3f5b684569e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "江苏省生产经营单位主要负责人，履行本条地方附加职责；五项频次/事故触发分别核实，不借处罚额替代职责。",
-  "reviewType": "content",
-  "reviewedContentHash": "43b6548c8f4c1d1613935d76b406604d2398c755b8d3e143d8dd2232c82e6b1c",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第十五条全条第（一）至（五）项",
-  "reviewedFields": [
-    "/category",
-    "/conditions",
-    "/description",
-    "/measures",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/category": "安全管理",
-    "/conditions": "适用于江苏省行政区域内生产经营单位的主要负责人，分别核查第十五条五项地方附加职责：每季度至少组织并参与一次全面检查；每年至少组织并参与一次事故应急救援演练；每年至少组织一次全面安全风险辨识并完善管控措施；发生生产安全事故时迅速抢救、及时如实报告并做好善后和配合调查；每年向从业人员报告或通报安全生产工作及本人履职情况。",
-    "/description": "江苏省生产经营单位主要负责人存在未履行第十五条所列职责的情形，应逐项明确缺失职责及相应季度、年度或事故发生触发条件。",
-    "/measures": "按第十五条五项职责分别落实季度全面检查及问题研究解决、年度应急救援演练、年度全面安全风险辨识及管控措施、事故发生后的抢救报告善后与配合调查、年度履职报告或通报并接受从业人员监督；按各项频次或事故触发条件核查。",
-    "/places": [
-      "江苏省行政区域内生产经营单位主要负责人履职管理活动"
-    ]
-  },
-  "fieldEvidenceRefs": {
-    "/category": [
-      "E_L020"
-    ],
-    "/conditions": [
-      "E_L020"
-    ],
-    "/description": [
-      "E_L020"
-    ],
-    "/measures": [
-      "E_L020"
-    ],
-    "/places": [
-      "E_L020"
-    ]
-  },
+  "reason": "标题避免只引用条号；原措施已按五项职责列明动作和频次，不采纳其为单纯复述的评价。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；",
   "previousReview": {
-    "checkedAt": "2026-09-14",
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "H_96049FDA8623F7EF0CDA4B1F73_1",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_E6570EE844CE96C412FA22E6"
+      "E_L020"
     ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reason": "江苏省生产经营单位主要负责人，履行本条地方附加职责；五项频次/事故触发分别核实，不借处罚额替代职责。",
     "reviewType": "content",
-    "reviewedContentHash": "9357497bbf8b308fbe48faf6fbaffe81cdd0788fd70f4c839020e5b77d44d194",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "reviewedContentHash": "43b6548c8f4c1d1613935d76b406604d2398c755b8d3e143d8dd2232c82e6b1c",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第十五条全条第（一）至（五）项",
+    "reviewedFields": [
+      "/category",
+      "/conditions",
+      "/description",
+      "/measures",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/category": "安全管理",
+      "/conditions": "适用于江苏省行政区域内生产经营单位的主要负责人，分别核查第十五条五项地方附加职责：每季度至少组织并参与一次全面检查；每年至少组织并参与一次事故应急救援演练；每年至少组织一次全面安全风险辨识并完善管控措施；发生生产安全事故时迅速抢救、及时如实报告并做好善后和配合调查；每年向从业人员报告或通报安全生产工作及本人履职情况。",
+      "/description": "江苏省生产经营单位主要负责人存在未履行第十五条所列职责的情形，应逐项明确缺失职责及相应季度、年度或事故发生触发条件。",
+      "/measures": "按第十五条五项职责分别落实季度全面检查及问题研究解决、年度应急救援演练、年度全面安全风险辨识及管控措施、事故发生后的抢救报告善后与配合调查、年度履职报告或通报并接受从业人员监督；按各项频次或事故触发条件核查。",
+      "/places": [
+        "江苏省行政区域内生产经营单位主要负责人履职管理活动"
+      ]
+    },
+    "fieldEvidenceRefs": {
+      "/category": [
+        "E_L020"
+      ],
+      "/conditions": [
+        "E_L020"
+      ],
+      "/description": [
+        "E_L020"
+      ],
+      "/measures": [
+        "E_L020"
+      ],
+      "/places": [
+        "E_L020"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_96049FDA8623F7EF0CDA4B1F73_1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_E6570EE844CE96C412FA22E6"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "9357497bbf8b308fbe48faf6fbaffe81cdd0788fd70f4c839020e5b77d44d194",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "da14014e494e1b020590ecbaf72ffaac8c5b5f6ee03fa4796e54c6e43f3a6deb",
+    "historySha256": "052ce8dc3c694e93357f9230d0047e2ce01efc19a94c29bfbd5017fbe0aa3479",
+    "previousEntity": {
+      "aliases": [],
+      "category": "设备设施",
+      "conditions": "适用于本隐患所述场所、设备及作业活动。",
+      "description": "第十五条生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责： （一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；（第十五条）。",
+      "id": "H_96049FDA8623F7EF0CDA4B1F73_1",
+      "keywords": [
+        "生产经营单位的主要负责人未依法履行安全生产管理职责"
+      ],
+      "lifecycle": "active",
+      "measures": "按《江苏省安全生产条例》第15条逐项落实主要负责人地方附加职责，包括季度全面检查、年度应急演练、年度风险辨识评估、事故抢救报告及年度履职报告，并分别留存记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "江苏省行政区域内生产经营单位及相关安全管理活动",
+        "通用场所"
+      ],
+      "title": "主要负责人未履行《江苏省安全生产条例》第15条规定的地方附加安全生产职责"
+    },
+    "previousEntityFileSha256": "9e3d305b68cd82b60105107e73eff4c8fa3afc0efea530f51262d56a905af613",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第十五条全条第（一）至（五）项",
+      "completeOfficialQuote": "第十五条 生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责：\n\n（一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；\n\n（二）每年至少组织并参与一次生产安全事故应急救援演练；\n\n（三）每年至少组织一次全面的安全风险辨识，制定完善管控措施；\n（四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理；\n\n（五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
+      "scopeDecision": "江苏省生产经营单位主要负责人，履行本条地方附加职责；五项频次/事故触发分别核实，不借处罚额替代职责。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
   },
-  "previousReviewFileSha256": "da14014e494e1b020590ecbaf72ffaac8c5b5f6ee03fa4796e54c6e43f3a6deb",
-  "historySha256": "052ce8dc3c694e93357f9230d0047e2ce01efc19a94c29bfbd5017fbe0aa3479",
-  "previousEntity": {
+  "previousDefinition": {
     "aliases": [],
-    "category": "设备设施",
-    "conditions": "适用于本隐患所述场所、设备及作业活动。",
-    "description": "第十五条生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责： （一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；（第十五条）。",
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内生产经营单位的主要负责人，分别核查第十五条五项地方附加职责：每季度至少组织并参与一次全面检查；每年至少组织并参与一次事故应急救援演练；每年至少组织一次全面安全风险辨识并完善管控措施；发生生产安全事故时迅速抢救、及时如实报告并做好善后和配合调查；每年向从业人员报告或通报安全生产工作及本人履职情况。",
+    "description": "江苏省生产经营单位主要负责人存在未履行第十五条所列职责的情形，应逐项明确缺失职责及相应季度、年度或事故发生触发条件。",
     "id": "H_96049FDA8623F7EF0CDA4B1F73_1",
     "keywords": [
       "生产经营单位的主要负责人未依法履行安全生产管理职责"
     ],
     "lifecycle": "active",
-    "measures": "按《江苏省安全生产条例》第15条逐项落实主要负责人地方附加职责，包括季度全面检查、年度应急演练、年度风险辨识评估、事故抢救报告及年度履职报告，并分别留存记录。",
+    "measures": "按第十五条五项职责分别落实季度全面检查及问题研究解决、年度应急救援演练、年度全面安全风险辨识及管控措施、事故发生后的抢救报告善后与配合调查、年度履职报告或通报并接受从业人员监督；按各项频次或事故触发条件核查。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "江苏省行政区域内生产经营单位及相关安全管理活动",
-      "通用场所"
+      "江苏省行政区域内生产经营单位主要负责人履职管理活动"
     ],
     "title": "主要负责人未履行《江苏省安全生产条例》第15条规定的地方附加安全生产职责"
-  },
-  "previousEntityFileSha256": "9e3d305b68cd82b60105107e73eff4c8fa3afc0efea530f51262d56a905af613",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
-    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
-    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
-    "lawVersionId": "L020",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
-    "operativeLocator": "第十五条全条第（一）至（五）项",
-    "completeOfficialQuote": "第十五条 生产经营单位的主要负责人除履行《中华人民共和国安全生产法》规定的安全生产职责外，还应当履行下列职责：\n\n（一）每季度至少组织并参与一次安全生产全面检查，研究分析和解决安全生产存在问题；\n\n（二）每年至少组织并参与一次生产安全事故应急救援演练；\n\n（三）每年至少组织一次全面的安全风险辨识，制定完善管控措施；\n（四）发生生产安全事故时迅速组织抢救，并按照规定及时、如实向负有安全生产监督管理职责的部门报告事故情况，做好善后处理工作，配合调查处理；\n\n（五）每年通过职工大会或者职工代表大会、信息公示栏等，向从业人员报告或者通报安全生产工作以及个人履行安全生产职责的情况，接受从业人员监督。",
-    "scopeDecision": "江苏省生产经营单位主要负责人，履行本条地方附加职责；五项频次/事故触发分别核实，不借处罚额替代职责。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  }
 }

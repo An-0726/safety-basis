@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_86641EBB2649A7349D99D07AD9_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "81f68d78a3663e70808785364dbc972ce20934bb17cb344f6f15909f637d7732",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_369D0DCC2D26903BEF0FFBE1"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "548e2dd46dc785f5c8597533886a459eac07926980748670643da1c98cb5034a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确事故触发及报告对象，不添加原文没有的小时数。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "承包方、承租方依法负责本单位安全生产工作，发生生产安全事故的，应当按照规定及时报告属地应急管理行政主管部门和其他有关部门，并通知发包方、出租方。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_86641EBB2649A7349D99D07AD9_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_369D0DCC2D26903BEF0FFBE1"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "548e2dd46dc785f5c8597533886a459eac07926980748670643da1c98cb5034a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，承包方、承租方发生生产安全事故时，未按照规定及时报告属地应急管理行政主管部门和其他有关部门，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_86641EBB2649A7349D99D07AD9_3",
+    "keywords": [
+      "承包方",
+      "承租方发生生产安全事故时",
+      "未按照规定及时报告属地应急管理行政主管部门和其他有关部门"
+    ],
+    "lifecycle": "active",
+    "measures": "承包方、承租方发生生产安全事故时，按照规定及时报告属地应急管理行政主管部门和其他有关部门。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "承包方、承租方发生生产安全事故时，未按照规定及时报告属地应急管理行政主管部门和其他有关部门"
+  }
 }

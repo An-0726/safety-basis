@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_3C77B5EE9E7DEDDEBF01271630_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d0b66daac6e94ee7a5e076df29ee01be29a15f5b74b09a99b519fe498090fe5c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_DD65FD1B8B54D19135E02016"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e3bfd887c0b78ba76fc43c14292fac146efae4081a439f0a8be7ee3607d299e0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留目录外且评估为较大以上的双重前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "辨识出的安全风险不在目录范围内，但通过评估确定为较大以上安全风险的，应当按照较大以上安全风险进行管理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_3C77B5EE9E7DEDDEBF01271630_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_DD65FD1B8B54D19135E02016"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e3bfd887c0b78ba76fc43c14292fac146efae4081a439f0a8be7ee3607d299e0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，辨识出的安全风险不在目录范围内，但通过评估确定为较大以上安全风险的，未按照较大以上安全风险进行管理，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_3C77B5EE9E7DEDDEBF01271630_3",
+    "keywords": [
+      "辨识出的安全风险不在目录范围内",
+      "但通过评估确定为较大以上安全风险的",
+      "未按照较大以上安全风险进行管理"
+    ],
+    "lifecycle": "active",
+    "measures": "辨识出的安全风险不在目录范围内，但通过评估确定为较大以上安全风险的，按照较大以上安全风险进行管理。整改后由符合相应要求的人员或机构实施必要的检查、检测、检验、评价或验收，对发现的问题闭环整改，并保存结果和复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "辨识出的安全风险不在目录范围内，但通过评估确定为较大以上安全风险的，未按照较大以上安全风险进行管理"
+  }
 }

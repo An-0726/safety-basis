@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_20_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ed19d93f41e7c6b575c71b8cf14b2927c0ae93ff70feddf788363a0f8bf576d9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2245D7A3E424383EF1BC6BDC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "18e0e89893312e741d8ba0a7ed68ca11709f28e8541ee5a7c4cc2fca4ddb5e1b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留危害严重类别、机构资质及年度检测频次，检测与现状评价不混同。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "职业病危害严重的用人单位，应当委托具有相应资质的职业卫生技术服务机构，每年至少进行一次职业病危害因素检测，每三年至少进行一次职业病危害现状评价。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_20_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2245D7A3E424383EF1BC6BDC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "18e0e89893312e741d8ba0a7ed68ca11709f28e8541ee5a7c4cc2fca4ddb5e1b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，职业病危害严重的用人单位未每年至少进行一次职业病危害因素检测，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_20_1",
+    "keywords": [
+      "职业病危害严重的用人单位未每年至少进行一次职业病危害因素检测"
+    ],
+    "lifecycle": "active",
+    "measures": "职业病危害严重的用人单位每年至少进行一次职业病危害因素检测。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业病危害严重的用人单位未每年至少进行一次职业病危害因素检测"
+  }
 }

@@ -4,19 +4,40 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "《危险化学品安全法》第四十一条要求危险化学品储存在专用场所并由专人管理，属通用储存义务，保留为 fallback；本条 direct 依据已由 GB 15603-2022 第5.9条承担。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "reviewedContentHash": "2181d9686e19abd11dafb064e2ab9788bfe8e2c64b51f8cae4cc1f2ec1c922e3",
   "contextHashes": {
-    "hazard": "e4c8ae3f85eb1fb0a67c298bc461392b88fc2e5e46f3e64f4d9953835532ba57",
-    "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931",
-    "link": "5e68f9653d8095645fe236e8e0ba6726a5ff3dcff5e9477ef10ff6231ef40380"
+    "hazard": "2cbe3447f8734b6da302222e651cc698b1b9125c3d64e8156b8d8b613cd0c8f2",
+    "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
   },
   "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "id": "RV_ec8cb86fad19252b",
+    "entityId": "K_a5906ce4d76f43127e04742e",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "《危险化学品安全法》第四十一条要求危险化学品储存在专用场所并由专人管理，属通用储存义务，保留为 fallback；本条 direct 依据已由 GB 15603-2022 第5.9条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "reviewedContentHash": "2181d9686e19abd11dafb064e2ab9788bfe8e2c64b51f8cae4cc1f2ec1c922e3",
+    "contextHashes": {
+      "hazard": "e4c8ae3f85eb1fb0a67c298bc461392b88fc2e5e46f3e64f4d9953835532ba57",
+      "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931",
+      "link": "5e68f9653d8095645fe236e8e0ba6726a5ff3dcff5e9477ef10ff6231ef40380"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

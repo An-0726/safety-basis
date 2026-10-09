@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJYA_35_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8d361a8ae5a0b4e4cbd07b84663bddbfa8debeaac2650d7d3e0582013ddb2b6c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2D7B8FD35D31C43A1FD4562B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8910e51f0a906f8d68cbfee77f587f3b95855f0933cf9536398e8759d749ee81",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确评估制度所涉内容，不泛化三年周期至所有单位。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十五条　应急预案编制单位应当建立应急预案定期评估制度，对预案内容的针对性和实用性进行分析，并对应急预案是否需要修订作出结论。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJYA_35_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2D7B8FD35D31C43A1FD4562B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8910e51f0a906f8d68cbfee77f587f3b95855f0933cf9536398e8759d749ee81",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，应急预案编制单位未建立应急预案定期评估制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_YJYA_35_1",
+    "keywords": [
+      "应急预案编制单位未建立应急预案定期评估制度"
+    ],
+    "lifecycle": "active",
+    "measures": "应急预案编制单位建立应急预案定期评估制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "应急预案编制单位未建立应急预案定期评估制度"
+  }
 }

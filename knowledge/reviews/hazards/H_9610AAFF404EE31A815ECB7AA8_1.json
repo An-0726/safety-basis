@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_9610AAFF404EE31A815ECB7AA8_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "54680b29e3fcb5a19e5ff8f50b139daa300f59b0b94e9689afdaaa4bc5f6dc85",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_0E86FB10825E1119609D3EEB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "1fb660ac841294b9ad48b51b38f385db424065702c8e0b81c8ff25982c4c2796",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确生产许可和检验合格必须同时具备。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十二条 特种设备使用单位应当使用取得许可生产并经检验合格的特种设备。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_9610AAFF404EE31A815ECB7AA8_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_0E86FB10825E1119609D3EEB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "1fb660ac841294b9ad48b51b38f385db424065702c8e0b81c8ff25982c4c2796",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，特种设备使用单位未使用取得许可生产并经检验合格的特种设备，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_9610AAFF404EE31A815ECB7AA8_1",
+    "keywords": [
+      "特种设备使用单位未使用取得许可生产并经检验合格的特种设备"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备使用单位使用取得许可生产并经检验合格的特种设备。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备使用单位未使用取得许可生产并经检验合格的特种设备"
+  }
 }

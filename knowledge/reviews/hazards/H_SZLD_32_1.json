@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_32_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9cdfb6c7330fd4b104738ca0f8b903b14485d1b625c805b961785bd2e83019cb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1792E7A05EA88B719E4819B9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "2f4870fcfa331775d7f020dbe7e72288e585447201a6db7782b0d74cbec92b95",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "培训考核覆盖法律法规、标准和专业知识，情况记录存档。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "压力容器使用单位应当对压力容器安全总监和压力容器安全员进行法律法规、标准和专业知识培训、考核，同时对培训、考核情况予以记录并存档备查。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_32_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1792E7A05EA88B719E4819B9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "2f4870fcfa331775d7f020dbe7e72288e585447201a6db7782b0d74cbec92b95",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：压力容器使用、运行、维护检修或相关管理场景",
+    "description": "经资料和执行情况核查，压力容器使用单位未对安全总监和安全员进行法律法规和专业知识培训考核，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_32_1",
+    "keywords": [
+      "压力容器使用单位未对安全总监和安全员进行法律法规和专业知识培训考核"
+    ],
+    "lifecycle": "active",
+    "measures": "压力容器使用单位对安全总监和安全员进行法律法规和专业知识培训考核。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "压力容器使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "压力容器使用单位未对安全总监和安全员进行法律法规和专业知识培训考核"
+  }
 }

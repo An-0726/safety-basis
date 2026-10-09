@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_40D505BA3F3EF05298824CF4F3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "76d9c7d8c70e44e29d6cc10b70e6eb645b85953e2fd902b9dd75e2d122cc4ecf",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8629B2AC432398F153A54134"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "627ea67bd0b9d8ce9ffff26e374ce6419b7cb5f95aac6a7d6a65de7c1455a3a0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十一条 生产经营单位对辨识出的安全风险，应当按照安全风险等级实施分级管控，根据其特点从组织、技术、管理、应急等方面制定并落实管控措施，编制安全风险管控清单。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_40D505BA3F3EF05298824CF4F3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8629B2AC432398F153A54134"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "627ea67bd0b9d8ce9ffff26e374ce6419b7cb5f95aac6a7d6a65de7c1455a3a0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位对辨识出的安全风险未按照安全风险等级实施分级管控，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_40D505BA3F3EF05298824CF4F3_1",
+    "keywords": [
+      "生产经营单位对辨识出的安全风险未按照安全风险等级实施分级管控"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位对辨识出的安全风险按照安全风险等级实施分级管控。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位对辨识出的安全风险未按照安全风险等级实施分级管控"
+  }
 }

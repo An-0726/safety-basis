@@ -3,11 +3,47 @@
   "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "f4bb50ba5a885f11c436c68d5412f5338097a1856c89145cde04421837acf654",
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "reviewer": "ChatGPT",
+  "reviewedContentHash": "cf2bc1885b79024e6c61a841ffdaf1e3b54ace0469453c76fbca829335222899",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_45E5C68DA9E57AD8237FF0F1"
   ],
-  "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  "reason": "聚焦登记标志位置，删除不相关报送审批措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十三条 特种设备使用单位应当在特种设备投入使用前或者投入使用后三十日内，向负责特种设备安全监督管理的部门办理使用登记，取得使用登记证书。登记标志应当置于该特种设备的显著位置。",
+  "previousReview": {
+    "entityId": "H_6409C243C7C08392D158FA8C97_2",
+    "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "f4bb50ba5a885f11c436c68d5412f5338097a1856c89145cde04421837acf654",
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "reviewer": "ChatGPT",
+    "evidenceRefs": [
+      "E_XLSX_FT_45E5C68DA9E57AD8237FF0F1"
+    ],
+    "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  },
+  "previousDefinition": {
+    "aliases": [
+      "叉车显著位置未放置特种设备使用标志"
+    ],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备登记标志未置于显著位置，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_6409C243C7C08392D158FA8C97_2",
+    "keywords": [
+      "特种设备登记标志未置于显著位置"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备登记标志置于显著位置。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备登记标志未置于显著位置"
+  }
 }

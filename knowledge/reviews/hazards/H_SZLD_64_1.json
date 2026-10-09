@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_64_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4392cd800cdea9f4e6f47fa25f016392e91e3e7afa1c7374f723dc5cb4894082",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E04D1F97385C2219C0B8074E"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "286c3c3e5336a850711315c26c63fcaeb07e8380816a8936fbc9e07609ce8b1b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "压力管道使用单位应当对压力管道安全总监和压力管道安全员进行法律法规、标准和专业知识培训、考核，并同时对培训、考核情况予以记录并存档备查。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_64_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E04D1F97385C2219C0B8074E"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "286c3c3e5336a850711315c26c63fcaeb07e8380816a8936fbc9e07609ce8b1b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全教育培训",
+    "conditions": "适用于依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：生产经营单位从业人员培训、考核和资格管理活动",
+    "description": "经资料和执行情况核查，压力管道使用单位未对安全总监和安全员进行法律法规和专业知识培训考核，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_64_1",
+    "keywords": [
+      "压力管道使用单位未对安全总监和安全员进行法律法规和专业知识培训考核"
+    ],
+    "lifecycle": "active",
+    "measures": "压力管道使用单位对安全总监和安全员进行法律法规和专业知识培训考核。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位从业人员培训、考核和资格管理活动"
+    ],
+    "title": "压力管道使用单位未对安全总监和安全员进行法律法规和专业知识培训考核"
+  }
 }

@@ -2,22 +2,44 @@
   "entityId": "K_cdba8c961ce5e8e9a7bf2895",
   "entityType": "link",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewer": "GPT-5.6-Sol legal-semantic-audit",
-  "checkedAt": "2026-09-11T07:30:00+08:00",
-  "reason": "GBZ 1-2010第5.1.2条对工业企业选址避开自然疫源地及不能避开时的综合防控设计义务作出直接规定；修订后的隐患事实限定为‘不能避开且未设计具体疫情综合预防控制措施’，与条款直接匹配。",
+  "decision": "rejected",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
     "GBZ1_5_1_2_EXACT_MATCH"
   ],
-  "reviewedContentHash": "9ab8fc7628ef347615c4a2ec052746aa8dabbd3cb7ed411d6bc39932e26a90c2",
+  "reviewedContentHash": "cb09913beaaee32b65ca4d4d6062a5e83ff9f7b53a2ee40cfd5fb87b69345f81",
   "contextHashes": {
-    "hazard": "1dc9c0ac2d6aabdefafe8d8f34b5c695f6972eb0ea87502ec30f060fa0925058",
-    "clause": "72e8c4c2597d2b46f9c0c662db9b739e9751f9fd7fae49e2ad424ea1815cd98a",
-    "link": "9ab8fc7628ef347615c4a2ec052746aa8dabbd3cb7ed411d6bc39932e26a90c2"
+    "hazard": "8d10d29622109f9513fc80933747914313c8a0fd710eb302239c678f233d287e",
+    "clause": "72e8c4c2597d2b46f9c0c662db9b739e9751f9fd7fae49e2ad424ea1815cd98a"
   },
   "evidenceRefs": [
     "EH_GBZ1_5_1_2"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_cdba8c961ce5e8e9a7bf2895",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "GPT-5.6-Sol legal-semantic-audit",
+    "checkedAt": "2026-09-11T07:30:00+08:00",
+    "reason": "GBZ 1-2010第5.1.2条对工业企业选址避开自然疫源地及不能避开时的综合防控设计义务作出直接规定；修订后的隐患事实限定为‘不能避开且未设计具体疫情综合预防控制措施’，与条款直接匹配。",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "GBZ1_5_1_2_EXACT_MATCH"
+    ],
+    "reviewedContentHash": "9ab8fc7628ef347615c4a2ec052746aa8dabbd3cb7ed411d6bc39932e26a90c2",
+    "contextHashes": {
+      "hazard": "1dc9c0ac2d6aabdefafe8d8f34b5c695f6972eb0ea87502ec30f060fa0925058",
+      "clause": "72e8c4c2597d2b46f9c0c662db9b739e9751f9fd7fae49e2ad424ea1815cd98a",
+      "link": "9ab8fc7628ef347615c4a2ec052746aa8dabbd3cb7ed411d6bc39932e26a90c2"
+    },
+    "evidenceRefs": [
+      "EH_GBZ1_5_1_2"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

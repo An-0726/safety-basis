@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8B29177A4C57A4044E772DB509_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b4e6f929a0c1c159f09576e48e3a996a5ead74789bbb17027ff9e538fe850cf5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_39AF58D80665C55B06AABFFA"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "0451c7cbcac919553e520c2c21f2a74532cdecc45dd0e6d62a1070b210ab8ebb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "维修保养专有部分的消防设施和消防器材并确保完好有效",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8B29177A4C57A4044E772DB509_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_39AF58D80665C55B06AABFFA"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "0451c7cbcac919553e520c2c21f2a74532cdecc45dd0e6d62a1070b210ab8ebb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，业主、物业使用人未遵守有关消防法律、法规的规定，未维修保养专有部分的消防设施和消防器材并确保完好有效，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8B29177A4C57A4044E772DB509_1",
+    "keywords": [
+      "业主",
+      "物业使用人未遵守有关消防法律",
+      "法规的规定",
+      "未维修保养专有部分的消防设施和消防器材并确保完好有效"
+    ],
+    "lifecycle": "active",
+    "measures": "业主、物业使用人遵守有关消防法律、法规的规定，维修保养专有部分的消防设施和消防器材并确保完好有效；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "业主、物业使用人未遵守有关消防法律、法规的规定，未维修保养专有部分的消防设施和消防器材并确保完好有效"
+  }
 }

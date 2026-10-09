@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_27_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f3e9f6063de85ca71cf52fc3f6763be7e69090ad79bbf745690a7695f87b85f6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4D5A33028D8427205A7A81B7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "2e943079a85f6beed58e66e39b6d58b15c8f78f467d2fc4f867c0974461e799e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按投入使用压力容器每日巡检及风险报告要求落实制度。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "27 第二十七条\n压力容器使用单位应当建立压力容器安全日管控制度。压力容器安全员要每日根据《压力容器安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对投入使用的压力容器进行巡检，形成《每日压力容器安全检查记录》，对发现的安全风险隐患，应当立即采取防范措施，及时上报压力容器安全总监或者单位主要负责人。未发现问题的，也应当予以记录，实行零风险报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_27_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4D5A33028D8427205A7A81B7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "2e943079a85f6beed58e66e39b6d58b15c8f78f467d2fc4f867c0974461e799e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：压力容器使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，压力容器使用单位未建立压力容器安全日管控制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_27_1",
+    "keywords": [
+      "压力容器使用单位未建立压力容器安全日管控制度"
+    ],
+    "lifecycle": "active",
+    "measures": "压力容器使用单位建立压力容器安全日管控制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "压力容器使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "压力容器使用单位未建立压力容器安全日管控制度"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H059_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "22776f158b906eb32f318bbb1941a667684a6ffdfad02cfc847b3b1d8d9dd135",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L015"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "67747819d678ff25d2faafcb68a98a1116ad4810596c529d4bf743eb6ba596f0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "仓储场所设置的消火栓应有明显标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H059_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_L015"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "67747819d678ff25d2faafcb68a98a1116ad4810596c529d4bf743eb6ba596f0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，仓储场所的消火栓未设置明显标志，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H059_1",
+    "keywords": [
+      "仓储场所的消火栓未设置明显标志"
+    ],
+    "lifecycle": "active",
+    "measures": "仓储场所的消火栓设置明显标志；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "仓储场所的消火栓未设置明显标志"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJYA_16_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2c03db32210f1f6a349cca71d1d7182697287ac0dd9d76640fa34a330a5f27d4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1021AFB62628873E938DE5D7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f0a401f368da002ac31c273af7faee301b30d016f41fd1de00457e79e469e710",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确附件信息缺项，删除通用判定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十六条　生产经营单位应急预案应当包括向上级应急管理机构报告的内容、应急组织机构和人员的联系方式、应急物资储备清单等附件信息。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJYA_16_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1021AFB62628873E938DE5D7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f0a401f368da002ac31c273af7faee301b30d016f41fd1de00457e79e469e710",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，生产经营单位应急预案未包括应急联系方式和应急物资储备清单等附件，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJYA_16_1",
+    "keywords": [
+      "生产经营单位应急预案未包括应急联系方式和应急物资储备清单等附件"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位应急预案包括应急联系方式和应急物资储备清单等附件。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "生产经营单位应急预案未包括应急联系方式和应急物资储备清单等附件"
+  }
 }

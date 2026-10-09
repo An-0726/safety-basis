@@ -5,12 +5,12 @@
   "decision": "verified",
   "reviewedContentHash": "9c12a3cc38949304f4bb192036f7f2a977aa3b9740e32609bc2618195a6eea33",
   "contextHashes": {
-    "hazard": "40a7405e21f83a494e6905fdc42f658d5fffa3a94aa1055cb2eb5fa10308b93b",
+    "hazard": "8b761fee91bb645f35ac5889fd29b2f869a9fe78d2901ba8e023f155d295658e",
     "clause": "7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "安全生产法第51条第1款明确规定生产经营单位必须依法参加工伤保险、为从业人员缴纳保险费，与Hazard未依法参加工伤保险的缺陷事实直接对应，义务对象（生产经营单位）与缺陷对象一致。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_MATCH"
   ],
@@ -24,5 +24,33 @@
     "v3Reason": "已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。",
     "v3Result": "passed"
   },
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_05B2CCBBD57A37BE1D8393A0FE",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "9c12a3cc38949304f4bb192036f7f2a977aa3b9740e32609bc2618195a6eea33",
+    "contextHashes": {
+      "hazard": "40a7405e21f83a494e6905fdc42f658d5fffa3a94aa1055cb2eb5fa10308b93b",
+      "clause": "7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7"
+    },
+    "checkedAt": "2026-09-10T12:00:00+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "安全生产法第51条第1款明确规定生产经营单位必须依法参加工伤保险、为从业人员缴纳保险费，与Hazard未依法参加工伤保险的缺陷事实直接对应，义务对象（生产经营单位）与缺陷对象一致。",
+    "reasonCodes": [
+      "DIRECT_MATCH"
+    ],
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_f60d0818a851d5340d4e03cbae_9",
+      "reviewedAt": "2026-09-09T13:36:11+00:00",
+      "reviewer": "Codex 主核验",
+      "v3Reason": "已逐项核对关联适用性；hazard和clause均已核验，clause定位已确认，重新核验通过。",
+      "v3Result": "passed"
+    },
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

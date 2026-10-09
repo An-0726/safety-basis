@@ -5,16 +5,36 @@
   "decision": "verified",
   "reviewedContentHash": "676f945b665d9347954138802dfc4fc8d875aacd93752fec53cc3a505e8f6d0f",
   "contextHashes": {
-    "hazard": "e0fcacd11d0ef4813859c3522c8a7e9de7157032d52e3b2fc92077a42a578925",
+    "hazard": "9d74bd80a8478bfc321d3775066a1f325a20fa3471e4e358517d2e31ea93faf7",
     "clause": "0e644842cffcedba24395e9a0cfa3ad7a4eec23c811b5fa9c9e0721eef3993d1"
   },
-  "checkedAt": "2026-09-10T14:09:26+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "安全生产法第42条第2款禁止占用、堵塞、封闭疏散通道、安全出口；喷涂区货物堆放阻塞疏散通道直接违反。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_MATCH"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_F4234CE043D086AD595AB0",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "676f945b665d9347954138802dfc4fc8d875aacd93752fec53cc3a505e8f6d0f",
+    "contextHashes": {
+      "hazard": "e0fcacd11d0ef4813859c3522c8a7e9de7157032d52e3b2fc92077a42a578925",
+      "clause": "0e644842cffcedba24395e9a0cfa3ad7a4eec23c811b5fa9c9e0721eef3993d1"
+    },
+    "checkedAt": "2026-09-10T14:09:26+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "安全生产法第42条第2款禁止占用、堵塞、封闭疏散通道、安全出口；喷涂区货物堆放阻塞疏散通道直接违反。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_MATCH"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

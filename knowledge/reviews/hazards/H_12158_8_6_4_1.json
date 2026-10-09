@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_6_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "64ae700fc2d52444e4b4b3ce03f5459dfd902a2c572597157ca076573eba7ee8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "0d2a3ccb5d19cb83acedb38e614c91c35dec1d824371f7b307c37c24004a2377",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留速度提升前提与电导率严格大于边界，避免补写未提供的提升起点。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当加油速度提升至不超过7 m/s时,油品电导率应大于250pS/m。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_6_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "0d2a3ccb5d19cb83acedb38e614c91c35dec1d824371f7b307c37c24004a2377",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，当加油速度提升至不超过7 m/s时，油品电导率未大于250pS/m，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_12158_8_6_4_1",
+    "keywords": [
+      "当加油速度提升至不超过7",
+      "m",
+      "s时",
+      "油品电导率未大于250pS"
+    ],
+    "lifecycle": "active",
+    "measures": "当加油速度提升至不超过7 m/s时，油品电导率大于250pS/m。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "当加油速度提升至不超过7 m/s时，油品电导率未大于250pS/m"
+  }
 }

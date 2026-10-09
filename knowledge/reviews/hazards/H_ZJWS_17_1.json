@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_17_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e2ab3178ee0fd9768cf49bee8cd63d152136010c0ce79f0f047d50de92d2660c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_243C6289D795B0BE171F832F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c412b5c684f99d87bd749a063c1430e99e64234ab84ebed63aa521882e545811",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确报警装置缺失的特定场所，保留可能发生急性职业损伤前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在可能发生急性职业损伤的有毒、有害工作场所，用人单位应当设置报警装置",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_17_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_243C6289D795B0BE171F832F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c412b5c684f99d87bd749a063c1430e99e64234ab84ebed63aa521882e545811",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，可能发生急性职业损伤的有毒有害工作场所未设置报警装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_ZJWS_17_1",
+    "keywords": [
+      "可能发生急性职业损伤的有毒有害工作场所未设置报警装置"
+    ],
+    "lifecycle": "active",
+    "measures": "可能发生急性职业损伤的有毒有害工作场所设置报警装置。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "可能发生急性职业损伤的有毒有害工作场所未设置报警装置"
+  }
 }

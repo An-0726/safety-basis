@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H037_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fbdd9e9babbe1421d58b78ecf04098490b1ddc813b70ccebaeca8b4b808fe70f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_STD_HJ2000_2010"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "b42b6b2f7474b8c20a8d42b9ce60b22d1854a514fc57f878dc3f0e1ef3049e97",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原适用条件泛指所有电气活动，现按处理介质和风机布置条件限定，并去除描述套句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "输送有爆炸和易燃气体的应选防爆型风机。当离心通风机布置在非爆炸环境场所时，宜选择风机叶轮防爆而风机电机不防爆的防爆风机；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H037_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2000_2010"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "b42b6b2f7474b8c20a8d42b9ce60b22d1854a514fc57f878dc3f0e1ef3049e97",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，输送易燃易爆气体的场所未选用防爆型风机，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H037_1",
+    "keywords": [
+      "输送易燃易爆气体的场所未选用防爆型风机"
+    ],
+    "lifecycle": "active",
+    "measures": "输送易燃易爆气体的场所选用防爆型风机。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "输送易燃易爆气体的场所未选用防爆型风机"
+  }
 }

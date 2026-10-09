@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C816254F9808B0AEE1B24CA0CB_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f44947199ffa61b11ffca2354c260f69b841c42909d3b9ba13be4eec2e25a825",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_B08C3746A1574D7D0B2DB545"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "7ce76576e4fec78b374da8abf5abf2d9979ff67382687165cecd862573706321",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "政府购买服务的承接主体应当按照建设工程法律、法规和国家工程建设消防技术标准等有关规定提供服务，并对所出具的意见、结论或者报告承担相应的法律责任。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C816254F9808B0AEE1B24CA0CB_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_B08C3746A1574D7D0B2DB545"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "7ce76576e4fec78b374da8abf5abf2d9979ff67382687165cecd862573706321",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于承接政府购买相关专业服务且依法承担本条义务的服务主体；应结合服务合同、执业范围和具体项目核查。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，政府购买服务的承接主体未按照建设工程法律、法规和国家工程建设消防技术标准等有关规定提供服务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_C816254F9808B0AEE1B24CA0CB_1",
+    "keywords": [
+      "政府购买服务的承接主体未按照建设工程法律",
+      "法规和国家工程建设消防技术标准等有关规定提供服务"
+    ],
+    "lifecycle": "active",
+    "measures": "政府购买服务的承接主体按照建设工程法律、法规和国家工程建设消防技术标准等有关规定提供服务；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "政府购买服务的承接主体未按照建设工程法律、法规和国家工程建设消防技术标准等有关规定提供服务"
+  }
 }

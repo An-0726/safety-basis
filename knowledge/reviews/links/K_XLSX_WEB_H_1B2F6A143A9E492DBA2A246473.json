@@ -4,15 +4,15 @@
   "reviewType": "applicability",
   "decision": "verified",
   "reviewedContentHash": "c4f4229520143f2c452b81aab84a82805275e887f74d6e5b78ccd6ed64458dd2",
-  "checkedAt": "2026-10-04T05:07:24Z",
-  "reviewer": "Source-specific containment author 20261004",
-  "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_CONTAIN_HJ2026_EXACT_20261004"
   ],
-  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "contextHashes": {
-    "hazard": "26aa42219df1a1293698aecd746da382d94add37421004bd3a45c5d609d0922a",
+    "hazard": "df01fbebcf7c01217d13e3fca0888c1c9c84ca1512d1b314fd5b84ae97e5466f",
     "clause": "0167d278a14c6f8df9f308a25b04079d6bc763031edc6a6015af48f26dcd1d24"
   },
   "reviewedFields": [
@@ -24,18 +24,23 @@
     "entityId": "K_XLSX_WEB_H_1B2F6A143A9E492DBA2A246473",
     "reviewType": "applicability",
     "decision": "verified",
-    "reviewedContentHash": "927468887686748aa792b75813a80c6a6c78740470788166081639c1a1faf411",
-    "contextHashes": {
-      "hazard": "9024b15c08e99bd3111b68d2193a65f84251149a18878408c022601a9069f0d9",
-      "clause": "172dd8b08e46e0d35997aa6a7f67e5d0a5bf289c8ef2fc8cc27f2b097babb420"
-    },
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "依据PR #62官方网络证据核验证实，GB 15577-2018第6.1条除尘密闭要求。条款逐字原文与隐患适用性吻合。",
+    "reviewedContentHash": "c4f4229520143f2c452b81aab84a82805275e887f74d6e5b78ccd6ed64458dd2",
+    "checkedAt": "2026-10-04T05:07:24Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
     "evidenceRefs": [
-      "E_SAMR_GB15577_2018"
+      "E_CONTAIN_HJ2026_EXACT_20261004"
     ],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "contextHashes": {
+      "hazard": "26aa42219df1a1293698aecd746da382d94add37421004bd3a45c5d609d0922a",
+      "clause": "0167d278a14c6f8df9f308a25b04079d6bc763031edc6a6015af48f26dcd1d24"
+    },
+    "reviewedFields": [
+      "clauseId",
+      "applicability"
+    ],
+    "previousReviewFileSha256": "db16396e64151cba6b1f4560fd1a169ce768c1e18593a42d8f9be8ea5d063f87"
   },
   "previousReviewFileSha256": "db16396e64151cba6b1f4560fd1a169ce768c1e18593a42d8f9be8ea5d063f87"
 }

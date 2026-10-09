@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_79F2D3D5229B96A81168DFF449_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "006f8b1fa6909640aa38e8dfc07ef6d6bd7aac283ab7506f9d3143440f20af0f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BE12364A9A6E022F156B96F7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "0e4181c279c2a17ca4d7e42b6decaaeca30d08954916d12ead6856a3215137e9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十五条 生产经营单位应当加强安全生产标准化建设，建立健全安全生产管理体系，全面管控生产经营活动各环节的安全风险，促进安全管理系统化、岗位操作行为规范化、设施设备本质安全化、作业环境器具定置化，提高安全生产管理水平。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_79F2D3D5229B96A81168DFF449_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_BE12364A9A6E022F156B96F7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "0e4181c279c2a17ca4d7e42b6decaaeca30d08954916d12ead6856a3215137e9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未加强安全生产标准化建设，未全面管控生产经营活动各环节的安全风险，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_79F2D3D5229B96A81168DFF449_1",
+    "keywords": [
+      "生产经营单位未加强安全生产标准化建设",
+      "未全面管控生产经营活动各环节的安全风险"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位加强安全生产标准化建设，全面管控生产经营活动各环节的安全风险。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未加强安全生产标准化建设，未全面管控生产经营活动各环节的安全风险"
+  }
 }

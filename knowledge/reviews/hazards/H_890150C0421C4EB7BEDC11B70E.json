@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_890150C0421C4EB7BEDC11B70E",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "c13b210ad05de6663c428c2816007ae6b1554585048c89559be2abacc9b95ed5",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "337093662d8c3646df43794f1e5312b336d04889bdf8d5e43de6ad74bd8ec1b9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_NHC_GBZ1_2010"
-  ]
+  ],
+  "reason": "原描述已具体；整改不能仅做测试，须先补设条文要求的两类装置。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "可能突然逸出大量有害物质或易造成急性中毒或易燃易爆的室内作业场所，应设置事故通风装置及与事故排风系统相连锁的泄漏报警装置。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_890150C0421C4EB7BEDC11B70E",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "c13b210ad05de6663c428c2816007ae6b1554585048c89559be2abacc9b95ed5",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NHC_GBZ1_2010"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_890150C0421C4EB7BEDC11B70E",
+    "title": "可能突然逸出有害物质的室内作业场所未设置事故通风装置",
+    "description": "在生产中可能突然逸出大量有害物质或易造成急性中毒或易燃易爆的化学物质的室内作业场所,未设置事故通风装置及与事故排风系统相连锁的泄漏报警装置",
+    "measures": "事故通风、泄漏报警与联锁功能测试。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "可能突然逸出有害物质的室内作业场所未设置事故通风装置"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》(GBZ1-2010) 6.1.5.2",
+    "mergedInto": null
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_49_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "91910fed88142825bb7f1718aa5188b02bad4f2c03a620c0cb404a23171a1e9d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_513F7079E35C878AC51CF903"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3860a7138fdb049cc4c9e636d0d91609ba4537c51c03df483d8ec09786d9f09b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "利用村民自建住宅从事家庭生产加工、民宿、农家乐等生产经营活动的，应当落实防火分隔、安全疏散等消防安全措施，配备必要的消防设施、器材。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_49_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_513F7079E35C878AC51CF903"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3860a7138fdb049cc4c9e636d0d91609ba4537c51c03df483d8ec09786d9f09b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，村民自建住宅从事生产经营未落实防火分隔和安全疏散措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_49_2",
+    "keywords": [
+      "村民自建住宅从事生产经营未落实防火分隔和安全疏散措施"
+    ],
+    "lifecycle": "active",
+    "measures": "村民自建住宅从事生产经营落实防火分隔和安全疏散措施；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "村民自建住宅从事生产经营未落实防火分隔和安全疏散措施"
+  }
 }

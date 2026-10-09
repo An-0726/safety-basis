@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_71F876EA935D4E2F7A2BCB3A60_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0f6567c9790bb37492166149b0e401cb22e34191cbb0e49d36c047c438e44d0d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_16B77B5F1FE86BF396A29D89"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "60b349ad58088ec5cce717fb36ff219e8cd1a96bd5284e0059929deb7fc7ef55",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十一条 生产经营单位应当将接受其作业指令的被派遣劳动者、灵活用工人员纳入本单位对从业人员安全生产的统一管理，履行安全生产保障责任，不得将安全生产保障责任转移给劳务派遣单位或者被派遣劳动者、灵活用工人员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_71F876EA935D4E2F7A2BCB3A60_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_16B77B5F1FE86BF396A29D89"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "60b349ad58088ec5cce717fb36ff219e8cd1a96bd5284e0059929deb7fc7ef55",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未将接受其作业指令的被派遣劳动者、灵活用工人员纳入本单位安全生产统一管理并履行安全生产保障责任，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_71F876EA935D4E2F7A2BCB3A60_1",
+    "keywords": [
+      "生产经营单位未将接受其作业指令的被派遣劳动者",
+      "灵活用工人员纳入本单位安全生产统一管理并履行安全生产保障责任"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位将接受其作业指令的被派遣劳动者、灵活用工人员纳入本单位安全生产统一管理并履行安全生产保障责任。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未将接受其作业指令的被派遣劳动者、灵活用工人员纳入本单位安全生产统一管理并履行安全生产保障责任"
+  }
 }

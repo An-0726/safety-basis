@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C8694BE798B94E39B4566EAB6B",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "09797cff1e005a48c31031cf2f0094629542d0d4b696fbbfa4699dec427380df",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "8bfb370116a29ea63ac77d0cd09862ac45057af91c7738b8051f7d371da7cfa7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "将长部位清单留在原描述，标题保留危险场所与标识缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "粉尘爆炸危险场所的出入口、生产区域及重点危险设备设施等部位，应设置显著的安全警示标识。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C8694BE798B94E39B4566EAB6B",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "8bfb370116a29ea63ac77d0cd09862ac45057af91c7738b8051f7d371da7cfa7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "粉尘爆炸危险场所的出入口、生产区域及重点危险设备设施等部位未设置显著的安全警示标识，人员对爆炸危险认知不足。",
+    "id": "H_C8694BE798B94E39B4566EAB6B",
+    "keywords": [
+      "粉尘爆炸危险场所的出入口",
+      "生产区域及重点危险设备设施等部位",
+      "未设置显著的安全警示标识"
+    ],
+    "lifecycle": "active",
+    "measures": "在粉尘爆炸危险场所出入口、生产区域及重点危险设备设施部位设置显著的安全警示标识。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "粉尘爆炸危险场所的出入口、生产区域及重点危险设备设施等部位，未设置显著的安全警示标识"
+  }
 }

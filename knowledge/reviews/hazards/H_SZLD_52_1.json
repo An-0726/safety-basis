@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_52_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "828537e1a3bb9bab8c021f6655d89b5e464b43f4c5df2cf1d448de7d8756c650",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_68E1DFC8082B3C4432C75823"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f063ad12bdad52e7f23d9707213f29ef07957f8fe457f0d9a3fa98be07fc208d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定压力管道使用单位人员及岗位职责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "压力管道使用单位应当依法配备压力管道安全总监和压力管道安全员，明确压力管道安全总监和压力管道安全员的岗位职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_52_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_68E1DFC8082B3C4432C75823"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f063ad12bdad52e7f23d9707213f29ef07957f8fe457f0d9a3fa98be07fc208d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，压力管道使用单位未配备安全总监和安全员并明确岗位职责，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_SZLD_52_1",
+    "keywords": [
+      "压力管道使用单位未配备安全总监和安全员并明确岗位职责"
+    ],
+    "lifecycle": "active",
+    "measures": "压力管道使用单位配备安全总监和安全员并明确岗位职责。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "压力管道使用单位未配备安全总监和安全员并明确岗位职责"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_6_2_1_7",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bccac46b0a1ffb4aa05fbb23a926d2f39ef806b608956bb91ebef37c7fafc1da",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "480f3ce1357ea79dcfaddd4271db095b380813a07001fda284b39a654d2eedaa",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确两个受约束时段任一出现粉尘进入即为缺陷，删除描述套句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "动火作业期间和作业完成后的冷却期间，不应有粉尘进入明火作业场所。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_6_2_1_7",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "480f3ce1357ea79dcfaddd4271db095b380813a07001fda284b39a654d2eedaa",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，动火作业期间和作业完成后的冷却期间，有粉尘进入明火作业场所，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_6_2_1_7",
+    "keywords": [
+      "动火作业期间和作业完成后的冷却期间",
+      "有粉尘进入明火作业场所"
+    ],
+    "lifecycle": "active",
+    "measures": "动火作业期间及作业完成后的冷却阶段，采取有效隔离和停运措施，防止粉尘进入明火作业区域；作业后检查设备内外部，确认无遗留热源和阴燃风险。整改后复核粉尘爆炸危险区域的点火源控制、除尘、隔爆/泄爆、静电和清扫等相关措施，并形成记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "动火作业期间和作业完成后的冷却期间，有粉尘进入明火作业场所"
+  }
 }

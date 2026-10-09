@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_1_13_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "109261eb341750bf6da4a5244434d5a50f84d6ecb9e150eb9fcb59ab1dbc2800",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "a3581d4a52112dfd3f1720914bb0cc725edc430df0b2496240fcc9c7939e5470",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留流速控制无效前提和替代方式选择结构，将设备长列举移出标题。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当不能以控制流速等方法减少静电积聚时,应在管道的末端装设液体静电消除器或采用静电电荷密度在线监测联锁等方式进行控制。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_1_13_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "a3581d4a52112dfd3f1720914bb0cc725edc430df0b2496240fcc9c7939e5470",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，当不能以控制流速等方法减少静电积聚时，未在管道的末端装设液体静电消除器或采用静电电荷密度在线监测联锁等方式进行控制，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_1_13_1",
+    "keywords": [
+      "当不能以控制流速等方法减少静电积聚时",
+      "未在管道的末端装设液体静电消除器或采用静电电荷密度在线监测联锁等方式进行控制"
+    ],
+    "lifecycle": "active",
+    "measures": "当不能以控制流速等方法减少静电积聚时，在管道的末端装设液体静电消除器或采用静电电荷密度在线监测联锁等方式进行控制。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "当不能以控制流速等方法减少静电积聚时，未在管道的末端装设液体静电消除器或采用静电电荷密度在线监测联锁等方式进行控制"
+  }
 }

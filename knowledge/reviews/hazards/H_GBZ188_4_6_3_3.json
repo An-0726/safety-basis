@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_GBZ188_4_6_3_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2d56cfc169b10c3a3f608be6269b688c00e0e954d33a0141387ae52dff2c0173",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8172948B8E8219A9D9ED78E0"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "534ff23c4e949ab92b3e8ae5c97cb98b6b79950c76d6b59f2cf69fb59b38eded",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确可能导致职业性传染病的作业及疫情流行期前提，删除通用结尾。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "从事可能导致职业性传染病的作业的劳动者，在疫情流行期或近期密切接触传染源者，应及时开展\n应急健康检查，随时监测疫情动态。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_GBZ188_4_6_3_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8172948B8E8219A9D9ED78E0"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "534ff23c4e949ab92b3e8ae5c97cb98b6b79950c76d6b59f2cf69fb59b38eded",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，职业性传染病作业劳动者在疫情流行期未及时接受应急健康检查，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_GBZ188_4_6_3_3",
+    "keywords": [
+      "职业性传染病作业劳动者在疫情流行期未及时接受应急健康检查"
+    ],
+    "lifecycle": "active",
+    "measures": "职业性传染病作业劳动者在疫情流行期及时接受应急健康检查。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业性传染病作业劳动者在疫情流行期未及时接受应急健康检查"
+  }
 }

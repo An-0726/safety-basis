@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_4A9A46E48C503722A10D893017_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f579eabced17952efcbc2da0745f08b6f6b9fe470f5de725f8c3723b9effa24b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_92420911F202FD17979381EC"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "ef14cce250b5743202eb1646834f594aa698fd7fc88b394514471d8fcaff20f8",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "供电、供气等企业应当建立完善灭火救援现场室内外快速断电、断气保障机制，协助消防救援机构做好火灾事故处置工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_4A9A46E48C503722A10D893017_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_92420911F202FD17979381EC"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "ef14cce250b5743202eb1646834f594aa698fd7fc88b394514471d8fcaff20f8",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，供电、供气等企业未建立完善灭火救援现场室内外快速断电、断气保障机制，未协助做好火灾事故处置工作，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_4A9A46E48C503722A10D893017_5",
+    "keywords": [
+      "供电",
+      "供气等企业未建立完善灭火救援现场室内外快速断电",
+      "断气保障机制",
+      "未协助做好火灾事故处置工作"
+    ],
+    "lifecycle": "active",
+    "measures": "供电、供气等企业建立完善灭火救援现场室内外快速断电、断气保障机制，协助做好火灾事故处置工作。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "供电、供气等企业未建立完善灭火救援现场室内外快速断电、断气保障机制，未协助做好火灾事故处置工作"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_39_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c668c87ff12526dcbe9e7e2406456ed8f10b4a23e1b3afd6b4bb757da0f7cba7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_284D28BB68027364C4ABD72E"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "18528d406a991e54a9409a210a0366867a53d1f3076375cc9b1e72749f671f5c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "采用气瓶充装过程控制要求，不套用气瓶使用要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "39 第三十九条\n气瓶安全总监和气瓶安全员应当具备下列气瓶充装安全管理能力：\n（一）熟悉气瓶充装相关法律法规、安全技术规范、标准和本单位气瓶充装过程控制等安全要求；\n（二）具备识别和防控气瓶安全风险的专业知识；\n（三）具备按照相关要求履行岗位职责的能力；\n（四）符合特种设备法律法规和安全技术规范的其他要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_39_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_284D28BB68027364C4ABD72E"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "18528d406a991e54a9409a210a0366867a53d1f3076375cc9b1e72749f671f5c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，气瓶安全总监和安全员未具备相应气瓶充装安全管理能力，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_39_1",
+    "keywords": [
+      "气瓶安全总监和安全员未具备相应气瓶充装安全管理能力"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶安全总监和安全员具备相应气瓶充装安全管理能力。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶安全总监和安全员未具备相应气瓶充装安全管理能力"
+  }
 }

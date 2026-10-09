@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_7D85AC280234FC8A78C5E07364_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "37e66f0fd7d6e159e114533197c345771b5c7b1edc5c11282cf843d103bf899b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_98B67C4F5027394733E45EA3"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "6b2c2a5f01e17af2f992be126dda84ba9d0d3b758c38d11831d2ca36ddd38c9d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "聚焦建设项目预评价阶段的报告内容，整改由行政报送套话改为缺失评价内容补充。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "职业病危害预评价报告应当对建设项目可能产生的职业病危害因素 及其对工作场所和劳动者健康的影响作出评价，确定危害类别和职业病 防护措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_7D85AC280234FC8A78C5E07364_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_98B67C4F5027394733E45EA3"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "6b2c2a5f01e17af2f992be126dda84ba9d0d3b758c38d11831d2ca36ddd38c9d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，职业病危害预评价报告未对建设项目可能产生的职业病危害因素及其对工作场所和劳动者健康的影响作出评价，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_7D85AC280234FC8A78C5E07364_5",
+    "keywords": [
+      "职业病危害预评价报告未对建设项目可能产生的职业病危害因素及其对工作场所和劳动者健康的影响作出评价"
+    ],
+    "lifecycle": "active",
+    "measures": "职业病危害预评价报告对建设项目可能产生的职业病危害因素及其对工作场所和劳动者健康的影响作出评价。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业病危害预评价报告未对建设项目可能产生的职业病危害因素及其对工作场所和劳动者健康的影响作出评价"
+  }
 }

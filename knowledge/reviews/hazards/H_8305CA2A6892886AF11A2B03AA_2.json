@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8305CA2A6892886AF11A2B03AA_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e2cfce5ec05888ca1103e61b6faea44b78677e8118d9ec1d9b1fb3eeea2534c1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_C79205A35F87DD226C0913AB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a9b068b83cdee674a44200c0ca85c3aa22f5c6d78b82b0c05b2fa16643757e6d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留严重事故隐患触发条件及双重告知报告义务，删除审批凭证套话。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十六条 电梯投入使用后，电梯制造单位应当对其制造的电梯的安全运行情况进行跟踪调查和了解，对电梯的维护保养单位或者使用单位在维护保养和安全运行方面存在的问题，提出改进建议，并提供必要的技术帮助；发现电梯存在严重事故隐患时，应当及时告知电梯使用单位，并向负责特种设备安全监督管理的部门报告。电梯制造单位对调查和了解的情况，应当作出记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8305CA2A6892886AF11A2B03AA_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_C79205A35F87DD226C0913AB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a9b068b83cdee674a44200c0ca85c3aa22f5c6d78b82b0c05b2fa16643757e6d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，电梯制造单位发现电梯存在严重事故隐患时，未及时告知电梯使用单位，未向负责特种设备安全监督管理的部门报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8305CA2A6892886AF11A2B03AA_2",
+    "keywords": [
+      "电梯制造单位发现电梯存在严重事故隐患时",
+      "未及时告知电梯使用单位",
+      "未向负责特种设备安全监督管理的部门报告"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯制造单位发现电梯存在严重事故隐患时，及时告知电梯使用单位，向负责特种设备安全监督管理的部门报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯制造单位发现电梯存在严重事故隐患时，未及时告知电梯使用单位，未向负责特种设备安全监督管理的部门报告"
+  }
 }

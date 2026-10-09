@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_34E4D0C37CE6BD4C5AA5A452B7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "54acaf5570ad936800e47c5ed335bb3a45297ad229bbed36e700c9c242f99da1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2CB86E2D791C865ABDC89B45"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8873826ed689c1b6e84d80fbaadfe786398bf04e9c9dff36f79a7ff8f214615d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "用条文列明的辨识对象和参与人员替换模板描述，不添加具体周期。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十六条 生产经营单位应当落实安全风险分级管控制度，定期组织本单位安全生产管理、工程技术、岗位操作等相关人员，对生产工艺、设施设备、作业环境、人员行为和管理体系等方面存在的安全风险进行全面、系统辨识评估，确定安全风险等级，从组织、技术、管理、应急等方面逐项制定管控措施，编制安全风险管控清单，按照安全风险等级实施分级管控。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_34E4D0C37CE6BD4C5AA5A452B7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2CB86E2D791C865ABDC89B45"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8873826ed689c1b6e84d80fbaadfe786398bf04e9c9dff36f79a7ff8f214615d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未落实安全风险分级管控制度，未定期组织安全生产管理、工程技术、岗位操作等相关人员开展安全风险辨识、评估，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_34E4D0C37CE6BD4C5AA5A452B7_1",
+    "keywords": [
+      "生产经营单位未落实安全风险分级管控制度",
+      "未定期组织安全生产管理",
+      "工程技术",
+      "岗位操作等相关人员开展安全风险辨识",
+      "评估"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位落实安全风险分级管控制度，定期组织安全生产管理、工程技术、岗位操作等相关人员开展安全风险辨识、评估。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位未落实安全风险分级管控制度，未定期组织安全生产管理、工程技术、岗位操作等相关人员开展安全风险辨识、评估"
+  }
 }

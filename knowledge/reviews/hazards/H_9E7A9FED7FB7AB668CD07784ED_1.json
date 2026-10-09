@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_9E7A9FED7FB7AB668CD07784ED_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4afb1acb8d58fc6d3c5ad9dd28a609ae46ef60e0bf3e28681bed7b489b6ffba7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_061511CE95880C4376636142"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "59cb083cf3491b561aad46b84c5b7726fd7308a1a5949c2b677c9dfef619e734",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补明告知部门层级与书面形式，保持施工前时序。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十三条 特种设备安装、改造、修理的施工单位应当在施工前将拟进行的特种设备安装、改造、修理情况书面告知直辖市或者设区的市级人民政府负责特种设备安全监督管理的部门。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_9E7A9FED7FB7AB668CD07784ED_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_061511CE95880C4376636142"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "59cb083cf3491b561aad46b84c5b7726fd7308a1a5949c2b677c9dfef619e734",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料和执行情况核查，特种设备安装、改造、修理的施工单位未在施工前将拟进行的特种设备安装、改造、修理情况书面告知负责特种设备安全监督管理的部门，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_9E7A9FED7FB7AB668CD07784ED_1",
+    "keywords": [
+      "特种设备安装",
+      "改造",
+      "修理的施工单位未在施工前将拟进行的特种设备安装",
+      "修理情况书面告知负责特种设备安全监督管理的部门"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备安装、改造、修理的施工单位在施工前将拟进行的特种设备安装、改造、修理情况书面告知负责特种设备安全监督管理的部门。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备安装、改造、修理的施工单位未在施工前将拟进行的特种设备安装、改造、修理情况书面告知负责特种设备安全监督管理的部门"
+  }
 }

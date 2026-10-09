@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_46_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0252c3c728ccd12b0c3ec3fce7bddcd6308e7ecec04b3f8531260f26444faeb7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_0CA15641F2FD3E9AA7BC086F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "97ef4f473aacfb7b5a2efff2d5962919ee6722d83ee1fc45dc2ec5c2fc77b9d3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "人员密集场所应当在建筑消防设施、消防器材、疏散设施的醒目位置设置消防安全标识，告知维护、使用消防设施、器材以及紧急情况下逃生自救的方法、要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_46_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_0CA15641F2FD3E9AA7BC086F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "97ef4f473aacfb7b5a2efff2d5962919ee6722d83ee1fc45dc2ec5c2fc77b9d3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，人员密集场所未在消防设施器材醒目位置设置消防安全标识，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_46_1",
+    "keywords": [
+      "人员密集场所未在消防设施器材醒目位置设置消防安全标识"
+    ],
+    "lifecycle": "active",
+    "measures": "人员密集场所在消防设施器材醒目位置设置消防安全标识；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "人员密集场所未在消防设施器材醒目位置设置消防安全标识"
+  }
 }

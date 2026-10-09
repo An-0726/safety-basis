@@ -4,22 +4,46 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ChatGPT",
-  "checkedAt": "2026-09-10T18:10:00+08:00",
-  "reason": "H043的场所对象、人员对象和培训义务均与XF 1131-2014第3.3.2条直接对应；该专项条款还明确上岗、转岗前以及在岗至少每半年的要求，专业直接程度明显高于《安全生产法》第二十八条的一般培训义务。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
     "WAREHOUSE_FIRE_TRAINING"
   ],
   "reviewedContentHash": "540d1936778f6ec349a2a43cd5aae7b16c372d3a376d9896188b5ae64b77c1f5",
   "contextHashes": {
-    "hazard": "8a33d5e01da986e347051394db7c6462a52c0b46c5073b446f811468922f90bd",
-    "clause": "829a16c73af15d08644a4fb217412af904a24df4141880d400310bd47be7af7b",
-    "link": "540d1936778f6ec349a2a43cd5aae7b16c372d3a376d9896188b5ae64b77c1f5"
+    "hazard": "940d68065d60bbf440189b9bd8e845c4f6ec30c70739ee6cb4f33bd25d3bc000",
+    "clause": "829a16c73af15d08644a4fb217412af904a24df4141880d400310bd47be7af7b"
   },
   "evidenceRefs": [
     "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb",
     "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "id": "RV_h043_xf1131_direct_20260910",
+    "entityId": "K_8a321f06af023ba4fba73c3d",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ChatGPT",
+    "checkedAt": "2026-09-10T18:10:00+08:00",
+    "reason": "H043的场所对象、人员对象和培训义务均与XF 1131-2014第3.3.2条直接对应；该专项条款还明确上岗、转岗前以及在岗至少每半年的要求，专业直接程度明显高于《安全生产法》第二十八条的一般培训义务。",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "WAREHOUSE_FIRE_TRAINING"
+    ],
+    "reviewedContentHash": "540d1936778f6ec349a2a43cd5aae7b16c372d3a376d9896188b5ae64b77c1f5",
+    "contextHashes": {
+      "hazard": "8a33d5e01da986e347051394db7c6462a52c0b46c5073b446f811468922f90bd",
+      "clause": "829a16c73af15d08644a4fb217412af904a24df4141880d400310bd47be7af7b",
+      "link": "540d1936778f6ec349a2a43cd5aae7b16c372d3a376d9896188b5ae64b77c1f5"
+    },
+    "evidenceRefs": [
+      "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb",
+      "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

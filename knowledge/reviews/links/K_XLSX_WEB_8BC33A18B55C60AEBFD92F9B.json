@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-09-30",
+  "checkedAt": "2026-10-09",
   "clauseId": "C_XLSX_WEB_DF2892ABEAE2EEF18CFBB76F",
   "contextHashes": {
-    "clause": "4da001b4195acca465d0d583b08ece395dad18e163a7c02d13d5b9c5c1dd534b",
-    "hazard": "29874fc64cc94b89fe949551ed9a83dafb14bf100d0c209ea48f9a6cfb0bb5d0"
+    "hazard": "0d890f7a64609a1a1ad571943e6aa6e194eb32a079eb1b642d023dfef939bc38",
+    "clause": "4da001b4195acca465d0d583b08ece395dad18e163a7c02d13d5b9c5c1dd534b"
   },
   "decision": "verified",
   "entityId": "K_XLSX_WEB_8BC33A18B55C60AEBFD92F9B",
@@ -17,28 +17,49 @@
     ]
   },
   "historySha256": "02ce2b51b174ab657216a03df43e0204ccb402fb8083d48f5dc40a67fab74adb",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "previousReview": {
     "checkedAt": "2026-09-30",
+    "clauseId": "C_XLSX_WEB_DF2892ABEAE2EEF18CFBB76F",
     "contextHashes": {
       "clause": "4da001b4195acca465d0d583b08ece395dad18e163a7c02d13d5b9c5c1dd534b",
-      "hazard": "e3247456e0fb521f3cde956c305256e67dacfe03385f891c41d504390325809c"
+      "hazard": "29874fc64cc94b89fe949551ed9a83dafb14bf100d0c209ea48f9a6cfb0bb5d0"
     },
     "decision": "verified",
     "entityId": "K_XLSX_WEB_8BC33A18B55C60AEBFD92F9B",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_WEB_E04E2E3F4C10159205FB7D6D",
-      "E_REMEDIATION_20260930_NJXF"
+      "E_SCOPE_20260930_NJXF_2_52_76"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_216AA081EA9265D4DC2808F9D4_3；条款：C_XLSX_WEB_DF2892ABEAE2EEF18CFBB76F；保留direct角色。",
-    "reason": "南京条例52(2)适用设置消防控制室的单位，要求接入、实时传输和正常使用，禁止擅拆停用。新措施恢复禁止且未把监测系统替代单位主体责任。",
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_SCOPE_20260930_NJXF_2_52_76"
+      ]
+    },
+    "historySha256": "02ce2b51b174ab657216a03df43e0204ccb402fb8083d48f5dc40a67fab74adb",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReviewFileSha256": "73b9aa3388fa1836a8c278d06b595fda7d8cc84292dbc8729e9c4f42813dd1e2",
+    "reason": "C_XLSX_WEB_DF2892ABEAE2EEF18CFBB76F第52条第二款直接支持联网义务，第三款仅支撑责任不替代。第2条处理地域和特别规定优先，不能把“森林、铁路等另有规定”改为绝对行业排除；联网正常、实时传输、不得擅拆停用分别核查，不能要求全部问题并存。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "applicability",
-    "reviewedContentHash": "21c44fa9ffaba403536f96c011a4340d481644931f7141e750e785c02a6e3cf4",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "cccd1bfe6ce5087a6d227b8bc18442932390986f67e3c2c92200e6d93e45b2bb",
+    "reviewedFields": [
+      "/applicability"
+    ],
+    "reviewedValues": {
+      "/applicability": "仅适用于南京市行政区域内设置消防控制室的单位，核查消防设施运行状态信息接入城市消防远程监控中心监测系统并实时传输，以及联网设施和传输网络正常使用、不得擅自拆除或停用。监测信息采集不替代单位消防安全主体责任。法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定。"
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930",
+    "roleRetained": "direct"
   },
   "previousReviewFileSha256": "73b9aa3388fa1836a8c278d06b595fda7d8cc84292dbc8729e9c4f42813dd1e2",
-  "reason": "C_XLSX_WEB_DF2892ABEAE2EEF18CFBB76F第52条第二款直接支持联网义务，第三款仅支撑责任不替代。第2条处理地域和特别规定优先，不能把“森林、铁路等另有规定”改为绝对行业排除；联网正常、实时传输、不得擅拆停用分别核查，不能要求全部问题并存。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewEvidence": {
     "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
     "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
@@ -54,6 +75,6 @@
   "reviewedValues": {
     "/applicability": "仅适用于南京市行政区域内设置消防控制室的单位，核查消防设施运行状态信息接入城市消防远程监控中心监测系统并实时传输，以及联网设施和传输网络正常使用、不得擅自拆除或停用。监测信息采集不替代单位消防安全主体责任。法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定。"
   },
-  "reviewer": "Codex十三项源范围独立复核20260930",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "roleRetained": "direct"
 }

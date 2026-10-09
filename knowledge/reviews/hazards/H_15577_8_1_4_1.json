@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_8_1_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a62910b23a0898b9d0df564227358025c9f82ea8bb272b6f9aa94dfe7a8080c4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "71e102c29fbefd5bd7cb11a98cb748d56e2226b2703b166458cc469afed30d77",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "直接描述跨防火分区连通关系，去除不符合套句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "不同防火分区的除尘系统不应连通。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_8_1_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "71e102c29fbefd5bd7cb11a98cb748d56e2226b2703b166458cc469afed30d77",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，不同防火分区的除尘系统连通，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_8_1_4_1",
+    "keywords": [
+      "不同防火分区的除尘系统连通"
+    ],
+    "lifecycle": "active",
+    "measures": "拆除不同防火分区除尘系统之间的连通关系，各防火分区设置相互独立或符合直接依据要求的除尘系统，防止火焰和爆炸跨区传播。整改后复核粉尘爆炸危险区域的点火源控制、除尘、隔爆/泄爆、静电和清扫等相关措施，并形成记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "不同防火分区的除尘系统连通"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_91C94232322744D0AFD01E6A64",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "f7fcf31eca3fd1713d88abe929dbb7d79bd1af228a3709db8d6aafee8dea7ca2",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "04abb4b361aa3b35532a93ae2634e700413c0ee811f0cefd86fa1418046d8867",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "一般安全教育条款未直接规定危化品特性和使用应急告知；库内危化品安全法第五十一条直接规定相关要求，替换关联并改正仅放置说明书的措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "使用危险化学品的单位应当将其作业场所使用的化学品安全技术说明书和化学品安全标签提供给从业人员，并加强培训教育，告知从业人员正确使用的方法和在紧急情况下应当采取的措施。\n使用危险化学品的个人，应当了解危险化学品的危险特性、正确使用方法和防护措施，不得违法使用、储存、处置危险化学品。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_91C94232322744D0AFD01E6A64",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "f7fcf31eca3fd1713d88abe929dbb7d79bd1af228a3709db8d6aafee8dea7ca2",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_91C94232322744D0AFD01E6A64",
+    "title": "操作人员,未掌握危险化学品的基本特性和应急处理方法",
+    "description": "操作人员未掌握所接触危险化学品的基本特性和应急处理方法。",
+    "measures": "贮存化学品的房间放置了安全技术说明书。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "操作人员,未掌握危险化学品的基本特性和应急处理方法"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《化学化工实验室安全管理规范》 (T/CCSAS 005—2019) 第7.4.13条",
+    "mergedInto": null
+  }
 }

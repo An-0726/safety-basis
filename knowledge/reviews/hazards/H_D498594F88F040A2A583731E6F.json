@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_D498594F88F040A2A583731E6F",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5175d5171b7e2af4521d5a4cb809b17ed4f4d3f2d0d9fff49be3c8875c0ed859",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9F28689D44144889B1526513"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "90b3f81c3eeacd401a63e4dac0b62c3672ccf3711c1f10d625ef0a6191b7b4a8",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "分别列明制造与安装改造重大修理的设备对象，不混入设计、普通维修或仅未出示资料的情形。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十五条 锅炉、压力容器、压力管道元件等特种设备的制造过程和锅炉、压力容器、压力管道、电梯、起重机械、客运索道、大型游乐设施的安装、改造、重大修理过程，应当经特种设备检验机构按照安全技术规范的要求进行监督检验；未经监督检验或者监督检验不合格的，不得出厂或者交付使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_D498594F88F040A2A583731E6F",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9F28689D44144889B1526513"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "90b3f81c3eeacd401a63e4dac0b62c3672ccf3711c1f10d625ef0a6191b7b4a8",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_D498594F88F040A2A583731E6F",
+    "title": "依法需要监督检验的特种设备制造、安装、改造或重大修理过程未经监督检验或检验不合格",
+    "description": "锅炉、压力容器、压力管道及起重机械等特种设备的设计、制造、安装、维修和检验,未符合有关安全技术规范的规定",
+    "measures": "对依法要求监督检验的特种设备制造、安装、改造、重大修理过程，按规定申请并接受监督检验；未经监督检验或检验不合格的，不得交付或投入使用。",
+    "conditions": "适用于法律、安全技术规范规定应实施监督检验的特种设备制造、安装、改造和重大修理过程。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "依法需要监督检验的特种设备制造、安装、改造或重大修理过程未经监督检验或检验不合格"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全基本要求》(GB 12801-2025)第5.6.3条",
+    "mergedInto": null
+  }
 }

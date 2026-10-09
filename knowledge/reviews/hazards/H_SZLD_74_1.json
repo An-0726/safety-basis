@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_74_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b6985e4c322b3674846d8c6f515624fea9c49be4d732b290703f451feae37384",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B5B14C26F69059010BA4C3C6"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3aa4720292c777c94c9faf2a70b00cf90fa9e35668ebc594a9ae3fb0b078dbcc",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留电梯钥匙、维保监督、报警救援和自行检测专门职责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电梯使用单位应当按照前款规定，结合本单位实际，细化制定《电梯安全员守则》。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_74_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B5B14C26F69059010BA4C3C6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3aa4720292c777c94c9faf2a70b00cf90fa9e35668ebc594a9ae3fb0b078dbcc",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，电梯使用单位未细化制定电梯安全员守则，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_74_1",
+    "keywords": [
+      "电梯使用单位未细化制定电梯安全员守则"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯使用单位细化制定电梯安全员守则。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯使用单位未细化制定电梯安全员守则"
+  }
 }

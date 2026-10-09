@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_APJG_19_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7d1f7a06b58c743bdebe16077c245e4053fb23b425ad59130cf48da0e3a03ed8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B4E1B79CAD72E3CD588125B1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "ff3df719339033fe963c49ef706d14c2a94806f04803a067a047dbe9f09695cf",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "19 第十九条 生产经营单位应当对本单位安全评价、检测检验过程进行监督，并对本单位所提供资料和安全评价、检测检验对象的真实性、可靠性负责，承担有关法律责任。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_APJG_19_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B4E1B79CAD72E3CD588125B1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "ff3df719339033fe963c49ef706d14c2a94806f04803a067a047dbe9f09695cf",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未对安全评价检测检验过程进行监督并对提供资料真实性负责，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_APJG_19_1",
+    "keywords": [
+      "生产经营单位未对安全评价检测检验过程进行监督并对提供资料真实性负责"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位对安全评价检测检验过程进行监督并对提供资料真实性负责。整改后由符合相应要求的人员或机构实施必要的检查、检测、检验、评价或验收，对发现的问题闭环整改，并保存结果和复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未对安全评价检测检验过程进行监督并对提供资料真实性负责"
+  }
 }

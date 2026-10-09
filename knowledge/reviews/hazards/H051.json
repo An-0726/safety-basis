@@ -1,15 +1,60 @@
 {
-  "decision": "verified",
   "entityId": "H051",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2b138d3c0c81a4e837201d6acee7b56b1a34250ee6caab84b7db84fade97c269",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_193b0d28194660f9d660b0bb14_14",
-    "reviewedAt": "2026-09-09T12:14:06+00:00",
-    "reviewer": "doubao-work-续接集成"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十二条　生产、经营、储存、使用危险物品的车间、商店、仓库不得与员工宿舍在同一座建筑物内，并应当与员工宿舍保持安全距离。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H051",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_193b0d28194660f9d660b0bb14_14",
+      "reviewedAt": "2026-09-09T12:14:06+00:00",
+      "reviewer": "doubao-work-续接集成"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "4941f23ed5473fb139dc2c7f3a5c6bd10f1a8ac767a3b7f92aab76435f4ca3dd"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "4941f23ed5473fb139dc2c7f3a5c6bd10f1a8ac767a3b7f92aab76435f4ca3dd"
+  "previousDefinition": {
+    "aliases": [
+      "危化场所与宿舍同楼",
+      "危险物品场所与宿舍距离不足"
+    ],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，危险物品生产经营储存使用场所与员工宿舍设置不符合安全要求，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H051",
+    "keywords": [
+      "危险物品",
+      "员工宿舍",
+      "同一建筑",
+      "安全距离",
+      "疏散",
+      "总图与建筑",
+      "危险物品生产经营储存使用场所与员工宿舍设置不符合安全要求"
+    ],
+    "lifecycle": "active",
+    "measures": "停止不符合要求的住宿或危险物品作业使用，按适用规定调整场所功能和安全距离，并同步核查出口、疏散通道及标志。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险物品场所",
+      "员工宿舍",
+      "生产经营单位"
+    ],
+    "title": "危险物品生产经营储存使用场所与员工宿舍设置不符合安全要求"
+  }
 }

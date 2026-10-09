@@ -1,28 +1,95 @@
 {
-  "entityType": "hazard",
   "entityId": "H_C714CE531A554FB49E0FD67BA8",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "5de1948663a074703bc8bbc59daa72ca187e0606e4685374e35a10ca3d9189bc",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "2026-10-02按对象、义务和适用条件复核本次定义修订。候选指出旧C条号/引文错配成立。本轮已取得准确技术原文，因此无需只因旧链错误就改成另一条通用消防器材H。 不确认任何具体现场事实、违规或整改完成。",
+  "reviewedContentHash": "9d48e127e451db85600d6eb03144a6403e694856d7d0566ce89026aa730aeaaa",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_CITATION_GB50016_8112_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "原描述和条件已明确设计适用范围，仅去除标题冗余否定及逗号，按设计条件判定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "8.1.12 设置在建筑室内外供人员操作或使用的消防设施，均应设置区别于环境的明显标志。",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_C714CE531A554FB49E0FD67BA8",
     "entityType": "hazard",
+    "entityId": "H_C714CE531A554FB49E0FD67BA8",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "5de1948663a074703bc8bbc59daa72ca187e0606e4685374e35a10ca3d9189bc",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "2026-10-02按对象、义务和适用条件复核本次定义修订。候选指出旧C条号/引文错配成立。本轮已取得准确技术原文，因此无需只因旧链错误就改成另一条通用消防器材H。 不确认任何具体现场事实、违规或整改完成。",
     "evidenceRefs": [
-      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      "E_CITATION_GB50016_8112_20261002"
     ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
-    "reviewedContentHash": "9969ba0092effde6a6f0ea02b45cbd6b8e61d107cbe54508513eec4c470577dd",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_C714CE531A554FB49E0FD67BA8",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "9969ba0092effde6a6f0ea02b45cbd6b8e61d107cbe54508513eec4c470577dd",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "795765cebe18d42216b583d92f46c4421c5866f8c298dc5db7ede123f61af559"
   },
-  "previousReviewFileSha256": "795765cebe18d42216b583d92f46c4421c5866f8c298dc5db7ede123f61af559"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "限GB50016-2014（2018年版）第1.0.2、1.0.3范围且第8.1.12适用的建筑防火设计对象；既有建筑另核适用设计/验收版本。限供人员操作或使用的消防设施，不推广到所有附属物、统一编号或定位线；与现行通用规范冲突时从其规定。",
+    "description": "在适用建筑设计规范的建筑内外，供人员操作或使用的消防设施未设置区别于环境的明显标志。",
+    "id": "H_C714CE531A554FB49E0FD67BA8",
+    "keywords": [
+      "设置在建筑室内外供人员操作或使用的消防设施",
+      "未设置区别于环境的明显标志",
+      "设",
+      "置",
+      "在",
+      "建",
+      "筑",
+      "室",
+      "内",
+      "外",
+      "供",
+      "人",
+      "员",
+      "操",
+      "作",
+      "或",
+      "使",
+      "用",
+      "的",
+      "消",
+      "防",
+      "施",
+      ",",
+      "均",
+      "未",
+      "区",
+      "别",
+      "于",
+      "环",
+      "境",
+      "明",
+      "显",
+      "标",
+      "志"
+    ],
+    "lifecycle": "active",
+    "measures": "为已确认落入该条的消防设施补设区别于环境的明显标志。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《建筑设计防火规 范》 第8. 1. 12条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "设置在建筑室内外供人员操作或使用的消防设施,均,未设置区别于环境的明显标志"
+  }
 }

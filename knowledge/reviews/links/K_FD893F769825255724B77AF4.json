@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-26T19:20:54+08:00",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "2f770390958a5c1744fbf2a7ca0bf104b24216c0c595d4cc54572c290e5ec7d7",
+    "hazard": "6df403bed1615a7c432f18c40cdc13d4b8a7cc1c04ea17c340182d72301e0bce",
     "clause": "b9e967e646d04ce7edf92cc4503859bd630f114238bcb1ac33a55b732806f90f"
   },
   "decision": "verified",
@@ -10,8 +10,26 @@
   "evidenceRefs": [
     "E_JS_RESPONSIBILITY_20260926"
   ],
-  "reason": "沿原地区与条款义务归并或补全文；未把江苏/南京地方要求推广到省外，未由单一资料缺失推定未履责。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "ef432c0f8b44e797b59634141fd636eeb80c9dd57fa4b53679c5a97534251a5b",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:20:54+08:00",
+    "contextHashes": {
+      "hazard": "2f770390958a5c1744fbf2a7ca0bf104b24216c0c595d4cc54572c290e5ec7d7",
+      "clause": "b9e967e646d04ce7edf92cc4503859bd630f114238bcb1ac33a55b732806f90f"
+    },
+    "decision": "verified",
+    "entityId": "K_FD893F769825255724B77AF4",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_JS_RESPONSIBILITY_20260926"
+    ],
+    "reason": "沿原地区与条款义务归并或补全文；未把江苏/南京地方要求推广到省外，未由单一资料缺失推定未履责。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "ef432c0f8b44e797b59634141fd636eeb80c9dd57fa4b53679c5a97534251a5b",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  }
 }

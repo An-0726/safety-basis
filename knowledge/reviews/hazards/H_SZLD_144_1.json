@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_144_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9f9a1e2859969cdbd8fa0a414b970ee82291973bcdd420aec619aef8be35e5ef",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_6B96036D1D39EF233A4FBA24"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "71d976e143732a8632914078cede0135e731be48b03e73c75a9375738d217187",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确主要负责人每月至少一次听取汇报和形成调度纪要。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "144 第一百四十四条\n场车使用单位应当建立场车安全月调度制度。场车使用单位主要负责人要每月至少听取一次场车安全总监管理工作情况汇报，对当月场车安全日常管理、风险隐患排查治理等情况进行总结，对下个月重点工作作出调度安排，形成《每月场车安全调度会议纪要》。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_144_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_6B96036D1D39EF233A4FBA24"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "71d976e143732a8632914078cede0135e731be48b03e73c75a9375738d217187",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：场车使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，场车使用单位未建立场车安全月调度制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_144_1",
+    "keywords": [
+      "场车使用单位未建立场车安全月调度制度"
+    ],
+    "lifecycle": "active",
+    "measures": "场车使用单位建立场车安全月调度制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "场车使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "场车使用单位未建立场车安全月调度制度"
+  }
 }

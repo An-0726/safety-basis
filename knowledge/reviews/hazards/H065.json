@@ -1,15 +1,57 @@
 {
-  "decision": "verified",
   "entityId": "H065",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2cbe3447f8734b6da302222e651cc698b1b9125c3d64e8156b8d8b613cd0c8f2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_62b0a2142bac91f58c75345a34_4",
-    "reviewedAt": "2026-09-09T13:33:45+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "直接依据采用“氧化性气体”“分离储存”，按原文限定对象，删除未载的风险后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "易燃气体、氧化性气体",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H065",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_62b0a2142bac91f58c75345a34_4",
+      "reviewedAt": "2026-09-09T13:33:45+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "e4c8ae3f85eb1fb0a67c298bc461392b88fc2e5e46f3e64f4d9953835532ba57"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "e4c8ae3f85eb1fb0a67c298bc461392b88fc2e5e46f3e64f4d9953835532ba57"
+  "previousDefinition": {
+    "aliases": [
+      "易燃气体与氧气混存",
+      "燃气与助燃气体同库"
+    ],
+    "category": "燃气安全",
+    "conditions": "适用于存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：燃气使用、储存及燃气设施相关场所",
+    "description": "现场检查发现，易燃气体与助燃气体同库储存，可能导致不相容物质相互作用或风险叠加。",
+    "id": "H065",
+    "keywords": [
+      "易燃气体",
+      "助燃气体",
+      "同库储存",
+      "气瓶",
+      "氧气"
+    ],
+    "lifecycle": "active",
+    "measures": "按气体危险特性和禁忌关系分区、分库存放易燃气体与助燃气体，设置清晰标识并保持必要隔离。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶存放区",
+      "危险化学品仓库"
+    ],
+    "title": "易燃气体与助燃气体同库储存"
+  }
 }

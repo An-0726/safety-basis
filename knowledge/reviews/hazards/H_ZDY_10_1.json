@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZDY_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "43060e3543431713b107fe72f02298a3dad7f78ccffd1eaa08c0e43786e837e8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_286E7EBE7BB06D7145392E11"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e29c275825c0522a9b6b93aee39bd5a33cc14d3b292831830df28fbd4f2cf379",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "10 第十条 重大危险源安全评估报告应当客观公正、数据准确、内容完整、结论明确、措施可行，并包括下列内容：",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZDY_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_286E7EBE7BB06D7145392E11"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e29c275825c0522a9b6b93aee39bd5a33cc14d3b292831830df28fbd4f2cf379",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "经资料及履职情况核查，重大危险源安全评估报告不符合客观公正和内容完整要求，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_ZDY_10_1",
+    "keywords": [
+      "重大危险源安全评估报告不符合客观公正和内容完整要求"
+    ],
+    "lifecycle": "active",
+    "measures": "重大危险源安全评估报告调整至符合客观公正和内容完整要求。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "重大危险源安全评估报告不符合客观公正和内容完整要求"
+  }
 }

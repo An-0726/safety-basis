@@ -1,28 +1,62 @@
 {
-  "entityType": "hazard",
   "entityId": "H_A8187D7204164D89B4C4EEF1B4",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "8aed93ecc8f1d2e5a0d044f98c97c903c7454df30aeab954b774da410124cfbe",
-  "checkedAt": "2026-10-02T23:35:09+08:00",
-  "reviewer": "Codex public-source content and applicability review 20261002",
-  "reason": "2026-10-02按对象、义务和适用条件复核本次定义修订。在第16条责任单位范围内可采用一般配置义务，但气瓶介质、灭火剂适配和检查频次不由C001统一规定。 不确认任何具体现场事实、违规或整改完成。",
+  "decision": "pending",
+  "reviewedContentHash": "ee1c40fb7d69da11cb915e71b8a04b71f015bc1356159423ffc62dca54ff6807",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_CITATION_FIRELAW2021_20261002"
   ],
-  "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+  "reason": "检索《消防法》现有条款及全库“气瓶”“灭火”“消防器材”，仅找到气瓶标准范围条款对消防灭火器用气瓶的排除；C001仅为按标准配置器材的一般义务，未直接规定气瓶存放区域必须配置灭火器材。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "按照国家标准、行业标准配置消防设施、器材，设置消防安全标志，并定期组织检验、维修，确保完好有效；",
   "previousReview": {
-    "checkedAt": "2026-09-14",
-    "decision": "verified",
-    "entityId": "H_A8187D7204164D89B4C4EEF1B4",
     "entityType": "hazard",
+    "entityId": "H_A8187D7204164D89B4C4EEF1B4",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "8aed93ecc8f1d2e5a0d044f98c97c903c7454df30aeab954b774da410124cfbe",
+    "checkedAt": "2026-10-02T23:35:09+08:00",
+    "reviewer": "Codex public-source content and applicability review 20261002",
+    "reason": "2026-10-02按对象、义务和适用条件复核本次定义修订。在第16条责任单位范围内可采用一般配置义务，但气瓶介质、灭火剂适配和检查频次不由C001统一规定。 不确认任何具体现场事实、违规或整改完成。",
     "evidenceRefs": [
-      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      "E_CITATION_FIRELAW2021_20261002"
     ],
-    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-    "reviewType": "content",
-    "reviewedContentHash": "19667246e5125131a531c417fa2bae23f925f4b2f1d3ba58c1a866674ec64c57",
-    "reviewer": "Codex新版整改回绑批次20260914"
+    "notes": "仅覆盖所述公共法源内容、对象和适用范围；不认证具体现场事实、全库完整性或未经审核的分支。",
+    "previousReview": {
+      "checkedAt": "2026-09-14",
+      "decision": "verified",
+      "entityId": "H_A8187D7204164D89B4C4EEF1B4",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      ],
+      "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+      "reviewType": "content",
+      "reviewedContentHash": "19667246e5125131a531c417fa2bae23f925f4b2f1d3ba58c1a866674ec64c57",
+      "reviewer": "Codex新版整改回绑批次20260914"
+    },
+    "previousReviewFileSha256": "00f8866f2a3c970b9b2c1cfa937d6bc4edd566eabf7193580a6a2614be829c49"
   },
-  "previousReviewFileSha256": "00f8866f2a3c970b9b2c1cfa937d6bc4edd566eabf7193580a6a2614be829c49"
+  "previousDefinition": {
+    "id": "H_A8187D7204164D89B4C4EEF1B4",
+    "title": "气瓶存放区域未配置灭火器材",
+    "description": "依法承担消防安全责任的单位在需配置消防器材的气瓶区域未按适用要求配置器材。",
+    "measures": "结合介质、火灾危险性和适用配置标准配置适配器材，维持完好有效。",
+    "conditions": "限第16条责任单位，先核气瓶介质、区域用途及应配置要求；不能把所有气瓶区域一律指定同一灭火剂或相同检查周期。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "气瓶存放区域未配置灭火器材"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求总则》",
+    "mergedInto": null
+  }
 }

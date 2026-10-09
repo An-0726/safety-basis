@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_58_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "3427d552d1d8988909b44084b536ac3e9976319efdfee293153302eed77db130",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8726BA2ED07077B5DF1CFDF9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c7c2444b0fd80befbf35c494b50590c2c1ce8fa08a58a714d513475bb4ae1b9e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确压力管道风险清单和日周月制度机制。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "58 第五十八条\n压力管道使用单位应当建立基于压力管道安全风险防控的动态管理机制，结合本单位实际，落实自查要求，制定《压力管道安全风险管控清单》，建立健全日管控、周排查、月调度工作制度和机制。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_58_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8726BA2ED07077B5DF1CFDF9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c7c2444b0fd80befbf35c494b50590c2c1ce8fa08a58a714d513475bb4ae1b9e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，压力管道使用单位未建立安全风险防控动态管理机制，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_58_1",
+    "keywords": [
+      "压力管道使用单位未建立安全风险防控动态管理机制"
+    ],
+    "lifecycle": "active",
+    "measures": "压力管道使用单位建立安全风险防控动态管理机制。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "压力管道使用单位未建立安全风险防控动态管理机制"
+  }
 }

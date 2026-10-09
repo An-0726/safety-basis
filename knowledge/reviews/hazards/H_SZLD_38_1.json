@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_38_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "abc75ab12a83b8ec425facfd34f9178d0103fc95a05ee16fbb1cdf865f05711a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_C6E3BC9AB3FC0B0EF642F578"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a04233a1e459e52319099fffd2661d7d288a06bcf3ad6b3889089eb3c812a00a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留充装介质及逐工位责任，不误写为逐瓶责任。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "38 第三十八条\n气瓶充装单位应当根据本单位气瓶的数量、充装介质等情况，配备气瓶安全总监和足够数量的气瓶安全员，并逐个充装工位明确负责的气瓶安全员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_38_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_C6E3BC9AB3FC0B0EF642F578"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a04233a1e459e52319099fffd2661d7d288a06bcf3ad6b3889089eb3c812a00a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，气瓶充装单位未按数量和介质配备安全总监和足够数量安全员，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_38_1",
+    "keywords": [
+      "气瓶充装单位未按数量和介质配备安全总监和足够数量安全员"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶充装单位按数量和介质配备安全总监和足够数量安全员。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶充装单位未按数量和介质配备安全总监和足够数量安全员"
+  }
 }

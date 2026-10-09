@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_42_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9e2f8c577c833a447277b0d7f386745011b064a0fc46c07b6379968fea31df3f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_00F3597663E5CC7F1FCAFE08"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "90f1b9db0ed735048e8cb73e4550eb45c246b5dd97f8a42171421d9efe2de33b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "动态管理范围限定气瓶充装，不扩大到全部气瓶使用。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "42 第四十二条\n气瓶充装单位应当建立基于气瓶充装安全风险防控的动态管理机制。结合本单位实际，落实自查要求，制定《气瓶充装安全风险管控清单》，建立健全日管控、周排查、月调度工作制度和机制。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_42_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_00F3597663E5CC7F1FCAFE08"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "90f1b9db0ed735048e8cb73e4550eb45c246b5dd97f8a42171421d9efe2de33b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，气瓶充装单位未建立气瓶充装安全风险防控动态管理机制，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_42_1",
+    "keywords": [
+      "气瓶充装单位未建立气瓶充装安全风险防控动态管理机制"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶充装单位建立气瓶充装安全风险防控动态管理机制。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶充装单位未建立气瓶充装安全风险防控动态管理机制"
+  }
 }

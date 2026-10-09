@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_5_5_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9b9303d54c10a19d394b6bd4dbcb8034916f694d3dab57222819071dd18b4fde",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "23e9d86f246828957100d6fb45c63f864f12ec9fbd097be86ede2043bb09fcea",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在危险废物的收集和转运过程中，应采取相应的安全防护和污染防治措施，包括防爆、防火、防中毒、防感染、防泄露、防飞扬、防雨或其它防止污染环境的措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_5_5_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "23e9d86f246828957100d6fb45c63f864f12ec9fbd097be86ede2043bb09fcea",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，危险废物收集和转运过程未采取安全防护和污染防治措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJF_5_5_1",
+    "keywords": [
+      "危险废物收集和转运过程未采取安全防护和污染防治措施"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物收集和转运过程采取安全防护和污染防治措施。整改后复核危险废物分类、包装、标识、贮存、转移或应急措施中与本项有关的要求，并保留相应台账和检查记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物收集和转运过程未采取安全防护和污染防治措施"
+  }
 }

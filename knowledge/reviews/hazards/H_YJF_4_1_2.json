@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_4_1_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d950f94455c5fccc430ed67765d39c073a4609377dda70d2306a5574740b2c99",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "7d1ddf588183c88e9718a176aa74135358f2f9b4f380eb9bf8dff01062c56b15",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在收集、贮存、运输危险废物时，应根据危险废物收集、贮存、处置经营许可证核发的有关规定建立相应的规章制度和污染防治措施，包括危险废物分析管理制度、安全管理制度、污染防治措施等；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_4_1_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "7d1ddf588183c88e9718a176aa74135358f2f9b4f380eb9bf8dff01062c56b15",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "经资料及履职情况核查，危险废物收集贮存运输单位未建立相应规章制度和污染防治措施，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_YJF_4_1_2",
+    "keywords": [
+      "危险废物收集贮存运输单位未建立相应规章制度和污染防治措施"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物收集贮存运输单位建立相应规章制度和污染防治措施。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物收集贮存运输单位未建立相应规章制度和污染防治措施"
+  }
 }

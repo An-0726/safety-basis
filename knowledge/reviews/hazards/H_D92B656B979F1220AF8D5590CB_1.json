@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D92B656B979F1220AF8D5590CB_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "45c91fcc43670671fb0bed2a7c669abc7eee9394c966dc1ad5efa45d3a17c279",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_50849C4D1D3004D377594E44"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "0988875c9bbbcb9221a2d1500cb9af2f55c781dcdbcbd889ffb11aa871b7091a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十二条 生产经营单位应当将安全风险辨识、管控的相关知识和技能纳入年度安全生产教育培训计划并组织实施，提高全员安全风险辨识、管控的意识和能力，保证从业人员了解本岗位安全风险基本情况，熟悉安全风险管控措施，掌握事故应急处置要点。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D92B656B979F1220AF8D5590CB_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_50849C4D1D3004D377594E44"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "0988875c9bbbcb9221a2d1500cb9af2f55c781dcdbcbd889ffb11aa871b7091a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全教育培训",
+    "conditions": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未将安全风险辨识、管控的相关知识和技能纳入年度安全生产教育培训计划并组织实施等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D92B656B979F1220AF8D5590CB_1",
+    "keywords": [
+      "生产经营单位未将安全风险辨识",
+      "管控的相关知识和技能纳入年度安全生产教育培训计划并组织实施等"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位将安全风险辨识、管控的相关知识和技能纳入年度安全生产教育培训计划并组织实施等。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动"
+    ],
+    "title": "生产经营单位未将安全风险辨识、管控的相关知识和技能纳入年度安全生产教育培训计划并组织实施等"
+  }
 }

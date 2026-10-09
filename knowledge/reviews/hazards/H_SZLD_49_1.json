@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_49_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "31380a85506f447d52b5a9093e4e784c518fc00ab6c6c36781e581f16204daae",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_6F2C9636D0E2D985C09101B3"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "38b6250f0770065bd920d473ab2ea8e9c0f143a1d66d8bd8cb92d35a6a1c2265",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定气瓶充装单位履职保障，删除资格作业套话。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "气瓶充装单位应当为气瓶安全总监和气瓶安全员提供必要的工作条件、教育培训和岗位待遇，充分保障其依法履行职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_49_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_6F2C9636D0E2D985C09101B3"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "38b6250f0770065bd920d473ab2ea8e9c0f143a1d66d8bd8cb92d35a6a1c2265",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "经资料和执行情况核查，气瓶充装单位未为安全总监和安全员提供工作条件和培训，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_49_1",
+    "keywords": [
+      "气瓶充装单位未为安全总监和安全员提供工作条件和培训"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶充装单位为安全总监和安全员提供工作条件和培训。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶充装单位未为安全总监和安全员提供工作条件和培训"
+  }
 }

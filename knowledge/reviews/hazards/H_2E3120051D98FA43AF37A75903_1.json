@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_2E3120051D98FA43AF37A75903_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a12ce8840ac0e5ffeae23d15826da5a9f03f82f980318213777aef197d31913f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_76DF8F942321E18A966DED02"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "631cf3117730ad0fefe1e34e813816dbedf8fb121e6a9d81231ca7912f1e3bed",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确触发情形及针对性辨识评估缺口，不将事故后全面系统评估与本条变化触发情形混同。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十二条 有下列情形之一的，生产经营单位应当及时组织开展针对性的安全风险辨识、评估，确定或者调整安全风险等级，完善管控措施：",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2E3120051D98FA43AF37A75903_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_76DF8F942321E18A966DED02"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "631cf3117730ad0fefe1e34e813816dbedf8fb121e6a9d81231ca7912f1e3bed",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，生产经营单位在规定情形出现时，未及时组织开展针对性的安全风险辨识、评估并确定或者调整安全风险等级，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_2E3120051D98FA43AF37A75903_1",
+    "keywords": [
+      "生产经营单位在规定情形出现时",
+      "未及时组织开展针对性的安全风险辨识",
+      "评估并确定或者调整安全风险等级"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位在规定情形出现时，及时组织开展针对性的安全风险辨识、评估并确定或者调整安全风险等级。整改后由符合相应要求的人员或机构实施必要的检查、检测、检验、评价或验收，对发现的问题闭环整改，并保存结果和复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位在规定情形出现时，未及时组织开展针对性的安全风险辨识、评估并确定或者调整安全风险等级"
+  }
 }

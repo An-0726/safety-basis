@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_887370A46D580ABE502C3EDD9A_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9b07354a46f32a2a8f96cfe7f7de0f4cf1a6bd26ac15a1d9855e4a26c06b5cfd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_9F2529F5F1382AFB948D60AF"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "4ee51970746297f1babd0cfa1d6fb03009fce73a420652bf10f0678ca40da15a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确确诊前提及报告对象，不与疑似病人报告混同。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "确诊为职业病的，用 人单位还应当向所在地劳动保障行政部门报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_887370A46D580ABE502C3EDD9A_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_9F2529F5F1382AFB948D60AF"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "4ee51970746297f1babd0cfa1d6fb03009fce73a420652bf10f0678ca40da15a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，劳动者确诊为职业病后，用人单位未向所在地劳动保障行政部门报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_887370A46D580ABE502C3EDD9A_2",
+    "keywords": [
+      "劳动者确诊为职业病后",
+      "用人单位未向所在地劳动保障行政部门报告"
+    ],
+    "lifecycle": "active",
+    "measures": "劳动者确诊为职业病后，用人单位向所在地劳动保障行政部门报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "劳动者确诊为职业病后，用人单位未向所在地劳动保障行政部门报告"
+  }
 }

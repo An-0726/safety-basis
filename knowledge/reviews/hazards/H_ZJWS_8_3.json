@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_8_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0feed33e5dde5b317f6fd0d0a938664df4adc9ce6bf5d9a72f7f11fe2cec0b15",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_7C11DC0F6E49B742F2B6DDC5"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "afed12cd194f47ba07c9022837ded57bad3da7f46bc79f3ea922f06a75a458a5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留其他用人单位和人数分支，排除危害严重单位，明确专兼职两者均缺失才构成本分支缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "其他存在职业病危害的用人单位，劳动者超过一百人的，应当设置或者指定职业卫生管理机构或者组织，配备专职职业卫生管理人员；劳动者在一百人以下的，应当配备专职或者兼职的职业卫生管理人员，负责本单位的职业病防治工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_8_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_7C11DC0F6E49B742F2B6DDC5"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "afed12cd194f47ba07c9022837ded57bad3da7f46bc79f3ea922f06a75a458a5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，百人以下用人单位未配备专职或兼职的职业卫生管理人员，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_ZJWS_8_3",
+    "keywords": [
+      "百人以下用人单位未配备专职或兼职的职业卫生管理人员"
+    ],
+    "lifecycle": "active",
+    "measures": "百人以下用人单位配备专职或兼职的职业卫生管理人员。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "百人以下用人单位未配备专职或兼职的职业卫生管理人员"
+  }
 }

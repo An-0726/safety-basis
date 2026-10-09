@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_87B9C4E0DA4B11593CBEA900B1_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "60275735b1e27ca998efbc58ac5a23bd54e3f8a730f2de02e859121137e7a944",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "29390ed43bd8c56a8d9c8abc17dcbc94ee34382378082760de733d57a24db1df",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留场所、事故预案类型及半年频次。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（四）人员密集场所每半年应当至少组织一次生产安全事故应急救援预案演练。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_87B9C4E0DA4B11593CBEA900B1_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "29390ed43bd8c56a8d9c8abc17dcbc94ee34382378082760de733d57a24db1df",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，人员密集场所未每半年至少组织一次生产安全事故应急救援预案演练，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_87B9C4E0DA4B11593CBEA900B1_4",
+    "keywords": [
+      "人员密集场所未每半年至少组织一次生产安全事故应急救援预案演练"
+    ],
+    "lifecycle": "active",
+    "measures": "人员密集场所每半年至少组织一次生产安全事故应急救援预案演练。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "人员密集场所未每半年至少组织一次生产安全事故应急救援预案演练"
+  }
 }

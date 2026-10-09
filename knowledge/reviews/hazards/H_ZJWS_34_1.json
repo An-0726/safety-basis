@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_34_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a177702abd5389be6ffdd2e48d66e9449714450cb977936c0084e43e424d85f9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_F1CB8A0953CD43DC69467CDD"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "cce30633a0070f2a6c6990238d64d8adbdbbf02c110e268b9d44e699bfcf45b5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以本条资料类别具体化档案缺失，整改按十二类核对补齐，不增设无来源的管理频次。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位应当建立健全下列职业卫生档案资料：\n（一）职业病防治责任制文件；\n（二）职业卫生管理规章制度、操作规程；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_34_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_F1CB8A0953CD43DC69467CDD"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "cce30633a0070f2a6c6990238d64d8adbdbbf02c110e268b9d44e699bfcf45b5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，用人单位未建立健全职业卫生档案资料，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_ZJWS_34_1",
+    "keywords": [
+      "用人单位未建立健全职业卫生档案资料"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位建立健全职业卫生档案资料。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未建立健全职业卫生档案资料"
+  }
 }

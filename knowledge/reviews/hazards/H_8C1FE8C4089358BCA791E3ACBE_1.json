@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8C1FE8C4089358BCA791E3ACBE_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2412c2da21f69ead98013f52096c0e90c4ca2e7b01e13c68e2eb4a64131e76a0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_C9074654CEE046293831AD8E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "1750866de9ced393e701f35e4e12059ad00f3d6bd9b307dae95ddf6016188cfe",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留事故伤员需抢救前提及特殊情况不得拒绝救护的限定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十三条发生生产安全事故造成人员伤害需要抢救的，生产经营单位应当及时将受伤人员送至医疗机构，并垫付医疗费用。因特殊情况不能及时垫付的，医疗机构不得拒绝救护。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8C1FE8C4089358BCA791E3ACBE_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_C9074654CEE046293831AD8E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "1750866de9ced393e701f35e4e12059ad00f3d6bd9b307dae95ddf6016188cfe",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，发生生产安全事故造成人员伤害需要抢救的，生产经营单位未及时将受伤人员送至医疗机构，并垫付医疗费用，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8C1FE8C4089358BCA791E3ACBE_1",
+    "keywords": [
+      "发生生产安全事故造成人员伤害需要抢救的",
+      "生产经营单位未及时将受伤人员送至医疗机构",
+      "并垫付医疗费用"
+    ],
+    "lifecycle": "active",
+    "measures": "发生生产安全事故造成人员伤害需要抢救的，生产经营单位及时将受伤人员送至医疗机构，并垫付医疗费用。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "发生生产安全事故造成人员伤害需要抢救的，生产经营单位未及时将受伤人员送至医疗机构，并垫付医疗费用"
+  }
 }

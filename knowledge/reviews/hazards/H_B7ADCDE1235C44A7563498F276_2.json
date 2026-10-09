@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_B7ADCDE1235C44A7563498F276_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "172e1abd7620bb5425bf0df6abff15a66cf211af087bb3d532475b2f864369aa",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_8BF7FBDF4A9F0A68DE0482B2"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "828857e40de742a67f4d3c042ad836f4d24bd01f66c7f82072dbc25972b29d33",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除无关防护描述，纠正措施中保留“无书面记录”的反向错误。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "安全生产委员会至少每季度召开一次会议，会议应当有书面记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_B7ADCDE1235C44A7563498F276_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_8BF7FBDF4A9F0A68DE0482B2"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "828857e40de742a67f4d3c042ad836f4d24bd01f66c7f82072dbc25972b29d33",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，安全生产委员会未至少每季度召开一次会议或者会议无书面记录，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_B7ADCDE1235C44A7563498F276_2",
+    "keywords": [
+      "安全生产委员会未至少每季度召开一次会议或者会议无书面记录"
+    ],
+    "lifecycle": "active",
+    "measures": "安全生产委员会至少每季度召开一次会议或者会议无书面记录。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "安全生产委员会未至少每季度召开一次会议或者会议无书面记录"
+  }
 }

@@ -4,19 +4,40 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "《安全生产法》第二十八条属从业人员安全生产教育培训的一般义务，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第3.3.1条承担。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "reviewedContentHash": "50dd02b61a810c060ab3abba118e8da20e9b6e7c3d589a74f299426827a902d0",
   "contextHashes": {
-    "hazard": "cf16e44e1127de9b628f715a1dcba4916ad0f7c9bf187d9cc15b807e517d9631",
-    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458",
-    "link": "d52ffaca31b5e53e198380fc1d885b10c575c315085bcfaa8510939441babbf5"
+    "hazard": "9ceac7172e80bba009bcde4e9a979ad2d2833b23fe9cf184a77f7b8922a5d8c9",
+    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458"
   },
   "evidenceRefs": [],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "id": "RV_0b80aa25ef8285f0",
+    "entityId": "K_6911ec008ce79a9bf22e77ec",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "《安全生产法》第二十八条属从业人员安全生产教育培训的一般义务，保留为 fallback；本条 direct 依据已由 XF 1131-2014 第3.3.1条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "reviewedContentHash": "50dd02b61a810c060ab3abba118e8da20e9b6e7c3d589a74f299426827a902d0",
+    "contextHashes": {
+      "hazard": "cf16e44e1127de9b628f715a1dcba4916ad0f7c9bf187d9cc15b807e517d9631",
+      "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458",
+      "link": "d52ffaca31b5e53e198380fc1d885b10c575c315085bcfaa8510939441babbf5"
+    },
+    "evidenceRefs": [],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

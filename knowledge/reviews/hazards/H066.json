@@ -1,18 +1,60 @@
 {
-  "decision": "verified",
   "entityId": "H066",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "289766a7d09519a9f0600c254f319eb25586fe270e2c174bd5f4c0dfde219081",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55037_JS_FIRE_FULLTEXT_20260926"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_62b0a2142bac91f58c75345a34_5",
-    "reviewedAt": "2026-09-09T13:33:45+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "道路的净宽度和净空高度应满足消防车安全、快速通行的要求",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H066",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GB55037_JS_FIRE_FULLTEXT_20260926"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_62b0a2142bac91f58c75345a34_5",
+      "reviewedAt": "2026-09-09T13:33:45+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "2c67490386d47a0a54afb3e3c40b2a4ce4c0759bfb9e64c126b4c565ab77671d",
+    "checkedAt": "2026-09-26T18:47:04+08:00",
+    "reviewer": "Codex 消防原文及直接适用性复核 20260926",
+    "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "2c67490386d47a0a54afb3e3c40b2a4ce4c0759bfb9e64c126b4c565ab77671d",
-  "checkedAt": "2026-09-26T18:47:04+08:00",
-  "reviewer": "Codex 消防原文及直接适用性复核 20260926",
-  "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。"
+  "previousDefinition": {
+    "aliases": [
+      "消防车道净宽不足",
+      "消防车道净空高度不足",
+      "消防车通行条件不足"
+    ],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，消防车道净宽度或净空高度不满足消防车通行要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H066",
+    "keywords": [
+      "消防车道",
+      "净宽",
+      "净空高度",
+      "4m"
+    ],
+    "lifecycle": "active",
+    "measures": "清除占用和限高障碍，按适用建筑防火标准复核消防车道净宽、净空高度、转弯和承载条件；确有不足时组织工程整改。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "现行《建筑防火通用规范》GB 55037—2022第3.4.5条不再把所有场景机械表述为统一“4m”；应根据需要通行的消防车参数及现行相关技术标准核定。旧GB 50016—2014第7.1.8相关强制性条文已被废止。",
+    "places": [
+      "消防车道",
+      "建筑周边"
+    ],
+    "title": "消防车道净宽度或净空高度不满足消防车通行要求"
+  }
 }

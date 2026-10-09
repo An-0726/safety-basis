@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-26T19:25:36+08:00",
-  "decision": "verified",
   "entityId": "H_B840C62B7BC50A71F260358EA3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f39285d73c15e512efe2d3dd0207d96af1f9ebb5b1578297681e42238db3083d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_JS_RISK_RESPONSIBILITY_20260926"
   ],
-  "reason": "第九条覆盖全部生产经营风险，不限消防。",
-  "reviewType": "content",
-  "reviewedContentHash": "797f10777e94d6718b1b9cc0ab85d00fea7374e1de83dc4097ec3db3e223372e",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reason": "压缩列举并保留存在安全风险的对象前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当将存在安全风险的生产经营系统、工作场所、作业区域、疏散通道、设施设备、物料，以及涉及爆破、吊装、危险场所动火、有限（受限）空间作业、燃气使用、大型检修等作业活动，确定为风险点。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:25:36+08:00",
+    "decision": "verified",
+    "entityId": "H_B840C62B7BC50A71F260358EA3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_JS_RISK_RESPONSIBILITY_20260926"
+    ],
+    "reason": "第九条覆盖全部生产经营风险，不限消防。",
+    "reviewType": "content",
+    "reviewedContentHash": "797f10777e94d6718b1b9cc0ab85d00fea7374e1de83dc4097ec3db3e223372e",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内生产经营单位安全风险管理。核直接条款的具体义务、风险等级及触发条件；国家对电力、铁路、民用航空等行业另有规定的，从其规定。",
+    "description": "现场检查发现，生产经营单位未将存在安全风险的生产经营系统、工作场所、作业区域、疏散通道、设施设备、物料等纳入安全风险辨识评估范围，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_B840C62B7BC50A71F260358EA3_2",
+    "keywords": [
+      "生产经营单位未将存在安全风险的生产经营系统",
+      "工作场所",
+      "作业区域",
+      "疏散通道",
+      "设施设备",
+      "物料等纳入安全风险辨识评估范围"
+    ],
+    "lifecycle": "active",
+    "measures": "将实际存在安全风险的系统、场所、区域、通道、设施设备、物料和作业活动全面纳入辨识评估，形成对应风险点及管控措施。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "\n2026-09-26：第九条覆盖全部生产经营风险，不限消防。",
+    "places": [
+      "江苏省生产经营单位"
+    ],
+    "title": "生产经营单位未将存在安全风险的生产经营系统、工作场所、作业区域、疏散通道、设施设备、物料等纳入安全风险辨识评估范围"
+  }
 }

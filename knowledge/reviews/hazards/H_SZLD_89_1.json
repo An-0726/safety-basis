@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_89_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a1048ea64d0c287fedc7dcb41dfc1a5ef2eb9b0ed7f0de3c87749f9cdc1ecb44",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_0F054CD68B227633C7A19362"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "4ab4655877befb812d1637fee902e2fa2bbe3430a73aaf3faa6230fd3f427b8f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按数量用途环境配员并逐台明确责任，不添加人数门槛。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "89 第八十九条\n起重机械使用单位应当根据本单位起重机械的数量、用途、使用环境等情况，配备起重机械安全总监和足够数量的起重机械安全员，并逐台明确负责的起重机械安全员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_89_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_0F054CD68B227633C7A19362"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "4ab4655877befb812d1637fee902e2fa2bbe3430a73aaf3faa6230fd3f427b8f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：起重机械使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，起重机械使用单位未按数量用途配备安全总监和足够数量安全员，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_89_1",
+    "keywords": [
+      "起重机械使用单位未按数量用途配备安全总监和足够数量安全员"
+    ],
+    "lifecycle": "active",
+    "measures": "起重机械使用单位按数量用途配备安全总监和足够数量安全员。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "起重机械使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "起重机械使用单位未按数量用途配备安全总监和足够数量安全员"
+  }
 }
