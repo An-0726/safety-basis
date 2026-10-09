@@ -1,14 +1,52 @@
 {
-  "entityType": "hazard",
   "entityId": "H024",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "checkedAt": "2026-09-26T17:45:09+08:00",
-  "reviewer": "Codex 原始目录核验 20260926",
-  "reviewedContentHash": "d7cc009f79b38ac2094a3319c0ec37a73ceb517da1c46ea8f2efb38d3157b618",
+  "reviewedContentHash": "e15c696480a805738356030a4c96633385bd3dbe297019100241c78310fe2856",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BBE8D371BB5F65D71A149DAA",
     "E_MEM_ELIMINATION_2015_75_ORIGINAL_20260926"
   ],
-  "reason": "保留原江苏适用范围及定义，仅补检索词和目录核对边界；原义务依据不变。"
+  "reason": "淘汰义务不以机械伤害风险为条件；未将目录中的单个砂轮机项目扩展为全部工艺设备。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "淘汰国家和省规定的危及生产安全的工艺、设备。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H024",
+    "reviewType": "definition",
+    "decision": "verified",
+    "checkedAt": "2026-09-26T17:45:09+08:00",
+    "reviewer": "Codex 原始目录核验 20260926",
+    "reviewedContentHash": "d7cc009f79b38ac2094a3319c0ec37a73ceb517da1c46ea8f2efb38d3157b618",
+    "evidenceRefs": [
+      "E_XLSX_FT_BBE8D371BB5F65D71A149DAA",
+      "E_MEM_ELIMINATION_2015_75_ORIGINAL_20260926"
+    ],
+    "reason": "保留原江苏适用范围及定义，仅补检索词和目录核对边界；原义务依据不变。"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于江苏省行政区域内，且存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：江苏省行政区域内机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现：使用应淘汰的危及生产安全工艺或设备。",
+    "id": "H024",
+    "keywords": [
+      "使用应淘汰的危及生产安全工艺或设备",
+      "不带除尘的砂轮机",
+      "无集尘型砂轮机",
+      "淘汰落后安全技术装备目录"
+    ],
+    "lifecycle": "active",
+    "measures": "先对照国家及所在地现行淘汰目录确认具体工艺、设备属于应淘汰范围；确认后立即停止继续使用，制定安全停用、拆除和更新替换方案，并妥善处置相关风险。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "适用淘汰目录时须逐项核设备身份、禁止或限制类型及限制范围。安监总科技〔2015〕75号四、职业健康领域第1项用于核对不带除尘的砂轮机；不是所有砂轮机均淘汰，也不能仅凭无除尘推定粉尘可燃或重大事故隐患。目录提示原设备加装除尘改装可能仍不满足安全要求。",
+    "places": [
+      "江苏省行政区域内机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "使用应淘汰的危及生产安全工艺或设备"
+  }
 }

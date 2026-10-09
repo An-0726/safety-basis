@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_6409C243C7C08392D158FA8C97_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d7dfbcbd782657f41b1410a1184bdb0cbf091dd21eb805e672c849399db1263e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_45E5C68DA9E57AD8237FF0F1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e4c884bbfc1e0f7f6b390854b27c63d4cf5b5e411b8c466dc7c7bd6ac71a93c1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留登记的两个可选时段，仅超过期限仍未登记时适用。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十三条 特种设备使用单位应当在特种设备投入使用前或者投入使用后三十日内，向负责特种设备安全监督管理的部门办理使用登记，取得使用登记证书。登记标志应当置于该特种设备的显著位置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_6409C243C7C08392D158FA8C97_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_45E5C68DA9E57AD8237FF0F1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e4c884bbfc1e0f7f6b390854b27c63d4cf5b5e411b8c466dc7c7bd6ac71a93c1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备使用单位未在特种设备投入使用前或者投入使用后三十日内向负责特种设备安全监督管理的部门办理使用登记，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_6409C243C7C08392D158FA8C97_1",
+    "keywords": [
+      "特种设备使用单位未在特种设备投入使用前或者投入使用后三十日内向负责特种设备安全监督管理的部门办理使用登记"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备使用单位在特种设备投入使用前或者投入使用后三十日内向负责特种设备安全监督管理的部门办理使用登记。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备使用单位未在特种设备投入使用前或者投入使用后三十日内向负责特种设备安全监督管理的部门办理使用登记"
+  }
 }

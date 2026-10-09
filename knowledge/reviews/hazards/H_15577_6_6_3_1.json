@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_6_6_3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "795b5f1ff6c8a3e56326a12db97ca4480a6618e57cc4f17ee2895480bb5c890b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "74b7644e6727159d7e85fb0a87b76a49a4f746e43555f85aac1fdb1f2c9fc50f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对于金属粉尘和与水接触可能产生爆炸性气体的粉尘，不应采用水基灭火器和水灭火。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_6_6_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "74b7644e6727159d7e85fb0a87b76a49a4f746e43555f85aac1fdb1f2c9fc50f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，对于金属粉尘和与水接触可能产生爆炸性气体的粉尘，采用水基灭火器和水灭火，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_6_6_3_1",
+    "keywords": [
+      "对于金属粉尘和与水接触可能产生爆炸性气体的粉尘",
+      "采用水基灭火器和水灭火"
+    ],
+    "lifecycle": "active",
+    "measures": "停止对金属粉尘以及遇水可能产生爆炸性气体的粉尘使用水基灭火器或直接用水灭火，按粉尘性质配置适用的灭火介质和处置方案。整改后复查现场防火、疏散、消防设施或应急处置条件，涉及设施功能的应测试确认并纳入防火巡查。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "对于金属粉尘和与水接触可能产生爆炸性气体的粉尘，采用水基灭火器和水灭火"
+  }
 }

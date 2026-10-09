@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_6_4_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ac05902a97c4cde4bdbc6d69419dbd8c9e9a73cddc640fae282a97418cee17e6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "0efd1d48e88bc9a77e28cb2b3b5ec763b179a025ba2998fd50907d47ccab6246",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "将笼统反抄改为部位核查、措施补齐及运行复核，不指定未由条文提供的设备。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "粉尘爆炸危险场所设备和装置应采取防止发生摩擦、碰撞的措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_6_4_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "0efd1d48e88bc9a77e28cb2b3b5ec763b179a025ba2998fd50907d47ccab6246",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，粉尘爆炸危险场所设备和装置未采取防止发生摩擦、碰撞的措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_6_4_1_1",
+    "keywords": [
+      "粉尘爆炸危险场所设备和装置未采取防止发生摩擦",
+      "碰撞的措施"
+    ],
+    "lifecycle": "active",
+    "measures": "粉尘爆炸危险场所设备和装置采取防止发生摩擦、碰撞的措施。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "粉尘爆炸危险场所设备和装置未采取防止发生摩擦、碰撞的措施"
+  }
 }

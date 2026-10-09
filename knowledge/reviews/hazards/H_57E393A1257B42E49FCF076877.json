@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_57E393A1257B42E49FCF076877",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "628e38a09d3821d251dd58cbdf08195c0b6c7d12341da3c4144bbf9df1399a68",
-  "checkedAt": "2026-09-26T18:47:04+08:00",
-  "reviewer": "Codex 消防原文及直接适用性复核 20260926",
-  "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+  "reviewedContentHash": "7082dcdc7a1b4010ff093fc7a67a6f3161df12db21c49c4d3931e6613480e6d9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55037_JS_FIRE_FULLTEXT_20260926"
-  ]
+  ],
+  "reason": "保留已有面积、用途及例外条件，设置义务须核条件后判断。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "1建筑占地面积大于300m²的厂房、仓库和民用建筑；",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_57E393A1257B42E49FCF076877",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "628e38a09d3821d251dd58cbdf08195c0b6c7d12341da3c4144bbf9df1399a68",
+    "checkedAt": "2026-09-26T18:47:04+08:00",
+    "reviewer": "Codex 消防原文及直接适用性复核 20260926",
+    "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+    "evidenceRefs": [
+      "E_GB55037_JS_FIRE_FULLTEXT_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_57E393A1257B42E49FCF076877",
+    "title": "应设置室外消火栓系统的建筑或场所未设置",
+    "description": "符合GB55037第8.1.5条适用条件的厂房、仓库、民用建筑或其他所列场所，未设置室外消火栓系统。",
+    "measures": "核建筑面积、体积、用途及适用例外，按消防给水设计要求补设室外消火栓系统。",
+    "conditions": "按第8.1.5条核建筑占地面积、耐火等级、体积及用途，包括占地面积大于300㎡的厂房仓库民用建筑等所列情形；保留城市轨道地上区间和一二级耐火且体积不大于3000m³戊类厂房例外。本关联不覆盖储罐区及堆场的专门设置依据。",
+    "category": "总图与建筑",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "室外消火栓",
+      "建筑占地面积",
+      "消防给水"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《建筑设计防火规 范》 第8. 1.2条\n2026-09-26已按现行完整原文纠正旧描述及适用范围；历史旧阈值和旧依据不再作为当前判定依据。",
+    "mergedInto": null
+  }
 }

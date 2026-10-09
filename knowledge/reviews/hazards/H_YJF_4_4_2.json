@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_4_4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4a72d5b3a6981c68c8f2d9638007a73436ef70b82687edcec34a979db6303f6c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "9cb1683a74316741098d042c43a23cf5ec1327b632738d805600dcc11e94526f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "应急预案编制可参照《危险废物经营单位编制应急预案指南》，涉及运输的相关内容还应符合交通行政主管部门的有关规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_4_4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "9cb1683a74316741098d042c43a23cf5ec1327b632738d805600dcc11e94526f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "经资料及履职情况核查，危险废物应急预案涉及运输的内容不符合交通部门规定，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_YJF_4_4_2",
+    "keywords": [
+      "危险废物应急预案涉及运输的内容不符合交通部门规定"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物应急预案涉及运输的内容调整至符合交通部门规定。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物应急预案涉及运输的内容不符合交通部门规定"
+  }
 }

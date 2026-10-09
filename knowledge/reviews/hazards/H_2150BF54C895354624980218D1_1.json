@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_2150BF54C895354624980218D1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "00b9d4571ee0d803b3c2ba8ccad30d94246a199dc7eb06a45fddd9db7a5919dd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_B64A2B0713D497D302F04123"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "18f52bf4fe22f84c305e23c89de18fa14d14d94eed4f6467ebebea29346c04a5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "属于火灾高危单位的公众聚集场所经营、管理者和生产、储存、运输、销售易燃易爆危险品的企业应当健全火灾风险防范机制，保证履行消防安全责任，保障公众安全。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2150BF54C895354624980218D1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_B64A2B0713D497D302F04123"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "18f52bf4fe22f84c305e23c89de18fa14d14d94eed4f6467ebebea29346c04a5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，属于火灾高危单位的公众聚集场所经营、管理者和易燃易爆危险品企业未健全火灾风险防范机制，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_2150BF54C895354624980218D1_1",
+    "keywords": [
+      "属于火灾高危单位的公众聚集场所经营",
+      "管理者和易燃易爆危险品企业未健全火灾风险防范机制"
+    ],
+    "lifecycle": "active",
+    "measures": "属于火灾高危单位的公众聚集场所经营、管理者和易燃易爆危险品企业健全火灾风险防范机制。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "属于火灾高危单位的公众聚集场所经营、管理者和易燃易爆危险品企业未健全火灾风险防范机制"
+  }
 }

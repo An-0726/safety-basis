@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_EE925675F6E84177BABE17ED75",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9e806bbece4ef17e622af649cba782097b1d5feec7049c62b150eeeca9124366",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "f5579221a56aa191ea3406e1e56ed73ba294359189bed11dbdf0f306c3c874b7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原措施误将并行义务写为“或”，改为同时落实并分别核查。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "贮存危险废物应根据危险废物的类别、形态、物理化学性质和污染防治要求进行分类贮存，且应避免危险废物与不相容的物质或材料接触。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_EE925675F6E84177BABE17ED75",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "f5579221a56aa191ea3406e1e56ed73ba294359189bed11dbdf0f306c3c874b7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，危险废物未分类贮存或未避免与不相容物质接触，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_EE925675F6E84177BABE17ED75",
+    "keywords": [
+      "危险废物未分类贮存或未避免与不相容物质接触"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物分类贮存或避免与不相容物质接触。整改后复核危险废物分类、包装、标识、贮存、转移或应急措施中与本项有关的要求，并保留相应台账和检查记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物未分类贮存或未避免与不相容物质接触"
+  }
 }

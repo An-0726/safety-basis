@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-10-09",
   "decision": "verified",
   "entityId": "K_XLSX_FT_B110F77FECB2904CF1D026D7",
   "entityType": "link",
   "evidenceRefs": [
     "E_L001"
   ],
-  "reason": "机关、团体、企业、事业等单位的建筑消防设施，每年至少全面检测一次并确保完好有效、完整准确记录并存档。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "271ec331b51e79ca6ca53b98a88115d84c3f4f487fa828dc2a4dec46712b56f5",
-  "reviewer": "Codex条款结构逐项复核20261003",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "locator": "第十六条第一款第（三）项",
   "reviewedFields": [
     "/applicability",
@@ -33,22 +33,73 @@
     ]
   },
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "contextHashes": {
-      "clause": "aff4fc74798e82d40ec8df416b0a986a0df8c3a33f866df9d3db0d0d4cb90c6b",
-      "hazard": "e8922b550c1a59c99f2ad8f0f1c917d4f8db3e009504844ce11ba42535a65d16"
-    },
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "K_XLSX_FT_B110F77FECB2904CF1D026D7",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_FT_A8B09C0E894A1F1842E6BEA1"
+      "E_L001"
     ],
-    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reason": "机关、团体、企业、事业等单位的建筑消防设施，每年至少全面检测一次并确保完好有效、完整准确记录并存档。",
     "reviewType": "applicability",
-    "reviewedContentHash": "29e9f1beaf42475c3232f406a18c568af04fe8dae5aecd1230961218d1a96e83",
-    "reviewer": "Codex正式核验批次20260913",
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "reviewedContentHash": "271ec331b51e79ca6ca53b98a88115d84c3f4f487fa828dc2a4dec46712b56f5",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第十六条第一款第（三）项",
+    "reviewedFields": [
+      "/applicability",
+      "/clauseId",
+      "/reason"
+    ],
+    "reviewedValues": {
+      "/applicability": "适用于机关、团体、企业、事业等单位的建筑消防设施；依第十六条第一款第（三）项核查每年至少一次全面检测、完好有效以及检测记录完整准确并存档备查。",
+      "/clauseId": "C_421CE6E205C8069977EB63572A",
+      "/reason": "第十六条第一款第（三）项直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+    },
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_L001"
+      ],
+      "/clauseId": [
+        "E_L001"
+      ],
+      "/reason": [
+        "E_L001"
+      ]
+    },
+    "previousReviewFileSha256": "9a9a9f96678c241a8a6aabe8a2fa3e18a2abb659e648469bfcfea8758fb3ce7b",
+    "historySha256": "a546efb08eaee25b1495bbb02ae23b4b77e31f8714fdc45e9fb2b872d45361ac",
+    "previousEntity": {
+      "applicability": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+      "clauseId": "C_XLSX_FT_C7CBCB1E528E3A6C6855FA14",
+      "hazardId": "H_421CE6E205C8069977EB63572A_2",
+      "id": "K_XLSX_FT_B110F77FECB2904CF1D026D7",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+      "role": "direct"
+    },
+    "previousEntityFileSha256": "4e30d877ac878371fe3a3ab5ec2afa81d35f87854f24d9b833b9aa14795e8c83",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202307/t20230726_3207767.html",
+      "currentnessEvidence": "official/national-current-laws-web-readback.json",
+      "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+      "lawVersionId": "L001",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "6f871d09f38d42e249c234698cb04255e3ea50238856ddca377129f36d435a71",
+      "operativeLocator": "第十六条第一款第（三）项",
+      "completeOfficialQuote": "第十六条  机关、团体、企业、事业等单位应当履行下列消防安全职责：\n\n　　（一）落实消防安全责任制，制定本单位的消防安全制度、消防安全操作规程，制定灭火和应急疏散预案；\n\n　　（二）按照国家标准、行业标准配置消防设施、器材，设置消防安全标志，并定期组织检验、维修，确保完好有效；\n\n　　（三）对建筑消防设施每年至少进行一次全面检测，确保完好有效，检测记录应当完整准确，存档备查；\n\n　　（四）保障疏散通道、安全出口、消防车通道畅通，保证防火防烟分区、防火间距符合消防技术标准；\n\n　　（五）组织防火检查，及时消除火灾隐患；\n\n　　（六）组织进行有针对性的消防演练；\n\n　　（七）法律、法规规定的其他消防安全职责。\n\n　　单位的主要负责人是本单位的消防安全责任人。",
+      "scopeDecision": "机关、团体、企业、事业等单位的建筑消防设施，每年至少全面检测一次并确保完好有效、完整准确记录并存档。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+    "contextHashes": {
+      "hazard": "e9be7711ac983957052326b4e7e6642c057786f6986a06adbb92000dacad082a",
+      "clause": "9f813ed969a7a8b899bb95c963d5f04bac1e36c69ba1ee48e90cbac39bb7fca0"
+    }
   },
   "previousReviewFileSha256": "9a9a9f96678c241a8a6aabe8a2fa3e18a2abb659e648469bfcfea8758fb3ce7b",
   "historySha256": "a546efb08eaee25b1495bbb02ae23b4b77e31f8714fdc45e9fb2b872d45361ac",
@@ -79,9 +130,9 @@
     "completeOfficialQuote": "第十六条  机关、团体、企业、事业等单位应当履行下列消防安全职责：\n\n　　（一）落实消防安全责任制，制定本单位的消防安全制度、消防安全操作规程，制定灭火和应急疏散预案；\n\n　　（二）按照国家标准、行业标准配置消防设施、器材，设置消防安全标志，并定期组织检验、维修，确保完好有效；\n\n　　（三）对建筑消防设施每年至少进行一次全面检测，确保完好有效，检测记录应当完整准确，存档备查；\n\n　　（四）保障疏散通道、安全出口、消防车通道畅通，保证防火防烟分区、防火间距符合消防技术标准；\n\n　　（五）组织防火检查，及时消除火灾隐患；\n\n　　（六）组织进行有针对性的消防演练；\n\n　　（七）法律、法规规定的其他消防安全职责。\n\n　　单位的主要负责人是本单位的消防安全责任人。",
     "scopeDecision": "机关、团体、企业、事业等单位的建筑消防设施，每年至少全面检测一次并确保完好有效、完整准确记录并存档。"
   },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "contextHashes": {
-    "hazard": "e9be7711ac983957052326b4e7e6642c057786f6986a06adbb92000dacad082a",
+    "hazard": "2c8b6c8adf2414fed3dda46616b9404a36a2b0311e1d2f0cf8aa8c8339554b54",
     "clause": "9f813ed969a7a8b899bb95c963d5f04bac1e36c69ba1ee48e90cbac39bb7fca0"
   }
 }

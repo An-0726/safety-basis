@@ -4,21 +4,44 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ChatGPT",
-  "checkedAt": "2026-09-10T17:50:00+08:00",
-  "reason": "《安全生产法》第二十八条是从业人员安全生产教育培训的一般义务，可以支撑H043的上位法责任，但没有仓储消防场景和具体培训频次，因此从direct调整为fallback；专项直接依据改由XF 1131-2014第3.3.2条承担。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "GENERAL_TRAINING_DUTY"
   ],
   "reviewedContentHash": "963b874caf0c99c9c56d11b770b53a6d70bfedc32f0b06f9411e0cfffc5a8b1b",
   "contextHashes": {
-    "hazard": "8a33d5e01da986e347051394db7c6462a52c0b46c5073b446f811468922f90bd",
-    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458",
-    "link": "963b874caf0c99c9c56d11b770b53a6d70bfedc32f0b06f9411e0cfffc5a8b1b"
+    "hazard": "940d68065d60bbf440189b9bd8e845c4f6ec30c70739ee6cb4f33bd25d3bc000",
+    "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458"
   },
   "evidenceRefs": [
     "E_71092af16b3511525cacf1cb6433950d99184ac935623a34537def93dbd5dee9"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "id": "RV_h043_fallback_20260910",
+    "entityId": "K_f1313b10272b1d1f3f163c64",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ChatGPT",
+    "checkedAt": "2026-09-10T17:50:00+08:00",
+    "reason": "《安全生产法》第二十八条是从业人员安全生产教育培训的一般义务，可以支撑H043的上位法责任，但没有仓储消防场景和具体培训频次，因此从direct调整为fallback；专项直接依据改由XF 1131-2014第3.3.2条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "GENERAL_TRAINING_DUTY"
+    ],
+    "reviewedContentHash": "963b874caf0c99c9c56d11b770b53a6d70bfedc32f0b06f9411e0cfffc5a8b1b",
+    "contextHashes": {
+      "hazard": "8a33d5e01da986e347051394db7c6462a52c0b46c5073b446f811468922f90bd",
+      "clause": "61f257eeb75f1eb41b0884c16fdd7c7820238b4c17c2ee7322cee677a9c54458",
+      "link": "963b874caf0c99c9c56d11b770b53a6d70bfedc32f0b06f9411e0cfffc5a8b1b"
+    },
+    "evidenceRefs": [
+      "E_71092af16b3511525cacf1cb6433950d99184ac935623a34537def93dbd5dee9"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

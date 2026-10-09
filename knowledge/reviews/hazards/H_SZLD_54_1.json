@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_54_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7bd6b3b68e9a5dea0e8068bc73190fca5d706874b1446011ddfbc517c24dfe7c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2532EC135D0FBF4FA25DEFD1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "b2ed8a3fad714f136c31fde588fba6abaaef990f45a6b9a179bce72ce882c50a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留逐条管道责任，不误写为逐台设备责任。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "54 第五十四条\n压力管道使用单位应当根据本单位压力管道的数量、用途、使用环境等情况，配备压力管道安全总监和足够数量的压力管道安全员，并逐条明确负责的压力管道安全员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_54_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2532EC135D0FBF4FA25DEFD1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "b2ed8a3fad714f136c31fde588fba6abaaef990f45a6b9a179bce72ce882c50a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，压力管道使用单位未按数量用途配备安全总监和足够数量安全员，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_54_1",
+    "keywords": [
+      "压力管道使用单位未按数量用途配备安全总监和足够数量安全员"
+    ],
+    "lifecycle": "active",
+    "measures": "压力管道使用单位按数量用途配备安全总监和足够数量安全员。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "压力管道使用单位未按数量用途配备安全总监和足够数量安全员"
+  }
 }

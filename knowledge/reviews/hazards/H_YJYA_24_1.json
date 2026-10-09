@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJYA_24_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bcaa154d27ef14851fe8607811bd4710c5697b523994e26080fae267a0b1e285",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2D7B8FD35D31C43A1FD4562B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "95798702fee0cbc2704bd19f12ca0514b10b1e94cd1327cd01378caa41677c13",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留风险可能影响周边的前提及告知内容。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "事故风险可能影响周边其他单位、人员的，生产经营单位应当将有关事故风险的性质、影响范围和应急防范措施告知周边的其他单位和人员。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJYA_24_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2D7B8FD35D31C43A1FD4562B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "95798702fee0cbc2704bd19f12ca0514b10b1e94cd1327cd01378caa41677c13",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料和执行情况核查，事故风险可能影响周边单位时未将风险和防范措施告知周边单位，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJYA_24_1",
+    "keywords": [
+      "事故风险可能影响周边单位时未将风险和防范措施告知周边单位"
+    ],
+    "lifecycle": "active",
+    "measures": "事故风险可能影响周边单位时将风险和防范措施告知周边单位。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "事故风险可能影响周边单位时未将风险和防范措施告知周边单位"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_7_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bfd768ea6001ce758d7f6be8751c9aad51a1bb686da5953f70c196318893c195",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "6c646491e95080f635a5b1ad299cffea19d5b62a5f3b353305a5532f98b9081e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留金属对象和装油前提，连接与接地均须满足。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当采用金属管嘴或金属漏斗向金属油桶装油时,各部分应保持良好的电气连接,并可靠接地。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_7_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "6c646491e95080f635a5b1ad299cffea19d5b62a5f3b353305a5532f98b9081e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，采用金属管嘴或金属漏斗向金属油桶装油时，各部分未保持良好的电气连接并可靠接地，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_7_1_1",
+    "keywords": [
+      "采用金属管嘴或金属漏斗向金属油桶装油时",
+      "各部分未保持良好的电气连接并可靠接地"
+    ],
+    "lifecycle": "active",
+    "measures": "采用金属管嘴或金属漏斗向金属油桶装油时，各部分保持良好的电气连接并可靠接地。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "采用金属管嘴或金属漏斗向金属油桶装油时，各部分未保持良好的电气连接并可靠接地"
+  }
 }

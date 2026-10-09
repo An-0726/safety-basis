@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_86641EBB2649A7349D99D07AD9_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "79f7392cbb1d9883f31b977f466ab059d2abdfe4ac5ea3571965f7fb4a1e1864",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_369D0DCC2D26903BEF0FFBE1"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "5ef1760905a6cc5b56e9067f9d7b0d96c822aa56c7dd91ac530976b4216241b8",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确义务主体是发包方、出租方，去除机械防护泛化条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位发包生产经营项目或者出租场所、设备的，应当依法具备相应的安全生产条件",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_86641EBB2649A7349D99D07AD9_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_369D0DCC2D26903BEF0FFBE1"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "5ef1760905a6cc5b56e9067f9d7b0d96c822aa56c7dd91ac530976b4216241b8",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于南京市行政区域内，且存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：南京市行政区域内机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，生产经营单位发包生产经营项目或者出租场所、设备的，未依法具备相应的安全生产条件，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_86641EBB2649A7349D99D07AD9_1",
+    "keywords": [
+      "生产经营单位发包生产经营项目或者出租场所",
+      "设备的",
+      "未依法具备相应的安全生产条件"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位发包生产经营项目或者出租场所、设备的，依法具备相应的安全生产条件。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "生产经营单位发包生产经营项目或者出租场所、设备的，未依法具备相应的安全生产条件"
+  }
 }

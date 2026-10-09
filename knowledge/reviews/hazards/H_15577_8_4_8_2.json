@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_8_4_8_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ba94d89ba5741ea3bd7a130272a69ccd0023a0a2ff35f08e61e44fb691a38160",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "49855b7638086d72c2dc404a720b213506a4351af36e25ef28302fd095519045",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "泄爆方向无法满足安全要求的，应采用无焰泄爆装置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_8_4_8_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "49855b7638086d72c2dc404a720b213506a4351af36e25ef28302fd095519045",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，泄爆方向无法满足安全要求的，未采用无焰泄爆装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15577_8_4_8_2",
+    "keywords": [
+      "泄爆方向无法满足安全要求的",
+      "未采用无焰泄爆装置"
+    ],
+    "lifecycle": "active",
+    "measures": "泄爆方向无法满足安全要求的，采用无焰泄爆装置。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "泄爆方向无法满足安全要求的，未采用无焰泄爆装置"
+  }
 }

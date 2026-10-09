@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_119_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bb354f5d71895ae0142ea048eb2e00cc2e80adc14c702062d806e15b78e9b42d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_81D3171FFA73C429BE4FE5F6"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a8f46eb7f96ebeb49f8e3d47bd5c5e924feb1300a88286315e133b10127f0122",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩标题，将整改对应到岗位职责中的实际工作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "大型游乐设施安全总监和大型游乐设施安全员应当按照岗位职责，协助单位主要负责人做好大型游乐设施使用安全管理工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_119_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_81D3171FFA73C429BE4FE5F6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a8f46eb7f96ebeb49f8e3d47bd5c5e924feb1300a88286315e133b10127f0122",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：大型游乐设施使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，大型游乐设施安全总监和大型游乐设施安全员未按照岗位职责，协助单位主要负责人做好大型游乐设施使用安全管理工作，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_119_2",
+    "keywords": [
+      "大型游乐设施安全总监和大型游乐设施安全员未按照岗位职责",
+      "协助单位主要负责人做好大型游乐设施使用安全管理工作"
+    ],
+    "lifecycle": "active",
+    "measures": "大型游乐设施安全总监和大型游乐设施安全员按照岗位职责，协助单位主要负责人做好大型游乐设施使用安全管理工作。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "大型游乐设施使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "大型游乐设施安全总监和大型游乐设施安全员未按照岗位职责，协助单位主要负责人做好大型游乐设施使用安全管理工作"
+  }
 }

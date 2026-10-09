@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H059 为仓储场所未按 GB 50057 设置防雷与接地系统或未按规定周期检测；XF 1131-2014 第8.11条（强制性）直接规定设置依据（GB 50057）、检测周期（一般每年一次、甲乙方每半年一次）及取证要求，确认为 direct 依据。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "MANDATORY_CLAUSE",
@@ -13,14 +13,39 @@
   ],
   "reviewedContentHash": "738d2543237f4193b431c3f588f8efcbf3ae6d14f61451c5ffa2927209906176",
   "contextHashes": {
-    "hazard": "9c272216aa34f3fccc91f460118bb26bd511607fe1369b52f1e317dc4953083b",
-    "clause": "b12d5b79a91e43e8f5c54395cecf1d4044a864beef49e15bef175751f11dedba",
-    "link": "738d2543237f4193b431c3f588f8efcbf3ae6d14f61451c5ffa2927209906176"
+    "hazard": "c6bfbec67c57fd6d366caee9d5e1e0f9274c062c900c9124d664cffea029dba2",
+    "clause": "b12d5b79a91e43e8f5c54395cecf1d4044a864beef49e15bef175751f11dedba"
   },
   "evidenceRefs": [
     "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb",
     "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c",
     "E_6f17cf85f91a6367a25cd532e5cf0d58b05e9e43bd728cf2427f2c5a86bc5449"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_CD39EA2650BF31F854865A",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "H059 为仓储场所未按 GB 50057 设置防雷与接地系统或未按规定周期检测；XF 1131-2014 第8.11条（强制性）直接规定设置依据（GB 50057）、检测周期（一般每年一次、甲乙方每半年一次）及取证要求，确认为 direct 依据。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "MANDATORY_CLAUSE",
+      "LIGHTNING_PROTECTION_PERIODIC_TEST"
+    ],
+    "reviewedContentHash": "738d2543237f4193b431c3f588f8efcbf3ae6d14f61451c5ffa2927209906176",
+    "contextHashes": {
+      "hazard": "9c272216aa34f3fccc91f460118bb26bd511607fe1369b52f1e317dc4953083b",
+      "clause": "b12d5b79a91e43e8f5c54395cecf1d4044a864beef49e15bef175751f11dedba",
+      "link": "738d2543237f4193b431c3f588f8efcbf3ae6d14f61451c5ffa2927209906176"
+    },
+    "evidenceRefs": [
+      "E_ed9d37fc9079d9f7b9ed91aa86876c40cd5013da9f5b86e1f4d25ca9ba0e96fb",
+      "E_277d781095b57f83d39eecb7283118ff69fde1134fcdd09aed6b95ca479f6d2c",
+      "E_6f17cf85f91a6367a25cd532e5cf0d58b05e9e43bd728cf2427f2c5a86bc5449"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_5_6_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d4de43473b17f61b492b46ac1b6d65bf30f8a817338cb9655532fda677cfc744",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "ad8d9c2ca5e7e0892970b24d62d5c1d32810dae87bb9b5bf77c6f6d62f936c50",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "标题压缩并区分监测记录与装置计量缺陷，条件保留频率的确定因素。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "检查在工作中应按照静电危害控制方案对关键数据进行实时监测并记录,并由具有资质的第三方机构对监测装置进行定期计量。检查、检测和计量频率取决于控制对象的用途、耐久性及失效的风险。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_5_6_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "ad8d9c2ca5e7e0892970b24d62d5c1d32810dae87bb9b5bf77c6f6d62f936c50",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "经资料及履职情况核查，静电危险场所相关单位未按照静电危害控制方案对关键数据进行实时监测并记录，监测装置未由具有资质的第三方机构定期计量，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_5_6_1",
+    "keywords": [
+      "静电危险场所相关单位未按照静电危害控制方案对关键数据进行实时监测并记录",
+      "监测装置未由具有资质的第三方机构定期计量"
+    ],
+    "lifecycle": "active",
+    "measures": "静电危险场所相关单位按照静电危害控制方案对关键数据进行实时监测并记录，监测装置由具有资质的第三方机构定期计量。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "静电危险场所相关单位未按照静电危害控制方案对关键数据进行实时监测并记录，监测装置未由具有资质的第三方机构定期计量"
+  }
 }

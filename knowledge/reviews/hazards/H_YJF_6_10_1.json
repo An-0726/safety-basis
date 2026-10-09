@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_6_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8ef1c89a7d02826759508593b7a463e902c3bf61d511b076637b434ca95eb30c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "496f83530ce2cd21e5597c1cd9f193b6b2261d59e50e23eb58b6d853204169aa",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "危险废物贮存设施的关闭应按照GB18597和《危险废物经营许可证管理办法》的有关规定执行。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_6_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "496f83530ce2cd21e5597c1cd9f193b6b2261d59e50e23eb58b6d853204169aa",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "经资料及履职情况核查，危险废物贮存设施的关闭未按照GB18597和《危险废物经营许可证管理办法》的有关规定执行，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJF_6_10_1",
+    "keywords": [
+      "危险废物贮存设施的关闭未按照GB18597和《危险废物经营许可证管理办法》的有关规定执行"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物贮存设施的关闭按照GB18597和《危险废物经营许可证管理办法》的有关规定执行。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物贮存设施的关闭未按照GB18597和《危险废物经营许可证管理办法》的有关规定执行"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_3762721034F27E86AB0557D1D5_6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1a6db4bd6d9c7238bc4dcf0b7a4af2480a3663432397b2298e4536512b71b6c9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "23bd7b8c73970fff925e14a5786beaa00ea7b81ceac516fd721414303efd4322",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确实际承担检查的医疗卫生机构主体，去除通用行政报送尾句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "职业健康检查应当由取得《医疗机构执业许可证》的医疗卫生机构 承担。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_3762721034F27E86AB0557D1D5_6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "23bd7b8c73970fff925e14a5786beaa00ea7b81ceac516fd721414303efd4322",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，职业健康检查未由取得《医疗机构执业许可证》的医疗卫生机构承担，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_3762721034F27E86AB0557D1D5_6",
+    "keywords": [
+      "职业健康检查未由取得《医疗机构执业许可证》的医疗卫生机构承担"
+    ],
+    "lifecycle": "active",
+    "measures": "职业健康检查由取得《医疗机构执业许可证》的医疗卫生机构承担。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业健康检查未由取得《医疗机构执业许可证》的医疗卫生机构承担"
+  }
 }

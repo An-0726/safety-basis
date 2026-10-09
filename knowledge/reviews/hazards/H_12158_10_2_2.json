@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_10_2_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9aba1c31f75ea8e9de5ee5a2709efe9b192e386f29a42d0f09043c12399b897a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "bc68680ccd7fc9a0f5c0fc16fc5c5cbf674105a791b052b8b12d762dabec20ad",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "如人员作业场所存在甲、乙类易燃易爆物质,并有燃烧和爆炸风险,所使用的防护服还应符合GB8965.1的规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_10_2_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "bc68680ccd7fc9a0f5c0fc16fc5c5cbf674105a791b052b8b12d762dabec20ad",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "作业安全与个体防护",
+    "conditions": "适用于存在直接依据所述危险作业或个体防护需求；应结合具体作业方式、危险因素、人员身份和防护用品适用性确认要求。\n适用场所：存在个体防护或危险作业要求的岗位和作业场所",
+    "description": "现场检查发现，存在甲、乙类易燃易爆物质且有燃烧爆炸风险的作业场所，所使用的防护服未符合GB8965.1的规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_10_2_2",
+    "keywords": [
+      "存在甲",
+      "乙类易燃易爆物质且有燃烧爆炸风险的作业场所",
+      "所使用的防护服未符合GB8965.1的规定"
+    ],
+    "lifecycle": "active",
+    "measures": "存在甲、乙类易燃易爆物质且有燃烧爆炸风险的作业场所，所使用的防护服符合GB8965.1的规定。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在个体防护或危险作业要求的岗位和作业场所"
+    ],
+    "title": "存在甲、乙类易燃易爆物质且有燃烧爆炸风险的作业场所，所使用的防护服未符合GB8965.1的规定"
+  }
 }

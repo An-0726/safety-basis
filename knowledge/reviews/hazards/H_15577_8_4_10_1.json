@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_8_4_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "682d0ab936ae8bca9e9b5456ded7db85669aacae49efe2c7450d233f754e37f0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "7f9846c04f7bde9071841ce94cd31ac104efd8a8df17b9d0b94a405df5416bd2",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩长标题，描述区分除尘能力不足与监测报警缺失，避免要求两类缺陷同时出现。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "湿式除尘系统水量、流速应能满足去除进入除尘器粉尘的要求，并设置液位、流速的连续监测报警装置；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_8_4_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "7f9846c04f7bde9071841ce94cd31ac104efd8a8df17b9d0b94a405df5416bd2",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，湿式除尘系统水量、流速未能满足去除进入除尘器粉尘的要求，未设置液位、流速的连续监测报警装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15577_8_4_10_1",
+    "keywords": [
+      "湿式除尘系统水量",
+      "流速未能满足去除进入除尘器粉尘的要求",
+      "未设置液位",
+      "流速的连续监测报警装置"
+    ],
+    "lifecycle": "active",
+    "measures": "湿式除尘系统水量、流速能满足去除进入除尘器粉尘的要求，设置液位、流速的连续监测报警装置。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "湿式除尘系统水量、流速未能满足去除进入除尘器粉尘的要求，未设置液位、流速的连续监测报警装置"
+  }
 }

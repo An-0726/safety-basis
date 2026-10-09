@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H066_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "16b8fdaba05be54e998182c85cde8af17ba63168a4227dbb39ffbf0b8634fb7c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L015"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "d72c913b40e53c951b6179d88808c7b460f830cb5909ab194f2aefdcd3b937b6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留自行组织或协助组织的选择关系，并缩短法条式标题。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "仓储场所应组织或者协助有关部门对消防安全责任人、消防安全管理人、消防控制室的值班操作人员进行消防安全专门培训。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H066_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_L015"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "d72c913b40e53c951b6179d88808c7b460f830cb5909ab194f2aefdcd3b937b6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料和执行情况核查，仓储场所未组织或者协助有关部门对消防安全责任人、消防安全管理人、消防控制室的值班操作人员进行消防安全专门培训，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H066_1",
+    "keywords": [
+      "仓储场所未组织或者协助有关部门对消防安全责任人",
+      "消防安全管理人",
+      "消防控制室的值班操作人员进行消防安全专门培训"
+    ],
+    "lifecycle": "active",
+    "measures": "仓储场所组织或者协助有关部门对消防安全责任人、消防安全管理人、消防控制室的值班操作人员进行消防安全专门培训。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "仓储场所未组织或者协助有关部门对消防安全责任人、消防安全管理人、消防控制室的值班操作人员进行消防安全专门培训"
+  }
 }

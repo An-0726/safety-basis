@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_096C13EE91B0CA0B2951BF62D1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5e4de93655796c6651c5e4fc507e74264cd0d83459e3ca08ac5cdd20c77582be",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_FC78775F63D40E8469D0794E"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "2eef9d83b821226d474f92084eb03e867d92e73dae70c095a9da5595dc54fcd5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "聚焦事故后的抢救义务，删除常态制度频次套话。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第七十条 特种设备发生事故后，事故发生单位应当按照应急预案采取措施，组织抢救，防止事故扩大，减少人员伤亡和财产损失，保护事故现场和有关证据，并及时向事故发生地县级以上人民政府负责特种设备安全监督管理的部门和有关部门报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_096C13EE91B0CA0B2951BF62D1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_FC78775F63D40E8469D0794E"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "2eef9d83b821226d474f92084eb03e867d92e73dae70c095a9da5595dc54fcd5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，特种设备发生事故后，事故发生单位未按照应急预案采取措施组织抢救，防止事故扩大，减少人员伤亡和财产损失，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_096C13EE91B0CA0B2951BF62D1_1",
+    "keywords": [
+      "特种设备发生事故后",
+      "事故发生单位未按照应急预案采取措施组织抢救",
+      "防止事故扩大",
+      "减少人员伤亡和财产损失"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备发生事故后，事故发生单位按照应急预案采取措施组织抢救，防止事故扩大，减少人员伤亡和财产损失。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备发生事故后，事故发生单位未按照应急预案采取措施组织抢救，防止事故扩大，减少人员伤亡和财产损失"
+  }
 }

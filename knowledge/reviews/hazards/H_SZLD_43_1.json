@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_43_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "168950b038a2cb6031ddb13be7f65f5fb915a2cef9ca75100614cb46a3a3e2d0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_FB2B64F2E1E0860D7778F112"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "eef23bb14b1000dbb1e8d46f0c46762a7d1400023582b3bde3c46bcb2a8c97a3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "采用每日巡检气瓶要求，不添加投入使用或试运行前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "43 第四十三条\n气瓶充装单位应当建立气瓶充装安全日管控制度。气瓶安全员要每日根据《气瓶充装安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对气瓶进行巡检，形成《每日气瓶充装安全检查记录》，对发现的安全风险隐患，应当立即采取防范措施，及时上报气瓶安全总监或者单位主要负责人。未发现问题的，也应当予以记录，实行零风险报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_43_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_FB2B64F2E1E0860D7778F112"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "eef23bb14b1000dbb1e8d46f0c46762a7d1400023582b3bde3c46bcb2a8c97a3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，气瓶充装单位未建立气瓶充装安全日管控制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_43_1",
+    "keywords": [
+      "气瓶充装单位未建立气瓶充装安全日管控制度"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶充装单位建立气瓶充装安全日管控制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶充装单位未建立气瓶充装安全日管控制度"
+  }
 }

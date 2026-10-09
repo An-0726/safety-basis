@@ -1,29 +1,65 @@
 {
-  "entityType": "hazard",
   "entityId": "H_12158_8_8_5_3",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "a7dde4064191bcaf0871f9230e36ff6dbb47a83f8ce91bb2a434307cf1d80284",
-  "checkedAt": "2026-10-04T03:40:00Z",
-  "reviewer": "Codex static/fire recovery author source review 20261004",
-  "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
+  "reviewedContentHash": "aa57adf6ad0f3685243a4273b91fc4ebc9fefc016965c105c3abe7e627fd0d41",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "reason": "原描述具体，非导体使用为触发前提，仅调整判断模式。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "评价过程和所采取的措施应形成文件并纳入静电防护管理体系文件。",
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_12158_8_8_5_3",
     "reviewType": "definition",
-    "decision": "rejected",
-    "reviewedContentHash": "2818557f79c8dba3c2a894de7ac8fbcc77b709cb88c4775226889f35a9a95d9b",
-    "checkedAt": "2026-09-30T12:25:50Z",
-    "reviewer": "Codex source-integrity recovery review 20260930",
-    "reason": "撤回原verified审核。隐患所述特定工艺防静电措施形成文件的管理要求，与实际关联C_12158_4_2_2_1的静电导体接地义务不符；现有关联不能支撑该文件化要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "decision": "verified",
+    "reviewedContentHash": "a7dde4064191bcaf0871f9230e36ff6dbb47a83f8ce91bb2a434307cf1d80284",
+    "checkedAt": "2026-10-04T03:40:00Z",
+    "reviewer": "Codex static/fire recovery author source review 20261004",
+    "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
     "evidenceRefs": [
-      "E_SAMR_GB12158_2024"
+      "E_RECOVERY_GB12158_2024_20261004"
     ],
-    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+    "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_12158_8_8_5_3",
+      "reviewType": "definition",
+      "decision": "rejected",
+      "reviewedContentHash": "2818557f79c8dba3c2a894de7ac8fbcc77b709cb88c4775226889f35a9a95d9b",
+      "checkedAt": "2026-09-30T12:25:50Z",
+      "reviewer": "Codex source-integrity recovery review 20260930",
+      "reason": "撤回原verified审核。隐患所述特定工艺防静电措施形成文件的管理要求，与实际关联C_12158_4_2_2_1的静电导体接地义务不符；现有关联不能支撑该文件化要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+      "evidenceRefs": [
+        "E_SAMR_GB12158_2024"
+      ],
+      "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+    },
+    "previousReviewFileSha256": "6c17ea58fe70270b243d51899c31a63ed76d0619b2a66758fba5359e3f79b1a7"
   },
-  "previousReviewFileSha256": "6c17ea58fe70270b243d51899c31a63ed76d0619b2a66758fba5359e3f79b1a7"
+  "previousDefinition": {
+    "id": "H_12158_8_8_5_3",
+    "title": "液态物料非导体管路的静电评价过程和措施未形成文件并纳入管理体系",
+    "description": "液态物料管路或部件采用静电非导体，相关起电程度评价过程和所采取的相应措施未形成文件并纳入静电防护管理体系。",
+    "measures": "核实非导体管路或部件的起电程度评价及必要防护措施，将评价过程和所采取措施形成文件并纳入静电防护管理体系；保持文件与实际管路和措施一致。",
+    "conditions": "仅适用于GB 12158—2024范围内静电危险场所的设计和管理；不适用于火炸药、电火工品、烟花爆竹的静电危害防范。其他静电危害（如静电电击）的防护仅可参考使用，不据本项泛化所有电气场所。 仅核液态物料防护中管路或部件采用静电非导体的情形，不能扩为所有生产工艺或所有电气线路。采用静电非导体时应具体评价起电程度，必要时采取相应措施，并将评价过程和措施形成文件纳入静电防护管理体系；不一律禁止非导体管道。",
+    "category": "安全防护",
+    "places": [
+      "静电危险场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "液态物料非导体管路的静电评价过程和措施未形成文件并纳入管理体系",
+      "GB 12158-2024",
+      "8.8.5"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "",
+    "mergedInto": null
+  }
 }

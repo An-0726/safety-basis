@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_66479FBB0E63039E3BC4F35513_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a67db52c1d17457c0f961785d0cb90590958ec0374bb3dbdc3b9b3f46b60e427",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_FAAB1989C6ED8E80865B83A7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "ed7ad3cb8876b9bc80bc0d8f9975f2240c4c14c16d71f51e88b73647e3f226c1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留故障异常、全面检查与消患前提，修正原措施“即继续使用”的歧义。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十二条 特种设备出现故障或者发生异常情况，特种设备使用单位应当对其进行全面检查，消除事故隐患，方可继续使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_66479FBB0E63039E3BC4F35513_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_FAAB1989C6ED8E80865B83A7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "ed7ad3cb8876b9bc80bc0d8f9975f2240c4c14c16d71f51e88b73647e3f226c1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备出现故障或者发生异常情况，使用单位未对其进行全面检查、消除事故隐患即继续使用，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_66479FBB0E63039E3BC4F35513_1",
+    "keywords": [
+      "特种设备出现故障或者发生异常情况",
+      "使用单位未对其进行全面检查",
+      "消除事故隐患即继续使用"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备出现故障或者发生异常情况，使用单位对其进行全面检查、消除事故隐患即继续使用。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备出现故障或者发生异常情况，使用单位未对其进行全面检查、消除事故隐患即继续使用"
+  }
 }

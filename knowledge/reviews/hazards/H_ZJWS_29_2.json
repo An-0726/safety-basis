@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_29_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "65fd3260d4284b53313ad6833d58d3cfba696b11e4edec1feb5b872fbb6072bf",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3A265A66F1EA7E15D4023E25"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "eaebbd2abb5faceda3fbc7c67c91f00c193e25d3805f8bedfc4b30c00f4b8c44",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确变更后作业危害未在原合同告知这一关键前提，不覆盖所有岗位变更。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "劳动者在履行劳动合同期间因工作岗位或者工作内容变更，从事与所订立劳动合同中未告知的存在职业病危害的作业时，用人单位应当依照前款规定，向劳动者履行如实告知的义务，并协商变更原劳动合同相关条款。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_29_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3A265A66F1EA7E15D4023E25"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "eaebbd2abb5faceda3fbc7c67c91f00c193e25d3805f8bedfc4b30c00f4b8c44",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，劳动者变更从事职业病危害作业未重新履行合同告知义务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_29_2",
+    "keywords": [
+      "劳动者变更从事职业病危害作业未重新履行合同告知义务"
+    ],
+    "lifecycle": "active",
+    "measures": "劳动者变更从事职业病危害作业重新履行合同告知义务。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "劳动者变更从事职业病危害作业未重新履行合同告知义务"
+  }
 }

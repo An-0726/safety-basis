@@ -1,56 +1,90 @@
 {
-  "checkedAt": "2026-09-30",
-  "decision": "verified",
   "entityId": "H_48B66BAC_15_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "064ba8a3f2a477a97dbc8e3ab9b50a2cbfc66dd3aab12eb66b7ce0de1005b4d0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_SCOPE_20260930_MEM13_2_3_15_22"
   ],
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_SCOPE_20260930_MEM13_2_3_15_22"
-    ],
-    "/places": [
-      "E_SCOPE_20260930_MEM13_2_3_15_22"
-    ]
-  },
-  "historySha256": "d4c3791987abf75bc371478bd513f39e6b04bca62713562e8a8e1a759e8febdb",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "未做好安全措施盲目施救的，监护人员应当予以制止。",
   "previousReview": {
     "checkedAt": "2026-09-30",
     "decision": "verified",
     "entityId": "H_48B66BAC_15_4",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_120E9E58B16FD0CF11DDACB0",
-      "E_REMEDIATION_20260930_MEM13"
+      "E_SCOPE_20260930_MEM13_2_3_15_22"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
-    "reason": "第13号令15条第二款要求制止未做好安全措施的盲目施救，事故应依预案科学处置。新措施恢复未做好条件；监护人职责仍不得进入有限空间参与作业，并非赋予其未经防护入内救人的许可。",
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_SCOPE_20260930_MEM13_2_3_15_22"
+      ],
+      "/places": [
+        "E_SCOPE_20260930_MEM13_2_3_15_22"
+      ]
+    },
+    "historySha256": "d4c3791987abf75bc371478bd513f39e6b04bca62713562e8a8e1a759e8febdb",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReview": {
+      "checkedAt": "2026-09-30",
+      "decision": "verified",
+      "entityId": "H_48B66BAC_15_4",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_120E9E58B16FD0CF11DDACB0",
+        "E_REMEDIATION_20260930_MEM13"
+      ],
+      "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+      "reason": "第13号令15条第二款要求制止未做好安全措施的盲目施救，事故应依预案科学处置。新措施恢复未做好条件；监护人职责仍不得进入有限空间参与作业，并非赋予其未经防护入内救人的许可。",
+      "reviewType": "content",
+      "reviewedContentHash": "24579dc2b99cf74f866ba9ffddfc8d25740393fe20ff7d0f224253d0a70b9068",
+      "reviewer": "Codex逐项内容复核20260930"
+    },
+    "previousReviewFileSha256": "c67d1727afaab9211c5800e9abfcc052d644a820b75302b070d3db9351356751",
+    "reason": "应急管理部第13号令第2、3条分别限定工贸企业、有限空间及进入作业，第15条第二款末句要求监护人员制止未做好安全措施的盲目施救。最终conditions锁定本实体事件分支，不把一般培训演练缺失捏造成已经发生未制止事件；对不得制造危险核验及不得无安全保障入内救援的说明是审查安全边界，未冒充逐字条文。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "content",
-    "reviewedContentHash": "24579dc2b99cf74f866ba9ffddfc8d25740393fe20ff7d0f224253d0a70b9068",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "3422ebdfc18280fb963525adca545bb643322037e009becba90a9159853c111b",
+    "reviewedFields": [
+      "/conditions",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "仅适用于工贸企业有限空间作业中发生未做好安全措施盲目施救行为，核查监护人员是否予以制止。平时预案、培训或演练不能证明曾发生该事件；不得为核验而制造危险救援。监护职责不赋予未经安全保障进入有限空间救援的许可。",
+      "/places": [
+        "工贸企业有限空间作业的应急处置及监护场景"
+      ]
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930"
   },
-  "previousReviewFileSha256": "c67d1727afaab9211c5800e9abfcc052d644a820b75302b070d3db9351356751",
-  "reason": "应急管理部第13号令第2、3条分别限定工贸企业、有限空间及进入作业，第15条第二款末句要求监护人员制止未做好安全措施的盲目施救。最终conditions锁定本实体事件分支，不把一般培训演练缺失捏造成已经发生未制止事件；对不得制造危险核验及不得无安全保障入内救援的说明是审查安全边界，未冒充逐字条文。",
-  "reviewEvidence": {
-    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
-    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
-    "profileAdmission": false,
-    "siteFactsVerified": false,
-    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
-  },
-  "reviewType": "content",
-  "reviewedContentHash": "3422ebdfc18280fb963525adca545bb643322037e009becba90a9159853c111b",
-  "reviewedFields": [
-    "/conditions",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "仅适用于工贸企业有限空间作业中发生未做好安全措施盲目施救行为，核查监护人员是否予以制止。平时预案、培训或演练不能证明曾发生该事件；不得为核验而制造危险救援。监护职责不赋予未经安全保障进入有限空间救援的许可。",
-    "/places": [
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "仅适用于工贸企业有限空间作业中发生未做好安全措施盲目施救行为，核查监护人员是否予以制止。平时预案、培训或演练不能证明曾发生该事件；不得为核验而制造危险救援。监护职责不赋予未经安全保障进入有限空间救援的许可。",
+    "description": "现场检查发现，作业人员未做好安全措施盲目施救时监护人员未予以制止，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_15_4",
+    "keywords": [
+      "作业人员未做好安全措施盲目施救时监护人员未予以制止"
+    ],
+    "lifecycle": "active",
+    "measures": "发现未做好安全措施的盲目施救行为，监护人员应当立即予以制止；发生有限空间作业事故后，应当按现场处置方案进行应急处置，组织科学施救。复核监护人员制止盲目施救的职责、现场处置方案和应急装备准备，并通过培训演练落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
       "工贸企业有限空间作业的应急处置及监护场景"
-    ]
-  },
-  "reviewer": "Codex十三项源范围独立复核20260930"
+    ],
+    "title": "作业人员未做好安全措施盲目施救时监护人员未予以制止"
+  }
 }

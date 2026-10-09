@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_1_17_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "be52888db47cde9f78e3311d4d1691901cd1b2a1313d25e6241563f28bede183",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "bcb739b81b92b9ce4849552b63aa80c7c70fb78f6f58d2199d4bf122e0e41a43",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "只依据完整句改写运行过程中的操作缺陷，不补写缺损表格数值。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当设备在灌装、循环或搅拌等工作过程中,不应进行取样、检尺或测温等现场操作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_1_17_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "bcb739b81b92b9ce4849552b63aa80c7c70fb78f6f58d2199d4bf122e0e41a43",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，在设备灌装、循环或搅拌过程中违规进行取样、检尺、测温等现场操作，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_1_17_1",
+    "keywords": [
+      "在设备灌装",
+      "循环或搅拌过程中违规进行取样",
+      "检尺",
+      "测温等现场操作"
+    ],
+    "lifecycle": "active",
+    "measures": "设备处于灌装、循环或搅拌状态时停止取样、检尺、测温等现场操作；设备停止后按直接依据规定的最小静置时间等待，再开展相关操作。整改后检查设备结构、防护、控制或稳定状态，必要时试运行验证，确认安全功能有效后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "在设备灌装、循环或搅拌过程中违规进行取样、检尺、测温等现场操作"
+  }
 }

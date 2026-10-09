@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-18",
-  "decision": "verified",
   "entityId": "H_71323E2862E5D3955E3DE6DE76_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7fe6c4282d2f6906e6185a69bf36bed935696442de062fdee54fba2d116b8e98",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "安全生产法相关条款直接规定建立健全全员安全生产责任制和规章制度。",
-  "reviewType": "content",
-  "reviewedContentHash": "2cd94979d5eeb74361d1cd374df5e47522a99741dd7a480a67515abd664670df",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  "reason": "标题和描述聚焦原条目守法、责任制及规章制度缺陷，整改核对并补落实这些要求，不复制整段宏观义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四条　生产经营单位必须遵守本法和其他有关安全生产的法律、法规，加强安全生产管理，建立健全全员安全生产责任制和安全生产规章制度",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "decision": "verified",
+    "entityId": "H_71323E2862E5D3955E3DE6DE76_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "安全生产法相关条款直接规定建立健全全员安全生产责任制和规章制度。",
+    "reviewType": "content",
+    "reviewedContentHash": "2cd94979d5eeb74361d1cd374df5e47522a99741dd7a480a67515abd664670df",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  },
+  "previousDefinition": {
+    "id": "H_71323E2862E5D3955E3DE6DE76_1",
+    "title": "生产经营单位未遵守安全生产法律法规，未建立健全全员安全生产责任制和安全生产规章制度",
+    "description": "第四条生产经营单位必须遵守本法和其他有关安全生产的法律、法规，加强安全生产管理，建立健全全员安全生产责任制和安全生产规章制度，加大对安全生产资金、物资、技术、人员的投入保障力度，改善安全生产条件，加强安全生产标准化、信息化建设，构建安全风险分级管控和隐患排查治理双重预防机制，健全风险防范化解机制，提高安全生产水平，确保安全生产。（第四条）。",
+    "measures": "建立健全并落实全员安全生产责任制和安全生产规章制度，依法保障资金、物资、技术、人员投入，推进标准化、信息化和风险分级管控、隐患排查治理双重预防机制。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产经营单位未遵守安全生产法律法规，未建立健全全员安全生产责任制和安全生产规章制度"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第四条 反转生成（GLM，2026-09-12）。\n\n《江苏省安全生产条例》《南京市安全生产条例》相关全员责任制和管理制度条款。【PHASE 12 2026-09-18】已复核现行条款原文、隐患对象和适用范围，建立当前direct关联。",
+    "mergedInto": null
+  }
 }

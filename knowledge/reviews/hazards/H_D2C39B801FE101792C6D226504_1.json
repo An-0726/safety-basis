@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D2C39B801FE101792C6D226504_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "67d4b254cd34ec55be0c11c69c0e9c97d393678507cd01b322ecccb9707db7ca",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_6CDF272C11B213C14F08DD19"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "bcffdadb7f9690409caf5406410d8feb59519a03d2d8054241792fd9708932d5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除法条长句和模板尾句，不增加检查周期或心理诊断要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十三条 生产经营单位应当关注从业人员的身体、心理状况和行为习惯，加强对从业人员的健康检查、心理疏导、精神慰藉，防范从业人员异常行为导致生产安全事故发生。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D2C39B801FE101792C6D226504_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_6CDF272C11B213C14F08DD19"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "bcffdadb7f9690409caf5406410d8feb59519a03d2d8054241792fd9708932d5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，生产经营单位未关注从业人员的身体、心理状况和行为习惯，加强对从业人员的健康检查、心理疏导、精神慰藉等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D2C39B801FE101792C6D226504_1",
+    "keywords": [
+      "生产经营单位未关注从业人员的身体",
+      "心理状况和行为习惯",
+      "加强对从业人员的健康检查",
+      "心理疏导",
+      "精神慰藉等"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位关注从业人员的身体、心理状况和行为习惯，加强对从业人员的健康检查、心理疏导、精神慰藉等。整改后由符合相应要求的人员或机构实施必要的检查、检测、检验、评价或验收，对发现的问题闭环整改，并保存结果和复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位未关注从业人员的身体、心理状况和行为习惯，加强对从业人员的健康检查、心理疏导、精神慰藉等"
+  }
 }

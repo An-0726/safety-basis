@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_44_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ac70bdc131772d2730cfc9ae9a8c622ce55e9938b997d2ead81eb8623fbcdc56",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3010117DD5CAD3DA0933FD82"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "dbc58c808def4b6ffcac5dc061a6d507bcd18bb4f2138aca09aa897bcd9afc90",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "出租人应当对承租人履行消防安全职责的情况进行监督。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_44_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3010117DD5CAD3DA0933FD82"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "dbc58c808def4b6ffcac5dc061a6d507bcd18bb4f2138aca09aa897bcd9afc90",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，出租人未对承租人履行消防安全职责的情况进行监督，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_44_3",
+    "keywords": [
+      "出租人未对承租人履行消防安全职责的情况进行监督"
+    ],
+    "lifecycle": "active",
+    "measures": "出租人对承租人履行消防安全职责的情况进行监督。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "出租人未对承租人履行消防安全职责的情况进行监督"
+  }
 }

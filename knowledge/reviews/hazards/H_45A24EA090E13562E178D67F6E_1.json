@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_45A24EA090E13562E178D67F6E_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b8b02c92b3371087f0a95d646a6255407c1de58c84d052f459c4ffea6241a900",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_STD_HJ2000_2010"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "7eb926a47dac36316bad0333223425e7c6ef85923c1fe0920f623bf76835ba97",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "排放有腐蚀性的气体时，排气筒应采用防腐设计。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_45A24EA090E13562E178D67F6E_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2000_2010"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "7eb926a47dac36316bad0333223425e7c6ef85923c1fe0920f623bf76835ba97",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，排放有腐蚀性的气体时，排气筒未采用防腐设计，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_45A24EA090E13562E178D67F6E_1",
+    "keywords": [
+      "排放有腐蚀性的气体时",
+      "排气筒未采用防腐设计"
+    ],
+    "lifecycle": "active",
+    "measures": "排放有腐蚀性的气体时，排气筒采用防腐设计。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "排放有腐蚀性的气体时，排气筒未采用防腐设计"
+  }
 }

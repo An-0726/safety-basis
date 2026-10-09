@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H037_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f5728fb6d979598e5e989bde8a494e1dd5c9a4976a2e22b6bb69053b1f8f2c1e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_STD_HJ2000_2010"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "cbd8a0502e5168513160ee0591c20f9bbadcd0bfb5915a5d38f7127602eabd01",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "输送浓度较大的含尘气体应选用排尘风机等。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H037_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2000_2010"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "cbd8a0502e5168513160ee0591c20f9bbadcd0bfb5915a5d38f7127602eabd01",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，输送浓度较大的含尘气体的场所未选用排尘风机，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H037_5",
+    "keywords": [
+      "输送浓度较大的含尘气体的场所未选用排尘风机"
+    ],
+    "lifecycle": "active",
+    "measures": "输送浓度较大的含尘气体的场所选用排尘风机。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "输送浓度较大的含尘气体的场所未选用排尘风机"
+  }
 }

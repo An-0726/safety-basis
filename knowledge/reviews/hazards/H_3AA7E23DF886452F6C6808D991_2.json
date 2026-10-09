@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_3AA7E23DF886452F6C6808D991_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bcc4d86201e251be4894d9acca801ffbd3fec1a0140ae43502644993868cfa90",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_84F77C2C0E11166231F2061E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "e99fbd49b22d0bb0f404b2bb938dce3f6a5af9e06b762dfdde5c8c21c215647d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "火灾事故发生单位的负责人和有关人员在事故调查期间应当接受调查组的询问，如实提供有关情况。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_3AA7E23DF886452F6C6808D991_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_84F77C2C0E11166231F2061E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "e99fbd49b22d0bb0f404b2bb938dce3f6a5af9e06b762dfdde5c8c21c215647d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，火灾事故发生单位的负责人和有关人员在事故调查期间未接受调查组的询问，如实提供有关情况，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_3AA7E23DF886452F6C6808D991_2",
+    "keywords": [
+      "火灾事故发生单位的负责人和有关人员在事故调查期间未接受调查组的询问",
+      "如实提供有关情况"
+    ],
+    "lifecycle": "active",
+    "measures": "火灾事故发生单位的负责人和有关人员在事故调查期间接受调查组的询问，如实提供有关情况；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "火灾事故发生单位的负责人和有关人员在事故调查期间未接受调查组的询问，如实提供有关情况"
+  }
 }

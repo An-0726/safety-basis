@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DAD6E3A9A0386D90050F5D8551_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e55a85f5192465bf44eaed881360ef6d8114be18df3c2da3f05590d6f47185e1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_830083694F57DA1A60E4E806"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b9ee351ad360b06fbdb0211c92722686b59a8f49f7bf3ca1427bff8869586bbb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留依法执行职务前提，具体呈现拒绝检查或阻碍执法的状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第六十六条 职业卫生监督执法人员依法执行职务时，被检查单位 应当接受检查并予以支持配合，不得拒绝和阻碍。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DAD6E3A9A0386D90050F5D8551_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_830083694F57DA1A60E4E806"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b9ee351ad360b06fbdb0211c92722686b59a8f49f7bf3ca1427bff8869586bbb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，被检查单位拒绝、阻碍职业卫生监督执法人员依法执行职务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DAD6E3A9A0386D90050F5D8551_1",
+    "keywords": [
+      "被检查单位拒绝",
+      "阻碍职业卫生监督执法人员依法执行职务"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止拒绝、阻碍职业卫生监督执法的行为，接受依法检查并提供所需场所、资料和说明；对执法检查指出的问题按要求整改并留存整改及复查记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "被检查单位拒绝、阻碍职业卫生监督执法人员依法执行职务"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_7B2FE1F2A576228A5743ADBB07_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0574ba31d271c0e20eecbd6def07b5bd8a8a6234c53162181bdd61cfab2339f2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_619F1B70EBE18F1F3B023790"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "5daf2c8b7cae7d531f3deafa8afbd36b758d791957ec9be9eecccad1e223eadd",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "建设工程施工单位通过租赁设备的方式将施工作业或者工程发包给设备租赁单位的，建设工程施工单位应当承担安全生产管理职责，不得将依法由其承担的安全生产责任转移给设备租赁单位。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_7B2FE1F2A576228A5743ADBB07_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_619F1B70EBE18F1F3B023790"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "5daf2c8b7cae7d531f3deafa8afbd36b758d791957ec9be9eecccad1e223eadd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于南京市行政区域内，且存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：南京市行政区域内机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "经资料及履职情况核查，建设工程施工单位通过租赁设备方式将施工作业或者工程发包给设备租赁单位的，未承担安全生产管理职责，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_7B2FE1F2A576228A5743ADBB07_2",
+    "keywords": [
+      "建设工程施工单位通过租赁设备方式将施工作业或者工程发包给设备租赁单位的",
+      "未承担安全生产管理职责"
+    ],
+    "lifecycle": "active",
+    "measures": "建设工程施工单位通过租赁设备方式将施工作业或者工程发包给设备租赁单位的，承担安全生产管理职责。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "建设工程施工单位通过租赁设备方式将施工作业或者工程发包给设备租赁单位的，未承担安全生产管理职责"
+  }
 }

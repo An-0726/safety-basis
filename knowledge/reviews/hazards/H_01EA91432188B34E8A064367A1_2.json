@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-26T19:20:54+08:00",
-  "decision": "verified",
   "entityId": "H_01EA91432188B34E8A064367A1_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "164af548bb02ea8b83e15f6524fba33a01f32ffc6c8692f3ea864d77c46253e7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_JS_RESPONSIBILITY_20260926"
   ],
-  "reason": "核定义务与地域；同义归并保留编号，费用与风险管理责任保留独立适用条件。",
-  "reviewType": "content",
-  "reviewedContentHash": "a74a5c27e4a2f57caf49df43b8198546ae25b3dde358d3633130c90682273b3e",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reason": "缩短标题且保留费用适用范围，原描述具体，仅改写措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "有关生产经营单位应当按照国家规定提取和使用安全生产费用，专项用于保障和改善安全生产条件。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:20:54+08:00",
+    "decision": "verified",
+    "entityId": "H_01EA91432188B34E8A064367A1_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_JS_RESPONSIBILITY_20260926"
+    ],
+    "reason": "核定义务与地域；同义归并保留编号，费用与风险管理责任保留独立适用条件。",
+    "reviewType": "content",
+    "reviewedContentHash": "a74a5c27e4a2f57caf49df43b8198546ae25b3dde358d3633130c90682273b3e",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动 提取义务须先核国家规定覆盖的行业、业务及计提口径；缺单一费用台账或支出凭证不能直接推定未提取、未使用或未保障安全投入。",
+    "description": "经核对依法适用的费用提取使用规定及财务资料，有关生产经营单位未按规定提取或专项使用安全生产费用。",
+    "id": "H_01EA91432188B34E8A064367A1_2",
+    "keywords": [
+      "有关生产经营单位未按照国家规定提取和使用安全生产费用",
+      "专项用于保障和改善安全生产条件"
+    ],
+    "lifecycle": "active",
+    "measures": "有关生产经营单位按照国家规定提取和使用安全生产费用，专项用于保障和改善安全生产条件。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "有关生产经营单位未按照国家规定提取和使用安全生产费用，专项用于保障和改善安全生产条件"
+  }
 }

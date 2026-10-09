@@ -1,30 +1,143 @@
 {
   "entityId": "H_7A03BD4501C948B78EA50A2733",
   "entityType": "hazard",
-  "reviewType": "content",
+  "reviewType": "definition",
   "decision": "verified",
-  "reviewer": "Codex逐页原件与适用范围复核20261003",
-  "checkedAt": "2026-10-03",
-  "reviewedContentHash": "062494f5ac80cfae04f1e87d1533c13155ed06559e4a6df3e03b37fc52a66109",
+  "reviewedContentHash": "0f1dd3fcb165575427303904d3ff6729091a06255593ade41e6b50427147d034",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_JGJ91_ORIGINAL_CLAUSES_20261003"
   ],
-  "reason": "逐页核实原文并核对全部现场表述字段；限定科研建筑设计、气体和对象范围，纠正复合分支及负向表述。不能据此认定实际企业已违规或已整改。",
-  "locator": "第10.2.6条",
-  "reviewedFields": [
-    "/conditions",
-    "/description",
-    "/keywords",
-    "/measures",
-    "/mode",
-    "/note",
-    "/places",
-    "/title"
-  ],
-  "reviewedValues": {
-    "/conditions": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项不添加介质名称或流向等原条文未明列要求；施工中采用粘着性标志属于宜采用，不能仅因选用其余法定标识方法判为违规。",
-    "/description": "在本项设计适用范围内，气体管道、阀门、终端组件、软管组件或压力指示仪表缺少耐久、清晰、易识别的标识，或者标识方法不属于金属标记、模板印刷、盖印或粘着性标志。",
-    "/keywords": [
+  "reason": "原描述具体，仅明确标识补设、可选方法及核查。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "气体管道、阀门、终端组件、软管组件和压力指示仪表，均应有耐久、清晰、易识别的标识。气体标识的方法应为金属标记、模板印刷、盖印或粘着性标志。",
+  "previousReview": {
+    "entityId": "H_7A03BD4501C948B78EA50A2733",
+    "entityType": "hazard",
+    "reviewType": "content",
+    "decision": "verified",
+    "reviewer": "Codex逐页原件与适用范围复核20261003",
+    "checkedAt": "2026-10-03",
+    "reviewedContentHash": "062494f5ac80cfae04f1e87d1533c13155ed06559e4a6df3e03b37fc52a66109",
+    "evidenceRefs": [
+      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+    ],
+    "reason": "逐页核实原文并核对全部现场表述字段；限定科研建筑设计、气体和对象范围，纠正复合分支及负向表述。不能据此认定实际企业已违规或已整改。",
+    "locator": "第10.2.6条",
+    "reviewedFields": [
+      "/conditions",
+      "/description",
+      "/keywords",
+      "/measures",
+      "/mode",
+      "/note",
+      "/places",
+      "/title"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项不添加介质名称或流向等原条文未明列要求；施工中采用粘着性标志属于宜采用，不能仅因选用其余法定标识方法判为违规。",
+      "/description": "在本项设计适用范围内，气体管道、阀门、终端组件、软管组件或压力指示仪表缺少耐久、清晰、易识别的标识，或者标识方法不属于金属标记、模板印刷、盖印或粘着性标志。",
+      "/keywords": [
+        "科研建筑",
+        "气体管道",
+        "阀门",
+        "终端组件",
+        "软管组件",
+        "压力指示仪表",
+        "标识",
+        "金属标记",
+        "模板印刷",
+        "盖印",
+        "粘着性标志"
+      ],
+      "/measures": "为气体管道、阀门、终端组件、软管组件和压力指示仪表设置耐久、清晰、易识别的标识，采用金属标记、模板印刷、盖印或粘着性标志；施工中宜采用粘着性标志。",
+      "/mode": "conditional",
+      "/note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《科研建筑设计标准》 第10.2.6条\n2026-10-03：对照公开出版原件纠正条文和科研建筑设计适用范围；保留稳定ID及历史审核。",
+      "/places": [
+        "科研建筑室内气体管道及组件"
+      ],
+      "/title": "科研建筑气体管道及组件标识不耐久清晰或标识方法不符合要求"
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/description": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/keywords": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/measures": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/mode": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/note": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/places": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ],
+      "/title": [
+        "E_JGJ91_ORIGINAL_CLAUSES_20261003"
+      ]
+    },
+    "reviewEvidence": {
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
+    },
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_7A03BD4501C948B78EA50A2733",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "af7e4299803e64230e2ba44c7a5fcbe1cef7fb718089817f6e20ca09d8b3d97c",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_MOHURD_JGJ91_2019"
+      ]
+    },
+    "previousReviewFileSha256": "df1ef227958911a0628e02d60d3fd8e1bfe6ed15c721be64a61dae8335750741",
+    "historySha256": "a3130b1a440aa3ad27a08e9834fdfddda9d16f0af97780d51ba64896e9c4cace",
+    "previousEntity": {
+      "id": "H_7A03BD4501C948B78EA50A2733",
+      "title": "气体管道、阀门、终端组件等未设置耐久清晰的标识",
+      "description": "气体管道、阀门、终端组件、软管组件和压力指示仪表,均,未有耐久、清晰、易识别的标识。气体标识的方法,未为金属标记、模板印刷、盖印或粘着性标志。施工中宜采用粘着性标志",
+      "measures": "气体管道、阀门、终端组件等设置耐久清晰的标识；管道系统有耐久、清晰、易识别的标识；完成后进行现场验证并留存记录。",
+      "conditions": "适用于本隐患所述场所与设备的相关管理。",
+      "category": "安全标志",
+      "places": [
+        "通用场所"
+      ],
+      "aliases": [],
+      "keywords": [
+        "气体管道、阀门、终端组件等未设置耐久清晰的标识"
+      ],
+      "lifecycle": "active",
+      "mode": "direct",
+      "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《科研建筑设计标准》 第10.2.6条",
+      "mergedInto": null
+    },
+    "previousEntityFileSha256": "4a0c19d28c7131ee16d86d019f750bd5b7aae3c2aed81d0f6c67f3d8dddf18ec"
+  },
+  "previousDefinition": {
+    "id": "H_7A03BD4501C948B78EA50A2733",
+    "title": "科研建筑气体管道及组件标识不耐久清晰或标识方法不符合要求",
+    "description": "在本项设计适用范围内，气体管道、阀门、终端组件、软管组件或压力指示仪表缺少耐久、清晰、易识别的标识，或者标识方法不属于金属标记、模板印刷、盖印或粘着性标志。",
+    "measures": "为气体管道、阀门、终端组件、软管组件和压力指示仪表设置耐久、清晰、易识别的标识，采用金属标记、模板印刷、盖印或粘着性标志；施工中宜采用粘着性标志。",
+    "conditions": "适用于科学研究机构、工业企业、大专院校等新建、扩建、改建的科研建筑设计，且属于JGJ91-2019第10.1.1条范围的室内气体管道；不得泛化为所有企业、所有实验室或全部燃气使用场所的通用运行义务。本项不添加介质名称或流向等原条文未明列要求；施工中采用粘着性标志属于宜采用，不能仅因选用其余法定标识方法判为违规。",
+    "category": "安全标志",
+    "places": [
+      "科研建筑室内气体管道及组件"
+    ],
+    "aliases": [],
+    "keywords": [
       "科研建筑",
       "气体管道",
       "阀门",
@@ -37,78 +150,9 @@
       "盖印",
       "粘着性标志"
     ],
-    "/measures": "为气体管道、阀门、终端组件、软管组件和压力指示仪表设置耐久、清晰、易识别的标识，采用金属标记、模板印刷、盖印或粘着性标志；施工中宜采用粘着性标志。",
-    "/mode": "conditional",
-    "/note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《科研建筑设计标准》 第10.2.6条\n2026-10-03：对照公开出版原件纠正条文和科研建筑设计适用范围；保留稳定ID及历史审核。",
-    "/places": [
-      "科研建筑室内气体管道及组件"
-    ],
-    "/title": "科研建筑气体管道及组件标识不耐久清晰或标识方法不符合要求"
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/description": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/keywords": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/measures": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/mode": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/note": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/places": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ],
-    "/title": [
-      "E_JGJ91_ORIGINAL_CLAUSES_20261003"
-    ]
-  },
-  "reviewEvidence": {
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "scope": "仅限列明条款、定义与关联；原件页图逐项核对。非企业现场事实、全库审核或技术标准全文再发布许可。"
-  },
-  "previousReview": {
-    "entityType": "hazard",
-    "entityId": "H_7A03BD4501C948B78EA50A2733",
-    "reviewType": "definition",
-    "decision": "verified",
-    "reviewedContentHash": "af7e4299803e64230e2ba44c7a5fcbe1cef7fb718089817f6e20ca09d8b3d97c",
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
-    "evidenceRefs": [
-      "E_MOHURD_JGJ91_2019"
-    ]
-  },
-  "previousReviewFileSha256": "df1ef227958911a0628e02d60d3fd8e1bfe6ed15c721be64a61dae8335750741",
-  "historySha256": "a3130b1a440aa3ad27a08e9834fdfddda9d16f0af97780d51ba64896e9c4cace",
-  "previousEntity": {
-    "id": "H_7A03BD4501C948B78EA50A2733",
-    "title": "气体管道、阀门、终端组件等未设置耐久清晰的标识",
-    "description": "气体管道、阀门、终端组件、软管组件和压力指示仪表,均,未有耐久、清晰、易识别的标识。气体标识的方法,未为金属标记、模板印刷、盖印或粘着性标志。施工中宜采用粘着性标志",
-    "measures": "气体管道、阀门、终端组件等设置耐久清晰的标识；管道系统有耐久、清晰、易识别的标识；完成后进行现场验证并留存记录。",
-    "conditions": "适用于本隐患所述场所与设备的相关管理。",
-    "category": "安全标志",
-    "places": [
-      "通用场所"
-    ],
-    "aliases": [],
-    "keywords": [
-      "气体管道、阀门、终端组件等未设置耐久清晰的标识"
-    ],
     "lifecycle": "active",
-    "mode": "direct",
-    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《科研建筑设计标准》 第10.2.6条",
+    "mode": "conditional",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《科研建筑设计标准》 第10.2.6条\n2026-10-03：对照公开出版原件纠正条文和科研建筑设计适用范围；保留稳定ID及历史审核。",
     "mergedInto": null
-  },
-  "previousEntityFileSha256": "4a0c19d28c7131ee16d86d019f750bd5b7aae3c2aed81d0f6c67f3d8dddf18ec"
+  }
 }

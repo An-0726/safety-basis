@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZDY_37_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "18f673600fb17a4bb44bfb36ea61d157ca3b35718b1e75bac22bc28f8ad98809",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3099FD4E8BF5D20F7A6C29B9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "df031d5d120461570ae01d55f08a82cd9c54c54c47dc82d253e202241c2ad23f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "通过定量风险评价，危险化学品重大危险源产生的社会风险应满足图1中可容许社会风险标准要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZDY_37_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3099FD4E8BF5D20F7A6C29B9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "df031d5d120461570ae01d55f08a82cd9c54c54c47dc82d253e202241c2ad23f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，通过定量风险评价，危险化学品重大危险源产生的社会风险未满足图1中可容许社会风险标准要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZDY_37_5",
+    "keywords": [
+      "通过定量风险评价",
+      "危险化学品重大危险源产生的社会风险未满足图1中可容许社会风险标准要求"
+    ],
+    "lifecycle": "active",
+    "measures": "通过定量风险评价，危险化学品重大危险源产生的社会风险满足图1中可容许社会风险标准要求。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "通过定量风险评价，危险化学品重大危险源产生的社会风险未满足图1中可容许社会风险标准要求"
+  }
 }

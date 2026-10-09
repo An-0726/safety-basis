@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_368FD9A90BB5C8A286971845A5_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "3e83690d16082f1469aef268dd1bae814ae32d3e6b0d0afda3045735d213b470",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1DD60DD7971CDBE700691929"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c2b8d001d63ec8bfb7a1058ea39c21b8c58c721c1362d229aea828e47b8419c1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定委托施工前提，指导与监控均须落实。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十二条 电梯的安装、改造、修理，必须由电梯制造单位或者其委托的依照本法取得相应许可的单位进行。电梯制造单位委托其他单位进行电梯安装、改造、修理的，应当对其安装、改造、修理进行安全指导和监控，并按照安全技术规范的要求进行校验和调试。电梯制造单位对电梯安全性能负责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_368FD9A90BB5C8A286971845A5_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1DD60DD7971CDBE700691929"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c2b8d001d63ec8bfb7a1058ea39c21b8c58c721c1362d229aea828e47b8419c1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，电梯制造单位委托其他单位进行电梯安装、改造、修理的，未对其安装、改造、修理进行安全指导和监控，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_368FD9A90BB5C8A286971845A5_2",
+    "keywords": [
+      "电梯制造单位委托其他单位进行电梯安装",
+      "改造",
+      "修理的",
+      "未对其安装",
+      "修理进行安全指导和监控"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯制造单位委托其他单位进行电梯安装、改造、修理的，对其安装、改造、修理进行安全指导和监控。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯制造单位委托其他单位进行电梯安装、改造、修理的，未对其安装、改造、修理进行安全指导和监控"
+  }
 }

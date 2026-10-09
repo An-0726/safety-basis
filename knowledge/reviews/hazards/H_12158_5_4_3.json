@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_5_4_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c97b463d5300d1939affeecabfeb0bb7b9a2f34bad2c2d37dc6d2a03e0e0d9c6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "03d4eb8b8e6ed871ae3402fca1ca1d681611225f77ab49f724e827b84f2b4b1c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确进入前时点和告知人员要求，描述直接指出告知缺失。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "进入静电危险场所前,应由有经验的工作人员告知有关规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_5_4_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "03d4eb8b8e6ed871ae3402fca1ca1d681611225f77ab49f724e827b84f2b4b1c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "经资料和执行情况核查，进入静电危险场所前，未由有经验的工作人员告知有关规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_5_4_3",
+    "keywords": [
+      "进入静电危险场所前",
+      "未由有经验的工作人员告知有关规定"
+    ],
+    "lifecycle": "active",
+    "measures": "进入静电危险场所前，由有经验的工作人员告知有关规定。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "进入静电危险场所前，未由有经验的工作人员告知有关规定"
+  }
 }

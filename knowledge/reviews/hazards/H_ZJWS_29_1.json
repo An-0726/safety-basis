@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_29_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9ced21a3976b9a78c49bb266f8670458250b1a545c0e8f695d46b7a046dbea01",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3A265A66F1EA7E15D4023E25"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "485825c9b5161e65254708fa9bed1b41c7562fda34662ca1b59f49feb03b916f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确合同订立时点和告知内容缺失，删除通用结尾。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位与劳动者订立劳动合同时，应当将工作过程中可能产生的职业病危害及其后果、职业病防护措施和待遇等如实告知劳动者",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_29_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3A265A66F1EA7E15D4023E25"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "485825c9b5161e65254708fa9bed1b41c7562fda34662ca1b59f49feb03b916f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，订立劳动合同时未如实告知劳动者职业病危害及其后果和待遇，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_29_1",
+    "keywords": [
+      "订立劳动合同时未如实告知劳动者职业病危害及其后果和待遇"
+    ],
+    "lifecycle": "active",
+    "measures": "订立劳动合同时如实告知劳动者职业病危害及其后果和待遇。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "订立劳动合同时未如实告知劳动者职业病危害及其后果和待遇"
+  }
 }

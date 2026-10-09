@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_E49959A78F69C60CA641CE6474_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9966e9a6fd6faa890c6e7e393c4b9ac2b4f184ac9e0aea23a727bfcab95fa614",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8FAF5D15E8E98B3C23F026A6"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "d3aa79e2f6f72bfa80b2fcf705d08ab5500c4fc08b406295c6ce42b4e84531d4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留须取得我国生产许可的前提，删除无关备案审批套话。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十条 进口的特种设备应当符合我国安全技术规范的要求，并经检验合格；需要取得我国特种设备生产许可的，应当取得许可。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_E49959A78F69C60CA641CE6474_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8FAF5D15E8E98B3C23F026A6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "d3aa79e2f6f72bfa80b2fcf705d08ab5500c4fc08b406295c6ce42b4e84531d4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，需要取得我国特种设备生产许可的进口特种设备，未取得许可，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_E49959A78F69C60CA641CE6474_2",
+    "keywords": [
+      "需要取得我国特种设备生产许可的进口特种设备",
+      "未取得许可"
+    ],
+    "lifecycle": "active",
+    "measures": "需要取得我国特种设备生产许可的进口特种设备，取得许可。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "需要取得我国特种设备生产许可的进口特种设备，未取得许可"
+  }
 }

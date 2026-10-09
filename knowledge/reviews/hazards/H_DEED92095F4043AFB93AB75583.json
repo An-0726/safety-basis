@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-17",
-  "decision": "verified",
   "entityId": "H_DEED92095F4043AFB93AB75583",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0130ac86c24ba001bedbed9d35fd667fa1fff46619c8b875c99b18694487cb13",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GBT13869_2017"
   ],
-  "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
-  "reviewType": "content",
-  "reviewedContentHash": "d9ce778f27f585fd460296aada45b0b07242e41923ce9fa1ea4f6ccf7a0e277c",
-  "reviewer": "Codex"
+  "reason": "压缩方法长列举，条件明确可选可靠连接与禁止方式，具体描述保留。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "保护接地线应采用焊接、压接、螺栓联结或其他可靠方法联结，严禁缠绕或挂钩。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "decision": "verified",
+    "entityId": "H_DEED92095F4043AFB93AB75583",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT13869_2017"
+    ],
+    "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+    "reviewType": "content",
+    "reviewedContentHash": "d9ce778f27f585fd460296aada45b0b07242e41923ce9fa1ea4f6ccf7a0e277c",
+    "reviewer": "Codex"
+  },
+  "previousDefinition": {
+    "id": "H_DEED92095F4043AFB93AB75583",
+    "title": "保护接地线,未采用焊接、压接、螺栓联结或其他可靠方法联结。严禁缠绕或挂钩",
+    "description": "保护接地线未采用焊接、压接、螺栓联结或其他可靠方法联结，存在缠绕、挂钩等不可靠连接方式，接地回路失效时设备外壳带电。",
+    "measures": "保护接地线采用焊接、压接或螺栓联结等可靠方法，严禁缠绕或挂钩。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "电气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "保护接地线,未采用焊接、压接、螺栓联结或其他可靠方法联结。严禁缠绕或挂钩"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施已改写为可执行动作。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.1.2条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+    "mergedInto": null
+  }
 }

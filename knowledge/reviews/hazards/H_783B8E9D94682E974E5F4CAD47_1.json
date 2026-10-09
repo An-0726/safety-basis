@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_783B8E9D94682E974E5F4CAD47_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b1a2b488cd26af406de32b96e5e06d2b22f91742e4247b5afa7a2377363183dc",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_84C6A3AF34BB5BF976325DF4"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "13052d50a79685f83a7aaaceff9e40490b91b07aa02c822fd977319b203ec2cb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特殊建设工程未经消防设计审查或者审查不合格的，建设单位、施工单位不得施工",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_783B8E9D94682E974E5F4CAD47_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_84C6A3AF34BB5BF976325DF4"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "13052d50a79685f83a7aaaceff9e40490b91b07aa02c822fd977319b203ec2cb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，特殊建设工程未经消防设计审查或者审查不合格，建设单位、施工单位进行施工，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_783B8E9D94682E974E5F4CAD47_1",
+    "keywords": [
+      "特殊建设工程未经消防设计审查或者审查不合格",
+      "建设单位",
+      "施工单位进行施工"
+    ],
+    "lifecycle": "active",
+    "measures": "特殊建设工程经消防设计审查或者审查整改合格，建设单位、施工单位进行施工；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "特殊建设工程未经消防设计审查或者审查不合格，建设单位、施工单位进行施工"
+  }
 }

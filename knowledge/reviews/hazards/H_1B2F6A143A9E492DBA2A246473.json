@@ -1,36 +1,70 @@
 {
-  "entityType": "hazard",
   "entityId": "H_1B2F6A143A9E492DBA2A246473",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "26aa42219df1a1293698aecd746da382d94add37421004bd3a45c5d609d0922a",
-  "checkedAt": "2026-10-04T05:07:24Z",
-  "reviewer": "Source-specific containment author 20261004",
-  "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
+  "reviewedContentHash": "df01fbebcf7c01217d13e3fca0888c1c9c84ca1512d1b314fd5b84ae97e5466f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_CONTAIN_HJ2026_EXACT_20261004"
   ],
-  "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
-  "reviewedFields": [
-    "category",
-    "conditions",
-    "description",
-    "measures",
-    "places",
-    "title"
-  ],
+  "reason": "仅压缩长标题，原描述具体且措施可执行，予以保留；新标题不补入本条未写出的压力参数。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "应尽可能利用主体生产装置本身的集气系统进行收集。集气罩的配置应与生产工艺协调一致， 不影响工艺操作。",
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_1B2F6A143A9E492DBA2A246473",
     "reviewType": "definition",
     "decision": "verified",
-    "reviewedContentHash": "9024b15c08e99bd3111b68d2193a65f84251149a18878408c022601a9069f0d9",
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "reviewedContentHash": "26aa42219df1a1293698aecd746da382d94add37421004bd3a45c5d609d0922a",
+    "checkedAt": "2026-10-04T05:07:24Z",
+    "reviewer": "Source-specific containment author 20261004",
+    "reason": "回到MEE官方原文和当前题录，精确恢复常压吸附工业有机废气治理工程的指导性技术核查项；保留原文条件和非普遍法定义务边界，删除本条未支持的附加措施。",
     "evidenceRefs": [
-      "E_SAMR_GB15577_2018"
-    ]
+      "E_CONTAIN_HJ2026_EXACT_20261004"
+    ],
+    "notes": "本次只审核所列具体源条款、定义及适用边界；不建立现场违法结论，不准入任何现场profile，不认证全库。完整前审原样保留；前审记录不表示继续有效。",
+    "reviewedFields": [
+      "category",
+      "conditions",
+      "description",
+      "measures",
+      "places",
+      "title"
+    ],
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_1B2F6A143A9E492DBA2A246473",
+      "reviewType": "definition",
+      "decision": "verified",
+      "reviewedContentHash": "9024b15c08e99bd3111b68d2193a65f84251149a18878408c022601a9069f0d9",
+      "checkedAt": "2026-09-19T01:00:00+08:00",
+      "reviewer": "Codex / PR #62 Policy",
+      "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+      "evidenceRefs": [
+        "E_SAMR_GB15577_2018"
+      ]
+    },
+    "previousReviewFileSha256": "32eefe0aa5d7a872b0b87da3cf4ae5e8a1f5b9004bd4570259024a50de9e83c4"
   },
-  "previousReviewFileSha256": "32eefe0aa5d7a872b0b87da3cf4ae5e8a1f5b9004bd4570259024a50de9e83c4"
+  "previousDefinition": {
+    "id": "H_1B2F6A143A9E492DBA2A246473",
+    "title": "常压吸附有机废气治理工程的集气罩配置与工艺不协调或未尽可能利用主体集气系统",
+    "description": "在工业有机废气常压吸附治理工程中，未尽可能利用主体生产装置本身的集气系统，或集气罩配置与生产工艺不协调、影响工艺操作，或在保证收集能力的前提下未兼顾结构简单、便于安装和维护管理。",
+    "measures": "尽可能利用主体生产装置本身的集气系统；结合生产工艺调整集气罩配置，避免影响工艺操作，并在保证收集能力的前提下使其结构简单、便于安装和维护管理。",
+    "conditions": "仅适用于工业有机废气常压吸附治理工程中的相应系统，作为该工程设计、施工、验收及建成后运行管理的技术核查依据。HJ 2026—2013为指导性文件，不能据此将本项泛化为所有废气系统的普遍法定违法判据。",
+    "category": "危险废物与环境安全",
+    "places": [
+      "工业有机废气常压吸附治理工程"
+    ],
+    "aliases": [],
+    "keywords": [
+      "集气罩配置未与生产工艺协调一致或未利用主体集气系统收集"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《吸附法工业有机废气治理工程技术规范》 HJ 2026—2013 第6.3.1.2条",
+    "mergedInto": null
+  }
 }

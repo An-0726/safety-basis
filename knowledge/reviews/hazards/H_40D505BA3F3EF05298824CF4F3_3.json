@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_40D505BA3F3EF05298824CF4F3_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1e682aad81ae04f9639da6125e65fcf02d1b99abc8a78cdc3879b2c32bc749d9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8629B2AC432398F153A54134"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e253a1d2aea0662ff7a5d01a7fdc67ae492d16a2c85bd98ec2d7b43ba04e22ae",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩列举式标题；用清单缺项描述明确条文包括责任人信息。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "安全风险管控清单应当载明安全风险的名称、风险点、所处位置（场所、部位、环节）、等级、可能导致的事故类型、管控措施以及责任部门、责任人等信息。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_40D505BA3F3EF05298824CF4F3_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8629B2AC432398F153A54134"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e253a1d2aea0662ff7a5d01a7fdc67ae492d16a2c85bd98ec2d7b43ba04e22ae",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，安全风险管控清单未载明安全风险的名称、风险点、所处位置、等级、可能导致的事故类型、管控措施以及责任部门，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_40D505BA3F3EF05298824CF4F3_3",
+    "keywords": [
+      "安全风险管控清单未载明安全风险的名称",
+      "风险点",
+      "所处位置",
+      "等级",
+      "可能导致的事故类型",
+      "管控措施以及责任部门"
+    ],
+    "lifecycle": "active",
+    "measures": "安全风险管控清单载明安全风险的名称、风险点、所处位置、等级、可能导致的事故类型、管控措施以及责任部门。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "安全风险管控清单未载明安全风险的名称、风险点、所处位置、等级、可能导致的事故类型、管控措施以及责任部门"
+  }
 }

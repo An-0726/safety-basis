@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-26T09:27:01+08:00",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "f4bb50ba5a885f11c436c68d5412f5338097a1856c89145cde04421837acf654",
+    "hazard": "cf2bc1885b79024e6c61a841ffdaf1e3b54ace0469453c76fbca829335222899",
     "clause": "a5fc6f772a47cedf3b204f2e13e494286edde157f16f99f011d796e2cc516dd2"
   },
   "decision": "verified",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_XLSX_FT_45E5C68DA9E57AD8237FF0F1"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "f4fe32f3fa39f87f23811a4d948a15e0530ef5a8c109607e406489092d3f310d",
-  "reviewer": "ChatGPT",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "contextHashes": {
+      "hazard": "f4bb50ba5a885f11c436c68d5412f5338097a1856c89145cde04421837acf654",
+      "clause": "a5fc6f772a47cedf3b204f2e13e494286edde157f16f99f011d796e2cc516dd2"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_55330562367BA576AF9A9E66",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_45E5C68DA9E57AD8237FF0F1"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。\n2026-09-26复核：本次仅追加同义检索表达，或将条件收窄到条文本已限定的对象；不改变既有decision。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "f4fe32f3fa39f87f23811a4d948a15e0530ef5a8c109607e406489092d3f310d",
+    "reviewer": "ChatGPT",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

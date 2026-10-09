@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_1094F237782E4FC9A7D58CA44E",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "0b548cb2c81a44e7a49cc20f2ac07837c6fd6570b61ae13e84cd2aa0b645f727",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "f5bb77a5fda9c905825a82159e373399903dcbbfab5dedf1ccba7733ee22be64",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_SAMR_GB15577_2018"
-  ]
+  ],
+  "reason": "限定金属粉尘对象，去除条文未指定的连续机械排风、排风联锁、挡水门槛及湿度记录要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "铝、镁等金属粉尘贮存和产生场所，应采取通风防潮措施，严防遇湿自燃或析出氢气积聚，并应设置氢气等可燃气体浓度监测报警装置。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_1094F237782E4FC9A7D58CA44E",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "0b548cb2c81a44e7a49cc20f2ac07837c6fd6570b61ae13e84cd2aa0b645f727",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_1094F237782E4FC9A7D58CA44E",
+    "title": "铝粉危废库房未采取通风措施,未安装氢气报警器,未采取防水防潮措施",
+    "description": "铝粉危险废物库房未采取通风措施，未安装氢气浓度检测报警装置，也未采取防水防潮措施；铝粉受潮可产生氢气，存在燃爆风险。",
+    "measures": "铝粉危废库房增设机械排风并保持连续通风，安装氢气浓度检测报警装置并与排风联锁；地面做防水防潮处理，库房设挡水门槛和防雨措施，定期监测库内湿度并记录。",
+    "conditions": "适用于库房的相关安全管理。",
+    "category": "粉尘防爆",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "铝粉危废库房未采取通风措施,未安装氢气报警器,未采取防水防潮措施"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)粉尘爆炸 第8条",
+    "mergedInto": null
+  }
 }

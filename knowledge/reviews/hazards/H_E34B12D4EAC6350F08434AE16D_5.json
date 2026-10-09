@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_E34B12D4EAC6350F08434AE16D_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "12121271c19b7fd5ba6f2c774f88d5e06c60de265961b10a7d7a4062d4305acf",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_1A51571EE6750DBEA9142647"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "790043063f3c0c3a47c2d6bf2805c3fd0e07c7458766b8299deafc927958d8e9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "建设工程的安全防护、文明施工措施费用应当包括消防器材配备和高层建筑工地临时消防给水设施、消防车通道设置等费用。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_E34B12D4EAC6350F08434AE16D_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1A51571EE6750DBEA9142647"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "790043063f3c0c3a47c2d6bf2805c3fd0e07c7458766b8299deafc927958d8e9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，建设工程的安全防护、文明施工措施费用未包括消防器材配备和高层建筑工地临时消防给水设施、消防车通道设置等费用，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_E34B12D4EAC6350F08434AE16D_5",
+    "keywords": [
+      "建设工程的安全防护",
+      "文明施工措施费用未包括消防器材配备和高层建筑工地临时消防给水设施",
+      "消防车通道设置等费用"
+    ],
+    "lifecycle": "active",
+    "measures": "建设工程的安全防护、文明施工措施费用包括消防器材配备和高层建筑工地临时消防给水设施、消防车通道设置等费用；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "建设工程的安全防护、文明施工措施费用未包括消防器材配备和高层建筑工地临时消防给水设施、消防车通道设置等费用"
+  }
 }

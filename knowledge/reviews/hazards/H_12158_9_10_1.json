@@ -1,14 +1,53 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_9_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fb9b46b6c02cc293a521d7f647009ef20c7ffe6237091c30f7f314249cde1940",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_DUP_DFD8AE3312C4FF209B02ED55",
     "E_XLSX_DUP_C30B931C15756B2AEDCA0494"
   ],
-  "reason": "两个Excel候选为同一隐患，已合并为一个正式隐患并核对两项标准条款。",
-  "reviewType": "content",
-  "reviewedContentHash": "e70acb0fa8ba52c1df358f4e5166ac65f8b662a0a241026479d60a3941378844",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "已有另一项完整直接依据支持材质要求，依该条缩短标题并明确可选材料。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "直接用于盛装起电粉料的器具、输送粉料的管道(带)等,应采用金属或防静电材料制成。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_9_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_DUP_DFD8AE3312C4FF209B02ED55",
+      "E_XLSX_DUP_C30B931C15756B2AEDCA0494"
+    ],
+    "reason": "两个Excel候选为同一隐患，已合并为一个正式隐患并核对两项标准条款。",
+    "reviewType": "content",
+    "reviewedContentHash": "e70acb0fa8ba52c1df358f4e5166ac65f8b662a0a241026479d60a3941378844",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，直接用于盛装起电粉料的器具、输送粉料的管道(带)等，未采用金属或防静电材料制成，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_9_10_1",
+    "keywords": [
+      "直接用于盛装起电粉料的器具",
+      "输送粉料的管道",
+      "带",
+      "等",
+      "未采用金属或防静电材料制成"
+    ],
+    "lifecycle": "active",
+    "measures": "直接用于盛装起电粉料的器具、输送粉料的管道(带)等，采用金属或防静电材料制成。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将重复候选合并，并保留GB 12158-2024与GB 15577-2018两项直接条款依据。",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "直接用于盛装起电粉料的器具、输送粉料的管道(带)等，未采用金属或防静电材料制成"
+  }
 }

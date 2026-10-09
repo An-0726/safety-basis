@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-10-09",
   "decision": "verified",
   "entityId": "K_XLSX_FT_336835C6F2669D6724FB5846",
   "entityType": "link",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "江苏省条文列举的危险作业；委托危险作业须管理协议/落实管理责任及受托方安全条件资质。不能据此全国化断言任何化学品储存区禁烟禁火。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "8a5b3a71cdb104cd81e26868bdbb4e2981bdbf210f0d5ed0a9f8fc59e8c63bb4",
-  "reviewer": "Codex条款结构逐项复核20261003",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "locator": "第二十九条第二款",
   "reviewedFields": [
     "/applicability",
@@ -33,22 +33,73 @@
     ]
   },
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "contextHashes": {
-      "clause": "79efd74682ea3dd3334e76dcd90104e9e79623934cea0dfaf070290ba7e52da5",
-      "hazard": "5a533f98fc4b3045df4050e79098ee3cc59c0f2770c6ad69763d6043d608797c"
-    },
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "K_XLSX_FT_336835C6F2669D6724FB5846",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_FT_F156A66F87973920B30EFBB7"
+      "E_L020"
     ],
-    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reason": "江苏省条文列举的危险作业；委托危险作业须管理协议/落实管理责任及受托方安全条件资质。不能据此全国化断言任何化学品储存区禁烟禁火。",
     "reviewType": "applicability",
-    "reviewedContentHash": "3997daa8c904f9bf6b3416bd886558e73d8a6468bbcd3df73c1d410e812b1a14",
-    "reviewer": "Codex正式核验批次20260913",
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "reviewedContentHash": "8a5b3a71cdb104cd81e26868bdbb4e2981bdbf210f0d5ed0a9f8fc59e8c63bb4",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第二十九条第二款",
+    "reviewedFields": [
+      "/applicability",
+      "/clauseId",
+      "/reason"
+    ],
+    "reviewedValues": {
+      "/applicability": "适用于江苏省行政区域内生产经营单位委托开展第二十九条所列爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业；应按实际作业类型核实受托主体安全生产条件及相应资质，不能以一般外包关系代替危险作业触发条件。",
+      "/clauseId": "C_301DCA3CAE2A494C399B323116",
+      "/reason": "第二十九条第二款直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+    },
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_L020"
+      ],
+      "/clauseId": [
+        "E_L020"
+      ],
+      "/reason": [
+        "E_L020"
+      ]
+    },
+    "previousReviewFileSha256": "7de06dabcb5aca2245e2a7c884a84c03ad3a1c402e362ce235e04700571a7231",
+    "historySha256": "2177b4c98b970b2934143511ae434bf9c7d4f72cf528750740218f0c7575a458",
+    "previousEntity": {
+      "applicability": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+      "clauseId": "C_XLSX_FT_261DD1438228E1E0CCDB1AAE",
+      "hazardId": "H_301DCA3CAE2A494C399B323116_3",
+      "id": "K_XLSX_FT_336835C6F2669D6724FB5846",
+      "jurisdictionCode": "CN-32",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+      "role": "direct"
+    },
+    "previousEntityFileSha256": "4ef25fda61c4426606d7571a971111cc3b2b3b24faae5279883fc98e1d7c9ef3",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第二十九条第二款",
+      "completeOfficialQuote": "第二十九条 生产经营单位进行爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业，应当执行有关危险作业管理制度，并遵守下列规定：\n\n（一）对作业安全风险进行评估，确认现场作业条件符合安全作业要求；\n\n（二）根据安全风险明确安全防范措施和现场应急处置措施；\n\n（三）确认作业人员的上岗资格以及劳动防护用品的配备、使用符合安全作业要求；\n（四）配备相应的安全设施和应急救援器材，设置作业现场的安全区域，确定专人现场统一指挥和监督；\n\n（五）在危险作业前向作业人员告知危险因素、作业安全要求和现场应急处置措施，并经双方现场签字确认；\n\n（六）发现直接危及人身安全的紧急情况时，按照现场应急处置措施停止作业、撤出人员。\n\n生产经营单位委托其他单位进行危险作业的，应当在作业前与受托方签订安全生产管理协议，明确并落实前款规定，对受托方安全生产工作统一协调、管理，并加强监督检查。生产经营单位不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
+      "scopeDecision": "江苏省条文列举的危险作业；委托危险作业须管理协议/落实管理责任及受托方安全条件资质。不能据此全国化断言任何化学品储存区禁烟禁火。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+    "contextHashes": {
+      "hazard": "a89f297fe67f4401b5fb1c0009b7f30e2601c9835872e51fccc1741666cd2e1d",
+      "clause": "34410c8c88c88f088235ccbc3c075cb76293ee1aa0b133c6d2c040d98044d19b"
+    }
   },
   "previousReviewFileSha256": "7de06dabcb5aca2245e2a7c884a84c03ad3a1c402e362ce235e04700571a7231",
   "historySha256": "2177b4c98b970b2934143511ae434bf9c7d4f72cf528750740218f0c7575a458",
@@ -79,9 +130,9 @@
     "completeOfficialQuote": "第二十九条 生产经营单位进行爆破、吊装、高处作业、有限（受限）空间作业、临近油气输送管道作业、临近高压输电线路作业、建筑物和构筑物拆除、大型检修以及涉及危险物品的场所动火和临时用电等危险作业，应当执行有关危险作业管理制度，并遵守下列规定：\n\n（一）对作业安全风险进行评估，确认现场作业条件符合安全作业要求；\n\n（二）根据安全风险明确安全防范措施和现场应急处置措施；\n\n（三）确认作业人员的上岗资格以及劳动防护用品的配备、使用符合安全作业要求；\n（四）配备相应的安全设施和应急救援器材，设置作业现场的安全区域，确定专人现场统一指挥和监督；\n\n（五）在危险作业前向作业人员告知危险因素、作业安全要求和现场应急处置措施，并经双方现场签字确认；\n\n（六）发现直接危及人身安全的紧急情况时，按照现场应急处置措施停止作业、撤出人员。\n\n生产经营单位委托其他单位进行危险作业的，应当在作业前与受托方签订安全生产管理协议，明确并落实前款规定，对受托方安全生产工作统一协调、管理，并加强监督检查。生产经营单位不得将危险作业委托给不具备安全生产条件或者相应资质的单位或者个人。",
     "scopeDecision": "江苏省条文列举的危险作业；委托危险作业须管理协议/落实管理责任及受托方安全条件资质。不能据此全国化断言任何化学品储存区禁烟禁火。"
   },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "contextHashes": {
-    "hazard": "a89f297fe67f4401b5fb1c0009b7f30e2601c9835872e51fccc1741666cd2e1d",
+    "hazard": "88cf354bcfa85dc21cedd58fa76a24e6b10752b8230397a071a5a0f51686f7db",
     "clause": "34410c8c88c88f088235ccbc3c075cb76293ee1aa0b133c6d2c040d98044d19b"
   }
 }

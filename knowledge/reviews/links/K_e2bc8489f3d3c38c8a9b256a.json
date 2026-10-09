@@ -3,18 +3,37 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ChatGPT",
-  "checkedAt": "2026-09-11",
-  "reason": "该隐患已拥有 GB 50187-2012 第7.4.1条的直接技术依据，本条《中华人民共和国安全生产法》规定仅作为上位法义务补充保留。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "SUPPORTING_UPPER_LAW"
   ],
   "reviewedContentHash": "f41dc29bea1d6b4a00016fda02024a3c5cd751d15e5242bde286c1050b597d1d",
   "contextHashes": {
-    "clause": "6f9a1a5c1366f90c1f29218bd7b615c7653426f23e807422be377a2caed35150",
-    "hazard": "8e8452850236ee6928ff4c5bd73d3a8841b8c626ce3b13bc3800807901cb8e3c",
-    "link": "f41dc29bea1d6b4a00016fda02024a3c5cd751d15e5242bde286c1050b597d1d"
+    "hazard": "0f1a47541cba7ea4b3212bbe9e627bf002c08e2a8c1a91fd3705f1d51ace8a31",
+    "clause": "6f9a1a5c1366f90c1f29218bd7b615c7653426f23e807422be377a2caed35150"
   },
   "evidenceRefs": [],
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_e2bc8489f3d3c38c8a9b256a",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ChatGPT",
+    "checkedAt": "2026-09-11",
+    "reason": "该隐患已拥有 GB 50187-2012 第7.4.1条的直接技术依据，本条《中华人民共和国安全生产法》规定仅作为上位法义务补充保留。",
+    "reasonCodes": [
+      "SUPPORTING_UPPER_LAW"
+    ],
+    "reviewedContentHash": "f41dc29bea1d6b4a00016fda02024a3c5cd751d15e5242bde286c1050b597d1d",
+    "contextHashes": {
+      "clause": "6f9a1a5c1366f90c1f29218bd7b615c7653426f23e807422be377a2caed35150",
+      "hazard": "8e8452850236ee6928ff4c5bd73d3a8841b8c626ce3b13bc3800807901cb8e3c",
+      "link": "f41dc29bea1d6b4a00016fda02024a3c5cd751d15e5242bde286c1050b597d1d"
+    },
+    "evidenceRefs": [],
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

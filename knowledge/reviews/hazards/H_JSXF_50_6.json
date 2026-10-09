@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_50_6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "31f4ee9ff2a610c5439faff28156b5d71a95b2f407e0b989dc955c7711866620",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_004B225DADE635F9EA0C3BA8"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "82579a2603a64891be5a50017e05500d3832dccf53818bbc87f20fdb63803b7f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "利用船舶或者水上浮动设施开设的餐饮、娱乐场所、水上加油点，应当符合相应的消防技术标准和管理规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_50_6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_004B225DADE635F9EA0C3BA8"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "82579a2603a64891be5a50017e05500d3832dccf53818bbc87f20fdb63803b7f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，利用船舶或者水上浮动设施开设的餐饮、娱乐场所、水上加油点，未符合相应的消防技术标准和管理规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_50_6",
+    "keywords": [
+      "利用船舶或者水上浮动设施开设的餐饮",
+      "娱乐场所",
+      "水上加油点",
+      "未符合相应的消防技术标准和管理规定"
+    ],
+    "lifecycle": "active",
+    "measures": "利用船舶或者水上浮动设施开设的餐饮、娱乐场所、水上加油点，符合相应的消防技术标准和管理规定；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "利用船舶或者水上浮动设施开设的餐饮、娱乐场所、水上加油点，未符合相应的消防技术标准和管理规定"
+  }
 }

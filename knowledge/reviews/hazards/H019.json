@@ -1,18 +1,67 @@
 {
-  "decision": "verified",
   "entityId": "H019",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8e5ab3ed80f4b32e6d64d73fa75f40fe40c6c2919144b55f0df382007b527dfb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_JS_RESPONSIBILITY_20260926"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_82815547a8a16c1838ce6d5d8a_2",
-    "reviewedAt": "2026-09-09T12:35:47+00:00",
-    "reviewer": "doubao-work-依赖刷新"
+  "reason": "仅替换模板描述，原标题、条件及措施予以保留。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十四条 生产经营单位应当建立健全全员安全生产责任制，明确主要负责人、其他负责人、职能部门负责人、生产车间（区队）负责人、生产班组负责人、岗位从业人员等全体从业人员的责任内容和考核标准，对全员安全生产责任制落实情况开展监督、考核、奖惩，保证全员安全生产责任制的落实。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H019",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_JS_RESPONSIBILITY_20260926"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_82815547a8a16c1838ce6d5d8a_2",
+      "reviewedAt": "2026-09-09T12:35:47+00:00",
+      "reviewer": "doubao-work-依赖刷新"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "9feace8489982fdb7675acf84b16b42a7df251b0b1fd9b666fe6d8235d705525",
+    "checkedAt": "2026-09-26T19:20:54+08:00",
+    "reason": "核定义务与地域；同义归并保留编号，费用与风险管理责任保留独立适用条件。",
+    "reviewer": "Codex 原文及适用性审计 20260926"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "9feace8489982fdb7675acf84b16b42a7df251b0b1fd9b666fe6d8235d705525",
-  "checkedAt": "2026-09-26T19:20:54+08:00",
-  "reason": "核定义务与地域；同义归并保留编号，费用与风险管理责任保留独立适用条件。",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "previousDefinition": {
+    "aliases": [
+      "安全生产责任制不健全",
+      "岗位安全职责不清",
+      "全员责任制未落实",
+      "生产经营单位未建立健全全员安全生产责任制",
+      "未建立健全全员安全生产责任制"
+    ],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动 核对岗位覆盖、职责内容及实际履职；仅责任书未签字或缺单一纸质表格，不当然证明责任制未建立或未落实。 核对岗位覆盖、职责内容及实际履职；仅责任书未签字或缺单一纸质表格，不当然证明责任制未建立或未落实。",
+    "description": "经资料及履职情况核查，全员安全生产责任制未建立或未落实，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H019",
+    "keywords": [
+      "责任制",
+      "全员责任制",
+      "岗位职责",
+      "责任人员",
+      "责任范围",
+      "考核标准",
+      "安全管理",
+      "全员安全生产责任制未建立或未落实"
+    ],
+    "lifecycle": "active",
+    "measures": "结合组织架构、岗位设置和风险重新完善全员安全生产责任制，明确各岗位责任人员、责任范围和考核标准，建立监督考核机制，并通过培训、履职记录和考核持续落实。",
+    "mergedInto": null,
+    "mode": "conditional",
+    "note": "不宜只看是否存在一份名为“责任制”的文件。应核查责任是否覆盖实际岗位、内容是否与现状相符以及是否存在履职和考核证据。",
+    "places": [
+      "通用场所",
+      "工贸企业",
+      "生产经营单位"
+    ],
+    "title": "全员安全生产责任制未建立或未落实"
+  }
 }

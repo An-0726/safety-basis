@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_3762721034F27E86AB0557D1D5_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9034d3e54bf46ea20c8e47a41fe604c031405cb346346aa0d64a25d7d23f17e1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "c76e7a81551b81a56e013d35e632fa5822d56fa5c351f8c8ba69b3418bcc70ff",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "直接呈现人员检查缺失与作业安排之间的对应关系。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位不得安排未经上岗前职业健康检查的劳动者从事接触职业 病危害的作业",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_3762721034F27E86AB0557D1D5_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E8C5AA9723A42BD1EB40C2CB"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "c76e7a81551b81a56e013d35e632fa5822d56fa5c351f8c8ba69b3418bcc70ff",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位安排未经上岗前职业健康检查的劳动者从事接触职业病危害的作业，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_3762721034F27E86AB0557D1D5_2",
+    "keywords": [
+      "用人单位安排未经上岗前职业健康检查的劳动者从事接触职业病危害的作业"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位安排经上岗前职业健康检查的劳动者从事接触职业病危害的作业。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位安排未经上岗前职业健康检查的劳动者从事接触职业病危害的作业"
+  }
 }

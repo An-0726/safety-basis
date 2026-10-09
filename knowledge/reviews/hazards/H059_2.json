@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H059_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "469e3f42a77d2a2cdceaa0dd053cdc35918fe7e95ad56e5f270ec1eb751dfa5b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L015"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "7b48f29f135771fba5e03b32aca3321f0832e79a0c60f0d391b95cf826cef194",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "距室外消火栓、水泵接合器2m范围内不应设置影响其正常使用的障碍物。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H059_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_L015"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "7b48f29f135771fba5e03b32aca3321f0832e79a0c60f0d391b95cf826cef194",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，距室外消火栓、水泵接合器2m范围内违规设置影响其正常使用的障碍物，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H059_2",
+    "keywords": [
+      "距室外消火栓",
+      "水泵接合器2m范围内违规设置影响其正常使用的障碍物"
+    ],
+    "lifecycle": "active",
+    "measures": "清除距室外消火栓、水泵接合器2m范围内影响正常使用的障碍物，保持操作、连接和消防救援所需空间持续畅通。整改后复查现场防火、疏散、消防设施或应急处置条件，涉及设施功能的应测试确认并纳入防火巡查。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "距室外消火栓、水泵接合器2m范围内违规设置影响其正常使用的障碍物"
+  }
 }

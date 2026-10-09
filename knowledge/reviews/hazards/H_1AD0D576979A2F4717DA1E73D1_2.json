@@ -1,16 +1,52 @@
 {
-  "reviewType": "content",
-  "entityType": "hazard",
   "entityId": "H_1AD0D576979A2F4717DA1E73D1_2",
+  "entityType": "hazard",
+  "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "66d4a46cb6c865a7a57c3994dee4f0f1169056c409a4cf131b51d8c3bb5fdb54",
+  "reviewedContentHash": "d52be6d00639c0b473297a05f34e84ce5e879ba199cae7ff6420a2bf8deabb5f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_D7EAE95C2C926E60C57D23CF",
     "E_REMEDIATION_20260930_TSELAW",
     "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
   ],
-  "reviewer": "Codex三条残余独立法律语义复核20260930",
-  "checkedAt": "2026-09-30",
-  "reason": "已完整核对本条title、description、measures、conditions、places及唯一direct依据。特种设备安全法第十九条义务主体为生产单位，第二条所称生产包括设计、制造、安装、改造、修理；删除使用现场参数套句及泛使用场所，要求有实际生产活动和适用技术要求不符合项或国家明令淘汰匹配证据。安全性能要求与适用能效指标均为合规要求，不符合任一适用要求不能认定合格，不将法条连接词误读为两项须同时不符；国家明令淘汰为独立禁止分支。仅拟生产计划或使用现场状态不能证明违法生产，但实际设计等活动不以制成成品为前提。title沿用法条禁止性表述，measures逐字保留，其中拟生产核查属于预防整改，不是已违法生产事实。",
-  "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。"
+  "reason": "仅压缩标题，保留原有具体描述、条件和措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十九条 特种设备生产单位应当保证特种设备生产符合安全技术规范及相关标准的要求，对其生产的特种设备的安全性能负责。不得生产不符合安全性能要求和能效指标以及国家明令淘汰的特种设备。",
+  "previousReview": {
+    "reviewType": "content",
+    "entityType": "hazard",
+    "entityId": "H_1AD0D576979A2F4717DA1E73D1_2",
+    "decision": "verified",
+    "reviewedContentHash": "66d4a46cb6c865a7a57c3994dee4f0f1169056c409a4cf131b51d8c3bb5fdb54",
+    "evidenceRefs": [
+      "E_XLSX_FT_D7EAE95C2C926E60C57D23CF",
+      "E_REMEDIATION_20260930_TSELAW",
+      "E_155fb9b72569daa3ad4d3698811dd86b6ca2a58ef2139698991b5afe1c12e686"
+    ],
+    "reviewer": "Codex三条残余独立法律语义复核20260930",
+    "checkedAt": "2026-09-30",
+    "reason": "已完整核对本条title、description、measures、conditions、places及唯一direct依据。特种设备安全法第十九条义务主体为生产单位，第二条所称生产包括设计、制造、安装、改造、修理；删除使用现场参数套句及泛使用场所，要求有实际生产活动和适用技术要求不符合项或国家明令淘汰匹配证据。安全性能要求与适用能效指标均为合规要求，不符合任一适用要求不能认定合格，不将法条连接词误读为两项须同时不符；国家明令淘汰为独立禁止分支。仅拟生产计划或使用现场状态不能证明违法生产，但实际设计等活动不以制成成品为前提。title沿用法条禁止性表述，measures逐字保留，其中拟生产核查属于预防整改，不是已违法生产事实。",
+    "notes": "本次审核限此隐患的title、description、measures、conditions、places与所列直接法律依据及必要范围/准入边界。仅按本报告列示新hash生效；不认证全库、未审分类、路由profile或现场事实。既有measures逐字保留。"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "仅适用于依法纳入《中华人民共和国特种设备安全法》监管范围的特种设备生产单位及其生产活动；生产包括设计、制造、安装、改造、修理。判定本项应有实际生产活动事实，并核实适用安全技术规范、相关标准中的安全性能要求或能效指标不符合项，或者设备与国家明令淘汰规定的匹配情况；不以安全性能与能效同时不符合为前提。仅有拟生产计划，或仅有使用登记、使用现场参数和设备状态，不足以据此认定已发生本项违法生产；已实际开展设计等法定生产活动的，不因尚未制造成品而排除适用。",
+    "description": "特种设备生产单位实际生产的特种设备不符合适用的安全性能要求或能效指标，或者属于国家明令淘汰的特种设备。",
+    "id": "H_1AD0D576979A2F4717DA1E73D1_2",
+    "keywords": [
+      "生产不符合安全性能要求和能效指标以及国家明令淘汰的特种设备"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止生产不符合安全性能要求和能效指标以及国家明令淘汰的特种设备。对拟生产设备核查安全技术规范、相关标准和国家淘汰目录，纠正不符合项，确保所生产设备符合要求；国家明令淘汰的设备不得继续生产。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备生产单位及生产活动"
+    ],
+    "title": "生产不符合安全性能要求和能效指标以及国家明令淘汰的特种设备"
+  }
 }

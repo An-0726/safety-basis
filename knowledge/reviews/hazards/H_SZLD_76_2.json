@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_76_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "916eca1e1ecb43fda8e47513ac9795a67bd8f5f7f7aa2d009f14c3a2add6cbbd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_EFEEEB8A0139EC59DF5E40CB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a747c4d6df0aa01b1f3da01653be02576bcec5a3d22599181306f1329600ec7c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "区分每日巡检未执行和制度缺失，保留通知维保整改及上报。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "76 第七十六条\n电梯使用单位应当建立电梯安全日管控制度。电梯安全员要每日根据《电梯安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对投入使用的电梯进行巡检，形成《每日电梯安全检查记录》，对发现的安全风险隐患，应当立即通知电梯维护保养单位予以整改，及时上报电梯安全总监或者单位主要负责人。未发现问题的，也应当予以记录，实行零风险报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_76_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_EFEEEB8A0139EC59DF5E40CB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a747c4d6df0aa01b1f3da01653be02576bcec5a3d22599181306f1329600ec7c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，电梯安全员未每日按安全风险管控清单对电梯进行巡检，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_76_2",
+    "keywords": [
+      "电梯安全员未每日按安全风险管控清单对电梯进行巡检"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯安全员每日按安全风险管控清单对电梯进行巡检。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯安全员未每日按安全风险管控清单对电梯进行巡检"
+  }
 }

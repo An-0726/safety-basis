@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_7D85AC280234FC8A78C5E07364_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "65273f5d7ad826c258f6034e711c25fdb24ddc1407373092b719fa7bfb2fcaa9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_98B67C4F5027394733E45EA3"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "0bd4d5c3305ccd51fb58c02598f01d83cac97f06e85fbdb58af2f26a6fb3663b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留医疗机构和可能产生放射性职业病危害限定，明确建设项目类型及开工前报告要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "医疗机构建设项目可能产生放射性职业病危害的，建设单位应当向 卫生行政部门提交放射性职业病危害预评价报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_7D85AC280234FC8A78C5E07364_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_98B67C4F5027394733E45EA3"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "0bd4d5c3305ccd51fb58c02598f01d83cac97f06e85fbdb58af2f26a6fb3663b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，医疗机构建设项目可能产生放射性职业病危害的，建设单位未向卫生行政部门提交放射性职业病危害预评价报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_7D85AC280234FC8A78C5E07364_2",
+    "keywords": [
+      "医疗机构建设项目可能产生放射性职业病危害的",
+      "建设单位未向卫生行政部门提交放射性职业病危害预评价报告"
+    ],
+    "lifecycle": "active",
+    "measures": "医疗机构建设项目可能产生放射性职业病危害的，建设单位向卫生行政部门提交放射性职业病危害预评价报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "医疗机构建设项目可能产生放射性职业病危害的，建设单位未向卫生行政部门提交放射性职业病危害预评价报告"
+  }
 }

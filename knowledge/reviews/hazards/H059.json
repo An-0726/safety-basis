@@ -1,15 +1,57 @@
 {
-  "decision": "verified",
   "entityId": "H059",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c6bfbec67c57fd6d366caee9d5e1e0f9274c062c900c9124d664cffea029dba2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_82815547a8a16c1838ce6d5d8a_29",
-    "reviewedAt": "2026-09-09T12:35:47+00:00",
-    "reviewer": "doubao-work-依赖刷新"
+  "reason": "直接条款明确仓储对象及检测周期，替换泛化电气活动条件；具体描述和简洁标题保留。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "8.11 仓储场所应按照GB 50057设置防雷与接地系统，并应每年检测一次，其中甲、乙类仓储场所的防雷装置应每半年检测一次，并应取得专业部门测试合格证书。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H059",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_82815547a8a16c1838ce6d5d8a_29",
+      "reviewedAt": "2026-09-09T12:35:47+00:00",
+      "reviewer": "doubao-work-依赖刷新"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "9c272216aa34f3fccc91f460118bb26bd511607fe1369b52f1e317dc4953083b"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "9c272216aa34f3fccc91f460118bb26bd511607fe1369b52f1e317dc4953083b"
+  "previousDefinition": {
+    "aliases": [
+      "仓库防雷检测未开展",
+      "仓储防雷接地不符合"
+    ],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "仓储场所未按GB 50057设置防雷与接地系统，或未按XF 1131规定的周期开展检测。",
+    "id": "H059",
+    "keywords": [
+      "仓储",
+      "防雷",
+      "接地",
+      "检测",
+      "GB50057"
+    ],
+    "lifecycle": "active",
+    "measures": "按建筑物防雷分类和仓储场所要求核查防雷与接地系统，委托具备相应条件的机构按法定或适用周期开展检测，并整改不合格项。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "XF 1131—2014第8.11条要求一般仓储场所防雷与接地系统每年检测一次，其中甲、乙类仓储场所防雷装置每半年检测一次。应结合场所火灾危险性分类适用检测周期。",
+    "places": [
+      "仓储场所",
+      "仓库"
+    ],
+    "title": "仓储场所防雷与接地系统设置或检测不到位"
+  }
 }

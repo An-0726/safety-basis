@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H036_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f4aa6977ed4e78685417c727061b8c2a63b8028f954b107cf571d659bed95307",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L015"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "ab2df69e297b67836136eeb3858f87a506499ec054825b3fdd168ac212ae45ed",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "甲、乙类物品的室内储存场所内不应设办公室。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H036_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_L015"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "ab2df69e297b67836136eeb3858f87a506499ec054825b3fdd168ac212ae45ed",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，甲、乙类物品的室内储存场所内违规设置办公室，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H036_2",
+    "keywords": [
+      "甲",
+      "乙类物品的室内储存场所内违规设置办公室"
+    ],
+    "lifecycle": "active",
+    "measures": "将办公室迁出甲、乙类物品室内储存场所，恢复储存区域的规定用途和防火分隔，避免人员办公与高火灾危险性储存空间混设。整改后复查现场防火、疏散、消防设施或应急处置条件，涉及设施功能的应测试确认并纳入防火巡查。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "甲、乙类物品的室内储存场所内违规设置办公室"
+  }
 }

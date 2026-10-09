@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_GBZ188_4_6_3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "82c50bf41a0f842475879814b7cfd0f94545c969bffc981362458a1ebd8560bc",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8172948B8E8219A9D9ED78E0"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "b2fab3c78f7f4b614b1e6e7d75ddf8f15fea99e353e35bc228a975a1cbbf81e6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定事故、受危害或可能受危害劳动者及事故处理要求，不扩大为所有人员检查。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当发生急性职业病危害事故时，根据事故处理的要求，对遭受或者可能遭受急性职业病危害的劳动\n者，应及时组织应急健康检查。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_GBZ188_4_6_3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8172948B8E8219A9D9ED78E0"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "b2fab3c78f7f4b614b1e6e7d75ddf8f15fea99e353e35bc228a975a1cbbf81e6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，发生急性职业病危害事故后未立即组织应急健康检查，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_GBZ188_4_6_3_2",
+    "keywords": [
+      "发生急性职业病危害事故后未立即组织应急健康检查"
+    ],
+    "lifecycle": "active",
+    "measures": "发生急性职业病危害事故后立即组织应急健康检查。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "发生急性职业病危害事故后未立即组织应急健康检查"
+  }
 }

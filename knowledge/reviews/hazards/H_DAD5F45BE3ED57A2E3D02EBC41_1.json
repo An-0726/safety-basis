@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DAD5F45BE3ED57A2E3D02EBC41_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1958f223021c7a659b4bd1ae03c1f3634f29cd6041d5f3f12d963ba678929412",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_BE6CCCC709207233710FD135"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "08d30a9cca6503d21eeae35c3b5ab9e2605f3950f0fc64942897d05d8b9d9e4d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "资料类别移入描述，标题保留诊断鉴定用途和如实提供的缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第四十七条 用人单位应当如实提供职业病诊断、鉴定所需的劳动 者职业史和职业病危害接触史、工作场所职业病危害因素检测结果等资 料",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DAD5F45BE3ED57A2E3D02EBC41_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_BE6CCCC709207233710FD135"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "08d30a9cca6503d21eeae35c3b5ab9e2605f3950f0fc64942897d05d8b9d9e4d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位未如实提供职业病诊断、鉴定所需的劳动者职业史和职业病危害接触史、工作场所职业病危害因素检测结果等资料，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DAD5F45BE3ED57A2E3D02EBC41_1",
+    "keywords": [
+      "用人单位未如实提供职业病诊断",
+      "鉴定所需的劳动者职业史和职业病危害接触史",
+      "工作场所职业病危害因素检测结果等资料"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位如实提供职业病诊断、鉴定所需的劳动者职业史和职业病危害接触史、工作场所职业病危害因素检测结果等资料。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未如实提供职业病诊断、鉴定所需的劳动者职业史和职业病危害接触史、工作场所职业病危害因素检测结果等资料"
+  }
 }

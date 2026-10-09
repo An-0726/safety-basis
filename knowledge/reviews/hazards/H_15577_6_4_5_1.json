@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_6_4_5_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2a80d050b7c8fcaaffc5f2ff676f1fb8cc85898a49f9ef9c40e2161c1d78c5c3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "642ed698272abe4b94a7c879b8b9a443e521f027c2d8b8d4ec3ac8473de6a767",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留存在点火源前提，描述明确探测与消除两项功能，不夹带通用保障套句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "粉尘输送管道中存在火花等点火源时，如与木质板材加工用砂光机连接的除尘风管、纺织梳棉（麻）设备除尘风管等，应设置火花探测与消除火花的装置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_6_4_5_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "642ed698272abe4b94a7c879b8b9a443e521f027c2d8b8d4ec3ac8473de6a767",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，粉尘输送管道中存在火花等点火源时，未设置火花探测消除装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15577_6_4_5_1",
+    "keywords": [
+      "粉尘输送管道中存在火花等点火源时",
+      "未设置火花探测消除装置"
+    ],
+    "lifecycle": "active",
+    "measures": "粉尘输送管道中存在火花等点火源时，设置火花探测消除装置。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "粉尘输送管道中存在火花等点火源时，未设置火花探测消除装置"
+  }
 }

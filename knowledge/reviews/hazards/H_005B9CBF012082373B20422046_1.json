@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_005B9CBF012082373B20422046_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "be7dc258223d894311963324566de1aecfbf57ac5255f3d4feeb8ae8ef61e614",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_2776105DE26F2D37B118F62D"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "97a06e0cdfc39ca68e9553e0896c6660d677a69af55d73e51c47a10de7e284a5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "民宿、农家乐等场所应当在客房内设置逃生路线示意图，配备逃生器材及其使用说明，并设置明显标识或者放置在醒目位置，保障消防安全。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_005B9CBF012082373B20422046_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_2776105DE26F2D37B118F62D"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "97a06e0cdfc39ca68e9553e0896c6660d677a69af55d73e51c47a10de7e284a5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，民宿、农家乐等场所未在客房内设置逃生路线示意图，未配备逃生器材及其使用说明，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_005B9CBF012082373B20422046_1",
+    "keywords": [
+      "民宿",
+      "农家乐等场所未在客房内设置逃生路线示意图",
+      "未配备逃生器材及其使用说明"
+    ],
+    "lifecycle": "active",
+    "measures": "民宿、农家乐等场所在客房内设置逃生路线示意图，配备逃生器材及其使用说明；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "民宿、农家乐等场所未在客房内设置逃生路线示意图，未配备逃生器材及其使用说明"
+  }
 }

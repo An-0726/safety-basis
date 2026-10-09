@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_7EC63DCB256002A18EE5F5E863_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c813426ae8433be45d63258123eb5ba429d8d17f61d3a59b6f4ed1c693a28c33",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_2096E71D84F809D6802AAEF8"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "1b61b1633e3fe9f133c87ae9a9b21bd28223073ca392fc3a8617856bbf64eb36",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩标题并保留疑似病人及诊断、观察期间两类触发条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在疑似职业病 病人诊断或者医学观察期间，不得解除或者终止与其订立的劳动合同。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_7EC63DCB256002A18EE5F5E863_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_2096E71D84F809D6802AAEF8"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "1b61b1633e3fe9f133c87ae9a9b21bd28223073ca392fc3a8617856bbf64eb36",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，用人单位在疑似职业病病人诊断或者医学观察期间，解除或者终止与其订立的劳动合同，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_7EC63DCB256002A18EE5F5E863_3",
+    "keywords": [
+      "用人单位在疑似职业病病人诊断或者医学观察期间",
+      "解除或者终止与其订立的劳动合同"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止在疑似职业病病人诊断或者医学观察期间解除或终止劳动合同，依法纠正已经作出的处理，并完整留存诊断、观察及劳动关系资料。整改后结合职业病危害因素和岗位接触情况复核防护、健康管理和记录完整性。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位在疑似职业病病人诊断或者医学观察期间，解除或者终止与其订立的劳动合同"
+  }
 }

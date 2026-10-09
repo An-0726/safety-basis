@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_9_2_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f1b3205d466247bc9714f70c7db8e337edff8110024c42e018e3feb12ac6577c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "00e9f2e27ed397775e27febb18e715c255de52bcd8ff4c03373573a10893cd23",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在工艺设备的设计及结构上应配置必要的密闭、清扫和排放装置,避免粉体的不正常滞留、堆积和飞扬。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_9_2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "00e9f2e27ed397775e27febb18e715c255de52bcd8ff4c03373573a10893cd23",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，在工艺设备的设计及结构上未配置必要的密闭、清扫和排放装置，避免粉体的不正常滞留、堆积和飞扬，相关安全防护或使用功能不能保持有效。",
+    "id": "H_12158_9_2_1",
+    "keywords": [
+      "在工艺设备的设计及结构上未配置必要的密闭",
+      "清扫和排放装置",
+      "避免粉体的不正常滞留",
+      "堆积和飞扬"
+    ],
+    "lifecycle": "active",
+    "measures": "在工艺设备的设计及结构上配置必要的密闭、清扫和排放装置，避免粉体的不正常滞留、堆积和飞扬。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "在工艺设备的设计及结构上未配置必要的密闭、清扫和排放装置，避免粉体的不正常滞留、堆积和飞扬"
+  }
 }

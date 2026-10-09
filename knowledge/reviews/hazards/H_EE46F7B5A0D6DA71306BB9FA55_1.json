@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_EE46F7B5A0D6DA71306BB9FA55_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "11a75fbe8c0357a68dd08a34f12156e9d49c2feb094c1804fe01286e899f5e25",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_E51667F9716B09E688154DC4"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "73815a74db50318062f8830a113c85bfbb8b0858f9c723973668909e1974cd96",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确其他负责人及各自职责范围，不臆造某岗位的具体失职事件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "其他负责人应当按照各自分工，负责其职责范围内的安全生产工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_EE46F7B5A0D6DA71306BB9FA55_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_E51667F9716B09E688154DC4"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "73815a74db50318062f8830a113c85bfbb8b0858f9c723973668909e1974cd96",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，其他负责人未按照各自分工，负责其职责范围内的安全生产工作，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_EE46F7B5A0D6DA71306BB9FA55_1",
+    "keywords": [
+      "其他负责人未按照各自分工",
+      "负责其职责范围内的安全生产工作"
+    ],
+    "lifecycle": "active",
+    "measures": "其他负责人按照各自分工，负责其职责范围内的安全生产工作。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "其他负责人未按照各自分工，负责其职责范围内的安全生产工作"
+  }
 }

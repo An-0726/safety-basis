@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_717D64929D7914A130061880A1_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4a0de50c95fee2d4495295b15dffa70fd50193eb3f2ada76a9eaecc9a7dd2d5a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_775BD7D8E6C62F8A63CB4341"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "51a5ba760a3ca45639cdb7a41a3e57a3238e30aef30a1bdbb31c1822ff9431b1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "被派遣劳动者、灵活用工人员依法享有从业人员的权利，并应当依法履行从业人员的义务。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_717D64929D7914A130061880A1_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_775BD7D8E6C62F8A63CB4341"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "51a5ba760a3ca45639cdb7a41a3e57a3238e30aef30a1bdbb31c1822ff9431b1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于南京市行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：南京市行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，被派遣劳动者、灵活用工人员未依法履行从业人员的义务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_717D64929D7914A130061880A1_2",
+    "keywords": [
+      "被派遣劳动者",
+      "灵活用工人员未依法履行从业人员的义务"
+    ],
+    "lifecycle": "active",
+    "measures": "被派遣劳动者、灵活用工人员依法履行从业人员的义务。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "被派遣劳动者、灵活用工人员未依法履行从业人员的义务"
+  }
 }

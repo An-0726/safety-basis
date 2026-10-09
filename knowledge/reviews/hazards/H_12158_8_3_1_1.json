@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_3_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "62d0348802ffd1f504ebee929e51b1163b5e982525fdfec86edb703019273bb5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "b2fad761a584f5131b185851a6cec14a00f32b5649a0221facbd243c81690df7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留蒸汽作业和受喷击对象限定，描述明确连接关系缺失。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "采用蒸汽进行吹扫和清洗时,受蒸汽喷击的管线、导电物体应与油罐或设备进行接地连接。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_3_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "b2fad761a584f5131b185851a6cec14a00f32b5649a0221facbd243c81690df7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，采用蒸汽进行吹扫和清洗时，受蒸汽喷击的管线、导电物体未与油罐或设备进行接地连接，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_3_1_1",
+    "keywords": [
+      "采用蒸汽进行吹扫和清洗时",
+      "受蒸汽喷击的管线",
+      "导电物体未与油罐或设备进行接地连接"
+    ],
+    "lifecycle": "active",
+    "measures": "采用蒸汽进行吹扫和清洗时，受蒸汽喷击的管线、导电物体与油罐或设备进行接地连接。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "采用蒸汽进行吹扫和清洗时，受蒸汽喷击的管线、导电物体未与油罐或设备进行接地连接"
+  }
 }

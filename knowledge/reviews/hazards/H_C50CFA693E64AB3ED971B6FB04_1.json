@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C50CFA693E64AB3ED971B6FB04_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "53713cf6881e0c0bc387efe6128bd89fc046b149b6f780022d047ff6e7b840cd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_B3A8AF34D4C458265CA0B417"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "913e27dc373b7b477997bddcf102eb890eb349b2824dee7e4bd60dd43d82c380",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员，应当依法开展社会消防技术服务活动，接受消防救援机构的监督管理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C50CFA693E64AB3ED971B6FB04_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_B3A8AF34D4C458265CA0B417"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "913e27dc373b7b477997bddcf102eb890eb349b2824dee7e4bd60dd43d82c380",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法从事消防审验、设施维护保养检测或消防安全评估等社会消防技术服务的机构及其从业人员；应结合从业条件和具体项目核查。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_C50CFA693E64AB3ED971B6FB04_1",
+    "keywords": [
+      "消防设施维护保养检测",
+      "消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动"
+    ],
+    "lifecycle": "active",
+    "measures": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员依法开展社会消防技术服务活动；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动"
+  }
 }

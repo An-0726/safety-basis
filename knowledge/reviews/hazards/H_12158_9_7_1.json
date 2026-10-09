@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_9_7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1fea9dcf1a13e7caa1759c8703680b5b7bfbe2f9ff7bf8fdf540139d8e4417d4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "cb8d7467beb826bc1a9e11a4eec40de9d738335ad7ee3dce1d675540d150973f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩标题，整改指向混入环节和已混入导体，不另指定条文未列的装置。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "气流物料输送系统内,应防止偶然性外来金属导体混入,成为对地绝缘的导体。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_9_7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "cb8d7467beb826bc1a9e11a4eec40de9d738335ad7ee3dce1d675540d150973f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，气流物料输送系统内，未防止偶然性外来金属导体混入，成为对地绝缘的导体，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_9_7_1",
+    "keywords": [
+      "气流物料输送系统内",
+      "未防止偶然性外来金属导体混入",
+      "成为对地绝缘的导体"
+    ],
+    "lifecycle": "active",
+    "measures": "气流物料输送系统内，防止偶然性外来金属导体混入，成为对地绝缘的导体。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "气流物料输送系统内，未防止偶然性外来金属导体混入，成为对地绝缘的导体"
+  }
 }

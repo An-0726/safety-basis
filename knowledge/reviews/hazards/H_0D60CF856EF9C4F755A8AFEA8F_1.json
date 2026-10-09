@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_0D60CF856EF9C4F755A8AFEA8F_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7995956e59125f2c0dd94ad1f4cd02555e8e8c3152bc0702a7e111a693201fb4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_5290D0CBC50A4EFBEE4AC59B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "5323e1af40c7ffc89284c1775bb2aea3a7721103c509811929a1faeb30ca72ea",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定检验检测工作，删除使用登记及继续使用的无关措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十二条 特种设备检验、检测工作应当遵守法律、行政法规的规定，并按照安全技术规范的要求进行。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_0D60CF856EF9C4F755A8AFEA8F_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_5290D0CBC50A4EFBEE4AC59B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "5323e1af40c7ffc89284c1775bb2aea3a7721103c509811929a1faeb30ca72ea",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备检验、检测工作未遵守法律、行政法规的规定，未按照安全技术规范的要求进行，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_0D60CF856EF9C4F755A8AFEA8F_1",
+    "keywords": [
+      "特种设备检验",
+      "检测工作未遵守法律",
+      "行政法规的规定",
+      "未按照安全技术规范的要求进行"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备检验、检测工作遵守法律、行政法规的规定，按照安全技术规范的要求进行。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备检验、检测工作未遵守法律、行政法规的规定，未按照安全技术规范的要求进行"
+  }
 }

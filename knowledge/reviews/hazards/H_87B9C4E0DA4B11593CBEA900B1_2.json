@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_87B9C4E0DA4B11593CBEA900B1_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "52165fd8b114f8a80ce34602db6b1e274a966e6fe0248dc25b841cd19c600bb7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "18ab9826d21b6cc80c83f9ace6f5abc8661a3991949f8eec9ad1fad240680ab7",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "标题压缩，描述保留完整强制设组织的行业范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（三）矿山、金属冶炼、建筑施工和危险物品的生产、经营、储存、运输、装卸以及城市轨道交通运营、船舶修造和拆解、电力行业的生产经营单位，应当建立应急救援组织；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_87B9C4E0DA4B11593CBEA900B1_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "18ab9826d21b6cc80c83f9ace6f5abc8661a3991949f8eec9ad1fad240680ab7",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于南京市行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，矿山、金属冶炼、建筑施工和危险物品的生产、经营、储存等行业的生产经营单位未依法建立应急救援组织，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_87B9C4E0DA4B11593CBEA900B1_2",
+    "keywords": [
+      "矿山",
+      "金属冶炼",
+      "建筑施工和危险物品的生产",
+      "经营",
+      "储存等行业的生产经营单位未依法建立应急救援组织"
+    ],
+    "lifecycle": "active",
+    "measures": "矿山、金属冶炼、建筑施工和危险物品的生产、经营、储存等行业的生产经营单位依法建立应急救援组织。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "矿山、金属冶炼、建筑施工和危险物品的生产、经营、储存等行业的生产经营单位未依法建立应急救援组织"
+  }
 }

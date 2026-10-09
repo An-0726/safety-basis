@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_1_9_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ab610c7e610a7d52905680359c88657fa8578e7f1caa0147220141713bd077d8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "ed443d02eb402948aa7cb35af6ad7eea8eba9482c2e920f77da2faaced92a93b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定油罐原装产品与拟换装产品，不扩大为所有油品换装。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "不应对装过汽油等高挥发性产品的油罐切换注入低挥发性油品。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_1_9_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "ed443d02eb402948aa7cb35af6ad7eea8eba9482c2e920f77da2faaced92a93b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，对装过汽油等高挥发性产品的油罐违规切换注入低挥发性油品，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_1_9_1",
+    "keywords": [
+      "对装过汽油等高挥发性产品的油罐违规切换注入低挥发性油品"
+    ],
+    "lifecycle": "active",
+    "measures": "停止将曾装过汽油等高挥发性产品的油罐直接切换用于注入低挥发性油品；按直接依据和工艺安全要求重新确定储罐介质安排。整改后检查相关线路、电气设备、接地/防静电或保护功能，必要时检测确认并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "对装过汽油等高挥发性产品的油罐违规切换注入低挥发性油品"
+  }
 }

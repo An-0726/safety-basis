@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AB1ADAB3E97ACC2E449503E8A4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "939e1ac8d2f6f4a44b965dd9c98c9e4623147af709c30f311e56f05e98922664",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_85FD5C683C202A3C3B15A045"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "0994d1a9aaa98abf4bf8ce6ef45a50aff16fd0145ef11699a7e05b71f9be6508",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩长标题并保留上岗前、在岗期间定期培训两个阶段，不自行规定培训周期。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位应当对劳动者进行上岗前的职业卫生培训和在岗期间的定 期职业卫生培训，普及职业卫生知识",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AB1ADAB3E97ACC2E449503E8A4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_85FD5C683C202A3C3B15A045"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "0994d1a9aaa98abf4bf8ce6ef45a50aff16fd0145ef11699a7e05b71f9be6508",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料和执行情况核查，用人单位未对劳动者进行上岗前的职业卫生培训和在岗期间的定期职业卫生培训，普及职业卫生知识，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AB1ADAB3E97ACC2E449503E8A4_2",
+    "keywords": [
+      "用人单位未对劳动者进行上岗前的职业卫生培训和在岗期间的定期职业卫生培训",
+      "普及职业卫生知识"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位对劳动者进行上岗前的职业卫生培训和在岗期间的定期职业卫生培训，普及职业卫生知识。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未对劳动者进行上岗前的职业卫生培训和在岗期间的定期职业卫生培训，普及职业卫生知识"
+  }
 }

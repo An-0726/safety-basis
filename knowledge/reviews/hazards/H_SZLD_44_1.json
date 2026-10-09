@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_44_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a51713ceab45dc4777ab8928371fbb55a0ea52ff212fc5894c9a8edc86453483",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_7F08EBD694C27048E2212605"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "5e2c70f710c7a3ddd0b51e62e3d7fdef70411006d547984d714ecdd14f4d89ec",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留充装管理环节、每周至少一次和报告要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "44 第四十四条\n气瓶充装单位应当建立气瓶充装安全周排查制度。气瓶安全总监要每周至少组织一次风险隐患排查，分析研判气瓶充装安全管理情况，研究解决日管控中发现的问题，形成《每周气瓶充装安全排查治理报告》。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_44_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_7F08EBD694C27048E2212605"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "5e2c70f710c7a3ddd0b51e62e3d7fdef70411006d547984d714ecdd14f4d89ec",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，气瓶充装单位未建立气瓶充装安全周排查制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_44_1",
+    "keywords": [
+      "气瓶充装单位未建立气瓶充装安全周排查制度"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶充装单位建立气瓶充装安全周排查制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶充装单位未建立气瓶充装安全周排查制度"
+  }
 }

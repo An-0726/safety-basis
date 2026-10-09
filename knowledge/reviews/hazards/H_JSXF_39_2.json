@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_39_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "edb3c50f885ebb82d1e72a8010d20111d382a09bfefa8f7e30adc904f47d0196",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_96BDF78035923DF1AD8C2C59"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "d3deffc083a99285ccc5de46ca4d347e87024a0f95142b8fe64f36f3ad946695",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "消防产品和有防火性能要求的建筑构件、建筑材料、室内装修装饰材料出厂前应当经检验合格。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_39_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_96BDF78035923DF1AD8C2C59"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "d3deffc083a99285ccc5de46ca4d347e87024a0f95142b8fe64f36f3ad946695",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，消防产品和有防火性能要求的建筑构件、建筑材料、室内装修装饰材料出厂前未经检验合格，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_39_2",
+    "keywords": [
+      "消防产品和有防火性能要求的建筑构件",
+      "建筑材料",
+      "室内装修装饰材料出厂前未经检验合格"
+    ],
+    "lifecycle": "active",
+    "measures": "消防产品和有防火性能要求的建筑构件、建筑材料、室内装修装饰材料出厂前经检验合格；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "消防产品和有防火性能要求的建筑构件、建筑材料、室内装修装饰材料出厂前未经检验合格"
+  }
 }

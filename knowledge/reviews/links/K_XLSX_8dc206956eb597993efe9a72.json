@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "7bbce1f6342e8e51ebe7cea65e16ac791c83a8405260316f377e47655d17577f",
-    "hazard": "cc233a823ccbd32a6ec45b3582c3b6bbae5f58f03857310ecae4db8edad283cb"
+    "hazard": "926cd6ae001782e1a3da8bc4def4bd829c5583aa17c3d1d480cf777ba56b8bc9",
+    "clause": "7bbce1f6342e8e51ebe7cea65e16ac791c83a8405260316f377e47655d17577f"
   },
   "decision": "verified",
   "entityId": "K_XLSX_8dc206956eb597993efe9a72",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "ec1ad539ad654bdadca1a1b4d39c25b06bf6c8f547456d0d8847472ec4f0733d",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "7bbce1f6342e8e51ebe7cea65e16ac791c83a8405260316f377e47655d17577f",
+      "hazard": "cc233a823ccbd32a6ec45b3582c3b6bbae5f58f03857310ecae4db8edad283cb"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_8dc206956eb597993efe9a72",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "ec1ad539ad654bdadca1a1b4d39c25b06bf6c8f547456d0d8847472ec4f0733d",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

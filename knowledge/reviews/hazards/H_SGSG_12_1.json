@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SGSG_12_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2f2238cf4d28337be32ca3470f58bfcb835658de4d5ef77a905c18541631719a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8A7FC251DA2508126694DA8C"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "d4c554875fe0f69926a15a96b490eb2b9a28747a13834814d9774b3df053738e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "具体列明报告内容缺项并逐项核查，不编造事故数据。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十二条报告事故应当包括下列内容：（一）事故发生单位概况；（二）事故发生的时间、地点以及事故现场情况；（三）事故的简要经过；（四）事故已经造成或者可能造成的伤亡人数（包括下落不明的人数）和初步估计的直接经济损失；（五）已经采取的措施；（六）其他应当报告的情况。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SGSG_12_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8A7FC251DA2508126694DA8C"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "d4c554875fe0f69926a15a96b490eb2b9a28747a13834814d9774b3df053738e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，报告事故未包括事故发生单位概况等内容，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SGSG_12_1",
+    "keywords": [
+      "报告事故未包括事故发生单位概况等内容"
+    ],
+    "lifecycle": "active",
+    "measures": "报告事故包括事故发生单位概况等内容。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "报告事故未包括事故发生单位概况等内容"
+  }
 }

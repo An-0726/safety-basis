@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_65E8F9D66CADAA46DD5012C8F7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9444f67c4d25b2ed42f84d25aeabfdce5f03e6c02da045185b9efa40277574ba",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_D1F5F30E8766F5D2963218C9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "0c16d0ed4fb337a5a19dd82d084bdfe83747b3936dce980514e42bef3b60055b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "纠正措施中仍允许同楼的错误，两项要求均须满足。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十九条 生产、储存、经营易燃易爆危险品的场所不得与居住场所设置在同一建筑物内，并应当与居住场所保持安全距离。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_65E8F9D66CADAA46DD5012C8F7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_D1F5F30E8766F5D2963218C9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "0c16d0ed4fb337a5a19dd82d084bdfe83747b3936dce980514e42bef3b60055b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "总图与建筑",
+    "conditions": "适用于涉及工业企业选址、总平面布置、建（构）筑物、道路、间距或相关空间条件；应结合建筑/场地性质、设计条件和适用标准确认要求。\n适用场所：工业企业厂区、建筑物、构筑物及总平面布置相关区域",
+    "description": "现场检查发现，生产、储存、经营易燃易爆危险品的场所与居住场所设置在同一建筑物内，或者未与居住场所保持安全距离，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_65E8F9D66CADAA46DD5012C8F7_1",
+    "keywords": [
+      "生产",
+      "储存",
+      "经营易燃易爆危险品的场所与居住场所设置在同一建筑物内",
+      "或者未与居住场所保持安全距离"
+    ],
+    "lifecycle": "active",
+    "measures": "生产、储存、经营易燃易爆危险品的场所与居住场所设置在同一建筑物内，或者与居住场所保持安全距离。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工业企业厂区、建筑物、构筑物及总平面布置相关区域"
+    ],
+    "title": "生产、储存、经营易燃易爆危险品的场所与居住场所设置在同一建筑物内，或者未与居住场所保持安全距离"
+  }
 }

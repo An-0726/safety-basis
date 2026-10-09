@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_4_3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "707ceb47f9899cbe7ac90d7b135b981151522b3cbe98c5f6e9bb544123868ac9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "043798a7eab2dac40d7df66febf9f1cc27dcccd2e03bb0f2c374660bac133959",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "培训内容至少应包括危险废物鉴别要求、危险废物经营许可证管理、危险废物转移联单管理、危险废物包装和标识、危险废物运输要求、危险废物事故应急方法等。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_4_3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "043798a7eab2dac40d7df66febf9f1cc27dcccd2e03bb0f2c374660bac133959",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "经资料和执行情况核查，危险废物培训内容未包括鉴别要求和转移联单管理等规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJF_4_3_2",
+    "keywords": [
+      "危险废物培训内容未包括鉴别要求和转移联单管理等规定"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物培训内容包括鉴别要求和转移联单管理等规定。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物培训内容未包括鉴别要求和转移联单管理等规定"
+  }
 }

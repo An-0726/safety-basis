@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_82FB7AF5E0F521EF8D9489136A_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bd68afd14b106fd4039a14c3069a4645345b3ac462ca468e3f2fb2f3cf4a45d7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_0E6F1CBB89B8DB4F990BD757"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "1b9e1fb5948ff6e4d4bf85bc94665147deea404ac02b25cb15fbc851e1ad2ce9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按地方范围和配送企业主体收窄条件，长标题缩短，描述区分制度与管理缺失。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "使用电动自行车从事快递、外卖等配送活动的企业，应当建立内部管理规章制度，加强对配送人员的管理，督促配送人员规范停放电动自行车和进行安全充电，在站点设置集中停放场地以及充换电设施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_82FB7AF5E0F521EF8D9489136A_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_0E6F1CBB89B8DB4F990BD757"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "1b9e1fb5948ff6e4d4bf85bc94665147deea404ac02b25cb15fbc851e1ad2ce9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于南京市行政区域内，且存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：南京市行政区域内电气设备安装、运行、检维修及用电相关场所",
+    "description": "经资料及履职情况核查，使用电动自行车从事快递、外卖等配送活动的企业，未建立内部管理规章制度，未加强对配送人员的管理，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_82FB7AF5E0F521EF8D9489136A_3",
+    "keywords": [
+      "使用电动自行车从事快递",
+      "外卖等配送活动的企业",
+      "未建立内部管理规章制度",
+      "未加强对配送人员的管理"
+    ],
+    "lifecycle": "active",
+    "measures": "使用电动自行车从事快递、外卖等配送活动的企业，建立内部管理规章制度，加强对配送人员的管理。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "使用电动自行车从事快递、外卖等配送活动的企业，未建立内部管理规章制度，未加强对配送人员的管理"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_5_3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "71f992d95bece660797c68e31bf334bc24bc4a5cd4b8761ece7810b8af87f1f3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "674fedd2e5049c047cc38edc5d0e9b3e61c0d6b8f3dcfa564889e37171f5598e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩长标题，描述明确方案内容缺项，并保留条文完整必备内容作为依据。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "其内容应至少包括:———可能产生的静电危害;———静电危害的表现形式;———静电危害的产生原因;———静电危害的控制措施;———人员的培训计划;———防静电措施的验证;———静电防护行为相关记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_5_3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "674fedd2e5049c047cc38edc5d0e9b3e61c0d6b8f3dcfa564889e37171f5598e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "经资料及履职情况核查，静电危害控制方案的内容未至少包括可能产生的静电危害、静电危害的表现形式、产生原因和控制措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_5_3_2",
+    "keywords": [
+      "静电危害控制方案的内容未至少包括可能产生的静电危害",
+      "静电危害的表现形式",
+      "产生原因和控制措施"
+    ],
+    "lifecycle": "active",
+    "measures": "静电危害控制方案的内容至少包括可能产生的静电危害、静电危害的表现形式、产生原因和控制措施。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "静电危害控制方案的内容未至少包括可能产生的静电危害、静电危害的表现形式、产生原因和控制措施"
+  }
 }

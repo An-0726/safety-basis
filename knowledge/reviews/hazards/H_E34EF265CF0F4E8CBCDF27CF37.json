@@ -1,18 +1,81 @@
 {
-  "decision": "verified",
   "entityId": "H_E34EF265CF0F4E8CBCDF27CF37",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "63228585d4e0bf057fd3af6a01bf1c6abcfd776efc3cae7109be64c7afb26cbe",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "EH_ae580ad10f096f6b8cb3fea4ed2d179ffdad4c5884e87d5f896c371c8a770f46"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_c6df18a2b7a7e62603b6a55c",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "聚焦标题对应的责任制，依据支持条款明确责任内容和监督考核。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（一）全员安全生产责任制；",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_E34EF265CF0F4E8CBCDF27CF37",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_ae580ad10f096f6b8cb3fea4ed2d179ffdad4c5884e87d5f896c371c8a770f46"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_c6df18a2b7a7e62603b6a55c",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "b55702c6492b6643a6bd79e6d006236e2556a854db9e7b1b0fca11f75c4cefbe",
+    "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同（或含坏字），已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
+    "checkedAt": "2026-09-12T02:29:39+08:00",
+    "reviewer": "GLM-5.3-Flash (ZCode)"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "b55702c6492b6643a6bd79e6d006236e2556a854db9e7b1b0fca11f75c4cefbe",
-  "reason": "\n2026-09-12 GLM 修订：原描述与标题完全相同（或含坏字），已依据标题、整改措施和所引依据改写为专业描述；法规依据与关联未改动。",
-  "checkedAt": "2026-09-12T02:29:39+08:00",
-  "reviewer": "GLM-5.3-Flash (ZCode)"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，未根据本单位实际，建立并实施下列安全生产管理制度:(一)全员安全生产责任制，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_E34EF265CF0F4E8CBCDF27CF37",
+    "keywords": [
+      "未根据本单位实际",
+      "建立并实施下列安全生产管理制度",
+      "全员安全生产责任制",
+      "未",
+      "根",
+      "据",
+      "本",
+      "单",
+      "位",
+      "实",
+      "际",
+      ",",
+      "建",
+      "立",
+      "并",
+      "施",
+      "下",
+      "列",
+      "安",
+      "全",
+      "生",
+      "产",
+      "管",
+      "理",
+      "制",
+      "度",
+      "一",
+      "员",
+      "责",
+      "任"
+    ],
+    "lifecycle": "active",
+    "measures": "结合本单位实际建立并实施安全生产管理制度（含全员安全生产责任制等）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《南京市安全生产条例》 第十一条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未根据本单位实际，建立并实施下列安全生产管理制度:(一)全员安全生产责任制"
+  }
 }

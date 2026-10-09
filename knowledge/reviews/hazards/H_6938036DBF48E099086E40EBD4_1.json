@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_6938036DBF48E099086E40EBD4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9e13b9da3576a8b19b0fc98274ab95ca6134495dd7c3fa731de6b54968b187ec",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_1BF9E2817416925E343D38B8"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b8e2f27c1f0f9ba21f8198f7e6d9f5163bd3d532b074909e4974aa283573c9d3",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十二条属于国家规定的高危行业、领域的生产经营单位，应当投保安全生产责任保险，鼓励其他行业、领域的生产经营单位投保安全生产责任保险。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_6938036DBF48E099086E40EBD4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1BF9E2817416925E343D38B8"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b8e2f27c1f0f9ba21f8198f7e6d9f5163bd3d532b074909e4974aa283573c9d3",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于南京市行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：南京市行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，属于国家规定的高危行业、领域的生产经营单位未投保安全生产责任保险，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_6938036DBF48E099086E40EBD4_1",
+    "keywords": [
+      "属于国家规定的高危行业",
+      "领域的生产经营单位未投保安全生产责任保险"
+    ],
+    "lifecycle": "active",
+    "measures": "属于国家规定的高危行业、领域的生产经营单位投保安全生产责任保险。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "属于国家规定的高危行业、领域的生产经营单位未投保安全生产责任保险"
+  }
 }

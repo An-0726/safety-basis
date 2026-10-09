@@ -1,29 +1,65 @@
 {
-  "entityType": "hazard",
   "entityId": "H_12158_4_2_3_5_2",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "a9c5a0009196c776ffa7f40201d0b744e1a8566615015817666871617ba2f07b",
-  "checkedAt": "2026-10-04T03:40:00Z",
-  "reviewer": "Codex static/fire recovery author source review 20261004",
-  "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
+  "reviewedContentHash": "2e65d634943d87ddc885a3ee72c345620992180f99dcc5356ee3b07ac9c17571",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_RECOVERY_GB12158_2024_20261004"
   ],
-  "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+  "reason": "压缩长标题，保留工艺需要与必要时采取措施分支。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "如工艺需要使用静电非导体材料时,应评价起电程度,必要时应采取相应措施。",
   "previousReview": {
     "entityType": "hazard",
     "entityId": "H_12158_4_2_3_5_2",
     "reviewType": "definition",
-    "decision": "rejected",
-    "reviewedContentHash": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
-    "checkedAt": "2026-09-30T12:25:50Z",
-    "reviewer": "Codex source-integrity recovery review 20260930",
-    "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+    "decision": "verified",
+    "reviewedContentHash": "a9c5a0009196c776ffa7f40201d0b744e1a8566615015817666871617ba2f07b",
+    "checkedAt": "2026-10-04T03:40:00Z",
+    "reviewer": "Codex static/fire recovery author source review 20261004",
+    "reason": "对照官方原PDF第1章及对应完整条文，收窄对象、环境、材料和触发条件；保留工艺需要例外、必要时措施及可选择合格路径。旧错配、截断数值和历史误合并正文不再作为现行定义。",
     "evidenceRefs": [
-      "E_SAMR_GB12158_2024"
+      "E_RECOVERY_GB12158_2024_20261004"
     ],
-    "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+    "notes": "本次为恢复作者逐原页内容和适用边界核验，尚不冒充独立交叉审查；独立验收由另行审核完成。仅通用检查定义，不确认具体现场事实、行政违法、重大事故隐患或整改完成。",
+    "previousReview": {
+      "entityType": "hazard",
+      "entityId": "H_12158_4_2_3_5_2",
+      "reviewType": "definition",
+      "decision": "rejected",
+      "reviewedContentHash": "f33f1aa78dfb49ade47151f54ce31dabeb5e3eddb483429e301340e8f846d254",
+      "checkedAt": "2026-09-30T12:25:50Z",
+      "reviewer": "Codex source-integrity recovery review 20260930",
+      "reason": "撤回原verified审核。隐患要求评价可滑移、分离的分层或套叠结构起电程度及形成文件；实际关联C_12158_4_2_2_1仅载静电导体接地义务，不能据此证明该具体评价和文件要求。 待取得当前适用版本的完整准确原文、精确条号和适用性证据后重新实质审核；本次不猜补数值、不重映射条款。",
+      "evidenceRefs": [
+        "E_SAMR_GB12158_2024"
+      ],
+      "notes": "2026-09-30恢复后重新检查现有实体和关联。保留原reviewedContentHash、contextHashes及evidenceRefs用于历史追溯，不表示原证据足以支持verified；未更改实体ID、lifecycle或正文。官方GB 12158-2024元数据仅证明标准身份和效力，不能替代逐条原文核验。"
+    },
+    "previousReviewFileSha256": "38e059ea34cf9a1853b58ca8230c7602a1df9a7844a214757f9dfa369e5aaa35"
   },
-  "previousReviewFileSha256": "38e059ea34cf9a1853b58ca8230c7602a1df9a7844a214757f9dfa369e5aaa35"
+  "previousDefinition": {
+    "id": "H_12158_4_2_3_5_2",
+    "title": "工艺需要使用静电非导体的分层或套叠结构未按要求评价、采取必要措施或形成文件",
+    "description": "可滑移、分离的分层或套叠结构因工艺需要使用静电非导体材料，存在未评价起电程度、在确有必要时未采取相应措施，或者未将评价过程和所采取措施形成文件纳入静电防护管理体系的情形。",
+    "measures": "先核实工艺需要及结构和材料属性，评价起电程度；根据评价结果在必要时采取相应措施，并将评价过程和所采取措施形成文件纳入静电防护管理体系。",
+    "conditions": "仅适用于GB 12158—2024范围内静电危险场所的设计和管理；不适用于火炸药、电火工品、烟花爆竹的静电危害防范。其他静电危害（如静电电击）的防护仅可参考使用，不据本项泛化所有电气场所。 仅核可滑移、分离的分层或套叠结构使用静电非导体材料的情形。工艺确需使用时允许评价管理分支，应评价起电程度，必要时采取相应措施，评价过程和措施形成文件并纳入静电防护管理体系；不将“必要时”改为无条件措施要求。",
+    "category": "安全防护",
+    "places": [
+      "静电危险场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "工艺需要使用静电非导体的分层或套叠结构未按要求评价、采取必要措施或形成文件",
+      "GB 12158-2024",
+      "4.2.3.5"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "",
+    "mergedInto": null
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_051DDF308929CC00EB1F334A7F_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b24f90a56ad01b7559623bb7c508a6c577d8a9234d9f8de89eced6e64a3d0e49",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_A9CC609C4EE8A19DAB9CC9CC"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "a8bcc8e2e15c12edd1ea717cde78daea1dd2d2732a9b6b43ca373ea8f331e96b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确津贴对应的劳动者与未获津贴状态，删除通用履职评价。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位对从事接触职业病危害的作业的劳动者，应当给予适当岗 位津贴。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_051DDF308929CC00EB1F334A7F_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_A9CC609C4EE8A19DAB9CC9CC"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "a8bcc8e2e15c12edd1ea717cde78daea1dd2d2732a9b6b43ca373ea8f331e96b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，用人单位对从事接触职业病危害的作业的劳动者，未给予适当岗位津贴，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_051DDF308929CC00EB1F334A7F_4",
+    "keywords": [
+      "用人单位对从事接触职业病危害的作业的劳动者",
+      "未给予适当岗位津贴"
+    ],
+    "lifecycle": "active",
+    "measures": "核对接触职业病危害岗位及人员范围，按适用规定落实相应岗位津贴；同步完善岗位识别、人员清单、薪酬执行和复核记录，防止遗漏。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位对从事接触职业病危害的作业的劳动者，未给予适当岗位津贴"
+  }
 }

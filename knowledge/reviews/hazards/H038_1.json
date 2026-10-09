@@ -1,14 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H038_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d93c1b8418290b515ebd8c7e7016d905b5626de19f29e385cbeaad1b3ea9b5b5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_STD_HJ2026_2013",
     "E_a90650fedd8f471fa157f21a228c7ec7a9eca503ab9253add14132cf31b7fb68"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "aed6ad48160e6b19871505b235a1d7b4bdf9c8a0bc5aabebe1104e81300b0c3f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩设备列举并保留治理工艺范围，描述明确等级比较对象。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "风机、电机和置于现场的电气仪表等应不低于现场防爆等级。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H038_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2026_2013",
+      "E_a90650fedd8f471fa157f21a228c7ec7a9eca503ab9253add14132cf31b7fb68"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "aed6ad48160e6b19871505b235a1d7b4bdf9c8a0bc5aabebe1104e81300b0c3f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，风机、电机和置于现场的电气仪表等的防爆等级未达到现场防爆等级要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H038_1",
+    "keywords": [
+      "风机",
+      "电机和置于现场的电气仪表等的防爆等级未达到现场防爆等级要求"
+    ],
+    "lifecycle": "active",
+    "measures": "风机、电机和置于现场的电气仪表等的防爆等级达到现场防爆等级要求。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "风机、电机和置于现场的电气仪表等的防爆等级未达到现场防爆等级要求"
+  }
 }

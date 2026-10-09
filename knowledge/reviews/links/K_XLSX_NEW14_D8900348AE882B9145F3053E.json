@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-26T18:24:27+08:00",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "6f4756588f1418967947110f33fd3d16cbad8aaa04f86287d69560186544f19a",
+    "hazard": "d36343fe2b54b389fabefbbe010d782420c437671dd5528a29502a1f924ff062",
     "clause": "3fb44c3dd49f41da57d9a8d676d60095d587a87a4a041adf11124dc6b32567d3"
   },
   "decision": "verified",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_YJYA_OFFICIAL_FULLTEXT_20260926"
   ],
-  "reason": "应急预案管理办法第三十八条直接规定物资装备落实、配备使用档案及定期检测维护；原安全生产法第八十一条只规定预案衔接和演练，不能单独支持维护义务。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "664d1cc4dd72292d671faec02f39d53438039b2cfc0460502946e1cfdacf677c",
-  "reviewer": "Codex 直接条款适用性纠错 20260926",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T18:24:27+08:00",
+    "contextHashes": {
+      "hazard": "6f4756588f1418967947110f33fd3d16cbad8aaa04f86287d69560186544f19a",
+      "clause": "3fb44c3dd49f41da57d9a8d676d60095d587a87a4a041adf11124dc6b32567d3"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_D8900348AE882B9145F3053E",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_YJYA_OFFICIAL_FULLTEXT_20260926"
+    ],
+    "reason": "应急预案管理办法第三十八条直接规定物资装备落实、配备使用档案及定期检测维护；原安全生产法第八十一条只规定预案衔接和演练，不能单独支持维护义务。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "664d1cc4dd72292d671faec02f39d53438039b2cfc0460502946e1cfdacf677c",
+    "reviewer": "Codex 直接条款适用性纠错 20260926",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

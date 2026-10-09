@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D10030397DDC825B27F576D17A_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "74ee176e0876d17d1be57f5e3bd21a04a4c42dd69bb830ea24fbe87f45b23de9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BCFFFB0D5A4BA681A76D4CD9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "dad06b91a55363211ba10278411f8280a234c94175cbd8f7d204cc6b54943808",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十一条 国务院住房和城乡建设主管部门规定的特殊建设工程，建设单位应当将消防设计文件报送住房和城乡建设主管部门审查，住房和城乡建设主管部门依法对审查的结果负责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D10030397DDC825B27F576D17A_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_BCFFFB0D5A4BA681A76D4CD9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "dad06b91a55363211ba10278411f8280a234c94175cbd8f7d204cc6b54943808",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，国务院住房和城乡建设主管部门规定的特殊建设工程，建设单位未将消防设计文件报送住房和城乡建设主管部门审查，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D10030397DDC825B27F576D17A_1",
+    "keywords": [
+      "国务院住房和城乡建设主管部门规定的特殊建设工程",
+      "建设单位未将消防设计文件报送住房和城乡建设主管部门审查"
+    ],
+    "lifecycle": "active",
+    "measures": "国务院住房和城乡建设主管部门规定的特殊建设工程，建设单位将消防设计文件报送住房和城乡建设主管部门审查。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "国务院住房和城乡建设主管部门规定的特殊建设工程，建设单位未将消防设计文件报送住房和城乡建设主管部门审查"
+  }
 }

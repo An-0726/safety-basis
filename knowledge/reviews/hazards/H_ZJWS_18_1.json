@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_18_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0d1e0257537fc1a05f22aad8b5e7fcb060c14cc7abbda4a6dd2d4cb5983a513a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B938620E58FFDBEAE092C68D"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "58342c946e267eba409aa48be500f5b253a80eceb92160913f3cfb2a4451d48e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除模板评价，整改以相应设备设施的维护检修及正常状态为确认对象。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位应当对职业病防护设备、应急救援设施进行经常性的维护、检修和保养，定期检测其性能和效果，确保其处于正常状态，不得擅自拆除或者停止使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_18_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B938620E58FFDBEAE092C68D"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "58342c946e267eba409aa48be500f5b253a80eceb92160913f3cfb2a4451d48e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位未对职业病防护设备和应急救援设施进行经常性维护检修，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_18_1",
+    "keywords": [
+      "用人单位未对职业病防护设备和应急救援设施进行经常性维护检修"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位对职业病防护设备和应急救援设施进行经常性维护检修。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未对职业病防护设备和应急救援设施进行经常性维护检修"
+  }
 }

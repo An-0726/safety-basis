@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_43_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "27b0073a21cbddbdbeffcc0705be06cd3d1e82fec993e55ae8d4f0dea520432a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_FB2B64F2E1E0860D7778F112"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "29252ae9752e7b45e2d77d6bb5ac2075858cc397d1a182eed725bd456fdc2f50",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "具体描述实际巡检缺项，不以制度缺失替代未执行事实。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "43 第四十三条\n气瓶充装单位应当建立气瓶充装安全日管控制度。气瓶安全员要每日根据《气瓶充装安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对气瓶进行巡检，形成《每日气瓶充装安全检查记录》，对发现的安全风险隐患，应当立即采取防范措施，及时上报气瓶安全总监或者单位主要负责人。未发现问题的，也应当予以记录，实行零风险报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_43_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_FB2B64F2E1E0860D7778F112"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "29252ae9752e7b45e2d77d6bb5ac2075858cc397d1a182eed725bd456fdc2f50",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，气瓶安全员未每日按安全风险管控清单对气瓶进行巡检，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_43_2",
+    "keywords": [
+      "气瓶安全员未每日按安全风险管控清单对气瓶进行巡检"
+    ],
+    "lifecycle": "active",
+    "measures": "气瓶安全员每日按安全风险管控清单对气瓶进行巡检。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "气瓶使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "气瓶安全员未每日按安全风险管控清单对气瓶进行巡检"
+  }
 }

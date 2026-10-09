@@ -1,15 +1,50 @@
 {
-  "checkedAt": "2026-09-30T12:25:50Z",
-  "decision": "verified",
   "entityId": "H_ZJWS_33_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "705b1bff89f7e8db503aaf4586d7fc9900bb41ca40596000ae2e93923ed6d502",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_78BF7FCC51883F1CFDAE5240",
     "E_NHC_WORKPLACE_OH_20260930"
   ],
-  "reason": "实质复核官方《工作场所职业卫生管理规定》（国家卫生健康委员会令第5号）第三十三条及现行有效规章库：隐患主体为用人单位，违规行为分别为安排未成年工接触职业病危害、安排职业禁忌劳动者从事其所禁忌作业。纠正原措施的禁止义务反转：立即停止前一种安排，后一种调整至不涉及禁忌作业的岗位；健康检查结论、岗位危害与年龄用于核查安排，处理和安置记录对应第三十四条第（九）项。个人防护用品不能豁免第三十三条的岗位安排限制。",
-  "reviewType": "content",
-  "reviewedContentHash": "eadd974142ead919888810014c6ab467b2f2753a6b539793d8c460dd81710091",
-  "reviewer": "Codex source-integrity recovery review 20260930",
-  "notes": "仅更新measures后逐项复核；其余隐患字段及ID/lifecycle保持不变。新hash绑定该具体经复核内容，不是批量自动重签。"
+  "reason": "压缩法条式标题并保留两类人员与各自禁止作业的对应关系。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位不得安排未成年工从事接触职业病危害的作业，不得安排有职业禁忌的劳动者从事其所禁忌的作业",
+  "previousReview": {
+    "checkedAt": "2026-09-30T12:25:50Z",
+    "decision": "verified",
+    "entityId": "H_ZJWS_33_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_78BF7FCC51883F1CFDAE5240",
+      "E_NHC_WORKPLACE_OH_20260930"
+    ],
+    "reason": "实质复核官方《工作场所职业卫生管理规定》（国家卫生健康委员会令第5号）第三十三条及现行有效规章库：隐患主体为用人单位，违规行为分别为安排未成年工接触职业病危害、安排职业禁忌劳动者从事其所禁忌作业。纠正原措施的禁止义务反转：立即停止前一种安排，后一种调整至不涉及禁忌作业的岗位；健康检查结论、岗位危害与年龄用于核查安排，处理和安置记录对应第三十四条第（九）项。个人防护用品不能豁免第三十三条的岗位安排限制。",
+    "reviewType": "content",
+    "reviewedContentHash": "eadd974142ead919888810014c6ab467b2f2753a6b539793d8c460dd81710091",
+    "reviewer": "Codex source-integrity recovery review 20260930",
+    "notes": "仅更新measures后逐项复核；其余隐患字段及ID/lifecycle保持不变。新hash绑定该具体经复核内容，不是批量自动重签。"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位安排未成年工从事接触职业病危害作业或安排有职业禁忌劳动者从事所禁忌作业，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_33_1",
+    "keywords": [
+      "用人单位安排未成年工从事接触职业病危害作业或安排有职业禁忌劳动者从事所禁忌作业"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止安排未成年工从事接触职业病危害的作业；对有职业禁忌的劳动者，调整至不涉及其所禁忌作业的岗位。结合劳动者年龄、职业健康检查结论与岗位危害核查用工安排，保留岗位调整及复核记录；不得以配发个人防护用品替代上述岗位安排限制。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位安排未成年工从事接触职业病危害作业或安排有职业禁忌劳动者从事所禁忌作业"
+  }
 }

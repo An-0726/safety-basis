@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZDY_27_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2903665b9ebbf69fa5bc086b9031c1ed651ca79596d4a98b4d8248f43eff3879",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_87D67A0C504A2E145484D5C7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e389eac8624729fb3c19e653c79cad82826df4df391235936609b4c2a116d84d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "27 第二十七条 重大危险源经过安全评价或者安全评估不再构成重大危险源的，危险化学品单位应当向所在地县级人民政府安全生产监督管理部门申请核销。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZDY_27_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_87D67A0C504A2E145484D5C7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e389eac8624729fb3c19e653c79cad82826df4df391235936609b4c2a116d84d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "经资料及履职情况核查，重大危险源不再构成重大危险源时未申请核销，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZDY_27_1",
+    "keywords": [
+      "重大危险源不再构成重大危险源时未申请核销"
+    ],
+    "lifecycle": "active",
+    "measures": "重大危险源不再构成重大危险源时申请核销。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "重大危险源不再构成重大危险源时未申请核销"
+  }
 }

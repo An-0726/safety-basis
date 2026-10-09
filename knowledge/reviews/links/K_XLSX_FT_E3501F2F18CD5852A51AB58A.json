@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-10-09",
   "decision": "verified",
   "entityId": "K_XLSX_FT_E3501F2F18CD5852A51AB58A",
   "entityType": "link",
   "evidenceRefs": [
     "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
   ],
-  "reason": "危险化学品生产、储存企业，按国家标准或行业标准装备自动控制/安全仪表系统及监测预警、互联互通。依第五十二条扩展至使用危险化学品从事生产的企业，不能扩展至任意使用单位。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "0e540dee6e5f918757e5652583b0c21a10b94b6bbcce6eaaa8402dec81314e71",
-  "reviewer": "Codex条款结构逐项复核20261003",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "locator": "第三十六条全条",
   "reviewedFields": [
     "/applicability",
@@ -33,22 +33,73 @@
     ]
   },
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "contextHashes": {
-      "clause": "9faa2c8ecf3e096b639fc9d21c6bdcc094363ab3ef723af5b307057778642923",
-      "hazard": "36ce91eb1e6665f9d9bdd9ed3822436a37f4b1396ba5de05ae66e6cbf93430f0"
-    },
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "K_XLSX_FT_E3501F2F18CD5852A51AB58A",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_FT_E81E59AF7BD490BD1EDF49F6"
+      "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
     ],
-    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reason": "危险化学品生产、储存企业，按国家标准或行业标准装备自动控制/安全仪表系统及监测预警、互联互通。依第五十二条扩展至使用危险化学品从事生产的企业，不能扩展至任意使用单位。",
     "reviewType": "applicability",
-    "reviewedContentHash": "45eb269504e0d13714f2615ebec414ff1c6f13c20e29fed696bde934728a5378",
-    "reviewer": "Codex正式核验批次20260913",
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "reviewedContentHash": "0e540dee6e5f918757e5652583b0c21a10b94b6bbcce6eaaa8402dec81314e71",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第三十六条全条",
+    "reviewedFields": [
+      "/applicability",
+      "/clauseId",
+      "/reason"
+    ],
+    "reviewedValues": {
+      "/applicability": "本项限生产、储存危险化学品的企业，按适用的国家标准或者行业标准核查自动控制系统、安全仪表系统和安全风险监测预警系统及与政府有关部门互联互通要求。第五十二条对使用危险化学品从事生产的企业另有适用扩展，本项不据此覆盖任意危险化学品使用单位。",
+      "/clauseId": "C_7FCC0C85E0C313B5599EBC67",
+      "/reason": "第三十六条全条直接规定本项义务；已对照完整官方原文核对责任主体、触发条件及对应分支，旧错配或截断引文不再作为本K直接依据。"
+    },
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+      ],
+      "/clauseId": [
+        "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+      ],
+      "/reason": [
+        "EH_SUB1_581f8b572012538b4a7201e20fadd8c577de62487b39b23a5e6475085a14e11d"
+      ]
+    },
+    "previousReviewFileSha256": "a61b8c966a828df07e85b6c8b1cd1b1b080e13d81dde74d411ab9e108c7a3bf6",
+    "historySha256": "67f241a115a01e32eaaf607222cf2f0b562b1b76b89fe1701ea7a760c042de0b",
+    "previousEntity": {
+      "applicability": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+      "clauseId": "C_XLSX_FT_3795752ADA83F95645BA047B",
+      "hazardId": "H_7FCC0C85E0C313B5599EBC67_1",
+      "id": "K_XLSX_FT_E3501F2F18CD5852A51AB58A",
+      "jurisdictionCode": "CN",
+      "legacyRole": "直接依据",
+      "lifecycle": "active",
+      "priority": 10,
+      "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+      "role": "direct"
+    },
+    "previousEntityFileSha256": "006116979a5d541b2babe2ab92fa0e0b527824788a2d2a759552725d20d28d27",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+      "currentnessEvidence": "official/national-current-laws-web-readback.json",
+      "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+      "lawVersionId": "LV_HAZCHEM_LAW",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "1581d28675503d3baec748a5083ad047ad8ddde28423da3a1735f2c2937e5627",
+      "operativeLocator": "第三十六条全条",
+      "completeOfficialQuote": "第三十六条　生产、储存危险化学品的企业应当按照国家标准或者行业标准装备自动控制系统和安全仪表系统，建立安全风险监测预警系统，并与政府有关部门实现互联互通。",
+      "scopeDecision": "危险化学品生产、储存企业，按国家标准或行业标准装备自动控制/安全仪表系统及监测预警、互联互通。依第五十二条扩展至使用危险化学品从事生产的企业，不能扩展至任意使用单位。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+    "contextHashes": {
+      "hazard": "b2e463abe7a34877a3f9658ffad0800a04d9fc2bc65826718238bead653aa562",
+      "clause": "1c42d4b0e3ecbf5da82c4a06139b45c01923810445000ad98c54cf70fc86c478"
+    }
   },
   "previousReviewFileSha256": "a61b8c966a828df07e85b6c8b1cd1b1b080e13d81dde74d411ab9e108c7a3bf6",
   "historySha256": "67f241a115a01e32eaaf607222cf2f0b562b1b76b89fe1701ea7a760c042de0b",
@@ -79,9 +130,9 @@
     "completeOfficialQuote": "第三十六条　生产、储存危险化学品的企业应当按照国家标准或者行业标准装备自动控制系统和安全仪表系统，建立安全风险监测预警系统，并与政府有关部门实现互联互通。",
     "scopeDecision": "危险化学品生产、储存企业，按国家标准或行业标准装备自动控制/安全仪表系统及监测预警、互联互通。依第五十二条扩展至使用危险化学品从事生产的企业，不能扩展至任意使用单位。"
   },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "contextHashes": {
-    "hazard": "b2e463abe7a34877a3f9658ffad0800a04d9fc2bc65826718238bead653aa562",
+    "hazard": "530a94d696643244ed13d2b527e83efbffa40de9d5216400db096fd4a2dc435e",
     "clause": "1c42d4b0e3ecbf5da82c4a06139b45c01923810445000ad98c54cf70fc86c478"
   }
 }

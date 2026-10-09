@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJYA_22_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "99c66d8b69c73cf048d3954c65ef3fd1e41144ba5fe8a11fbf907732a68666a8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E8428513F105F4CE3AF5E559"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f5ed63c468913be368deb4f3fb73e2f28d23975bc4877d76aae9f90354af8db9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留利害关系和参加评审前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "评审人员与所评审应急预案的生产经营单位有利害关系的，应当回避。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJYA_22_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E8428513F105F4CE3AF5E559"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f5ed63c468913be368deb4f3fb73e2f28d23975bc4877d76aae9f90354af8db9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于生产经营单位组织应急预案评审的情形；应核查评审人员与被评审单位的利害关系及回避情况。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料、记录及履职情况核查，评审人员与所评审应急预案的生产经营单位有利害关系的，未回避。",
+    "id": "H_YJYA_22_2",
+    "keywords": [
+      "评审人员与所评审应急预案的生产经营单位有利害关系的",
+      "未回避"
+    ],
+    "lifecycle": "active",
+    "measures": "评审人员与所评审应急预案的生产经营单位有利害关系的，回避。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "评审人员与所评审应急预案的生产经营单位有利害关系的，未回避"
+  }
 }

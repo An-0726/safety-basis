@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_6F495345B1F2FB2A217A9E4F4C_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d7ea4ac90adf0253fdc2dc2c1a539ce865688687d41ed095076a083412ad639d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_5FE11B1EF2005AE156AEA509"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "878218db7fe8fecc6f031e9fe07d1a4ef81c0ec7ce944011f20d3f14026136a2",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确责任转移的主体与情形，去除模板描述；保留已有可执行整改措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "任何人不得通过委托、授权等形式将自己应当承担的安全生产责任转移给其他人。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_6F495345B1F2FB2A217A9E4F4C_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_5FE11B1EF2005AE156AEA509"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "878218db7fe8fecc6f031e9fe07d1a4ef81c0ec7ce944011f20d3f14026136a2",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于南京市行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：南京市行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，任何人通过委托、授权等形式将自己承担的安全生产责任转移给其他人，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_6F495345B1F2FB2A217A9E4F4C_2",
+    "keywords": [
+      "任何人通过委托",
+      "授权等形式将自己承担的安全生产责任转移给其他人"
+    ],
+    "lifecycle": "active",
+    "measures": "停止通过委托、授权等方式转移依法应由本人承担的安全生产责任，重新明确责任边界、履职事项和监督机制，并以实际履职记录证明责任落实。整改后对责任边界、现场状态和履职资料进行复核，确认相应要求已落实并形成记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "任何人通过委托、授权等形式将自己承担的安全生产责任转移给其他人"
+  }
 }

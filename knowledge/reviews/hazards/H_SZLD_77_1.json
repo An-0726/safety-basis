@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_77_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c6a256b759b9ae8dfe11dd0572e0f6298edff371d8548e9a33a2b97631c22028",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_6939937596DE8962C8A7860A"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e6ae277ec3fadb429cff1e4804035aa318bf0ca33050d83ee284510310508101",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留每周至少一次以及维保全过程或抽样监督的可选路径。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "77 第七十七条\n电梯使用单位应当建立电梯安全周排查制度。电梯安全总监要每周至少组织一次风险隐患排查，分析研判电梯使用安全管理情况，研究解决日管控中发现的问题，形成《每周电梯安全排查治理报告》。\n电梯安全总监应当对维护保养过程进行全过程或者抽样监督，并作出记录，发现问题的应当及时处理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_77_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_6939937596DE8962C8A7860A"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e6ae277ec3fadb429cff1e4804035aa318bf0ca33050d83ee284510310508101",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，电梯使用单位未建立电梯安全周排查制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_77_1",
+    "keywords": [
+      "电梯使用单位未建立电梯安全周排查制度"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯使用单位建立电梯安全周排查制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯使用单位未建立电梯安全周排查制度"
+  }
 }

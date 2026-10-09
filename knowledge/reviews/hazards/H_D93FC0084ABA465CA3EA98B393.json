@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D93FC0084ABA465CA3EA98B393",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "4475814cbb772bbb90dbc549842b6892f82b6ed99b542bf0eca27c4bbc39d9e7",
-  "checkedAt": "2026-09-26T20:21:31+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "明确以危险区域与电气设备保护级别对应关系为核查要件，不把化学品管制类别当防爆区域。",
+  "reviewedContentHash": "8ec140c9f1a9a788d6b896533c9a3b2957f6daade852e7562101fe6f0cd01f36",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB50058_ZJ_ORIGINAL_20260926"
-  ]
+  ],
+  "reason": "删除条文未记载的引燃后果；依据危险区域与设备保护级别的关系明确选型及核查。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "1 爆炸性环境内电气设备保护级别的选择应符合表5.2.2-1的规定。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D93FC0084ABA465CA3EA98B393",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "4475814cbb772bbb90dbc549842b6892f82b6ed99b542bf0eca27c4bbc39d9e7",
+    "checkedAt": "2026-09-26T20:21:31+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "明确以危险区域与电气设备保护级别对应关系为核查要件，不把化学品管制类别当防爆区域。",
+    "evidenceRefs": [
+      "E_GB50058_ZJ_ORIGINAL_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_D93FC0084ABA465CA3EA98B393",
+    "title": "经危险区域划分需采用防爆电气的危化品暂存间仍使用非防爆灯具",
+    "description": "危化品暂存间内使用非防爆灯具，灯具火花可能引燃可燃蒸气。",
+    "measures": "将危化品暂存间内灯具更换为符合防爆要求的防爆型灯具。",
+    "conditions": "先根据实际可燃气体、蒸气或粉尘释放、通风及有关条件完成爆炸危险区域划分，再按GB50058-2014第5.2.2条第1项表5.2.2-1核设备保护级别。易制毒、易制爆或危险化学品名称不等于场所已划为爆炸危险区；应同时核设备实际用途、位置和铭牌。不把区域外设备或仅机械风机选型无条件纳入。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "经危险区域划分需采用防爆电气的危化品暂存间仍使用非防爆灯具"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《危险化学品安全管理条例》第20条\n\nGB 50257-2014《电气装置安装工程 爆炸和火灾危险环境电气装置施工及验收规范》\nGB 15603-2022《危险化学品仓库储存通则》\n《中华人民共和国危险化学品安全法》。\n2026-09-26按真实第5.2.2第1项及表格重核，补全区划前提，旧概括引文已替换。",
+    "mergedInto": null
+  }
 }

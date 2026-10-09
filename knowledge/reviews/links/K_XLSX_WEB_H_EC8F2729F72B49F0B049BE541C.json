@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "5d8fbaea3aa9e3c588a72847ed11d19418645c2b3592c87887af5d1f519c7f33",
   "contextHashes": {
-    "hazard": "441a2eb61c32c47ae65e98da1936d34c432cd953e6de3598cec713af9b336105",
+    "hazard": "90f43c079e2d3db04549dc06f7965ed4d1128caecca984e0b7a4ffee78456fc8",
     "clause": "eb55376f01f82e3cbee47e1ab39092dc16035709d741d792101f702f747f8a05"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第二十八条第一款三级教育培训。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_EC8F2729F72B49F0B049BE541C",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "5d8fbaea3aa9e3c588a72847ed11d19418645c2b3592c87887af5d1f519c7f33",
+    "contextHashes": {
+      "hazard": "441a2eb61c32c47ae65e98da1936d34c432cd953e6de3598cec713af9b336105",
+      "clause": "eb55376f01f82e3cbee47e1ab39092dc16035709d741d792101f702f747f8a05"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第二十八条第一款三级教育培训。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_3_3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "787848a3e2f329601ccf726c95f3a9207bb17079a2a24e7aa299a94127e34074",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "13fd8344ebca8b1a6492968f6c9c6b12c4b8e17be1979c0b9500dfd1addd095b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "不应使用汽油、苯类等易燃溶剂对设备、器具吹扫和清洗。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_3_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "13fd8344ebca8b1a6492968f6c9c6b12c4b8e17be1979c0b9500dfd1addd095b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，违规使用汽油、苯类等易燃溶剂对设备、器具吹扫和清洗，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_3_3_1",
+    "keywords": [
+      "违规使用汽油",
+      "苯类等易燃溶剂对设备",
+      "器具吹扫和清洗"
+    ],
+    "lifecycle": "active",
+    "measures": "停止使用汽油、苯类等易燃溶剂吹扫、清洗设备和器具，改用与设备、介质及火灾爆炸风险相适应的安全清洗方法。整改后检查设备结构、防护、控制或稳定状态，必要时试运行验证，确认安全功能有效后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "违规使用汽油、苯类等易燃溶剂对设备、器具吹扫和清洗"
+  }
 }

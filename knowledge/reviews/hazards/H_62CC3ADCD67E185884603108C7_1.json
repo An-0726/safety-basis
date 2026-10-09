@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_62CC3ADCD67E185884603108C7_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "fb8d901624d4f5cddbe9cff69f78c01d06c1553980e144117db1e84469556ece",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "2c2a99d8d98004c106f41b9eb0b9b85e49b5412c70d8563e5f60cd30bea60ce6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_NPC_OCCUPATIONAL_LAW_2018"
-  ]
+  ],
+  "reason": "删除正向法条摘抄，整改同时落实有效防护设施与个人防护用品两项要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位必须采用有效的职业病防护设施，并为劳动者提供个人使用的职业病防护用品。用人单位为劳动者个人提供的职业病防护用品必须符合防治职业病的要求；不符合要求的，不得使用。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_62CC3ADCD67E185884603108C7_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "fb8d901624d4f5cddbe9cff69f78c01d06c1553980e144117db1e84469556ece",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_OCCUPATIONAL_LAW_2018"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_62CC3ADCD67E185884603108C7_1",
+    "title": "用人单位未采用有效的职业病防护设施，或者未为劳动者提供个人使用的职业病防护用品",
+    "description": "第二十二条用人单位必须采用有效的职业病防护设施，并为劳动者提供个人使用的职业病防护用品。（第二十二条）。",
+    "measures": "第二十二条用人单位必须采用有效的职业病防护设施，并为劳动者提供个人使用的职业病防护用品。（依据 第二十二条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "用人单位未采用有效的职业病防护设施，或者未为劳动者提供个人使用的职业病防护用品"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第二十二条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

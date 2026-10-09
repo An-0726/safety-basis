@@ -1,56 +1,90 @@
 {
-  "checkedAt": "2026-09-30",
-  "decision": "verified",
   "entityId": "H_FCB_19_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4e788ef26bb96fa21fa7bfbf963336a7e064cb8687a2da67edd12f99118e7d9f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_SCOPE_20260930_MEM6_2_3_19_32"
   ],
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_SCOPE_20260930_MEM6_2_3_19_32"
-    ],
-    "/places": [
-      "E_SCOPE_20260930_MEM6_2_3_19_32"
-    ]
-  },
-  "historySha256": "b30052e4dfceb5bd3275c8c3cc5c75c97cd3e7705696229db65ff7022d7b342e",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "reason": "删除通用判断，保留动火检修维修后复产前提；需结合清理及温度状态判断适用。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "作业后，应当妥善清理现场，作业点最高温度恢复到常温后方可重新开始生产。",
   "previousReview": {
     "checkedAt": "2026-09-30",
     "decision": "verified",
     "entityId": "H_FCB_19_4",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_FCB_L006",
-      "E_REMEDIATION_20260930_MEM6"
+      "E_SCOPE_20260930_MEM6_2_3_19_32"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
-    "reason": "第6号令19条要求作业点最高温度恢复常温后方可生产。新措施补足温度前提，清场本身不再构成复产许可，范围仍限对应粉尘涉爆检修动火。",
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_SCOPE_20260930_MEM6_2_3_19_32"
+      ],
+      "/places": [
+        "E_SCOPE_20260930_MEM6_2_3_19_32"
+      ]
+    },
+    "historySha256": "b30052e4dfceb5bd3275c8c3cc5c75c97cd3e7705696229db65ff7022d7b342e",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReview": {
+      "checkedAt": "2026-09-30",
+      "decision": "verified",
+      "entityId": "H_FCB_19_4",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_FCB_L006",
+        "E_REMEDIATION_20260930_MEM6"
+      ],
+      "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。",
+      "reason": "第6号令19条要求作业点最高温度恢复常温后方可生产。新措施补足温度前提，清场本身不再构成复产许可，范围仍限对应粉尘涉爆检修动火。",
+      "reviewType": "content",
+      "reviewedContentHash": "bf97d5d5c411941559e2a24ab4a510574b0de22adc8f1c15244fad8c8c1dd759",
+      "reviewer": "Codex逐项内容复核20260930"
+    },
+    "previousReviewFileSha256": "8aa096b92da67061b57d0e3285119cb826c965ce2874b416ae1da49f447fbb46",
+    "reason": "第6号令第2/3条限定粉尘涉爆工贸企业和危险场所，第19条要求作业后妥善清场、作业点最高温度回到常温后才复产。最终范围准确覆盖本title既定的动火检修维修后拟复产或已复产子集，保留最高温度和清场两项要求，不泛化普通动火或一般粉尘。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "content",
-    "reviewedContentHash": "bf97d5d5c411941559e2a24ab4a510574b0de22adc8f1c15244fad8c8c1dd759",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "f0f7b6f5982e7ce74f307b70bf2ccb7b0759835357960edff1478fa6c2b51745",
+    "reviewedFields": [
+      "/conditions",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "仅适用于粉尘涉爆工贸企业，对粉尘爆炸危险场所设备设施或除尘系统实施动火检修维修后拟恢复或已经恢复生产的场景。作业后须妥善清理现场，作业点最高温度恢复常温后方可重新开始生产；本项不因普通粉尘或普通动火场景而直接适用。",
+      "/places": [
+        "粉尘涉爆工贸企业动火检修维修后的复产场景"
+      ]
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930"
   },
-  "previousReviewFileSha256": "8aa096b92da67061b57d0e3285119cb826c965ce2874b416ae1da49f447fbb46",
-  "reason": "第6号令第2/3条限定粉尘涉爆工贸企业和危险场所，第19条要求作业后妥善清场、作业点最高温度回到常温后才复产。最终范围准确覆盖本title既定的动火检修维修后拟复产或已复产子集，保留最高温度和清场两项要求，不泛化普通动火或一般粉尘。",
-  "reviewEvidence": {
-    "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
-    "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
-    "profileAdmission": false,
-    "siteFactsVerified": false,
-    "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
-  },
-  "reviewType": "content",
-  "reviewedContentHash": "f0f7b6f5982e7ce74f307b70bf2ccb7b0759835357960edff1478fa6c2b51745",
-  "reviewedFields": [
-    "/conditions",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "仅适用于粉尘涉爆工贸企业，对粉尘爆炸危险场所设备设施或除尘系统实施动火检修维修后拟恢复或已经恢复生产的场景。作业后须妥善清理现场，作业点最高温度恢复常温后方可重新开始生产；本项不因普通粉尘或普通动火场景而直接适用。",
-    "/places": [
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "仅适用于粉尘涉爆工贸企业，对粉尘爆炸危险场所设备设施或除尘系统实施动火检修维修后拟恢复或已经恢复生产的场景。作业后须妥善清理现场，作业点最高温度恢复常温后方可重新开始生产；本项不因普通粉尘或普通动火场景而直接适用。",
+    "description": "现场检查发现，动火作业后未妥善清理现场即恢复生产，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FCB_19_4",
+    "keywords": [
+      "动火作业后未妥善清理现场即恢复生产"
+    ],
+    "lifecycle": "active",
+    "measures": "动火检修维修作业后妥善清理现场，确认作业点最高温度恢复到常温后方可重新开始生产；检查有无残留热源及积尘，留存清理、温度确认和复产检查记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
       "粉尘涉爆工贸企业动火检修维修后的复产场景"
-    ]
-  },
-  "reviewer": "Codex十三项源范围独立复核20260930"
+    ],
+    "title": "动火作业后未妥善清理现场即恢复生产"
+  }
 }

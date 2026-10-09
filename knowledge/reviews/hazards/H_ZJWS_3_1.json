@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "69d120af8e6fe2d84f72c58b7d53141cbe4f382aa82e1117f5850d11b50e46ec",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9168F52666E55D78859BBA02"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "38f308c9a4eed897e3981eff0ae395fdde2b15b3d1e2064e00cf64e8debea2d4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "整改围绕工作环境的符合性及有效保护措施，不虚构原文未列明的设施或数值。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位应当加强职业病防治工作，为劳动者提供符合法律、法规、规章、国家职业卫生标准和卫生要求的工作环境和条件，并采取有效措施保障劳动者的职业健康。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9168F52666E55D78859BBA02"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "38f308c9a4eed897e3981eff0ae395fdde2b15b3d1e2064e00cf64e8debea2d4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位未提供符合国家职业卫生标准和卫生要求的工作环境，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_3_1",
+    "keywords": [
+      "用人单位未提供符合国家职业卫生标准和卫生要求的工作环境"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位提供符合国家职业卫生标准和卫生要求的工作环境。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位未提供符合国家职业卫生标准和卫生要求的工作环境"
+  }
 }

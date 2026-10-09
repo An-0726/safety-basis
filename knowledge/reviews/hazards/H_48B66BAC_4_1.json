@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f441b6995577aa52f45577cdc4d560bbc4d8e9eef7409e4b35e8f70c2ce25c68",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_27D44FC560D98D50591D8FFD"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "0103a405e24b3ebeba483f18fb63d4d16d7ebfc354bc27158361ad2a2a787dba",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "工贸企业主要负责人是有限空间作业安全第一责任人，应当组织制定有限空间作业安全管理制度，明确有限空间作业审批人、监护人员、作业人员的职责，以及安全培训、作业审批、防护用品、应急救援装备、操作规程和应急处置等方面的要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_27D44FC560D98D50591D8FFD"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "0103a405e24b3ebeba483f18fb63d4d16d7ebfc354bc27158361ad2a2a787dba",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "经资料及履职情况核查，工贸企业主要负责人未组织制定有限空间作业安全管理制度，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_4_1",
+    "keywords": [
+      "工贸企业主要负责人未组织制定有限空间作业安全管理制度"
+    ],
+    "lifecycle": "active",
+    "measures": "工贸企业主要负责人组织制定有限空间作业安全管理制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "工贸企业主要负责人未组织制定有限空间作业安全管理制度"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_528C6C8455A14D97ADEF524650",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "12ac16bb287df6ad2a47abffc9916300f8b1ca4b5fa58c713781a35291b27977",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "71c2e7516ce7e1e28fe32c4fae4992dcbb4d5fd3e04b09d8d0f8ffe6fc549236",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_NHC_GBZ1_2010"
-  ]
+  ],
+  "reason": "原描述重复且截断，与所引条文不一致；依据原文恢复声源优先及工程控制不足时的补充条件，保留已具操作性的措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "噪声控制应优先从声源上减少噪声，采用低噪声工艺和设备；工程控制措施不能满足要求时，再结合防降噪设施与个体防护措施。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_528C6C8455A14D97ADEF524650",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "12ac16bb287df6ad2a47abffc9916300f8b1ca4b5fa58c713781a35291b27977",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NHC_GBZ1_2010"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_528C6C8455A14D97ADEF524650",
+    "title": "未按优先顺序采取降噪措施",
+    "description": "未依次采取以下措施减少噪声:a)通过设计减少噪声源在机器设计的初始阶段,,未全面考虑由于使用各种零部件可能产生的噪声,以及避免、消除或在机器设计的初始阶段,,未全面考虑由于使用各种零部件可能产生的噪声,以",
+    "measures": "实施实际降噪改造、检测及PPE补充措施。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "专项安全与EHS",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "未按优先顺序采取降噪措施"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句（含条款列举），已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《纺织机械 安全 要求 第 1 部分: 通用要求》(GB/T 17780. 1-2012)第 5.4.7 条",
+    "mergedInto": null
+  }
 }

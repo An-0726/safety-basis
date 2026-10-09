@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_8_4_4_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "063a59b21340251227e017b8f7d0675ed55ab8eea089548367ed49f06cb092da",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "f10ee7caa5a3ade37a7ba9fed51ec7abfebe960c4411a5d39ae238908aa8b071",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "描述区分监测报警装置缺失与压差记录缺失，去除管理模板句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "袋式除尘器进、出风口应设置风压差监测报警装置，并记录压差数据；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_8_4_4_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "f10ee7caa5a3ade37a7ba9fed51ec7abfebe960c4411a5d39ae238908aa8b071",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "经资料及履职情况核查，袋式除尘器进、出风口未设置风压差监测报警装置并记录压差数据，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15577_8_4_4_1",
+    "keywords": [
+      "袋式除尘器进",
+      "出风口未设置风压差监测报警装置并记录压差数据"
+    ],
+    "lifecycle": "active",
+    "measures": "袋式除尘器进、出风口设置风压差监测报警装置并记录压差数据。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "袋式除尘器进、出风口未设置风压差监测报警装置并记录压差数据"
+  }
 }

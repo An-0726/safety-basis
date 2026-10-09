@@ -1,58 +1,109 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_7D2425A6472F9ED7098B49315B_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f468ab791c60c228ca6e20a1bf129e3ef5abdf21f560916289eb797418f86850",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L014"
   ],
-  "reason": "气瓶充装单位向气体使用者提供合规气瓶、使用指导，并按规范办理使用登记、申报定期检验。不得泛化为所有气体使用者义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "48458571558af5ece087e048e0443137de9755355c84041dcb2e351b54d11c63",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第四十九条第三款",
-  "reviewedFields": [
-    "/conditions",
-    "/measures",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/conditions": "适用于法定气瓶充装单位向气体使用者提供气瓶的活动；核查所供气瓶符合安全技术规范以及气瓶安全使用指导，不能将充装单位义务直接转成所有气体使用者的义务。",
-    "/measures": "向气体使用者提供符合安全技术规范要求的气瓶，并对气体使用者进行气瓶安全使用指导；按照安全技术规范要求办理气瓶使用登记，及时申报定期检验。",
-    "/places": [
-      "气瓶充装单位供瓶及安全使用指导活动"
-    ]
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_L014"
-    ],
-    "/measures": [
-      "E_L014"
-    ],
-    "/places": [
-      "E_L014"
-    ]
-  },
+  "reason": "明确供瓶不符合要求与指导缺失，保留原有具体条件和措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "H_7D2425A6472F9ED7098B49315B_3",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+      "E_L014"
     ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reason": "气瓶充装单位向气体使用者提供合规气瓶、使用指导，并按规范办理使用登记、申报定期检验。不得泛化为所有气体使用者义务。",
     "reviewType": "content",
-    "reviewedContentHash": "c9e6289dd5aacf4b42b5d1f23613e678cd9e4f77a18c08a1e77be2bf0e4d6337",
-    "reviewer": "Codex正式核验批次20260913"
+    "reviewedContentHash": "48458571558af5ece087e048e0443137de9755355c84041dcb2e351b54d11c63",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第四十九条第三款",
+    "reviewedFields": [
+      "/conditions",
+      "/measures",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于法定气瓶充装单位向气体使用者提供气瓶的活动；核查所供气瓶符合安全技术规范以及气瓶安全使用指导，不能将充装单位义务直接转成所有气体使用者的义务。",
+      "/measures": "向气体使用者提供符合安全技术规范要求的气瓶，并对气体使用者进行气瓶安全使用指导；按照安全技术规范要求办理气瓶使用登记，及时申报定期检验。",
+      "/places": [
+        "气瓶充装单位供瓶及安全使用指导活动"
+      ]
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_L014"
+      ],
+      "/measures": [
+        "E_L014"
+      ],
+      "/places": [
+        "E_L014"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_7D2425A6472F9ED7098B49315B_3",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "c9e6289dd5aacf4b42b5d1f23613e678cd9e4f77a18c08a1e77be2bf0e4d6337",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "c798a6a711b47c7ca1bce8754646c3ee3a5c82a47c55a9b04d6bf7b337444f74",
+    "historySha256": "62ac7293bab0ea398d5dc727938d242ac114bf4bb3a18c13c485c67157b91855",
+    "previousEntity": {
+      "aliases": [],
+      "category": "特种设备",
+      "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+      "description": "现场检查发现，气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶，未对气体使用者进行气瓶安全使用指导，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_7D2425A6472F9ED7098B49315B_3",
+      "keywords": [
+        "气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶",
+        "未对气体使用者进行气瓶安全使用指导"
+      ],
+      "lifecycle": "active",
+      "measures": "气瓶充装单位向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "气瓶使用、运行、维护检修或相关管理场景"
+      ],
+      "title": "气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶，未对气体使用者进行气瓶安全使用指导"
+    },
+    "previousEntityFileSha256": "395908bbccbaae65949c3cc5f2c51283bb42a8954561f00d660e245289d8cb8f",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+      "currentnessEvidence": "official/national-current-laws-web-readback.json",
+      "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+      "lawVersionId": "L014",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+      "operativeLocator": "第四十九条第三款",
+      "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+      "scopeDecision": "气瓶充装单位向气体使用者提供合规气瓶、使用指导，并按规范办理使用登记、申报定期检验。不得泛化为所有气体使用者义务。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
   },
-  "previousReviewFileSha256": "c798a6a711b47c7ca1bce8754646c3ee3a5c82a47c55a9b04d6bf7b337444f74",
-  "historySha256": "62ac7293bab0ea398d5dc727938d242ac114bf4bb3a18c13c485c67157b91855",
-  "previousEntity": {
+  "previousDefinition": {
     "aliases": [],
     "category": "特种设备",
-    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "conditions": "适用于法定气瓶充装单位向气体使用者提供气瓶的活动；核查所供气瓶符合安全技术规范以及气瓶安全使用指导，不能将充装单位义务直接转成所有气体使用者的义务。",
     "description": "现场检查发现，气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶，未对气体使用者进行气瓶安全使用指导，实际状态与直接依据规定的安全要求不一致。",
     "id": "H_7D2425A6472F9ED7098B49315B_3",
     "keywords": [
@@ -60,29 +111,13 @@
       "未对气体使用者进行气瓶安全使用指导"
     ],
     "lifecycle": "active",
-    "measures": "气瓶充装单位向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "measures": "向气体使用者提供符合安全技术规范要求的气瓶，并对气体使用者进行气瓶安全使用指导；按照安全技术规范要求办理气瓶使用登记，及时申报定期检验。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "气瓶使用、运行、维护检修或相关管理场景"
+      "气瓶充装单位供瓶及安全使用指导活动"
     ],
     "title": "气瓶充装单位未向气体使用者提供符合安全技术规范要求的气瓶，未对气体使用者进行气瓶安全使用指导"
-  },
-  "previousEntityFileSha256": "395908bbccbaae65949c3cc5f2c51283bb42a8954561f00d660e245289d8cb8f",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
-    "currentnessEvidence": "official/national-current-laws-web-readback.json",
-    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
-    "lawVersionId": "L014",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
-    "operativeLocator": "第四十九条第三款",
-    "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
-    "scopeDecision": "气瓶充装单位向气体使用者提供合规气瓶、使用指导，并按规范办理使用登记、申报定期检验。不得泛化为所有气体使用者义务。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  }
 }

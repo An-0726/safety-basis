@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-18",
-  "decision": "verified",
   "entityId": "H_71323E2862E5D3955E3DE6DE76_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0f2a6bd3f2bb9a1c1919df0b4e52aa26d79d1ffafc7b7c1add37b8a9e398df14",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "安全生产法相关条款直接规定新兴行业领域单位落实全员安全生产责任制。",
-  "reviewType": "content",
-  "reviewedContentHash": "01caff4bbb06bec6916e432edc97897519e9ecbf625039c2198e6169dfdd8239",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  "reason": "保留新兴行业领域及其特点限定，删除与本条目责任制缺陷无关的正向义务串句。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "平台经济等新兴行业、领域的生产经营单位应当根据本行业、领域的特点，建立健全并落实全员安全生产责任制",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "decision": "verified",
+    "entityId": "H_71323E2862E5D3955E3DE6DE76_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "安全生产法相关条款直接规定新兴行业领域单位落实全员安全生产责任制。",
+    "reviewType": "content",
+    "reviewedContentHash": "01caff4bbb06bec6916e432edc97897519e9ecbf625039c2198e6169dfdd8239",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  },
+  "previousDefinition": {
+    "id": "H_71323E2862E5D3955E3DE6DE76_2",
+    "title": "平台经济等新兴行业、领域的生产经营单位未根据本行业、领域特点建立健全并落实全员安全生产责任制",
+    "description": "平台经济等新兴行业、领域的生产经营单位应当根据本行业、领域的特点，建立健全并落实全员安全生产责任制，加强从业人员安全生产教育和培训，履行本法和其他法律、法规规定的有关安全生产义务。（第四条）。",
+    "measures": "针对平台经济等新兴行业领域特点建立健全并落实全员安全生产责任制，开展从业人员安全教育培训，落实适用安全生产义务并留存责任和培训记录。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "平台经济等新兴行业、领域的生产经营单位未根据本行业、领域特点建立健全并落实全员安全生产责任制"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第四条 反转生成（GLM，2026-09-12）。\n\n【PHASE 12 2026-09-18】已复核现行条款原文、隐患对象和适用范围，建立当前direct关联。",
+    "mergedInto": null
+  }
 }

@@ -5,16 +5,36 @@
   "decision": "verified",
   "reviewedContentHash": "2a05d527312d97c83ab7debce47a76301f1f070b9c72d7573b44eacec8bef1dc",
   "contextHashes": {
-    "hazard": "3f664d0f56293c2985136036e1b5b57c1104783351810d2d7c9140167882a1ba",
+    "hazard": "d9893ce7fabb02c0addebffdc75c8711efc530e818b83d9d643efafd1abd0118",
     "clause": "50ce7c5bd93d4b7732dc5e83285a131c79158801571e4f6bbee1e00521174116"
   },
-  "checkedAt": "2026-09-10T14:09:46+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "hazard 为江苏省生产经营单位主要负责人未按要求每年向从业人员报告/通报安全生产工作及个人履职情况；江苏省安全生产条例第十五条第（五）项要求每年通过职代会、信息公示栏等向从业人员报告或通报并接受监督，直接对应。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_APPLICABLE"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_3B578F8F5A3CBA7FCA13EE",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "2a05d527312d97c83ab7debce47a76301f1f070b9c72d7573b44eacec8bef1dc",
+    "contextHashes": {
+      "hazard": "3f664d0f56293c2985136036e1b5b57c1104783351810d2d7c9140167882a1ba",
+      "clause": "50ce7c5bd93d4b7732dc5e83285a131c79158801571e4f6bbee1e00521174116"
+    },
+    "checkedAt": "2026-09-10T14:09:46+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "hazard 为江苏省生产经营单位主要负责人未按要求每年向从业人员报告/通报安全生产工作及个人履职情况；江苏省安全生产条例第十五条第（五）项要求每年通过职代会、信息公示栏等向从业人员报告或通报并接受监督，直接对应。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_APPLICABLE"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-17",
-  "decision": "verified",
   "entityId": "H_2724BCA646E74C1694B53CF8DB",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "932e82a1449337b866d9d58eb26bfbce7ee01501895a9fcc39109491da09220e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GBT13869_2017"
   ],
-  "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
-  "reviewType": "content",
-  "reviewedContentHash": "3525be5fe3a6f4a1c4142c5b41ef093d7b3c63b780931f6d2b251df344af4756",
-  "reviewer": "Codex"
+  "reason": "明确停运原因和重新接通电源的三个前置要求，现有标题和描述保留。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用电产品因停电或故障等情况而停止运行时，应及时切断电源。在查明原因，排除故障，并确认已恢复正常后才能重新接通电源。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "decision": "verified",
+    "entityId": "H_2724BCA646E74C1694B53CF8DB",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT13869_2017"
+    ],
+    "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+    "reviewType": "content",
+    "reviewedContentHash": "3525be5fe3a6f4a1c4142c5b41ef093d7b3c63b780931f6d2b251df344af4756",
+    "reviewer": "Codex"
+  },
+  "previousDefinition": {
+    "id": "H_2724BCA646E74C1694B53CF8DB",
+    "title": "用电产品停运时未及时切断电源或未查明原因即重新接通",
+    "description": "用电产品因停电或故障等情况而停止运行时,未及时切断电源。在查明原因、排除故障,并确认已恢复正常后才能重新接通电源",
+    "measures": "制定并落实用电操作规程：停运时及时切断电源，查明原因、排除故障后方可重新接通。",
+    "conditions": "适用于用电产品的相关安全管理。",
+    "category": "电气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "用电产品停运时未及时切断电源或未查明原因即重新接通"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；2026-09-11 同步将整改措施改写为可执行动作。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.2.1条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+    "mergedInto": null
+  }
 }

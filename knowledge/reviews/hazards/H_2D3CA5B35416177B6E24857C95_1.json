@@ -1,64 +1,118 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_2D3CA5B35416177B6E24857C95_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d7153805e0d8fd97d32d21352a3e37b193a35221b73f1b0f981336fcbf756939",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L020"
   ],
-  "reason": "江苏省危险物品生产、储存、装卸单位及矿山、金属冶炼单位；按国家有关规定配备相关专业注册安全工程师。不得把矿山/金属冶炼删成危化品专属。",
-  "reviewType": "content",
-  "reviewedContentHash": "f8e70a0a23599729b59a557c2acb028f8986c856091d38d457cd17c003fec8eb",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第十八条全条",
-  "reviewedFields": [
-    "/category",
-    "/conditions",
-    "/measures",
-    "/places"
-  ],
-  "reviewedValues": {
-    "/category": "安全管理",
-    "/conditions": "仅适用于江苏省行政区域内危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位；按照国家有关规定核实相关专业注册安全工程师配置，不扩展为所有危险化学品经营、使用单位的一般义务。",
-    "/measures": "按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，核实人员专业、资格和实际履职。",
-    "/places": [
-      "江苏省行政区域内危险物品生产、储存、装卸单位",
-      "江苏省行政区域内矿山、金属冶炼单位"
-    ]
-  },
-  "fieldEvidenceRefs": {
-    "/category": [
-      "E_L020"
-    ],
-    "/conditions": [
-      "E_L020"
-    ],
-    "/measures": [
-      "E_L020"
-    ],
-    "/places": [
-      "E_L020"
-    ]
-  },
+  "reason": "压缩长标题并保留法定单位和相关专业限定，不增加人员数量要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十八条危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "H_2D3CA5B35416177B6E24857C95_1",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
+      "E_L020"
     ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reason": "江苏省危险物品生产、储存、装卸单位及矿山、金属冶炼单位；按国家有关规定配备相关专业注册安全工程师。不得把矿山/金属冶炼删成危化品专属。",
     "reviewType": "content",
-    "reviewedContentHash": "48ea76648aadc420b7996b060367fb5da96969a8593f815a679b93c03afec7fc",
-    "reviewer": "Codex正式核验批次20260913"
+    "reviewedContentHash": "f8e70a0a23599729b59a557c2acb028f8986c856091d38d457cd17c003fec8eb",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第十八条全条",
+    "reviewedFields": [
+      "/category",
+      "/conditions",
+      "/measures",
+      "/places"
+    ],
+    "reviewedValues": {
+      "/category": "安全管理",
+      "/conditions": "仅适用于江苏省行政区域内危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位；按照国家有关规定核实相关专业注册安全工程师配置，不扩展为所有危险化学品经营、使用单位的一般义务。",
+      "/measures": "按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，核实人员专业、资格和实际履职。",
+      "/places": [
+        "江苏省行政区域内危险物品生产、储存、装卸单位",
+        "江苏省行政区域内矿山、金属冶炼单位"
+      ]
+    },
+    "fieldEvidenceRefs": {
+      "/category": [
+        "E_L020"
+      ],
+      "/conditions": [
+        "E_L020"
+      ],
+      "/measures": [
+        "E_L020"
+      ],
+      "/places": [
+        "E_L020"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_2D3CA5B35416177B6E24857C95_1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "48ea76648aadc420b7996b060367fb5da96969a8593f815a679b93c03afec7fc",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "1dad39ccf683560e987dc10eb4b1f99b159476039595b961379fc23bf003c96e",
+    "historySha256": "2cf696d61221dfcc0d468989aa9c63994e71fd41042ca1571cc73ca28d343537",
+    "previousEntity": {
+      "aliases": [],
+      "category": "危险化学品与危险物质",
+      "conditions": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+      "description": "现场检查发现，危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_2D3CA5B35416177B6E24857C95_1",
+      "keywords": [
+        "危险物品的生产",
+        "储存",
+        "装卸单位以及矿山",
+        "金属冶炼单位",
+        "未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作"
+      ],
+      "lifecycle": "active",
+      "measures": "危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所"
+      ],
+      "title": "危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作"
+    },
+    "previousEntityFileSha256": "724d43373a2854b03db324b85d5453815ac1c10a43fbef3d2276e4e44dcb4e4b",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第十八条全条",
+      "completeOfficialQuote": "第十八条 危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
+      "scopeDecision": "江苏省危险物品生产、储存、装卸单位及矿山、金属冶炼单位；按国家有关规定配备相关专业注册安全工程师。不得把矿山/金属冶炼删成危化品专属。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
   },
-  "previousReviewFileSha256": "1dad39ccf683560e987dc10eb4b1f99b159476039595b961379fc23bf003c96e",
-  "historySha256": "2cf696d61221dfcc0d468989aa9c63994e71fd41042ca1571cc73ca28d343537",
-  "previousEntity": {
+  "previousDefinition": {
     "aliases": [],
-    "category": "危险化学品与危险物质",
-    "conditions": "适用于江苏省行政区域内，且存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "category": "安全管理",
+    "conditions": "仅适用于江苏省行政区域内危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位；按照国家有关规定核实相关专业注册安全工程师配置，不扩展为所有危险化学品经营、使用单位的一般义务。",
     "description": "现场检查发现，危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，实际状态与直接依据规定的安全要求不一致。",
     "id": "H_2D3CA5B35416177B6E24857C95_1",
     "keywords": [
@@ -69,29 +123,14 @@
       "未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作"
     ],
     "lifecycle": "active",
-    "measures": "危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "measures": "按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作，核实人员专业、资格和实际履职。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "江苏省行政区域内危险化学品生产、储存、经营、使用或重大危险源相关场所"
+      "江苏省行政区域内危险物品生产、储存、装卸单位",
+      "江苏省行政区域内矿山、金属冶炼单位"
     ],
     "title": "危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，未按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作"
-  },
-  "previousEntityFileSha256": "724d43373a2854b03db324b85d5453815ac1c10a43fbef3d2276e4e44dcb4e4b",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
-    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
-    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
-    "lawVersionId": "L020",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
-    "operativeLocator": "第十八条全条",
-    "completeOfficialQuote": "第十八条 危险物品的生产、储存、装卸单位以及矿山、金属冶炼单位，应当按照国家有关规定配备相关专业的注册安全工程师从事安全生产管理工作。",
-    "scopeDecision": "江苏省危险物品生产、储存、装卸单位及矿山、金属冶炼单位；按国家有关规定配备相关专业注册安全工程师。不得把矿山/金属冶炼删成危化品专属。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  }
 }

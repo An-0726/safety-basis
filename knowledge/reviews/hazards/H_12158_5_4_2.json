@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_5_4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "dd3044daaf3592cb30e3b183b4a0b7dc3ca83b25bfbf086ffd030f8d35e605cd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "6992a2cb2918bf0e110a7be0c69f4754812daf965c3d9a3e9bd8cbd011f265ab",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "标题保留非操作人员和进入场所的限定，人员列举移至条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对进入静电危险场所的非操作人员,包括但不限于短期来访的外来人员、维修人员、保洁人员等,应配备公用的个体防静电装备。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_5_4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "6992a2cb2918bf0e110a7be0c69f4754812daf965c3d9a3e9bd8cbd011f265ab",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，对进入静电危险场所的非操作人员，包括但不限于短期来访的外来人员、维修人员、保洁人员等，未配备公用的个体防静电装备，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_12158_5_4_2",
+    "keywords": [
+      "对进入静电危险场所的非操作人员",
+      "包括但不限于短期来访的外来人员",
+      "维修人员",
+      "保洁人员等",
+      "未配备公用的个体防静电装备"
+    ],
+    "lifecycle": "active",
+    "measures": "对进入静电危险场所的非操作人员，包括但不限于短期来访的外来人员、维修人员、保洁人员等，配备公用的个体防静电装备。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "对进入静电危险场所的非操作人员，包括但不限于短期来访的外来人员、维修人员、保洁人员等，未配备公用的个体防静电装备"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F465105AA4130B0DE602E880A3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "05d18428f488edfeb0f87be08ea24f9bcbc075f9f7fee42287a4aa9cd6b69b16",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_BFE9C60EA83C95DB1465FD3E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "79759bfeaf13c61609ca37f347427f2ef54a613067edb061c8feda13366aeb3e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "设有消防控制室的单位应当按照有关规定保存竣工后的总平面布局图、建筑消防设施平面布置图、建筑消防设施系统图以及安全出口布置图、重点部位位置图等资料，并在应急救援时及时提供。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F465105AA4130B0DE602E880A3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_BFE9C60EA83C95DB1465FD3E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "79759bfeaf13c61609ca37f347427f2ef54a613067edb061c8feda13366aeb3e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，设有消防控制室的单位未按照有关规定保存竣工后的总平面布局图、建筑消防设施平面布置图等图纸，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_F465105AA4130B0DE602E880A3_1",
+    "keywords": [
+      "设有消防控制室的单位未按照有关规定保存竣工后的总平面布局图",
+      "建筑消防设施平面布置图等图纸"
+    ],
+    "lifecycle": "active",
+    "measures": "设有消防控制室的单位按照有关规定保存竣工后的总平面布局图、建筑消防设施平面布置图等图纸；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "设有消防控制室的单位未按照有关规定保存竣工后的总平面布局图、建筑消防设施平面布置图等图纸"
+  }
 }

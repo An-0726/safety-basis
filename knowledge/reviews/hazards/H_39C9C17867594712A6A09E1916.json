@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_39C9C17867594712A6A09E1916",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "c8b0eaaf9f183e0d36143e191b39ecda195b8649e67fffb07877bf23dfd8650b",
-  "checkedAt": "2026-09-26T18:47:04+08:00",
-  "reviewer": "Codex 消防原文及直接适用性复核 20260926",
-  "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+  "reviewedContentHash": "f894a55a24a718b43034f0a9f5ed91431411278518e50f483d9e49c69dc06510",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55037_JS_FIRE_FULLTEXT_20260926"
-  ]
+  ],
+  "reason": "按直接依据规定的疏散要素整改，不补写未经核实的设备布局缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "7.1.1建筑的疏散出口数量、位置和宽度，疏散楼梯（间）的形式和宽度，避难设施的位置和面积等，应与建筑的使用功能、火灾危险性、耐火等级、建筑高度或层数、埋深、建筑面积、人员密度、人员特性等相适应。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_39C9C17867594712A6A09E1916",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "c8b0eaaf9f183e0d36143e191b39ecda195b8649e67fffb07877bf23dfd8650b",
+    "checkedAt": "2026-09-26T18:47:04+08:00",
+    "reviewer": "Codex 消防原文及直接适用性复核 20260926",
+    "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+    "evidenceRefs": [
+      "E_GB55037_JS_FIRE_FULLTEXT_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_39C9C17867594712A6A09E1916",
+    "title": "厂房与库房的布置,未满足安全疏散的需要",
+    "description": "厂房与库房的布置未满足安全疏散的需要。",
+    "measures": "调整厂房与库房布置，满足安全疏散要求。",
+    "conditions": "仅就厂房、库房的疏散出口数量、位置、宽度、楼梯及避难条件与建筑属性和人数相适应进行判定；需明确实际不满足的要素，不能用本原则支持未核实的工艺设备布置缺陷。",
+    "category": "总图与建筑",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "厂房与库房的布置,未满足安全疏散的需要"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《建筑设计防火 规范》\n\nGB 55037-2022《建筑防火通用规范》。\n2026-09-26已按现行完整原文纠正旧描述及适用范围；历史旧阈值和旧依据不再作为当前判定依据。",
+    "mergedInto": null
+  }
 }

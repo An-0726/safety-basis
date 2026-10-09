@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F1A74F853D15762CF7C2DA6DD1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ac368b39e5f4816c091f5f26aa017dd39cd143c2e99a6603f61d7053c6fdc633",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8629B2AC432398F153A54134"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "0a545158b1889a67a3ed6a530b61167ee6663b7170b89229a349c04fdf84f5fc",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确制度内容缺项，删除模板描述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第八条 生产经营单位应当制定安全风险分级管控制度，明确安全风险辨识、评估的程序、方法以及分级管控职责分工等内容。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F1A74F853D15762CF7C2DA6DD1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8629B2AC432398F153A54134"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "0a545158b1889a67a3ed6a530b61167ee6663b7170b89229a349c04fdf84f5fc",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未制定安全风险分级管控制度，未明确安全风险辨识、评估的程序、方法以及分级管控职责分工等内容，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_F1A74F853D15762CF7C2DA6DD1_1",
+    "keywords": [
+      "生产经营单位未制定安全风险分级管控制度",
+      "未明确安全风险辨识",
+      "评估的程序",
+      "方法以及分级管控职责分工等内容"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位制定安全风险分级管控制度，明确安全风险辨识、评估的程序、方法以及分级管控职责分工等内容。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位未制定安全风险分级管控制度，未明确安全风险辨识、评估的程序、方法以及分级管控职责分工等内容"
+  }
 }

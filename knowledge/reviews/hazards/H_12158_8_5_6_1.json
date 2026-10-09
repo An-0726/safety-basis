@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_5_6_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d209ca26842c6e4d1c279287b8ee788c6d5f6c4150e81c5708c6528a00be8fde",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "00e1879c9a1c966585f8900f5ed68cc4851b6fcd2825457dbbe48e8706a6a8a4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留闪点门槛和两种可选防护途径，明确两类均不满足的缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "当油舱装有闪点小于60℃的油品时,油舱系统应配备惰性气体装置或其他静电防护措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_5_6_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "00e1879c9a1c966585f8900f5ed68cc4851b6fcd2825457dbbe48e8706a6a8a4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，当油舱装有闪点小于60℃的油品时，油舱系统未配备惰性气体装置或其他静电防护措施，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_12158_8_5_6_1",
+    "keywords": [
+      "当油舱装有闪点小于60℃的油品时",
+      "油舱系统未配备惰性气体装置或其他静电防护措施"
+    ],
+    "lifecycle": "active",
+    "measures": "当油舱装有闪点小于60℃的油品时，油舱系统配备惰性气体装置或其他静电防护措施。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "当油舱装有闪点小于60℃的油品时，油舱系统未配备惰性气体装置或其他静电防护措施"
+  }
 }

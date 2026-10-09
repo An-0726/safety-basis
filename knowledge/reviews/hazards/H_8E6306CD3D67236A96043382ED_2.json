@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8E6306CD3D67236A96043382ED_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "29eb74fdb0f2e61ecedf162bb947ef2af2be1c95a3742ce47844db00c50e34c3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_A2ED1437703A30BBA0830A9D"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "816be82405752d3a0d49f5ce22278bea8ffe944d5aa103f0ce477d5d352d92f4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "没有国家标准的，必须符合行业标准。禁止生产、销售或者使用不合格的消防产品以及国家明令淘汰的消防产品。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8E6306CD3D67236A96043382ED_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A2ED1437703A30BBA0830A9D"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "816be82405752d3a0d49f5ce22278bea8ffe944d5aa103f0ce477d5d352d92f4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，没有国家标准的消防产品，不符合行业标准，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_8E6306CD3D67236A96043382ED_2",
+    "keywords": [
+      "没有国家标准的消防产品",
+      "不符合行业标准"
+    ],
+    "lifecycle": "active",
+    "measures": "没有国家标准的消防产品，调整至符合行业标准；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "没有国家标准的消防产品，不符合行业标准"
+  }
 }

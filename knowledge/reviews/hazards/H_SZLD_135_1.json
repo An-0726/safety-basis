@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_135_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "52af337d5cda1a0f23636ba4d4f2cba10a1858acad21fbf8466b199f26714e65",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B6F33FE6E2C86FFEE515CCE5"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8ad4e38ce7991b43aba92d2897210706cc9aff6557b3ac3eef8bf5177f4bf07f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "展开场车对象含义，聚焦人员配备。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "场（厂）内专用机动车辆（以下简称场车）使用单位应当依法配备场车安全总监和场车安全员，明确场车安全总监和场车安全员的岗位职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_135_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B6F33FE6E2C86FFEE515CCE5"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8ad4e38ce7991b43aba92d2897210706cc9aff6557b3ac3eef8bf5177f4bf07f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：场车使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，场车使用单位未配备场车安全总监和安全员，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_SZLD_135_1",
+    "keywords": [
+      "场车使用单位未配备场车安全总监和安全员"
+    ],
+    "lifecycle": "active",
+    "measures": "场车使用单位配备场车安全总监和安全员。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "场车使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "场车使用单位未配备场车安全总监和安全员"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_18_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5f6143ae4213db509f0210e728b0dea49a32a20009be2d0464dd84d4dcc08324",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_74AE850563105A4236D72789"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "9e733ca96f21d8ad66fa47b6d2f241dbb31e0ef862a7f005d70d5495b557e66a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "消防安全责任人、消防安全管理人和其他消防安全管理人员应当参加培训，具备与本单位相适应的消防安全知识和管理能力。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_18_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_74AE850563105A4236D72789"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "9e733ca96f21d8ad66fa47b6d2f241dbb31e0ef862a7f005d70d5495b557e66a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料和执行情况核查，单位消防安全责任人和管理人员未参加消防培训具备相应管理能力，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_JSXF_18_2",
+    "keywords": [
+      "单位消防安全责任人和管理人员未参加消防培训具备相应管理能力"
+    ],
+    "lifecycle": "active",
+    "measures": "单位消防安全责任人和管理人员参加消防培训具备相应管理能力。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "单位消防安全责任人和管理人员未参加消防培训具备相应管理能力"
+  }
 }

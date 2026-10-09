@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AB1ADAB3E97ACC2E449503E8A4_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "df845b8e33644c7de95f761bb9edc9cc08ce964a9fdc79db7f471a42ce0308e2",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_85FD5C683C202A3C3B15A045"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "40250974d79a1610e90c59ea602ce465bd41d64c0401cde864935a1ca8fe2499",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以本条前款列明的劳动者义务具体化教育触发情形，删除通用结尾。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "劳动者不履行前款规定义务的，用人单位应当对其进行教育。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AB1ADAB3E97ACC2E449503E8A4_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_85FD5C683C202A3C3B15A045"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "40250974d79a1610e90c59ea602ce465bd41d64c0401cde864935a1ca8fe2499",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料和执行情况核查，劳动者不履行职业病防护相关义务时，用人单位未对其进行教育，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AB1ADAB3E97ACC2E449503E8A4_3",
+    "keywords": [
+      "劳动者不履行职业病防护相关义务时",
+      "用人单位未对其进行教育"
+    ],
+    "lifecycle": "active",
+    "measures": "劳动者不履行职业病防护相关义务时，用人单位对其进行教育。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "劳动者不履行职业病防护相关义务时，用人单位未对其进行教育"
+  }
 }

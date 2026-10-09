@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FC58C02E253472D0EB5E77E178_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "884176f48d313354cf2874e9820b86ad6a4bc209e5957249ff870e92abc86708",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_276908B5E4D5252220D68D20"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "067e78f7a1ae367ddf6084b4e786d0e675051a303cea559861853ac2d9a30477",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确被禁止的替代行为及地域，保留已有可执行措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位不得以发放货币或者其他物品替代提供劳动防护用品。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FC58C02E253472D0EB5E77E178_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_276908B5E4D5252220D68D20"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "067e78f7a1ae367ddf6084b4e786d0e675051a303cea559861853ac2d9a30477",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "作业安全与个体防护",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述危险作业或个体防护需求；应结合具体作业方式、危险因素、人员身份和防护用品适用性确认要求。\n适用场所：江苏省行政区域内存在个体防护或危险作业要求的岗位和作业场所",
+    "description": "现场检查发现，生产经营单位以发放货币或者其他物品替代提供劳动防护用品，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FC58C02E253472D0EB5E77E178_2",
+    "keywords": [
+      "生产经营单位以发放货币或者其他物品替代提供劳动防护用品"
+    ],
+    "lifecycle": "active",
+    "measures": "停止以货币或其他物品替代劳动防护用品，并按岗位风险和适用标准实际提供合格劳动防护用品。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内存在个体防护或危险作业要求的岗位和作业场所"
+    ],
+    "title": "生产经营单位以发放货币或者其他物品替代提供劳动防护用品"
+  }
 }

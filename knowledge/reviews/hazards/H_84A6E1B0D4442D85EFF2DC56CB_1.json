@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_84A6E1B0D4442D85EFF2DC56CB_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4dbd0d6baad816ebb87aa2ea4df5c7177914581bab389255c8b5c72c68cca497",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_6AEFBE1BFC246A5C84C12A7E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "a2cbee518a38df04d650223b95b0107a96867e2e52b0d41a129339d565f492a0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确制度建立与实施的缺项，不能依据库内资料编造某一企业具体缺失制度。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十一条生产经营单位应当根据本单位实际，建立并实施下列安全生产管理制度：",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_84A6E1B0D4442D85EFF2DC56CB_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_6AEFBE1BFC246A5C84C12A7E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "a2cbee518a38df04d650223b95b0107a96867e2e52b0d41a129339d565f492a0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未根据本单位实际，建立并实施全员安全生产责任制等安全生产管理制度，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_84A6E1B0D4442D85EFF2DC56CB_1",
+    "keywords": [
+      "生产经营单位未根据本单位实际",
+      "建立并实施全员安全生产责任制等安全生产管理制度"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位根据本单位实际，建立并实施全员安全生产责任制等安全生产管理制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位未根据本单位实际，建立并实施全员安全生产责任制等安全生产管理制度"
+  }
 }

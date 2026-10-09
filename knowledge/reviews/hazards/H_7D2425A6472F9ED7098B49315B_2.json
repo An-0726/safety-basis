@@ -1,110 +1,148 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_7D2425A6472F9ED7098B49315B_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c81a3a4b77c383ffbec80161b1616e60f0d83485165182bbb8408c3631d42735",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_L014"
   ],
-  "reason": "移动式压力容器、气瓶充装单位；充装前后检查记录，禁止充装不符合安全技术规范的容器/气瓶。",
-  "reviewType": "content",
-  "reviewedContentHash": "816474c745380d571d16e2078b41fac487000d94502b7db420dc6103c5e3c43b",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第四十九条第二款",
-  "reviewedFields": [
-    "/conditions",
-    "/description",
-    "/keywords",
-    "/measures",
-    "/places",
-    "/title"
-  ],
-  "reviewedValues": {
-    "/conditions": "适用于法定移动式压力容器、气瓶充装单位的充装活动；本项核查充装前后检查、记录制度及禁止对不符合安全技术规范要求的容器、气瓶充装。",
-    "/description": "移动式压力容器、气瓶充装单位存在未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装的情形；应明确实际缺失的制度或违规充装事实。",
-    "/keywords": [
+  "reason": "仅压缩标题，保留已具体且对题的描述、条件和措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。",
+  "previousReview": {
+    "checkedAt": "2026-10-03",
+    "decision": "verified",
+    "entityId": "H_7D2425A6472F9ED7098B49315B_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_L014"
+    ],
+    "reason": "移动式压力容器、气瓶充装单位；充装前后检查记录，禁止充装不符合安全技术规范的容器/气瓶。",
+    "reviewType": "content",
+    "reviewedContentHash": "816474c745380d571d16e2078b41fac487000d94502b7db420dc6103c5e3c43b",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第四十九条第二款",
+    "reviewedFields": [
+      "/conditions",
+      "/description",
+      "/keywords",
+      "/measures",
+      "/places",
+      "/title"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于法定移动式压力容器、气瓶充装单位的充装活动；本项核查充装前后检查、记录制度及禁止对不符合安全技术规范要求的容器、气瓶充装。",
+      "/description": "移动式压力容器、气瓶充装单位存在未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装的情形；应明确实际缺失的制度或违规充装事实。",
+      "/keywords": [
+        "充装前后检查记录制度",
+        "移动式压力容器",
+        "气瓶",
+        "不符合安全技术规范",
+        "违规充装"
+      ],
+      "/measures": "建立并落实充装前后的检查、记录制度；禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装，核查检查结果与充装记录。",
+      "/places": [
+        "移动式压力容器、气瓶充装作业及检查记录管理"
+      ],
+      "/title": "充装单位未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_L014"
+      ],
+      "/description": [
+        "E_L014"
+      ],
+      "/keywords": [
+        "E_L014"
+      ],
+      "/measures": [
+        "E_L014"
+      ],
+      "/places": [
+        "E_L014"
+      ],
+      "/title": [
+        "E_L014"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_7D2425A6472F9ED7098B49315B_2",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "0c2800e3cb4c82e73d01949473e7bdcc7849cc292e38bf492255f9f355b31561",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "5f6aa67656e5857d7fcc5ed9e790f510000f54da248b544faba1c31b00f046e3",
+    "historySha256": "e28469bbf6a416c02fc6dd022cef20b8c98e06435a6b6a3da37783a7e6b887bd",
+    "previousEntity": {
+      "aliases": [],
+      "category": "特种设备",
+      "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：压力容器使用、运行、维护检修或相关管理场景",
+      "description": "经资料及履职情况核查，充装单位未建立充装前后的检查、记录制度，对不符合安全技术规范要求的移动式压力容器和气瓶进行充装，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+      "id": "H_7D2425A6472F9ED7098B49315B_2",
+      "keywords": [
+        "充装单位未建立充装前后的检查",
+        "记录制度",
+        "对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
+      ],
+      "lifecycle": "active",
+      "measures": "充装单位建立充装前后的检查、记录制度，对调整至符合安全技术规范要求的移动式压力容器和气瓶进行充装。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "压力容器使用、运行、维护检修或相关管理场景"
+      ],
+      "title": "充装单位未建立充装前后的检查、记录制度，对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
+    },
+    "previousEntityFileSha256": "065c78abc4b2f329db2dc7257a8880733eb1b4ada88797852941409a6dcd755e",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
+      "currentnessEvidence": "official/national-current-laws-web-readback.json",
+      "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
+      "lawVersionId": "L014",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
+      "operativeLocator": "第四十九条第二款",
+      "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
+      "scopeDecision": "移动式压力容器、气瓶充装单位；充装前后检查记录，禁止充装不符合安全技术规范的容器/气瓶。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于法定移动式压力容器、气瓶充装单位的充装活动；本项核查充装前后检查、记录制度及禁止对不符合安全技术规范要求的容器、气瓶充装。",
+    "description": "移动式压力容器、气瓶充装单位存在未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装的情形；应明确实际缺失的制度或违规充装事实。",
+    "id": "H_7D2425A6472F9ED7098B49315B_2",
+    "keywords": [
       "充装前后检查记录制度",
       "移动式压力容器",
       "气瓶",
       "不符合安全技术规范",
       "违规充装"
     ],
-    "/measures": "建立并落实充装前后的检查、记录制度；禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装，核查检查结果与充装记录。",
-    "/places": [
-      "移动式压力容器、气瓶充装作业及检查记录管理"
-    ],
-    "/title": "充装单位未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_L014"
-    ],
-    "/description": [
-      "E_L014"
-    ],
-    "/keywords": [
-      "E_L014"
-    ],
-    "/measures": [
-      "E_L014"
-    ],
-    "/places": [
-      "E_L014"
-    ],
-    "/title": [
-      "E_L014"
-    ]
-  },
-  "previousReview": {
-    "checkedAt": "2026-09-13",
-    "decision": "verified",
-    "entityId": "H_7D2425A6472F9ED7098B49315B_2",
-    "entityType": "hazard",
-    "evidenceRefs": [
-      "E_XLSX_FT_DD006BA5157AEB49F839AF8E"
-    ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-    "reviewType": "content",
-    "reviewedContentHash": "0c2800e3cb4c82e73d01949473e7bdcc7849cc292e38bf492255f9f355b31561",
-    "reviewer": "Codex正式核验批次20260913"
-  },
-  "previousReviewFileSha256": "5f6aa67656e5857d7fcc5ed9e790f510000f54da248b544faba1c31b00f046e3",
-  "historySha256": "e28469bbf6a416c02fc6dd022cef20b8c98e06435a6b6a3da37783a7e6b887bd",
-  "previousEntity": {
-    "aliases": [],
-    "category": "特种设备",
-    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：压力容器使用、运行、维护检修或相关管理场景",
-    "description": "经资料及履职情况核查，充装单位未建立充装前后的检查、记录制度，对不符合安全技术规范要求的移动式压力容器和气瓶进行充装，相应管理要求缺少完整、有效的文件或执行记录支撑。",
-    "id": "H_7D2425A6472F9ED7098B49315B_2",
-    "keywords": [
-      "充装单位未建立充装前后的检查",
-      "记录制度",
-      "对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
-    ],
     "lifecycle": "active",
-    "measures": "充装单位建立充装前后的检查、记录制度，对调整至符合安全技术规范要求的移动式压力容器和气瓶进行充装。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "measures": "建立并落实充装前后的检查、记录制度；禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装，核查检查结果与充装记录。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "压力容器使用、运行、维护检修或相关管理场景"
+      "移动式压力容器、气瓶充装作业及检查记录管理"
     ],
-    "title": "充装单位未建立充装前后的检查、记录制度，对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
-  },
-  "previousEntityFileSha256": "065c78abc4b2f329db2dc7257a8880733eb1b4ada88797852941409a6dcd755e",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.samr.gov.cn/tzsbj/zcfg/flfg/art/2019/art_39715c5a62f64e32aa522fcc2afd6298.html",
-    "currentnessEvidence": "official/national-current-laws-web-readback.json",
-    "currentnessEvidenceSha256": "070dbf1006e2acefa98fb0412d5afc88876099317338b01118c64986c070d27b",
-    "lawVersionId": "L014",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "17ce7829a1bf91bf96df8c8035a4f16731e260a303989450197c3128a5af7b4d",
-    "operativeLocator": "第四十九条第二款",
-    "completeOfficialQuote": "第四十九条　移动式压力容器、气瓶充装单位，应当具备下列条件，并经负责特种设备安全监督管理的部门许可，方可从事充装活动:\n\n　　（一）有与充装和管理相适应的管理人员和技术人员；\n\n　　（二）有与充装和管理相适应的充装设备、检测手段、场地厂房、器具、安全设施；\n\n　　（三）有健全的充装管理制度、责任制度、处理措施。\n\n　　充装单位应当建立充装前后的检查、记录制度，禁止对不符合安全技术规范要求的移动式压力容器和气瓶进行充装。\n　　气瓶充装单位应当向气体使用者提供符合安全技术规范要求的气瓶，对气体使用者进行气瓶安全使用指导，并按照安全技术规范的要求办理气瓶使用登记，及时申报定期检验。",
-    "scopeDecision": "移动式压力容器、气瓶充装单位；充装前后检查记录，禁止充装不符合安全技术规范的容器/气瓶。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+    "title": "充装单位未建立充装前后的检查、记录制度，或者对不符合安全技术规范要求的移动式压力容器和气瓶进行充装"
+  }
 }

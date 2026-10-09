@@ -1,15 +1,57 @@
 {
-  "decision": "verified",
   "entityId": "H067",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9ceac7172e80bba009bcde4e9a979ad2d2833b23fe9cf184a77f7b8922a5d8c9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
   ],
-  "migratedFromV3Verification": {
-    "id": "VR_62b0a2142bac91f58c75345a34_6",
-    "reviewedAt": "2026-09-09T13:33:45+00:00",
-    "reviewer": "Codex 主核验"
+  "reason": "描述已有明确人员和行为，仅修正泛化条件并保留两种培训组织方式。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "3.3.1 仓储场所应组织或者协助有关部门对消防安全责任人、消防安全管理人、消防控制室的值班操作人员进行消防安全专门培训。消防控制室的值班操作人员应通过消防行业特有工种职业技能鉴定，持证上岗。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H067",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_62b0a2142bac91f58c75345a34_6",
+      "reviewedAt": "2026-09-09T13:33:45+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "cf16e44e1127de9b628f715a1dcba4916ad0f7c9bf187d9cc15b807e517d9631"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "cf16e44e1127de9b628f715a1dcba4916ad0f7c9bf187d9cc15b807e517d9631"
+  "previousDefinition": {
+    "aliases": [
+      "消防控制室人员未专项培训",
+      "仓储消防责任人未培训"
+    ],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "仓储场所未组织或协助有关部门对消防安全责任人、消防安全管理人、消防控制室值班操作人员开展消防安全专门培训。",
+    "id": "H067",
+    "keywords": [
+      "仓储",
+      "消防安全责任人",
+      "消防管理人",
+      "消防控制室",
+      "专项培训"
+    ],
+    "lifecycle": "active",
+    "measures": "识别依法或标准要求接受专项消防培训的岗位，组织消防安全责任人、管理人员和消防控制室值班操作人员等参加相应培训并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "仓储场所",
+      "仓库"
+    ],
+    "title": "仓储场所消防重点岗位未接受专项消防培训"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_A3B6BFDE310A41F0D006E5D76D_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "804aa4151848324ac510a4877e96a6e17ca518fade156790c345bd35057fd539",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_0323A43FD1BB442D8AE0DAC3"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "a24e65f8e9ff556fc1f0bd2be46528183bf978b258a9fadf8ce7332e3dda0890",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "将说明内容核查限定于严重职业病危害岗位的中文警示说明，删除通用评价。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "警示说明应当载明产生职业病危害的种类、后果、 预防以及应急救治措施等内容。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_A3B6BFDE310A41F0D006E5D76D_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_0323A43FD1BB442D8AE0DAC3"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "a24e65f8e9ff556fc1f0bd2be46528183bf978b258a9fadf8ce7332e3dda0890",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，警示说明未载明产生职业病危害的种类、后果、预防以及应急救治措施等内容，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_A3B6BFDE310A41F0D006E5D76D_3",
+    "keywords": [
+      "警示说明未载明产生职业病危害的种类",
+      "后果",
+      "预防以及应急救治措施等内容"
+    ],
+    "lifecycle": "active",
+    "measures": "警示说明载明产生职业病危害的种类、后果、预防以及应急救治措施等内容。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "警示说明未载明产生职业病危害的种类、后果、预防以及应急救治措施等内容"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_B1B83C549A4342EEEC8C2279",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c857bc9fccc76af6da250ffdf368a4106cbec77ab33e9f22d74288de4fe843cd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_586E12ADA04A9D8F23F2E09B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "837a5a618c6278b54b881ba2c1bae27b51d8f88301f2b1c57c1ae50578d2335d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "11.2.1 储存危险化学品的仓库和作业场所应设置明显的安全标志,并符合GB 2894、AQ 3047 的规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_B1B83C549A4342EEEC8C2279",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_586E12ADA04A9D8F23F2E09B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "837a5a618c6278b54b881ba2c1bae27b51d8f88301f2b1c57c1ae50578d2335d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，危险化学品储存区域未设置明显的安全警示标志，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_B1B83C549A4342EEEC8C2279",
+    "keywords": [
+      "危险化学品储存区域未设置明显的安全警示标志"
+    ],
+    "lifecycle": "active",
+    "measures": "危险化学品储存区域设置明显的安全警示标志。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "危险化学品储存区域未设置明显的安全警示标志"
+  }
 }

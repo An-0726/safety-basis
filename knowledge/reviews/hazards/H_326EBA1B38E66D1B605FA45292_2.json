@@ -1,109 +1,147 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_326EBA1B38E66D1B605FA45292_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4f6b890e5e2589aeedeb2bc312915243ab41763ed28c758cd292279c49aba516",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_CITATION_JS2023_20261002"
   ],
-  "reason": "江苏省第十六条第一款列明行业以外的其他生产经营单位，从业人员超过一百人。被派遣劳动者计入人数；另有行业规定的从其规定。",
-  "reviewType": "content",
-  "reviewedContentHash": "c1e3ee9cd800b21d862b59931f686d7b1c99dd7282bbddebe2084f94f6960c15",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第十六条第二款第一句前分支，结合第三、四款",
-  "reviewedFields": [
-    "/conditions",
-    "/description",
-    "/keywords",
-    "/measures",
-    "/places",
-    "/title"
-  ],
-  "reviewedValues": {
-    "/conditions": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员超过一百人，被派遣劳动者计入从业人员总数。国家对建筑施工等劳动密集型行业另有机构或专职人员规定的，从其规定。",
-    "/description": "江苏省第十六条第一款列明行业以外、从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员；应结合行业及计入被派遣劳动者后的人数核实适用分支。",
-    "/keywords": [
+  "reason": "保留其他单位、超过一百人及两条路径均未落实的限定，原描述和条件已明确。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；从业人员一百人以下的，应当配备专职或者兼职的安全生产管理人员。",
+  "previousReview": {
+    "checkedAt": "2026-10-03",
+    "decision": "verified",
+    "entityId": "H_326EBA1B38E66D1B605FA45292_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_CITATION_JS2023_20261002"
+    ],
+    "reason": "江苏省第十六条第一款列明行业以外的其他生产经营单位，从业人员超过一百人。被派遣劳动者计入人数；另有行业规定的从其规定。",
+    "reviewType": "content",
+    "reviewedContentHash": "c1e3ee9cd800b21d862b59931f686d7b1c99dd7282bbddebe2084f94f6960c15",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第十六条第二款第一句前分支，结合第三、四款",
+    "reviewedFields": [
+      "/conditions",
+      "/description",
+      "/keywords",
+      "/measures",
+      "/places",
+      "/title"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员超过一百人，被派遣劳动者计入从业人员总数。国家对建筑施工等劳动密集型行业另有机构或专职人员规定的，从其规定。",
+      "/description": "江苏省第十六条第一款列明行业以外、从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员；应结合行业及计入被派遣劳动者后的人数核实适用分支。",
+      "/keywords": [
+        "江苏省",
+        "其他生产经营单位",
+        "超过一百人",
+        "既未设置安全生产管理机构",
+        "也未配备专职安全生产管理人员"
+      ],
+      "/measures": "设置安全生产管理机构或者配备专职安全生产管理人员；结合单位行业和计入被派遣劳动者后的从业人数核查法定配置，国家另有规定的按其规定执行。",
+      "/places": [
+        "江苏省行政区域内从业人员超过一百人的上述其他生产经营单位"
+      ],
+      "/title": "从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员"
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/description": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/keywords": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/measures": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/places": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/title": [
+        "E_CITATION_JS2023_20261002"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_326EBA1B38E66D1B605FA45292_2",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "9f8665d2ccfc40d9fc40a565a372063fd3b68056bc1c5ada1cec61c5981c4490",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "9b1a6c100b4ef9f93ab373651889bd04bb71b66e8160ce9618e79c7a81aab655",
+    "historySha256": "269cc0ef9ca264446be6192f8aca6e6e1ccc5519bfaadcc4ca4a4d1106e8883a",
+    "previousEntity": {
+      "aliases": [],
+      "category": "安全管理",
+      "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+      "description": "现场检查发现，从业人员超过一百人的其他生产经营单位，未设置安全生产管理机构或者配备专职安全生产管理人员，相应安全防护、识别、监测或应急保障条件缺失。",
+      "id": "H_326EBA1B38E66D1B605FA45292_2",
+      "keywords": [
+        "从业人员超过一百人的其他生产经营单位",
+        "未设置安全生产管理机构或者配备专职安全生产管理人员"
+      ],
+      "lifecycle": "active",
+      "measures": "从业人员超过一百人的其他生产经营单位，设置安全生产管理机构或者配备专职安全生产管理人员。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "江苏省行政区域内生产经营单位及相关安全管理活动"
+      ],
+      "title": "从业人员超过一百人的其他生产经营单位，未设置安全生产管理机构或者配备专职安全生产管理人员"
+    },
+    "previousEntityFileSha256": "7369747f3b8a3e71835ffc778772ed140f3a0e6fe210b7aad0ee769799738462",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第十六条第二款第一句前分支，结合第三、四款",
+      "completeOfficialQuote": "第十六条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位，应当按照下列规定设置安全生产管理机构、配备专职安全生产管理人员：\n\n（一）从业人员不足三十人的，配备一名以上专职安全生产管理人员；\n\n（二）从业人员三十人以上不足一百人的，设置专门的安全生产管理机构，并配备两名以上专职安全生产管理人员；\n\n（三）从业人员一百人以上不足三百人的，设置专门的安全生产管理机构，并配备三名以上专职安全生产管理人员；\n\n（四）从业人员三百人以上的，设置专门的安全生产管理机构，并按照不低于从业人员百分之一的比例配备专职安全生产管理人员。\n前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；从业人员一百人以下的，应当配备专职或者兼职的安全生产管理人员。从业人员二十人以下且位置相邻、行业相近、业态相似的生产经营单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式开展安全生产管理工作，但是保证安全生产的责任仍由本单位负责。\n\n生产经营单位使用被派遣劳动者的，被派遣劳动者数量计入生产经营单位从业人员总数。\n\n国家对建筑施工等劳动密集型行业在设立安全生产管理机构或者配备专职安全生产管理人员方面另有规定的，按照其规定执行。",
+      "scopeDecision": "江苏省第十六条第一款列明行业以外的其他生产经营单位，从业人员超过一百人。被派遣劳动者计入人数；另有行业规定的从其规定。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内《江苏省安全生产条例》第十六条第一款列明的矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位以外的其他生产经营单位；从业人员超过一百人，被派遣劳动者计入从业人员总数。国家对建筑施工等劳动密集型行业另有机构或专职人员规定的，从其规定。",
+    "description": "江苏省第十六条第一款列明行业以外、从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员；应结合行业及计入被派遣劳动者后的人数核实适用分支。",
+    "id": "H_326EBA1B38E66D1B605FA45292_2",
+    "keywords": [
       "江苏省",
       "其他生产经营单位",
       "超过一百人",
       "既未设置安全生产管理机构",
       "也未配备专职安全生产管理人员"
     ],
-    "/measures": "设置安全生产管理机构或者配备专职安全生产管理人员；结合单位行业和计入被派遣劳动者后的从业人数核查法定配置，国家另有规定的按其规定执行。",
-    "/places": [
-      "江苏省行政区域内从业人员超过一百人的上述其他生产经营单位"
-    ],
-    "/title": "从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员"
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/description": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/keywords": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/measures": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/places": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/title": [
-      "E_CITATION_JS2023_20261002"
-    ]
-  },
-  "previousReview": {
-    "checkedAt": "2026-09-13",
-    "decision": "verified",
-    "entityId": "H_326EBA1B38E66D1B605FA45292_2",
-    "entityType": "hazard",
-    "evidenceRefs": [
-      "E_XLSX_FT_7B5B94A1D8ABDE66D3297B5B"
-    ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-    "reviewType": "content",
-    "reviewedContentHash": "9f8665d2ccfc40d9fc40a565a372063fd3b68056bc1c5ada1cec61c5981c4490",
-    "reviewer": "Codex正式核验批次20260913"
-  },
-  "previousReviewFileSha256": "9b1a6c100b4ef9f93ab373651889bd04bb71b66e8160ce9618e79c7a81aab655",
-  "historySha256": "269cc0ef9ca264446be6192f8aca6e6e1ccc5519bfaadcc4ca4a4d1106e8883a",
-  "previousEntity": {
-    "aliases": [],
-    "category": "安全管理",
-    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
-    "description": "现场检查发现，从业人员超过一百人的其他生产经营单位，未设置安全生产管理机构或者配备专职安全生产管理人员，相应安全防护、识别、监测或应急保障条件缺失。",
-    "id": "H_326EBA1B38E66D1B605FA45292_2",
-    "keywords": [
-      "从业人员超过一百人的其他生产经营单位",
-      "未设置安全生产管理机构或者配备专职安全生产管理人员"
-    ],
     "lifecycle": "active",
-    "measures": "从业人员超过一百人的其他生产经营单位，设置安全生产管理机构或者配备专职安全生产管理人员。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "measures": "设置安全生产管理机构或者配备专职安全生产管理人员；结合单位行业和计入被派遣劳动者后的从业人数核查法定配置，国家另有规定的按其规定执行。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "江苏省行政区域内生产经营单位及相关安全管理活动"
+      "江苏省行政区域内从业人员超过一百人的上述其他生产经营单位"
     ],
-    "title": "从业人员超过一百人的其他生产经营单位，未设置安全生产管理机构或者配备专职安全生产管理人员"
-  },
-  "previousEntityFileSha256": "7369747f3b8a3e71835ffc778772ed140f3a0e6fe210b7aad0ee769799738462",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
-    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
-    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
-    "lawVersionId": "L020",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
-    "operativeLocator": "第十六条第二款第一句前分支，结合第三、四款",
-    "completeOfficialQuote": "第十六条 矿山、金属冶炼、建筑施工、船舶修造、船舶拆解、运输单位和危险物品的生产、经营、储存、装卸单位，应当按照下列规定设置安全生产管理机构、配备专职安全生产管理人员：\n\n（一）从业人员不足三十人的，配备一名以上专职安全生产管理人员；\n\n（二）从业人员三十人以上不足一百人的，设置专门的安全生产管理机构，并配备两名以上专职安全生产管理人员；\n\n（三）从业人员一百人以上不足三百人的，设置专门的安全生产管理机构，并配备三名以上专职安全生产管理人员；\n\n（四）从业人员三百人以上的，设置专门的安全生产管理机构，并按照不低于从业人员百分之一的比例配备专职安全生产管理人员。\n前款规定以外的其他生产经营单位，从业人员超过一百人的，应当设置安全生产管理机构或者配备专职安全生产管理人员；从业人员一百人以下的，应当配备专职或者兼职的安全生产管理人员。从业人员二十人以下且位置相邻、行业相近、业态相似的生产经营单位，可以采取组建安全生产管理互助帮扶联合体、委托相关机构提供安全生产管理服务等方式开展安全生产管理工作，但是保证安全生产的责任仍由本单位负责。\n\n生产经营单位使用被派遣劳动者的，被派遣劳动者数量计入生产经营单位从业人员总数。\n\n国家对建筑施工等劳动密集型行业在设立安全生产管理机构或者配备专职安全生产管理人员方面另有规定的，按照其规定执行。",
-    "scopeDecision": "江苏省第十六条第一款列明行业以外的其他生产经营单位，从业人员超过一百人。被派遣劳动者计入人数；另有行业规定的从其规定。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+    "title": "从业人员超过一百人的其他生产经营单位，既未设置安全生产管理机构，也未配备专职安全生产管理人员"
+  }
 }

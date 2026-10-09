@@ -1,13 +1,52 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D6BAA7AB75724A75B3F41905B2_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "647c9610db489cc84196ca0dc2eb010539a3f6c452303157133bc5581b9790b4",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_6979664EB598D22DC09FDD1C"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "8e7cc0c9463d5b91a42a94d605a42277ae35f555f31b9a25df8b9f149e1a589b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "机关、团体、企业、事业等单位应当结合场所特点编制、更新灭火和应急疏散预案，并每年至少组织一次有针对性的消防演练。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D6BAA7AB75724A75B3F41905B2_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_6979664EB598D22DC09FDD1C"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "8e7cc0c9463d5b91a42a94d605a42277ae35f555f31b9a25df8b9f149e1a589b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，机关、团体、企业、事业等单位未结合场所特点编制、更新灭火和应急疏散预案，并每年至少组织一次有针对性的消防演练，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D6BAA7AB75724A75B3F41905B2_2",
+    "keywords": [
+      "机关",
+      "团体",
+      "企业",
+      "事业等单位未结合场所特点编制",
+      "更新灭火和应急疏散预案",
+      "并每年至少组织一次有针对性的消防演练"
+    ],
+    "lifecycle": "active",
+    "measures": "机关、团体、企业、事业等单位结合场所特点编制、更新灭火和应急疏散预案，并每年至少组织一次有针对性的消防演练。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "机关、团体、企业、事业等单位未结合场所特点编制、更新灭火和应急疏散预案，并每年至少组织一次有针对性的消防演练"
+  }
 }

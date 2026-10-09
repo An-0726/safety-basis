@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_30_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "32d415276c791040d2edbbcd8ca9cadfaa2e81ff08a5e6f31f3fb5f779f32634",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2CFA38019798FAB136A06F48"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "049bc6635dea9dff4acb3fb7e562dda315e44fba22fd09401443e85f8c9c6b6f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按审阅指出的责任主体错位改为组织搬迁或改变用途义务，保留二选一处置方式。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "易燃易爆危险品生产、经营、储存场所等重大火灾危险源不符合消防安全布局的，有关地方人民政府、相关园区管理机构应当组织限期搬迁或者改变用途。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_30_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2CFA38019798FAB136A06F48"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "049bc6635dea9dff4acb3fb7e562dda315e44fba22fd09401443e85f8c9c6b6f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，易燃易爆危险品场所等重大火灾危险源不符合消防安全布局，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_JSXF_30_2",
+    "keywords": [
+      "易燃易爆危险品场所等重大火灾危险源不符合消防安全布局"
+    ],
+    "lifecycle": "active",
+    "measures": "易燃易爆危险品场所等重大火灾危险源调整至符合消防安全布局；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "易燃易爆危险品场所等重大火灾危险源不符合消防安全布局"
+  }
 }

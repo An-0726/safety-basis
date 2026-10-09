@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_F2C423D851BA4C8782A4B97FB8",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "76a8510235a25bb42ef80508ce43ffffe29dddb06d368d0c6ece807fc8416d51",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9EA38B8D1FBEA266844DFA1B"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "08a0b4798fc57d73b9e0a05864ff77a8194cb7d9761f52a8392b26f8874ba646",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十七条 生产、储存危险化学品的单位，应当根据其生产、储存的危险化学品的种类和危险特性，在作业场所设置相应的监测、监控、通风、防晒、调温、防火、灭火、防爆、泄压、防毒、中和、防潮、防雷、防静电、防腐、防泄漏以及防护围堤或者隔离操作等安全设施、设备，并按照国家标准、行业标准或者国家有关规定对安全设施、设备进行经常性维护、保养，保证安全设施、设备的正常使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_F2C423D851BA4C8782A4B97FB8",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9EA38B8D1FBEA266844DFA1B"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "08a0b4798fc57d73b9e0a05864ff77a8194cb7d9761f52a8392b26f8874ba646",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_F2C423D851BA4C8782A4B97FB8",
+    "title": "危险化学品生产、储存单位对易燃易爆工艺或作业过程未采取相应防火防爆措施",
+    "description": "仅适用于所引法规/标准明确覆盖的单位、工艺和作业场景；现场判定前应核实主体、介质和危险区域条件。 经现场核查存在以下不符合：危险化学品生产、储存单位对易燃易爆工艺或作业过程未采取相应防火防爆措施。",
+    "measures": "明确并落实具体防火、防爆设施和验收要求。",
+    "conditions": "仅适用于所引法规/标准明确覆盖的单位、工艺和作业场景；现场判定前应核实主体、介质和危险区域条件。",
+    "category": "作业安全与个体防护",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "危险化学品生产、储存单位对易燃易爆工艺或作业过程未采取相应防火防爆措施"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《生产过程安全卫生要求 总则》(GBT12801-2008) 第 5.3.1 条",
+    "mergedInto": null
+  }
 }

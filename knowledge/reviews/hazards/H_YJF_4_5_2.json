@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_YJF_4_5_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "6e3385ec147b358976618a49f5b520c51ec8bee05489f04d453b35fe0c7ab8db",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_YJF_HJ 20252"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "d091609da56b6b180c9cb5e4835f68b846118e555835e2fa89e56e2a1834e516",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "(2)若造成事故的危险废物具有剧毒性、易燃性、爆炸性或高传染性，应立即疏散人群，并请求环境保护、消防、医疗、公安等相关部门支援。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_YJF_4_5_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_YJF_HJ 20252"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "d091609da56b6b180c9cb5e4835f68b846118e555835e2fa89e56e2a1834e516",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，剧毒易燃易爆危险废物事故未立即疏散人群并采取应急措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_YJF_4_5_2",
+    "keywords": [
+      "剧毒易燃易爆危险废物事故未立即疏散人群并采取应急措施"
+    ],
+    "lifecycle": "active",
+    "measures": "剧毒易燃易爆危险废物事故立即疏散人群并采取应急措施。整改后复核危险废物分类、包装、标识、贮存、转移或应急措施中与本项有关的要求，并保留相应台账和检查记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "剧毒易燃易爆危险废物事故未立即疏散人群并采取应急措施"
+  }
 }

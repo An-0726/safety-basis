@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-16",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7",
-    "hazard": "f8fb49f6a72ce1821fd4cf0719a76db85ab47bfa308b88141045869c77396a87"
+    "hazard": "d0232fc42124054225ec67c788cf914e2ddf23e26de7c5ad3c8041836a0e57a3",
+    "clause": "7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7"
   },
   "decision": "verified",
   "entityId": "K_PHASE6_F1B4B062B1B09544C676D0BF",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
   ],
-  "reason": "《安全生产法》第五十一条与隐患对象直接一致。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "4931fbcf66727f01aac92a821654f3b3517b5e0aeef24413362cd2de54de325a",
-  "reviewer": "ChatGPT PHASE6 final review 20260916",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "contextHashes": {
+      "clause": "7c60d6970b0b6c131a7b5c9ae6deba64258cc2eba1b7bbd2f0e1e0202a272ea7",
+      "hazard": "f8fb49f6a72ce1821fd4cf0719a76db85ab47bfa308b88141045869c77396a87"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE6_F1B4B062B1B09544C676D0BF",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "reason": "《安全生产法》第五十一条与隐患对象直接一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "4931fbcf66727f01aac92a821654f3b3517b5e0aeef24413362cd2de54de325a",
+    "reviewer": "ChatGPT PHASE6 final review 20260916",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

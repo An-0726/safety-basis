@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_8_2_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c5f0e0e6ae931287ce03da28f783a815be566c039600b5d84b17abe8ff3f8f02",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "85200e46e8bf613ac34ccb1669dc2211e7e906fec926ec9042a622d555d95659",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "每个产尘点均有义务不等于所有点均已缺失，改为点位分类核查而不虚构实际点名。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "所有产尘点均应装设吸尘罩并保证有足够的入口风量以满足作业岗位粉尘捕集要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_8_2_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "85200e46e8bf613ac34ccb1669dc2211e7e906fec926ec9042a622d555d95659",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，所有产尘点均未装设吸尘罩并保证有足够的入口风量以满足作业岗位粉尘捕集要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_8_2_1_1",
+    "keywords": [
+      "所有产尘点均未装设吸尘罩并保证有足够的入口风量以满足作业岗位粉尘捕集要求"
+    ],
+    "lifecycle": "active",
+    "measures": "所有产尘点均装设吸尘罩并保证有足够的入口风量以满足作业岗位粉尘捕集要求。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "所有产尘点均未装设吸尘罩并保证有足够的入口风量以满足作业岗位粉尘捕集要求"
+  }
 }

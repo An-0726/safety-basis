@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-30",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "hazard": "8d82c87cb0a828dde5db062011ea7c460c5ca27819e284e9a6c05410c694906d",
+    "hazard": "8ff3d0c477657586fd977dc235ed43d65b6f0aee57c19a2cca914107dde7dea3",
     "clause": "eb07ef83e9e4985a3f0b32528bcd624425fed4001f62d0577b6151de26050480"
   },
   "decision": "verified",
@@ -12,9 +12,29 @@
     "E_REMEDIATION_20260930_GB15577",
     "E_REMEDIATION_20260930_MEM6"
   ],
-  "reason": "8.3.2无合规干式巷道除尘风道例外。独立修订为绝对禁止并停止原有使用，改用合规钢质风管，保留强度要求；同时纠正hazard及link误套总平面布置范围。不能以粉尘沉降、通风改良等保留被禁止结构。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "cbf3d54ddaff2ca1a57d6019a0d6bf189bb844bfedeb63e59f8b369855a7a132",
-  "reviewer": "Codex逐项内容复核20260930",
-  "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_8_3_2_1；条款：C_15577_8_3_2；保留direct角色。"
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-30",
+    "contextHashes": {
+      "hazard": "8d82c87cb0a828dde5db062011ea7c460c5ca27819e284e9a6c05410c694906d",
+      "clause": "eb07ef83e9e4985a3f0b32528bcd624425fed4001f62d0577b6151de26050480"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_0dac466595d5a96b9c29c60f",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_15577_GB 15577",
+      "E_REMEDIATION_20260930_GB15577",
+      "E_REMEDIATION_20260930_MEM6"
+    ],
+    "reason": "8.3.2无合规干式巷道除尘风道例外。独立修订为绝对禁止并停止原有使用，改用合规钢质风管，保留强度要求；同时纠正hazard及link误套总平面布置范围。不能以粉尘沉降、通风改良等保留被禁止结构。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "cbf3d54ddaff2ca1a57d6019a0d6bf189bb844bfedeb63e59f8b369855a7a132",
+    "reviewer": "Codex逐项内容复核20260930",
+    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_15577_8_3_2_1；条款：C_15577_8_3_2；保留direct角色。"
+  }
 }

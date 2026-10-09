@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_138_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2871c9355e94920447aa4a96846e0b244734248b4c2c981124e0773eab3dbd71",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_5616773B98688707FFFAA289"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3433eca31d6be77b04bbc7bce5ef2d41859afa054639781d2d1b6fd9c0275f13",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按原文四项场车管理能力整改，不添加资格上岗条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "138 第一百三十八条\n场车安全总监和场车安全员应当具备下列场车使用安全管理能力：\n（一）熟悉场车使用相关法律法规、安全技术规范、标准和本单位场车安全使用要求；\n（二）具备识别和防控场车使用安全风险的专业知识；\n（三）具备按照相关要求履行岗位职责的能力；\n（四）符合特种设备法律法规和安全技术规范的其他要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_138_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_5616773B98688707FFFAA289"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3433eca31d6be77b04bbc7bce5ef2d41859afa054639781d2d1b6fd9c0275f13",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：场车使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，场车安全总监和安全员未具备相应场车使用安全管理能力，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_138_1",
+    "keywords": [
+      "场车安全总监和安全员未具备相应场车使用安全管理能力"
+    ],
+    "lifecycle": "active",
+    "measures": "场车安全总监和安全员具备相应场车使用安全管理能力。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "场车使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "场车安全总监和安全员未具备相应场车使用安全管理能力"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_7_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9aa56fc229479815ef03cd4f6d93418b9aaaa6cb78404cafeb6a6aeae4b72606",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_52EE92815856956C92B3D4CC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "29cc515ac26e08cdfd16b8dffee4bbee71626dbea8047788595a07d26e518756",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "将外部报送、备案回执要求改为企业内部作业审批。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "工贸企业应当根据有限空间作业安全风险大小，明确审批要求。\n未经工贸企业确定的作业审批人批准，不得实施有限空间作业。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_7_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_52EE92815856956C92B3D4CC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "29cc515ac26e08cdfd16b8dffee4bbee71626dbea8047788595a07d26e518756",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "现场检查发现，工贸企业未根据有限空间作业安全风险大小，明确审批要求，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_7_1",
+    "keywords": [
+      "工贸企业未根据有限空间作业安全风险大小",
+      "明确审批要求"
+    ],
+    "lifecycle": "active",
+    "measures": "工贸企业根据有限空间作业安全风险大小，明确审批要求。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "工贸企业未根据有限空间作业安全风险大小，明确审批要求"
+  }
 }

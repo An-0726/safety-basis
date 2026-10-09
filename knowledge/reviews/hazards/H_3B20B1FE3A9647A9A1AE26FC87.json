@@ -1,15 +1,50 @@
 {
-  "checkedAt": "2026-09-19T00:00:00+08:00",
-  "decision": "verified",
   "entityId": "H_3B20B1FE3A9647A9A1AE26FC87",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "26beae04bd36fc0d8f7197bd889e83903373c8ff89bdd01015f3c3a3ac243823",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "经核验GB 18597-2023官方原件，条款原文与适用范围完全支撑该隐患判定，转为正式有效隐患。产生与贮存单位未建造专用贮存设施或场所，直接违反GB 18597-2023第4.1条总体要求。",
-  "reviewType": "content",
-  "reviewedContentHash": "f47bac49616a2d7b9e832b719fc6fcd704bfcf8e8ee7273f26cd61cf51e13a4d",
-  "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
-  "reviewedAt": "2026-09-19T00:00:00Z",
-  "lifecycle": "active"
+  "reason": "原文允许设施或场所二选一，标题须明确两种方式均缺失。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "产生、收集、贮存、利用、处置危险废物的单位应建造危险废物贮存设施或设置贮存场所，并根据需要选择贮存设施类型。",
+  "previousReview": {
+    "checkedAt": "2026-09-19T00:00:00+08:00",
+    "decision": "verified",
+    "entityId": "H_3B20B1FE3A9647A9A1AE26FC87",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "经核验GB 18597-2023官方原件，条款原文与适用范围完全支撑该隐患判定，转为正式有效隐患。产生与贮存单位未建造专用贮存设施或场所，直接违反GB 18597-2023第4.1条总体要求。",
+    "reviewType": "content",
+    "reviewedContentHash": "f47bac49616a2d7b9e832b719fc6fcd704bfcf8e8ee7273f26cd61cf51e13a4d",
+    "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+    "reviewedAt": "2026-09-19T00:00:00Z",
+    "lifecycle": "active"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于产生、收集、贮存、利用、处置危险废物的单位。",
+    "description": "产生、收集、贮存、利用、处置危险废物的单位，未建造符合环境保护要求的危险废物贮存设施，也未按规定设置危险废物贮存场所。",
+    "id": "H_3B20B1FE3A9647A9A1AE26FC87",
+    "keywords": [
+      "危险废物产生者和经营者未建造专用贮存设施"
+    ],
+    "lifecycle": "active",
+    "measures": "产生、收集、贮存、利用、处置危险废物的单位，应根据危险废物的形态、特性与产生量，建造符合标准的危险废物贮存设施（贮存库、贮存场、贮存池、储罐区）或设置规范的贮存场所（贮存点）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所",
+      "通用场所"
+    ],
+    "title": "未建造危险废物贮存设施或未设置危险废物贮存场所"
+  }
 }

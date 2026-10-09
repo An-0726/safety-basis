@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DAD5F45BE3ED57A2E3D02EBC41_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b8e76a9ff83d1da15c1bc0560be0b6fca27bfbea67cbcb291b5566e16cd451ac",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_BE6CCCC709207233710FD135"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "ee01472af7584646e9bef649f7951c065c05a161263aa337a0ab5613f57ff0ca",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确调查目的与拒绝阻挠对象；同条末句规定用人单位不得拒绝、阻挠。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位不得拒绝、阻挠。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DAD5F45BE3ED57A2E3D02EBC41_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_BE6CCCC709207233710FD135"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "ee01472af7584646e9bef649f7951c065c05a161263aa337a0ab5613f57ff0ca",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料及履职情况核查，用人单位拒绝、阻挠职业病诊断、鉴定机构进行现场调查，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DAD5F45BE3ED57A2E3D02EBC41_5",
+    "keywords": [
+      "用人单位拒绝",
+      "阻挠职业病诊断",
+      "鉴定机构进行现场调查"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止拒绝、阻挠行为，按照职业病诊断、鉴定机构现场调查需要开放相关工作场所，并如实提供职业史、职业病危害接触史、检测结果等有关资料；指定人员配合调查并留存资料提交记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位拒绝、阻挠职业病诊断、鉴定机构进行现场调查"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_GB15603_5_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "72f9a4e33c687bc93690fdbfe22c9f506be4235f99687b09f9dd7d287a32611e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_6b0b2eef3aaae4a0d3192d1f434ad8960a5f8e54e00300f986b408c3b78ed519"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "90884936b59196a186ef1acdc17e03f880697001ee37a61a2a0837edeeb4a8ee",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "标题去除列举，条件保留三种储存方式，不将其改成必须同时采用三种。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "5.1 危险化学品仓库应采用隔离储存、隔开储存、分离储存的方式对危险化学品进行储存。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_GB15603_5_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_6b0b2eef3aaae4a0d3192d1f434ad8960a5f8e54e00300f986b408c3b78ed519"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "90884936b59196a186ef1acdc17e03f880697001ee37a61a2a0837edeeb4a8ee",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于存在危险化学品或其他危险物质的生产、储存、经营、使用、装卸、运输或处置活动；应结合物质危险特性、数量、用途、场所性质和责任主体确认要求。\n适用场所：危险化学品生产、储存、经营、使用或重大危险源相关场所",
+    "description": "现场检查发现，危险化学品仓库未采用隔离储存、隔开储存、分离储存的方式对危险化学品进行储存，可能导致不相容物质相互作用或风险叠加。",
+    "id": "H_GB15603_5_1_1",
+    "keywords": [
+      "危险化学品仓库未采用隔离储存",
+      "隔开储存",
+      "分离储存的方式对危险化学品进行储存"
+    ],
+    "lifecycle": "active",
+    "measures": "危险化学品仓库采用隔离储存、隔开储存、分离储存的方式对危险化学品进行储存。整改后复核物质危险特性、储存或使用条件、安全设施和作业管理要求，确认现场条件及相关台账均满足直接依据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险化学品生产、储存、经营、使用或重大危险源相关场所"
+    ],
+    "title": "危险化学品仓库未采用隔离储存、隔开储存、分离储存的方式对危险化学品进行储存"
+  }
 }

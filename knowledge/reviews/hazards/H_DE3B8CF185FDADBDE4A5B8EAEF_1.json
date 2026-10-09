@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DE3B8CF185FDADBDE4A5B8EAEF_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bc584b1b64bda157cbce23131fde5e3c64d6da8eaeb2b4b8da0c314cc2b52802",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E1BD1AF9246C3A5A3BC3D335"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "dfac4b2485ee26c699c08088e4852820c4d4b6a141e54bf2922f090149997887",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确检查内容及发现问题后的处理动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十一条 生产经营单位应当将安全风险管控措施落实情况作为安全生产检查的重要内容，加强对安全风险管控措施落实情况的监督检查，及时处理监督检查中发现的问题。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DE3B8CF185FDADBDE4A5B8EAEF_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E1BD1AF9246C3A5A3BC3D335"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "dfac4b2485ee26c699c08088e4852820c4d4b6a141e54bf2922f090149997887",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，生产经营单位未将安全风险管控措施落实情况作为安全生产检查的重要内容，加强对安全风险管控措施落实情况的监督检查等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DE3B8CF185FDADBDE4A5B8EAEF_1",
+    "keywords": [
+      "生产经营单位未将安全风险管控措施落实情况作为安全生产检查的重要内容",
+      "加强对安全风险管控措施落实情况的监督检查等"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位将安全风险管控措施落实情况作为安全生产检查的重要内容，加强对安全风险管控措施落实情况的监督检查等。整改后由符合相应要求的人员或机构实施必要的检查、检测、检验、评价或验收，对发现的问题闭环整改，并保存结果和复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位未将安全风险管控措施落实情况作为安全生产检查的重要内容，加强对安全风险管控措施落实情况的监督检查等"
+  }
 }

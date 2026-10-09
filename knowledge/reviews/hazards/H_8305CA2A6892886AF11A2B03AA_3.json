@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8305CA2A6892886AF11A2B03AA_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a00871d64209a9ad585a49d3132e924c94e89b17fbedc566eb27483d589baeb8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_C79205A35F87DD226C0913AB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "6ceb51d11dbef7c6fd722def329098b47286aef47b246761cae2278e5cb15706",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确记录对象，删除条款未规定的频次要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "电梯制造单位对调查和了解的情况，应当作出记录。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8305CA2A6892886AF11A2B03AA_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_C79205A35F87DD226C0913AB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "6ceb51d11dbef7c6fd722def329098b47286aef47b246761cae2278e5cb15706",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，电梯制造单位未对调查了解的情况作出记录，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8305CA2A6892886AF11A2B03AA_3",
+    "keywords": [
+      "电梯制造单位未对调查了解的情况作出记录"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯制造单位对调查了解的情况作出记录。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯制造单位未对调查了解的情况作出记录"
+  }
 }

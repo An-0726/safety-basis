@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_12_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a7cf68ccfa003fe9c566b83f50f001249f2ad35194fc733c8baec74343579315",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4C249A8AB5B60E5523A8DA1C"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "4c11563245c4ac1f8235cf41fb7aa3256d78b5e2e660801b149e1683856f4b9e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按原文落实周排查，不增加其他设备的工作事项。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "12 第十二条\n锅炉使用单位应当建立锅炉安全周排查制度。锅炉安全总监要每周至少组织一次风险隐患排查，分析研判锅炉使用安全管理情况，研究解决日管控中发现的问题，形成《每周锅炉安全排查治理报告》。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_12_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4C249A8AB5B60E5523A8DA1C"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "4c11563245c4ac1f8235cf41fb7aa3256d78b5e2e660801b149e1683856f4b9e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：锅炉使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，锅炉使用单位未建立锅炉安全周排查制度，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_12_1",
+    "keywords": [
+      "锅炉使用单位未建立锅炉安全周排查制度"
+    ],
+    "lifecycle": "active",
+    "measures": "锅炉使用单位建立锅炉安全周排查制度。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "锅炉使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "锅炉使用单位未建立锅炉安全周排查制度"
+  }
 }

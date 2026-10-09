@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_87B9C4E0DA4B11593CBEA900B1_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a1e29efcd599fd50a4f5da6481fb0a3387656b06c0cbf2a9e8e9d93b25bdd0ea",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "aaec08c02d06961f7cc5262e3c469f63357cbdd01de55a65ad6218ee6e951c1a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确现场人员和险情前提，纠正与内部报告无关的备案审批措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "遇到险情时，现场有关人员应当立即向本单位负责人报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_87B9C4E0DA4B11593CBEA900B1_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_5AB1E8798A56B0D671EEFC83"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "aaec08c02d06961f7cc5262e3c469f63357cbdd01de55a65ad6218ee6e951c1a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，遇到险情时，现场有关人员未立即向本单位负责人报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_87B9C4E0DA4B11593CBEA900B1_5",
+    "keywords": [
+      "遇到险情时",
+      "现场有关人员未立即向本单位负责人报告"
+    ],
+    "lifecycle": "active",
+    "measures": "遇到险情时，现场有关人员立即向本单位负责人报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "遇到险情时，现场有关人员未立即向本单位负责人报告"
+  }
 }

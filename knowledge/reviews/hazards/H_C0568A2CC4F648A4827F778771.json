@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C0568A2CC4F648A4827F778771",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d3c341e1f55829079753a56c54f55b1ea7112f2a63385816b5746e5683dc4c1c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "1f7840aa36681b3ab7e4eb0df782c173f9644965a7a8825006d013e49ff3e7c5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除本条未记载的反应和污染后果，保留分类收集及妥善处理两项要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "危险废物贮存过程产生的液态废物和固态废物应分类收集，按其环境管理要求妥善处理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C0568A2CC4F648A4827F778771",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "1f7840aa36681b3ab7e4eb0df782c173f9644965a7a8825006d013e49ff3e7c5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "危险废物贮存过程产生的液态废物和固态废物未分类收集，也未按其环境管理要求妥善处理，混存可能导致不相容废物发生反应或造成环境污染。",
+    "id": "H_C0568A2CC4F648A4827F778771",
+    "keywords": [
+      "危险废物贮存过程产生的液态废物和固态废物",
+      "未分类收集",
+      "按其环境管理要求妥善处理"
+    ],
+    "lifecycle": "active",
+    "measures": "对危险废物贮存过程产生的液态废物和固态废物分类收集，并按环境管理要求妥善处理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物贮存过程产生的液态废物和固态废物，未分类收集，按其环境管理要求妥善处理"
+  }
 }

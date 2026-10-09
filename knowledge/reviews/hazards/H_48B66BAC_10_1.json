@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ed94df540337ac9a5db54c7019792599dfe4518220ee1032c4443fb9a2ad4fd9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3AF82859FC2FE8A4913E953A"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "039e72a0dce4e3efb77528210c3cc138b187b8fa0e810a12d8ff2ed21fb5dbe5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "10 第十条\n工贸企业应当制定有限空间作业现场处置方案，按规定组织演练，并进行演练效果评估。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3AF82859FC2FE8A4913E953A"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "039e72a0dce4e3efb77528210c3cc138b187b8fa0e810a12d8ff2ed21fb5dbe5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "经资料及履职情况核查，工贸企业未制定有限空间作业现场处置方案，按规定组织演练，并进行演练效果评估，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_48B66BAC_10_1",
+    "keywords": [
+      "工贸企业未制定有限空间作业现场处置方案",
+      "按规定组织演练",
+      "并进行演练效果评估"
+    ],
+    "lifecycle": "active",
+    "measures": "工贸企业制定有限空间作业现场处置方案，按规定组织演练，并进行演练效果评估。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "工贸企业未制定有限空间作业现场处置方案，按规定组织演练，并进行演练效果评估"
+  }
 }

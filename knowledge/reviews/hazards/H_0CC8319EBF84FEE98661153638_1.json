@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_0CC8319EBF84FEE98661153638_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "868198585803eae5cb32150cb344f019b88f7057f0a514ab09adcc7e9920bc4f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_D2BC4D6804C777A8E7C897D4"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b7a9c04278aa518eb27bd29d8f972f4606e42c8a51269fd8ac463aab7433eb50",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "压缩标题并聚焦危害知悉义务，不附加条文未规定的检测或防护项目。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十二条 用人单位对采用的技术、工艺、设备、材料，应当知 悉其产生的职业病危害",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_0CC8319EBF84FEE98661153638_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_D2BC4D6804C777A8E7C897D4"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b7a9c04278aa518eb27bd29d8f972f4606e42c8a51269fd8ac463aab7433eb50",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "经资料和执行情况核查，用人单位对采用的技术、工艺、设备、材料，未知悉其产生的职业病危害，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_0CC8319EBF84FEE98661153638_1",
+    "keywords": [
+      "用人单位对采用的技术",
+      "工艺",
+      "设备",
+      "材料",
+      "未知悉其产生的职业病危害"
+    ],
+    "lifecycle": "active",
+    "measures": "用人单位对采用的技术、工艺、设备、材料，知悉其产生的职业病危害。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位对采用的技术、工艺、设备、材料，未知悉其产生的职业病危害"
+  }
 }

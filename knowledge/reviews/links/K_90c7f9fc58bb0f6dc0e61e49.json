@@ -5,12 +5,12 @@
   "decision": "verified",
   "reviewedContentHash": "7b8d006a85ca3833578395033fe408b1645741d39d77b512a640ed6ce031ef1b",
   "contextHashes": {
-    "hazard": "19412683d6b660e9c010ec7cce36a4bf4a2738c79edc8bfe7962b6bd9382c0a2",
+    "hazard": "1fbcfc81c08a08f9a1fb464fe54de4c754d6fb96b944e8d299b563fa5c8134e6",
     "clause": "4b5944f0ee1fa7b95aee2a56eba8a4ca72a48e403561c13dd78005a14d81ddbf"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "安全生产法第24条第2款要求从业人员一百人以下的生产经营单位配备专职或兼职安全生产管理人员，与Hazard从业人员不足一百人未配备兼职/专职安全管理人员直接对应。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_MATCH"
   ],
@@ -24,5 +24,33 @@
     "v3Reason": "[C022] 隐患为从业人员不足一百人的生产经营单位未配备专职或兼职安全生产管理人员，安全生产法第二十四条第二款规定从业人员在一百人以下的应当配备专职或者兼职的安全生产管理人员，语义完全对应。",
     "v3Result": "passed"
   },
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_90c7f9fc58bb0f6dc0e61e49",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "7b8d006a85ca3833578395033fe408b1645741d39d77b512a640ed6ce031ef1b",
+    "contextHashes": {
+      "hazard": "19412683d6b660e9c010ec7cce36a4bf4a2738c79edc8bfe7962b6bd9382c0a2",
+      "clause": "4b5944f0ee1fa7b95aee2a56eba8a4ca72a48e403561c13dd78005a14d81ddbf"
+    },
+    "checkedAt": "2026-09-10T12:00:00+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "安全生产法第24条第2款要求从业人员一百人以下的生产经营单位配备专职或兼职安全生产管理人员，与Hazard从业人员不足一百人未配备兼职/专职安全管理人员直接对应。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_MATCH"
+    ],
+    "evidenceRefs": [
+      "E_7a38c57463cdd138ed3836d217496abcf59064c229056324132a12afac77274b"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VRF_7fac442bb2ef50e413b40065_220",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次",
+      "v3Reason": "[C022] 隐患为从业人员不足一百人的生产经营单位未配备专职或兼职安全生产管理人员，安全生产法第二十四条第二款规定从业人员在一百人以下的应当配备专职或者兼职的安全生产管理人员，语义完全对应。",
+      "v3Result": "passed"
+    },
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

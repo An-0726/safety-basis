@@ -1,69 +1,121 @@
 {
-  "checkedAt": "2026-10-03",
-  "decision": "verified",
   "entityId": "H_D7F4B2B8F70D67B625BE3E5E95_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "343aa6884dc0653c26d335caa03c8fecedf471aa400cd07b8a7d570a7d8959f7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_CITATION_JS2023_20261002"
   ],
-  "reason": "江苏省生产经营单位委托开展安全生产培训即触发委托方的监督和保证质量义务；受托机构是否具备培训条件是另行核实的要求，不得因其不具备条件而免除委托方责任。",
-  "reviewType": "content",
-  "reviewedContentHash": "ec57d3ed444ac76433e679d9cb7be25ba4b849e586320b7ad65e9d7f3eab7f5c",
-  "reviewer": "Codex条款结构逐项复核20261003",
-  "locator": "第二十一条第二款",
-  "reviewedFields": [
-    "/conditions",
-    "/description",
-    "/measures",
-    "/places",
-    "/title"
-  ],
-  "reviewedValues": {
-    "/conditions": "适用于江苏省行政区域内生产经营单位委托开展安全生产培训的情形；委托方应对培训工作进行监督并保证培训质量。另应选择具备安全生产培训条件的机构，不能因受托机构不具备培训条件而免除委托方的监督和质量责任。",
-    "/description": "江苏省生产经营单位委托开展安全生产培训时，存在未对培训工作进行监督或者未保证培训质量的情形；受托机构是否具备培训条件应另行核实，不影响委托方监督和质量责任。",
-    "/measures": "委托具备安全生产培训条件的机构开展培训，对培训工作进行监督，保证培训质量；核对委托内容与实际培训实施情况。",
-    "/places": [
-      "江苏省行政区域内生产经营单位委托安全生产培训活动"
-    ],
-    "/title": "生产经营单位委托培训的，未对培训工作进行监督或者未保证培训质量"
-  },
-  "fieldEvidenceRefs": {
-    "/conditions": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/description": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/measures": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/places": [
-      "E_CITATION_JS2023_20261002"
-    ],
-    "/title": [
-      "E_CITATION_JS2023_20261002"
-    ]
-  },
+  "reason": "仅缩短标题，原描述具体并区分委托方责任，措施可执行。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-03",
     "decision": "verified",
     "entityId": "H_D7F4B2B8F70D67B625BE3E5E95_3",
     "entityType": "hazard",
     "evidenceRefs": [
-      "E_XLSX_FT_E97798E77AB03A0E228B048D"
+      "E_CITATION_JS2023_20261002"
     ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reason": "江苏省生产经营单位委托开展安全生产培训即触发委托方的监督和保证质量义务；受托机构是否具备培训条件是另行核实的要求，不得因其不具备条件而免除委托方责任。",
     "reviewType": "content",
-    "reviewedContentHash": "e672e4e0af8d5ca14dddb6df456011c89b2a7e83cff519df3dea5fc2f4c06845",
-    "reviewer": "Codex正式核验批次20260913"
+    "reviewedContentHash": "ec57d3ed444ac76433e679d9cb7be25ba4b849e586320b7ad65e9d7f3eab7f5c",
+    "reviewer": "Codex条款结构逐项复核20261003",
+    "locator": "第二十一条第二款",
+    "reviewedFields": [
+      "/conditions",
+      "/description",
+      "/measures",
+      "/places",
+      "/title"
+    ],
+    "reviewedValues": {
+      "/conditions": "适用于江苏省行政区域内生产经营单位委托开展安全生产培训的情形；委托方应对培训工作进行监督并保证培训质量。另应选择具备安全生产培训条件的机构，不能因受托机构不具备培训条件而免除委托方的监督和质量责任。",
+      "/description": "江苏省生产经营单位委托开展安全生产培训时，存在未对培训工作进行监督或者未保证培训质量的情形；受托机构是否具备培训条件应另行核实，不影响委托方监督和质量责任。",
+      "/measures": "委托具备安全生产培训条件的机构开展培训，对培训工作进行监督，保证培训质量；核对委托内容与实际培训实施情况。",
+      "/places": [
+        "江苏省行政区域内生产经营单位委托安全生产培训活动"
+      ],
+      "/title": "生产经营单位委托培训的，未对培训工作进行监督或者未保证培训质量"
+    },
+    "fieldEvidenceRefs": {
+      "/conditions": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/description": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/measures": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/places": [
+        "E_CITATION_JS2023_20261002"
+      ],
+      "/title": [
+        "E_CITATION_JS2023_20261002"
+      ]
+    },
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_D7F4B2B8F70D67B625BE3E5E95_3",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_E97798E77AB03A0E228B048D"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "e672e4e0af8d5ca14dddb6df456011c89b2a7e83cff519df3dea5fc2f4c06845",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousReviewFileSha256": "5ce2dd393cf9f7cd86f20c124b613b89fc941ec2bf99776b4e309a40bf939777",
+    "historySha256": "d850c3c7a50afbbb48eab94612efcfac377bbb24ba2ef66a49d96a808d97039c",
+    "previousEntity": {
+      "aliases": [],
+      "category": "安全教育培训",
+      "conditions": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
+      "description": "经资料和执行情况核查，生产经营单位委托培训的，未对培训工作进行监督，未保证培训质量，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_D7F4B2B8F70D67B625BE3E5E95_3",
+      "keywords": [
+        "生产经营单位委托培训的",
+        "未对培训工作进行监督",
+        "未保证培训质量"
+      ],
+      "lifecycle": "active",
+      "measures": "生产经营单位委托培训的，对培训工作进行监督，保证培训质量。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动"
+      ],
+      "title": "生产经营单位委托培训的，未对培训工作进行监督，未保证培训质量"
+    },
+    "previousEntityFileSha256": "c24ccd680edaf363c42cec2b22d34eb3d5ff5bfb5ebb25f7357f4efeb20312bf",
+    "reviewEvidence": {
+      "checkedAt": "2026-10-03",
+      "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
+      "currentnessEvidence": "official/jiangsu-status-web-readback.json",
+      "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
+      "lawVersionId": "L020",
+      "siteFactsVerified": false,
+      "profileAdmission": false,
+      "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
+      "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
+      "operativeLocator": "第二十一条第二款",
+      "completeOfficialQuote": "第二十一条 生产经营单位应当依法对下列人员在上岗前进行安全操作规程和安全操作技能的教育和培训，并做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业：\n\n（一）新进从业人员；\n\n（二）离岗六个月以上或者换岗的从业人员；\n\n（三）涉及采用新工艺、新技术、新材料或者使用新设备的从业人员。\n\n生产经营单位可以自主组织培训，也可以委托具备安全生产培训条件的机构进行培训。生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。\n\n从业人员应当按照要求接受安全生产教育和培训，掌握本职工作所需的安全生产知识，提高安全操作技能，增强事故预防和应急处理能力。",
+      "scopeDecision": "江苏省生产经营单位委托开展安全生产培训即触发委托方的监督和保证质量义务；受托机构是否具备培训条件是另行核实的要求，不得因其不具备条件而免除委托方责任。"
+    },
+    "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
   },
-  "previousReviewFileSha256": "5ce2dd393cf9f7cd86f20c124b613b89fc941ec2bf99776b4e309a40bf939777",
-  "historySha256": "d850c3c7a50afbbb48eab94612efcfac377bbb24ba2ef66a49d96a808d97039c",
-  "previousEntity": {
+  "previousDefinition": {
     "aliases": [],
     "category": "安全教育培训",
-    "conditions": "适用于江苏省行政区域内，且依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动",
-    "description": "经资料和执行情况核查，生产经营单位委托培训的，未对培训工作进行监督，未保证培训质量，实际状态与直接依据规定的安全要求不一致。",
+    "conditions": "适用于江苏省行政区域内生产经营单位委托开展安全生产培训的情形；委托方应对培训工作进行监督并保证培训质量。另应选择具备安全生产培训条件的机构，不能因受托机构不具备培训条件而免除委托方的监督和质量责任。",
+    "description": "江苏省生产经营单位委托开展安全生产培训时，存在未对培训工作进行监督或者未保证培训质量的情形；受托机构是否具备培训条件应另行核实，不影响委托方监督和质量责任。",
     "id": "H_D7F4B2B8F70D67B625BE3E5E95_3",
     "keywords": [
       "生产经营单位委托培训的",
@@ -71,29 +123,13 @@
       "未保证培训质量"
     ],
     "lifecycle": "active",
-    "measures": "生产经营单位委托培训的，对培训工作进行监督，保证培训质量。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "measures": "委托具备安全生产培训条件的机构开展培训，对培训工作进行监督，保证培训质量；核对委托内容与实际培训实施情况。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
-      "江苏省行政区域内生产经营单位从业人员培训、考核和资格管理活动"
+      "江苏省行政区域内生产经营单位委托安全生产培训活动"
     ],
-    "title": "生产经营单位委托培训的，未对培训工作进行监督，未保证培训质量"
-  },
-  "previousEntityFileSha256": "c24ccd680edaf363c42cec2b22d34eb3d5ff5bfb5ebb25f7357f4efeb20312bf",
-  "reviewEvidence": {
-    "checkedAt": "2026-10-03",
-    "officialSourceUrl": "https://www.jsrd.gov.cn/qwfb/sjfg/202304/t20230410_1221265.shtml",
-    "currentnessEvidence": "official/jiangsu-status-web-readback.json",
-    "currentnessEvidenceSha256": "8238e4b2010acdfec95de6c518b8e2ec2a143601a4c41ac7fb4713c2249b90b9",
-    "lawVersionId": "L020",
-    "siteFactsVerified": false,
-    "profileAdmission": false,
-    "limits": "本次核验限既有法版本及列明条款、责任主体和适用分支；不声明全库语义验收、企业现场合规、专业机构认证或公开profile准入。",
-    "completeOfficialArticleArchiveSha256": "81fee4976f6e51ef601eaf38b65fe694db58acf7833f7b3af5e0c408ecf68e00",
-    "operativeLocator": "第二十一条第二款",
-    "completeOfficialQuote": "第二十一条 生产经营单位应当依法对下列人员在上岗前进行安全操作规程和安全操作技能的教育和培训，并做好记录和考核；未经安全生产教育和培训合格的，不得上岗作业：\n\n（一）新进从业人员；\n\n（二）离岗六个月以上或者换岗的从业人员；\n\n（三）涉及采用新工艺、新技术、新材料或者使用新设备的从业人员。\n\n生产经营单位可以自主组织培训，也可以委托具备安全生产培训条件的机构进行培训。生产经营单位委托培训的，应当对培训工作进行监督，保证培训质量。\n\n从业人员应当按照要求接受安全生产教育和培训，掌握本职工作所需的安全生产知识，提高安全操作技能，增强事故预防和应急处理能力。",
-    "scopeDecision": "江苏省生产经营单位委托开展安全生产培训即触发委托方的监督和保证质量义务；受托机构是否具备培训条件是另行核实的要求，不得因其不具备条件而免除委托方责任。"
-  },
-  "notes": "实质核验范围限reviewedFields、完整条款及当前明确分支；完整旧记录及旧审核保留。未认证其他未变字段、未核现场事实或整体资料库。"
+    "title": "生产经营单位委托培训的，未对培训工作进行监督或者未保证培训质量"
+  }
 }

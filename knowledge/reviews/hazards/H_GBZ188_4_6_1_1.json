@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_GBZ188_4_6_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "cf9ec87a05f28a13568511e83781a24508da39b75b92bbe9ef78f66424985c12",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1B7FC945EFDEF1614A2EA348"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "210d8979de0a903a59f1fdf6f7251e5c30bec2f01e4c6db28970c35ddddf8b1a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "直接呈现有害作业已开始而上岗前检查未完成的时点缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "上岗前职业健康检查均为强制性职业健康检查，应在开始从事有害作业前完成。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_GBZ188_4_6_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1B7FC945EFDEF1614A2EA348"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "210d8979de0a903a59f1fdf6f7251e5c30bec2f01e4c6db28970c35ddddf8b1a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，未在劳动者开始接触职业病危害作业前完成上岗前职业健康检查，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_GBZ188_4_6_1_1",
+    "keywords": [
+      "未在劳动者开始接触职业病危害作业前完成上岗前职业健康检查"
+    ],
+    "lifecycle": "active",
+    "measures": "在劳动者开始接触职业病危害作业前完成上岗前职业健康检查。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "未在劳动者开始接触职业病危害作业前完成上岗前职业健康检查"
+  }
 }

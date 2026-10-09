@@ -1,13 +1,63 @@
 {
-  "checkedAt": "2026-09-26T18:47:04+08:00",
-  "decision": "verified",
   "entityId": "H_C372C4B450D94D7CACD38CDBD0",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "70a097d0e00eb9c7fc73dbb7a7220faf8cd8ceeb2b825b9394b3fd842a09b07f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GB55037_JS_FIRE_FULLTEXT_20260926"
   ],
-  "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
-  "reviewType": "content",
-  "reviewedContentHash": "5a84f04b1dca945f1ad00f20fce814c2036af419ab903a1bd31e922e78f9cedc",
-  "reviewer": "Codex 消防原文及直接适用性复核 20260926"
+  "reason": "原描述已指出半径缺陷，仅补适用条件和可执行措施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "转弯半径应满足消防车转弯的要求",
+  "previousReview": {
+    "checkedAt": "2026-09-26T18:47:04+08:00",
+    "decision": "verified",
+    "entityId": "H_C372C4B450D94D7CACD38CDBD0",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GB55037_JS_FIRE_FULLTEXT_20260926"
+    ],
+    "reason": "2026-09-26逐项核对实际义务与完整原文，纠正原批量关联的条号及适用性；不得依赖历史错误引用。",
+    "reviewType": "content",
+    "reviewedContentHash": "5a84f04b1dca945f1ad00f20fce814c2036af419ab903a1bd31e922e78f9cedc",
+    "reviewer": "Codex 消防原文及直接适用性复核 20260926"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "消防车道转弯半径不满足消防车转弯的要求。",
+    "id": "H_C372C4B450D94D7CACD38CDBD0",
+    "keywords": [
+      "2转弯半径",
+      "未满足消防车转弯的要求",
+      "2",
+      "转",
+      "弯",
+      "半",
+      "径",
+      ",",
+      "未",
+      "满",
+      "足",
+      "消",
+      "防",
+      "车",
+      "的",
+      "要",
+      "求"
+    ],
+    "lifecycle": "active",
+    "measures": "消除“消防车道转弯半径不满足消防车转弯要求”隐患；完成整改后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原标题开头带法条款项序号（如“4…”“5…”）或破折号，读起来像条文而非隐患，已去掉序号并顺理为缺陷表述；法律依据与整改措施未改动。原 conditions 字段记录的引用依据为：依据：《建筑设计防火规范》(GB50016-2014,2018版)第7.1)8条\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "消防车道转弯半径不满足消防车转弯要求"
+  }
 }

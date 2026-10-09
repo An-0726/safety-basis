@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_539E0915B38B64780FF185BE28_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "87753f6599930cf4150f25a74335e11ff53a1f293bf90c39107394631f13c3a5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_7DD8764DEF1202F7CDE4AB22"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "f1ae843b69e0abdeca74781f17edbac4dc39698fe55be008d7fcfead73b1133e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "纠正原措施将不符合要求的治理触发条件反写为符合要求的错误，保留治理、停作业和复作业条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "发现工作场所职业病危害因素不符合国家职业卫生标准和卫生要求 时，用人单位应当立即采取相应治理措施，仍然达不到国家职业卫生标 准和卫生要求的，必须停止存在职业病危害因素的作业；职业病危害因 素经治理后，符合国家职业卫生标准和卫生要求的，方可重新作业。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_539E0915B38B64780FF185BE28_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_7DD8764DEF1202F7CDE4AB22"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "f1ae843b69e0abdeca74781f17edbac4dc39698fe55be008d7fcfead73b1133e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，发现工作场所职业病危害因素不符合国家职业卫生标准和卫生要求时，用人单位未立即采取相应治理措施，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_539E0915B38B64780FF185BE28_4",
+    "keywords": [
+      "发现工作场所职业病危害因素不符合国家职业卫生标准和卫生要求时",
+      "用人单位未立即采取相应治理措施"
+    ],
+    "lifecycle": "active",
+    "measures": "发现工作场所职业病危害因素调整至符合国家职业卫生标准和卫生要求时，用人单位立即采取相应治理措施。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "发现工作场所职业病危害因素不符合国家职业卫生标准和卫生要求时，用人单位未立即采取相应治理措施"
+  }
 }

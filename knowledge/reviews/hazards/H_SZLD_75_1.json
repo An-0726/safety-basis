@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_75_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b5edfc5a0cb162ce5cc04f34a7658f096f2b77e9e61c0403b9f9d423dc5c6efa",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_E3D223E4AEE0DE7FB022BAE8"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a90c124f2654efd057137530d2e347a759c6485c797ca699f9dad84ea5a6369f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "展开电梯动态机制中的风险清单和日周月制度。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "75 第七十五条\n电梯使用单位应当建立基于电梯安全风险防控的动态管理机制，结合本单位实际，落实自查要求，制定《电梯安全风险管控清单》，建立健全日管控、周排查、月调度工作制度和机制。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_75_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E3D223E4AEE0DE7FB022BAE8"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a90c124f2654efd057137530d2e347a759c6485c797ca699f9dad84ea5a6369f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，电梯使用单位未建立电梯安全风险防控动态管理机制和管控清单，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_SZLD_75_1",
+    "keywords": [
+      "电梯使用单位未建立电梯安全风险防控动态管理机制和管控清单"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯使用单位建立电梯安全风险防控动态管理机制和管控清单。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯使用单位未建立电梯安全风险防控动态管理机制和管控清单"
+  }
 }

@@ -3,11 +3,47 @@
   "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "b6022d92eb223889bf89a49eb520da90d05c6a88a14567df8160783827162ab0",
-  "checkedAt": "2026-09-26T09:27:01+08:00",
-  "reviewer": "ChatGPT",
+  "reviewedContentHash": "5f95c5786d9176358966bddb9a65936bd57ca10b9675be24fcfc8b7339cc7e77",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_GBT13869_2017"
   ],
-  "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  "reason": "删除原描述重复和正反句混杂，长标题压缩并补明接线对象。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "插头与插座应按规定正确接线，插座的保护接地极在任何情况下都应单独与保护接地线可靠连接，不得在插头(座)内将保护接地极与工作中性线连接在一起。",
+  "previousReview": {
+    "entityId": "H_B0A88B69CC0047CE8BF9D87EB6",
+    "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "b6022d92eb223889bf89a49eb520da90d05c6a88a14567df8160783827162ab0",
+    "checkedAt": "2026-09-26T09:27:01+08:00",
+    "reviewer": "ChatGPT",
+    "evidenceRefs": [
+      "E_GBT13869_2017"
+    ],
+    "reason": "2026真实检查表达补充为搜索别名；未因别名增加而新建实体或改变既有法律发布状态。"
+  },
+  "previousDefinition": {
+    "id": "H_B0A88B69CC0047CE8BF9D87EB6",
+    "title": "插头插座未按规定正确接线，保护接地极未单独与保护接地线可靠连接",
+    "description": "插头插座的安装插头与插座,未按规定正确接线,插座的保护接地极在任何情况下都,未单独与保护接地线可靠连接,不得在插头(座)内将保护接地极与工作中性线连接在一起",
+    "measures": "按规范正确接线，保护接地极单独与保护接地线可靠连接，不得与工作中性线连接。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "电气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [
+      "工业风扇保护接地插头被改成两孔插头"
+    ],
+    "keywords": [
+      "插头插座未按规定正确接线，保护接地极未单独与保护接地线可靠连接"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；2026-09-11 同步将整改措施改写为可执行动作。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.1.3条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+    "mergedInto": null
+  }
 }

@@ -3,20 +3,43 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "checkedAt": "2026-09-26T19:02:50+08:00",
-  "reason": "核出口标志灯第4.5.10条第1款：内侧上方居中；受限时允许门两侧且开门不得遮挡，不要求所有标志灯必须唯一正上方。",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "INSTALLATION_POSITION"
   ],
   "reviewedContentHash": "63315f2456662461b87895b71792c9dfe78bd62af0ee0bf651a64985d99c039b",
   "contextHashes": {
-    "hazard": "7b9d332a1092c9a4d535370c20a133db39f7eac444286775672bbe70c43eb600",
+    "hazard": "091eadaad67903c074349476e4307198c647be917bb3903efb6d9f4535266864",
     "clause": "5c0152ead973f7ecc46ad21d6d64e00d8c9fef5b745100980e48ec4e43348c50"
   },
   "evidenceRefs": [
     "E_GB51309_HENAN_GUIDE_20260926",
     "E_GB55036_SUPERSESSION_SH_20260926"
-  ]
+  ],
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_5FDE45315A65F96B358146",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "checkedAt": "2026-09-26T19:02:50+08:00",
+    "reason": "核出口标志灯第4.5.10条第1款：内侧上方居中；受限时允许门两侧且开门不得遮挡，不要求所有标志灯必须唯一正上方。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "INSTALLATION_POSITION"
+    ],
+    "reviewedContentHash": "63315f2456662461b87895b71792c9dfe78bd62af0ee0bf651a64985d99c039b",
+    "contextHashes": {
+      "hazard": "7b9d332a1092c9a4d535370c20a133db39f7eac444286775672bbe70c43eb600",
+      "clause": "5c0152ead973f7ecc46ad21d6d64e00d8c9fef5b745100980e48ec4e43348c50"
+    },
+    "evidenceRefs": [
+      "E_GB51309_HENAN_GUIDE_20260926",
+      "E_GB55036_SUPERSESSION_SH_20260926"
+    ]
+  }
 }

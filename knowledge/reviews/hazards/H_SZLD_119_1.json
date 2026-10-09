@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_119_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e2bc6e319954356f17bd5c919df51399e309ee3b7d89c0c1016f38767326381a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_81D3171FFA73C429BE4FE5F6"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "df70f614f259bfdc5a27dd38db8c8e5526009d8c44a330dfe1513de12840a7d8",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "具体描述人员缺配，删除防护和设备档案套话。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "大型游乐设施使用单位应当依法配备大型游乐设施安全总监和大型游乐设施安全员，明确大型游乐设施安全总监和大型游乐设施安全员的岗位职责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_119_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_81D3171FFA73C429BE4FE5F6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "df70f614f259bfdc5a27dd38db8c8e5526009d8c44a330dfe1513de12840a7d8",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：大型游乐设施使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，大型游乐设施使用单位未配备安全总监和安全员，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_SZLD_119_1",
+    "keywords": [
+      "大型游乐设施使用单位未配备安全总监和安全员"
+    ],
+    "lifecycle": "active",
+    "measures": "大型游乐设施使用单位配备安全总监和安全员。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "大型游乐设施使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "大型游乐设施使用单位未配备安全总监和安全员"
+  }
 }

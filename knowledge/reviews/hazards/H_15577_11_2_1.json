@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_11_2_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4a583a2265cc847fb99e6c05de1abc62fa2e6c0a93e7db7e76d73ff30001ca9e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "26f78dbbc39ebc9ca10b693798c890a196fc5bb0556802c201b66f2ffe8c1d15",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留两类任一适用的工艺前提，整改围绕呼吸保护装置配备及有效性。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在工艺流程中使用惰性气体或可能释放出有毒气体的场所，应配备可保证作业人员安全的呼吸保护装置。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_11_2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "26f78dbbc39ebc9ca10b693798c890a196fc5bb0556802c201b66f2ffe8c1d15",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，在工艺流程中使用惰性气体或可能释放出有毒气体的场所，未配备可保证作业人员安全的呼吸保护装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_15577_11_2_1",
+    "keywords": [
+      "在工艺流程中使用惰性气体或可能释放出有毒气体的场所",
+      "未配备可保证作业人员安全的呼吸保护装置"
+    ],
+    "lifecycle": "active",
+    "measures": "在工艺流程中使用惰性气体或可能释放出有毒气体的场所，配备可保证作业人员安全的呼吸保护装置。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "在工艺流程中使用惰性气体或可能释放出有毒气体的场所，未配备可保证作业人员安全的呼吸保护装置"
+  }
 }

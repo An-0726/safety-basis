@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-09-30",
+  "checkedAt": "2026-10-09",
   "clauseId": "C_XLSX_FT_A1375937E6BBD3AB3B8885CE",
   "contextHashes": {
-    "clause": "fda841f2e69e0a7448642bc3a114b3ac6bc024a8f626404ee2c1c0f0b37c0aae",
-    "hazard": "3422ebdfc18280fb963525adca545bb643322037e009becba90a9159853c111b"
+    "hazard": "064ba8a3f2a477a97dbc8e3ab9b50a2cbfc66dd3aab12eb66b7ce0de1005b4d0",
+    "clause": "fda841f2e69e0a7448642bc3a114b3ac6bc024a8f626404ee2c1c0f0b37c0aae"
   },
   "decision": "verified",
   "entityId": "K_XLSX_FT_DD461077A70ADF5DAD2D90E7",
@@ -17,28 +17,49 @@
     ]
   },
   "historySha256": "0d169cd438b34807f21ada0989e72f4a211650ed496489aceb1af7bdbb9a5381",
-  "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
   "previousReview": {
     "checkedAt": "2026-09-30",
+    "clauseId": "C_XLSX_FT_A1375937E6BBD3AB3B8885CE",
     "contextHashes": {
       "clause": "fda841f2e69e0a7448642bc3a114b3ac6bc024a8f626404ee2c1c0f0b37c0aae",
-      "hazard": "24579dc2b99cf74f866ba9ffddfc8d25740393fe20ff7d0f224253d0a70b9068"
+      "hazard": "3422ebdfc18280fb963525adca545bb643322037e009becba90a9159853c111b"
     },
     "decision": "verified",
     "entityId": "K_XLSX_FT_DD461077A70ADF5DAD2D90E7",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_FT_120E9E58B16FD0CF11DDACB0",
-      "E_REMEDIATION_20260930_MEM13"
+      "E_SCOPE_20260930_MEM13_2_3_15_22"
     ],
-    "notes": "本次审核限所列精确修正及对应条款的对象、义务方向、适用边界，不认证未变字段、全部分类、全库或现场状态。对应隐患：H_48B66BAC_15_4；条款：C_XLSX_FT_A1375937E6BBD3AB3B8885CE；保留direct角色。",
-    "reason": "第13号令15条第二款要求制止未做好安全措施的盲目施救，事故应依预案科学处置。新措施恢复未做好条件；监护人职责仍不得进入有限空间参与作业，并非赋予其未经防护入内救人的许可。",
+    "fieldEvidenceRefs": {
+      "/applicability": [
+        "E_SCOPE_20260930_MEM13_2_3_15_22"
+      ]
+    },
+    "historySha256": "0d169cd438b34807f21ada0989e72f4a211650ed496489aceb1af7bdbb9a5381",
+    "notes": "本次逐项判断仅覆盖reviewedFields中列明的最终精确源修订及对应直接条款适用边界。全实体hash仅为内容绑定，不等于认证所有未变字段、行业分类、profile准入、全库或现场事实。previousReview须完整原样保留，不能用新reason覆盖旧记录。",
+    "previousReviewFileSha256": "1791cb93f01dfbcb6398e17157d5fe98d102941481bc916ada173ae6996c47fe",
+    "reason": "C_XLSX_FT_A1375937E6BBD3AB3B8885CE的第15条第二款末句直接支持该制止义务。发生含正在发生的危险施救，不要求已完成进入或已造成伤亡；原文未将被制止者限为原作业人员，最终applicability也未加入该限定。一般监护、预案培训等其他义务仍可在无事故时核查，本事件子项并不免除它们。",
+    "reviewEvidence": {
+      "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
+      "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
+      "profileAdmission": false,
+      "siteFactsVerified": false,
+      "sourceScopeAssessmentSha256": "5466d8fb742dc40091640de0029513a6c4cc7b072d685b0f64236707429bd947"
+    },
     "reviewType": "applicability",
-    "reviewedContentHash": "f74a54efbee2fee8a02daa5d432ce76e9d6ede9dc9ff41c29c70c3470e7ae5c3",
-    "reviewer": "Codex逐项内容复核20260930"
+    "reviewedContentHash": "18d9ab69e1338a8bed1fb707440524560b97e899808e8d994ab41a5f2b38fd4d",
+    "reviewedFields": [
+      "/applicability"
+    ],
+    "reviewedValues": {
+      "/applicability": "仅适用于工贸企业有限空间作业中发生未做好安全措施盲目施救行为，核查监护人员是否予以制止。平时预案、培训或演练不能证明曾发生该事件；不得为核验而制造危险救援。监护职责不赋予未经安全保障进入有限空间救援的许可。"
+    },
+    "reviewer": "Codex十三项源范围独立复核20260930",
+    "roleRetained": "direct"
   },
   "previousReviewFileSha256": "1791cb93f01dfbcb6398e17157d5fe98d102941481bc916ada173ae6996c47fe",
-  "reason": "C_XLSX_FT_A1375937E6BBD3AB3B8885CE的第15条第二款末句直接支持该制止义务。发生含正在发生的危险施救，不要求已完成进入或已造成伤亡；原文未将被制止者限为原作业人员，最终applicability也未加入该限定。一般监护、预案培训等其他义务仍可在无事故时核查，本事件子项并不免除它们。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewEvidence": {
     "implementationBaselineCommit": "a35a5cf1a5c395f70df2db0f1e6a940d93a8fd70",
     "individualSourceDecisionsSha256": "613f5b383f64e30e5dc0b5b8b6dba087bc03009d2636ad0363e6e9fa24178a5f",
@@ -54,6 +75,6 @@
   "reviewedValues": {
     "/applicability": "仅适用于工贸企业有限空间作业中发生未做好安全措施盲目施救行为，核查监护人员是否予以制止。平时预案、培训或演练不能证明曾发生该事件；不得为核验而制造危险救援。监护职责不赋予未经安全保障进入有限空间救援的许可。"
   },
-  "reviewer": "Codex十三项源范围独立复核20260930",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "roleRetained": "direct"
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_644EEE5EC12221D39672FE26E2_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "8f472a96afca025247d9b05aad24b93499384db234142441a4445864bddb6269",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_93AC33EC11E80A9DD9F94677"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "f1761e064355bbdfd5e126e2cc6bc4588b8e727241271f0d07fdb4b8f6e764fc",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "制定防火安全管理制度和紧急安全疏散方案，设立消防安全疏散引导员",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_644EEE5EC12221D39672FE26E2_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_93AC33EC11E80A9DD9F94677"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "f1761e064355bbdfd5e126e2cc6bc4588b8e727241271f0d07fdb4b8f6e764fc",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，公共娱乐场所未制定防火安全管理制度和紧急安全疏散方案，未设立消防安全疏散引导员，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_644EEE5EC12221D39672FE26E2_1",
+    "keywords": [
+      "公共娱乐场所未制定防火安全管理制度和紧急安全疏散方案",
+      "未设立消防安全疏散引导员"
+    ],
+    "lifecycle": "active",
+    "measures": "公共娱乐场所制定防火安全管理制度和紧急安全疏散方案，设立消防安全疏散引导员。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "公共娱乐场所未制定防火安全管理制度和紧急安全疏散方案，未设立消防安全疏散引导员"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_11DE14FC27F7E94AAD650FEA7C_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e777ebb10db010947b8bdeb1fb39ca0db3dd888d4af237ae9c176295d48d5271",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_64CBDD5020267664E0F362D9"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "a2ce86d521db367da2d8b1bd358c923c58fb6877dfbfb1a7194b49e38b90829a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "学校应当针对不同年龄阶段学生的认知特点，开展各种形式的日常消防安全教育。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_11DE14FC27F7E94AAD650FEA7C_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_64CBDD5020267664E0F362D9"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "a2ce86d521db367da2d8b1bd358c923c58fb6877dfbfb1a7194b49e38b90829a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料和执行情况核查，学校未针对不同年龄阶段学生的认知特点，开展各种形式的日常消防安全教育，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_11DE14FC27F7E94AAD650FEA7C_1",
+    "keywords": [
+      "学校未针对不同年龄阶段学生的认知特点",
+      "开展各种形式的日常消防安全教育"
+    ],
+    "lifecycle": "active",
+    "measures": "学校针对不同年龄阶段学生的认知特点，开展各种形式的日常消防安全教育。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "学校未针对不同年龄阶段学生的认知特点，开展各种形式的日常消防安全教育"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_YJF_4_7_1",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "0a4fa8aa0b2f39d65790ebf1ab0d0a1180cd92c717e56dc14997dea452a1e250",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "7a109ea923cb34a513690b416f3e42f9f0d464c6fb009360832732f265f2254f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_MEE_HJ2025_2012"
-  ]
+  ],
+  "reason": "原文仅引用HJ519，库内无该标准条款，改写限于收集贮存运输核对、纠正和复核，不补写其未提供的具体设施或参数。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "废铅酸蓄电池的收集、贮存和运输应按HJ519执行。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_YJF_4_7_1",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "0a4fa8aa0b2f39d65790ebf1ab0d0a1180cd92c717e56dc14997dea452a1e250",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MEE_HJ2025_2012"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "废铅酸蓄电池的收集、贮存和运输应按HJ519执行。（第4.7条）。",
+    "id": "H_YJF_4_7_1",
+    "keywords": [
+      "废铅酸蓄电池的收集",
+      "贮存和运输未按HJ519执行"
+    ],
+    "lifecycle": "active",
+    "measures": "废铅酸蓄电池的收集、贮存和运输应按HJ519执行。（依据 第4.7条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所",
+      "通用场所"
+    ],
+    "title": "废铅酸蓄电池的收集、贮存和运输未按HJ519执行"
+  }
 }

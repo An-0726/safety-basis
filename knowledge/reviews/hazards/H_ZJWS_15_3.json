@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_15_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d25195fee01f119cd10c0e36cd0e6659d20c0b69c797a226d6873c9a3fb85468",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_F62DB0D15F369585DDE156DC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f920c5d63702803f934e182216fc3b38f181c7a272de7010dfabef65a23c8781",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文完整列明的说明内容呈现缺项，删除通用评价。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "警示说明应当载明产生职业病危害的种类、后果、预防和应急处置措施等内容。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_15_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_F62DB0D15F369585DDE156DC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f920c5d63702803f934e182216fc3b38f181c7a272de7010dfabef65a23c8781",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，职业病危害警示说明未载明危害种类、后果和应急措施等内容，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_15_3",
+    "keywords": [
+      "职业病危害警示说明未载明危害种类",
+      "后果和应急措施等内容"
+    ],
+    "lifecycle": "active",
+    "measures": "职业病危害警示说明载明危害种类、后果和应急措施等内容。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业病危害警示说明未载明危害种类、后果和应急措施等内容"
+  }
 }

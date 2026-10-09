@@ -5,12 +5,12 @@
   "decision": "verified",
   "reviewedContentHash": "0ae29f560e24bf9fffcc811347535a722ee699d18f50201b60afedd92f9a5eeb",
   "contextHashes": {
-    "hazard": "2f770390958a5c1744fbf2a7ca0bf104b24216c0c595d4cc54572c290e5ec7d7",
+    "hazard": "6df403bed1615a7c432f18c40cdc13d4b8a7cc1c04ea17c340182d72301e0bce",
     "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
   },
-  "checkedAt": "2026-09-10T15:00:00+08:00",
-  "reviewer": "Doubao-Agent-Sub3",
-  "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（未建立健全并落实本单位全员安全生产责任制，未加强安全生产标准化建设）。Clause C018（安全生产法第21条第（一）项：建立健全并落实全员安全生产责任制，加强安全生产标准化建设） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_MATCH",
     "SPLIT_REASSIGNED"
@@ -25,5 +25,34 @@
     "v3Reason": "隐患为对安全生产法第四条一般义务的违反，其文本逐项列明：建立健全全员安全生产责任制（C018）、组织制定并实施安全生产规章制度和操作规程（C019）、加大安全生产资金投入（C015）、构建安全风险分级管控和隐患排查治理双重预防机制（C020），均与对应条款直接对应。",
     "v3Result": "passed"
   },
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_012500360729ae5276213ac4",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "0ae29f560e24bf9fffcc811347535a722ee699d18f50201b60afedd92f9a5eeb",
+    "contextHashes": {
+      "hazard": "2f770390958a5c1744fbf2a7ca0bf104b24216c0c595d4cc54572c290e5ec7d7",
+      "clause": "aed065bbf0acfd97f9048752f395790b847b417dcf96fc58385abe403fe5aba9"
+    },
+    "checkedAt": "2026-09-10T15:00:00+08:00",
+    "reviewer": "Doubao-Agent-Sub3",
+    "reason": "【V4-split-20260910】复合隐患拆分后重判：本条 link 迁移至子隐患（未建立健全并落实本单位全员安全生产责任制，未加强安全生产标准化建设）。Clause C018（安全生产法第21条第（一）项：建立健全并落实全员安全生产责任制，加强安全生产标准化建设） 与该单一义务直接对应，role=direct 正确，applicability 理由充分，verified。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_MATCH",
+      "SPLIT_REASSIGNED"
+    ],
+    "evidenceRefs": [
+      "E_b47ab44398a36cb40eeb26fb6cc6c3f36798920358437afbfb272c8f4b5729bd"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VRF_da65b6cb17c1562b2925eb15_182",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次",
+      "v3Reason": "隐患为对安全生产法第四条一般义务的违反，其文本逐项列明：建立健全全员安全生产责任制（C018）、组织制定并实施安全生产规章制度和操作规程（C019）、加大安全生产资金投入（C015）、构建安全风险分级管控和隐患排查治理双重预防机制（C020），均与对应条款直接对应。",
+      "v3Result": "passed"
+    },
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

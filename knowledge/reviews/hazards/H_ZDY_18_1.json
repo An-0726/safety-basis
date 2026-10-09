@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZDY_18_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f631ab39a52eeb5aa76b86bb521fbaf411a8f949116341515338b7679fc0329d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_16115118ED663D7DDACD9257"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e5165a7df0da02ddc31b61a5e366b72ed24d6981c555c786c3fc300dee9fcecc",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "设置标志与写明处置办法均需落实。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "危险化学品单位应当在重大危险源所在场所设置明显的安全警示标志，写明紧急情况下的应急处置办法。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZDY_18_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_16115118ED663D7DDACD9257"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e5165a7df0da02ddc31b61a5e366b72ed24d6981c555c786c3fc300dee9fcecc",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，危险化学品单位未在重大危险源所在场所设置明显的安全警示标志，写明紧急情况下的应急处置办法，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZDY_18_1",
+    "keywords": [
+      "危险化学品单位未在重大危险源所在场所设置明显的安全警示标志",
+      "写明紧急情况下的应急处置办法"
+    ],
+    "lifecycle": "active",
+    "measures": "危险化学品单位在重大危险源所在场所设置明显的安全警示标志，写明紧急情况下的应急处置办法。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "危险化学品单位未在重大危险源所在场所设置明显的安全警示标志，写明紧急情况下的应急处置办法"
+  }
 }

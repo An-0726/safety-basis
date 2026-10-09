@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_11_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f44be13745e26b71f7152d29c3aa8a3e7edab8271262caaf6fe03f676144846b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_ED0C4A7052CD1A3491B034BC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "6f7d79e42942e3aa056e4091ad5a02bd298a44c8f32a5a3ca871924012766be6",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "区分巡检未执行与制度缺失，保留投入使用设备前提。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "锅炉安全员要每日根据《锅炉安全风险管控清单》，按照相关安全技术规范和本单位安全管理制度的要求，对投入使用的锅炉进行巡检，形成《每日锅炉安全检查记录》，对发现的安全风险隐患，应当立即采取防范措施，及时上报锅炉安全总监或者单位主要负责人。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_11_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_ED0C4A7052CD1A3491B034BC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "6f7d79e42942e3aa056e4091ad5a02bd298a44c8f32a5a3ca871924012766be6",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：锅炉使用、运行、维护检修或相关管理场景",
+    "description": "经资料及履职情况核查，锅炉安全员未每日按管控清单对投入使用的锅炉进行巡检，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_11_2",
+    "keywords": [
+      "锅炉安全员未每日按管控清单对投入使用的锅炉进行巡检"
+    ],
+    "lifecycle": "active",
+    "measures": "锅炉安全员每日按管控清单对投入使用的锅炉进行巡检。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "锅炉使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "锅炉安全员未每日按管控清单对投入使用的锅炉进行巡检"
+  }
 }

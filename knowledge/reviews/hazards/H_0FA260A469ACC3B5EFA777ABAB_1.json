@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H_0FA260A469ACC3B5EFA777ABAB_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9305fcfd0d42ddc50f5793679517f76c77bc9767957dd73aa650446f47683dad",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_MEM_SANTONGSHI"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "2976c1b20bb563971210580803c041a9df1956c92b5bd5c4382b721f29ce4d31",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "原第十七条仅要求按安全设施设计施工，未直接规定标题的特定项目及批准设计限定；更换为安全生产法第三十四条并据此改写。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十四条矿山、金属冶炼建设项目和用于生产、储存、装卸危险物品的建设项目的施工单位必须按照批准的安全设施设计施工，并对安全设施的工程质量负责。",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H_0FA260A469ACC3B5EFA777ABAB_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_MEM_SANTONGSHI"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "2976c1b20bb563971210580803c041a9df1956c92b5bd5c4382b721f29ce4d31",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousDefinition": {
+    "id": "H_0FA260A469ACC3B5EFA777ABAB_1",
+    "title": "矿山、金属冶炼建设项目和用于生产、储存、装卸危险物品的建设项目的施工单位未按照批准的安全设施设计施工",
+    "description": "第三十四条矿山、金属冶炼建设项目和用于生产、储存、装卸危险物品的建设项目的施工单位必须按照批准的安全设施设计施工，并对安全设施的工程质量负责。（第三十四条）。",
+    "measures": "施工单位严格按照经批准的安全设施设计和相关施工技术标准、规范组织施工并对工程质量负责，整改材料中的条号统一为《建设项目安全设施“三同时”监督管理办法》第17条。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "矿山、金属冶炼建设项目和用于生产、储存、装卸危险物品的建设项目的施工单位未按照批准的安全设施设计施工"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第三十四条 反转生成（GLM，2026-09-12）。\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "mergedInto": null
+  }
 }

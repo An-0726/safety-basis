@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AQPX_10_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "749fdd56507df301b5b508ae7043efeba995bf51fe510ae1bd27cca6a4ef3eb5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_75CEBD677C75FDC09B320E7F"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "61561d1496a668e8cd71a0237845b33cbf9d55bbe9579a049fa19fbdeea4cb9b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "以条文限定对象和触发条件，替换模板描述并明确整改及核查动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十条生产经营单位应当建立安全培训管理制度，保障从业人员安全培训所需经费，对从业人员进行与其所从事岗位相应的安全教育培训；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AQPX_10_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_75CEBD677C75FDC09B320E7F"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "61561d1496a668e8cd71a0237845b33cbf9d55bbe9579a049fa19fbdeea4cb9b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全教育培训",
+    "conditions": "适用于依法负有安全生产教育培训义务的单位及相应人员；应结合人员类别、岗位性质、岗位变更、特种作业或专项培训要求确认内容、学时/频次和考核要求。\n适用场所：生产经营单位从业人员培训、考核和资格管理活动",
+    "description": "经资料及履职情况核查，生产经营单位未建立安全培训管理制度，保障从业人员安全培训所需经费，对从业人员进行与其所从事岗位相应的安全教育培训，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_AQPX_10_1",
+    "keywords": [
+      "生产经营单位未建立安全培训管理制度",
+      "保障从业人员安全培训所需经费",
+      "对从业人员进行与其所从事岗位相应的安全教育培训"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位建立安全培训管理制度，保障从业人员安全培训所需经费，对从业人员进行与其所从事岗位相应的安全教育培训。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位从业人员培训、考核和资格管理活动"
+    ],
+    "title": "生产经营单位未建立安全培训管理制度，保障从业人员安全培训所需经费，对从业人员进行与其所从事岗位相应的安全教育培训"
+  }
 }

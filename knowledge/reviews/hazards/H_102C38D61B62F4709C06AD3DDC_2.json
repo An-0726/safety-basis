@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_102C38D61B62F4709C06AD3DDC_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "31622d994a0d7c67068ad1177cfb1f031a851ef9f4009c4b842b8cbffd57725d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_2339BB2717583AFC4C732DFA"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b9096809dbb55931024c76ca5b1bb0ac9a7ff19bea1151d796705034d2e6cc73",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "删除通用判定句；按本条责任分工落实主要负责人全面责任，不臆造具体未履职事件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位主要负责人为本单位安全生产第一责任人，应当对本单位的安全生产工作全面负责。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_102C38D61B62F4709C06AD3DDC_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_2339BB2717583AFC4C732DFA"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b9096809dbb55931024c76ca5b1bb0ac9a7ff19bea1151d796705034d2e6cc73",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，生产经营单位主要负责人未对本单位的安全生产工作全面负责，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_102C38D61B62F4709C06AD3DDC_2",
+    "keywords": [
+      "生产经营单位主要负责人未对本单位的安全生产工作全面负责"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位主要负责人对本单位的安全生产工作全面负责。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位主要负责人未对本单位的安全生产工作全面负责"
+  }
 }

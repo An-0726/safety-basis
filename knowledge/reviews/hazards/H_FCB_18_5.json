@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FCB_18_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "be36609e860a20ce60ac28a5782c3acc997d611a765d0139a0c8134c17a38f4b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix2-20261009",
   "evidenceRefs": [
     "E_FCB_L006"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "d3c63b8f14770c02f5d388446b2fe560eb1fb4c8312f24de9ec2c5ae69c6d016",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按条文指出暂存位置和防水防潮方面的缺陷，删除模板评价。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "需要临时存放的，应当设置相对独立的暂存场所，远离作业现场等人员密集场所，并采取防水防潮、通风、氢气监测等必要的防火防爆措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FCB_18_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_FCB_L006"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "d3c63b8f14770c02f5d388446b2fe560eb1fb4c8312f24de9ec2c5ae69c6d016",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，镁合金废屑暂存场所未远离人员密集场所并采取防水防潮措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FCB_18_5",
+    "keywords": [
+      "镁合金废屑暂存场所未远离人员密集场所并采取防水防潮措施"
+    ],
+    "lifecycle": "active",
+    "measures": "镁合金废屑暂存场所远离人员密集场所并采取防水防潮措施。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "镁合金废屑暂存场所未远离人员密集场所并采取防水防潮措施"
+  }
 }
