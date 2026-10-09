@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H001",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "d8044ae6839f4b870b9c2eac7be7010df6accff838a4038deb09fbd39a979ded",
-  "checkedAt": "2026-09-26T18:55:20+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+  "reviewedContentHash": "578c745fd4cefcfa4f065a6324924af189f7a74eb96e3f6a950f1be22bef6961",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_GB55036_SH_ORIGINAL_20260926"
-  ]
+  ],
+  "reason": "Codex认为库内无灭火器欠压的直接技术判据而建议下架；Claude复核：失压的灭火器不满足《消防法》第十六条第一款第（二）项“确保完好有效”，以该项为直接依据保留公开，原GB 55036第10.0.7条关联保留。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "灭火器应定期维护、维修和报废。灭火器报废后，应按照等效替代的原则更换。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H001",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "d8044ae6839f4b870b9c2eac7be7010df6accff838a4038deb09fbd39a979ded",
+    "checkedAt": "2026-09-26T18:55:20+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+    "evidenceRefs": [
+      "E_GB55036_SH_ORIGINAL_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "现场配置的储压式灭火器压力指示器指针位于欠压区域，未保持完好有效。",
+    "id": "H001",
+    "keywords": [
+      "灭火器失压"
+    ],
+    "lifecycle": "active",
+    "measures": "及时以适用类型、足够灭火级别的合格灭火器替换失压器材；将失压灭火器交由符合要求的单位检修，按检查结果维修或报废；完善巡检及更换记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "灭火器失压"
+  }
 }

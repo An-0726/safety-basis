@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_4AF088F48DFD4BFA88FD254F28",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "3d273bd040a1339f26129dbe070751f2ec51512e76346c48da76e5f6428b1d6a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_03DA60D016391C003EFD3C59"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "654c841747dba8f09d32386f2d06d0b582dae81449b659317fa39f4bd234df59",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "先核安全生产法第八十一条，再以“液氮、储罐、泄漏、应急处置方案”检索全部现行条款并核对《深度冷冻法生产氧气及相关气体安全技术规程》；未找到液氮储罐必须另建专项泄漏方案的直接条款，通用应急预案义务及冻伤应急健康检查均不对题。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第八十一条 生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_4AF088F48DFD4BFA88FD254F28",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_03DA60D016391C003EFD3C59"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "654c841747dba8f09d32386f2d06d0b582dae81449b659317fa39f4bd234df59",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_4AF088F48DFD4BFA88FD254F28",
+    "title": "未建立液氮储罐泄露应急处置方案",
+    "description": "企业未建立液氮储罐泄漏应急处置方案，发生泄漏时无章可循。",
+    "measures": "编制液氮储罐泄漏应急处置方案，明确处置流程与职责分工，组织演练并留存记录。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "应急与事故管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "未建立液氮储罐泄露应急处置方案"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《深度冷冻法生产氧气及相关气体安全技术规程》4.13.1",
+    "mergedInto": null
+  }
 }

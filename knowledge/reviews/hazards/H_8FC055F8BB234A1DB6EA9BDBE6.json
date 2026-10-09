@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8FC055F8BB234A1DB6EA9BDBE6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "dda1e17d2056e81092a5988bc9f0664052b71a2802a7fd58321cc751c68d7ec7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "7d184451bf33807f22244840733f1aa21ad1768310d28e41e52b8376054497f2",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补回设置贮存场所的合法选项，主体清单采用条文原文而非运输转移。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "产生、收集、贮存、利用、处置危险废物的单位应建造危险废物贮存设施或设置贮存场所，并根据需要选择贮存设施类型。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8FC055F8BB234A1DB6EA9BDBE6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "7d184451bf33807f22244840733f1aa21ad1768310d28e41e52b8376054497f2",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，危险废物相关单位未建造贮存设施或未按需要选择贮存设施类型，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8FC055F8BB234A1DB6EA9BDBE6",
+    "keywords": [
+      "危险废物相关单位未建造贮存设施或未按需要选择贮存设施类型"
+    ],
+    "lifecycle": "active",
+    "measures": "建造危险废物贮存设施或设置贮存场所，并按需要选择贮存设施类型。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物相关单位未建造贮存设施或未按需要选择贮存设施类型"
+  }
 }

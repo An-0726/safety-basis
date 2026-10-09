@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D3C181B41BAE9B17C4DFE1B7A5_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "390ed97d292e1b00d847e4c192491b835414767e8b4b0c13c4a9a2ff944d5f8d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_82AEDB06194EDE3678C10AAE"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "4648c89f03ae98962758c6e5e1f45a6b4c00efeb488ff19df429ad1b4508d97b",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同一法规完整第九条直接规定组织职工参与，原关联第九条只摘录监督职责，不能覆盖标题动作。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第九条工会依法对安全生产工作进行监督，参与生产安全事故调查，提出保障安全生产的建议，维护职工在安全生产方面的合法权益。 生产经营单位的工会依法组织职工参加本单位安全生产工作的民主管理和民主监督，生产经营单位制定或者修改安全生产规章制度、作出有关安全生产的决定，应当听取工会的意见。未组建工会的生产经营单位，由职工和其他从业人员的代表参与本单位安全生产工作的民主管理和民主监督。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D3C181B41BAE9B17C4DFE1B7A5_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_82AEDB06194EDE3678C10AAE"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "4648c89f03ae98962758c6e5e1f45a6b4c00efeb488ff19df429ad1b4508d97b",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于已依法建立工会组织的生产经营单位及其工会履职活动；应通过工会工作记录、民主管理资料和实际履职情况核查。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位的工会未依法组织职工参加本单位安全生产工作的民主管理和民主监督，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D3C181B41BAE9B17C4DFE1B7A5_1",
+    "keywords": [
+      "生产经营单位的工会未依法组织职工参加本单位安全生产工作的民主管理和民主监督"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位的工会依法组织职工参加本单位安全生产工作的民主管理和民主监督。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位的工会未依法组织职工参加本单位安全生产工作的民主管理和民主监督"
+  }
 }

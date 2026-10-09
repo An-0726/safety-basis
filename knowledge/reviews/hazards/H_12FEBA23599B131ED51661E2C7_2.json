@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12FEBA23599B131ED51661E2C7_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5ba6c281122e2fb8436d38e8b1a20c37e6449c3beb4d661fe0fc3dd0bebf0557",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4982C228D399B3D12EFEE4BB"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "73ae5db69f97730600bf5bf45ad6390ab2ce697ba51c2253359b4184507dbed2",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现条款是水质处理及定期检验，完整第四十四条另规定清洗与监督检验，两个义务均须落实。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "从事锅炉清洗，应当按照安全技术规范的要求进行，并接受特种设备检验机构的监督检验。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12FEBA23599B131ED51661E2C7_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4982C228D399B3D12EFEE4BB"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "73ae5db69f97730600bf5bf45ad6390ab2ce697ba51c2253359b4184507dbed2",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：锅炉使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，从事锅炉清洗的单位未按照安全技术规范的要求进行，并接受特种设备检验机构的监督检验，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12FEBA23599B131ED51661E2C7_2",
+    "keywords": [
+      "从事锅炉清洗的单位未按照安全技术规范的要求进行",
+      "并接受特种设备检验机构的监督检验"
+    ],
+    "lifecycle": "active",
+    "measures": "从事锅炉清洗的单位按照安全技术规范的要求进行，并接受特种设备检验机构的监督检验。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "锅炉使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "从事锅炉清洗的单位未按照安全技术规范的要求进行，并接受特种设备检验机构的监督检验"
+  }
 }

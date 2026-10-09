@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_7_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9ec119079f8bf57e628fc1f4ca52b7646a25c9e210d10e65dd382929cc0fdd3f",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_52EE92815856956C92B3D4CC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "e9c096ea1e9197555c1dca34253055f6f3ceb9ce0e6752c76b69487ea1e0b3a9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按明确风险而非未定义高风险触发审批层级，删除行政受理备案许可回执。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对于存在硫化氢、一氧化碳、二氧化碳等中毒和窒息等风险的有限空间作业，应当由工贸企业主要负责人或者其书面委托的人员进行审批，委托进行审批的，相关责任仍由工贸企业主要负责人承担。\n未经工贸企业确定的作业审批人批准，不得实施有限空间作业。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_7_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_52EE92815856956C92B3D4CC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "e9c096ea1e9197555c1dca34253055f6f3ceb9ce0e6752c76b69487ea1e0b3a9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "现场检查发现，高风险有限空间作业未经主要负责人或其书面委托人员审批，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_7_2",
+    "keywords": [
+      "高风险有限空间作业未经主要负责人或其书面委托人员审批"
+    ],
+    "lifecycle": "active",
+    "measures": "高风险有限空间作业经主要负责人或其书面委托人员审批。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "高风险有限空间作业未经主要负责人或其书面委托人员审批"
+  }
 }

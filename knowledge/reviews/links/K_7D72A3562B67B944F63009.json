@@ -5,17 +5,38 @@
   "decision": "verified",
   "reviewedContentHash": "6b0620b1f83fa985de3910dd0b2f5ed459dc822f239ffd38d90dccc8cb8bfe0b",
   "contextHashes": {
-    "hazard": "95a73e3ecd13f6aa31e64d5a0094dca8776071bac389a560cd770d2e109931f0",
+    "hazard": "f1eb7d5e3ba4b8b93e736639e4a6c516394a2c09922a25d0c512918fdff2d5c0",
     "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
   },
-  "checkedAt": "2026-09-10",
-  "reviewer": "ZCode-DeepSeek",
-  "reason": "《危险化学品安全法》第四十一条要求危险化学品储存在专用储存场所并由专人管理，属通用储存义务，保留为 fallback；本条 direct 依据已由 GB 15603-2022 第5.2条承担。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "evidenceRefs": [],
   "migratedFromV3Verification": null,
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_7D72A3562B67B944F63009",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "6b0620b1f83fa985de3910dd0b2f5ed459dc822f239ffd38d90dccc8cb8bfe0b",
+    "contextHashes": {
+      "hazard": "95a73e3ecd13f6aa31e64d5a0094dca8776071bac389a560cd770d2e109931f0",
+      "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
+    },
+    "checkedAt": "2026-09-10",
+    "reviewer": "ZCode-DeepSeek",
+    "reason": "《危险化学品安全法》第四十一条要求危险化学品储存在专用储存场所并由专人管理，属通用储存义务，保留为 fallback；本条 direct 依据已由 GB 15603-2022 第5.2条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "evidenceRefs": [],
+    "migratedFromV3Verification": null,
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

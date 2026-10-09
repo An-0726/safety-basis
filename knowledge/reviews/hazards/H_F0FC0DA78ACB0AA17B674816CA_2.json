@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F0FC0DA78ACB0AA17B674816CA_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0f80303a472bba49992e00e86f7eb6c100d1118e2e735de9a4f955fa32cdc55b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_23242641CCB6C5C939BC0362"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "69fc8046e2434a3a0b897b0387c6edb9182ffd0fa058d18c1d4a65479be518d0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第八十五条直接规定参与抢救部门单位的义务，原消防巡查措施和场所限定与本项不符。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "参与事故抢救的部门和单位应当服从统一指挥，加强协同联动，采取有效的应急救援措施，并根据事故救援的需要采取警戒、疏散等措施，防止事故扩大和次生灾害的发生，减少人员伤亡和财产损失。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F0FC0DA78ACB0AA17B674816CA_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_23242641CCB6C5C939BC0362"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "69fc8046e2434a3a0b897b0387c6edb9182ffd0fa058d18c1d4a65479be518d0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，参与事故抢救的部门和单位未服从统一指挥，未采取有效的应急救援措施，未根据事故救援的需要采取警戒、疏散等措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_F0FC0DA78ACB0AA17B674816CA_2",
+    "keywords": [
+      "参与事故抢救的部门和单位未服从统一指挥",
+      "未采取有效的应急救援措施",
+      "未根据事故救援的需要采取警戒",
+      "疏散等措施"
+    ],
+    "lifecycle": "active",
+    "measures": "参与事故抢救的部门和单位服从统一指挥，采取有效的应急救援措施，根据事故救援的需要采取警戒、疏散等措施；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "参与事故抢救的部门和单位未服从统一指挥，未采取有效的应急救援措施，未根据事故救援的需要采取警戒、疏散等措施"
+  }
 }

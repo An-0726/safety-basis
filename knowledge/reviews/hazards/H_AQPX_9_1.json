@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_AQPX_9_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "6f501e0581e6999aea962b8015b48937b31864fa95292d59f0bec4f126538951",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_CFAA6C211F06E48071A2798F"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "907435997060d23cd8e24c8bd10ce2d44d59b55616ab0c8b2d220829e8cdb291",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "条文允许委托，原标题只以未自主培训认定缺陷会误判合规委托培训。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对从业人员的安全培训，具备安全培训条件的生产经营单位应当以自主培训为主，也可以委托具备安全培训条件的机构进行安全培训。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_AQPX_9_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_CFAA6C211F06E48071A2798F"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "907435997060d23cd8e24c8bd10ce2d44d59b55616ab0c8b2d220829e8cdb291",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "第九条对从业人员的安全培训，具备安全培训条件的生产经营单位应当以自主培训为主，也可以委托具备安全培训条件的机构进行安全培训。（第9条）。",
+    "id": "H_AQPX_9_1",
+    "keywords": [
+      "具备安全培训条件的生产经营单位未对从业人员自主开展安全培训"
+    ],
+    "lifecycle": "active",
+    "measures": "第九条对从业人员的安全培训，具备安全培训条件的生产经营单位应当以自主培训为主，也可以委托具备安全培训条件的机构进行安全培训。（依据 第9条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位从业人员培训、考核和资格管理活动",
+      "通用场所"
+    ],
+    "title": "具备安全培训条件的生产经营单位未对从业人员自主开展安全培训"
+  }
 }

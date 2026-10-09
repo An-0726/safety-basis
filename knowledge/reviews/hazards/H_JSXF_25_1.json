@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_JSXF_25_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4763ac0eacfa288cb797cf01c1b4f8f98d17cdaef6fa48fb1b5474a78e123c1e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BADB752B39F253BA4C6CCF8A"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "eff3897bbcd94ad06617d05c5bdc45ddbfa44737d3cfc09d4a2d8d38b011257e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原题泛化为所有设控制室单位，补消防安全重点单位、社区及联合建站例外。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "其他设有消防控制室的消防安全重点单位和城乡居民社区，应当按照规定配备必要的消防器材，建立微型消防站，积极开展防火巡查和初起火灾扑救等火灾防控工作。合用消防控制室的消防安全重点单位，可以联合建立微型消防站。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_JSXF_25_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_BADB752B39F253BA4C6CCF8A"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "eff3897bbcd94ad06617d05c5bdc45ddbfa44737d3cfc09d4a2d8d38b011257e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，设有消防控制室的单位未配备必要消防器材建立微型消防站，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_JSXF_25_1",
+    "keywords": [
+      "设有消防控制室的单位未配备必要消防器材建立微型消防站"
+    ],
+    "lifecycle": "active",
+    "measures": "设有消防控制室的单位配备必要消防器材建立微型消防站；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "设有消防控制室的单位未配备必要消防器材建立微型消防站"
+  }
 }

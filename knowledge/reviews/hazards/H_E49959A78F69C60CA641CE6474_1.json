@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_E49959A78F69C60CA641CE6474_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "cf32224aa65fdafe9c47a687b3adb0cc0065b1bc2a2168bf6199de24f5935709",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_8FAF5D15E8E98B3C23F026A6"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "a42bdd7bd1ab4a405bdac2385b0ab9811bb60f197d5e06a527a225d7b4ac2ca1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "符合安全技术规范并经检验合格为同时满足的要求，整改不能写为二选一。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十条 进口的特种设备应当符合我国安全技术规范的要求，并经检验合格；需要取得我国特种设备生产许可的，应当取得许可。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_E49959A78F69C60CA641CE6474_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_8FAF5D15E8E98B3C23F026A6"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "a42bdd7bd1ab4a405bdac2385b0ab9811bb60f197d5e06a527a225d7b4ac2ca1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，进口的特种设备不符合我国安全技术规范的要求，或者未经检验合格，现场参数、设置或状态未达到直接依据规定的要求。",
+    "id": "H_E49959A78F69C60CA641CE6474_1",
+    "keywords": [
+      "进口的特种设备不符合我国安全技术规范的要求",
+      "或者未经检验合格"
+    ],
+    "lifecycle": "active",
+    "measures": "进口的特种设备调整至符合我国安全技术规范的要求，或者经检验合格。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "进口的特种设备不符合我国安全技术规范的要求，或者未经检验合格"
+  }
 }

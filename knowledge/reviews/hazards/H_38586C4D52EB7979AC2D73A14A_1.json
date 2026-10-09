@@ -1,13 +1,53 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_38586C4D52EB7979AC2D73A14A_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9e8ae7433ba7f222b2ea9445ea6b06ab515e335e2c595f6c66bce355d02d702e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9666E02A7589B885790DD568"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "69ce9288eafbf22f4e37c8e99755ad36d845d6d1f1e462ba425c954d54f56d23",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "第三条为总体原则，改用同条例第九条直接规定年度辨识评估义务，将原则性标题收敛为可核查缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当组织本单位安全生产管理、工程技术、岗位操作等相关人员，开展全面、系统的安全风险辨识、评估，确定或者调整安全风险等级，每年不少于一次。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_38586C4D52EB7979AC2D73A14A_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9666E02A7589B885790DD568"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "69ce9288eafbf22f4e37c8e99755ad36d845d6d1f1e462ba425c954d54f56d23",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "第三条安全风险管理应当坚持安全第一、预防为主、综合治理，实行全面辨识、科学评估、分级管控。（第三条）。",
+    "id": "H_38586C4D52EB7979AC2D73A14A_1",
+    "keywords": [
+      "安全风险管理工作未坚持安全第一",
+      "预防为主",
+      "综合治理",
+      "未实行全面辨识",
+      "科学评估",
+      "分级管控"
+    ],
+    "lifecycle": "active",
+    "measures": "第三条安全风险管理应当坚持安全第一、预防为主、综合治理，实行全面辨识、科学评估、分级管控。（依据 第三条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "安全风险管理工作未坚持安全第一、预防为主、综合治理，未实行全面辨识、科学评估、分级管控"
+  }
 }

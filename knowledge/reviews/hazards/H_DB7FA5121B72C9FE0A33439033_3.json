@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DB7FA5121B72C9FE0A33439033_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "783533dfd12650fa8ce6ea33bbbe87fe084c75669426f00fc5a4f3ef12d494a1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "295b92d696b079cc28cafa49a57c06483dafaf4dbd56175c4c872fc453d804e2",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同一法规完整第二十八条直接规定重大隐患治理方案及必要停止措施，原关联只摘录一般隐患排查治理。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十八条生产经营单位应当落实事故隐患排查治理制度，定期组织安全生产管理、工程技术和其他相关人员排查并及时消除本单位的事故隐患。在事故隐患治理过程中，应当采取相应的安全防范措施，防止事故发生。 对排查出的重大事故隐患，生产经营单位应当制定和落实治理方案及时排除，并根据需要停用相关设施设备或者停产停业。重大事故隐患排查治理情况应当向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告。 生产经营单位应当建立事故隐患报告奖励制度，公开本单位有关负责人和安全生产管理机构的联系方式，受理从业人员报告的安全生产问题，对报告事故隐患的从业人员给予表扬、奖励。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DB7FA5121B72C9FE0A33439033_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "295b92d696b079cc28cafa49a57c06483dafaf4dbd56175c4c872fc453d804e2",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于江苏省行政区域内，且存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：江苏省行政区域内机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "经资料及履职情况核查，对排查出的重大事故隐患，生产经营单位未制定和落实治理方案及时排除，未根据需要停用相关设施设备或者停产停业，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_DB7FA5121B72C9FE0A33439033_3",
+    "keywords": [
+      "对排查出的重大事故隐患",
+      "生产经营单位未制定和落实治理方案及时排除",
+      "未根据需要停用相关设施设备或者停产停业"
+    ],
+    "lifecycle": "active",
+    "measures": "对排查出的重大事故隐患，生产经营单位制定和落实治理方案及时排除，根据需要停用相关设施设备或者停产停业。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "对排查出的重大事故隐患，生产经营单位未制定和落实治理方案及时排除，未根据需要停用相关设施设备或者停产停业"
+  }
 }

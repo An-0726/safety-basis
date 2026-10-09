@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_8_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "2eeb9cbb86b0b2606b68d604fe54ebd3f777034d25d570f8cee876b0f512d9c9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_7C11DC0F6E49B742F2B6DDC5"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "f71b68411e745ec8714211b3287a12c5df1153952108b0f545176925b7521653",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "补其他存在职业病危害及人数前提，纠正措施中的机构与人员二选一错误。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "其他存在职业病危害的用人单位，劳动者超过一百人的，应当设置或者指定职业卫生管理机构或者组织，配备专职职业卫生管理人员；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_8_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_7C11DC0F6E49B742F2B6DDC5"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "f71b68411e745ec8714211b3287a12c5df1153952108b0f545176925b7521653",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，劳动者超过一百人的用人单位未设置职业卫生管理机构或专职管理人员，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_ZJWS_8_2",
+    "keywords": [
+      "劳动者超过一百人的用人单位未设置职业卫生管理机构或专职管理人员"
+    ],
+    "lifecycle": "active",
+    "measures": "劳动者超过一百人的用人单位设置职业卫生管理机构或专职管理人员。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "劳动者超过一百人的用人单位未设置职业卫生管理机构或专职管理人员"
+  }
 }

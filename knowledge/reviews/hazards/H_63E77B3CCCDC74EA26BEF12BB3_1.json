@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_63E77B3CCCDC74EA26BEF12BB3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5f6529cc84ae6de9cb908a2880f2073c762e2cf0461711ae7788bf50d1b3b66b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_A5866610D81DCC49817EFAD7"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8cb03484a9643845ccab4cce00f9b3c044b5636194414a62964fa8e931c9215e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同一法规完整第五十四条明确禁止报复，原关联仅列权利而未列禁止不利处理。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十四条从业人员有权对本单位安全生产工作中存在的问题提出批评、检举、控告；有权拒绝违章指挥和强令冒险作业。 生产经营单位不得因从业人员对本单位安全生产工作提出批评、检举、控告或者拒绝违章指挥、强令冒险作业而降低其工资、福利等待遇或者解除与其订立的劳动合同。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_63E77B3CCCDC74EA26BEF12BB3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A5866610D81DCC49817EFAD7"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8cb03484a9643845ccab4cce00f9b3c044b5636194414a62964fa8e931c9215e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位因从业人员提出批评、检举、控告或者拒绝违章指挥、强令冒险作业而降低其工资、福利等待遇或者解除劳动合同，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_63E77B3CCCDC74EA26BEF12BB3_1",
+    "keywords": [
+      "生产经营单位因从业人员提出批评",
+      "检举",
+      "控告或者拒绝违章指挥",
+      "强令冒险作业而降低其工资",
+      "福利等待遇或者解除劳动合同"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止因从业人员提出批评、检举、控告或者拒绝违章指挥、强令冒险作业而实施降薪、降低福利待遇或解除劳动合同等不利处理；纠正已经作出的不当处理，完善从业人员安全生产权利保障和申诉处理机制，并留存处理记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位因从业人员提出批评、检举、控告或者拒绝违章指挥、强令冒险作业而降低其工资、福利等待遇或者解除劳动合同"
+  }
 }

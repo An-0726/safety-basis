@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_13AAF56DFDBE457B8DBA5C84D6",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "0adab8bc4939614bfdfae4e2e90ca729a92a9e015d364329dfa92f4f13bc246d",
+  "decision": "rejected",
+  "reviewedContentHash": "8a54682929e826b9653aff436e8d413ff24b2577bba2713ec114dd613ea87419",
   "contextHashes": {
-    "hazard": "4d8584133ef5e072aad47edd407bf2ee64268c97ebe1c61704faf1c6a43cc50f",
+    "hazard": "1a12bd58cb4ee0b35ab957b630836268e44c276a12b5f7217f769c31f5f12c5e",
     "clause": "eb55376f01f82e3cbee47e1ab39092dc16035709d741d792101f702f747f8a05"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第二十八条危化岗位培训要求。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_13AAF56DFDBE457B8DBA5C84D6",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "0adab8bc4939614bfdfae4e2e90ca729a92a9e015d364329dfa92f4f13bc246d",
+    "contextHashes": {
+      "hazard": "4d8584133ef5e072aad47edd407bf2ee64268c97ebe1c61704faf1c6a43cc50f",
+      "clause": "eb55376f01f82e3cbee47e1ab39092dc16035709d741d792101f702f747f8a05"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第二十八条危化岗位培训要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

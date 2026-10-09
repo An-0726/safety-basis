@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_AED379F6362D3635EC569FD799_6",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f050f97fcd2c62f92cb4261be81dbf4d1d8e6e875a32d38ea8e08c19cc7917fd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9AE61F2202E9E659853DEEC1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "de84e0df6505920847dae917890cc0ad9f28408102afebc53e70ba814ef53bd5",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原关联只有申请检查义务，改用同法完整第十五条中直接禁止未经许可使用营业的规定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "公众聚集场所未经消防救援机构许可的，不得投入使用、营业。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_AED379F6362D3635EC569FD799_6",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9AE61F2202E9E659853DEEC1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "de84e0df6505920847dae917890cc0ad9f28408102afebc53e70ba814ef53bd5",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，公众聚集场所未经消防救援机构许可，擅自投入使用、营业，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_AED379F6362D3635EC569FD799_6",
+    "keywords": [
+      "公众聚集场所未经消防救援机构许可",
+      "擅自投入使用",
+      "营业"
+    ],
+    "lifecycle": "active",
+    "measures": "停止未经法定程序的使用、生产、营业或作业活动，完成规定的许可、审查、验收或确认后再恢复。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "公众聚集场所未经消防救援机构许可，擅自投入使用、营业"
+  }
 }

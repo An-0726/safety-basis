@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_35_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "62ca565b66e6dcd6a272d708c79862f0f3fcafb420d25ec371668a59d577c0bc",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_1C1869E87A6D0141EF6797BC"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "7358082f4cd05d83076614c5dc573459c0174f630edb07a75cefbb6225cb3752",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留故意及事故发生前提，删除岗位暴露、个体防护等无关记录。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用人单位不得故意破坏事故现场、毁灭有关证据，不得迟报、漏报、谎报或者瞒报职业病危害事故。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_35_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_1C1869E87A6D0141EF6797BC"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "7358082f4cd05d83076614c5dc573459c0174f630edb07a75cefbb6225cb3752",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，用人单位破坏事故现场毁灭证据或迟报瞒报职业病危害事故，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_35_3",
+    "keywords": [
+      "用人单位破坏事故现场毁灭证据或迟报瞒报职业病危害事故"
+    ],
+    "lifecycle": "active",
+    "measures": "停止相关违法行为，依法保护事故现场和证据，并如实、及时履行报告和配合调查义务。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "用人单位破坏事故现场毁灭证据或迟报瞒报职业病危害事故"
+  }
 }

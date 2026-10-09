@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_259DFBD67938DF694867A18D02_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9590a54a53ba20de2b896a3181004277720ff4c26dab3534852c2ff0f2d7a10c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_37FBF31942CEEA0EDA3A1225"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "da06b20e98b98d7dc950246cbc2fe1352f3b01c1f93b092335cb526919bca63a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联仅为报警，完整第四十四条另有单位立即组织扑救要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "任何单位发生火灾，必须立即组织力量扑救。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_259DFBD67938DF694867A18D02_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_37FBF31942CEEA0EDA3A1225"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "da06b20e98b98d7dc950246cbc2fe1352f3b01c1f93b092335cb526919bca63a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，任何单位发生火灾，未立即组织力量扑救，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_259DFBD67938DF694867A18D02_4",
+    "keywords": [
+      "任何单位发生火灾",
+      "未立即组织力量扑救"
+    ],
+    "lifecycle": "active",
+    "measures": "任何单位发生火灾，立即组织力量扑救；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "任何单位发生火灾，未立即组织力量扑救"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FFCA8BF0F7D52A89E7DFDED1EB_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c303c5c5cb0fcd6f4c101d7b52e0c0ad540da043187500a8ebcc8158911025aa",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_C9D32D88683F6CF4587B2EB1"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "c022964cbfbb37ec666bd89b09e04a01132b65eae736e576fb742b93a10cd132",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联只规定国务院有关部门制定标准职责，同部法规完整第十一条另有生产经营单位执行标准的明确义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位必须执行依法制定的保障安全生产的国家标准或者行业标准。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FFCA8BF0F7D52A89E7DFDED1EB_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_C9D32D88683F6CF4587B2EB1"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "c022964cbfbb37ec666bd89b09e04a01132b65eae736e576fb742b93a10cd132",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位未执行依法制定的保障安全生产的国家标准或者行业标准，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FFCA8BF0F7D52A89E7DFDED1EB_2",
+    "keywords": [
+      "生产经营单位未执行依法制定的保障安全生产的国家标准或者行业标准"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位执行依法制定的保障安全生产的国家标准或者行业标准。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位未执行依法制定的保障安全生产的国家标准或者行业标准"
+  }
 }

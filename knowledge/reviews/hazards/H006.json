@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H006",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "f5f4841839bb473e90eb08b153f790241243971abcf68b58cd30aeed88708d4a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_89B479575B86EBF8E6431251"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "83d2a9f28c68823fa756db8fcbbddea04685ff4bb738fec4ee6b4ce64c38e94c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "优先核对现引法规，并检索全库有效条款中的“燃气报警、联动、联锁、自动切断、安全保护装置”，核对《中华人民共和国安全生产法》《城镇燃气报警控制系统技术规程》《工贸企业重大事故隐患判定标准》；报警装置安装及专项压力监测联锁条款不直接规定一般燃气泄漏报警器必须联动切断阀，未找到对题原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十六条　安全设备的设计、制造、安装、使用、检测、维修、改造和报废，应当符合国家标准或者行业标准。\n生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。\n生产经营单位不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设备、设施，或者篡改、隐瞒、销毁其相关数据、信息。\n餐饮等行业的生产经营单位使用燃气的，应当安装可燃气体报警装置，并保障其正常使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H006",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_89B479575B86EBF8E6431251"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "83d2a9f28c68823fa756db8fcbbddea04685ff4bb738fec4ee6b4ce64c38e94c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：燃气使用、储存及燃气设施相关场所",
+    "description": "现场燃气报警装置未实现与紧急切断装置联动，燃气泄漏报警后不能自动切断气源；应核查是否另有满足要求的安全保护装置。",
+    "id": "H006",
+    "keywords": [
+      "燃气报警器未联动切断阀"
+    ],
+    "lifecycle": "active",
+    "measures": "燃气报警器联动切断阀。整改后对燃气设施的通风、报警、切断、防泄漏或防爆功能中与本项有关的部分进行测试确认，合格后再恢复使用并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条第四款（兜底）",
+    "places": [
+      "燃气使用、储存及燃气设施相关场所"
+    ],
+    "title": "燃气报警器未联动切断阀"
+  }
 }

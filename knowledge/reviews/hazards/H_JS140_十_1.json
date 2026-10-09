@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_JS140_十_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "6f0c68df50b4ee2402cc06a1e626abf595d9d319942ac6a101adba3601917a71",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_18438727555319690A617689"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "85084e73ed47fffd556c292601629e955e960638f5033b62e68565a639b9d892",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补完整六类触发分支、江苏地域及工业企业对象，避免只复制第一种情形。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "有下列情形之一的，企业应当及时组织开展针对性的安全风险辨识，确定或者调整安全风险等级，更新安全风险管控清单：",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_JS140_十_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_18438727555319690A617689"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "85084e73ed47fffd556c292601629e955e960638f5033b62e68565a639b9d892",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "有下列情形之一的，企业应当及时组织开展针对性的安全风险辨识，确定或者调整安全风险等级，更新安全风险管控清单：（一）生产工艺流程、主要设备设施、主要生产物料发生改变的；（第十条）。",
+    "id": "H_JS140_十_1",
+    "keywords": [
+      "企业未及时组织开展针对性的安全风险辨识",
+      "未确定或者调整安全风险等级"
+    ],
+    "lifecycle": "active",
+    "measures": "有下列情形之一的，企业应当及时组织开展针对性的安全风险辨识，确定或者调整安全风险等级，更新安全风险管控清单：（一）生产工艺流程、主要设备设施、主要生产物料发生改变的；（依据 第十条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "企业未及时组织开展针对性的安全风险辨识，未确定或者调整安全风险等级"
+  }
 }

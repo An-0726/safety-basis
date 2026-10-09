@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_DB7FA5121B72C9FE0A33439033_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "65f8ddf79e0cd924dff2d17a54e558d4de3e6fd11d04d08c7562aaef3b42dd43",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "d73873e9eb09092e0188ab5c6bd710be00658e898b90aec8ef3f04e9dba5f251",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联漏报告段，完整第二十八条明确监管部门和职工大会或者职代会两类报告渠道。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "重大事故隐患排查治理情况应当向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_DB7FA5121B72C9FE0A33439033_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_4A23FC7282B0A541ADB6C632"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "d73873e9eb09092e0188ab5c6bd710be00658e898b90aec8ef3f04e9dba5f251",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，重大事故隐患排查治理情况未向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_DB7FA5121B72C9FE0A33439033_4",
+    "keywords": [
+      "重大事故隐患排查治理情况未向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告"
+    ],
+    "lifecycle": "active",
+    "measures": "重大事故隐患排查治理情况向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "重大事故隐患排查治理情况未向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告"
+  }
 }

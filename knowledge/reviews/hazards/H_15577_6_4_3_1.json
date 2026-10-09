@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15577_6_4_3_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "16072bcc89ec08272ae79a7c47fa845aae7947538df983f793c49572a6804bc7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_15577_GB 15577"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "15954c86d88a87282a584ba2e698b40d30a318d8dca830ca6e7e753dad026d26",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "在《粉尘防爆安全规程》及全库现行条款中检索“金属粉末、不锈钢摩擦、锈钢摩擦”，仅现条文涉及该摩擦防火花要求且关键文字可疑，其他结果为温度监测义务，不能对题；按禁止自行纠正原文要求先下架。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "应采取有效措施防止铝、镁、钛、错等金属粉末或含有这些金属的粉末与锈钢摩擦产生火花。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15577_6_4_3_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_15577_GB 15577"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "15954c86d88a87282a584ba2e698b40d30a318d8dca830ca6e7e753dad026d26",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于存在可燃性粉尘爆炸危险及其生产、输送、除尘、清扫、储存、检维修或动火等环节；不构成粉尘爆炸危险的普通粉尘场景不直接适用。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "现场检查发现，未采取有效措施防止铝、镁、钛、锆等金属粉末或含有这些金属的粉末与不锈钢摩擦产生火花，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15577_6_4_3_1",
+    "keywords": [
+      "未采取有效措施防止铝",
+      "镁",
+      "钛",
+      "锆等金属粉末或含有这些金属的粉末与不锈钢摩擦产生火花"
+    ],
+    "lifecycle": "active",
+    "measures": "采取有效措施防止铝、镁、钛、锆等金属粉末或含有这些金属的粉末与不锈钢摩擦产生火花。整改后复核粉尘爆炸危险区域的防点燃、防静电、除尘、隔爆/泄爆或清扫等与本项有关的措施，并形成检查维护记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "未采取有效措施防止铝、镁、钛、锆等金属粉末或含有这些金属的粉末与不锈钢摩擦产生火花"
+  }
 }

@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_65E8F9D66CADAA46DD5012C8F7_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b68d27c77c9c043b701bb27f5576570cd6e773304dca9821a3f2c87df218d03d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_D1F5F30E8766F5D2963218C9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "8622e1be701daaba8946a483c23d7b5e54e9094e4a76e7a3c8b6d4c1756ede75",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现依据只禁止易燃易爆危险品与居住同楼，完整第十九条另规定其他物品同楼的标准符合性。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产、储存、经营其他物品的场所与居住场所设置在同一建筑物内的，应当符合国家工程建设消防技术标准。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_65E8F9D66CADAA46DD5012C8F7_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_D1F5F30E8766F5D2963218C9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "8622e1be701daaba8946a483c23d7b5e54e9094e4a76e7a3c8b6d4c1756ede75",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，生产、储存、经营其他物品的场所与居住场所设置在同一建筑物内的，未符合国家工程建设消防技术标准，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_65E8F9D66CADAA46DD5012C8F7_2",
+    "keywords": [
+      "生产",
+      "储存",
+      "经营其他物品的场所与居住场所设置在同一建筑物内的",
+      "未符合国家工程建设消防技术标准"
+    ],
+    "lifecycle": "active",
+    "measures": "生产、储存、经营其他物品的场所与居住场所设置在同一建筑物内的，符合国家工程建设消防技术标准；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "生产、储存、经营其他物品的场所与居住场所设置在同一建筑物内的，未符合国家工程建设消防技术标准"
+  }
 }

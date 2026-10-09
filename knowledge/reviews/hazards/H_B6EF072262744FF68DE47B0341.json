@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_B6EF072262744FF68DE47B0341",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "1acb9b4ee2b4f5e3b851241a9d608565a23606dd10fb74d8f1a4ab7721ae1ea1",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "10f8766bfc28a083832d278259b384be94fa6fbc0888fd80537a2749d1c55ed9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "优先核对现引法规，并检索全库有效条款中的“储气罐、安全阀、供气总管、切断阀、压缩空气”，核对《中华人民共和国安全生产法》及全库储气罐、压力容器条款；现条款只规定维护检测，未找到直接规定储气罐安全阀及供气总管间切断阀的有效原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_B6EF072262744FF68DE47B0341",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "1acb9b4ee2b4f5e3b851241a9d608565a23606dd10fb74d8f1a4ab7721ae1ea1",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_B6EF072262744FF68DE47B0341",
+    "title": "储气罐未装设安全阀或储气罐与供气总管之间未装设切断阀",
+    "description": "压缩空气站储气罐未装设安全阀，或储气罐与供气总管之间未装设切断阀。",
+    "measures": "在储气罐上装设安全阀，并在储气罐与供气总管之间装设切断阀。",
+    "conditions": "适用于压缩空气站储气罐及其与供气总管之间的管路。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "储气罐未装设安全阀或储气罐与供气总管之间未装设切断阀"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-10专业终审：原 V3 记录引用《压缩空气站设计规范》GB 50029 第3.0.18条，该标准尚未收录于现行全文库、条款原文未核实，故未登记为 direct 依据；本条以《中华人民共和国安全生产法》第三十六条关于安全设备应符合国家标准或行业标准的通用要求作为兜底依据，该专项标准入库并核实原文后应重新核定直接依据。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n《中华人民共和国特种设备安全法》。",
+    "mergedInto": null
+  }
 }

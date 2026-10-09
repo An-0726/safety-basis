@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_JS140_十二_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "3700775cb085eec86f6131e3019430c110fa5b5c612a3fb554d582b526db431b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_B089962DF19D44EEE8904F95"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "150e2b0b2c779129524c47d6084f43be58f3ca8e1f4c60ec5e4a8b485c855269",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "补江苏工业企业范围，区分未建立和未持续更新两类缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "企业应当建立安全风险管控清单并持续更新。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_JS140_十二_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_B089962DF19D44EEE8904F95"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "150e2b0b2c779129524c47d6084f43be58f3ca8e1f4c60ec5e4a8b485c855269",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "企业应当建立安全风险管控清单并持续更新。（第十二条）。",
+    "id": "H_JS140_十二_1",
+    "keywords": [
+      "企业未建立安全风险管控清单并持续更新"
+    ],
+    "lifecycle": "active",
+    "measures": "企业应当建立安全风险管控清单并持续更新。（依据 第十二条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动",
+      "通用场所"
+    ],
+    "title": "企业未建立安全风险管控清单并持续更新"
+  }
 }

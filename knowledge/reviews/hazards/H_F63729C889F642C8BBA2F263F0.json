@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_F63729C889F642C8BBA2F263F0",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "c4377ce442e6da91c970b142e1e24f9f3507a74c2249307c3d2d33db3a6db08f",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "a550c641d8d1d09aba6dfaf2fbb0acb69ee752d6b61f769fbcfb9a3f39a6c386",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_SAMR_TSG21_2016"
-  ]
+  ],
+  "reason": "保留其他明显压力标识的合规替代方式，删除本条没有的校验要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "压力表盘上应当划出指示工作压力的红线，或者采用便于操作人员观察的明显压力指示标识。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_F63729C889F642C8BBA2F263F0",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "c4377ce442e6da91c970b142e1e24f9f3507a74c2249307c3d2d33db3a6db08f",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_TSG21_2016"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_F63729C889F642C8BBA2F263F0",
+    "title": "压力表刻度盘未标示工作压力红线",
+    "description": "压力表刻度盘上未划出指示工作压力的红线",
+    "measures": "按固定式压力容器安全技术规程在压力表上设置清晰的工作压力标识或采用符合要求的显示方式，同时校验压力表并记录校验结果。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "压力表刻度盘未标示工作压力红线"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《固定式压力容器安全技术监察规程》9.2.1.2",
+    "mergedInto": null
+  }
 }

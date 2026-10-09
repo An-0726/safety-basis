@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_3227246FFEDB65997424055F",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "d140fb581b9ce68e807bb2db15b11dc3b7d42a104843e744c7b1b1394445cbf0",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "25ef23d8626cad24c29551ddbfadea65d1a7b0934e2bcfd6d38aaed447d91503",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_FIRE_LAW_2021"
-  ]
+  ],
+  "reason": "条文只列持证义务，未列焊接热切割、建筑焊工证名，按原文对象和要求收敛。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "进行电焊、气焊等具有火灾危险作业的人员和自动消防系统的操作人员，必须持证上岗，并遵守消防安全操作规程。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_3227246FFEDB65997424055F",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "d140fb581b9ce68e807bb2db15b11dc3b7d42a104843e744c7b1b1394445cbf0",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_FIRE_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于动火作业的相关安全管理。",
+    "description": "从事焊接、切割动火作业的人员未按规定持焊接与热切割（或建筑焊工）特种作业操作资格证上岗",
+    "id": "H_3227246FFEDB65997424055F",
+    "keywords": [
+      "焊接与热切割",
+      "动火作业",
+      "特种作业证"
+    ],
+    "lifecycle": "active",
+    "measures": "从事焊接、热切割动火作业的人员按规定持相应特种作业操作资格证上岗；焊接切割动火作业人员均持相应特种作业操作资格证上岗；完成后进行现场验证并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_997F60F5C9034C5593A316E08F 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。原 conditions 字段记录的引用依据为：依据：《焊接与切割安全》(GB9448-2025)4.2.4",
+    "places": [
+      "通用场所"
+    ],
+    "title": "从事焊接、热切割动火作业的人员未按规定持相应特种作业操作资格证上岗"
+  }
 }

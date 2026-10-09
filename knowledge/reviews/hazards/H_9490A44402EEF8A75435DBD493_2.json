@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_9490A44402EEF8A75435DBD493_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f9188fde16710966d3d5d38a79ac662645f0c4de81b28361a19ace4c8fd69de7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_102016353FE4F4D4C699DD69"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "fe8b84dd1381c6488ec78a8c5bd69d562b94d21ff9f86047909241d23f0160cb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联只有建设项目监督要求，完整第六十条直接规定撤离建议及立即处理义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "发现危及从业人员生命安全的情况时，有权向生产经营单位建议组织从业人员撤离危险场所，生产经营单位必须立即作出处理。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_9490A44402EEF8A75435DBD493_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_102016353FE4F4D4C699DD69"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "fe8b84dd1381c6488ec78a8c5bd69d562b94d21ff9f86047909241d23f0160cb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，生产经营单位对工会提出的组织从业人员撤离危险场所的建议，未立即作出处理，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_9490A44402EEF8A75435DBD493_2",
+    "keywords": [
+      "生产经营单位对工会提出的组织从业人员撤离危险场所的建议",
+      "未立即作出处理"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位对工会提出的组织从业人员撤离危险场所的建议，立即作出处理。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "生产经营单位对工会提出的组织从业人员撤离危险场所的建议，未立即作出处理"
+  }
 }

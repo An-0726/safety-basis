@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SGSG_13_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "ca07649250864d5b07f18af93212b0d7fd25d72b741fc7d1da2f917e2e5ce1f6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3BC1EF359C5A59C293BC414F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "ff706c58f818d1407f5a81fd104be890a6b75b68fe2a23aa7ec52c93a26a56b1",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留道路交通和火灾7日的专门分支，不把所有事故统一写30日。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第十三条事故报告后出现新情况的，应当及时补报。自事故发生之日起30日内，事故造成的伤亡人数发生变化的，应当及时补报。道路交通事故、火灾事故自发生之日起7日内，事故造成的伤亡人数发生变化的，应当及时补报。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SGSG_13_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3BC1EF359C5A59C293BC414F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "ff706c58f818d1407f5a81fd104be890a6b75b68fe2a23aa7ec52c93a26a56b1",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，自事故发生之日起30日内，事故造成的伤亡人数发生变化的，未及时补报，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SGSG_13_2",
+    "keywords": [
+      "自事故发生之日起30日内",
+      "事故造成的伤亡人数发生变化的",
+      "未及时补报"
+    ],
+    "lifecycle": "active",
+    "measures": "自事故发生之日起30日内，事故造成的伤亡人数发生变化的，及时补报。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "自事故发生之日起30日内，事故造成的伤亡人数发生变化的，未及时补报"
+  }
 }

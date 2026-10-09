@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "71c4bf6602fea77335c76d37d083fb076b1e030561894dad96c9ce22e9b32b85",
   "contextHashes": {
-    "hazard": "6840b5541f6fd80ca00d7d916ae79b8937847a24c6f68fdfbcdac1e734b7e1a9",
+    "hazard": "512452f26f2e8e84a8a7e485d99f1d32c69457c3c953534e713176c4c986177a",
     "clause": "04955dd4cdb9e3506003263b935b74d4309388a3f5b69a64b3e39f2b56ee8c3a"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第四十五条符合国标的劳保用品。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_EDE4F3F91EC94F4A8B8970393D",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "71c4bf6602fea77335c76d37d083fb076b1e030561894dad96c9ce22e9b32b85",
+    "contextHashes": {
+      "hazard": "6840b5541f6fd80ca00d7d916ae79b8937847a24c6f68fdfbcdac1e734b7e1a9",
+      "clause": "04955dd4cdb9e3506003263b935b74d4309388a3f5b69a64b3e39f2b56ee8c3a"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第四十五条符合国标的劳保用品。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

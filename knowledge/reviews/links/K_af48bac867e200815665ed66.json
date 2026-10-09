@@ -3,19 +3,39 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T18:30:00+08:00",
-  "reason": "治理系统未有事故自动报警装置，违反安全生产法第八十一条生产经营单位应当制定生产安全事故应急救援预案的要求，以及安全设备必须具备报警功能的要求。事故自动报警装置是应急救援的重要设施。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
     "EMERGENCY_ALARM"
   ],
   "reviewedContentHash": "e63de635d456eba29f1bff02c7c52fa905892021df8ad1941e74c00fa449745a",
   "contextHashes": {
-    "hazard": "4d8a152ea482e88c01b6a7239a4f80945c01ebbfb0bf594a053c8a411bf9ee42",
-    "clause": "46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000",
-    "link": "965da4d471e098e08a218649d833458f6d99da5e1d1c3f4fa82467ed7d8e3669"
+    "hazard": "081ed5cbb56d30ff603daa0ace45bdd25fb61396b9d89db0f076d91dbff386e7",
+    "clause": "46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000"
   },
   "evidenceRefs": [],
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_af48bac867e200815665ed66",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Doubao-Agent",
+    "checkedAt": "2026-09-10T18:30:00+08:00",
+    "reason": "治理系统未有事故自动报警装置，违反安全生产法第八十一条生产经营单位应当制定生产安全事故应急救援预案的要求，以及安全设备必须具备报警功能的要求。事故自动报警装置是应急救援的重要设施。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "EMERGENCY_ALARM"
+    ],
+    "reviewedContentHash": "e63de635d456eba29f1bff02c7c52fa905892021df8ad1941e74c00fa449745a",
+    "contextHashes": {
+      "hazard": "4d8a152ea482e88c01b6a7239a4f80945c01ebbfb0bf594a053c8a411bf9ee42",
+      "clause": "46897af01f7ccae066431e0d831f3b138f7651617eb15c537c231802198ae000",
+      "link": "965da4d471e098e08a218649d833458f6d99da5e1d1c3f4fa82467ed7d8e3669"
+    },
+    "evidenceRefs": [],
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

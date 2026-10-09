@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8E6306CD3D67236A96043382ED_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5ca2d888d321d5c3600fc05639040b8d518808c53ed8ed71db037127d83dbff8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_A2ED1437703A30BBA0830A9D"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "504f4667cd49cc6ea83bd7a2083e216fc7ef5dbf0a02ef44dfd5675a5abf3c10",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第二十四条直接规定新研制消防产品技术鉴定前置要求，现截取标准符合性段不含此义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "新研制的尚未制定国家标准、行业标准的消防产品，应当按照国务院产品质量监督部门会同国务院应急管理部门规定的办法，经技术鉴定符合消防安全要求的，方可生产、销售、使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8E6306CD3D67236A96043382ED_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A2ED1437703A30BBA0830A9D"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "504f4667cd49cc6ea83bd7a2083e216fc7ef5dbf0a02ef44dfd5675a5abf3c10",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，新研制的尚未制定国家标准、行业标准的消防产品，未按照国务院产品质量监督部门会同国务院应急管理部门规定的办法进行技术鉴定，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_8E6306CD3D67236A96043382ED_3",
+    "keywords": [
+      "新研制的尚未制定国家标准",
+      "行业标准的消防产品",
+      "未按照国务院产品质量监督部门会同国务院应急管理部门规定的办法进行技术鉴定"
+    ],
+    "lifecycle": "active",
+    "measures": "新研制的尚制定国家标准、行业标准的消防产品，按照国务院产品质量监督部门会同国务院应急管理部门规定的办法进行技术鉴定；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "新研制的尚未制定国家标准、行业标准的消防产品，未按照国务院产品质量监督部门会同国务院应急管理部门规定的办法进行技术鉴定"
+  }
 }

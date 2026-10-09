@@ -1,15 +1,55 @@
 {
-  "checkedAt": "2026-09-19T00:00:00+08:00",
-  "decision": "verified",
   "entityId": "H_72C3801D44894633B32B67FD4E",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7a8750d4ae4f21bebb46980380a659a7cb24d0953b325231b904b373023aa14e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "经核验GB 18597-2023官方原件，条款原文与适用范围完全支撑该隐患判定，转为正式有效隐患。集中贮存设施建在禁建保护区或严重自然灾害地带，违反GB 18597-2023第5.2、5.3条选址规定。",
-  "reviewType": "content",
-  "reviewedContentHash": "63d8d6591d3e8a88bd6ce1dcfc1a97d3ada1fdc9ef6fd9eac5d02bb595f77a9b",
-  "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
-  "reviewedAt": "2026-09-19T00:00:00Z",
-  "lifecycle": "active"
+  "reason": "将5.2的对象限定为集中贮存设施并恢复原文灾害名称；现有5.3关联的applicability及reason误写溶洞和自然灾害，字段补丁无权修改关联说明，复核时须据5.3原文纠正。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "集中贮存设施不应选在生态保护红线区域、永久基本农田和其他需要特别保护的区域内，不应建在溶洞区或易遭受洪水、滑坡、泥石流、潮汐等严重自然灾害影响的地区。\n贮存设施不应选在江河、湖泊、运河、渠道、水库及其最高水位线以下的滩地和岸坡，以及法律法规规定禁止贮存危险废物的其他地点。",
+  "previousReview": {
+    "checkedAt": "2026-09-19T00:00:00+08:00",
+    "decision": "verified",
+    "entityId": "H_72C3801D44894633B32B67FD4E",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "经核验GB 18597-2023官方原件，条款原文与适用范围完全支撑该隐患判定，转为正式有效隐患。集中贮存设施建在禁建保护区或严重自然灾害地带，违反GB 18597-2023第5.2、5.3条选址规定。",
+    "reviewType": "content",
+    "reviewedContentHash": "63d8d6591d3e8a88bd6ce1dcfc1a97d3ada1fdc9ef6fd9eac5d02bb595f77a9b",
+    "reviewer": "Codex GB 18597-2023 专项收录与转正批次 20260919",
+    "reviewedAt": "2026-09-19T00:00:00Z",
+    "lifecycle": "active"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于危险废物集中贮存设施及一般贮存设施选址的法定禁止区域核查。",
+    "description": "危险废物集中贮存设施选址位于生态保护红线区域、永久基本农田和其他需要特别保护的区域，或者位于溶洞区或易遭受滑坡、泥石流、潮水或内涝等严重自然灾害影响的地带。",
+    "id": "H_72C3801D44894633B32B67FD4E",
+    "keywords": [
+      "危险废物贮存设施选址",
+      "设计",
+      "运行管理未满足",
+      "GB",
+      "18597",
+      "等标准要求"
+    ],
+    "lifecycle": "active",
+    "measures": "危险废物集中贮存设施选址必须避开生态保护红线、永久基本农田等禁建区域；贮存设施场址必须避开溶洞区及易遭受滑坡、泥石流、潮水、内涝等严重自然灾害地带。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所",
+      "通用场所"
+    ],
+    "title": "危险废物集中贮存设施选址不符合禁建区要求"
+  }
 }

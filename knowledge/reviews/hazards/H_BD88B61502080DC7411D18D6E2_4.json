@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_BD88B61502080DC7411D18D6E2_4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d89ce2f1cb847f03a29cf56e592574419309d7a3bbe2a4a626ec7c259fd63266",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_A29144356483332A9913EF7B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "b3c901c247e739437d15fe98c74ea2ea5bc11f8da4583483a4ab81ad42480b7a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现依据只有政府编预案职责，完整第六十条另含各级各类预案修订、衔接和演练要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "各级各类生产安全事故应急救援预案应当按照有关规定及时修订、相互衔接，并且定期组织演练。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_BD88B61502080DC7411D18D6E2_4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_A29144356483332A9913EF7B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "b3c901c247e739437d15fe98c74ea2ea5bc11f8da4583483a4ab81ad42480b7a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于江苏省行政区域内，且依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：江苏省行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "经资料及履职情况核查，各级各类生产安全事故应急救援预案未按照有关规定及时修订、相互衔接，也未定期组织演练，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_BD88B61502080DC7411D18D6E2_4",
+    "keywords": [
+      "各级各类生产安全事故应急救援预案未按照有关规定及时修订",
+      "相互衔接",
+      "也未定期组织演练"
+    ],
+    "lifecycle": "active",
+    "measures": "各级各类生产安全事故应急救援预案按照有关规定及时修订、相互衔接，也定期组织演练。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "各级各类生产安全事故应急救援预案未按照有关规定及时修订、相互衔接，也未定期组织演练"
+  }
 }

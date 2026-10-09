@@ -2,17 +2,35 @@
   "entityType": "link",
   "entityId": "K_XLSX_WEB_H_6DA95A770FF648088F066C2BF4",
   "reviewType": "applicability",
-  "decision": "verified",
-  "reviewedContentHash": "4f6d0a40d6905aef00c46f09340af41331b399496dec8ff3d39122c99b65bace",
+  "decision": "rejected",
+  "reviewedContentHash": "69b03c8597789ecaa880543103af55867fad8303299a9c66e16515372ba9b8b3",
   "contextHashes": {
-    "hazard": "731f2f0b825ff8307b63fac0a3122228307d4afe1bc33e122a26bfb11349ac61",
+    "hazard": "022b45ae25b752763a6b69c0a1be760348d0d057ddfa8f0c11063224628d29e9",
     "clause": "04955dd4cdb9e3506003263b935b74d4309388a3f5b69a64b3e39f2b56ee8c3a"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第四十五条劳动防护用品佩戴。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_6DA95A770FF648088F066C2BF4",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "4f6d0a40d6905aef00c46f09340af41331b399496dec8ff3d39122c99b65bace",
+    "contextHashes": {
+      "hazard": "731f2f0b825ff8307b63fac0a3122228307d4afe1bc33e122a26bfb11349ac61",
+      "clause": "04955dd4cdb9e3506003263b935b74d4309388a3f5b69a64b3e39f2b56ee8c3a"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第四十五条劳动防护用品佩戴。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

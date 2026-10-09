@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_C57A98D6C7BFC2D6918CC60265_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "4303789c2faf3f15b587fdf05f9463abe1b91a5da6d60aeb1d89439891febca0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_3521094B7AED1F92644C9551"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "77fde4b7a851d0f63ce7f979fcb0b612a3796074fe0f9a9de95255c7a1e49aab",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "同一法规完整第五十五条含禁止因紧急停工撤离降低待遇解约的直接规定，原关联仅列停工撤离权利。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五十五条从业人员发现直接危及人身安全的紧急情况时，有权停止作业或者在采取可能的应急措施后撤离作业场所。 生产经营单位不得因从业人员在前款紧急情况下停止作业或者采取紧急撤离措施而降低其工资、福利等待遇或者解除与其订立的劳动合同。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_C57A98D6C7BFC2D6918CC60265_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_3521094B7AED1F92644C9551"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "77fde4b7a851d0f63ce7f979fcb0b612a3796074fe0f9a9de95255c7a1e49aab",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位因从业人员在紧急情况下停止作业或者采取紧急撤离措施而降低其工资、福利等待遇或者解除与其订立的劳动合同，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_C57A98D6C7BFC2D6918CC60265_1",
+    "keywords": [
+      "生产经营单位因从业人员在紧急情况下停止作业或者采取紧急撤离措施而降低其工资",
+      "福利等待遇或者解除与其订立的劳动合同"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止因从业人员在紧急情况下停止作业或采取紧急撤离措施而降低待遇、解除劳动合同等不利处理，并纠正已经作出的处理，完善紧急避险权利保障机制。整改后通过制度文件、人员能力、履职记录和实际执行情况复核闭环效果。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位因从业人员在紧急情况下停止作业或者采取紧急撤离措施而降低其工资、福利等待遇或者解除与其订立的劳动合同"
+  }
 }

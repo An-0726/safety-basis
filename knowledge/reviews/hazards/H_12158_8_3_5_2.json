@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_8_3_5_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "77f44d99d1eb4685d4447f8a311f64ae44f10b7f89b7f3875037b7fd066645a7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "ed117466b28d6a8fd516fb6451f3e09a322f5d72811c6b155fbb66a5e1c82dc0",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "恢复清洗后使用前提，不自行补表5的数值。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "可移动容器的清洗过程应搬离可燃的环境条件,并且在清洗后经过静置才可使用。静置时间应不小于表5规定的时间。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_8_3_5_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "ed117466b28d6a8fd516fb6451f3e09a322f5d72811c6b155fbb66a5e1c82dc0",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "电气安全",
+    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "description": "现场检查发现，静置时间未达到表5规定的时间，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_8_3_5_2",
+    "keywords": [
+      "静置时间未达到表5规定的时间"
+    ],
+    "lifecycle": "active",
+    "measures": "静置时间达到表5规定的时间。由具备相应作业能力的人员实施整改，完成后对接地、绝缘、保护装置、防爆或联锁等与本项有关的安全功能进行复核测试，确认合格后再送电使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电气设备安装、运行、检维修及用电相关场所"
+    ],
+    "title": "静置时间未达到表5规定的时间"
+  }
 }

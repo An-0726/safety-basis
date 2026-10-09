@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_59164F49FF146C2B74D52556C4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "93764d30805fc059f741194bab12e36d846c3fc6fe06628b65d9b569abade2af",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_957C1ACCA84908E4AC14EB56"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "76f82ea9edf3c537da900120cd811a5b6af376cdd1e4984b0cb68e3decb3884d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联只包含岗位设置要求，同部法规完整第十九条明确规定相关专业职称或资格，须保留二选一结构。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "安全总监或者其他专职安全生产分管负责人应当具有工程师以上相关专业的技术职称或者取得相关专业的注册安全工程师资格，熟悉安全生产法律、法规、标准和规范。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_59164F49FF146C2B74D52556C4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_957C1ACCA84908E4AC14EB56"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "76f82ea9edf3c537da900120cd811a5b6af376cdd1e4984b0cb68e3decb3884d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "专项安全与EHS",
+    "conditions": "适用于江苏省行政区域内，且存在直接依据所述特定主体、活动或综合性EHS管理事项；引用前应核对责任主体、适用对象、触发条件及排除情形。\n适用场所：江苏省行政区域内相关生产经营单位、设备设施或作业活动",
+    "description": "现场检查发现，安全总监或者其他专职安全生产分管负责人未具有工程师以上相关专业技术职称或者注册安全工程师资格，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_59164F49FF146C2B74D52556C4_2",
+    "keywords": [
+      "安全总监或者其他专职安全生产分管负责人未具有工程师以上相关专业技术职称或者注册安全工程师资格"
+    ],
+    "lifecycle": "active",
+    "measures": "安全总监或者其他专职安全生产分管负责人具有工程师以上相关专业技术职称或者注册安全工程师资格。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内相关生产经营单位、设备设施或作业活动"
+    ],
+    "title": "安全总监或者其他专职安全生产分管负责人未具有工程师以上相关专业技术职称或者注册安全工程师资格"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_34E4D0C37CE6BD4C5AA5A452B7_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9ab7cb5b776d1eec806d03ab6b543bccd9a27f4e63c2aeef8cef9dff625fb17d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_2CB86E2D791C865ABDC89B45"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "74b258488645bc03636036f205089bdf01ba503864c0253183d4e0894b93a48d",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现条款缺少重大风险专项方案段，同部法规完整第二十六条直接规定该义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位对存在的重大安全风险，应当制定专项管控方案，通过隔离安全风险源、采取技术手段、实施个体防护、设置监控预警设备等针对性措施加强管控。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_34E4D0C37CE6BD4C5AA5A452B7_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_2CB86E2D791C865ABDC89B45"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "74b258488645bc03636036f205089bdf01ba503864c0253183d4e0894b93a48d",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于江苏省行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：江苏省行政区域内生产经营单位及相关安全管理活动",
+    "description": "经资料及履职情况核查，生产经营单位对存在的重大安全风险未制定专项管控方案，相应管理要求缺少完整、有效的文件或执行记录支撑。",
+    "id": "H_34E4D0C37CE6BD4C5AA5A452B7_2",
+    "keywords": [
+      "生产经营单位对存在的重大安全风险未制定专项管控方案"
+    ],
+    "lifecycle": "active",
+    "measures": "生产经营单位对存在的重大安全风险制定专项管控方案。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "江苏省行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "生产经营单位对存在的重大安全风险未制定专项管控方案"
+  }
 }

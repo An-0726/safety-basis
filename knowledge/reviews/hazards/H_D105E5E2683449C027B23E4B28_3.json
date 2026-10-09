@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D105E5E2683449C027B23E4B28_3",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "f78365263b2d928602659b9f4fdcd3d83816fdaf0c5bfc7478eec66808219888",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "76ca86aeb607b9a675bb0d42a8b1c3ad50a29287a5cf727fc01717892495eec9",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "完整第八十二条另含器材设备物资配置且包括运输单位，现首段只规定组织和人员。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "危险物品的生产、经营、储存、运输单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位应当配备必要的应急救援器材、设备和物资，并进行经常性维护、保养，保证正常运转。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D105E5E2683449C027B23E4B28_3",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "f78365263b2d928602659b9f4fdcd3d83816fdaf0c5bfc7478eec66808219888",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_D105E5E2683449C027B23E4B28_3",
+    "title": "危险物品的生产、经营、储存、运输单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位未配备必要的应急救援器材、设备和物资",
+    "description": "危险物品的生产、经营、储存、运输单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位应当配备必要的应急救援器材、设备和物资，并进行经常性维护、保养，保证正常运转。（第八十二条）。",
+    "measures": "危险物品的生产、经营、储存、运输单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位应当配备必要的应急救援器材、设备和物资，并进行经常性维护、保养，保证正常运转。（依据 第八十二条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "危险物品的生产、经营、储存、运输单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位未配备必要的应急救援器材、设备和物资"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第八十二条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

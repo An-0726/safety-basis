@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_SZLD_81_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "793e9df47baaf6030de255265d9e5f9563f04ba037f491286becb7043dcb3227",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_D7C7A2C2D9C4AED8AC0037BA"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "ea4725507f2a39be8746dd3af8f658d2da9b3cd12c72ab774ee36358595f46d9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "明确考核对象和不再符合要求的共同前提，纠正整改时间逻辑。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "监督抽查考核不合格，不再符合电梯使用要求的，使用单位应当立即采取整改措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_SZLD_81_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_D7C7A2C2D9C4AED8AC0037BA"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "ea4725507f2a39be8746dd3af8f658d2da9b3cd12c72ab774ee36358595f46d9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：电梯使用、运行、维护检修或相关管理场景",
+    "description": "经资料和执行情况核查，电梯监督抽查考核不合格后使用单位未立即采取整改措施，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_SZLD_81_3",
+    "keywords": [
+      "电梯监督抽查考核不合格后使用单位未立即采取整改措施"
+    ],
+    "lifecycle": "active",
+    "measures": "电梯监督抽查考核整改合格后使用单位立即采取整改措施。整改后核对人员名单、培训内容、考核结果或资格证明；未达到要求的人员不得独立从事相应岗位或作业，并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "电梯使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "电梯监督抽查考核不合格后使用单位未立即采取整改措施"
+  }
 }

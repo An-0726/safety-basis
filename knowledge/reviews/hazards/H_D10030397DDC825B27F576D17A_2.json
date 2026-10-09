@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D10030397DDC825B27F576D17A_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "66fab0afce5c9c76012a38bf9b964647d75200724bfc7d603a629342407e262d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_BCFFFB0D5A4BA681A76D4CD9"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "7ab4ed2df1b5016f93a048454cf171cf32cc018cbd9d0cb382302dd8f90b1496",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联为特殊建设工程审查，完整第十一条直接规定其他建设工程申报时的消防设计资料。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定以外的其他建设工程，建设单位申请领取施工许可证或者申请批准开工报告时应当提供满足施工需要的消防设计图纸及技术资料。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D10030397DDC825B27F576D17A_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_BCFFFB0D5A4BA681A76D4CD9"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "7ab4ed2df1b5016f93a048454cf171cf32cc018cbd9d0cb382302dd8f90b1496",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，其他建设工程的建设单位申请领取施工许可证或者申请批准开工报告时，未提供满足施工需要的消防设计图纸及技术资料，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D10030397DDC825B27F576D17A_2",
+    "keywords": [
+      "其他建设工程的建设单位申请领取施工许可证或者申请批准开工报告时",
+      "未提供满足施工需要的消防设计图纸及技术资料"
+    ],
+    "lifecycle": "active",
+    "measures": "其他建设工程的建设单位申请领取施工许可证或者申请批准开工报告时，提供满足施工需要的消防设计图纸及技术资料。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "其他建设工程的建设单位申请领取施工许可证或者申请批准开工报告时，未提供满足施工需要的消防设计图纸及技术资料"
+  }
 }

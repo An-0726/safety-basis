@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-14",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "c75d2d8c2370925df50d612a92318ac58d9be9ff4891ea789addbc78f4c090e8",
-    "hazard": "a84d75c02d5ca6e0bf24f07983053f2c7aab76bab099206d46366b7d2f923b8e"
+    "hazard": "be27800d0d7d5f9417d749d4d9e728564a7a5dc68c412c435d281ca3a66aff46",
+    "clause": "c75d2d8c2370925df50d612a92318ac58d9be9ff4891ea789addbc78f4c090e8"
   },
   "decision": "verified",
   "entityId": "K_XLSX_NEW14_C767572144CC0493AC9CDDB5",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
   ],
-  "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "1081fdc3d7002c4c98255c7ad51c073d9d7356e925017183348bf89a244ce792",
-  "reviewer": "Codex新版整改回绑批次20260914",
-  "notes": "原错误挂《危险化学品安全法》5.2.6；实际为JGJ 91-2019第5.2.6条。"
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "contextHashes": {
+      "clause": "c75d2d8c2370925df50d612a92318ac58d9be9ff4891ea789addbc78f4c090e8",
+      "hazard": "a84d75c02d5ca6e0bf24f07983053f2c7aab76bab099206d46366b7d2f923b8e"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_NEW14_C767572144CC0493AC9CDDB5",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_899D6D9F5C97976AF2B53BEB"
+    ],
+    "reason": "新版整改字段与现有已核验条款的对象、版本和适用范围一致。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "1081fdc3d7002c4c98255c7ad51c073d9d7356e925017183348bf89a244ce792",
+    "reviewer": "Codex新版整改回绑批次20260914",
+    "notes": "原错误挂《危险化学品安全法》5.2.6；实际为JGJ 91-2019第5.2.6条。"
+  }
 }

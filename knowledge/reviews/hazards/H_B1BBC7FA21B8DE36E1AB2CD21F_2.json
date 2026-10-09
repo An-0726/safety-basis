@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_B1BBC7FA21B8DE36E1AB2CD21F_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "c12e03b6db99f08f99bde3912b7cbaf4fd15c0e9dc71b85481f195d8a590aed3",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_54D999546064D0CA8005F91E"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "66026baab477b4a6a53157a8e45f96db956f1fb5df55cddea01d4795a6e059da",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "30人门槛只适用于前款列明单位，补行业及地域条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定的生产经营单位，从业人员三十人以上的，应当设置安全生产管理机构。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_B1BBC7FA21B8DE36E1AB2CD21F_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_54D999546064D0CA8005F91E"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "66026baab477b4a6a53157a8e45f96db956f1fb5df55cddea01d4795a6e059da",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于南京市行政区域内，且由直接依据规定的责任主体承担相应安全管理义务；应通过制度、职责、台账、记录、报告及实际执行情况核实是否落实，不宜仅凭现场外观判定。\n适用场所：南京市行政区域内生产经营单位及相关安全管理活动",
+    "description": "现场检查发现，从业人员三十人以上的生产经营单位未设置安全生产管理机构，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_B1BBC7FA21B8DE36E1AB2CD21F_2",
+    "keywords": [
+      "从业人员三十人以上的生产经营单位未设置安全生产管理机构"
+    ],
+    "lifecycle": "active",
+    "measures": "从业人员三十人以上的生产经营单位设置安全生产管理机构。整改完成后由责任人员对现场状态和相关资料进行复核，确认要求已经落实并形成可追溯记录后闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内生产经营单位及相关安全管理活动"
+    ],
+    "title": "从业人员三十人以上的生产经营单位未设置安全生产管理机构"
+  }
 }

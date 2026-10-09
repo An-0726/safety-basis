@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D5554A461F994E1121BFF8E5D4_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "0548a02e5a9ae6f3f78c3c2a13722041461606004be7c57f59edc7b92951b82d",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_226C733407DAA40D5FE25506"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "d0eb1d8fb9771b3eaa8db7ec4af7ffc525c14078bfedee56954d055419a961cb",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现关联为危险品生产储存等操作要求，完整第二十三条另含进入场所的消防安全规定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "进入生产、储存易燃易爆危险品的场所，必须执行消防安全规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D5554A461F994E1121BFF8E5D4_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_226C733407DAA40D5FE25506"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "d0eb1d8fb9771b3eaa8db7ec4af7ffc525c14078bfedee56954d055419a961cb",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，进入生产、储存易燃易爆危险品的场所，未执行消防安全规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D5554A461F994E1121BFF8E5D4_2",
+    "keywords": [
+      "进入生产",
+      "储存易燃易爆危险品的场所",
+      "未执行消防安全规定"
+    ],
+    "lifecycle": "active",
+    "measures": "进入生产、储存易燃易爆危险品的场所，执行消防安全规定；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "进入生产、储存易燃易爆危险品的场所，未执行消防安全规定"
+  }
 }

@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "5c278874036124340f69e9a8113cb0dcc457e23f5a691418fad7f09cf2067a77",
   "contextHashes": {
-    "hazard": "397715062d52e344be0eb2f1585cad7c2dfabf4c93789b73f606931e456b94db",
+    "hazard": "482916a79ee52231e32e8abe93708620a526e3e5920e3414e97fbce1b9dce8ba",
     "clause": "a6602047e655d78a0af5694afa23a8f72adcaba4da2bef0e4759e059da51477d"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第八十二条兼职应急人员指定。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_D105E5E2683449C027B23E4B28_2",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "5c278874036124340f69e9a8113cb0dcc457e23f5a691418fad7f09cf2067a77",
+    "contextHashes": {
+      "hazard": "397715062d52e344be0eb2f1585cad7c2dfabf4c93789b73f606931e456b94db",
+      "clause": "a6602047e655d78a0af5694afa23a8f72adcaba4da2bef0e4759e059da51477d"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，《安全生产法》第八十二条兼职应急人员指定。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_2AE1F443127CB3AE4EFDFAA4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "fbdff0fe87f1bc12ed38ac793f0a67a3010fb0e15fd64fc14d48f5f7d920d193",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "96a13b8515676b2266ad84f4b7b5f9573d9c22aaa7e417a197d41136ff878499",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原文要求收集装置与净化设施且限定废物特性，不能将收集装置替换为导出口。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "贮存易产生粉尘、VOCs、酸雾、有毒有害大气污染物和刺激性气味气体的危险废物贮存库，应设置气体收集装置和气体净化设施；气体净化设施的排气筒高度应符合GB 16297要求。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_2AE1F443127CB3AE4EFDFAA4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "96a13b8515676b2266ad84f4b7b5f9573d9c22aaa7e417a197d41136ff878499",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，危险废物贮存库未设置气体收集导出口及气体净化装置，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_2AE1F443127CB3AE4EFDFAA4",
+    "keywords": [
+      "危险废物贮存库未设置气体收集导出口及气体净化装置"
+    ],
+    "lifecycle": "active",
+    "measures": "在危险废物贮存库设置气体收集导出口及气体净化装置，并保持正常运行。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危险废物贮存库未设置气体收集导出口及气体净化装置"
+  }
 }

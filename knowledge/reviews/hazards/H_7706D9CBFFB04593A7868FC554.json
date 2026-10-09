@@ -1,13 +1,73 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_7706D9CBFFB04593A7868FC554",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "d29bf72d4363f2162c37c7c8cff052b55f9a84067659988922f4ce6184492afd",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9AF12B8E75794D4700AD3A2A"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "68db2cdef877226723a24122a1791c338534d2671cd196831cdbbbf280c3bafb",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "保留资金投入的对题部分，删除该条未直接规定的资金使用专项制度。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第二十条 生产经营单位的决策机构、主要负责人或者个人经营的投资人应当保证安全生产条件所必需的资金投入，并纳入年度生产经营计划和财务预算，重点用于安全风险管控、事故隐患治理、安全设施设备维护、安全生产教育和培训、劳动防护用品配备、应急救援演练和设备物资配备等方面的支出。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_7706D9CBFFB04593A7868FC554",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9AF12B8E75794D4700AD3A2A"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "68db2cdef877226723a24122a1791c338534d2671cd196831cdbbbf280c3bafb",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "未保证事故隐患排查治理所需资金，未建立资金使用专项制度。",
+    "id": "H_7706D9CBFFB04593A7868FC554",
+    "keywords": [
+      "未保证事故隐患排查治理所需的资金",
+      "建立资金使用专项制度",
+      "未",
+      "保",
+      "证",
+      "事",
+      "故",
+      "隐",
+      "患",
+      "排",
+      "查",
+      "治",
+      "理",
+      "所",
+      "需",
+      "的",
+      "资",
+      "金",
+      ",",
+      "建",
+      "立",
+      "使",
+      "用",
+      "专",
+      "项",
+      "制",
+      "度"
+    ],
+    "lifecycle": "active",
+    "measures": "按要求投入资金,保证隐患排查治理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《安全生产事故隐患排查治理暂行规定》原国家安监总局令第16号 第九条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "未保证事故隐患排查治理所需的资金,建立资金使用专项制度"
+  }
 }

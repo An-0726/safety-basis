@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D71C107D07BDC5D8F3BBA2AD9F_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e15c7d1f4af7e3ab22f973fc38049eb3bd85b4f8d01ce31a275bcc48fe223e3a",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_STD_HJ2026_2013"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "64e9f7b2726554b97a8a51a7d88bb0122bd39d944e69d13e0e2c15144cd822ee",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "按无歧义原文改写吸附工程开停机先后顺序；“连锁控制”字样可疑部分留待原文复核，不自行更正或据其起草控制要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "治理工程应先于产生废气的生产工艺设备开启、后于生产工艺设备停机，",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D71C107D07BDC5D8F3BBA2AD9F_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_STD_HJ2026_2013"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "64e9f7b2726554b97a8a51a7d88bb0122bd39d944e69d13e0e2c15144cd822ee",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "机械与设备安全",
+    "conditions": "适用于存在机械运动、夹卷、剪切、挤压、撞击、旋转、锐边或设备失控等机械危险及相关操作、检维修活动；应结合设备结构、危险部位和使用状态确认防护要求。\n适用场所：机械设备制造、安装、运行、操作和检维修相关场所",
+    "description": "现场检查发现，治理工程未先于产生废气的生产工艺设备开启、后于生产工艺设备停机，未实现连锁控制，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D71C107D07BDC5D8F3BBA2AD9F_1",
+    "keywords": [
+      "治理工程未先于产生废气的生产工艺设备开启",
+      "后于生产工艺设备停机",
+      "未实现连锁控制"
+    ],
+    "lifecycle": "active",
+    "measures": "治理工程先于产生废气的生产工艺设备开启、后于生产工艺设备停机，实现连锁控制。整改后对防护装置、结构、通道、联锁或其他与本项有关的安全功能进行检查确认，必要时试运行验证，合格后再投入使用。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所"
+    ],
+    "title": "治理工程未先于产生废气的生产工艺设备开启、后于生产工艺设备停机，未实现连锁控制"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_5D26A315823F4DA1B9368CC93D",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "d008d6cbd17d772bd558e90adc42dbc5f4f1368614a9403c6a0af4110de80f66",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "63372904e8b8c007488f512b18ded3324a6d8115edd1337e13c644fd7886dced",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "先查安全生产法第四十一条第二款，再以“实验室、安全检查、人员能力、健康状况、工作流程”检索全部现行条款并核对《科研建筑设计标准》；未找到实验室该专项安全检查清单的直接规定，一般隐患排查治理义务不能支持任意实验室及清单全部项目。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当建立健全并落实生产安全事故隐患排查治理制度，采取技术、管理措施，及时发现并消除事故隐患。事故隐患排查治理情况应当如实记录。重大事故隐患排查治理情况应当及时向负有安全生产监督管理职责的部门和职工大会或者职工代表大会报告。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_5D26A315823F4DA1B9368CC93D",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "d008d6cbd17d772bd558e90adc42dbc5f4f1368614a9403c6a0af4110de80f66",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_5D26A315823F4DA1B9368CC93D",
+    "title": "实验室未开展安全检查或检查内容不全面",
+    "description": "实验室,未开展对实验室工作的安全检查。安全检查,未包括对危险源辨识、风险评价和风险控制措施、人员能力与健康状况、环境、设施和设备、物料、工作流程等的安全检查",
+    "measures": "定期对实验室开展安全检查，内容覆盖危险源辨识、风险评价、人员能力、设施设备、物料等。",
+    "conditions": "适用于实验室的相关安全管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "实验室未开展安全检查或检查内容不全面"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《检测实验室安全 第1部分:总则》(GB/T 27476.1-2014) 第4.9.1条",
+    "mergedInto": null
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_3BD1ECF362913A2E15E2314DED_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5fd632ae3c11b0c2671d2572cb21aa8309782592c4d382657cff95acd17d9c33",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_84F77C2C0E11166231F2061E"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "73179e4074c8bf892e14a9dbf8da921436af2e93283b5a3111a0d4a4419d2b54",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "现南京第六十二条不含火灾扑灭后的现场保护要求，改用消防法第五十一条直接对应原缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "火灾扑灭后，发生火灾的单位和相关人员应当按照消防救援机构的要求保护现场，接受事故调查，如实提供与火灾有关的情况。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_3BD1ECF362913A2E15E2314DED_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_84F77C2C0E11166231F2061E"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "73179e4074c8bf892e14a9dbf8da921436af2e93283b5a3111a0d4a4419d2b54",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_3BD1ECF362913A2E15E2314DED_1",
+    "title": "火灾扑灭后，发生火灾的单位和相关人员未按照消防救援机构的要求保护现场，接受事故调查，如实提供与火灾有关的情况",
+    "description": "火灾扑灭后，发生火灾的单位和相关人员应当按照消防救援机构的要求保护现场，接受事故调查，如实提供与火灾有关的情况。（第五十一条）。",
+    "measures": "火灾扑灭后按消防救援机构要求保护现场、接受事故调查并如实提供有关情况；整改材料中的错误条号统一为《南京市消防条例》第62条。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "火灾扑灭后，发生火灾的单位和相关人员未按照消防救援机构的要求保护现场，接受事故调查，如实提供与火灾有关的情况"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第五十一条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

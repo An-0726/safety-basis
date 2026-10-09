@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_A27A68D3C15D4183AC46936645",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "e77a2282af77b6b13aad5ce2e24af5ec4767a66a395965fedd93a20408226986",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "a3f07d910dc96a8a1a2c786ea3822d1778236214ddb34844f2b0605e1d3a24d6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "优先核对现引法规，并检索全库有效条款中的“液化石油气、泄漏检测报警、防爆通风、通风设备”，核对《中华人民共和国安全生产法》《危险化学品重大危险源监督管理暂行规定》及全库燃气条款；维护检测义务、重大危险源监测要求均不能支持普通液化石油气车间同时设置报警和防爆通风设备的判据，未找到直接对题原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位必须对安全设备进行经常性维护、保养，并定期检测，保证正常运转。维护、保养、检测应当作好记录，并由有关人员签字。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_A27A68D3C15D4183AC46936645",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "e77a2282af77b6b13aad5ce2e24af5ec4767a66a395965fedd93a20408226986",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_A27A68D3C15D4183AC46936645",
+    "title": "液化石油气车间及场所未设置泄漏检测报警仪或防爆通风设备",
+    "description": "液化石油气的车间及场所,未设置泄漏检测报警仪,使用防爆型的通风系统和设备,配备两套以上重型防护服。穿防静电工作服,工作场所浓度超标时,建议操作人员,未该佩戴过滤式防毒面具",
+    "measures": "设置泄漏检测报警仪,使用防爆型的通风系统和设备。",
+    "conditions": "适用于车间的相关安全管理。",
+    "category": "危险化学品与危险物质",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "液化石油气车间及场所未设置泄漏检测报警仪或防爆通风设备"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《首批重点监管的危险化学品安全措施和应急处置原则》\n\n《中华人民共和国安全生产法》第四十五条\nGB 50058-2014《爆炸危险环境电力装置设计规范》\nGB 50257-2014《电气装置安装工程 爆炸和火灾危险环境电气装置施工及验收规范》\nGB 12158-2024《防止静电事故通用导则》。",
+    "mergedInto": null
+  }
 }

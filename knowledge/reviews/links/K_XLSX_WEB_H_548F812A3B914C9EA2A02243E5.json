@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "c294ff3e4091bd74a13a29619c7804fc0f47f761d046aa2ce3ad1a51cb18fa6f",
   "contextHashes": {
-    "hazard": "97f00ca958b25df8033059e302db463d29a32cb647bc3a693c67ae969e575b03",
+    "hazard": "85ab295738ce41f5fb6116153c7e7ab3f5f296f5cddf14e5b89615d6c9f645a4",
     "clause": "96d2e710c55b79fd3d01c0889625ab353db04bea350a5e7d12fe2db27dbed665"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，HJ 2026-2013第8.2.1条吸附治理工程联锁要求。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_MEE_HJ2026_2013"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_548F812A3B914C9EA2A02243E5",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "c294ff3e4091bd74a13a29619c7804fc0f47f761d046aa2ce3ad1a51cb18fa6f",
+    "contextHashes": {
+      "hazard": "97f00ca958b25df8033059e302db463d29a32cb647bc3a693c67ae969e575b03",
+      "clause": "96d2e710c55b79fd3d01c0889625ab353db04bea350a5e7d12fe2db27dbed665"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，HJ 2026-2013第8.2.1条吸附治理工程联锁要求。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MEE_HJ2026_2013"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

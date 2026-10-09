@@ -5,12 +5,12 @@
   "decision": "verified",
   "reviewedContentHash": "bf9a7a193fcac7965561626743ef279b2bf49c9ab063888711dee20b0cc0d187",
   "contextHashes": {
-    "hazard": "b4fe1871811d583aefadaa2f7dbaec6c2d1143088de99aba375772c36c0b6126",
+    "hazard": "7864e88779f9349a95d4fcb6aa27f4c9702c5c9809ffac9966504f8261d450bd",
     "clause": "4b5944f0ee1fa7b95aee2a56eba8a4ca72a48e403561c13dd78005a14d81ddbf"
   },
-  "checkedAt": "2026-09-10T12:00:00+08:00",
-  "reviewer": "Doubao-Agent",
-  "reason": "安全生产法第24条第2款要求从业人员一百人以下的生产经营单位配备专职或兼职安全生产管理人员，与Hazard直接对应。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_MATCH"
   ],
@@ -24,5 +24,33 @@
     "v3Reason": "实体内容未发生实质性变化，revision/dependency_hash 因元数据维护而更新；经重新核验，内容与依据一致，维持通过。",
     "v3Result": "passed"
   },
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_6DAC9EE55232A226E5E19CF1E9",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "bf9a7a193fcac7965561626743ef279b2bf49c9ab063888711dee20b0cc0d187",
+    "contextHashes": {
+      "hazard": "b4fe1871811d583aefadaa2f7dbaec6c2d1143088de99aba375772c36c0b6126",
+      "clause": "4b5944f0ee1fa7b95aee2a56eba8a4ca72a48e403561c13dd78005a14d81ddbf"
+    },
+    "checkedAt": "2026-09-10T12:00:00+08:00",
+    "reviewer": "Doubao-Agent",
+    "reason": "安全生产法第24条第2款要求从业人员一百人以下的生产经营单位配备专职或兼职安全生产管理人员，与Hazard直接对应。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_MATCH"
+    ],
+    "evidenceRefs": [
+      "E_2345728bbdaef16a045171443523b3c41777753ce5a09c56399e283b83881c38"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_193b0d28194660f9d660b0bb14_68",
+      "reviewedAt": "2026-09-09T12:14:06+00:00",
+      "reviewer": "doubao-work-续接集成",
+      "v3Reason": "实体内容未发生实质性变化，revision/dependency_hash 因元数据维护而更新；经重新核验，内容与依据一致，维持通过。",
+      "v3Result": "passed"
+    },
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

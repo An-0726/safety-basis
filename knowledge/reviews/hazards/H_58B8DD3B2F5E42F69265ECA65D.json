@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_58B8DD3B2F5E42F69265ECA65D",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "87e8542bc1aeac862710675a56cd3ba15544900bd396fd5ea3cc397d195d670c",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_89B479575B86EBF8E6431251"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "2b48b5483b1874460aba8f2b64692087cc9c4cdb5f82876553334823781ff899",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "库内生产设备安全卫生设计总则6.2.1直接同时规定罩性能及设计检查更换要求，替换安全设备一般条款。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "高速旋转零部件应配置满足强度、刚度、形态和尺寸要求的防护罩,并应在设计中规定此类零部件的检查周期和更换标准。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_58B8DD3B2F5E42F69265ECA65D",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_89B479575B86EBF8E6431251"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "2b48b5483b1874460aba8f2b64692087cc9c4cdb5f82876553334823781ff899",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于存在高速旋转零部件的生产设备。",
+    "description": "高速旋转零部件未配置满足强度、刚度、形态和尺寸要求的防护罩，或未在设计中规定此类零部件的检查周期和更换标准。",
+    "id": "H_58B8DD3B2F5E42F69265ECA65D",
+    "keywords": [
+      "高速旋转零部件未配置符合要求的防护罩或未规定检查周期和更换标准"
+    ],
+    "lifecycle": "active",
+    "measures": "具有旋转危险部位的设备已设置防护罩。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条（兜底）\n\n《中华人民共和国安全生产法》主席令〔2021〕第88号 第三十六条（兜底）。",
+    "places": [
+      "机械设备制造、安装、运行、操作和检维修相关场所",
+      "通用场所"
+    ],
+    "title": "高速旋转零部件未配置符合要求的防护罩或未规定检查周期和更换标准"
+  }
 }

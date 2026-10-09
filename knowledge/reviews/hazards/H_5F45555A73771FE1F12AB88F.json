@@ -1,13 +1,49 @@
 {
-  "entityType": "hazard",
   "entityId": "H_5F45555A73771FE1F12AB88F",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "54039e5e65a5d2e1c18ce4aafad2d691772fbf0981c8e8037c52ee05ac341c0c",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "badd908625f8158d17969c14c02ce5e9d881c6e9d3ea95d33851eae8e0967977",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "安全生产法淘汰义务不覆盖全部报废分支，改用重大事故隐患准则中直接列举淘汰和报废状态仍使用的规定。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "4.1 特种设备有下列情形之一仍继续使用的，应判定为重大事故隐患。\na) 特种设备未取得许可生产、因安全问题国家明令淘汰、已经报废或者达到报废条件。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_5F45555A73771FE1F12AB88F",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "54039e5e65a5d2e1c18ce4aafad2d691772fbf0981c8e8037c52ee05ac341c0c",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于特种设备的相关安全管理。",
+    "description": "特种设备因安全问题被国家明令淘汰、已经报废或达到报废条件仍继续使用",
+    "id": "H_5F45555A73771FE1F12AB88F",
+    "keywords": [
+      "明令淘汰",
+      "报废",
+      "继续使用"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止使用国家明令淘汰、已报废或达到报废条件的特种设备，依法办理报废、注销并消除使用功能；需要替换的，使用登记、检验合格的合规设备。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_44549E43707D4EBCB2D1BC7E67 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。原 conditions 字段记录的引用依据为：依据：《特种设备重大事故隐患判定准则》GB45067-2024第4.1条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "使用国家明令淘汰、已经报废或达到报废条件的特种设备仍继续使用"
+  }
 }

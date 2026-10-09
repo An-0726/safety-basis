@@ -1,13 +1,48 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D87EA645288648BA82AF01F8E6",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "6486203e1c1634031d51a8c76b112be6e9b855035170e90472abe6fedf0f00ac",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "f0f6b048498f7d31211d29f4253c7b0db2bd521910d975b85ac3623c03bcbc3b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "先查安全生产法第八十一条，再以“新组建、生产经营活动前、评审备案、预案”检索全部现行条款并核对《生产安全事故应急预案管理办法》；未找到新组建单位须完成所列评审备案培训演练后方可经营的直接条款，通用制定衔接演练义务不能作为全部经营前置条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D87EA645288648BA82AF01F8E6",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "6486203e1c1634031d51a8c76b112be6e9b855035170e90472abe6fedf0f00ac",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "新组建的生产经营单位在开展生产经营活动前,未编制有关应急预案,并在按照有关规定进行评审、备案、培训和演练后,方可进行生产经营活动",
+    "id": "H_D87EA645288648BA82AF01F8E6",
+    "keywords": [
+      "新组建单位未编制应急预案即开展生产经营活动"
+    ],
+    "lifecycle": "active",
+    "measures": "动作；标题中的“开展生产经营前。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动",
+      "通用场所"
+    ],
+    "title": "新组建单位未编制应急预案即开展生产经营活动"
+  }
 }

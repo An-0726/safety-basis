@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D105E5E2683449C027B23E4B28_2",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "397715062d52e344be0eb2f1585cad7c2dfabf4c93789b73f606931e456b94db",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "482916a79ee52231e32e8abe93708620a526e3e5920e3414e97fbce1b9dce8ba",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "保留列举行业、小规模及未建组织共同前提，删除正向法规复述。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "危险物品的生产、经营、储存单位以及矿山、金属冶炼、城市轨道交通运营、建筑施工单位应当建立应急救援组织；生产经营规模较小的，可以不建立应急救援组织，但应当指定兼职的应急救援人员。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D105E5E2683449C027B23E4B28_2",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "397715062d52e344be0eb2f1585cad7c2dfabf4c93789b73f606931e456b94db",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_D105E5E2683449C027B23E4B28_2",
+    "title": "生产经营规模较小未建立应急救援组织的，未指定兼职的应急救援人员",
+    "description": "生产经营规模较小的，可以不建立应急救援组织，但应当指定兼职的应急救援人员。（第八十二条）。",
+    "measures": "生产经营规模较小的，可以不建立应急救援组织，但应当指定兼职的应急救援人员。（依据 第八十二条 整改。）。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产经营规模较小未建立应急救援组织的，未指定兼职的应急救援人员"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第八十二条 反转生成（GLM，2026-09-12）。",
+    "mergedInto": null
+  }
 }

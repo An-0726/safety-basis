@@ -3,19 +3,39 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T22:00:00+08:00",
-  "reason": "对在岗人员至少每半年未进行一次消防安全教育，违反消防法第十六条第一款第（六）项组织进行有针对性的消防演练的要求，以及机关、团体、企业、事业单位消防安全管理规定中消防安全教育要求。对在岗人员必须至少每半年进行一次消防安全教育。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
     "FIRE_SAFETY_EDUCATION_SEMIANNUAL"
   ],
   "reviewedContentHash": "5bf85c85d183d6e2631c4306592500b57f12fbef96e263add8af84bc3025d5b4",
   "contextHashes": {
-    "hazard": "5404c87bedaf028bfa917416e79278a4f49556b72305e298640e4fa62342fc31",
-    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
-    "link": "0a710e9736e7d14e998fcf983cdf382cac413e8dabac97e1bf86db46f163bf4f"
+    "hazard": "16464bc914466183422495d6d954aa38a4bbae9485ee02a79a6ad64650b36509",
+    "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af"
   },
   "evidenceRefs": [],
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_d9855a075b2663d8283a9254",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Doubao-Agent",
+    "checkedAt": "2026-09-10T22:00:00+08:00",
+    "reason": "对在岗人员至少每半年未进行一次消防安全教育，违反消防法第十六条第一款第（六）项组织进行有针对性的消防演练的要求，以及机关、团体、企业、事业单位消防安全管理规定中消防安全教育要求。对在岗人员必须至少每半年进行一次消防安全教育。（链接降级 supporting 后哈希同步更新，2026-09-12）",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "FIRE_SAFETY_EDUCATION_SEMIANNUAL"
+    ],
+    "reviewedContentHash": "5bf85c85d183d6e2631c4306592500b57f12fbef96e263add8af84bc3025d5b4",
+    "contextHashes": {
+      "hazard": "5404c87bedaf028bfa917416e79278a4f49556b72305e298640e4fa62342fc31",
+      "clause": "89d3845ef595543cc70c285ebb4e4d0efe5946333a4047b4072b9cfe11a179af",
+      "link": "0a710e9736e7d14e998fcf983cdf382cac413e8dabac97e1bf86db46f163bf4f"
+    },
+    "evidenceRefs": [],
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

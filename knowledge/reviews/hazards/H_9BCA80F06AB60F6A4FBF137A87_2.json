@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_9BCA80F06AB60F6A4FBF137A87_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "33e9a21604c2427e9068ee3ac8c6c7ec75e03d5ca25e223ab50a72ea9976ba23",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_8B075BCD00084450A0A015CF"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "6577a2550c1c84e06f68c83497d5cad30595bbdb3b2baa4521d3df5bd57edd41",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "该义务属于物业服务企业在管理区域内的职责，补主体与触发条件。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（八）对违反消防法律、法规规定的行为，应当及时采取合理措施制止，向有关部门或者单位报告并协助处理；",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_9BCA80F06AB60F6A4FBF137A87_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_8B075BCD00084450A0A015CF"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "6577a2550c1c84e06f68c83497d5cad30595bbdb3b2baa4521d3df5bd57edd41",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "设备设施",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "description": "对违反消防法律、法规规定的行为，应当及时采取合理措施制止，向有关部门或者单位报告并协助处理；（第十七条）。",
+    "id": "H_9BCA80F06AB60F6A4FBF137A87_2",
+    "keywords": [
+      "对违反消防法律",
+      "法规规定的行为",
+      "未及时采取合理措施制止",
+      "向有关部门或者单位报告并协助处理"
+    ],
+    "lifecycle": "active",
+    "measures": "对违反消防法律、法规规定的行为，应当及时采取合理措施制止，向有关部门或者单位报告并协助处理；（依据 第十七条 整改。）。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+      "通用场所"
+    ],
+    "title": "对违反消防法律、法规规定的行为，未及时采取合理措施制止，向有关部门或者单位报告并协助处理"
+  }
 }

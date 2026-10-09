@@ -1,13 +1,76 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_E1699142F07844FF9C21D0C37A",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "7c70d3870de7d859716bd50d108a18f4b81ba4555bd0eb5fa7b668618fb57202",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9EA38B8D1FBEA266844DFA1B"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "42671ed2512bc38cf1b73f01dd4c147e91bcb5b203e772cf2640987c0438fee7",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "条文未规定防爆柜周围的位置和包装分类要求，收敛到储存作业场所按危险特性设置灭火设施。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十七条 生产、储存危险化学品的单位，应当根据其生产、储存的危险化学品的种类和危险特性，在作业场所设置相应的监测、监控、通风、防晒、调温、防火、灭火、防爆、泄压、防毒、中和、防潮、防雷、防静电、防腐、防泄漏以及防护围堤或者隔离操作等安全设施、设备，并按照国家标准、行业标准或者国家有关规定对安全设施、设备进行经常性维护、保养，保证安全设施、设备的正常使用。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_E1699142F07844FF9C21D0C37A",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9EA38B8D1FBEA266844DFA1B"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "42671ed2512bc38cf1b73f01dd4c147e91bcb5b203e772cf2640987c0438fee7",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "存放危险化学品的防爆柜周围未配置适用的消防器材，柜内危险化学品发生初起火灾时无法就近取用器材进行处置，消防器材配置存在缺失。",
+    "id": "H_E1699142F07844FF9C21D0C37A",
+    "keywords": [
+      "危险化学品储存满足分类",
+      "包装要求",
+      "防爆柜周围未设置消防器材",
+      "危",
+      "险",
+      "化",
+      "学",
+      "品",
+      "储",
+      "存",
+      "满",
+      "足",
+      "分",
+      "类",
+      ",",
+      "包",
+      "装",
+      "要",
+      "求",
+      "防",
+      "爆",
+      "柜",
+      "周",
+      "围",
+      "未",
+      "设",
+      "置",
+      "消",
+      "器",
+      "材"
+    ],
+    "lifecycle": "active",
+    "measures": "在防爆柜周围配置适用的消防器材，并定期检查保持有效。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。原 conditions 字段记录的引用依据为：依据：《危险化学品仓库储存通则》第5.4条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "危险化学品储存满足分类、包装要求,防爆柜周围未设置消防器材。"
+  }
 }

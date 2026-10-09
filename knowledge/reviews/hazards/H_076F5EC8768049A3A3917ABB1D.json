@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_076F5EC8768049A3A3917ABB1D",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "f5bc4b6712b9b413c7e5a858bdb55ee102c02d650e3b7f8cf86d1d117f0917a0",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "fec261d643a9110ce65165969c8cd7cc42042975535cc7b3528ddcb5ddc8fb95",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_NPC_WORK_SAFETY_LAW_2021"
-  ]
+  ],
+  "reason": "优先核对现引法规，并检索全库有效条款中的“卫生学评估、难以避开、公共卫生、设计单位”，核对《中华人民共和国安全生产法》及全库建设工程卫生条款；现依据仅为生产安全事故预案，未找到建设工程选址难以避开时卫生学评估及突发公共卫生预案要求的对题原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "生产经营单位应当制定本单位生产安全事故应急救援预案，与所在地县级以上地方人民政府组织制定的生产安全事故应急救援预案相衔接，并定期组织演练。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_076F5EC8768049A3A3917ABB1D",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "f5bc4b6712b9b413c7e5a858bdb55ee102c02d650e3b7f8cf86d1d117f0917a0",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_NPC_WORK_SAFETY_LAW_2021"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_076F5EC8768049A3A3917ABB1D",
+    "title": "难以避开的建设工程未进行卫生学评估或未明确要求制定应急救援预案",
+    "description": "建设工程需要难以避开的,未首先进行卫生学评估,并根据评估结果采取必要的控制措施。设计单位,未明确要求施工单位和建设单位制定施工期间和投产运行后突发公共卫生事件应急救援预案",
+    "measures": "厂址选择避开了可能产生危害健康的场所和设施。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "应急与事故管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "难以避开的建设工程未进行卫生学评估或未明确要求制定应急救援预案"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n原 conditions 字段记录的引用依据为：依据：《工业企业设计卫生标准》第5.1.3条",
+    "mergedInto": null
+  }
 }

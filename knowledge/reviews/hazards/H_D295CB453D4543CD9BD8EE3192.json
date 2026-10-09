@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_D295CB453D4543CD9BD8EE3192",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "ec6167aa238f282a069931a9d790aff8280ea1a6cc83c91b5be9778518bc22af",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "reviewedContentHash": "fb0cb769eabfe337bc0bd9fff452d0c87fa42e32b40b38cd56e938759e7a80f1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_SAMR_GB15577_2018"
-  ]
+  ],
+  "reason": "优先在已引粉尘防爆安全规程内找到第8.4.6条直接设置要求，补充干式限定并删除无原文支撑的装置形式及后果。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "干式除尘器应设置锁气卸灰装置，及时清卸灰仓内的积灰。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_D295CB453D4543CD9BD8EE3192",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "ec6167aa238f282a069931a9d790aff8280ea1a6cc83c91b5be9778518bc22af",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_SAMR_GB15577_2018"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_D295CB453D4543CD9BD8EE3192",
+    "title": "铝粉除尘系统未安装锁气卸灰装置",
+    "description": "铝粉除尘系统未安装锁气卸灰装置，卸灰时存在粉尘外逸和爆炸风险。",
+    "measures": "在铝粉除尘系统卸灰口安装锁气卸灰装置（锁气阀/回转卸料器），保证卸灰时系统密闭、不泄漏火焰和粉尘；调试其动作可靠性并纳入日常点检。",
+    "conditions": "适用于除尘系统的相关安全管理。",
+    "category": "粉尘防爆",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "铝粉除尘系统未安装锁气卸灰装置"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)粉尘爆炸 第6条",
+    "mergedInto": null
+  }
 }

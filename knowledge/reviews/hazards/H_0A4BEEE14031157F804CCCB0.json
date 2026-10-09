@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_0A4BEEE14031157F804CCCB0",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "90ab598a38cd74380e98b1d935a319a289a98766715555b48da89ff553c8a635",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9F075F10289E6648F498F5DC"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "3305adbfdcd70b31f1d4a0bf064f0fa0894c17414f3dfed238ac370c96c952f1",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "优先核对现引法规，并检索全库有效条款中的“仓库管理人员、个人安全防护、可靠、防护用品”，核对《中华人民共和国危险化学品安全法》《危险化学品仓库储存通则》及全库劳动防护条款；现全员责任条款不规定仓库人员个人防护，库内未找到直接规定该人员配备“可靠的个人安全防护用品”的专项原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第五条 生产、储存、使用、经营、运输危险化学品的企业、学校、科研机构、医疗机构、检测机构、检验机构等单位（以下统称危险化学品单位）应当实行全员安全生产责任制，构建安全风险分级管控和隐患排查治理双重预防机制，加强安全生产标准化、信息化建设，其主要负责人对本单位的危险化学品安全生产工作全面负责。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_0A4BEEE14031157F804CCCB0",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9F075F10289E6648F498F5DC"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "3305adbfdcd70b31f1d4a0bf064f0fa0894c17414f3dfed238ac370c96c952f1",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_0A4BEEE14031157F804CCCB0",
+    "title": "危险化学品仓库管理人员未配备可靠的个人安全防护用品",
+    "description": "危险化学品仓库管理人员未配备可靠的个人安全防护用品。",
+    "measures": "仓库管理人员配备可靠的个人安全防护用品。",
+    "conditions": "适用于危险化学品仓库的相关安全管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "危险化学品仓库管理人员未配备可靠的个人安全防护用品"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_F57270BED8114BB69A556DEBA2 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《危险化学品仓库储存通则》（GB 15603-2022）",
+    "mergedInto": null
+  }
 }

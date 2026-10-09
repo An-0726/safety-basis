@@ -1,13 +1,55 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_0D60CF856EF9C4F755A8AFEA8F_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "40bb07817784eda0767d8d0771f097ed849dfa404176f67434b9f0456626ce39",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_5290D0CBC50A4EFBEE4AC59B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "b260fa6c8fc5156783a69feeaef95c3b89f062ad99648409ba210964a2937bf9",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第五十二条直接规定服务要求，现关联首段只规定检验检测按规范进行。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特种设备检验、检测机构及其检验、检测人员应当依法为特种设备生产、经营、使用单位提供安全、可靠、便捷、诚信的检验、检测服务。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_0D60CF856EF9C4F755A8AFEA8F_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_5290D0CBC50A4EFBEE4AC59B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "b260fa6c8fc5156783a69feeaef95c3b89f062ad99648409ba210964a2937bf9",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于依法从事特种设备检验、检测的机构及其人员；应结合核准/资格范围、具体检验检测项目和执业记录核查。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备检验、检测机构及其检验、检测人员未依法为特种设备生产、经营、使用单位提供安全、可靠、便捷、诚信的检验、检测服务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_0D60CF856EF9C4F755A8AFEA8F_2",
+    "keywords": [
+      "特种设备检验",
+      "检测机构及其检验",
+      "检测人员未依法为特种设备生产",
+      "经营",
+      "使用单位提供安全",
+      "可靠",
+      "便捷",
+      "诚信的检验",
+      "检测服务"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备检验、检测机构及其检验、检测人员依法为特种设备生产、经营、使用单位提供安全、可靠、便捷、诚信的检验、检测服务。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备检验、检测机构及其检验、检测人员未依法为特种设备生产、经营、使用单位提供安全、可靠、便捷、诚信的检验、检测服务"
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_CCE174D6871EB0E8372D9E5A96_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "19b7e073c83230af32fbde7551b353a71f137d64812242f81c0c98f7d22d36d0",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_1B1FD98BCBEA01AC7C954E52"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "2e2f4676857dc05db061baf4e324d7a5dafeebaaaf6686dbfa6022fad870fd4f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原关联规定备案现场检查的依据，改用消防法第十三条直接规定建设单位验收后备案义务的条款。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "前款规定以外的其他建设工程，建设单位在验收后应当报住房和城乡建设主管部门备案，住房和城乡建设主管部门应当进行抽查。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_CCE174D6871EB0E8372D9E5A96_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_1B1FD98BCBEA01AC7C954E52"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "2e2f4676857dc05db061baf4e324d7a5dafeebaaaf6686dbfa6022fad870fd4f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "description": "经资料及履职情况核查，特殊建设工程以外的其他建设工程未按照规定进行竣工验收消防备案，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_CCE174D6871EB0E8372D9E5A96_3",
+    "keywords": [
+      "特殊建设工程以外的其他建设工程未按照规定进行竣工验收消防备案"
+    ],
+    "lifecycle": "active",
+    "measures": "特殊建设工程以外的其他建设工程按照规定进行竣工验收消防备案。整改后留存报送材料、受理回执、备案/许可/审批凭证或告知记录，确保责任主体、程序和时限可追溯。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "特殊建设工程以外的其他建设工程未按照规定进行竣工验收消防备案"
+  }
 }

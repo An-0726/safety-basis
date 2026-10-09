@@ -1,18 +1,36 @@
 {
-  "checkedAt": "2026-09-13",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "f632eeaacf1e8a1df2e91d71d5c57ca8b2fb2650696a06e52f06902385f9bfd2",
-    "hazard": "74b258488645bc03636036f205089bdf01ba503864c0253183d4e0894b93a48d"
+    "hazard": "9ab7cb5b776d1eec806d03ab6b543bccd9a27f4e63c2aeef8cef9dff625fb17d",
+    "clause": "f632eeaacf1e8a1df2e91d71d5c57ca8b2fb2650696a06e52f06902385f9bfd2"
   },
-  "decision": "verified",
+  "decision": "rejected",
   "entityId": "K_XLSX_FT_6AA34B18DAEB349143BEF125",
   "entityType": "link",
   "evidenceRefs": [
     "E_XLSX_FT_2CB86E2D791C865ABDC89B45"
   ],
-  "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+  "reason": "质量审阅认定该条款不直接支持本条所述缺陷；关联停用，仅保留历史。",
   "reviewType": "applicability",
-  "reviewedContentHash": "894d0a8ae50c6c5aeff1ee89567122deddb0f41456e32ec8288aef8cdd8c8cee",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewedContentHash": "4287f2efd768e50b0fb7aebdca87c0d5ed7ff7a17a5bfc286d738ada74cf98c5",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "f632eeaacf1e8a1df2e91d71d5c57ca8b2fb2650696a06e52f06902385f9bfd2",
+      "hazard": "74b258488645bc03636036f205089bdf01ba503864c0253183d4e0894b93a48d"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_6AA34B18DAEB349143BEF125",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_FT_2CB86E2D791C865ABDC89B45"
+    ],
+    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "894d0a8ae50c6c5aeff1ee89567122deddb0f41456e32ec8288aef8cdd8c8cee",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

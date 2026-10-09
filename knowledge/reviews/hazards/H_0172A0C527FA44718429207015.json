@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_0172A0C527FA44718429207015",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "737165b7ce1bed75f7b14c1137a8d04abda4b0c769308fb18a8f30f98db7ac9b",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "394b32e5be252efbfe4b17fef30730bb491d25f76f7f03c121feb63e971a760e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原文允许未稳定时按易爆易燃危险品贮存，保留替代路径，不将缺少预处理单独判为缺陷。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在常温常压下易爆、易燃及排出有毒气体的危险废物应进行预处理，使之稳定后贮存，否则应按易爆、易燃危险品贮存。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_0172A0C527FA44718429207015",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "394b32e5be252efbfe4b17fef30730bb491d25f76f7f03c121feb63e971a760e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，易爆易燃及排出有毒气体的危险废物未预处理稳定后贮存，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_0172A0C527FA44718429207015",
+    "keywords": [
+      "易爆易燃及排出有毒气体的危险废物未预处理稳定后贮存"
+    ],
+    "lifecycle": "active",
+    "measures": "对易爆、易燃及排出有毒气体的危险废物进行预处理使其稳定后贮存，并按危险特性分类管理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "易爆易燃及排出有毒气体的危险废物未预处理稳定后贮存"
+  }
 }

@@ -1,13 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_F7139737D02A463788B9DA860E",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "37c77f0ee18b561293c2d53495d983e9bd3870851028f3a7b9d8aac1d9f5309e",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "bbfe9ddb1f455e7cbb5a9e0fd39b956ed927250990e36bd98d4efdf30be7477e",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原文更换对象仅为破损泄漏容器和包装物，设施要求是清理地面及保持防护功能，不能概括成所有设施更换。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "应定期检查危险废物的贮存状况，及时清理贮存设施地面，更换破损泄漏的危险废物贮存容器和包装物，保证堆存危险废物的防雨、防风、防扬尘等设施功能完好。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_F7139737D02A463788B9DA860E",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "bbfe9ddb1f455e7cbb5a9e0fd39b956ed927250990e36bd98d4efdf30be7477e",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "对所贮存的危险废物包装容器及贮存设施未按规定周期开展检查；或检查中发现包装容器、贮存设施存在破损、渗漏等缺陷时，未及时采取清理、更换等措施，缺陷状态持续存在，存在危险废物泄漏污染风险。",
+    "id": "H_F7139737D02A463788B9DA860E",
+    "keywords": [
+      "未定期对所贮存的危险废物包装容器及贮存设施进行检查",
+      "发现破损",
+      "未及时采取措施清理更换"
+    ],
+    "lifecycle": "active",
+    "measures": "定期检查危险废物包装容器及贮存设施，发现破损及时清理更换。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "未定期对所贮存的危险废物包装容器及贮存设施进行检查，发现破损，未及时采取措施清理更换"
+  }
 }

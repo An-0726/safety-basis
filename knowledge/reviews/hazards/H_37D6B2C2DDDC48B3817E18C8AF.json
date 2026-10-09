@@ -1,13 +1,71 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_37D6B2C2DDDC48B3817E18C8AF",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "02603572b8468148969e191f49736ac0aa280b416131c3286d66c93680cfd9c7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_276908B5E4D5252220D68D20"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "a04e63fe13f0b9e1860ae0129ee32b894c8f78a5907ce527de9935f5b6963927",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "现有依据直接支持劳动防护用品配备，删除无直接支持的现场急救用具和岗位危害清单要求，补明江苏地域。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十二条 生产经营单位应当为从业人员提供符合国家标准或者行业标准的劳动防护用品，并教育、督促从业人员正确佩戴、使用。生产经营单位不得以发放货币或者其他物品替代提供劳动防护用品。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_37D6B2C2DDDC48B3817E18C8AF",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_276908B5E4D5252220D68D20"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "a04e63fe13f0b9e1860ae0129ee32b894c8f78a5907ce527de9935f5b6963927",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "作业安全与个体防护",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "作业单位未为作业人员配备必要的劳动防护用品和现场急救用具。",
+    "id": "H_37D6B2C2DDDC48B3817E18C8AF",
+    "keywords": [
+      "作业单位",
+      "未配备必要的劳动防护用品和现场急救用具",
+      "作",
+      "业",
+      "单",
+      "位",
+      ",",
+      "未",
+      "配",
+      "备",
+      "必",
+      "要",
+      "的",
+      "劳",
+      "动",
+      "防",
+      "护",
+      "用",
+      "品",
+      "和",
+      "现",
+      "场",
+      "急",
+      "救",
+      "具"
+    ],
+    "lifecycle": "active",
+    "measures": "为作业人员配备必要的劳动防护用品和现场急救用具。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《气瓶搬运、装卸、储存和使用安全规定》第5.1条\n\nGB 39800.1-2020《个体防护装备配备规范 第1部分：总则》\n《中华人民共和国安全生产法》第四十五条\nGBZ 1-2010《工业企业设计卫生标准》\n《中华人民共和国职业病防治法》。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "作业单位未按岗位危害配备必要的劳动防护用品和适用的现场急救用具"
+  }
 }

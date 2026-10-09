@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_311325FC449A451C8D1255AD60",
+  "entityType": "hazard",
   "reviewType": "definition",
-  "decision": "verified",
-  "reviewedContentHash": "4dc2482fc3e44f127781c491b1323fd89ed623a1928e357873691e98ebb4774e",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "decision": "pending",
+  "reviewedContentHash": "d6c162d6e9b8ec4150b7dbcc821f27c6fa8e1e58d1da5c0d08a8ada0ea702eb5",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_MEE_GB18597_2023"
-  ]
+  ],
+  "reason": "优先核对现引法规，并检索全库有效条款中的“废液、收集桶、满溢、清运”，核对《危险废物贮存污染控制标准》《生产过程安全基本要求》；贮存设施建设和废液安全处置的一般规定未直接规定收集桶满溢的清运要求，未找到对题有效原文。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "产生、收集、贮存、利用、处置危险废物的单位应建造危险废物贮存设施或设置贮存场所，并根据需要选择贮存设施类型。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_311325FC449A451C8D1255AD60",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "4dc2482fc3e44f127781c491b1323fd89ed623a1928e357873691e98ebb4774e",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MEE_GB18597_2023"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_311325FC449A451C8D1255AD60",
+    "title": "废液收集桶满溢未及时清运",
+    "description": "废液收集桶已满未及时清运，在现场堆放。",
+    "measures": "及时将已满的废液收集桶清运至危险废物暂存间，规范存放并如实记录台账，避免现场超量堆放。",
+    "conditions": "适用于实验室等场所废液收集容器的管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "废液收集桶满溢未及时清运"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。\n\n2026-09-11 通用化：原表述含企业现场细节（具体编号/楼层/方位/数量词），已抽象为通用隐患表述，法律依据与整改措施未改动。\n\nGB 18597-2023《危险废物贮存污染控制标准》。",
+    "mergedInto": null
+  }
 }

@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FCB_25_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "3a75a83b5c79d78a9c4dacdb24a0382bbeffdf139937bfc4ce13e9297e50dfff",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_FCB_L006"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "18371587b6cdce506498e954845ef98d862275e9da1db81940b038ee74fd2449",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "禁阻挠义务限定监管部门委托，不能泛指所有机构服务或增加问题整改闭环。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "粉尘涉爆企业不得拒绝、阻挠负责粉尘涉爆企业安全监管的部门委托的安全生产技术服务机构开展技术服务工作。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FCB_25_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_FCB_L006"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "18371587b6cdce506498e954845ef98d862275e9da1db81940b038ee74fd2449",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "粉尘防爆",
+    "conditions": "适用于依法从事安全评价、认证、检测、检验等技术服务的机构及相应执业活动；应结合资质范围、项目合同、报告和执业过程核查。\n适用场所：存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所",
+    "description": "经资料及履职情况核查，粉尘涉爆企业拒绝或阻挠安全生产技术服务机构开展技术服务，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FCB_25_1",
+    "keywords": [
+      "粉尘涉爆企业拒绝或阻挠安全生产技术服务机构开展技术服务"
+    ],
+    "lifecycle": "active",
+    "measures": "立即停止拒绝、阻挠行为，配合监管部门依法委托的安全生产技术服务机构开展安全评价、检测、检验、隐患排查等技术服务；按要求提供必要的现场条件和资料，对发现的问题形成整改闭环。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在可燃性粉尘爆炸危险的生产、除尘、输送或储存场所"
+    ],
+    "title": "粉尘涉爆企业拒绝或阻挠安全生产技术服务机构开展技术服务"
+  }
 }

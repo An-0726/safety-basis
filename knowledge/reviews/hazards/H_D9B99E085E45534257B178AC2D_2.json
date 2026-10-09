@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_D9B99E085E45534257B178AC2D_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "5504db4977b5fc38454659655ffa5e1c4fd45671f265dd5271d702226b02cc58",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_44829B25C4AC101351CBBB16"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "a27914e7eae94f98aa7da6d35d00d7d635105e5de1510148c5834768e104dea8",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "江苏省资质主体条款不含上述义务，库内安全生产法第七十二条直接规定公开制度及禁止行为。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "承担安全评价、认证、检测、检验职责的机构应当建立并实施服务公开和报告公开制度，不得租借资质、挂靠、出具虚假报告。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_D9B99E085E45534257B178AC2D_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_44829B25C4AC101351CBBB16"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "a27914e7eae94f98aa7da6d35d00d7d635105e5de1510148c5834768e104dea8",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_D9B99E085E45534257B178AC2D_2",
+    "title": "承担安全评价、认证、检测、检验职责的机构未建立并实施服务公开和报告公开制度，租借资质、挂靠或者出具虚假报告",
+    "description": "承担安全评价、认证、检测、检验职责的机构应当建立并实施服务公开和报告公开制度，不得租借资质、挂靠、出具虚假报告。（第七十二条）。",
+    "measures": "建立并实施服务公开、报告公开制度；同时禁止租借资质、挂靠和出具虚假报告，分别按《江苏省安全生产条例》第39条和《安全生产法》第72条落实。",
+    "conditions": "适用于本隐患所述场所、设备及作业活动。",
+    "category": "设备设施",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "承担安全评价、认证、检测、检验职责的机构未建立并实施服务公开和报告公开制度，租借资质、挂靠或者出具虚假报告"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "依据 第七十二条 反转生成（GLM，2026-09-12）。\n\n《中华人民共和国安全生产法》第七十二条。",
+    "mergedInto": null
+  }
 }

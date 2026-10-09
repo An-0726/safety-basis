@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_37731F2FA3794EE382DED9708D",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "58908d52909f8bfcf7e5aa8258bf63217ca151e064ed6b3dbe3175c7aec96593",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_36E528BE2345959812615FB3"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "362bf5888f0ae173611f3ae21bf28ad9d812df959971946f835b4f2a28ed9861",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "先核安全生产法第三十五条，再以“内部检查、内部维修、提示操作、安全措施标志”检索全部现行条款并核对《生产设备安全卫生设计总则》；未找到需进入设备内部维修须设置专门安全措施提示标志的直接规定，一般警示义务不能支持指定设备和标志内容。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十五条 生产经营单位应当在有较大危险因素的生产经营场所和有关设施、设备上，设置明显的安全警示标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_37731F2FA3794EE382DED9708D",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_36E528BE2345959812615FB3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "362bf5888f0ae173611f3ae21bf28ad9d812df959971946f835b4f2a28ed9861",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_37731F2FA3794EE382DED9708D",
+    "title": "需进入内部检查维修的设备（尤其缺氧或有毒介质）未设置醒目的安全措施提示标志",
+    "description": "未进入内部检查、维修的生产设备,特别是缺氧和含有毒介质的设备,必须设有明显的提示操作人员采用安全措施的标志",
+    "measures": "对需进入内部检查、维修且可能存在缺氧、有毒有害介质等风险的设备设置醒目风险提示和安全措施标志；涉及有限空间的，落实辨识、审批、检测、通风、防护和监护要求。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "安全标志",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "需进入内部检查维修的设备（尤其缺氧或有毒介质）未设置醒目的安全措施提示标志"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。\n\n2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《生产设备安全卫生设计总则》(GB 5083-2023) 第5.10.3条\n\nGB 5083-2023《生产设备安全卫生设计总则》\n《工贸企业有限空间作业安全规定》（进入有限空间时）。",
+    "mergedInto": null
+  }
 }

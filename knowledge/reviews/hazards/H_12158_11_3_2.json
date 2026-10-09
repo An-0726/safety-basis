@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_12158_11_3_2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "857fa4810cdc69ad21b55cd834ef110cb71b308607b51f7ecd9ca51b649a3ae8",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "f46408292ace0aac47e03c6b024e51aa363b69df515f9c79ac901ad7b3f88b98",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "保留11.3按需要和可能选取部分或全部内容的结构，不把可选分析分支推广全部应急事故。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "对于较复杂的情况,则应根据实际的需要和可能,选取以下部分或全部内容,做进一步的分析测试,并通过综合分析后,做出相应的结论。\n物件的起电程度和放电能量难以用分析的方法予以定量或半定量确定时,应参考事故发生时的具体条件,通过实物模拟试验或仿真计算加以验证。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_12158_11_3_2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_12158_GB 12158"
+    ],
+    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "f46408292ace0aac47e03c6b024e51aa363b69df515f9c79ac901ad7b3f88b98",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，物件的起电程度和放电能量难以用分析方法予以定量或半定量确定时，未参考事故发生时的具体条件，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_12158_11_3_2",
+    "keywords": [
+      "物件的起电程度和放电能量难以用分析方法予以定量或半定量确定时",
+      "未参考事故发生时的具体条件"
+    ],
+    "lifecycle": "active",
+    "measures": "物件的起电程度和放电能量难以用分析方法予以定量或半定量确定时，参考事故发生时的具体条件。整改后通过预案、演练、报告记录或现场处置准备情况核实要求已经落实，并保留可追溯的闭环证据。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "生产经营单位及应急准备、事故报告和应急处置相关活动"
+    ],
+    "title": "物件的起电程度和放电能量难以用分析方法予以定量或半定量确定时，未参考事故发生时的具体条件"
+  }
 }

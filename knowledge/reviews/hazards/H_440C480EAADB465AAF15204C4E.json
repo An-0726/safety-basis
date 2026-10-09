@@ -1,13 +1,47 @@
 {
-  "entityType": "hazard",
   "entityId": "H_440C480EAADB465AAF15204C4E",
+  "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "d3818a300ab193973df18c8cc8bc3d34b1653bc84d88f56bc8e80fab1686fe61",
-  "checkedAt": "2026-09-26T18:55:20+08:00",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+  "reviewedContentHash": "01acd3b9b3aa3fe70d598bca9c39d8054fb85bb352c4471781216f8df8239d91",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_GB55036_SH_ORIGINAL_20260926"
-  ]
+  ],
+  "reason": "Codex认为库内无灭火器欠压的直接技术判据而建议下架；Claude复核：失压的灭火器不满足《消防法》第十六条第一款第（二）项“确保完好有效”，以该项为直接依据保留公开，原GB 55036第10.0.7条关联保留。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "灭火器应定期维护、维修和报废。灭火器报废后，应按照等效替代的原则更换。",
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_440C480EAADB465AAF15204C4E",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "d3818a300ab193973df18c8cc8bc3d34b1653bc84d88f56bc8e80fab1686fe61",
+    "checkedAt": "2026-09-26T18:55:20+08:00",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "reason": "逐项核现行全文；数量、类型、位置、维护义务各按对应条款，不以处罚条款替代。",
+    "evidenceRefs": [
+      "E_GB55036_SH_ORIGINAL_20260926"
+    ]
+  },
+  "previousDefinition": {
+    "id": "H_440C480EAADB465AAF15204C4E",
+    "title": "灭火器压力指示器的指针,未在绿色范围内",
+    "description": "灭火器压力指示器的指针不在绿色范围内，表明压力异常。",
+    "measures": "对压力指示器指针不在绿区范围内的灭火器进行充装或更换。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "总图与建筑",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "灭火器压力指示器的指针,未在绿色范围内"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《建筑灭火器配置验 收及检查规范》GB 50444-2008 第 2.2.1 条",
+    "mergedInto": null
+  }
 }

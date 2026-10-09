@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_D938BDABA6238F3520F00B78",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "6238791918f4ed1226e234e054f079ce6d8420b5a3fc8dec253116f87209def6",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_36E528BE2345959812615FB3"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "8809d413ac3f87961a44923004e6dfaaf0f384f0d65bdbb3784706c87ace491e",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "加入较大危险因素门槛，避免把机器警示要求无条件推广。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十五条 生产经营单位应当在有较大危险因素的生产经营场所和有关设施、设备上，设置明显的安全警示标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_D938BDABA6238F3520F00B78",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_36E528BE2345959812615FB3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "8809d413ac3f87961a44923004e6dfaaf0f384f0d65bdbb3784706c87ace491e",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_D938BDABA6238F3520F00B78",
+    "title": "生产设备/机器上未设置明显的安全警示（安全）标牌",
+    "description": "生产设备、机器上未设置明显的安全警示标牌。",
+    "measures": "在机器明显位置设置安全警示标牌。",
+    "conditions": "适用于生产设备的相关安全管理。",
+    "category": "安全管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "生产设备/机器上未设置明显的安全警示（安全）标牌"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "【V4-split-20260910】由 H_89BC396EBC084489B0CC25B02B 拆分而来，单一义务聚焦；来源 V3 原文保留于 conditions。\n\n2026-09-11 修订：原整改措施为现状描述或空话，已改写为可执行的整改动作。\n\n2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\n原 conditions 字段记录的引用依据为：依据：《铸造机械通用技术条件》(GB/T 25711-2010)第3.12.1条",
+    "mergedInto": null
+  }
 }

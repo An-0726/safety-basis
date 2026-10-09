@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-18",
+  "checkedAt": "2026-10-09",
   "contextHashes": {
-    "clause": "3372eb166cbb3aa1506f7beb19d3445c363c3a61178072d9c03658b05e507d0d",
-    "hazard": "d02217a7458ba38cf155d0f7966c1d6eb78801ffe4ae4561cd4de2d5f2fb6373"
+    "hazard": "07c88842ffdc693476575c2f011772aa033e26c89d9cc35b272f1be8d2735cf7",
+    "clause": "3372eb166cbb3aa1506f7beb19d3445c363c3a61178072d9c03658b05e507d0d"
   },
   "decision": "verified",
   "entityId": "K_PHASE12_EXACT_B64CCE85B4F84BF023E9",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "安全生产法第二十九条直接要求从业人员了解、掌握安全技术特性并接受专门培训。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "fe0b9eb7e16314a81c9b690f26aab192eeb5bcbe6596a295f8a42dbc785e6894",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "contextHashes": {
+      "clause": "3372eb166cbb3aa1506f7beb19d3445c363c3a61178072d9c03658b05e507d0d",
+      "hazard": "d02217a7458ba38cf155d0f7966c1d6eb78801ffe4ae4561cd4de2d5f2fb6373"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE12_EXACT_B64CCE85B4F84BF023E9",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "安全生产法第二十九条直接要求从业人员了解、掌握安全技术特性并接受专门培训。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "fe0b9eb7e16314a81c9b690f26aab192eeb5bcbe6596a295f8a42dbc785e6894",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

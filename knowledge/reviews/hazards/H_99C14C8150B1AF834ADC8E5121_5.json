@@ -1,13 +1,51 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_99C14C8150B1AF834ADC8E5121_5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "b6e0628215217bb24b36e4659c2151973fdd1a0d2f346beb9cb7f678c17a4ee1",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_WEB_0D32F81B7FF81451CD54EF87"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "add8453d2bfc1e3537d67015889db930486395601910aea5c0c25a98b4ff7cb4",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "分别保留避难空间占用与瓶装燃气禁用的对象，删除无关报警通风测试要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "不得占用高层建筑的避难层、避难间，不得在高层建筑、大型商业综合体内和地下、半地下建筑内使用瓶装燃气。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_99C14C8150B1AF834ADC8E5121_5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_0D32F81B7FF81451CD54EF87"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "add8453d2bfc1e3537d67015889db930486395601910aea5c0c25a98b4ff7cb4",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "燃气安全",
+    "conditions": "适用于南京市行政区域内，且存在燃气使用、储存、输配或燃气设施设置；应结合气源种类、场所用途、设施型式、用气规模及地方规定确认具体要求。\n适用场所：南京市行政区域内燃气使用、储存及燃气设施相关场所",
+    "description": "现场检查发现：占用高层建筑的避难层、避难间，或者在高层建筑、大型商业综合体内和地下、半地下建筑内使用瓶装燃气。",
+    "id": "H_99C14C8150B1AF834ADC8E5121_5",
+    "keywords": [
+      "占用高层建筑的避难层",
+      "避难间",
+      "或者在高层建筑",
+      "大型商业综合体内和地下",
+      "半地下建筑内使用瓶装燃气"
+    ],
+    "lifecycle": "active",
+    "measures": "清除高层建筑避难层、避难间的占用行为，并停止在高层建筑、大型商业综合体以及地下、半地下建筑内违规使用瓶装燃气；按规定调整燃气使用方式和场所。整改后检查燃气设施、报警/切断、通风和使用管理状态，必要时进行功能测试。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "南京市行政区域内燃气使用、储存及燃气设施相关场所"
+    ],
+    "title": "占用高层建筑的避难层、避难间，或者在高层建筑、大型商业综合体内和地下、半地下建筑内使用瓶装燃气"
+  }
 }

@@ -1,13 +1,48 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_D5554A461F994E1121BFF8E5D4_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "1526e20a1ad73acf0ae3d1e488e858ec4add371da318cd0e51fc050e065829a7",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_226C733407DAA40D5FE25506"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "53b83a0198d5366b0dc71e369d8e77006926b380bffed5610c3c480d9cf40c9a",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "现依据限定易燃易爆危险品操作，完整第二十三条直接规定可燃物资仓库管理义务。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "储存可燃物资仓库的管理，必须执行消防技术标准和管理规定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_D5554A461F994E1121BFF8E5D4_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_226C733407DAA40D5FE25506"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "53b83a0198d5366b0dc71e369d8e77006926b380bffed5610c3c480d9cf40c9a",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "消防安全",
+    "conditions": "适用于依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：依法承担消防安全责任的建筑、场所或单位",
+    "description": "现场检查发现，储存可燃物资仓库的管理，未执行消防技术标准和管理规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_D5554A461F994E1121BFF8E5D4_3",
+    "keywords": [
+      "储存可燃物资仓库的管理",
+      "未执行消防技术标准和管理规定"
+    ],
+    "lifecycle": "active",
+    "measures": "储存可燃物资仓库的管理，执行消防技术标准和管理规定；定期开展防火巡查并留存记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "依法承担消防安全责任的建筑、场所或单位"
+    ],
+    "title": "储存可燃物资仓库的管理，未执行消防技术标准和管理规定"
+  }
 }

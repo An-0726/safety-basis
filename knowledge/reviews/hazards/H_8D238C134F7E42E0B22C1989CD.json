@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_8D238C134F7E42E0B22C1989CD",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "38484492c87243163210e3bbaac09d70eca25399b8492df8d9c1d80140d34b43",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
   ],
-  "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
-  "reviewType": "content",
-  "reviewedContentHash": "7f03e15b82a24edb682fae8d6448c13ab43ad9ecad8899c31fd4e632c77c485c",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "原文规定区域泄漏堵截及明确容量门槛，删除逐桶托盘、每班检查及未引条文中的防渗要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "在贮存库内或通过贮存分区方式贮存液态危险废物的，应具有液体泄漏堵截设施，堵截设施最小容积不应低于对应贮存区域最大液态废物容器容积或液态废物总储量1/10（二者取较大者）；",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_8D238C134F7E42E0B22C1989CD",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_026fdfa94508deea38f0f150b79c87a9a3ae47136eb94c8a17aefbd2b273e992"
+    ],
+    "reason": "已核对Excel隐患内容与现有已核验条款的对象、义务和整改措施，法规版本链通过当前性核验。",
+    "reviewType": "content",
+    "reviewedContentHash": "7f03e15b82a24edb682fae8d6448c13ab43ad9ecad8899c31fd4e632c77c485c",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "危险废物与环境安全",
+    "conditions": "适用于存在危险废物产生、收集、贮存、转移、利用或运输等活动；应结合危险废物类别、设施类型、作业环节和法定责任主体确认具体要求。\n适用场所：危险废物产生、收集、贮存、转移或运输相关场所",
+    "description": "现场检查发现，危废暂存间桶装液体下方未设泄漏液体收集装置，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_8D238C134F7E42E0B22C1989CD",
+    "keywords": [
+      "危废暂存间桶装液体下方未设泄漏液体收集装置"
+    ],
+    "lifecycle": "active",
+    "measures": "在各液体危废桶下方设置防泄漏托盘（二次容器）或围堰，容积满足规范要求，地面做防渗处理；每班检查托盘内无积液并记录，满溢及时清理。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "本批已将法规目录命中与现有已核验条款逐项对应，并完成适用性核验。",
+    "places": [
+      "危险废物产生、收集、贮存、转移或运输相关场所"
+    ],
+    "title": "危废暂存间桶装液体下方未设泄漏液体收集装置"
+  }
 }

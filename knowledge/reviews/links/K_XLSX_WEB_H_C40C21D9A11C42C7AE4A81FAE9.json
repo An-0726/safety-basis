@@ -5,14 +5,32 @@
   "decision": "verified",
   "reviewedContentHash": "1a451f1de1e3f6fc9f4ad43f8d883de14e2b621c423516412e4053807fd39e15",
   "contextHashes": {
-    "hazard": "85a603c1eeb6edb7c44fba79adc4a89b9cec87f64010d4e06bca2d98fda8b9fe",
+    "hazard": "485546b61173422efe425ebe1fe40b3f445b911f3fca4c78eb296a11fee8b8cb",
     "clause": "4012c15c1f901f882dd1594843dbd9e3ebdd319eefbe23242c47f61907b2d908"
   },
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "依据PR #62官方网络证据核验证实，GB 50054-2011第4.1.1条电气装置安全运行维护。条款逐字原文与隐患适用性吻合。",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "evidenceRefs": [
     "E_MOHURD_GB50054_2011"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityType": "link",
+    "entityId": "K_XLSX_WEB_H_C40C21D9A11C42C7AE4A81FAE9",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewedContentHash": "1a451f1de1e3f6fc9f4ad43f8d883de14e2b621c423516412e4053807fd39e15",
+    "contextHashes": {
+      "hazard": "85a603c1eeb6edb7c44fba79adc4a89b9cec87f64010d4e06bca2d98fda8b9fe",
+      "clause": "4012c15c1f901f882dd1594843dbd9e3ebdd319eefbe23242c47f61907b2d908"
+    },
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "依据PR #62官方网络证据核验证实，GB 50054-2011第4.1.1条电气装置安全运行维护。条款逐字原文与隐患适用性吻合。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50054_2011"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

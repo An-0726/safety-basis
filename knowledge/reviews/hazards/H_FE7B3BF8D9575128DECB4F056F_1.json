@@ -1,13 +1,50 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_FE7B3BF8D9575128DECB4F056F_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e6541c62f660b7e911075e5dc5f985b6ec318e8326b10254b4ca6c2709b39f40",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_22006672B48A223BF77AD55F"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "7439f3b1c797bd513d45111c6634583ed66b6b253b17963c53da659a9f6135dd",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "完整第十三条直接规定三类人员配备，现关联只有单位及主要负责人安全责任。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "特种设备生产、经营、使用单位应当按照国家有关规定配备特种设备安全管理人员、检测人员和作业人员，并对其进行必要的安全教育和技能培训。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_FE7B3BF8D9575128DECB4F056F_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_22006672B48A223BF77AD55F"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "7439f3b1c797bd513d45111c6634583ed66b6b253b17963c53da659a9f6135dd",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：特种设备使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，特种设备生产、经营、使用单位未按照国家有关规定配备特种设备安全管理人员、检测人员和作业人员等，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_FE7B3BF8D9575128DECB4F056F_1",
+    "keywords": [
+      "特种设备生产",
+      "经营",
+      "使用单位未按照国家有关规定配备特种设备安全管理人员",
+      "检测人员和作业人员等"
+    ],
+    "lifecycle": "active",
+    "measures": "特种设备生产、经营、使用单位按照国家有关规定配备特种设备安全管理人员、检测人员和作业人员等。整改后按安全技术规范复核设备状态、法定检验/登记或安全管理要求，确认满足继续使用条件并完整保存设备档案。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "特种设备使用、运行、维护检修或相关管理场景"
+    ],
+    "title": "特种设备生产、经营、使用单位未按照国家有关规定配备特种设备安全管理人员、检测人员和作业人员等"
+  }
 }

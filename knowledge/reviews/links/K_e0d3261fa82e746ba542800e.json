@@ -4,19 +4,40 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "pending",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "《建筑设计防火规范》GB 50016-2014（2018年版）第6.2.3条属建筑防火分隔的通用规定，保留为 fallback；本条 direct 依据已由科研建筑专项标准 JGJ 91-2019 第5.2.5条承担。",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
+  "checkedAt": "2026-10-09",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
   "reviewedContentHash": "f464e1631687905e4a8a7a3a9daac171bd5151e9b7e24c0a5f3f2028f3a41b7b",
   "contextHashes": {
-    "hazard": "579f4826d285e239d001bec594374b2ad3d5fc678b6cd9a95968af23ab837682",
-    "clause": "6bc32a1f0533e7f5f8dd77015f0a013f5b9cf1e56b5d92a3e4784c12bd0061c1",
-    "link": "d27f58683d6f45602be7be48411fb84b84d07d6e6a5cb91b61af6c6bf299330a"
+    "hazard": "d37387b131280649a3d60af2a5b326cce861f7947e6fc9a91ac007fefacc69b8",
+    "clause": "6bc32a1f0533e7f5f8dd77015f0a013f5b9cf1e56b5d92a3e4784c12bd0061c1"
   },
   "evidenceRefs": [],
-  "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "id": "RV_2fb7e06f7492877b",
+    "entityId": "K_e0d3261fa82e746ba542800e",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "pending",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "《建筑设计防火规范》GB 50016-2014（2018年版）第6.2.3条属建筑防火分隔的通用规定，保留为 fallback；本条 direct 依据已由科研建筑专项标准 JGJ 91-2019 第5.2.5条承担。",
+    "reasonCodes": [
+      "FALLBACK_ROLE_CONFIRMED",
+      "DIRECT_CLAUSE_ADDED"
+    ],
+    "reviewedContentHash": "f464e1631687905e4a8a7a3a9daac171bd5151e9b7e24c0a5f3f2028f3a41b7b",
+    "contextHashes": {
+      "hazard": "579f4826d285e239d001bec594374b2ad3d5fc678b6cd9a95968af23ab837682",
+      "clause": "6bc32a1f0533e7f5f8dd77015f0a013f5b9cf1e56b5d92a3e4784c12bd0061c1",
+      "link": "d27f58683d6f45602be7be48411fb84b84d07d6e6a5cb91b61af6c6bf299330a"
+    },
+    "evidenceRefs": [],
+    "notes": "该标准仍现行，但部分强制性条文已被通用规范替代；需确认当前条款是否属于被废止范围。"
+  }
 }

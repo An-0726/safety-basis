@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_48B66BAC_8_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "865e02201471821497d9658c3fe114d00e1ccfdf3f42ea6f061fe66023c11ebb",
+  "checkedAt": "2026-10-09",
+  "reviewer": "Claude quality repair quality-fix1-20261009",
   "evidenceRefs": [
     "E_XLSX_FT_9EAF39DDBA1A13D6F798B4E0"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "3d863cee045842628d584385f28670640e477fa689d1b744dd8e3105893c0f3f",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "两条direct原文均允许合同或协议，补两者均未约定时才适用，并保留常态和应急职责。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "发包单位与作业单位签订的安全生产管理协议或合同中应明确各自的有限空间作业安全生产职责。内容应包括常态下的有限空间作业安全职责和紧急情况下的应急处置职责。\n8 第八条\n工贸企业将有限空间作业依法发包给其他单位实施的，应当与承包单位在合同或者协议中约定各自的安全生产管理职责。工贸企业对其发包的有限空间作业统一协调、管理，并对现场作业进行安全检查，督促承包单位有效落实各项安全措施。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_48B66BAC_8_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_9EAF39DDBA1A13D6F798B4E0"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "3d863cee045842628d584385f28670640e477fa689d1b744dd8e3105893c0f3f",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "有限空间作业",
+    "conditions": "适用于现场空间符合有限空间定义且实际涉及辨识、进入、审批、通风、检测、监护、作业或应急救援等环节；不构成有限空间的普通封闭场所不直接适用。\n适用场所：工贸企业有限空间及有限空间作业区域",
+    "description": "经资料及履职情况核查，工贸企业发包有限空间作业未在合同中约定安全生产管理职责，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_48B66BAC_8_1",
+    "keywords": [
+      "工贸企业发包有限空间作业未在合同中约定安全生产管理职责"
+    ],
+    "lifecycle": "active",
+    "measures": "工贸企业发包有限空间作业在合同中约定安全生产管理职责。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "工贸企业有限空间及有限空间作业区域"
+    ],
+    "title": "工贸企业发包有限空间作业未在合同中约定安全生产管理职责"
+  }
 }
