@@ -3,9 +3,9 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "ZCode-DeepSeek",
-  "checkedAt": "2026-09-10",
-  "reason": "H_67303D31… 为焊接和切割区域未明确标明或未设必要警告标志；GB 9448-2025 第10章『警告标志』逐字对应（承继原 GB 9448-1999 相应条款），确认为 direct 依据。",
+  "reviewer": "Claude pending-source batch1 author 20261008",
+  "checkedAt": "2026-10-08",
+  "reason": "GB 9448—2025第10章第二句“焊接和切割区域应予以明确标明，并且应有必要的警告标志”直接对应本项；条款引文已更正为第10章逐字全文后重新绑定。",
   "reasonCodes": [
     "DIRECT_CLAUSE_CONFIRMED",
     "SPECIFIC_TECHNICAL_STANDARD",
@@ -14,11 +14,35 @@
   "reviewedContentHash": "52e7df319c5a947931b3cbb6c525f5adcbc9cd37fafb860ee408a8706cae40c4",
   "contextHashes": {
     "hazard": "68f1277dac1f6ebfc20c2ddf7aa8de83cf63569bf04a20a940c8fbec46d26a57",
-    "clause": "a4d32280426db56e5dc7084fa50ee3e19458eb4b62b0437c05b508e48b3b767c",
+    "clause": "15d93cb99cec2b779aa66d3a2f3aa96769e3d1477778d18860b98e71f82d0d70",
     "link": "52e7df319c5a947931b3cbb6c525f5adcbc9cd37fafb860ee408a8706cae40c4"
   },
   "evidenceRefs": [
-    "E_d2ddf39931d8f80e6b093ab06826ce9c6c7701e9febb594e01240370212300b0"
+    "E_PEND_GB9448_2025_20261008"
   ],
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "notes": "作者对照正式原件页面图像逐字核对并自查；未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "entityId": "K_474D0188C2AC738775C8F7",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "ZCode-DeepSeek",
+    "checkedAt": "2026-09-10",
+    "reason": "H_67303D31… 为焊接和切割区域未明确标明或未设必要警告标志；GB 9448-2025 第10章『警告标志』逐字对应（承继原 GB 9448-1999 相应条款），确认为 direct 依据。",
+    "reasonCodes": [
+      "DIRECT_CLAUSE_CONFIRMED",
+      "SPECIFIC_TECHNICAL_STANDARD",
+      "WELDING_AREA_SIGNAGE"
+    ],
+    "reviewedContentHash": "52e7df319c5a947931b3cbb6c525f5adcbc9cd37fafb860ee408a8706cae40c4",
+    "contextHashes": {
+      "hazard": "68f1277dac1f6ebfc20c2ddf7aa8de83cf63569bf04a20a940c8fbec46d26a57",
+      "clause": "a4d32280426db56e5dc7084fa50ee3e19458eb4b62b0437c05b508e48b3b767c",
+      "link": "52e7df319c5a947931b3cbb6c525f5adcbc9cd37fafb860ee408a8706cae40c4"
+    },
+    "evidenceRefs": [
+      "E_d2ddf39931d8f80e6b093ab06826ce9c6c7701e9febb594e01240370212300b0"
+    ],
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

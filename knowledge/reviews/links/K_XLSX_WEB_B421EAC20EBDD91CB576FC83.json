@@ -1,18 +1,49 @@
 {
-  "checkedAt": "2026-09-13",
-  "contextHashes": {
-    "clause": "96da0c6a7bbd87008f1a82d69a15a9462c6a0530841a6987ce21dbca2879d94d",
-    "hazard": "7c19fce3a5b1e6024b0d0f7e7c9a06a8985a9b6d2bcdef4627911617037b00be"
-  },
-  "decision": "pending",
   "entityId": "K_XLSX_WEB_B421EAC20EBDD91CB576FC83",
   "entityType": "link",
-  "evidenceRefs": [
-    "E_XLSX_WEB_DF4885B7397742CC1AB1C04D"
-  ],
-  "reason": "隐患与官方条款直接对应。",
   "reviewType": "applicability",
-  "reviewedContentHash": "52bde4d7bddd3baf969bfc0d0834f0685f679273eaa144950d621a2faa468f12",
-  "reviewer": "Codex正式核验批次20260913",
-  "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  "decision": "rejected",
+  "reviewedContentHash": "576814b30426abbf8b612beea51288d3c227eb0f1cdcebfda63742688ae755ec",
+  "checkedAt": "2026-10-08",
+  "reviewer": "Claude pending-source batch1 author 20261008",
+  "evidenceRefs": [
+    "E_PEND_GB15607_2023_20261008"
+  ],
+  "reason": "旧关联所挂条款为OCR跨条串文，不是逐字原文，撤回其直接支持；本项已由正式原文条款承载：GB 15607—2023第4.2.1条，例外见第4.2.2条。",
+  "notes": "作者对照正式原件页面图像逐字核对并自查；未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "contextHashes": {
+      "clause": "96da0c6a7bbd87008f1a82d69a15a9462c6a0530841a6987ce21dbca2879d94d",
+      "hazard": "7c19fce3a5b1e6024b0d0f7e7c9a06a8985a9b6d2bcdef4627911617037b00be"
+    },
+    "decision": "pending",
+    "entityId": "K_XLSX_WEB_B421EAC20EBDD91CB576FC83",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_XLSX_WEB_DF4885B7397742CC1AB1C04D"
+    ],
+    "reason": "隐患与官方条款直接对应。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "52bde4d7bddd3baf969bfc0d0834f0685f679273eaa144950d621a2faa468f12",
+    "reviewer": "Codex正式核验批次20260913",
+    "notes": "对应条款已因来源/OCR/原子化问题降级，不能保持Pass。"
+  },
+  "previousDefinition": {
+    "applicability": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "clauseId": "C_XLSX_WEB_3DBC63E728DBA48012026783",
+    "hazardId": "H_15607_4_2_1_1",
+    "id": "K_XLSX_WEB_B421EAC20EBDD91CB576FC83",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "proposed",
+    "priority": 10,
+    "reason": "隐患对象、整改措施与官方条款逐项对应。",
+    "role": "direct",
+    "status": "needs_review"
+  },
+  "contextHashes": {
+    "hazard": "bd85bbd2a72f4126c62c086d9438f75943db26abc3fd50d7060b62e482306de7",
+    "clause": "96da0c6a7bbd87008f1a82d69a15a9462c6a0530841a6987ce21dbca2879d94d"
+  }
 }

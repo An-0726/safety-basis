@@ -1,13 +1,53 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_15607_6_1_1",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "22e1aecae1cf33c53884184aecfc985864b63f1fd8e22835e09f64f34ad7f2c4",
+  "checkedAt": "2026-10-08",
+  "reviewer": "Claude pending-source batch1 author 20261008",
   "evidenceRefs": [
-    "E_XLSX_WEB_D5327C2F3B1BD9F27F4D42EC"
+    "E_PEND_GB6514_2023_20261008",
+    "E_PEND_GB15607_2023_20261008"
   ],
-  "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-  "reviewType": "content",
-  "reviewedContentHash": "b049b45662e96b333b7df3ad59ea73ad687bf8730487791bfaea3f39d45acfaf",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "GB 15607—2023第6.1条要求通风、回收、净化装置符合GB 6514和GB 15577的有关规定；规则只取GB 6514—2023第7.3.2.1条“喷粉室应设机械通风和粉末净化回收装置”这一自含义务。",
+  "notes": "作者对照正式原件页面图像逐字核对并自查；未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_15607_6_1_1",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_WEB_D5327C2F3B1BD9F27F4D42EC"
+    ],
+    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+    "reviewType": "content",
+    "reviewedContentHash": "b049b45662e96b333b7df3ad59ea73ad687bf8730487791bfaea3f39d45acfaf",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "涂装安全",
+    "conditions": "适用于存在喷漆、调漆、喷粉、烘干固化等涂装工艺及其配套设备设施；应结合涂料/粉末性质、火灾爆炸危险区域和工艺环节确认适用。\n适用场所：涂装、喷漆、喷粉、调漆及相关作业场所",
+    "description": "现场检查发现，通风、回收、净化装置未符合GB6514和GB15577的有关规定，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_15607_6_1_1",
+    "keywords": [
+      "通风",
+      "回收",
+      "净化装置未符合GB6514和GB15577的有关规定"
+    ],
+    "lifecycle": "proposed",
+    "measures": "通风、回收、净化装置符合GB6514和GB15577的有关规定。整改后结合涂料或粉末特性和爆炸危险区域，复核通风、防爆、防静电、联锁及消防措施，确认作业条件满足要求后再恢复作业。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "涂装、喷漆、喷粉、调漆及相关作业场所"
+    ],
+    "title": "通风、回收、净化装置未符合GB6514和GB15577的有关规定"
+  },
+  "remainingUnsupportedBranches": [
+    "GB 15577对除尘、回收、净化系统的各项有关规定未在本项内映射。",
+    "GB 6514—2023第7.1节通用通风各条及第7.3.2.2条出粉口防止粉尘飞扬未并入本项。"
+  ]
 }
