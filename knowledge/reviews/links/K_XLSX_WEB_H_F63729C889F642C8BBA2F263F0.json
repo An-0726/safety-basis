@@ -5,16 +5,16 @@
   "decision": "verified",
   "reviewedContentHash": "f0b16e4ed7e68a3c9d023cc6958dd1b8824711670bc610358fb10bd3e07d562b",
   "contextHashes": {
-    "hazard": "a550c641d8d1d09aba6dfaf2fbb0acb69ee752d6b61f769fbcfb9a3f39a6c386",
-    "clause": "5ca65732664b1ada2069c74486a8fb808b3881c63f8ad61e242301554fdc0fe3"
+    "hazard": "1b2f797bf50e1387c5b7a006f4b16e0a816b92c74ed84499ed6f092ef16025aa",
+    "clause": "66651315bc3008d47f0ab488228f21a0464d9c3eeb2d52e1db4fa6a8c62dd3bf"
   },
-  "checkedAt": "2026-10-09",
-  "reviewer": "Claude quality repair quality-fix1-20261009",
-  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude content-gap batch4 author 20261011",
+  "reason": "条款引文按官方原件更正，条目同步改为未划红线；关联本身未改，刷新上下文绑定。",
   "evidenceRefs": [
-    "E_SAMR_TSG21_2016"
+    "E_TSG21_2016_SAMR_PDF_9_2_1_2_20261011"
   ],
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "notes": "来源由Claude定位，并对照官方PDF文本层或页面图像逐字核对；作者自查，未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
   "previousReview": {
     "entityType": "link",
     "entityId": "K_XLSX_WEB_H_F63729C889F642C8BBA2F263F0",
@@ -22,15 +22,15 @@
     "decision": "verified",
     "reviewedContentHash": "f0b16e4ed7e68a3c9d023cc6958dd1b8824711670bc610358fb10bd3e07d562b",
     "contextHashes": {
-      "hazard": "c4377ce442e6da91c970b142e1e24f9f3507a74c2249307c3d2d33db3a6db08f",
+      "hazard": "a550c641d8d1d09aba6dfaf2fbb0acb69ee752d6b61f769fbcfb9a3f39a6c386",
       "clause": "5ca65732664b1ada2069c74486a8fb808b3881c63f8ad61e242301554fdc0fe3"
     },
-    "checkedAt": "2026-09-19T01:00:00+08:00",
-    "reviewer": "Codex / PR #62 Policy",
-    "reason": "依据PR #62官方网络证据核验证实，TSG 21-2016第9.2.1.2条压力表红线标识要求。条款逐字原文与隐患适用性吻合。",
+    "checkedAt": "2026-10-09",
+    "reviewer": "Claude quality repair quality-fix1-20261009",
+    "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
     "evidenceRefs": [
       "E_SAMR_TSG21_2016"
     ],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。"
   }
 }

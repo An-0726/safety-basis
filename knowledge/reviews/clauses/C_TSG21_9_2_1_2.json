@@ -1,11 +1,34 @@
 {
-  "decision": "verified",
   "entityId": "C_TSG21_9_2_1_2",
   "entityType": "clause",
-  "evidenceRefs": [
-    "E_SAMR_TSG21_2016"
-  ],
   "reviewType": "text",
-  "reviewedContentHash": "5ca65732664b1ada2069c74486a8fb808b3881c63f8ad61e242301554fdc0fe3",
-  "checkedAt": "2026-09-19T00:00:00+08:00"
+  "decision": "verified",
+  "reviewedContentHash": "66651315bc3008d47f0ab488228f21a0464d9c3eeb2d52e1db4fa6a8c62dd3bf",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude content-gap batch4 author 20261011",
+  "evidenceRefs": [
+    "E_TSG21_2016_SAMR_PDF_9_2_1_2_20261011"
+  ],
+  "reason": "对照市场监管总局官网PDF第103页文本层逐字核对第9.2.1.2条全文。原引文“压力表盘上应当划出指示工作压力的红线，或者采用便于操作人员观察的明显压力指示标识”在TSG 21—2016正文及第1号修改单中均不存在，予以更正。",
+  "notes": "来源由Claude定位，并对照官方PDF文本层或页面图像逐字核对；作者自查，未经独立复核，不得表述为独立复核通过。不证明企业现场、整改完成、违法或重大事故隐患的个案认定。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "C_TSG21_9_2_1_2",
+    "entityType": "clause",
+    "evidenceRefs": [
+      "E_SAMR_TSG21_2016"
+    ],
+    "reviewType": "text",
+    "reviewedContentHash": "5ca65732664b1ada2069c74486a8fb808b3881c63f8ad61e242301554fdc0fe3",
+    "checkedAt": "2026-09-19T00:00:00+08:00"
+  },
+  "previousDefinition": {
+    "articlePath": "9.2.1.2",
+    "id": "C_TSG21_9_2_1_2",
+    "jurisdictionCode": "CN",
+    "lawVersionId": "LV_TSG21_2016_AM1",
+    "lifecycle": "active",
+    "quote": "压力表盘上应当划出指示工作压力的红线，或者采用便于操作人员观察的明显压力指示标识。",
+    "sourceUrl": "https://www.samr.gov.cn/"
+  }
 }
