@@ -1,6 +1,6 @@
 'use strict';
 
-import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS } from './search-vocabulary.js';
+import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS, COLLOQUIAL_LEADING_VERBS } from './search-vocabulary.js';
 
 export const normalize = value => String(value ?? '').normalize('NFKC').toLowerCase()
   .replace(/[，。；：、（）()【】\[\]《》“”‘’'"·•…—–_-]+/g,' ')
@@ -152,7 +152,7 @@ const interpretColloquial = query => {
     let run='';
     // 词典外的片段按原样要求命中；剩下的单个字（没水→水）须出现在标题里，
     // 方位字和虚化动词除外。
-    const flush=()=>{if(run.length>1)add(run,[run]);else if(run){rewritten=true;if(!COLLOQUIAL_IGNORED_CHARS.includes(run))add(run,[run],true);}run='';};
+    const flush=()=>{while(run.length>1&&COLLOQUIAL_LEADING_VERBS.includes(run[0])){run=run.slice(1);rewritten=true;}if(run.length>1)add(run,[run]);else if(run){rewritten=true;if(!COLLOQUIAL_IGNORED_CHARS.includes(run))add(run,[run],true);}run='';};
     for(let i=0;i<chunk.length;){
       const word=COLLOQUIAL_LEXICON.find(w=>chunk.startsWith(w,i));
       if(!word){run+=chunk[i++];continue;}
