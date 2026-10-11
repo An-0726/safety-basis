@@ -156,21 +156,21 @@ test('受控展示字段支持主题、场景、依据类型和未细分场景�
   const rows = [
     hazardRow({id: 'H_ELEC', displayCategory: '电气安全', sceneTags: ['电气与配电'], displayLevels: ['国家标准']}),
     hazardRow({id: 'H_UNCLASSIFIED', displayCategory: '电气安全', sceneTags: [], displayLevels: ['国家标准']}),
-    hazardRow({id: 'H_OTHER', displayCategory: '机械与设备安全', sceneTags: ['机械加工'], displayLevels: ['行业标准']}),
+    hazardRow({id: 'H_OTHER', displayCategory: '机械设备与设施', sceneTags: ['机械加工'], displayLevels: ['行业标准']}),
   ];
   assert.deepEqual(searchHazards(rows, '', {category: '电气安全', sceneTag: '电气与配电', displayLevel: '国家标准'}).map(x => x.id), ['H_ELEC']);
   assert.deepEqual(searchHazards(rows, '', {sceneTag: '__unclassified__'}).map(x => x.id), ['H_UNCLASSIFIED']);
-  assert.deepEqual(searchHazards(rows, '', {category: '机械与设备安全'}).map(x => x.id), ['H_OTHER']);
+  assert.deepEqual(searchHazards(rows, '', {category: '机械设备与设施'}).map(x => x.id), ['H_OTHER']);
 });
 
 test('稳定编号展示覆盖后的主题筛选仍可召回，且不把原始主题当展示主题', () => {
   const corrected = hazardRow({
     id: 'H_133DEA3AE07CE30E3CA5CBF4FF_1',
     category: '设备设施',
-    displayCategory: '安全管理',
+    displayCategory: '安全管理与培训',
     searchText: '设备设施 安全管理 现场管理',
   });
-  assert.deepEqual(searchHazards([corrected], '', {category: '安全管理'}).map(x => x.id), [corrected.id]);
+  assert.deepEqual(searchHazards([corrected], '', {category: '安全管理与培训'}).map(x => x.id), [corrected.id]);
   assert.equal(searchHazards([corrected], '', {category: '设备设施'}).length, 0);
 });
 

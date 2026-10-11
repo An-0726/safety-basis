@@ -502,7 +502,7 @@ test('旧重大分类URL保留窄结果并提示专题，移除chip及历史恢�
 test('旧分类提示与主导航都提供明确专题入口，不把专业记录批量改类',()=>{
   const html=fs.readFileSync(new URL('../web/index.html',import.meta.url),'utf8');
   assert.match(html,/id="majorTopicNotice"[^>]+hidden/);
-  assert.match(html,/此筛选仅保留旧分类中的记录/);
+  assert.match(html,/该旧分类已取消，原有记录并入“安全管理与培训”/);
   assert.ok((html.match(/href="major-criteria\.html"/g)||[]).length>=2);
 });
 

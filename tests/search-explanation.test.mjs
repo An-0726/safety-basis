@@ -51,8 +51,8 @@ test('快照在中国日期跨日后提示未核验变化，不推断法律失�
 test('实际单条别名并入专业分类，旧分类链接只按已投影的唯一目标迁移',()=>{
   const cases=[
     ['H_FORKLIFT_UNATTENDED_KEY','特种设备'],
-    ['H_WORKPLACE_CHEM_SDS_MISSING','危险化学品与危险物质'],
-    ['H_CF_GEN_18','设备设施'],
+    ['H_WORKPLACE_CHEM_SDS_MISSING','危化品与燃气'],
+    ['H_CF_GEN_18','机械设备与设施'],
   ];
   for(const [id,displayCategory] of cases){
     const source=JSON.parse(fs.readFileSync(new URL(`../knowledge/hazards/${id}.json`,import.meta.url),'utf8'));
@@ -69,7 +69,12 @@ test('实际单条别名并入专业分类，旧分类链接只按已投影的�
 });
 
 test('旧分类若对应多个已审核目标，不猜测或扩大为其中一种',()=>{
-  const rows=[row('A','气瓶',{category:'设备设施',displayCategory:'特种设备'}),row('B','砂轮',{category:'设备设施',displayCategory:'机械与设备安全'})];
+  const rows=[row('A','气瓶',{category:'设备设施',displayCategory:'特种设备'}),row('B','砂轮',{category:'设备设施',displayCategory:'机械设备与设施'})];
   assert.equal(canonicalCategoryFilter('设备设施',rows),'设备设施');
   assert.equal(canonicalCategoryFilter('未知分类',rows),'未知分类');
+});
+
+test('旧“重大事故隐患判定”分类链接不被并入合并后的分类',()=>{
+  const rows=[row('A','关键安全设施失效',{category:'重大事故隐患判定',displayCategory:'安全管理与培训'})];
+  assert.equal(canonicalCategoryFilter('重大事故隐患判定',rows),'重大事故隐患判定');
 });

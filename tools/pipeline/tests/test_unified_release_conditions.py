@@ -64,7 +64,7 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
 
     def test_controlled_category_and_level_projection(self):
         self.assertEqual(presentation.display_category("用电安全"), "电气安全")
-        self.assertEqual(presentation.display_category("专项安全与EHS"), "综合安全")
+        self.assertEqual(presentation.display_category("专项安全与EHS"), "安全管理与培训")
         self.assertEqual(presentation.display_category("未批准的新主题"), "未批准的新主题")
         self.assertEqual(presentation.display_level("部门规章（部令）"), "部门规章")
         self.assertEqual(presentation.display_level("环境保护标准", "LV_YJFGZ"), "行业标准")
@@ -76,7 +76,7 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
         for hazard_id, target in presentation.STABLE_ID_CATEGORY_OVERRIDES.items():
             source = json.loads((source_dir / (hazard_id + ".json")).read_text(encoding="utf-8"))
             projected = presentation.project_hazard(source, hazard_id=hazard_id)
-            self.assertEqual(projected["displayCategory"], target, hazard_id)
+            self.assertEqual(projected["displayCategory"], presentation.CATEGORY_GROUPS.get(target, target), hazard_id)
             self.assertIn("category", source)
             self.assertEqual(
                 presentation.project_hazard(source, hazard_id="H_NOT_IN_OVERRIDE")["displayCategory"],
@@ -86,11 +86,11 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
         self.assertNotIn("H_47B0A90180C24A42AFA38767B9", presentation.STABLE_ID_CATEGORY_OVERRIDES)
         self.assertEqual(
             presentation.display_category("设备设施", "H_47B0A90180C24A42AFA38767B9"),
-            "设备设施",
+            "机械设备与设施",
         )
         self.assertEqual(
             presentation.display_category("机械设备安全", "H_NOT_IN_OVERRIDE"),
-            "机械与设备安全",
+            "机械设备与设施",
         )
 
     def test_scene_projection_is_union_and_empty_is_unclassified(self):
@@ -115,6 +115,20 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
         self.assertEqual(review["unknownModes"], ["new-mode"])
         self.assertEqual(review["unknownRoles"], ["new-role"])
         self.assertEqual(review["stableCategoryOverrideCount"], 65)
+
+    def test_display_categories_are_the_twelve_groups(self):
+        expected = {
+            "消防安全", "特种设备", "电气安全", "机械设备与设施", "危化品与燃气", "粉尘防爆",
+            "作业安全", "职业卫生", "危险废物与环境", "应急与事故管理", "安全管理与培训", "场所与标志",
+        }
+        self.assertEqual(set(presentation.CATEGORY_GROUPS.values()), expected)
+        for target in list(presentation.CATEGORY_ALIASES.values()) + list(presentation.STABLE_ID_CATEGORY_OVERRIDES.values()):
+            self.assertIn(target, presentation.CATEGORY_GROUPS, target)
+        source_dir = ROOT / "knowledge" / "hazards"
+        for path in source_dir.glob("*.json"):
+            source = json.loads(path.read_text(encoding="utf-8"))
+            if source.get("lifecycle") == "active":
+                self.assertIn(presentation.display_category(source.get("category", ""), source["id"]), expected, source["id"])
 
     def test_bundle_verifier_recomputes_and_rejects_presentation_tamper(self):
         failures = verifier.Failures()
