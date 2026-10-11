@@ -1,6 +1,6 @@
 {
   "asOf": "2026-10-09",
-  "batch": "quality-repair-locked-20261011b",
+  "batch": "evidence-restore-20261011",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -577,33 +577,64 @@
       "hazardsRelinked": 4,
       "hazardsDelisted": 2,
       "scope": "Quality repair from the full audit: wording and scope aligned with stored clause text, off-topic links retired, unsupported rules returned to proposed. Drafted by Codex, reviewed by Claude; no clause text changed."
+    },
+    {
+      "id": "evidence-restore-20261011",
+      "hazardsRestored": 13,
+      "entityCountDelta": {
+        "laws": 3,
+        "lawVersions": 3,
+        "clauses": 6,
+        "hazards": 0,
+        "links": 13,
+        "evidence": 6,
+        "successions": 0,
+        "requirements": 0
+      },
+      "admittedHazardIds": [
+        "H_15577_7_3_4_1",
+        "H_GBZ188_16_7",
+        "H078",
+        "H_311325FC449A451C8D1255AD60",
+        "H_37731F2FA3794EE382DED9708D",
+        "H_0A4BEEE14031157F804CCCB0",
+        "H_BE83BE3E8CBE49DDB87577016F",
+        "H_A7E8F1070CEC4FB989ED155EBB",
+        "H_494CC49EED4143FB834A68734A",
+        "H_407B9F4BFC5A4879B9950C9D87",
+        "H_06280C62983C4FB2837C0CF2BC",
+        "H_07F925FDEFE56C60596FE131",
+        "H_DF3B6594E08FC09E0122D97129_2"
+      ],
+      "scope": "TASK.md指定13条离线补依据；仅按直接条文收窄恢复。其他40条候选不变；停用关联及完整历史保留；原件不入库。",
+      "reviewStatus": "author_self_check_only_not_independently_reviewed"
     }
   ],
   "counts": {
-    "laws": 149,
-    "lawVersions": 153,
-    "clauses": 3237,
+    "laws": 152,
+    "lawVersions": 156,
+    "clauses": 3243,
     "hazards": 2159,
-    "links": 2277,
-    "evidence": 1454,
+    "links": 2290,
+    "evidence": 1460,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
-  "laws": 149,
-  "lawVersions": 153,
-  "clauses": 3237,
+  "laws": 152,
+  "lawVersions": 156,
+  "clauses": 3243,
   "hazards": 2159,
-  "links": 2277,
-  "evidence": 1454,
+  "links": 2290,
+  "evidence": 1460,
   "successions": 26,
-  "activeHazards": 1750,
-  "proposedHazards": 279,
+  "activeHazards": 1763,
+  "proposedHazards": 266,
   "supersededHazards": 130,
   "lifecycle": {
-    "active": 1750,
-    "proposed": 279,
+    "active": 1763,
+    "proposed": 266,
     "superseded": 130
   },
   "requirements": 75
