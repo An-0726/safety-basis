@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-17",
-  "decision": "verified",
   "entityId": "H_1A8786209C974B6BB28C4ADFA5",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "12717c7408819d31da068833f69579fdbcdf7535cba71a0fa585696490a50af6",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011",
   "evidenceRefs": [
     "E_GBT13869_2017"
   ],
-  "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
-  "reviewType": "content",
-  "reviewedContentHash": "92f221d41821ab2ea4e41ec8e8a41a07265d7ef8550c02633bb0f2b7933f14bc",
-  "reviewer": "Codex"
+  "reason": "库内现有关联C_GBT13869_5_2_1_overload明确规定用电产品不允许超负荷运行，且要求正确选用规格型式、容量和保护方式。本次明确运行及容量负荷核查前提，删去未经本条原文支持的事故后果、定期维护等扩展；不改标题、关联或生命周期。",
+  "notes": "依据全量质量审阅及本次TASK限定范围修复：Codex对照库内条款原文起草，Claude复核后应用；未经独立复核。只改本条表述、适用范围及复核上下文绑定，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "任何用电产品在运行过程中，应有必要的监控或监视措施；用电产品不允许超负荷运行。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "decision": "verified",
+    "entityId": "H_1A8786209C974B6BB28C4ADFA5",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT13869_2017"
+    ],
+    "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+    "reviewType": "content",
+    "reviewedContentHash": "92f221d41821ab2ea4e41ec8e8a41a07265d7ef8550c02633bb0f2b7933f14bc",
+    "reviewer": "Codex"
+  },
+  "previousDefinition": {
+    "id": "H_1A8786209C974B6BB28C4ADFA5",
+    "title": "用电产品超负荷运行",
+    "description": "用电产品超过额定负荷运行，可能导致线路过热、绝缘损坏甚至引发电气火灾。",
+    "measures": "将用电负荷控制在额定值以内，定期维护保养并监测运行电流。",
+    "conditions": "适用于用电产品的相关安全管理。",
+    "category": "电气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "用电产品超负荷运行"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施已改写为可执行动作；原 description 与 title 完全相同，已补写为完整描述。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.2.1条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+    "mergedInto": null
+  }
 }
