@@ -46,7 +46,7 @@ function fixture() {
     searchIndex: [
       hazard('H-A', '粉尘除尘器 ABC 安全装置失效', '粉尘防爆'),
       hazard('H-B', '起重机械装置失效', '特种设备'),
-      hazard('H-SHARED', '安全装置未设置', '安全管理', {displayCategory: '机械安全'}),
+      hazard('H-SHARED', '安全装置未设置', '安全管理', {displayCategory: '机械设备与设施'}),
       hazard('H-KEYWORD', '重大事故隐患关键词命中', '粉尘防爆'),
     ],
   };
@@ -78,9 +78,9 @@ test('重大关键词不能把专题之外的 H 纳入', () => {
 
 test('专业过滤正交于专题归属，优先 displayCategory 且不改变原始 category', () => {
   const data = fixture(), before = structuredClone(data), model = validate(data);
-  assert.deepEqual(ids(selectMajorResults(model, {category: '机械安全'}).hazards), ['H-SHARED']);
-  assert.deepEqual(ids(selectMajorResults(model, {category: '安全管理'}).hazards), []);
-  assert.equal(selectMajorResults(model, {category: '机械安全'}).standards.length, 2);
+  assert.deepEqual(ids(selectMajorResults(model, {category: '机械设备与设施'}).hazards), ['H-SHARED']);
+  assert.deepEqual(ids(selectMajorResults(model, {category: '安全管理与培训'}).hazards), []);
+  assert.equal(selectMajorResults(model, {category: '机械设备与设施'}).standards.length, 2);
   assert.equal(model.hazards[2].category, '安全管理');
   assert.strictEqual(model.hazards[2], data.searchIndex[2]);
   assert.deepEqual(data, before);

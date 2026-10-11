@@ -15,8 +15,8 @@ class SceneClueTests(unittest.TestCase):
     def test_reviewed_singleton_category_aliases_keep_exact_source_and_basis(self):
         cases = {
             'H_FORKLIFT_UNATTENDED_KEY': ('特种设备安全', '特种设备', 'C_GBT36507_2023_4_8_1'),
-            'H_WORKPLACE_CHEM_SDS_MISSING': ('危险化学品安全', '危险化学品与危险物质', 'C_HAZCHEM_LAW_51'),
-            'H_CF_GEN_18': ('设备设施安全', '设备设施', 'C_GBT34525_2017_7_1_6'),
+            'H_WORKPLACE_CHEM_SDS_MISSING': ('危险化学品安全', '危化品与燃气', 'C_HAZCHEM_LAW_51'),
+            'H_CF_GEN_18': ('设备设施安全', '机械设备与设施', 'C_GBT34525_2017_7_1_6'),
         }
         links = [json.loads(path.read_text()) for path in (ROOT / 'knowledge/links').glob('*.json')]
         for record_id, (raw, display, clause_id) in cases.items():
@@ -38,10 +38,11 @@ class SceneClueTests(unittest.TestCase):
         for record_id, expected in cases.items():
             source = json.loads((ROOT / 'knowledge/hazards' / f'{record_id}.json').read_text())
             self.assertEqual(source['category'], expected)
-            self.assertEqual(presentation.project_hazard(source, record_id)['displayCategory'], expected)
+            self.assertEqual(presentation.project_hazard(source, record_id)['displayCategory'],
+                             presentation.CATEGORY_GROUPS.get(expected, expected))
         # The new name aliases must not displace an already reviewed stable-ID override.
         source = json.loads((ROOT / 'knowledge/hazards/H_06280C62983C4FB2837C0CF2BC.json').read_text())
-        self.assertEqual(presentation.project_hazard(source, source['id'])['displayCategory'], '机械与设备安全')
+        self.assertEqual(presentation.project_hazard(source, source['id'])['displayCategory'], '机械设备与设施')
 
     def test_actual_equipment_and_place_records(self):
         cases = {
@@ -86,7 +87,7 @@ class SceneClueTests(unittest.TestCase):
     def test_existing_reviewed_category_stays_separate_from_scene(self):
         source = json.loads((ROOT / 'knowledge/hazards/H078.json').read_text())
         projected = presentation.project_hazard(source, 'H078')
-        self.assertEqual(projected['displayCategory'], '安全教育培训')
+        self.assertEqual(projected['displayCategory'], '安全管理与培训')
         self.assertEqual(projected['sceneTags'], ['危废贮存场所'])
         self.assertNotIn('安全教育培训', presentation.SCENE_TAGS)
 

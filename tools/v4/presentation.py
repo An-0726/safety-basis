@@ -23,6 +23,35 @@ CATEGORY_ALIASES = {
     "设备设施安全": "设备设施",
 }
 
+# 仅合并现有展示分类；不改变正式隐患的原始 category 或逐条覆盖表。
+CATEGORY_GROUPS = {
+    "消防安全": "消防安全",
+    "消防疏散": "消防安全",
+    "特种设备": "特种设备",
+    "电气安全": "电气安全",
+    "机械与设备安全": "机械设备与设施",
+    "设备设施": "机械设备与设施",
+    "安全防护": "机械设备与设施",
+    "危险化学品与危险物质": "危化品与燃气",
+    "燃气安全": "危化品与燃气",
+    "气瓶安全": "危化品与燃气",
+    "粉尘防爆": "粉尘防爆",
+    "涂装安全": "作业安全",
+    "有限空间作业": "作业安全",
+    "作业安全与个体防护": "作业安全",
+    "职业卫生": "职业卫生",
+    "危险废物与环境安全": "危险废物与环境",
+    "应急与事故管理": "应急与事故管理",
+    "安全管理": "安全管理与培训",
+    "安全教育培训": "安全管理与培训",
+    "综合安全": "安全管理与培训",
+    "现场安全管理": "安全管理与培训",
+    "重大事故隐患判定": "安全管理与培训",
+    "总图与建筑": "场所与标志",
+    "安全标志": "场所与标志",
+    "通风与检测报警": "场所与标志",
+}
+
 # 仅用于公开前台的稳定编号展示投影。原始 ``category`` 字段、标题、场所、
 # 条件、法规依据及关联关系均保持不变；未列入此表的编号不得因标题相似而
 # 自动扩展覆盖范围。
@@ -188,8 +217,10 @@ _PUNCT = re.compile(r"[，。；：、（）()【】\[\]《》“”‘’'\"·�
 def display_category(value, hazard_id=""):
     """Return a controlled UI alias while preserving unknown source values."""
     if hazard_id in STABLE_ID_CATEGORY_OVERRIDES:
-        return STABLE_ID_CATEGORY_OVERRIDES[hazard_id]
-    return CATEGORY_ALIASES.get(value or "", value or "")
+        category = STABLE_ID_CATEGORY_OVERRIDES[hazard_id]
+    else:
+        category = CATEGORY_ALIASES.get(value or "", value or "")
+    return CATEGORY_GROUPS.get(category, category)
 
 
 def display_level(raw_level, version_id=""):
@@ -305,6 +336,7 @@ def presentation_review(hazards, level_records, modes=None, roles=None):
 
     return {
         "categoryAliases": dict(CATEGORY_ALIASES),
+        "categoryGroups": dict(CATEGORY_GROUPS),
         "stableCategoryOverrides": dict(STABLE_ID_CATEGORY_OVERRIDES),
         "stableCategoryOverrideCount": len(STABLE_ID_CATEGORY_OVERRIDES),
         "displayLevelMap": dict(DISPLAY_LEVEL_MAP),

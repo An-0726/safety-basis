@@ -24,6 +24,7 @@ sys.path.insert(0, str(ROOT / "tools" / "review"))
 from presentation import (  # noqa: E402
     APPROVED_MAINTENANCE_TEXTS,
     CATEGORY_ALIASES,
+    CATEGORY_GROUPS,
     NOTE_DATE_PREFIX,
     STABLE_ID_CATEGORY_OVERRIDES,
     project_hazard,
@@ -97,16 +98,17 @@ def build_report(new_bundle: Path, old_bundle: Path, knowledge_root: Path, argv:
             missing_override_ids.append(hazard_id)
             continue
         expected = project_hazard(src, hazard_id=hazard_id)
-        if row.get("displayCategory") != target or index.get("displayCategory") != target:
+        display_target = CATEGORY_GROUPS.get(target, target)
+        if row.get("displayCategory") != display_target or index.get("displayCategory") != display_target:
             override_projection_errors.append(hazard_id)
         override_rows.append({
             "id": hazard_id,
             "originalCategory": src.get("category", ""),
             "oldDisplayCategory": old_search.get(hazard_id, {}).get("displayCategory", ""),
-            "displayCategory": target,
+            "displayCategory": display_target,
             "title": src.get("title", ""),
             "places": list(dict.fromkeys(src.get("places") or [])),
-            "overrideReason": reason_for(target),
+            "overrideReason": reason_for(target) + f" 展示分组后为“{display_target}”。",
         })
 
     raw_mismatches: list[dict[str, str]] = []
@@ -132,7 +134,9 @@ def build_report(new_bundle: Path, old_bundle: Path, knowledge_root: Path, argv:
             continue
         source_category = source_hazards.get(hazard_id, {}).get("category", "")
         expected_reason = "stable-ID override" if hazard_id in STABLE_ID_CATEGORY_OVERRIDES else "专项安全与EHS display alias"
-        if hazard_id not in STABLE_ID_CATEGORY_OVERRIDES and source_category != "专项安全与EHS":
+        if old_value in CATEGORY_GROUPS and CATEGORY_GROUPS[old_value] == new_value:
+            expected_reason = "display category group"
+        elif hazard_id not in STABLE_ID_CATEGORY_OVERRIDES and source_category != "专项安全与EHS":
             unexpected_display_changes.append(hazard_id)
         display_changes.append({
             "id": hazard_id,
@@ -213,6 +217,7 @@ def build_report(new_bundle: Path, old_bundle: Path, knowledge_root: Path, argv:
             "stableIdRowsAudited": len(override_rows),
             "displayCategoryChangesFromStage4": len(display_changes),
             "aliasDisplayChanges": sum(item["reason"] == "专项安全与EHS display alias" for item in display_changes),
+            "groupDisplayChanges": sum(item["reason"] == "display category group" for item in display_changes),
             "maintenanceRecords": sum(bool(row.get("maintenanceNote", "").strip()) for row in new_hazards.values()),
             "maintenanceSegments": sum(sum(segment.get("kind") == "maintenance" for segment in row.get("noteSegments", [])) for row in new_hazards.values()),
         },
@@ -228,6 +233,7 @@ def build_report(new_bundle: Path, old_bundle: Path, knowledge_root: Path, argv:
                 "overridePresent": "H_47B0A90180C24A42AFA38767B9" in STABLE_ID_CATEGORY_OVERRIDES,
             },
             "alias": {"专项安全与EHS": CATEGORY_ALIASES.get("专项安全与EHS")},
+            "categoryGroups": dict(CATEGORY_GROUPS),
         },
         "projectionIntegrity": {
             "rawMismatches": raw_mismatches,
@@ -262,7 +268,7 @@ def build_report(new_bundle: Path, old_bundle: Path, knowledge_root: Path, argv:
         },
         "boundary": [
             "稳定编号清单以任务书为闭集；未列编号不因标题相似自动扩展。",
-            "专项安全与EHS 仅增加综合安全展示别名；原 category 保留。",
+            "专项安全与EHS 保留综合安全展示别名，再按 CATEGORY_GROUPS 并入安全管理与培训；原 category 保留。",
             "候选、未批准维护线索、PHASE/版本治理等未批准内容不隐藏，仍按原边界保留并供审查。",
             "本审计不修改 knowledge、source/publication 或正式 current 发布目录；外部包仅用于本地预览交付。",
         ],
@@ -286,7 +292,7 @@ def markdown_report(report: dict[str, Any]) -> str:
         f"- 阶段 4 包：`{report['source']['oldBundle']}`",
         f"- `dataVersion`：`{report['source']['newDataVersion']}`；`releaseHash`：`{report['source']['newReleaseHash']}`",
         f"- 计数：隐患 {counts['manifest'].get('hazards')} / 法规 {counts['manifest'].get('laws')} / 条款 {counts['manifest'].get('clauses')} / 关联 {counts['manifest'].get('links')}；期望一致：{'是' if counts['matchesExpected'] else '否'}",
-        f"- 展示主题分布变化：阶段 4 {len(counts['oldDisplayCategoryCounts'])} 项 → 阶段 5 {len(counts['newDisplayCategoryCounts'])} 项；稳定编号改变 {counts['displayCategoryChangesFromStage4']} 条，其中别名变化 {counts['aliasDisplayChanges']} 条。",
+        f"- 展示主题分布变化：阶段 4 {len(counts['oldDisplayCategoryCounts'])} 项 → 当前 {len(counts['newDisplayCategoryCounts'])} 项；展示改变 {counts['displayCategoryChangesFromStage4']} 条，其中别名变化 {counts['aliasDisplayChanges']} 条、展示分组变化 {counts['groupDisplayChanges']} 条。",
         "",
         "## 稳定编号覆盖表",
         "",

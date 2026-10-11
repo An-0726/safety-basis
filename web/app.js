@@ -150,7 +150,8 @@ function loadUrlState(){
   return route;
 }
 export function canonicalCategoryFilter(value,rows=[]){
-  if(!value||rows.some(row=>displayCategoryOf(row)===value))return value;
+  // The retired major-criteria label keeps its own notice; never redirect it into a merged category.
+  if(!value||value===LEGACY_MAJOR_CATEGORY||rows.some(row=>displayCategoryOf(row)===value))return value;
   const targets=new Set(rows.filter(row=>row.category===value).map(displayCategoryOf));
   // An old label may migrate only when the shipped, reviewed projection gives
   // it one unambiguous destination. Never infer a category from title words.
