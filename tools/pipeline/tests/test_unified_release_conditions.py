@@ -93,6 +93,23 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
             "机械设备与设施",
         )
 
+    def test_reviewed_category_corrections_reference_existing_disjoint_hazards_in_twelve_groups(self):
+        targets = set(presentation.CATEGORY_GROUPS.values())
+        corrections = presentation.REVIEWED_CATEGORY_CORRECTIONS
+        self.assertTrue(corrections)
+        self.assertEqual(len(presentation.STABLE_ID_CATEGORY_OVERRIDES), 65)
+        self.assertFalse(set(corrections) & set(presentation.STABLE_ID_CATEGORY_OVERRIDES))
+        source_dir = ROOT / "knowledge" / "hazards"
+        for hazard_id, target in corrections.items():
+            with self.subTest(hazard_id=hazard_id):
+                path = source_dir / (hazard_id + ".json")
+                self.assertTrue(path.is_file())
+                source = json.loads(path.read_text(encoding="utf-8"))
+                self.assertEqual(source["id"], hazard_id)
+                self.assertIn(target, targets)
+                self.assertEqual(presentation.display_category(source["category"], hazard_id), target)
+                self.assertEqual(presentation.display_category("用电安全", hazard_id), target)
+
     def test_scene_projection_is_union_and_empty_is_unclassified(self):
         tags = presentation.scene_tags([
             "车间电气控制柜旁的消防疏散通道",
@@ -115,6 +132,8 @@ class UnifiedReleaseConditionsTests(unittest.TestCase):
         self.assertEqual(review["unknownModes"], ["new-mode"])
         self.assertEqual(review["unknownRoles"], ["new-role"])
         self.assertEqual(review["stableCategoryOverrideCount"], 65)
+        self.assertEqual(review["reviewedCategoryCorrections"], presentation.REVIEWED_CATEGORY_CORRECTIONS)
+        self.assertEqual(review["reviewedCategoryCorrectionCount"], len(presentation.REVIEWED_CATEGORY_CORRECTIONS))
 
     def test_display_categories_are_the_twelve_groups(self):
         expected = {

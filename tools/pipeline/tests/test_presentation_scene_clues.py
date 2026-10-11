@@ -39,6 +39,7 @@ class SceneClueTests(unittest.TestCase):
             source = json.loads((ROOT / 'knowledge/hazards' / f'{record_id}.json').read_text())
             self.assertEqual(source['category'], expected)
             self.assertEqual(presentation.project_hazard(source, record_id)['displayCategory'],
+                             '安全管理与培训' if record_id == 'H_12158_8_8_5_3' else
                              presentation.CATEGORY_GROUPS.get(expected, expected))
         # The new name aliases must not displace an already reviewed stable-ID override.
         source = json.loads((ROOT / 'knowledge/hazards/H_06280C62983C4FB2837C0CF2BC.json').read_text())
