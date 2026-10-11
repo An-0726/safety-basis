@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-18",
+  "checkedAt": "2026-10-11",
   "contextHashes": {
-    "clause": "d7f1b3663f0ff0a1965ff3e318ba9ad146ac19db9ee9b1e65667970bb3c34094",
-    "hazard": "f2bc9aa1e67bb073356016d8df0d140723dee0e7693141144936c783eeea3218"
+    "hazard": "9e1e8c187cb1262d4e263f3b99e8a0fe3e67343454480ce060b27ca67502b946",
+    "clause": "d7f1b3663f0ff0a1965ff3e318ba9ad146ac19db9ee9b1e65667970bb3c34094"
   },
   "decision": "verified",
   "entityId": "K_PHASE12_EXACT_CA13CB6F21406EEECF82",
@@ -10,9 +10,27 @@
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示信息真实、准确。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "8a72eb4deb86cc06744cf1716eddc37211e780176a5872a8c3de8d0680ebef92",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "contextHashes": {
+      "clause": "d7f1b3663f0ff0a1965ff3e318ba9ad146ac19db9ee9b1e65667970bb3c34094",
+      "hazard": "f2bc9aa1e67bb073356016d8df0d140723dee0e7693141144936c783eeea3218"
+    },
+    "decision": "verified",
+    "entityId": "K_PHASE12_EXACT_CA13CB6F21406EEECF82",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示信息真实、准确。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "8a72eb4deb86cc06744cf1716eddc37211e780176a5872a8c3de8d0680ebef92",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }

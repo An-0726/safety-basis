@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from canonical import content_hash
+from quality_repair_supersessions import load_supersessions, continued_hash
 
 LEDGER = 'docs/commerce-candidate-dispositions-20261002.jsonl'
 INDEPENDENT_REVIEW = 'docs/commerce-independent-review-20261002.json'
@@ -21,7 +22,7 @@ ACTIONS = {
 }
 
 
-def validate_rows(rows, hazards, reviews, source_map):
+def validate_rows(rows, hazards, reviews, source_map, supersessions=None):
     errors = []
     ids = [r.get('hazardId') for r in rows]
     if len(ids) != 44 or len(set(ids)) != 44:
@@ -57,7 +58,8 @@ def validate_rows(rows, hazards, reviews, source_map):
                 errors.append(f'{hid}: conditional merge not applied or invalid')
             if not th or th.get('lifecycle') != 'active' or th.get('mergedInto'):
                 errors.append(f'{hid}: canonical target must be an unmerged active definition')
-            elif row.get('canonicalTargetContentHash') != content_hash(th):
+            elif continued_hash(supersessions, target, row.get('canonicalTargetContentHash'),
+                                'canonicalTargetContentHash', LEDGER) != content_hash(th):
                 errors.append(f'{hid}: canonical target changed; reassess merge applicability')
             if review.get('decision') != 'verified' or not row.get('remainingSourceClaims'):
                 errors.append(f'{hid}: missing merge review or residual source boundary')
@@ -77,7 +79,7 @@ def validate_rows(rows, hazards, reviews, source_map):
     return errors
 
 
-def validate_independent_review(rows, independent, entities, atomic_rows=None):
+def validate_independent_review(rows, independent, entities, atomic_rows=None, supersessions=None):
     """Bind the separately authored decision without manufacturing a review."""
     errors = []
     expected = {r['hazardId']: r for r in rows + list(atomic_rows or []) if r['action'] in
@@ -100,7 +102,9 @@ def validate_independent_review(rows, independent, entities, atomic_rows=None):
         if row['action'] == 'merged_conditionally':
             if item.get('targetId') != row.get('canonicalHazardId'):
                 errors.append(f'{hid}: independent merge target differs')
-            bindings.append(('hazards', item.get('targetId'), item.get('targetHash')))
+            bindings.append(('hazards', item.get('targetId'),
+                             continued_hash(supersessions, item.get('targetId'), item.get('targetHash'),
+                                            'targetHash', INDEPENDENT_REVIEW)))
         elif {k.get('linkId') for k in item.get('links', [])} != set(row.get('appliedLinkIds', [])):
             errors.append(f'{hid}: independent selected link set differs')
         for link in item.get('links', []):
@@ -115,11 +119,12 @@ def validate_independent_review(rows, independent, entities, atomic_rows=None):
 
 
 def validate_commerce_dispositions(root: Path):
+    supersessions = load_supersessions(root)
     rows = [json.loads(x) for x in (root / LEDGER).read_text(encoding='utf-8').splitlines() if x.strip()]
     hazards = {x['id']: x for p in (root/'knowledge/hazards').glob('*.json') for x in [json.loads(p.read_text(encoding='utf-8'))]}
     reviews = {x['entityId']: x for p in (root/'knowledge/reviews/hazards').glob('*.json') for x in [json.loads(p.read_text(encoding='utf-8'))]}
     source_map = [json.loads(x) for x in (root/'docs/commerce-ingest-map-20260921.jsonl').read_text(encoding='utf-8').splitlines()]
-    errors = validate_rows(rows, hazards, reviews, source_map)
+    errors = validate_rows(rows, hazards, reviews, source_map, supersessions)
     independent = json.loads((root/INDEPENDENT_REVIEW).read_text(encoding='utf-8'))
     entities = {'hazards': hazards}
     for folder in ['links', 'clauses', 'law-versions']:
@@ -139,7 +144,7 @@ def validate_commerce_dispositions(root: Path):
     independent, source_continuation_errors = approved_source_continuation(root, independent, historical_entities)
     errors += source_continuation_errors
     errors += validate_atomic_splits(atomic_rows, rows, source_map, historical_entities)
-    return errors + validate_independent_review(rows, independent, historical_entities, atomic_rows)
+    return errors + validate_independent_review(rows, independent, historical_entities, atomic_rows, supersessions)
 
 
 def validate_atomic_splits(atomic_rows, rows, source_map, entities):

@@ -3,18 +3,37 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Doubao-Agent",
-  "checkedAt": "2026-09-10T18:30:00+08:00",
-  "reason": "该隐患的判定准则已由 GB 45067-2024 直接规定；《中华人民共和国特种设备安全法》相关规定作为上位法义务补充保留。",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
+  "checkedAt": "2026-10-11",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "SUPPORTING_UPPER_LAW"
   ],
   "reviewedContentHash": "e9107c1a0862f2a827177788de4ba747e89c4ef8963187b14fc7b8b7fecc09a8",
   "contextHashes": {
-    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8",
-    "hazard": "8bd94e3efa551f3767f35edc720547c392ca495e0c74703d93f25e3e0fc1bb52",
-    "link": "e9107c1a0862f2a827177788de4ba747e89c4ef8963187b14fc7b8b7fecc09a8"
+    "hazard": "b3c1c2bccfbfe07902f0c78c7b928179095c227ddf26c3f1e2908bb5f7ee1f7c",
+    "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8"
   },
   "evidenceRefs": [],
-  "notes": "支撑依据不能单独使隐患取得发布资格。"
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_39f6683077e41c46e6965a8e",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Doubao-Agent",
+    "checkedAt": "2026-09-10T18:30:00+08:00",
+    "reason": "该隐患的判定准则已由 GB 45067-2024 直接规定；《中华人民共和国特种设备安全法》相关规定作为上位法义务补充保留。",
+    "reasonCodes": [
+      "SUPPORTING_UPPER_LAW"
+    ],
+    "reviewedContentHash": "e9107c1a0862f2a827177788de4ba747e89c4ef8963187b14fc7b8b7fecc09a8",
+    "contextHashes": {
+      "clause": "1a500d0967dfc076674e23fcb615d054ccf895294d33f89c559dfbba888252d8",
+      "hazard": "8bd94e3efa551f3767f35edc720547c392ca495e0c74703d93f25e3e0fc1bb52",
+      "link": "e9107c1a0862f2a827177788de4ba747e89c4ef8963187b14fc7b8b7fecc09a8"
+    },
+    "evidenceRefs": [],
+    "notes": "支撑依据不能单独使隐患取得发布资格。"
+  }
 }

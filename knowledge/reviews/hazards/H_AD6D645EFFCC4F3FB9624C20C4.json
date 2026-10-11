@@ -1,16 +1,68 @@
 {
-  "decision": "verified",
   "entityId": "H_AD6D645EFFCC4F3FB9624C20C4",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "daaeb50005ffa297353752d1be9fad60ab9a93d72af96cf21fe70a04ffe18332",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "EH_0b9dec0503efa7a4dbc822678bffc558c1ac2192ea25f59c6a2e6d2a78e3c1bf"
   ],
-  "migratedFromV3Verification": {
-    "id": "VHF_3220c78371e3dddbcb169dd9",
-    "reviewedAt": "2026-09-09T14:38:34+00:00",
-    "reviewer": "并发重验批次"
+  "reason": "保留气瓶暂存区域对象，按第三十五条限定较大危险因素和明显警示标志，删除无原文支持的特定区域标识及每周检查要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十五条　生产经营单位应当在有较大危险因素的生产经营场所和有关设施、设备上，设置明显的安全警示标志。",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_AD6D645EFFCC4F3FB9624C20C4",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "EH_0b9dec0503efa7a4dbc822678bffc558c1ac2192ea25f59c6a2e6d2a78e3c1bf"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VHF_3220c78371e3dddbcb169dd9",
+      "reviewedAt": "2026-09-09T14:38:34+00:00",
+      "reviewer": "并发重验批次"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "13da03dcef8c5d7dcd431efc0ca21ffc5bcb6bbb2ed00e0c1404a7d46cbc962c",
+    "checkedAt": "2026-09-10T13:30:00+08:00"
   },
-  "reviewType": "content",
-  "reviewedContentHash": "13da03dcef8c5d7dcd431efc0ca21ffc5bcb6bbb2ed00e0c1404a7d46cbc962c",
-  "checkedAt": "2026-09-10T13:30:00+08:00"
+  "previousDefinition": {
+    "aliases": [],
+    "category": "特种设备",
+    "conditions": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "description": "现场检查发现，气瓶暂存区域无标识，未设置安全警示标示，相应安全防护、识别、监测或应急保障条件缺失。",
+    "id": "H_AD6D645EFFCC4F3FB9624C20C4",
+    "keywords": [
+      "气瓶暂存区域无标识",
+      "未设置安全警示标示",
+      "气",
+      "瓶",
+      "暂",
+      "存",
+      "区",
+      "域",
+      "无",
+      "标",
+      "识",
+      ",",
+      "未",
+      "设",
+      "置",
+      "安",
+      "全",
+      "警",
+      "示"
+    ],
+    "lifecycle": "active",
+    "measures": "在气瓶暂存区域设置区域标识和\"禁止烟火\"\"当心爆炸\"等安全警示标志，空瓶、满瓶分区标识并标明气体名称；每周检查标识齐全清晰。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《化学化工实验室安全管理规范》 第10.1.9条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "气瓶暂存区域无标识，未设置安全警示标识"
+  }
 }

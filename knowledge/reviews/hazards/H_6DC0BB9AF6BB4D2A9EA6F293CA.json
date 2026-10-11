@@ -1,13 +1,60 @@
 {
-  "checkedAt": "2026-09-18",
-  "decision": "verified",
   "entityId": "H_6DC0BB9AF6BB4D2A9EA6F293CA",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9e1e8c187cb1262d4e263f3b99e8a0fe3e67343454480ce060b27ca67502b946",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "E_PHASE12_EXACT_LOCATOR"
   ],
-  "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示信息真实、准确。",
-  "reviewType": "content",
-  "reviewedContentHash": "f2bc9aa1e67bb073356016d8df0d140723dee0e7693141144936c783eeea3218",
-  "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  "reason": "原文公示栏信息不同于重大风险警示牌信息，按公示栏清单改写并补江苏工业企业范围。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "企业应当通过公示栏公示较大以上安全风险的名称、所处位置、可能导致的事故类型及其后果、管控责任部门和监督举报电话等基本情况。",
+  "previousReview": {
+    "checkedAt": "2026-09-18",
+    "decision": "verified",
+    "entityId": "H_6DC0BB9AF6BB4D2A9EA6F293CA",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_PHASE12_EXACT_LOCATOR"
+    ],
+    "reason": "江苏省生产经营单位安全风险管理条例第十六条直接要求公示信息真实、准确。",
+    "reviewType": "content",
+    "reviewedContentHash": "f2bc9aa1e67bb073356016d8df0d140723dee0e7693141144936c783eeea3218",
+    "reviewer": "Codex PHASE12 exact-locator review 20260918"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "description": "企业较大风险公示栏所公示的风险信息与实际情况不符。",
+    "id": "H_6DC0BB9AF6BB4D2A9EA6F293CA",
+    "keywords": [
+      "企业较大风险风险公示栏信息错误",
+      "企",
+      "业",
+      "较",
+      "大",
+      "风",
+      "险",
+      "公",
+      "示",
+      "栏",
+      "信",
+      "息",
+      "错",
+      "误"
+    ],
+    "lifecycle": "active",
+    "measures": "对照风险清单与现场实际，更正公示栏中的风险点、风险等级、管控措施和责任人信息，经主要负责人审核后重新公示；建立信息变更即更新机制并留存复核记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。原 conditions 字段记录的引用依据为：依据：《江苏省工业企业安全生产风险报告规定》(江苏省人民政府令第140号) 第16条\n\n【PHASE 12 2026-09-18】已复核现行条款原文、隐患对象和适用范围，建立当前direct关联。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "企业较大风险风险公示栏信息错误"
+  }
 }

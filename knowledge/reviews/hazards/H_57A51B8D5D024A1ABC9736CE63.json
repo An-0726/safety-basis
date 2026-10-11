@@ -1,1 +1,76 @@
-{"decision":"verified","entityId":"H_57A51B8D5D024A1ABC9736CE63","entityType":"hazard","evidenceRefs":["E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"],"migratedFromV3Verification":{"id":"VR_4d583bba01cf6d53805372b332_21","reviewedAt":"2026-09-09T13:34:33+00:00","reviewer":"Codex 主核验"},"reviewType":"content","reviewedContentHash":"7bebb1e1e77c64b1c308932ebe0e31532e87942bed19c77b14342bb35e26b217"}
+{
+  "entityId": "H_57A51B8D5D024A1ABC9736CE63",
+  "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "a8d620a0f5bcd0dce1b1c32eab765829213cf71253671c32a4e726c4e8ae462b",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
+  "evidenceRefs": [
+    "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+  ],
+  "reason": "补机械企业生产期间及八类区域边界，删除泛化应急场景。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（三）生产期间铸造用熔炼炉、精炼炉、保温炉的炉底、炉坑和事故坑，以及熔融金属泄漏、喷溅影响范围内的炉前平台、炉基区域、造型地坑、浇注作业坑和熔融金属转运通道等8类区域存在积水的；",
+  "previousReview": {
+    "decision": "verified",
+    "entityId": "H_57A51B8D5D024A1ABC9736CE63",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_0d32c4cce961a92a4907df8e724d162ba60113e84300c1c90fd8b5e72104c0ab"
+    ],
+    "migratedFromV3Verification": {
+      "id": "VR_4d583bba01cf6d53805372b332_21",
+      "reviewedAt": "2026-09-09T13:34:33+00:00",
+      "reviewer": "Codex 主核验"
+    },
+    "reviewType": "content",
+    "reviewedContentHash": "7bebb1e1e77c64b1c308932ebe0e31532e87942bed19c77b14342bb35e26b217"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "应急与事故管理",
+    "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+    "description": "现场检查发现，熔融金属泄漏喷溅影响范围内区域存在积水，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_57A51B8D5D024A1ABC9736CE63",
+    "keywords": [
+      "期间铸造用熔炼炉",
+      "精炼炉",
+      "保温炉的炉底",
+      "期",
+      "间",
+      "铸",
+      "造",
+      "用",
+      "熔",
+      "炼",
+      "炉",
+      ",",
+      "精",
+      "保",
+      "温",
+      "的",
+      "底",
+      "坑",
+      "和",
+      "事",
+      "故",
+      "以",
+      "及",
+      "融",
+      "金",
+      "属",
+      "泄",
+      "漏"
+    ],
+    "lifecycle": "active",
+    "measures": "清除熔融金属泄漏喷溅影响范围内的积水，并采取防止积水措施。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；法律依据与整改措施未改动。2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)机械行业 第3条",
+    "places": [
+      "通用场所"
+    ],
+    "title": "熔融金属泄漏喷溅影响范围内区域存在积水"
+  }
+}

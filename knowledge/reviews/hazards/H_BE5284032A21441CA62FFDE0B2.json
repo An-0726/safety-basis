@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-17",
-  "decision": "verified",
   "entityId": "H_BE5284032A21441CA62FFDE0B2",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "9def02f5a391ce675452b18ca78604829a7ee1b501583d5c21901edf97f838c2",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "E_GBT13869_2017"
   ],
-  "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
-  "reviewType": "content",
-  "reviewedContentHash": "5824fde4701f5f64b4197e6fef87ac82b41b88402214cfbb108377441d8342cc",
-  "reviewer": "Codex"
+  "reason": "明确环境不满足且无附加措施的判断，整改按制造商要求核对与调整。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "用电产品应按照制造商要求的使用环境条件进行安装，如果不能满足制造商的环境要求，应该采取附加的安装措施，例如，为用电产品提供防止外来电气、机械、化学和物理应力的防护。",
+  "previousReview": {
+    "checkedAt": "2026-09-17",
+    "decision": "verified",
+    "entityId": "H_BE5284032A21441CA62FFDE0B2",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_GBT13869_2017"
+    ],
+    "reason": "隐患描述、整改措施及版本口径经复核；当前正式依据按 asOf 效力门禁回绑现行 GB/T 13869-2017，GB/T 13869-2026 在 2027-02-01 实施前仅作为 upcoming 版本保留。",
+    "reviewType": "content",
+    "reviewedContentHash": "5824fde4701f5f64b4197e6fef87ac82b41b88402214cfbb108377441d8342cc",
+    "reviewer": "Codex"
+  },
+  "previousDefinition": {
+    "id": "H_BE5284032A21441CA62FFDE0B2",
+    "title": "用电产品未按制造商要求的环境条件安装或未采取附加措施",
+    "description": "用电产品,未按照制造商要求的使用环境条件进行安装,如果不能满足制造商的环境要求,未采取附加的安装措施",
+    "measures": "按制造商要求的使用环境条件安装用电产品；不能满足时采取附加安装措施。",
+    "conditions": "适用于用电产品的相关安全管理。",
+    "category": "电气安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "用电产品未按制造商要求的环境条件安装或未采取附加措施"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 精简：原标题为法条式长句，已压缩为一句缺陷表述；2026-09-11 同步将整改措施改写为可执行动作。\n\n历史记录：2026-09-14 曾按“已发布新版优先采用”口径拟改引 GB/T 13869-2026；该口径已于 2026-09-17 撤销。\n\n2026-09-17 版本治理校正：当前正式依据为现行 GB/T 13869-2017 第5.1.1条；GB/T 13869-2026 为 upcoming，2027-02-01 实施前不作为当前正式隐患依据，实施日起重新核验并切换对应条款。",
+    "mergedInto": null
+  }
 }

@@ -1,16 +1,32 @@
 {
-  "checkedAt": "2026-09-12",
+  "checkedAt": "2026-10-11",
   "contextHashes": {
-    "clause": "d930268a9b53dd5a05fd3dd3ad1b9fba7c22fc1a8d468c9ce680942039c5a0cb",
-    "hazard": "7bebb1e1e77c64b1c308932ebe0e31532e87942bed19c77b14342bb35e26b217"
+    "hazard": "a8d620a0f5bcd0dce1b1c32eab765829213cf71253671c32a4e726c4e8ae462b",
+    "clause": "d930268a9b53dd5a05fd3dd3ad1b9fba7c22fc1a8d468c9ce680942039c5a0cb"
   },
   "decision": "verified",
   "entityId": "K_D658170B1725CA7B8A1BEFEE",
   "entityType": "link",
   "evidenceRefs": [],
-  "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "b9d731eeae8d892c8a7edbe94b0dd2dbdc33b15b6727882a3ff08a66225fc2d5",
-  "reviewer": "GLM-5.3-Flash (ZCode)",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "contextHashes": {
+      "clause": "d930268a9b53dd5a05fd3dd3ad1b9fba7c22fc1a8d468c9ce680942039c5a0cb",
+      "hazard": "7bebb1e1e77c64b1c308932ebe0e31532e87942bed19c77b14342bb35e26b217"
+    },
+    "decision": "verified",
+    "entityId": "K_D658170B1725CA7B8A1BEFEE",
+    "entityType": "link",
+    "evidenceRefs": [],
+    "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "b9d731eeae8d892c8a7edbe94b0dd2dbdc33b15b6727882a3ff08a66225fc2d5",
+    "reviewer": "GLM-5.3-Flash (ZCode)",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  }
 }
