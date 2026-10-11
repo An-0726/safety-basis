@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-16",
-  "decision": "verified",
   "entityId": "H_14FF17559BF1415B9F0007905D",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "e126ac37696288bad1bc2c35fce722f0f08c7b014a1443a399c6e7d3af3f82dd",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "E_PDDB_L019"
   ],
-  "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "ef0238342886ce549ee8d4313c367fa0266e21b00d54252969b4e245bbf54e6b",
-  "reviewer": "ChatGPT PHASE6 final review 20260916"
+  "reason": "补机械企业及铸造炉范围并删除无原文支持的后果渲染。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第七条机械企业有下列情形之一的，应当判定为重大事故隐患：\n（二）铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施的；",
+  "previousReview": {
+    "checkedAt": "2026-09-16",
+    "decision": "verified",
+    "entityId": "H_14FF17559BF1415B9F0007905D",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_PDDB_L019"
+    ],
+    "reason": "PHASE 6最终核验：隐患对象表述与所选现行条款义务一致；未使用摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "ef0238342886ce549ee8d4313c367fa0266e21b00d54252969b4e245bbf54e6b",
+    "reviewer": "ChatGPT PHASE6 final review 20260916"
+  },
+  "previousDefinition": {
+    "id": "H_14FF17559BF1415B9F0007905D",
+    "title": "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施的",
+    "description": "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施，炉体故障或泄漏时高温熔融金属无处安全接纳，存在烫伤和起火爆炸风险。",
+    "measures": "为熔炼炉、精炼炉、保温炉设置紧急排放和应急储存设施。",
+    "conditions": "适用于本隐患所述场所与设备的相关管理。",
+    "category": "应急与事故管理",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "铸造用熔炼炉、精炼炉、保温炉未设置紧急排放和应急储存设施的"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "2026-09-11 修订：原整改措施为现状描述或空话（“已设置…”“符合要求”等），已改写为可执行的整改动作。\n\n原 conditions 字段记录的引用依据为：依据：《工贸行业重大生产安全事故隐患判定标准》(中华人民共和国应急管理部令第10号)机械行业 第2条\n\n【PHASE 6 2026-09-16】已回到官方原文复核对象、现行版本、逐字条款和适用边界，建立当前direct关联。",
+    "mergedInto": null
+  }
 }

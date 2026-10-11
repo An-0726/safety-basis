@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-26T19:37:09+08:00",
-  "decision": "verified",
   "entityId": "H020",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "f2d5123aaaf1663094bac56afa466b06fc1ddcd01b67d3af790991c4057c0aba",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "E_WORK_SAFETY_LAW_MEM_20260926"
   ],
-  "reason": "保留历史实体，收紧主要负责人职责及具体事实条件；组织制定实施与单位文件缺项需区分。",
-  "reviewType": "content",
-  "reviewedContentHash": "0374b0559266cb39de989de3927707b2c86fb36309fe494796b3a004042137e1",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reason": "仅明确制度规程缺失及主要负责人职责，保留其余已认可字段。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "（二）组织制定并实施本单位安全生产规章制度和操作规程；",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:37:09+08:00",
+    "decision": "verified",
+    "entityId": "H020",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_WORK_SAFETY_LAW_MEM_20260926"
+    ],
+    "reason": "保留历史实体，收紧主要负责人职责及具体事实条件；组织制定实施与单位文件缺项需区分。",
+    "reviewType": "content",
+    "reviewedContentHash": "0374b0559266cb39de989de3927707b2c86fb36309fe494796b3a004042137e1",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "安全管理",
+    "conditions": "依据安全生产法第二十一条第（二）项核主要负责人组织制定并实施制度、规程的职责。须结合实际工艺、岗位、风险及组织实施证据确认缺陷；缺特定名称、汇编、张贴版或签字表不当然证明未履责。",
+    "description": "经资料及履职情况核查，安全生产规章制度和操作规程不健全，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H020",
+    "keywords": [
+      "安全生产规章制度和操作规程不健全"
+    ],
+    "lifecycle": "active",
+    "measures": "结合现有工艺、设备、岗位和风险补齐安全生产规章制度及安全操作规程，履行内部审批发布、培训宣贯和实施程序，并在工艺设备或法规要求变化时及时评审修订。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "\n2026-09-26补全直接条款并限定责任主体，未将一般文件缺项直接认定为主要负责人未履责。",
+    "places": [
+      "生产经营单位及相关安全管理活动"
+    ],
+    "title": "安全生产规章制度和操作规程不健全"
+  }
 }

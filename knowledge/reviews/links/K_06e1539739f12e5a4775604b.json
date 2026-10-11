@@ -3,19 +3,41 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Codex 原文及适用性审计 20260926",
-  "checkedAt": "2026-09-26T19:37:09+08:00",
-  "reason": "核完整条文与原具体义务对应，未以开头句或截断款替代实际列举要求。",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
+  "checkedAt": "2026-10-11",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reasonCodes": [
     "DIRECT_ROLE_CONFIRMED",
     "MOLTEN_METAL_WATERPROOF_MEASURES"
   ],
   "reviewedContentHash": "5fb95549ba4541bad0264ee45dda845b837f264e41239719abb4fbf90e760a4e",
   "contextHashes": {
-    "hazard": "7bebb1e1e77c64b1c308932ebe0e31532e87942bed19c77b14342bb35e26b217",
+    "hazard": "a8d620a0f5bcd0dce1b1c32eab765829213cf71253671c32a4e726c4e8ae462b",
     "clause": "a1fc1d0c10dd01266fb5d1a666361fc83c5673e9478c895e16ce600e9bd53cc8"
   },
   "evidenceRefs": [
     "E_WORK_SAFETY_LAW_MEM_20260926"
-  ]
+  ],
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "entityId": "K_06e1539739f12e5a4775604b",
+    "entityType": "link",
+    "reviewType": "applicability",
+    "decision": "verified",
+    "reviewer": "Codex 原文及适用性审计 20260926",
+    "checkedAt": "2026-09-26T19:37:09+08:00",
+    "reason": "核完整条文与原具体义务对应，未以开头句或截断款替代实际列举要求。",
+    "reasonCodes": [
+      "DIRECT_ROLE_CONFIRMED",
+      "MOLTEN_METAL_WATERPROOF_MEASURES"
+    ],
+    "reviewedContentHash": "5fb95549ba4541bad0264ee45dda845b837f264e41239719abb4fbf90e760a4e",
+    "contextHashes": {
+      "hazard": "7bebb1e1e77c64b1c308932ebe0e31532e87942bed19c77b14342bb35e26b217",
+      "clause": "a1fc1d0c10dd01266fb5d1a666361fc83c5673e9478c895e16ce600e9bd53cc8"
+    },
+    "evidenceRefs": [
+      "E_WORK_SAFETY_LAW_MEM_20260926"
+    ]
+  }
 }

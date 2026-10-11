@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-14",
-  "decision": "verified",
   "entityId": "H_3B72743967A94A1DA7242C44AF",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "pending",
+  "reviewedContentHash": "60a9a34032b457e8414f607919407db88fd730ba61ed9c8deb8f32a96e9a94ab",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "E_XLSX_FT_36E528BE2345959812615FB3"
   ],
-  "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
-  "reviewType": "content",
-  "reviewedContentHash": "aa6f695ab1b883ddd9614b9b783a35c3598ff57fdf33b18466b194b11c48c9e3",
-  "reviewer": "Codex新版整改回绑批次20260914"
+  "reason": "优先核对现引法规，并检索全库有效条款中的“物品存放、严禁烟火、照明、安全警示、消防器材”，核对《中华人民共和国安全生产法》《生产过程安全基本要求》《仓储场所消防安全管理通则》；现条款仅规定较大危险因素处的警示标志，照明等条款各有不同条件，未找到能直接支持标题组合及原描述全部要求的对题依据。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "第三十五条 生产经营单位应当在有较大危险因素的生产经营场所和有关设施、设备上，设置明显的安全警示标志。",
+  "previousReview": {
+    "checkedAt": "2026-09-14",
+    "decision": "verified",
+    "entityId": "H_3B72743967A94A1DA7242C44AF",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_36E528BE2345959812615FB3"
+    ],
+    "reason": "新版整改表内容已与知识源同版次已核验条款逐项回绑；未使用修订表摘要替代官方原文。",
+    "reviewType": "content",
+    "reviewedContentHash": "aa6f695ab1b883ddd9614b9b783a35c3598ff57fdf33b18466b194b11c48c9e3",
+    "reviewer": "Codex新版整改回绑批次20260914"
+  },
+  "previousDefinition": {
+    "id": "H_3B72743967A94A1DA7242C44AF",
+    "title": "仓储或生产场所的安全警示、照明或消防器材配置未分别符合适用专项标准",
+    "description": "物品存放的地点、仓库、场院未做到严禁烟火，也未配置符合规定的照明和消防器材，储存区域存在火灾风险且缺少初期处置条件。",
+    "measures": "物料存放处严禁烟 火,配置符合规定的 照明和消防器材。",
+    "conditions": "适用于仓库的相关安全管理。",
+    "category": "消防安全",
+    "places": [
+      "通用场所"
+    ],
+    "aliases": [],
+    "keywords": [
+      "仓储或生产场所的安全警示、照明或消防器材配置未分别符合适用专项标准"
+    ],
+    "lifecycle": "active",
+    "mode": "direct",
+    "note": "原 conditions 字段记录的引用依据为：依据：《生产过程安全 卫生要求总则》 第 5.8. 1.2 c)条\n\nGB 55036-2022《消防设施通用规范》\nGB/T 13869-2026《用电安全导则》\n《中华人民共和国安全生产法》第三十五条（警示标志兜底）。",
+    "mergedInto": null
+  }
 }

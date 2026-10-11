@@ -1,13 +1,47 @@
 {
-  "checkedAt": "2026-09-13",
-  "decision": "verified",
   "entityId": "H_ZJWS_24_3",
   "entityType": "hazard",
+  "reviewType": "definition",
+  "decision": "verified",
+  "reviewedContentHash": "bd4b1c708da94f57dedccd1b424db08c5eff17a80e6e5c91c07ff5a3297180cc",
+  "checkedAt": "2026-10-11",
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
   "evidenceRefs": [
     "E_XLSX_FT_E5D20293B467D31DBD61871B"
   ],
-  "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-  "reviewType": "content",
-  "reviewedContentHash": "5ceab67664ab68c2c1e2653e64c8be6b3123826c246b89d89e27199ac25bea64",
-  "reviewer": "Codex正式核验批次20260913"
+  "reason": "限定相应材料产品包装，保留标识和中文说明同时具备的要求。",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "basisQuote": "产品包装应当有醒目的警示标识和中文警示说明。",
+  "previousReview": {
+    "checkedAt": "2026-09-13",
+    "decision": "verified",
+    "entityId": "H_ZJWS_24_3",
+    "entityType": "hazard",
+    "evidenceRefs": [
+      "E_XLSX_FT_E5D20293B467D31DBD61871B"
+    ],
+    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+    "reviewType": "content",
+    "reviewedContentHash": "5ceab67664ab68c2c1e2653e64c8be6b3123826c246b89d89e27199ac25bea64",
+    "reviewer": "Codex正式核验批次20260913"
+  },
+  "previousDefinition": {
+    "aliases": [],
+    "category": "职业卫生",
+    "conditions": "适用于存在职业病危害因素及相应接触岗位或作业活动；应结合危害因素种类、接触岗位、用人单位责任和职业健康管理环节确认适用。\n适用场所：存在职业病危害因素的用人单位及相关作业场所",
+    "description": "现场检查发现，职业病危害材料产品包装未设警示标识和中文警示说明，实际状态与直接依据规定的安全要求不一致。",
+    "id": "H_ZJWS_24_3",
+    "keywords": [
+      "职业病危害材料产品包装未设警示标识和中文警示说明"
+    ],
+    "lifecycle": "active",
+    "measures": "职业病危害材料产品包装设警示标识和中文警示说明。整改后结合职业病危害因素和岗位暴露情况复核控制效果，保留检测、维护、健康监护或个体防护等与本项有关的记录。",
+    "mergedInto": null,
+    "mode": "direct",
+    "note": "",
+    "places": [
+      "存在职业病危害因素的用人单位及相关作业场所"
+    ],
+    "title": "职业病危害材料产品包装未设警示标识和中文警示说明"
+  }
 }

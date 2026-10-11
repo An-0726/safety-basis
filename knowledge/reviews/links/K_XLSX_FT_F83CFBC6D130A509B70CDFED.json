@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-26T19:37:09+08:00",
+  "checkedAt": "2026-10-11",
   "contextHashes": {
-    "hazard": "0374b0559266cb39de989de3927707b2c86fb36309fe494796b3a004042137e1",
+    "hazard": "f2d5123aaaf1663094bac56afa466b06fc1ddcd01b67d3af790991c4057c0aba",
     "clause": "eb41d88f689da0973ce81712c4650446a646ef9915739c8473523259ed32d08a"
   },
   "decision": "verified",
@@ -10,8 +10,26 @@
   "evidenceRefs": [
     "E_WORK_SAFETY_LAW_MEM_20260926"
   ],
-  "reason": "核完整条文与原具体义务对应，未以开头句或截断款替代实际列举要求。",
+  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
   "reviewType": "applicability",
   "reviewedContentHash": "b4fffb6cffe53de3334cb6d019a915cffe133960f6edf6e1aae68599b271ae38",
-  "reviewer": "Codex 原文及适用性审计 20260926"
+  "reviewer": "Claude quality repair quality-repair-locked-20261011b",
+  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "previousReview": {
+    "checkedAt": "2026-09-26T19:37:09+08:00",
+    "contextHashes": {
+      "hazard": "0374b0559266cb39de989de3927707b2c86fb36309fe494796b3a004042137e1",
+      "clause": "eb41d88f689da0973ce81712c4650446a646ef9915739c8473523259ed32d08a"
+    },
+    "decision": "verified",
+    "entityId": "K_XLSX_FT_F83CFBC6D130A509B70CDFED",
+    "entityType": "link",
+    "evidenceRefs": [
+      "E_WORK_SAFETY_LAW_MEM_20260926"
+    ],
+    "reason": "核完整条文与原具体义务对应，未以开头句或截断款替代实际列举要求。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "b4fffb6cffe53de3334cb6d019a915cffe133960f6edf6e1aae68599b271ae38",
+    "reviewer": "Codex 原文及适用性审计 20260926"
+  }
 }
