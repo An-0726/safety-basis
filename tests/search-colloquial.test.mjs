@@ -129,3 +129,17 @@ test('词典外的词前面带“做、办”等虚化动词时，只按后面�
   const result=searchHazardsDetailed([row('X','未按规定开展安全评价')],'没做安全评价');
   assert.equal(result.rows[0]?.id,'X');
 });
+
+// 2026-10-13：现场口语与条目用语不同（高空、没人管、电线乱拉）。标题取自已发布条目。
+test('高空、没人管、电线乱拉等口语问法落到对应条目',()=>{
+  const field=[
+    row('PLATFORM','距下方地面1.2m及以上的平台、通道或工作面敞开边缘未设置防护栏杆'),
+    row('FORKLIFT','叉车无人看管或轮班结束时未取下点火钥匙或访问授权卡'),
+    row('WIRING','既有仓储室内储存场所配电线路未穿金属管或难燃硬塑料管保护'),
+    row('HELMET','作业人员在应佩戴安全帽的作业场所未佩戴安全帽'),
+  ];
+  for(const [query,id] of [['高空没护栏','PLATFORM'],['叉车没人管','FORKLIFT'],['电线乱拉','WIRING'],['没戴安全帽','HELMET']]){
+    const result=searchHazardsDetailed(field,query);
+    assert.equal(result.rows[0]?.id,id,query);
+  }
+});
