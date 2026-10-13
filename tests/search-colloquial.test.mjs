@@ -143,3 +143,15 @@ test('高空、没人管、电线乱拉等口语问法落到对应条目',()=>{
     assert.equal(result.rows[0]?.id,id,query);
   }
 });
+
+test('吊钩没保险、疏散门锁了、楼梯没扶手、灭火器没标签落到对应条目',()=>{
+  const field=[
+    row('HOOK','起重机吊钩未装设防脱钩装置'),
+    row('EXIT_LOCK','疏散通道、安全出口或消防车通道被占用、堵塞、封闭'),
+    row('STAIR','固定式钢斜梯未按梯宽和两侧敞开情况设置扶手'),
+    row('TAG','有视线障碍的灭火器设置点缺少醒目位置标志'),
+  ];
+  for(const [query,id] of [['吊钩没保险','HOOK'],['疏散门锁了','EXIT_LOCK'],['楼梯没扶手','STAIR'],['灭火器没标签','TAG']]){
+    assert.equal(searchHazardsDetailed(field,query).rows[0]?.id,id,query);
+  }
+});

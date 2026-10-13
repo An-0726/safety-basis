@@ -293,6 +293,11 @@ export const COLLOQUIAL_TERMS = {
   // 2026-10-13 third round: field wording whose rule titles use other words.
   '高空': ['高处', '1.2m', '距下方地面', '平台'],
   '没人管': ['无人看管', '无人照管'],
+  '没压力': ['失压', '压力指示器', '绿色范围'],
+  '没标签': ['标志', '标识', '标牌'],
+  '没保险': ['防脱钩', '防脱绳', '防脱', '闭锁'],
+  '疏散门': ['安全出口', '疏散门', '疏散通道'],
+  '楼梯': ['楼梯', '斜梯', '钢梯', '梯子'],
 };
 
 // Filler removed from a spoken query before it is interpreted.
