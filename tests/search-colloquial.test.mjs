@@ -155,3 +155,9 @@ test('吊钩没保险、疏散门锁了、楼梯没扶手、灭火器没标签�
     assert.equal(searchHazardsDetailed(field,query).rows[0]?.id,id,query);
   }
 });
+
+// “灭火器没压力”：等价词“灭火器没压”过长会整体吃掉“没压力”之后的部分。
+test('灭火器没压力落到灭火器失压',()=>{
+  const pressure=[row('LOSS','灭火器失压'),row('GAUGE','灭火器压力指示器的指针未在绿色范围内')];
+  assert.equal(searchHazardsDetailed(pressure,'灭火器没压力').rows[0]?.id,'LOSS');
+});
