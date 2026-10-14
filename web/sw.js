@@ -27,7 +27,8 @@ self.addEventListener('fetch', event => {
 async function shell(request) {
   const cache = await caches.open(SHELL);
   try {
-    const response = await fetch(request);
+    // no-cache: 每次向服务器确认是否有新版本，不直接用浏览器里还没过期的旧副本。
+    const response = await fetch(request, {cache: 'no-cache'});
     if (response.ok) await cache.put(request, response.clone());
     return response;
   } catch {
