@@ -252,7 +252,13 @@ export function searchHazardsDetailed(rows, query, filters={}) {
     if(filters.status && r.status!==filters.status) continue;
     out.push(r);
   }
-  const matched=matchingRows(out,terms,prepared.remainder);
+  // A complete existing title is a deliberate item lookup, including suggestion clicks.
+  // Keep all same-title IDs, but do not substitute body mentions when filters exclude it.
+  const isTitleLookup=literalTitleQuery&&rows.some(r=>normalize(r.title)===literalTitleQuery);
+  const exactTitleRows=isTitleLookup?out.filter(r=>normalize(r.title)===literalTitleQuery):[];
+  const matched=isTitleLookup
+    ? {rows:exactTitleRows,terms,matchKind:exactTitleRows.length?'standard':'none'}
+    : matchingRows(out,terms,prepared.remainder);
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map((row,i)=>({row,score:matched.ranked?-i:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));

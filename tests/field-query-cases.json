@@ -1,0 +1,835 @@
+{
+  "provenance": "assistant_designed_synthetic_not_actual_user_logs",
+  "cases": [
+    {
+      "group": "equipment",
+      "intent": "ground-wire",
+      "query": "配电箱接地线断了",
+      "expectedTargetIds": [
+        "H_DEED92095F4043AFB93AB75583"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "ground-wire",
+      "query": "配电柜保护接地线脱落",
+      "expectedTargetIds": [
+        "H_DEED92095F4043AFB93AB75583"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "ground-wire",
+      "query": "设备接地线断开",
+      "expectedTargetIds": [
+        "H_DEED92095F4043AFB93AB75583"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "ground-wire",
+      "query": "配电箱的接地线掉了",
+      "expectedTargetIds": [
+        "H_DEED92095F4043AFB93AB75583"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "exposed-wire",
+      "query": "电线头露在外面",
+      "expectedTargetIds": [
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_62AD7AADA05F468BAE0F91F5CC"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "exposed-wire",
+      "query": "线头外露",
+      "expectedTargetIds": [
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_62AD7AADA05F468BAE0F91F5CC"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "exposed-wire",
+      "query": "电源线头露出来了",
+      "expectedTargetIds": [
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_62AD7AADA05F468BAE0F91F5CC"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "exposed-wire",
+      "query": "电源线头外露",
+      "expectedTargetIds": [
+        "H_GBT13869_REMOVED_POWER_END",
+        "H_62AD7AADA05F468BAE0F91F5CC"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "blocked-route",
+      "query": "消防通道堆满东西",
+      "expectedTargetIds": [
+        "H_8A0E0A3FDDD04AF1829ED6C16E"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "blocked-route",
+      "query": "疏散通道堆了东西",
+      "expectedTargetIds": [
+        "H_8A0E0A3FDDD04AF1829ED6C16E"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "blocked-route",
+      "query": "安全通道被货物堵住",
+      "expectedTargetIds": [
+        "H_8A0E0A3FDDD04AF1829ED6C16E"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "blocked-route",
+      "query": "消防通道堆满货物",
+      "expectedTargetIds": [
+        "H_8A0E0A3FDDD04AF1829ED6C16E"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "mixed-chemicals",
+      "query": "化学品混着放",
+      "expectedTargetIds": [
+        "H_38446A727CFE42F2B4BB5B471C",
+        "H_GB15603_5_1_1",
+        "H_32DB2138E70743A99E7B94013C"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "mixed-chemicals",
+      "query": "危化品混在一起放",
+      "expectedTargetIds": [
+        "H_38446A727CFE42F2B4BB5B471C",
+        "H_GB15603_5_1_1",
+        "H_32DB2138E70743A99E7B94013C"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "mixed-chemicals",
+      "query": "危险化学品混放",
+      "expectedTargetIds": [
+        "H_38446A727CFE42F2B4BB5B471C",
+        "H_GB15603_5_1_1",
+        "H_32DB2138E70743A99E7B94013C"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "mixed-chemicals",
+      "query": "化学品放在一起",
+      "expectedTargetIds": [
+        "H_38446A727CFE42F2B4BB5B471C",
+        "H_GB15603_5_1_1",
+        "H_32DB2138E70743A99E7B94013C"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "unknown-chemical-identity",
+      "query": "普通清洗剂和油漆放一起",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "unknown-chemical-identity",
+      "query": "清洗剂和油漆放在一起",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "unknown-chemical-identity",
+      "query": "清洗剂和油漆混着放",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "chemicals",
+      "intent": "unknown-chemical-identity",
+      "query": "普通清洗剂和油漆混着放",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "leaning-stack",
+      "query": "材料垛歪了",
+      "expectedTargetIds": [
+        "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "leaning-stack",
+      "query": "物料堆倾斜",
+      "expectedTargetIds": [
+        "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "leaning-stack",
+      "query": "货物垛不稳",
+      "expectedTargetIds": [
+        "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "leaning-stack",
+      "query": "材料堆摇晃",
+      "expectedTargetIds": [
+        "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "rack-anchor",
+      "query": "货架没有地脚螺栓",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "rack-anchor",
+      "query": "货架没装锚栓",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "rack-anchor",
+      "query": "货架未设固定螺栓",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "place",
+      "intent": "rack-anchor",
+      "query": "货架缺少地脚螺栓",
+      "expectedTargetIds": [],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "rotating-gloves",
+      "query": "车床戴着手套干活",
+      "expectedTargetIds": [
+        "H_GB29512_HAND_PPE_ADDED_RISK"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "rotating-gloves",
+      "query": "钻床操作佩戴手套",
+      "expectedTargetIds": [
+        "H_GB29512_HAND_PPE_ADDED_RISK"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "rotating-gloves",
+      "query": "旋转设备戴手套作业",
+      "expectedTargetIds": [
+        "H_GB29512_HAND_PPE_ADDED_RISK"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "rotating-gloves",
+      "query": "车床作业戴手套",
+      "expectedTargetIds": [
+        "H_GB29512_HAND_PPE_ADDED_RISK"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "welding-eye-protection",
+      "query": "电焊没戴护目镜",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "welding-eye-protection",
+      "query": "焊接作业未佩戴面罩",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "welding-eye-protection",
+      "query": "焊接没有佩戴防护眼镜",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "welding-eye-protection",
+      "query": "电焊作业未戴面罩",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hot-work-permit",
+      "query": "动火没办作业票",
+      "expectedTargetIds": [
+        "H073",
+        "H_15577_6_2_1_2",
+        "H_1308AD06878441D69BC9975A70"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hot-work-permit",
+      "query": "动火未办动火票",
+      "expectedTargetIds": [
+        "H073",
+        "H_15577_6_2_1_2",
+        "H_1308AD06878441D69BC9975A70"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hot-work-permit",
+      "query": "焊接动火没有办理审批",
+      "expectedTargetIds": [
+        "H073",
+        "H_15577_6_2_1_2",
+        "H_1308AD06878441D69BC9975A70"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hot-work-permit",
+      "query": "动火没办理作业票",
+      "expectedTargetIds": [
+        "H073",
+        "H_15577_6_2_1_2",
+        "H_1308AD06878441D69BC9975A70"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "confined-space-entry",
+      "query": "有限空间没通风就下去",
+      "expectedTargetIds": [
+        "H_48B66BAC_14_1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "confined-space-entry",
+      "query": "有限空间作业未通风就进入",
+      "expectedTargetIds": [
+        "H_48B66BAC_14_1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "confined-space-entry",
+      "query": "有限空间没通风就作业",
+      "expectedTargetIds": [
+        "H_48B66BAC_14_1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "confined-space-entry",
+      "query": "有限空间未先通风就作业",
+      "expectedTargetIds": [
+        "H_48B66BAC_14_1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hearing-protection",
+      "query": "车间噪音大没戴耳塞",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4",
+        "H_FC756EA86AAF4A94BA7207A5B5"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hearing-protection",
+      "query": "噪声很大未戴耳罩",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4",
+        "H_FC756EA86AAF4A94BA7207A5B5"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hearing-protection",
+      "query": "车间噪声大没有佩戴耳塞",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4",
+        "H_FC756EA86AAF4A94BA7207A5B5"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "hearing-protection",
+      "query": "噪音很大没戴耳罩",
+      "expectedTargetIds": [
+        "H_52F66EFA02894089AB8D6D04C4",
+        "H_FC756EA86AAF4A94BA7207A5B5"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "compressor-valve",
+      "query": "空压机安全阀过期",
+      "expectedTargetIds": [
+        "H_EAFEE743563A40C59DF6640FA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "compressor-valve",
+      "query": "储气罐安全阀校验过期",
+      "expectedTargetIds": [
+        "H_EAFEE743563A40C59DF6640FA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "compressor-valve",
+      "query": "空压机的安全阀超期",
+      "expectedTargetIds": [
+        "H_EAFEE743563A40C59DF6640FA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "compressor-valve",
+      "query": "储气罐的安全阀校验超期",
+      "expectedTargetIds": [
+        "H_EAFEE743563A40C59DF6640FA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "warehouse-lamp",
+      "query": "仓库灯不亮",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+        "H_EXIT_SIGN_LAMP_FAULT"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "warehouse-lamp",
+      "query": "库房灯坏了",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+        "H_EXIT_SIGN_LAMP_FAULT"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "warehouse-lamp",
+      "query": "仓库里的灯损坏",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+        "H_EXIT_SIGN_LAMP_FAULT"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "fire",
+      "intent": "warehouse-lamp",
+      "query": "库房里的灯不亮",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+        "H_EXIT_SIGN_LAMP_FAULT"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "cabinet-door-grounding",
+      "query": "配电柜门没接地",
+      "expectedTargetIds": [
+        "H_43C6C076F9FC456DB09138A19A",
+        "H_JGJT46_2024_BOX_PE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "cabinet-door-grounding",
+      "query": "配电箱的门未接地",
+      "expectedTargetIds": [
+        "H_43C6C076F9FC456DB09138A19A",
+        "H_JGJT46_2024_BOX_PE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "cabinet-door-grounding",
+      "query": "配电柜门没有跨接线",
+      "expectedTargetIds": [
+        "H_43C6C076F9FC456DB09138A19A",
+        "H_JGJT46_2024_BOX_PE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "cabinet-door-grounding",
+      "query": "配电箱门没跨接线",
+      "expectedTargetIds": [
+        "H_43C6C076F9FC456DB09138A19A",
+        "H_JGJT46_2024_BOX_PE"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "generic-height-belt",
+      "query": "高处作业没系安全带",
+      "expectedTargetIds": [
+        "H_COM_HIGH_FALL_PROTECTION",
+        "H_GB12801_2025_5_6_2_S1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "generic-height-belt",
+      "query": "高处未系安全带",
+      "expectedTargetIds": [
+        "H_COM_HIGH_FALL_PROTECTION",
+        "H_GB12801_2025_5_6_2_S1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "generic-height-belt",
+      "query": "高处作业没有系安全带",
+      "expectedTargetIds": [
+        "H_COM_HIGH_FALL_PROTECTION",
+        "H_GB12801_2025_5_6_2_S1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "work",
+      "intent": "generic-height-belt",
+      "query": "高处没戴安全带",
+      "expectedTargetIds": [
+        "H_COM_HIGH_FALL_PROTECTION",
+        "H_GB12801_2025_5_6_2_S1"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "new-worker-training",
+      "query": "新员工没培训就上岗",
+      "expectedTargetIds": [
+        "H015"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "new-worker-training",
+      "query": "新工人没有培训就上岗",
+      "expectedTargetIds": [
+        "H015"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "new-worker-training",
+      "query": "新员工未培训就上岗",
+      "expectedTargetIds": [
+        "H015"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "new-worker-training",
+      "query": "新工人没做安全培训",
+      "expectedTargetIds": [
+        "H015"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "emergency-drill-period",
+      "query": "今年没做应急演练",
+      "expectedTargetIds": [
+        "H_1B4FBE6B18404FD795AA211BA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "emergency-drill-period",
+      "query": "单位今年没有做应急演练",
+      "expectedTargetIds": [
+        "H_1B4FBE6B18404FD795AA211BA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "emergency-drill-period",
+      "query": "企业今年未开展应急演练",
+      "expectedTargetIds": [
+        "H_1B4FBE6B18404FD795AA211BA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "emergency-drill-period",
+      "query": "今年未做应急演练",
+      "expectedTargetIds": [
+        "H_1B4FBE6B18404FD795AA211BA6"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "inspection-records",
+      "query": "隐患排查没记录",
+      "expectedTargetIds": [
+        "H_4BCFEF17729F891A6144A8E0"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "inspection-records",
+      "query": "隐患排查没有记录",
+      "expectedTargetIds": [
+        "H_4BCFEF17729F891A6144A8E0"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "inspection-records",
+      "query": "隐患排查未记录",
+      "expectedTargetIds": [
+        "H_4BCFEF17729F891A6144A8E0"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "management",
+      "intent": "inspection-records",
+      "query": "隐患排查没留记录",
+      "expectedTargetIds": [
+        "H_4BCFEF17729F891A6144A8E0"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "gauge-verification-scope",
+      "query": "压力表没检定",
+      "expectedTargetIds": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "equipment",
+      "intent": "gauge-verification-scope",
+      "query": "压力表未检定",
+      "expectedTargetIds": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "equipment",
+      "intent": "gauge-verification-scope",
+      "query": "压力表没有检定",
+      "expectedTargetIds": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "fire",
+      "intent": "emergency-lamp-operation",
+      "query": "应急灯没亮",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "fire",
+      "intent": "emergency-lamp-operation",
+      "query": "应急灯坏了",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "fire",
+      "intent": "emergency-lamp-operation",
+      "query": "应急灯不亮",
+      "expectedTargetIds": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "fire",
+      "intent": "extinguisher-pressure",
+      "query": "灭火器压力不够",
+      "expectedTargetIds": [
+        "H001"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "fire",
+      "intent": "extinguisher-pressure",
+      "query": "灭火器压力不足",
+      "expectedTargetIds": [
+        "H001"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "management",
+      "intent": "forklift-operator",
+      "query": "叉车司机没证",
+      "expectedTargetIds": [
+        "H_SE_OPERATOR_WITHOUT_QUALIFICATION"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "management",
+      "intent": "forklift-operator",
+      "query": "叉车司机无证",
+      "expectedTargetIds": [
+        "H_SE_OPERATOR_WITHOUT_QUALIFICATION"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "management",
+      "intent": "forklift-operator",
+      "query": "叉车司机没有证",
+      "expectedTargetIds": [
+        "H_SE_OPERATOR_WITHOUT_QUALIFICATION"
+      ],
+      "suppressResults": false
+    },
+    {
+      "group": "equipment",
+      "intent": "grinder-guard",
+      "query": "砂轮机没有防护罩",
+      "expectedTargetIds": [
+        "H_B032810073CB4F9D934B250454"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "grinder-guard",
+      "query": "砂轮机没装防护罩",
+      "expectedTargetIds": [
+        "H_B032810073CB4F9D934B250454"
+      ],
+      "suppressResults": true
+    },
+    {
+      "group": "equipment",
+      "intent": "grinder-guard",
+      "query": "砂轮机未装防护罩",
+      "expectedTargetIds": [
+        "H_B032810073CB4F9D934B250454"
+      ],
+      "suppressResults": true
+    }
+  ]
+}

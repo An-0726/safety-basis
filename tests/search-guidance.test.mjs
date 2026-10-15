@@ -49,3 +49,57 @@ test('补录规则按真实标题别名检索，压力表故障与检定严格�
   assert.deepEqual(searchHazardsDetailed(rows,'材料堆太高').rows.map(r=>r.id),['H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE']);
   assert.equal(searchHazardsDetailed(rows,'压力表坏了',{category:'消防安全'}).rows.length,0);
 });
+
+test('现场问法不混淆缺少、损坏、安装验收、首次检验和设施种类',()=>{
+  const titles={SIGN:'应设灯光疏散指示标志的场所未设置或位置、方向不符合要求',EXTINGUISHER:'应配置灭火器的建筑内未配置灭火器',APPLY:'特种设备未按要求办理定期检验',USE:'特种设备未经定期检验或检验不合格仍继续使用',VENT:'危险化学品储存单位未按种类危险特性设置相应安全设施'};
+  const targets=Object.entries(titles).map(([id,title])=>row(id,title));
+  const distractors=[
+    row('SIGN_FAULT','安全出口或疏散指示标志灯具损坏、不能正常指示',{searchText:'疏散指示 灯 安装 设置'}),
+    row('PLACEMENT','灭火器摆放不稳固或铭牌未朝外',{searchText:'灭火器 放 配置'}),
+    row('SOCKET','建筑电气安装验收时暗装插座面板或地面插座盖板未固定牢固',{searchText:'插座 损坏'}),
+    row('FIRST','场（厂）内专用机动车辆首次投入使用前未完成首次检验',{searchText:'叉车 定期检验 年检'}),
+    row('EXPLOSION','经危险区域划分需采用防爆电气的危化品暂存间仍使用非防爆灯具',{searchText:'危化品仓库 通风'}),
+  ];
+  const rows=[...targets,...distractors];
+  const cases=[['疏散指示灯没安装',['SIGN']],['安全出口指示灯没有设置',['SIGN']],['灭火器没放',['EXTINGUISHER']],['仓库没有灭火器',['EXTINGUISHER']],['叉车没有年检',['APPLY','USE']],['叉车定期检验超期',['APPLY','USE']],['危化品仓库没有通风',['VENT']],['危险化学品库房未安装通风设施',['VENT']]];
+  for(const [query,ids] of cases){
+    const result=searchHazardsDetailed(rows,query);
+    assert.equal(result.rows.length,0,query);assert.ok(result.queryNotice,query);
+    assert.equal(result.suggestions.length,ids.length,query);assert.equal(result.interpretedQuery,query);
+    result.suggestions.forEach((item,i)=>assert.deepEqual(searchHazardsDetailed(rows,item.query).rows.map(r=>r.id),[ids[i]],query));
+  }
+  const broken=searchHazardsDetailed(rows,'插座坏了');
+  assert.equal(broken.rows.length,0);assert.equal(broken.suggestions.length,0);assert.match(broken.queryNotice,/使用期损坏/);
+  for(const r of distractors)assert.deepEqual(searchHazardsDetailed([{...r,searchText:r.title+' '+r.searchText}],r.title).rows.map(x=>x.id),[r.id]);
+});
+
+test('压力表口语用点击建议确认设备和缺陷，不把指针不动当成未检定',()=>{
+  const damage=row('D','固定式压力容器压力表玻璃破裂、刻度不清或部件损坏');
+  const verification=row('V','固定式压力容器压力表未经检定或超过检定有效期');
+  for(const [query,id] of [['压力表不走了','D'],['压力表玻璃碎了','D'],['压力表检定超期','V']]){
+    const result=searchHazardsDetailed([damage,verification],query);
+    assert.equal(result.rows.length,0);assert.equal(result.suggestions.length,1);
+    assert.deepEqual(searchHazardsDetailed([damage,verification],result.suggestions[0].query).rows.map(r=>r.id),[id]);
+    assert.equal(searchHazardsDetailed([damage,verification],result.suggestions[0].query,{category:'消防安全'}).rows.length,0);
+  }
+});
+
+test('安全出口上锁先区分疏散通行与门禁专用条件',()=>{
+  const rows=[row('EXIT','疏散通道、安全出口或消防车通道被占用、堵塞、封闭'),row('GATE','控制人员出入的闸口或门禁疏散出口火灾释放、内部开启或标识不符合要求')];
+  for(const query of ['安全出口上锁','安全出口锁了']){
+    const result=searchHazardsDetailed(rows,query);
+    assert.equal(result.rows.length,0);assert.equal(result.suggestions.length,2);
+    result.suggestions.forEach((s,i)=>assert.deepEqual(searchHazardsDetailed(rows,s.query).rows.map(r=>r.id),[['EXIT'],['GATE']][i]));
+    assert.match(result.suggestions[1].note,/门禁或闸口/);
+  }
+});
+
+test('防震胶圈、佩戴和地面问法沿用原有适用性边界',()=>{
+  const distractors=[row('CAP','气瓶未装配保护罩或瓶帽',{searchText:'气瓶 钢瓶 防震胶圈'}),row('GLOVE','生产活动中需使用手部防护装备的作业未正确佩戴',{searchText:'钻床 操作 手套 佩戴'}),row('FOOD','餐饮食品处理区地面未保持防滑',{searchText:'车间 地面 油污 湿滑'})];
+  for(const query of ['气瓶缺少防震胶圈','钢瓶没有防震胶圈','钻床操作未佩戴手套','旋转作业未佩戴手套','车间地面有油','普通车间地面湿滑']){
+    const result=searchHazardsDetailed(distractors,query);assert.equal(result.rows.length,0,query);assert.ok(result.queryNotice,query);
+  }
+  assert.equal(searchHazardsDetailed(distractors,'车间地面有油').suggestions.length,0);
+  assert.equal(searchHazardsDetailed(distractors,'地面有油污').suggestions.length,1);
+  assert.equal(searchHazardsDetailed(distractors,'应急照明灯没装过').suggestions.length,1);
+});

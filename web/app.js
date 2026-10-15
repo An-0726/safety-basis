@@ -518,7 +518,12 @@ async function boot(){
     setDataDateHeader(state.store.manifest,state.store.verifiedFiles?.manifest);
     $('#search').value=state.query;
     switchView(state.view,{keepQuery:true,initial:true,historyMode:'replace'});
-    if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+    if('serviceWorker' in navigator) {
+      // Modules are loaded now; finish cleanup after any late old-worker requests.
+      const requestCleanup=()=>navigator.serviceWorker.controller?.postMessage({type:'safety-basis:cleanup-shell-caches'});
+      navigator.serviceWorker.addEventListener('controllerchange',requestCleanup);
+      navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(requestCleanup).catch(()=>{});
+    }
   }catch(err){showError(err);$('#list').innerHTML='<div class="empty"><strong>数据库未能初始化</strong></div>'}
 }
 
