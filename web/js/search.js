@@ -120,7 +120,20 @@ const relatedVariantsOf = term => {
 };
 // 正确的领域词不能对正文做单字通配或散落字片匹配：
 // “安全员”不能因为正文有“安全阀/安全出口”就命中。
-const termsMatch = (text, groups) => groups.every(variants=>variants.some(t=>text.includes(t)));
+const termOccurs = (text, term) => term==='行车'
+  ? /(?<!自)行车(?!制动|或驻车制动|和驻车制动|道|路线|速度)/.test(text)
+  : text.includes(term);
+const termsMatch = (text, groups) => groups.every(variants=>variants.some(t=>termOccurs(text,t)));
+
+// Workshop crane names refer to the rule's equipment, not a bicycle substring,
+// road-vehicle braking, or a crane mentioned only in another rule's exclusions.
+// Use the same object check for hazards and law names; complete title lookups
+// remain handled separately below.
+const CRANE_QUERY_TERMS = new Set(['行车','天车','起重机','起重机械','起重设备']);
+const craneObjectRows = (rows, terms) => !terms.some(t=>CRANE_QUERY_TERMS.has(t)) ? rows : rows.filter(row=>{
+  const heading=normalize([row.title??row.name??'',...(row.aliases||[]),...(row.keywords||[])].join(' '));
+  return ['起重机','起重机械','起重设备','天车','行车'].some(term=>termOccurs(heading,term));
+});
 
 // 只为词典外的中文词提供单字替换或相邻错序纠正；歧义时不猜。
 // 在当前筛选范围内完全没有原词/同义词结果时，才启用纠正查询。
@@ -181,6 +194,7 @@ const colloquialRows = (rows, query) => {
   return {rows:hits.map(x=>x.row),terms:parsed.labels,matchKind:'colloquial',ranked:true};
 };
 const matchingRows = (rows, terms, query='') => {
+  rows=craneObjectRows(rows,terms);
   const strict=strictRows(rows,terms);
   return strict.matchKind==='none' ? (colloquialRows(rows,query)||strict) : strict;
 };

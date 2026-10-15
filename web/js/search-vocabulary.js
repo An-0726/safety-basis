@@ -144,6 +144,8 @@ export const EQUIVALENT_GROUPS = [
 // Related concepts are considered only if no literal or equivalent result
 // survives the selected filters. They are useful fallbacks, not synonyms.
 export const RELATED_GROUPS = [
+  // 设备总类只作相关检索，不将全部起重设备认作同一种起重机。
+  ['起重机', '起重机械', '起重设备'],
   ['配电室', '配电箱'],
   ['配电房', '低压配电'],
   ['疏散指示标志', '安全出口指示'],
@@ -185,6 +187,8 @@ export const RELATED_GROUPS = [
 
 // Common query components for unspaced Chinese compound queries.
 export const SEGMENT_TERMS = [
+  // “自行车”须保留完整，不能切成“自 + 行车”而触发起重设备别名。
+  '自行车', '行车制动', '行车道',
   '灭火器', '培训', '失压', '未设置', '未安装', '未配备', '未检测', '未检验',
   '未审批', '未通风', '未佩戴', '未接地', '未培训', '未演练', '未维护',
   '无证', '过期', '失效', '破损', '损坏', '故障', '泄漏', '堵塞', '占用',
