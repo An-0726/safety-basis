@@ -1,7 +1,10 @@
 // Ambiguous field wording must not silently acquire a site, duty or defect.
+import {fieldQueryGuidance} from './field-query-guidance.js';
 const suggestion=(label,query,note)=>({label,query,note});
 export function hazardSearchGuidance(value){
   const query=String(value??'').normalize('NFKC').replace(/\s+/g,'').replace(/[，。？！?!]/g,'');
+  const fieldGuidance=fieldQueryGuidance(query);
+  if(fieldGuidance)return fieldGuidance;
   // A missing sign is not a failed lamp, and a missing extinguisher is not a placement defect.
   const absence='(?:未(?:设置|安装|装设|配置)|没有(?:设置|安装|装|配置|放)|没(?:设置|安装|装|配置|放|配)|未装|未设|缺少|缺失)(?:过|了)?';
   const absentSign=new RegExp('^(?:安全出口(?:指示|标志)灯|(?:疏散|出口)(?:指示|标志)灯|(?:安全出口|疏散)指示标志(?:灯(?:具)?)?)'+absence+'$');

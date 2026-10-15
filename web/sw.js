@@ -1,15 +1,20 @@
 'use strict';
 const SHELL = 'safety-basis-shell-v14';
 const SHELL_FILES = ['./', './index.html', './library.html', './style.css', './library.css', './stage3.css', './app.js',
-  './js/field-profiles.js', './js/store.js', './js/search.js', './js/search-vocabulary.js', './js/browse-groups.js', './js/search-guidance.js', './js/library.js', './js/fulltext-search.js', './js/verified-files.js',
+  './js/field-profiles.js', './js/store.js', './js/search.js', './js/search-vocabulary.js', './js/browse-groups.js', './js/search-guidance.js', './js/field-query-guidance.js', './js/library.js', './js/fulltext-search.js', './js/verified-files.js',
   './manifest.webmanifest', './icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(SHELL).then(cache => cache.addAll(SHELL_FILES)).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', event => {
-  event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('safety-basis-') && key !== SHELL)
-    .map(key => caches.delete(key)))).then(() => self.clients.claim()));
+  // Old controlled pages can reopen their namespace while claim() is pending.
+  // Clean again after ownership changes so those late opens do not leave stale caches.
+  event.waitUntil(clearPreviousCaches().then(() => self.clients.claim()).then(clearPreviousCaches));
 });
+function clearPreviousCaches() {
+  return caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('safety-basis-') && key !== SHELL)
+    .map(key => caches.delete(key))));
+}
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET') return;
