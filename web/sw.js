@@ -1,5 +1,5 @@
 'use strict';
-const SHELL = 'safety-basis-shell-v12';
+const SHELL = 'safety-basis-shell-v13';
 const SHELL_FILES = ['./', './index.html', './library.html', './style.css', './library.css', './stage3.css', './app.js',
   './js/field-profiles.js', './js/store.js', './js/search.js', './js/search-vocabulary.js', './js/browse-groups.js', './js/search-guidance.js', './js/library.js', './js/fulltext-search.js', './js/verified-files.js',
   './manifest.webmanifest', './icon.svg'];

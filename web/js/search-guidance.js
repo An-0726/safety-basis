@@ -2,6 +2,13 @@
 const suggestion=(label,query,note)=>({label,query,note});
 export function hazardSearchGuidance(value){
   const query=String(value??'').normalize('NFKC').replace(/\s+/g,'').replace(/[，。？！?!]/g,'');
+  // Explicit installation absence must not broaden into faults of installed lamps.
+  const absentLight=/^(?:消防)?(?:应急(?:照明)?灯(?:具)?|(?:疏散|应急|通道)照明(?:灯(?:具)?)?)(?:未(?:设置|安装|装设)|没有(?:设置|安装|装)|没(?:设置|安装|装)|未装|未设|缺少|缺失)(?:了)?$/;
+  const absentLightInPassage=/^通道(?:缺少|缺失|未设置|未安装|没装|没有)(?:疏散|应急)?(?:照明|灯)(?:了)?$/;
+  if(absentLight.test(query)||absentLightInPassage.test(query))return {
+    suppressResults:true,notice:'未安装、未设置与已装灯具损坏是不同缺陷。请先确认是否依法需要配置，以及具体建筑和部位。',
+    suggestions:[suggestion('查建筑疏散照明未设置','应设疏散照明的建筑部位未设置疏散照明','仅适用于条款列明的建筑、部位及例外，须核实现场条件；不代表所有通道都须设应急灯。')],
+  };
   if(/^(?:疏散)?通道(?:没|没有)灯(?:了)?$/.test(query))return {
     suppressResults:true,notice:'请先区分普通照明、疏散照明和疏散指示标志；未设置与灯具损坏是不同缺陷。',
     suggestions:[
