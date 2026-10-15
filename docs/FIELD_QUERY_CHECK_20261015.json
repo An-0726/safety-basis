@@ -1,0 +1,1400 @@
+{
+  "provenance": "assistant_designed_synthetic_field_phrases_not_actual_user_logs",
+  "baselineCommit": "72a0d9bcfddec874a7aa29b57ac2dceae7d49b4b",
+  "publicHazards": 1764,
+  "counts": {
+    "补充边界提示或有条件入口": 9,
+    "保留现有候选，仍需确认适用场景": 9,
+    "修正误配，先确认条件": 8,
+    "保留搜索或证据缺口，未改动": 14
+  },
+  "results": [
+    {
+      "query": "气瓶缺少防震胶圈",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "气瓶缺少防震胶圈",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "气瓶 缺少防震胶圈",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "气瓶缺少防震胶圈",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "缺防震圈与缺瓶帽、保护罩不是同一缺陷。本站尚无可据此认定所有在用气瓶不符合要求的通用规则，应核实际瓶型、行业和装卸运输要求。",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "钢瓶没有防震胶圈",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "钢瓶没有防震胶圈",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "钢瓶没有防震胶圈",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "钢瓶没有防震胶圈",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "缺防震圈与缺瓶帽、保护罩不是同一缺陷。本站尚无可据此认定所有在用气瓶不符合要求的通用规则，应核实际瓶型、行业和装卸运输要求。",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "压力表不走了",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "压力表不走了",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "压力表不走了",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "压力表不走了",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "先确认压力表所属设备及实际缺陷；指针不动不能单独证明部件损坏，也不能当成未检定。",
+        "suggestions": [
+          {
+            "label": "查固定式压力容器压力表损坏",
+            "query": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏",
+            "note": "仅在确认固定式压力容器及条款列明的实际缺陷后使用；一般仪表或单纯示值不变须另核。",
+            "ids": [
+              "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "压力表玻璃碎了",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "压力表玻璃碎了",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "压力表玻璃碎了",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "压力表玻璃碎了",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "先确认压力表所属设备及实际缺陷；指针不动不能单独证明部件损坏，也不能当成未检定。",
+        "suggestions": [
+          {
+            "label": "查固定式压力容器压力表损坏",
+            "query": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏",
+            "note": "仅在确认固定式压力容器及条款列明的实际缺陷后使用；一般仪表或单纯示值不变须另核。",
+            "ids": [
+              "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "压力表没检定",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "压力表没检定",
+        "count": 1,
+        "matchKind": "standard",
+        "terms": "压力表没检定",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
+            "title": "固定式压力容器压力表未经检定或超过检定有效期"
+          }
+        ]
+      },
+      "after": {
+        "query": "压力表没检定",
+        "count": 1,
+        "matchKind": "standard",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
+            "title": "固定式压力容器压力表未经检定或超过检定有效期"
+          }
+        ]
+      }
+    },
+    {
+      "query": "压力表检定超期",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "压力表检定超期",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "压力表检定超期",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "压力表检定超期",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "检定超期与仪表损坏分开核查，并须确认所属设备及检定有效期。",
+        "suggestions": [
+          {
+            "label": "查固定式压力容器压力表检定",
+            "query": "固定式压力容器压力表未经检定或超过检定有效期",
+            "note": "仅在确认属于条款适用的固定式压力容器压力表后使用，不延伸到所有仪表。",
+            "ids": [
+              "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "疏散指示灯没安装",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "疏散指示灯没安装",
+        "count": 3,
+        "matchKind": "colloquial",
+        "terms": "疏散指示 灯 安装",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_EXIT_SIGN_LAMP_FAULT",
+            "title": "安全出口或疏散指示标志灯具损坏、不能正常指示"
+          },
+          {
+            "id": "H_69344942331F4E74ACB10315FE",
+            "title": "应设灯光疏散指示标志的场所未设置或位置、方向不符合要求"
+          },
+          {
+            "id": "H_COM_ELECTRICAL_BOX_COVER",
+            "title": "建筑电气安装验收时接线盒盖板或暗装开关面板缺失"
+          }
+        ]
+      },
+      "after": {
+        "query": "疏散指示灯没安装",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "未设置指示标志与已经设置但灯具损坏是不同缺陷；还需核实建筑、场所和标志类型。",
+        "suggestions": [
+          {
+            "label": "查灯光疏散指示标志未设置",
+            "query": "应设灯光疏散指示标志的场所未设置或位置、方向不符合要求",
+            "note": "仅适用于条款列明应设置的建筑和场所；不能用灯具故障或接线盒安装规则替代。",
+            "ids": [
+              "H_69344942331F4E74ACB10315FE"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "安全出口指示灯没有设置",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "安全出口指示灯没有设置",
+        "count": 3,
+        "matchKind": "colloquial",
+        "terms": "安全出口指示 灯 设置",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_69344942331F4E74ACB10315FE",
+            "title": "应设灯光疏散指示标志的场所未设置或位置、方向不符合要求"
+          },
+          {
+            "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+            "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+          },
+          {
+            "id": "H_EXIT_SIGN_LAMP_FAULT",
+            "title": "安全出口或疏散指示标志灯具损坏、不能正常指示"
+          }
+        ]
+      },
+      "after": {
+        "query": "安全出口指示灯没有设置",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "未设置指示标志与已经设置但灯具损坏是不同缺陷；还需核实建筑、场所和标志类型。",
+        "suggestions": [
+          {
+            "label": "查灯光疏散指示标志未设置",
+            "query": "应设灯光疏散指示标志的场所未设置或位置、方向不符合要求",
+            "note": "仅适用于条款列明应设置的建筑和场所；不能用灯具故障或接线盒安装规则替代。",
+            "ids": [
+              "H_69344942331F4E74ACB10315FE"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "应急灯没亮",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "应急灯没亮",
+        "count": 1,
+        "matchKind": "colloquial",
+        "terms": "应急灯 亮",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+            "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+          }
+        ]
+      },
+      "after": {
+        "query": "应急灯没亮",
+        "count": 1,
+        "matchKind": "colloquial",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+            "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+          }
+        ]
+      }
+    },
+    {
+      "query": "应急灯坏了",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "应急灯坏了",
+        "count": 1,
+        "matchKind": "standard",
+        "terms": "应急灯 坏了",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+            "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+          }
+        ]
+      },
+      "after": {
+        "query": "应急灯坏了",
+        "count": 1,
+        "matchKind": "standard",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+            "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+          }
+        ]
+      }
+    },
+    {
+      "query": "应急照明灯没装过",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "应急照明灯没装过",
+        "count": 3,
+        "matchKind": "colloquial",
+        "terms": "应急照明灯 安装 过",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_42356AF341B9414E855DD7D0CD",
+            "title": "生产过程作业场所未按规定设置应急照明"
+          },
+          {
+            "id": "H_4E1F7C3FFB724997B5C4EC82C9",
+            "title": "生产过程作业场所未按规定设置疏散指示标志"
+          },
+          {
+            "id": "H_GB12801_5_4_6_2",
+            "title": "生产过程风险位置安全标志或作业场所应急疏散设施未按规定设置"
+          }
+        ]
+      },
+      "after": {
+        "query": "应急照明灯没装过",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "未安装、未设置与已装灯具损坏是不同缺陷。请先确认是否依法需要配置，以及具体建筑和部位。",
+        "suggestions": [
+          {
+            "label": "查建筑疏散照明未设置",
+            "query": "应设疏散照明的建筑部位未设置疏散照明",
+            "note": "仅适用于条款列明的建筑、部位及例外，须核实现场条件；不代表所有通道都须设应急灯。",
+            "ids": [
+              "H_C0BEAB6834F44E5CBE05F9CBD0"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "灭火器没放",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "灭火器没放",
+        "count": 2,
+        "matchKind": "colloquial",
+        "terms": "灭火器 放",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_08C1576EE4824ED8BE0CDD56DF",
+            "title": "灭火器摆放不稳固或铭牌未朝外"
+          },
+          {
+            "id": "H_COM_EV_CHARGING_AREA",
+            "title": "南京电动自行车集中充电场所和设施未落实消防安全设置或运营管理要求"
+          }
+        ]
+      },
+      "after": {
+        "query": "灭火器没放",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "未配置灭火器与摆放不稳、铭牌朝向或维护失效是不同问题；先确认建筑与配置条件。",
+        "suggestions": [
+          {
+            "label": "查建筑灭火器配置要求",
+            "query": "应配置灭火器的建筑内未配置灭火器",
+            "note": "须核实建筑、使用性质和应配置条件；不能仅因提到灭火器就套用某地充电场所规则。",
+            "ids": [
+              "H_COM_NO_FIRE_EQUIP"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "灭火器压力不够",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "灭火器压力不够",
+        "count": 2,
+        "matchKind": "standard",
+        "terms": "灭火器压力不够",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H001",
+            "title": "灭火器失压"
+          },
+          {
+            "id": "H025",
+            "title": "消防设施、器材未按要求检验维修"
+          }
+        ]
+      },
+      "after": {
+        "query": "灭火器压力不够",
+        "count": 2,
+        "matchKind": "standard",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H001",
+            "title": "灭火器失压"
+          },
+          {
+            "id": "H025",
+            "title": "消防设施、器材未按要求检验维修"
+          }
+        ]
+      }
+    },
+    {
+      "query": "配电柜门没接地",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "配电柜门没接地",
+        "count": 2,
+        "matchKind": "colloquial",
+        "terms": "配电柜 门 接地",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_43C6C076F9FC456DB09138A19A",
+            "title": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接"
+          },
+          {
+            "id": "H_JGJT46_2024_BOX_PE",
+            "title": "建筑市政施工临时配电箱金属部件PE连接或箱门电气连接不符合要求"
+          }
+        ]
+      },
+      "after": {
+        "query": "配电柜门没接地",
+        "count": 2,
+        "matchKind": "colloquial",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_43C6C076F9FC456DB09138A19A",
+            "title": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接"
+          },
+          {
+            "id": "H_JGJT46_2024_BOX_PE",
+            "title": "建筑市政施工临时配电箱金属部件PE连接或箱门电气连接不符合要求"
+          }
+        ]
+      }
+    },
+    {
+      "query": "配电箱接地线断了",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "配电箱接地线断了",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "配电箱 接地 线断了",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "配电箱接地线断了",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "电线头露在外面",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "电线头露在外面",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "电线头露在外面",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "电线头露在外面",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "插座坏了",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "插座坏了",
+        "count": 1,
+        "matchKind": "colloquial",
+        "terms": "插座 损坏",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_COM_SOCKET_LOOSE",
+            "title": "建筑电气安装验收时暗装插座面板或地面插座盖板未固定牢固"
+          }
+        ]
+      },
+      "after": {
+        "query": "插座坏了",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "插座使用中损坏与安装验收时面板未固定牢固不是同一缺陷。请按实际情况区分破损、松动、接地或不通电；本站现有安装验收条目不能直接据此判定使用期损坏。",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "安全出口上锁",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "安全出口上锁",
+        "count": 1,
+        "matchKind": "standard",
+        "terms": "安全出口 上锁",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H004",
+            "title": "控制人员出入的闸口或门禁疏散出口火灾释放、内部开启或标识不符合要求"
+          }
+        ]
+      },
+      "after": {
+        "query": "安全出口上锁",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "先确认该门是否承担疏散功能及是否影响通行；普通出口门与控制人员出入的门禁、闸口须分别核查。",
+        "suggestions": [
+          {
+            "label": "查疏散出口通行条件",
+            "query": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭",
+            "note": "须核实出口疏散用途及实际占用、堵塞或封闭情况，检索原话不能替代现场核实。",
+            "ids": [
+              "H_8A0E0A3FDDD04AF1829ED6C16E"
+            ]
+          },
+          {
+            "label": "查门禁或闸口疏散出口",
+            "query": "控制人员出入的闸口或门禁疏散出口火灾释放、内部开启或标识不符合要求",
+            "note": "仅在确认属于门禁或闸口疏散出口后核查，不能替代所有普通出口门的要求。",
+            "ids": [
+              "H004"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "消防通道堆满东西",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "消防通道堆满东西",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "消防通道 堆满东西",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "消防通道堆满东西",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "车间地面有油",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "车间地面有油",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "车间地面有油",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "车间地面有油",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "请核实场所和实际滑跌风险；餐饮食品处理区的防滑要求不能直接套用于普通工业车间。",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "地面有油污",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "地面有油污",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "地面有油污",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "地面有油污",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "请核实场所和实际滑跌风险；餐饮食品处理区的防滑要求不能直接套用于普通工业车间。",
+        "suggestions": [
+          {
+            "label": "查看餐饮食品处理区防滑",
+            "query": "餐饮食品处理区地面未保持防滑",
+            "note": "仅供确认属于餐饮食品处理区后选择；普通车间油污的对题依据仍待补。",
+            "ids": [
+              "H_COM_SLIPPERY_FLOOR"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "普通车间地面湿滑",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "普通车间地面湿滑",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "普通车间地面湿滑",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "普通车间地面湿滑",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "请核实场所和实际滑跌风险；餐饮食品处理区的防滑要求不能直接套用于普通工业车间。",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "化学品混着放",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "化学品混着放",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "化学品混着放",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "化学品混着放",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "普通清洗剂和油漆放一起",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "普通清洗剂和油漆放一起",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "普通清洗剂和油漆放一起",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "普通清洗剂和油漆放一起",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "危化品仓库没有通风",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "危化品仓库没有通风",
+        "count": 3,
+        "matchKind": "colloquial",
+        "terms": "危化品仓库 通风",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_COM_SPRAY_PAINT_STORAGE",
+            "title": "属于危险化学品的自喷漆未按要求储存"
+          },
+          {
+            "id": "H_9C23C18DB9EF40A58B8C98F06C",
+            "title": "危险化学品储存单位未按种类危险特性设置相应安全设施"
+          },
+          {
+            "id": "H_D93FC0084ABA465CA3EA98B393",
+            "title": "经危险区域划分需采用防爆电气的危化品暂存间仍使用非防爆灯具"
+          }
+        ]
+      },
+      "after": {
+        "query": "危化品仓库没有通风",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "通风设施要求须结合物料危险特性和储存条件确认；没有通风不能改判为灯具不防爆。",
+        "suggestions": [
+          {
+            "label": "查危化品储存安全设施条件",
+            "query": "危险化学品储存单位未按种类危险特性设置相应安全设施",
+            "note": "仅在确认属于危险化学品储存单位后核查相应设施，不代表所有仓库都必须设置同一套通风设备。",
+            "ids": [
+              "H_9C23C18DB9EF40A58B8C98F06C"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "叉车没有年检",
+      "disposition": "修正误配，先确认条件",
+      "before": {
+        "query": "叉车没有年检",
+        "count": 1,
+        "matchKind": "colloquial",
+        "terms": "叉车 定期检验",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_A4AB60E806794B28A73C3F3C48",
+            "title": "场（厂）内专用机动车辆首次投入使用前未完成首次检验"
+          }
+        ]
+      },
+      "after": {
+        "query": "叉车没有年检",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "定期检验与首次投入使用前的首次检验不同。请先确认有效期、是否已申报，以及是否仍在使用。",
+        "suggestions": [
+          {
+            "label": "查未申报定期检验",
+            "query": "特种设备未按要求办理定期检验",
+            "note": "用于核查是否按要求申报；“没有年检”本身不能证明未申报。",
+            "ids": [
+              "H036"
+            ]
+          },
+          {
+            "label": "查未经定期检验仍继续使用",
+            "query": "特种设备未经定期检验或检验不合格仍继续使用",
+            "note": "须另行确认仍继续使用，不能由检索原话自动补入这一事实。",
+            "ids": [
+              "H_5D5ACB4A6D45FD9CEFC4654D"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "叉车司机没证",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "叉车司机没证",
+        "count": 1,
+        "matchKind": "standard",
+        "terms": "叉车司机 没证",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_SE_OPERATOR_WITHOUT_QUALIFICATION",
+            "title": "叉车司机、起重机司机等特种设备作业人员未取得相应资格上岗作业"
+          }
+        ]
+      },
+      "after": {
+        "query": "叉车司机没证",
+        "count": 1,
+        "matchKind": "standard",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_SE_OPERATOR_WITHOUT_QUALIFICATION",
+            "title": "叉车司机、起重机司机等特种设备作业人员未取得相应资格上岗作业"
+          }
+        ]
+      }
+    },
+    {
+      "query": "材料垛歪了",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "材料垛歪了",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "材料垛歪了",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "材料垛歪了",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "货架没有地脚螺栓",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "货架没有地脚螺栓",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "货架没有地脚螺栓",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "货架没有地脚螺栓",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "砂轮机没有防护罩",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "砂轮机没有防护罩",
+        "count": 1,
+        "matchKind": "colloquial",
+        "terms": "砂轮机 防护罩",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_B032810073CB4F9D934B250454",
+            "title": "高速旋转零部件未配置满足要求的防护罩"
+          }
+        ]
+      },
+      "after": {
+        "query": "砂轮机没有防护罩",
+        "count": 1,
+        "matchKind": "colloquial",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_B032810073CB4F9D934B250454",
+            "title": "高速旋转零部件未配置满足要求的防护罩"
+          }
+        ]
+      }
+    },
+    {
+      "query": "钻床操作未佩戴手套",
+      "disposition": "补充边界提示或有条件入口",
+      "before": {
+        "query": "钻床操作未佩戴手套",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "钻床操作 未佩戴 手套",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "钻床操作未佩戴手套",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "旋转作业不能仅凭未戴手套判定不符合。应先评估手部防护需求及装备造成的缠绕等附加风险。",
+        "suggestions": [
+          {
+            "label": "查看手部防护装备附加风险",
+            "query": "手部防护装备的选用增加缠绕或点火等风险",
+            "note": "这是装备选用引入风险的规则，不代表所有旋转作业都必须戴手套或都禁止戴手套。",
+            "ids": [
+              "H_GB29512_HAND_PPE_ADDED_RISK"
+            ]
+          }
+        ],
+        "results": []
+      }
+    },
+    {
+      "query": "车床戴着手套干活",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "车床戴着手套干活",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "车床戴着手套干活",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "车床戴着手套干活",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "电焊没戴护目镜",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "电焊没戴护目镜",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "电焊没戴 护目镜",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "电焊没戴护目镜",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "高处作业没系安全带",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "高处作业没系安全带",
+        "count": 1,
+        "matchKind": "colloquial",
+        "terms": "高处作业 安全带",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_COM_HIGH_FALL_PROTECTION",
+            "title": "建筑与市政施工高处作业未正确使用个人防坠落用品"
+          }
+        ]
+      },
+      "after": {
+        "query": "高处作业没系安全带",
+        "count": 1,
+        "matchKind": "colloquial",
+        "notice": "",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_COM_HIGH_FALL_PROTECTION",
+            "title": "建筑与市政施工高处作业未正确使用个人防坠落用品"
+          }
+        ]
+      }
+    },
+    {
+      "query": "动火没办作业票",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "动火没办作业票",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "动火没办作业票",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "动火没办作业票",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "有限空间没通风就下去",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "有限空间没通风就下去",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "有限空间 没 通风 就下去",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "有限空间没通风就下去",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "车间噪音大没戴耳塞",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "车间噪音大没戴耳塞",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "车间 噪音 大没戴 耳塞",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "车间噪音大没戴耳塞",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "空压机安全阀过期",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "空压机安全阀过期",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "空压机安全阀 过期",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "空压机安全阀过期",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    },
+    {
+      "query": "储气罐压力表坏了",
+      "disposition": "保留现有候选，仍需确认适用场景",
+      "before": {
+        "query": "储气罐压力表坏了",
+        "count": 1,
+        "matchKind": "standard",
+        "terms": "储气罐 压力表坏了",
+        "notice": "下列压力表损坏规则限固定式压力容器及条款列明的缺陷；一般仪表是否适用须另核，损坏不等于未检定。",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+            "title": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏"
+          }
+        ]
+      },
+      "after": {
+        "query": "储气罐压力表坏了",
+        "count": 1,
+        "matchKind": "standard",
+        "notice": "下列压力表损坏规则限固定式压力容器及条款列明的缺陷；一般仪表是否适用须另核，损坏不等于未检定。",
+        "suggestions": [],
+        "results": [
+          {
+            "id": "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+            "title": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏"
+          }
+        ]
+      }
+    },
+    {
+      "query": "仓库灯不亮",
+      "disposition": "保留搜索或证据缺口，未改动",
+      "before": {
+        "query": "仓库灯不亮",
+        "count": 0,
+        "matchKind": "none",
+        "terms": "仓库 灯不亮",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      },
+      "after": {
+        "query": "仓库灯不亮",
+        "count": 0,
+        "matchKind": "none",
+        "notice": "",
+        "suggestions": [],
+        "results": []
+      }
+    }
+  ],
+  "extendedCases": [
+    {
+      "query": "出口标志灯未安装",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "未设置指示标志与已经设置但灯具损坏是不同缺陷；还需核实建筑、场所和标志类型。",
+      "suggestions": [
+        {
+          "label": "查灯光疏散指示标志未设置",
+          "query": "应设灯光疏散指示标志的场所未设置或位置、方向不符合要求",
+          "note": "仅适用于条款列明应设置的建筑和场所；不能用灯具故障或接线盒安装规则替代。",
+          "ids": [
+            "H_69344942331F4E74ACB10315FE"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "仓库灭火器未配置",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "未配置灭火器与摆放不稳、铭牌朝向或维护失效是不同问题；先确认建筑与配置条件。",
+      "suggestions": [
+        {
+          "label": "查建筑灭火器配置要求",
+          "query": "应配置灭火器的建筑内未配置灭火器",
+          "note": "须核实建筑、使用性质和应配置条件；不能仅因提到灭火器就套用某地充电场所规则。",
+          "ids": [
+            "H_COM_NO_FIRE_EQUIP"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "叉车年检过期",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "定期检验与首次投入使用前的首次检验不同。请先确认有效期、是否已申报，以及是否仍在使用。",
+      "suggestions": [
+        {
+          "label": "查未申报定期检验",
+          "query": "特种设备未按要求办理定期检验",
+          "note": "用于核查是否按要求申报；“没有年检”本身不能证明未申报。",
+          "ids": [
+            "H036"
+          ]
+        },
+        {
+          "label": "查未经定期检验仍继续使用",
+          "query": "特种设备未经定期检验或检验不合格仍继续使用",
+          "note": "须另行确认仍继续使用，不能由检索原话自动补入这一事实。",
+          "ids": [
+            "H_5D5ACB4A6D45FD9CEFC4654D"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "危险化学品暂存间未设置通风设备",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "通风设施要求须结合物料危险特性和储存条件确认；没有通风不能改判为灯具不防爆。",
+      "suggestions": [
+        {
+          "label": "查危化品储存安全设施条件",
+          "query": "危险化学品储存单位未按种类危险特性设置相应安全设施",
+          "note": "仅在确认属于危险化学品储存单位后核查相应设施，不代表所有仓库都必须设置同一套通风设备。",
+          "ids": [
+            "H_9C23C18DB9EF40A58B8C98F06C"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "插座破损",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "插座使用中损坏与安装验收时面板未固定牢固不是同一缺陷。请按实际情况区分破损、松动、接地或不通电；本站现有安装验收条目不能直接据此判定使用期损坏。",
+      "suggestions": [],
+      "results": []
+    },
+    {
+      "query": "压力表指针不动",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "先确认压力表所属设备及实际缺陷；指针不动不能单独证明部件损坏，也不能当成未检定。",
+      "suggestions": [
+        {
+          "label": "查固定式压力容器压力表损坏",
+          "query": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏",
+          "note": "仅在确认固定式压力容器及条款列明的实际缺陷后使用；一般仪表或单纯示值不变须另核。",
+          "ids": [
+            "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "压力表检定过期",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "检定超期与仪表损坏分开核查，并须确认所属设备及检定有效期。",
+      "suggestions": [
+        {
+          "label": "查固定式压力容器压力表检定",
+          "query": "固定式压力容器压力表未经检定或超过检定有效期",
+          "note": "仅在确认属于条款适用的固定式压力容器压力表后使用，不延伸到所有仪表。",
+          "ids": [
+            "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "旋转作业没有佩戴手套",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "旋转作业不能仅凭未戴手套判定不符合。应先评估手部防护需求及装备造成的缠绕等附加风险。",
+      "suggestions": [
+        {
+          "label": "查看手部防护装备附加风险",
+          "query": "手部防护装备的选用增加缠绕或点火等风险",
+          "note": "这是装备选用引入风险的规则，不代表所有旋转作业都必须戴手套或都禁止戴手套。",
+          "ids": [
+            "H_GB29512_HAND_PPE_ADDED_RISK"
+          ]
+        }
+      ],
+      "results": []
+    },
+    {
+      "query": "气瓶缺失防震胶圈",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "缺防震圈与缺瓶帽、保护罩不是同一缺陷。本站尚无可据此认定所有在用气瓶不符合要求的通用规则，应核实际瓶型、行业和装卸运输要求。",
+      "suggestions": [],
+      "results": []
+    },
+    {
+      "query": "工业车间地面有油污",
+      "count": 0,
+      "matchKind": "none",
+      "notice": "请核实场所和实际滑跌风险；餐饮食品处理区的防滑要求不能直接套用于普通工业车间。",
+      "suggestions": [],
+      "results": []
+    },
+    {
+      "query": "灭火器摆放不稳固或铭牌未朝外",
+      "count": 1,
+      "matchKind": "standard",
+      "notice": "",
+      "suggestions": [],
+      "results": [
+        {
+          "id": "H_08C1576EE4824ED8BE0CDD56DF",
+          "title": "灭火器摆放不稳固或铭牌未朝外"
+        }
+      ]
+    },
+    {
+      "query": "场（厂）内专用机动车辆首次投入使用前未完成首次检验",
+      "count": 1,
+      "matchKind": "standard",
+      "notice": "",
+      "suggestions": [],
+      "results": [
+        {
+          "id": "H_A4AB60E806794B28A73C3F3C48",
+          "title": "场（厂）内专用机动车辆首次投入使用前未完成首次检验"
+        }
+      ]
+    }
+  ],
+  "realUserQueries": 0,
+  "reportedAt": "2026-10-15T17:15:24.028759+08:00",
+  "stage": "local_verified_not_merged_or_deployed",
+  "validation": {
+    "frontendPassed": 808,
+    "browserCases": 52,
+    "openedSuggestionTargets": 12,
+    "checks": [
+      {
+        "shareRefreshHistoryAndFilterPreserved": true
+      },
+      {
+        "keyboardSuggestionEnter": true,
+        "mobileWidth": 390,
+        "noOverflow": true,
+        "mobileClick": true
+      },
+      {
+        "actualOldBundleCacheBefore": [
+          "safety-basis-shell-v13"
+        ],
+        "newCacheAfter": [
+          "safety-basis-shell-v14"
+        ],
+        "newBehaviorActive": true
+      }
+    ],
+    "bundle": {
+      "ok": true,
+      "bundle": "field-phrases-20261015",
+      "releaseHash": "3ee768252a38d2e05632c261d377a5f25eea6ad7cbeb1439cdf98490f34575bc",
+      "counts": {
+        "hazards": 1764,
+        "laws": 106,
+        "clauses": 1514,
+        "links": 1949,
+        "fieldProfiles": 15
+      },
+      "gate": {
+        "asOf": "2026-10-15",
+        "eligibleHazards": 1764,
+        "eligibleLinks": 1949
+      },
+      "fullText": {
+        "fullTextCount": 11,
+        "officialLinkCount": 68
+      },
+      "errors": []
+    },
+    "publicSnapshot": "1764 hazards match; 0 changed",
+    "knowledgeChanges": 0
+  },
+  "priorProduction": {
+    "pullRequest": "https://github.com/An-0726/safety-basis/pull/130",
+    "commit": "72a0d9bcfddec874a7aa29b57ac2dceae7d49b4b",
+    "dataVersion": "2026.10.15.72a0d9bcfdde",
+    "releaseHash": "00791c86e68ab5f53a2a8422b3ce74487dc62ca2258bec89152eaaba4a7033fd",
+    "workflow": "https://github.com/An-0726/safety-basis/actions/runs/38699341975",
+    "automatedOpened": 1764,
+    "failures": 0,
+    "allFourJobs": "success"
+  }
+}
