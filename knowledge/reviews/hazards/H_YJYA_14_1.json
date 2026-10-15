@@ -3,33 +3,68 @@
   "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "486c39683856c786e084f944d1ef696db760f6732d6ad20adf5a436582ca5d6c",
-  "checkedAt": "2026-10-09",
-  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reviewedContentHash": "acd0b4689b3f3ff6a9c9613f3438fa4502bfecdd32693069541760ee247a68a3",
+  "checkedAt": "2026-10-15",
+  "reviewer": "Codex search and quality author review 20261015",
   "evidenceRefs": [
     "E_XLSX_FT_3D9F5FA44821DA3EFD93243C"
   ],
-  "reason": "不把独立专项预案当作必选形式，保留可并入综合预案结构。",
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "reason": "专项预案内容要求有库内条文支持，但条件和措施混入事故报告、调查、频次等无关模板。收窄到已编制专项预案或综合预案内相应专项内容，不由此要求所有单位另编专项预案。",
+  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
   "basisQuote": "专项应急预案应当规定应急指挥机构与职责、处置程序和措施等内容。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "decision": "verified",
     "entityId": "H_YJYA_14_1",
     "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "486c39683856c786e084f944d1ef696db760f6732d6ad20adf5a436582ca5d6c",
+    "checkedAt": "2026-10-09",
+    "reviewer": "Claude quality repair quality-fix2-20261009",
     "evidenceRefs": [
       "E_XLSX_FT_3D9F5FA44821DA3EFD93243C"
     ],
-    "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
-    "reviewType": "content",
-    "reviewedContentHash": "b9d46d33d7609a80a80a0b703a236fe494801ce6121360c600d7fac3657cad4b",
-    "reviewer": "Codex正式核验批次20260913"
+    "reason": "不把独立专项预案当作必选形式，保留可并入综合预案结构。",
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "basisQuote": "专项应急预案应当规定应急指挥机构与职责、处置程序和措施等内容。",
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_YJYA_14_1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_FT_3D9F5FA44821DA3EFD93243C"
+      ],
+      "reason": "已核对Excel隐患内容与归档全文条款的对象、义务和整改措施，条款号及法规版本均已确认。",
+      "reviewType": "content",
+      "reviewedContentHash": "b9d46d33d7609a80a80a0b703a236fe494801ce6121360c600d7fac3657cad4b",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousDefinition": {
+      "aliases": [],
+      "category": "应急与事故管理",
+      "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
+      "description": "经资料及履职情况核查，专项应急预案未规定应急指挥机构与职责、处置程序和措施等内容，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_YJYA_14_1",
+      "keywords": [
+        "专项应急预案未规定应急指挥机构与职责",
+        "处置程序和措施等内容"
+      ],
+      "lifecycle": "active",
+      "measures": "专项应急预案规定应急指挥机构与职责、处置程序和措施等内容。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "生产经营单位及应急准备、事故报告和应急处置相关活动"
+      ],
+      "title": "专项应急预案未规定应急指挥机构与职责、处置程序和措施等内容"
+    }
   },
   "previousDefinition": {
     "aliases": [],
     "category": "应急与事故管理",
     "conditions": "适用于依法负有应急准备、事故报告、调查配合、救援处置或事后整改等义务的责任主体，且已触发直接依据规定的相应情形；具体程序、时限和范围以直接依据为准。\n适用场所：生产经营单位及应急准备、事故报告和应急处置相关活动",
-    "description": "经资料及履职情况核查，专项应急预案未规定应急指挥机构与职责、处置程序和措施等内容，实际状态与直接依据规定的安全要求不一致。",
+    "description": "已编制的专项应急预案中，应急指挥机构与职责、处置程序或措施未规定完整；并入综合应急预案的相应内容亦存在缺项。",
     "id": "H_YJYA_14_1",
     "keywords": [
       "专项应急预案未规定应急指挥机构与职责",
@@ -38,11 +73,11 @@
     "lifecycle": "active",
     "measures": "专项应急预案规定应急指挥机构与职责、处置程序和措施等内容。同步明确责任人、执行流程、频次和检查要求，形成受控文件或台账，并以实际执行记录验证制度已经落实。",
     "mergedInto": null,
-    "mode": "direct",
+    "mode": "conditional",
     "note": "",
     "places": [
       "生产经营单位及应急准备、事故报告和应急处置相关活动"
     ],
-    "title": "专项应急预案未规定应急指挥机构与职责、处置程序和措施等内容"
+    "title": "专项应急预案缺少指挥职责、处置程序或措施"
   }
 }

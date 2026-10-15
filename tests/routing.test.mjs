@@ -4,7 +4,7 @@ import {parseRoute, routeQuery} from '../web/app.js';
 
 test('share/reload retains all hazard filters, query and stable ID',()=>{
   const route={view:'hazards',query:'柜门 保护连接',selectedHazard:'H_中文_123',selectedLaw:'',
-    filters:{inspectionClass:'',category:'电气安全',scene:'仓储与物流',level:'国家标准',region:'江苏',mode:'conditional'}};
+    filters:{browse:'equipment',inspectionClass:'',category:'电气安全',scene:'仓储与物流',level:'国家标准',region:'江苏',mode:'conditional'}};
   assert.deepEqual(parseRoute('?'+routeQuery(route)),route);
 });
 test('law filters and selected law survive round trip without hazard filters',()=>{

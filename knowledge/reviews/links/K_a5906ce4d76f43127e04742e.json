@@ -4,40 +4,61 @@
   "entityType": "link",
   "reviewType": "applicability",
   "decision": "verified",
-  "reviewer": "Claude quality repair quality-fix2-20261009",
-  "checkedAt": "2026-10-09",
-  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
+  "reviewer": "Codex search and quality author review 20261015",
+  "checkedAt": "2026-10-15",
+  "reason": "危险化学品安全法第四十一条仅作为依法储存和符合国家标准的上位法补充；本H分离储存的直接判据为GB15603—2022第5.9条。不能由该上位法关联单独认定分离储存方式或重大事故隐患。；核对本H范围及对应完整原文，保留fallback角色和既有生命周期。",
   "reasonCodes": [
     "FALLBACK_ROLE_CONFIRMED",
     "DIRECT_CLAUSE_ADDED"
   ],
-  "reviewedContentHash": "2181d9686e19abd11dafb064e2ab9788bfe8e2c64b51f8cae4cc1f2ec1c922e3",
+  "reviewedContentHash": "21ceb00d1393d15e9d72a6caa12794b5b66fd855a834b4d95360d018948ee5ac",
   "contextHashes": {
-    "hazard": "2cbe3447f8734b6da302222e651cc698b1b9125c3d64e8156b8d8b613cd0c8f2",
+    "hazard": "ebdc710ba13b8918bb5045965da920ac5be942a32f6308e72e54efd776eced70",
     "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
   },
   "evidenceRefs": [],
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
   "previousReview": {
     "id": "RV_ec8cb86fad19252b",
     "entityId": "K_a5906ce4d76f43127e04742e",
     "entityType": "link",
     "reviewType": "applicability",
     "decision": "verified",
-    "reviewer": "ZCode-DeepSeek",
-    "checkedAt": "2026-09-10",
-    "reason": "《危险化学品安全法》第四十一条要求危险化学品储存在专用场所并由专人管理，属通用储存义务，保留为 fallback；本条 direct 依据已由 GB 15603-2022 第5.9条承担。",
+    "reviewer": "Claude quality repair quality-fix2-20261009",
+    "checkedAt": "2026-10-09",
+    "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
     "reasonCodes": [
       "FALLBACK_ROLE_CONFIRMED",
       "DIRECT_CLAUSE_ADDED"
     ],
     "reviewedContentHash": "2181d9686e19abd11dafb064e2ab9788bfe8e2c64b51f8cae4cc1f2ec1c922e3",
     "contextHashes": {
-      "hazard": "e4c8ae3f85eb1fb0a67c298bc461392b88fc2e5e46f3e64f4d9953835532ba57",
-      "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931",
-      "link": "5e68f9653d8095645fe236e8e0ba6726a5ff3dcff5e9477ef10ff6231ef40380"
+      "hazard": "2cbe3447f8734b6da302222e651cc698b1b9125c3d64e8156b8d8b613cd0c8f2",
+      "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931"
     },
     "evidenceRefs": [],
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "previousReview": {
+      "id": "RV_ec8cb86fad19252b",
+      "entityId": "K_a5906ce4d76f43127e04742e",
+      "entityType": "link",
+      "reviewType": "applicability",
+      "decision": "verified",
+      "reviewer": "ZCode-DeepSeek",
+      "checkedAt": "2026-09-10",
+      "reason": "《危险化学品安全法》第四十一条要求危险化学品储存在专用场所并由专人管理，属通用储存义务，保留为 fallback；本条 direct 依据已由 GB 15603-2022 第5.9条承担。",
+      "reasonCodes": [
+        "FALLBACK_ROLE_CONFIRMED",
+        "DIRECT_CLAUSE_ADDED"
+      ],
+      "reviewedContentHash": "2181d9686e19abd11dafb064e2ab9788bfe8e2c64b51f8cae4cc1f2ec1c922e3",
+      "contextHashes": {
+        "hazard": "e4c8ae3f85eb1fb0a67c298bc461392b88fc2e5e46f3e64f4d9953835532ba57",
+        "clause": "cf7d31b1118097da5205851fa297761ba8c098de3c3484ff4027c05bf88d6931",
+        "link": "5e68f9653d8095645fe236e8e0ba6726a5ff3dcff5e9477ef10ff6231ef40380"
+      },
+      "evidenceRefs": [],
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    }
   }
 }

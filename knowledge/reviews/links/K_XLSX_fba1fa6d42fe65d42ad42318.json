@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-09",
+  "checkedAt": "2026-10-15",
   "contextHashes": {
-    "hazard": "447296b15dc88549d0004dd421a2b594de8ffdb29c4ee8157cc1a6472ac7ffc3",
+    "hazard": "a7bcce23f147e5a00619b52e8d2544516fc3e1aeb33dc42e1cac911b4f83dd4e",
     "clause": "33b2b4b945343ae9bbbdd396d381a252e5ec61b20b5a814644cd8d26b9948d22"
   },
   "decision": "verified",
@@ -10,16 +10,16 @@
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
+  "reason": "逐项核对变更后的H、完整条款及本K的角色/适用性：适用于爆炸性气体环境中的金属链使用行为。。保留原关联生命周期和审核决定，不因上下文变化复活历史关联。",
   "reviewType": "applicability",
-  "reviewedContentHash": "59fcb043206106e033427b9633737da76a6b0e84fff478ddf850d50d0d42cbff",
-  "reviewer": "Claude quality repair quality-fix2-20261009",
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "reviewedContentHash": "f5d5bd0bc9a2010ebd42f0025e9db2f8f104dd7a83e3288dd72593b7c0549405",
+  "reviewer": "Codex search and quality author review 20261015",
+  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-09",
     "contextHashes": {
-      "clause": "33b2b4b945343ae9bbbdd396d381a252e5ec61b20b5a814644cd8d26b9948d22",
-      "hazard": "cb056f96a8932e06e80f643f0f3cd33752ca01ca4dfcb27c246ef53ff6f816ad"
+      "hazard": "447296b15dc88549d0004dd421a2b594de8ffdb29c4ee8157cc1a6472ac7ffc3",
+      "clause": "33b2b4b945343ae9bbbdd396d381a252e5ec61b20b5a814644cd8d26b9948d22"
     },
     "decision": "verified",
     "entityId": "K_XLSX_fba1fa6d42fe65d42ad42318",
@@ -27,10 +27,40 @@
     "evidenceRefs": [
       "E_12158_GB 12158"
     ],
-    "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+    "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
     "reviewType": "applicability",
     "reviewedContentHash": "59fcb043206106e033427b9633737da76a6b0e84fff478ddf850d50d0d42cbff",
-    "reviewer": "Codex正式核验批次20260913",
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "reviewer": "Claude quality repair quality-fix2-20261009",
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "contextHashes": {
+        "clause": "33b2b4b945343ae9bbbdd396d381a252e5ec61b20b5a814644cd8d26b9948d22",
+        "hazard": "cb056f96a8932e06e80f643f0f3cd33752ca01ca4dfcb27c246ef53ff6f816ad"
+      },
+      "decision": "verified",
+      "entityId": "K_XLSX_fba1fa6d42fe65d42ad42318",
+      "entityType": "link",
+      "evidenceRefs": [
+        "E_12158_GB 12158"
+      ],
+      "reason": "隐患对象、条款义务和整改措施逐项对应；条款为现行已核验版本，关联角色为直接依据。",
+      "reviewType": "applicability",
+      "reviewedContentHash": "59fcb043206106e033427b9633737da76a6b0e84fff478ddf850d50d0d42cbff",
+      "reviewer": "Codex正式核验批次20260913",
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    }
+  },
+  "previousDefinition": {
+    "applicability": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+    "clauseId": "C_12158_4_2_3_7",
+    "hazardId": "H_12158_4_2_3_7_1",
+    "id": "K_XLSX_fba1fa6d42fe65d42ad42318",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "已核对隐患描述、整改措施与条款原文的对象、义务和适用条件，作为直接依据。",
+    "role": "direct"
   }
 }

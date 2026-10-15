@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-09",
+  "checkedAt": "2026-10-15",
   "contextHashes": {
-    "hazard": "a51713ceab45dc4777ab8928371fbb55a0ea52ff212fc5894c9a8edc86453483",
+    "hazard": "ea3461390dad583846c26cf115aab70dc4e456aff8e88f98bf9e45482298cbc6",
     "clause": "9a6336e6406e9a71ae72050fbc2f11154ec147726cd3d7bf570886ae77d90054"
   },
   "decision": "verified",
@@ -10,16 +10,16 @@
   "evidenceRefs": [
     "E_XLSX_FT_7F08EBD694C27048E2212605"
   ],
-  "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
+  "reason": "逐项核对变更后的H、完整条款及本K的角色/适用性：仅适用于气瓶充装单位及其气瓶安全总监建立、执行气瓶充装安全周排查制度；一般气瓶使用单位不因持有、使用气瓶承担本条充装管理职责。。保留原关联生命周期和审核决定，不因上下文变化复活历史关联。",
   "reviewType": "applicability",
-  "reviewedContentHash": "8279e7b7d9f7ff9c495e4970e0833a5ce588fde56bbab52b61e6df7bf8df1d9a",
-  "reviewer": "Claude quality repair quality-fix2-20261009",
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "reviewedContentHash": "99af431da75d843b85b3714232df6d7f327292e9f5828193fe0389c1289fba4b",
+  "reviewer": "Codex search and quality author review 20261015",
+  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
+    "checkedAt": "2026-10-09",
     "contextHashes": {
-      "clause": "9a6336e6406e9a71ae72050fbc2f11154ec147726cd3d7bf570886ae77d90054",
-      "hazard": "5e2c70f710c7a3ddd0b51e62e3d7fdef70411006d547984d714ecdd14f4d89ec"
+      "hazard": "a51713ceab45dc4777ab8928371fbb55a0ea52ff212fc5894c9a8edc86453483",
+      "clause": "9a6336e6406e9a71ae72050fbc2f11154ec147726cd3d7bf570886ae77d90054"
     },
     "decision": "verified",
     "entityId": "K_XLSX_FT_6693F128AEAAC6F150558D2A",
@@ -27,10 +27,40 @@
     "evidenceRefs": [
       "E_XLSX_FT_7F08EBD694C27048E2212605"
     ],
-    "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+    "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
     "reviewType": "applicability",
     "reviewedContentHash": "8279e7b7d9f7ff9c495e4970e0833a5ce588fde56bbab52b61e6df7bf8df1d9a",
-    "reviewer": "Codex正式核验批次20260913",
-    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    "reviewer": "Claude quality repair quality-fix2-20261009",
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "contextHashes": {
+        "clause": "9a6336e6406e9a71ae72050fbc2f11154ec147726cd3d7bf570886ae77d90054",
+        "hazard": "5e2c70f710c7a3ddd0b51e62e3d7fdef70411006d547984d714ecdd14f4d89ec"
+      },
+      "decision": "verified",
+      "entityId": "K_XLSX_FT_6693F128AEAAC6F150558D2A",
+      "entityType": "link",
+      "evidenceRefs": [
+        "E_XLSX_FT_7F08EBD694C27048E2212605"
+      ],
+      "reason": "隐患对象、条款原文和整改措施逐项对应；关联角色为直接依据。",
+      "reviewType": "applicability",
+      "reviewedContentHash": "8279e7b7d9f7ff9c495e4970e0833a5ce588fde56bbab52b61e6df7bf8df1d9a",
+      "reviewer": "Codex正式核验批次20260913",
+      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+    }
+  },
+  "previousDefinition": {
+    "applicability": "适用于相关设备依法属于特种设备监管范围并处于生产、经营、使用、充装、检验检测等相应环节；应先确认设备类别、登记/检验状态和法定责任主体。\n适用场所：气瓶使用、运行、维护检修或相关管理场景",
+    "clauseId": "C_XLSX_FT_4CE01F6266558B92A77B0F51",
+    "hazardId": "H_SZLD_44_1",
+    "id": "K_XLSX_FT_6693F128AEAAC6F150558D2A",
+    "jurisdictionCode": "CN",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+    "role": "direct"
   }
 }
