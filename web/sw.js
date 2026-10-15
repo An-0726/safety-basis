@@ -15,6 +15,9 @@ function clearPreviousCaches() {
   return caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('safety-basis-') && key !== SHELL)
     .map(key => caches.delete(key))));
 }
+self.addEventListener('message', event => {
+  if(event.data?.type === 'safety-basis:cleanup-shell-caches') event.waitUntil(clearPreviousCaches());
+});
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET') return;

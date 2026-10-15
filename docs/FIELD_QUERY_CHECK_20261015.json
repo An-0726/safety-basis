@@ -4668,7 +4668,7 @@
   },
   "reviewBoundary": "作者自拟合成样本，不是实际用户日志；不确认企业现场事实；未改知识库",
   "verificationRequirements": {
-    "frontendTests": 837,
+    "frontendTests": 838,
     "pipelineTests": 446,
     "browserQueries": 120,
     "allPublishedRules": 1764,
@@ -4676,5 +4676,5 @@
     "newCache": "v14",
     "statusAuthority": "精确提交的自动检查与实际执行记录，覆盖数量不代表已通过"
   },
-  "cacheUpgradeFix": "清理接管期间旧页面重新打开的本应用缓存，保留其他应用命名空间"
+  "cacheUpgradeFix": "接管前后及页面模块加载完成后清理迟到旧缓存，保留其他应用命名空间"
 }
