@@ -4,6 +4,21 @@ import assert from 'node:assert/strict';
 import {searchHazardsDetailed} from '../web/js/search.js';
 const row=(id,title,extra={})=>({id,title,searchText:title,aliases:[],keywords:[],lawNames:[],places:[],levels:[],scopes:['全国'],...extra});
 
+test('未安装照明的不同说法不返回灯具损坏，建议能到达有条件的未设置条目',()=>{
+  const missing='应设疏散照明的建筑部位未设置疏散照明';
+  const broken='已设置的消防应急照明灯具损坏、不能正常点亮';
+  const rows=[row('MISSING',missing),row('BROKEN',broken,{searchText:broken+' 应急灯 通道 照明 损坏'})];
+  for(const query of ['应急灯没装','应急照明灯未安装','消防应急灯没有安装','通道照明未设置','通道缺少照明','通道未设置照明','通道没装灯']){
+    const result=searchHazardsDetailed(rows,query);
+    assert.equal(result.rows.length,0,query);
+    assert.match(result.queryNotice,/不同缺陷/);
+    assert.equal(result.suggestions.length,1);
+    assert.deepEqual(searchHazardsDetailed(rows,result.suggestions[0].query).rows.map(r=>r.id),['MISSING']);
+  }
+  assert.deepEqual(searchHazardsDetailed(rows,broken).rows.map(r=>r.id),['BROKEN']);
+  assert.equal(searchHazardsDetailed(rows,'通道没灯').suggestions.length,3);
+});
+
 test('缺灯、含糊的化学品存放和油污不被解释成其他缺陷或场所',()=>{
   const rows=[row('SIGN','安全出口或疏散指示标志灯具损坏、不能正常指示',{searchText:'通道 灯 损坏'}),row('DISTANCE','库房物品堆放不符合仓储消防五距及分堆要求',{searchText:'通道 灯'}),row('CHEM','危险化学品仓库未采用规定的储存方式'),row('KITCHEN','餐饮食品处理区地面未保持防滑')];
   for(const query of ['通道没灯','化学品随便放','地上有油']){

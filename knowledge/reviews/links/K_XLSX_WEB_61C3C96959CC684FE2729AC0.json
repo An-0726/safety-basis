@@ -1,7 +1,7 @@
 {
   "checkedAt": "2026-10-15",
   "contextHashes": {
-    "hazard": "b4e6f929a0c1c159f09576e48e3a996a5ead74789bbb17027ff9e538fe850cf5",
+    "hazard": "1a34e5be6ba3a49f35786ea6f33209ff0177823b2a60bb8ce037a2768a23b2b7",
     "clause": "d27fc0f429dfc959e64b42d7b79f20562432b1108b5f1c71eae7fa0e70c797be"
   },
   "decision": "verified",
@@ -11,33 +11,34 @@
     "E_XLSX_WEB_39AF58D80665C55B06AABFFA",
     "E_NJ_FIRE_16_18_RECHECK_20261015"
   ],
-  "reason": "逐项核对变更后的H、完整条款及本K的角色/适用性：适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位。保留原关联生命周期和审核决定，不因上下文变化复活历史关联。",
+  "reason": "对照官方第十八条，将H及K范围限定至业主、物业使用人的专有部分消防设施器材义务，不混同第十七条共用设施职责。",
   "reviewType": "applicability",
-  "reviewedContentHash": "bd0fc54902c94976d261f6989fb18155fe2f03c41c387621a556dbf869ef28df",
-  "reviewer": "Codex search and quality author review 20261015",
-  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
+  "reviewedContentHash": "d1cb8c3a387af6c0fa1f30efb61328dfca64906bd25323bdc54a36700176fc34",
+  "reviewer": "Codex same-author second review 20261015",
+  "notes": "用户指定由原作者继续复核；属于作者二次复核，未经独立人工签审，不确认现场事实或整改完成。",
   "previousReview": {
-    "checkedAt": "2026-10-09",
+    "checkedAt": "2026-10-15",
     "contextHashes": {
       "hazard": "b4e6f929a0c1c159f09576e48e3a996a5ead74789bbb17027ff9e538fe850cf5",
-      "clause": "bf75e64fba9c9db065b0937321825b2732a3a28ba61f4784eab72fd6297305e9"
+      "clause": "d27fc0f429dfc959e64b42d7b79f20562432b1108b5f1c71eae7fa0e70c797be"
     },
     "decision": "verified",
     "entityId": "K_XLSX_WEB_61C3C96959CC684FE2729AC0",
     "entityType": "link",
     "evidenceRefs": [
-      "E_XLSX_WEB_39AF58D80665C55B06AABFFA"
+      "E_XLSX_WEB_39AF58D80665C55B06AABFFA",
+      "E_NJ_FIRE_16_18_RECHECK_20261015"
     ],
-    "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
+    "reason": "逐项核对变更后的H、完整条款及本K的角色/适用性：适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位。保留原关联生命周期和审核决定，不因上下文变化复活历史关联。",
     "reviewType": "applicability",
     "reviewedContentHash": "bd0fc54902c94976d261f6989fb18155fe2f03c41c387621a556dbf869ef28df",
-    "reviewer": "Claude quality repair quality-fix2-20261009",
-    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "reviewer": "Codex search and quality author review 20261015",
+    "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
     "previousReview": {
-      "checkedAt": "2026-09-13",
+      "checkedAt": "2026-10-09",
       "contextHashes": {
-        "clause": "bf75e64fba9c9db065b0937321825b2732a3a28ba61f4784eab72fd6297305e9",
-        "hazard": "0451c7cbcac919553e520c2c21f2a74532cdecc45dd0e6d62a1070b210ab8ebb"
+        "hazard": "b4e6f929a0c1c159f09576e48e3a996a5ead74789bbb17027ff9e538fe850cf5",
+        "clause": "bf75e64fba9c9db065b0937321825b2732a3a28ba61f4784eab72fd6297305e9"
       },
       "decision": "verified",
       "entityId": "K_XLSX_WEB_61C3C96959CC684FE2729AC0",
@@ -45,11 +46,41 @@
       "evidenceRefs": [
         "E_XLSX_WEB_39AF58D80665C55B06AABFFA"
       ],
-      "reason": "隐患与官方条款直接对应。",
+      "reason": "所属条目按质量审阅修正，关联本身未改；刷新上下文绑定。",
       "reviewType": "applicability",
       "reviewedContentHash": "bd0fc54902c94976d261f6989fb18155fe2f03c41c387621a556dbf869ef28df",
-      "reviewer": "Codex正式核验批次20260913",
-      "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+      "reviewer": "Claude quality repair quality-fix2-20261009",
+      "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+      "previousReview": {
+        "checkedAt": "2026-09-13",
+        "contextHashes": {
+          "clause": "bf75e64fba9c9db065b0937321825b2732a3a28ba61f4784eab72fd6297305e9",
+          "hazard": "0451c7cbcac919553e520c2c21f2a74532cdecc45dd0e6d62a1070b210ab8ebb"
+        },
+        "decision": "verified",
+        "entityId": "K_XLSX_WEB_61C3C96959CC684FE2729AC0",
+        "entityType": "link",
+        "evidenceRefs": [
+          "E_XLSX_WEB_39AF58D80665C55B06AABFFA"
+        ],
+        "reason": "隐患与官方条款直接对应。",
+        "reviewType": "applicability",
+        "reviewedContentHash": "bd0fc54902c94976d261f6989fb18155fe2f03c41c387621a556dbf869ef28df",
+        "reviewer": "Codex正式核验批次20260913",
+        "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+      }
     }
+  },
+  "previousDefinition": {
+    "applicability": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+    "clauseId": "C_XLSX_WEB_F9E26C92A26841D225B020FB",
+    "hazardId": "H_8B29177A4C57A4044E772DB509_1",
+    "id": "K_XLSX_WEB_61C3C96959CC684FE2729AC0",
+    "jurisdictionCode": "CN-3201",
+    "legacyRole": "直接依据",
+    "lifecycle": "active",
+    "priority": 10,
+    "reason": "隐患对象、整改措施与官方条款逐项对应。",
+    "role": "direct"
   }
 }

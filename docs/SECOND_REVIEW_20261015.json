@@ -1,0 +1,371 @@
+{
+  "asOf": "2026-10-15",
+  "baselineCommit": "78e97938d0f6a3ce435dc36fe590db8523f699a2",
+  "reviewType": "same_author_second_review_not_independent",
+  "targetCount": 17,
+  "noNewMismatch": 13,
+  "correctedTargetCount": 4,
+  "reviews": [
+    {
+      "hazardId": "H_GB29512_HAND_PPE_NOT_WORN",
+      "title": "生产活动中需使用手部防护装备的作业未正确佩戴",
+      "kind": "new",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "第5.1.3条完整支持正确佩戴及换场景换适用品；先做危害评估，不等同所有岗位均戴手套。",
+      "officialSources": [
+        "https://www.mem.gov.cn/fw/flfgbz/bz/bzwb/202605/W020260519618697512384.pdf"
+      ],
+      "hazardFileSha256": "fdc8ebc52d48c8a755b09c139a276ca88a666b4d463fd87ff948c2fc1d1a92ef"
+    },
+    {
+      "hazardId": "H_GB29512_HAND_PPE_ADDED_RISK",
+      "title": "手部防护装备的选用增加缠绕或点火等风险",
+      "kind": "new",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "第4.1条直接规定不得增加装备自身缠绕、点火等风险；不推导所有旋转作业统一佩戴或禁戴。",
+      "officialSources": [
+        "https://www.mem.gov.cn/fw/flfgbz/bz/bzwb/202605/W020260519618697512384.pdf"
+      ],
+      "hazardFileSha256": "84cca927309aad5d32fb58d7d18dddd32dc2274f38ad46254c8ef859c0fa52df"
+    },
+    {
+      "hazardId": "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE",
+      "title": "生产物料成垛堆放的垛高、垛距或垛基础不符合安全要求",
+      "kind": "new",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "第4.5.5条堆垛要求与对象对应；必须另有经核安全要求或稳定性证据，没有自设通用高度。",
+      "officialSources": [
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=460626D8FC0EFC7D30C0160D003D185F"
+      ],
+      "hazardFileSha256": "8c799621a417967fc168865ab3e62d08d51647b496cae2091e5b11b1da0d3d3e"
+    },
+    {
+      "hazardId": "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+      "title": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏",
+      "kind": "new",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "第7.2.3.4.2条（2）（4）（5）项损坏及年度检查处置对应，未混同超期检定或全厂停产。",
+      "officialSources": [
+        "https://www.samr.gov.cn/cms_files/filemanager/samr/www/samrnew/tzsbj/zcfg/aqjsgf/aqjsgf/201906/P020190621529714648457.pdf"
+      ],
+      "hazardFileSha256": "07b4f136f72183568c8fbd030271cae4a86552d5e1239c12be484f7619ed74c9"
+    },
+    {
+      "hazardId": "H_12158_4_2_3_7_1",
+      "title": "在爆炸性气体环境中违规使用金属链",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "禁用金属链的爆炸性气体环境范围明确；整改已删除全面电气检测套话。",
+      "officialSources": [
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=B4B6BEA653AB3C8218837E90115E747D"
+      ],
+      "hazardFileSha256": "113b8b9392aa9e77525b3ddb02881477c4ba6e0f052c25a263fd5653e3a415da"
+    },
+    {
+      "hazardId": "H_15577_10_1_2",
+      "title": "粉尘爆炸危险场所检修作业未进行审批",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "检修审批与粉尘爆炸危险场所条件一致，未编造行政回执。",
+      "officialSources": [
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FAAB87ED78F8CA2A1EF4D75F731602A3"
+      ],
+      "hazardFileSha256": "2efd69d2452b8ca5d703267c4b765c499e67f4b5a68cb5c825a0b5e1e7eff6e7"
+    },
+    {
+      "hazardId": "H_2E3120051D98FA43AF37A75903_1",
+      "title": "触发规定情形后未及时辨识评估安全风险并确定或调整等级",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "江苏条例第十二条第一款触发事实与风险评估义务相符；未要求一律委托有资质机构。",
+      "officialSources": [
+        "https://www.jsrd.gov.cn/qwfb/sjfg/202406/t20240604_1221284.shtml"
+      ],
+      "hazardFileSha256": "ed25705a54e5762d212033fbb6ec89923411d1664a9a533202b327bb764f1b17"
+    },
+    {
+      "hazardId": "H_8B29177A4C57A4044E772DB509_1",
+      "title": "业主或物业使用人未保持专有部分消防设施器材有效",
+      "kind": "changed",
+      "outcome": "corrected",
+      "reason": "对照官方第十八条，将H及K范围限定至业主、物业使用人的专有部分消防设施器材义务，不混同第十七条共用设施职责。",
+      "officialSources": [
+        "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html"
+      ],
+      "hazardFileSha256": "0266f63f2642c20b79157b5631432c131cb79198fc7b755fcaed5b67571e3454"
+    },
+    {
+      "hazardId": "H_C50CFA693E64AB3ED971B6FB04_1",
+      "title": "社会消防技术服务机构或从业人员未依法开展服务",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "南京第十六条两款的服务及主管机关已分清；当前H只消费第一款，排除消防审验服务。",
+      "officialSources": [
+        "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html"
+      ],
+      "hazardFileSha256": "ed89a752e4f0cdd440749ba46e147b3e253996e4bcac88f3d8cda54c3c1746fa"
+    },
+    {
+      "hazardId": "H_F1A74F853D15762CF7C2DA6DD1_1",
+      "title": "风险分级管控制度未制定或未明确辨识评估程序、方法及职责",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "江苏条例第八条的制度内容与措施对应，无虚构统一频次。",
+      "officialSources": [
+        "https://www.jsrd.gov.cn/qwfb/sjfg/202406/t20240604_1221284.shtml"
+      ],
+      "hazardFileSha256": "e6ea59165f25ba856eda514679d805e5ccc9d4fbe1c9fd7cbfc50aad24ba448e"
+    },
+    {
+      "hazardId": "H_JSXF_93_1",
+      "title": "符合重点单位界定标准的个体工商户未履行消防职责",
+      "kind": "changed",
+      "outcome": "corrected",
+      "reason": "H已明确重点单位个体工商户，K仍泛化为所有单位/工程；二次复核后收窄该K，不改变H的义务。",
+      "officialSources": [
+        "https://www.jsrd.gov.cn/qwfb/sjfg/202301/t20230130_1221261.shtml"
+      ],
+      "hazardFileSha256": "d6813d04d5c06f676cfde34155dbaca9cd0cf7f4c2bfdb771c049be1c7028c1b"
+    },
+    {
+      "hazardId": "H_SZLD_44_1",
+      "title": "气瓶充装单位未建立气瓶充装安全周排查制度",
+      "kind": "changed",
+      "outcome": "corrected",
+      "reason": "对照总局第四十四条全文，删除原文前导入序号44；条号、完整义务及频次不变。",
+      "officialSources": [
+        "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_df3582cb24ae497ba18d9667ecbb63b7.html"
+      ],
+      "hazardFileSha256": "62cb4b80b1b0f65a0f1c5ad88f8748cb3c86d3ef059ab19358f400deb5ce2ddb"
+    },
+    {
+      "hazardId": "H_YJYA_14_1",
+      "title": "专项应急预案缺少指挥职责、处置程序或措施",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "第十四条允许专项内容并入综合预案；现条件没有无差别要求另编独立专项预案。",
+      "officialSources": [
+        "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/gz11/201606/t20160603_405633.shtml"
+      ],
+      "hazardFileSha256": "232cb2df4454d05fa37302fa15e854539d044d5cc5efe4156a778966958e6032"
+    },
+    {
+      "hazardId": "H_ZJWS_9_1",
+      "title": "用人单位主要负责人和职业卫生管理人员不具备相应职业卫生知识和管理能力",
+      "kind": "changed",
+      "outcome": "corrected",
+      "reason": "对照国务院公报原页，删除第九条前导入序号9并改用可直接追溯的官方公报PDF；正文内容不变。",
+      "officialSources": [
+        "https://www.gov.cn/gbgl/1d347e854ee846d38a258e59af8b44db/files/bba765940eef4e11af62d3828e8a0c8d.pdf"
+      ],
+      "hazardFileSha256": "c5f8b6bb57725a335925a9c9fc6e018d48e9ac69ed513364dbdab955acf2211e"
+    },
+    {
+      "hazardId": "H065",
+      "title": "易燃气体与氧化性气体未分离储存",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "分离储存按GB15603第5.9条直接认定，上位法只补充；没有用一般分区标识替代分离，也不据此自动认定重大隐患。",
+      "officialSources": [
+        "http://www.npc.gov.cn/npc/c2/c30834/202512/t20251227_450708.html",
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4BB90BF6C7015DF7E4905694A80F7C57"
+      ],
+      "hazardFileSha256": "51080d337cdf0a66746ec36ac31c9e45b6e2760095f93271e73b7a47c428fd85"
+    },
+    {
+      "hazardId": "H_TSG23_CYLINDER_NO_GUARD_OR_CAP",
+      "title": "气瓶未装配保护罩或瓶帽",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "防震圈误别名已移除；出厂配置、在用缺失、装卸瓶帽分别限定，推荐性依据未伪称强制普适。",
+      "officialSources": [
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=D7C9C74FA430939F709900DB6F7397B9",
+        "https://www.samr.gov.cn/cms_files/filemanager/samr/www/samrnew/samrgkml/nsjg/tzsbj/202101/W020210105640603116062.pdf"
+      ],
+      "hazardFileSha256": "c36f6960acb87341e5a849e26e6eadfd787efab4131699009d2122ae256a11a8"
+    },
+    {
+      "hazardId": "H_GB15603_5_1_1",
+      "title": "危险化学品仓库未采用规定的储存方式",
+      "kind": "changed",
+      "outcome": "no_new_substantive_mismatch_found",
+      "reason": "H和K均限危化品仓库，相应储存方式需按储存对象核定。",
+      "officialSources": [
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4BB90BF6C7015DF7E4905694A80F7C57"
+      ],
+      "hazardFileSha256": "9eea54b9ab19efd40f2b92382b481cc294b1260e4c00a31308465dfa0310d93c"
+    }
+  ],
+  "additionalSearchFinding": {
+    "provenance": "synthetic_second_review_holdout_not_actual_user_usage",
+    "query": "应急灯没装",
+    "before": "7条中包括灯具损坏",
+    "after": "0条直接判断、1条有条件未设置检索建议，点击后才更换查询",
+    "guard": "损坏问法保持原逻辑；同类未安装/未设置表达共同覆盖，建议目标不会循环拦截。"
+  },
+  "changes": [
+    {
+      "path": "knowledge/hazards/H_8B29177A4C57A4044E772DB509_1.json",
+      "fields": {
+        "conditions": {
+          "before": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+          "after": "仅适用于南京市行政区域内业主、物业使用人对其专有部分消防设施和消防器材的维修保养及完好有效义务；共用消防设施的物业服务企业职责不由本条替代。"
+        }
+      }
+    },
+    {
+      "path": "knowledge/links/K_XLSX_WEB_61C3C96959CC684FE2729AC0.json",
+      "fields": {
+        "reason": {
+          "before": "隐患对象、整改措施与官方条款逐项对应。",
+          "after": "作者二次复核南京市消防条例第十八条：仅支持业主、物业使用人的专有部分义务；共用设施物业管理职责见第十七条，不泛化至所有单位、建设工程或活动。"
+        },
+        "applicability": {
+          "before": "适用于南京市行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+          "after": "仅适用于南京市行政区域内业主、物业使用人对其专有部分消防设施和消防器材的维修保养及完好有效义务；共用消防设施的物业服务企业职责不由本条替代。"
+        }
+      }
+    },
+    {
+      "path": "knowledge/links/K_XLSX_FT_7556D212E7A7E36206FFDFE9.json",
+      "fields": {
+        "reason": {
+          "before": "隐患描述、全文条款和整改措施逐项对应，作为直接依据。",
+          "after": "作者二次复核江苏省消防条例第九十三条：先核个体工商户已符合重点单位界定标准，再核具体消防职责；清除泛化单位、工程和火灾处置模板。"
+        },
+        "applicability": {
+          "before": "适用于江苏省行政区域内，且依法承担消防安全责任的单位、场所、建设工程或活动；涉及人员密集场所、公众聚集场所、特定建筑属性或火灾事故处置时，应先确认法定属性和触发条件。\n适用场所：江苏省行政区域内依法承担消防安全责任的建筑、场所或单位",
+          "after": "仅适用于江苏省行政区域内已经符合消防安全重点单位界定标准的个体工商户，核查其应履行的具体重点单位消防安全职责；未核实该属性的，不由本条直接判定。"
+        }
+      }
+    },
+    {
+      "path": "knowledge/clauses/C_XLSX_FT_4CE01F6266558B92A77B0F51.json",
+      "fields": {
+        "quote": {
+          "before": "44 第四十四条\n气瓶充装单位应当建立气瓶充装安全周排查制度。气瓶安全总监要每周至少组织一次风险隐患排查，分析研判气瓶充装安全管理情况，研究解决日管控中发现的问题，形成《每周气瓶充装安全排查治理报告》。",
+          "after": "第四十四条\n气瓶充装单位应当建立气瓶充装安全周排查制度。气瓶安全总监要每周至少组织一次风险隐患排查，分析研判气瓶充装安全管理情况，研究解决日管控中发现的问题，形成《每周气瓶充装安全排查治理报告》。"
+        }
+      }
+    },
+    {
+      "path": "knowledge/clauses/C_XLSX_FT_9E13CC165E25B381D09E32C6.json",
+      "fields": {
+        "sourceUrl": {
+          "before": "https://www.gov.cn/gongbao/content/2021/content_5595925.htm",
+          "after": "https://www.gov.cn/gbgl/1d347e854ee846d38a258e59af8b44db/files/bba765940eef4e11af62d3828e8a0c8d.pdf"
+        },
+        "quote": {
+          "before": "9 第九条\n用人单位的主要负责人和职业卫生管理人员应当具备与本单位所从事的生产经营活动相适应的职业卫生知识和管理能力，并接受职业卫生培训。\n对用人单位主要负责人、职业卫生管理人员的职业卫生培训，应当包括下列主要内容：\n（一）职业卫生相关法律、法规、规章和国家职业卫生标准；\n（二）职业病危害预防和控制的基本知识；\n（三）职业卫生管理相关知识；\n（四）国家卫生健康委规定的其他内容。",
+          "after": "第九条\n用人单位的主要负责人和职业卫生管理人员应当具备与本单位所从事的生产经营活动相适应的职业卫生知识和管理能力，并接受职业卫生培训。\n对用人单位主要负责人、职业卫生管理人员的职业卫生培训，应当包括下列主要内容：\n（一）职业卫生相关法律、法规、规章和国家职业卫生标准；\n（二）职业病危害预防和控制的基本知识；\n（三）职业卫生管理相关知识；\n（四）国家卫生健康委规定的其他内容。"
+        }
+      }
+    }
+  ],
+  "research": [
+    {
+      "id": "OIL_GENERAL",
+      "topic": "工业地面油污",
+      "status": "not_found_for_universal_rule",
+      "source": "https://xcoss.henan.gov.cn/typtfile/20260120/84600d71bf854522bf2aff6982cd488b.pdf",
+      "finding": "GB12801第4.5.3条是具有危险有害因素的剩余物料清除义务，不能仅凭油污就补入其属于生产剩余物料的事实；没有闭合全部工业地面的油污运行维护判据。"
+    },
+    {
+      "id": "OIL_OR_CYLINDER_OLD_AQT7009",
+      "topic": "油污与防震圈的历史线索",
+      "status": "excluded_obsolete",
+      "source": "https://hbba.sacinfo.org.cn/stdDetail/1d8b9d16c9409b0bc3701b3002a51d2b",
+      "finding": "官方行业标准平台明确标AQ/T7009—2013为废止。原PDF仍可访问不代表现行，旧机械企业检查表引用不用于晋升。未凭表格片段断言具体废止日期。"
+    },
+    {
+      "id": "RACK_33454",
+      "topic": "货架固定",
+      "status": "current_metadata_fulltext_pending",
+      "source": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=A03562927A6EB577D428E697EC4577F9",
+      "finding": "GB/T33454—2016现行；已核题录，尚未取得可直接核验的官方完整锚栓条款。不得把推荐性标准、检查锚栓状态或个别类型要求扩大为所有货架必须固定。"
+    },
+    {
+      "id": "RACK_41514",
+      "topic": "货架固定",
+      "status": "current_metadata_fulltext_pending",
+      "source": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=465B04483AE2DEEEE69D354DC8BE70EE",
+      "finding": "GB/T41514—2022题录现行，2023-02-01实施；官方完整具体判据仍待取得。第三方转载只辅助定位，不据此建立公开条款。"
+    },
+    {
+      "id": "RACK_DESIGN",
+      "topic": "货架固定",
+      "status": "design_scope_not_universal_operation_rule",
+      "source": "https://www.samr.gov.cn/bzjss/bzjd/art/2021/art_b921c6076fff445da462fe5e281eb83d.html",
+      "finding": "GB/T39681—2020为立体仓库货架系统设计规范；官方解读指向该类系统，不能泛化成普通层架运行中的普适锚固判据。"
+    },
+    {
+      "id": "RACK_REAGENT_DRAFT",
+      "topic": "货架固定",
+      "status": "excluded_draft",
+      "source": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202512/W020251231607840862757.pdf",
+      "finding": "危化品试剂仓库GB XXXXX—XXXX征求意见文本，不作为已经实施标准；普通仓储范围也不由试剂仓库文本推定。"
+    },
+    {
+      "id": "CYLINDER_FERROALLOY",
+      "topic": "气瓶防震保护",
+      "status": "narrow_scope_evidence_complete_draft_only",
+      "source": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202511/W020251103544217883491.pdf",
+      "metadata": "https://std.samr.gov.cn/hb/search/stdHBDetailed?id=460FBF4254412E79E06397BE0A0AA2A9",
+      "finding": "AQ2024—2025铁合金生产安全规范第6.1.10条直接涉及氧气瓶、乙炔瓶防震胶圈完好齐全；封面及官方题录：2025-10-15发布、2026-04-30实施，代替2010版。范围为铁合金、金属铬、金属锰、五氧化二钒、高硅硅铁生产企业的设计、生产和检修等安全管理。限定行业草案可成立，不能填成所有在用气瓶义务。",
+      "pdfPage": 9,
+      "printedPage": 6,
+      "sha256": "208f4e6024ae59f4e5ebebf2bfeb76cdae4911c156cca330d8de2e1dd01bfbbf"
+    },
+    {
+      "id": "CYLINDER_GENERAL",
+      "topic": "气瓶防震保护",
+      "status": "not_found_for_universal_rule",
+      "source": "https://www.samr.gov.cn/cms_files/filemanager/samr/www/samrnew/samrgkml/nsjg/tzsbj/202101/W020210105640603116062.pdf",
+      "finding": "TSG23保护附件列举及GB/T34525的瓶帽装卸要求不支持通用防震圈义务；不据未列入附件清单推断其他行业也无要求。"
+    }
+  ],
+  "qualifiedNarrowDraft": {
+    "candidateId": "DRAFT_AQ2024_2025_6_1_10_SHOCK_RING",
+    "publicationStatus": "not_admitted_not_published",
+    "title": "适用铁合金等生产企业的氧气瓶、乙炔瓶防震胶圈缺失或不完好",
+    "description": "AQ2024—2025适用范围内生产企业使用的氧气瓶、乙炔瓶，防震胶圈不完好或不齐全。",
+    "conditions": "AQ2024—2025铁合金生产安全规范第6.1.10条直接涉及氧气瓶、乙炔瓶防震胶圈完好齐全；封面及官方题录：2025-10-15发布、2026-04-30实施，代替2010版。范围为铁合金、金属铬、金属锰、五氧化二钒、高硅硅铁生产企业的设计、生产和检修等安全管理。限定行业草案可成立，不能填成所有在用气瓶义务。",
+    "articlePath": "第6.1.10条",
+    "quote": "氧气瓶、乙炔瓶放置地点应远离明火，且不应正对渣口、铁口，气瓶的瓶帽、防震胶圈和安全阀应完好齐全。",
+    "sourceUrl": "https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202511/W020251103544217883491.pdf",
+    "measures": "按适用瓶型和安全技术要求补齐或更换不完好的防震胶圈，核查处理后的完好、齐全状态；不得将本项作为所有行业和所有在用气瓶的通用义务。",
+    "reviewBoundary": "作者二次核验；只形成窄行业草案，未写入knowledge、未提升为公开规则。",
+    "duplicateCheck": {
+      "lexicalMatches": 15,
+      "outcome": "未见相同铁合金范围的防震胶圈公开规则；瓶帽规则属于不同缺陷，不合并复用其判定。"
+    }
+  },
+  "realSearchCollection": {
+    "confirmedRealQueries": 0,
+    "status": "awaiting_user_or_existing_log_source",
+    "inspected": "本仓库前端、本任务历史交接材料及仓库现有1条Issue（历史管理事项）；PR129评论为空。未发现可验证的真实查询原话，未声称已查看GitHub后台访问数据。",
+    "existingQa": "历史9问法及本轮13条补充问法均不计入已确认真实用户检索样本；后者明确为自拟。",
+    "telemetryAdded": false
+  },
+  "publicationStatus": "local_followup_fix_not_merged_or_deployed",
+  "publicHazardCount": 1764,
+  "validation": {
+    "frontendTests": 804,
+    "pipelineTests": 446,
+    "knowledge": "PASS",
+    "strictRelease": "PASS",
+    "publicationIntegrity": "PASS",
+    "reviewBinding": "PASS",
+    "bundle": "PASS",
+    "snapshotDelta": {
+      "added": 0,
+      "changed": 4,
+      "removed": 0
+    },
+    "browserOpenedChangedRules": 4,
+    "browserMissingLightingQueries": 7,
+    "cacheUpgrade": "v12_to_v13_PASS",
+    "candidateReleaseHash": "00791c86e68ab5f53a2a8422b3ce74487dc62ca2258bec89152eaaba4a7033fd",
+    "windowsTestEnvironment": "PYTHONUTF8=1; PYTHONIOENCODING=utf-8. Initial GBK run failed reading UTF-8 sources; successful rerun retained all expectations."
+  }
+}
