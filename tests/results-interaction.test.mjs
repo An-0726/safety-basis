@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {INSPECTION_LABELS} from '../web/js/field-profiles.js';
+import {BROWSE_GROUPS} from '../web/js/browse-groups.js';
 import {searchHazardsDetailed, searchLawsDetailed} from '../web/js/search.js';
 
 const APP_SOURCE = fs.readFileSync(new URL('../web/app.js', import.meta.url), 'utf8')
@@ -72,7 +73,7 @@ class FakeElement {
 
 function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   const ids = [
-    'detail', 'toast', 'search', 'inspectionClass', 'category', 'scene', 'level', 'region', 'mode',
+    'detail', 'toast', 'search', 'browse', 'inspectionClass', 'category', 'scene', 'level', 'region', 'mode',
     'lawLevel', 'lawRegion', 'lawStatus', 'count', 'summary', 'list',
     'hazardFilterCount', 'lawFilterCount', 'searchView', 'dataView',
     'activeFilters', 'searchNotice', 'hazardMoreFilters', 'lawMoreFilters', 'majorTopicNotice',
@@ -92,7 +93,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     },
     querySelectorAll(selector) {
       if (selector === '.card') return elements.get('list').cards;
-      if(selector === '#hazardFilters select,#lawFilters select')return ['inspectionClass','category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
+      if(selector === '#hazardFilters select,#lawFilters select')return ['browse','inspectionClass','category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
       return [];
     },
     addEventListener() {},
@@ -100,7 +101,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   };
   const context = {
     document, renderNormativeContent,
-    searchHazardsDetailed, INSPECTION_LABELS,
+    searchHazardsDetailed, INSPECTION_LABELS, BROWSE_GROUPS,
     searchLawsDetailed,
     DataStore: class {},
     navigator: {clipboard: {writeText: async () => {}}},
@@ -405,12 +406,13 @@ test('法规视图切换始终重置为首条并保持列表详情一致', async
 });
 
 
-test('只有专业分类和地区常显，现场标签及其他条件渐进展示',()=>{
+test('首屏只显示六组问题入口，十二类专业分类与地区在更多筛选中',()=>{
   const html=fs.readFileSync(new URL('../web/index.html',import.meta.url),'utf8');
   const filters=html.slice(html.indexOf('id="hazardFilters"'),html.indexOf('id="lawFilters"'));
   const primary=filters.slice(0,filters.indexOf('<details'));
-  assert.match(primary,/专业分类/);assert.match(primary,/id="region"/);
-  assert.doesNotMatch(primary,/id="scene"|id="level"|id="mode"|适用场景/);
+  assert.match(primary,/问题分类/);assert.match(primary,/id="browse"/);
+  assert.doesNotMatch(primary,/id="category"|id="region"|id="scene"|id="level"|id="mode"|适用场景/);
+  assert.match(filters,/<details[^>]+>[\s\S]*id="category"[\s\S]*id="region"/);
   assert.match(filters,/<details[^>]+>[\s\S]*id="scene"[\s\S]*id="level"[\s\S]*id="mode"/);
   assert.match(html,/id="search"[^>]+aria-describedby="searchHelp"/);
   assert.match(html,/id="scene"[^>]+aria-describedby="sceneHelp"/);

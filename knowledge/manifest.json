@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-09",
-  "batch": "content-gap-batch4-20261011",
+  "asOf": "2026-10-15",
+  "batch": "search-ui-quality-20261015",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -636,32 +636,54 @@
       ],
       "scope": "Eight new rules for spoken-search gaps (residual-current device, pressure gauge verification, power strip overload, hydrant without water, hydrant box without hose or nozzle, obstructed sprinkler, obstructed point detector, cylinder guard or cap). TSG 21 clause 9.2.1.2 quote corrected against the official PDF and the red-line rule bound to it reworded. Insulating mats and rack load signs not admitted: no on-topic official text obtained.",
       "reviewStatus": "author_self_check_only_not_independently_reviewed"
+    },
+    {
+      "id": "search-ui-quality-20261015",
+      "hazardsAdded": 4,
+      "admittedHazardIds": [
+        "H_GB29512_HAND_PPE_NOT_WORN",
+        "H_GB29512_HAND_PPE_ADDED_RISK",
+        "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE",
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "reviewStatus": "author_self_check_only_not_independently_reviewed",
+      "entityCountDelta": {
+        "laws": 1,
+        "lawVersions": 1,
+        "clauses": 3,
+        "hazards": 4,
+        "links": 4,
+        "evidence": 7,
+        "successions": 0,
+        "requirements": 0
+      },
+      "scope": "13 reviewed findings disposed; targeted scope and wording repairs, two clause corrections, four narrowly conditioned search-gap rules. No enterprise facts, whole-library review, private data, or automatic publication approval."
     }
   ],
   "counts": {
-    "laws": 154,
-    "lawVersions": 158,
-    "clauses": 3250,
-    "hazards": 2167,
-    "links": 2305,
-    "evidence": 1467,
+    "laws": 155,
+    "lawVersions": 159,
+    "clauses": 3253,
+    "hazards": 2171,
+    "links": 2309,
+    "evidence": 1474,
     "successions": 26,
     "requirements": 75
   },
   "formatVersion": "4.0-alpha",
   "scope": "知识库存统计以counts与lifecycle字段为准；正式发布由当前日期核验链生成，proposed候选与尚待核实的现场事实不进入正式站。",
-  "laws": 154,
-  "lawVersions": 158,
-  "clauses": 3250,
-  "hazards": 2167,
-  "links": 2305,
-  "evidence": 1467,
+  "laws": 155,
+  "lawVersions": 159,
+  "clauses": 3253,
+  "hazards": 2171,
+  "links": 2309,
+  "evidence": 1474,
   "successions": 26,
-  "activeHazards": 1771,
+  "activeHazards": 1775,
   "proposedHazards": 266,
   "supersededHazards": 130,
   "lifecycle": {
-    "active": 1771,
+    "active": 1775,
     "proposed": 266,
     "superseded": 130
   },

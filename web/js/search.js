@@ -1,4 +1,6 @@
 'use strict';
+import {browseGroupMatches} from './browse-groups.js';
+import {hazardSearchGuidance} from './search-guidance.js';
 
 import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS, COLLOQUIAL_LEADING_VERBS } from './search-vocabulary.js';
 
@@ -224,6 +226,8 @@ const hazardScore=(r,q,terms)=>{
 };
 
 export function searchHazardsDetailed(rows, query, filters={}) {
+  const guidance=hazardSearchGuidance(query);
+  if(guidance.suppressResults)return {rows:[],matchKind:'none',interpretedQuery:String(query??''),queryNotice:guidance.notice,suggestions:guidance.suggestions};
   const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
   const literalTitleQuery=normalize(query);
   const out=[];
@@ -235,6 +239,7 @@ export function searchHazardsDetailed(rows, query, filters={}) {
     if(!exactTitle && !standardsMatch(r,prepared.standards,'hazards')) continue;
     if(r.status==='已失效' && filters.status!=='已失效') continue;
     if(filters.inspectionClass && !(r.inspectionClasses||[]).includes(filters.inspectionClass)) continue;
+    if(filters.browse && !browseGroupMatches(r,filters.browse)) continue;
     if(filters.category && displayCategoryOf(r)!==filters.category) continue;
     if(filters.displayCategory && displayCategoryOf(r)!==filters.displayCategory) continue;
     if(filters.place && !r.places.includes(filters.place)) continue;
@@ -251,7 +256,7 @@ export function searchHazardsDetailed(rows, query, filters={}) {
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map((row,i)=>({row,score:matched.ranked?-i:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
-  return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:prepared.queryNotice};
+  return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:[prepared.queryNotice,guidance.notice].filter(Boolean).join(' '),suggestions:guidance.suggestions};
 }
 
 const lawScore=(r,q,terms)=>{

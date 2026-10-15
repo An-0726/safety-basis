@@ -58,17 +58,19 @@ def main():
 
             def primary_controls():
                 home()
-                expect(page.get_by_label('专业分类', exact=True)).to_be_visible()
-                expect(page.locator('#region')).to_be_visible()
+                expect(page.locator('#browse')).to_be_visible()
+                expect(page.locator('#category')).not_to_be_visible()
+                expect(page.locator('#region')).not_to_be_visible()
                 expect(page.locator('#scene')).not_to_be_visible()
                 expect(page.locator('#hazardMoreFilters')).not_to_have_attribute('open', '')
-                assert page.locator('#hazardFilters > label').count() == 2
+                assert page.locator('#hazardFilters > label').count() == 1
+                assert page.locator('#browse option').count() == 7
                 available = {tag for row in rows for tag in row['sceneTags']}
                 options = set(page.locator('#scene option').evaluate_all('(nodes)=>nodes.map(node=>node.value)'))
                 assert options == available | {'', '未细分场景'}, options - available
                 page.screenshot(path=str(args.out / 'desktop-search.png'), full_page=True)
-                return {'visiblePrimaryFilters': 2, 'sceneOptions': len(available), 'emptySceneOptions': 0}
-            check('primary_search_category_region_and_no_empty_scene_options', primary_controls)
+                return {'visiblePrimaryFilters': 1, 'browseGroups': 6, 'sceneOptions': len(available), 'emptySceneOptions': 0}
+            check('primary_browse_groups_and_no_empty_scene_options', primary_controls)
 
             def scene_filter():
                 home()
@@ -99,6 +101,7 @@ def main():
                 page.fill('#search', '安全员 培训')
                 expect(page.locator('#count')).not_to_have_text('0')
                 assert '安全员' in page.locator('#search').input_value()
+                page.locator('#hazardMoreFilters summary').click()
                 page.select_option('#category', '特种设备')
                 expect(page.locator('#category')).to_have_value('特种设备')
                 page.locator('#clear').click()
@@ -135,7 +138,7 @@ def main():
             def phone():
                 page.set_viewport_size({'width': 390, 'height': 844})
                 home()
-                for selector in ['#category', '#region', '#hazardMoreFilters summary']:
+                for selector in ['#browse', '#hazardMoreFilters summary']:
                     assert page.locator(selector).bounding_box()['height'] >= 44, selector
                 page.locator('#hazardMoreFilters summary').click()
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
@@ -158,8 +161,8 @@ def main():
                 page.keyboard.press('Enter')
                 expect(page.locator('#scene')).to_be_visible()
                 page.keyboard.press('Tab')
-                expect(page.locator('#scene')).to_be_focused()
-                return {'slashFocus': True, 'nativeDisclosureEnter': True, 'tabReachesScene': True}
+                expect(page.locator('#category')).to_be_focused()
+                return {'slashFocus': True, 'nativeDisclosureEnter': True, 'tabReachesPreciseCategory': True}
             check('keyboard_shortcut_and_progressive_filters', keyboard)
 
             check('no_unhandled_javascript_errors', lambda: {'errors': errors} if not errors else (_ for _ in ()).throw(AssertionError(errors)))

@@ -3,33 +3,67 @@
   "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "447296b15dc88549d0004dd421a2b594de8ffdb29c4ee8157cc1a6472ac7ffc3",
-  "checkedAt": "2026-10-09",
-  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reviewedContentHash": "a7bcce23f147e5a00619b52e8d2544516fc3e1aeb33dc42e1cac911b4f83dd4e",
+  "checkedAt": "2026-10-15",
+  "reviewer": "Codex search and quality author review 20261015",
   "evidenceRefs": [
     "E_12158_GB 12158"
   ],
-  "reason": "将环境前提写入条件，去除与缺陷无关的模板结尾。",
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "reason": "标题与金属链禁用条款对应；措施末尾要求检查线路、电气设备等属于无关套话，K适用范围也泛化到一般用电。改为核验爆炸性气体环境和金属链使用，不扩大成全面电气检测。",
+  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
   "basisQuote": "在爆炸性气体环境中不应使用金属链。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "decision": "verified",
     "entityId": "H_12158_4_2_3_7_1",
     "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "447296b15dc88549d0004dd421a2b594de8ffdb29c4ee8157cc1a6472ac7ffc3",
+    "checkedAt": "2026-10-09",
+    "reviewer": "Claude quality repair quality-fix2-20261009",
     "evidenceRefs": [
       "E_12158_GB 12158"
     ],
-    "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
-    "reviewType": "content",
-    "reviewedContentHash": "cb056f96a8932e06e80f643f0f3cd33752ca01ca4dfcb27c246ef53ff6f816ad",
-    "reviewer": "Codex正式核验批次20260913"
+    "reason": "将环境前提写入条件，去除与缺陷无关的模板结尾。",
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "basisQuote": "在爆炸性气体环境中不应使用金属链。",
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_12158_4_2_3_7_1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_12158_GB 12158"
+      ],
+      "reason": "已逐项核对Excel隐患描述、整改措施与现有已核验条款；条款原文、法规版本链和适用条件均通过本批核验。",
+      "reviewType": "content",
+      "reviewedContentHash": "cb056f96a8932e06e80f643f0f3cd33752ca01ca4dfcb27c246ef53ff6f816ad",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousDefinition": {
+      "aliases": [],
+      "category": "电气安全",
+      "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
+      "description": "现场检查发现，在爆炸性气体环境中违规使用金属链，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_12158_4_2_3_7_1",
+      "keywords": [
+        "在爆炸性气体环境中违规使用金属链"
+      ],
+      "lifecycle": "active",
+      "measures": "在爆炸性气体环境中停止使用金属链，采用符合该危险环境要求的替代连接、吊挂或传动方式，避免产生机械火花或静电点火风险。整改后检查相关线路、电气设备、接地/防静电或保护功能，必要时检测确认并留存记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "电气设备安装、运行、检维修及用电相关场所"
+      ],
+      "title": "在爆炸性气体环境中违规使用金属链"
+    }
   },
   "previousDefinition": {
     "aliases": [],
     "category": "电气安全",
-    "conditions": "适用于存在电气设备安装、运行、操作、检维修或临时用电等活动；涉及爆炸危险环境、防雷防静电、特殊电压或特定设备时，应进一步核对专项要求。\n适用场所：电气设备安装、运行、检维修及用电相关场所",
-    "description": "现场检查发现，在爆炸性气体环境中违规使用金属链，实际状态与直接依据规定的安全要求不一致。",
+    "conditions": "适用于爆炸性气体环境中的金属链使用行为。",
+    "description": "处于爆炸性气体环境的作业中仍在使用金属链。",
     "id": "H_12158_4_2_3_7_1",
     "keywords": [
       "在爆炸性气体环境中违规使用金属链"
@@ -37,10 +71,10 @@
     "lifecycle": "active",
     "measures": "在爆炸性气体环境中停止使用金属链，采用符合该危险环境要求的替代连接、吊挂或传动方式，避免产生机械火花或静电点火风险。整改后检查相关线路、电气设备、接地/防静电或保护功能，必要时检测确认并留存记录。",
     "mergedInto": null,
-    "mode": "direct",
+    "mode": "conditional",
     "note": "",
     "places": [
-      "电气设备安装、运行、检维修及用电相关场所"
+      "爆炸性气体环境"
     ],
     "title": "在爆炸性气体环境中违规使用金属链"
   }

@@ -3,6 +3,7 @@ import {DataStore} from './js/store.js';
 import {searchHazardsDetailed,searchLawsDetailed} from './js/search.js';
 import {INSPECTION_LABELS,profileTemplateText,profileReferenceText} from './js/field-profiles.js';
 import {renderNormativeContent} from './js/normative-content.js';
+import {BROWSE_GROUPS} from './js/browse-groups.js';
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -112,10 +113,10 @@ function modeLabel(value){return ({direct:'直接适用',conditional:'有条件�
 function roleLabel(value){return ({direct:'直接依据',indirect:'间接依据',supporting:'间接／辅助依据',fallback:'上位法／兜底依据'})[value]||value||'未标注'}
 function displayCategoryOf(row){return row.displayCategory??row.category??''}
 function displayLevelOf(row){return row.displayLevel??row.level??''}
-function currentFilters(){return state.view==='hazards'?{inspectionClass:$('#inspectionClass')?.value||'',category:$('#category').value,sceneTag:$('#scene').value,displayLevel:$('#level').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value}:{displayLevel:$('#lawLevel').value,level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
+function currentFilters(){return state.view==='hazards'?{browse:$('#browse').value,inspectionClass:$('#inspectionClass')?.value||'',category:$('#category').value,sceneTag:$('#scene').value,displayLevel:$('#level').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value}:{displayLevel:$('#lawLevel').value,level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
 
 const URL_FILTERS={
-  hazards:{inspectionClass:'#inspectionClass',category:'#category',scene:'#scene',level:'#level',region:'#region',mode:'#mode'},
+  hazards:{browse:'#browse',inspectionClass:'#inspectionClass',category:'#category',scene:'#scene',level:'#level',region:'#region',mode:'#mode'},
   laws:{level:'#lawLevel',region:'#lawRegion',status:'#lawStatus'},
   data:{},
 };
@@ -170,7 +171,7 @@ function applyUrlFilters(route){
     else if(value)state.routeWarnings.push(`链接中的筛选“${value}”已不再提供，请重新选择。`);
   }
   updateFilterSummary();
-  if($('#hazardMoreFilters'))$('#hazardMoreFilters').open=['#scene','#level','#mode','#inspectionClass'].some(id=>$(id)?.value);
+  if($('#hazardMoreFilters'))$('#hazardMoreFilters').open=['#category','#region','#scene','#level','#mode','#inspectionClass'].some(id=>$(id)?.value);
   if($('#lawMoreFilters'))$('#lawMoreFilters').open=['#lawLevel','#lawStatus'].some(id=>$(id)?.value);
 }
 function syncUrl(historyMode='replace'){
@@ -183,6 +184,7 @@ function syncUrl(historyMode='replace'){
 }
 
 function initFilters(){const t=state.store.taxonomy;
+  $('#browse').innerHTML='<option value="">全部问题</option>'+BROWSE_GROUPS.map(group=>optionPair(group.id,group.label)).join('');
   const categories=t.displayCategories||t.categories||[];
   const levels=t.displayLevels||t.lawLevels||[];
   const availableScenes=new Set(state.store.searchIndex.flatMap(row=>row.sceneTags||[]));
@@ -435,7 +437,7 @@ async function clearOfflineCache(){try{if('caches' in window){for(const k of awa
 function showError(err){console.error(err);$('#detail').innerHTML=`<div class="empty error"><strong>数据读取失败</strong><p>${esc(err?.message||err)}</p><button id="retry">重新加载</button></div>`;$('#retry')?.addEventListener('click',()=>location.reload())}
 
 function updateFilterSummary(){
-  const hazardCount=['#scene','#level','#mode','#inspectionClass'].filter(id=>$(id)?.value).length;
+  const hazardCount=['#category','#region','#scene','#level','#mode','#inspectionClass'].filter(id=>$(id)?.value).length;
   const lawCount=['#lawLevel','#lawStatus'].filter(id=>$(id)?.value).length;
   if($('#hazardFilterCount'))$('#hazardFilterCount').textContent=hazardCount?`（${hazardCount}）`:'';
   if($('#lawFilterCount'))$('#lawFilterCount').textContent=lawCount?`（${lawCount}）`:'';
@@ -452,10 +454,22 @@ function showSearchNotice(match){
         : '';
   node.textContent=[...state.routeWarnings,match.queryNotice,node.textContent,state.view==='hazards'?state.store.fieldProfileNotice:'',state.view==='hazards'&&$('#inspectionClass')?.value?'核查用途筛选仅覆盖已审场景，未归入此用途不代表不适用。':''].filter(Boolean).join(' ');
   node.hidden=!node.textContent;
+  const suggestions=$('#searchSuggestions');
+  if(suggestions){
+    const items=state.view==='hazards'?(match.suggestions||[]):[];
+    suggestions.hidden=!items.length;
+    suggestions.innerHTML=items.map((item,index)=>`<div><button type="button" data-suggestion="${index}">${esc(item.label)}</button><p>${esc(item.note)}</p></div>`).join('');
+    suggestions.querySelectorAll('button[data-suggestion]').forEach(button=>button.onclick=()=>{
+      const item=items[Number(button.dataset.suggestion)];if(!item)return;
+      $('#search').value=item.query;
+      renderResults({mode:'filter-change',historyMode:'push'});
+      $('#search').focus();
+    });
+  }
 }
 function renderActiveFilters(){
   const node=$('#activeFilters');if(!node)return;
-  const labels={inspectionClass:'核查用途',category:'专业分类',scene:'现场标签',level:'依据类型',region:'地区',mode:'适用方式',status:'效力状态'};
+  const labels={browse:'问题分类',inspectionClass:'核查用途',category:'专业分类',scene:'现场标签',level:'依据类型',region:'地区',mode:'适用方式',status:'效力状态'};
   const entries=Object.entries(URL_FILTERS[state.view]||{}).filter(([,selector])=>$(selector)?.value);
   node.hidden=!entries.length;
   node.innerHTML=entries.map(([key,selector])=>{
@@ -477,7 +491,13 @@ function bind(){
   const resetFilters=()=>{state.profileSelections.clear();$$('#hazardFilters select,#lawFilters select').forEach(x=>x.value='');$('#search').value='';state.query='';renderResults({mode:'filter-change',historyMode:'push'})};
   $('#reset').onclick=resetFilters;
   $('#resetLaw').onclick=resetFilters;
-  $$('#hazardFilters select,#lawFilters select').forEach(x=>x.onchange=()=>renderResults({mode:'filter-change',historyMode:'push'}));
+  $$('#hazardFilters select,#lawFilters select').forEach(x=>x.onchange=()=>{
+    // A new broad selection replaces a precise selection, and vice versa.
+    // This avoids an invisible intersection hiding an otherwise valid result.
+    if(x.id==='browse')$('#category').value='';
+    if(x.id==='category')$('#browse').value='';
+    renderResults({mode:'filter-change',historyMode:'push'});
+  });
   window.addEventListener('popstate',()=>{
     if(!state.store)return;
     const route=loadUrlState();applyUrlFilters(route);

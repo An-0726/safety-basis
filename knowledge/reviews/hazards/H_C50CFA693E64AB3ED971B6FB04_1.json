@@ -3,46 +3,82 @@
   "entityType": "hazard",
   "reviewType": "definition",
   "decision": "verified",
-  "reviewedContentHash": "53713cf6881e0c0bc387efe6128bd89fc046b149b6f780022d047ff6e7b840cd",
-  "checkedAt": "2026-10-09",
-  "reviewer": "Claude quality repair quality-fix2-20261009",
+  "reviewedContentHash": "9939dc7390a3e42d2dde48d01f8eff78900f3ebc2432e93b69171a08207a7f6e",
+  "checkedAt": "2026-10-15",
+  "reviewer": "Codex search and quality author review 20261015",
   "evidenceRefs": [
-    "E_XLSX_WEB_B3A8AF34D4C458265CA0B417"
+    "E_XLSX_WEB_B3A8AF34D4C458265CA0B417",
+    "E_NJ_FIRE_16_18_RECHECK_20261015"
   ],
-  "reason": "删除通用评价，按条款明确对象及缺陷状态。",
-  "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+  "reason": "conditions和K包含消防审验技术服务，整改措施却统一写接受消防救援机构监督。官方第十六条把维保检测/评估与消防审验分列，后者由城乡建设行政主管部门监督。建议本H限第一款，第二款单独建规则，分别指明主管部门。",
+  "notes": "作者逐项自查，未经独立复核；不确认企业违法、现场事实、整改完成或重大事故隐患。",
   "basisQuote": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员，应当依法开展社会消防技术服务活动，接受消防救援机构的监督管理。",
   "previousReview": {
-    "checkedAt": "2026-09-13",
-    "decision": "verified",
     "entityId": "H_C50CFA693E64AB3ED971B6FB04_1",
     "entityType": "hazard",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "53713cf6881e0c0bc387efe6128bd89fc046b149b6f780022d047ff6e7b840cd",
+    "checkedAt": "2026-10-09",
+    "reviewer": "Claude quality repair quality-fix2-20261009",
     "evidenceRefs": [
       "E_XLSX_WEB_B3A8AF34D4C458265CA0B417"
     ],
-    "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
-    "reviewType": "content",
-    "reviewedContentHash": "913e27dc373b7b477997bddcf102eb890eb349b2824dee7e4bd60dd43d82c380",
-    "reviewer": "Codex正式核验批次20260913"
+    "reason": "删除通用评价，按条款明确对象及缺陷状态。",
+    "notes": "依据全量质量审阅结论修复：Codex按库内条款原文起草，Claude复核后应用；未经独立复核。只改条目表述、适用范围或关联，不改条款原文，不证明企业现场事实。",
+    "basisQuote": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员，应当依法开展社会消防技术服务活动，接受消防救援机构的监督管理。",
+    "previousReview": {
+      "checkedAt": "2026-09-13",
+      "decision": "verified",
+      "entityId": "H_C50CFA693E64AB3ED971B6FB04_1",
+      "entityType": "hazard",
+      "evidenceRefs": [
+        "E_XLSX_WEB_B3A8AF34D4C458265CA0B417"
+      ],
+      "reason": "已核对隐患描述和整改措施与官方法规条款的对象及义务。",
+      "reviewType": "content",
+      "reviewedContentHash": "913e27dc373b7b477997bddcf102eb890eb349b2824dee7e4bd60dd43d82c380",
+      "reviewer": "Codex正式核验批次20260913"
+    },
+    "previousDefinition": {
+      "aliases": [],
+      "category": "消防安全",
+      "conditions": "适用于依法从事消防审验、设施维护保养检测或消防安全评估等社会消防技术服务的机构及其从业人员；应结合从业条件和具体项目核查。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
+      "description": "现场检查发现，消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动，实际状态与直接依据规定的安全要求不一致。",
+      "id": "H_C50CFA693E64AB3ED971B6FB04_1",
+      "keywords": [
+        "消防设施维护保养检测",
+        "消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动"
+      ],
+      "lifecycle": "active",
+      "measures": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员依法开展社会消防技术服务活动；定期开展防火巡查并留存记录。",
+      "mergedInto": null,
+      "mode": "direct",
+      "note": "",
+      "places": [
+        "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
+      ],
+      "title": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动"
+    }
   },
   "previousDefinition": {
     "aliases": [],
     "category": "消防安全",
     "conditions": "适用于依法从事消防审验、设施维护保养检测或消防安全评估等社会消防技术服务的机构及其从业人员；应结合从业条件和具体项目核查。\n适用场所：南京市行政区域内依法承担消防安全责任的建筑、场所或单位",
-    "description": "现场检查发现，消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动，实际状态与直接依据规定的安全要求不一致。",
+    "description": "消防设施维护保养检测或消防安全评估服务中，机构或从业人员的服务活动未按法定要求开展。",
     "id": "H_C50CFA693E64AB3ED971B6FB04_1",
     "keywords": [
       "消防设施维护保养检测",
       "消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动"
     ],
     "lifecycle": "active",
-    "measures": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员依法开展社会消防技术服务活动；定期开展防火巡查并留存记录。",
+    "measures": "核对具体社会消防技术服务活动，纠正不符合法定要求的服务行为，核查整改后的服务情况，并接受消防救援机构监督管理。",
     "mergedInto": null,
     "mode": "direct",
     "note": "",
     "places": [
       "南京市行政区域内依法承担消防安全责任的建筑、场所或单位"
     ],
-    "title": "消防设施维护保养检测、消防安全评估等消防技术服务机构及其从业人员未依法开展社会消防技术服务活动"
+    "title": "社会消防技术服务机构或从业人员未依法开展服务"
   }
 }
