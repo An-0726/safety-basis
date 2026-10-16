@@ -133,7 +133,9 @@ const termOccurs = (text, term) => {
   return text.includes(term);
 };
 const termsMatch = (text, groups) => groups.every(variants=>variants.some(t=>termOccurs(text,t)));
-const objectHeading = row => normalize([row.title??row.name??'',...(row.aliases||[]),...(row.keywords||[])].join(' '));
+// DataStore adds fieldProfiles only after public hashes and exact basis joins
+// validate. Their approved scenario titles can identify an object as well.
+const objectHeading = row => normalize([row.title??row.name??'',...(row.aliases||[]),...(row.keywords||[]),...(row.fieldProfiles||[]).map(p=>p.title)].join(' '));
 
 // Topic choices must describe the rule's object. Background prose mentioning
 // another device or a general chapter does not establish that object.

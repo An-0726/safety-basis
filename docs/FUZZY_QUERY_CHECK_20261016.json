@@ -1,13 +1,15 @@
 {
   "date": "2026-10-16",
   "provenance": "120条自拟语料，不是真实用户日志；非零结果不等于专业准确",
+  "indexMode": "DataStore verified public index with validated field profiles",
+  "verifiedProfiles": 15,
   "summary": {
     "cases": 120,
     "groups": 6,
     "newFuzzyIntents": 53,
     "direct": 37,
-    "conditional": 73,
-    "explicitGaps": 9,
+    "conditional": 77,
+    "explicitGaps": 5,
     "unmatched": 1,
     "allPublicRows": 1764,
     "uniqueTitles": 1756,
@@ -26,6 +28,7 @@
       "一行车吊钩防脱钩装置损坏",
       "吊钩",
       "个人防坠落用品",
+      "安全设备未保持正常运转或维护、检测不到位",
       "压力表",
       "固定式压力容器",
       "气瓶",
@@ -37,6 +40,7 @@
       "人员密集场所、高层和地下公共建筑防火门关闭功能不符合要求",
       "设置保持开启状态的防火门的，未保证火灾时能自动关闭",
       "感烟火灾探测器",
+      "建筑消防设施年度全面检测、有效状态或记录不符合要求",
       "火灾自动报警系统",
       "可燃气体",
       "有毒气体",
@@ -106,6 +110,7 @@
       "H_COM_LIFTING_BARRICADE",
       "H_772BE36081184956B7899AA306",
       "H_COM_HIGH_FALL_PROTECTION",
+      "H_A9E3881B83F84709B23CF8EB2C",
       "H_F63729C889F642C8BBA2F263F0",
       "H_TSG21_PRESSURE_GAUGE_DAMAGED",
       "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
@@ -178,6 +183,7 @@
       "H_004D8F2994DD43D1A2F418386F",
       "H_69344942331F4E74ACB10315FE",
       "H_GB50166_POINT_DETECTOR_OBSTRUCTED",
+      "H_421CE6E205C8069977EB63572A_2",
       "H_99B75F33D550486BBA89A77139",
       "H_COM_GAS_DETECTOR_LOCATION",
       "H076",
@@ -1235,7 +1241,16 @@
         "matchKind": "none",
         "notice": "先核急停装置及实际功能故障；按不动、未配置和位置不便是不同问题，不能用未配急停或安装位置条目替代失效判据。",
         "ids": [],
-        "suggestions": []
+        "suggestions": [
+          {
+            "label": "若确认安全设备功能失效",
+            "query": "安全设备未保持正常运转或维护、检测不到位",
+            "note": "仅在确认已配置并承担生产安全保护功能、且实际未保持正常运转后使用；不由故障推定未维护或未检测。",
+            "ids": [
+              "H_A9E3881B83F84709B23CF8EB2C"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1253,7 +1268,16 @@
         "matchKind": "none",
         "notice": "先核急停装置及实际功能故障；按不动、未配置和位置不便是不同问题，不能用未配急停或安装位置条目替代失效判据。",
         "ids": [],
-        "suggestions": []
+        "suggestions": [
+          {
+            "label": "若确认安全设备功能失效",
+            "query": "安全设备未保持正常运转或维护、检测不到位",
+            "note": "仅在确认已配置并承担生产安全保护功能、且实际未保持正常运转后使用；不由故障推定未维护或未检测。",
+            "ids": [
+              "H_A9E3881B83F84709B23CF8EB2C"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1293,7 +1317,16 @@
         "matchKind": "none",
         "notice": "护罩损坏与未配置护罩不同；需补充设备、危险部件和实际防护失效情况，不用缺失规则替代所有罩体损坏。",
         "ids": [],
-        "suggestions": []
+        "suggestions": [
+          {
+            "label": "若确认安全设备防护功能失效",
+            "query": "安全设备未保持正常运转或维护、检测不到位",
+            "note": "先确认属于已配置的生产安全保护设备及实际防护功能失效；外观破损不直接证明功能失效，也不推定未维护检测。",
+            "ids": [
+              "H_A9E3881B83F84709B23CF8EB2C"
+            ]
+          }
+        ]
       }
     },
     {
@@ -1974,7 +2007,16 @@
         "matchKind": "none",
         "notice": "烟感功能故障不能用未配置、安装间距或遮挡条目替代；先确认探测器类型、测试条件与实际故障。",
         "ids": [],
-        "suggestions": []
+        "suggestions": [
+          {
+            "label": "若为建筑消防设施有效状态问题",
+            "query": "建筑消防设施年度全面检测、有效状态或记录不符合要求",
+            "note": "仅在确认属于建筑消防设施且存在相应有效状态问题后使用；不从故障推定年度检测未做或记录缺失。",
+            "ids": [
+              "H_421CE6E205C8069977EB63572A_2"
+            ]
+          }
+        ]
       }
     },
     {
@@ -2031,6 +2073,7 @@
               "H_15577_8_1_2_1",
               "H_582731EF84014F338DD9B04458",
               "H_FE6C8CE7D9D74815847BCF72A7",
+              "H_A9E3881B83F84709B23CF8EB2C",
               "H_CF_MAJOR_06",
               "H_C706DAF977FA4CC5960E97DD05",
               "H_1094F237782E4FC9A7D58CA44E"
@@ -2054,14 +2097,15 @@
       "group": "fire",
       "query": "气体报警器",
       "before": {
-        "count": 4,
+        "count": 5,
         "matchKind": "standard",
         "notice": "",
         "ids": [
           "H_GB12801_ACCIDENT_EXHAUST_INTERLOCK",
           "H_12158_9_18_1",
           "H_COM_GAS_DETECTOR_LOCATION",
-          "H_1094F237782E4FC9A7D58CA44E"
+          "H_1094F237782E4FC9A7D58CA44E",
+          "H_A9E3881B83F84709B23CF8EB2C"
         ],
         "suggestions": []
       },
@@ -2093,6 +2137,7 @@
               "H_15577_8_1_2_1",
               "H_582731EF84014F338DD9B04458",
               "H_FE6C8CE7D9D74815847BCF72A7",
+              "H_A9E3881B83F84709B23CF8EB2C",
               "H_CF_MAJOR_06",
               "H_C706DAF977FA4CC5960E97DD05",
               "H_1094F237782E4FC9A7D58CA44E"
@@ -2152,6 +2197,7 @@
               "H_15577_8_1_2_1",
               "H_582731EF84014F338DD9B04458",
               "H_FE6C8CE7D9D74815847BCF72A7",
+              "H_A9E3881B83F84709B23CF8EB2C",
               "H_CF_MAJOR_06",
               "H_C706DAF977FA4CC5960E97DD05",
               "H_1094F237782E4FC9A7D58CA44E"
@@ -2179,10 +2225,11 @@
         "suggestions": []
       },
       "after": {
-        "count": 5,
+        "count": 6,
         "matchKind": "related",
         "notice": "",
         "ids": [
+          "H_A9E3881B83F84709B23CF8EB2C",
           "H_GB55037_BUILDING_GAS_ALARM",
           "H_COM_GAS_DETECTOR_LOCATION",
           "H_COM_VALVE_OBSTRUCTED",

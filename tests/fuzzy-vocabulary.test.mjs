@@ -24,6 +24,8 @@ const targets=[
   row('EXT_PRESSURE','灭火器压力指示器的指针,未在绿色范围内'),
   row('SDS','危险化学品使用单位未向从业人员提供安全技术说明书或安全标签'),
   row('TRAINING','从业人员安全教育培训不到位'),
+  row('SAFETY','安全设备未保持正常运转或维护、检测不到位'),
+  row('FIRE_EFFECTIVE','建筑消防设施年度全面检测、有效状态或记录不符合要求'),
 ];
 
 test('新增常见俗称通过相同对象检索，组合查询仍要求缺陷命中',()=>{
@@ -64,6 +66,8 @@ test('进一步选定对象后，正文背景或排除范围提及不代替设�
     const incidental=row('INCIDENTAL','另一设备安装问题',{searchText:`另一设备安装问题 ${q}`});
     assert.deepEqual(ids([incidental,correct],q),['CORRECT'],q);
   }
+  const approved=row('APPROVED','安全设备功能失效',{searchText:'安全设备功能失效 可燃气体报警',fieldProfiles:[{title:'承担生产安全监测功能的可燃气体报警装置失效'}]});
+  assert.deepEqual(ids([approved],'可燃气体'),['APPROVED']);
 });
 
 test('耳塞口罩未佩戴先核岗位需求，不混入安全帽或用品采购责任',()=>{
@@ -93,6 +97,8 @@ test('有条件建议区分对象、缺失损坏、仪表检定和岗位培训�
     ['煤气罐没固定',['CYLINDER_STABLE']],['消防栓水带不见了',['HYDRANT_HOSE']],
     ['灭火器压力低',['EXT_PRESSURE']],['化学品没有MSDS',['SDS']],
     ['新来的没培训',['TRAINING']],['安全培训没做',['TRAINING']],
+    ['急停失灵',['SAFETY']],['急停按钮按不动',['SAFETY']],
+    ['机器护罩坏了',['SAFETY']],['烟感坏掉了',['FIRE_EFFECTIVE']],
   ]){
     const r=searchHazardsDetailed(targets,q);
     assert.equal(r.rows.length,0,q);assert.ok(r.queryNotice,q);
@@ -112,7 +118,7 @@ test('模糊设备名或操作证必须分清对象，不纠错成另一个设�
 });
 
 test('缺证或运行损坏不借未安装、安装位置或未佩戴条目凑结果',()=>{
-  for(const q of ['急停失灵','急停按钮按不动','机器护罩坏了','烟感坏掉了','绝缘手套破了','叉车安全带','气瓶圈没了','气瓶减压器','绝缘胶垫']){
+  for(const q of ['绝缘手套破了','叉车安全带','气瓶圈没了','气瓶减压器','绝缘胶垫']){
     const r=searchHazardsDetailed(targets,q);
     assert.equal(r.rows.length,0,q);assert.equal(r.suggestions.length,0,q);assert.ok(r.queryNotice,q);
   }
