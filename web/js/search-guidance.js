@@ -3,6 +3,13 @@ import {fieldQueryGuidance} from './field-query-guidance.js';
 const suggestion=(label,query,note)=>({label,query,note});
 export function hazardSearchGuidance(value){
   const query=String(value??'').normalize('NFKC').replace(/\s+/g,'').replace(/[，。？！?!]/g,'');
+  // Do not strip a negation or a completed/unknown state and manufacture a
+  // defect. These endings deliberately do not match “没有断路器” or “未完成”.
+  if(/(?:没有|未见|未发现|不存在)(?:断|断裂|断开|失灵|故障|损坏|破损|失效)(?:了)?$/.test(query)
+      ||/(?:已经|(?<!未)已)(?:修好|修复|签字|完成)(?:了)?$/.test(query)
+      ||/^(?:未查明|尚未确认|尚未核实)/.test(query))return {
+    suppressResults:true,notice:'这句话表示未查明、未发现缺陷或相关动作已完成，不能删掉状态词当成已发生的不符合。请按核实后的对象和实际问题继续检索。',suggestions:[],
+  };
   const fieldGuidance=fieldQueryGuidance(query);
   if(fieldGuidance)return fieldGuidance;
   // A missing sign is not a failed lamp, and a missing extinguisher is not a placement defect.
