@@ -120,19 +120,56 @@ const relatedVariantsOf = term => {
 };
 // 正确的领域词不能对正文做单字通配或散落字片匹配：
 // “安全员”不能因为正文有“安全阀/安全出口”就命中。
-const termOccurs = (text, term) => term==='行车'
-  ? /(?<!自)行车(?!制动|或驻车制动|和驻车制动|道|路线|速度)/.test(text)
-  : text.includes(term);
+const latinTermPatterns = new Map();
+const termOccurs = (text, term) => {
+  if(term==='行车')return /(?<!自)行车(?!制动|或驻车制动|和驻车制动|道|路线|速度)/.test(text);
+  if(term==='天车')return /(?<![露每])天车/.test(text);
+  // Acronyms such as PPE, RCD, SDS and LEL are whole Latin words; do not
+  // retrieve copper, parallel or an unrelated identifier by a short substring.
+  if(/^[a-z][a-z0-9]+$/.test(term)){
+    if(!latinTermPatterns.has(term))latinTermPatterns.set(term,new RegExp(`(?<![a-z0-9])${term}(?![a-z0-9])`));
+    return latinTermPatterns.get(term).test(text);
+  }
+  return text.includes(term);
+};
 const termsMatch = (text, groups) => groups.every(variants=>variants.some(t=>termOccurs(text,t)));
+// DataStore adds fieldProfiles only after public hashes and exact basis joins
+// validate. Their approved scenario titles can identify an object as well.
+const objectHeading = row => normalize([row.title??row.name??'',...(row.aliases||[]),...(row.keywords||[]),...(row.fieldProfiles||[]).map(p=>p.title)].join(' '));
+
+// Topic choices must describe the rule's object. Background prose mentioning
+// another device or a general chapter does not establish that object.
+const PRIMARY_TOPICS = new Map([
+  ['疏散通道',[['疏散通道','疏散走道','逃生通道']]],
+  ['消防车道',[['消防车道','消防车通道']]],
+  ['防火门',[['防火门']]],
+  ['安全出口',[['安全出口','疏散出口','逃生出口']]],
+  ['感烟火灾探测器',[['感烟','烟感','点型火灾探测器']]],
+  ['火灾自动报警系统',[['火灾自动报警系统','火灾报警系统','火灾报警控制器','消防报警主机','火警主机']]],
+  ['可燃气体',[['可燃气体','燃气','煤气','氢气']]],
+  ['有毒气体',[['有毒气体']]],
+  ['一氧化碳',[['一氧化碳']]],
+  ['有限空间气体检测',[['有限空间'],['气体检测']]],
+  ['便携式可燃气体检测',[['便携式'],['可燃气体'],['检测']]],
+  ['固定式压力容器',[['固定式压力容器']]],
+  ['气瓶',[['气瓶','液化石油气钢瓶']]],
+  ['压力表',[['压力表']]],
+  ['个人防坠落用品',[['个人防坠落用品']]],
+  ...['危险化学品仓库','危化品仓库','危化库'].map(query=>[query,[['危险化学品仓库','危化品仓库','危化库']]]),
+]);
+const primaryTopicRows = (rows, query) => {
+  const groups=PRIMARY_TOPICS.get(normalize(query));
+  return groups?rows.filter(row=>termsMatch(objectHeading(row),groups)):rows;
+};
 
 // Workshop crane names refer to the rule's equipment, not a bicycle substring,
 // road-vehicle braking, or a crane mentioned only in another rule's exclusions.
 // Use the same object check for hazards and law names; complete title lookups
 // remain handled separately below.
-const CRANE_QUERY_TERMS = new Set(['行车','天车','起重机','起重机械','起重设备']);
+const CRANE_QUERY_TERMS = new Set(['行车','天车','起重机','起重机械','起重设备','门式起重机','龙门吊']);
 const craneObjectRows = (rows, terms) => !terms.some(t=>CRANE_QUERY_TERMS.has(t)) ? rows : rows.filter(row=>{
-  const heading=normalize([row.title??row.name??'',...(row.aliases||[]),...(row.keywords||[])].join(' '));
-  return ['起重机','起重机械','起重设备','天车','行车'].some(term=>termOccurs(heading,term));
+  const heading=objectHeading(row);
+  return ['起重机','起重机械','起重设备','天车','行车','龙门吊'].some(term=>termOccurs(heading,term));
 });
 
 // 只为词典外的中文词提供单字替换或相邻错序纠正；歧义时不猜。
@@ -186,7 +223,7 @@ const colloquialRows = (rows, query) => {
   if(!parsed) return null;
   const nameOf=row=>String(row.title??row.name??'');
   // 标题直接出现所说对象或首选条文用语的条目排前，其次是标题出现其他等价用语的条目。
-  const titleHits=row=>{const title=normalize(nameOf(row));return parsed.groups.reduce((sum,g,i)=>sum+(title.includes(parsed.labels[i])?3:g.some(t=>title.includes(t))?2:0),0);};
+  const titleHits=row=>{const title=normalize(nameOf(row));return parsed.groups.reduce((sum,g,i)=>sum+(termOccurs(title,parsed.labels[i])?3:g.some(t=>termOccurs(title,t))?2:0),0);};
   const headingOf=row=>normalize([nameOf(row),...(row.aliases||[]),...(row.keywords||[])].join(' '));
   const hits=rows.filter(r=>termsMatch(r.searchText,parsed.groups)&&termsMatch(headingOf(r),parsed.spokenGroups)).map(row=>({row,score:titleHits(row)}));
   if(!hits.length) return null;
@@ -194,7 +231,7 @@ const colloquialRows = (rows, query) => {
   return {rows:hits.map(x=>x.row),terms:parsed.labels,matchKind:'colloquial',ranked:true};
 };
 const matchingRows = (rows, terms, query='') => {
-  rows=craneObjectRows(rows,terms);
+  rows=primaryTopicRows(craneObjectRows(rows,terms),query);
   const strict=strictRows(rows,terms);
   return strict.matchKind==='none' ? (colloquialRows(rows,query)||strict) : strict;
 };
@@ -220,18 +257,18 @@ const hazardScore=(r,q,terms)=>{
   const title=normalize(r.title), aliases=normalize(r.aliases.join(' ')), keywords=normalize(r.keywords.join(' ')), laws=normalize(r.lawNames.join(' '));
   let score=0;
   if(title===q) score+=160;
-  else if(title.startsWith(q)) score+=120;
-  else if(title.includes(q)) score+=95;
-  if(aliases.includes(q)) score+=70;
-  if(keywords.includes(q)) score+=55;
-  if(laws.includes(q)) score+=35;
+  else if(title.startsWith(q)&&termOccurs(title,q)) score+=120;
+  else if(termOccurs(title,q)) score+=95;
+  if(termOccurs(aliases,q)) score+=70;
+  if(termOccurs(keywords,q)) score+=55;
+  if(termOccurs(laws,q)) score+=35;
   for(const t of terms){
-    if(title.includes(t)) score+=28;
-    else if(aliases.includes(t)) score+=20;
-    else if(keywords.includes(t)) score+=14;
-    else if(laws.includes(t)) score+=8;
-    else if(variantsOf(t).some(v=>v!==t&&title.includes(v))) score+=12;
-    else if(variantsOf(t).some(v=>v!==t&&(aliases.includes(v)||keywords.includes(v)))) score+=8;
+    if(termOccurs(title,t)) score+=28;
+    else if(termOccurs(aliases,t)) score+=20;
+    else if(termOccurs(keywords,t)) score+=14;
+    else if(termOccurs(laws,t)) score+=8;
+    else if(variantsOf(t).some(v=>v!==t&&termOccurs(title,v))) score+=12;
+    else if(variantsOf(t).some(v=>v!==t&&(termOccurs(aliases,v)||termOccurs(keywords,v)))) score+=8;
     else score+=2;
   }
   if(r.status==='已核验') score+=3;
@@ -284,13 +321,13 @@ const lawScore=(r,q,terms)=>{
   const name=normalize(r.name), aliases=normalize(r.aliases.join(' '));
   let score=0;
   if(name===q) score+=160;
-  else if(name.startsWith(q)) score+=120;
-  else if(name.includes(q)) score+=95;
-  if(aliases.includes(q)) score+=60;
+  else if(name.startsWith(q)&&termOccurs(name,q)) score+=120;
+  else if(termOccurs(name,q)) score+=95;
+  if(termOccurs(aliases,q)) score+=60;
   for(const t of terms){
-    if(name.includes(t)) score+=28;
-    else if(aliases.includes(t)) score+=18;
-    else if(variantsOf(t).some(v=>v!==t&&name.includes(v))) score+=12;
+    if(termOccurs(name,t)) score+=28;
+    else if(termOccurs(aliases,t)) score+=18;
+    else if(variantsOf(t).some(v=>v!==t&&termOccurs(name,v))) score+=12;
     else score+=3;
   }
   if(r.status==='现行有效') score+=3;

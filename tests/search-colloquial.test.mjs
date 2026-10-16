@@ -108,7 +108,9 @@ test('第二轮口语问法落到对应条目',()=>{
     ['灭火器没气了','EXT_LOWP'],['灭火器放地上','EXT_HEIGHT'],['防火门常开','FDOOR'],['没做消防演练','FIREDRILL'],
     ['电瓶车乱充电','EBIKE'],['旋转部位没罩子','ROT'],['危化品库没防爆灯','EXLAMP'],['洗眼器被挡住','WASH'],
     ['危废仓库没防渗','HWSEEP'],['危废混放','HWMIX'],['积尘很厚','DUST'],['进罐没检测','CS'],['洞口没盖板','PIT'],
-    ['没戴耳塞','PPE'],['没戴口罩','PPE'],['没做职业危害检测','OHTEST'],['没签责任书','RESP'],
+    // Missing ear/respiratory PPE now uses conditional suggestions; the fuzzy
+    // query suite checks that full-index searches cannot substitute helmet rules.
+    ['没做职业危害检测','OHTEST'],['没签责任书','RESP'],
     ['没有隐患排查记录','HIDREC'],['外包没签安全协议','CONTRACT'],['没做风险辨识','RISK'],['警示牌掉了','SIGNWORN'],
     ['仓库住人','DORM'],
   ]){
