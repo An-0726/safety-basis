@@ -6,7 +6,7 @@ import tempfile
 import zipfile
 from pathlib import Path, PurePosixPath
 
-from .storage import now, uid
+from .storage import now, uid, private_data_root
 
 
 def create_backup(store):
@@ -33,7 +33,7 @@ def create_backup(store):
 
 
 def restore_backup(source, destination):
-    destination = Path(destination).resolve()
+    destination = private_data_root(destination)
     if destination.exists() and any(destination.iterdir()):
         raise ValueError('恢复目标必须是空目录，以免覆盖正在使用的数据库')
     with zipfile.ZipFile(source) as archive:

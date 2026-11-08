@@ -16,9 +16,10 @@ const currentHazards = rows => rows.filter(x => x.status === '已核验' && x.pu
 const currentLaws = rows => rows.filter(x => Number(x.clauseCount || 0) > 0);
 
 export class DataStore {
-  constructor(base='.') {
+  constructor(base='.', {fetcher = (...args) => fetch(...args)} = {}) {
     this.base=base;
-    this.verifiedFiles=new VerifiedFiles(base);
+    this.fetcher=fetcher;
+    this.verifiedFiles=new VerifiedFiles(base, {fetcher});
     this.manifest=null;
     this.searchIndex=[];
     this.lawIndex=[];
@@ -36,7 +37,7 @@ export class DataStore {
     if(this.verifiedFiles.manifest) return this.verifiedFiles.read(path);
     const version=this.manifest?.dataVersion;
     const suffix=version && !fresh ? `${path.includes('?')?'&':'?'}v=${encodeURIComponent(version)}` : '';
-    const res=await fetch(joinUrl(this.base,path)+suffix,{cache:fresh?'no-store':'default'});
+    const res=await this.fetcher(joinUrl(this.base,path)+suffix,{cache:fresh?'no-store':'default'});
     if(!res.ok) throw new Error(`读取失败：${path} (${res.status})`);
     return res.json();
   }

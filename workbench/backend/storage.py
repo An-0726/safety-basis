@@ -21,9 +21,20 @@ def dumps(value):
     return json.dumps(value, ensure_ascii=False, separators=(',', ':'))
 
 
+def private_data_root(value):
+    """Apply the same private path boundary to serving, backup and restore."""
+    root = Path(value).resolve()
+    repository = Path(__file__).resolve().parents[2]
+    if root == repository or repository in root.parents:
+        allowed = [repository / item for item in ('workbench/runtime', 'workbench/private', 'workbench-data', 'tmp')]
+        if not any(root == item or item in root.parents for item in allowed):
+            raise ValueError('私有工作台数据只能保存在仓库外或已忽略的私有运行目录，不能写入公开仓库路径')
+    return root
+
+
 class Store:
     def __init__(self, root):
-        self.root = Path(root).resolve()
+        self.root = private_data_root(root)
         self.root.mkdir(parents=True, exist_ok=True, mode=0o700)
         for folder in ('photos', 'reports', 'backups', 'templates'):
             (self.root / folder).mkdir(exist_ok=True, mode=0o700)

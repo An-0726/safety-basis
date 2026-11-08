@@ -4,6 +4,8 @@
 
 在线站点：<https://an-0726.github.io/safety-basis/>
 
+私有检查工作台：<https://safety-basis-inspection.upezra8.chatgpt.site>。使用站点所有者的 ChatGPT 账号登录，无需安装；项目、照片与报告保存在私有工作区。[使用与云端说明](docs/PRIVATE_CLOUD_WORKBENCH.md)
+
 **当前上线版本、已核数量、剩余工作和完整8步计划统一见 [PROJECT_STATE](docs/PROJECT_STATE.md)。** 本页说明怎么使用与长期数据边界，不另维护第二份“当前状态”。接手维护先读 [AGENTS](AGENTS.md) 和 [HANDOFF](docs/HANDOFF.md)。
 
 ## 一、怎么使用
@@ -126,7 +128,11 @@ GitHub和GitHub Pages是公开空间。企业原件、照片、联系人、签�
 
 ## 八、私有隐患检查工作台
 
-`workbench/` 提供可运行的检查工作台：企业项目、现场记录、照片、正式法条匹配、事实核实、专业审核、Word/PDF导出及备份恢复。它复用本库已发布知识与检索，企业业务数据独立保存在私有目录，不进入GitHub Pages。
+`workbench/` 提供可运行的检查工作台：企业项目、现场记录、照片、正式法条匹配、事实核实、专业审核、Word/PDF导出及私有备份。它复用本库已发布知识与检索，企业业务数据不进入GitHub Pages。
+
+直接使用：[打开私有云端工作台](https://safety-basis-inspection.upezra8.chatgpt.site)，使用所有者的 ChatGPT 账号登录。云端数据保存在私有 D1/R2；当前是单所有者工作区，审核记录不是资格认证或电子签章。云端备份为结构化数据与对象文件，没有网页一键恢复；本机版保留 SQLite 备份恢复能力。详见[云端交付说明](docs/PRIVATE_CLOUD_WORKBENCH.md)。
+
+需要在自己的设备上独立运行时，仍可使用本机版：
 
 ```sh
 python -m pip install -r tools/pipeline/requirements.txt -r workbench/requirements.txt
