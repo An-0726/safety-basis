@@ -17,7 +17,7 @@ export function observationStateBoundary(value) {
   if (observation.activeClaims.length) return null;
   // These qualifiers are meaningful even in the middle of a long sentence.
   // Do not let the colloquial fallback discard them and manufacture a defect.
-  if (/(?:未确认|未核实|未查明|没查清|没确认|没核实|待核实|待确认|待核查|不确定|不知道|不清楚|疑似|怀疑|好像|似乎|或许|可能|大概|是否|是不是|有没有|坏没坏|失压与否)/.test(q.replace(/疑似职业病/g, '职业病诊断情形'))) {
+  if (observation.hasUncertainty) {
     return stop('unconfirmed_observation', '原话含有待核实、疑问或不确定状态。请先核实对象和实际情况；不能删掉这些状态词，直接认定已经存在缺陷。',
       ['对象与适用场景', '现场当前状态及观察或检测证据'], [], 'fact_unconfirmed');
   }
@@ -32,8 +32,15 @@ export function observationStateBoundary(value) {
     return stop('negated_observation', '原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。',
       ['现场当前状态及证据'], [], 'fact_unconfirmed');
   }
+  if (observation.unresolvedReference) return stop('observed_object_unidentified',
+    '原话中的已知设备是位置参照，不能把旁边、上方或下方另一设备的故障归给它。请明确实际故障设备的名称、类型和状态，再核对适用依据。',
+    ['实际故障设备的名称和类型','位置参照与故障对象的关系','实际故障及当前状态证据']);
+  if (observation.hasHistorical) return stop('historical_observation',
+    '原话中的历史、已排除或已恢复状态词已保留，不能将过去的问题当成当前隐患。请依据复查记录核实当前设备状态。',
+    ['当前设备状态','复查或检测证据'], [], 'fact_unconfirmed');
   const currentFailure=/(?:但|仍|还是|又|再次).*(?:没|未|不亮|不动作|损坏|故障|失压|失效|堵塞|破损|漏气|泄漏)/.test(q);
-  if (!currentFailure && (/(?<!未)(?:已经|已)(?:修好|修复|整改完成|更换|换好|维修完成|处理完|清理完|清走|清掉|疏通|排除|恢复正常|接好|完成)(?:了)?/.test(q)
+  if (!currentFailure && (observation.claims.some(claim=>claim.polarity==='normal'&&claim.subjects.length)
+      || /(?<!未)(?:已经|已)(?:修好|修复|整改完成|更换|换好|维修完成|处理完|清理完|清走|清掉|疏通|排除|恢复正常|接好|完成)(?:了)?/.test(q)
       || /(?:现在|目前)(?:已经|已)?(?:正常|完好|畅通)/.test(q)
       || /(?:已经|(?<!未)已)(?:安装|配置|配备|接地|固定|佩戴|检测|检验|检定|校验|培训|演练|审批|签字)(?:完成|合格|有效|了)?$/.test(q)
       || /(?:正常|完好无损|压力充足|仍在有效期|还没到期|尚未到期)$/.test(q))) {

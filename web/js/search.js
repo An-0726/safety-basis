@@ -2,7 +2,7 @@
 import {browseGroupMatches} from './browse-groups.js';
 import {hazardSearchGuidance} from './search-guidance.js';
 import {pressureGaugeStateBoundary} from './search-boundaries.js';
-import {splitFieldQuery, interpretFieldQuery, fieldObservationMatches, fieldDefectMatches, fieldCandidateScore} from './query-intent.js';
+import {splitFieldIssues, interpretFieldQuery, fieldObservationMatches, fieldDefectMatches, fieldCandidateScore} from './query-intent.js';
 
 import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS, COLLOQUIAL_LEADING_VERBS } from './search-vocabulary.js';
 
@@ -337,6 +337,41 @@ const activeFilters = filters => Object.fromEntries(Object.entries(filters).filt
 function issueGuidance(interpretation) {
   const {query,defects}=interpretation;
   const objects=defects.length?interpretation.subjects:interpretation.objects;
+  if(objects.some(object=>object.key==='配电箱')&&!defects.length&&/不合格|出了问题|有问题|不知道|不清楚|未核实/.test(query))return {
+    suppressResults:true,notice:'配电箱的具体缺陷尚未明确。请分别核实保护接地、内部线路和箱门状态，选择与现场事实相符的方向；“不合格”不能直接解释成其中任何一项。',
+    suggestions:[searchChoice('核查保护接地','配电箱接地','核实保护导体及连接位置和实际状态。'),searchChoice('核查内部线路','电气线路绝缘损坏','核实线路绝缘及带电部位，不能只凭模糊照片认定。'),searchChoice('核查箱门连接','装有电器的可开启配电箱（柜）门与金属框架未可靠连接','核实箱门是否装有电器及保护连接。')],
+    assessment:{classification:'needs_conditions',reason:'cabinet_defect_unconfirmed',requiredFacts:['实际缺陷部件','具体状态与现场证据','供电和设备使用场景']},
+  };
+  if(objects.some(object=>object.key==='插排')&&/额定|实测|电流|功率|超负荷|过载/.test(query))return {
+    suppressResults:!defects.includes('overload'),
+    notice:'插排负荷须核对同一设备的额定电流或功率与同时运行的实际负荷。电器数量不能证明超负荷；安培与瓦不能直接比较。已描述的数值仅用于寻找候选，仍须核实铭牌、测量方式和实际使用条件。',
+    suggestions:[searchChoice('核查插排负荷依据','移动式插座（插线板）超负荷使用','记录额定值及同维度、同时运行的实际负荷，核对适用范围。')],
+    assessment:{classification:'needs_conditions',reason:'power_strip_load_conditions',requiredFacts:['同一插排的额定电流或功率','同时运行的实际负荷与测量证据','单位和测量条件是否可直接比较','产品及使用场景的适用范围']},
+  };
+  if(objects.some(object=>object.key==='气瓶')&&defects.includes('unsecured'))return {
+    notice:'按气瓶立放或放置时固定、防倾倒问题查找候选。缺少一条链条不能证明没有其他有效固定；须核实支架、卡箍等替代措施、实际稳定状态及瓶型和使用范围。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'cylinder_securing_conditions',requiredFacts:['气瓶类型及放置或使用状态','是否有其他可靠固定或防倾倒措施','实际稳定情况及现场证据','排除车用或固定使用瓶式压力容器等不适用情形']},
+  };
+  if(objects.some(object=>object.key==='安全阀')&&defects.includes('calibration_overdue'))return {
+    notice:'安全阀校验与压力容器本体定期检验、压力表检定分别核查。本体检验有效不能代替安全阀校验；候选仍需核实所属设备、校验期限和继续使用状态。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'valve_calibration_conditions',requiredFacts:['安全阀及所属设备适用范围','校验记录、期限及证据','实际使用状态']},
+  };
+  if(objects.some(object=>object.key==='固定式压力容器')&&defects.includes('inspection_overdue'))return {
+    notice:'按压力容器本体定期检验期限查找候选，须先核实是否属于特种设备监管及定检范围、有效期和继续使用状态。超期不等于已有“不合格”检验结论，也不能自动认定重大事故隐患。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'vessel_inspection_conditions',requiredFacts:['压力容器是否属于法定特种设备及定检范围','本体定期检验期限和实际检验记录','是否继续使用','不得把超期推成检验结论不合格']},
+  };
+  if(objects.some(object=>object.key==='压力表')&&defects.includes('pressure_mark_missing'))return {
+    notice:'按压力表工作压力红线查找候选；玻璃完好与检定有效不代替刻度盘红线要求。仍须确认固定式压力容器适用范围及表盘实际标记。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'gauge_mark_conditions',requiredFacts:['所属设备及条款适用范围','指示工作压力的红线是否确实缺失','表盘和工作压力现场证据']},
+  };
+  if(objects.some(object=>['洒水喷头','感烟探测器'].includes(object.key))&&defects.includes('obstructed'))return {
+    notice:'按已描述的消防设施遮挡查找候选。请核实设施类型、是否已投入或恢复使用及实际遮挡；喷头的临时施工保护与遗留障碍、点型探测器与线型光束探测器应分别处理。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'fire_device_obstruction_conditions',requiredFacts:['自动喷水系统或点型探测器的实际类型','投入或恢复使用状态','遮挡物位置和实际影响','施工临时保护是否已按要求拆除']},
+  };
+  if(objects.some(object=>object.key==='电动自行车')&&defects.includes('entry_elevator'))return {
+    notice:'按电动自行车进入住宅电梯或户内的行为查找候选。须核实住宅场景、实际进入行为和地域范围；住户行为与物业劝阻义务分别检索。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'bicycle_entry_conditions',requiredFacts:['住宅电梯或户内场景','实际进入行为及行为主体','条款地域与生效范围']},
+  };
   if(objects.some(object=>object.key==='配电箱')&&defects.includes('absent'))return {
     suppressResults:true,notice:'原话表示配电箱尚未安装，不能套用已安装后的配线、箱门接地或损坏规则。请核实供配电方案、是否应设、场所和使用阶段；当前库内没有足以凭这句话直接认定缺项的通用条目。',
     suggestions:[],assessment:{classification:'needs_conditions',reason:'cabinet_installation_unconfirmed',requiredFacts:['场所与供配电方式','是否依法或按适用设计应设置配电箱','尚未施工还是已投入使用','适用条款与现场证据']},
@@ -385,13 +420,14 @@ function issueGuidance(interpretation) {
   return null;
 }
 
-function oneFieldIssue(rows, raw, filters, index) {
-  let interpretation=interpretFieldQuery(raw);
+function oneFieldIssue(rows, raw, filters, index, inheritedSubject=null) {
+  const lookup=inheritedSubject?`${inheritedSubject.name}，${raw}`:raw;
+  let interpretation={...interpretFieldQuery(lookup),original:raw,inheritedSubject};
   const exact=rows.some(row=>normalize(row.title)===normalize(raw))&&normalize(raw)!=='';
-  let result=searchHazardsDetailed(rows,raw,filters);
+  let result=searchHazardsDetailed(rows,lookup,filters);
   if(interpretation.corrections.length&&result.rows.length&&result.matchKind!=='corrected'
     &&interpretation.corrections.some(item=>result.rows.some(row=>objectHeading(row).includes(item.from)))) {
-    interpretation=interpretFieldQuery(raw,{correctTypos:false});
+    interpretation={...interpretFieldQuery(lookup,{correctTypos:false}),original:raw,inheritedSubject};
   }
   const initialAssessment=result.assessment?.classification;
   const protectedState=['fact_unconfirmed','evidence_gap'].includes(initialAssessment);
@@ -430,7 +466,7 @@ function oneFieldIssue(rows, raw, filters, index) {
         .sort((a,b)=>b.score-a.score||String(a.row.title).localeCompare(String(b.row.title),'zh-CN'));
       const changed=result.rows.length!==ranked.length||ranked.some((item,i)=>item.row.id!==result.rows[i]?.id);
       result={...result,rows:ranked.map(item=>item.row),matchKind:ranked.length?(result.matchKind==='none'?'colloquial':result.matchKind):'none',
-        interpretedQuery:ranked.length&&changed?[...(interpretation.subjects.length?interpretation.subjects:interpretation.objects).map(object=>object.name),...interpretation.defects.map(defect=>({pressure_loss:'失压',grounding:'接地',verification_overdue:'检定超期',inspection_overdue:'定期检验超期',damaged:'损坏',absent:'未设置',obstructed:'占用或遮挡',charging_wiring:'飞线充电',not_worn:'未佩戴',understaffed:'值班人数不足'}[defect]))].join(' '):result.interpretedQuery,
+        interpretedQuery:ranked.length&&changed?[...(interpretation.subjects.length?interpretation.subjects:interpretation.objects).map(object=>object.name),...interpretation.defects.map(defect=>({pressure_loss:'失压',grounding:'接地',verification_overdue:'检定超期',inspection_overdue:'定期检验超期',calibration_overdue:'校验超期',pressure_mark_missing:'工作压力红线缺失',damaged:'损坏',absent:'未设置',obstructed:'占用或遮挡',locked:'锁闭',unsecured:'防倾倒或固定',overload:'超负荷',entry_elevator:'进入住宅电梯或户内',charging_wiring:'飞线充电',not_worn:'未佩戴',understaffed:'值班人数不足'}[defect]))].join(' '):result.interpretedQuery,
         assessment:result.assessment?.classification==='needs_conditions'?result.assessment:{classification:ranked.length?'candidate_matches':'no_result',reason:ranked.length?'object_and_state_candidates':'no_object_state_match',requiredFacts:[]}};
     }
     if(interpretation.changed&&result.assessment?.classification==='candidate_matches') {
@@ -456,12 +492,12 @@ function oneFieldIssue(rows, raw, filters, index) {
   const cleanFilters=activeFilters(filters);
   let unfilteredCount=0,zeroReason='';
   if(!result.rows.length) {
-    if(['fact_unconfirmed','evidence_gap','needs_conditions'].includes(result.assessment?.classification))zeroReason=result.assessment.classification;
+    if(['fact_unconfirmed','evidence_gap'].includes(result.assessment?.classification)||semanticGuidance?.suppressResults)zeroReason=result.assessment?.classification||'needs_conditions';
     else if(Object.keys(cleanFilters).length) {
-      const unfiltered=oneFieldIssue(rows,raw,{},index);
+      const unfiltered=oneFieldIssue(rows,raw,{},index,inheritedSubject);
       unfilteredCount=unfiltered.rows.length;
       zeroReason=unfilteredCount?'filters_exclude_matches':(unfiltered.zeroReason||'no_library_match');
-    } else zeroReason='no_library_match';
+    } else zeroReason=result.assessment?.classification==='needs_conditions'?'needs_conditions':'no_library_match';
   }
   return {...result,id:`issue-${index+1}`,query:raw,originalQuery:raw,interpretation,
     queryNotice:[changedNotice,result.queryNotice].filter(Boolean).join(' '),
@@ -475,8 +511,8 @@ function oneFieldIssue(rows, raw, filters, index) {
 export function searchHazardIssuesDetailed(rows, query, filters={}) {
   const raw=String(query??'').trim();
   const exact=raw&&rows.some(row=>normalize(row.title)===normalize(raw));
-  const parts=exact?[raw]:splitFieldQuery(raw);
-  const issues=parts.map((part,index)=>oneFieldIssue(rows,part,filters,index));
+  const parts=exact?[{query:raw}]:splitFieldIssues(raw);
+  const issues=parts.map((part,index)=>oneFieldIssue(rows,part.query,filters,index,part.inheritedSubject));
   const combined=[...new Map(issues.flatMap(issue=>issue.rows).map(row=>[row.id,row])).values()];
   return {issues,rows:combined,isMultiIssue:issues.length>1,query:raw,
     queryNotice:issues.length>1?`已分为 ${issues.length} 个问题分别检索。每组仅提供候选，现场事实与适用条件仍需核实。`:issues[0]?.queryNotice||'',

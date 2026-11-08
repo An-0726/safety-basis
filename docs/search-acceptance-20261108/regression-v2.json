@@ -1,0 +1,1357 @@
+{
+  "schema": "original-site-search-acceptance-report-v1",
+  "dataset_sha256": "6cfd379b4c97bfc62a234b8d982c20c5a5d24ac7ab08d6972c1adf7de9ecee3e",
+  "dataVersion": "2026.11.08.original-search-final",
+  "releaseHash": "215965c4700e41cb22bba8df1d2351a88bbcbdb7ea19fca0629346928f68e0bd",
+  "implementation_sha256": "b03e3e06f4ba2aa167ccc1b14410a8bb83b081f8f0ca6a22fa08e8cdb45953c0",
+  "implementation_files": {
+    "search.js": "b03e3e06f4ba2aa167ccc1b14410a8bb83b081f8f0ca6a22fa08e8cdb45953c0",
+    "query-intent.js": "8b0cdfe3546be2282d9deec665742326880c9e33b60122116d92e67c3a0a74b4",
+    "search-boundaries.js": "0987082038c8c24fc574f13ced390964a00d049d8b400f913b8fedab941f5c48",
+    "search-guidance.js": "31f9ff44bd4487251c944af4fad0ae7a593156b062921581810657dc65e5b15e",
+    "field-query-guidance.js": "3f348417d930a6a11e63eeaa7091d2778dcc37a591a14b2cf30c80435e4e2070",
+    "search-vocabulary.js": "f55dbb67b19cef4be5fc418f0c79fa3e1a75b5bb58fa052b1a91fd16721fe0f1"
+  },
+  "summary": {
+    "samples": 20,
+    "synthetic": 20,
+    "real_deidentified": 0,
+    "on_topic_top3": {
+      "numerator": 9,
+      "denominator": 10
+    },
+    "targeted_mismatch_samples": 0,
+    "raw_zero_results": 9,
+    "expected_positive_zero_results": 0,
+    "all_contract_checks": 19,
+    "limitations": "合成留出样本、助手标注；误匹配仅指已列明禁止目标或否定状态的直接候选，非全库专业准确率。条件建议不合并进原句直接命中率。"
+  },
+  "results": [
+    {
+      "sample": {
+        "id": "H2_01",
+        "query": "巡检拍到这只灭火气压力表的针已经落到欠压红区了，还摆在车间里。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H001"
+          ]
+        ],
+        "tags": [
+          "常见错字",
+          "口语",
+          "设备与状态"
+        ],
+        "annotation": "灭火气为灭火器错字；已明确储压式灭火器欠压，适用已配置灭火器完好有效要求。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "巡检拍到这只灭火气压力表的针已经落到欠压红区了，还摆在车间里。",
+            "interpretedQuery": "灭火器压力表 失压",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_440C480EAADB465AAF15204C4E",
+                "title": "灭火器压力指示器的指针,未在绿色范围内"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "object_and_state_candidates",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“巡检拍到灭火器压力表的针已经落到欠压红区了,还摆在车间里”查找（纠错：“灭火气”→“灭火器”）。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          -1
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_02",
+        "query": "采用集中火灾报警系统的厂区，消控室夜班一直只有一个人在岗。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_GB25506_CONTROL_ROOM_DUTY"
+          ]
+        ],
+        "tags": [
+          "简称",
+          "场景条件"
+        ],
+        "annotation": "消控室为消防控制室简称；明确集中报警系统和每班单人事实，覆盖双人值班条目适用条件。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "采用集中火灾报警系统的厂区，消控室夜班一直只有一个人在岗。",
+            "interpretedQuery": "消控室 值班人数不足",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_GB25506_CONTROL_ROOM_DUTY",
+                "title": "消防控制室未实行24小时双人值班或值班人员未持证"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "control_room_staffing_scope",
+              "requiredFacts": [
+                "集中或控制中心报警系统等适用条件",
+                "实际班次及在岗人数",
+                "相关地域规定"
+              ]
+            },
+            "notice": "已保留原话，按“采用集中火灾报警系统的厂区,消控室夜班一直只有一个人在岗”查找。 按消防控制室实际值班人数查找候选。仍须核对火灾报警系统类型、消防控制室设置及适用的地方规定，不能由单人观察推定所有时段或持证情况。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_03",
+        "query": "纸箱一摞摞放在仓库供人员疏散的过道里，现在人都过不去了。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H044",
+            "H_8A0E0A3FDDD04AF1829ED6C16E",
+            "H_3642D1A7D0A7422A83E1B0E8BA"
+          ]
+        ],
+        "tags": [
+          "口语",
+          "词序变化",
+          "场景条件"
+        ],
+        "annotation": "明确仓储疏散通道被纸箱堵塞；允许仓储专条或全国适用的疏散通道堵塞条目，不用南京专属条目充当全国答案。"
+      },
+      "actual": {
+        "count": 7,
+        "issues": [
+          {
+            "query": "纸箱一摞摞放在仓库供人员疏散的过道里，现在人都过不去了。",
+            "interpretedQuery": "疏散通道 占用或遮挡",
+            "count": 7,
+            "top3": [
+              {
+                "id": "H044",
+                "title": "仓储场所疏散通道、安全出口或消防车通道不畅通"
+              },
+              {
+                "id": "H_3642D1A7D0A7422A83E1B0E8BA",
+                "title": "生产经营场所或员工宿舍出口、疏散通道不畅通"
+              },
+              {
+                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
+                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "object_and_state_candidates",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“纸箱一摞摞放在仓库疏散通道里,现在人都过不去了”查找。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_04",
+        "query": "车间这台桥式天车是2025年设计制造的，额定10吨、起升6米，没有装过任何起升高度限位器。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_TSG51_BRIDGE_GANTRY_CRANE_HEIGHT_LIMITER"
+          ]
+        ],
+        "tags": [
+          "别名",
+          "长句",
+          "未安装",
+          "场景条件"
+        ],
+        "annotation": "天车为桥式起重机别名；给出厂房、设计制造年份及吨位高度，明确完全未安装，不推定装置损坏。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "车间这台桥式天车是2025年设计制造的，额定10吨、起升6米，没有装过任何起升高度限位器。",
+            "interpretedQuery": "起升高度限位器 未设置",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_TSG51_BRIDGE_GANTRY_CRANE_HEIGHT_LIMITER",
+                "title": "桥式、门式起重机未按规定安装起升高度限位装置"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "height_limiter_scope",
+              "requiredFacts": [
+                "所属设备及起重机型式",
+                "设计制造日期与适用依据",
+                "目录参数及限位装置形式",
+                "原话数值、日期与条款适用条件逐项核对"
+              ]
+            },
+            "notice": "已保留原话，按“桥式天车是2025年设计制造的,额定10吨、起升6米,没有装过任何起升高度限位器”查找。 限位装置缺少与已经安装但动作失灵分别核查。须确认起重机型式、设计制造依据、目录参数及已有装置形式；原话数值和年份不会自动证明全部适用条件已满足。 原话中的数值条件已保留：2025年、10吨、6米。候选不代表已满足条款阈值、设备范围或设计制造日期要求，请逐项核对适用条件。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_05",
+        "query": "做固定式压力容器年度检查时发现，储气罐压力表的玻璃裂了，刻度也看不清。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+          ]
+        ],
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+        ],
+        "tags": [
+          "口语",
+          "损坏与检定区分",
+          "场景条件"
+        ],
+        "annotation": "明确固定式压力容器年度检查中的玻璃和刻度缺陷；没有任何检定超期事实。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "做固定式压力容器年度检查时发现，储气罐压力表的玻璃裂了，刻度也看不清。",
+            "interpretedQuery": "压力表 损坏",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+                "title": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "gauge_damage_state",
+              "requiredFacts": [
+                "所属设备及条款适用范围",
+                "实际损坏及证据"
+              ]
+            },
+            "notice": "已保留原话，按“做固定式压力容器年度检查时发现,储气罐压力表的玻璃裂了,刻度也看不清”查找。 压力表损坏与检定超期分别核查；检索候选仍须确认所属设备及条款列明的实际损坏。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_06",
+        "query": "固定式压力容器上的压力表还在用，检定证书上的有效期已经过了三个月，表本身并没有损坏。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+          ]
+        ],
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+        ],
+        "tags": [
+          "长句",
+          "检定超期",
+          "否定状态"
+        ],
+        "annotation": "固定式压力容器压力表检定已过期；明确否认物理损坏，不自行推算固定检定周期。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "固定式压力容器上的压力表还在用，检定证书上的有效期已经过了三个月，表本身并没有损坏。",
+            "interpretedQuery": "压力表 检定超期",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
+                "title": "固定式压力容器压力表未经检定或超过检定有效期"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "gauge_verification_state",
+              "requiredFacts": [
+                "是否属于固定式压力容器及条款适用范围",
+                "检定有效期及证据",
+                "原话数值、日期与条款适用条件逐项核对"
+              ]
+            },
+            "notice": "已保留原话，按“固定式压力容器上的压力表还在用,检定证书上的有效期已经过了三个月,表本身并没有损坏”查找。 检定有效期与压力表部件损坏分别核查；检索候选仍须确认设备适用范围及真实有效期。 原话中的数值条件已保留：三个月。候选不代表已满足条款阈值、设备范围或设计制造日期要求，请逐项核对适用条件。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_07",
+        "query": "装着按钮和指示灯的可开启金属配电柜门，门板和金属框架接地端子之间没有保护连接。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_43C6C076F9FC456DB09138A19A"
+          ]
+        ],
+        "tags": [
+          "词序变化",
+          "设备条件",
+          "电气安全"
+        ],
+        "annotation": "明确柜门上装有电器且缺保护连接，避免把空柜门未跨接直接判为同一问题。"
+      },
+      "actual": {
+        "count": 2,
+        "issues": [
+          {
+            "query": "装着按钮和指示灯的可开启金属配电柜门，门板和金属框架接地端子之间没有保护连接。",
+            "interpretedQuery": "配电柜 接地",
+            "count": 2,
+            "top3": [
+              {
+                "id": "H_43C6C076F9FC456DB09138A19A",
+                "title": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接"
+              },
+              {
+                "id": "H_JGJT46_2024_BOX_PE",
+                "title": "建筑市政施工临时配电箱金属部件PE连接或箱门电气连接不符合要求"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "cabinet_grounding_conditions",
+              "requiredFacts": [
+                "保护接地或其他导体用途",
+                "箱体、箱门或导体的实际缺陷位置",
+                "是否属于装有电器的可开启门或施工临时用电场景"
+              ]
+            },
+            "notice": "已保留原话，按“装着按钮和指示灯的可开启金属配电柜门,门板和金属框架接地端子之间没有保护连接”查找。 配电箱接地须分别核实箱体保护接地、保护导体连接及装有电器的箱门连接。候选中的箱门或施工临时用电条件必须现场确认，不能由“没接地”自动补齐。",
+            "suggestions": [
+              {
+                "query": "保护接地线连接不可靠或采用缠绕、挂钩",
+                "label": "保护接地线连接",
+                "top3": [
+                  {
+                    "id": "H_DEED92095F4043AFB93AB75583",
+                    "title": "保护接地线连接不可靠或采用缠绕、挂钩"
+                  }
+                ]
+              },
+              {
+                "query": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接",
+                "label": "装有电器的可开启箱门",
+                "top3": [
+                  {
+                    "id": "H_43C6C076F9FC456DB09138A19A",
+                    "title": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": true,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_08",
+        "query": "车间已经按头部撞击风险规定这个岗位必须戴安全帽，可刚才那位师傅为了凉快，帽子放在一边就开工了。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_PPE_SAFETY_HELMET_NOT_WORN"
+          ]
+        ],
+        "tags": [
+          "口语",
+          "长句",
+          "多余描述",
+          "场景条件"
+        ],
+        "annotation": "明确岗位确需头部防护及实际未佩戴事实；不把所有工作场所都视为必须佩戴安全帽。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "车间已经按头部撞击风险规定这个岗位必须戴安全帽，可刚才那位师傅为了凉快，帽子放在一边就开工了。",
+            "interpretedQuery": "安全帽 未佩戴",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_PPE_SAFETY_HELMET_NOT_WORN",
+                "title": "作业人员在应佩戴安全帽的作业场所未佩戴安全帽"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "helmet_use_scope",
+              "requiredFacts": [
+                "岗位头部防护需求或现场佩戴规定",
+                "实际作业及佩戴情况"
+              ]
+            },
+            "notice": "已保留原话，按“已经按头部撞击风险规定岗位必须戴安全帽,可刚才那位师傅为了凉快,帽子放在一边就开工了”查找。 按已描述的作业时未佩戴安全帽查找候选；仍须核实岗位风险、现场规定和实际佩戴状态，不推定所有工作场所都必须戴安全帽。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_09",
+        "query": "厂房灭火器被货物挡住拿不出来；另外年度检查固定式压力容器时，看到储气罐压力表玻璃已经破裂。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H003"
+          ],
+          [
+            "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+          ]
+        ],
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+        ],
+        "min_issues": 2,
+        "tags": [
+          "多问题",
+          "口语",
+          "跨设备",
+          "场景条件"
+        ],
+        "annotation": "两项分别为灭火器取用受阻和固定式压力容器压力表损坏；不要求同一条目同时包含两项，也无检定超期事实。"
+      },
+      "actual": {
+        "count": 2,
+        "issues": [
+          {
+            "query": "厂房灭火器被货物挡住拿不出来",
+            "interpretedQuery": "灭火器 占用或遮挡",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H003",
+                "title": "灭火器被遮挡、取用受阻"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "object_and_state_candidates",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“灭火器被货物挡住拿不出来”查找。",
+            "suggestions": []
+          },
+          {
+            "query": "另外年度检查固定式压力容器时，看到储气罐压力表玻璃已经破裂。",
+            "interpretedQuery": "压力表 损坏",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+                "title": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "gauge_damage_state",
+              "requiredFacts": [
+                "所属设备及条款适用范围",
+                "实际损坏及证据"
+              ]
+            },
+            "notice": "已保留原话，按“年度检查固定式压力容器时,看到储气罐压力表玻璃已经破裂”查找。 压力表损坏与检定超期分别核查；检索候选仍须确认所属设备及条款列明的实际损坏。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 2,
+        "expected_groups": 2,
+        "group_issue_indices": [
+          0,
+          1
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_10",
+        "query": "生产车间电箱前塞满周转料，柜门开不了；疏散出口原来装好的消防应急照明灯也坏了，断电试验一点都不亮。",
+        "source_kind": "synthetic",
+        "expected_groups": [
+          [
+            "H_ELEC_PDX_CHANNEL_BLOCKED"
+          ],
+          [
+            "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+          ]
+        ],
+        "min_issues": 2,
+        "tags": [
+          "多问题",
+          "简称",
+          "已安装后损坏",
+          "场景条件"
+        ],
+        "annotation": "两项分别为配电箱操作空间被占用和已设置消防应急照明灯失效；已给出生产车间及断电功能试验条件。"
+      },
+      "actual": {
+        "count": 2,
+        "issues": [
+          {
+            "query": "生产车间电箱前塞满周转料，柜门开不了",
+            "interpretedQuery": "配电箱 占用或遮挡",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_ELEC_PDX_CHANNEL_BLOCKED",
+                "title": "配电箱（柜）前堆放杂物，操作通道或维护空间被遮挡、占用"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "object_and_state_candidates",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“配电箱前塞满周转料,柜门开不了”查找。",
+            "suggestions": []
+          },
+          {
+            "query": "疏散出口原来装好的消防应急照明灯也坏了，断电试验一点都不亮。",
+            "interpretedQuery": "消防应急照明灯 损坏",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+                "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "object_and_state_candidates",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“疏散出口原来装好的消防应急照明灯也坏了,断电试验一点都不亮”查找。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 2,
+        "expected_groups": 2,
+        "group_issue_indices": [
+          0,
+          1
+        ],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_11",
+        "query": "这只固定式压力容器压力表检定还在有效期内，玻璃完整、刻度清楚，检查没有发现损坏。",
+        "source_kind": "synthetic",
+        "empty": true,
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+          "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+        ],
+        "tags": [
+          "否定",
+          "正常状态"
+        ],
+        "annotation": "两个缺陷都被明确否认，不能因出现检定和损坏字样给出相应直接隐患候选。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "这只固定式压力容器压力表检定还在有效期内，玻璃完整、刻度清楚，检查没有发现损坏。",
+            "interpretedQuery": "这只固定式压力容器压力表检定还在有效期内，玻璃完整、刻度清楚，检查没有发现损坏。",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "negated_observation",
+              "requiredFacts": [
+                "现场当前状态及证据"
+              ]
+            },
+            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_12",
+        "query": "储气罐压力表看着没有读数，但机器已停机，我还没确认罐里有没有压力，也没核对检定证书，该查什么？",
+        "source_kind": "synthetic",
+        "required_condition": true,
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+          "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+        ],
+        "tags": [
+          "条件不足",
+          "事实未核实",
+          "否定词保留"
+        ],
+        "annotation": "停机无示值并不证明损坏，未核对证书并不证明超期；应要求核实工作压力、损坏表现和检定状态。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "储气罐压力表看着没有读数，但机器已停机，我还没确认罐里有没有压力，也没核对检定证书，该查什么？",
+            "interpretedQuery": "储气罐压力表看着没有读数，但机器已停机，我还没确认罐里有没有压力，也没核对检定证书，该查什么？",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "unconfirmed_observation",
+              "requiredFacts": [
+                "对象与适用场景",
+                "现场当前状态及观察或检测证据"
+              ]
+            },
+            "notice": "原话含有待核实、疑问或不确定状态。请先核实对象和实际情况；不能删掉这些状态词，直接认定已经存在缺陷。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_13",
+        "query": "培训签到表还没交给我，只能说资料没提供，培训到底做没做暂时不知道。",
+        "source_kind": "synthetic",
+        "required_condition": true,
+        "forbidden_ids": [
+          "H_AQPX_9_1",
+          "H_AQPX_10_1"
+        ],
+        "tags": [
+          "资料与实施区分",
+          "事实未核实",
+          "口语"
+        ],
+        "annotation": "只确认资料尚未提供，禁止直接认定培训未开展或培训义务未落实；允许给出需核实的资料相关候选。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "培训签到表还没交给我，只能说资料没提供，培训到底做没做暂时不知道。",
+            "interpretedQuery": "培训签到表还没交给我，只能说资料没提供，培训到底做没做暂时不知道。",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "unconfirmed_observation",
+              "requiredFacts": [
+                "对象与适用场景",
+                "现场当前状态及观察或检测证据"
+              ]
+            },
+            "notice": "原话含有待核实、疑问或不确定状态。请先核实对象和实际情况；不能删掉这些状态词，直接认定已经存在缺陷。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_14",
+        "query": "普通人力脚踏自行车的刹车失灵了，想找对应检查依据。",
+        "source_kind": "synthetic",
+        "empty": true,
+        "forbidden_ids": [
+          "H_TSG51_BRIDGE_GANTRY_CRANE_HEIGHT_LIMITER"
+        ],
+        "tags": [
+          "自行车与行车区分",
+          "库内暂缺"
+        ],
+        "annotation": "当前公开索引无普通人力自行车制动故障条目；不得由于自行车包含行车字样匹配起重设备，不强制某个零结果状态标签。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "普通人力脚踏自行车的刹车失灵了，想找对应检查依据。",
+            "interpretedQuery": "普通人力脚踏 自行车 的刹车失灵了,想找对应 检查 依据",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_object_state_match",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“普通人力脚踏自行车的刹车失灵了,想找对应检查依据”查找。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_15",
+        "query": "生产车间的消防应急照明灯从一开始就没安装过，现场根本没有灯具。",
+        "source_kind": "synthetic",
+        "forbidden_ids": [
+          "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+        ],
+        "tags": [
+          "未安装与损坏区分",
+          "缺陷状态"
+        ],
+        "annotation": "本例仅验收未安装不能被标为已安装后损坏；不预设具体工程强制设置条件，也不禁止返回适用的缺装候选。"
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "生产车间的消防应急照明灯从一开始就没安装过，现场根本没有灯具。",
+            "interpretedQuery": "消防应急照明灯 未设置",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_C0BEAB6834F44E5CBE05F9CBD0",
+                "title": "应设疏散照明的建筑部位未设置疏散照明"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "object_and_state_candidates",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“消防应急照明灯从一开始就没安装过,现场根本没有灯具”查找。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_16",
+        "query": "仓库的报警装置好像有问题，现场还没说明是哪一种报警，也没说清哪里不对。",
+        "source_kind": "synthetic",
+        "required_condition": true,
+        "min_suggestions": 2,
+        "tags": [
+          "歧义",
+          "条件不足",
+          "可选择解释"
+        ],
+        "annotation": "设备类型和具体缺陷均未知，至少给出两个可选择的进一步检索方向并说明核实条件；不强制自创的 assessment 分类名称。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "仓库的报警装置好像有问题，现场还没说明是哪一种报警，也没说清哪里不对。",
+            "interpretedQuery": "仓库的报警装置好像有问题，现场还没说明是哪一种报警，也没说清哪里不对。",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "unconfirmed_observation",
+              "requiredFacts": [
+                "对象与适用场景",
+                "现场当前状态及观察或检测证据",
+                "检测或报警对象",
+                "装置类型与场所",
+                "实际安装与功能状态"
+              ]
+            },
+            "notice": "原话含有待核实、疑问或不确定状态。请先核实对象和实际情况；不能删掉这些状态词，直接认定已经存在缺陷。 报警器类型尚未明确。请先区分火灾、可燃气体或有毒气体报警，再核实未安装、已安装但故障或其他状态；这些设备与义务不能互换。",
+            "suggestions": [
+              {
+                "query": "火灾自动报警系统",
+                "label": "火灾报警设备",
+                "top3": [
+                  {
+                    "id": "H_99B75F33D550486BBA89A77139",
+                    "title": "火灾自动报警系统设计中壁挂手动火灾报警按钮未设置明显标志"
+                  }
+                ]
+              },
+              {
+                "query": "可燃气体",
+                "label": "可燃气体报警设备",
+                "top3": [
+                  {
+                    "id": "H_COM_GAS_DETECTOR_LOCATION",
+                    "title": "可燃气体探测器安装位置不符合探测要求"
+                  },
+                  {
+                    "id": "H076",
+                    "title": "喷漆区通风量未确保可燃气体浓度不大于25%LEL"
+                  },
+                  {
+                    "id": "H_AA6382B9890B42B1B70DC3EA3B",
+                    "title": "机械企业有机溶剂清洗未防止周边密闭或半密闭空间可燃气体积聚"
+                  }
+                ]
+              },
+              {
+                "query": "有毒气体",
+                "label": "有毒气体报警设备",
+                "top3": [
+                  {
+                    "id": "H_GB12801_ACCIDENT_EXHAUST_INTERLOCK",
+                    "title": "存在可燃或有毒气体的建筑物事故排风未与气体报警器联锁"
+                  },
+                  {
+                    "id": "H_46768_5_12_2",
+                    "title": "可能突发缺氧或有毒气体升高的有限空间作业防护不足"
+                  },
+                  {
+                    "id": "H_0172A0C527FA44718429207015",
+                    "title": "常温常压易爆易燃或排有毒气体危废未按允许路径贮存"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_17",
+        "query": "走了一圈，灭火器压力正常，安全出口和疏散通道也没有被杂物堵住。",
+        "source_kind": "synthetic",
+        "empty": true,
+        "forbidden_ids": [
+          "H001",
+          "H044",
+          "H_8A0E0A3FDDD04AF1829ED6C16E",
+          "H_3642D1A7D0A7422A83E1B0E8BA"
+        ],
+        "tags": [
+          "否定",
+          "多个正常状态"
+        ],
+        "annotation": "两个设备或场景均明确正常；不把提到的缺陷词当作已存在隐患。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "走了一圈，灭火器压力正常",
+            "interpretedQuery": "走了一圈，灭火器压力正常",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "completed_observation",
+              "requiredFacts": [
+                "修复后的当前状态",
+                "复查或检测证据"
+              ]
+            },
+            "notice": "原话表示已修复、已完成或目前正常。检索保留完成状态词，不将历史问题改成当前隐患；复查时请记录当前事实及证据。",
+            "suggestions": []
+          },
+          {
+            "query": "安全出口和疏散通道也没有被杂物堵住。",
+            "interpretedQuery": "安全出口和疏散通道也没有被杂物堵住。",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "negated_observation",
+              "requiredFacts": [
+                "现场当前状态及证据"
+              ]
+            },
+            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_18",
+        "query": "灭火器失压",
+        "source_kind": "synthetic",
+        "filters": {
+          "category": "电气安全"
+        },
+        "empty": true,
+        "expected_filter_empty": true,
+        "tags": [
+          "分类筛选",
+          "筛选过严",
+          "零结果原因"
+        ],
+        "annotation": "消防灭火器失压在无筛选时有公开条目，电气安全筛选应排除；须能识别结果因筛选消失。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭火器失压",
+            "interpretedQuery": "灭火器失压",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_19",
+        "query": "仓库里的普通货架没有用膨胀螺栓固定到地面。",
+        "source_kind": "synthetic",
+        "empty": true,
+        "forbidden_ids": [
+          "H_GB12801_STACK_HEIGHT_OR_BASE_UNSAFE",
+          "H_GB50166_POINT_DETECTOR_OBSTRUCTED",
+          "H_GB55036_SPRINKLER_OBSTRUCTED"
+        ],
+        "tags": [
+          "库内暂缺",
+          "正文偶然提及",
+          "误匹配控制"
+        ],
+        "annotation": "当前公开索引无普通货架地面锚固专条；出现货架字样的成垛堆放、探测器遮挡、喷头遮挡条目不支持所述缺陷。不强制区分 evidence_gap 与未识别的实现状态。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "仓库里的普通货架没有用膨胀螺栓固定到地面。",
+            "interpretedQuery": "仓库 里的普通货架没有用膨胀螺栓固定到地面",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "已保留原话，按“仓库里的普通货架没有用膨胀螺栓固定到地面”查找。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "H2_20",
+        "query": "南京小区的电动自行车飞线充电",
+        "source_kind": "synthetic",
+        "filters": {
+          "region": "全国"
+        },
+        "empty": true,
+        "expected_filter_empty": true,
+        "tags": [
+          "地域筛选",
+          "筛选过严",
+          "零结果原因"
+        ],
+        "annotation": "当前可直接匹配的飞线充电条目 H010 限南京；按既有筛选协议，全国仅保留全国适用条目，而南京包含全国、江苏、南京。此处检验筛选确实排除地方条目，不把全国法规偶然提及自行车的其他缺陷当作答案。"
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "南京小区的电动自行车飞线充电",
+            "interpretedQuery": "南京小区的 电动自行车 飞线充电",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_object_state_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "group_issue_indices": [],
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    }
+  ]
+}

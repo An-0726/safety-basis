@@ -1,16 +1,16 @@
 {
   "schema": "original-site-search-acceptance-report-v1",
   "dataset_sha256": "b7cee4f59362fa6be0d42fdc7d8ab3050c1851f2a55c6a39b84fa05dc1fe2112",
-  "dataVersion": "2026.11.08.search-acceptance-final",
-  "releaseHash": "16c5e49069a7ce65ca873a267c0cf4f6cf5dd23013fc5e08440c07bb59251819",
-  "implementation_sha256": "7ce8e208c87580143f30bc3e0265ad5d51a1411740d6ea912ee7d523087be417",
+  "dataVersion": "2026.11.08.original-search-final",
+  "releaseHash": "215965c4700e41cb22bba8df1d2351a88bbcbdb7ea19fca0629346928f68e0bd",
+  "implementation_sha256": "b03e3e06f4ba2aa167ccc1b14410a8bb83b081f8f0ca6a22fa08e8cdb45953c0",
   "implementation_files": {
-    "search.js": "7ce8e208c87580143f30bc3e0265ad5d51a1411740d6ea912ee7d523087be417",
-    "query-intent.js": "c6314c4a211380de1f7badbf5f61f83bf42fdfdbdb8a5de106e2bdef9af96629",
-    "search-boundaries.js": "771c4e83f7fe26c19a0c628349bbac061232dbed6c85d0aa75aa5c9da28b08bb",
-    "search-guidance.js": "ee8f21c231ba56e1c9d124c9cdd8c27bb105c054447e08dbe5243cdfa87dc4f4",
+    "search.js": "b03e3e06f4ba2aa167ccc1b14410a8bb83b081f8f0ca6a22fa08e8cdb45953c0",
+    "query-intent.js": "8b0cdfe3546be2282d9deec665742326880c9e33b60122116d92e67c3a0a74b4",
+    "search-boundaries.js": "0987082038c8c24fc574f13ced390964a00d049d8b400f913b8fedab941f5c48",
+    "search-guidance.js": "31f9ff44bd4487251c944af4fad0ae7a593156b062921581810657dc65e5b15e",
     "field-query-guidance.js": "3f348417d930a6a11e63eeaa7091d2778dcc37a591a14b2cf30c80435e4e2070",
-    "search-vocabulary.js": "15048bb688e2827ae041419527196414fb813b748ace14d0a2aa4508b3de4832"
+    "search-vocabulary.js": "f55dbb67b19cef4be5fc418f0c79fa3e1a75b5bb58fa052b1a91fd16721fe0f1"
   },
   "summary": {
     "samples": 40,
@@ -74,6 +74,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -158,6 +161,9 @@
         "suggestion_top3_hit": true,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -223,6 +229,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -280,6 +289,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -341,6 +353,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -395,6 +410,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -454,6 +472,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -519,6 +540,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -578,6 +602,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -632,6 +659,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -691,6 +721,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -775,6 +808,9 @@
         "suggestion_top3_hit": true,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -856,6 +892,10 @@
         "suggestion_top3_hit": false,
         "groups_hit": 2,
         "expected_groups": 2,
+        "group_issue_indices": [
+          0,
+          1
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -899,12 +939,12 @@
             "count": 7,
             "top3": [
               {
-                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
-                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
-              },
-              {
                 "id": "H_3642D1A7D0A7422A83E1B0E8BA",
                 "title": "生产经营场所或员工宿舍出口、疏散通道不畅通"
+              },
+              {
+                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
+                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
               },
               {
                 "id": "H008",
@@ -948,6 +988,10 @@
         "suggestion_top3_hit": false,
         "groups_hit": 2,
         "expected_groups": 2,
+        "group_issue_indices": [
+          0,
+          1
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -1031,6 +1075,10 @@
         "suggestion_top3_hit": false,
         "groups_hit": 2,
         "expected_groups": 2,
+        "group_issue_indices": [
+          0,
+          1
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -1123,6 +1171,10 @@
         "suggestion_top3_hit": false,
         "groups_hit": 2,
         "expected_groups": 2,
+        "group_issue_indices": [
+          0,
+          1
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -1164,7 +1216,7 @@
                 "现场当前状态及证据"
               ]
             },
-            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
+            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
             "suggestions": []
           }
         ]
@@ -1174,6 +1226,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1215,7 +1268,7 @@
                 "现场当前状态及证据"
               ]
             },
-            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
+            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
             "suggestions": []
           }
         ]
@@ -1225,6 +1278,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1266,7 +1320,7 @@
                 "现场当前状态及证据"
               ]
             },
-            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
+            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
             "suggestions": []
           }
         ]
@@ -1276,6 +1330,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1312,12 +1367,13 @@
             "top3": [],
             "assessment": {
               "classification": "fact_unconfirmed",
-              "reason": "negated_completed_or_unconfirmed",
+              "reason": "unconfirmed_observation",
               "requiredFacts": [
-                "现场当前状态及证据"
+                "对象与适用场景",
+                "现场当前状态及观察或检测证据"
               ]
             },
-            "notice": "这句话表示未查明、未发现缺陷或相关动作已完成，不能删掉状态词当成已发生的不符合。请按核实后的对象和实际问题继续检索。",
+            "notice": "原话含有待核实、疑问或不确定状态。请先核实对象和实际情况；不能删掉这些状态词，直接认定已经存在缺陷。",
             "suggestions": []
           }
         ]
@@ -1327,6 +1383,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1388,6 +1445,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1442,6 +1500,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -1502,6 +1563,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -1536,7 +1600,7 @@
         "issues": [
           {
             "query": "固定式压力容器压力表玻璃破裂",
-            "interpretedQuery": "固定式 压力容器 压力表玻璃破裂",
+            "interpretedQuery": "固定式 压力容器 压力表 玻璃破裂",
             "count": 1,
             "top3": [
               {
@@ -1562,6 +1626,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -1616,6 +1683,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1671,6 +1739,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1725,6 +1794,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1810,6 +1880,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1909,6 +1980,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -1963,6 +2035,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2016,6 +2089,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2065,6 +2139,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2115,6 +2190,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2174,6 +2250,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -2210,17 +2289,13 @@
         ]
       },
       "actual": {
-        "count": 5,
+        "count": 3,
         "issues": [
           {
             "query": "疏散通道堵塞",
             "interpretedQuery": "疏散通道 占用或遮挡",
-            "count": 5,
+            "count": 3,
             "top3": [
-              {
-                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
-                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
-              },
               {
                 "id": "H_3642D1A7D0A7422A83E1B0E8BA",
                 "title": "生产经营场所或员工宿舍出口、疏散通道不畅通"
@@ -2228,6 +2303,10 @@
               {
                 "id": "H075",
                 "title": "危险化学品使用场所疏散通道被占用或设置逃生障碍"
+              },
+              {
+                "id": "H044",
+                "title": "仓储场所疏散通道、安全出口或消防车通道不畅通"
               }
             ],
             "assessment": {
@@ -2245,6 +2324,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -2275,16 +2357,20 @@
         }
       },
       "actual": {
-        "count": 2,
+        "count": 4,
         "issues": [
           {
             "query": "纸箱占用疏散通道",
             "interpretedQuery": "疏散通道 占用或遮挡",
-            "count": 2,
+            "count": 4,
             "top3": [
               {
                 "id": "H008",
                 "title": "纸箱堆积、占用疏散通道"
+              },
+              {
+                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
+                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
               },
               {
                 "id": "H_82FB7AF5E0F521EF8D9489136A_4",
@@ -2306,6 +2392,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          0
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -2358,6 +2447,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2400,7 +2490,7 @@
                 "复查或检测证据"
               ]
             },
-            "notice": "原话表示已修复、已完成或目前正常。检索不会删除完成状态，将历史问题改成当前隐患；复查时请记录当前事实及证据。",
+            "notice": "原话表示已修复、已完成或目前正常。检索保留完成状态词，不将历史问题改成当前隐患；复查时请记录当前事实及证据。",
             "suggestions": []
           }
         ]
@@ -2410,6 +2500,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2451,12 +2542,12 @@
             "top3": [],
             "assessment": {
               "classification": "fact_unconfirmed",
-              "reason": "negated_completed_or_unconfirmed",
+              "reason": "negated_observation",
               "requiredFacts": [
                 "现场当前状态及证据"
               ]
             },
-            "notice": "这句话表示未查明、未发现缺陷或相关动作已完成，不能删掉状态词当成已发生的不符合。请按核实后的对象和实际问题继续检索。",
+            "notice": "原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。",
             "suggestions": []
           },
           {
@@ -2488,6 +2579,9 @@
         "suggestion_top3_hit": false,
         "groups_hit": 1,
         "expected_groups": 1,
+        "group_issue_indices": [
+          1
+        ],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": false,
@@ -2586,6 +2680,7 @@
         "suggestion_top3_hit": null,
         "groups_hit": 0,
         "expected_groups": 0,
+        "group_issue_indices": [],
         "mismatch": false,
         "forbidden_ids": [],
         "zero_results": true,
@@ -2598,6 +2693,5 @@
         "pass": true
       }
     }
-  ],
-  "evaluation_stage": "after-v1-disclosure-regression"
+  ]
 }

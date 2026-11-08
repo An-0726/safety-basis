@@ -23,10 +23,44 @@ import threading
 import time
 from urllib.parse import parse_qs, quote, urlencode, urlparse
 
-from playwright.sync_api import Error as PlaywrightError, expect, sync_playwright
+from playwright.sync_api import expect, sync_playwright
+
+
+PROFILE_DELAY_HEADER = 'X-Search-UX-Profile-Delay'
+
+
+class HeldProfileResponse:
+    """Delay an actual HTTP response without retaining a Playwright Route."""
+
+    def __init__(self, path, key):
+        self.path, self.key = path, key
+        self.received, self.released = threading.Event(), threading.Event()
+        self.lock, self.request_count = threading.Lock(), 0
+
+    def matches(self, path, header):
+        return header == self.key and urlparse(path).path.endswith('/' + self.path)
+
+    def arrive(self):
+        with self.lock:
+            self.request_count += 1
+        self.received.set()
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        try:
+            gate = getattr(self.server, 'profile_gate', None)
+            if gate and gate.matches(self.path, self.headers.get(PROFILE_DELAY_HEADER)):
+                gate.arrive()
+                if not gate.released.wait(timeout=30):
+                    self.send_error(504, 'Acceptance test did not release the delayed response')
+                    return
+            super().do_GET()
+        except (BrokenPipeError, ConnectionResetError):
+            # Fault tests intentionally let the browser abort requests. The
+            # response gate is always released in finally, including failures.
+            pass
+
     def log_message(self, *_args):
         pass
 
@@ -37,6 +71,22 @@ def read_json(path):
 
 def compact(text):
     return re.sub(r'\s+', '', text or '')
+
+
+def candidate_text(row):
+    """Only the item's own curated names and keywords, never incidental prose."""
+    return ' '.join([row.get('title', ''), *row.get('aliases', []), *row.get('keywords', [])])
+
+
+def require_candidate_semantics(candidate_ids, by_id, object_pattern, defect_pattern=None):
+    assert candidate_ids, 'Expected at least one independently relevant candidate'
+    rejected = []
+    for candidate_id in candidate_ids:
+        row = by_id[candidate_id]
+        text = candidate_text(row)
+        if not re.search(object_pattern, text) or (defect_pattern and not re.search(defect_pattern, text)):
+            rejected.append({'id': candidate_id, 'title': row['title'], 'itemTerms': text})
+    assert not rejected, {'wrongCandidateSemantics': rejected}
 
 
 def main():
@@ -220,17 +270,23 @@ def main():
                     expect(groups.nth(1).locator('h3').first).to_contain_text('疏散通道还堆了纸箱')
                     first = ids(page, '#list .issue-group:nth-of-type(1) .card')
                     second = ids(page, '#list .issue-group:nth-of-type(2) .card')
-                    assert first and second
-                    assert all('灭火器' in by_id[item]['title'] for item in first)
-                    assert all('疏散通道' in by_id[item]['title'] for item in second)
+                    require_candidate_semantics(first, by_id, '灭火器', '失压|压力不足|无压力|欠压')
+                    require_candidate_semantics(second, by_id, '疏散通道|安全出口|逃生通道',
+                                                '堆放|堆积|占用|堵塞|阻塞|封闭|不畅|障碍')
+                    assert 'H001' in first, {'missingPressureAnchor': first}
+                    assert not set(first) & set(second), {'mixedIssueGroups': [first, second]}
                     groups.nth(1).get_by_role('button', name=re.compile('只看这个问题')).click()
                     expect(page.locator('#list .issue-group')).to_have_count(0)
-                    assert all('疏散通道' in by_id[item]['title'] for item in ids(page))
+                    focused = all_ids(page)
+                    require_candidate_semantics(focused, by_id, '疏散通道|安全出口|逃生通道',
+                                                '堆放|堆积|占用|堵塞|阻塞|封闭|不畅|障碍')
+                    assert 'H008' in focused and 'H001' not in focused, {'wrongFocusedCandidates': focused}
                     page.get_by_role('button', name='全部问题', exact=True).click()
                     expect(page.locator('#list .issue-group')).to_have_count(2)
                     expect(page.locator('#search')).to_have_value(text)
                     page.screenshot(path=str(output / 'desktop-multiple.png'), full_page=True)
-                    return {'query': text, 'groups': 2, 'firstIds': first, 'secondIds': second, 'focusKeepsOriginal': True}
+                    return {'query': text, 'groups': 2, 'firstIds': first, 'secondIds': second,
+                            'focusedIds': focused, 'independentObjectAndDefectChecks': True, 'focusKeepsOriginal': True}
             check('multiple_observations_have_independent_result_groups', multiple)
 
             def clarify():
@@ -283,12 +339,18 @@ def main():
                 with session('devices') as page:
                     home(page)
                     query(page, '行车')
-                    cranes = page.locator('#list .card h3').all_text_contents()
-                    assert cranes and not any('自行车' in title for title in cranes), cranes
+                    crane_ids = all_ids(page)
+                    require_candidate_semantics(crane_ids, by_id, r'起重|吊钩|天车|桥式|(?<!自)行车(?!道)')
+                    assert not any('自行车' in candidate_text(by_id[item]) for item in crane_ids), crane_ids
                     query(page, '自行车充电')
-                    bikes = page.locator('#list .card h3').all_text_contents()
-                    assert bikes and all('自行车' in title for title in bikes), bikes
-                    return {'craneTitles': cranes, 'bicycleTitles': bikes}
+                    bicycle_ids = all_ids(page)
+                    require_candidate_semantics(bicycle_ids, by_id, '自行车|电瓶车', '充电')
+                    assert 'H010' in bicycle_ids, {'missingBicycleAnchor': bicycle_ids}
+                    assert not set(crane_ids) & set(bicycle_ids), {'crossMatchedObjects': [crane_ids, bicycle_ids]}
+                    return {'craneIds': crane_ids, 'bicycleIds': bicycle_ids,
+                            'craneTitles': [by_id[item]['title'] for item in crane_ids],
+                            'bicycleTitles': [by_id[item]['title'] for item in bicycle_ids],
+                            'ownItemMetadataChecks': True}
             check('crane_and_bicycle_objects_do_not_cross_match', devices)
 
             def natural():
@@ -425,6 +487,13 @@ def main():
                         measured = targets(page, ['#search', '#clear', '#browse', '#equipment', '#problem', '#reset', '#hazardMoreFilters summary'])
                         no_overflow(page)
                         expand(page)
+                        filter_box = page.locator('#hazardFilters').bounding_box()
+                        open_box = page.locator('#hazardMoreFilters').bounding_box()
+                        panel_box = page.locator('#hazardMoreFilters .more-filter-items').bounding_box()
+                        assert filter_box and open_box and panel_box, 'Expanded filters have no visible dimensions'
+                        assert abs(open_box['width'] - filter_box['width']) <= 1, {'filters': filter_box, 'open': open_box}
+                        assert abs(panel_box['width'] - filter_box['width']) <= 1, {'filters': filter_box, 'panel': panel_box}
+                        assert abs(panel_box['x'] - filter_box['x']) <= 1, {'filters': filter_box, 'panel': panel_box}
                         measured.update(targets(page, ['#industry', '#category', '#region', '#scene', '#level', '#mode', '#inspectionClass']))
                         no_overflow(page)
                         query(page, '灭火器没压力，疏散通道堆了纸箱')
@@ -443,7 +512,9 @@ def main():
                         expect(page.locator('#list')).to_be_focused()
                         no_overflow(page)
                         page.screenshot(path=str(output / f'mobile-{width}-search.png'), full_page=True)
-                        results.append({'width': width, 'noOverflow': True, 'returnFocus': 'results', 'touchTargets': measured})
+                        results.append({'width': width, 'noOverflow': True, 'returnFocus': 'results',
+                                        'expandedFilterWidth': round(panel_box['width'], 1),
+                                        'availableFilterWidth': round(filter_box['width'], 1), 'touchTargets': measured})
                 return results
             check('mobile_widths_touch_targets_and_return_focus', mobile)
 
@@ -530,76 +601,62 @@ def main():
 
             def delayed_profiles():
                 assert profile_path, 'Release does not advertise field profiles'
-                pattern, held = '**/' + profile_path + '*', []
+                gate = HeldProfileResponse(profile_path, 'delayed-profiles')
                 with session('delayed_profiles', injected=True) as page:
-                    ended, responses = set(), []
+                    failures, responses = [], []
 
                     def is_profile(url):
                         return urlparse(url).path.endswith('/' + profile_path)
 
-                    def finished(request):
+                    def failed(request):
                         if is_profile(request.url):
-                            ended.add(request)
+                            failures.append(request.failure)
 
-                    page.on('requestfinished', finished)
-                    page.on('requestfailed', finished)
+                    page.on('requestfailed', failed)
                     page.on('response', lambda response: responses.append(response.url) if is_profile(response.url) else None)
-
-                    def hold(route):
-                        held.append(route)
-                    page.route(pattern, hold)
-                    started = time.monotonic()
-                    home(page, profiles=False)
-                    # Python route callbacks are delivered while Playwright is
-                    # pumping events; a DOM assertion alone does not guarantee
-                    # that its corresponding callback has already run.
-                    route_deadline = time.monotonic() + 15
-                    while not held:
-                        remaining = route_deadline - time.monotonic()
-                        assert remaining > 0, 'No profile response was actually held'
-                        page.wait_for_timeout(min(50, remaining * 1000))
-                    expect(page.locator('#profileStatus')).to_contain_text('搜索已可用')
-                    document_started = page.evaluate('performance.timeOrigin')
-                    query(page, '灭火器没压力')
-                    page.locator('#list .card').first.click()
-                    expect(page.locator('#detail h2')).to_contain_text('灭火器')
-                    expect(page.locator('#detail .basis').first).to_be_visible()
-                    assert not responses, 'Core search/detail was checked after a profile response arrived'
-                    core_seconds = round(time.monotonic() - started, 3)
-                    page.unroute(pattern, hold)
-                    body = (bundle / profile_path).read_bytes()
-                    expired, fulfilled = 0, 0
-                    for route in list(held):
-                        request = route.request
-                        if request in ended or request.failure:
-                            expired += 1
-                            continue
-                        try:
-                            route.fulfill(status=200, content_type='application/json', body=body)
-                            fulfilled += 1
-                        except PlaywrightError:
-                            # The product's timeout can abort a held request
-                            # between this check and fulfill on a slow runner.
-                            # Do not suppress unrelated interception failures.
-                            if request not in ended and not request.failure:
-                                raise
-                            expired += 1
-                    page.wait_for_function("""() => document.querySelector('#profileStatus').hidden ||
-                        !!document.querySelector('#retryProfiles')""", timeout=30000)
-                    retried = page.locator('#retryProfiles').is_visible()
-                    if retried:
-                        assert expired, 'Unexpected profile failure after the held response was released'
-                        expect(page.locator('#profileStatus')).to_contain_text('超时')
-                        page.locator('#retryProfiles').click()
-                    expect(page.locator('#profileStatus')).to_be_hidden(timeout=30000)
-                    assert page.evaluate('performance.timeOrigin') == document_started
-                    expect(page.locator('#search')).to_have_value('灭火器没压力')
-                    expect(page.locator('#count')).not_to_have_text('0')
-                    return {'heldProfileRequests': len(held), 'searchAndBasisBeforeProfiles': True,
-                            'profileResponsesBeforeSearchAndBasis': 0, 'expiredProfileRequests': expired,
-                            'fulfilledProfileRequests': fulfilled, 'retriedAfterProfileTimeout': retried,
-                            'secondsToSearchAndDetail': core_seconds, 'profilesEventuallyJoin': True,
-                            'originalDocumentPreserved': True}
+                    page.set_extra_http_headers({PROFILE_DELAY_HEADER: gate.key})
+                    server.profile_gate = gate
+                    try:
+                        started = time.monotonic()
+                        home(page, profiles=False)
+                        # The server must have the request before we inspect
+                        # core usability; no profile headers/body are released.
+                        request_deadline = time.monotonic() + 15
+                        while not gate.received.is_set():
+                            remaining = request_deadline - time.monotonic()
+                            assert remaining > 0, 'No profile response was actually held'
+                            page.wait_for_timeout(min(50, remaining * 1000))
+                        expect(page.locator('#profileStatus')).to_contain_text('搜索已可用')
+                        document_started = page.evaluate('performance.timeOrigin')
+                        query(page, '灭火器没压力')
+                        page.locator('#list .card').first.click()
+                        expect(page.locator('#detail h2')).to_contain_text('灭火器')
+                        expect(page.locator('#detail .basis').first).to_be_visible()
+                        assert not responses, 'Core search/detail was checked after a profile response arrived'
+                        assert not gate.released.is_set(), 'Profile response was released before core detail was checked'
+                        core_seconds = round(time.monotonic() - started, 3)
+                        held_count = gate.request_count
+                        gate.released.set()
+                        page.wait_for_function("""() => document.querySelector('#profileStatus').hidden ||
+                            !!document.querySelector('#retryProfiles')""", timeout=30000)
+                        retried = page.locator('#retryProfiles').is_visible()
+                        if retried:
+                            assert failures, 'Unexpected profile failure after the held response was released'
+                            expect(page.locator('#profileStatus')).to_contain_text('超时')
+                            page.locator('#retryProfiles').click()
+                        expect(page.locator('#profileStatus')).to_be_hidden(timeout=30000)
+                        assert responses, 'Profiles became ready without a profile response'
+                        assert page.evaluate('performance.timeOrigin') == document_started
+                        expect(page.locator('#search')).to_have_value('灭火器没压力')
+                        expect(page.locator('#count')).not_to_have_text('0')
+                        return {'heldProfileRequests': held_count, 'searchAndBasisBeforeProfiles': True,
+                                'profileResponsesBeforeSearchAndBasis': 0, 'failedProfileRequests': failures,
+                                'releasedProfileResponses': len(responses), 'retriedAfterProfileTimeout': retried,
+                                'secondsToSearchAndDetail': core_seconds, 'profilesEventuallyJoin': True,
+                                'originalDocumentPreserved': True}
+                    finally:
+                        gate.released.set()
+                        server.profile_gate = None
             check('delayed_profiles_do_not_block_core_search_or_detail', delayed_profiles)
 
             def profiles_retry():

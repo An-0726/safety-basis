@@ -76,6 +76,7 @@ mark{background:#fff0b9;color:inherit;border-radius:3px;padding:0 .06em}
   #searchView #clear,#searchView #reset,#searchView #resetLaw{min-height:44px;min-width:44px}
   #searchView .filters>label{flex:1 1 calc(50% - 12px);min-width:130px}
   #searchView .filters select{width:100%;min-height:44px;font-size:16px}
+  #searchView .filters>.more-filters[open]{flex-basis:100%;width:100%}
   #searchView .more-filters summary,#searchView #activeFilters .filter-chip{min-height:44px}
   #searchView #searchSuggestions button,#searchView #detail button,#searchView #detail .buttonlink{min-height:44px}
   .issue-overview{padding:12px}.issue-tabs{display:grid;grid-template-columns:1fr 1fr}.issue-tabs>button:first-child{grid-column:1 / -1}

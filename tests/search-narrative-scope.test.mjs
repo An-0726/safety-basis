@@ -160,3 +160,56 @@ test('单字断的否定保持有效，断路器与断电不被误认为否定�
   assert.equal(observationStateBoundary('配电箱没有断路器'),null);
   assert.equal(observationStateBoundary('检修前没有断电'),null);
 });
+
+test('共享否定、待核与排除范围不能在并列切分后变成第二项肯定事实',()=>{
+  for(const q of [
+    '没有发现灭火器失压和应急灯损坏',
+    '尚未核实灭火器失压和应急灯损坏',
+    '已排除灭火器失压和应急灯损坏',
+    '本次巡查未查出灭火器失压以及消防应急照明灯损坏',
+  ]){
+    assert.equal(searchHazardsDetailed(rows,q).rows.length,0,q);
+    const result=search(q);assert.equal(result.rows.length,0,q);
+    assert.ok(result.issues.every(issue=>issue.assessment.classification==='fact_unconfirmed'),q);
+  }
+  for(const q of ['没有发现灭火器失压，但应急灯确实损坏','尚未核实灭火器失压，但应急灯已确认损坏']){
+    const result=search(q);assert.deepEqual(ids(result),['lamp'],q);
+  }
+  const positive=search('灭火器失压和应急灯损坏');
+  assert.equal(positive.issues.length,2);assert.deepEqual(ids(positive),['ext','lamp']);
+});
+
+test('历史事实和当前恢复按对象覆盖，另一设备修复不能取消已观察的问题',()=>{
+  for(const q of ['灭火器以前失压，现在压力正常','灭火器失压，现在压力正常','灭火器以前失压']){
+    assert.equal(searchHazardsDetailed(rows,q).rows.length,0,q);
+    assert.equal(search(q).rows.length,0,q);
+  }
+  for(const q of ['灭火器曾经修复，现在又失压','灭火器失压，应急灯已修复']){
+    const result=search(q);assert.ok(ids(result).includes('ext'),q);
+    assert.ok(!ids(result).includes('lamp'),q);
+  }
+  assert.deepEqual(ids(search('固定式压力容器压力表玻璃破裂，但刻度清楚')),['gauge-damage']);
+  assert.deepEqual(ids(search('固定式压力容器压力表指针损坏，但玻璃完整')),['gauge-damage']);
+  assert.deepEqual(ids(search('固定式压力容器压力表检定超期，表本身已修复')),['gauge-expired']);
+});
+
+test('证据不足、无法确认或不能排除不等于已确认，但已确认的独立事实可继续检索',()=>{
+  for(const q of ['没有证据表明灭火器失压','暂无证据证明灭火器失压','还不能确认应急灯损坏','无法证实应急灯损坏','不能排除灭火器失压']){
+    assert.equal(searchHazardsDetailed(rows,q).rows.length,0,q);
+    const result=search(q);assert.equal(result.rows.length,0,q);
+    assert.ok(result.issues.every(issue=>issue.assessment.classification==='fact_unconfirmed'),q);
+  }
+  for(const q of ['现在已经确认应急灯损坏','没有证据表明灭火器失压，但复查确认应急灯损坏']){
+    assert.deepEqual(ids(search(q)),['lamp'],q);
+  }
+});
+
+test('位置参照设备不能承接另一个未识别对象的故障，反向状态也不覆盖已知对象',()=>{
+  for(const q of ['应急灯下面的普通照明灯坏了，应急灯正常','应急灯上方的普通照明灯坏了','应急灯旁边的窗户破裂']){
+    const result=search(q);
+    assert.ok(!ids(result).includes('lamp'),q);
+    assert.equal(result.issues[0].assessment.reason,'observed_object_unidentified',q);
+  }
+  assert.deepEqual(ids(search('应急灯坏了，下面的普通照明灯正常')),['lamp']);
+  assert.deepEqual(ids(search('安全出口下面的消防应急照明灯坏了')),['lamp']);
+});
