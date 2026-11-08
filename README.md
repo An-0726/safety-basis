@@ -123,3 +123,14 @@ CI（`.github/workflows/site.yml`）：PR 上运行测试、Gate、构建、快�
 GitHub和GitHub Pages是公开空间。企业原件、照片、联系人、签字、私有映射、真实本机路径、SQLite、OCR、私有审计/交接材料和未获再发布权利的全文不得进入公开仓库或发布包。
 
 代码采用 [MIT License](LICENSE)；这不为第三方法规标准原件或其他资料授予额外复制权利。
+
+## 八、私有隐患检查工作台
+
+`workbench/` 提供可运行的检查工作台：企业项目、现场记录、照片、正式法条匹配、事实核实、专业审核、Word/PDF导出及备份恢复。它复用本库已发布知识与检索，企业业务数据独立保存在私有目录，不进入GitHub Pages。
+
+```sh
+python -m pip install -r tools/pipeline/requirements.txt -r workbench/requirements.txt
+python -m workbench
+```
+
+打开 `http://127.0.0.1:8765/`。完整操作、Windows用法、脱敏样例、模板替换和部署边界见 [工作台说明](workbench/README.md)。没有真实照片或Word母版也可用合成示例跑通业务流程；示例不会被描述为真实检查结论。

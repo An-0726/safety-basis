@@ -1,7 +1,8 @@
 // Ambiguous field wording must not silently acquire a site, duty or defect.
 import {fieldQueryGuidance} from './field-query-guidance.js';
+import {fieldSafetyBoundary} from './search-boundaries.js';
 const suggestion=(label,query,note)=>({label,query,note});
-export function hazardSearchGuidance(value){
+function legacyHazardSearchGuidance(value){
   const query=String(value??'').normalize('NFKC').replace(/\s+/g,'').replace(/[，。？！?!]/g,'');
   // Do not strip a negation or a completed/unknown state and manufacture a
   // defect. These endings deliberately do not match “没有断路器” or “未完成”.
@@ -9,6 +10,7 @@ export function hazardSearchGuidance(value){
       ||/(?:已经|(?<!未)已)(?:修好|修复|签字|完成)(?:了)?$/.test(query)
       ||/^(?:未查明|尚未确认|尚未核实)/.test(query))return {
     suppressResults:true,notice:'这句话表示未查明、未发现缺陷或相关动作已完成，不能删掉状态词当成已发生的不符合。请按核实后的对象和实际问题继续检索。',suggestions:[],
+    assessment:{classification:'fact_unconfirmed',reason:'negated_completed_or_unconfirmed',requiredFacts:['现场当前状态及证据']},
   };
   const fieldGuidance=fieldQueryGuidance(query);
   if(fieldGuidance)return fieldGuidance;
@@ -25,6 +27,7 @@ export function hazardSearchGuidance(value){
   };
   if(/^插座(?:坏(?:了)?|损坏|破损|不通电|烧坏(?:了)?)$/.test(query))return {
     suppressResults:true,notice:'插座使用中损坏与安装验收时面板未固定牢固不是同一缺陷。请按实际情况区分破损、松动、接地或不通电；本站现有安装验收条目不能直接据此判定使用期损坏。',suggestions:[],
+    assessment:{classification:'evidence_gap',reason:'socket_in_service_source_gap',requiredFacts:['使用期实际缺陷','对题的现行法规依据']},
   };
   if(/^叉车(?:(?:没有|没|未)(?:进行)?(?:年检|定期检验)|年检(?:过期|超期)|定期检验(?:过期|超期))$/.test(query))return {
     suppressResults:true,notice:'定期检验与首次投入使用前的首次检验不同。请先确认有效期、是否已申报，以及是否仍在使用。',
@@ -62,6 +65,7 @@ export function hazardSearchGuidance(value){
   const oilyFloor=/^((?:普通)?(?:工业|机械)?车间(?:里)?)?(?:地上|地面)(?:有油(?:污)?|湿滑)(?:了)?$/.exec(query);
   if(oilyFloor)return {
     suppressResults:true,notice:'请核实场所和实际滑跌风险；餐饮食品处理区的防滑要求不能直接套用于普通工业车间。',
+    assessment:{classification:oilyFloor[1]?'evidence_gap':'needs_conditions',reason:oilyFloor[1]?'industrial_floor_source_gap':'floor_scene_unconfirmed',requiredFacts:['场所用途','实际滑跌风险','对题的现行法规依据']},
     suggestions:!oilyFloor[1]?[suggestion('查看餐饮食品处理区防滑','餐饮食品处理区地面未保持防滑','仅供确认属于餐饮食品处理区后选择；普通车间油污的对题依据仍待补。')]:[],
   };
   if(/^(?:化学品|普通化学品|危化品)(?:随便放|乱放)(?:了)?$/.test(query))return {
@@ -77,6 +81,7 @@ export function hazardSearchGuidance(value){
   };
   if(/(?:气瓶|钢瓶).*(?:没|缺|无|未).*防震(?:胶)?圈/.test(query))return {
     suppressResults:true,notice:'缺防震圈与缺瓶帽、保护罩不是同一缺陷。本站尚无可据此认定所有在用气瓶不符合要求的通用规则，应核实际瓶型、行业和装卸运输要求。',suggestions:[],
+    assessment:{classification:'evidence_gap',reason:'cylinder_ring_source_gap',requiredFacts:['瓶型及行业','使用或装卸运输情形','对题的现行法规依据']},
   };
   if(/^压力表(?:不走(?:了)?|不动(?:了)?|指针不动(?:了)?|玻璃(?:碎(?:了)?|破(?:了)?|破裂))$/.test(query))return {
     suppressResults:true,notice:'先确认压力表所属设备及实际缺陷；指针不动不能单独证明部件损坏，也不能当成未检定。',
@@ -90,4 +95,19 @@ export function hazardSearchGuidance(value){
   if(/压力表(?:坏了|损坏|坏)$/.test(query))return {notice:'下列压力表损坏规则限固定式压力容器及条款列明的缺陷；一般仪表是否适用须另核，损坏不等于未检定。',suggestions:[]};
   if(/^材料堆太高(?:了)?$/.test(query))return {notice:'堆高须结合物料、堆垛基础和已核安全要求判断，不能套用统一高度；仓库顶部净距是另一项要求。',suggestions:[]};
   return {notice:'',suggestions:[]};
+}
+
+// Machine-readable retrieval disposition; neither a candidate hit nor a notice
+// confirms a real-world defect. Human evaluation labels remain separate.
+export function hazardSearchGuidance(value) {
+  const guidance = legacyHazardSearchGuidance(value);
+  // Explicitly negated or completed facts take priority over object-specific
+  // source-gap notices (for example, a ring that has not been damaged).
+  if (guidance.assessment?.classification === 'fact_unconfirmed') return guidance;
+  const boundary = fieldSafetyBoundary(value);
+  if (boundary) return boundary;
+  if (guidance.notice && !guidance.assessment) {
+    guidance.assessment = {classification: 'needs_conditions', reason: 'field_query_guidance', requiredFacts: []};
+  }
+  return guidance;
 }

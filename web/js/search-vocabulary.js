@@ -141,6 +141,8 @@ export const EQUIVALENT_GROUPS = [
   ['隐患排查治理台账', '隐患治理台账'],
   ['应急救援器材', '应急器材'],
   ['安全警示标志', '警示标志', '安全警示标识', '警示标识'],
+  // Same verification state only; do not equate equipment inspection with gauge verification.
+  ['检定超期', '检定过期', '超过检定有效期'],
   ['贮存', '储存'],
   ['仓库', '库房'],
   ['总平面布置', '总图布置'],

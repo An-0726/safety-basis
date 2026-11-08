@@ -12,8 +12,23 @@ source/proposals/
 source/releases/current/
 source/releases/site-selection.json
 source/releases/*.review.json
+source/releases/.workbench-build-*/
+source/releases/.workbench-previous-*/
 __pycache__/
 tmp/
 dist/
 *.pyc
 .tmp.driveupload/
+
+# Private inspection workbench runtime and real field-query datasets.
+workbench/runtime/
+workbench/private/
+workbench-data/
+private-evaluation/
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db-wal
+*.db-shm
+.venv/

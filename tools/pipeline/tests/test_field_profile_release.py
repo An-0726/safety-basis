@@ -135,11 +135,12 @@ class FieldProfileReleaseTests(unittest.TestCase):
 
     def test_formal_ui_module_is_shipped_and_checksum_covered(self):
         self.build()
-        asset = 'js/field-profiles.js'
-        self.assertIn(asset, builder.SITE_ASSETS)
-        self.assertIn(asset, verifier.SITE_ASSETS)
-        self.assertEqual((self.out / asset).read_bytes(), (Path(builder.WEB) / asset).read_bytes())
-        self.assertIn(asset, self.read('checksums.json'))
+        for asset in ('js/field-profiles.js', 'js/search-boundaries.js'):
+            with self.subTest(asset=asset):
+                self.assertIn(asset, builder.SITE_ASSETS)
+                self.assertIn(asset, verifier.SITE_ASSETS)
+                self.assertEqual((self.out / asset).read_bytes(), (Path(builder.WEB) / asset).read_bytes())
+                self.assertIn(asset, self.read('checksums.json'))
 
     def test_missing_ui_module_cannot_pass_after_resealing(self):
         self.build()

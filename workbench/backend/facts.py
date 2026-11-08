@@ -1,0 +1,67 @@
+"""Inspector-facing labels for the existing governed profile fact keys.
+
+These labels do not alter rule applicability. Conditional branch facts may be
+recorded as not asserted, with a reason; they must never all be assumed true.
+"""
+
+FACT_LABELS = {
+    'applicableRequirementConfirmed': '核实本次适用要求、地域、主体和例外',
+    'siteTriggerConfirmed': '核实本场景的现场触发条件',
+    'defectObserved': '通过本次观察或测量核实所述具体缺陷',
+    'actualDrillDatesConfirmed': '核实实际演练日期',
+    'actualResidentialUseVerifiedIfAsserted': '如主张居住用途，核实实际居住使用情况',
+    'branchAActualUnlicensedFillingConfirmedIfSelected': '如选用分支A，核实实际无许可充装事实',
+    'branchBWrongMediumConfirmedIfSelected': '如选用分支B，核实错误介质充装事实',
+    'branchCEmergencyCutoffDefectAndContinuedUseConfirmedIfSelected': '如选用分支C，核实紧急切断缺陷及继续使用事实',
+    'branchSpecificEvidenceIdentified': '明确本次所选分支的对应证据',
+    'combustibleDustExplosionScopeConfirmed': '核实属于可燃性粉尘爆炸危险适用范围',
+    'conductiveDustCollectionPartConfirmed': '核实涉及导电性粉尘收集部位',
+    'continuedUseAfterAdverseConclusionConfirmed': '核实不利检验结论后仍继续使用的事实',
+    'criterionBranchSelectedAndFactsConfirmed': '明确所选判定分支并核实该分支事实',
+    'determinationActorAndAuthorityScopeConfirmed': '核实判定主体及其权限范围',
+    'determinationActorAndHandlingStatusConfirmed': '核实判定主体及处置状态',
+    'dustTypeBranchConfirmed': '核实粉尘类型及对应分支',
+    'electricalEquipmentAndWiringIdentified': '明确涉及的电气设备与线路',
+    'entryScenarioAndPreventionArrangementsConfirmed': '核实进入场景及预防措施安排',
+    'equipmentAndUseScopeConfirmed': '核实设备类别与使用范围',
+    'equipmentFillingActivityAndExclusionsConfirmed': '核实设备、充装活动及排除情形',
+    'equipotentialAndGroundingConditionObserved': '核实等电位连接与接地的实际状态',
+    'evacuationDrillArrangementsAndExecutionConfirmed': '核实疏散演练安排及实际执行',
+    'exclusionStatusConfirmed': '核实排除情形是否存在',
+    'existingMajorHazardDeterminationAndTreatmentStatusConfirmed': '核实既有重大隐患判定及处置状态',
+    'firefightingAndEvacuationContentConfirmed': '核实灭火与疏散演练内容',
+    'flangeJumperConditionObservedIfApplicable': '如适用，核实法兰跨接的实际状态',
+    'groundResistanceMeasurementValidatedIfAsserted': '如引用接地电阻数值，核实测量结果与适用性',
+    'halfYearReviewWindowConfirmed': '核实本次半年核查时间窗口',
+    'ignitionSourceMeasuresConfirmed': '核实点火源防范措施',
+    'ignitionSourceProtectionAssessed': '评估点火源防护情况',
+    'industryAndDustExplosionScopeConfirmed': '核实行业及粉尘爆炸危险适用范围',
+    'inspectionConclusionExactlyNotMeetingRequirementsConfirmed': '核实检验结论原文确为“不符合要求”',
+    'inspectionConclusionExactlyUnqualifiedConfirmed': '核实检验结论原文确为“不合格”',
+    'inspectionReportAuthenticityAndDeviceMatchConfirmed': '核实检验报告真实性及对应设备',
+    'installedMaterialFirePerformanceVerifiedIfAsserted': '如引用材料防火性能，核实已安装材料的性能证据',
+    'jiangsuEducationalInstitutionConfirmed': '核实江苏地域及学校或其他教育机构主体',
+    'jiangsuKeyFireSafetyUnitConfirmed': '核实江苏地域及消防安全重点单位身份',
+    'jiangsuResidentialContextConfirmed': '核实江苏地域及住宅场景',
+    'jiangsuUrbanRailScopeVerified': '核实江苏城市轨道交通适用范围',
+    'latestInspectionAndRectificationTimelineConfirmed': '核实最近检验与整改时间线',
+    'occupationalHazardEmployerAndWorkplaceScopeVerified': '核实职业病危害用人单位及工作场所适用范围',
+    'operationalOrAdvertisingFacilityIdentityVerifiedIfAsserted': '如选用该情形，核实设施的经营或广告用途',
+    'ownerOrUserRoleConfirmed': '核实所有人或使用人的主体身份',
+    'prohibitedZoneAndActualShopUseVerifiedIfAsserted': '如选用该情形，核实禁止区域及实际商铺用途',
+    'relevantEnclosureDustIngressProtectionAssessed': '评估相关外壳防粉尘进入的保护情况',
+    'requiredOutputConfirmed': '核实本项要求形成的记录或成果',
+    'selectedBranchRecorded': '记录本次选用的具体分支',
+    'sludgeRemovalBranchAssessed': '评估清理泥浆分支是否适用及其实际措施',
+    'systemPressureModeConfirmed': '核实系统压力运行方式',
+    'testScopeConfirmed': '核实本次检测范围',
+    'ventilationWhileRunningAssessed': '评估运行期间的通风措施',
+    'ventilationWhileStoppedAssessed': '评估停运期间的通风措施',
+    'visitArrangementsAndExecutionConfirmed': '核实参观活动安排及实际执行',
+    'wetDustCollectorAndObjectsConfirmed': '核实湿式除尘器及其处理对象',
+    'workAndLivingLayoutAndSeparationVerifiedIfAsserted': '如选用该情形，核实生产与居住布局及分隔情况',
+}
+
+
+def is_conditional_fact(key):
+    return key.endswith(('IfSelected', 'IfAsserted', 'IfApplicable'))
