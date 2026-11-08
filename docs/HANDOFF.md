@@ -2,6 +2,8 @@
 
 ## 当前交接（2026-11-08）
 
+完整功能已通过 [PR134 CI](https://github.com/An-0726/safety-basis/actions/runs/42460190930) 并在 [PR134](https://github.com/An-0726/safety-basis/pull/134) 合并（`d2575652af12bb068d6002834dc6386a0a54e315`）。GitHub真实Chromium工作台48项、网站24条抽检通过；本页稍后的“本地受限”描述只说明执行环境，不代表远端未验收。Pages部署须按最终main提交核对。
+
 先读根目录 [AGENTS](../AGENTS.md)，当前事实以 [PROJECT_STATE](PROJECT_STATE.md) 与 [知识库收口报告](KNOWLEDGE_CLOSEOUT.md) 为准。本次是完整开发委托，用户已授权连续实施、提交、推送、PR及按现有权限和CI推进合并发布，不需要逐项请求继续。
 
 开工 main 为 `883a2664f9c08c09b4a7cd2c4e441571c8dbca76`（PR133），线上 dataVersion `2026.10.16.883a2664f9c0`。修复前按11月8日构建比线上少1H，原因是2025防雷办法11月1日到期。已按官方修订原文补齐继任版本及第13/17条，保留同一H，修复后当前投影 **1764H/1949K/1514C/106LV**。完整库存 **1775active/266proposed/130superseded**，不能用库存数量代替公开规则数。
