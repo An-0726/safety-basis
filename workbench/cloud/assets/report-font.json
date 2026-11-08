@@ -1,0 +1,61 @@
+{
+  "family": "Safety Basis Sans",
+  "upstream_family": "Noto Sans CJK SC",
+  "upstream": "https://github.com/notofonts/noto-cjk",
+  "license": "SIL Open Font License 1.1",
+  "font_file": "report-font.ttf",
+  "sha256": "ec2fb75a3e8826421f8c88bc2e09bcf3f18a6b60fc0d47f6b6717ab551eb500f",
+  "bytes": 9790052,
+  "glyphs": 30482,
+  "codepoints": 30970,
+  "supplemented_outlines": [
+    {
+      "family": "Noto Serif CJK SC",
+      "codepoints": [
+        "U+9FF0",
+        "U+9FF1",
+        "U+9FF2",
+        "U+9FF3",
+        "U+9FF4",
+        "U+9FF5",
+        "U+9FF6",
+        "U+9FF7",
+        "U+9FF8",
+        "U+9FF9",
+        "U+9FFA",
+        "U+9FFB",
+        "U+9FFC",
+        "U+9FFD",
+        "U+9FFE",
+        "U+9FFF"
+      ]
+    },
+    {
+      "family": "Noto Sans",
+      "codepoints": [
+        "U+1D43",
+        "U+1D47",
+        "U+200B",
+        "U+2070",
+        "U+2075",
+        "U+2076",
+        "U+2077",
+        "U+2078",
+        "U+2079",
+        "U+2080",
+        "U+2081",
+        "U+2082"
+      ]
+    }
+  ],
+  "coverage": "Source-supported Basic CJK, Extension A, CJK compatibility, punctuation, Latin, symbols and governed knowledge characters",
+  "basic_cjk_missing": [],
+  "knowledge_missing": [
+    "U+F03D",
+    "U+F0B4"
+  ],
+  "knowledge_files_sha256": "094b8763a619386dc2e659ebbb61a81c76d65e5e396b8340600b8b575382d85f",
+  "knowledge_file_count": 17769,
+  "rebuild": "python workbench/cloud/tools/build_report_font.py",
+  "unsupported_policy": "renderReport rejects missing glyphs before writing either output; no silent substitution"
+}

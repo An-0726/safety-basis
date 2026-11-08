@@ -2,7 +2,11 @@
 
 ## 当前交接（2026-11-08）
 
-完整功能已通过 [PR134 CI](https://github.com/An-0726/safety-basis/actions/runs/42460190930) 并在 [PR134](https://github.com/An-0726/safety-basis/pull/134) 合并（`d2575652af12bb068d6002834dc6386a0a54e315`）。GitHub真实Chromium工作台48项、网站24条抽检通过；本页稍后的“本地受限”描述只说明执行环境，不代表远端未验收。Pages部署须按最终main提交核对。
+**私有云端工作台已经上线：**[打开工作台](https://safety-basis-inspection.upezra8.chatgpt.site)，使用站点所有者的ChatGPT账号登录，无需安装Python/Node。2026-11-08部署成功，15项真实线上验收全部通过；验收只使用合成项目、描述和图片，实际下载的Word与3页PDF已核验。Worker / D1 / R2复用同一前端和正式知识包，事实、审核及历史报告保持既定保护。详见[云端交付与维护说明](PRIVATE_CLOUD_WORKBENCH.md)。
+
+首轮云端线上验收知识包为 `2026.11.08.3bb002368e57`，hash `e681ca40a794c5dce0aeb751a3e9b93dac9d976cc0266379e31a4ad8cc5c920d`，公开1764H/1949K/1514C/106LV。云端38项测试（26 API / SQL、12报告）、Node 880项、Python工作台和路径保护19项通过。云端实现随本次源码交付；当前提交与CI请读[工作流](https://github.com/An-0726/safety-basis/actions/workflows/site.yml)及对应PR，不沿用前序PR结果。
+
+前序本机工作台、知识库及检索交付已通过 [PR134 CI](https://github.com/An-0726/safety-basis/actions/runs/42460190930) 并在 [PR134](https://github.com/An-0726/safety-basis/pull/134) 合并（`d2575652af12bb068d6002834dc6386a0a54e315`）。GitHub真实Chromium工作台48项、网站24条抽检通过；本页稍后的“本地受限”描述只说明执行环境。Pages部署须按最终main提交核对，私有Sites部署与Pages分开验收。
 
 先读根目录 [AGENTS](../AGENTS.md)，当前事实以 [PROJECT_STATE](PROJECT_STATE.md) 与 [知识库收口报告](KNOWLEDGE_CLOSEOUT.md) 为准。本次是完整开发委托，用户已授权连续实施、提交、推送、PR及按现有权限和CI推进合并发布，不需要逐项请求继续。
 
@@ -10,13 +14,15 @@
 
 266条候选已全量形成[逐ID处置JSONL](CANDIDATE_INVENTORY_20261108.jsonl)及[优先40条](CANDIDATE_PRIORITY_20261108.md)。[机器对账](KNOWLEDGE_CLOSEOUT_20261108.json)保存11条active排除原因、27项succession及日期集合差异；[开工快照](KNOWLEDGE_CLOSEOUT_BASELINE_20261108.json)是修复前历史证据，不随工具重新生成。候选仍全部proposed，不把检索命中、照片或样例当作已确认现场隐患。
 
-知识库新增7项测试和全库13项验证已通过；公开来源索引已补齐新增气象局版本，160行与知识版本逐ID对齐，publication完整性检查通过（0错误）。**本轮实施已完成本地测试，整体提交/发布状态见本次PR与Pages凭据。** 统一构建current、public_snapshot与线上验收在总集成执行；不得拿开工线上hash当新部署凭据。新增复核为明确标识的作者官方原件核验，未冒充独立人工签审。企业照片、私有PDF/SQLite和凭据不进入公开仓库。
+知识库新增7项测试和全库13项验证已通过；公开来源索引已补齐新增气象局版本，160行与知识版本逐ID对齐，publication完整性检查通过（0错误）。**该知识库收口已随前序PR134合并；当前云端补充源码与私有上线状态见本页开头。** 继续发布时统一构建current、核对public_snapshot与线上实际包，不得拿开工线上hash当新部署凭据。新增复核为明确标识的作者官方原件核验，未冒充独立人工签审。企业照片、私有PDF/SQLite和凭据不进入公开仓库。
 
 生成工具：`python tools/checks/knowledge_closeout.py --as-of 2026-11-08 --baseline-as-of 2026-10-16 --out docs`，追加 `--check` 只读检查产物与当前知识源是否一致。继续修复应依据此队列和当前主线逐项核原件，不应重新从旧候选数量起算。
 
-本轮同时交付 [可运行工作台及启动说明](../workbench/README.md)、[现场问法导入评估说明](SEARCH_EVALUATION.md)、[检索改进结果](SEARCH_EVALUATION_20261108.md)和[整体交付报告](PHASE2_DELIVERY_20261108.md)。工作台已具备项目、照片、条款选择、事实确认、审核、Word/PDF、历史快照和备份恢复；不再作为“待实现原型”交接。真实问法为0，29条新增与120条历史均为合成回归；专业审核身份是本机填写的记录，不是机构资质认证或电子签章。
+本轮同时交付 [可运行工作台及启动说明](../workbench/README.md)、[现场问法导入评估说明](SEARCH_EVALUATION.md)、[检索改进结果](SEARCH_EVALUATION_20261108.md)和[前序交付报告](PHASE2_DELIVERY_20261108.md)。工作台已具备项目、照片、条款选择、事实确认、审核、Word/PDF、历史快照及私有备份；本机支持空目录恢复，云端当前没有网页恢复。真实问法为0，29条新增与120条历史均为合成回归；人工填写审核姓名和意见并记录操作来源，不是机构资质认证或电子签章。
 
-本地通过880项Node、453项Python管线、17项工作台测试及47项DOM/真实后端联调，报告已用实际Word转换成PDF并逐页验版。最终PR/Pages真实浏览器结果须查看本次Actions，不把DOM通过写成Chromium通过。企业私有云部署、多用户身份权限、原版Word母版和真实数据验收仍未提供，均明确保留为余项。
+前序本机验收通过880项Node、453项Python管线、17项工作台测试及47项DOM/真实后端联调，报告已用实际Word转换成PDF并逐页验版。当前云端使用`pdf-lib`独立排版与授权字体，不能将其称为LibreOffice转换；当前云端测试与线上验收见本页开头。最终PR/Pages真实浏览器结果须查看对应Actions，不把DOM通过写成Chromium通过。
+
+私有云部署已完成。保留的真实限制是单owner共享空间、无多租户或专业资格认证、在线完整备份32MiB且无网页恢复、未提供企业原版Word母版及真实企业样本。云端归档为结构化JSON和对象文件，不能直接用本机SQLite恢复命令；照片、私有数据库、报告和凭据不得进入公开仓库。
 
 ## 以下为历史交接，保留追溯
 

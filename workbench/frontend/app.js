@@ -98,8 +98,8 @@ async function api(path, options = {}) {
     }
     return result;
   } catch (error) {
-    if (error.name === 'AbortError') throw new Error('请求耗时较长或已取消。请检查本机服务后重试。');
-    if (error instanceof TypeError) throw new Error('无法连接本机工作台服务。请确认服务仍在运行，再重试。');
+    if (error.name === 'AbortError') throw new Error('请求耗时较长或已取消。请检查工作区连接后重试。');
+    if (error instanceof TypeError) throw new Error('无法连接工作台服务。请刷新页面或检查登录状态后重试。');
     throw error;
   } finally { clearTimeout(timer); }
 }
@@ -195,7 +195,7 @@ function updateSaveUI() {
     if (state.saveError) { element.textContent = '保存失败'; element.classList.add('error'); }
     else if (state.savePromise) element.textContent = '正在保存…';
     else if (state.dirty || state.factsDirty) { element.textContent = '有待保存的更改'; element.classList.add('dirty'); }
-    else { element.textContent = '✓ 已保存到本机'; element.classList.add('saved'); }
+    else { element.textContent = '✓ 已保存到工作区'; element.classList.add('saved'); }
   });
   const saveError = $('#editor-save-error');
   if (saveError) { saveError.hidden = !state.saveError; $('.error-message', saveError).textContent = state.saveError; }
@@ -300,7 +300,7 @@ function renderLanding(main) {
   const hero = node('section', 'welcome-card', node('span', 'eyebrow', 'EVIDENCE BEFORE CONCLUSION'), node('h1', '', '把现场记录，整理成', node('br'), '有依据的检查报告。'), node('p', 'intro', '从企业项目、现场照片到法规条款与事实核实，在同一个工作区完成记录、专业审核和报告导出。'), node('div', 'button-row', button('＋ 新建检查项目', () => openProjectDialog(), 'primary'), button('使用脱敏样例', loadDemo, 'secondary')));
   const flow = node('section', 'workflow-grid');
   [['01', '记录现场', '保留现场原话与照片，描述具体位置、设备和现象。'], ['02', '匹配法规', '复用安全依据知识库，保留条款原文与版本快照。'], ['03', '逐项核实', '核对事实、适用条件与误判边界，未知项保持待核实。'], ['04', '审核与导出', '由专业人员确认记录，生成带照片的 Word / PDF 报告。']].forEach(([step, title, text]) => flow.append(node('article', 'workflow-card', node('span', 'step', step), node('h3', '', title), node('p', '', text))));
-  content.append(hero, flow, node('p', 'landing-note', '项目、照片和导出报告由本机服务保存。请定期导出备份，并妥善保管企业资料。'));
+  content.append(hero, flow, node('p', 'landing-note', '项目、照片和导出报告保存在当前私有工作区。请定期导出备份，并妥善保管企业资料。'));
   main.append(content);
 }
 function renderFindingList() {
@@ -346,7 +346,7 @@ function renderEditor() {
   updateSaveUI();
 }
 async function discardAndReload() {
-  if (await confirmAction('重新载入服务端版本', '此操作将丢弃当前页面尚未保存的编辑，显示本机服务中最后保存的版本。', '重新载入')) {
+  if (await confirmAction('重新载入服务端版本', '此操作将丢弃当前页面尚未保存的编辑，显示工作区中最后保存的版本。', '重新载入')) {
     clearTimeout(state.saveTimer); state.dirty = false; state.factsDirty = false;
     try { await reloadCurrent(); } catch (error) { toast(errorText(error), 'error'); }
   }
@@ -405,6 +405,29 @@ function renderPhotos(panel) {
   if (!(state.finding.photos || []).length && isLocked()) panel.append(node('p', 'subtle tiny', '此记录尚无现场照片。'));
 }
 function showPhoto(photo) { const img = $('#photo-preview'); img.src = safeUrl(photo.url, true); img.alt = photo.caption || '现场照片'; setText('#photo-preview-caption', photo.caption || photo.filename || '现场照片'); showDialog('#photo-dialog'); }
+async function prepareCloudPhoto(file) {
+  if (file.size > 20 * 1024 * 1024) throw new Error('单张照片不能超过 20 MB。');
+  const source = URL.createObjectURL(file);
+  let bitmap;
+  try {
+    bitmap = new Image();
+    bitmap.src = source;
+    await bitmap.decode();
+    if (!bitmap.naturalWidth || !bitmap.naturalHeight || bitmap.naturalWidth * bitmap.naturalHeight > 40000000) throw new Error('照片尺寸无效或超过 4000 万像素。');
+    const scale = Math.min(1, 2400 / Math.max(bitmap.naturalWidth, bitmap.naturalHeight));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(bitmap.naturalWidth * scale));
+    canvas.height = Math.max(1, Math.round(bitmap.naturalHeight * scale));
+    const context = canvas.getContext('2d');
+    if (!context) throw new Error('浏览器无法处理照片，请换用支持图片处理的浏览器。');
+    context.fillStyle = '#fff'; context.fillRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.9));
+    canvas.width = 1; canvas.height = 1;
+    if (!blob) throw new Error('照片处理失败，请重新选择照片。');
+    return new File([blob], file.name.replace(/\.[^.]+$/, '') + '.jpg', {type: 'image/jpeg'});
+  } finally { URL.revokeObjectURL(source); }
+}
 async function uploadPhotos(files) {
   if (!files.length || state.operation || isLocked()) return;
   const allowed = files.filter(file => ['image/jpeg', 'image/png', 'image/webp'].includes(file.type));
@@ -414,7 +437,8 @@ async function uploadPhotos(files) {
     let done = 0;
     for (const file of allowed) {
       const status = $('#photo-upload-status'); if (status) { status.hidden = false; status.textContent = `正在保存照片 ${done + 1} / ${allowed.length}…`; }
-      const form = new FormData(); form.append('file', file); form.append('caption', '');
+      const clean = document.documentElement.dataset.storage === 'cloud' ? await prepareCloudPhoto(file) : file;
+      const form = new FormData(); form.append('file', clean, clean.name || file.name); form.append('caption', '');
       await api(`/api/findings/${encodeURIComponent(state.finding.id)}/photos`, { method: 'POST', body: form, timeout: 90000 }); done += 1;
     }
   }, `${allowed.length} 张照片已保存到当前记录。`);
@@ -427,7 +451,7 @@ async function movePhoto(photo, targetIndex) {
   });
 }
 async function removePhoto(photo) {
-  if (!await confirmAction('删除现场照片', '此照片将从当前记录移除。本机中尚未删除的历史报告不受影响。', '删除照片')) return;
+  if (!await confirmAction('删除现场照片', '此照片将从当前记录移除。已生成的历史报告不受影响。', '删除照片')) return;
   await runMutation(() => api(`/api/findings/${encodeURIComponent(state.finding.id)}/photos/${encodeURIComponent(photo.id)}`, { method: 'DELETE' }), '照片已删除。');
 }
 function renderBasesPanel(panel) {
@@ -507,7 +531,7 @@ function renderReviewPanel(panel) {
     if (finding.status !== 'draft') actions.append(button('重新打开记录', () => review('reopen'), 'quiet'));
   }
   form.append(actions); panel.append(form);
-  if (finding.status !== 'confirmed') panel.append(node('p', 'subtle tiny', '保存提交人和审核人姓名及意见，供项目内追溯；当前 MVP 使用本机审核记录。'));
+  if (finding.status !== 'confirmed') panel.append(node('p', 'subtle tiny', '保存提交人和审核人姓名及意见，供项目内追溯；当前 MVP 保存项目内的审核记录，不能替代专业资格和正式签章。'));
   const history = node('section', 'review-history', node('h3', '', '审核与状态记录'));
   const reviews = finding.reviews || [];
   if (!reviews.length) history.append(node('p', 'subtle tiny', '尚无审核记录。'));
@@ -525,7 +549,7 @@ function renderReviewPanel(panel) {
     try {
       const items = listOf(await api(`/api/findings/${encodeURIComponent(finding.id)}/audit`), 'audit');
       content.replaceChildren();
-      [...items].reverse().forEach(item => content.append(node('div', 'audit-item', node('strong', '', auditLabel(item.action)), node('span', '', `${item.actor || '本机操作人'} · ${timeText(item.created_at)}`))));
+      [...items].reverse().forEach(item => content.append(node('div', 'audit-item', node('strong', '', auditLabel(item.action)), node('span', '', `${item.actor || '工作区操作人'} · ${timeText(item.created_at)}`))));
       if (!items.length) content.append(node('p', 'subtle tiny', '暂无操作记录。'));
       audit.dataset.loaded = 'true';
     } catch (error) { content.replaceChildren(node('p', 'form-error', errorText(error))); }
@@ -578,7 +602,7 @@ async function moveFinding(direction) {
 }
 async function deleteFinding() {
   if (!state.finding || state.finding.status !== 'draft' || state.operation) return;
-  if (!await confirmAction('删除此草稿记录', '将删除该草稿及其关联照片。请确认当前记录不再需要；需要保留时可先导出本机备份。', '删除草稿')) return;
+  if (!await confirmAction('删除此草稿记录', '将删除该草稿及其关联照片。请确认当前记录不再需要；需要保留时可先导出完整备份。', '删除草稿')) return;
   try {
     await flushChanges(); await api(`/api/findings/${encodeURIComponent(state.finding.id)}`, { method: 'DELETE' });
     state.finding = null; state.dirty = false; state.factsDirty = false; await refreshProjects(); await openProject(state.project.id); toast('草稿记录已删除。');
@@ -617,7 +641,7 @@ async function loadDemo() {
 }
 async function downloadBackup() {
   try { await flushChanges(); } catch { return; }
-  toast('备份包含本机项目、照片和报告，请保存在受控位置。', 'warning', 8500);
+  toast('备份包含工作区项目、照片和报告，请保存在受控位置。', 'warning', 8500);
   const link = downloadLink('下载备份', '/api/backup'); document.body.append(link); link.click(); link.remove();
 }
 async function openKnowledgeSearch() {
@@ -803,9 +827,9 @@ function renderReportBody(latest = null) {
     const input = node('input'); input.type = 'radio'; input.name = 'mode'; input.value = value; input.checked = value === (count.confirmed ? 'confirmed' : 'draft');
     modes.append(node('label', 'report-mode', input, node('div', '', node('strong', '', title), node('small', '', description))));
   });
-  form.append(modes, node('div', 'notice compact info', '报告包含项目概况、现场问题、紧随其后的隐患照片、法规条款、整改建议及审核信息。所用模板可在本机服务中替换。'));
+  form.append(modes, node('div', 'notice compact info', '报告包含项目概况、现场问题、紧随其后的隐患照片、法规条款、整改建议及审核信息。采用可替换模板；本机版还可使用自有 Word 母版。'));
   const generate = node('button', 'button primary', '生成 Word / PDF'); generate.type = 'submit';
-  const hint = node('span', 'subtle tiny', '生成后文件保存在本机，并列入下方历史记录。');
+  const hint = node('span', 'subtle tiny', '生成后文件保存在工作区，并列入下方历史记录。');
   const result = node('div'); result.id = 'report-result';
   form.append(node('div', 'button-row', generate, hint), result);
   form.addEventListener('submit', async event => {
@@ -819,7 +843,7 @@ function renderReportBody(latest = null) {
   });
   body.append(form);
   if (latest) {
-    const output = node('div', 'report-result', node('h3', '', latest.mode === 'draft' ? '草稿报告已生成' : '审核报告已生成'), node('p', '', `${latest.excluded_count ? `已排除 ${latest.excluded_count} 条尚未确认记录。` : ''}Word 和 PDF 已保存在本机，可下载用于复核。`), node('div', 'button-row', downloadLink('↓ Word 报告', latest.docx_url, 'primary'), downloadLink('↓ PDF 报告', latest.pdf_url, 'secondary'), downloadLink('数据快照', latest.snapshot_url, 'quiet')));
+    const output = node('div', 'report-result', node('h3', '', latest.mode === 'draft' ? '草稿报告已生成' : '审核报告已生成'), node('p', '', `${latest.excluded_count ? `已排除 ${latest.excluded_count} 条尚未确认记录。` : ''}Word 和 PDF 已保存在工作区，可下载用于复核。`), node('div', 'button-row', downloadLink('↓ Word 报告', latest.docx_url, 'primary'), downloadLink('↓ PDF 报告', latest.pdf_url, 'secondary'), downloadLink('数据快照', latest.snapshot_url, 'quiet')));
     body.append(output);
   }
   const history = node('section', 'report-history-list', node('h3', '', `报告历史 · ${state.reports.length}`));
@@ -830,17 +854,28 @@ function renderReportBody(latest = null) {
   body.append(history);
 }
 function renderBootError(error) {
-  $('#main').replaceChildren(node('section', 'load-error', node('span', 'eyebrow', 'CONNECTION REQUIRED'), node('h1', '', '暂时无法打开本机工作区'), node('p', '', errorText(error)), node('p', '', '请启动检查工作台服务，并使用服务提供的本机地址打开。项目、照片和报告从该服务读取，不能直接双击网页文件运行。'), button('重新连接', initialize, 'primary')));
+  $('#main').replaceChildren(node('section', 'load-error', node('span', 'eyebrow', 'CONNECTION REQUIRED'), node('h1', '', '暂时无法打开检查工作区'), node('p', '', errorText(error)), node('p', '', '请检查登录状态和网络连接；若使用本机版，请确认工作台服务仍在运行。'), button('重新连接', initialize, 'primary')));
   setText('#local-status', '服务连接待恢复'); $('.online-dot')?.classList.add('offline');
 }
 async function initialize() {
   try {
     const [projects, meta, health] = await Promise.allSettled([api('/api/projects'), api('/api/knowledge/meta'), api('/api/health')]);
     if (projects.status === 'rejected') throw projects.reason;
+    if (health.status === 'rejected') throw health.reason;
     state.projects = listOf(projects.value, 'projects');
     if (meta.status === 'fulfilled') state.meta = meta.value;
     if (health.status === 'fulfilled' && health.value?.demo) setText('#local-status', '脱敏样例工作区');
-    else setText('#local-status', '本机私有工作区');
+    else setText('#local-status', health.value?.deployment === 'private-cloud' ? (health.value?.viewer?.source === 'chatgpt' ? '已登录 · 私有云工作区' : '私有云工作区') : '本机私有工作区');
+    document.documentElement.dataset.storage = health.status === 'fulfilled' && health.value?.deployment === 'private-cloud' ? 'cloud' : 'local';
+    setText('.privacy-pill', document.documentElement.dataset.storage === 'cloud' ? '● 登录保护 · 私有存储' : '● 本机存储');
+    $('#account-session')?.remove();
+    if (health.value?.deployment === 'private-cloud' && health.value?.viewer?.source === 'chatgpt') {
+      const account = node('div', 'notice info', node('strong', '', '当前登录'), node('p', '', health.value.viewer.display_name));
+      account.id = 'account-session';
+      const signOut = node('a', 'button quiet small', '退出登录');
+      signOut.href = '/signout-with-chatgpt?return_to=%2F'; signOut.target = '_top';
+      account.append(signOut); $('#help-dialog .help-content').append(account);
+    }
     $('.online-dot')?.classList.remove('offline');
     const version = state.meta.data_version || state.meta.dataVersion || state.meta.version || '当前正式知识库';
     const asOf = state.meta.as_of || state.meta.asOf || state.meta.sourceAsOf;

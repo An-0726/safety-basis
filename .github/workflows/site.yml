@@ -73,6 +73,20 @@ jobs:
         run: python tools/checks/public_snapshot.py --bundle source/releases/current --check
       - name: Private workbench business flow and export tests
         run: python -m unittest discover -s workbench/tests -v
+      - name: Private cloud API, storage and report regressions
+        run: |
+          npm --prefix workbench/cloud ci
+          node --test workbench/cloud/tests/*.test.mjs
+          mkdir -p tmp
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          # Offline build fixture only; this value is never sent to a hosting API.
+          Path('tmp/cloud-hosting.json').write_text(json.dumps({
+              'project_id': 'ci-build-fixture-not-a-hosted-site', 'd1': 'DB', 'r2': 'BUCKET'
+          }))
+          PY
+          node workbench/cloud/build.mjs --bundle source/releases/current --output dist --hosting tmp/cloud-hosting.json
       - name: Open the changed rules and a sample in a real browser
         shell: bash
         env:
@@ -89,6 +103,25 @@ jobs:
             --out "${RUNNER_TEMP}/browser/local.json"
       - name: Exercise the private workbench in a real browser
         run: python -m workbench.tests.browser_flow --output "${RUNNER_TEMP}/browser/workbench"
+      - name: Exercise the cloud workbench through the same real browser flow
+        shell: bash
+        run: |
+          node workbench/cloud/preview.mjs > "${RUNNER_TEMP}/browser/cloud-server.log" 2>&1 &
+          CLOUD_PREVIEW_PID=$!
+          trap 'kill "$CLOUD_PREVIEW_PID" 2>/dev/null || true' EXIT
+          python - <<'PY'
+          import time, urllib.request
+          for attempt in range(60):
+              try:
+                  with urllib.request.urlopen('http://127.0.0.1:5173/api/health', timeout=2) as response:
+                      assert response.status == 200
+                  break
+              except Exception:
+                  if attempt == 59:
+                      raise
+                  time.sleep(0.25)
+          PY
+          python -m workbench.tests.browser_flow --url http://127.0.0.1:5173 --output "${RUNNER_TEMP}/browser/cloud-workbench"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

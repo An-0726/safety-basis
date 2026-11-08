@@ -1,0 +1,26 @@
+{
+  "name": "safety-basis-private-cloud",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "dev": "node preview.mjs"
+  },
+  "dependencies": {
+    "docx": "9.6.1",
+    "pdf-lib": "1.17.1",
+    "@pdf-lib/fontkit": "1.1.1",
+    "fflate": "0.8.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "wrangler": "4.92.0",
+    "drizzle-kit": "0.31.10",
+    "drizzle-orm": "0.45.2"
+  }
+}
