@@ -1,15 +1,17 @@
 'use strict';
 import {DataStore} from './js/store.js';
-import {searchHazardsDetailed,searchLawsDetailed} from './js/search.js';
+import {searchHazardIssuesDetailed,searchLawsDetailed} from './js/search.js';
 import {INSPECTION_LABELS,profileTemplateText,profileReferenceText} from './js/field-profiles.js';
 import {renderNormativeContent} from './js/normative-content.js';
 import {BROWSE_GROUPS} from './js/browse-groups.js';
+import {filterHazardFacets,hazardFacetOptions} from './js/search-facets.js';
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MAX_RENDER=120;
+const CLIENT_DATA_VERSION='__SAFETY_BASIS_DATA_VERSION__';
 const LEGACY_MAJOR_CATEGORY='重大事故隐患判定';
-const state={view:'hazards',selectedHazard:'',selectedLaw:'',query:'',store:null,results:[],visibleCount:MAX_RENDER,pendingDetailScroll:false,routeWarnings:[],profileSelections:new Map()};
+const state={view:'hazards',selectedHazard:'',selectedLaw:'',query:'',store:null,results:[],visibleCount:MAX_RENDER,pendingDetailScroll:false,routeWarnings:[],issueFocus:'',lastQuery:'',issueMatch:null,highlightTerms:[],profileSelections:new Map()};
 
 export function createDetailRequestGuard(getCurrentState){
   if(typeof getCurrentState!=='function') throw new TypeError('getCurrentState must be a function');
@@ -113,10 +115,10 @@ function modeLabel(value){return ({direct:'直接适用',conditional:'有条件�
 function roleLabel(value){return ({direct:'直接依据',indirect:'间接依据',supporting:'间接／辅助依据',fallback:'上位法／兜底依据'})[value]||value||'未标注'}
 function displayCategoryOf(row){return row.displayCategory??row.category??''}
 function displayLevelOf(row){return row.displayLevel??row.level??''}
-function currentFilters(){return state.view==='hazards'?{browse:$('#browse').value,inspectionClass:$('#inspectionClass')?.value||'',category:$('#category').value,sceneTag:$('#scene').value,displayLevel:$('#level').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value}:{displayLevel:$('#lawLevel').value,level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
+function currentFilters(){return state.view==='hazards'?{browse:$('#browse').value,industry:$('#industry')?.value||'',equipment:$('#equipment')?.value||'',problem:$('#problem')?.value||'',inspectionClass:$('#inspectionClass')?.value||'',category:$('#category').value,sceneTag:$('#scene').value,displayLevel:$('#level').value,level:$('#level').value,region:$('#region').value,mode:$('#mode').value}:{displayLevel:$('#lawLevel').value,level:$('#lawLevel').value,region:$('#lawRegion').value,status:$('#lawStatus').value}}
 
 const URL_FILTERS={
-  hazards:{browse:'#browse',inspectionClass:'#inspectionClass',category:'#category',scene:'#scene',level:'#level',region:'#region',mode:'#mode'},
+  hazards:{browse:'#browse',industry:'#industry',equipment:'#equipment',problem:'#problem',inspectionClass:'#inspectionClass',category:'#category',scene:'#scene',level:'#level',region:'#region',mode:'#mode'},
   laws:{level:'#lawLevel',region:'#lawRegion',status:'#lawStatus'},
   data:{},
 };
@@ -165,13 +167,16 @@ function applyUrlFilters(route){
   }
   for(const [key,selector] of Object.entries(URL_FILTERS[route.view])){
     const select=$(selector),rawValue=route.filters[key]||'';
+    if(select&&key==='inspectionClass'&&rawValue&&INSPECTION_LABELS[rawValue]&&['loading','unavailable'].includes(state.store.fieldProfileStatus)){
+      select.innerHTML+=optionPair(rawValue,INSPECTION_LABELS[rawValue]+'（等待场景资料）');
+    }
     const value=key==='category'?canonicalCategoryFilter(rawValue,state.store.searchIndex):rawValue;
     // Ignore unknown values instead of silently hiding the whole database.
     if(select&&[...select.options].some(option=>option.value===value))select.value=value;
     else if(value)state.routeWarnings.push(`链接中的筛选“${value}”已不再提供，请重新选择。`);
   }
   updateFilterSummary();
-  if($('#hazardMoreFilters'))$('#hazardMoreFilters').open=['#category','#region','#scene','#level','#mode','#inspectionClass'].some(id=>$(id)?.value);
+  if($('#hazardMoreFilters'))$('#hazardMoreFilters').open=['#industry','#category','#region','#scene','#level','#mode','#inspectionClass'].some(id=>$(id)?.value);
   if($('#lawMoreFilters'))$('#lawMoreFilters').open=['#lawLevel','#lawStatus'].some(id=>$(id)?.value);
 }
 function syncUrl(historyMode='replace'){
@@ -190,11 +195,15 @@ function initFilters(){const t=state.store.taxonomy;
   const availableScenes=new Set(state.store.searchIndex.flatMap(row=>row.sceneTags||[]));
   const scenes=(t.sceneTagOptions||[]).filter(tag=>tag==='未细分场景'||availableScenes.has(tag));
   const modes=t.hazardModes||[];
+  const facets=hazardFacetOptions(state.store.searchIndex);
+  for(const [key,label] of [['industry','全部行业 / 场所'],['equipment','全部检索对象'],['problem','全部问题类型']]){
+    if($('#'+key))$('#'+key).innerHTML=optionPair('',label)+(facets[key]||[]).map(option).join('');
+  }
   // The major-criteria topic is independent of professional categories. Keep
   // the old value hidden only to preserve old URLs without widening results.
   $('#category').innerHTML='<option value="">全部专业分类</option>'+categories.filter(value=>value!==LEGACY_MAJOR_CATEGORY).map(option).join('')+`<option value="${LEGACY_MAJOR_CATEGORY}" hidden disabled>重大事故隐患判定（旧分类）</option>`;
   $('#scene').innerHTML='<option value="">全部现场标签</option>'+(scenes.length?scenes.map(value=>optionPair(value,value==='未细分场景'?'未标注具体现场':value)).join(''):'');
-  if($('#inspectionClass'))$('#inspectionClass').innerHTML='<option value="">全部条目（不限定用途）</option>'+Object.entries(INSPECTION_LABELS).filter(([key])=>state.store.searchIndex.some(row=>(row.inspectionClasses||[]).includes(key))).map(([key,label])=>optionPair(key,label+'（已审场景）')).join('');
+  refreshInspectionFilter();
   $('#level').innerHTML='<option value="">全部依据类型</option>'+levels.map(option).join('');
   $('#mode').innerHTML='<option value="">全部适用方式</option>'+modes.map(value=>optionPair(value,modeLabel(value))).join('');
   $('#lawLevel').innerHTML='<option value="">全部依据类型</option>'+levels.map(option).join('');
@@ -203,7 +212,7 @@ function initFilters(){const t=state.store.taxonomy;
 
 function switchView(view,{keepQuery=false,initial=false,targetId=null,historyMode='push'}={}){
   if(!state.store)return;
-  state.view=view;state.visibleCount=MAX_RENDER;state.pendingDetailScroll=false;if(!keepQuery)state.query='';
+  state.view=view;state.issueFocus='';state.visibleCount=MAX_RENDER;state.pendingDetailScroll=false;if(!keepQuery)state.query='';
   if(targetId!==null){
     if(view==='hazards')state.selectedHazard=targetId;else if(view==='laws')state.selectedLaw=targetId;
     for(const selector of Object.values(URL_FILTERS[view]||{}))if($(selector))$(selector).value='';
@@ -231,25 +240,101 @@ function resolveSelectedId(rows,currentId,mode,allRows){
   return currentId;
 }
 
+export function highlightText(value,terms=[]){
+  const text=String(value??'');
+  const words=[...new Set((terms||[]).map(term=>String(term).trim()).filter(term=>term.length>1))].sort((a,b)=>b.length-a.length);
+  if(!words.length)return esc(text);
+  const lower=text.toLocaleLowerCase(), normalized=words.map(word=>word.toLocaleLowerCase());
+  let html='',plain='',offset=0;
+  while(offset<text.length){
+    const found=normalized.findIndex(word=>lower.startsWith(word,offset));
+    if(found<0){plain+=text[offset++];continue;}
+    html+=esc(plain)+`<mark>${esc(text.slice(offset,offset+words[found].length))}</mark>`;
+    plain='';offset+=words[found].length;
+  }
+  return html+esc(plain);
+}
+
+export function zeroResultExplanation(issue={},hasFilters=false){
+  const reason=issue.zeroReason||issue.assessment?.classification;
+  if(reason==='filters_exclude_matches'||(hasFilters&&issue.unfilteredCount>0))return {title:'当前筛选挡住了候选',message:`移除筛选后可找到 ${issue.unfilteredCount} 条候选。可先查看全部，再逐项核对适用场景。`,clearFilters:true};
+  if(reason==='fact_unconfirmed')return {title:'这句话尚未确认存在缺陷',message:issue.queryNotice||'请保留“未发现”“没有损坏”等状态。先核实实际发生的问题，再检索相应依据。'};
+  if(reason==='needs_conditions')return {title:'需要补充对象或现场条件',message:issue.queryNotice||'当前说法有不止一种解释，请选择下方具体场景，或补充设备、缺陷和使用地点。'};
+  if(reason==='evidence_gap')return {title:'当前已核验库暂缺对应依据',message:issue.queryNotice||'当前公开库没有足以支持这项具体判断的已核验依据。请核对原文与现场证据，不要据此认定没有要求。'};
+  return {title:'没有找到对题候选',message:hasFilters?'可以移除筛选，并补充设备名称和实际缺陷；当前未检索到不代表没有相关要求。':'可改用“设备＋实际问题”，或补充行业、作业与地点。当前库未检索到不代表没有相关要求。',clearFilters:hasFilters};
+}
+function anyActiveFilters(){return Object.values(URL_FILTERS[state.view]||{}).some(selector=>$(selector)?.value);}
+function clearCurrentFilters(){
+  for(const selector of Object.values(URL_FILTERS[state.view]||{}))if($(selector))$(selector).value='';
+  renderResults({mode:'filter-change',historyMode:'push'});
+}
+function emptyResultsHtml(issue={}){
+  const help=zeroResultExplanation(issue,anyActiveFilters());
+  const facts=issue.assessment?.requiredFacts||[];
+  return `<div class="empty issue-empty empty-results"><strong>${esc(help.title)}</strong><p>${esc(help.message)}</p>${facts.length?`<p class="required-facts">需要核实：${facts.map(esc).join('；')}</p>`:''}${help.clearFilters?'<button type="button" data-clear-filters>清除筛选，保留问法</button>':''}</div>`;
+}
+function issueSuggestionsHtml(issue){
+  return (issue.suggestions||[]).length?`<div class="issue-suggestions">${issue.suggestions.map((item,index)=>`<div><button type="button" data-issue-suggestion="${index}" data-issue-id="${esc(issue.id)}">${esc(item.label)}</button><p>${esc(item.note||'')}</p></div>`).join('')}</div>`:'';
+}
+function renderIssueOverview(match){
+  const node=$('#issueOverview');if(!node)return;
+  node.hidden=state.view!=='hazards'||!match.isMultiIssue;
+  if(node.hidden){node.innerHTML='';return;}
+  node.innerHTML=`<div class="issue-heading"><strong>已分成 ${match.issues.length} 个问题分别检索</strong><span>逐组核实，结果均为检索候选。</span></div><div class="issue-tabs"><button type="button" class="issue-tab" data-issue-focus="" aria-pressed="${!state.issueFocus}">全部问题</button>${match.issues.map((issue,index)=>`<button type="button" class="issue-tab" data-issue-focus="${esc(issue.id)}" aria-pressed="${state.issueFocus===issue.id}"><span>问题 ${index+1} · ${esc(issue.query||'全部条目')}</span><small>${issue.rows.length} 条候选${!issue.rows.length?' · '+zeroResultExplanation(issue,anyActiveFilters()).title:''}</small></button>`).join('')}</div>`;
+  node.querySelectorAll('[data-issue-focus]').forEach(button=>button.onclick=()=>focusIssue(button.dataset.issueFocus));
+}
+function focusIssue(id){state.issueFocus=id;state.visibleCount=MAX_RENDER;state.selectedHazard='';renderResults({mode:'issue-focus'});backToResults();}
+function chooseIssueSuggestion(issueId,index){
+  const issue=state.issueMatch?.issues.find(item=>item.id===issueId),suggestion=issue?.suggestions?.[index];
+  if(!suggestion)return;
+  const source=issue.originalQuery||issue.query;
+  const query=$('#search').value;
+  // Preserve every other observation when clarifying just this group.
+  $('#search').value=state.issueMatch.isMultiIssue&&source&&query.includes(source)?query.replace(source,suggestion.query):suggestion.query;
+  renderResults({mode:'filter-change',historyMode:'push'});$('#search').focus();
+}
 function renderResults({mode='normal',historyMode='replace'}={}){
   if(!state.store)return;
   const list=$('#list');
-  const filterChanged=mode==='filter-change';
-  const viewChanged=mode==='view-change';
-  const initialDeepLink=mode==='initial';
-  const previousScrollTop=filterChanged||viewChanged?0:(list?.scrollTop||0);
+  const filterChanged=mode==='filter-change',viewChanged=mode==='view-change',initialDeepLink=mode==='initial';
+  const previousScrollTop=filterChanged||viewChanged||mode==='issue-focus'?0:(list?.scrollTop||0);
   if(filterChanged||viewChanged){state.visibleCount=MAX_RENDER;state.pendingDetailScroll=false;state.routeWarnings=[];}
   state.query=$('#search').value.trim();
+  if(state.query!==state.lastQuery||viewChanged)state.issueFocus='';
+  state.lastQuery=state.query;
   const filters=currentFilters();
   updateFilterSummary();
   if($('#majorTopicNotice'))$('#majorTopicNotice').hidden=state.view!=='hazards'||filters.category!==LEGACY_MAJOR_CATEGORY;
-  const match=state.view==='hazards'?searchHazardsDetailed(state.store.searchIndex,state.query,filters):searchLawsDetailed(state.store.lawIndex,state.query,filters);
-  const rows=match.rows;
-  showSearchNotice(match);
-  renderActiveFilters();
+  const match=state.view==='hazards'?searchHazardIssuesDetailed(state.store.searchIndex,state.query,filters):searchLawsDetailed(state.store.lawIndex,state.query,filters);
+  if(state.view==='hazards'){
+    // Interpret against the complete index so a restrictive facet cannot split a
+    // formal title differently. Facets then narrow each already-ranked issue.
+    if(filters.industry||filters.equipment||filters.problem){
+      match.rows=filterHazardFacets(match.rows,filters);
+      match.issues.forEach(issue=>{issue.rows=filterHazardFacets(issue.rows,filters);});
+    }
+    // The engine reports its own filters. Account for navigation facets too.
+    if((filters.industry||filters.equipment||filters.problem)&&match.issues.some(issue=>!issue.rows.length)){
+      const all=searchHazardIssuesDetailed(state.store.searchIndex,state.query,{});
+      match.issues.forEach((issue,index)=>{if(!issue.rows.length&&all.issues[index]?.rows.length){issue.unfilteredCount=all.issues[index].rows.length;issue.zeroReason='filters_exclude_matches';}});
+    }
+    state.issueMatch=match;
+    if(!match.issues.some(issue=>issue.id===state.issueFocus))state.issueFocus='';
+    if(initialDeepLink&&match.isMultiIssue&&state.selectedHazard){
+      state.issueFocus=match.issues.find(issue=>issue.rows.some(row=>row.id===state.selectedHazard))?.id||'';
+    }
+  }else state.issueMatch=null;
+  const focused=match.issues?.find(issue=>issue.id===state.issueFocus);
+  const activeMatch=focused||(!match.isMultiIssue&&match.issues?.[0])||match;
+  const rows=activeMatch.rows;
+  const grouped=state.view==='hazards'&&match.isMultiIssue&&!focused;
+  state.highlightTerms=focused?.highlightTerms||match.issues?.[0]?.highlightTerms||state.query.split(/\s+/).filter(Boolean);
+  showSearchNotice(activeMatch);
+  renderActiveFilters();renderIssueOverview(match);
   state.results=rows;
   if(state.view==='hazards'){
     state.selectedHazard=resolveSelectedId(rows,state.selectedHazard,mode,state.store.searchIndex);
+    if(grouped&&state.selectedHazard)state.highlightTerms=match.issues.find(issue=>issue.rows.some(row=>row.id===state.selectedHazard))?.highlightTerms||state.highlightTerms;
     const selectedIndex=rows.findIndex(x=>x.id===state.selectedHazard);
     if(initialDeepLink&&selectedIndex>=state.visibleCount)state.visibleCount=Math.ceil((selectedIndex+1)/MAX_RENDER)*MAX_RENDER;
   }else{
@@ -259,16 +344,29 @@ function renderResults({mode='normal',historyMode='replace'}={}){
   }
   const shownRows=rows.slice(0,state.visibleCount);
   $('#count').textContent=rows.length;
-  $('#summary').textContent=rows.length
-    ? `已展示 ${shownRows.length} / ${rows.length}；${state.view==='hazards'?'选择隐患查看完整依据':'选择法规查看收录条款与关联隐患'}`
-    : '试试缩短关键词或移除筛选；未检索到不代表不存在相关要求。';
-  const empty=rows.length?'':'<div class="empty"><strong>没有找到匹配内容</strong><p>试试缩短关键词或移除筛选。</p><p>未检索到不代表不存在相关要求。</p></div>';
+  $('#summary').textContent=grouped?`${match.issues.length} 个问题分别展示；每组先展示最多 4 条，可点开查看全部候选。`:rows.length
+    ? `已展示 ${shownRows.length} / ${rows.length}；${state.view==='hazards'?'选择候选查看完整依据与条件':'选择法规查看收录条款与关联隐患'}`
+    : zeroResultExplanation(activeMatch,anyActiveFilters()).title+'；未检索到不代表不存在相关要求。';
   const more=shownRows.length<rows.length?`<button type="button" id="loadMore" class="loadmore">加载更多（再显示 ${Math.min(MAX_RENDER,rows.length-shownRows.length)} 条）</button>`:'';
-  list.innerHTML=rows.length?shownRows.map(state.view==='hazards'?hazardCard:lawCard).join('')+more:empty;
+  if(grouped){
+    list.innerHTML=match.issues.map((issue,index)=>{
+      let preview=issue.rows.slice(0,4);
+      const selected=issue.rows.find(row=>row.id===state.selectedHazard);
+      if(selected&&!preview.some(row=>row.id===selected.id))preview=[...preview.slice(0,3),selected];
+      return `<section class="issue-group" data-issue-id="${esc(issue.id)}" aria-label="问题 ${index+1}：${esc(issue.query)}"><div class="issue-group-head"><h3>问题 ${index+1} · ${esc(issue.query)}</h3><span>${issue.rows.length} 条候选</span></div>${issue.rows.length?`<p class="issue-query-notice">${esc(issue.queryNotice||'核对对象、实际缺陷和条款适用条件后再作判断。')}</p>`:''}${issue.rows.length?preview.map(row=>hazardCard(row,issue.highlightTerms)).join(''):emptyResultsHtml(issue)}${issueSuggestionsHtml(issue)}${issue.rows.length?`<button type="button" class="issue-focus-button" data-focus-issue="${esc(issue.id)}">只看这个问题（${issue.rows.length} 条）</button>`:''}</section>`;
+    }).join('');
+  }else list.innerHTML=rows.length?shownRows.map(row=>state.view==='hazards'?hazardCard(row,state.highlightTerms):lawCard(row)).join('')+more:emptyResultsHtml(activeMatch);
   list.scrollTop=previousScrollTop;
   if($('#loadMore'))$('#loadMore').onclick=()=>{state.visibleCount=Math.min(rows.length,state.visibleCount+MAX_RENDER);renderResults({mode:'pagination'})};
+  list.querySelectorAll('[data-clear-filters]').forEach(button=>button.onclick=clearCurrentFilters);
+  list.querySelectorAll('[data-focus-issue]').forEach(button=>button.onclick=()=>focusIssue(button.dataset.focusIssue));
+  list.querySelectorAll('[data-issue-suggestion]').forEach(button=>button.onclick=()=>chooseIssueSuggestion(button.dataset.issueId,Number(button.dataset.issueSuggestion)));
   if(state.view==='hazards'){
-    $$('.card').forEach(el=>el.onclick=()=>selectHazard(el.dataset.id));
+    $$('.card').forEach(el=>el.onclick=()=>{
+      const issueId=el.closest?.('.issue-group')?.dataset.issueId;
+      if(issueId)state.highlightTerms=match.issues.find(issue=>issue.id===issueId)?.highlightTerms||[];
+      selectHazard(el.dataset.id);
+    });
     if(state.selectedHazard&&state.store.searchIndex.some(x=>x.id===state.selectedHazard))renderHazardDetail();
     else if(state.selectedHazard)renderUnavailable(state.selectedHazard,'隐患');
     else renderHazardDetail();
@@ -286,9 +384,11 @@ function renderUnavailable(id,kind){
   $('#detail').innerHTML=`<div class="empty"><strong>此${esc(kind)}未在当前已核验库中发布</strong><p>链接编号：${esc(id)}</p><p>可能尚待核验、已撤下或编号有误。请从列表选择其他内容，或搜索已核验的依据。</p></div>`
 }
 
-function hazardCard(r){
-  const clues=(r.sceneTags||[]).join(' · ');
-  return `<button class="card ${r.id===state.selectedHazard?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedHazard}"><div class="meta"><span>${esc(displayCategoryOf(r))}</span>${pill(r.status==='已核验'?modeLabel(r.mode):r.status)}</div><h3>${esc(r.title)}</h3>${clues?`<p>${esc(clues)}</p>`:''}${r.profileSummary?`<p class="profile-card-label">核查用途：${esc(r.profileSummary)}</p>`:''}<span class="arrow">↗</span></button>`;
+function hazardCard(r,terms=state.highlightTerms){
+  const basis=(r.lawNames||[]).slice(0,2).join('、');
+  const scope=r.conditions||(r.places||[]).join('；');
+  const description=r.description||r.title;
+  return `<button class="card ${r.id===state.selectedHazard?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedHazard}"><div class="meta"><span>${esc(displayCategoryOf(r))}</span>${pill(r.status==='已核验'?modeLabel(r.mode):r.status)}</div><h3>${highlightText(r.title,terms)}</h3><p class="candidate-status">检索候选 · 现场事实待核实</p>${description!==r.title?`<p class="card-preview"><b>表现</b> ${highlightText(description,terms)}</p>`:''}${basis?`<p class="card-preview"><b>依据</b> ${highlightText(basis,terms)}${(r.lawNames||[]).length>2?' 等':''}</p>`:''}<p class="card-preview"><b>${r.conditions?'条件':'场所'}</b> ${highlightText(scope||'需打开条目核对适用对象与条件',terms)}</p>${r.profileSummary?`<p class="profile-card-label">核查用途：${esc(r.profileSummary)}</p>`:''}<span class="arrow" aria-hidden="true">↗</span></button>`;
 }
 function lawCard(r){return `<button class="card ${r.id===state.selectedLaw?'selected':''}" data-id="${esc(r.id)}" aria-pressed="${r.id===state.selectedLaw}"><div class="meta"><span>${esc(displayLevelOf(r))}</span>${pill(r.status)}</div><h3>${esc(r.name)}</h3><p>${esc(r.scope)} · ${r.clauseCount} 条收录条款 · 关联 ${r.hazardCount} 条隐患</p><span class="arrow">↗</span></button>`}
 
@@ -357,18 +457,18 @@ async function renderHazardDetail({focusProfile=false}={}){
     const conditions=hazard.conditions||'';
     const noteParts=publicNoteParts(hazard);
     const businessNote=noteParts.businessNote;
-    const conditionsBlock=conditions?`<section class="block"><h3><span class="number">02</span>适用条件</h3><p>${esc(conditions)}</p></section>`:'';
+    const conditionsBlock=conditions?`<section class="block"><h3><span class="number">02</span>适用条件</h3><p>${highlightText(conditions,state.highlightTerms)}</p></section>`:'';
     const basisNumber=conditions?'03':'02';
     const measuresNumber=conditions?'04':'03';
     const noteBlock=businessNote.trim()?`<section class="block note"><h3>补充说明</h3><p>${esc(businessNote.trim())}</p></section>`:'';
-    const html=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(hazard.displayCategory||displayCategoryOf(hazard))}</span>${pill(hazard.status==='已核验'?modeLabel(hazard.mode):hazard.status)}</div><h2>${esc(hazard.title)}</h2><div class="subtitle">${esc((hazard.places||[]).join(' · '))}<br>核验状态：${esc(hazard.status)} · ${esc(dateOnly(hazard.checked))} · 数据日期 ${esc(dataDateOf(state.store.manifest,state.store.verifiedFiles?.manifest))}</div></div><div class="detailbody">${candidateNotice}<section class="block"><h3><span class="number">01</span>${profiles.length?'条目说明（需按场景核实）':'隐患专业描述'}</h3><p>${esc(hazard.description)}</p></section>${conditionsBlock}${profileSectionHtml(hazard,profiles,selectedProfile,bases)}<section class="block"><h3><span class="number">${basisNumber}</span>法规原文依据 <small>${bases.length} 条</small></h3>${basisContent}</section><section class="block"><h3><span class="number">${measuresNumber}</span>整改措施</h3><p>${esc(hazard.measures)}</p></section>${noteBlock}${technicalInfoHtml({id:hazard.id,checked:hazard.checked,places:hazard.places||[],historicalReferences:noteParts.historicalReferences})}</div><div class="detailactions"><button class="primary" id="copy">复制整改条目</button><button id="copyfull">复制完整资料</button><button id="share">复制当前链接</button><button id="backResults">返回结果</button></div>`;
+    const html=`<div class="detailtop"><div class="topline"><span class="eyebrow">${esc(hazard.displayCategory||displayCategoryOf(hazard))}</span>${pill(hazard.status==='已核验'?modeLabel(hazard.mode):hazard.status)}</div><h2>${highlightText(hazard.title,state.highlightTerms)}</h2><p class="candidate-status detail-candidate">检索候选 · 现场事实待核实</p><div class="subtitle">${esc((hazard.places||[]).join(' · '))}<br>条目依据核验：${esc(hazard.status)} · ${esc(dateOnly(hazard.checked))} · 数据日期 ${esc(dataDateOf(state.store.manifest,state.store.verifiedFiles?.manifest))}</div></div><div class="detailbody">${candidateNotice}<div class="onsite-notice">本页展示已收录条目的依据和核查参考。检索命中、条目已核验或选中一个场景，均不代表已确认现场存在隐患；请核实对象、当前状态和本条依据的适用条件。</div><section class="block"><h3><span class="number">01</span>${profiles.length?'条目说明（需按场景核实）':'隐患专业描述'}</h3><p>${highlightText(hazard.description,state.highlightTerms)}</p></section>${conditionsBlock}${profileSectionHtml(hazard,profiles,selectedProfile,bases)}<section class="block"><h3><span class="number">${basisNumber}</span>法规原文依据 <small>${bases.length} 条</small></h3>${basisContent}</section><section class="block"><h3><span class="number">${measuresNumber}</span>整改措施</h3><p>${esc(hazard.measures)}</p></section>${noteBlock}${technicalInfoHtml({id:hazard.id,checked:hazard.checked,places:hazard.places||[],historicalReferences:noteParts.historicalReferences})}</div><div class="detailactions"><button class="primary" id="copy">复制整改参考</button><button id="copyfull">复制完整资料</button><button id="share">复制当前链接</button><button id="backResults">返回结果</button></div>`;
     if(!detailRequests.isCurrent(request)) return;
     $('#detail').innerHTML=html;
     if(!detailRequests.isCurrent(request)) return;
-    const referencePrefix=profiles.length?'核查参考资料，非已核实的现场隐患。场景选择不代表条件成立或违规已发生。'+(profiles.every(p=>p.defaultFieldEntry==='exclude')?'本条已审场景不纳入默认现场检查；排除现场入口不等于本项要求不适用。':'')+'\n\n':'';
+    const referencePrefix=profiles.length?'核查参考资料，非已核实的现场隐患。场景选择不代表条件成立或违规已发生。'+(profiles.every(p=>p.defaultFieldEntry==='exclude')?'本条已审场景不纳入默认现场检查；排除现场入口不等于本项要求不适用。':'')+'\n\n':'检索候选参考资料，现场事实尚未核实。使用前请核对对象、当前状态和各条依据的适用条件。\n\n';
     const profileText=selectedProfile?profileReferenceText(selectedProfile)+'\n\n本场景选定依据：\n'+selectedProfile.basisLinkIds.map(id=>bases.find(b=>b.ref.linkId===id)).map(b=>`《${b.law.name}》${b.clause.article}\n本条依据适用范围：${basisApplicability(b.ref)}`).join('\n\n')+'\n\n条目完整参考：\n':'';
-    if(profiles.length)$('#copy').textContent='复制核查参考';
-    $('#copy').onclick=()=>copyText(referencePrefix+profileText+hazardText(hazard,bases),profiles.length?'已复制核查参考':'已复制整改条目');
+    $('#copy').textContent=profiles.length?'复制核查参考':'复制整改参考';
+    $('#copy').onclick=()=>copyText(referencePrefix+profileText+hazardText(hazard,bases),profiles.length?'已复制核查参考':'已复制整改参考');
     $('#copyfull').onclick=()=>copyText(referencePrefix+profileText+hazardFullText(hazard,bases),'已复制完整资料');
     if($('#profileSelect'))$('#profileSelect').onchange=()=>{
       const value=$('#profileSelect').value;
@@ -437,7 +537,7 @@ async function clearOfflineCache(){try{if('caches' in window){for(const k of awa
 function showError(err){console.error(err);$('#detail').innerHTML=`<div class="empty error"><strong>数据读取失败</strong><p>${esc(err?.message||err)}</p><button id="retry">重新加载</button></div>`;$('#retry')?.addEventListener('click',()=>location.reload())}
 
 function updateFilterSummary(){
-  const hazardCount=['#category','#region','#scene','#level','#mode','#inspectionClass'].filter(id=>$(id)?.value).length;
+  const hazardCount=['#industry','#category','#region','#scene','#level','#mode','#inspectionClass'].filter(id=>$(id)?.value).length;
   const lawCount=['#lawLevel','#lawStatus'].filter(id=>$(id)?.value).length;
   if($('#hazardFilterCount'))$('#hazardFilterCount').textContent=hazardCount?`（${hazardCount}）`:'';
   if($('#lawFilterCount'))$('#lawFilterCount').textContent=lawCount?`（${lawCount}）`:'';
@@ -452,7 +552,9 @@ function showSearchNotice(match){
       : match.matchKind==='colloquial'
         ? `没有与原话完全一致的条目，已按“${match.interpretedQuery}”查找。请核对对象、缺陷与适用条件。`
         : '';
-  node.textContent=[...state.routeWarnings,match.queryNotice,node.textContent,state.view==='hazards'?state.store.fieldProfileNotice:'',state.view==='hazards'&&$('#inspectionClass')?.value?'核查用途筛选仅覆盖已审场景，未归入此用途不代表不适用。':''].filter(Boolean).join(' ');
+  node.textContent=[...state.routeWarnings,match.queryNotice,node.textContent,state.view==='hazards'&&!$('#profileStatus')?state.store.fieldProfileNotice:'',state.view==='hazards'&&$('#inspectionClass')?.value?'核查用途筛选仅覆盖已审场景，未归入此用途不代表不适用。':''].filter(Boolean).join(' ');
+  const facts=match.assessment?.requiredFacts||[];
+  if(facts.length)node.textContent+=' 需要核实：'+facts.join('；');
   node.hidden=!node.textContent;
   const suggestions=$('#searchSuggestions');
   if(suggestions){
@@ -461,6 +563,7 @@ function showSearchNotice(match){
     suggestions.innerHTML=items.map((item,index)=>`<div><button type="button" data-suggestion="${index}">${esc(item.label)}</button><p>${esc(item.note)}</p></div>`).join('');
     suggestions.querySelectorAll('button[data-suggestion]').forEach(button=>button.onclick=()=>{
       const item=items[Number(button.dataset.suggestion)];if(!item)return;
+      if(state.issueFocus&&state.issueMatch?.isMultiIssue){chooseIssueSuggestion(state.issueFocus,Number(button.dataset.suggestion));return;}
       $('#search').value=item.query;
       renderResults({mode:'filter-change',historyMode:'push'});
       $('#search').focus();
@@ -469,7 +572,7 @@ function showSearchNotice(match){
 }
 function renderActiveFilters(){
   const node=$('#activeFilters');if(!node)return;
-  const labels={browse:'问题分类',inspectionClass:'核查用途',category:'专业分类',scene:'现场标签',level:'依据类型',region:'地区',mode:'适用方式',status:'效力状态'};
+  const labels={browse:'问题分类',industry:'行业 / 场所',equipment:'检索对象',problem:'问题类型',inspectionClass:'核查用途',category:'专业分类',scene:'现场标签',level:'依据类型',region:'地区',mode:'适用方式',status:'效力状态'};
   const entries=Object.entries(URL_FILTERS[state.view]||{}).filter(([,selector])=>$(selector)?.value);
   node.hidden=!entries.length;
   node.innerHTML=entries.map(([key,selector])=>{
@@ -509,22 +612,84 @@ function bind(){
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();if(state.view==='data')switchView('hazards');$('#search').focus()}});
 }
 
+export function checkedClientVersion(pageVersion,clientVersion){
+  const resolved=value=>{const text=String(value||'').trim();return text.startsWith('__')?'':text;};
+  const page=resolved(pageVersion),client=resolved(clientVersion);
+  if(page&&client&&page!==client){
+    const error=new Error('页面与检索脚本版本不一致，请清理旧缓存并重新加载。');error.code='VERSION_MISMATCH';throw error;
+  }
+  return client||page;
+}
+function refreshInspectionFilter(){
+  const select=$('#inspectionClass');if(!select)return;
+  const selected=select.value;
+  const classes=Object.entries(INSPECTION_LABELS).filter(([key])=>state.store.searchIndex.some(row=>(row.inspectionClasses||[]).includes(key)));
+  select.innerHTML=optionPair('','全部条目（不限定用途）')+classes.map(([key,label])=>optionPair(key,label+'（已审场景）')).join('');
+  if(selected&&INSPECTION_LABELS[selected]&&!classes.some(([key])=>key===selected))select.innerHTML+=optionPair(selected,INSPECTION_LABELS[selected]+'（场景资料暂不可用）');
+  select.value=selected;
+}
+function renderProfileStatus(message=''){
+  const node=$('#profileStatus');if(!node||!state.store)return;
+  const status=state.store.fieldProfileStatus;
+  node.hidden=!['loading','unavailable'].includes(status);
+  if(node.hidden){node.innerHTML='';return;}
+  const title=status==='loading'?'搜索已可用，现场核查场景继续加载':'现场核查场景未能加载';
+  const needsReload=status==='unavailable'&&['INTEGRITY','VERSION_MISMATCH'].includes(state.store.fieldProfileError?.code);
+  const content=status==='loading'?(message||'条目与法规已可查询；场景资料校验完成后补充展示。'):(state.store.fieldProfileNotice||'原条目仍可检索，请重试加载核查场景。');
+  node.innerHTML=`<div><strong>${esc(title)}</strong><p>${esc(content)}${$('#inspectionClass')?.value?' 所选“核查用途”需要场景资料，加载成功前暂不提供该用途结果。':''}</p></div>${status==='unavailable'?'<button type="button" id="retryProfiles">重试场景资料</button>':''}${needsReload?'<button type="button" id="reloadProfiles">加载最新页面</button>':''}`;
+  if($('#reloadProfiles'))$('#reloadProfiles').onclick=()=>location.reload();
+  if($('#retryProfiles'))$('#retryProfiles').onclick=async()=>{
+    const current=state.store;
+    const pending=current.loadFieldProfiles({onProgress:handleLoadProgress});renderProfileStatus();
+    try{await pending;}catch(error){console.error(error);}
+    if(state.store!==current)return;
+    refreshInspectionFilter();renderProfileStatus();
+    if(state.view!=='data')renderResults({mode:'profiles-ready'});
+  };
+}
+function handleLoadProgress(info={}){
+  if(['profiles','ready'].includes(info.phase)){renderProfileStatus(info.message);return;}
+  const message=$('#loadMessage');if(message)message.textContent=info.message||'正在读取数据';
+  if($('#loadTitle'))$('#loadTitle').textContent=info.phase==='manifest'?'正在核对发布版本':info.phase==='retry'?'正在重试数据请求':'正在加载检索索引';
+}
+function showStartupError(error){
+  const node=$('#loadStatus');if(node){node.hidden=false;node.classList.add('failed');}
+  if($('#loadTitle'))$('#loadTitle').textContent=error?.code==='VERSION_MISMATCH'?'页面、脚本或数据版本不一致':'数据库未能完成加载';
+  if($('#loadMessage'))$('#loadMessage').textContent=`${error?.message||error}${error?.code?'（'+error.code+'）':''}`;
+  if($('#loadActions'))$('#loadActions').hidden=false;
+  if($('#summary'))$('#summary').textContent='加载失败；可重新加载，或清理旧缓存后重试。';
+  if($('#dbVersion'))$('#dbVersion').textContent='数据尚未就绪';
+  showError(error);
+  $('#list').innerHTML='<div class="empty"><strong>暂时无法显示检索结果</strong><p>请根据上方错误原因重试加载。</p></div>';
+}
 async function boot(){
-  bindStickyHeaderHeight();
-  const route=loadUrlState();bind();
+  window.__safetyBasisBoot?.start();
   try{
-    state.store=await new DataStore('.').init();
+    bindStickyHeaderHeight();
+    const route=loadUrlState();bind();
+    if($('#retryLoad'))$('#retryLoad').onclick=()=>location.reload();
+    if($('#recoverCache')&&window.__safetyBasisBoot?.recover)$('#recoverCache').onclick=window.__safetyBasisBoot.recover;
+    const expectedVersion=checkedClientVersion($('meta[name="safety-basis-version"]')?.content,CLIENT_DATA_VERSION);
+    const store=new DataStore('.');
+    await store.init({deferFieldProfiles:true,requiredManifest:true,expectedVersion,onProgress:handleLoadProgress});
+    state.store=store;
     initFilters();applyUrlFilters(route);
-    setDataDateHeader(state.store.manifest,state.store.verifiedFiles?.manifest);
+    setDataDateHeader(store.manifest,store.verifiedFiles?.manifest);
     $('#search').value=state.query;
+    if($('#loadStatus'))$('#loadStatus').hidden=true;
     switchView(state.view,{keepQuery:true,initial:true,historyMode:'replace'});
+    renderProfileStatus();
+    store.fieldProfilesReady?.then(()=>{
+      if(state.store!==store)return;
+      refreshInspectionFilter();renderProfileStatus();
+      if(state.view!=='data')renderResults({mode:'profiles-ready'});
+    });
     if('serviceWorker' in navigator) {
-      // Modules are loaded now; finish cleanup after any late old-worker requests.
       const requestCleanup=()=>navigator.serviceWorker.controller?.postMessage({type:'safety-basis:cleanup-shell-caches'});
       navigator.serviceWorker.addEventListener('controllerchange',requestCleanup);
-      navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(requestCleanup).catch(()=>{});
+      navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(()=>navigator.serviceWorker.ready).then(requestCleanup).catch(()=>{});
     }
-  }catch(err){showError(err);$('#list').innerHTML='<div class="empty"><strong>数据库未能初始化</strong></div>'}
+  }catch(err){state.store=null;showStartupError(err);}
 }
 
 if(typeof document!=='undefined') boot();

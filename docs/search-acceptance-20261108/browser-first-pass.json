@@ -1,0 +1,446 @@
+{
+  "schemaVersion": "search-ux-browser-audit-v2",
+  "target": "local generated public bundle",
+  "dataVersion": "2026.11.08.fbdc1f1c1136",
+  "hazards": 1766,
+  "sourceKind": "synthetic",
+  "samplePurpose": "public requirements and development regression; not held-out accuracy",
+  "realDeidentifiedSamples": 0,
+  "createdAt": "2026-11-08T13:51:06.890530+00:00",
+  "checks": [
+    {
+      "name": "primary_controls_and_source_grounded_scenes",
+      "pass": true,
+      "evidence": {
+        "primaryFilters": [
+          "问题分类",
+          "检索对象",
+          "问题类型"
+        ],
+        "sourceGroundedSceneOptions": 26
+      },
+      "elapsedSeconds": 0.7
+    },
+    {
+      "name": "page_scripts_and_data_use_one_release",
+      "pass": true,
+      "evidence": {
+        "page": "2026.11.08.fbdc1f1c1136",
+        "manifest": "2026.11.08.fbdc1f1c1136",
+        "data": "2026.11.08.fbdc1f1c1136",
+        "versionedRuntimeAssets": 17
+      },
+      "elapsedSeconds": 0.349
+    },
+    {
+      "name": "multiple_observations_have_independent_result_groups",
+      "pass": false,
+      "error": "",
+      "elapsedSeconds": 0.587
+    },
+    {
+      "name": "clarifying_one_issue_preserves_other_observations",
+      "pass": true,
+      "evidence": {
+        "otherObservationPreserved": true,
+        "selectedQuery": "灭火器没压力，疏散通道占用"
+      },
+      "elapsedSeconds": 0.462
+    },
+    {
+      "name": "negation_uncertainty_and_completed_states_are_preserved",
+      "pass": true,
+      "evidence": {
+        "queries": [
+          "应急灯没有坏",
+          "通道没有堆东西",
+          "现场尚未核实应急灯是否损坏",
+          "灭火器已经修复了"
+        ],
+        "negatedGroupEmpty": true,
+        "independentPositiveGroupSearchable": true
+      },
+      "elapsedSeconds": 0.468
+    },
+    {
+      "name": "missing_fault_and_documentary_states_remain_separate",
+      "pass": true,
+      "evidence": {
+        "absentNotSubstituted": true,
+        "damagedLampTitles": [
+          "已设置的消防应急照明灯具损坏、不能正常点亮"
+        ],
+        "documentsNotImplementation": true
+      },
+      "elapsedSeconds": 0.451
+    },
+    {
+      "name": "crane_and_bicycle_objects_do_not_cross_match",
+      "pass": false,
+      "error": "['电动自行车飞线充电', '民用建筑架空层电动自行车充电场所防火分隔不合规', '电动自行车集中充电场所、设施设置不合规或堵塞通道', '南京电动自行车集中充电场所和设施未落实消防安全设置或运营管理要求', '人员密集场所未根据需要配套设置电动自行车集中停放区域、建设集中充电设施', '新建改建住宅小区未同步建充电设施且未预留建设条件', '电动车集中停放充电运营主体消防制度、规程或责任未落实']",
+      "elapsedSeconds": 0.564
+    },
+    {
+      "name": "spoken_typo_long_and_reordered_queries_reach_candidates",
+      "pass": true,
+      "evidence": {
+        "queries": [
+          "今天检查时看到车间里的灭火器没有压力了",
+          "灭活器没压力",
+          "失压的灭火器"
+        ],
+        "originalInputAndUrlPreserved": true
+      },
+      "elapsedSeconds": 0.443
+    },
+    {
+      "name": "ambiguous_phrases_offer_choices_and_required_conditions",
+      "pass": true,
+      "evidence": {
+        "passageChoices": 3,
+        "cabinetConditionsVisible": true
+      },
+      "elapsedSeconds": 0.453
+    },
+    {
+      "name": "equipment_problem_filter_combinations_and_clear_keep_query",
+      "pass": true,
+      "evidence": {
+        "combinedIds": [
+          "H001"
+        ],
+        "reloadPreservesCombination": true,
+        "clearFiltersKeepsQuery": true
+      },
+      "elapsedSeconds": 0.706
+    },
+    {
+      "name": "scene_filter_matches_source_and_survives_history",
+      "pass": true,
+      "evidence": {
+        "scene": "配电室与配电装置",
+        "count": 7,
+        "sourceIdsAgree": true,
+        "collapsedChipAndHistory": true
+      },
+      "elapsedSeconds": 0.56
+    },
+    {
+      "name": "candidate_status_highlighting_basis_and_conditions_are_visible",
+      "pass": true,
+      "evidence": {
+        "cardLabels": [
+          "依据",
+          "场所"
+        ],
+        "highlighted": true,
+        "conditionsId": "H001",
+        "sourceConditionsShown": true
+      },
+      "elapsedSeconds": 0.455
+    },
+    {
+      "name": "source_gap_and_generic_zero_result_have_distinct_explanations",
+      "pass": true,
+      "evidence": {
+        "sourceGapDistinctFromNoMatch": true,
+        "zeroIsNotNoDuty": true
+      },
+      "elapsedSeconds": 0.394
+    },
+    {
+      "name": "keyboard_search_and_filter_disclosure",
+      "pass": true,
+      "evidence": {
+        "slashFocus": true,
+        "nativeDisclosure": true,
+        "tabReachesIndustry": true
+      },
+      "elapsedSeconds": 0.363
+    },
+    {
+      "name": "mobile_widths_touch_targets_and_return_focus",
+      "pass": true,
+      "evidence": [
+        {
+          "width": 320,
+          "noOverflow": true,
+          "returnFocus": "results",
+          "touchTargets": {
+            "#search:0": {
+              "width": 168.0,
+              "height": 44
+            },
+            "#clear:0": {
+              "width": 49.0,
+              "height": 44
+            },
+            "#browse:0": {
+              "width": 266,
+              "height": 44
+            },
+            "#equipment:0": {
+              "width": 266,
+              "height": 44
+            },
+            "#problem:0": {
+              "width": 266,
+              "height": 44
+            },
+            "#reset:0": {
+              "width": 73.9,
+              "height": 44
+            },
+            "#hazardMoreFilters summary:0": {
+              "width": 182.1,
+              "height": 44
+            },
+            "#industry:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#category:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#region:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#scene:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#level:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#mode:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#inspectionClass:0": {
+              "width": 156.1,
+              "height": 44
+            },
+            "#issueOverview button:0": {
+              "width": 240,
+              "height": 44
+            },
+            "#issueOverview button:1": {
+              "width": 116,
+              "height": 80.5
+            },
+            "#issueOverview button:2": {
+              "width": 116,
+              "height": 80.5
+            },
+            "#list .issue-focus-button:0": {
+              "width": 263,
+              "height": 44
+            },
+            "#list .issue-focus-button:1": {
+              "width": 263,
+              "height": 44
+            },
+            "#activeFilters .filter-chip:0": {
+              "width": 120.9,
+              "height": 44
+            },
+            "#list [data-clear-filters]:0": {
+              "width": 145,
+              "height": 46
+            },
+            "#list [data-clear-filters]:1": {
+              "width": 145,
+              "height": 46
+            },
+            "#backResults:0": {
+              "width": 238,
+              "height": 44
+            }
+          }
+        },
+        {
+          "width": 390,
+          "noOverflow": true,
+          "returnFocus": "results",
+          "touchTargets": {
+            "#search:0": {
+              "width": 236.2,
+              "height": 44
+            },
+            "#clear:0": {
+              "width": 50.8,
+              "height": 44
+            },
+            "#browse:0": {
+              "width": 163,
+              "height": 44
+            },
+            "#equipment:0": {
+              "width": 163,
+              "height": 44
+            },
+            "#problem:0": {
+              "width": 336,
+              "height": 44
+            },
+            "#reset:0": {
+              "width": 73.9,
+              "height": 44
+            },
+            "#hazardMoreFilters summary:0": {
+              "width": 252.1,
+              "height": 44
+            },
+            "#industry:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#category:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#region:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#scene:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#level:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#mode:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#inspectionClass:0": {
+              "width": 226.1,
+              "height": 44
+            },
+            "#issueOverview button:0": {
+              "width": 310,
+              "height": 44
+            },
+            "#issueOverview button:1": {
+              "width": 151,
+              "height": 80.5
+            },
+            "#issueOverview button:2": {
+              "width": 151,
+              "height": 80.5
+            },
+            "#list .issue-focus-button:0": {
+              "width": 333,
+              "height": 44
+            },
+            "#list .issue-focus-button:1": {
+              "width": 333,
+              "height": 44
+            },
+            "#activeFilters .filter-chip:0": {
+              "width": 120.9,
+              "height": 44
+            },
+            "#list [data-clear-filters]:0": {
+              "width": 145,
+              "height": 46
+            },
+            "#list [data-clear-filters]:1": {
+              "width": 145,
+              "height": 46
+            },
+            "#backResults:0": {
+              "width": 308,
+              "height": 44
+            }
+          }
+        }
+      ],
+      "elapsedSeconds": 1.767
+    },
+    {
+      "name": "stale_page_and_current_script_fail_visibly_then_retry",
+      "pass": true,
+      "evidence": {
+        "stalePageRejected": true,
+        "message": "页面与检索脚本版本不一致，请清理旧缓存并重新加载。（VERSION_MISMATCH）",
+        "retryRestoresSearch": true
+      },
+      "elapsedSeconds": 0.418
+    },
+    {
+      "name": "current_script_and_different_data_release_fail_visibly_then_retry",
+      "pass": true,
+      "evidence": {
+        "mixedDataRejected": true,
+        "message": "页面与数据库发布版本不一致，请重新加载最新页面。（VERSION_MISMATCH）",
+        "retryRestoresSearch": true
+      },
+      "elapsedSeconds": 0.427
+    },
+    {
+      "name": "incomplete_or_stale_index_bytes_are_not_silently_displayed",
+      "pass": true,
+      "evidence": {
+        "wrongBytesRejected": true,
+        "message": "网站数据已更新或文件不完整，请刷新后重试。（INTEGRITY）",
+        "retryRestoresSearch": true
+      },
+      "elapsedSeconds": 0.471
+    },
+    {
+      "name": "network_failure_has_reason_and_working_retry",
+      "pass": true,
+      "evidence": {
+        "failedRequests": 2,
+        "visibleCause": "网络连接中断，未能读取data/search-index.json，请重试。（NETWORK）",
+        "retryRestoresSearch": true,
+        "queryPreserved": true
+      },
+      "elapsedSeconds": 0.394
+    },
+    {
+      "name": "missing_module_cannot_leave_endless_initialization",
+      "pass": true,
+      "evidence": {
+        "moduleFailureHasRecovery": true,
+        "message": "检索脚本加载失败。请检查网络后重新加载；若更新后持续出现，请清理旧缓存再试。",
+        "retryRestoresSearch": true
+      },
+      "elapsedSeconds": 0.396
+    },
+    {
+      "name": "delayed_profiles_do_not_block_core_search_or_detail",
+      "pass": false,
+      "error": "Route.fulfill: Route is already handled!",
+      "elapsedSeconds": 0.576
+    },
+    {
+      "name": "optional_profile_failure_preserves_search_and_can_retry",
+      "pass": true,
+      "evidence": {
+        "coreSurvivesOptionalFailure": true,
+        "retryWithoutReload": true,
+        "queryAndCandidatesPreserved": true
+      },
+      "elapsedSeconds": 0.485
+    },
+    {
+      "name": "normal_search_flows_have_no_unhandled_javascript_errors",
+      "pass": true,
+      "evidence": {
+        "normalFlowUnhandledErrors": [],
+        "injectedFailureContextsExcluded": true
+      },
+      "elapsedSeconds": 0.0
+    }
+  ],
+  "passed": 20,
+  "failed": 3,
+  "total": 23
+}

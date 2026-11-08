@@ -1331,9 +1331,9 @@
   "baselineProjection": {
     "counts": {
       "clauses": 1514,
-      "hazards": 1764,
+      "hazards": 1766,
       "lawVersions": 106,
-      "links": 1949
+      "links": 1951
     },
     "ids": {
       "clauses": [
@@ -2984,6 +2984,7 @@
         "H_0A04041605A506FE1A9F1C4045_1",
         "H_0A04041605A506FE1A9F1C4045_2",
         "H_0A4BEEE14031157F804CCCB0",
+        "H_0A53849CB39848628056FDADEB",
         "H_0A9DDC2534BC46FDA9AEE80A89",
         "H_0AC67D4DEEB18F4681E7E988DE_1",
         "H_0AEEA3C7BD0D4396AF871679A0",
@@ -4232,6 +4233,7 @@
         "H_GBZ188_4_6_1_1",
         "H_GBZ188_4_6_3_2",
         "H_GBZ188_4_6_3_3",
+        "H_HAZCHEM_COMMUNICATION_DEVICE_INOPERABLE",
         "H_HJ2026_9_1_2_1",
         "H_JGJT46_2024_BOX_PE",
         "H_JS140_七_1",
@@ -5109,6 +5111,8 @@
         "K_H023_NJ_STAFFING_15",
         "K_H024_MEM_ELIMINATION_2015_IV_1",
         "K_H032_GBT13869_5_1_1",
+        "K_HAZCHEM_ALARM_SERVICEABILITY_20261108",
+        "K_HAZCHEM_COMMUNICATION_SERVICEABILITY_20261108",
         "K_H_14E04FE43D8A43_C_GB18597_6_1_1",
         "K_H_14E04FE43D8A43_C_GB18597_8_3_5",
         "K_H_3B20B1FE3A9647_C_GB18597_4_1",
@@ -6679,19 +6683,19 @@
       ]
     }
   },
-  "candidateCount": 266,
+  "candidateCount": 265,
   "candidateGapCounts": {
     "applicability_or_review_pending": 17,
     "no_exact_clause": 136,
     "official_evidence_missing": 2,
-    "rejected_or_misaligned_basis": 111
+    "rejected_or_misaligned_basis": 110
   },
   "currentProjection": {
     "counts": {
       "clauses": 1514,
-      "hazards": 1764,
+      "hazards": 1766,
       "lawVersions": 106,
-      "links": 1949
+      "links": 1951
     },
     "ids": {
       "clauses": [
@@ -8342,6 +8346,7 @@
         "H_0A04041605A506FE1A9F1C4045_1",
         "H_0A04041605A506FE1A9F1C4045_2",
         "H_0A4BEEE14031157F804CCCB0",
+        "H_0A53849CB39848628056FDADEB",
         "H_0A9DDC2534BC46FDA9AEE80A89",
         "H_0AC67D4DEEB18F4681E7E988DE_1",
         "H_0AEEA3C7BD0D4396AF871679A0",
@@ -9590,6 +9595,7 @@
         "H_GBZ188_4_6_1_1",
         "H_GBZ188_4_6_3_2",
         "H_GBZ188_4_6_3_3",
+        "H_HAZCHEM_COMMUNICATION_DEVICE_INOPERABLE",
         "H_HJ2026_9_1_2_1",
         "H_JGJT46_2024_BOX_PE",
         "H_JS140_七_1",
@@ -10469,6 +10475,8 @@
         "K_H023_NJ_STAFFING_15",
         "K_H024_MEM_ELIMINATION_2015_IV_1",
         "K_H032_GBT13869_5_1_1",
+        "K_HAZCHEM_ALARM_SERVICEABILITY_20261108",
+        "K_HAZCHEM_COMMUNICATION_SERVICEABILITY_20261108",
         "K_H_14E04FE43D8A43_C_GB18597_6_1_1",
         "K_H_14E04FE43D8A43_C_GB18597_8_3_5",
         "K_H_3B20B1FE3A9647_C_GB18597_4_1",
@@ -12073,23 +12081,22 @@
   },
   "inventory": {
     "clauses": 3255,
-    "evidence": 1478,
-    "hazards": 2171,
+    "evidence": 1480,
+    "hazards": 2172,
     "lawVersions": 160,
     "laws": 155,
-    "links": 2311,
+    "links": 2313,
     "requirements": 75,
     "successions": 27
   },
   "lifecycle": {
-    "active": 1775,
-    "proposed": 266,
+    "active": 1777,
+    "proposed": 265,
     "superseded": 130
   },
   "method": "读取正式knowledge和现有release_gate_core；按Gate发布集合逐ID对账。优先级为补证工作排序，不是现场风险评级或重大隐患结论。",
   "priorityCount": 40,
   "priorityHazardIds": [
-    "H_0A53849CB39848628056FDADEB",
     "H_0D7B747137B74DEEA766A4DA5E",
     "H_12158_10_1_2",
     "H_15577_6_4_3_1",
@@ -12128,10 +12135,11 @@
     "H_AA7C48BCF0E6458484759F407B",
     "H_CF_MAJOR_04",
     "H006",
-    "H_12158_3_1"
+    "H_12158_3_1",
+    "H_13AAF56DFDBE457B8DBA5C84D6"
   ],
   "schemaVersion": 1,
-  "sourceFingerprint": "4068f364cda3ff4ce9552e2aa8ef1607dbaea3e29f7812fb2ad14a7e579173ff",
+  "sourceFingerprint": "5694986120f36d4ed4e4f0a3ff7cfe1f49e6bf39cdd476716617eb5de746d606",
   "successions": [
     {
       "classification": "partial_scope_only",

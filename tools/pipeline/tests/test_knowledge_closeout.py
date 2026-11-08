@@ -24,7 +24,8 @@ class KnowledgeCloseoutTests(unittest.TestCase):
         actual = [r['hazardId'] for r in self.candidates]
         self.assertEqual(set(actual), expected)
         self.assertEqual(len(actual), len(set(actual)))
-        self.assertEqual(len(actual), 266)
+        self.assertEqual(len(actual), 265)
+        self.assertNotIn('H_0A53849CB39848628056FDADEB', expected)
         self.assertFalse(expected & set(self.audit['currentProjection']['ids']['hazards']))
         for row in self.candidates:
             self.assertTrue(row['minimumEvidenceActions'])
@@ -37,7 +38,9 @@ class KnowledgeCloseoutTests(unittest.TestCase):
         excluded = {r['hazardId'] for r in self.audit['activeExcluded']}
         self.assertFalse(current & excluded)
         self.assertEqual(len(current) + len(excluded), self.audit['lifecycle']['active'])
-        self.assertEqual((len(current), len(excluded)), (1764, 11))
+        self.assertEqual((len(current), len(excluded)), (1766, 11))
+        self.assertTrue({'H_0A53849CB39848628056FDADEB',
+                         'H_HAZCHEM_COMMUNICATION_DEVICE_INOPERABLE'} <= current)
         self.assertIn('H_CE94D2ACC8C544BCA0FB0AA026', excluded)
         self.assertEqual(self.audit['validationErrors'], [])
         for row in self.audit['activeExcluded']:
@@ -65,7 +68,7 @@ class KnowledgeCloseoutTests(unittest.TestCase):
             self.assertNotEqual(before, closeout.source_fingerprint(directory))
         outputs = closeout.output_files(self.audit, self.candidates)
         rows = [json.loads(line) for line in outputs['CANDIDATE_INVENTORY_20261108.jsonl'].splitlines()]
-        self.assertEqual(len(rows), 266)
+        self.assertEqual(len(rows), 265)
         self.assertEqual(len(self.audit['priorityHazardIds']), 40)
         self.assertEqual(len(set(self.audit['priorityHazardIds'])), 40)
 

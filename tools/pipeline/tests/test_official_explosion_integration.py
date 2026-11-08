@@ -174,7 +174,10 @@ class OfficialExplosionTests(unittest.TestCase):
     def test_per_link_scope_projection_is_lossless_and_separate(self):
         for kid in [K08] + INITIAL + MAINT:
             k = self.state['links'][kid]
-            basis = project_basis_reference(k, 'c0000')
+            clause = self.state['clauses'][k['clauseId']]
+            version = self.state['law-versions'][clause['lawVersionId']]
+            law = self.state['laws'][version['lawId']]
+            basis = project_basis_reference(k, 'c0000', clause=clause, version=version, law=law)
             self.assertEqual(basis['applicability'], k['applicability'])
             self.assertEqual(basis['linkId'], kid)
             self.assertEqual(basis['jurisdictionCode'], 'CN')

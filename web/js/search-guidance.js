@@ -1,17 +1,11 @@
 // Ambiguous field wording must not silently acquire a site, duty or defect.
 import {fieldQueryGuidance} from './field-query-guidance.js';
-import {fieldSafetyBoundary} from './search-boundaries.js';
+import {fieldSafetyBoundary, observationStateBoundary} from './search-boundaries.js';
 const suggestion=(label,query,note)=>({label,query,note});
 function legacyHazardSearchGuidance(value){
   const query=String(value??'').normalize('NFKC').replace(/\s+/g,'').replace(/[，。？！?!]/g,'');
-  // Do not strip a negation or a completed/unknown state and manufacture a
-  // defect. These endings deliberately do not match “没有断路器” or “未完成”.
-  if(/(?:没有|未见|未发现|不存在)(?:断|断裂|断开|失灵|故障|损坏|破损|失效)(?:了)?$/.test(query)
-      ||/(?:已经|(?<!未)已)(?:修好|修复|签字|完成)(?:了)?$/.test(query)
-      ||/^(?:未查明|尚未确认|尚未核实)/.test(query))return {
-    suppressResults:true,notice:'这句话表示未查明、未发现缺陷或相关动作已完成，不能删掉状态词当成已发生的不符合。请按核实后的对象和实际问题继续检索。',suggestions:[],
-    assessment:{classification:'fact_unconfirmed',reason:'negated_completed_or_unconfirmed',requiredFacts:['现场当前状态及证据']},
-  };
+  const observation = observationStateBoundary(value);
+  if (observation) return observation;
   const fieldGuidance=fieldQueryGuidance(query);
   if(fieldGuidance)return fieldGuidance;
   // A missing sign is not a failed lamp, and a missing extinguisher is not a placement defect.
@@ -62,7 +56,7 @@ function legacyHazardSearchGuidance(value){
       suggestion('查疏散指示灯损坏','安全出口或疏散指示标志灯具损坏、不能正常指示','指示标志与照明功能分别核查。'),
     ],
   };
-  const oilyFloor=/^((?:普通)?(?:工业|机械)?车间(?:里)?)?(?:地上|地面)(?:有油(?:污)?|湿滑)(?:了)?$/.exec(query);
+  const oilyFloor=/^((?:普通)?(?:工业|机械)?车间(?:里)?)?(?:地上|地面)(?:有油(?:污)?|油污|油渍|湿滑)(?:了)?$/.exec(query);
   if(oilyFloor)return {
     suppressResults:true,notice:'请核实场所和实际滑跌风险；餐饮食品处理区的防滑要求不能直接套用于普通工业车间。',
     assessment:{classification:oilyFloor[1]?'evidence_gap':'needs_conditions',reason:oilyFloor[1]?'industrial_floor_source_gap':'floor_scene_unconfirmed',requiredFacts:['场所用途','实际滑跌风险','对题的现行法规依据']},

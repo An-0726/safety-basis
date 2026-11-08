@@ -1,0 +1,2213 @@
+{
+  "schema": "original-site-search-acceptance-report-v1",
+  "dataset_sha256": "b7cee4f59362fa6be0d42fdc7d8ab3050c1851f2a55c6a39b84fa05dc1fe2112",
+  "dataVersion": "2026.11.08.595e30e6b3b2",
+  "releaseHash": "ef8b07b4c753cc1d9f969aac8283a1f0c287255603817e54a1023e3057f6ab28",
+  "implementation_sha256": "9a1ea8e31f165e366a35ed793fde61a2c356bf55e7927950d30b407b9edd9e11",
+  "summary": {
+    "samples": 40,
+    "synthetic": 40,
+    "real_deidentified": 0,
+    "on_topic_top3": {
+      "numerator": 11,
+      "denominator": 23
+    },
+    "targeted_mismatch_samples": 2,
+    "raw_zero_results": 27,
+    "expected_positive_zero_results": 12,
+    "all_contract_checks": 15,
+    "limitations": "合成留出样本、助手标注；误匹配仅指已列明禁止目标或否定状态的直接候选，非全库专业准确率。条件建议不合并进原句直接命中率。"
+  },
+  "results": [
+    {
+      "sample": {
+        "id": "HOLD-001",
+        "group": "口语",
+        "query": "灭火器压力不足了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 2,
+        "issues": [
+          {
+            "query": "灭火器压力不足了",
+            "interpretedQuery": "灭火器压力不足",
+            "count": 2,
+            "top3": [
+              {
+                "id": "H001",
+                "title": "灭火器失压"
+              },
+              {
+                "id": "H025",
+                "title": "消防设施、器材未按要求检验维修"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-002",
+        "group": "口语",
+        "query": "配电柜门没接地线",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_43C6C076F9FC456DB09138A19A"
+          ]
+        ],
+        "required_condition": true
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "配电柜门没接地线",
+            "interpretedQuery": "配电柜 门 接地 线",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_43C6C076F9FC456DB09138A19A",
+                "title": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-003",
+        "group": "口语",
+        "query": "疏散走道被杂物堵住了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_8A0E0A3FDDD04AF1829ED6C16E",
+            "H_3642D1A7D0A7422A83E1B0E8BA",
+            "H008",
+            "H044"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "疏散走道被杂物堵住了",
+            "interpretedQuery": "疏散走道 被杂物堵住了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-004",
+        "group": "别名",
+        "query": "天车吊钩防脱钩装置坏了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_772BE36081184956B7899AA306"
+          ]
+        ],
+        "forbidden_ids": [
+          "H010"
+        ]
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "天车吊钩防脱钩装置坏了",
+            "interpretedQuery": "天车 吊钩防脱钩装置 损坏",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_772BE36081184956B7899AA306",
+                "title": "一行车吊钩防脱钩装置损坏"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-005",
+        "group": "别名",
+        "query": "电动自行车拉线充电",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H010"
+          ]
+        ],
+        "forbidden_ids": [
+          "H_772BE36081184956B7899AA306"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "电动自行车拉线充电",
+            "interpretedQuery": "电动自行车 拉线充电",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-006",
+        "group": "别名",
+        "query": "消防应急照明灯不亮了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "消防应急照明灯不亮了",
+            "interpretedQuery": "消防 应急照明灯 损坏",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+                "title": "已设置的消防应急照明灯具损坏、不能正常点亮"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-007",
+        "group": "错字",
+        "query": "灭活器没压力",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭活器没压力",
+            "interpretedQuery": "灭活器没压力",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-008",
+        "group": "错字",
+        "query": "疏散通到堵塞",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_8A0E0A3FDDD04AF1829ED6C16E",
+            "H_3642D1A7D0A7422A83E1B0E8BA",
+            "H008",
+            "H044"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 6,
+        "issues": [
+          {
+            "query": "疏散通到堵塞",
+            "interpretedQuery": "疏散通道 堵塞",
+            "count": 6,
+            "top3": [
+              {
+                "id": "H075",
+                "title": "危险化学品使用场所疏散通道被占用或设置逃生障碍"
+              },
+              {
+                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
+                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
+              },
+              {
+                "id": "H044",
+                "title": "仓储场所疏散通道、安全出口或消防车通道不畅通"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-009",
+        "group": "长句",
+        "query": "今天巡检时发现灭火器没压力了，想查一下整改依据",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "今天巡检时发现灭火器没压力了，想查一下整改依据",
+            "interpretedQuery": "今天巡检时发现 灭火器 没压力了,想查一下整改依据",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-010",
+        "group": "长句",
+        "query": "请帮我看看车间里已经安装的应急照明灯损坏了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "请帮我看看车间里已经安装的应急照明灯损坏了",
+            "interpretedQuery": "请帮我看看车间里已经安装的 应急照明灯 损坏 了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-011",
+        "group": "词序",
+        "query": "压力不足的灭火器",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "压力不足的灭火器",
+            "interpretedQuery": "压力不足的 灭火器",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-012",
+        "group": "词序",
+        "query": "没有接地线的配电箱门",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_43C6C076F9FC456DB09138A19A"
+          ]
+        ],
+        "required_condition": true
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "没有接地线的配电箱门",
+            "interpretedQuery": "接地 线 配电箱 门",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_43C6C076F9FC456DB09138A19A",
+                "title": "装有电器的可开启配电箱（柜）门与金属框架未可靠连接"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-013",
+        "group": "多问题",
+        "query": "灭火器没气了；应急照明灯也不亮",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ],
+          [
+            "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+          ]
+        ],
+        "min_issues": 2
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭火器没气了；应急照明灯也不亮",
+            "interpretedQuery": "灭火器 没气了; 应急照明灯 也不亮",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 2,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": false,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-014",
+        "group": "多问题",
+        "query": "消防通道被堵，灭火器没有压力",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_8A0E0A3FDDD04AF1829ED6C16E",
+            "H_3642D1A7D0A7422A83E1B0E8BA",
+            "H008",
+            "H044"
+          ],
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ],
+        "min_issues": 2
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "消防通道被堵，灭火器没有压力",
+            "interpretedQuery": "消防通道 被堵, 灭火器 没有压力",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 2,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": false,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-015",
+        "group": "多问题",
+        "query": "固定式压力容器压力表检定过期，灭火器失压",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+          ],
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ],
+        "min_issues": 2,
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "固定式压力容器压力表检定过期，灭火器失压",
+            "interpretedQuery": "固定式 压力容器 压力表 检定过期 , 灭火器失压",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "gauge_verification_state",
+              "requiredFacts": [
+                "是否属于固定式压力容器及条款适用范围",
+                "检定有效期及证据"
+              ]
+            },
+            "notice": "检定有效期与压力表部件损坏分别核查；检索候选仍须确认设备适用范围及真实有效期。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 2,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": false,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-016",
+        "group": "多问题",
+        "query": "灭火器没压力，同时疏散走道被杂物挡住了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ],
+          [
+            "H_8A0E0A3FDDD04AF1829ED6C16E",
+            "H_3642D1A7D0A7422A83E1B0E8BA",
+            "H008",
+            "H044"
+          ]
+        ],
+        "min_issues": 2
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭火器没压力，同时疏散走道被杂物挡住了",
+            "interpretedQuery": "灭火器 没压力,同时 疏散走道 被杂物挡住了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 2,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": false,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-017",
+        "group": "否定",
+        "query": "应急照明灯并没有坏",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "fact_unconfirmed"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "应急照明灯并没有坏",
+            "interpretedQuery": "应急照明灯 并没有坏",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": false,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-018",
+        "group": "否定",
+        "query": "灭火器并没有失压",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "fact_unconfirmed"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭火器并没有失压",
+            "interpretedQuery": "灭火器 并没有 失压",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": false,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-019",
+        "group": "否定",
+        "query": "疏散通道未堵塞",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "fact_unconfirmed"
+        ]
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "疏散通道未堵塞",
+            "interpretedQuery": "疏散通道 未 堵塞",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_COM_EV_CHARGING_AREA",
+                "title": "南京电动自行车集中充电场所和设施未落实消防安全设置或运营管理要求"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": true,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": false,
+        "assessment_ok": false,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-020",
+        "group": "否定",
+        "query": "尚未确认应急灯是否损坏",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "fact_unconfirmed"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "尚未确认应急灯是否损坏",
+            "interpretedQuery": "尚未确认应急灯是否损坏",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "fact_unconfirmed",
+              "reason": "negated_completed_or_unconfirmed",
+              "requiredFacts": [
+                "现场当前状态及证据"
+              ]
+            },
+            "notice": "这句话表示未查明、未发现缺陷或相关动作已完成，不能删掉状态词当成已发生的不符合。请按核实后的对象和实际问题继续检索。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-021",
+        "group": "状态",
+        "query": "车间消防应急灯未安装",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true,
+        "forbidden_ids": [
+          "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "车间消防应急灯未安装",
+            "interpretedQuery": "车间消防应急灯未安装",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "emergency_lighting_absent",
+              "requiredFacts": [
+                "建筑用途及类别",
+                "所在部位",
+                "是否属于条款规定应设疏散照明的情形"
+              ]
+            },
+            "notice": "未设置与已经设置但灯具损坏是不同缺陷。还需核实建筑、部位及消防设计要求，不能由“车间”或“仓库”自动补齐应设条件。",
+            "suggestions": [
+              {
+                "query": "应设疏散照明的建筑部位未设置疏散照明",
+                "label": "查疏散照明未设置",
+                "top3": [
+                  {
+                    "id": "H_C0BEAB6834F44E5CBE05F9CBD0",
+                    "title": "应设疏散照明的建筑部位未设置疏散照明"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-022",
+        "group": "状态",
+        "query": "消防应急灯已经安装但坏了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+          ]
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "消防应急灯已经安装但坏了",
+            "interpretedQuery": "消防应急灯 已经安装但坏了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-023",
+        "group": "状态",
+        "query": "固定式压力容器压力表超过检定有效期",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+          ]
+        ],
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+        ]
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "固定式压力容器压力表超过检定有效期",
+            "interpretedQuery": "固定式 压力容器 压力表 超过检定有效期",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
+                "title": "固定式压力容器压力表未经检定或超过检定有效期"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "gauge_verification_state",
+              "requiredFacts": [
+                "是否属于固定式压力容器及条款适用范围",
+                "检定有效期及证据"
+              ]
+            },
+            "notice": "检定有效期与压力表部件损坏分别核查；检索候选仍须确认设备适用范围及真实有效期。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-024",
+        "group": "状态",
+        "query": "固定式压力容器压力表玻璃破裂",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+          ]
+        ],
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+        ]
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "固定式压力容器压力表玻璃破裂",
+            "interpretedQuery": "固定式 压力容器 压力表玻璃破裂",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+                "title": "固定式压力容器压力表玻璃破裂、刻度不清或部件损坏"
+              }
+            ],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "gauge_damage_state",
+              "requiredFacts": [
+                "所属设备及条款适用范围",
+                "实际损坏及证据"
+              ]
+            },
+            "notice": "压力表损坏与检定超期分别核查；检索候选仍须确认所属设备及条款列明的实际损坏。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-025",
+        "group": "资料与事实",
+        "query": "检查时消防设施检测报告暂时没有提供",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true,
+        "forbidden_ids": [
+          "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "检查时消防设施检测报告暂时没有提供",
+            "interpretedQuery": "检查 时消防 设施 检测 报告暂时没有提供",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-026",
+        "group": "资料与事实",
+        "query": "压力表检定证书没有拿出来",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true,
+        "forbidden_ids": [
+          "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
+          "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "压力表检定证书没有拿出来",
+            "interpretedQuery": "压力表检定证书没有拿出来",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-027",
+        "group": "资料与事实",
+        "query": "培训已开展，只是签到表没有提供",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true,
+        "forbidden_ids": [
+          "H_6B81819B5BCB43149B0148792F"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "培训已开展，只是签到表没有提供",
+            "interpretedQuery": "培训 已开展,只是签到表没有提供",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-028",
+        "group": "歧义",
+        "query": "消防门坏了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true,
+        "min_suggestions": 2
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "消防门坏了",
+            "interpretedQuery": "消防门坏了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "needs_conditions",
+              "reason": "fuzzy-fire-door-name",
+              "requiredFacts": []
+            },
+            "notice": "先区分承担防火分隔功能的门与用于人员疏散的出口；“消防门”不能纠错成消防栓，也不能直接证明门的耐火类型。",
+            "suggestions": [
+              {
+                "query": "防火门",
+                "label": "若查防火门",
+                "top3": [
+                  {
+                    "id": "H_COM_WRONG_FIRE_DOOR",
+                    "title": "应设置防火门的部位使用不符合耐火要求的普通门"
+                  },
+                  {
+                    "id": "H_99C14C8150B1AF834ADC8E5121_3",
+                    "title": "人员密集场所、高层和地下公共建筑防火门关闭功能不符合要求"
+                  },
+                  {
+                    "id": "H_JSXF_46_2",
+                    "title": "人员密集场所疏散通道、楼梯及前室常闭防火门敞开"
+                  }
+                ]
+              },
+              {
+                "query": "安全出口",
+                "label": "若查人员疏散出口",
+                "top3": [
+                  {
+                    "id": "H_EXIT_SIGN_LAMP_FAULT",
+                    "title": "安全出口或疏散指示标志灯具损坏、不能正常指示"
+                  },
+                  {
+                    "id": "H044",
+                    "title": "仓储场所疏散通道、安全出口或消防车通道不畅通"
+                  },
+                  {
+                    "id": "H_FACTORY_AUX_INDEPENDENT_EXIT",
+                    "title": "丙类厂房内生产辅助用房未设独立安全出口"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-029",
+        "group": "歧义",
+        "query": "通道上堆了杂物",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true,
+        "min_suggestions": 2
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "通道上堆了杂物",
+            "interpretedQuery": "通道 堆放 杂物",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H_ELEC_PDX_CHANNEL_BLOCKED",
+                "title": "配电箱（柜）前堆放杂物，操作通道或维护空间被遮挡、占用"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": true,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": false,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": false,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-030",
+        "group": "缺证",
+        "query": "气瓶没有防震圈",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "evidence_gap",
+          "needs_conditions"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "气瓶没有防震圈",
+            "interpretedQuery": "气瓶没有防震圈",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "evidence_gap",
+              "reason": "cylinder_ring_source_gap",
+              "requiredFacts": [
+                "气瓶种类",
+                "行业和使用、装卸或运输场景",
+                "对应现行条款及原始证据"
+              ]
+            },
+            "notice": "缺防震圈与缺瓶帽、保护罩不是同一缺陷。本站尚无可据此认定所有在用气瓶不符合要求的通用规则，应核实际瓶型、行业和装卸运输要求。",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-031",
+        "group": "缺证",
+        "query": "普通工业车间地面油污",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "evidence_gap"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "普通工业车间地面油污",
+            "interpretedQuery": "普通工业车间地面油污",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": false,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-032",
+        "group": "无结果",
+        "query": "量子隐形电梯的反重力环磨损",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "no_result"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "量子隐形电梯的反重力环磨损",
+            "interpretedQuery": "量子隐形电梯的反重力环磨损",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-033",
+        "group": "筛选",
+        "query": "灭火器失压",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "filters": {
+          "category": "特种设备"
+        },
+        "expected_filter_empty": true
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭火器失压",
+            "interpretedQuery": "灭火器失压",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-034",
+        "group": "筛选",
+        "query": "灭火器失压",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ],
+        "filters": {
+          "category": "消防安全",
+          "region": "全国"
+        }
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "灭火器失压",
+            "interpretedQuery": "灭火器失压",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H001",
+                "title": "灭火器失压"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-035",
+        "group": "地域",
+        "query": "疏散通道堵塞",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H_8A0E0A3FDDD04AF1829ED6C16E",
+            "H_3642D1A7D0A7422A83E1B0E8BA",
+            "H008",
+            "H044"
+          ]
+        ],
+        "filters": {
+          "region": "全国"
+        },
+        "forbidden_ids": [
+          "H008"
+        ]
+      },
+      "actual": {
+        "count": 4,
+        "issues": [
+          {
+            "query": "疏散通道堵塞",
+            "interpretedQuery": "疏散通道 堵塞",
+            "count": 4,
+            "top3": [
+              {
+                "id": "H075",
+                "title": "危险化学品使用场所疏散通道被占用或设置逃生障碍"
+              },
+              {
+                "id": "H_8A0E0A3FDDD04AF1829ED6C16E",
+                "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭"
+              },
+              {
+                "id": "H044",
+                "title": "仓储场所疏散通道、安全出口或消防车通道不畅通"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-036",
+        "group": "地域",
+        "query": "纸箱占用疏散通道",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H008"
+          ]
+        ],
+        "filters": {
+          "region": "南京"
+        }
+      },
+      "actual": {
+        "count": 1,
+        "issues": [
+          {
+            "query": "纸箱占用疏散通道",
+            "interpretedQuery": "纸箱 占用 疏散通道",
+            "count": 1,
+            "top3": [
+              {
+                "id": "H008",
+                "title": "纸箱堆积、占用疏散通道"
+              }
+            ],
+            "assessment": {
+              "classification": "candidate_matches",
+              "reason": "retrieval_candidates",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "groups_hit": 1,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": false,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": true
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-037",
+        "group": "状态",
+        "query": "配电箱还没有安装",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "配电箱还没有安装",
+            "interpretedQuery": "配电箱 还没有安装",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-038",
+        "group": "状态",
+        "query": "灭火器已经恢复正常压力",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "allowed_assessments": [
+          "fact_unconfirmed"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "灭火器已经恢复正常压力",
+            "interpretedQuery": "灭火器 已经恢复正常压力",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": false,
+        "condition_ok": true,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-039",
+        "group": "多问题含否定",
+        "query": "应急灯没有损坏，灭火器却失压了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [
+          [
+            "H001",
+            "H_440C480EAADB465AAF15204C4E"
+          ]
+        ],
+        "min_issues": 2,
+        "forbidden_ids": [
+          "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+        ]
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "应急灯没有损坏，灭火器却失压了",
+            "interpretedQuery": "应急灯 没有 损坏 , 灭火器 却 失压 了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": false,
+        "groups_hit": 0,
+        "expected_groups": 1,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": true,
+        "split_ok": false,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    },
+    {
+      "sample": {
+        "id": "HOLD-040",
+        "group": "缺证",
+        "query": "建筑内燃气报警器坏了",
+        "source_kind": "synthetic",
+        "annotation_origin": "assistant_synthetic",
+        "role": "held_out_acceptance",
+        "expected_groups": [],
+        "empty": true,
+        "required_condition": true
+      },
+      "actual": {
+        "count": 0,
+        "issues": [
+          {
+            "query": "建筑内燃气报警器坏了",
+            "interpretedQuery": "建筑内 燃气报警器 坏了",
+            "count": 0,
+            "top3": [],
+            "assessment": {
+              "classification": "no_result",
+              "reason": "no_retrieval_match",
+              "requiredFacts": []
+            },
+            "notice": "",
+            "suggestions": []
+          }
+        ]
+      },
+      "checks": {
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "groups_hit": 0,
+        "expected_groups": 0,
+        "mismatch": false,
+        "forbidden_ids": [],
+        "zero_results": true,
+        "empty_ok": true,
+        "assessment_ok": true,
+        "condition_ok": false,
+        "split_ok": true,
+        "suggestion_count_ok": true,
+        "filter_explains_empty": true,
+        "pass": false
+      }
+    }
+  ],
+  "evaluation_stage": "original-production-baseline",
+  "implementation_commit": "595e30e6b3b2774334f21db1ba8a286ddf58f24e"
+}

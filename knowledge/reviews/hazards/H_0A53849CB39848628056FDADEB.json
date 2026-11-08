@@ -1,13 +1,75 @@
 {
   "entityType": "hazard",
   "entityId": "H_0A53849CB39848628056FDADEB",
-  "reviewType": "definition",
+  "reviewType": "content",
   "decision": "verified",
-  "reviewedContentHash": "4580c1a274c5a1de899e63c2d31e230424286455e3c674aa4fe1885dbda1ae19",
-  "checkedAt": "2026-09-19T01:00:00+08:00",
-  "reviewer": "Codex / PR #62 Policy",
-  "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+  "checkedAt": "2026-11-08",
+  "reviewer": "author review / original-site-search-20261108",
+  "reviewedContentHash": "1746e733942f62a4802eb65241ab343cd05036f87be78395967fbca396a8f918",
   "evidenceRefs": [
-    "E_MOHURD_GB50058_2014"
-  ]
+    "E_HAZCHEM_ART38_SAMR_20261108"
+  ],
+  "locator": "第三十八条第一款（保留完整两款原文）",
+  "reason": "实读现行官方法律原文，分别核对未设置与已设置后失效两种缺陷、责任主体和场所范围。不是现场隐患确认或独立专业签审。",
+  "reviewEvidence": {
+    "officialSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_4e160e51cc134696a183a5f531f097e5.html",
+    "lawVersionId": "LV_HAZCHEM_LAW",
+    "completeOfficialQuote": "第三十八条　生产、储存危险化学品的单位，应当在其作业场所设置通信、报警装置，并保证处于适用状态。\n\n生产、储存危险化学品的单位，不得关闭、破坏直接关系生产安全的监控、报警、防护、救生设施、设备，或者以其他任何方式影响其正常使用，不得篡改、隐瞒、销毁其相关数据、信息。",
+    "siteFactsVerified": false,
+    "independentProfessionalReview": false
+  },
+  "previousReview": {
+    "entityType": "hazard",
+    "entityId": "H_0A53849CB39848628056FDADEB",
+    "reviewType": "definition",
+    "decision": "verified",
+    "reviewedContentHash": "4580c1a274c5a1de899e63c2d31e230424286455e3c674aa4fe1885dbda1ae19",
+    "checkedAt": "2026-09-19T01:00:00+08:00",
+    "reviewer": "Codex / PR #62 Policy",
+    "reason": "隐患定义、表现、防范措施与适用场景经官方标准核实完全成立。",
+    "evidenceRefs": [
+      "E_MOHURD_GB50058_2014"
+    ]
+  },
+  "previousEntity": {
+    "aliases": [],
+    "category": "危险化学品与危险物质",
+    "conditions": "适用于危险化学品生产、储存单位相应作业场所；其他场所应按可燃气体检测报警等专项标准另行判定。",
+    "description": "爆炸危险区域可燃气体报警器未正常使用，无法及时发现气体泄漏。",
+    "id": "H_0A53849CB39848628056FDADEB",
+    "keywords": [
+      "车间外乙炔气瓶储藏棚内可燃气体报警器未正常使用",
+      "车",
+      "间",
+      "外",
+      "乙",
+      "炔",
+      "气",
+      "瓶",
+      "储",
+      "藏",
+      "棚",
+      "内",
+      "可",
+      "燃",
+      "体",
+      "报",
+      "警",
+      "器",
+      "未",
+      "正",
+      "常",
+      "使",
+      "用"
+    ],
+    "lifecycle": "proposed",
+    "measures": "检修或更换可燃气体报警器，恢复其正常监测报警功能；建立定期检查制度，确认报警器处于运行状态并留存记录。",
+    "mergedInto": null,
+    "mode": "candidate",
+    "note": "【Phase8】原引用条例第22条（专用仓库储存）为条款号错误；作业场所通信、报警装置义务对应条例第21条（官方全文核验），已修正。2026-09-11 修订：原 measures 字段直接照抄隐患描述（V3 迁移遗留），已改写为针对该隐患的可执行整改措施；标题、描述与法律依据未改动。2026-09-11 通用化：原表述含企业现场细节（具体编号/楼层/方位/数量词），已抽象为通用隐患表述，法律依据与整改措施未改动。2026-09-11 修订：原 description 与 title 完全相同，已补写为含情境的完整描述。\n\nGB 50257-2014《电气装置安装工程 爆炸和火灾危险环境电气装置施工及验收规范》。",
+    "places": [
+      "通用场所"
+    ],
+    "title": "爆炸危险区域可燃气体报警器未正常使用"
+  }
 }

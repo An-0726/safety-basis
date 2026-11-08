@@ -101,6 +101,8 @@ jobs:
           python tools/checks/browser_smoke.py --bundle source/releases/current \
             --expected-commit "${GITHUB_SHA}" --ids "${CHANGED}" \
             --out "${RUNNER_TEMP}/browser/local.json"
+      - name: Verify search semantics, mobile filters and loading recovery
+        run: python tools/browser/audit_search_ux.py --bundle source/releases/current --out "${RUNNER_TEMP}/browser/search-ux"
       - name: Exercise the private workbench in a real browser
         run: python -m workbench.tests.browser_flow --output "${RUNNER_TEMP}/browser/workbench"
       - name: Exercise the cloud workbench through the same real browser flow

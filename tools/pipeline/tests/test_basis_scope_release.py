@@ -55,17 +55,18 @@ class BasisScopeReleaseTests(unittest.TestCase):
         for link in (f.link, second, same_c):
             self.assertEqual(actual[link['id']]['applicability'], link['applicability'])
             self.assertEqual(actual[link['id']]['clauseId'], link['clauseId'])
-            self.assertEqual(actual[link['id']]['jurisdictionCode'], link.get('jurisdictionCode'))
+            self.assertEqual(actual[link['id']]['jurisdictionCode'], 'CN')
         self.assertEqual(rows['H_OTHER']['basisRefs'][0]['applicability'], 'Other hazard only')
         self.assertEqual(rows['H_TEST']['conditions'], f.hazard['conditions'])
         self.assertEqual(len(rows['H_TEST']['basisRefs']), 3)
         rc, report = self.verify(); self.assertEqual(rc, 0, report)
 
-    def test_verbatim_scope_and_missing_jurisdiction_are_not_inferred(self):
+    def test_verbatim_scope_and_missing_link_region_use_only_reviewed_parent_codes(self):
         link = {**self.f.link, 'applicability': '  Exact scope\nSecond line  '}
-        row = project_basis_reference(link, 'c0000')
+        row = project_basis_reference(link, 'c0000', clause=self.f.clause,
+                                      version=self.f.version, law=self.f.law)
         self.assertEqual(row['applicability'], link['applicability'])
-        self.assertIsNone(row['jurisdictionCode'])
+        self.assertEqual(row['jurisdictionCode'], 'CN')
         self.assertEqual(set(row), {'linkId', 'clauseId', 'clauseShard', 'role', 'applicability', 'jurisdictionCode'})
 
     def test_invalid_or_private_new_scope_fields_abort(self):
@@ -75,7 +76,8 @@ class BasisScopeReleaseTests(unittest.TestCase):
             for value in values:
                 with self.subTest(key=key, value=value):
                     with self.assertRaisesRegex(ValueError, 'BASIS_PUBLIC_FIELD_UNSAFE'):
-                        project_basis_reference({**self.f.link, key: value}, 'c0000')
+                        project_basis_reference({**self.f.link, key: value}, 'c0000',
+                                                clause=self.f.clause, version=self.f.version, law=self.f.law)
 
     def test_resealed_scope_or_link_identity_tamper_cannot_hide_behind_same_clause_role(self):
         self.build()

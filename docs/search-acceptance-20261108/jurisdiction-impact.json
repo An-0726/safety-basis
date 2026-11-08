@@ -1,0 +1,1997 @@
+{
+  "schemaVersion": "regional-projection-audit-v1",
+  "asOf": "2026-11-08",
+  "sourceSnapshotSha256": "d2db61de65f8365686c31cb7c7f4f5edb089d97b251275d9c596ac6d63ff5dd5",
+  "counts": {
+    "hazards": 1766,
+    "links": 1951,
+    "clauses": 1514,
+    "lawVersions": 106,
+    "fieldProfiles": 15,
+    "profileBases": 15
+  },
+  "currentSourceOldAlgorithmVsNew": {
+    "changedHazardScopes": 41,
+    "removedNationalFromHazards": 38,
+    "changedBasisReferences": 122,
+    "basisReferenceChanges": {
+      "全国 -> CN": 19,
+      "CN -> CN-32": 37,
+      "None -> CN": 42,
+      "CN -> CN-3201": 24
+    },
+    "changedClauseRegions": 28,
+    "changedLawVersionScopes": 0,
+    "changedProfileBases": 1,
+    "hazardsWhereSupportingWouldAddRegion": 18,
+    "hazardsWhereNationalSupportingWouldBroadenLocal": 18,
+    "hazardScopeChanges": [
+      {
+        "hazardId": "H002",
+        "title": "消火栓被遮挡、圈占",
+        "before": [
+          "全国",
+          "南京"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H016",
+        "title": "安全生产投入保障不足",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H017",
+        "title": "劳动防护用品配备或使用管理不到位",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H019",
+        "title": "全员安全生产责任制未建立或未落实",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H024",
+        "title": "使用应淘汰的危及生产安全工艺或设备",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H040_1",
+        "title": "危险化学品使用作业场所内违规设置与生产无关的生活设施",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H046",
+        "title": "江苏生产经营单位主要负责人未按要求组织季度安全生产全面检查",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "全国",
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H047",
+        "title": "江苏生产经营单位主要负责人未按要求组织年度应急救援演练",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "全国",
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H048",
+        "title": "江苏生产经营单位主要负责人未按要求组织年度全面安全风险辨识",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "全国",
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H050",
+        "title": "主要负责人未按要求向从业人员报告或通报安全生产履职情况",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_00DB7A50FF994B5DB5470A3B03",
+        "title": "江苏生产经营单位未公示较大以上安全风险",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1406240A81E64AC3B54F3B6937",
+        "title": "南京不足百人的非第十四条单位未配至少一名安全管理人员",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_14A806AFE9E84CB4B4827662",
+        "title": "全员安全生产责任制未落实，安全生产标准化建设不足",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1810D03B12E593B41007BB5F",
+        "title": "主要负责人未落实安全生产第一责任人责任",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1CC145D6F52942A0BCD349369E",
+        "title": "喷涂区内货物堆放阻塞疏散通道",
+        "before": [
+          "全国",
+          "南京"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_2117D2DF6C5D401D8695E27E59",
+        "title": "主要负责人未履行安全生产第一责任人职责",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_21EE48E691609CFAFE81743D58_3",
+        "title": "大型群众性活动临时建筑、构筑物及设施设备未经安全检测检验",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_34E4D0C37CE6BD4C5AA5A452B7_2",
+        "title": "生产经营单位对存在的重大安全风险未制定专项管控方案",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_38586C4D52EB7979AC2D73A14A_1",
+        "title": "江苏省生产经营单位未每年至少一次全面系统辨识评估安全风险",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_4BCFEF17729F891A6144A8E0",
+        "title": "隐患排查治理记录、通报不落实或重大隐患记录保存不足五年",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_57A266BB1B9641979670B030C0",
+        "title": "事故隐患排查治理制度或措施落实不到位",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_59164F49FF146C2B74D52556C4_2",
+        "title": "安全总监或专职安全生产分管负责人不具备规定的相关专业职称或资格",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_68B4D4FA3376550BFD0C19FAC7_1",
+        "title": "公共消防设施管理维护部门单位未保持设施完好有效",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_6A3ECBD2217B41DCA80350F3F0",
+        "title": "未正确穿戴劳动防护用品上岗",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_71F876EA935D4E2F7A2BCB3A60_2",
+        "title": "劳务派遣单位未对被派遣劳动者进行必要的安全生产教育和培训",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_8A0E0A3FDDD04AF1829ED6C16E",
+        "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭",
+        "before": [
+          "全国",
+          "南京"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_8DB944621AC043EF8758F7D4C3",
+        "title": "未建立安全风险管控清单",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_914777FE698BBE29C98D5253",
+        "title": "未建立健全各级安全生产责任制",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_A391870174121346CDCD7AB323_2",
+        "title": "安全生产技术服务机构执业不符标准规范或未落实服务、报告公开制度",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_A949DBF30F454B848D6F2E6F25",
+        "title": "未建立健全安全生产责任制或通过委托授权转移安全生产责任",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_AE6F650F77F34725B856344FB3",
+        "title": "其他生产经营单位未按规定配备安全生产管理人员",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_B715CBDA6E4B404E8327D6634C",
+        "title": "劳动防护用品和安全生产培训经费未安排",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_BD88B61502080DC7411D18D6E2_3",
+        "title": "生产经营单位未编制生产安全事故应急救援预案或重点岗位应急处置卡",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_BD88B61502080DC7411D18D6E2_4",
+        "title": "生产安全事故应急救援预案未及时修订、相互衔接或定期演练",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_D3C181B41BAE9B17C4DFE1B7A5_1",
+        "title": "生产经营单位工会未组织职工参与安全生产民主管理监督",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_D52D16A1D36A65AC0758976A0D_3",
+        "title": "小型、微型等规模较小单位未建救援队伍且未指定兼职应急救援人员",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_DC6AE2637C1549ECA1FEB8F087",
+        "title": "江苏生产经营单位未制定安全风险分级管控制度",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_E34EF265CF0F4E8CBCDF27CF37",
+        "title": "未根据本单位实际建立或实施全员安全生产责任制",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_EBAC52694A158BB70F99CF35B4_2",
+        "title": "生产经营单位应急救援器材设备物资配备不足或未经常维护保养",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_FA2C3AF3B739441683F00227D1",
+        "title": "重点行业安全生产管理机构或专职人员配备不到位",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_FC58C02E253472D0EB5E77E178_3",
+        "title": "生产经营单位未依法加强对女职工、未成年工等的劳动保护",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      }
+    ],
+    "basisChanges": [
+      {
+        "linkId": "K_012500360729ae5276213ac4",
+        "hazardId": "H_14A806AFE9E84CB4B4827662",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_04361764d56792472364b113",
+        "hazardId": "H_914777FE698BBE29C98D5253",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_06244B9622E98A22EB43E5A9",
+        "hazardId": "H_14A806AFE9E84CB4B4827662",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_06e1539739f12e5a4775604b",
+        "hazardId": "H_57A51B8D5D024A1ABC9736CE63",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_08B3CC1FD3457C258066E48B",
+        "hazardId": "H_4BCFEF17729F891A6144A8E0",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_0a0e7a2512cb41284c8e2e8f",
+        "hazardId": "H_67303D31915B4AC0A6902EB975",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_0b4855b2bffe91ad8f74ee99",
+        "hazardId": "H_FEE8D0BD627F4772B00620F8AD",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_17415422B71B42B7B8DF8A3D",
+        "hazardId": "H_B715CBDA6E4B404E8327D6634C",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_25cddb1405d1157808399b28",
+        "hazardId": "H_649D252AC64641AD892000B4BF",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_268992294b0a31c7dfe40d30",
+        "hazardId": "H_2BE78B1CC3324F4E8984125CC0",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_2df328d78a2e5dd2fb54a2c3",
+        "hazardId": "H_85BE9EF94A3647009200216F5D",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_2ed940181621471a73477da4",
+        "hazardId": "H003",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_373810ce675158585419d177",
+        "hazardId": "H_E34EF265CF0F4E8CBCDF27CF37",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_39f6683077e41c46e6965a8e",
+        "hazardId": "H_A0120A30298373EDAA8F8384",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_3B578F8F5A3CBA7FCA13EE",
+        "hazardId": "H050",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_43ef04628e3d0e5f615decbe",
+        "hazardId": "H_A35BD266ADB24DF2A32373976A",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_44945faf20638815e27f35e4",
+        "hazardId": "H042",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_4791629CCC23F0C7E3DED755",
+        "hazardId": "H_6A3ECBD2217B41DCA80350F3F0",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_55ce4fb003a58aa62fb1ac58",
+        "hazardId": "H031",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_57811f53c66fb66140b074fc",
+        "hazardId": "H_A9E3881B83F84709B23CF8EB2C",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_5BF2CA74742145A056B91B57",
+        "hazardId": "H017",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_5ab28d8f00bd0927dbcb4d89",
+        "hazardId": "H_BA2A7EA77D6B412EA060E9D2EA",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_5b34899229605eac5019902f",
+        "hazardId": "H_1AD2E9632F2C494B9FBA1BFDB1",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_5be36231b98e9c47fd90f6a0",
+        "hazardId": "H_E34EF265CF0F4E8CBCDF27CF37",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_6349f5e41f369c07278a4131",
+        "hazardId": "H_AF46CA9B337E49EBA59ED06BF7",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_6911ec008ce79a9bf22e77ec",
+        "hazardId": "H067",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_6b0ca07e6f4824f43d5191d2",
+        "hazardId": "H_A0DF83C346A0442795C07876AC",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_732f8c9fca92454504089233",
+        "hazardId": "H_A949DBF30F454B848D6F2E6F25",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_753ce44d79a63e0a3de418c3",
+        "hazardId": "H_5C820D66ED014D208E042104F8",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_75ff17fcb059053248fe98c7",
+        "hazardId": "H_E6C12F6DD8F24889AAC94161A2",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_7665046ad26a72fe0e9af125",
+        "hazardId": "H_BB2661766A76402F93238E588C",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_7E90DE074D15D4EB4D785A53",
+        "hazardId": "H_2117D2DF6C5D401D8695E27E59",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_802b64b8680a289b6edd2b92",
+        "hazardId": "H_D280B7FFCA6D4443B6C28330BD",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_8a13d5b6fcd84ce7caf702a0",
+        "hazardId": "H_69344942331F4E74ACB10315FE",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_90c7f9fc58bb0f6dc0e61e49",
+        "hazardId": "H_AE6F650F77F34725B856344FB3",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_90fda26441cf539bf6a7a986",
+        "hazardId": "H_3789CE3F23914775836A360BA3",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_92D6C63B42D4513395228CB1",
+        "hazardId": "H_AE6F650F77F34725B856344FB3",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_A3A748E682C6B908D97B2CC4",
+        "hazardId": "H_914777FE698BBE29C98D5253",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_A4261A214F7BC58476AA3C74",
+        "hazardId": "H_1406240A81E64AC3B54F3B6937",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_AD6052AB381F2A4DD079A6B0",
+        "hazardId": "H016",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_B897A2F28CDD42FDE76F7B68",
+        "hazardId": "H_E34EF265CF0F4E8CBCDF27CF37",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_F19FAA0823E78F72827E4133",
+        "hazardId": "H019",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_FBDEB4195900A46FA65BB20C",
+        "hazardId": "H_A949DBF30F454B848D6F2E6F25",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_FD893F769825255724B77AF4",
+        "hazardId": "H_14A806AFE9E84CB4B4827662",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_PHASE12_EXACT_CA13CB6F21406EEECF82",
+        "hazardId": "H_6DC0BB9AF6BB4D2A9EA6F293CA",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_PHASE12_EXACT_E495107ECEA58E904EAF",
+        "hazardId": "H_68B4D4FA3376550BFD0C19FAC7_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_QFIX_1810D03B12E593B41007BB5F_1_20261009",
+        "hazardId": "H_1810D03B12E593B41007BB5F",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_21EE48E691609CFAFE81743D58_3_1_20261009",
+        "hazardId": "H_21EE48E691609CFAFE81743D58_3",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_34E4D0C37CE6BD4C5AA5A452B7_2_1_20261009",
+        "hazardId": "H_34E4D0C37CE6BD4C5AA5A452B7_2",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_38586C4D52EB7979AC2D73A14A_1_1_20261009",
+        "hazardId": "H_38586C4D52EB7979AC2D73A14A_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_59164F49FF146C2B74D52556C4_2_1_20261009",
+        "hazardId": "H_59164F49FF146C2B74D52556C4_2",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_71F876EA935D4E2F7A2BCB3A60_2_1_20261009",
+        "hazardId": "H_71F876EA935D4E2F7A2BCB3A60_2",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_A391870174121346CDCD7AB323_2_1_20261009",
+        "hazardId": "H_A391870174121346CDCD7AB323_2",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_BD88B61502080DC7411D18D6E2_3_1_20261009",
+        "hazardId": "H_BD88B61502080DC7411D18D6E2_3",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_BD88B61502080DC7411D18D6E2_4_1_20261009",
+        "hazardId": "H_BD88B61502080DC7411D18D6E2_4",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_D3C181B41BAE9B17C4DFE1B7A5_1_1_20261009",
+        "hazardId": "H_D3C181B41BAE9B17C4DFE1B7A5_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_D52D16A1D36A65AC0758976A0D_3_1_20261009",
+        "hazardId": "H_D52D16A1D36A65AC0758976A0D_3",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_EBAC52694A158BB70F99CF35B4_2_1_20261009",
+        "hazardId": "H_EBAC52694A158BB70F99CF35B4_2",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_QFIX_FC58C02E253472D0EB5E77E178_3_1_20261009",
+        "hazardId": "H_FC58C02E253472D0EB5E77E178_3",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_00151F6E25976A9E21DFA50E",
+        "hazardId": "H_8E472C6D1E4111FA51667DAEA5_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_018CA4C4C2BED0B63BEF1588",
+        "hazardId": "H_421CE6E205C8069977EB63572A_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_0D22D6B4AD08EB17D0F9FA69",
+        "hazardId": "H_99C14C8150B1AF834ADC8E5121_4",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_0FF97E6CC8B560F50A3F89F0",
+        "hazardId": "H_FFABAF11E6E54209ABC62D832C",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_17F9DD269F12BB68D227D5DF",
+        "hazardId": "H_JS140_十二_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_18C215308E4183EBBF496142",
+        "hazardId": "H_JS140_十七_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_20EF09022170CA8A8C54CC2D",
+        "hazardId": "H_1308AD06878441D69BC9975A70",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_269D5010412B70E237A82D3B",
+        "hazardId": "H_37D6B2C2DDDC48B3817E18C8AF",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_27420C0E55B164F9EE3533C4",
+        "hazardId": "H_11306694C41448A7A51DC3550E",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_2AB8474177FB8986C6F0964F",
+        "hazardId": "H_E8DB5A9E2700483BA4639D3AD6",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_3784E98AF50439C9050A4F50",
+        "hazardId": "H_135CEF1FEDFF160F80424A5DCB_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_3E151BB1E43EC4C10B3DD291",
+        "hazardId": "H_552711D344C77E0227C90BB100_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_40CDAB05AC3AE47618F248A2",
+        "hazardId": "H_JS140_十二_2",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_40FD332EA6B0C85413C15127",
+        "hazardId": "H019",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_460A30974C298D9F6B70F978",
+        "hazardId": "H_JS140_十_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_497F04FBCBD76A1310DBF14D",
+        "hazardId": "H_37630CC404984F6FB271662FC8",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_54F0D9DFA6D926C9E9158502",
+        "hazardId": "H_7706D9CBFFB04593A7868FC554",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_64D99D56D1DF85FC47E850C9",
+        "hazardId": "H_JSXF_45_5",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_664C4719CF9CA130F952E493",
+        "hazardId": "H_99C14C8150B1AF834ADC8E5121_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_72BBA9A5D88F66EDDA11D207",
+        "hazardId": "H_EB1106CEA2DA49F98DEBC373CF",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_7747A0D25C24C447E7175861",
+        "hazardId": "H_6F495345B1F2FB2A217A9E4F4C_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_87FFF60C5C86C2706C3008A5",
+        "hazardId": "H_7CB62393573F4AE4914FE493F0",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_9D9BE8E6B67AD5784F2D5066",
+        "hazardId": "H_7A2AAA3D53D03F168C7ECCBB",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_AA53FD9CC261A76665D7C18E",
+        "hazardId": "H_JS140_七_1",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_AB625F26E10AEF6081446EBF",
+        "hazardId": "H_0AEEA3C7BD0D4396AF871679A0",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_AEA5B50A9BAAEAD8DB843CB9",
+        "hazardId": "H_B7ADCDE1235C44A7563498F276_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_B0195A31CC57A57E424D6CE0",
+        "hazardId": "H_B1BBC7FA21B8DE36E1AB2CD21F_1",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_B9F7F116ACA841D05E2A83C7",
+        "hazardId": "H_9BCA80F06AB60F6A4FBF137A87_2",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_BDE6F6E9550B6BDFBDB5CE60",
+        "hazardId": "H049",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_C3B156344D23342272E2EAE8",
+        "hazardId": "H_87B2F0BEA865AD12A492FF008D_2",
+        "before": "CN",
+        "after": "CN-3201"
+      },
+      {
+        "linkId": "K_XLSX_NEW14_E52CE7AB2F9F2B05CD3A1A36",
+        "hazardId": "H_29E2A1B2BE9B4996ABDFC52C3F",
+        "before": "CN",
+        "after": "CN-32"
+      },
+      {
+        "linkId": "K_a077966f305d0836d43edb8a",
+        "hazardId": "H_C0BCA9C2C90042A58EE2F60575",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_a5906ce4d76f43127e04742e",
+        "hazardId": "H065",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_aad91177eb7469101f0c223b",
+        "hazardId": "H_67B3E00C8196487A9AAE845D91",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_af48bac867e200815665ed66",
+        "hazardId": "H_183385CCF77E47A7A4CC4E75D6",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_affa50e64ea799b3c1ed437b",
+        "hazardId": "H_BD32095BBE999606E80E376E",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_b064b1dc6d92606d0199f232",
+        "hazardId": "H_03466ADE0A589C7D890736A6",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_b1b05e247020d90ae0847328",
+        "hazardId": "H040",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_b69556c1221698e91d97530c",
+        "hazardId": "H059",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_c31c6a9cc54a3acda8c8ed28",
+        "hazardId": "H_86746E9DDF904453A53248278C",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_c3b9ac7d5380e0f9ffc919cf",
+        "hazardId": "H048",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_c465099abf77b30e3c542597",
+        "hazardId": "H_095F0B8A265A45FFAED1B3902F",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_c68b66ed9601e8a33de23809",
+        "hazardId": "H046",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_cae4052cbaf8176051a37023",
+        "hazardId": "H_C6F79739AB464612BC5A5E47C3",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_cc33aba983cdd4a14a29adaa",
+        "hazardId": "H_788375AEB39E46F9922E3467EA",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_cdeeaa0c1c05c8dd2add4ea0c4",
+        "hazardId": "H019",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_cfa8eacaa1b5c3c9f093c5a2",
+        "hazardId": "H_3642D1A7D0A7422A83E1B0E8BA",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_d9855a075b2663d8283a9254",
+        "hazardId": "H_C5D8F3941BEF44C59E619C6A7F",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_e2b00189a832df2176bf988c",
+        "hazardId": "H_E42BFE6A0C03418990DE03B652",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_e2bc8489f3d3c38c8a9b256a",
+        "hazardId": "H_3806FDAC1BA944798E28C0BCDF",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_e3ecc464e13785c8f28fbef2",
+        "hazardId": "H_AD6D645EFFCC4F3FB9624C20C4",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_ee4a1332ad72f3ce814a1a0f",
+        "hazardId": "H_C365C2FC4666428F9859B10E6B",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_ef05e1b56ea9b7b40bd02ed3",
+        "hazardId": "H_A949DBF30F454B848D6F2E6F25",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_ef86228a33f4d0437929a1ab",
+        "hazardId": "H079",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_f114aa3acfe7f1f5d5414c54",
+        "hazardId": "H003",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_f23aa4e34ae0c1a61049ed31",
+        "hazardId": "H_EA29DB8CDDF141028504F2705A",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_f399e5db9e73606158cade56",
+        "hazardId": "H_EAFEE743563A40C59DF6640FA6",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_f3c46052650eaf7fbe06537e",
+        "hazardId": "H057",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_f541bc13c1f16b1e65587853",
+        "hazardId": "H_5C632EB0FC8E4DC586BDF3567E",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_f84551f7219f6393bc017e35",
+        "hazardId": "H_EC527E40F25347948ADA08A388",
+        "before": null,
+        "after": "CN"
+      },
+      {
+        "linkId": "K_fb03012279815a93d9c99124",
+        "hazardId": "H_F3E7D18DBD77459B983AB5CD06",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_fb679390b1d04cb57eb5f22e",
+        "hazardId": "H_9916E091141DD0179B0E4EC3",
+        "before": "全国",
+        "after": "CN"
+      },
+      {
+        "linkId": "K_fc1f0ca7fa944f1e16dbe0ea",
+        "hazardId": "H_C9C72BEF81D84D44B8F4A21EA6",
+        "before": null,
+        "after": "CN"
+      }
+    ],
+    "clauseChanges": [
+      {
+        "clauseId": "C040",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C049",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_01EA91432188B34E8A064367A1",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_0361BBA9D7060472D4D7557C7E",
+        "before": "全国",
+        "after": "南京"
+      },
+      {
+        "clauseId": "C_21EE48E691609CFAFE81743D58",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_34E4D0C37CE6BD4C5AA5A452B7",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_3991CFF0FEB865C59D18569965",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_40D505BA3F3EF05298824CF4F3",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_59164F49FF146C2B74D52556C4",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_6F495345B1F2FB2A217A9E4F4C",
+        "before": "全国",
+        "after": "南京"
+      },
+      {
+        "clauseId": "C_71F876EA935D4E2F7A2BCB3A60",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_79F2D3D5229B96A81168DFF449",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_84A6E1B0D4442D85EFF2DC56CB",
+        "before": "全国",
+        "after": "南京"
+      },
+      {
+        "clauseId": "C_A391870174121346CDCD7AB323",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_B840C62B7BC50A71F260358EA3",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_BD88B61502080DC7411D18D6E2",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_BE01A83B3E4C4847AAE6EE5B89",
+        "before": "全国",
+        "after": "南京"
+      },
+      {
+        "clauseId": "C_C9A4989764BF6348FE0FEB0BA2",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_D125A95637EF68ACB553168135",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_D3C181B41BAE9B17C4DFE1B7A5",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_D52D16A1D36A65AC0758976A0D",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_E253AB88D71B101DAFBBD0D0FF",
+        "before": "全国",
+        "after": "南京"
+      },
+      {
+        "clauseId": "C_EBAC52694A158BB70F99CF35B4",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_F1A74F853D15762CF7C2DA6DD1",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_FC58C02E253472D0EB5E77E178",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_JS32_15_1",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_JS32_15_2",
+        "before": "全国",
+        "after": "江苏"
+      },
+      {
+        "clauseId": "C_JS32_15_3",
+        "before": "全国",
+        "after": "江苏"
+      }
+    ],
+    "lawChanges": [],
+    "profileChanges": [
+      {
+        "profileId": "FPR_GAS_ALARM_FUNCTION_FAILURE",
+        "linkId": "K_57811f53c66fb66140b074fc",
+        "before": {
+          "jurisdictionCode": "全国",
+          "lawJurisdictionCode": "CN"
+        },
+        "after": {
+          "jurisdictionCode": "CN",
+          "lawJurisdictionCode": "CN"
+        }
+      }
+    ],
+    "supportingRoleEffects": [
+      {
+        "hazardId": "H002",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H016",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H017",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H019",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1406240A81E64AC3B54F3B6937",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_14A806AFE9E84CB4B4827662",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1CC145D6F52942A0BCD349369E",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_2117D2DF6C5D401D8695E27E59",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_4BCFEF17729F891A6144A8E0",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_57A266BB1B9641979670B030C0",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_6A3ECBD2217B41DCA80350F3F0",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_8A0E0A3FDDD04AF1829ED6C16E",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_914777FE698BBE29C98D5253",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_A949DBF30F454B848D6F2E6F25",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_AE6F650F77F34725B856344FB3",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_B715CBDA6E4B404E8327D6634C",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_E34EF265CF0F4E8CBCDF27CF37",
+        "allBasisLabels": [
+          "全国",
+          "南京"
+        ],
+        "qualifyingBasisLabels": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_FA2C3AF3B739441683F00227D1",
+        "allBasisLabels": [
+          "全国",
+          "江苏"
+        ],
+        "qualifyingBasisLabels": [
+          "江苏"
+        ]
+      }
+    ]
+  },
+  "previousVerifiedBundleComparison": {
+    "previousHazards": 1764,
+    "currentHazards": 1766,
+    "changedCommonHazardScopes": 41,
+    "newHazards": [
+      "H_0A53849CB39848628056FDADEB",
+      "H_HAZCHEM_COMMUNICATION_DEVICE_INOPERABLE"
+    ],
+    "removedHazards": [],
+    "changes": [
+      {
+        "hazardId": "H002",
+        "title": "消火栓被遮挡、圈占",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H016",
+        "title": "安全生产投入保障不足",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H017",
+        "title": "劳动防护用品配备或使用管理不到位",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H019",
+        "title": "全员安全生产责任制未建立或未落实",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H024",
+        "title": "使用应淘汰的危及生产安全工艺或设备",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H040_1",
+        "title": "危险化学品使用作业场所内违规设置与生产无关的生活设施",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H046",
+        "title": "江苏生产经营单位主要负责人未按要求组织季度安全生产全面检查",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "全国",
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H047",
+        "title": "江苏生产经营单位主要负责人未按要求组织年度应急救援演练",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "全国",
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H048",
+        "title": "江苏生产经营单位主要负责人未按要求组织年度全面安全风险辨识",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "全国",
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H050",
+        "title": "主要负责人未按要求向从业人员报告或通报安全生产履职情况",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_00DB7A50FF994B5DB5470A3B03",
+        "title": "江苏生产经营单位未公示较大以上安全风险",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1406240A81E64AC3B54F3B6937",
+        "title": "南京不足百人的非第十四条单位未配至少一名安全管理人员",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_14A806AFE9E84CB4B4827662",
+        "title": "全员安全生产责任制未落实，安全生产标准化建设不足",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1810D03B12E593B41007BB5F",
+        "title": "主要负责人未落实安全生产第一责任人责任",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_1CC145D6F52942A0BCD349369E",
+        "title": "喷涂区内货物堆放阻塞疏散通道",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_2117D2DF6C5D401D8695E27E59",
+        "title": "主要负责人未履行安全生产第一责任人职责",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_21EE48E691609CFAFE81743D58_3",
+        "title": "大型群众性活动临时建筑、构筑物及设施设备未经安全检测检验",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_34E4D0C37CE6BD4C5AA5A452B7_2",
+        "title": "生产经营单位对存在的重大安全风险未制定专项管控方案",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_38586C4D52EB7979AC2D73A14A_1",
+        "title": "江苏省生产经营单位未每年至少一次全面系统辨识评估安全风险",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_4BCFEF17729F891A6144A8E0",
+        "title": "隐患排查治理记录、通报不落实或重大隐患记录保存不足五年",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_57A266BB1B9641979670B030C0",
+        "title": "事故隐患排查治理制度或措施落实不到位",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_59164F49FF146C2B74D52556C4_2",
+        "title": "安全总监或专职安全生产分管负责人不具备规定的相关专业职称或资格",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_68B4D4FA3376550BFD0C19FAC7_1",
+        "title": "公共消防设施管理维护部门单位未保持设施完好有效",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_6A3ECBD2217B41DCA80350F3F0",
+        "title": "未正确穿戴劳动防护用品上岗",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_71F876EA935D4E2F7A2BCB3A60_2",
+        "title": "劳务派遣单位未对被派遣劳动者进行必要的安全生产教育和培训",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_8A0E0A3FDDD04AF1829ED6C16E",
+        "title": "疏散通道、安全出口或消防车通道被占用、堵塞、封闭",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_8DB944621AC043EF8758F7D4C3",
+        "title": "未建立安全风险管控清单",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_914777FE698BBE29C98D5253",
+        "title": "未建立健全各级安全生产责任制",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_A391870174121346CDCD7AB323_2",
+        "title": "安全生产技术服务机构执业不符标准规范或未落实服务、报告公开制度",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_A949DBF30F454B848D6F2E6F25",
+        "title": "未建立健全安全生产责任制或通过委托授权转移安全生产责任",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_AE6F650F77F34725B856344FB3",
+        "title": "其他生产经营单位未按规定配备安全生产管理人员",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_B715CBDA6E4B404E8327D6634C",
+        "title": "劳动防护用品和安全生产培训经费未安排",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_BD88B61502080DC7411D18D6E2_3",
+        "title": "生产经营单位未编制生产安全事故应急救援预案或重点岗位应急处置卡",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_BD88B61502080DC7411D18D6E2_4",
+        "title": "生产安全事故应急救援预案未及时修订、相互衔接或定期演练",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_D3C181B41BAE9B17C4DFE1B7A5_1",
+        "title": "生产经营单位工会未组织职工参与安全生产民主管理监督",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_D52D16A1D36A65AC0758976A0D_3",
+        "title": "小型、微型等规模较小单位未建救援队伍且未指定兼职应急救援人员",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_DC6AE2637C1549ECA1FEB8F087",
+        "title": "江苏生产经营单位未制定安全风险分级管控制度",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_E34EF265CF0F4E8CBCDF27CF37",
+        "title": "未根据本单位实际建立或实施全员安全生产责任制",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "南京"
+        ]
+      },
+      {
+        "hazardId": "H_EBAC52694A158BB70F99CF35B4_2",
+        "title": "生产经营单位应急救援器材设备物资配备不足或未经常维护保养",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_FA2C3AF3B739441683F00227D1",
+        "title": "重点行业安全生产管理机构或专职人员配备不到位",
+        "before": [
+          "全国",
+          "江苏"
+        ],
+        "after": [
+          "江苏"
+        ]
+      },
+      {
+        "hazardId": "H_FC58C02E253472D0EB5E77E178_3",
+        "title": "生产经营单位未依法加强对女职工、未成年工等的劳动保护",
+        "before": [
+          "全国"
+        ],
+        "after": [
+          "江苏"
+        ]
+      }
+    ]
+  },
+  "boundaries": {
+    "sourceLocalBranchConflicts": [],
+    "allSourceDifferentLocalLinkAndLawPairs": [],
+    "noNaturalLanguageScopeInference": true,
+    "supportingCannotSupplyCandidateRegion": true,
+    "knowledgeUnmodifiedByAudit": true,
+    "existingGateUnchanged": true
+  },
+  "examples": {
+    "H010": {
+      "scopes": [
+        "南京"
+      ],
+      "bases": [
+        {
+          "linkId": "K_XLSX_WEB_86F8F6582F77F6774A0EEECE",
+          "clauseId": "C_XLSX_WEB_4489A6E3DEC2165D6C5D4633",
+          "role": "direct",
+          "jurisdictionCode": "CN-3201"
+        }
+      ]
+    },
+    "H_8A0E0A3FDDD04AF1829ED6C16E": {
+      "scopes": [
+        "南京"
+      ],
+      "bases": [
+        {
+          "linkId": "K_4AF820EA7AC674CE787AE161",
+          "clauseId": "C_FBF31A0937B68B9F9F6A4D0993",
+          "role": "direct",
+          "jurisdictionCode": "CN-3201"
+        },
+        {
+          "linkId": "K_9D8D428F4699A53C1563B2",
+          "clauseId": "C043",
+          "role": "supporting",
+          "jurisdictionCode": "CN"
+        }
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@ import {parseRoute, routeQuery} from '../web/app.js';
 
 test('share/reload retains all hazard filters, query and stable ID',()=>{
   const route={view:'hazards',query:'柜门 保护连接',selectedHazard:'H_中文_123',selectedLaw:'',
-    filters:{browse:'equipment',inspectionClass:'',category:'电气安全',scene:'仓储与物流',level:'国家标准',region:'江苏',mode:'conditional'}};
+    filters:{browse:'equipment',industry:'',equipment:'',problem:'',inspectionClass:'',category:'电气安全',scene:'仓储与物流',level:'国家标准',region:'江苏',mode:'conditional'}};
   assert.deepEqual(parseRoute('?'+routeQuery(route)),route);
 });
 test('law filters and selected law survive round trip without hazard filters',()=>{
@@ -33,4 +33,15 @@ test('optional inspection purpose survives URL and scene selection is never seri
   const route=parseRoute('?id=H003&inspectionClass=document_review&profile=FPR_ONE&facts=true');
   assert.equal(route.filters.inspectionClass,'document_review');
   assert.equal(routeQuery(route),'id=H003&inspectionClass=document_review');
+});
+
+
+test('three scene-derived facets round trip together with existing restrictions',()=>{
+  const route={view:'hazards',query:'电箱没接地',selectedHazard:'H_现场_123',selectedLaw:'',
+    filters:{browse:'electrical',industry:'工贸企业',equipment:'配电与电气设备',problem:'接地与电气防护',inspectionClass:'site_inspection',category:'电气安全',scene:'生产现场',level:'国家标准',region:'江苏',mode:'conditional'}};
+  assert.deepEqual(parseRoute('?'+routeQuery(route)),route);
+  const restored=parseRoute('?'+routeQuery(route));
+  assert.equal(restored.filters.industry,'工贸企业');
+  assert.equal(restored.filters.equipment,'配电与电气设备');
+  assert.equal(restored.filters.problem,'接地与电气防护');
 });

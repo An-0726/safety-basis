@@ -139,7 +139,8 @@ class FieldProfileReleaseTests(unittest.TestCase):
             with self.subTest(asset=asset):
                 self.assertIn(asset, builder.SITE_ASSETS)
                 self.assertIn(asset, verifier.SITE_ASSETS)
-                self.assertEqual((self.out / asset).read_bytes(), (Path(builder.WEB) / asset).read_bytes())
+                self.assertEqual((self.out / asset).read_bytes(), builder.render_web_asset(
+                    asset, (Path(builder.WEB) / asset).read_bytes(), self.read('data/manifest.json')['dataVersion']))
                 self.assertIn(asset, self.read('checksums.json'))
 
     def test_missing_ui_module_cannot_pass_after_resealing(self):

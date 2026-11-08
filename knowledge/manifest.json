@@ -1,6 +1,6 @@
 {
   "asOf": "2026-11-08",
-  "batch": "phase2-knowledge-closeout-20261108",
+  "batch": "original-site-search-and-alarm-states-20261108",
   "batches": [
     {
       "id": "gb12801-exclusive-enddate-20260930",
@@ -686,15 +686,35 @@
       "batch": "phase2-knowledge-closeout-20261108",
       "asOf": "2026-11-08",
       "description": "补齐中国气象局防雷办法2026年已生效修订版本链；逐ID收口266候选、源库与按日发布投影。仅增加1版本、2原文条款、2关联、2官方证据、1succession；H生命周期和稳定ID不变。"
+    },
+    {
+      "id": "original-site-alarm-states-20261108",
+      "hazardsAdded": 1,
+      "hazardsReconstructed": 2,
+      "candidatesAdmitted": 1,
+      "linksAdded": 2,
+      "evidenceAdded": 2,
+      "scope": "Split absence, alarm serviceability and communication serviceability under current Hazardous Chemicals Safety Law Article 38; retain both existing H IDs, original coverage and rejected historical GB50058 link. Author source/scope review only; no company fact confirmation.",
+      "scopeCorrections": {
+        "clauses": [
+          "C_FBF31A0937B68B9F9F6A4D0993"
+        ],
+        "links": [
+          "K_4AF820EA7AC674CE787AE161",
+          "K_7E30C53DFD3AB8847A72ACD0",
+          "K_1538F7DDC2147E518603C8E5"
+        ],
+        "basis": "南京市消防条例第二条、第四十七条；不扩张地域"
+      }
     }
   ],
   "counts": {
     "laws": 155,
     "lawVersions": 160,
     "clauses": 3255,
-    "hazards": 2171,
-    "links": 2311,
-    "evidence": 1478,
+    "hazards": 2172,
+    "links": 2313,
+    "evidence": 1480,
     "successions": 27,
     "requirements": 75
   },
@@ -703,16 +723,16 @@
   "laws": 155,
   "lawVersions": 160,
   "clauses": 3255,
-  "hazards": 2171,
-  "links": 2311,
-  "evidence": 1478,
+  "hazards": 2172,
+  "links": 2313,
+  "evidence": 1480,
   "successions": 27,
-  "activeHazards": 1775,
-  "proposedHazards": 266,
+  "activeHazards": 1777,
+  "proposedHazards": 265,
   "supersededHazards": 130,
   "lifecycle": {
-    "active": 1775,
-    "proposed": 266,
+    "active": 1777,
+    "proposed": 265,
     "superseded": 130
   },
   "requirements": 75

@@ -12,6 +12,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 from release_gate_core import evaluate_release_gate
+from jurisdiction import JurisdictionError, basis_jurisdiction, version_jurisdiction
 
 SCHEMA_VERSION = 1
 PROFILE_ROOT = 'field-profiles/v1'
@@ -334,13 +335,19 @@ def public_projection(knowledge, *, as_of):
                 clause = context.entities['clauses'][link['clauseId']]
                 version = context.entities['law-versions'][clause['lawVersionId']]
                 law = context.entities['laws'][version['lawId']]
+                try:
+                    jurisdiction = basis_jurisdiction(link, clause, version, law)
+                    law_jurisdiction = version_jurisdiction(version, law)
+                except JurisdictionError as exc:
+                    errors.append('SELECTED_BASIS_JURISDICTION:' + link_id + ':' + exc.code)
+                    continue
                 # Preserve restrictions verbatim; never widen a local or specialist
                 # basis by presenting only a generic profile title.
                 basis = {'linkId': link_id, 'clauseId': clause['id'], 'role': link['role'],
                          'applicability': link['applicability'],
-                         'jurisdictionCode': link.get('jurisdictionCode'),
+                         'jurisdictionCode': jurisdiction,
                          'lawVersionId': version['id'], 'lawId': law['id'],
-                         'lawJurisdictionCode': law['jurisdictionCode']}
+                         'lawJurisdictionCode': law_jurisdiction}
                 if not _text(basis['applicability']) or (basis['jurisdictionCode'] is not None and not _text(basis['jurisdictionCode'])) or not _text(basis['lawJurisdictionCode']) or PRIVATE.search(json.dumps(basis, ensure_ascii=False)):
                     errors.append('SELECTED_BASIS_PUBLIC_TEXT_UNSAFE:' + link_id)
                 bases.append(basis)

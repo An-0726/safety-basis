@@ -465,9 +465,10 @@ test('真实渲染兼容缺失、空字符串和 null 条件/备注，且不生�
     pending.deferred.resolve();
     await render;
 
-    assert.doesNotMatch(detailHtml(harness), /适用条件|补充说明/);
-    assert.doesNotMatch(await clickCopy(harness, 'copy'), /适用条件|补充说明/);
-    assert.doesNotMatch(await clickCopy(harness, 'copyfull'), /适用条件|补充说明/);
+    assert.doesNotMatch(detailHtml(harness), /<h3>[^<]*(?:<[^>]+>[^<]*<\/[^>]+>)*(?:适用条件|补充说明)/);
+    assert.match(detailHtml(harness), /现场事实待核实/);
+    assert.doesNotMatch(await clickCopy(harness, 'copy'), /【(?:适用条件|补充说明)】/);
+    assert.doesNotMatch(await clickCopy(harness, 'copyfull'), /【(?:适用条件|补充说明)】/);
   }
 });
 
