@@ -1,6 +1,8 @@
 # 下一阶段开发交付记录（2026-11-08）
 
-**本文件是提交前的实施与验收记录。** 知识库收口、现场检索评估工具和可运行的隐患检查工作台已形成同一批代码交付。最终提交、PR、远端 CI、合并及 Pages 结果以本次 PR 的实际凭据为准；此处不预填尚未取得的编号或部署结论。
+**完整功能已通过 CI 并合并到 main。** [PR134](https://github.com/An-0726/safety-basis/pull/134) 合并提交为 `d2575652af12bb068d6002834dc6386a0a54e315`；其 [CI 42460190930](https://github.com/An-0726/safety-basis/actions/runs/42460190930) 的 validate、build 均成功。GitHub Chromium 实际完成工作台 48 项业务及移动宽度检查，网站抽检打开 24 条（包含此次防雷修复），0 失败。浏览器产物已取回并目核；移动截图在视口切换动画中采集的问题通过后续专项等待与菜单开合验收修正。
+
+以下本地测试和开工数据保留为实施记录；最终 Pages 是否上线须核对精确 main 提交的 [发布 Actions](https://github.com/An-0726/safety-basis/actions/workflows/site.yml) 与 [线上 manifest](https://an-0726.github.io/safety-basis/data/manifest.json)，不把合并或 PR CI 成功当作部署成功。
 
 使用入口：[项目 README](../README.md)、[工作台运行说明](../workbench/README.md)、[检索评估说明](SEARCH_EVALUATION.md)、[知识库收口报告](KNOWLEDGE_CLOSEOUT.md)。
 

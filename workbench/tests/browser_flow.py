@@ -407,7 +407,35 @@ def run_browser(args, url, output, png):
             result['checks'].append('page reload restores persisted project and finding')
             page.screenshot(path=str(output/'desktop.png'), full_page=True)
             page.set_viewport_size({'width':390,'height':844})
-            page.screenshot(path=str(output/'mobile.png'), full_page=True)
+            # Resizing triggers the sidebar's translate transition. Wait for its
+            # geometry, then exercise real mobile clicks before capturing it.
+            page.wait_for_function('''() => {
+                const sidebar = document.querySelector('#sidebar');
+                return sidebar && !sidebar.classList.contains('open')
+                    && sidebar.getBoundingClientRect().right <= 1;
+            }''')
+            result['checks'].append('mobile sidebar is fully outside the viewport after resizing')
+            page.locator('#menu-button').click()
+            page.wait_for_function('''() => {
+                const sidebar = document.querySelector('#sidebar');
+                const bounds = sidebar.getBoundingClientRect();
+                return sidebar.classList.contains('open') && bounds.width > 0
+                    && bounds.left >= -1 && bounds.right <= innerWidth + 1
+                    && document.querySelector('#menu-button').getAttribute('aria-expanded') === 'true'
+                    && !document.querySelector('#sidebar-backdrop').hidden;
+            }''')
+            result['checks'].append('mobile menu click opens a fully visible sidebar and backdrop')
+            # The sidebar covers the backdrop's center; click its exposed edge.
+            page.locator('#sidebar-backdrop').click(position={'x':374,'y':96})
+            page.wait_for_function('''() => {
+                const sidebar = document.querySelector('#sidebar');
+                return !sidebar.classList.contains('open')
+                    && sidebar.getBoundingClientRect().right <= 1
+                    && document.querySelector('#menu-button').getAttribute('aria-expanded') === 'false'
+                    && document.querySelector('#sidebar-backdrop').hidden;
+            }''')
+            result['checks'].append('mobile backdrop click closes the sidebar completely')
+            page.screenshot(path=str(output/'mobile.png'), full_page=True, animations='disabled')
             overflow = page.evaluate('document.documentElement.scrollWidth > innerWidth + 1')
             if overflow:
                 raise AssertionError('Mobile page overflows horizontally')
