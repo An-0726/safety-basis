@@ -1,0 +1,393 @@
+{
+  "schema": "original-site-search-holdout-v3",
+  "created_at_utc": "2026-11-08T13:29:48.849898+00:00",
+  "sample_kind": "synthetic",
+  "annotation_owner": "assistant_independent_loading_stability_agent",
+  "real_deidentified_samples": 0,
+  "protocol": {
+    "blinded_to": [
+      "latest search-engine implementation",
+      "engine tests",
+      "all scoring files",
+      "heldout-v1.json"
+    ],
+    "own_v2_may_be_recalled_for_nonduplication": true,
+    "label_sources": [
+      "current public search index",
+      "current public hazard details and conditions",
+      "baseline public ID existence"
+    ],
+    "no_engine_execution_before_freeze": true,
+    "final_additional_holdout": true,
+    "purpose": "第三组且最后新增的独立合成留出验收；先冻结后评分，保留最终成绩，不因结果再次无限另取。",
+    "candidate_policy": "条件或事实不足的问法要求核实提示，允许合理待核候选；明确正常、明确否定或不同设备状态按明文分别标注。",
+    "unobserved_scope": "本问法集不检验网络、缓存、界面可访问性、真实用户总体准确率或企业现场最终隐患认定。"
+  },
+  "label_snapshot": {
+    "dataVersion": "2026.11.08.search-acceptance-final",
+    "releaseHash": "16c5e49069a7ce65ca873a267c0cf4f6cf5dd23013fc5e08440c07bb59251819",
+    "search_index_sha256": "f05d63b4852552b24b3b37293ac8652217fa5a0d5bbd13a7d9c6c38ffdd709a7",
+    "baseline_search_index_sha256": "9b41c2f31c256cf70e2a5aae8a87faaa151599601e0a7bf672bf0d8032c8b7c7",
+    "baseline_count": 1764,
+    "current_count": 1766,
+    "all_expected_and_forbidden_ids_in_baseline": true
+  },
+  "coverage": {
+    "total": 20,
+    "answerable_positive": 10,
+    "multi_issue_positive": 2,
+    "boundary_and_filter": 10,
+    "long_query_definition": "至少50个Unicode字符，包含标点",
+    "long_query_count": 7,
+    "long_query_ids": [
+      "H3_01",
+      "H3_02",
+      "H3_04",
+      "H3_06",
+      "H3_08",
+      "H3_09",
+      "H3_10"
+    ],
+    "filters": {
+      "category": 1,
+      "region": 1
+    },
+    "real_deidentified": 0,
+    "synthetic": 20
+  },
+  "cases": [
+    {
+      "id": "H3_01",
+      "query": "南京这家工厂午班还有人在里面干活，后面的安全出口却从外面上了挂锁，工人试过从里面打不开；门前的过道倒是没有堆东西。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_3642D1A7D0A7422A83E1B0E8BA",
+          "H_8A0E0A3FDDD04AF1829ED6C16E"
+        ]
+      ],
+      "tags": [
+        "长句",
+        "事实与另一否定事实",
+        "出口封闭",
+        "地域条件"
+      ],
+      "annotation": "明确在南京生产场所、有人作业、安全出口锁闭且内部无法开启；过道无堆物不否认出口锁闭。接受生产经营场所出口不畅和消防安全出口封闭两个实际适用条目。未说明门禁系统，不要求门禁专条。"
+    },
+    {
+      "id": "H3_02",
+      "query": "商场里安全出口上方那个带绿色小人的疏散指示灯以前能亮，这次试验一直是黑的，维修人员也确认灯具已经坏了。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_EXIT_SIGN_LAMP_FAULT"
+        ]
+      ],
+      "tags": [
+        "长句",
+        "现场口语",
+        "既有装置损坏"
+      ],
+      "annotation": "对象为已经设置的灯光疏散指示标志且功能故障已核实；普通照明、应急照明照明灯和缺装标志不是同一缺陷。"
+    },
+    {
+      "id": "H3_03",
+      "query": "氩弧焊工位那只四十升氩气钢瓶正在立着供气，没有支架卡箍，也没绑链条，师傅一推瓶身就晃。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_CF_GEN_18"
+        ]
+      ],
+      "tags": [
+        "长句",
+        "现场口语",
+        "气瓶条件"
+      ],
+      "annotation": "普通焊接工位40L瓶装氩气气瓶立放使用、无可靠固定并可晃动，符合防倾倒条目；不是车用或固定使用瓶式压力容器。未据此推断使用前根本没有检查。"
+    },
+    {
+      "id": "H3_04",
+      "query": "机修工位那根二百二十伏电源线还在通电使用，芯线绝缘已经裂开，铜导体直接露在外面，这次不是只有最外层护套擦伤。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_62AD7AADA05F468BAE0F91F5CC",
+          "H_AC89D3C3CCF049EF991BA4E42F"
+        ]
+      ],
+      "tags": [
+        "长句",
+        "状态限定",
+        "电气绝缘"
+      ],
+      "annotation": "给出220V、导体绝缘破损且铜导体裸露，排除仅外护套损伤的不确定情形；接受专门绝缘损伤条目及实际覆盖绝缘强度要求的概括条目。不涉及柜内母排遮栏设计。"
+    },
+    {
+      "id": "H3_05",
+      "query": "电工拆开三孔插坐检查，接地孔对应的端子上没接地线，火线和零线的接法倒是对的。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_B0A88B69CC0047CE8BF9D87EB6",
+          "H_DEED92095F4043AFB93AB75583"
+        ]
+      ],
+      "tags": [
+        "常见错字",
+        "事实与另一否定事实",
+        "保护接地"
+      ],
+      "annotation": "插坐为插座的同音错字。明确插座保护接地极未连接保护接地线；相线中性线接法正确不抵消该缺陷。接受插座专条和保护接地线连接不可靠的概括条目。"
+    },
+    {
+      "id": "H3_06",
+      "query": "已登记的固定式储气罐本体定期检验还有效，不过上面安全阀的校验期限已经过了，现场确认到现在一直没送去复校。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_EAFEE743563A40C59DF6640FA6",
+          "H_AD7DF1CACA954D59AAAF9D8CBD"
+        ]
+      ],
+      "forbidden_ids": [
+        "H036",
+        "H_5D5ACB4A6D45FD9CEFC4654D",
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "tags": [
+        "长句",
+        "事实与另一否定事实",
+        "设备与附件区分",
+        "校验超期"
+      ],
+      "annotation": "超期对象为固定式压力容器的安全阀，接受具体安全阀条目及安全阀未定期校验的概括项。本体检验明确有效；不能改写为整台特种设备定检超期，也不是压力表检定问题。"
+    },
+    {
+      "id": "H3_07",
+      "query": "机修车间用二百二十伏手电钻，电工顺着线查到开关箱，确认这一路只有普通空开，从来没装过漏保。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_GB12801_RCD_MISSING_OR_FAILED"
+        ]
+      ],
+      "tags": [
+        "长句",
+        "简称",
+        "未安装",
+        "场景条件"
+      ],
+      "annotation": "普通空开和漏保为现场简称；明确生产企业机修工位220V电动工具回路未设置剩余电流保护，非建筑施工临时用电。"
+    },
+    {
+      "id": "H3_08",
+      "query": "查的是登记在册的固定式储气罐，压力表检定还有效、玻璃也没坏，问题是表盘上根本没有划指示工作压力的红线。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_F63729C889F642C8BBA2F263F0"
+        ]
+      ],
+      "forbidden_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED",
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "tags": [
+        "长句",
+        "明确事实与否定事实",
+        "问题类型区分"
+      ],
+      "annotation": "明确固定式压力容器压力表缺工作压力红线，检定有效且未损坏；禁止把被否认的两种状态当作本句问题。"
+    },
+    {
+      "id": "H3_09",
+      "query": "车间值班桌上的拖线板额定十安，实测几个电器同时开时达到十六安；旁边焊接工位那只四十升氩气瓶立着用，却既没支架也没绑链条。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_GBT13869_POWER_STRIP_OVERLOAD",
+          "H_1A8786209C974B6BB28C4ADFA5"
+        ],
+        [
+          "H_CF_GEN_18"
+        ]
+      ],
+      "min_issues": 2,
+      "tags": [
+        "长句",
+        "多问题",
+        "别名",
+        "参数明确"
+      ],
+      "annotation": "两个独立问题：移动插座实际16A超过额定10A，以及普通焊接用40L氩气瓶立放无固定。第一组同时接受移动插座专条与用电产品超负荷概括项；不以设备数量代替负荷证据。"
+    },
+    {
+      "id": "H3_10",
+      "query": "普通零件仓库新堆的货把自动喷水系统的喷淋头整个挡住了；另外，库房装修完已经恢复使用，顶上的点型烟感还包着塑料袋没拆。",
+      "source_kind": "synthetic",
+      "expected_groups": [
+        [
+          "H_GB55036_SPRINKLER_OBSTRUCTED"
+        ],
+        [
+          "H_GB50166_POINT_DETECTOR_OBSTRUCTED"
+        ]
+      ],
+      "min_issues": 2,
+      "tags": [
+        "长句",
+        "多问题",
+        "简称",
+        "场景条件"
+      ],
+      "annotation": "两个独立消防设施问题：洒水喷头受货物遮挡、恢复使用后点型感烟探测器被塑料袋包裹。非焊割临时保护喷头、非火药炸药专用场所、非线型光束探测器。"
+    },
+    {
+      "id": "H3_11",
+      "query": "办公室一块插线板上接了五样电器，我还没看它额定多少安，也没量同时运行的电流，这样就能说超负荷了吗？",
+      "source_kind": "synthetic",
+      "required_condition": true,
+      "tags": [
+        "长句",
+        "条件不足",
+        "不能只按数量判定"
+      ],
+      "annotation": "接入电器数量不能单独证明超负荷，应提示核实额定值与实际负荷。允许相关待核候选，不要求将其全部隐藏，也不强制特定零结果分类。"
+    },
+    {
+      "id": "H3_12",
+      "query": "班组今天拿不出氮气瓶使用前检查记录，师傅说开工前查过，但我还没核实，气瓶本身有没有缺陷也还不知道。",
+      "source_kind": "synthetic",
+      "required_condition": true,
+      "tags": [
+        "长句",
+        "资料与实施区分",
+        "事实未核实"
+      ],
+      "annotation": "只知未提供记录，检查是否实施、气瓶是否有缺陷均未知；应提示核实，不能将资料未提供等同未检查。允许显示待核的相关检查依据，不对合理候选作一律禁止。"
+    },
+    {
+      "id": "H3_13",
+      "query": "这台固定式压力容器的安全阀校验标签日期清楚，还在有效期内，运行检查也没有发现漏气或失灵。",
+      "source_kind": "synthetic",
+      "empty": true,
+      "forbidden_ids": [
+        "H_AD7DF1CACA954D59AAAF9D8CBD",
+        "H_EAFEE743563A40C59DF6640FA6"
+      ],
+      "tags": [
+        "正常状态",
+        "否定",
+        "校验与功能"
+      ],
+      "annotation": "明确校验有效和未发现功能异常，没有给出安全阀隐患事实；不因出现校验、失灵等词直接输出隐患候选。"
+    },
+    {
+      "id": "H3_14",
+      "query": "员工只是推着电动自行车从楼外空地经过，没有停车充电，也没有进楼或挡住通道。",
+      "source_kind": "synthetic",
+      "empty": true,
+      "forbidden_ids": [
+        "H010",
+        "H_TSG51_BRIDGE_GANTRY_CRANE_HEIGHT_LIMITER",
+        "H_82FB7AF5E0F521EF8D9489136A_2",
+        "H_JSXF_53_3"
+      ],
+      "tags": [
+        "自行车与行车区分",
+        "多个否定事实",
+        "正常行为"
+      ],
+      "annotation": "所述为室外经过，明确无充电、无入楼、无通道阻碍；不得因为自行车包含行车字样匹配起重机，也不能推定已充电或进入住宅电梯。"
+    },
+    {
+      "id": "H3_15",
+      "query": "现场确认从来没有安装过灯光疏散指示标志，墙上也没有灯座和接线，现在看到的只是纸质箭头贴纸。",
+      "source_kind": "synthetic",
+      "forbidden_ids": [
+        "H_EXIT_SIGN_LAMP_FAULT"
+      ],
+      "tags": [
+        "未安装与损坏区分",
+        "缺陷状态"
+      ],
+      "annotation": "明确从未安装灯光指示标志，不能改写为既有指示灯损坏；允许根据具体建筑条件给出缺装相关候选。本项不预设所有建筑位置必须使用灯光标志。"
+    },
+    {
+      "id": "H3_16",
+      "query": "交接本只记了电箱不合格，照片没拍清楚，现在还不知道是接地、里面的线路还是箱门出了问题。",
+      "source_kind": "synthetic",
+      "required_condition": true,
+      "min_suggestions": 2,
+      "tags": [
+        "歧义",
+        "设备明确但缺陷未知",
+        "可选择解释"
+      ],
+      "annotation": "电箱设备明确但缺陷不明；至少给出两个可选择的检索方向并提示核实具体情况，不从泛称不合格推定某一个已确认缺陷。"
+    },
+    {
+      "id": "H3_17",
+      "query": "这只在用氧气瓶周围十米内没有明火，也没有气割或其他会产生火花的作业。",
+      "source_kind": "synthetic",
+      "empty": true,
+      "forbidden_ids": [
+        "H_COM_OXY_CUTTING_DISTANCE"
+      ],
+      "tags": [
+        "否定",
+        "距离范围",
+        "正常状态"
+      ],
+      "annotation": "明确否认氧气瓶10m内明火或火花作业这一触发条件；不能删除否定词后判为距离不合格，也没有给出其他气瓶缺陷。"
+    },
+    {
+      "id": "H3_18",
+      "query": "气瓶立放使用未采取可靠防倾倒措施",
+      "source_kind": "synthetic",
+      "filters": {
+        "category": "电气安全"
+      },
+      "empty": true,
+      "expected_filter_empty": true,
+      "tags": [
+        "分类筛选",
+        "筛选过严",
+        "零结果解释"
+      ],
+      "annotation": "无筛选时对应气瓶防倾倒公开条目；其显示分类为机械设备与设施，电气安全筛选应将其排除，不能用电气条目凑结果。"
+    },
+    {
+      "id": "H3_19",
+      "query": "住户把电动自行车推入南京住宅楼的电梯",
+      "source_kind": "synthetic",
+      "filters": {
+        "region": "全国"
+      },
+      "empty": true,
+      "expected_filter_empty": true,
+      "tags": [
+        "地域筛选",
+        "筛选过严",
+        "零结果解释"
+      ],
+      "annotation": "可直接对应的住宅电梯电动自行车条目分别适用于南京及江苏；按既有地域筛选协议，全国只保留全国适用项。明确是住户行为，不把物业劝阻义务或普通电梯运行故障当答案。"
+    },
+    {
+      "id": "H3_20",
+      "query": "办公室人脸考勤机总认不出员工，这台机器只用来打卡，不控制门禁，也不影响任何安全出口的开启。",
+      "source_kind": "synthetic",
+      "empty": true,
+      "forbidden_ids": [
+        "H004"
+      ],
+      "tags": [
+        "当前库内无对题条目",
+        "设备用途区分",
+        "正文偶然关联"
+      ],
+      "annotation": "当前公开索引没有独立考勤机人脸识别故障条目；已排除门禁和疏散出口用途，不应套用门禁疏散功能要求。不强制实现采用库内暂缺或未识别中的某一状态名称。"
+    }
+  ]
+}

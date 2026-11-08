@@ -1,16 +1,53 @@
 {
-  "checkedAt": "2026-09-12",
-  "contextHashes": {
-    "clause": "8884a1d7ff6c3e154f847753e083ce3a2c3661779823166a0d72ea6b7b04cb2c",
-    "hazard": "919ca2bf9afc623edc4337ad0d890d99040eed76fd7a16022a1ab9ca09df030b"
-  },
-  "decision": "verified",
-  "entityId": "K_7E30C53DFD3AB8847A72ACD0",
   "entityType": "link",
-  "evidenceRefs": [],
-  "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+  "entityId": "K_7E30C53DFD3AB8847A72ACD0",
   "reviewType": "applicability",
-  "reviewedContentHash": "739d5d1ef8e1ada58ea6cbe9402697969d216dfde5a4c8ca95cabea66ab6edc6",
-  "reviewer": "GLM-5.3-Flash (ZCode)",
-  "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  "decision": "verified",
+  "checkedAt": "2026-11-08",
+  "reviewer": "author official-source scope review / original-site-search-20261108",
+  "reviewedContentHash": "a050f84c4d474a6d7818bc876144b6086e35049ad3f53a01808e4d54737e67cb",
+  "contextHashes": {
+    "hazard": "919ca2bf9afc623edc4337ad0d890d99040eed76fd7a16022a1ab9ca09df030b",
+    "clause": "601a4fb3fe8a89db85929b02365ec0b2ea27e946e66b6680b042f1e7c49d9676"
+  },
+  "evidenceRefs": [
+    "E_NANJING_FIRE_ART2_47_SCOPE_20261108"
+  ],
+  "locator": "第二条及第四十七条",
+  "reason": "核对完整法源、条目实际对象和本K范围，纠正地方条例关联误标全国；原H条件也明确南京，义务与direct角色不变。",
+  "reviewEvidence": {
+    "officialSourceUrl": "https://rd.nanjing.gov.cn/xxfb/cwhgg/202505/t20250506_5140604.html",
+    "completeOfficialQuote": "第二条　本市行政区域内的消防工作和相关应急救援工作，适用本条例。\n\n法律、法规对森林、铁路、港口（含渔业港口）、民航和在内河水域内航行、停泊、作业的民用船舶以及相关设施的消防工作另有规定的，从其规定。\n\n第四十七条　任何单位和个人不得损坏、挪用或者擅自拆除、停用消防设施、器材，不得埋压、圈占、遮挡消火栓或者占用防火间距，不得占用、堵塞、封闭疏散通道、安全出口、消防车通道，不得占用电缆井、管道井或者在电缆井、管道井等竖向管井堆放杂物，不得占用、堵塞天井。人员密集场所的门窗不得设置影响逃生和灭火救援的障碍物。\n\n禁止燃放孔明灯、荷花灯等产生明火且不可控制的飘移物。",
+    "siteFactsVerified": false,
+    "independentProfessionalReview": false
+  },
+  "previousReview": {
+    "checkedAt": "2026-09-12",
+    "contextHashes": {
+      "clause": "8884a1d7ff6c3e154f847753e083ce3a2c3661779823166a0d72ea6b7b04cb2c",
+      "hazard": "919ca2bf9afc623edc4337ad0d890d99040eed76fd7a16022a1ab9ca09df030b"
+    },
+    "decision": "verified",
+    "entityId": "K_7E30C53DFD3AB8847A72ACD0",
+    "entityType": "link",
+    "evidenceRefs": [],
+    "reason": "专项技术依据审核（GLM）：条款原文具体规定本隐患所违反的要求，原母法通用条款降级为 supporting。",
+    "reviewType": "applicability",
+    "reviewedContentHash": "739d5d1ef8e1ada58ea6cbe9402697969d216dfde5a4c8ca95cabea66ab6edc6",
+    "reviewer": "GLM-5.3-Flash (ZCode)",
+    "notes": "结构、版本状态和条款定位通过自动审计；未发现已知确定性错配。"
+  },
+  "previousEntity": {
+    "id": "K_7E30C53DFD3AB8847A72ACD0",
+    "hazardId": "H002",
+    "clauseId": "C_FBF31A0937B68B9F9F6A4D0993",
+    "role": "direct",
+    "legacyRole": "",
+    "applicability": "消火栓被遮挡、圈占的现场状态。",
+    "jurisdictionCode": "CN",
+    "lifecycle": "active",
+    "priority": 10,
+    "requirementId": "",
+    "reason": "明确规定不得埋压、圈占、遮挡消火栓（GLM 专项依据审核，2026-09-12）"
+  }
 }

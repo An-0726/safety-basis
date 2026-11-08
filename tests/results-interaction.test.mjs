@@ -5,7 +5,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {INSPECTION_LABELS} from '../web/js/field-profiles.js';
 import {BROWSE_GROUPS} from '../web/js/browse-groups.js';
-import {searchHazardsDetailed, searchLawsDetailed} from '../web/js/search.js';
+import {searchHazardIssuesDetailed, searchHazardsDetailed, searchLawsDetailed} from '../web/js/search.js';
+import {filterHazardFacets,hazardFacetOptions} from '../web/js/search-facets.js';
 
 const APP_SOURCE = fs.readFileSync(new URL('../web/app.js', import.meta.url), 'utf8')
   .replace(/\r\n/g, '\n');
@@ -23,6 +24,7 @@ class FakeElement {
     this.classList = {toggle() {}, add() {}, remove() {}};
     this.children = new Map();
     this.cards = [];
+    this.actionButtons = [];
     this.filterButtons = [];
     this.options = [{value: '', textContent: ''}];
     this.open = false;
@@ -35,10 +37,18 @@ class FakeElement {
     this._innerHTML = String(value);
     this.children = new Map();
     this.cards = [];
+    this.actionButtons = [];
     this.filterButtons = [];
     this.options = [...this._innerHTML.matchAll(/<option value="([^"]*)"[^>]*>([^<]*)<\/option>/g)].map(match=>({value:match[1],textContent:match[2]}));
     for(const match of this._innerHTML.matchAll(/data-filter="([^"]+)"/g)){
       const button=new FakeElement('chip');button.dataset.filter=match[1];this.filterButtons.push(button);
+    }
+    for(const match of this._innerHTML.matchAll(/<button\b([^>]*)>/g)){
+      const button=new FakeElement('action');
+      for(const attribute of match[1].matchAll(/data-([a-z-]+)(?:="([^"]*)")?/g)){
+        button.dataset[attribute[1].replace(/-([a-z])/g,(_m,c)=>c.toUpperCase())]=attribute[2]||'';
+      }
+      if(Object.keys(button.dataset).length)this.actionButtons.push(button);
     }
     for (const match of this._innerHTML.matchAll(/\bid="([^"]+)"/g)) {
       if (!this.children.has(match[1])) this.children.set(match[1], new FakeElement(match[1]));
@@ -60,6 +70,8 @@ class FakeElement {
   querySelectorAll(selector) {
     if (selector === '.card') return this.cards;
     if (selector === 'button[data-filter]') return this.filterButtons;
+    const attr=selector.match(/^(?:button)?\[data-([a-z-]+)\]$/)?.[1];
+    if(attr){const key=attr.replace(/-([a-z])/g,(_m,c)=>c.toUpperCase());return this.actionButtons.filter(button=>Object.hasOwn(button.dataset,key));}
     return [];
   }
   focus() { this.focused = true; }
@@ -73,10 +85,10 @@ class FakeElement {
 
 function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   const ids = [
-    'detail', 'toast', 'search', 'browse', 'inspectionClass', 'category', 'scene', 'level', 'region', 'mode',
+    'detail', 'toast', 'search', 'browse', 'equipment', 'problem', 'industry', 'inspectionClass', 'category', 'scene', 'level', 'region', 'mode',
     'lawLevel', 'lawRegion', 'lawStatus', 'count', 'summary', 'list',
     'hazardFilterCount', 'lawFilterCount', 'searchView', 'dataView',
-    'activeFilters', 'searchNotice', 'hazardMoreFilters', 'lawMoreFilters', 'majorTopicNotice',
+    'activeFilters', 'searchNotice', 'searchSuggestions', 'issueOverview', 'profileStatus', 'hazardMoreFilters', 'lawMoreFilters', 'majorTopicNotice',
     'clear', 'reset', 'resetLaw', 'hazardFilters', 'lawFilters', 'sectionTitle', 'sectionHint',
   ];
   const elements = new Map(ids.map(id => [id, new FakeElement(id)]));
@@ -86,6 +98,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
       if (selector.startsWith('#')) {
         const id = selector.slice(1);
         if (id === 'loadMore') return elements.get('list').children.get('loadMore') || null;
+        if (id === 'retryProfiles'||id === 'reloadProfiles') return elements.get('profileStatus').children.get(id) || null;
         return elements.get(id) || null;
       }
       if (selector === '#detail h2') return null;
@@ -93,7 +106,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     },
     querySelectorAll(selector) {
       if (selector === '.card') return elements.get('list').cards;
-      if(selector === '#hazardFilters select,#lawFilters select')return ['browse','inspectionClass','category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
+      if(selector === '#hazardFilters select,#lawFilters select')return ['browse','equipment','problem','industry','inspectionClass','category','scene','level','region','mode','lawLevel','lawRegion','lawStatus'].map(id=>elements.get(id));
       return [];
     },
     addEventListener() {},
@@ -101,7 +114,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
   };
   const context = {
     document, renderNormativeContent,
-    searchHazardsDetailed, INSPECTION_LABELS, BROWSE_GROUPS,
+    searchHazardIssuesDetailed,searchHazardsDetailed,filterHazardFacets,hazardFacetOptions, INSPECTION_LABELS, BROWSE_GROUPS,
     searchLawsDetailed,
     DataStore: class {},
     navigator: {clipboard: {writeText: async () => {}}},
@@ -121,7 +134,7 @@ function loadResultsApp({rowCount = 365, lawCount = 0} = {}) {
     .replace(/^import[^\n]*\n/gm, '')
     .replace(/^export /gm, '')
     .replace("if(typeof document!=='undefined') boot();", '');
-  source += '\n globalThis.__testApi={state,renderResults,selectHazard,selectLaw,bind,initFilters,applyUrlFilters,basisHtml,hazardText,hazardFullText};';
+  source += '\n globalThis.__testApi={state,renderResults,selectHazard,selectLaw,bind,initFilters,applyUrlFilters,basisHtml,hazardText,hazardFullText,focusIssue,chooseIssueSuggestion,clearCurrentFilters,renderProfileStatus,showStartupError};';
   vm.createContext(context);
   new vm.Script(source, {filename: 'web/app.js'}).runInContext(context);
 
@@ -544,4 +557,120 @@ test('核查用途可选，default不排除无配置记录；深链、Back式恢
   api.state.profileSelections.set('H001','FPR_DOC');elements.get('reset').onclick();await settle();assert.equal(api.state.results.length,4);assert.equal(elements.get('inspectionClass').value,'');assert.equal(api.state.profileSelections.size,0);
   api.applyUrlFilters({view:'hazards',filters:{inspectionClass:'document_review'}});api.renderResults({mode:'initial'});await settle();assert.equal(api.state.results.length,1);
   api.applyUrlFilters({view:'hazards',filters:{inspectionClass:'removed_class'}});api.renderResults({mode:'initial'});await settle();assert.equal(api.state.results.length,4);assert.match(elements.get('searchNotice').textContent,/已不再提供/);
+});
+
+
+// Synthetic development fixtures; separate from independent acceptance queries.
+function loadFieldResults(){
+  const app=loadResultsApp({rowCount:0});
+  const row=(id,title,extra={})=>({id,title,searchText:title,aliases:[],keywords:[],lawNames:['建筑防火通用规范'],places:['工贸企业'],sceneTags:[],levels:['国家标准'],scopes:['全国'],category:'消防安全',status:'已核验',mode:'direct',...extra});
+  app.api.state.store.searchIndex=[
+    row('LOSS','灭火器失压'),
+    row('BAD','灭火器损坏'),
+    row('ROUTE','疏散通道、安全出口或消防车通道被占用、堵塞、封闭'),
+    row('HYDRANT','消火栓被遮挡、圈占'),
+    row('BOX','配电箱前堆放杂物、操作通道被占用',{category:'电气安全',places:['仓储物流']}),
+  ];
+  app.api.initFilters();
+  return app;
+}
+
+test('multi-issue DOM separates candidates, focuses a group, and restores all groups',async()=>{
+  const {api,elements}=loadFieldResults();
+  elements.get('search').value='灭火器失压，疏散通道还堆了纸箱';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(api.state.issueMatch.issues.length,2);
+  assert.equal(elements.get('issueOverview').hidden,false);
+  assert.equal((elements.get('list').innerHTML.match(/class="issue-group"/g)||[]).length,2);
+  assert.match(elements.get('list').innerHTML,/<mark>灭火器(?:失压)?<\/mark>/);
+  assert.match(elements.get('list').innerHTML,/检索候选 · 现场事实待核实/);
+  elements.get('list').querySelectorAll('[data-focus-issue]')[1].onclick();await settle();
+  assert.equal(api.state.issueFocus,'issue-2');
+  assert.ok(api.state.results.every(row=>row.id==='ROUTE'));
+  assert.doesNotMatch(elements.get('list').innerHTML,/class="issue-group"/);
+  elements.get('issueOverview').querySelectorAll('[data-issue-focus]')[0].onclick();await settle();
+  assert.equal(api.state.issueFocus,'');
+  assert.equal((elements.get('list').innerHTML.match(/class="issue-group"/g)||[]).length,2);
+  assert.equal(elements.get('search').value,'灭火器失压，疏散通道还堆了纸箱');
+});
+
+test('negated issue keeps its own explanation while a second issue returns candidates',async()=>{
+  const {api,elements}=loadFieldResults();
+  elements.get('search').value='灭火器没有损坏，疏散通道堵塞';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(api.state.issueMatch.issues[0].rows.length,0);
+  assert.ok(api.state.issueMatch.issues[1].rows.length>0);
+  assert.match(elements.get('list').innerHTML,/这句话尚未确认存在缺陷/);
+  assert.match(elements.get('list').innerHTML,/data-id="ROUTE"/);
+  assert.doesNotMatch(elements.get('list').innerHTML,/data-id="BAD"/);
+});
+
+test('choosing an ambiguous passage meaning preserves the other observation',async()=>{
+  const {api,elements}=loadFieldResults();
+  elements.get('search').value='通道堆东西，灭火器没压力';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(api.state.issueMatch.issues[0].suggestions.length,3);
+  const target=api.state.issueMatch.issues[0].suggestions[0].query;
+  elements.get('list').querySelectorAll('[data-issue-suggestion]')[0].onclick();await settle();
+  assert.equal(elements.get('search').value,target+'，灭火器没压力');
+  assert.equal(api.state.issueMatch.issues.length,2);
+  assert.ok(api.state.issueMatch.issues[0].rows.some(row=>row.id==='ROUTE'));
+  assert.ok(api.state.issueMatch.issues[1].rows.some(row=>row.id==='LOSS'));
+});
+
+test('facet zero results explain the exclusion and clear filters without changing the query',async()=>{
+  const {api,elements}=loadFieldResults();
+  elements.get('search').value='灭火器没压力';
+  elements.get('equipment').value='配电与电气设备';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(api.state.results.length,0);
+  assert.match(elements.get('list').innerHTML,/当前筛选挡住了候选/);
+  assert.equal(elements.get('list').querySelectorAll('[data-clear-filters]').length,1);
+  elements.get('list').querySelectorAll('[data-clear-filters]')[0].onclick();await settle();
+  assert.equal(elements.get('search').value,'灭火器没压力');
+  assert.equal(elements.get('equipment').value,'');
+  assert.ok(api.state.results.some(row=>row.id==='LOSS'));
+});
+
+test('a restrictive facet cannot split a formal multi-punctuation title',async()=>{
+  const {api,elements}=loadFieldResults();
+  const title=api.state.store.searchIndex.find(row=>row.id==='ROUTE').title;
+  elements.get('search').value=title;
+  elements.get('equipment').value='灭火器';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(api.state.issueMatch.isMultiIssue,false);
+  assert.equal(api.state.results.length,0);
+  elements.get('list').querySelectorAll('[data-clear-filters]')[0].onclick();await settle();
+  assert.equal(elements.get('search').value,title);
+  assert.equal(api.state.issueMatch.isMultiIssue,false);
+  assert.equal(api.state.results[0].id,'ROUTE');
+});
+
+test('new facet route selections apply together and produce the same rows',async()=>{
+  const {api,elements}=loadFieldResults();
+  api.applyUrlFilters({view:'hazards',filters:{industry:'工贸企业',equipment:'灭火器',problem:'损坏或失效'}});
+  elements.get('search').value='灭火器没压力';
+  api.renderResults({mode:'filter-change'});await settle();
+  assert.equal(elements.get('industry').value,'工贸企业');
+  assert.equal(elements.get('equipment').value,'灭火器');
+  assert.equal(elements.get('problem').value,'损坏或失效');
+  assert.equal(api.state.results[0].id,'LOSS');
+  assert.match(elements.get('activeFilters').innerHTML,/data-filter="industry"/);
+  assert.match(elements.get('activeFilters').innerHTML,/data-filter="equipment"/);
+  assert.match(elements.get('activeFilters').innerHTML,/data-filter="problem"/);
+});
+
+test('optional profile failure keeps the core usable and exposes both safe retry and latest-page reload',async()=>{
+  const {api,elements}=loadFieldResults();
+  const store=api.state.store;
+  store.fieldProfileStatus='unavailable';store.fieldProfileNotice='场景数据校验失败';store.fieldProfileError={code:'INTEGRITY'};
+  store.loadFieldProfiles=async()=>{store.fieldProfileStatus='ready';store.fieldProfileNotice='';};
+  elements.get('search').value='灭火器没压力';
+  api.renderResults({mode:'filter-change'});api.renderProfileStatus();await settle();
+  assert.equal(elements.get('profileStatus').hidden,false);
+  assert.ok(elements.get('profileStatus').children.get('reloadProfiles'));
+  assert.ok(api.state.results.some(row=>row.id==='LOSS'));
+  await elements.get('profileStatus').children.get('retryProfiles').onclick();await settle();
+  assert.equal(elements.get('profileStatus').hidden,true);
+  assert.ok(api.state.results.some(row=>row.id==='LOSS'));
 });

@@ -2,6 +2,7 @@
 import {browseGroupMatches} from './browse-groups.js';
 import {hazardSearchGuidance} from './search-guidance.js';
 import {pressureGaugeStateBoundary} from './search-boundaries.js';
+import {splitFieldQuery, interpretFieldQuery, fieldObservationMatches, fieldDefectMatches, fieldCandidateScore} from './query-intent.js';
 
 import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS, COLLOQUIAL_LEADING_VERBS } from './search-vocabulary.js';
 
@@ -278,10 +279,14 @@ const hazardScore=(r,q,terms)=>{
 };
 
 export function searchHazardsDetailed(rows, query, filters={}) {
-  const guidance=hazardSearchGuidance(query);
-  if(guidance.suppressResults)return {rows:[],matchKind:'none',interpretedQuery:String(query??''),queryNotice:guidance.notice,suggestions:guidance.suggestions,assessment:guidance.assessment};
-  const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
   const literalTitleQuery=normalize(query);
+  // A user following a specific published title is browsing that rule, not
+  // asserting its wording as an observed fact. Some legal titles themselves
+  // contain “疑似” or “记录缺失”; keep these deliberate lookups reachable.
+  const isTitleLookup=literalTitleQuery&&rows.some(r=>normalize(r.title)===literalTitleQuery);
+  const guidance=isTitleLookup?{notice:'',suggestions:[]}:hazardSearchGuidance(query);
+  if(guidance.suppressResults)return {rows:[],matchKind:'none',interpretedQuery:String(query??''),queryNotice:guidance.notice,suggestions:guidance.suggestions,assessment:guidance.assessment,suppressed:true};
+  const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
   const out=[];
   for(const r of rows){
     // A complete prose title can mention a different standard from its basis.
@@ -306,10 +311,12 @@ export function searchHazardsDetailed(rows, query, filters={}) {
   }
   // A complete existing title is a deliberate item lookup, including suggestion clicks.
   // Keep all same-title IDs, but do not substitute body mentions when filters exclude it.
-  const isTitleLookup=literalTitleQuery&&rows.some(r=>normalize(r.title)===literalTitleQuery);
   const exactTitleRows=isTitleLookup?out.filter(r=>normalize(r.title)===literalTitleQuery):[];
   const stateBoundary=isTitleLookup?null:pressureGaugeStateBoundary(query);
-  const boundaryRows=stateBoundary?out.filter(r=>stateBoundary.heading.test(objectHeading(r))):out;
+  const intent=isTitleLookup?null:interpretFieldQuery(query);
+  const installationStates=intent?.objects.length?intent.defects.filter(defect=>['absent','damaged'].includes(defect)):[];
+  const boundaryRows=out.filter(r=>(!stateBoundary||stateBoundary.heading.test(objectHeading(r)))
+    &&installationStates.every(defect=>fieldDefectMatches(r,defect,intent)));
   const matched=isTitleLookup
     ? {rows:exactTitleRows,terms,matchKind:exactTitleRows.length?'standard':'none'}
     : matchingRows(boundaryRows,terms,prepared.remainder);
@@ -317,6 +324,165 @@ export function searchHazardsDetailed(rows, query, filters={}) {
   const scored=matched.rows.map((row,i)=>({row,score:matched.ranked?-i:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
   return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:[prepared.queryNotice,guidance.notice,stateBoundary?.notice].filter(Boolean).join(' '),suggestions:guidance.suggestions,assessment:stateBoundary?{classification:'needs_conditions',reason:stateBoundary.reason,requiredFacts:stateBoundary.requiredFacts}:guidance.assessment||{classification:scored.length?'candidate_matches':'no_result',reason:scored.length?'retrieval_candidates':'no_retrieval_match',requiredFacts:[]}};
+}
+
+const searchChoice=(label,query,note)=>({label,query,note});
+const passageChoices = [
+  searchChoice('人员疏散通道', '疏散通道占用', '确认承担人员疏散用途，再核实堆物是否占用或影响通行。'),
+  searchChoice('消防车道', '消防车道堵塞', '确认属于消防车辆通行车道，并核实实际通行障碍。'),
+  searchChoice('配电箱操作通道', '配电箱前堆物', '确认属于配电箱操作或检修空间，再核实实际遮挡或占用。'),
+];
+const activeFilters = filters => Object.fromEntries(Object.entries(filters).filter(([,value])=>value!==''&&value!==null&&value!==undefined));
+
+function issueGuidance(interpretation) {
+  const {query,defects}=interpretation;
+  const objects=defects.length?interpretation.subjects:interpretation.objects;
+  if(objects.some(object=>object.key==='配电箱')&&defects.includes('absent'))return {
+    suppressResults:true,notice:'原话表示配电箱尚未安装，不能套用已安装后的配线、箱门接地或损坏规则。请核实供配电方案、是否应设、场所和使用阶段；当前库内没有足以凭这句话直接认定缺项的通用条目。',
+    suggestions:[],assessment:{classification:'needs_conditions',reason:'cabinet_installation_unconfirmed',requiredFacts:['场所与供配电方式','是否依法或按适用设计应设置配电箱','尚未施工还是已投入使用','适用条款与现场证据']},
+  };
+  if(objects.some(object=>object.key==='电动自行车')&&/(?:拉线|拖线)充电/.test(query))return {
+    notice:'按电动自行车充电方式查找候选；使用电线充电本身不能证明违规。请核实是否实际私拉乱接或飞线、所在场所及条目的地域适用范围。',
+    suggestions:[],assessment:{classification:'needs_conditions',reason:'bicycle_charging_conditions',requiredFacts:['具体接线方式及现场证据','充电场所','条款地域与对象范围']},
+  };
+  if(objects.some(object=>object.key==='消防控制室')&&defects.includes('understaffed'))return {
+    notice:'按消防控制室实际值班人数查找候选。仍须核对火灾报警系统类型、消防控制室设置及适用的地方规定，不能由单人观察推定所有时段或持证情况。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'control_room_staffing_scope',requiredFacts:['集中或控制中心报警系统等适用条件','实际班次及在岗人数','相关地域规定']},
+  };
+  if(objects.some(object=>object.key==='安全帽')&&defects.includes('not_worn'))return {
+    notice:'按已描述的作业时未佩戴安全帽查找候选；仍须核实岗位风险、现场规定和实际佩戴状态，不推定所有工作场所都必须戴安全帽。',suggestions:[],
+    assessment:{classification:'needs_conditions',reason:'helmet_use_scope',requiredFacts:['岗位头部防护需求或现场佩戴规定','实际作业及佩戴情况']},
+  };
+  if(objects.some(object=>object.key==='起升高度限位器')&&defects.includes('absent'))return {
+    suppressResults:!interpretation.objects.some(object=>object.key==='起重机'),
+    notice:'限位装置缺少与已经安装但动作失灵分别核查。须确认起重机型式、设计制造依据、目录参数及已有装置形式；原话数值和年份不会自动证明全部适用条件已满足。',
+    suggestions:[],assessment:{classification:'needs_conditions',reason:'height_limiter_scope',requiredFacts:['所属设备及起重机型式','设计制造日期与适用依据','目录参数及限位装置形式']},
+  };
+  const genericPassage=objects.some(object=>object.key==='通道')
+    &&!objects.some(object=>['疏散通道','消防车道','配电箱','配电室','安全出口'].includes(object.key));
+  if(genericPassage&&defects.includes('obstructed'))return {
+    suppressResults:true,notice:'“通道”用途尚不明确。请选择人员疏散、消防车辆通行或设备操作通道，并核实堆物是否实际妨碍通行；不自动套用喷涂、施工或某一地域的专用规则。',
+    suggestions:passageChoices,assessment:{classification:'needs_conditions',reason:'passage_use_unconfirmed',requiredFacts:['通道实际用途','堆放物位置及通行受阻情况','场所与地域适用条件']},
+  };
+  if(objects.some(object=>object.key==='配电箱')&&defects.includes('grounding'))return {
+    notice:'配电箱接地须分别核实箱体保护接地、保护导体连接及装有电器的箱门连接。候选中的箱门或施工临时用电条件必须现场确认，不能由“没接地”自动补齐。',
+    suggestions:[searchChoice('保护接地线连接', '保护接地线连接不可靠或采用缠绕、挂钩', '确认该导体承担保护接地功能及实际连接情况。'),
+      searchChoice('装有电器的可开启箱门', '装有电器的可开启配电箱（柜）门与金属框架未可靠连接', '仅在确认箱门装有电器、可开启及连接不可靠时选用。')],
+    assessment:{classification:'needs_conditions',reason:'cabinet_grounding_conditions',requiredFacts:['保护接地或其他导体用途','箱体、箱门或导体的实际缺陷位置','是否属于装有电器的可开启门或施工临时用电场景']},
+  };
+  if(objects.some(object=>object.key==='起重机')&&defects.includes('damaged')&&!/吊钩|防脱|限位|制动|钢丝绳|联锁|急停/.test(query))return {
+    suppressResults:true,notice:'已按起重设备理解“行车”，但“坏了”尚不能确定是吊钩、防脱装置、限位还是其他部件。请明确部件和失效表现；不因名称相符就套用吊钩损坏规则。',
+    suggestions:[searchChoice('查看起重机相关候选', '起重机', '先核具体机型，再按实际部件和缺陷选择。')],
+    assessment:{classification:'needs_conditions',reason:'crane_defect_unconfirmed',requiredFacts:['起重机型式与适用范围','具体故障部件','观察、测试和实际失效情况']},
+  };
+  if(objects.some(object=>object.key==='报警器')&&!/火灾|可燃|有毒|一氧化碳|危(?:险)?化(?:学)?品|生产设备/.test(query))return {
+    suppressResults:true,notice:'报警器类型尚未明确。请先区分火灾、可燃气体或有毒气体报警，再核实未安装、已安装但故障或其他状态；这些设备与义务不能互换。',
+    suggestions:[searchChoice('火灾报警设备','火灾自动报警系统','核实具体探测器或控制器，以及实际故障或配置问题。'),
+      searchChoice('可燃气体报警设备','可燃气体','核实检测介质、危险区域和装置状态。'),
+      searchChoice('有毒气体报警设备','有毒气体','核实气体种类、使用场景和装置状态。')],
+    assessment:{classification:'needs_conditions',reason:'alarm_type_unconfirmed',requiredFacts:['检测或报警对象','装置类型与场所','实际安装与功能状态']},
+  };
+  return null;
+}
+
+function oneFieldIssue(rows, raw, filters, index) {
+  let interpretation=interpretFieldQuery(raw);
+  const exact=rows.some(row=>normalize(row.title)===normalize(raw))&&normalize(raw)!=='';
+  let result=searchHazardsDetailed(rows,raw,filters);
+  if(interpretation.corrections.length&&result.rows.length&&result.matchKind!=='corrected'
+    &&interpretation.corrections.some(item=>result.rows.some(row=>objectHeading(row).includes(item.from)))) {
+    interpretation=interpretFieldQuery(raw,{correctTypos:false});
+  }
+  const initialAssessment=result.assessment?.classification;
+  const protectedState=['fact_unconfirmed','evidence_gap'].includes(initialAssessment);
+  const semanticGuidance=exact||initialAssessment==='evidence_gap'?null:issueGuidance(interpretation);
+  // A deliberately chosen full title is kept as an exact lookup. Known-state
+  // or known-source-gap guidance takes precedence over any natural-language
+  // rewrite. Unknown wording is never silently discarded to force a hit.
+  if(protectedState&&semanticGuidance?.suggestions?.length)result={...result,
+    queryNotice:[result.queryNotice,semanticGuidance.notice].filter(Boolean).join(' '),
+    suggestions:semanticGuidance.suggestions,
+    assessment:{...result.assessment,requiredFacts:[...new Set([...(result.assessment?.requiredFacts||[]),...(semanticGuidance.assessment?.requiredFacts||[])])]}};
+  else if(!protectedState&&semanticGuidance?.suppressResults)result={rows:[],matchKind:'none',interpretedQuery:interpretation.query,
+    queryNotice:semanticGuidance.notice,suggestions:semanticGuidance.suggestions,assessment:semanticGuidance.assessment};
+  else if(!exact&&!protectedState) {
+    if(!result.rows.length&&interpretation.changed) {
+      const alternative=searchHazardsDetailed(rows,interpretation.query,filters);
+      // A safe interpretation may expose an existing ambiguity/negation guard
+      // that a long prefix hid, even when it quite properly has no results.
+      if(alternative.rows.length||alternative.queryNotice||alternative.suggestions?.length)result=alternative;
+    }
+    const canRefine=!result.suppressed&&['candidate_matches','no_result','needs_conditions'].includes(result.assessment?.classification);
+    if(canRefine&&interpretation.objects.length) {
+      const conforms=row=>fieldObservationMatches(row,interpretation);
+      let candidates=result.rows.filter(conforms);
+      // Only this controlled object+state fallback drops conversational words.
+      // Each candidate must match an observed subject and its own defect.
+      // Parent equipment and location remain context rather than extra ANDs.
+      // Ambiguous, negated and documentary queries have already stopped above.
+      if(interpretation.defects.length) {
+        const standards=prepareQuery(interpretation.query).standards;
+        const filtered=searchHazardsDetailed(rows,'',filters).rows.filter(row=>standardsMatch(row,standards,'hazards'));
+        candidates=[...new Map([...candidates,...filtered.filter(conforms)].map(row=>[row.id,row])).values()];
+      }
+      const rankingIntent={...interpretation,scenes:[...interpretation.scenes,...['place','region','scene','sceneTag'].map(key=>filters[key]).filter(Boolean)]};
+      const ranked=candidates.map((row,position)=>({row,score:fieldCandidateScore(row,rankingIntent,position)}))
+        .sort((a,b)=>b.score-a.score||String(a.row.title).localeCompare(String(b.row.title),'zh-CN'));
+      const changed=result.rows.length!==ranked.length||ranked.some((item,i)=>item.row.id!==result.rows[i]?.id);
+      result={...result,rows:ranked.map(item=>item.row),matchKind:ranked.length?(result.matchKind==='none'?'colloquial':result.matchKind):'none',
+        interpretedQuery:ranked.length&&changed?[...(interpretation.subjects.length?interpretation.subjects:interpretation.objects).map(object=>object.name),...interpretation.defects.map(defect=>({pressure_loss:'失压',grounding:'接地',verification_overdue:'检定超期',inspection_overdue:'定期检验超期',damaged:'损坏',absent:'未设置',obstructed:'占用或遮挡',charging_wiring:'飞线充电',not_worn:'未佩戴',understaffed:'值班人数不足'}[defect]))].join(' '):result.interpretedQuery,
+        assessment:result.assessment?.classification==='needs_conditions'?result.assessment:{classification:ranked.length?'candidate_matches':'no_result',reason:ranked.length?'object_and_state_candidates':'no_object_state_match',requiredFacts:[]}};
+    }
+    if(interpretation.changed&&result.assessment?.classification==='candidate_matches') {
+      const canonicalGuidance=hazardSearchGuidance(interpretation.query);
+      if(canonicalGuidance.assessment?.classification==='needs_conditions')result={...result,
+        queryNotice:[result.queryNotice,canonicalGuidance.notice].filter(Boolean).join(' '),
+        suggestions:canonicalGuidance.suggestions,assessment:canonicalGuidance.assessment};
+    }
+    if(semanticGuidance&&!['fact_unconfirmed','evidence_gap'].includes(result.assessment?.classification))result={...result,
+      queryNotice:[result.queryNotice,semanticGuidance.notice].filter(Boolean).join(' '),
+      suggestions:[...(result.suggestions||[]),...semanticGuidance.suggestions],assessment:semanticGuidance.assessment};
+    if(result.rows.length&&interpretation.quantitativeFacts.length)result={...result,
+      queryNotice:[result.queryNotice,`原话中的数值条件已保留：${interpretation.quantitativeFacts.join('、')}。候选不代表已满足条款阈值、设备范围或设计制造日期要求，请逐项核对适用条件。`].filter(Boolean).join(' '),
+      assessment:{...result.assessment,classification:'needs_conditions',requiredFacts:[...new Set([...(result.assessment?.requiredFacts||[]),'原话数值、日期与条款适用条件逐项核对'])]}};
+  }
+  const corrected=interpretation.corrections.length&&result.rows.length&&normalize(result.interpretedQuery)!==normalize(raw)
+    ?interpretation.corrections.map(item=>`“${item.from}”→“${item.to}”`).join('、'):'';
+  const changedNotice=interpretation.changed&&!exact&&!protectedState&&!semanticGuidance?.suppressResults
+    ?`已保留原话，按“${interpretation.query}”查找${corrected?`（纠错：${corrected}）`:''}。`:'';
+  const titleTerms=[...interpretation.objects.flatMap(object=>{
+    const group=EQUIVALENT_GROUPS.find(names=>names.includes(object.name));return group||[object.name];
+  }),...(result.interpretedQuery||'').split(/\s+/).filter(Boolean)];
+  const cleanFilters=activeFilters(filters);
+  let unfilteredCount=0,zeroReason='';
+  if(!result.rows.length) {
+    if(['fact_unconfirmed','evidence_gap','needs_conditions'].includes(result.assessment?.classification))zeroReason=result.assessment.classification;
+    else if(Object.keys(cleanFilters).length) {
+      const unfiltered=oneFieldIssue(rows,raw,{},index);
+      unfilteredCount=unfiltered.rows.length;
+      zeroReason=unfilteredCount?'filters_exclude_matches':(unfiltered.zeroReason||'no_library_match');
+    } else zeroReason='no_library_match';
+  }
+  return {...result,id:`issue-${index+1}`,query:raw,originalQuery:raw,interpretation,
+    queryNotice:[changedNotice,result.queryNotice].filter(Boolean).join(' '),
+    highlightTerms:[...new Set(titleTerms)].filter(term=>term.length>=2),
+    activeFilters:cleanFilters,unfilteredCount,zeroReason};
+}
+
+/** The original website's observation search. Each independent issue keeps
+ * its own candidates and disposition; the aggregate is an OR union, never an
+ * impossible AND across different equipment and defects. */
+export function searchHazardIssuesDetailed(rows, query, filters={}) {
+  const raw=String(query??'').trim();
+  const exact=raw&&rows.some(row=>normalize(row.title)===normalize(raw));
+  const parts=exact?[raw]:splitFieldQuery(raw);
+  const issues=parts.map((part,index)=>oneFieldIssue(rows,part,filters,index));
+  const combined=[...new Map(issues.flatMap(issue=>issue.rows).map(row=>[row.id,row])).values()];
+  return {issues,rows:combined,isMultiIssue:issues.length>1,query:raw,
+    queryNotice:issues.length>1?`已分为 ${issues.length} 个问题分别检索。每组仅提供候选，现场事实与适用条件仍需核实。`:issues[0]?.queryNotice||'',
+    matchKind:issues.length>1?'multiple':issues[0]?.matchKind||'none',
+    interpretedQuery:issues.map(issue=>issue.interpretedQuery).join('；'),
+    suggestions:issues.length===1?issues[0].suggestions:[],assessment:issues.length===1?issues[0].assessment:null};
 }
 
 const lawScore=(r,q,terms)=>{

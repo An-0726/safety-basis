@@ -41,6 +41,7 @@ from presentation import (  # noqa: E402
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 from field_profiles import public_projection  # noqa: E402
 from basis_refs import basis_sort_key, project_basis_reference  # noqa: E402
+from jurisdiction import candidate_scopes, clause_jurisdiction, region_label, version_jurisdiction  # noqa: E402
 from major_criteria import public_projection as major_criteria_projection  # noqa: E402
 from major_criteria_references import (public_projection as reference_projection,
                                        project_publication, REFERENCE_FILE)  # noqa: E402
@@ -65,15 +66,16 @@ DEFAULT_OUT = os.path.join(ROOT, "source", "releases", "current")
 SHARD_SIZE = 200
 MODEL = "deterministic local build"
 
+from web_assets import render_web_asset
+
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
                "js/search-vocabulary.js", "js/browse-groups.js", "js/search-guidance.js", "js/search-boundaries.js", "js/field-query-guidance.js", "js/field-profiles.js",
-               "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
+               "js/library.js", "js/fulltext-search.js", "js/verified-files.js", "js/query-intent.js", "js/search-facets.js", "js/bootstrap-watchdog.js",
                "major-criteria.html", "major-criteria.css",
                "js/major-criteria.js", "js/major-criteria-model.js",
                "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js", "js/normative-content.js", "js/major-criteria-reading-model.js")
 
-REGION = {"CN": "全国", "CN-32": "江苏", "CN-3201": "南京"}
 STATUS_LABEL = {"active": "现行有效", "upcoming": "即将生效", "repealed": "已废止", "unknown": "待核验"}
 def rd(p):
     with io.open(p, encoding="utf-8") as f:
@@ -302,21 +304,26 @@ def build(args, knowledge, source_hash, as_of_date):
                 "checked": clause_checked.get(cid, ""),
                 "status": STATUS_LABEL.get(validity, "待核验")
                           if (c.get("lifecycle") or "active") == "active" else "已废止",
-                "region": REGION.get(c.get("jurisdictionCode") or "CN", "全国"),
+                "region": region_label(clause_jurisdiction(c, lv, laws[lv['lawId']])),
             })
         clause_shards.append({"id": sid, "url": "data/clauses/%s.json" % sid})
         wr(os.path.join(data, "clauses", sid + ".json"),
            {"schemaVersion": 2, "records": recs})
 
+    public_basis_refs = {}
     for i in range(0, len(pub), SHARD_SIZE):
         sid = "h%04d" % (i // SHARD_SIZE)
         p = os.path.join(data, "hazards", sid + ".json")
         payload = rd(p)
         for rec in payload["records"]:
             rec["basisRefs"] = [
-                project_basis_reference(links[kid], c_shard_of[cid])
+                project_basis_reference(
+                    links[kid], c_shard_of[cid], clause=clauses[cid],
+                    version=lvs[clauses[cid]['lawVersionId']],
+                    law=laws[lvs[clauses[cid]['lawVersionId']]['lawId']])
                 for cid, _role, kid in basis_of[rec["id"]]
             ]
+            public_basis_refs[rec['id']] = rec['basisRefs']
         wr(p, payload)
 
     # ---- 正式法规索引：knowledge 是身份/版本主源；publication 仅补来源元数据 ----
@@ -373,7 +380,7 @@ def build(args, knowledge, source_hash, as_of_date):
         aliases = list(dict.fromkeys((law.get("aliases") or []) + (source.get("aliases") or [])))
         validity = lv.get("validityStatus", "unknown")
         refs = rebuilt_refs(version_clause[vid])
-        region_code = law.get("jurisdictionCode") or lv.get("scope") or "CN"
+        region_code = version_jurisdiction(lv, law)
         raw_level = raw_law_level(law, lv, source)
         law_index.append({
             "id": vid,
@@ -382,7 +389,7 @@ def build(args, knowledge, source_hash, as_of_date):
             "documentNumber": number,
             "level": raw_level,
             "displayLevel": display_level(raw_level, vid),
-            "scope": REGION.get(region_code, source.get("scope") or region_code),
+            "scope": region_label(region_code),
             "status": STATUS_LABEL.get(validity, "待核验"),
             "checked": (lv_checked.get(vid, "") or source.get("checked", ""))[:10],
             "effectiveDate": lv.get("effectiveDate", ""),
@@ -412,7 +419,7 @@ def build(args, knowledge, source_hash, as_of_date):
         level_records[vid] = (raw, display_level(raw, vid))
     for hid in pub:
         h = hazards[hid]
-        lns, stds, scopes, lvls, display_lvls = set(), set(), set(), set(), set()
+        lns, stds, lvls, display_lvls = set(), set(), set(), set()
         for cid, _role, _kid in basis_of[hid]:
             c = clauses[cid]
             lv = lvs.get(c.get("lawVersionId")) or {}
@@ -422,7 +429,6 @@ def build(args, knowledge, source_hash, as_of_date):
                 lns.add(nm)
             if lv.get("documentNumber"):
                 stds.add(lv["documentNumber"])
-            scopes.add(REGION.get(c.get("jurisdictionCode") or "CN", "全国"))
             level = raw_law_level(law, lv, publication_by_id.get(c.get("lawVersionId")) or {})
             if level:
                 lvls.add(level)
@@ -443,7 +449,7 @@ def build(args, knowledge, source_hash, as_of_date):
             "checked": checked_at.get(hid, ""),
             "levels": sorted(lvls),
             "displayLevels": sorted(display_lvls),
-            "scopes": sorted(scopes),
+            "scopes": candidate_scopes(public_basis_refs[hid]),
             "lawNames": sorted(lns),
             "stdNumbers": sorted(stds),
             "shard": h_shard_of[hid],
@@ -558,7 +564,8 @@ def build(args, knowledge, source_hash, as_of_date):
         src = os.path.join(WEB, asset)
         dst = os.path.join(out, asset)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
-        shutil.copyfile(src, dst)
+        with open(src, 'rb') as source_file, open(dst, 'wb') as destination_file:
+            destination_file.write(render_web_asset(asset, source_file.read(), DATA_VERSION))
     shutil.copytree(os.path.join(PUBLICATION, "fulltext"), os.path.join(data, "fulltext"))
 
     # Controlled reference entries use their true metadata/topic review date.
@@ -620,6 +627,7 @@ def build(args, knowledge, source_hash, as_of_date):
                    if rel.startswith("data/")}
     site_manifest = {
         "schemaVersion": "safety-site-bundle-v1",
+        "dataVersion": DATA_VERSION,
         "asOf": AS_OF,
         "releaseHash": release_hash,
         "fullTextCatalog": "data/fulltext/catalog.json",

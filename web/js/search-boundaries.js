@@ -1,6 +1,7 @@
 // Retrieval boundaries only: these checks do not decide that a site has a hazard.
 // Keep object identity, observed defect and documentary evidence separate. The
 // same metadata is available to the local workbench and offline evaluation.
+import {analyzeFieldObservation} from './query-intent.js';
 const choice = (label, query, note) => ({label, query, note});
 const stop = (reason, notice, requiredFacts, suggestions = [], classification = 'needs_conditions') => ({
   suppressResults: true, notice, suggestions,
@@ -8,12 +9,44 @@ const stop = (reason, notice, requiredFacts, suggestions = [], classification = 
 });
 const compact = value => String(value ?? '').normalize('NFKC').replace(/[\s，。？！?!]/g, '');
 
+export function observationStateBoundary(value) {
+  const q = compact(value);
+  const observation = analyzeFieldObservation(value);
+  // Polarity belongs to a specific state. “检定超期，但没有损坏” still
+  // supports looking up verification candidates, without claiming breakage.
+  if (observation.activeClaims.length) return null;
+  // These qualifiers are meaningful even in the middle of a long sentence.
+  // Do not let the colloquial fallback discard them and manufacture a defect.
+  if (/(?:未确认|未核实|未查明|没查清|没确认|没核实|待核实|待确认|待核查|不确定|不知道|不清楚|疑似|怀疑|好像|似乎|或许|可能|大概|是否|是不是|有没有|坏没坏|失压与否)/.test(q.replace(/疑似职业病/g, '职业病诊断情形'))) {
+    return stop('unconfirmed_observation', '原话含有待核实、疑问或不确定状态。请先核实对象和实际情况；不能删掉这些状态词，直接认定已经存在缺陷。',
+      ['对象与适用场景', '现场当前状态及观察或检测证据'], [], 'fact_unconfirmed');
+  }
+  if (observation.claims.some(claim=>claim.polarity==='negated')
+      // A terminal “断” is a state. “断路器” and “断电” are different
+      // predicates/objects and must not be swallowed by a one-character guard.
+      || /(?:没有|没|未|不)(?:明显|再)?断(?:了)?(?:$|[,，;；。])/.test(String(value??'').normalize('NFKC').trim())
+      || /(?:未发现|没有发现|未见)(?!.*(?:报告|记录|台账|签到表)).*(?:损坏|故障|失效|缺陷|堵|堆|失压|接地|异常|隐患)/.test(q)
+      || /(?:没有|没|未|不|不存在)(?:明显|再)?(?:坏(?:掉)?|损坏|故障|失灵|失效|破损|断裂|断开|堵(?:塞|住)?|被堵|遮挡|被挡|堆(?:放|积|东西|杂物|纸箱)|放(?:置|着|有)?(?:杂物|纸箱|东西|货物|物料)|漏气|泄漏|超期|过期|失压|异常|隐患(?!排查|记录|治理|整改))/.test(q)
+      || /(?:没有|没|未)(?:超过|超出).*(?:有效期|周期)/.test(q)
+      || /(?:不是|并非|不属于).*(?:没|未|没有|损坏|故障|失效|失压|超期|过期|堵塞|遮挡)/.test(q)) {
+    return stop('negated_observation', '原话表示未发生或未发现所说的缺陷。已保留否定和状态词，不把正常、未发现或双重否定的描述改成隐患；需要时请按实际待查问题重新检索。',
+      ['现场当前状态及证据'], [], 'fact_unconfirmed');
+  }
+  const currentFailure=/(?:但|仍|还是|又|再次).*(?:没|未|不亮|不动作|损坏|故障|失压|失效|堵塞|破损|漏气|泄漏)/.test(q);
+  if (!currentFailure && (/(?<!未)(?:已经|已)(?:修好|修复|整改完成|更换|换好|维修完成|处理完|清理完|清走|清掉|疏通|排除|恢复正常|接好|完成)(?:了)?/.test(q)
+      || /(?:现在|目前)(?:已经|已)?(?:正常|完好|畅通)/.test(q)
+      || /(?:已经|(?<!未)已)(?:安装|配置|配备|接地|固定|佩戴|检测|检验|检定|校验|培训|演练|审批|签字)(?:完成|合格|有效|了)?$/.test(q)
+      || /(?:正常|完好无损|压力充足|仍在有效期|还没到期|尚未到期)$/.test(q))) {
+    return stop('completed_observation', '原话表示已修复、已完成或目前正常。检索保留完成状态词，不将历史问题改成当前隐患；复查时请记录当前事实及证据。',
+      ['修复后的当前状态', '复查或检测证据'], [], 'fact_unconfirmed');
+  }
+  return null;
+}
+
 export function fieldSafetyBoundary(value) {
   const q = compact(value);
-  if (/^(?:现场|本次检查)?(?:未见|未发现|尚未确认|尚未核实|未查明).*(?:损坏|故障|失效|缺陷|是否)/.test(q)) {
-    return stop('unconfirmed_observation', '原话表示未发现或尚未核实。请保留这一状态，确认对象和实际事实后再匹配；不能把待核问题写成已确认隐患。',
-      ['核实对象', '实际观察或检测事实'], [], 'fact_unconfirmed');
-  }
+  const state = observationStateBoundary(value);
+  if (state) return state;
   if (/^(?:(?:现场|车间|仓库)(?:内|里|的)?)?灭火器(?:前面|前|周围|旁边)(?:堆放|堆有|放有|摆放|堆着)(?:了)?(?:纸箱|杂物|货物)$/.test(q)) {
     return stop('extinguisher_access_observation', '灭火器附近堆放物品还需核实是否遮挡识别或实际妨碍取用。请记录位置、距离和取用状态，再选择对应条款；不能仅凭“有纸箱”认定取用受阻。',
       ['灭火器设置点及适用场景', '物品是否遮挡识别或妨碍便捷取用', '现场照片及实际取用核实'], [
@@ -61,6 +94,11 @@ export function fieldSafetyBoundary(value) {
     return stop('equipment_document_review', '暂未找到检验或检测报告只能记为资料待核，不能推定设备故障、检验超期或未经检验仍在使用。请分别核实设备类别、有效期、实际检验及继续使用情况。',
       ['设备类别', '实际检验及有效期', '报告保存或提供情况', '是否仍继续使用']);
   }
+  if (/(?:报告|记录|台账|签到表|档案|证书|合格证).*(?:暂时|暂)?(?:没给|没拿出来|没有拿出来|未拿出|没提供|没有提供|未提供|没有出示|未出示|找不到|没找到|未找到|缺失)/.test(q)
+      || /(?:(?:没有|没|未|暂未)(?:找到|查到|提供|出示)|未见).*(?:报告|记录|台账|签到表|档案|证书|合格证)$/.test(q)) {
+    return stop('document_availability_unconfirmed', '资料或证书未提供、未出示或暂未找到，只能说明资料仍待核实，不能据此推定培训、检验、检测或检查从未实施、资格无效，也不能推定设备损坏。请分别核实实施事实、有效期和记录义务。',
+      ['具体资料和法定记录义务', '活动是否实际实施及其证据', '记录是否保存、是否能够提供']);
+  }
   return null;
 }
 
@@ -69,9 +107,10 @@ export function fieldSafetyBoundary(value) {
 // Never make verification and periodic equipment inspection synonyms.
 export function pressureGaugeStateBoundary(query) {
   const q = compact(query);
-  if (!q.includes('压力表')) return null;
-  const overdue = /(?:检定(?:超期|过期)|超过检定有效期)/.test(q);
-  const damaged = /(?:损坏|故障|玻璃(?:破裂|破损|碎了)|指针松动|弹簧管泄漏)/.test(q);
+  if (!q.includes('压力表') || q.includes('灭火器')) return null;
+  const observation = analyzeFieldObservation(query);
+  const overdue = observation.defects.includes('verification_overdue');
+  const damaged = observation.defects.includes('damaged');
   if (overdue && !damaged) return {
     reason: 'gauge_verification_state',
     heading: /(?:检定|检定有效期)/,

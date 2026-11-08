@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="safety-basis-version" content="__SAFETY_BASIS_DATA_VERSION__">
   <meta name="theme-color" content="#183e35">
   <meta name="description" content="安全隐患与法规依据速查工具：只在正式视图展示已核验隐患与实际引用法规版本。">
   <meta name="referrer" content="no-referrer">
@@ -40,14 +41,17 @@
 
   <section id="searchView" class="workspace">
     <div class="sectionhead"><div><h2 id="sectionTitle">隐患速查</h2><p id="sectionHint">现场问题 → 专业描述 → 直接依据 → 整改措施</p></div><span class="shortcut">按 <kbd>/</kbd> 聚焦搜索</span></div>
+    <div id="loadStatus" class="load-status" role="status" aria-live="polite"><span class="spinner" aria-hidden="true"></span><div><strong id="loadTitle">正在加载检索索引</strong><p id="loadMessage">首次打开需要读取并校验公开数据，请稍候。</p><div id="loadActions" class="recovery-actions" hidden><button id="retryLoad" type="button">重新加载</button><button id="recoverCache" type="button">清理旧缓存并重试</button></div></div></div>
+    <noscript><p class="search-notice">本页需要 JavaScript 才能搜索。请在浏览器中允许此网站运行脚本后重新加载。</p></noscript>
+    <div id="profileStatus" class="profile-load-status" role="status" hidden></div>
     <div id="snapshotNotice" class="snapshot-notice" role="status" hidden></div>
     <aside id="majorTopicNotice" class="major-topic-notice" hidden><strong>你打开的是旧版“重大事故隐患判定”分类链接</strong><p>该旧分类已取消，原有记录并入“安全管理与培训”，不能代表重大隐患判定依据的收录范围。<a href="major-criteria.html">打开独立的重大隐患判定专题 ↗</a>，查看已核验判定条文及其关联隐患。</p></aside>
     <div class="searchbar"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索数据库" aria-describedby="searchHelp" autocomplete="off" spellcheck="false"><button id="clear" class="quiet" type="button">清空</button></div>
-    <p id="searchHelp" class="search-help">输入设备、现场问题或法规名称；多个关键词用空格分开</p>
+    <p id="searchHelp" class="search-help">用现场原话描述设备和问题；一句话有多个问题时可用逗号分开，例如“灭火器没压力，疏散通道堆了纸箱”</p>
 
     <div id="hazardFilters" class="filters">
-      <label>问题分类<select id="browse"></select></label>
-      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>专业分类<select id="category"></select></label><label>地区<select id="region"><option value="">国家＋江苏／南京</option><option value="全国">仅国家依据</option><option value="江苏">江苏补充</option><option value="南京">南京补充</option></select></label><label>场所 / 设备 / 作业<select id="scene" aria-describedby="sceneHelp"></select></label><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label><label>核查用途<select id="inspectionClass" aria-describedby="inspectionHelp"><option value="">全部条目（不限定用途）</option></select></label><p id="inspectionHelp">可选，仅筛选已审场景；用途审核不代表现场事实成立，未归类条目仍保留在默认全部结果中。</p><p id="sceneHelp">现场标签仅整理条目已记录的场所信息，不能代替适用条件判断；未标注不代表不适用。</p></div></details>
+      <label>问题分类<select id="browse"></select></label><label>检索对象<select id="equipment" aria-describedby="facetHelp"></select></label><label>问题类型<select id="problem" aria-describedby="facetHelp"></select></label>
+      <details id="hazardMoreFilters" class="more-filters"><summary>更多筛选 <span id="hazardFilterCount"></span></summary><div class="more-filter-items"><label>行业 / 场所<select id="industry" aria-describedby="facetHelp"></select></label><label>专业分类<select id="category"></select></label><label>地区<select id="region"><option value="">国家＋江苏／南京</option><option value="全国">仅国家依据</option><option value="江苏">江苏补充</option><option value="南京">南京补充</option></select></label><label>场所 / 设备 / 作业<select id="scene" aria-describedby="sceneHelp"></select></label><label>依据类型<select id="level"></select></label><label>适用方式<select id="mode"></select></label><label>核查用途<select id="inspectionClass" aria-describedby="inspectionHelp"><option value="">全部条目（不限定用途）</option></select></label><p id="inspectionHelp">可选，仅筛选已审场景；用途审核不代表现场事实成立，未归类条目仍保留在默认全部结果中。</p><p id="facetHelp">检索对象和问题类型按条目名称整理，行业 / 场所仅据已记录场所信息整理；这些导航标签不代表法规适用性，未标注的条目可在全部结果中查找。</p><p id="sceneHelp">现场标签仅整理条目已记录的场所信息，不能代替适用条件判断；未标注不代表不适用。</p></div></details>
       <button id="reset" class="quiet" type="button">全部重置 ↺</button>
     </div>
 
@@ -60,8 +64,9 @@
     <div id="activeFilters" class="active-filters" aria-label="当前筛选条件" hidden></div>
     <p id="searchNotice" class="search-notice" role="status" hidden></p>
     <div id="searchSuggestions" class="search-suggestions" aria-label="进一步检索建议" hidden></div>
-    <div class="resultbar"><span role="status" aria-live="polite" aria-atomic="true"><b id="count">0</b> 条匹配 <small id="summary">数据库正在初始化</small></span><span class="legend"><i></i> 原文与适用性分开核验 <em>·</em> 使用前复核现场条件</span></div>
-    <div class="columns"><div id="list" class="list" tabindex="-1" aria-label="搜索结果"></div><article id="detail" class="detail" aria-live="polite"><div class="empty"><strong>数据库正在初始化</strong></div></article></div>
+    <div id="issueOverview" class="issue-overview" aria-label="一句话中的问题" hidden></div>
+    <div class="resultbar"><span role="status" aria-live="polite" aria-atomic="true"><b id="count">0</b> 条候选 <small id="summary">正在读取并校验检索索引</small></span><span class="legend"><i></i> 检索候选 <em>·</em> 现场事实与适用条件待核实</span></div>
+    <div class="columns"><div id="list" class="list" tabindex="-1" aria-label="搜索结果"></div><article id="detail" class="detail" aria-live="polite"><div class="empty"><strong>正在读取并校验检索索引</strong></div></article></div>
   </section>
 
   <section id="dataView" class="workspace" hidden></section>
@@ -69,6 +74,7 @@
   <footer><span>隐患依据速查 <b>·</b> 数据版本 <span id="dbDate">—</span></span><span>原文可追溯 / 条款可复用 / 关联可反查 / 版本可回滚 <b>·</b> <a href="https://safety-basis-inspection.upezra8.chatgpt.site" target="_blank" rel="noopener noreferrer">私有检查工作台（登录使用）</a></span></footer>
 </main>
 <div id="toast" role="status" aria-live="polite"></div>
+<script src="js/bootstrap-watchdog.js"></script>
 <script type="module" src="app.js"></script>
 </body>
 </html>

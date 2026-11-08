@@ -28,6 +28,8 @@ from presentation import (  # noqa: E402
 from release_gate_core import evaluate_release_gate, load_dir  # noqa: E402
 from field_profiles import public_projection  # noqa: E402
 from basis_refs import basis_sort_key, project_basis_reference  # noqa: E402
+from jurisdiction import (JurisdictionError, candidate_scopes, clause_jurisdiction,
+                          region_label, version_jurisdiction)  # noqa: E402
 from major_criteria import (public_projection as major_criteria_projection,
                             CATALOG_FILE, TOPIC_FILE)  # noqa: E402
 from major_criteria_references import (public_projection as reference_projection,
@@ -37,6 +39,7 @@ from major_criteria_directory import (public_projection as directory_projection,
 from major_criteria_reading import (public_projection as reading_projection, READING_FILE)  # noqa: E402
 from release_snapshot import stable_knowledge_snapshot  # noqa: E402
 from normative_content import validate_ordinary_clause_content  # noqa: E402
+from web_assets import render_web_asset  # noqa: E402
 
 
 def check_clause_content(bad, cid, row, source):
@@ -50,6 +53,7 @@ def check_clause_content(bad, cid, row, source):
         bad.check(False, '条款表格或完整文本校验失败：' + cid + ':' + str(exc))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+WEB = os.path.join(ROOT, "web")
 KNOW = os.path.join(ROOT, "knowledge")
 PUBLICATION = os.path.join(ROOT, "source", "publication")
 SELECTION = os.path.join(ROOT, "source", "releases", "site-selection.json")
@@ -57,7 +61,7 @@ SELECTION = os.path.join(ROOT, "source", "releases", "site-selection.json")
 SITE_ASSETS = ("index.html", "library.html", "style.css", "library.css", "stage3.css", "app.js",
                "sw.js", "icon.svg", "manifest.webmanifest", "js/store.js", "js/search.js",
                "js/search-vocabulary.js", "js/browse-groups.js", "js/search-guidance.js", "js/search-boundaries.js", "js/field-query-guidance.js", "js/field-profiles.js",
-               "js/library.js", "js/fulltext-search.js", "js/verified-files.js",
+               "js/library.js", "js/fulltext-search.js", "js/verified-files.js", "js/query-intent.js", "js/search-facets.js", "js/bootstrap-watchdog.js",
                "major-criteria.html", "major-criteria.css",
                "js/major-criteria.js", "js/major-criteria-model.js",
                "js/major-criteria-reference-model.js", "js/major-criteria-directory-model.js", "js/normative-content.js", "js/major-criteria-reading-model.js")
@@ -248,6 +252,19 @@ def verify(args, KNOW, source_hash):
 
     manifest = rd(os.path.join(bundle, "data", "manifest.json"))
     site_manifest = rd(os.path.join(bundle, "site-manifest.json"))
+    bad.check(site_manifest.get('dataVersion') == manifest.get('dataVersion'),
+              '页面发布清单与数据版本不一致')
+    for asset in SITE_ASSETS:
+        source_path = os.path.join(WEB, asset)
+        target_path = os.path.join(bundle, asset)
+        if not os.path.isfile(target_path):
+            continue
+        try:
+            with open(source_path, 'rb') as source_file, open(target_path, 'rb') as built_file:
+                expected = render_web_asset(asset, source_file.read(), manifest.get('dataVersion'))
+                bad.check(built_file.read() == expected, '前端文件或模块版本与当前构建不一致：' + asset)
+        except (OSError, ValueError) as exc:
+            bad.append('前端版本核验失败：' + asset + ' ' + str(exc))
     public_files = {'searchIndex': 'data/search-index.json', 'lawIndex': 'data/law-index.json',
                     'taxonomy': 'data/taxonomy.json', 'fieldProfiles': FIELD_PROFILE_FILE,
                     'majorCriteriaCatalog': CATALOG_FILE, 'majorCriteriaTopic': TOPIC_FILE,
@@ -465,10 +482,21 @@ def verify(args, KNOW, source_hash):
         for field in ("places", "aliases", "keywords"):
             bad.check((row.get(field) or []) == (src.get(field) or []),
                       "隐患标签被改动：%s/%s" % (hid, field))
-        expected_basis_refs = [project_basis_reference(link, clause_shard_by_id.get(link['clauseId'], 'missing'))
-                               for link in sorted(verified_links_by_hazard.get(hid, []), key=basis_sort_key)]
-        bad.check(row.get('basisRefs') == expected_basis_refs,
-                  '隐患逐K依据身份或适用范围与精确源投影不一致：' + hid)
+        try:
+            expected_basis_refs = []
+            for link in sorted(verified_links_by_hazard.get(hid, []), key=basis_sort_key):
+                clause = know_clauses[link['clauseId']]
+                version = know_lvs[clause['lawVersionId']]
+                law = know_laws[version['lawId']]
+                expected_basis_refs.append(project_basis_reference(
+                    link, clause_shard_by_id.get(link['clauseId'], 'missing'),
+                    clause=clause, version=version, law=law))
+            bad.check(row.get('basisRefs') == expected_basis_refs,
+                      '隐患逐K依据身份或适用范围与精确源投影不一致：' + hid)
+            bad.check(si_by_id.get(hid, {}).get('scopes') == candidate_scopes(expected_basis_refs),
+                      '搜索索引地域与直接或兜底依据的最窄交集不一致：' + hid)
+        except JurisdictionError as exc:
+            bad.check(False, '隐患来源地域无法安全投影：' + hid + ':' + str(exc))
         shipped = {(r["clauseId"], r["role"]) for r in row["basisRefs"]}
         bad.check(shipped == verified_by_hazard.get(hid, set()),
                   "隐患依据集合与 Gate 关联不一致：" + hid)
@@ -484,6 +512,13 @@ def verify(args, KNOW, source_hash):
         check_clause_content(bad, cid, row, src)
         bad.check(row["article"] == (src.get("articlePath") or src.get("clauseNumber") or ""),
                   "条款条号被改动：" + cid)
+        try:
+            version = know_lvs[vid]
+            law = know_laws[version['lawId']]
+            bad.check(row.get('region') == region_label(clause_jurisdiction(src, version, law)),
+                      '条款地域与来源及父级最窄交集不一致：' + cid)
+        except JurisdictionError as exc:
+            bad.check(False, '条款来源地域无法安全投影：' + cid + ':' + str(exc))
 
     bad.check(law_ids == expected_law_ids,
               "正式法规索引必须恰好等于正式条款实际引用的 knowledge 法规版本")
@@ -493,6 +528,11 @@ def verify(args, KNOW, source_hash):
             continue
         law = know_laws.get(lv.get("lawId")) or {}
         source = publication_by_id.get(entry["id"]) or {}
+        try:
+            bad.check(entry.get('scope') == region_label(version_jurisdiction(lv, law)),
+                      '法规地域与版本及身份最窄交集不一致：' + entry['id'])
+        except JurisdictionError as exc:
+            bad.check(False, '法规来源地域无法安全投影：' + entry['id'] + ':' + str(exc))
         expected_raw_level = raw_law_level(law, lv, source)
         bad.check(entry.get("level") == expected_raw_level,
                   "法规原始 level 被改动：" + entry["id"])

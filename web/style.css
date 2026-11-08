@@ -38,3 +38,51 @@ nav a.nav{text-decoration:none;display:inline-flex;align-items:center;justify-co
 .basis .normative-table th,.basis .normative-table td{border:1px solid var(--line);padding:10px 12px;text-align:center;vertical-align:middle;white-space:pre-wrap}
 .basis .normative-table th{background:#f7faf4}
 .basis .normative-table-source{font-size:11px;color:var(--muted);margin:4px 0 14px}
+
+/* Search assistance stays inside the existing list/detail layout. */
+mark{background:#fff0b9;color:inherit;border-radius:3px;padding:0 .06em}
+.load-status{display:flex;align-items:flex-start;gap:14px;margin:16px 0;padding:18px 20px;background:#edf4f1;border:1px solid #c6dbd1;border-radius:12px;color:#244b40}
+.load-status p,.profile-load-status p{margin:5px 0 0;line-height:1.6;font-size:13px}
+.load-status.failed{background:#fff4e6;border-color:#e8c48d;color:#704c18}
+.load-status.failed>.spinner{display:none}
+.recovery-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.recovery-actions button,.profile-load-status button,.issue-empty button{min-height:44px;padding:9px 13px;border:1px solid #9eb6ad;background:#fff;border-radius:8px;color:#244b40;cursor:pointer;font:inherit;font-size:13px}
+.profile-load-status{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 16px;margin:12px 0;border:1px solid #d5e0dc;background:#f6f8f5;border-radius:10px;color:#4d645b}
+.profile-load-status strong{font-size:13px}.profile-load-status button{flex-shrink:0}
+.issue-overview{margin:18px 0 12px;padding:15px;background:#f1f6f3;border:1px solid #cdded5;border-radius:12px}
+.issue-heading{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;font-size:14px;color:#244b40}
+.issue-heading span{font-size:12px;color:#62746b}
+.issue-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.issue-tabs button{min-height:44px;max-width:100%;padding:10px 13px;border:1px solid #c1d5c9;border-radius:8px;background:#fff;cursor:pointer;text-align:left;font:inherit;font-size:13px;color:#244b40}
+.issue-tabs button span,.issue-tabs button small{display:block;overflow-wrap:anywhere}.issue-tabs button small{margin-top:3px;color:#65766d;font-size:11px}
+.issue-tabs button[aria-pressed=true]{border-color:#275b46;background:#dfede4;box-shadow:inset 0 0 0 1px #275b46}
+.issue-group{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #d6dfd9}
+.issue-group-head{padding:10px 8px 7px;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.issue-group-head h3{margin:0;font-size:14px;line-height:1.6;color:#204b3e;overflow-wrap:anywhere}
+.issue-group-head>span{font-size:11px;color:#66786e;white-space:nowrap}
+.issue-query-notice{font-size:12px;line-height:1.6;margin:0 8px 10px;color:#62746b}
+.issue-focus-button{display:block;width:100%;min-height:44px;padding:10px;border:1px solid #bed1c5;background:#eef5ef;border-radius:8px;color:#295a45;cursor:pointer;font:inherit;font-size:13px}
+.issue-suggestions{display:grid;gap:8px;margin:12px 4px}.issue-suggestions button{min-height:44px;padding:10px 12px;border:1px solid #becfba;border-radius:8px;background:#fff;color:#315b3b;cursor:pointer;font:inherit;font-size:13px;text-align:left}.issue-suggestions p{margin:4px 3px;font-size:12px;line-height:1.6;color:#68756a}
+.issue-empty{padding:24px 14px}.issue-empty strong{font-size:15px}.issue-empty p{line-height:1.7;font-size:13px}.required-facts{color:#645328}
+.card .candidate-status{font-size:11px;color:#667667;margin:7px 0}
+.card .card-preview{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:1.65;font-size:12px;margin:6px 0;color:#536459}
+.card-preview b{font-weight:600;color:#3e5c4c;margin-right:3px}
+.detail-candidate{display:inline-block;color:#3b604d!important;background:#eaf2e9;border:1px solid #c5d7c5;border-radius:6px;font-size:12px!important;padding:5px 9px;margin:0 0 10px!important}
+.onsite-notice{padding:13px 15px;border-left:3px solid #a5b99f;background:#f5f7f0;font-size:13px;line-height:1.75;color:#546449;margin-bottom:20px}
+#facetHelp{line-height:1.6;font-size:12px;color:#67786c;grid-column:1 / -1}
+@media(max-width:780px){
+  .load-status{padding:14px;gap:10px}.profile-load-status{align-items:flex-start;flex-direction:column;gap:10px}
+  #searchView .searchbar input{min-height:44px;font-size:16px}
+  #searchView #clear,#searchView #reset,#searchView #resetLaw{min-height:44px;min-width:44px}
+  #searchView .filters>label{flex:1 1 calc(50% - 12px);min-width:130px}
+  #searchView .filters select{width:100%;min-height:44px;font-size:16px}
+  #searchView .more-filters summary,#searchView #activeFilters .filter-chip{min-height:44px}
+  #searchView #searchSuggestions button,#searchView #detail button,#searchView #detail .buttonlink{min-height:44px}
+  .issue-overview{padding:12px}.issue-tabs{display:grid;grid-template-columns:1fr 1fr}.issue-tabs>button:first-child{grid-column:1 / -1}
+  .issue-tabs button{padding:10px;line-height:1.5}.issue-heading span{font-size:12px}.resultbar small{display:block!important;max-width:100%;line-height:1.6;margin-top:6px;font-size:12px}
+  .resultbar{align-items:flex-start;gap:10px;flex-direction:column}.resultbar .legend{font-size:11px}
+  .list:has(.issue-group){max-height:460px}.issue-empty{padding:20px 12px}
+  .card .card-preview{-webkit-line-clamp:2}.recovery-actions{width:100%}.recovery-actions button{flex:1 1 auto}
+}
+
+[hidden]{display:none!important}

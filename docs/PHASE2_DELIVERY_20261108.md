@@ -1,5 +1,7 @@
 # 下一阶段开发交付记录（2026-11-08）
 
+**同日后续范围补充：** 原网站搜索与查询体验的八项要求已另行实施，包含知识条目拆分、搜索、分类筛选、加载恢复及改前改后验收，见 [原站改造交付记录](ORIGINAL_SITE_SEARCH_20261108.md)。当前公开1766H/1951K、待补证候选265；本文件保留前序PR134的1764/266等历史成绩，后续实际云端上线见 [私有云端说明](PRIVATE_CLOUD_WORKBENCH.md)。
+
 **完整功能已通过 CI 并合并到 main。** [PR134](https://github.com/An-0726/safety-basis/pull/134) 合并提交为 `d2575652af12bb068d6002834dc6386a0a54e315`；其 [CI 42460190930](https://github.com/An-0726/safety-basis/actions/runs/42460190930) 的 validate、build 均成功。GitHub Chromium 实际完成工作台 48 项业务及移动宽度检查，网站抽检打开 24 条（包含此次防雷修复），0 失败。浏览器产物已取回并目核；移动截图在视口切换动画中采集的问题通过后续专项等待与菜单开合验收修正。
 
 以下本地测试和开工数据保留为实施记录；最终 Pages 是否上线须核对精确 main 提交的 [发布 Actions](https://github.com/An-0726/safety-basis/actions/workflows/site.yml) 与 [线上 manifest](https://an-0726.github.io/safety-basis/data/manifest.json)，不把合并或 PR CI 成功当作部署成功。

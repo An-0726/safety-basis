@@ -285,6 +285,10 @@ export const COLLOQUIAL_TERMS = {
   '电动车': ['电动自行车'],
   '电瓶车': ['电动自行车'],
   '乱充电': ['飞线充电', '充电'],
+  // Retrieval alternatives only; a cable used for charging is not by itself
+  // proof of a prohibited installation or of a local rule's applicability.
+  '拉线充电': ['飞线充电', '充电'],
+  '拖线充电': ['飞线充电', '充电'],
   '裸露': ['裸露', '外露', '裸带电', '防护罩'],
   '罩子': ['防护罩', '防护装置'],
   '旋转': ['旋转', '转动', '传动'],

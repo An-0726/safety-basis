@@ -30,7 +30,10 @@ class Mem10CatalogIntegrationTests(unittest.TestCase):
         self.assertIn('轻工企业', rows[0]['applicability'])
         self.assertIn('第八条第（七）项', rows[0]['applicability'])
         self.assertIn('不将其他分项自动套用', rows[0]['applicability'])
-        basis = project_basis_reference(self.link, 'c0000')
+        clause = json.loads((ROOT / 'knowledge/clauses' / (self.link['clauseId'] + '.json')).read_text())
+        version = json.loads((ROOT / 'knowledge/law-versions' / (clause['lawVersionId'] + '.json')).read_text())
+        law = json.loads((ROOT / 'knowledge/laws' / (version['lawId'] + '.json')).read_text())
+        basis = project_basis_reference(self.link, 'c0000', clause=clause, version=version, law=law)
         self.assertEqual(basis['applicability'], rows[0]['applicability'])
         self.assertEqual(basis['jurisdictionCode'], rows[0]['jurisdictionCode'])
 
