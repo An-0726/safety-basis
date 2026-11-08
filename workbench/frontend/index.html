@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#183c37">
+  <meta name="description" content="安全依据检查工作台：整理现场记录、核实适用条件、匹配法规条款并生成检查报告。">
+  <title>检查工作台 · 安全依据</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到工作区</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="项目导航">
+      <a class="brand" href="#" aria-label="安全依据检查工作台首页">
+        <span class="brand-mark" aria-hidden="true">安</span>
+        <span><strong>安全依据</strong><small>检查工作台</small></span>
+        <span class="mvp-tag">MVP</span>
+      </a>
+      <div class="sidebar-section-label">检查项目 <span id="project-count">0</span></div>
+      <button class="button primary sidebar-new" id="new-project"><span aria-hidden="true">＋</span> 新建项目</button>
+      <label class="project-filter"><span class="sr-only">筛选项目</span><input id="project-filter" type="search" placeholder="搜索企业或项目" autocomplete="off"></label>
+      <nav id="project-list" class="project-list" aria-label="项目列表"><div class="subtle loading">正在读取项目…</div></nav>
+      <div class="sidebar-bottom">
+        <button class="button quiet" id="load-demo"><span aria-hidden="true">◇</span> 体验脱敏样例</button>
+        <button class="button quiet" id="backup-button"><span aria-hidden="true">↓</span> 导出本机备份</button>
+        <div class="local-note"><span class="online-dot" aria-hidden="true"></span><span id="local-status">本机私有工作区</span></div>
+        <p class="sidebar-footnote" id="knowledge-version">正在核对知识库版本…</p>
+      </div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menu-button" aria-label="打开项目导航" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span>检查工作台</span><span aria-hidden="true">/</span><strong id="breadcrumb-current">项目概览</strong></div>
+        <div class="topbar-meta"><span class="privacy-pill"><span aria-hidden="true">●</span> 本机存储</span><button class="button quiet small" id="help-button">使用指引</button></div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="boot-state" id="boot-state"><div class="spinner" aria-hidden="true"></div><h1>正在打开检查工作区</h1><p>读取项目和知识库快照</p></div>
+      </main>
+      <footer class="app-footer"><span>现场事实由检查人员核实，报告结论须经专业审核。</span><span id="footer-version">Safety Basis Workbench</span></footer>
+    </div>
+  </div>
+  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+  <div class="toast-region" id="toasts" role="status" aria-live="polite" aria-atomic="false"></div>
+  <dialog id="project-dialog" class="dialog compact-dialog" aria-labelledby="project-dialog-title">
+    <form id="project-form">
+      <div class="dialog-header"><div><span class="eyebrow">PROJECT</span><h2 id="project-dialog-title">新建检查项目</h2></div><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div>
+      <div class="dialog-body form-grid">
+        <label class="field full"><span>企业名称 <i>必填</i></span><input name="company" required maxlength="200" placeholder="填写企业名称或脱敏代号" autocomplete="organization"></label>
+        <label class="field full"><span>项目名称 <i>必填</i></span><input name="name" required maxlength="200" placeholder="例如：生产车间安全专项检查"></label>
+        <label class="field"><span>检查日期 <i>必填</i></span><input name="inspection_date" type="date" required></label>
+        <label class="field"><span>检查人员</span><input name="inspectors" maxlength="300" placeholder="多名人员可用顿号分隔"></label>
+        <label class="field full"><span>检查范围与目的</span><textarea name="purpose" rows="3" maxlength="1000" placeholder="说明检查范围、场所及本次重点"></textarea></label>
+        <p class="form-error full" id="project-form-error" role="alert" hidden></p>
+      </div>
+      <div class="dialog-footer"><button type="button" class="button secondary close-dialog">取消</button><button type="submit" class="button primary" id="project-submit">创建项目</button></div>
+    </form>
+  </dialog>
+  <dialog id="search-dialog" class="dialog search-dialog" aria-labelledby="search-dialog-title">
+    <div class="dialog-header"><div><span class="eyebrow">LEGAL REFERENCE</span><h2 id="search-dialog-title">匹配法规依据</h2><p>检索核查场景，核对条款与适用条件后关联至当前记录。</p></div><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div>
+    <div class="knowledge-search-bar"><form id="knowledge-search-form"><label class="sr-only" for="knowledge-query">输入现场问法</label><input id="knowledge-query" type="search" placeholder="例如：配电箱前堆放物品，是否影响操作？" maxlength="1000" autocomplete="off"><button type="submit" class="button primary">检索</button></form><div id="search-guidance" class="search-guidance" role="status"></div></div>
+    <div class="knowledge-layout"><section class="knowledge-results" id="knowledge-results" aria-label="检索结果"><div class="empty-state small"><span class="empty-symbol" aria-hidden="true">⌕</span><h3>从现场原话开始</h3><p>补充具体场所、设备和观察到的现象，有助于区分适用场景。</p></div></section><section class="knowledge-detail" id="knowledge-detail" aria-label="条款与适用条件"><div class="detail-placeholder"><span class="empty-symbol" aria-hidden="true">§</span><p>选择左侧结果，核对法规原文与核查场景</p></div></section></div>
+    <div class="dialog-footer search-footer"><span class="subtle">检索结果是核查参考；关联条款不会自动确认现场事实。</span><button type="button" class="button secondary close-dialog">完成</button></div>
+  </dialog>
+  <dialog id="report-dialog" class="dialog report-dialog" aria-labelledby="report-dialog-title">
+    <div class="dialog-header"><div><span class="eyebrow">REPORTS</span><h2 id="report-dialog-title">生成检查报告</h2><p id="report-project-name"></p></div><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div>
+    <div class="dialog-body" id="report-body"></div>
+  </dialog>
+  <dialog id="photo-dialog" class="dialog photo-dialog" aria-label="现场照片预览"><button type="button" class="icon-button close-dialog photo-close" aria-label="关闭照片">×</button><img id="photo-preview" alt="现场照片"><p id="photo-preview-caption"></p></dialog>
+  <dialog id="confirm-dialog" class="dialog compact-dialog" aria-labelledby="confirm-title"><div class="dialog-header"><h2 id="confirm-title">请确认</h2><button type="button" class="icon-button close-dialog" aria-label="取消">×</button></div><div class="dialog-body"><p id="confirm-description"></p></div><div class="dialog-footer"><button class="button secondary" id="confirm-no">取消</button><button class="button danger" id="confirm-yes">确认</button></div></dialog>
+  <dialog id="help-dialog" class="dialog compact-dialog" aria-labelledby="help-title"><div class="dialog-header"><div><span class="eyebrow">HOW IT WORKS</span><h2 id="help-title">从现场记录到审核报告</h2></div><button type="button" class="icon-button close-dialog" aria-label="关闭">×</button></div><div class="dialog-body help-content"><ol><li><strong>建立项目</strong><p>填写企业、检查日期和检查人员。没有真实资料时，可先使用完全合成的脱敏样例。</p></li><li><strong>记录现场</strong><p>保留现场原话，填写位置与设备，添加照片和说明。专业表述和整改建议可逐步完善。</p></li><li><strong>关联法源并核实</strong><p>阅读条款，选择适用核查场景。每项事实、适用条件和误判边界都需逐条核实，未知项保持“待核实”。</p></li><li><strong>专业审核与导出</strong><p>记录满足核实要求后，提交专业审核。审核报告仅纳入已确认记录；草稿报告会保留待核实状态。</p></li></ol><div class="notice info"><strong>保存与备份</strong><p>编辑内容自动保存至本机服务。照片与报告保存在运行服务的设备上；导出的完整备份包含私有资料，请妥善保管。</p></div></div><div class="dialog-footer"><button type="button" class="button primary close-dialog">开始工作</button></div></dialog>
+</body>
+</html>

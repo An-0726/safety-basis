@@ -1,0 +1,681 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-08",
+  "sourceCommit": "883a2664f9c08c09b4a7cd2c4e441571c8dbca76",
+  "meaning": "实施前以最新main知识源和现有Release Gate按日期回放；不代表当时每个企业现场事实。",
+  "manifestCounts": {
+    "laws": 155,
+    "lawVersions": 159,
+    "clauses": 3253,
+    "hazards": 2171,
+    "links": 2309,
+    "evidence": 1476,
+    "successions": 26,
+    "requirements": 75
+  },
+  "gates": {
+    "2026-10-16": {
+      "projection": {
+        "hazards": 1764,
+        "links": 1949,
+        "clauses": 1514,
+        "lawVersions": 106
+      },
+      "activeExcluded": [
+        {
+          "hazardId": "H_1B474A2ABA0E23143E2FE451",
+          "title": "镁废屑袋装储存未单层存放、存在堆垛存放",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_409ABC97960D46FBBF6AA54D28",
+          "title": "微型消防站缺少物品 清单和检查记录",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_009EFFF6DC057F3650A66526",
+              "clauseId": "C_XLSX_FT_D554FB289C8D9AC9E53ACF93",
+              "lawVersionId": "L001",
+              "officialName": "中华人民共和国消防法（2021修正）",
+              "articlePath": "第六十七条",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        },
+        {
+          "hazardId": "H_68196C0A0FBDDAF0354E0F71",
+          "title": "进行检修和抢修作业时未携带氨气检测仪（检测报警设备）",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_68196C0A0FBDDAF0354E0F71",
+              "clauseId": "C_MEM10_13",
+              "lawVersionId": "L019",
+              "officialName": "工贸企业重大事故隐患判定标准",
+              "articlePath": "第十三条",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_6F7D6D7E28DD423B9F40AF8218",
+          "title": "在燃气、空气或氧气的混气管路与燃烧器之间,未设阻火器",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_06AA37592680D0C494CCB965",
+              "clauseId": "C_XLSX_FT_DEC0C23FE8B8BEC1ACCCE6AC",
+              "lawVersionId": "L001",
+              "officialName": "中华人民共和国消防法（2021修正）",
+              "articlePath": "二十七",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        },
+        {
+          "hazardId": "H_8C14C2BD0D4A4EF1B42FDC8C2E",
+          "title": "机加工废屑未配备专用收集容器或清理不及时",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_B552B08A4FD28A8770CDC2BB",
+          "title": "存在有毒、缺氧等高风险检修抢修作业时未按风险配备和使用适用的呼吸防护装备",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_B552B08A4FD28A8770CDC2BB",
+              "clauseId": "C_MEM10_13",
+              "lawVersionId": "L019",
+              "officialName": "工贸企业重大事故隐患判定标准",
+              "articlePath": "第十三条",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_BF7AA7549F8E1B94012882C9",
+          "title": "粉尘废屑未优先采用机械压块压实处理，干式储存未桶装加盖或袋装封口密闭",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_C1CE3A649721387F1FC0F7BE",
+          "title": "粉尘废屑未冷却至常温即入库存放，或不同种类混装、与氧化物/过氧化物/酸/爆炸品/易燃物品同场所存放",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_CE94D2ACC8C544BCA0FB0AA026",
+          "title": "有高处坠落危险的作业部位未配置扶梯平台、围栏和系挂装置",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_CE94D2ACC8C544BCA0FB0AA026",
+              "clauseId": "C_GBT12801_5_7_1_C",
+              "lawVersionId": "LV_STD_GB12801_2008",
+              "officialName": "生产过程安全卫生要求总则",
+              "articlePath": "5.7.1 c)",
+              "linkReasons": [
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_VERSION_EXPIRED:active_past_endDate"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_D98B4749D74246E2A3825D5B09",
+          "title": "液化石油气气瓶间缺失少“严禁烟火”、“易燃易爆” 等安全警示标志",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_06DA14F047F55C9102685D5D",
+              "clauseId": "C_XLSX_FT_D554FB289C8D9AC9E53ACF93",
+              "lawVersionId": "L001",
+              "officialName": "中华人民共和国消防法（2021修正）",
+              "articlePath": "第六十七条",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            },
+            {
+              "linkId": "K_XLSX_NEW14_0A9FF087925483120EDA1C30",
+              "clauseId": "C_XLSX_FT_0A0BC6D714EBEE8BE88DC97C",
+              "lawVersionId": "L002",
+              "officialName": "中华人民共和国安全生产法",
+              "articlePath": "三十五",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        },
+        {
+          "hazardId": "H_F0D64F91542E4B0399D83D670D",
+          "title": "每个堆间,未留有搬运通道",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A",
+              "clauseId": "C_XLSX_FT_1488F0C3329AF5C8262E2AB2",
+              "lawVersionId": "L015",
+              "officialName": "仓储场所消防安全管理通则",
+              "articlePath": "第6.7条",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        }
+      ]
+    },
+    "2026-11-08": {
+      "projection": {
+        "hazards": 1763,
+        "links": 1947,
+        "clauses": 1512,
+        "lawVersions": 105
+      },
+      "activeExcluded": [
+        {
+          "hazardId": "H_1B474A2ABA0E23143E2FE451",
+          "title": "镁废屑袋装储存未单层存放、存在堆垛存放",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_1B474A2ABA0E23143E2FE451",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_409ABC97960D46FBBF6AA54D28",
+          "title": "微型消防站缺少物品 清单和检查记录",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_009EFFF6DC057F3650A66526",
+              "clauseId": "C_XLSX_FT_D554FB289C8D9AC9E53ACF93",
+              "lawVersionId": "L001",
+              "officialName": "中华人民共和国消防法（2021修正）",
+              "articlePath": "第六十七条",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        },
+        {
+          "hazardId": "H_68196C0A0FBDDAF0354E0F71",
+          "title": "进行检修和抢修作业时未携带氨气检测仪（检测报警设备）",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_68196C0A0FBDDAF0354E0F71",
+              "clauseId": "C_MEM10_13",
+              "lawVersionId": "L019",
+              "officialName": "工贸企业重大事故隐患判定标准",
+              "articlePath": "第十三条",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_6F7D6D7E28DD423B9F40AF8218",
+          "title": "在燃气、空气或氧气的混气管路与燃烧器之间,未设阻火器",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_06AA37592680D0C494CCB965",
+              "clauseId": "C_XLSX_FT_DEC0C23FE8B8BEC1ACCCE6AC",
+              "lawVersionId": "L001",
+              "officialName": "中华人民共和国消防法（2021修正）",
+              "articlePath": "二十七",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        },
+        {
+          "hazardId": "H_89016FC0F3E849C2B8B8755C35",
+          "title": "投入使用后的雷电防护装置未按适用周期检测",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_13",
+              "clauseId": "C_CMA44_2025_13",
+              "lawVersionId": "LV_CMA_LIGHTNING_MANAGEMENT_2025",
+              "officialName": "防雷减灾管理办法",
+              "articlePath": "第十三条",
+              "linkReasons": [
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_VERSION_EXPIRED:active_past_endDate"
+              ]
+            },
+            {
+              "linkId": "K_REBUILD_H_89016FC0F3E849C2B8B8755C35_C_CMA44_2025_17",
+              "clauseId": "C_CMA44_2025_17",
+              "lawVersionId": "LV_CMA_LIGHTNING_MANAGEMENT_2025",
+              "officialName": "防雷减灾管理办法",
+              "articlePath": "第十七条",
+              "linkReasons": [
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_VERSION_EXPIRED:active_past_endDate"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_8C14C2BD0D4A4EF1B42FDC8C2E",
+          "title": "机加工废屑未配备专用收集容器或清理不及时",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_8C14C2BD0D4A4EF1B42FDC8C2E",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_B552B08A4FD28A8770CDC2BB",
+          "title": "存在有毒、缺氧等高风险检修抢修作业时未按风险配备和使用适用的呼吸防护装备",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_B552B08A4FD28A8770CDC2BB",
+              "clauseId": "C_MEM10_13",
+              "lawVersionId": "L019",
+              "officialName": "工贸企业重大事故隐患判定标准",
+              "articlePath": "第十三条",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_BF7AA7549F8E1B94012882C9",
+          "title": "粉尘废屑未优先采用机械压块压实处理，干式储存未桶装加盖或袋装封口密闭",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_BF7AA7549F8E1B94012882C9",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_C1CE3A649721387F1FC0F7BE",
+          "title": "粉尘废屑未冷却至常温即入库存放，或不同种类混装、与氧化物/过氧化物/酸/爆炸品/易燃物品同场所存放",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_C1CE3A649721387F1FC0F7BE",
+              "clauseId": "C_GB15577_6_1",
+              "lawVersionId": "LV_STD_A307C34C912F164D6A1D19E9",
+              "officialName": "粉尘防爆安全规程",
+              "articlePath": "6.1",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected",
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_CE94D2ACC8C544BCA0FB0AA026",
+          "title": "有高处坠落危险的作业部位未配置扶梯平台、围栏和系挂装置",
+          "hazardReasons": [],
+          "links": [
+            {
+              "linkId": "K_XLSX_WEB_H_CE94D2ACC8C544BCA0FB0AA026",
+              "clauseId": "C_GBT12801_5_7_1_C",
+              "lawVersionId": "LV_STD_GB12801_2008",
+              "officialName": "生产过程安全卫生要求总则",
+              "articlePath": "5.7.1 c)",
+              "linkReasons": [
+                "BLOCK_CLAUSE_TEXT:clause_gate_failed"
+              ],
+              "clauseReasons": [
+                "BLOCK_VERSION_EXPIRED:active_past_endDate"
+              ]
+            }
+          ]
+        },
+        {
+          "hazardId": "H_D98B4749D74246E2A3825D5B09",
+          "title": "液化石油气气瓶间缺失少“严禁烟火”、“易燃易爆” 等安全警示标志",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_06DA14F047F55C9102685D5D",
+              "clauseId": "C_XLSX_FT_D554FB289C8D9AC9E53ACF93",
+              "lawVersionId": "L001",
+              "officialName": "中华人民共和国消防法（2021修正）",
+              "articlePath": "第六十七条",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            },
+            {
+              "linkId": "K_XLSX_NEW14_0A9FF087925483120EDA1C30",
+              "clauseId": "C_XLSX_FT_0A0BC6D714EBEE8BE88DC97C",
+              "lawVersionId": "L002",
+              "officialName": "中华人民共和国安全生产法",
+              "articlePath": "三十五",
+              "linkReasons": [
+                "BLOCK_REVIEW_NOT_VERIFIED:pending"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        },
+        {
+          "hazardId": "H_F0D64F91542E4B0399D83D670D",
+          "title": "每个堆间,未留有搬运通道",
+          "hazardReasons": [
+            "BLOCK_REVIEW_NOT_VERIFIED:pending"
+          ],
+          "links": [
+            {
+              "linkId": "K_XLSX_NEW14_D1DA94F05E6955E3E9A73A2A",
+              "clauseId": "C_XLSX_FT_1488F0C3329AF5C8262E2AB2",
+              "lawVersionId": "L015",
+              "officialName": "仓储场所消防安全管理通则",
+              "articlePath": "第6.7条",
+              "linkReasons": [
+                "BLOCK_LINK_APPLICABILITY:link_not_active",
+                "BLOCK_REVIEW_NOT_VERIFIED:rejected"
+              ],
+              "clauseReasons": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "onlineManifest": {
+    "schemaVersion": 2,
+    "v4SchemaVersion": 3,
+    "dataVersion": "2026.10.16.883a2664f9c0",
+    "generatedAt": "2026-10-16",
+    "publicScope": "国家法规标准优先，江苏／南京补充；现行依据与官方资料查阅分别展示，查阅不授予现行判定资格",
+    "counts": {
+      "hazards": 1764,
+      "laws": 106,
+      "lawVersions": 106,
+      "clauses": 1514,
+      "links": 1949,
+      "fieldProfiles": 15,
+      "majorCriteriaStandards": 6,
+      "majorCriteriaClauses": 110,
+      "majorCriteriaHazards": 25,
+      "majorCriteriaAssociations": 25,
+      "majorCriteriaDirectoryGroups": 8,
+      "majorCriteriaDirectoryDocuments": 9,
+      "majorCriteriaReadingGroups": 3,
+      "majorCriteriaReadingDocuments": 4,
+      "majorCriteriaReadingFirstLevelItems": 109,
+      "majorCriteriaReferenceStandards": 1,
+      "majorCriteriaSearchTopics": 53
+    },
+    "sourceCounts": {
+      "hazards": 2171,
+      "laws": 155,
+      "lawVersions": 159,
+      "clauses": 3253,
+      "links": 2309
+    },
+    "health": {
+      "verifiedHazards": 1764,
+      "pendingHazards": 266,
+      "activeLaws": 106,
+      "pendingLaws": 0,
+      "invalidReferences": 0,
+      "stagedHazards": 407,
+      "stagedLaws": 53
+    },
+    "files": {
+      "searchIndex": "data/search-index.json",
+      "lawIndex": "data/law-index.json",
+      "taxonomy": "data/taxonomy.json",
+      "fieldProfiles": "data/field-profiles.json",
+      "majorCriteriaCatalog": "data/major-criteria-catalog.json",
+      "majorCriteriaTopic": "data/major-criteria-topic.json",
+      "majorCriteriaReferences": "data/major-criteria-references.json",
+      "majorCriteriaDirectory": "data/major-criteria-directory.json",
+      "majorCriteriaReading": "data/major-criteria-reading.json"
+    },
+    "hazardShards": [
+      {
+        "id": "h0000",
+        "url": "data/hazards/h0000.json"
+      },
+      {
+        "id": "h0001",
+        "url": "data/hazards/h0001.json"
+      },
+      {
+        "id": "h0002",
+        "url": "data/hazards/h0002.json"
+      },
+      {
+        "id": "h0003",
+        "url": "data/hazards/h0003.json"
+      },
+      {
+        "id": "h0004",
+        "url": "data/hazards/h0004.json"
+      },
+      {
+        "id": "h0005",
+        "url": "data/hazards/h0005.json"
+      },
+      {
+        "id": "h0006",
+        "url": "data/hazards/h0006.json"
+      },
+      {
+        "id": "h0007",
+        "url": "data/hazards/h0007.json"
+      },
+      {
+        "id": "h0008",
+        "url": "data/hazards/h0008.json"
+      }
+    ],
+    "clauseShards": [
+      {
+        "id": "c0000",
+        "url": "data/clauses/c0000.json"
+      },
+      {
+        "id": "c0001",
+        "url": "data/clauses/c0001.json"
+      },
+      {
+        "id": "c0002",
+        "url": "data/clauses/c0002.json"
+      },
+      {
+        "id": "c0003",
+        "url": "data/clauses/c0003.json"
+      },
+      {
+        "id": "c0004",
+        "url": "data/clauses/c0004.json"
+      },
+      {
+        "id": "c0005",
+        "url": "data/clauses/c0005.json"
+      },
+      {
+        "id": "c0006",
+        "url": "data/clauses/c0006.json"
+      },
+      {
+        "id": "c0007",
+        "url": "data/clauses/c0007.json"
+      }
+    ],
+    "releaseHash": "a205567e6fc1b4d67946a63c69d2b415ec48cf7e4a0c80a4e4f0c4ffa77c4c0a",
+    "sourceRevision": "d7c15d8e7e81f933e2d2774613eff609659b93a1695ae79e4efb26efa1164c2e",
+    "buildToolVersion": "safety-unified-release-v2"
+  }
+}

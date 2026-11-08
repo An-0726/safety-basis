@@ -361,5 +361,6 @@ export const FUZZY_QUERY_INTENTS=[
 export function fieldQueryGuidance(query){
   const match=FIELD_QUERY_INTENTS.find(item=>item.patterns.some(pattern=>pattern.test(query)))
     ||FUZZY_QUERY_INTENTS.find(item=>item.patterns.some(pattern=>pattern.test(query)));
-  return match?{suppressResults:match.suppressResults,notice:match.notice,suggestions:match.suggestions}:null;
+  const evidenceGapIntents=new Set(['rack-anchor','fuzzy-insulating-mat','fuzzy-cylinder-regulator','fuzzy-cylinder-ring','fuzzy-vehicle-belt','fuzzy-insulating-glove-damage']);
+  return match?{suppressResults:match.suppressResults,notice:match.notice,suggestions:match.suggestions,assessment:{classification:evidenceGapIntents.has(match.id)?'evidence_gap':'needs_conditions',reason:match.id,requiredFacts:[]}}:null;
 }

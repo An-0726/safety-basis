@@ -1,0 +1,1421 @@
+{
+  "schema_version": "search-delivery-evaluation-v1",
+  "date": "2026-11-08",
+  "interpretation": "全部测试输入为脱敏合成文本；没有真实企业问法、没有独立专业人员审核的真实样本，不宣称真实现场准确率。",
+  "verification_environment": {
+    "runtime": "Node.js 22+",
+    "publication_status": "独立本地正式包构建及检索验证；不代表已部署"
+  },
+  "provenance": {
+    "jsonl_fixture": "tests/fixtures/field-query/synthetic-boundaries.jsonl",
+    "jsonl_sha256": "1723a7dc07bd155474986dbf05aebf4a4c923edfe8eeac3c6570a6e2325ea2bf",
+    "csv_fixture": "tests/fixtures/field-query/synthetic-boundaries.csv",
+    "csv_sha256": "bb4423d03eb46af43a285504468e0d7569b0c8d55946dcc758435b11d968b10d",
+    "history_fixture": "docs/FUZZY_QUERY_CHECK_20261016.json",
+    "history_sha256": "aa29d1a94e89cb4828e7a10b8bfa8d1cfc85bddbc5ebda3608092bc505885958",
+    "data_manifest": {
+      "schemaVersion": 2,
+      "v4SchemaVersion": 3,
+      "dataVersion": "2026.11.08.phase2",
+      "generatedAt": "2026-11-08",
+      "publicScope": "国家法规标准优先，江苏／南京补充；现行依据与官方资料查阅分别展示，查阅不授予现行判定资格",
+      "counts": {
+        "hazards": 1764,
+        "laws": 106,
+        "lawVersions": 106,
+        "clauses": 1514,
+        "links": 1949,
+        "fieldProfiles": 15,
+        "majorCriteriaStandards": 6,
+        "majorCriteriaClauses": 110,
+        "majorCriteriaHazards": 25,
+        "majorCriteriaAssociations": 25,
+        "majorCriteriaDirectoryGroups": 8,
+        "majorCriteriaDirectoryDocuments": 9,
+        "majorCriteriaReadingGroups": 3,
+        "majorCriteriaReadingDocuments": 4,
+        "majorCriteriaReadingFirstLevelItems": 109,
+        "majorCriteriaReferenceStandards": 1,
+        "majorCriteriaSearchTopics": 53
+      },
+      "sourceCounts": {
+        "hazards": 2171,
+        "laws": 155,
+        "lawVersions": 160,
+        "clauses": 3255,
+        "links": 2311
+      },
+      "health": {
+        "verifiedHazards": 1764,
+        "pendingHazards": 0,
+        "activeLaws": 106,
+        "pendingLaws": 0,
+        "invalidReferences": 0,
+        "stagedHazards": 407,
+        "stagedLaws": 54
+      },
+      "files": {
+        "searchIndex": "data/search-index.json",
+        "lawIndex": "data/law-index.json",
+        "taxonomy": "data/taxonomy.json",
+        "fieldProfiles": "data/field-profiles.json",
+        "majorCriteriaCatalog": "data/major-criteria-catalog.json",
+        "majorCriteriaTopic": "data/major-criteria-topic.json",
+        "majorCriteriaReferences": "data/major-criteria-references.json",
+        "majorCriteriaDirectory": "data/major-criteria-directory.json",
+        "majorCriteriaReading": "data/major-criteria-reading.json"
+      },
+      "hazardShards": [
+        {
+          "id": "h0000",
+          "url": "data/hazards/h0000.json"
+        },
+        {
+          "id": "h0001",
+          "url": "data/hazards/h0001.json"
+        },
+        {
+          "id": "h0002",
+          "url": "data/hazards/h0002.json"
+        },
+        {
+          "id": "h0003",
+          "url": "data/hazards/h0003.json"
+        },
+        {
+          "id": "h0004",
+          "url": "data/hazards/h0004.json"
+        },
+        {
+          "id": "h0005",
+          "url": "data/hazards/h0005.json"
+        },
+        {
+          "id": "h0006",
+          "url": "data/hazards/h0006.json"
+        },
+        {
+          "id": "h0007",
+          "url": "data/hazards/h0007.json"
+        },
+        {
+          "id": "h0008",
+          "url": "data/hazards/h0008.json"
+        }
+      ],
+      "clauseShards": [
+        {
+          "id": "c0000",
+          "url": "data/clauses/c0000.json"
+        },
+        {
+          "id": "c0001",
+          "url": "data/clauses/c0001.json"
+        },
+        {
+          "id": "c0002",
+          "url": "data/clauses/c0002.json"
+        },
+        {
+          "id": "c0003",
+          "url": "data/clauses/c0003.json"
+        },
+        {
+          "id": "c0004",
+          "url": "data/clauses/c0004.json"
+        },
+        {
+          "id": "c0005",
+          "url": "data/clauses/c0005.json"
+        },
+        {
+          "id": "c0006",
+          "url": "data/clauses/c0006.json"
+        },
+        {
+          "id": "c0007",
+          "url": "data/clauses/c0007.json"
+        }
+      ],
+      "releaseHash": "e681ca40a794c5dce0aeb751a3e9b93dac9d976cc0266379e31a4ad8cc5c920d",
+      "sourceRevision": "5482114854f447450e9b5cfbf29436e94bde3e3a02d6b9ba9430dc3dfa608b7a",
+      "buildToolVersion": "safety-unified-release-v2"
+    },
+    "implementation_sha256": {
+      "web/js/store.js": "3247475dfd568f144b26d88e06bab6020a2ed2fd5afc833e5c7027f6b471e688",
+      "web/js/search.js": "9a1ea8e31f165e366a35ed793fde61a2c356bf55e7927950d30b407b9edd9e11",
+      "web/js/search-vocabulary.js": "fbdd7426fdd11288f047557a877d284eabd4b6c7a989a92b8f9ff5d039175013",
+      "web/js/search-guidance.js": "4289babbe1fb1a3984d32e16752f5be0c2e4b43196984b102b74b3e397590657",
+      "web/js/search-boundaries.js": "6a6edd0034cc331d9f36744159d61f8e3713fef8af5ba2a64069025795dac046",
+      "web/js/field-query-guidance.js": "3f348417d930a6a11e63eeaa7091d2778dcc37a591a14b2cf30c80435e4e2070",
+      "web/js/field-profiles.js": "b73aff3831db8eab3ac037b97576248bd4e957022397d2843d7aad11d762e496",
+      "web/js/browse-groups.js": "47517fbd5f1f4c4f3a578b76716aa10a565513eb7123abca2ae1429d09abcc44",
+      "web/js/verified-files.js": "e861e8779b3d69cb18a40cdacef3a83d4a9835912aaea9153f0a65375e68f4a8",
+      "web/js/normative-content.js": "1d45c1c6c30816065c5a9b19d3823450378d1b243b75ca2e51c6ce5e66713d92",
+      "tools/checks/field_query_eval.mjs": "90489c467dba41a9c2d8f7259b7a0522c2754898a21627f405d27300bfb13349",
+      "tools/checks/field_query_history.mjs": "ae1c53f792f3b7f543e64ec01232dc1b48f944f6e92663759286b92a995aec95"
+    }
+  },
+  "real_sample_count": 0,
+  "human_reviewed_real_sample_count": 0,
+  "synthetic_summary": {
+    "samples": 29,
+    "reviewed": 29,
+    "pending": 0,
+    "unavailable_label_samples": 0,
+    "direct_top3": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1
+    },
+    "conditional_suggestion_top3": {
+      "numerator": 7,
+      "denominator": 7,
+      "rate": 1
+    },
+    "either_route_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "classification_agreement": {
+      "numerator": 29,
+      "denominator": 29,
+      "rate": 1
+    },
+    "conditions_detection": {
+      "numerator": 14,
+      "denominator": 14,
+      "rate": 1
+    },
+    "evidence_gap_detection": {
+      "numerator": 4,
+      "denominator": 4,
+      "rate": 1
+    },
+    "severe_mismatch_top3": {
+      "numerator": 0,
+      "denominator": 25,
+      "rate": 0
+    },
+    "forbidden_suggestion_samples": 0,
+    "unreviewed_mismatch_risk_samples": 4,
+    "annotation_labels": {
+      "needs_conditions": 14,
+      "direct_correct": 8,
+      "evidence_gap": 4,
+      "fact_unconfirmed": 2,
+      "no_result": 1
+    }
+  },
+  "real_summary": {
+    "samples": 0,
+    "reviewed": 0,
+    "pending": 0,
+    "unavailable_label_samples": 0,
+    "direct_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "conditional_suggestion_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "either_route_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "classification_agreement": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "conditions_detection": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "evidence_gap_detection": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "severe_mismatch_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "forbidden_suggestion_samples": 0,
+    "unreviewed_mismatch_risk_samples": 0,
+    "annotation_labels": {}
+  },
+  "human_reviewed_real_summary": {
+    "samples": 0,
+    "reviewed": 0,
+    "pending": 0,
+    "unavailable_label_samples": 0,
+    "direct_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "conditional_suggestion_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "either_route_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "classification_agreement": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "conditions_detection": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "evidence_gap_detection": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "severe_mismatch_top3": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "forbidden_suggestion_samples": 0,
+    "unreviewed_mismatch_risk_samples": 0,
+    "annotation_labels": {}
+  },
+  "csv_jsonl_results_identical": true,
+  "historical_compatibility": {
+    "samples": 120,
+    "unchanged_route_and_top3": 120,
+    "changed_route_and_top3": 0,
+    "unavailable_historical_id_samples": 0,
+    "current_outcomes": {
+      "candidate_matches": 37,
+      "needs_conditions": 77,
+      "evidence_gap": 5,
+      "no_result": 1
+    },
+    "real_samples": 0,
+    "human_reviewed_real_samples": 0
+  },
+  "tests": {
+    "node_search_and_evaluation": {
+      "tests": 140,
+      "pass": 140,
+      "fail": 0,
+      "command": "node --test tests/search*.test.mjs tests/fuzzy-vocabulary.test.mjs tests/field-query-guidance.test.mjs tests/field-query-eval.test.mjs"
+    },
+    "formal_asset_shipping": {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "command": "PYTHONPATH=tools/pipeline/tests python -m unittest test_field_profile_release.FieldProfileReleaseTests.test_formal_ui_module_is_shipped_and_checksum_covered"
+    }
+  },
+  "cases": [
+    {
+      "id": "SYN-001",
+      "query": "车间应急灯没有安装",
+      "group": "未配置与损坏",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H_C0BEAB6834F44E5CBE05F9CBD0"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+        "H_69344942331F4E74ACB10315FE"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "emergency_lighting_absent",
+        "requiredFacts": [
+          "建筑用途及类别",
+          "所在部位",
+          "是否属于条款规定应设疏散照明的情形"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-002",
+      "query": "仓库内应急照明灯未设置",
+      "group": "未配置与损坏",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H_C0BEAB6834F44E5CBE05F9CBD0"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT",
+        "H_69344942331F4E74ACB10315FE"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "emergency_lighting_absent",
+        "requiredFacts": [
+          "建筑用途及类别",
+          "所在部位",
+          "是否属于条款规定应设疏散照明的情形"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-003",
+      "query": "应急灯坏了",
+      "group": "未配置与损坏",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_C0BEAB6834F44E5CBE05F9CBD0"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "emergency-lamp-operation",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-004",
+      "query": "已设置的消防应急照明灯具损坏、不能正常点亮",
+      "group": "未配置与损坏",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_C0BEAB6834F44E5CBE05F9CBD0"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-005",
+      "query": "固定式压力容器压力表检定超期",
+      "group": "检定超期与故障",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "expected_basis_ids": [
+        "K_GAP4_GAUGE_9_2_1_2_20261011"
+      ],
+      "forbidden_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "gauge_verification_state",
+        "requiredFacts": [
+          "是否属于固定式压力容器及条款适用范围",
+          "检定有效期及证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-006",
+      "query": "固定式压力容器压力表检定过期",
+      "group": "检定超期与故障",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "gauge_verification_state",
+        "requiredFacts": [
+          "是否属于固定式压力容器及条款适用范围",
+          "检定有效期及证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-007",
+      "query": "固定式压力容器压力表损坏",
+      "group": "检定超期与故障",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "expected_basis_ids": [
+        "K_TSG21_PRESSURE_GAUGE_DAMAGED_20261015"
+      ],
+      "forbidden_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "gauge_damage_state",
+        "requiredFacts": [
+          "所属设备及条款适用范围",
+          "实际损坏及证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-008",
+      "query": "压力表检定超期",
+      "group": "检定超期与故障",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "field_query_guidance",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-009",
+      "query": "气瓶防震圈丢失",
+      "group": "防震圈与瓶帽",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "evidence_gap",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_TSG23_CYLINDER_NO_GUARD_OR_CAP"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "evidence_gap",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "evidence_gap",
+        "reason": "cylinder_ring_source_gap",
+        "requiredFacts": [
+          "气瓶种类",
+          "行业和使用、装卸或运输场景",
+          "对应现行条款及原始证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": true,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-010",
+      "query": "钢瓶缺少防震胶圈",
+      "group": "防震圈与瓶帽",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "evidence_gap",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_TSG23_CYLINDER_NO_GUARD_OR_CAP"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "evidence_gap",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "evidence_gap",
+        "reason": "cylinder_ring_source_gap",
+        "requiredFacts": [
+          "气瓶种类",
+          "行业和使用、装卸或运输场景",
+          "对应现行条款及原始证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": true,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-011",
+      "query": "气瓶未装配保护罩或瓶帽",
+      "group": "防震圈与瓶帽",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_TSG23_CYLINDER_NO_GUARD_OR_CAP"
+      ],
+      "expected_basis_ids": [
+        "K_GAP4_CYLINDER_7_2_4_20261011"
+      ],
+      "forbidden_hazard_ids": [],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H_TSG23_CYLINDER_NO_GUARD_OR_CAP"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-012",
+      "query": "车间消防门关不上",
+      "group": "消防门与消火栓",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H_99C14C8150B1AF834ADC8E5121_3"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H002"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "fire_door_object",
+        "requiredFacts": [
+          "门的类型",
+          "所在建筑和部位",
+          "关闭或疏散功能的实际状态"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-013",
+      "query": "消火栓被遮挡、圈占",
+      "group": "消防门与消火栓",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H002"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_99C14C8150B1AF834ADC8E5121_3"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H002"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-014",
+      "query": "人员密集场所、高层和地下公共建筑防火门关闭功能不符合要求",
+      "group": "消防门与消火栓",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_99C14C8150B1AF834ADC8E5121_3"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H002"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H_99C14C8150B1AF834ADC8E5121_3"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-015",
+      "query": "行车吊钩防脱钩装置损坏",
+      "group": "行车与自行车",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_772BE36081184956B7899AA306"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H010"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H_772BE36081184956B7899AA306"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-016",
+      "query": "电动自行车飞线充电",
+      "group": "行车与自行车",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H010"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_772BE36081184956B7899AA306"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H010"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-017",
+      "query": "普通化学品未分类存放",
+      "group": "普通化学品与危化品",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_GB15603_5_1_1",
+        "H_38446A727CFE42F2B4BB5B471C"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "ordinary_chemical_identity",
+        "requiredFacts": [
+          "物料名称及危险性分类",
+          "物料相容性",
+          "实际储存场景"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-018",
+      "query": "普通化学品混放",
+      "group": "普通化学品与危化品",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_GB15603_5_1_1",
+        "H_38446A727CFE42F2B4BB5B471C"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "ordinary_chemical_identity",
+        "requiredFacts": [
+          "物料名称及危险性分类",
+          "物料相容性",
+          "实际储存场景"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-019",
+      "query": "危险化学品仓库未采用规定的储存方式",
+      "group": "普通化学品与危化品",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_GB15603_5_1_1",
+        "H_38446A727CFE42F2B4BB5B471C"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H_38446A727CFE42F2B4BB5B471C",
+        "H_GB15603_5_1_1"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-020",
+      "query": "资料核查：年度消防检测报告缺失",
+      "group": "资料核查与现场隐患",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H_421CE6E205C8069977EB63572A_2"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "fire_document_review",
+        "requiredFacts": [
+          "是否负有对应年度检测义务",
+          "实际检测实施情况",
+          "报告与记录的保存或提供情况"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-021",
+      "query": "没有找到设备检验报告",
+      "group": "资料核查与现场隐患",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_5D5ACB4A6D45FD9CEFC4654D",
+        "H_TSG21_PRESSURE_GAUGE_DAMAGED",
+        "H_TSG21_PRESSURE_GAUGE_NOT_VERIFIED"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "equipment_document_review",
+        "requiredFacts": [
+          "设备类别",
+          "实际检验及有效期",
+          "报告保存或提供情况",
+          "是否仍继续使用"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-022",
+      "query": "培训签到表缺签字",
+      "group": "资料核查与现场隐患",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H_85BE9EF94A3647009200216F5D"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_6B81819B5BCB43149B0148792F"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "training_document_review",
+        "requiredFacts": [
+          "实际培训情况",
+          "应记录的培训时间、内容、参加人员和考核结果",
+          "资料缺项及其证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-023",
+      "query": "生产经营单位未培训从业人员或未合格即上岗",
+      "group": "资料核查与现场隐患",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "candidate_matches",
+      "expected_target_route": "direct",
+      "expected_hazard_ids": [
+        "H_6B81819B5BCB43149B0148792F"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "candidate_matches",
+      "actual_direct_top3_hazard_ids": [
+        "H_6B81819B5BCB43149B0148792F"
+      ],
+      "assessment": {
+        "classification": "candidate_matches",
+        "reason": "retrieval_candidates",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": true,
+        "suggestion_top3_hit": false,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-024",
+      "query": "现场未发现灭火器损坏",
+      "group": "事实未确认",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "fact_unconfirmed",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H001"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "fact_unconfirmed",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "fact_unconfirmed",
+        "reason": "unconfirmed_observation",
+        "requiredFacts": [
+          "核实对象",
+          "实际观察或检测事实"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-025",
+      "query": "车间灯具已经修复",
+      "group": "事实未确认",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "fact_unconfirmed",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_FIRE_EMERGENCY_LIGHTING_LAMP_FAULT"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "fact_unconfirmed",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "fact_unconfirmed",
+        "reason": "negated_completed_or_unconfirmed",
+        "requiredFacts": [
+          "现场当前状态及证据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-026",
+      "query": "插座坏了",
+      "group": "缺证提示",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "evidence_gap",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_COM_SOCKET_LOOSE"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "evidence_gap",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "evidence_gap",
+        "reason": "socket_in_service_source_gap",
+        "requiredFacts": [
+          "使用期实际缺陷",
+          "对题的现行法规依据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": true,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-027",
+      "query": "普通工业车间地面有油",
+      "group": "缺证提示",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "evidence_gap",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H_COM_SLIPPERY_FLOOR"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "evidence_gap",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "evidence_gap",
+        "reason": "industrial_floor_source_gap",
+        "requiredFacts": [
+          "场所用途",
+          "实际滑跌风险",
+          "对题的现行法规依据"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": true,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-028",
+      "query": "脱敏样例不存在的设备类型甲乙丙",
+      "group": "未覆盖原句",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "no_result",
+      "expected_target_route": "none",
+      "expected_hazard_ids": [],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "no_result",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "no_result",
+        "reason": "no_retrieval_match",
+        "requiredFacts": []
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": null,
+        "suggestion_top3_hit": null,
+        "classification_match": true,
+        "conditions_detected": null,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    },
+    {
+      "id": "SYN-029",
+      "query": "灭火器前堆放纸箱",
+      "group": "观察与事实确认",
+      "annotation_origin": "assistant_synthetic",
+      "expected_outcome": "needs_conditions",
+      "expected_target_route": "suggestion",
+      "expected_hazard_ids": [
+        "H003"
+      ],
+      "expected_basis_ids": [],
+      "forbidden_hazard_ids": [
+        "H002"
+      ],
+      "forbidden_basis_ids": [],
+      "actual_outcome": "needs_conditions",
+      "actual_direct_top3_hazard_ids": [],
+      "assessment": {
+        "classification": "needs_conditions",
+        "reason": "extinguisher_access_observation",
+        "requiredFacts": [
+          "灭火器设置点及适用场景",
+          "物品是否遮挡识别或妨碍便捷取用",
+          "现场照片及实际取用核实"
+        ]
+      },
+      "checks": {
+        "unavailable_expected_ids": [],
+        "unavailable_forbidden_ids": [],
+        "direct_top3_hit": false,
+        "suggestion_top3_hit": true,
+        "classification_match": true,
+        "conditions_detected": true,
+        "evidence_gap_detected": null,
+        "severe_mismatch_top3": false,
+        "forbidden_hits": [],
+        "forbidden_suggestion_hits": []
+      }
+    }
+  ]
+}

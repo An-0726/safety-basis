@@ -1,6 +1,7 @@
 'use strict';
 import {browseGroupMatches} from './browse-groups.js';
 import {hazardSearchGuidance} from './search-guidance.js';
+import {pressureGaugeStateBoundary} from './search-boundaries.js';
 
 import { EQUIVALENT_GROUPS, RELATED_GROUPS, SEGMENT_TERMS, COLLOQUIAL_TERMS, COLLOQUIAL_FILLERS, COLLOQUIAL_WORDS, COLLOQUIAL_IGNORED_CHARS, COLLOQUIAL_LEADING_VERBS } from './search-vocabulary.js';
 
@@ -278,7 +279,7 @@ const hazardScore=(r,q,terms)=>{
 
 export function searchHazardsDetailed(rows, query, filters={}) {
   const guidance=hazardSearchGuidance(query);
-  if(guidance.suppressResults)return {rows:[],matchKind:'none',interpretedQuery:String(query??''),queryNotice:guidance.notice,suggestions:guidance.suggestions};
+  if(guidance.suppressResults)return {rows:[],matchKind:'none',interpretedQuery:String(query??''),queryNotice:guidance.notice,suggestions:guidance.suggestions,assessment:guidance.assessment};
   const prepared=prepareQuery(query),q=normalize(prepared.expanded),terms=termsOf(prepared.remainder);
   const literalTitleQuery=normalize(query);
   const out=[];
@@ -307,13 +308,15 @@ export function searchHazardsDetailed(rows, query, filters={}) {
   // Keep all same-title IDs, but do not substitute body mentions when filters exclude it.
   const isTitleLookup=literalTitleQuery&&rows.some(r=>normalize(r.title)===literalTitleQuery);
   const exactTitleRows=isTitleLookup?out.filter(r=>normalize(r.title)===literalTitleQuery):[];
+  const stateBoundary=isTitleLookup?null:pressureGaugeStateBoundary(query);
+  const boundaryRows=stateBoundary?out.filter(r=>stateBoundary.heading.test(objectHeading(r))):out;
   const matched=isTitleLookup
     ? {rows:exactTitleRows,terms,matchKind:exactTitleRows.length?'standard':'none'}
-    : matchingRows(out,terms,prepared.remainder);
+    : matchingRows(boundaryRows,terms,prepared.remainder);
   const rankingQuery=matched.terms===terms ? q : matched.terms.join('');
   const scored=matched.rows.map((row,i)=>({row,score:matched.ranked?-i:hazardScore(row,rankingQuery,matched.terms)}));
   scored.sort((a,b)=>b.score-a.score || a.row.title.localeCompare(b.row.title,'zh-CN'));
-  return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:[prepared.queryNotice,guidance.notice].filter(Boolean).join(' '),suggestions:guidance.suggestions};
+  return {rows:scored.map(x=>x.row),matchKind:prepared.standards.length&&matched.matchKind==='all'?(matched.rows.length?'standard':'none'):matched.matchKind,interpretedQuery:matched.terms.join(' '),queryNotice:[prepared.queryNotice,guidance.notice,stateBoundary?.notice].filter(Boolean).join(' '),suggestions:guidance.suggestions,assessment:stateBoundary?{classification:'needs_conditions',reason:stateBoundary.reason,requiredFacts:stateBoundary.requiredFacts}:guidance.assessment||{classification:scored.length?'candidate_matches':'no_result',reason:scored.length?'retrieval_candidates':'no_retrieval_match',requiredFacts:[]}};
 }
 
 const lawScore=(r,q,terms)=>{
